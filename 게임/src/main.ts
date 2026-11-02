@@ -239,7 +239,7 @@ document.addEventListener('pointerdown',(e)=>{
     shopFocus=Number(product.dataset.shopIndex);selectedGear=null;pressedGear=null;
     drag={shopIndex:shopFocus,id:-1,x:e.clientX,y:e.clientY,pointer:e.pointerId,moved:false,ghost:null,dx:0,dy:0};
     refreshLinks();
-  } else if(!button){shopFocus=null;pressedGear=null;} 
+  } else if(!button){shopFocus=null;pressedGear=null;}
   if(button){
     const id=Number(button.dataset.gearId);pressedGear=id;shopFocus=null;const item=game.gear.find(g=>g.id===id);
     const cell=(button.dataset.bagCell??button.dataset.cell)!.split(',').map(Number);
