@@ -4,6 +4,13 @@ export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spe
 export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; }
 export interface Gear { id:number; def:ItemDef; owner:number|null; x:number; y:number; turns:number; }
 export interface Shot { x:number; y:number; tx:number; ty:number; life:number; color:number; }
+export type LogCategory = 'damage' | 'reward' | 'economy';
+export interface DevLog {
+  id:number; time:number; category:LogCategory; text:string;
+  sourceId?:number; targetId?:number; attack?:number; damage?:number;
+  hpBefore?:number; hpAfter?:number; goldBefore?:number; goldAfter?:number; goldDelta?:number;
+}
+export const DEV_LOG_LIMIT=100;
 
 const lengths=PATH.map((p,i)=>Math.hypot(PATH[(i+1)%4][0]-p[0],PATH[(i+1)%4][1]-p[1]));
 const perimeter=lengths.reduce((a,b)=>a+b,0);
@@ -22,7 +29,24 @@ export class Defense {
   shop:(ItemDef|null)[]=ITEMS.slice(0,5);
   kills=0; elapsed=0; speed=1; revision=0;
   message='병사를 선택하고 전장의 빈 칸을 눌러주세요.';
+  readonly logs:Record<LogCategory,DevLog[]>={damage:[],reward:[],economy:[]};
+  logRevision=0;
+  private nextLogId=1;
   private nextId=1; private spawnClock=0;
+  private log(category:LogCategory,text:string,data:Partial<Omit<DevLog,'id'|'time'|'category'|'text'>>={}):void {
+    const list=this.logs[category];
+    list.unshift({id:this.nextLogId++,time:this.elapsed,category,text,...data});
+    if(list.length>DEV_LOG_LIMIT)list.length=DEV_LOG_LIMIT;
+    this.logRevision++;
+  }
+  private unitName(u:Unit):string {
+    return `${UNITS[u.kind].name} #${u.id} (${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열)`;
+  }
+  private goldLog(category:'reward'|'economy',reason:string,before:number,data:Partial<DevLog>={}):void {
+    const delta=this.gold-before;
+    this.log(category,`${reason} · ${delta>=0?'+':''}${delta}G · ${before} → ${this.gold}G`,
+      {...data,goldBefore:before,goldAfter:this.gold,goldDelta:delta});
+  }
   note(message:string):false {this.message=message;this.revision++;return false;}
   heroes():Unit[] {return this.units.filter(u=>UNITS[u.kind].hero);}
   stats(unit:Unit) {
@@ -38,8 +62,10 @@ export class Defense {
     if(def.hero&&this.heroes().length>=RULES.heroLimit)return this.note('영웅은 최대 3명까지 배치할 수 있습니다.');
     if(def.hero&&this.units.some(u=>u.kind===kind))return this.note('같은 영웅은 한 명만 배치합니다. (시험 규칙)');
     if(this.gold<def.cost)return this.note('소환에 필요한 골드가 부족합니다.');
-    this.gold-=def.cost;
-    this.units.push({id:this.nextId++,kind,slot,level:1,spent:def.cost,cooldown:0.3});
+    const before=this.gold;this.gold-=def.cost;
+    const unit:Unit={id:this.nextId++,kind,slot,level:1,spent:def.cost,cooldown:0.3};
+    this.units.push(unit);
+    this.goldLog('economy',`${this.unitName(unit)} 소환${def.hero?' (무료)':''}`,before,{sourceId:unit.id});
     this.note(`${def.name} 배치 완료`);return true;
   }
   upgrade(id:number):boolean {
@@ -48,26 +74,32 @@ export class Defense {
     if(u.level>=5)return this.note('시험 강화는 5레벨까지입니다.');
     const cost=this.upgradeCost(u);
     if(this.gold<cost)return this.note('강화 골드가 부족합니다.');
-    this.gold-=cost;u.spent+=cost;u.level++;this.note(`${UNITS[u.kind].name} Lv.${u.level} 강화 완료`);return true;
+    const before=this.gold;this.gold-=cost;u.spent+=cost;u.level++;
+    this.goldLog('economy',`${this.unitName(u)} Lv.${u.level-1} → Lv.${u.level} 강화`,before,{sourceId:u.id});
+    this.note(`${UNITS[u.kind].name} Lv.${u.level} 강화 완료`);return true;
   }
   upgradeCost(u:Unit):number{return Math.floor(UNITS[u.kind].cost*0.6*u.level);}
   sellUnit(id:number):boolean {
     const u=this.units.find(u=>u.id===id);
     if(!u||UNITS[u.kind].hero)return this.note('영웅은 판매하거나 교체할 수 없습니다.');
-    const refund=Math.floor(u.spent/2);this.gold+=refund;
+    const before=this.gold,refund=Math.floor(u.spent/2);this.gold+=refund;
+    this.goldLog('economy',`${this.unitName(u)} 판매`,before,{sourceId:u.id});
     this.units=this.units.filter(v=>v.id!==id);this.note(`병사 판매 · ${refund}G 환급`);return true;
   }
   buy(index:number):boolean {
     const item=this.shop[index];if(!item)return false;
     if(this.gold<item.price)return this.note('구매 골드가 부족합니다.');
-    this.gold-=item.price;this.shop[index]=null;
-    this.gear.push({id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0});
+    const before=this.gold;this.gold-=item.price;this.shop[index]=null;
+    const gear:Gear={id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0};
+    this.gear.push(gear);
+    this.goldLog('economy',`${item.name} #${gear.id} 구매`,before);
     this.note(`${item.name}을 공용 가방에 넣었습니다.`);return true;
   }
   reroll():boolean {
     if(this.gold<RULES.rerollGold)return this.note('리롤 골드가 부족합니다.');
-    this.gold-=RULES.rerollGold;
+    const before=this.gold;this.gold-=RULES.rerollGold;
     this.shop=Array.from({length:5},()=>ITEMS[Math.floor(Math.random()*ITEMS.length)]);
+    this.goldLog('economy','상점 리롤',before);
     this.note('상점 상품을 새로 가져왔습니다.');return true;
   }
   equip(id:number,owner:number,x:number,y:number,turns:number):boolean {
@@ -87,7 +119,8 @@ export class Defense {
   sellGear(id:number):boolean {
     const g=this.gear.find(g=>g.id===id);if(!g)return false;
     // 이번 판매 대상은 상점 직접 구매품만. 조합품의 재료 원가 규칙은 아직 구현하지 않음.
-    const value=Math.floor(g.def.price/2);this.gold+=value;
+    const before=this.gold,value=Math.floor(g.def.price/2);this.gold+=value;
+    this.goldLog('economy',`${g.def.name} #${g.id} 판매`,before);
     this.gear=this.gear.filter(v=>v.id!==id);this.note(`${g.def.name} 판매 · ${value}G 환급`);return true;
   }
   tick(realSeconds:number):void {
@@ -108,11 +141,17 @@ export class Defense {
       const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range)
         .sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
       if(!target){u.cooldown=0;continue;}
-      target.hp-=s.attack;u.cooldown=1/s.rate;
+      const hpBefore=target.hp;
+      target.hp=Math.max(0,target.hp-s.attack);u.cooldown=1/s.rate;
+      const damage=hpBefore-target.hp;
+      this.log('damage',`${this.unitName(u)} → 몬스터 #${target.id} · 공격 ${s.attack} / 실제 피해 ${damage} · 체력 ${hpBefore} → ${target.hp}`,
+        {sourceId:u.id,targetId:target.id,attack:s.attack,damage,hpBefore,hpAfter:target.hp});
       this.shots.push({x:pos.x,y:pos.y,tx:target.x,ty:target.y,life:0.16,color:UNITS[u.kind].color});
       if(target.hp<=0) {
         const bonus=this.heroes().reduce((sum,h)=>sum+this.stats(h).gold,0);
+        const before=this.gold;
         this.gold+=Math.floor(RULES.killGold*(1+bonus));this.kills++;this.revision++;
+        this.goldLog('reward',`${this.unitName(u)}이 몬스터 #${target.id} 처치${bonus>0?` (골드 보너스 +${Math.round(bonus*100)}%)`:''}`,before,{sourceId:u.id,targetId:target.id});
       }
     }
     this.enemies=this.enemies.filter(e=>e.hp>0);

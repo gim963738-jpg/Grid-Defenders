@@ -48,6 +48,12 @@
       </section>
       <footer>WEB-002 · 임시 수치 / 자동 스킬·웨이브·보스·조합은 미구현</footer>
     </main>
+    <aside id="dev-log" aria-label="임시 개발자 기록창">
+      <header class="dev-log-heading"><h2>개발자 기록창 <span>임시</span></h2><p>전투 경과 시간 · 최신 기록 위 · 구역별 최근 100건</p></header>
+      <section class="log-section"><h3>① 전투 피해 <small id="damage-count">0건</small></h3><ol id="damage-log" aria-label="피해 기록"><li class="log-empty">공격이 발생하면 표시됩니다.</li></ol></section>
+      <section class="log-section"><h3>② 처치 · 골드 획득 <small id="reward-count">0건</small></h3><ol id="reward-log" aria-label="처치 보상 기록"><li class="log-empty">처치 보상이 발생하면 표시됩니다.</li></ol></section>
+      <section class="log-section"><h3>③ 골드 사용 · 판매 <small id="economy-count">0건</small></h3><ol id="economy-log" aria-label="골드 사용 판매 기록"><li class="log-empty">소환·강화·구매·판매 시 표시됩니다.</li></ol></section>
+    </aside>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

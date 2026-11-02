@@ -1,5 +1,5 @@
 import { Application } from 'pixi.js';
-import { Defense } from './defense';
+import { Defense, type LogCategory } from './defense';
 import { GRID, RULES, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
 import './style.css';
@@ -9,6 +9,33 @@ const game=new Defense();
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
 let selectedGear:number|null=null,turns=0,tab='summon';
 const events=new AbortController();
+const logHeads:Record<LogCategory,number>={damage:0,reward:0,economy:0};
+function refreshLogs():void {
+  for(const category of ['damage','reward','economy'] as const) {
+    const records=game.logs[category];
+    if(!records.length||logHeads[category]===records[0].id)continue;
+    logHeads[category]=records[0].id;
+    const list=el<HTMLOListElement>(`${category}-log`);
+    const oldTop=list.scrollTop;
+    const anchor=oldTop>0?Array.from(list.children).find(row=>row.getBoundingClientRect().bottom>list.getBoundingClientRect().top):null;
+    const anchorId=anchor?.getAttribute('data-log-id');
+    const oldOffset=anchor?anchor.getBoundingClientRect().top-list.getBoundingClientRect().top:0;
+    const nodes=records.map(record=>{
+      const row=document.createElement('li');row.dataset.logId=String(record.id);
+      const time=document.createElement('time');
+      const seconds=Math.floor(record.time);
+      time.textContent=`[${String(Math.floor(seconds/60)).padStart(2,'0')}:${String(seconds%60).padStart(2,'0')}]`;
+      const text=document.createElement('span');text.textContent=record.text;
+      row.append(time,text);return row;
+    });
+    list.replaceChildren(...nodes);
+    if(anchorId) {
+      const retained=nodes.find(row=>row.dataset.logId===anchorId);
+      list.scrollTop=retained?retained.getBoundingClientRect().top-list.getBoundingClientRect().top+list.scrollTop-oldOffset:oldTop;
+    } else list.scrollTop=0;
+    el(`${category}-count`).textContent=`${records.length}건`;
+  }
+}
 
 function shape(item:ItemDef,rotation=0):string {
   const cells=rotated(item.cells,rotation),width=Math.max(...cells.map(c=>c[0]))+1;
@@ -29,7 +56,7 @@ function refresh():void {
   const u=game.units.find(u=>u.id===selectedUnit);
   if(u) {
     const d=UNITS[u.kind],s=game.stats(u);
-    el('unit-detail').innerHTML=`<b>${d.name} ${d.hero?'':`Lv.${u.level}`}</b><br>공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<div class="actions">${d.hero?'<span>영웅은 판매·교체 불가 · 기본 공격만 구현</span>':`<button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>강화 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button>`}</div>`;
+    el('unit-detail').innerHTML=`<b>${d.name} #${u.id} ${d.hero?'':`Lv.${u.level}`}</b> · ${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열<br>공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<div class="actions">${d.hero?'<span>영웅은 판매·교체 불가 · 기본 공격만 구현</span>':`<button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>강화 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button>`}</div>`;
   } else el('unit-detail').textContent='배치된 유닛을 누르면 정보와 병사 강화·판매를 확인합니다.';
   if(!game.heroes().some(h=>h.id===selectedHero))selectedHero=game.heroes()[0]?.id??null;
   el('hero-tabs').innerHTML=game.heroes().map(h=>`<button data-hero="${h.id}" class="${h.id===selectedHero?'active':''}">${UNITS[h.kind].name}</button>`).join('')||'<p class="empty">소환·지휘에서 영웅을 먼저 배치하세요.</p>';
@@ -53,6 +80,7 @@ function refresh():void {
   el('shop-cards').innerHTML=game.shop.map((item,index)=>item?`<article class="shop-card">${shape(item)}<b>${item.name}</b><p>${item.description}</p><button data-buy="${index}" ${game.gold<item.price?'disabled':''}>구매 ${item.price}G</button></article>`:'<article class="shop-card"><b>구매 완료</b><p>새로고침으로 상품을 보충하세요.</p></article>').join('');
   el('reroll').toggleAttribute('disabled',game.gold<RULES.rerollGold);
   updateHud();
+  refreshLogs();
 }
 function updateHud():void {
   el('gold').innerHTML=`${game.gold} <small>G</small>`;
@@ -135,7 +163,7 @@ async function start():Promise<void> {
   app.ticker.add(ticker=>{
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
     const dt=Math.min(ticker.deltaMS/1000,0.1);game.tick(dt);view.draw(selectedUnit,pending!==null);
-    hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();}
+    hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshLogs();}
     if(lastRevision!==game.revision&&!drag){lastRevision=game.revision;refresh();}
   });
   if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();drag?.ghost?.remove();app.destroy(true,{children:true});});
