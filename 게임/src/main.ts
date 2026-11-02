@@ -9,6 +9,45 @@ const game=new Defense();
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
 let selectedGear:number|null=null,turns=0,tab='summon';
 const events=new AbortController();
+let heroInfo:{kind:UnitKind;unitId:number|null}|null=null;
+let heroInfoMarkup='';
+function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
+function positionHeroInfo():void {
+  const popup=el('hero-info');if(!heroInfo)return;
+  let anchor:{left:number;right:number;top:number;bottom:number};
+  if(heroInfo.unitId!==null){
+    const unit=game.heroes().find(u=>u.id===heroInfo!.unitId),canvas=document.querySelector('canvas');
+    if(!unit||!canvas){closeHeroInfo();return;}
+    const box=canvas.getBoundingClientRect(),point=SLOTS[unit.slot];
+    const x=box.left+point.x*box.width/RULES.width,y=box.top+point.y*box.height/RULES.height;
+    anchor={left:x-20,right:x+20,top:y-22,bottom:y+22};
+  } else {
+    const card=document.querySelector<HTMLElement>(`[data-summon="${heroInfo.kind}"]`);
+    if(!card||el('summon').hidden){popup.hidden=true;return;}
+    anchor=card.getBoundingClientRect();
+  }
+  if(anchor.bottom<0||anchor.top>innerHeight){popup.hidden=true;return;}
+  popup.hidden=false;
+  const bounds=el('app').getBoundingClientRect();
+  const width=Math.min(300,bounds.width-16,innerWidth-16);
+  popup.style.width=`${width}px`;
+  const minLeft=Math.max(8,bounds.left+8),maxLeft=Math.min(innerWidth-width-8,bounds.right-width-8);
+  const left=Math.max(minLeft,Math.min(maxLeft,(anchor.left+anchor.right-width)/2));
+  const height=popup.getBoundingClientRect().height;
+  let top=anchor.top-height-10;
+  if(top<8)top=anchor.bottom+10;
+  popup.style.left=`${left}px`;popup.style.top=`${Math.max(8,Math.min(innerHeight-height-8,top))}px`;
+}
+function refreshHeroInfo():void {
+  if(!heroInfo)return;
+  const def=UNITS[heroInfo.kind],unit=game.heroes().find(u=>u.id===heroInfo!.unitId);
+  if(heroInfo.unitId!==null&&!unit){closeHeroInfo();return;}
+  const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0};
+  const fields=[['hp','♥','최대 체력',stats.hp.toLocaleString()],['attack','⚔','공격력',stats.attack.toLocaleString()],['armor','⬡','방어력',String(stats.armor)],['rate','↗','공격속도',`${stats.rate.toFixed(2)}/초`],['regen','✚','체력 재생',`${stats.regen}/초`],['gold','◇','골드 획득',`+${Math.round(stats.gold*100)}%`]];
+  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${def.icon}</span><div><small>${unit?'장비 적용 능력치':'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="영웅 능력치 닫기">×</button></header><dl>${fields.map(([key,icon,label,value])=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}">${value}</dd></div>`).join('')}</dl>`;
+  if(markup!==heroInfoMarkup){el('hero-info').innerHTML=markup;heroInfoMarkup=markup;}
+  positionHeroInfo();
+}
 const logHeads:Record<LogCategory,number>={damage:0,reward:0,economy:0};
 function refreshLogs():void {
   for(const category of ['damage','reward','economy'] as const) {
@@ -59,22 +98,20 @@ function inventoryGrid(owner:number|null):string {
 function refresh():void {
   const unitCards=(hero:boolean)=>Object.entries(UNITS).filter(([,d])=>d.hero===hero).map(([kind,d])=>{
     const blocked=hero&&(game.heroes().length>=RULES.heroLimit||game.heroes().some(u=>u.kind===kind));
+    if(hero)return `<button class="unit-card hero-card ${pending===kind?'selected':''} ${blocked?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
     return `<button class="unit-card ${pending===kind?'selected':''}" data-summon="${kind}" ${blocked||game.gold<d.cost?'disabled':''} aria-pressed="${pending===kind}"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><small>공격 ${d.attack} · 공속 ${d.rate}</small><span class="price">${hero?(game.heroes().some(u=>u.kind===kind)?'배치됨':'무료 소환'):`${d.cost} G`}</span></button>`;
   }).join('');
   el('soldiers').innerHTML=unitCards(false);el('heroes').innerHTML=unitCards(true);
   el('hero-count').textContent=`배치 ${game.heroes().length} / 3 · 무료`;
   const u=game.units.find(u=>u.id===selectedUnit);
-  if(u) {
+  el('unit-detail').hidden=!u||UNITS[u.kind].hero;
+  if(u&&!UNITS[u.kind].hero) {
     const d=UNITS[u.kind],s=game.stats(u);
-    el('unit-detail').innerHTML=`<b>${d.name} #${u.id} ${d.hero?'':`Lv.${u.level}`}</b> · ${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열<br>공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<div class="actions">${d.hero?'<span>판매·다른 영웅으로 교체 불가 · 위치 이동 가능</span>':`<button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>강화 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button>`}</div>`;
+    el('unit-detail').innerHTML=`<b>${d.name} #${u.id} Lv.${u.level}</b> · ${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열<br>공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<div class="actions"><button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>강화 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button></div>`;
   } else el('unit-detail').textContent='배치된 유닛을 누르면 정보와 병사 강화·판매를 확인합니다.';
   if(!game.heroes().some(h=>h.id===selectedHero))selectedHero=game.heroes()[0]?.id??null;
-  el('hero-tabs').innerHTML=game.heroes().map(h=>`<button data-hero="${h.id}" class="${h.id===selectedHero?'active':''}">${UNITS[h.kind].name}</button>`).join('')||'<p class="empty">소환·지휘에서 영웅을 먼저 배치하세요.</p>';
   const hero=game.heroes().find(h=>h.id===selectedHero);
-  if(hero) {
-    const s=game.stats(hero);
-    el('hero-stats').textContent=`공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp} · 방어 ${s.armor} · 회복 ${s.regen}/초`;
-  } else el('hero-stats').textContent='영웅별 장비칸 5 × 6 · 임시 규격';
+  el('gear-title').textContent=hero?`${UNITS[hero.kind].name} #${hero.id} 장비`:'영웅 장비';
   el('equipment').innerHTML=hero?inventoryGrid(hero.id):'<p class="empty">영웅을 먼저 배치하세요.</p>';
   const bag=inventoryGrid(null);
   el('gear-bag').innerHTML=bag;el('shop-bag').innerHTML=bag;
@@ -87,6 +124,7 @@ function refresh():void {
   el('reroll').toggleAttribute('disabled',game.gold<RULES.rerollGold);
   updateHud();
   refreshLogs();
+  refreshHeroInfo();
 }
 function updateHud():void {
   el('gold').innerHTML=`${game.gold} <small>G</small>`;
@@ -127,6 +165,7 @@ function canvasSlot(x:number,y:number):number {
 document.addEventListener('pointerdown',(e)=>{
   if(e.button!==0)return;
   const target=e.target as HTMLElement;
+  if(!target.closest('#hero-info')&&!target.closest('.hero-card'))closeHeroInfo();
   const button=target.closest<HTMLElement>('[data-gear-id]');
   if(button){
     const id=Number(button.dataset.gearId),item=game.gear.find(g=>g.id===id);
@@ -178,11 +217,17 @@ el('app').addEventListener('click',(e)=>{
   if(suppressClick)return;
   const b=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!b||b.disabled)return;
   const d=b.dataset;
-  if(d.tab)openTab(d.tab);
-  else if(d.summon){const kind=d.summon as UnitKind;pending=pending===kind?null:kind;game.note(pending?`${UNITS[kind].name} 선택 · 전장의 빈 칸을 눌러주세요.`:'소환 선택을 취소했습니다.');}
+  if(d.tab){closeHeroInfo();openTab(d.tab);}
+  else if(d.summon){
+    const kind=d.summon as UnitKind;
+    if(UNITS[kind].hero){
+      const placed=game.heroes().find(u=>u.kind===kind);
+      if(placed){selectedUnit=placed.id;selectedHero=placed.id;pending=null;selectedGear=null;openTab('gear');heroInfo={kind,unitId:placed.id};game.note(`${UNITS[kind].name} 장비 선택`);}
+      else {heroInfo={kind,unitId:null};pending=game.heroes().length<RULES.heroLimit?kind:null;game.note(pending?`${UNITS[kind].name} 선택 · 빈 칸을 누르면 무료 소환`:'영웅 정원이 가득합니다. 기본 능력치를 확인할 수 있습니다.');}
+    } else {closeHeroInfo();pending=pending===kind?null:kind;game.note(pending?`${UNITS[kind].name} 선택 · 전장의 빈 칸을 눌러주세요.`:'소환 선택을 취소했습니다.');}
+  }
   else if(d.upgrade)game.upgrade(Number(d.upgrade));
   else if(d.sellUnit){game.sellUnit(Number(d.sellUnit));selectedUnit=null;}
-  else if(d.hero){selectedHero=Number(d.hero);if(game.gear.find(g=>g.id===selectedGear)?.owner!==null)selectedGear=null;}
   else if(d.buy)game.buy(Number(d.buy));
   else if(d.cell||d.bagCell){
     if(d.gearId){
@@ -200,6 +245,10 @@ el('app').addEventListener('click',(e)=>{
   else if(b.id==='speed'){game.speed=game.speed===1?2:game.speed===2?3:1;b.textContent=`${game.speed}×`;}
   refresh();
 },{signal:events.signal});
+el('hero-info').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-info'))closeHeroInfo();},{signal:events.signal});
+document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},{signal:events.signal});
+window.addEventListener('resize',positionHeroInfo,{signal:events.signal});
+document.addEventListener('scroll',positionHeroInfo,{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
 el('app').addEventListener('dblclick',(e)=>{
   const block=(e.target as HTMLElement).closest<HTMLElement>('[data-gear-id]');
@@ -216,8 +265,8 @@ async function start():Promise<void> {
   const view=createDefenseView(app,game,(slot)=>{
     if(unitDrag?.moved)return;
     const unit=game.units.find(u=>u.slot===slot);
-    if(unit){selectedUnit=unit.id;pending=null;if(UNITS[unit.kind].hero){selectedHero=unit.id;selectedGear=null;openTab('gear');}game.note(`${UNITS[unit.kind].name} 선택 · 드래그로 이동·자리교체`);}
-    else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}}}
+    if(unit){selectedUnit=unit.id;pending=null;if(UNITS[unit.kind].hero){selectedHero=unit.id;selectedGear=null;openTab('gear');heroInfo={kind:unit.kind,unitId:unit.id};}else closeHeroInfo();game.note(`${UNITS[unit.kind].name} 선택 · 드래그로 이동·자리교체`);}
+    else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
     else game.note('먼저 아래에서 소환할 병사 또는 영웅을 선택하세요.');
     refresh();
   });

@@ -27,13 +27,11 @@
         <div class="section-title"><h2>병사 소환</h2><span>소환: 빈 칸 터치 · 이동: 유닛 드래그</span></div>
         <div id="soldiers" class="cards three"></div>
         <div class="section-title"><h2>영웅 소환</h2><span id="hero-count">무료 · 최대 3명</span></div>
-        <div id="heroes" class="cards two"></div>
+        <div id="heroes" class="cards two" aria-label="영웅 선택 · 클릭하여 능력치 확인"></div>
         <section id="unit-detail" class="detail"></section>
       </section>
       <section id="gear" class="panel" hidden>
-        <div class="section-title"><h2>영웅 장비</h2><span>장착 즉시 효과 적용</span></div>
-        <div id="hero-tabs" class="hero-tabs"></div>
-        <div id="hero-stats" class="stat-line"></div>
+        <div class="section-title"><h2 id="gear-title">영웅 장비</h2><span>전장의 영웅을 눌러 선택</span></div>
         <div class="equipment-layout"><div id="equipment" aria-label="영웅 장비칸 5열 6행"></div><aside><b>장비 배치</b><p>선택 후 빈 칸 터치 또는 드래그.<br>블록 더블클릭·두 번 탭: 회전.</p><button id="rotate">↻ 90° 회전</button><button id="unequip">가방으로 해제</button></aside></div>
         <div id="item-detail" class="detail"></div>
         <div class="section-title"><h2>공용 가방</h2><span>수량 제한 없음</span></div>
@@ -47,7 +45,7 @@
         <div id="shop-item-detail" class="detail"></div>
         <p class="hint">공용 가방은 아래로 확장됩니다. 블록 드래그: 이동 · 더블클릭·두 번 탭: 회전.</p>
       </section>
-      <footer>WEB-004 · 임시 수치 / 자동 스킬·웨이브·보스·조합은 미구현</footer>
+      <footer>WEB-005 · 임시 수치 / 자동 스킬·웨이브·보스·조합은 미구현</footer>
     </main>
     <aside id="dev-log" aria-label="임시 개발자 기록창">
       <header class="dev-log-heading"><h2>개발자 기록창 <span>임시</span></h2><p>전투 경과 시간 · 최신 기록 위 · 구역별 최근 100건</p></header>
@@ -55,6 +53,7 @@
       <section class="log-section"><h3>② 처치 · 골드 획득 <small id="reward-count">0건</small></h3><ol id="reward-log" aria-label="처치 보상 기록"><li class="log-empty">처치 보상이 발생하면 표시됩니다.</li></ol></section>
       <section class="log-section"><h3>③ 골드 사용 · 판매 <small id="economy-count">0건</small></h3><ol id="economy-log" aria-label="골드 사용 판매 기록"><li class="log-empty">소환·강화·구매·판매 시 표시됩니다.</li></ol></section>
     </aside>
+    <section id="hero-info" role="dialog" aria-modal="false" aria-label="영웅 능력치" hidden></section>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
