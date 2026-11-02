@@ -41,6 +41,7 @@ export class Defense {
   gold:number=RULES.initialGold;
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
   shop:(ItemDef|null)[]=ITEMS.slice(0,5);
+  shopDiscounts:boolean[]=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);
   kills=0; elapsed=0; speed=1; revision=0;
   anvils=0;
   message='병사를 선택하고 전장의 빈 칸을 눌러주세요.';
@@ -131,18 +132,21 @@ export class Defense {
   }
   buy(index:number,position?:{x:number;y:number}):boolean {
     const item=this.shop[index];if(!item)return false;
-    if(this.gold<item.price)return this.note('구매 골드가 부족합니다.');
-    const before=this.gold;this.gold-=item.price;this.shop[index]=null;
-    const gear:Gear={id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis:item.price};
+    const price=this.shopPrice(index);
+    if(this.gold<price)return this.note('구매 골드가 부족합니다.');
+    const before=this.gold;this.gold-=price;this.shop[index]=null;
+    const gear:Gear={id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis:price};
     Object.assign(gear,this.purchasePosition(item,position));
     this.gear.push(gear);
-    this.goldLog('economy',`${item.name} #${gear.id} 구매`,before);
+    this.goldLog('economy',`${item.name} #${gear.id} 구매${this.shopDiscounts[index]?' (반값 할인)':''}`,before);
     this.note(`${item.name}을 공용 가방에 넣었습니다.`);return true;
   }
+  shopPrice(index:number):number {return Math.floor((this.shop[index]?.price??0)*(this.shopDiscounts[index]?0.5:1));}
   reroll():boolean {
     if(this.gold<RULES.rerollGold)return this.note('리롤 골드가 부족합니다.');
     const before=this.gold;this.gold-=RULES.rerollGold;
     this.shop=Array.from({length:5},()=>ITEMS[Math.floor(Math.random()*ITEMS.length)]);
+    this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);
     this.goldLog('economy','상점 리롤',before);
     this.note('상점 상품을 새로 가져왔습니다.');return true;
   }
@@ -150,6 +154,9 @@ export class Defense {
     const item=this.gear.find(g=>g.id===id),unit=this.heroes().find(u=>u.id===owner);
     if(!item||!unit)return this.note('먼저 장비를 사용할 영웅을 선택해 주세요.');
     if(!Number.isInteger(x)||!Number.isInteger(y)||!Number.isInteger(turns))return this.note('유효한 장비 칸을 선택하세요.');
+    const position=this.correctedPosition(item,owner,x,y,turns);
+    if(!position)return this.note('영웅 장비칸에 빈칸이 없습니다.');
+    x=position.x;y=position.y;
     item.owner=owner;item.x=x;item.y=y;item.turns=((turns%4)+4)%4;item.order=++this.placementOrder;
     const state=this.gearState(item);
     this.note(`${item.def.name} 배치 완료 · ${state.active?'능력치 활성':state.reason+' / 능력치 비활성'}`);return true;
@@ -160,16 +167,40 @@ export class Defense {
     g.owner=null;Object.assign(g,space);
     this.note(`${g.def.name} 장착 해제 · 공용 가방으로 이동`);return true;
   }
-  canPlace(item:Pick<Gear,'id'|'def'>,owner:number|null,x:number,y:number,turns:number):boolean {
+  outside(item:Pick<Gear,'def'>,owner:number|null,x:number,y:number,turns:number):boolean {
+    return rotated(item.def.cells,turns).some(([dx,dy])=>x+dx<0||y+dy<0||x+dx>=GRID.columns||(owner!==null&&y+dy>=GRID.rows));
+  }
+  canPlace(item:Pick<Gear,'id'|'def'>,owner:number|null,x:number,y:number,turns:number,others:readonly Gear[]=this.gear):boolean {
     if(!Number.isInteger(x)||!Number.isInteger(y)||!Number.isInteger(turns))return false;
     const cells=rotated(item.def.cells,turns).map(([dx,dy])=>[dx+x,dy+y]);
     if(cells.some(([cx,cy])=>cx<0||cy<0||cx>=GRID.columns||(owner!==null&&cy>=GRID.rows)))return false;
-    const occupied=new Set(this.gear.filter(g=>g.owner===owner&&g.id!==item.id).flatMap(g=>rotated(g.def.cells,g.turns).map(([dx,dy])=>`${g.x+dx},${g.y+dy}`)));
+    const occupied=new Set(others.filter(g=>g.owner===owner&&g.id!==item.id).flatMap(g=>rotated(g.def.cells,g.turns).map(([dx,dy])=>`${g.x+dx},${g.y+dy}`)));
     return !cells.some(([cx,cy])=>occupied.has(`${cx},${cy}`));
+  }
+  nearestFree(item:Pick<Gear,'id'|'def'>,owner:number|null,x:number,y:number,turns:number,others:readonly Gear[]=this.gear):{x:number;y:number}|null {
+    const cells=rotated(item.def.cells,turns),height=Math.max(...cells.map(c=>c[1]))+1;
+    const bottom=others.filter(g=>g.owner===owner&&g.id!==item.id).reduce((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+1),0);
+    const rows=owner===null?Math.max(GRID.rows,bottom+height,Math.ceil(Math.max(0,y))+height):GRID.rows;
+    let best:{x:number;y:number}|null=null,distance=Infinity;
+    for(let cy=0;cy<=rows-height;cy++)for(let cx=0;cx<GRID.columns;cx++){
+      const d=(cx-x)**2+(cy-y)**2;
+      if(d<distance&&this.canPlace(item,owner,cx,cy,turns,others)){best={x:cx,y:cy};distance=d;}
+    }
+    return best;
+  }
+  correctedPosition(item:Pick<Gear,'id'|'def'>,owner:number|null,x:number,y:number,turns:number,others:readonly Gear[]=this.gear):{x:number;y:number}|null {
+    return this.outside(item,owner,x,y,turns)?this.nearestFree(item,owner,x,y,turns,others):{x,y};
+  }
+  autoEquip(id:number,owner:number):boolean {
+    const item=this.gear.find(g=>g.id===id);if(!item||!this.heroes().some(h=>h.id===owner))return false;
+    const position=this.nearestFree(item,owner,0,0,item.turns);
+    if(!position)return this.note('영웅 장비칸에 빈칸이 없습니다.');
+    return this.equip(id,owner,position.x,position.y,item.turns);
   }
   purchasePosition(def:ItemDef,position?:{x:number;y:number}):{x:number;y:number} {
     const item={id:-1,def,turns:0};
-    return position&&this.canPlace(item,null,position.x,position.y,0)?position:this.findBagSpace(item);
+    const corrected=position?this.correctedPosition(item,null,position.x,position.y,0):null;
+    return corrected&&this.canPlace(item,null,corrected.x,corrected.y,0)?corrected:this.findBagSpace(item);
   }
   private findBagSpace(item:Pick<Gear,'id'|'def'|'turns'>):{x:number;y:number} {
     const bottom=this.gear.filter(g=>g.owner===null&&g.id!==item.id).reduce((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+1),0);
@@ -181,6 +212,8 @@ export class Defense {
   }
   placeInBag(id:number,x:number,y:number,turns:number):boolean {
     const item=this.gear.find(g=>g.id===id);if(!item)return false;
+    const position=this.correctedPosition(item,null,x,y,turns);if(!position)return false;
+    x=position.x;y=position.y;
     if(!this.canPlace(item,null,x,y,turns))return this.note('가방 경계를 벗어나거나 장비가 겹칩니다. 원래 위치를 유지합니다.');
     item.owner=null;item.x=x;item.y=y;item.turns=((turns%4)+4)%4;
     this.note(`${item.def.name} 공용 가방 배치 완료`);return true;
@@ -233,15 +266,16 @@ export class Defense {
         costBasis:pair.reduce((sum,id)=>sum+this.gear.find(g=>g.id===id)!.costBasis,0)};
     });
     // 재료가 사라질 칸과 앞선 완성품까지 고려해, 가방 결과 배치도 소비 전에 검증한다.
-    const occupied=new Set(this.gear.filter(g=>g.owner===null&&!ids.includes(g.id))
-      .flatMap(g=>rotated(g.def.cells,g.turns).map(([x,y])=>`${g.x+x},${g.y+y}`)));
-    for(const result of results){
-      if(result.owner!==null)continue;
+    const planned=this.gear.filter(g=>!ids.includes(g.id));
+    for(const [i,result] of results.entries()){
       const def=ITEMS.find(item=>item.id===result.recipe.result)!;
-      const cells=rotated(def.cells,result.turns).map(([x,y])=>[result.x+x,result.y+y]);
-      if(cells.some(([x,y])=>x<0||y<0||x>=GRID.columns||occupied.has(`${x},${y}`)))
+      const candidate:Gear={id:this.nextId+i,def,...result,order:0};
+      const position=this.correctedPosition(candidate,result.owner,result.x,result.y,result.turns,planned);
+      if(!position)return this.note('영웅 장비칸에 빈칸이 없습니다. 재료와 모루는 유지됩니다.');
+      result.x=position.x;result.y=position.y;Object.assign(candidate,position);
+      if(result.owner===null&&!this.canPlace(candidate,null,result.x,result.y,result.turns,planned))
         return this.note('조합 자리의 완성품 공간이 부족합니다. 주변 블록을 옮겨주세요. 재료와 모루는 유지됩니다.');
-      cells.forEach(([x,y])=>occupied.add(`${x},${y}`));
+      planned.push(candidate);
     }
     this.gear=this.gear.filter(g=>!ids.includes(g.id));this.anvils-=pairs.length;
     for(const {recipe,costBasis,owner,x,y,turns} of results){
@@ -261,7 +295,7 @@ export class Defense {
   }
   reset():void {
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
-    this.shop=ITEMS.slice(0,5);this.kills=0;this.elapsed=0;this.speed=1;this.spawnClock=0;this.nextId=1;this.placementOrder=0;
+    this.shop=ITEMS.slice(0,5);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.spawnClock=0;this.nextId=1;this.placementOrder=0;
     this.logs.damage.length=0;this.logs.reward.length=0;this.logs.economy.length=0;this.nextLogId=1;this.logRevision++;
     this.note('게임을 시작 상태로 초기화했습니다.');
   }

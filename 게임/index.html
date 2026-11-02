@@ -42,11 +42,11 @@
         <div class="section-title"><h2>공용 가방</h2><span>구매한 장비 보관</span></div>
         <div class="inventory-scroll"><div id="shop-bag" class="inventory-grid" aria-label="상점 공용 가방"></div></div>
         <div id="shop-item-detail" class="detail"></div>
-        <div class="section-title"><h2>전투 상점</h2><button id="reroll" class="small-button">새로고침 20G</button></div>
-        <div id="shop-cards" class="shop-cards"></div>
+        <section id="shop-market" aria-label="상점과 드래그 판매 영역"><p id="shop-sale-hint">보유 아이템을 이곳으로 끌어 판매</p><div class="section-title"><h2>전투 상점</h2><button id="reroll" class="small-button">새로고침 20G</button></div>
+        <div id="shop-cards" class="shop-cards"></div></section>
         <p class="hint">공용 가방은 아래로 확장됩니다. 블록 드래그: 이동 · 더블클릭·두 번 탭: 회전. 상점 상품을 공용 가방에 내려놓으면 구매합니다.</p>
       </section>
-      <footer>WEB-008 · 임시 수치 / 자동 스킬·웨이브·보스·일반 모루 수급은 미구현</footer>
+      <footer>WEB-011 · 임시 수치 / 자동 스킬·웨이브·보스·일반 모루 수급은 미구현</footer>
     </main>
     <aside id="dev-tools" aria-label="개발자 도구와 아이템 조합">
       <header class="tools-heading"><h2>개발자 도구 <span>임시</span></h2><p id="dev-balance">골드 480G · 모루 0</p></header>
@@ -62,6 +62,9 @@
       <section class="log-section"><h3>③ 재화 사용 · 판매 · 조합 <small id="economy-count">0건</small></h3><ol id="economy-log" aria-label="재화 사용 판매 조합 기록"><li class="log-empty">소환·강화·구매·판매·조합 시 표시됩니다.</li></ol></section>
     </aside>
     <svg id="combination-links" aria-hidden="true"></svg>
+    <button id="field-upgrade" hidden></button>
+    <div id="center-notice" role="status" aria-live="polite" hidden></div>
+    <div id="hero-drop-target" hidden></div>
     <div id="gear-drag-layer" aria-hidden="true"></div>
     <section id="hero-info" role="dialog" aria-modal="false" aria-label="유닛 능력치" hidden></section>
     <script type="module" src="/src/main.ts"></script>

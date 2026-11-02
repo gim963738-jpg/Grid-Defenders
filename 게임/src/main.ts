@@ -12,6 +12,7 @@ let shopFocus:number|null=null;
 let pressedGear:number|null=null;
 const events=new AbortController();
 let heroInfo:{kind:UnitKind;unitId:number|null}|null=null;
+let noticeTimer:ReturnType<typeof setTimeout>|undefined;
 let heroInfoMarkup='';
 function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
 function positionHeroInfo():void {
@@ -107,10 +108,11 @@ function inventoryGrid(owner:number|null):string {
 }
 function refresh():void {
 
+  const chosenSoldier=game.units.find(u=>u.id===selectedUnit&&!UNITS[u.kind].hero);
   const unitCards=(hero:boolean)=>Object.entries(UNITS).filter(([,d])=>d.hero===hero).map(([kind,d])=>{
     const blocked=hero&&(game.heroes().length>=RULES.heroLimit||game.heroes().some(u=>u.kind===kind));
     if(hero)return `<button class="unit-card hero-card ${pending===kind?'selected':''} ${blocked?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
-    return `<button class="unit-card ${pending===kind?'selected':''} ${game.gold<d.cost?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><small>클릭하여 능력치 확인</small><span class="price">${d.cost} G</span></button>`;
+    return `<div class="soldier-choice"><button class="unit-card ${pending===kind?'selected':''} ${game.gold<d.cost?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><small>클릭하여 능력치 확인</small><span class="price">${d.cost} G</span></button>${chosenSoldier?.kind===kind?`<button class="card-upgrade" data-upgrade="${chosenSoldier.id}" ${chosenSoldier.level>=5||game.gold<game.upgradeCost(chosenSoldier)?'disabled':''}>#${chosenSoldier.id} 승급 ${chosenSoldier.level>=5?'MAX':game.upgradeCost(chosenSoldier)+'G'}</button>`:''}</div>`;
   }).join('');
   el('soldiers').innerHTML=unitCards(false);el('heroes').innerHTML=unitCards(true);
   el('hero-count').textContent=`배치 ${game.heroes().length} / 3 · 무료`;
@@ -118,7 +120,7 @@ function refresh():void {
   el('unit-detail').hidden=!u||UNITS[u.kind].hero;
   if(u&&!UNITS[u.kind].hero) {
     const d=UNITS[u.kind],s=game.stats(u);
-    el('unit-detail').innerHTML=`<b>${d.name} #${u.id} Lv.${u.level}</b> · ${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열<br>공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<div class="actions"><button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>강화 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button></div>`;
+    el('unit-detail').innerHTML=`<b>${d.name} #${u.id} Lv.${u.level}</b> · ${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열<br>공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<div class="actions"><button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>승급 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button></div>`;
   } else el('unit-detail').textContent='배치된 유닛을 누르면 정보와 병사 강화·판매를 확인합니다.';
   if(!game.heroes().some(h=>h.id===selectedHero))selectedHero=game.heroes()[0]?.id??null;
   const hero=game.heroes().find(h=>h.id===selectedHero);
@@ -133,12 +135,13 @@ function refresh():void {
   const gear=game.gear.find(g=>g.id===selectedGear);
   const itemDetail=gear?`${shape(gear.def,turns)} <b>${gear.def.name} #${gear.id}</b> · ${gear.def.description}<br>방향 ${turns*90}° · ${gear.owner===null?'공용 가방':game.gearState(gear).active?'능력치 활성':`능력치 비활성 (${game.gearState(gear).reason})`}<div class="actions"><button data-rotate-selected>↻ 회전</button>${gear.owner===null?`<button data-open-gear>영웅에게 장착</button>`:''}<button class="danger" data-sell-gear="${gear.id}">판매 +${Math.floor(gear.costBasis/2)}G</button><button data-cancel-gear>취소</button></div>`:'블록을 선택하거나 끌어 놓으세요. 더블클릭·두 번 탭하면 회전합니다.';
   el('item-detail').innerHTML=itemDetail;el('shop-item-detail').innerHTML=itemDetail;
-  el('shop-cards').innerHTML=game.shop.map((item,index)=>item?`<article class="shop-card" data-shop-index="${index}" tabindex="0" aria-label="${item.name} · 공용 가방에 드래그하여 구매">${shape(item)}<b>${item.name}</b><p>${item.description}</p><button data-buy="${index}" ${game.gold<item.price?'disabled':''}>구매 ${item.price}G</button></article>`:'<article class="shop-card"><b>구매 완료</b><p>새로고침으로 상품을 보충하세요.</p></article>').join('');
+  el('shop-cards').innerHTML=game.shop.map((item,index)=>item?`<article class="shop-card" data-shop-index="${index}" tabindex="0" aria-label="${item.name} · 공용 가방에 드래그하여 구매">${shape(item)}<b>${item.name}</b><p>${item.description}</p>${game.shopDiscounts[index]?`<span class="discount-tag">50% 할인</span> <del>${item.price}G</del>`:''}<button data-buy="${index}" ${game.gold<game.shopPrice(index)?'disabled':''}>구매 ${game.shopPrice(index)}G</button></article>`:'<article class="shop-card"><b>구매 완료</b><p>새로고침으로 상품을 보충하세요.</p></article>').join('');
   el('reroll').toggleAttribute('disabled',game.gold<RULES.rerollGold);
   updateHud();
   refreshLogs();
   refreshHeroInfo();
   refreshTools();
+  refreshFieldUpgrade();
 }
 function refreshTools():void {
   el('dev-balance').textContent=`골드 ${game.gold.toLocaleString()}G · 모루 ${game.anvils}`;
@@ -226,35 +229,62 @@ let unitDrag:Drag|null=null;
 let suppressClick=false;
 let lastGearTap:{id:number;context:string;time:number}|null=null;
 let lastRotation:{id:number;time:number}|null=null;
+function showCenterNotice(message:string):void {
+  clearTimeout(noticeTimer);el('center-notice').textContent=message;el('center-notice').hidden=false;
+  noticeTimer=setTimeout(()=>el('center-notice').hidden=true,2800);
+}
+function refreshFieldUpgrade():void {
+  const button=el<HTMLButtonElement>('field-upgrade'),u=game.units.find(u=>u.id===selectedUnit&&!UNITS[u.kind].hero),canvas=document.querySelector('canvas');
+  button.hidden=!u||!canvas||!!unitDrag?.moved;if(!u||!canvas||unitDrag?.moved)return;
+  const r=canvas.getBoundingClientRect(),p=SLOTS[u.slot],x=r.left+p.x*r.width/RULES.width,y=r.top+(p.y+25)*r.height/RULES.height;
+  button.hidden=y<0||y>innerHeight||r.bottom<0||r.top>innerHeight;
+  button.style.left=`${Math.max(38,Math.min(innerWidth-38,x))}px`;button.style.top=`${y}px`;
+  button.textContent=`승급 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}`;
+  button.disabled=u.level>=5||game.gold<game.upgradeCost(u);button.dataset.upgrade=String(u.id);
+}
+function dragDestination(){
+  if(!drag)return null;
+  const hit=document.elementFromPoint(drag.x,drag.y),gear=game.gear.find(g=>g.id===drag!.id);
+  if(drag.shopIndex===undefined&&tab==='shop'&&hit?.closest('#shop-market'))return {kind:'sale' as const};
+  const hero=tab==='shop'&&gear?.owner===null&&hit?.closest('canvas')?game.heroes().find(h=>h.slot===canvasSlot(drag!.x,drag!.y)):null;
+  if(hero)return {kind:'hero' as const,hero};
+  const grids=['equipment','gear-bag','shop-bag'].map(id=>el(id)).filter(g=>g.getClientRects().length&&g.querySelector('[data-cell],[data-bag-cell]'));
+  let grid=hit?.closest<HTMLElement>('#equipment,#gear-bag,#shop-bag');
+  // 영역 밖 드롭도 가장 가까운 보이는 격자의 좌표로 보정한다. 상점 미구매품은 가방 위에서만 구매.
+  if(!grid&&drag.shopIndex===undefined)grid=grids.sort((a,b)=>{
+    const distance=(g:HTMLElement)=>{const r=g.getBoundingClientRect();return Math.max(r.left-drag!.x,0,drag!.x-r.right)**2+Math.max(r.top-drag!.y,0,drag!.y-r.bottom)**2};return distance(a)-distance(b);
+  })[0]??null;
+  if(!grid)return null;
+  const first=grid.querySelector<HTMLElement>('[data-cell],[data-bag-cell]');if(!first)return null;
+  const r=first.getBoundingClientRect(),step=r.width+3;
+  const x=Math.round((drag.x-r.left-r.width/2)/step)-drag.dx,y=Math.round((drag.y-r.top-r.height/2)/step)-drag.dy;
+  const bag=grid.id!=='equipment',owner=bag?null:selectedHero;
+  return {kind:'grid' as const,grid,bag,owner,x,y,size:r.width};
+}
 function updateGearDrag():void {
-  document.querySelectorAll<HTMLElement>('.drop-preview').forEach(node=>{
-    node.classList.remove('drop-preview','drop-warning');node.style.removeProperty('--preview-color');
-  });
+  document.querySelectorAll<HTMLElement>('.drop-preview').forEach(node=>{node.classList.remove('drop-preview','drop-warning');node.style.removeProperty('--preview-color');});
+  el('hero-drop-target').hidden=true;el('shop-market').classList.remove('sale-drop-active');el('shop-sale-hint').textContent='보유 아이템을 이곳으로 끌어 판매';
   if(!drag?.moved||!drag.ghost)return;
-  const gear=game.gear.find(g=>g.id===drag!.id);
-  const def=drag.shopIndex===undefined?gear?.def:game.shop[drag.shopIndex];if(!def)return;
-  const rotation=gear?.turns??0,cells=rotated(def.cells,rotation);
-  const hit=document.elementFromPoint(drag.x,drag.y)?.closest<HTMLElement>('[data-cell],[data-bag-cell]');
-  const grid=hit?.parentElement;
-  const size=hit?.getBoundingClientRect().width??drag.cellSize??32;
-  const gap=3,step=size+gap;
-  const ghost=drag.ghost;
+  const gear=game.gear.find(g=>g.id===drag!.id),def=drag.shopIndex===undefined?gear?.def:game.shop[drag.shopIndex];if(!def)return;
+  const rotation=gear?.turns??0,cells=rotated(def.cells,rotation),destination=dragDestination();
+  const size=destination?.kind==='grid'?destination.size:drag.cellSize??32,step=size+3,ghost=drag.ghost;
   ghost.innerHTML=cells.map(([x,y])=>`<i style="left:${x*step}px;top:${y*step}px;width:${size}px;height:${size}px;background:${def.color}"></i>`).join('');
-  ghost.style.width=`${(Math.max(...cells.map(c=>c[0]))+1)*step-gap}px`;
-  ghost.style.height=`${(Math.max(...cells.map(c=>c[1]))+1)*step-gap}px`;
+  ghost.style.width=`${(Math.max(...cells.map(c=>c[0]))+1)*step-3}px`;ghost.style.height=`${(Math.max(...cells.map(c=>c[1]))+1)*step-3}px`;
   ghost.style.left=`${drag.x-drag.dx*step-size/2}px`;ghost.style.top=`${drag.y-drag.dy*step-size/2}px`;
   let valid=true;
-  if(hit&&grid){
-    const bag=hit.dataset.bagCell!==undefined;
-    const [cx,cy]=(hit.dataset.bagCell??hit.dataset.cell)!.split(',').map(Number);
-    let x=cx-drag.dx,y=cy-drag.dy;
-    if(drag.shopIndex!==undefined){
-      valid=bag&&game.gold>=def.price;
-      if(bag){const position=game.purchasePosition(def,{x:cx,y:cy});x=position.x;y=position.y;}
-    } else valid=(bag||selectedHero!==null)&&game.canPlace({id:drag.id,def},bag?null:selectedHero,x,y,rotation);
-    for(const [dx,dy] of cells){
-      const address=`${x+dx},${y+dy}`;
-      const node=Array.from(grid.querySelectorAll<HTMLElement>('[data-cell],[data-bag-cell]')).find(n=>(n.dataset.cell??n.dataset.bagCell)===address);
+  if(destination?.kind==='sale'){el('shop-market').classList.add('sale-drop-active');el('shop-sale-hint').textContent=`놓으면 판매 +${Math.floor((gear?.costBasis??0)/2)}G`;}
+  else if(destination?.kind==='hero'){
+    const canvas=document.querySelector('canvas')!,r=canvas.getBoundingClientRect(),p=SLOTS[destination.hero.slot],outline=el('hero-drop-target');
+    outline.hidden=false;outline.style.left=`${r.left+(p.x-25)*r.width/RULES.width}px`;outline.style.top=`${r.top+(p.y-23)*r.height/RULES.height}px`;
+    outline.style.width=`${50*r.width/RULES.width}px`;outline.style.height=`${46*r.height/RULES.height}px`;
+    valid=!!game.nearestFree({id:drag.id,def},destination.hero.id,0,0,rotation);outline.classList.toggle('no-space',!valid);
+  } else if(destination?.kind==='grid'){
+    const {bag,owner,grid}=destination;
+    let position=drag.shopIndex!==undefined?(bag?game.purchasePosition(def,{x:destination.x,y:destination.y}):null):game.correctedPosition({id:drag.id,def},owner,destination.x,destination.y,rotation);
+    valid=!!position&&(bag||owner!==null)&&game.canPlace({id:drag.id,def},owner,position.x,position.y,rotation);
+    if(drag.shopIndex!==undefined)valid=!!position&&bag&&game.gold>=game.shopPrice(drag.shopIndex);
+    if(position)for(const [dx,dy] of cells){
+      const node=Array.from(grid.querySelectorAll<HTMLElement>('[data-cell],[data-bag-cell]')).find(n=>(n.dataset.cell??n.dataset.bagCell)===`${position.x+dx},${position.y+dy}`);
       if(node){node.classList.add('drop-preview');node.classList.toggle('drop-warning',!valid);node.style.setProperty('--preview-color',def.color);}
     }
   }
@@ -321,14 +351,18 @@ document.addEventListener('pointerup',(e)=>{
   if(!drag||drag.pointer!==e.pointerId)return;
   if(drag.moved) {
     suppressClick=true;
-    const target=document.elementFromPoint(e.clientX,e.clientY)?.closest<HTMLElement>('[data-cell],[data-bag-cell]');
-    const address=target?.dataset.cell??target?.dataset.bagCell;
+    drag.x=e.clientX;drag.y=e.clientY;const destination=dragDestination();
     if(drag.shopIndex!==undefined){
-      const bag=document.elementFromPoint(e.clientX,e.clientY)?.closest('#gear-bag,#shop-bag');
-      if(bag){const position=target?.dataset.bagCell?.split(',').map(Number);game.buy(drag.shopIndex,position?{x:position[0],y:position[1]}:undefined);shopFocus=null;}
+      if(destination?.kind==='grid'&&destination.bag)game.buy(drag.shopIndex,{x:destination.x,y:destination.y});
       else game.note('공용 가방에 내려놓을 때만 구매합니다.');
-    } else if(address){const [x,y]=address.split(',').map(Number);placeGear(x-drag.dx,y-drag.dy,!!target?.dataset.bagCell);}
-    else game.note('장비칸에 놓지 않아 원래 위치를 유지합니다.');
+    } else if(destination?.kind==='sale'){game.sellGear(drag.id);selectedGear=null;}
+    else if(destination?.kind==='hero'){
+      if(game.autoEquip(drag.id,destination.hero.id)){selectedHero=destination.hero.id;selectedGear=null;}
+      else showCenterNotice(game.message);
+    } else if(destination?.kind==='grid'){
+      placeGear(destination.x,destination.y,destination.bag);
+      if(game.message.includes('빈칸이 없습니다'))showCenterNotice(game.message);
+    } else game.note('장비칸을 찾지 못해 원래 위치를 유지합니다.');
     refresh();setTimeout(()=>suppressClick=false,0);
   }
   drag.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;updateGearDrag();refreshLinks();
@@ -341,6 +375,7 @@ el('app').addEventListener('click',(e)=>{
   if(d.tab){closeHeroInfo();openTab(d.tab);}
   else if(d.summon){
     const kind=d.summon as UnitKind;
+    if(!game.units.some(u=>u.id===selectedUnit&&u.kind===kind))selectedUnit=null;
     if(UNITS[kind].hero){
       const placed=game.heroes().find(u=>u.kind===kind);
       if(placed){selectedUnit=placed.id;selectedHero=placed.id;pending=null;selectedGear=null;openTab('gear');heroInfo={kind,unitId:placed.id};game.note(`${UNITS[kind].name} 장비 선택`);}
@@ -374,16 +409,17 @@ el('dev-tools').addEventListener('click',(e)=>{
   else if(button.id==='dev-anvils')game.devAnvils();
   else if(button.id==='dev-reset'){
     drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
-    game.reset();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
+    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
     lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');el('speed').textContent='1×';
   }
   refresh();
 },{signal:events.signal});
 window.addEventListener('blur',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
+el('field-upgrade').addEventListener('click',()=>{const id=Number(el('field-upgrade').dataset.upgrade);game.upgrade(id);refresh();},{signal:events.signal});
 el('hero-info').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-info'))closeHeroInfo();},{signal:events.signal});
 document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},{signal:events.signal});
-window.addEventListener('resize',()=>{positionHeroInfo();updateGearDrag();refreshLinks();},{signal:events.signal});
-document.addEventListener('scroll',()=>{positionHeroInfo();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
+window.addEventListener('resize',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{signal:events.signal});
+document.addEventListener('scroll',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
 el('app').addEventListener('dblclick',(e)=>{
   const block=(e.target as HTMLElement).closest<HTMLElement>('[data-gear-id]');
@@ -419,9 +455,9 @@ async function start():Promise<void> {
     }
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
     const dt=Math.min(ticker.deltaMS/1000,0.1);game.tick(dt);view.draw(selectedUnit,pending!==null);
-    hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshLogs();}
+    hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}
     if(lastRevision!==game.revision&&!drag&&!unitDrag){lastRevision=game.revision;refresh();}
   });
-  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
+  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
 void start().catch((error:unknown)=>{el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';console.error(error);});

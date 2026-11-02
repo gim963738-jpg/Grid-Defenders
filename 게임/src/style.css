@@ -94,3 +94,16 @@
 .gear-drag-ghost.drag-warning i{border-color:#ff817c}
 .gear-cell.drop-preview::after{content:'';position:absolute;inset:0;pointer-events:none;background:var(--preview-color);opacity:.45;border:2px dashed #e9f6d2;border-radius:2px;z-index:2}
 .gear-cell.drop-preview.drop-warning::after{background:#e55858;border-color:#ffaaa3}
+.soldier-choice{min-width:0;display:flex;flex-direction:column;gap:5px}.soldier-choice>.unit-card{width:100%;flex:1}
+.card-upgrade{padding:7px 3px;background:#66532f;color:#ffdfa0;border:1px solid #a98d51;border-radius:5px;font-size:10px}
+#field-upgrade{position:fixed;z-index:25;transform:translateX(-50%);width:74px;min-height:23px;padding:3px 2px;font-size:10px;border:1px solid #d1a45c;border-radius:5px;background:#514425;color:#ffe1a2;box-shadow:0 2px 6px #0009}
+#center-notice{position:fixed;z-index:50;left:50%;top:50%;transform:translate(-50%,-50%);width:max-content;max-width:calc(100vw - 32px);padding:16px 20px;border:1px solid #d5ac68;border-radius:9px;background:#1e2928f5;color:#ffe1aa;box-shadow:0 6px 28px #000a;text-align:center;font-size:14px;pointer-events:none}
+#hero-drop-target{position:fixed;z-index:16;border:3px solid #7be8ac;border-radius:6px;background:#71dfad22;pointer-events:none}
+#hero-drop-target.no-space{border-color:#f17c76;background:#ed686822}
+#shop-market{border:1px dashed #6c634d;border-radius:8px;padding:8px;margin-top:14px}
+#shop-market .section-title{margin-top:8px}
+#shop-sale-hint{margin:0;font-size:10px;color:#b6ad91;text-align:center}
+#shop-market.sale-drop-active{border:2px solid #edb472;background:#59432d55}
+#shop-market.sale-drop-active #shop-sale-hint{color:#ffe0a1;font-weight:700}
+.discount-tag{display:inline-block;font-size:10px;color:#ffdc88;background:#654b26;border:1px solid #ad8144;border-radius:3px;padding:1px 4px;margin-bottom:5px}
+.shop-card del{font-size:10px;color:#9eaa98}

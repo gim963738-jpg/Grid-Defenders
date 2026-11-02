@@ -1,6 +1,6 @@
 // WEB-002 시험 수치. 최종 밸런스가 아니다.
 export const RULES = { width: 390, height: 330, initialGold: 480, maxEnemies: 30,
-  spawnSeconds: 2.4, killGold: 12, heroLimit: 3, rerollGold: 20 } as const;
+  spawnSeconds: 2.4, killGold: 12, heroLimit: 3, rerollGold: 20, shopDiscountChance:0.2 } as const;
 export type UnitKind = 'guard' | 'archer' | 'mage' | 'tank' | 'melee' | 'ranged' | 'healer';
 export interface UnitDef { name: string; icon: string; hero: boolean; cost: number;
   attack: number; rate: number; range: number; hp: number; armor: number; color: number; }
