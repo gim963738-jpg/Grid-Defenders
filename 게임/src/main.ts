@@ -45,8 +45,9 @@ function refreshHeroInfo():void {
   if(!heroInfo)return;
   const def=UNITS[heroInfo.kind],unit=game.units.find(u=>u.id===heroInfo!.unitId);
   if(heroInfo.unitId!==null&&!unit){closeHeroInfo();return;}
-  const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0};
+  const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0,critChance:def.hero?0:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier};
   const fields=[['hp','♥','최대 체력',stats.hp.toLocaleString()],['attack','⚔','공격력',stats.attack.toLocaleString()],['armor','⬡','방어력',String(stats.armor)],['rate','↗','공격속도',`${stats.rate.toFixed(2)}/초`],['regen','✚','체력 재생',`${stats.regen}/초`],['gold','◇','골드 획득',`+${Math.round(stats.gold*100)}%`]];
+  if(!def.hero)fields.push(['attack','✦','치명타 확률',`${Math.round(stats.critChance*100)}%`],['attack','✦','치명타 배율',`${stats.critMultiplier}배`]);
   const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(([key,icon,label,value])=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}">${value}</dd></div>`).join('')}</dl>`;
   if(markup!==heroInfoMarkup){el('hero-info').innerHTML=markup;heroInfoMarkup=markup;}
   positionHeroInfo();
@@ -120,7 +121,7 @@ function refresh():void {
   el('unit-detail').hidden=!u||UNITS[u.kind].hero;
   if(u&&!UNITS[u.kind].hero) {
     const d=UNITS[u.kind],s=game.stats(u);
-    el('unit-detail').innerHTML=`<b>${d.name} #${u.id} Lv.${u.level}</b> · ${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열<br>공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<div class="actions"><button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>승급 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button></div>`;
+    el('unit-detail').innerHTML=`<b>${d.name} #${u.id} Lv.${u.level}</b> · ${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열<br>공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<br>치명타 ${Math.round(s.critChance*100)}% · 피해 ${s.critMultiplier}배<div class="actions"><button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>승급 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button></div>`;
   } else el('unit-detail').textContent='배치된 유닛을 누르면 정보와 병사 강화·판매를 확인합니다.';
   if(!game.heroes().some(h=>h.id===selectedHero))selectedHero=game.heroes()[0]?.id??null;
   const hero=game.heroes().find(h=>h.id===selectedHero);
@@ -207,7 +208,12 @@ function refreshLinks():void {
 }
 function updateHud():void {
   el('gold').innerHTML=`${game.gold} <small>G</small>`;
-  el('enemies').innerHTML=`${game.enemies.length} <small>/ ${RULES.maxEnemies}</small>`;
+  const bountyActive=game.enemies.some(e=>e.bounty&&e.hp>0),credits=game.bountyCredits();
+  el('enemies').innerHTML=`${game.enemies.filter(e=>!e.bounty).length} <small>/ ${RULES.maxEnemies}</small>${bountyActive?' <small class="bounty-hud">현상금1</small>':''}`;
+  const bountyButton=el<HTMLButtonElement>('bounty-summon');bountyButton.hidden=credits<1;bountyButton.disabled=bountyActive;
+  bountyButton.title=`현상금 소환 · 대기 ${credits}회 · 처치 보상 모루 ${RULES.bountyAnvils}개 / 기본 ${RULES.bountyGold}G`;
+  bountyButton.setAttribute('aria-label',bountyActive?'현상금 몬스터 전투 중':`현상금 몬스터 소환 · 남은 ${credits}회`);
+  el('bounty-label').textContent=bountyActive?'진행중':`소환${credits>1?' ×'+credits:''}`;
   el('kills').textContent=String(game.kills);
   el('population').textContent=`배치 ${game.units.length} / 16`;
   el('message').textContent=game.message;
@@ -333,6 +339,7 @@ document.addEventListener('pointermove',(e)=>{
       unitDrag.ghost.textContent=unit?`${UNITS[unit.kind].name} 이동`:'유닛 이동';document.body.append(unitDrag.ghost);
     }
     if(unitDrag.ghost){unitDrag.ghost.style.left=`${e.clientX}px`;unitDrag.ghost.style.top=`${e.clientY}px`;}
+    if(unitDrag.moved){unitDrag.x=e.clientX;unitDrag.y=e.clientY;}
   }
   if(!drag||drag.pointer!==e.pointerId)return;
   if(!drag.moved&&Math.hypot(e.clientX-drag.x,e.clientY-drag.y)>7) {
@@ -400,6 +407,7 @@ el('app').addEventListener('click',(e)=>{
   else if('openGear'in d)openTab('gear');
   else if(b.id==='combine'){if(game.combineMany(game.combinationPlan(selectedHero))){selectedGear=null;pressedGear=null;shopFocus=null;}}
   else if(b.id==='reroll')game.reroll();
+  else if(b.id==='bounty-summon')game.summonBounty();
   else if(b.id==='speed'){game.speed=game.speed===1?2:game.speed===2?3:1;b.textContent=`${game.speed}×`;}
   refresh();
 },{signal:events.signal});
@@ -454,7 +462,7 @@ async function start():Promise<void> {
       if(!node||node.scrollTop===before){if(drag.y<edge)window.scrollBy(0,-step);else if(drag.y>innerHeight-edge)window.scrollBy(0,step);}
     }
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
-    const dt=Math.min(ticker.deltaMS/1000,0.1);game.tick(dt);view.draw(selectedUnit,pending!==null);
+    const dt=Math.min(ticker.deltaMS/1000,0.1);game.tick(dt);view.draw(selectedUnit,pending!==null,unitDrag?.moved?{id:unitDrag.id,slot:canvasSlot(unitDrag.x,unitDrag.y)}:undefined);
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}
     if(lastRevision!==game.revision&&!drag&&!unitDrag){lastRevision=game.revision;refresh();}
   });

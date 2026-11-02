@@ -15,7 +15,7 @@
         <div><span>처치</span><strong id="kills">0</strong></div>
         <button id="speed" aria-label="전투 배속 변경">1×</button>
       </section>
-      <section id="battlefield" aria-label="순환 전장"><p id="status" role="status">전장을 준비하는 중입니다.</p></section>
+      <section id="battlefield" aria-label="순환 전장"><button id="bounty-summon" hidden aria-label="현상금 몬스터 소환"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12 4 3l9 6h6l9-6-1 9v12l-5 5H10l-5-5Z" fill="#bb8034" stroke="#ffdd7a" stroke-width="2"/><path d="M9 14h4v5H9zm10 0h4v5h-4zm-7 9h8" fill="#fff0bc" stroke="#fff0bc"/></svg><span id="bounty-label">소환</span></button><p id="status" role="status">전장을 준비하는 중입니다.</p></section>
       <div class="field-caption"><span>↻ 외곽 순환 · 아군 일방 공격</span><span id="population">배치 0 / 16</span></div>
       <p id="message" role="status">병사를 선택하고 전장의 빈 칸을 눌러주세요.</p>
       <nav class="tabs" aria-label="전투 조작 메뉴">
@@ -46,12 +46,12 @@
         <div id="shop-cards" class="shop-cards"></div></section>
         <p class="hint">공용 가방은 아래로 확장됩니다. 블록 드래그: 이동 · 더블클릭·두 번 탭: 회전. 상점 상품을 공용 가방에 내려놓으면 구매합니다.</p>
       </section>
-      <footer>WEB-011 · 임시 수치 / 자동 스킬·웨이브·보스·일반 모루 수급은 미구현</footer>
+      <footer>WEB-012 · 임시 수치 / 자동 스킬·웨이브·보스는 미구현</footer>
     </main>
     <aside id="dev-tools" aria-label="개발자 도구와 아이템 조합">
       <header class="tools-heading"><h2>개발자 도구 <span>임시</span></h2><p id="dev-balance">골드 480G · 모루 0</p></header>
       <div class="dev-actions"><button id="dev-gold">골드 +10,000G</button><button id="dev-anvils">모루 +10</button><button id="dev-reset" class="danger">게임 리셋</button></div>
-      <p class="tools-hint">리셋: 전투·재화·유닛·장비·기록 초기화.<br>모루는 현재 테스트 버튼으로 지급합니다.</p>
+      <p class="tools-hint">리셋: 전투·재화·유닛·장비·기록 초기화.<br>일반 몬스터 50마리 처치마다 현상금 소환 가능. 현상금 보상은 모루·골드입니다.</p>
       <p class="tools-hint">조합은 영웅 장비칸 오른쪽에서 실행합니다.<br>아이템을 누르는 동안 파란 점선으로 상대를 확인합니다. 변이 붙은 재료 중 조합 예정은 노란 실선, 재료를 공유하는 후순위는 회색 실선입니다.<br>조합 1회당 모루 1개를 사용합니다.</p>
       <section id="recipe-tree" aria-label="개발자용 조합 공식 트리"></section>
     </aside>
