@@ -1,8 +1,9 @@
-import { AREA_ATTACK, GRID, ITEMS, PATH, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+import { AREA_ATTACK, GRID, ITEMS, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
 export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; }
-export interface Gear { id:number; def:ItemDef; owner:number|null; x:number; y:number; turns:number; }
+export interface Gear { id:number; def:ItemDef; owner:number|null; x:number; y:number; turns:number; order:number; costBasis:number; }
+export interface GearState { active:boolean; reason:string; }
 export interface Shot { x:number; y:number; tx:number; ty:number; life:number; color:number; }
 export type AttackArea =
   | { kind:'sector'; x:number; y:number; radius:number; angle:number; halfAngle:number; life:number; color:number }
@@ -38,11 +39,13 @@ export class Defense {
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
   shop:(ItemDef|null)[]=ITEMS.slice(0,5);
   kills=0; elapsed=0; speed=1; revision=0;
+  anvils=0;
   message='병사를 선택하고 전장의 빈 칸을 눌러주세요.';
   readonly logs:Record<LogCategory,DevLog[]>={damage:[],reward:[],economy:[]};
   logRevision=0;
   private nextLogId=1;
   private nextId=1; private spawnClock=0;
+  private placementOrder=0;
   private log(category:LogCategory,text:string,data:Partial<Omit<DevLog,'id'|'time'|'category'|'text'>>={}):void {
     const list=this.logs[category];
     list.unshift({id:this.nextLogId++,time:this.elapsed,category,text,...data});
@@ -59,8 +62,25 @@ export class Defense {
   }
   note(message:string):false {this.message=message;this.revision++;return false;}
   heroes():Unit[] {return this.units.filter(u=>UNITS[u.kind].hero);}
+  gearStates(owner:number):Map<number,GearState> {
+    const occupied=new Set<string>(),result=new Map<number,GearState>();
+    const gear=this.gear.filter(g=>g.owner===owner).sort((a,b)=>a.order-b.order||a.id-b.id);
+    for(const item of gear){
+      const cells=rotated(item.def.cells,item.turns).map(([dx,dy])=>[item.x+dx,item.y+dy]);
+      const outside=cells.some(([x,y])=>x<0||y<0||x>=GRID.columns||y>=GRID.rows);
+      const overlap=cells.some(([x,y])=>occupied.has(`${x},${y}`));
+      result.set(item.id,{active:!outside&&!overlap,reason:outside?'경계 밖':overlap?'다른 장비와 겹침':'활성'});
+      // 먼저 놓인 물리 블록의 칸을 우선한다. 비활성 블록도 뒤에 놓인 블록과의 겹침 판정에 포함.
+      for(const [x,y] of cells)occupied.add(`${x},${y}`);
+    }
+    return result;
+  }
+  gearState(item:Gear):GearState {
+    return item.owner===null?{active:false,reason:'공용 가방 보관'}:this.gearStates(item.owner).get(item.id)!;
+  }
   stats(unit:Unit) {
-    const base=UNITS[unit.kind], gear=this.gear.filter(g=>g.owner===unit.id);
+    const states=this.gearStates(unit.id);
+    const base=UNITS[unit.kind], gear=this.gear.filter(g=>g.owner===unit.id&&states.get(g.id)?.active);
     const total=(field:'attack'|'armor'|'hp'|'speed'|'regen'|'gold')=>gear.reduce((a,g)=>a+(g.def[field]??0),0);
     return {attack:Math.round(base.attack*(1+(unit.level-1)*0.25)+total('attack')),
       rate:base.rate*(1+total('speed')),range:base.range,
@@ -110,7 +130,7 @@ export class Defense {
     const item=this.shop[index];if(!item)return false;
     if(this.gold<item.price)return this.note('구매 골드가 부족합니다.');
     const before=this.gold;this.gold-=item.price;this.shop[index]=null;
-    const gear:Gear={id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0};
+    const gear:Gear={id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis:item.price};
     Object.assign(gear,this.findBagSpace(gear));
     this.gear.push(gear);
     this.goldLog('economy',`${item.name} #${gear.id} 구매`,before);
@@ -126,9 +146,10 @@ export class Defense {
   equip(id:number,owner:number,x:number,y:number,turns:number):boolean {
     const item=this.gear.find(g=>g.id===id),unit=this.heroes().find(u=>u.id===owner);
     if(!item||!unit)return this.note('먼저 장비를 사용할 영웅을 선택해 주세요.');
-    if(!this.canPlace(item,owner,x,y,turns))return this.note('경계를 벗어나거나 다른 장비와 겹칩니다. 원래 위치를 유지합니다.');
-    item.owner=owner;item.x=x;item.y=y;item.turns=((turns%4)+4)%4;
-    this.note(`${item.def.name} 장착 완료 · 능력치 적용`);return true;
+    if(!Number.isInteger(x)||!Number.isInteger(y)||!Number.isInteger(turns))return this.note('유효한 장비 칸을 선택하세요.');
+    item.owner=owner;item.x=x;item.y=y;item.turns=((turns%4)+4)%4;item.order=++this.placementOrder;
+    const state=this.gearState(item);
+    this.note(`${item.def.name} 배치 완료 · ${state.active?'능력치 활성':state.reason+' / 능력치 비활성'}`);return true;
   }
   unequip(id:number):boolean {
     const g=this.gear.find(g=>g.id===id);if(!g)return false;
@@ -164,10 +185,42 @@ export class Defense {
   }
   sellGear(id:number):boolean {
     const g=this.gear.find(g=>g.id===id);if(!g)return false;
-    // 이번 판매 대상은 상점 직접 구매품만. 조합품의 재료 원가 규칙은 아직 구현하지 않음.
-    const before=this.gold,value=Math.floor(g.def.price/2);this.gold+=value;
+    // 직접 구매품은 구매 원가, 조합품은 소모한 재료의 누적 원가를 기준으로 환급.
+    const before=this.gold,value=Math.floor(g.costBasis/2);this.gold+=value;
     this.goldLog('economy',`${g.def.name} #${g.id} 판매`,before);
     this.gear=this.gear.filter(v=>v.id!==id);this.note(`${g.def.name} 판매 · ${value}G 환급`);return true;
+  }
+  recipeFor(ids:readonly number[]) {
+    if(ids.length!==2||new Set(ids).size!==2)return undefined;
+    const materials=ids.map(id=>this.gear.find(g=>g.id===id));
+    if(materials.some(g=>!g||g.owner!==null))return undefined;
+    const key=materials.map(g=>g!.def.id).sort().join(',');
+    return RECIPES.find(r=>[...r.materials].sort().join(',')===key);
+  }
+  combine(ids:readonly number[]):boolean {
+    const recipe=this.recipeFor(ids);
+    if(!recipe)return this.note('공용 가방의 서로 다른 재료 2개와 맞는 조합식을 선택하세요.');
+    if(this.anvils<1)return this.note('조합에 모루 1개가 필요합니다.');
+    const costBasis=ids.reduce((sum,id)=>sum+this.gear.find(g=>g.id===id)!.costBasis,0);
+    const def=ITEMS.find(item=>item.id===recipe.result)!;
+    // 검증이 끝난 후에만 재료와 모루를 소모한다.
+    this.gear=this.gear.filter(g=>!ids.includes(g.id));this.anvils--;
+    const result:Gear={id:this.nextId++,def,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis};
+    Object.assign(result,this.findBagSpace(result));this.gear.push(result);
+    this.log('economy',`${recipe.materials.map(id=>ITEMS.find(item=>item.id===id)!.name).join(' + ')} → ${def.name} #${result.id} · 모루 -1 / 남은 ${this.anvils} · 재료 원가 ${costBasis}G`);
+    this.note(`${def.name} 조합 완료 · 공용 가방에 배치`);return true;
+  }
+  devGold():void {
+    const before=this.gold;this.gold+=10000;this.goldLog('economy','[개발자] 골드 지급',before);this.note('개발자 골드 +10,000G');
+  }
+  devAnvils():void {
+    const before=this.anvils;this.anvils+=10;this.log('economy',`[개발자] 모루 +10 · ${before} → ${this.anvils}`);this.note('개발자 모루 +10');
+  }
+  reset():void {
+    this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
+    this.shop=ITEMS.slice(0,5);this.kills=0;this.elapsed=0;this.speed=1;this.spawnClock=0;this.nextId=1;this.placementOrder=0;
+    this.logs.damage.length=0;this.logs.reward.length=0;this.logs.economy.length=0;this.nextLogId=1;this.logRevision++;
+    this.note('게임을 시작 상태로 초기화했습니다.');
   }
   tick(realSeconds:number):void {
     const dt=realSeconds*this.speed;this.elapsed+=dt;
