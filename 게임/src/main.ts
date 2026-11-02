@@ -1,6 +1,6 @@
 import { Application } from 'pixi.js';
 import { Defense, recipeForTypes, type LogCategory } from './defense';
-import { GRID, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+import { GRID, ITEMS, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
 import './style.css';
 
@@ -149,6 +149,15 @@ function refreshTools():void {
   button.textContent=count?`조합 ${count}회 실행`:'조합 재료를 붙여주세요';
   button.title=plan.map(pair=>pair.map(id=>{const g=game.gear.find(g=>g.id===id)!;return `${g.def.name} #${g.id}`;}).join(' + ')).join(' / ');
   refreshLinks();
+}
+function renderRecipeTree():void {
+  el('recipe-tree').innerHTML=`<details open><summary>📁 조합 공식 <small>${RECIPES.length}종</small></summary><p class="tools-hint">개발 확인용 · 조합 1회당 모루 1개</p><ul>${RECIPES.map(recipe=>{
+    const result=ITEMS.find(item=>item.id===recipe.result)!;
+    return `<li><details open><summary><span class="tree-item">${shape(result)}<b>${result.name}</b></span></summary><ul>${recipe.materials.map(id=>{
+      const material=ITEMS.find(item=>item.id===id)!;
+      return `<li><span class="tree-item">${shape(material)}<span>${material.name} ×1</span></span></li>`;
+    }).join('')}</ul></details></li>`;
+  }).join('')}</ul></details>`;
 }
 // 화면에 보이는 칸들의 중심만 사용한다. 스크롤로 가려진 칸에는 선을 그리지 않는다.
 function visibleCenter(nodes:HTMLElement[]):{x:number;y:number}|null {
@@ -364,6 +373,7 @@ async function start():Promise<void> {
     refresh();
   });
   let lastRevision=-1,hudClock=0;
+  renderRecipeTree();
   refresh();
   app.ticker.add(ticker=>{
     if(drag?.moved){

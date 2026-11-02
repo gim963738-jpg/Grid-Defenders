@@ -78,3 +78,13 @@
 .shop-card[data-shop-index]:active{cursor:grabbing}
 #combine-status{color:#f2cf7b;overflow-wrap:anywhere}
 .equipment-layout aside #combine{background:#66532f;color:#fff0bd;font-weight:650}
+#recipe-tree{margin-top:14px;padding-top:12px;border-top:1px solid #5c5037;font-size:11px}
+#recipe-tree summary{cursor:pointer;color:#e8ce91;padding:5px 0;overflow-wrap:anywhere}
+#recipe-tree summary:focus-visible{outline:2px solid #f1c97b;outline-offset:2px}
+#recipe-tree ul{list-style:none;margin:0 0 5px 8px;padding-left:16px}
+#recipe-tree li{position:relative;border-left:1px solid #647267;padding:3px 0 3px 12px}
+#recipe-tree li::before{content:'';position:absolute;left:0;top:16px;width:9px;border-top:1px solid #647267}
+#recipe-tree li:last-child{border-left-color:transparent}
+#recipe-tree li:last-child::after{content:'';position:absolute;left:-1px;top:0;height:16px;border-left:1px solid #647267}
+#recipe-tree .tree-item{display:inline-flex;gap:8px;align-items:center;vertical-align:middle;color:#d5dfcd}
+#recipe-tree .mini-shape{min-width:31px;flex:none}
