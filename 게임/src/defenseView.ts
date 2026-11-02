@@ -32,6 +32,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const badges=SLOTS.map(p=>{const t=new Text({text:'',style:{fontFamily:'system-ui',fontSize:10,fontWeight:'bold',fill:0xf5f4e7}});t.anchor.set(0.5);t.position.set(p.x,p.y+15);root.addChild(t);return t;});
   const caption=new Text({text:'순환 디펜스 · 전투 시험',style:{fontFamily:'system-ui',fontSize:10,fill:0xdacdb1}});caption.position.set(13,RULES.height-17);root.addChild(caption);
   const numberPool:Text[]=[];
+  const enemyLabels:Text[]=[];
   return {
     draw(selectedId:number|null,pending:boolean,movement?:{id:number;slot:number}) {
       actors.clear();selected.clear();effects.clear();
@@ -70,15 +71,23 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
           actors.circle(p.x+13,p.y-17,4).fill(color);
         } else actors.moveTo(p.x+12,p.y+3).lineTo(p.x+18,p.y-17).stroke({width:3,color:0xd9e4e6});
       }
-      for(const e of game.enemies) {
+      for(const [index,e] of game.enemies.entries()) {
         actors.ellipse(e.x,e.y+7,10,4).fill({color:0x1d261d,alpha:0.4});
-        const radius=e.bounty?12:8;
-        actors.roundRect(e.x-radius,e.y-radius,radius*2,radius*2,5).fill(e.bounty?0xb87a30:0xbc6560).stroke({width:2,color:e.bounty?0xffdc73:0x623f3d});
+        const radius=e.named?14:e.bounty?12:8,color=e.bounty?0xb87a30:e.defenseType==='physical'?0x518db2:e.defenseType==='magic'?0x9660b4:0xbc6560;
+        actors.roundRect(e.x-radius,e.y-radius,radius*2,radius*2,5).fill(color).stroke({width:2,color:e.bounty||e.named?0xffdc73:0x394550});
         if(e.bounty)actors.moveTo(e.x-8,e.y-12).lineTo(e.x-8,e.y-18).lineTo(e.x-2,e.y-12).moveTo(e.x+8,e.y-12).lineTo(e.x+8,e.y-18).lineTo(e.x+2,e.y-12).stroke({width:3,color:0xffdc73});
+        if(e.named)actors.moveTo(e.x-10,e.y-radius-1).lineTo(e.x-11,e.y-radius-7).lineTo(e.x-5,e.y-radius-4).lineTo(e.x,e.y-radius-10).lineTo(e.x+5,e.y-radius-4).lineTo(e.x+11,e.y-radius-7).lineTo(e.x+10,e.y-radius-1).closePath().fill(0xffdc73);
         actors.rect(e.x-4,e.y-3,2,3).fill(0xffdb9c).rect(e.x+3,e.y-3,2,3).fill(0xffdb9c);
-        actors.rect(e.x-10,e.y-15,20,3).fill(0x332c29);
-        actors.rect(e.x-10,e.y-15,20*Math.max(0,e.hp/e.maxHp),3).fill(0xe4a27c);
+        const bar=radius+2;
+        actors.rect(e.x-bar,e.y-radius-5,bar*2,3).fill(0x332c29);
+        actors.rect(e.x-bar,e.y-radius-5,bar*2*Math.max(0,e.hp/e.maxHp),3).fill(0xe4a27c);
+        if(!enemyLabels[index]){const t=new Text({style:{fontFamily:'system-ui',fontSize:8,fill:0xf3e5c2,stroke:{color:0x14201d,width:2}}});t.anchor.set(0.5);t.eventMode='none';root.addChild(t);enemyLabels.push(t);}
+        const label=enemyLabels[index];label.visible=true;
+        label.text=e.named?e.name:e.bounty?'현상금':e.defenseType==='physical'?'물방':e.defenseType==='magic'?'마방':'일반';
+        label.style.fill=e.named||e.bounty?0xffdd8a:e.defenseType==='physical'?0xa6d9ff:e.defenseType==='magic'?0xdec0ff:0xf3e5c2;
+        label.position.set(Math.max(label.width/2+2,Math.min(RULES.width-label.width/2-2,e.x)),e.y+radius+8);
       }
+      for(let i=game.enemies.length;i<enemyLabels.length;i++)enemyLabels[i].visible=false;
       for(const s of game.shots)actors.moveTo(s.x,s.y).lineTo(s.tx,s.ty).stroke({width:2,color:s.color,alpha:Math.min(1,s.life/0.12)});
       for(let i=0;i<Math.max(numberPool.length,game.damageNumbers.length);i++){
         const number=game.damageNumbers[i];

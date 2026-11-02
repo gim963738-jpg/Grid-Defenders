@@ -1,6 +1,6 @@
 import { Application } from 'pixi.js';
 import { Defense, recipeForTypes, type LogCategory } from './defense';
-import { BAG_GRID, GRID, ITEMS, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+import { BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
 import './style.css';
 
@@ -45,8 +45,8 @@ function refreshHeroInfo():void {
   if(!heroInfo)return;
   const def=UNITS[heroInfo.kind],unit=game.units.find(u=>u.id===heroInfo!.unitId);
   if(heroInfo.unitId!==null&&!unit){closeHeroInfo();return;}
-  const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0,critChance:def.hero?0:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier};
-  const fields=[['hp','♥','최대 체력',stats.hp.toLocaleString()],['attack','⚔','공격력',stats.attack.toLocaleString()],['armor','⬡','방어력',String(stats.armor)],['rate','↗','공격속도',`${stats.rate.toFixed(2)}/초`],['regen','✚','체력 재생',`${stats.regen}/초`],['gold','◇','골드 획득',`+${Math.round(stats.gold*100)}%`]];
+  const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0,critChance:def.hero?0:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier,physicalAttack:def.damageType==='physical'?def.attack:0,magicAttack:def.damageType==='magic'?def.attack:0,physicalArmor:def.armor,magicArmor:def.magicArmor};
+  const fields=[['hp','♥','최대 체력',stats.hp.toLocaleString()],['rate','↗','공격속도',`${stats.rate.toFixed(2)}/초`],['attack','⚔','물리 공격',String(stats.physicalAttack)],['attack','✦','마법 공격',String(stats.magicAttack)],['armor','⬡','물리 방어',String(stats.physicalArmor)],['armor','◇','마법 방어',String(stats.magicArmor)],['regen','✚','체력 재생',`${stats.regen}/초`],['gold','◇','골드 획득',`+${Math.round(stats.gold*100)}%`]];
   if(!def.hero)fields.push(['attack','✦','치명타 확률',`${Math.round(stats.critChance*100)}%`],['attack','✦','치명타 배율',`${stats.critMultiplier}배`]);
   const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(([key,icon,label,value])=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}">${value}</dd></div>`).join('')}</dl>`;
   if(markup!==heroInfoMarkup){el('hero-info').innerHTML=markup;heroInfoMarkup=markup;}
@@ -121,7 +121,7 @@ function refresh():void {
   el('unit-detail').hidden=!u||UNITS[u.kind].hero;
   if(u&&!UNITS[u.kind].hero) {
     const d=UNITS[u.kind],s=game.stats(u);
-    el('unit-detail').innerHTML=`<b>${d.name} #${u.id} Lv.${u.level}</b> · ${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열<br>공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<br>치명타 ${Math.round(s.critChance*100)}% · 피해 ${s.critMultiplier}배<div class="actions"><button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>승급 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button></div>`;
+    el('unit-detail').innerHTML=`<b>${d.name} #${u.id} Lv.${u.level}</b> · ${Math.floor(u.slot/4)+1}행 ${u.slot%4+1}열<br>${DAMAGE_LABEL[s.damageType]} 공격 ${s.attack} · 공속 ${s.rate.toFixed(2)} · 체력 ${s.hp}<br>치명타 ${Math.round(s.critChance*100)}% · 피해 ${s.critMultiplier}배<div class="actions"><button data-upgrade="${u.id}" ${u.level>=5||game.gold<game.upgradeCost(u)?'disabled':''}>승급 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}</button><button class="danger" data-sell-unit="${u.id}">판매 +${Math.floor(u.spent/2)}G</button></div>`;
   } else el('unit-detail').textContent='배치된 유닛을 누르면 정보와 병사 강화·판매를 확인합니다.';
   if(!game.heroes().some(h=>h.id===selectedHero))selectedHero=game.heroes()[0]?.id??null;
   const hero=game.heroes().find(h=>h.id===selectedHero);
@@ -148,7 +148,13 @@ function refreshTools():void {
   button.disabled=!count||game.anvils<count;
   button.textContent=count?`조합 ${count}회 실행`:'조합 재료를 붙여주세요';
   button.title=plan.map(pair=>pair.map(id=>{const g=game.gear.find(g=>g.id===id)!;return `${g.def.name} #${g.id}`;}).join(' + ')).join(' / ');
+  const full=game.enemies.filter(e=>!e.bounty&&!e.named&&e.hp>0).length>=RULES.maxEnemies;
+  document.querySelectorAll<HTMLButtonElement>('[data-monster-id]').forEach(button=>button.disabled=full&&!MONSTERS.find(d=>d.id===button.dataset.monsterId)?.named);
   refreshLinks();
+}
+function renderMonsterTools():void {
+  el('test-enemy-buttons').innerHTML=MONSTERS.map(def=>`<button data-monster-id="${def.id}">${def.named?'네임드 · ':''}${def.name}</button>`).join('');
+  el('test-enemy-stats').innerHTML=MONSTERS.map(def=>`<article><b>${def.name} · ${DEFENSE_LABEL[def.defenseType]}</b><p>체력 ${def.hp} · ${DAMAGE_LABEL[def.damageType]} 공격 ${def.attack} · 공속 ${def.rate}/초<br>물리 방어 ${def.armor} · 마법 방어 ${def.magicArmor}<br>이동 ${def.speed} · 처치 ${def.gold}G</p></article>`).join('');
 }
 function renderRecipeTree():void {
   el('recipe-tree').innerHTML=`<details open><summary>📁 조합 공식 <small>${RECIPES.length}종</small></summary><p class="tools-hint">개발 확인용 · 조합 1회당 모루 1개</p><ul>${RECIPES.map(recipe=>{
@@ -205,11 +211,15 @@ function refreshLinks():void {
 function updateHud():void {
   el('gold').innerHTML=`${game.gold} <small>G</small>`;
   const bountyActive=game.enemies.some(e=>e.bounty&&e.hp>0),credits=game.bountyCredits();
-  el('enemies').innerHTML=`${game.enemies.filter(e=>!e.bounty).length} <small>/ ${RULES.maxEnemies}</small>${bountyActive?' <small class="bounty-hud">현상금1</small>':''}`;
+  el('enemies').innerHTML=`${game.enemies.filter(e=>!e.bounty&&!e.named).length} <small>/ ${RULES.maxEnemies}</small>${bountyActive?' <small class="bounty-hud">현상금1</small>':''}`;
   const bountyButton=el<HTMLButtonElement>('bounty-summon');bountyButton.hidden=credits<1;bountyButton.disabled=bountyActive;
-  bountyButton.title=`현상금 소환 · 대기 ${credits}회 · 처치 보상 모루 ${RULES.bountyAnvils}개 / 기본 ${RULES.bountyGold}G`;
+  bountyButton.title=`현상금 소환 · 대기 ${credits}/${RULES.bountyStackLimit}회 · 처치 보상 모루 ${RULES.bountyAnvils}개 / 기본 ${RULES.bountyGold}G`;
   bountyButton.setAttribute('aria-label',bountyActive?'현상금 몬스터 전투 중':`현상금 몬스터 소환 · 남은 ${credits}회`);
   el('bounty-label').textContent=bountyActive?'진행중':`소환${credits>1?' ×'+credits:''}`;
+  el('wave-number').textContent=`WAVE ${game.wave} · 무한 시험`;
+  el('wave-timer').textContent=`${Math.max(0,Math.ceil(RULES.waveSeconds-game.waveTime))}초`;
+  el('wave-spawns').textContent=`일반 ${game.waveSpawned}/${RULES.waveMonsters} 소환`;
+  el('wave-specials').textContent=`네임드 ${game.enemies.filter(e=>e.named).length} · 현상금 ${bountyActive?1:0} · 소환 대기 ${credits}/${RULES.bountyStackLimit}`;
   el('kills').textContent=String(game.kills);
   el('population').textContent=`배치 ${game.units.length} / 16`;
   el('message').textContent=game.message;
@@ -409,6 +419,8 @@ el('dev-tools').addEventListener('click',(e)=>{
   const button=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!button||button.disabled)return;
   if(button.id==='dev-gold')game.devGold();
   else if(button.id==='dev-anvils')game.devAnvils();
+  else if(button.dataset.monsterId)game.spawnTestMonster(button.dataset.monsterId);
+  else if(button.id==='dev-next-wave')game.nextTestWave();
   else if(button.id==='dev-reset'){
     drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
     clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
@@ -444,6 +456,7 @@ async function start():Promise<void> {
     refresh();
   });
   let lastRevision=-1,hudClock=0;
+  renderMonsterTools();
   renderRecipeTree();
   refresh();
   app.ticker.add(ticker=>{

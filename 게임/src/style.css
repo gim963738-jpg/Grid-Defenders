@@ -112,3 +112,11 @@
 #bounty-summon svg{display:block;width:75%;min-height:0;flex:1}
 #bounty-summon span{font-size:clamp(6px,1.7vw,8px);line-height:1.2;color:#ffe5a1;white-space:nowrap}
 .bounty-hud{display:inline-block;font-size:8px;white-space:nowrap;color:#f0c87c;border:1px solid #8b6b39;border-radius:3px;padding:1px 2px;vertical-align:middle}
+
+#wave-info{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 8px;padding:10px;margin-bottom:9px;border:1px solid #4e5e50;border-radius:7px;background:#1b2927;font-size:10px;color:#b2c1ac}
+#wave-info strong{color:#edcf91;font-size:12px}#wave-timer{font-variant-numeric:tabular-nums;color:#f2ce85;font-size:14px}#wave-specials,#wave-info small{grid-column:1/-1;font-size:9px}
+.combat-legend{display:flex;flex-wrap:wrap;gap:4px 8px;margin:0 0 8px;font-size:9px;color:#b7b9ad}.combat-legend .physical{color:#8fc8ee}.combat-legend .magic{color:#c7a1ef}
+.monster-test-tools{border-top:1px solid #5c5037;margin-top:13px;padding-top:10px}.monster-test-tools h3{font-size:12px;margin:0}
+#test-enemy-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:8px 0}#dev-next-wave{width:100%!important}
+.monster-test-tools details{margin-top:10px}.monster-test-tools summary{cursor:pointer;color:#e4c68a;padding:5px 0}
+#test-enemy-stats article{padding:7px;border:1px solid #445344;border-radius:4px;margin-top:5px}#test-enemy-stats b{font-size:10px}#test-enemy-stats p{font-size:10px;margin:4px 0}

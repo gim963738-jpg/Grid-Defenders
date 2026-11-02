@@ -15,8 +15,10 @@
         <div><span>처치</span><strong id="kills">0</strong></div>
         <button id="speed" aria-label="전투 배속 변경">1×</button>
       </section>
+      <section id="wave-info" aria-label="무한 웨이브 시험 상태"><strong id="wave-number">WAVE 1 · 무한 시험</strong><b id="wave-timer">30초</b><span id="wave-spawns"></span><span id="wave-specials"></span><small>시간 종료: 일반 정리 · 네임드/현상금 유지</small></section>
       <section id="battlefield" aria-label="순환 전장"><button id="bounty-summon" hidden aria-label="현상금 몬스터 소환"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12 4 3l9 6h6l9-6-1 9v12l-5 5H10l-5-5Z" fill="#bb8034" stroke="#ffdd7a" stroke-width="2"/><path d="M9 14h4v5H9zm10 0h4v5h-4zm-7 9h8" fill="#fff0bc" stroke="#fff0bc"/></svg><span id="bounty-label">소환</span></button><p id="status" role="status">전장을 준비하는 중입니다.</p></section>
       <div class="field-caption"><span>↻ 외곽 순환 · 아군 일방 공격</span><span id="population">배치 0 / 16</span></div>
+      <p class="combat-legend"><span>● 일반형</span><span class="physical">⬡ 물리 방어형</span><span class="magic">◇ 마법 방어형</span><span>왕관: 네임드</span></p>
       <p id="message" role="status">병사를 선택하고 전장의 빈 칸을 눌러주세요.</p>
       <nav class="tabs" aria-label="전투 조작 메뉴">
         <button data-tab="summon" class="active" aria-pressed="true">소환·지휘</button>
@@ -45,13 +47,14 @@
         <div id="shop-cards" class="shop-cards"></div></section>
         <p class="hint">공용 가방은 아래로 확장됩니다. 블록 드래그: 이동 · 더블클릭·두 번 탭: 회전. 상점 상품을 공용 가방에 내려놓으면 구매합니다.</p>
       </section>
-      <footer>WEB-012 · 임시 수치 / 자동 스킬·웨이브·보스는 미구현</footer>
+      <footer>WEB-014 · 무한 웨이브 시험 / 정식 방어 공식·영웅 스킬·보스·승패는 미구현</footer>
     </main>
     <aside id="dev-tools" aria-label="개발자 도구와 아이템 조합">
       <header class="tools-heading"><h2>개발자 도구 <span>임시</span></h2><p id="dev-balance">골드 480G · 모루 0</p></header>
       <div class="dev-actions"><button id="dev-gold">골드 +10,000G</button><button id="dev-anvils">모루 +10</button><button id="dev-reset" class="danger">게임 리셋</button></div>
-      <p class="tools-hint">리셋: 전투·재화·유닛·장비·기록 초기화.<br>일반 몬스터 50마리 처치마다 현상금 소환 가능. 현상금 보상은 모루·골드입니다.</p>
+      <p class="tools-hint">리셋: 전투·재화·유닛·장비·기록 초기화.<br>3웨이브마다 현상금 소환 기회 적립(최대3회). 현상금 보상은 모루·골드입니다.</p>
       <p class="tools-hint">조합은 영웅 장비칸 오른쪽에서 실행합니다.<br>아이템을 누르는 동안 파란 점선으로 상대를 확인합니다. 변이 붙은 재료 중 조합 예정은 노란 실선, 재료를 공유하는 후순위는 회색 실선입니다.<br>조합 1회당 모루 1개를 사용합니다.</p>
+      <section class="monster-test-tools"><h3>몬스터 시험 소환</h3><p class="tools-hint">일치 방어형은 피해 ×0.75, 나머지 ×1.<br>몬스터는 일반전에서 아군을 공격하지 않습니다.</p><div id="test-enemy-buttons"></div><button id="dev-next-wave">다음 웨이브로 · 일반 몬스터 정리</button><details><summary>임시 몬스터 능력치</summary><p class="tools-hint">1웨이브 기준. 체력·공격은 웨이브당 기본값의10% 가산. 방어력 숫자는 준비 데이터이며 현재 피해는 타입 배율만 적용.</p><div id="test-enemy-stats"></div></details></section>
       <section id="recipe-tree" aria-label="개발자용 조합 공식 트리"></section>
     </aside>
     <aside id="dev-log" aria-label="임시 개발자 기록창">

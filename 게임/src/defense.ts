@@ -1,7 +1,9 @@
-import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
-export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; }
+export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; named:boolean;name:string;defenseType:DefenseType;damageType:DamageType;attack:number;armor:number;magicArmor:number;rate:number;goldReward:number;wave:number; }
+export function defenseMultiplier(attack:DamageType,defense:DefenseType):number {return attack===defense?0.75:1;}
+export function mitigatedDamage(attack:number,type:DamageType,defense:DefenseType):number {return Math.round(attack*defenseMultiplier(type,defense));}
 export interface DamageNumber {id:number;x:number;y:number;damage:number;critical:boolean;life:number;}
 export interface Gear { id:number; def:ItemDef; owner:number|null; x:number; y:number; turns:number; order:number; costBasis:number; }
 export function recipeForTypes(a:string,b:string) {
@@ -24,7 +26,7 @@ export interface DevLog {
   id:number; time:number; category:LogCategory; text:string;
   sourceId?:number; targetId?:number; attack?:number; damage?:number;
   hpBefore?:number; hpAfter?:number; goldBefore?:number; goldAfter?:number; goldDelta?:number;
-  critical?:boolean;
+  critical?:boolean;damageType?:DamageType;defenseType?:DefenseType;defenseMultiplier?:number;
 }
 export const DEV_LOG_LIMIT=100;
 
@@ -45,7 +47,8 @@ export class Defense {
   shop:(ItemDef|null)[]=ITEMS.slice(0,5);
   shopDiscounts:boolean[]=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);
   kills=0; elapsed=0; speed=1; revision=0;
-  normalKills=0;bountySummons=0;
+  normalKills=0;bountySummons=0;pendingBounties=0;
+  wave=1;waveTime=0;waveSpawned=0;
   damageNumbers:DamageNumber[]=[];
   private nextDamageId=1;
   anvils=0;
@@ -53,8 +56,53 @@ export class Defense {
   readonly logs:Record<LogCategory,DevLog[]>={damage:[],reward:[],economy:[]};
   logRevision=0;
   private nextLogId=1;
-  private nextId=1; private spawnClock=0;
+  private nextId=1;
   private placementOrder=0;
+  constructor(){this.startWave(false);}
+  private createMonster(def:MonsterDef):Enemy {
+    const factor=1+(this.wave-1)*0.1,maxHp=Math.round(def.hp*factor);
+    return {id:this.nextId++,distance:0,...pathPoint(0),hp:maxHp,maxHp,speed:def.speed,named:def.named,name:def.name,defenseType:def.defenseType,damageType:def.damageType,
+      attack:Math.round(def.attack*factor),armor:def.armor,magicArmor:def.magicArmor,rate:def.rate,goldReward:def.gold,wave:this.wave};
+  }
+  spawnTestMonster(id:string):boolean {
+    const def=MONSTERS.find(d=>d.id===id);if(!def)return false;
+    if(!def.named&&this.enemies.filter(e=>!e.bounty&&!e.named&&e.hp>0).length>=RULES.maxEnemies)return this.note('일반 몬스터 시험 한도30마리에 도달했습니다.');
+    const enemy=this.createMonster(def);this.enemies.push(enemy);this.note(`[개발자] ${def.name} #${enemy.id} 소환 · ${DEFENSE_LABEL[def.defenseType]}`);return true;
+  }
+  private spawnWaveDue():void {
+    const due=Math.min(RULES.waveMonsters,Math.floor(this.waveTime/RULES.waveSpawnSeconds)+1);
+    while(this.waveSpawned<due&&this.enemies.filter(e=>!e.bounty&&!e.named&&e.hp>0).length<RULES.maxEnemies){
+      const def=MONSTERS[(this.wave-1+this.waveSpawned)%3];this.enemies.push(this.createMonster(def));this.waveSpawned++;
+    }
+  }
+  private startWave(announce=true):void {
+    this.waveTime=0;this.waveSpawned=0;
+    if(this.wave%RULES.bountyEvery===0){
+      this.pendingBounties=Math.min(RULES.bountyStackLimit,this.pendingBounties+1);
+      this.log('economy',`[웨이브 ${this.wave}] 현상금 소환 기회 · ${this.pendingBounties}/${RULES.bountyStackLimit}`);
+    }
+    if(this.wave%RULES.namedEvery===0){
+      const names=MONSTERS.filter(d=>d.named),def=names[(this.wave/RULES.namedEvery-1)%names.length];
+      this.enemies.push(this.createMonster(def));this.log('economy',`[웨이브 ${this.wave}] 네임드 ${def.name} 등장`);
+    }
+    this.spawnWaveDue();
+    if(announce)this.note(`${this.wave}웨이브 시작 · ${RULES.waveSeconds}초 시험 전투`);
+  }
+  nextTestWave():void {
+    const removed=this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
+    this.enemies=this.enemies.filter(e=>(e.named||e.bounty)&&e.hp>0);
+    this.shots=[];this.attackAreas=[];this.wave++;
+    this.log('economy',`[웨이브 전환] 남은 일반 몬스터 ${removed}마리 정리 · 처치 보상 없음 · 네임드/현상금 유지`);
+    this.startWave();
+  }
+  private advanceWaves(dt:number):void {
+    let remaining=dt;
+    while(remaining>0){
+      const step=Math.min(remaining,RULES.waveSeconds-this.waveTime);
+      this.waveTime+=step;remaining-=step;this.spawnWaveDue();
+      if(this.waveTime>=RULES.waveSeconds-1e-8)this.nextTestWave();
+    }
+  }
   private log(category:LogCategory,text:string,data:Partial<Omit<DevLog,'id'|'time'|'category'|'text'>>={}):void {
     const list=this.logs[category];
     list.unshift({id:this.nextLogId++,time:this.elapsed,category,text,...data});
@@ -71,12 +119,12 @@ export class Defense {
   }
   note(message:string):false {this.message=message;this.revision++;return false;}
   heroes():Unit[] {return this.units.filter(u=>UNITS[u.kind].hero);}
-  bountyCredits():number {return Math.max(0,Math.floor(this.normalKills/RULES.bountyThreshold)-this.bountySummons);}
+  bountyCredits():number {return this.pendingBounties;}
   summonBounty():boolean {
-    if(this.bountyCredits()<1)return this.note('일반 몬스터 50마리 처치마다 현상금 소환 기회를 얻습니다.');
+    if(this.bountyCredits()<1)return this.note('3웨이브마다 현상금 소환 기회를 얻습니다.');
     if(this.enemies.some(e=>e.bounty&&e.hp>0))return this.note('현상금 몬스터는 동시에 1마리만 소환할 수 있습니다.');
-    this.enemies.push({id:this.nextId++,distance:0,...pathPoint(0),hp:RULES.bountyHp,maxHp:RULES.bountyHp,speed:RULES.bountySpeed,bounty:true});
-    this.bountySummons++;this.note('현상금 몬스터 등장 · 처치하면 모루와 골드를 획득합니다.');return true;
+    this.enemies.push({id:this.nextId++,distance:0,...pathPoint(0),hp:RULES.bountyHp,maxHp:RULES.bountyHp,speed:RULES.bountySpeed,bounty:true,named:false,name:'현상금 몬스터',defenseType:'normal',damageType:'physical',attack:80,armor:20,magicArmor:20,rate:0.8,goldReward:RULES.bountyGold,wave:this.wave});
+    this.pendingBounties--;this.bountySummons++;this.note('현상금 몬스터 등장 · 처치하면 모루와 골드를 획득합니다.');return true;
   }
   gearStates(owner:number):Map<number,GearState> {
     const occupied=new Set<string>(),result=new Map<number,GearState>();
@@ -97,10 +145,11 @@ export class Defense {
   stats(unit:Unit) {
     const states=this.gearStates(unit.id);
     const base=UNITS[unit.kind], gear=this.gear.filter(g=>g.owner===unit.id&&states.get(g.id)?.active);
-    const total=(field:'attack'|'armor'|'hp'|'speed'|'regen'|'gold')=>gear.reduce((a,g)=>a+(g.def[field]??0),0);
-    return {attack:Math.round(base.attack*(1+(unit.level-1)*0.25)+total('attack')),
+    const total=(field:'attack'|'armor'|'magicArmor'|'hp'|'speed'|'regen'|'gold')=>gear.reduce((a,g)=>a+(g.def[field]??0),0);
+    const attack=Math.round(base.attack*(1+(unit.level-1)*0.25)+total('attack')),physicalArmor=base.armor+total('armor'),magicArmor=base.magicArmor+total('magicArmor');
+    return {attack,damageType:base.damageType,physicalAttack:base.damageType==='physical'?attack:0,magicAttack:base.damageType==='magic'?attack:0,physicalArmor,magicArmor,
       rate:base.rate*(1+total('speed')),range:base.range,
-      hp:base.hp+total('hp'),armor:base.armor+total('armor'),regen:total('regen'),gold:total('gold'),
+      hp:base.hp+total('hp'),armor:physicalArmor,regen:total('regen'),gold:total('gold'),
       critChance:base.hero?0:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier};
   }
   summon(kind:UnitKind,slot:number):boolean {
@@ -308,21 +357,14 @@ export class Defense {
   }
   reset():void {
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
-    this.normalKills=0;this.bountySummons=0;this.damageNumbers=[];this.nextDamageId=1;
-    this.shop=ITEMS.slice(0,5);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.spawnClock=0;this.nextId=1;this.placementOrder=0;
+    this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.damageNumbers=[];this.nextDamageId=1;
+    this.shop=ITEMS.slice(0,5);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.nextId=1;this.placementOrder=0;
     this.logs.damage.length=0;this.logs.reward.length=0;this.logs.economy.length=0;this.nextLogId=1;this.logRevision++;
-    this.note('게임을 시작 상태로 초기화했습니다.');
+    this.startWave(false);this.note('게임을 시작 상태로 초기화했습니다.');
   }
   tick(realSeconds:number):void {
     const dt=realSeconds*this.speed;this.elapsed+=dt;
-    this.spawnClock+=dt;
-    while(this.spawnClock>=RULES.spawnSeconds) {
-      this.spawnClock-=RULES.spawnSeconds;
-      if(this.enemies.filter(e=>!e.bounty).length<RULES.maxEnemies) {
-        const maxHp=160+Math.floor(this.elapsed/30)*40;
-        this.enemies.push({id:this.nextId++,distance:0,...pathPoint(0),hp:maxHp,maxHp,speed:43});
-      }
-    }
+    this.advanceWaves(dt);
     for(const e of this.enemies){e.distance+=e.speed*dt;Object.assign(e,pathPoint(e.distance));}
     for(const u of this.units) {
       u.cooldown-=dt;if(u.cooldown>0)continue;
@@ -339,7 +381,7 @@ export class Defense {
       const targets=area?this.enemies.filter(e=>e.hp>0&&inAttackArea(area!,e.x,e.y)):[target];
       this.shots.push({x:pos.x,y:pos.y,tx:target.x,ty:target.y,life:0.16,color:UNITS[u.kind].color});
       const critical=s.critChance>0&&Math.random()<s.critChance;
-      const attack=Math.round(s.attack*(critical?s.critMultiplier:1));
+      const attack=s.attack*(critical?s.critMultiplier:1);
       for(const victim of targets)this.hit(u,victim,attack,critical);
     }
     this.enemies=this.enemies.filter(e=>e.hp>0);
@@ -353,19 +395,20 @@ export class Defense {
   private hit(u:Unit,target:Enemy,attack:number,critical=false):void {
       if(target.hp<=0)return;
       const hpBefore=target.hp;
-      target.hp=Math.max(0,target.hp-attack);
+      const damageType=UNITS[u.kind].damageType,multiplier=defenseMultiplier(damageType,target.defenseType),afterDefense=mitigatedDamage(attack,damageType,target.defenseType);
+      target.hp=Math.max(0,target.hp-afterDefense);
       const damage=hpBefore-target.hp;
       this.damageNumbers.push({id:this.nextDamageId++,x:target.x,y:target.y,damage,critical,life:0.75});
       if(this.damageNumbers.length>80)this.damageNumbers.splice(0,this.damageNumbers.length-80);
-      const targetName=`${target.bounty?'현상금 몬스터':'몬스터'} #${target.id}`;
-      this.log('damage',`${this.unitName(u)} → ${targetName}${critical?' [치명타 ×1.5]':''} · 공격 ${attack} / 실제 피해 ${damage} · 체력 ${hpBefore} → ${target.hp}`,
-        {sourceId:u.id,targetId:target.id,attack,damage,hpBefore,hpAfter:target.hp,critical});
+      const targetName=`${target.name} #${target.id} (${DEFENSE_LABEL[target.defenseType]})`;
+      this.log('damage',`${this.unitName(u)} → ${targetName}${critical?' [치명타 ×1.5]':''} · ${DAMAGE_LABEL[damageType]} 공격 ${attack} → 방어 ×${multiplier} = ${afterDefense} / 실제 피해 ${damage} · 체력 ${hpBefore} → ${target.hp}`,
+        {sourceId:u.id,targetId:target.id,attack,damage,hpBefore,hpAfter:target.hp,critical,damageType,defenseType:target.defenseType,defenseMultiplier:multiplier});
       if(target.hp<=0) {
         const bonus=this.heroes().reduce((sum,h)=>sum+this.stats(h).gold,0);
         const before=this.gold;
-        this.gold+=Math.floor((target.bounty?RULES.bountyGold:RULES.killGold)*(1+bonus));this.kills++;
+        this.gold+=Math.floor(target.goldReward*(1+bonus));this.kills++;
         if(target.bounty){this.anvils+=RULES.bountyAnvils;this.note(`현상금 처치 · 모루 +${RULES.bountyAnvils} · 골드 획득`);}
-        else {this.normalKills++;if(this.normalKills%RULES.bountyThreshold===0)this.note('현상금 몬스터 소환 준비 완료 · 전장 오른쪽 위 버튼을 눌러주세요.');}
+        else if(!target.named)this.normalKills++;
         this.revision++;
         this.goldLog('reward',`${this.unitName(u)}이 ${targetName} 처치${target.bounty?` · 모루 +${RULES.bountyAnvils} / 보유 ${this.anvils}`:''}${bonus>0?` (골드 보너스 +${Math.round(bonus*100)}%)`:''}`,before,{sourceId:u.id,targetId:target.id});
       }

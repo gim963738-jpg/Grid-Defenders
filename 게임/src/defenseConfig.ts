@@ -1,30 +1,34 @@
 // WEB-002 시험 수치. 최종 밸런스가 아니다.
 export const RULES = { width: 390, height: 330, initialGold: 480, maxEnemies: 30,
   spawnSeconds: 2.4, killGold: 12, heroLimit: 3, rerollGold: 20, shopDiscountChance:0.2,
-  soldierCritChance:0.1, critMultiplier:1.5, bountyThreshold:50, bountyHp:1600, bountySpeed:32, bountyGold:100, bountyAnvils:1 } as const;
+  soldierCritChance:0.1, critMultiplier:1.5, waveSeconds:30, waveMonsters:10, waveSpawnSeconds:2, namedEvery:5, bountyEvery:3, bountyStackLimit:3, bountyHp:1600, bountySpeed:32, bountyGold:100, bountyAnvils:1 } as const;
+export type DamageType = 'physical' | 'magic';
+export type DefenseType = 'normal' | 'physical' | 'magic';
+export const DAMAGE_LABEL:Record<DamageType,string>={physical:'물리',magic:'마법'};
+export const DEFENSE_LABEL:Record<DefenseType,string>={normal:'일반형',physical:'물리 방어형',magic:'마법 방어형'};
 export type UnitKind = 'guard' | 'archer' | 'mage' | 'tank' | 'melee' | 'ranged' | 'healer';
 export interface UnitDef { name: string; icon: string; hero: boolean; cost: number;
-  attack: number; rate: number; range: number; hp: number; armor: number; color: number; }
+  attack: number; damageType:DamageType; rate: number; range: number; hp: number; armor: number; magicArmor:number; color: number; }
 export const UNITS: Record<UnitKind, UnitDef> = {
-  guard: { name:'보병',icon:'검',hero:false,cost:50,attack:26,rate:1,range:130,hp:400,armor:20,color:0x8bb8df },
-  archer: { name:'궁병',icon:'궁',hero:false,cost:75,attack:30,rate:1.2,range:230,hp:260,armor:10,color:0x70d9a0 },
-  mage: { name:'마법병',icon:'마',hero:false,cost:90,attack:48,rate:0.7,range:190,hp:240,armor:8,color:0xb9a0ef },
-  tank: { name:'탱커',icon:'방',hero:true,cost:0,attack:40,rate:0.8,range:130,hp:2000,armor:60,color:0xf3c76c },
-  melee: { name:'근접 딜러',icon:'검',hero:true,cost:0,attack:90,rate:1,range:130,hp:1100,armor:25,color:0xfa9583 },
-  ranged: { name:'원거리 딜러',icon:'술',hero:true,cost:0,attack:75,rate:1,range:230,hp:800,armor:15,color:0xb9a0ef },
-  healer: { name:'힐러',icon:'빛',hero:true,cost:0,attack:30,rate:1,range:190,hp:900,armor:20,color:0x70dbcf },
+  guard: { damageType:'physical',magicArmor:10,name:'보병',icon:'검',hero:false,cost:50,attack:26,rate:1,range:130,hp:400,armor:20,color:0x8bb8df },
+  archer: { damageType:'physical',magicArmor:5,name:'궁병',icon:'궁',hero:false,cost:75,attack:30,rate:1.2,range:230,hp:260,armor:10,color:0x70d9a0 },
+  mage: { damageType:'magic',magicArmor:15,name:'마법병',icon:'마',hero:false,cost:90,attack:48,rate:0.7,range:190,hp:240,armor:8,color:0xb9a0ef },
+  tank: { damageType:'physical',magicArmor:40,name:'탱커',icon:'방',hero:true,cost:0,attack:40,rate:0.8,range:130,hp:2000,armor:60,color:0xf3c76c },
+  melee: { damageType:'physical',magicArmor:15,name:'근접 딜러',icon:'검',hero:true,cost:0,attack:90,rate:1,range:130,hp:1100,armor:25,color:0xfa9583 },
+  ranged: { damageType:'magic',magicArmor:20,name:'원거리 딜러',icon:'술',hero:true,cost:0,attack:75,rate:1,range:230,hp:800,armor:15,color:0xb9a0ef },
+  healer: { damageType:'magic',magicArmor:25,name:'힐러',icon:'빛',hero:true,cost:0,attack:30,rate:1,range:190,hp:900,armor:20,color:0x70dbcf },
 };
 export type Cell = [number, number];
 export interface ItemDef { id:string; name:string; short:string; cells:Cell[]; color:string;
-  price:number; attack?:number; armor?:number; hp?:number; speed?:number; regen?:number; gold?:number; description:string; }
+  price:number; attack?:number; armor?:number; magicArmor?:number; hp?:number; speed?:number; regen?:number; gold?:number; description:string; }
 export const ITEMS: ItemDef[] = [
   {id:'I01',name:'철검',short:'검',cells:[[0,0],[1,0]],color:'#809bb9',price:60,attack:15,description:'공격력 +15'},
-  {id:'I02',name:'수호 방패',short:'방',cells:[[0,0],[1,0]],color:'#719aaf',price:60,armor:20,description:'방어력 +20'},
+  {id:'I02',name:'수호 방패',short:'방',cells:[[0,0],[1,0]],color:'#719aaf',price:60,armor:20,description:'물리 방어력 +20'},
   {id:'I03',name:'가속 룬',short:'속',cells:[[0,0],[1,0]],color:'#9a92c7',price:70,speed:0.1,description:'공격속도 +10%'},
   {id:'I04',name:'활력의 수정',short:'체',cells:[[0,0],[1,0]],color:'#ae8192',price:60,hp:150,description:'체력 +150'},
   {id:'I05',name:'황금 주머니',short:'금',cells:[[0,0]],color:'#c7a85c',price:100,gold:0.1,description:'골드 획득 +10%'},
   {id:'I06',name:'정밀 검',short:'정',cells:[[0,0],[1,0],[2,0]],color:'#67ad8b',price:150,attack:40,description:'공격력 +40'},
-  {id:'I07',name:'룬 방패',short:'룬',cells:[[0,0],[0,1],[1,1]],color:'#67a3a2',price:160,armor:35,hp:200,description:'방어력 +35 · 체력 +200'},
+  {id:'I07',name:'룬 방패',short:'룬',cells:[[0,0],[0,1],[1,1]],color:'#67a3a2',price:160,armor:35,hp:200,description:'물리 방어력 +35 · 체력 +200'},
   {id:'I08',name:'질풍의 검',short:'질',cells:[[0,0],[0,1],[1,1]],color:'#83ae74',price:150,attack:20,speed:0.15,description:'공격력 +20 · 공속 +15%'},
   {id:'I09',name:'재생의 부적',short:'재',cells:[[0,0],[1,0],[2,0]],color:'#6eac90',price:160,hp:350,regen:10,description:'체력 +350 · 초당 회복 +10'},
 ];
@@ -48,3 +52,12 @@ export function rotated(cells: Cell[], turns:number): Cell[] {
   }
   return result;
 }
+
+export interface MonsterDef {id:string;name:string;defenseType:DefenseType;damageType:DamageType;hp:number;attack:number;armor:number;magicArmor:number;rate:number;speed:number;gold:number;named:boolean;}
+export const MONSTERS:MonsterDef[]=[
+  {id:'normal',name:'순환 괴물',defenseType:'normal',damageType:'physical',hp:160,attack:20,armor:10,magicArmor:10,rate:0.8,speed:43,gold:12,named:false},
+  {id:'physical',name:'철갑 괴물',defenseType:'physical',damageType:'physical',hp:180,attack:25,armor:60,magicArmor:10,rate:0.7,speed:40,gold:12,named:false},
+  {id:'magic',name:'비전 괴물',defenseType:'magic',damageType:'magic',hp:160,attack:25,armor:10,magicArmor:60,rate:0.8,speed:43,gold:12,named:false},
+  {id:'named-physical',name:'강철 감시자',defenseType:'physical',damageType:'physical',hp:3200,attack:150,armor:120,magicArmor:40,rate:0.7,speed:27,gold:150,named:true},
+  {id:'named-magic',name:'비전 파수꾼',defenseType:'magic',damageType:'magic',hp:2800,attack:170,armor:40,magicArmor:120,rate:0.8,speed:30,gold:150,named:true},
+];
