@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grid Defenders — 실행 확인</title>
+    <link rel="icon" href="data:," />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        background: #080d16;
+        color: #e2e8f0;
+        font-family: system-ui, sans-serif;
+      }
+      #app { width: min(100%, 390px); }
+      canvas { display: block; width: 100% !important; height: auto !important; }
+      #status { margin: 0; padding: 16px; text-align: center; }
+      #status[hidden] { display: none; }
+    </style>
+  </head>
+  <body>
+    <main id="app" aria-label="Grid Defenders 실행 확인 화면">
+      <p id="status" role="status">화면을 불러오는 중입니다.</p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
