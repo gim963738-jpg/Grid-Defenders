@@ -3,6 +3,9 @@ import { AREA_ATTACK, GRID, ITEMS, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
 export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; }
 export interface Gear { id:number; def:ItemDef; owner:number|null; x:number; y:number; turns:number; order:number; costBasis:number; }
+export function recipeForTypes(a:string,b:string) {
+  return RECIPES.find(r=>(r.materials[0]===a&&r.materials[1]===b)||(r.materials[0]===b&&r.materials[1]===a));
+}
 export interface GearState { active:boolean; reason:string; }
 export interface Shot { x:number; y:number; tx:number; ty:number; life:number; color:number; }
 export type AttackArea =
@@ -126,12 +129,12 @@ export class Defense {
     this.goldLog('economy',`${this.unitName(u)} 판매`,before,{sourceId:u.id});
     this.units=this.units.filter(v=>v.id!==id);this.note(`병사 판매 · ${refund}G 환급`);return true;
   }
-  buy(index:number):boolean {
+  buy(index:number,position?:{x:number;y:number}):boolean {
     const item=this.shop[index];if(!item)return false;
     if(this.gold<item.price)return this.note('구매 골드가 부족합니다.');
     const before=this.gold;this.gold-=item.price;this.shop[index]=null;
     const gear:Gear={id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis:item.price};
-    Object.assign(gear,this.findBagSpace(gear));
+    Object.assign(gear,position&&this.canPlace(gear,null,position.x,position.y,0)?position:this.findBagSpace(gear));
     this.gear.push(gear);
     this.goldLog('economy',`${item.name} #${gear.id} 구매`,before);
     this.note(`${item.name}을 공용 가방에 넣었습니다.`);return true;
@@ -192,24 +195,45 @@ export class Defense {
   }
   recipeFor(ids:readonly number[]) {
     if(ids.length!==2||new Set(ids).size!==2)return undefined;
-    const materials=ids.map(id=>this.gear.find(g=>g.id===id));
-    if(materials.some(g=>!g||g.owner!==null))return undefined;
-    const key=materials.map(g=>g!.def.id).sort().join(',');
-    return RECIPES.find(r=>[...r.materials].sort().join(',')===key);
+    const [a,b]=ids.map(id=>this.gear.find(g=>g.id===id));
+    return a&&b?recipeForTypes(a.def.id,b.def.id):undefined;
   }
-  combine(ids:readonly number[]):boolean {
-    const recipe=this.recipeFor(ids);
-    if(!recipe)return this.note('공용 가방의 서로 다른 재료 2개와 맞는 조합식을 선택하세요.');
-    if(this.anvils<1)return this.note('조합에 모루 1개가 필요합니다.');
-    const costBasis=ids.reduce((sum,id)=>sum+this.gear.find(g=>g.id===id)!.costBasis,0);
-    const def=ITEMS.find(item=>item.id===recipe.result)!;
-    // 검증이 끝난 후에만 재료와 모루를 소모한다.
-    this.gear=this.gear.filter(g=>!ids.includes(g.id));this.anvils--;
-    const result:Gear={id:this.nextId++,def,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis};
-    Object.assign(result,this.findBagSpace(result));this.gear.push(result);
-    this.log('economy',`${recipe.materials.map(id=>ITEMS.find(item=>item.id===id)!.name).join(' + ')} → ${def.name} #${result.id} · 모루 -1 / 남은 ${this.anvils} · 재료 원가 ${costBasis}G`);
-    this.note(`${def.name} 조합 완료 · 공용 가방에 배치`);return true;
+  touching(a:Gear,b:Gear):boolean {
+    if(a.owner!==b.owner||a.id===b.id)return false;
+    const ac=rotated(a.def.cells,a.turns).map(([x,y])=>[x+a.x,y+a.y]);
+    const bc=rotated(b.def.cells,b.turns).map(([x,y])=>[x+b.x,y+b.y]);
+    if([...ac,...bc].some(([x,y])=>x<0||y<0||x>=GRID.columns||(a.owner!==null&&y>=GRID.rows)))return false;
+    if(ac.some(([x,y])=>bc.some(([bx,by])=>x===bx&&y===by)))return false;
+    return ac.some(([x,y])=>bc.some(([bx,by])=>Math.abs(x-bx)+Math.abs(y-by)===1));
   }
+  adjacentPairs(owner:number|null):[number,number][] {
+    const items=this.gear.filter(g=>g.owner===owner).sort((a,b)=>a.id-b.id),pairs:[number,number][]=[];
+    for(let i=0;i<items.length;i++)for(let j=i+1;j<items.length;j++)
+      if(recipeForTypes(items[i].def.id,items[j].def.id)&&this.touching(items[i],items[j]))pairs.push([items[i].id,items[j].id]);
+    return pairs;
+  }
+  combinationPlan(hero:number|null):[number,number][] {
+    const candidates=[...(hero===null?[]:this.adjacentPairs(hero)),...this.adjacentPairs(null)];
+    const used=new Set<number>();
+    // 같은 재료를 두 번 소비하지 않는다. 현재 영웅, 공용 가방, 생성 번호 순으로 확정.
+    return candidates.filter(pair=>{if(pair.some(id=>used.has(id)))return false;pair.forEach(id=>used.add(id));return true;});
+  }
+  combineMany(pairs:readonly (readonly number[])[]):boolean {
+    const ids=pairs.flat(),recipes=pairs.map(pair=>this.recipeFor(pair));
+    if(!pairs.length||new Set(ids).size!==ids.length||recipes.some(r=>!r))return this.note('붙어 있는 조합 재료가 없습니다.');
+    if(pairs.some(pair=>!this.touching(this.gear.find(g=>g.id===pair[0])!,this.gear.find(g=>g.id===pair[1])!)))return this.note('같은 가방에서 재료 블록의 변을 붙여주세요.');
+    if(this.anvils<pairs.length)return this.note(`조합 ${pairs.length}회에 모루 ${pairs.length}개가 필요합니다.`);
+    const results=pairs.map((pair,i)=>({recipe:recipes[i]!,costBasis:pair.reduce((sum,id)=>sum+this.gear.find(g=>g.id===id)!.costBasis,0)}));
+    this.gear=this.gear.filter(g=>!ids.includes(g.id));this.anvils-=pairs.length;
+    for(const {recipe,costBasis} of results){
+      const def=ITEMS.find(item=>item.id===recipe.result)!;
+      const result:Gear={id:this.nextId++,def,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis};
+      Object.assign(result,this.findBagSpace(result));this.gear.push(result);
+      this.log('economy',`${recipe.materials.map(id=>ITEMS.find(item=>item.id===id)!.name).join(' + ')} → ${def.name} #${result.id} · 모루 -1 / 남은 ${this.anvils} · 재료 원가 ${costBasis}G`);
+    }
+    this.note(`조합 ${pairs.length}회 완료 · 모루 ${pairs.length}개 사용 · 완성품은 공용 가방에서 확인하세요.`);return true;
+  }
+  combine(ids:readonly number[]):boolean {return this.combineMany([ids]);}
   devGold():void {
     const before=this.gold;this.gold+=10000;this.goldLog('economy','[개발자] 골드 지급',before);this.note('개발자 골드 +10,000G');
   }

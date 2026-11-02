@@ -1,6 +1,6 @@
 import { Application } from 'pixi.js';
-import { Defense, type LogCategory } from './defense';
-import { GRID, ITEMS, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+import { Defense, recipeForTypes, type LogCategory } from './defense';
+import { GRID, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
 import './style.css';
 
@@ -8,7 +8,8 @@ const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById
 const game=new Defense();
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
 let selectedGear:number|null=null,turns=0,tab='summon';
-let combineSelection:number[]=[];
+let shopFocus:number|null=null;
+let pressedGear:number|null=null;
 const events=new AbortController();
 let heroInfo:{kind:UnitKind;unitId:number|null}|null=null;
 let heroInfoMarkup='';
@@ -101,11 +102,11 @@ function inventoryGrid(owner:number|null):string {
     const x=i%GRID.columns,y=Math.floor(i/GRID.columns),stack=occupied.get(`${x},${y}`)??[];
     const g=stack.find(g=>g.id===selectedGear)??stack.at(-1),inactive=g&&states&&!states.get(g.id)?.active;
     const address=owner===null?`data-bag-cell="${x},${y}"`:`data-cell="${x},${y}"`;
-    return `<button class="gear-cell ${g?.id===selectedGear?'picked':''} ${inactive?'gear-inactive':''} ${g&&combineSelection.includes(g.id)?'material-picked':''}" ${address} ${g?`data-gear-id="${g.id}" ${inactive?'data-inactive="true"':''} style="background-color:${g.def.color}" title="${stack.map(v=>`${v.def.name} #${v.id}`).join(' / ')} · 더블클릭 회전"`:''} aria-label="${owner===null?'공용 가방':'영웅 장비'} ${x+1}열 ${y+1}행${g?' '+g.def.name:''}${inactive?' 비활성':''}">${g?g.def.short:''}${stack.length>1?`<sup>${stack.length}</sup>`:''}</button>`;
+    return `<button class="gear-cell ${g?.id===selectedGear?'picked':''} ${inactive?'gear-inactive':''} " ${address} ${g?`data-gear-id="${g.id}" ${inactive?'data-inactive="true"':''} style="background-color:${g.def.color}" title="${stack.map(v=>`${v.def.name} #${v.id}`).join(' / ')} · 더블클릭 회전"`:''} aria-label="${owner===null?'공용 가방':'영웅 장비'} ${x+1}열 ${y+1}행${g?' '+g.def.name:''}${inactive?' 비활성':''}">${g?g.def.short:''}${stack.length>1?`<sup>${stack.length}</sup>`:''}</button>`;
   }).join('');
 }
 function refresh():void {
-  combineSelection=combineSelection.filter(id=>game.gear.some(g=>g.id===id&&g.owner===null));
+
   const unitCards=(hero:boolean)=>Object.entries(UNITS).filter(([,d])=>d.hero===hero).map(([kind,d])=>{
     const blocked=hero&&(game.heroes().length>=RULES.heroLimit||game.heroes().some(u=>u.kind===kind));
     if(hero)return `<button class="unit-card hero-card ${pending===kind?'selected':''} ${blocked?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
@@ -130,11 +131,9 @@ function refresh():void {
   const bag=inventoryGrid(null);
   el('gear-bag').innerHTML=bag;el('shop-bag').innerHTML=bag;
   const gear=game.gear.find(g=>g.id===selectedGear);
-  el('rotate').toggleAttribute('disabled',!gear);
-  el('unequip').toggleAttribute('disabled',!gear||gear.owner===null);
-  const itemDetail=gear?`${shape(gear.def,turns)} <b>${gear.def.name} #${gear.id}</b> · ${gear.def.description}<br>방향 ${turns*90}° · ${gear.owner===null?'공용 가방':game.gearState(gear).active?'능력치 활성':`능력치 비활성 (${game.gearState(gear).reason})`}<div class="actions"><button data-rotate-selected>↻ 회전</button>${gear.owner===null?`<button data-open-gear>영웅에게 장착</button><button data-material="${gear.id}" aria-pressed="${combineSelection.includes(gear.id)}">${combineSelection.includes(gear.id)?'재료 선택 해제':'조합 재료 선택'}</button>`:''}<button class="danger" data-sell-gear="${gear.id}">판매 +${Math.floor(gear.costBasis/2)}G</button><button data-cancel-gear>취소</button></div>`:'블록을 선택하거나 끌어 놓으세요. 더블클릭·두 번 탭하면 회전합니다.';
+  const itemDetail=gear?`${shape(gear.def,turns)} <b>${gear.def.name} #${gear.id}</b> · ${gear.def.description}<br>방향 ${turns*90}° · ${gear.owner===null?'공용 가방':game.gearState(gear).active?'능력치 활성':`능력치 비활성 (${game.gearState(gear).reason})`}<div class="actions"><button data-rotate-selected>↻ 회전</button>${gear.owner===null?`<button data-open-gear>영웅에게 장착</button>`:''}<button class="danger" data-sell-gear="${gear.id}">판매 +${Math.floor(gear.costBasis/2)}G</button><button data-cancel-gear>취소</button></div>`:'블록을 선택하거나 끌어 놓으세요. 더블클릭·두 번 탭하면 회전합니다.';
   el('item-detail').innerHTML=itemDetail;el('shop-item-detail').innerHTML=itemDetail;
-  el('shop-cards').innerHTML=game.shop.map((item,index)=>item?`<article class="shop-card">${shape(item)}<b>${item.name}</b><p>${item.description}</p><button data-buy="${index}" ${game.gold<item.price?'disabled':''}>구매 ${item.price}G</button></article>`:'<article class="shop-card"><b>구매 완료</b><p>새로고침으로 상품을 보충하세요.</p></article>').join('');
+  el('shop-cards').innerHTML=game.shop.map((item,index)=>item?`<article class="shop-card" data-shop-index="${index}" tabindex="0" aria-label="${item.name} · 공용 가방에 드래그하여 구매">${shape(item)}<b>${item.name}</b><p>${item.description}</p><button data-buy="${index}" ${game.gold<item.price?'disabled':''}>구매 ${item.price}G</button></article>`:'<article class="shop-card"><b>구매 완료</b><p>새로고침으로 상품을 보충하세요.</p></article>').join('');
   el('reroll').toggleAttribute('disabled',game.gold<RULES.rerollGold);
   updateHud();
   refreshLogs();
@@ -143,29 +142,56 @@ function refresh():void {
 }
 function refreshTools():void {
   el('dev-balance').textContent=`골드 ${game.gold.toLocaleString()}G · 모루 ${game.anvils}`;
-  el('recipe-list').innerHTML=RECIPES.map(recipe=>{
-    const used:number[]=[];
-    const available=recipe.materials.every(type=>{const g=game.gear.find(g=>g.owner===null&&g.def.id===type&&!used.includes(g.id));if(!g)return false;used.push(g.id);return true;});
-    const result=ITEMS.find(item=>item.id===recipe.result)!;
-    const chip=(id:string)=>{const item=ITEMS.find(item=>item.id===id)!;return `<span class="recipe-chip">${shape(item)}<span>${item.name}</span></span>`;};
-    return `<article class="recipe-card"><div class="recipe-formula">${chip(recipe.materials[0])}<b>+</b>${chip(recipe.materials[1])}<b>→</b>${chip(recipe.result)}</div><p>${result.description} · 모루 1</p><button data-pick-recipe="${recipe.id}" ${available?'':'disabled'}>${available?'재료 선택':'가방 재료 부족'}</button></article>`;
-  }).join('');
-  const selection=combineSelection.map(id=>game.gear.find(g=>g.id===id)!);
-  el('combine-materials').innerHTML=selection.map(g=>`<button data-remove-material="${g.id}">${g.def.name} #${g.id} ×</button>`).join('')||'<span>가방에서 재료 2개를 선택하세요.</span>';
-  const recipe=game.recipeFor(combineSelection),result=ITEMS.find(item=>item.id===recipe?.result);
-  el('combine-result').textContent=result?`결과: ${result.name} · 판매 환급 ${Math.floor(selection.reduce((sum,g)=>sum+g.costBasis,0)/2)}G`:selection.length===2?'해당 재료의 조합식이 없습니다.':'조합식의 ‘재료 선택’을 눌러도 됩니다.';
-  el('combine').toggleAttribute('disabled',!recipe||game.anvils<1);
+  const plan=game.combinationPlan(selectedHero),count=plan.length;
+  el('combine-status').textContent=`조합 ${count}회 · 모루 ${count}개 필요 / 보유 ${game.anvils}개`;
+  const button=el<HTMLButtonElement>('combine');
+  button.disabled=!count||game.anvils<count;
+  button.textContent=count?`조합 ${count}회 실행`:'조합 재료를 붙여주세요';
+  button.title=plan.map(pair=>pair.map(id=>{const g=game.gear.find(g=>g.id===id)!;return `${g.def.name} #${g.id}`;}).join(' + ')).join(' / ');
+  refreshLinks();
 }
-function selectMaterial(id:number):void {
-  if(combineSelection.includes(id))combineSelection=combineSelection.filter(v=>v!==id);
-  else if(combineSelection.length<2&&game.gear.some(g=>g.id===id&&g.owner===null))combineSelection.push(id);
-  else game.note('재료는 2개까지 선택합니다. 먼저 기존 선택을 해제하세요.');
+// 화면에 보이는 칸들의 중심만 사용한다. 스크롤로 가려진 칸에는 선을 그리지 않는다.
+function visibleCenter(nodes:HTMLElement[]):{x:number;y:number}|null {
+  const rects=nodes.filter(node=>node.getClientRects().length).map(node=>{
+    const r=node.getBoundingClientRect(),scroll=node.closest('.inventory-scroll')?.getBoundingClientRect();
+    const left=Math.max(0,r.left,scroll?.left??0),right=Math.min(innerWidth,r.right,scroll?.right??innerWidth);
+    const top=Math.max(0,r.top,scroll?.top??0),bottom=Math.min(innerHeight,r.bottom,scroll?.bottom??innerHeight);
+    return {left,right,top,bottom};
+  }).filter(r=>r.right>r.left&&r.bottom>r.top);
+  if(!rects.length)return null;
+  return {x:rects.reduce((n,r)=>n+(r.left+r.right)/2,0)/rects.length,y:rects.reduce((n,r)=>n+(r.top+r.bottom)/2,0)/rects.length};
 }
-function selectRecipe(id:string):void {
-  const recipe=RECIPES.find(r=>r.id===id);if(!recipe)return;
-  const selected:number[]=[];
-  for(const type of recipe.materials){const gear=game.gear.find(g=>g.owner===null&&g.def.id===type&&!selected.includes(g.id));if(!gear){game.note('공용 가방에 조합 재료가 부족합니다.');return;}selected.push(gear.id);}
-  combineSelection=selected;game.note('재료 선택 완료 · 모루 1개로 조합할 수 있습니다.');
+function refreshLinks():void {
+  const svg=document.getElementById('combination-links')!;
+  svg.setAttribute('viewBox',`0 0 ${innerWidth} ${innerHeight}`);
+  document.querySelectorAll('.combo-partner').forEach(node=>node.classList.remove('combo-partner'));
+  const lines:string[]=[];
+  const line=(a:{x:number;y:number},b:{x:number;y:number},kind:string)=>lines.push(`<line class="${kind}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`);
+  const grids=['equipment','gear-bag','shop-bag'].map(id=>el(id)).filter(node=>node.getClientRects().length);
+  for(const grid of grids){
+    const owner=grid.id==='equipment'?selectedHero:null;
+    if(grid.id==='equipment'&&owner===null)continue;
+    for(const [a,b] of game.adjacentPairs(owner)){
+      const ca=visibleCenter(Array.from(grid.querySelectorAll<HTMLElement>(`[data-gear-id="${a}"]`)));
+      const cb=visibleCenter(Array.from(grid.querySelectorAll<HTMLElement>(`[data-gear-id="${b}"]`)));
+      if(ca&&cb)line(ca,cb,'combo-ready');
+    }
+  }
+  const id=pressedGear??selectedGear;
+  const held=game.gear.find(g=>g.id===id);
+  const product=shopFocus===null?null:game.shop[shopFocus];
+  const type=drag?.shopIndex!==undefined?game.shop[drag.shopIndex]:held?.def??product;
+  let source:{x:number;y:number}|null=null;
+  if(drag?.moved)source={x:drag.x,y:drag.y};
+  else if(held&&shopFocus===null)source=visibleCenter(Array.from(document.querySelectorAll<HTMLElement>(`[data-gear-id="${held.id}"]`)));
+  else if(shopFocus!==null)source=visibleCenter(Array.from(document.querySelectorAll<HTMLElement>(`[data-shop-index="${shopFocus}"]`)));
+  if(type&&source)for(const grid of grids)for(const item of game.gear){
+    if(item.id===held?.id||!recipeForTypes(type.id,item.def.id))continue;
+    const cells=Array.from(grid.querySelectorAll<HTMLElement>(`[data-gear-id="${item.id}"]`));
+    const target=visibleCenter(cells);if(!target)continue;
+    cells.forEach(node=>node.classList.add('combo-partner'));line(source,target,'combo-hint');
+  }
+  svg.innerHTML=lines.join('');
 }
 function updateHud():void {
   el('gold').innerHTML=`${game.gold} <small>G</small>`;
@@ -176,7 +202,7 @@ function updateHud():void {
 }
 function chooseGear(id:number):void {
   const g=game.gear.find(g=>g.id===id);if(!g)return;
-  selectedGear=id;turns=g.turns;if(g.owner!==null)selectedHero=g.owner;
+  shopFocus=null;selectedGear=id;turns=g.turns;if(g.owner!==null)selectedHero=g.owner;
   game.note(`${g.def.name} 선택 · 빈 칸에 배치 / 더블클릭 회전`);
 }
 function placeGear(x:number,y:number,bag=false):void {
@@ -185,7 +211,7 @@ function placeGear(x:number,y:number,bag=false):void {
   const success=bag?game.placeInBag(selectedGear,x,y,turns):game.equip(selectedGear,selectedHero!,x,y,turns);
   if(success)selectedGear=null;
 }
-type Drag={id:number;x:number;y:number;pointer:number;moved:boolean;ghost:HTMLElement|null;dx:number;dy:number};
+type Drag={shopIndex?:number;id:number;x:number;y:number;pointer:number;moved:boolean;ghost:HTMLElement|null;dx:number;dy:number};
 let drag:Drag|null=null;
 let unitDrag:Drag|null=null;
 let suppressClick=false;
@@ -208,10 +234,16 @@ document.addEventListener('pointerdown',(e)=>{
   const target=e.target as HTMLElement;
   if(!target.closest('#hero-info')&&!target.closest('.unit-card'))closeHeroInfo();
   const button=target.closest<HTMLElement>('[data-gear-id]');
+  const product=target.closest<HTMLElement>('[data-shop-index]');
+  if(product){
+    shopFocus=Number(product.dataset.shopIndex);selectedGear=null;pressedGear=null;
+    drag={shopIndex:shopFocus,id:-1,x:e.clientX,y:e.clientY,pointer:e.pointerId,moved:false,ghost:null,dx:0,dy:0};
+    refreshLinks();
+  } else if(!button){shopFocus=null;pressedGear=null;} 
   if(button){
-    const id=Number(button.dataset.gearId),item=game.gear.find(g=>g.id===id);
+    const id=Number(button.dataset.gearId);pressedGear=id;shopFocus=null;const item=game.gear.find(g=>g.id===id);
     const cell=(button.dataset.bagCell??button.dataset.cell)!.split(',').map(Number);
-    drag={id,x:e.clientX,y:e.clientY,pointer:e.pointerId,moved:false,ghost:null,dx:cell[0]-(item?.x??0),dy:cell[1]-(item?.y??0)};
+    drag={id,x:e.clientX,y:e.clientY,pointer:e.pointerId,moved:false,ghost:null,dx:cell[0]-(item?.x??0),dy:cell[1]-(item?.y??0)};refreshLinks();
   }
   if(target.tagName==='CANVAS'){
     const unit=game.units.find(u=>u.slot===canvasSlot(e.clientX,e.clientY));
@@ -231,11 +263,13 @@ document.addEventListener('pointermove',(e)=>{
   }
   if(!drag||drag.pointer!==e.pointerId)return;
   if(!drag.moved&&Math.hypot(e.clientX-drag.x,e.clientY-drag.y)>7) {
-    drag.moved=true;lastGearTap=null;chooseGear(drag.id);
+    drag.moved=true;lastGearTap=null;if(drag.shopIndex===undefined)chooseGear(drag.id);
     drag.ghost=document.createElement('div');drag.ghost.className='drag-ghost';
-    drag.ghost.textContent=game.gear.find(g=>g.id===drag!.id)?.def.name??'';document.body.append(drag.ghost);
+    drag.ghost.textContent=drag.shopIndex===undefined?(game.gear.find(g=>g.id===drag!.id)?.def.name??''):(game.shop[drag.shopIndex]?.name??'');document.body.append(drag.ghost);
   }
+  if(drag.moved){drag.x=e.clientX;drag.y=e.clientY;}
   if(drag.ghost){drag.ghost.style.left=`${e.clientX}px`;drag.ghost.style.top=`${e.clientY}px`;}
+  refreshLinks();
 },{signal:events.signal});
 document.addEventListener('pointerup',(e)=>{
   if(unitDrag&&unitDrag.pointer===e.pointerId){
@@ -247,13 +281,17 @@ document.addEventListener('pointerup',(e)=>{
     suppressClick=true;
     const target=document.elementFromPoint(e.clientX,e.clientY)?.closest<HTMLElement>('[data-cell],[data-bag-cell]');
     const address=target?.dataset.cell??target?.dataset.bagCell;
-    if(address){const [x,y]=address.split(',').map(Number);placeGear(x-drag.dx,y-drag.dy,!!target?.dataset.bagCell);}
+    if(drag.shopIndex!==undefined){
+      const bag=document.elementFromPoint(e.clientX,e.clientY)?.closest('#gear-bag,#shop-bag');
+      if(bag){const position=target?.dataset.bagCell?.split(',').map(Number);game.buy(drag.shopIndex,position?{x:position[0],y:position[1]}:undefined);shopFocus=null;}
+      else game.note('공용 가방에 내려놓을 때만 구매합니다.');
+    } else if(address){const [x,y]=address.split(',').map(Number);placeGear(x-drag.dx,y-drag.dy,!!target?.dataset.bagCell);}
     else game.note('장비칸에 놓지 않아 원래 위치를 유지합니다.');
     refresh();setTimeout(()=>suppressClick=false,0);
   }
-  drag.ghost?.remove();drag=null;
+  drag.ghost?.remove();drag=null;pressedGear=null;refreshLinks();
 },{signal:events.signal});
-document.addEventListener('pointercancel',()=>{drag?.ghost?.remove();drag=null;unitDrag?.ghost?.remove();unitDrag=null;},{signal:events.signal});
+document.addEventListener('pointercancel',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;refreshLinks();},{signal:events.signal});
 el('app').addEventListener('click',(e)=>{
   if(suppressClick)return;
   const b=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!b||b.disabled)return;
@@ -272,7 +310,6 @@ el('app').addEventListener('click',(e)=>{
   else if(d.buy)game.buy(Number(d.buy));
   else if(d.selectGear)chooseGear(Number(d.selectGear));
   else if(d.returnGear){game.unequip(Number(d.returnGear));selectedGear=null;}
-  else if(d.material)selectMaterial(Number(d.material));
   else if(d.cell||d.bagCell){
     if(d.gearId){
       const id=Number(d.gearId),context=b.parentElement!.id,now=performance.now();
@@ -282,32 +319,29 @@ el('app').addEventListener('click',(e)=>{
   }
   else if(d.sellGear){game.sellGear(Number(d.sellGear));selectedGear=null;}
   else if('cancelGear'in d){selectedGear=null;game.note('장비 선택을 취소했습니다.');}
-  else if((b.id==='rotate'||'rotateSelected'in d)&&selectedGear!==null)rotateSelected(selectedGear);
+  else if('rotateSelected'in d&&selectedGear!==null)rotateSelected(selectedGear);
   else if('openGear'in d)openTab('gear');
-  else if(b.id==='unequip'&&selectedGear!==null){game.unequip(selectedGear);selectedGear=null;}
+  else if(b.id==='combine'){if(game.combineMany(game.combinationPlan(selectedHero))){selectedGear=null;pressedGear=null;shopFocus=null;}}
   else if(b.id==='reroll')game.reroll();
   else if(b.id==='speed'){game.speed=game.speed===1?2:game.speed===2?3:1;b.textContent=`${game.speed}×`;}
   refresh();
 },{signal:events.signal});
 el('dev-tools').addEventListener('click',(e)=>{
   const button=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!button||button.disabled)return;
-  const data=button.dataset;
   if(button.id==='dev-gold')game.devGold();
   else if(button.id==='dev-anvils')game.devAnvils();
   else if(button.id==='dev-reset'){
     drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
-    game.reset();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;combineSelection=[];
+    game.reset();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
     lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');el('speed').textContent='1×';
   }
-  else if(data.pickRecipe)selectRecipe(data.pickRecipe);
-  else if(data.removeMaterial)combineSelection=combineSelection.filter(id=>id!==Number(data.removeMaterial));
-  else if(button.id==='combine'){if(game.combine(combineSelection)){combineSelection=[];selectedGear=null;}}
   refresh();
 },{signal:events.signal});
+el('shop-cards').addEventListener('focusin',(e)=>{const card=(e.target as HTMLElement).closest<HTMLElement>('[data-shop-index]');if(card){shopFocus=Number(card.dataset.shopIndex);selectedGear=null;refreshLinks();}},{signal:events.signal});
 el('hero-info').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-info'))closeHeroInfo();},{signal:events.signal});
 document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},{signal:events.signal});
-window.addEventListener('resize',positionHeroInfo,{signal:events.signal});
-document.addEventListener('scroll',positionHeroInfo,{capture:true,signal:events.signal});
+window.addEventListener('resize',()=>{positionHeroInfo();refreshLinks();},{signal:events.signal});
+document.addEventListener('scroll',()=>{positionHeroInfo();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
 el('app').addEventListener('dblclick',(e)=>{
   const block=(e.target as HTMLElement).closest<HTMLElement>('[data-gear-id]');
@@ -332,6 +366,14 @@ async function start():Promise<void> {
   let lastRevision=-1,hudClock=0;
   refresh();
   app.ticker.add(ticker=>{
+    if(drag?.moved){
+      const edge=60,step=Math.min(ticker.deltaMS,40)*0.35;
+      const node=document.elementFromPoint(drag.x,drag.y)?.closest<HTMLElement>('.inventory-scroll');
+      const rect=node?.getBoundingClientRect();
+      const before=node?.scrollTop;
+      if(node&&rect){if(drag.y<rect.top+edge)node.scrollTop-=step;else if(drag.y>rect.bottom-edge)node.scrollTop+=step;}
+      if(!node||node.scrollTop===before){if(drag.y<edge)window.scrollBy(0,-step);else if(drag.y>innerHeight-edge)window.scrollBy(0,step);}
+    }
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
     const dt=Math.min(ticker.deltaMS/1000,0.1);game.tick(dt);view.draw(selectedUnit,pending!==null);
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshLogs();}

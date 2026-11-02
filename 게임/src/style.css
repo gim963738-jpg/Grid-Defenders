@@ -66,3 +66,14 @@
 .recipe-card{padding:9px;margin-top:7px;background:#1b2927;border:1px solid #485747;border-radius:6px}.recipe-formula{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:4px;align-items:center}.recipe-formula>b{color:#e3bf72;font-size:13px}.recipe-chip{display:grid;justify-items:center;gap:4px;text-align:center;font-size:10px;word-break:keep-all}.recipe-chip .mini-shape{min-height:26px}.recipe-card p{font-size:10px;line-height:1.6;color:#aebda5;margin:8px 0}.recipe-card button{width:100%!important}
 @media(min-width:1080px){#dev-tools{position:fixed;left:calc(50% + 235px);top:16px;bottom:16px;width:min(320px,calc((100vw - 430px)/2 - 32px));margin:0;overflow:auto;overscroll-behavior:contain}}
 .recipe-card{padding:7px}.recipe-chip .mini-shape{min-height:18px}.recipe-card p{font-size:9px;margin:5px 0;line-height:1.45}#dev-tools .recipe-card button{padding:5px}#combine-result{margin:7px 0}
+
+/* 조합 연결선은 입력을 가로채지 않는 화면 좌표 오버레이. */
+#combination-links{position:fixed;inset:0;width:100%;height:100%;z-index:15;pointer-events:none;overflow:hidden}
+#combination-links line{stroke-linecap:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px #091214)}
+#combination-links .combo-ready{stroke:#ffdc51;stroke-width:3}
+#combination-links .combo-hint{stroke:#59caff;stroke-width:2.5;stroke-dasharray:7 6}
+.gear-cell.combo-partner{box-shadow:inset 0 0 0 2px #59caff}
+.shop-card[data-shop-index]{touch-action:none;user-select:none;cursor:grab}
+.shop-card[data-shop-index]:active{cursor:grabbing}
+#combine-status{color:#f2cf7b;overflow-wrap:anywhere}
+.equipment-layout aside #combine{background:#66532f;color:#fff0bd;font-weight:650}
