@@ -220,12 +220,46 @@ function placeGear(x:number,y:number,bag=false):void {
   const success=bag?game.placeInBag(selectedGear,x,y,turns):game.equip(selectedGear,selectedHero!,x,y,turns);
   if(success)selectedGear=null;
 }
-type Drag={shopIndex?:number;id:number;x:number;y:number;pointer:number;moved:boolean;ghost:HTMLElement|null;dx:number;dy:number};
+type Drag={shopIndex?:number;cellSize?:number;id:number;x:number;y:number;pointer:number;moved:boolean;ghost:HTMLElement|null;dx:number;dy:number};
 let drag:Drag|null=null;
 let unitDrag:Drag|null=null;
 let suppressClick=false;
 let lastGearTap:{id:number;context:string;time:number}|null=null;
 let lastRotation:{id:number;time:number}|null=null;
+function updateGearDrag():void {
+  document.querySelectorAll<HTMLElement>('.drop-preview').forEach(node=>{
+    node.classList.remove('drop-preview','drop-warning');node.style.removeProperty('--preview-color');
+  });
+  if(!drag?.moved||!drag.ghost)return;
+  const gear=game.gear.find(g=>g.id===drag!.id);
+  const def=drag.shopIndex===undefined?gear?.def:game.shop[drag.shopIndex];if(!def)return;
+  const rotation=gear?.turns??0,cells=rotated(def.cells,rotation);
+  const hit=document.elementFromPoint(drag.x,drag.y)?.closest<HTMLElement>('[data-cell],[data-bag-cell]');
+  const grid=hit?.parentElement;
+  const size=hit?.getBoundingClientRect().width??drag.cellSize??32;
+  const gap=3,step=size+gap;
+  const ghost=drag.ghost;
+  ghost.innerHTML=cells.map(([x,y])=>`<i style="left:${x*step}px;top:${y*step}px;width:${size}px;height:${size}px;background:${def.color}"></i>`).join('');
+  ghost.style.width=`${(Math.max(...cells.map(c=>c[0]))+1)*step-gap}px`;
+  ghost.style.height=`${(Math.max(...cells.map(c=>c[1]))+1)*step-gap}px`;
+  ghost.style.left=`${drag.x-drag.dx*step-size/2}px`;ghost.style.top=`${drag.y-drag.dy*step-size/2}px`;
+  let valid=true;
+  if(hit&&grid){
+    const bag=hit.dataset.bagCell!==undefined;
+    const [cx,cy]=(hit.dataset.bagCell??hit.dataset.cell)!.split(',').map(Number);
+    let x=cx-drag.dx,y=cy-drag.dy;
+    if(drag.shopIndex!==undefined){
+      valid=bag&&game.gold>=def.price;
+      if(bag){const position=game.purchasePosition(def,{x:cx,y:cy});x=position.x;y=position.y;}
+    } else valid=(bag||selectedHero!==null)&&game.canPlace({id:drag.id,def},bag?null:selectedHero,x,y,rotation);
+    for(const [dx,dy] of cells){
+      const address=`${x+dx},${y+dy}`;
+      const node=Array.from(grid.querySelectorAll<HTMLElement>('[data-cell],[data-bag-cell]')).find(n=>(n.dataset.cell??n.dataset.bagCell)===address);
+      if(node){node.classList.add('drop-preview');node.classList.toggle('drop-warning',!valid);node.style.setProperty('--preview-color',def.color);}
+    }
+  }
+  ghost.classList.toggle('drag-warning',!valid);
+}
 function rotateSelected(id:number):void {
   selectedGear=id;
   if(game.rotateGear(id)){const item=game.gear.find(g=>g.id===id)!;const state=game.gearState(item);game.note(item.owner===null||state.active?'블록 90° 회전 완료':`회전 완료 · 능력치 비활성 (${state.reason})`);}
@@ -252,7 +286,7 @@ document.addEventListener('pointerdown',(e)=>{
   if(button){
     const id=Number(button.dataset.gearId);pressedGear=id;shopFocus=null;const item=game.gear.find(g=>g.id===id);
     const cell=(button.dataset.bagCell??button.dataset.cell)!.split(',').map(Number);
-    drag={id,x:e.clientX,y:e.clientY,pointer:e.pointerId,moved:false,ghost:null,dx:cell[0]-(item?.x??0),dy:cell[1]-(item?.y??0)};refreshLinks();
+    drag={id,cellSize:button.getBoundingClientRect().width,x:e.clientX,y:e.clientY,pointer:e.pointerId,moved:false,ghost:null,dx:cell[0]-(item?.x??0),dy:cell[1]-(item?.y??0)};refreshLinks();
   }
   if(target.tagName==='CANVAS'){
     const unit=game.units.find(u=>u.slot===canvasSlot(e.clientX,e.clientY));
@@ -273,11 +307,10 @@ document.addEventListener('pointermove',(e)=>{
   if(!drag||drag.pointer!==e.pointerId)return;
   if(!drag.moved&&Math.hypot(e.clientX-drag.x,e.clientY-drag.y)>7) {
     drag.moved=true;lastGearTap=null;if(drag.shopIndex===undefined)chooseGear(drag.id);
-    drag.ghost=document.createElement('div');drag.ghost.className='drag-ghost';
-    drag.ghost.textContent=drag.shopIndex===undefined?(game.gear.find(g=>g.id===drag!.id)?.def.name??''):(game.shop[drag.shopIndex]?.name??'');document.body.append(drag.ghost);
+    drag.ghost=document.createElement('div');drag.ghost.className='gear-drag-ghost';drag.ghost.setAttribute('aria-hidden','true');el('gear-drag-layer').append(drag.ghost);
   }
   if(drag.moved){drag.x=e.clientX;drag.y=e.clientY;}
-  if(drag.ghost){drag.ghost.style.left=`${e.clientX}px`;drag.ghost.style.top=`${e.clientY}px`;}
+  updateGearDrag();
   refreshLinks();
 },{signal:events.signal});
 document.addEventListener('pointerup',(e)=>{
@@ -298,9 +331,9 @@ document.addEventListener('pointerup',(e)=>{
     else game.note('장비칸에 놓지 않아 원래 위치를 유지합니다.');
     refresh();setTimeout(()=>suppressClick=false,0);
   }
-  drag.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;refreshLinks();
+  drag.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;updateGearDrag();refreshLinks();
 },{signal:events.signal});
-document.addEventListener('pointercancel',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;refreshLinks();},{signal:events.signal});
+document.addEventListener('pointercancel',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
 el('app').addEventListener('click',(e)=>{
   if(suppressClick)return;
   const b=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!b||b.disabled)return;
@@ -346,11 +379,11 @@ el('dev-tools').addEventListener('click',(e)=>{
   }
   refresh();
 },{signal:events.signal});
-window.addEventListener('blur',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;refreshLinks();},{signal:events.signal});
+window.addEventListener('blur',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
 el('hero-info').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-info'))closeHeroInfo();},{signal:events.signal});
 document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},{signal:events.signal});
-window.addEventListener('resize',()=>{positionHeroInfo();refreshLinks();},{signal:events.signal});
-document.addEventListener('scroll',()=>{positionHeroInfo();refreshLinks();},{capture:true,signal:events.signal});
+window.addEventListener('resize',()=>{positionHeroInfo();updateGearDrag();refreshLinks();},{signal:events.signal});
+document.addEventListener('scroll',()=>{positionHeroInfo();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
 el('app').addEventListener('dblclick',(e)=>{
   const block=(e.target as HTMLElement).closest<HTMLElement>('[data-gear-id]');
@@ -389,6 +422,6 @@ async function start():Promise<void> {
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshLogs();}
     if(lastRevision!==game.revision&&!drag&&!unitDrag){lastRevision=game.revision;refresh();}
   });
-  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();drag?.ghost?.remove();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
+  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
 void start().catch((error:unknown)=>{el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';console.error(error);});

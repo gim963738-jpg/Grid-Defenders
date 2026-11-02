@@ -134,7 +134,7 @@ export class Defense {
     if(this.gold<item.price)return this.note('구매 골드가 부족합니다.');
     const before=this.gold;this.gold-=item.price;this.shop[index]=null;
     const gear:Gear={id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis:item.price};
-    Object.assign(gear,position&&this.canPlace(gear,null,position.x,position.y,0)?position:this.findBagSpace(gear));
+    Object.assign(gear,this.purchasePosition(item,position));
     this.gear.push(gear);
     this.goldLog('economy',`${item.name} #${gear.id} 구매`,before);
     this.note(`${item.name}을 공용 가방에 넣었습니다.`);return true;
@@ -160,14 +160,18 @@ export class Defense {
     g.owner=null;Object.assign(g,space);
     this.note(`${g.def.name} 장착 해제 · 공용 가방으로 이동`);return true;
   }
-  private canPlace(item:Gear,owner:number|null,x:number,y:number,turns:number):boolean {
+  canPlace(item:Pick<Gear,'id'|'def'>,owner:number|null,x:number,y:number,turns:number):boolean {
     if(!Number.isInteger(x)||!Number.isInteger(y)||!Number.isInteger(turns))return false;
     const cells=rotated(item.def.cells,turns).map(([dx,dy])=>[dx+x,dy+y]);
     if(cells.some(([cx,cy])=>cx<0||cy<0||cx>=GRID.columns||(owner!==null&&cy>=GRID.rows)))return false;
     const occupied=new Set(this.gear.filter(g=>g.owner===owner&&g.id!==item.id).flatMap(g=>rotated(g.def.cells,g.turns).map(([dx,dy])=>`${g.x+dx},${g.y+dy}`)));
     return !cells.some(([cx,cy])=>occupied.has(`${cx},${cy}`));
   }
-  private findBagSpace(item:Gear):{x:number;y:number} {
+  purchasePosition(def:ItemDef,position?:{x:number;y:number}):{x:number;y:number} {
+    const item={id:-1,def,turns:0};
+    return position&&this.canPlace(item,null,position.x,position.y,0)?position:this.findBagSpace(item);
+  }
+  private findBagSpace(item:Pick<Gear,'id'|'def'|'turns'>):{x:number;y:number} {
     const bottom=this.gear.filter(g=>g.owner===null&&g.id!==item.id).reduce((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+1),0);
     for(let y=0;y<=bottom;y++)for(let x=0;x<GRID.columns;x++)if(this.canPlace(item,null,x,y,item.turns))return {x,y};
     return {x:0,y:bottom};

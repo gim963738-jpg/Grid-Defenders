@@ -88,3 +88,9 @@
 #recipe-tree li:last-child::after{content:'';position:absolute;left:-1px;top:0;height:16px;border-left:1px solid #647267}
 #recipe-tree .tree-item{display:inline-flex;gap:8px;align-items:center;vertical-align:middle;color:#d5dfcd}
 #recipe-tree .mini-shape{min-width:31px;flex:none}
+#gear-drag-layer{position:fixed;inset:0;z-index:20;pointer-events:none;overflow:hidden}
+.gear-drag-ghost{position:absolute;pointer-events:none;opacity:.8;filter:drop-shadow(0 3px 5px #0009)}
+.gear-drag-ghost i{position:absolute;border:2px solid #f3e2b5;border-radius:3px}
+.gear-drag-ghost.drag-warning i{border-color:#ff817c}
+.gear-cell.drop-preview::after{content:'';position:absolute;inset:0;pointer-events:none;background:var(--preview-color);opacity:.45;border:2px dashed #e9f6d2;border-radius:2px;z-index:2}
+.gear-cell.drop-preview.drop-warning::after{background:#e55858;border-color:#ffaaa3}
