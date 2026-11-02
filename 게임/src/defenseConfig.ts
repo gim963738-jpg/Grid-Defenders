@@ -28,7 +28,8 @@ export const ITEMS: ItemDef[] = [
   {id:'I08',name:'질풍의 검',short:'질',cells:[[0,0],[0,1],[1,1]],color:'#83ae74',price:150,attack:20,speed:0.15,description:'공격력 +20 · 공속 +15%'},
   {id:'I09',name:'재생의 부적',short:'재',cells:[[0,0],[1,0],[2,0]],color:'#6eac90',price:160,hp:350,regen:10,description:'체력 +350 · 초당 회복 +10'},
 ];
-export const GRID = { columns:5, rows:6 } as const;
+export const GRID = { columns:4, rows:5 } as const;
+export const BAG_GRID = { columns:5, rows:6 } as const;
 export const RECIPES = [
   {id:'R01',materials:['I01','I01'],result:'I06'},
   {id:'R02',materials:['I02','I04'],result:'I07'},

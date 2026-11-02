@@ -1,6 +1,6 @@
 import { Application } from 'pixi.js';
 import { Defense, recipeForTypes, type LogCategory } from './defense';
-import { GRID, ITEMS, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+import { BAG_GRID, GRID, ITEMS, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
 import './style.css';
 
@@ -99,9 +99,9 @@ function inventoryGrid(owner:number|null):string {
   for(const g of game.gear.filter(g=>g.owner===owner).sort((a,b)=>a.order-b.order))for(const [dx,dy]of rotated(g.def.cells,g.turns)){
     const key=`${g.x+dx},${g.y+dy}`;occupied.set(key,[...(occupied.get(key)??[]),g]);
   }
-  const rows=owner===null?game.bagRows():GRID.rows;
-  return Array.from({length:GRID.columns*rows},(_,i)=>{
-    const x=i%GRID.columns,y=Math.floor(i/GRID.columns),stack=occupied.get(`${x},${y}`)??[];
+  const rows=owner===null?game.bagRows():GRID.rows,columns=owner===null?BAG_GRID.columns:GRID.columns;
+  return Array.from({length:columns*rows},(_,i)=>{
+    const x=i%columns,y=Math.floor(i/columns),stack=occupied.get(`${x},${y}`)??[];
     const g=stack.find(g=>g.id===selectedGear)??stack.at(-1),inactive=g&&states&&!states.get(g.id)?.active;
     const address=owner===null?`data-bag-cell="${x},${y}"`:`data-cell="${x},${y}"`;
     return `<button class="gear-cell ${g?.id===selectedGear?'picked':''} ${inactive?'gear-inactive':''} " ${address} ${g?`data-gear-id="${g.id}" ${inactive?'data-inactive="true"':''} style="background-color:${g.def.color}" title="${stack.map(v=>`${v.def.name} #${v.id}`).join(' / ')} · 더블클릭 회전"`:''} aria-label="${owner===null?'공용 가방':'영웅 장비'} ${x+1}열 ${y+1}행${g?' '+g.def.name:''}${inactive?' 비활성':''}">${g?g.def.short:''}${stack.length>1?`<sup>${stack.length}</sup>`:''}</button>`;
@@ -127,10 +127,6 @@ function refresh():void {
   const hero=game.heroes().find(h=>h.id===selectedHero);
   el('gear-title').textContent=hero?`${UNITS[hero.kind].name} #${hero.id} 장비`:'영웅 장비';
   el('equipment').innerHTML=hero?inventoryGrid(hero.id):'<p class="empty">영웅을 먼저 배치하세요.</p>';
-  el('equipped-list').innerHTML=hero?game.gear.filter(g=>g.owner===hero.id).map(g=>{
-    const state=game.gearState(g);
-    return `<div class="gear-state-row ${state.active?'':'invalid'}"><button data-select-gear="${g.id}">${g.def.name} #${g.id} · ${state.active?'활성':`비활성 (${state.reason})`}</button>${!state.active?`<button data-return-gear="${g.id}">가방으로</button>`:''}</div>`;
-  }).join(''):'';
   const bag=inventoryGrid(null);
   el('gear-bag').innerHTML=bag;el('shop-bag').innerHTML=bag;
   const gear=game.gear.find(g=>g.id===selectedGear);
@@ -392,8 +388,6 @@ el('app').addEventListener('click',(e)=>{
   else if(d.upgrade)game.upgrade(Number(d.upgrade));
   else if(d.sellUnit){game.sellUnit(Number(d.sellUnit));selectedUnit=null;}
   else if(d.buy)game.buy(Number(d.buy));
-  else if(d.selectGear)chooseGear(Number(d.selectGear));
-  else if(d.returnGear){game.unequip(Number(d.returnGear));selectedGear=null;}
   else if(d.cell||d.bagCell){
     if(d.gearId){
       const id=Number(d.gearId),context=b.parentElement!.id,now=performance.now();

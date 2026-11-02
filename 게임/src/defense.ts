@@ -1,4 +1,4 @@
-import { AREA_ATTACK, GRID, ITEMS, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
 export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; }
@@ -181,21 +181,21 @@ export class Defense {
     this.note(`${g.def.name} 장착 해제 · 공용 가방으로 이동`);return true;
   }
   outside(item:Pick<Gear,'def'>,owner:number|null,x:number,y:number,turns:number):boolean {
-    return rotated(item.def.cells,turns).some(([dx,dy])=>x+dx<0||y+dy<0||x+dx>=GRID.columns||(owner!==null&&y+dy>=GRID.rows));
+    return rotated(item.def.cells,turns).some(([dx,dy])=>x+dx<0||y+dy<0||x+dx>=(owner===null?BAG_GRID.columns:GRID.columns)||(owner!==null&&y+dy>=GRID.rows));
   }
   canPlace(item:Pick<Gear,'id'|'def'>,owner:number|null,x:number,y:number,turns:number,others:readonly Gear[]=this.gear):boolean {
     if(!Number.isInteger(x)||!Number.isInteger(y)||!Number.isInteger(turns))return false;
     const cells=rotated(item.def.cells,turns).map(([dx,dy])=>[dx+x,dy+y]);
-    if(cells.some(([cx,cy])=>cx<0||cy<0||cx>=GRID.columns||(owner!==null&&cy>=GRID.rows)))return false;
+    if(cells.some(([cx,cy])=>cx<0||cy<0||cx>=(owner===null?BAG_GRID.columns:GRID.columns)||(owner!==null&&cy>=GRID.rows)))return false;
     const occupied=new Set(others.filter(g=>g.owner===owner&&g.id!==item.id).flatMap(g=>rotated(g.def.cells,g.turns).map(([dx,dy])=>`${g.x+dx},${g.y+dy}`)));
     return !cells.some(([cx,cy])=>occupied.has(`${cx},${cy}`));
   }
   nearestFree(item:Pick<Gear,'id'|'def'>,owner:number|null,x:number,y:number,turns:number,others:readonly Gear[]=this.gear):{x:number;y:number}|null {
     const cells=rotated(item.def.cells,turns),height=Math.max(...cells.map(c=>c[1]))+1;
     const bottom=others.filter(g=>g.owner===owner&&g.id!==item.id).reduce((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+1),0);
-    const rows=owner===null?Math.max(GRID.rows,bottom+height,Math.ceil(Math.max(0,y))+height):GRID.rows;
+    const rows=owner===null?Math.max(BAG_GRID.rows,bottom+height,Math.ceil(Math.max(0,y))+height):GRID.rows;
     let best:{x:number;y:number}|null=null,distance=Infinity;
-    for(let cy=0;cy<=rows-height;cy++)for(let cx=0;cx<GRID.columns;cx++){
+    for(let cy=0;cy<=rows-height;cy++)for(let cx=0;cx<(owner===null?BAG_GRID.columns:GRID.columns);cx++){
       const d=(cx-x)**2+(cy-y)**2;
       if(d<distance&&this.canPlace(item,owner,cx,cy,turns,others)){best={x:cx,y:cy};distance=d;}
     }
@@ -217,11 +217,11 @@ export class Defense {
   }
   private findBagSpace(item:Pick<Gear,'id'|'def'|'turns'>):{x:number;y:number} {
     const bottom=this.gear.filter(g=>g.owner===null&&g.id!==item.id).reduce((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+1),0);
-    for(let y=0;y<=bottom;y++)for(let x=0;x<GRID.columns;x++)if(this.canPlace(item,null,x,y,item.turns))return {x,y};
+    for(let y=0;y<=bottom;y++)for(let x=0;x<BAG_GRID.columns;x++)if(this.canPlace(item,null,x,y,item.turns))return {x,y};
     return {x:0,y:bottom};
   }
   bagRows():number {
-    return this.gear.filter(g=>g.owner===null).reduce<number>((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+4),GRID.rows);
+    return this.gear.filter(g=>g.owner===null).reduce<number>((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+4),BAG_GRID.rows);
   }
   placeInBag(id:number,x:number,y:number,turns:number):boolean {
     const item=this.gear.find(g=>g.id===id);if(!item)return false;
@@ -252,7 +252,7 @@ export class Defense {
     if(a.owner!==b.owner||a.id===b.id)return false;
     const ac=rotated(a.def.cells,a.turns).map(([x,y])=>[x+a.x,y+a.y]);
     const bc=rotated(b.def.cells,b.turns).map(([x,y])=>[x+b.x,y+b.y]);
-    if([...ac,...bc].some(([x,y])=>x<0||y<0||x>=GRID.columns||(a.owner!==null&&y>=GRID.rows)))return false;
+    if([...ac,...bc].some(([x,y])=>x<0||y<0||x>=(a.owner===null?BAG_GRID.columns:GRID.columns)||(a.owner!==null&&y>=GRID.rows)))return false;
     if(ac.some(([x,y])=>bc.some(([bx,by])=>x===bx&&y===by)))return false;
     return ac.some(([x,y])=>bc.some(([bx,by])=>Math.abs(x-bx)+Math.abs(y-by)===1));
   }
