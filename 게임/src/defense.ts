@@ -223,15 +223,30 @@ export class Defense {
     if(!pairs.length||new Set(ids).size!==ids.length||recipes.some(r=>!r))return this.note('붙어 있는 조합 재료가 없습니다.');
     if(pairs.some(pair=>!this.touching(this.gear.find(g=>g.id===pair[0])!,this.gear.find(g=>g.id===pair[1])!)))return this.note('같은 가방에서 재료 블록의 변을 붙여주세요.');
     if(this.anvils<pairs.length)return this.note(`조합 ${pairs.length}회에 모루 ${pairs.length}개가 필요합니다.`);
-    const results=pairs.map((pair,i)=>({recipe:recipes[i]!,costBasis:pair.reduce((sum,id)=>sum+this.gear.find(g=>g.id===id)!.costBasis,0)}));
+    const results=pairs.map((pair,i)=>{
+      const anchor=this.gear.find(g=>g.id===pair[0])!;
+      return {recipe:recipes[i]!,owner:anchor.owner,x:anchor.x,y:anchor.y,turns:anchor.turns,
+        costBasis:pair.reduce((sum,id)=>sum+this.gear.find(g=>g.id===id)!.costBasis,0)};
+    });
+    // 재료가 사라질 칸과 앞선 완성품까지 고려해, 가방 결과 배치도 소비 전에 검증한다.
+    const occupied=new Set(this.gear.filter(g=>g.owner===null&&!ids.includes(g.id))
+      .flatMap(g=>rotated(g.def.cells,g.turns).map(([x,y])=>`${g.x+x},${g.y+y}`)));
+    for(const result of results){
+      if(result.owner!==null)continue;
+      const def=ITEMS.find(item=>item.id===result.recipe.result)!;
+      const cells=rotated(def.cells,result.turns).map(([x,y])=>[result.x+x,result.y+y]);
+      if(cells.some(([x,y])=>x<0||y<0||x>=GRID.columns||occupied.has(`${x},${y}`)))
+        return this.note('조합 자리의 완성품 공간이 부족합니다. 주변 블록을 옮겨주세요. 재료와 모루는 유지됩니다.');
+      cells.forEach(([x,y])=>occupied.add(`${x},${y}`));
+    }
     this.gear=this.gear.filter(g=>!ids.includes(g.id));this.anvils-=pairs.length;
-    for(const {recipe,costBasis} of results){
+    for(const {recipe,costBasis,owner,x,y,turns} of results){
       const def=ITEMS.find(item=>item.id===recipe.result)!;
-      const result:Gear={id:this.nextId++,def,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis};
-      Object.assign(result,this.findBagSpace(result));this.gear.push(result);
+      const result:Gear={id:this.nextId++,def,owner,x,y,turns,order:++this.placementOrder,costBasis};
+      this.gear.push(result);
       this.log('economy',`${recipe.materials.map(id=>ITEMS.find(item=>item.id===id)!.name).join(' + ')} → ${def.name} #${result.id} · 모루 -1 / 남은 ${this.anvils} · 재료 원가 ${costBasis}G`);
     }
-    this.note(`조합 ${pairs.length}회 완료 · 모루 ${pairs.length}개 사용 · 완성품은 공용 가방에서 확인하세요.`);return true;
+    this.note(`조합 ${pairs.length}회 완료 · 모루 ${pairs.length}개 사용 · 완성품은 재료가 있던 자리에서 확인하세요.`);return true;
   }
   combine(ids:readonly number[]):boolean {return this.combineMany([ids]);}
   devGold():void {

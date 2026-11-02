@@ -166,6 +166,7 @@ function refreshLinks():void {
   svg.setAttribute('viewBox',`0 0 ${innerWidth} ${innerHeight}`);
   document.querySelectorAll('.combo-partner').forEach(node=>node.classList.remove('combo-partner'));
   const lines:string[]=[];
+  const planned=new Set(game.combinationPlan(selectedHero).map(pair=>pair.join(',')));
   const line=(a:{x:number;y:number},b:{x:number;y:number},kind:string)=>lines.push(`<line class="${kind}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`);
   const grids=['equipment','gear-bag','shop-bag'].map(id=>el(id)).filter(node=>node.getClientRects().length);
   for(const grid of grids){
@@ -174,11 +175,10 @@ function refreshLinks():void {
     for(const [a,b] of game.adjacentPairs(owner)){
       const ca=visibleCenter(Array.from(grid.querySelectorAll<HTMLElement>(`[data-gear-id="${a}"]`)));
       const cb=visibleCenter(Array.from(grid.querySelectorAll<HTMLElement>(`[data-gear-id="${b}"]`)));
-      if(ca&&cb)line(ca,cb,'combo-ready');
+      if(ca&&cb)line(ca,cb,planned.has(`${a},${b}`)?'combo-ready':'combo-deferred');
     }
   }
-  const id=pressedGear??selectedGear;
-  const held=game.gear.find(g=>g.id===id);
+  const held=game.gear.find(g=>g.id===pressedGear);
   const product=shopFocus===null?null:game.shop[shopFocus];
   const type=drag?.shopIndex!==undefined?game.shop[drag.shopIndex]:held?.def??product;
   let source:{x:number;y:number}|null=null;
@@ -289,7 +289,7 @@ document.addEventListener('pointerup',(e)=>{
     else game.note('장비칸에 놓지 않아 원래 위치를 유지합니다.');
     refresh();setTimeout(()=>suppressClick=false,0);
   }
-  drag.ghost?.remove();drag=null;pressedGear=null;refreshLinks();
+  drag.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;refreshLinks();
 },{signal:events.signal});
 document.addEventListener('pointercancel',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;refreshLinks();},{signal:events.signal});
 el('app').addEventListener('click',(e)=>{
@@ -337,7 +337,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   }
   refresh();
 },{signal:events.signal});
-el('shop-cards').addEventListener('focusin',(e)=>{const card=(e.target as HTMLElement).closest<HTMLElement>('[data-shop-index]');if(card){shopFocus=Number(card.dataset.shopIndex);selectedGear=null;refreshLinks();}},{signal:events.signal});
+window.addEventListener('blur',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;refreshLinks();},{signal:events.signal});
 el('hero-info').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-info'))closeHeroInfo();},{signal:events.signal});
 document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},{signal:events.signal});
 window.addEventListener('resize',()=>{positionHeroInfo();refreshLinks();},{signal:events.signal});
