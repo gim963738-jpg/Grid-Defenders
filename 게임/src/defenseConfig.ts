@@ -28,6 +28,7 @@ export const ITEMS: ItemDef[] = [
   {id:'I09',name:'재생의 부적',short:'재',cells:[[0,0],[1,0],[2,0]],color:'#6eac90',price:160,hp:350,regen:10,description:'체력 +350 · 초당 회복 +10'},
 ];
 export const GRID = { columns:5, rows:6 } as const;
+export const AREA_ATTACK = { guardHalfAngle:Math.PI/4, mageRadius:48 } as const;
 export const PATH: Cell[] = [[28,28],[362,28],[362,302],[28,302]];
 export const SLOTS = Array.from({length:16},(_,i)=>({x:99+(i%4)*64,y:81+Math.floor(i/4)*56}));
 export function rotated(cells: Cell[], turns:number): Cell[] {

@@ -24,12 +24,20 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
     return slot;
   });
   const selected=new Graphics();root.addChild(selected);
+  selected.eventMode='none';
+  const effects=new Graphics();effects.eventMode='none';root.addChild(effects);
   const actors=new Graphics();root.addChild(actors);
+  actors.eventMode='none';
   const badges=SLOTS.map(p=>{const t=new Text({text:'',style:{fontFamily:'system-ui',fontSize:10,fontWeight:'bold',fill:0xf5f4e7}});t.anchor.set(0.5);t.position.set(p.x,p.y+15);root.addChild(t);return t;});
   const caption=new Text({text:'순환 디펜스 · 전투 시험',style:{fontFamily:'system-ui',fontSize:10,fill:0xdacdb1}});caption.position.set(13,RULES.height-17);root.addChild(caption);
   return {
     draw(selectedId:number|null,pending:boolean) {
-      actors.clear();selected.clear();
+      actors.clear();selected.clear();effects.clear();
+      for(const area of game.attackAreas) {
+        if(area.kind==='circle')effects.circle(area.x,area.y,area.radius);
+        else effects.moveTo(area.x,area.y).arc(area.x,area.y,area.radius,area.angle-area.halfAngle,area.angle+area.halfAngle).closePath();
+        effects.fill({color:area.color,alpha:0.22*Math.min(1,area.life/0.12)}).stroke({width:2,color:area.color,alpha:Math.min(1,area.life/0.12)});
+      }
       for(let i=0;i<SLOTS.length;i++) {
         const u=game.units.find(u=>u.slot===i),p=SLOTS[i];
         slotGraphics[i].children[1].visible=!u;
@@ -37,7 +45,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         if(pending&&!u)selected.roundRect(p.x-25,p.y-23,50,46,6).stroke({width:1,color:0xf3c76c,alpha:0.8});
         if(!u)continue;
         if(u.id===selectedId) {
-          selected.circle(p.x,p.y,game.stats(u).range).fill({color:UNITS[u.kind].color,alpha:0.035});
+          selected.circle(p.x,p.y,game.stats(u).range)
+            .fill({color:UNITS[u.kind].color,alpha:UNITS[u.kind].hero?0.16:0.07})
+            .stroke({width:2,color:UNITS[u.kind].color,alpha:UNITS[u.kind].hero?0.95:0.5});
           selected.roundRect(p.x-26,p.y-24,52,48,7).stroke({width:2,color:0xffd27b});
         }
         const color=UNITS[u.kind].color;

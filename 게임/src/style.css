@@ -27,3 +27,10 @@
   #dev-log{position:fixed;top:16px;bottom:16px;left:max(12px,calc(50% - 635px));width:min(400px,calc((100vw - 430px)/2 - 32px));margin:0;display:flex;flex-direction:column}
   .dev-log-heading{flex:none}.log-section{flex:1}.log-section ol{height:auto;flex:1}
 }
+
+.inventory-scroll{max-height:340px;overflow:auto;overscroll-behavior:contain;border-radius:8px}
+.inventory-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;padding:6px;background:#0e1a18;border:1px solid #58654a;border-radius:8px;touch-action:none}
+.inventory-grid .gear-cell{min-width:0;user-select:none}
+.gear-cell[data-gear-id]{cursor:grab;user-select:none}
+.gear-cell[data-gear-id]:active{cursor:grabbing}
+.detail .actions{flex-wrap:wrap}

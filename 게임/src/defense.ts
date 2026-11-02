@@ -1,9 +1,19 @@
-import { GRID, ITEMS, PATH, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+import { AREA_ATTACK, GRID, ITEMS, PATH, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
 export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; }
 export interface Gear { id:number; def:ItemDef; owner:number|null; x:number; y:number; turns:number; }
 export interface Shot { x:number; y:number; tx:number; ty:number; life:number; color:number; }
+export type AttackArea =
+  | { kind:'sector'; x:number; y:number; radius:number; angle:number; halfAngle:number; life:number; color:number }
+  | { kind:'circle'; x:number; y:number; radius:number; life:number; color:number };
+export function inAttackArea(area:AttackArea,x:number,y:number):boolean {
+  const dx=x-area.x,dy=y-area.y;
+  if(Math.hypot(dx,dy)>area.radius+1e-6)return false;
+  if(area.kind==='circle'||Math.hypot(dx,dy)<1e-6)return true;
+  const delta=Math.atan2(Math.sin(Math.atan2(dy,dx)-area.angle),Math.cos(Math.atan2(dy,dx)-area.angle));
+  return Math.abs(delta)<=area.halfAngle+1e-6;
+}
 export type LogCategory = 'damage' | 'reward' | 'economy';
 export interface DevLog {
   id:number; time:number; category:LogCategory; text:string;
@@ -25,7 +35,7 @@ export function pathPoint(distance:number): {x:number;y:number} {
 
 export class Defense {
   gold:number=RULES.initialGold;
-  units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[];
+  units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
   shop:(ItemDef|null)[]=ITEMS.slice(0,5);
   kills=0; elapsed=0; speed=1; revision=0;
   message='병사를 선택하고 전장의 빈 칸을 눌러주세요.';
@@ -68,6 +78,16 @@ export class Defense {
     this.goldLog('economy',`${this.unitName(unit)} 소환${def.hero?' (무료)':''}`,before,{sourceId:unit.id});
     this.note(`${def.name} 배치 완료`);return true;
   }
+  moveUnit(id:number,slot:number):boolean {
+    const unit=this.units.find(u=>u.id===id);
+    if(!unit||!Number.isInteger(slot)||!SLOTS[slot])return this.note('유닛을 전장 안의 배치 칸에 놓아주세요.');
+    if(unit.slot===slot)return true;
+    const other=this.units.find(u=>u.slot===slot),previous=unit.slot;
+    if(other)other.slot=previous;
+    unit.slot=slot;
+    this.note(other?`${UNITS[unit.kind].name}과 ${UNITS[other.kind].name} 자리교체 완료`:`${UNITS[unit.kind].name} 이동 완료`);
+    return true;
+  }
   upgrade(id:number):boolean {
     const u=this.units.find(u=>u.id===id);
     if(!u||UNITS[u.kind].hero)return this.note('병사만 강화할 수 있습니다.');
@@ -81,7 +101,7 @@ export class Defense {
   upgradeCost(u:Unit):number{return Math.floor(UNITS[u.kind].cost*0.6*u.level);}
   sellUnit(id:number):boolean {
     const u=this.units.find(u=>u.id===id);
-    if(!u||UNITS[u.kind].hero)return this.note('영웅은 판매하거나 교체할 수 없습니다.');
+    if(!u||UNITS[u.kind].hero)return this.note('영웅은 판매할 수 없습니다. 위치 이동은 드래그로 가능합니다.');
     const before=this.gold,refund=Math.floor(u.spent/2);this.gold+=refund;
     this.goldLog('economy',`${this.unitName(u)} 판매`,before,{sourceId:u.id});
     this.units=this.units.filter(v=>v.id!==id);this.note(`병사 판매 · ${refund}G 환급`);return true;
@@ -91,6 +111,7 @@ export class Defense {
     if(this.gold<item.price)return this.note('구매 골드가 부족합니다.');
     const before=this.gold;this.gold-=item.price;this.shop[index]=null;
     const gear:Gear={id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0};
+    Object.assign(gear,this.findBagSpace(gear));
     this.gear.push(gear);
     this.goldLog('economy',`${item.name} #${gear.id} 구매`,before);
     this.note(`${item.name}을 공용 가방에 넣었습니다.`);return true;
@@ -105,16 +126,41 @@ export class Defense {
   equip(id:number,owner:number,x:number,y:number,turns:number):boolean {
     const item=this.gear.find(g=>g.id===id),unit=this.heroes().find(u=>u.id===owner);
     if(!item||!unit)return this.note('먼저 장비를 사용할 영웅을 선택해 주세요.');
-    const cells=rotated(item.def.cells,turns).map(([dx,dy])=>[dx+x,dy+y]);
-    if(cells.some(([cx,cy])=>cx<0||cy<0||cx>=GRID.columns||cy>=GRID.rows))return this.note('장비가 장비칸 밖으로 나갑니다.');
-    const occupied=new Set(this.gear.filter(g=>g.owner===owner&&g.id!==id).flatMap(g=>rotated(g.def.cells,g.turns).map(([dx,dy])=>`${g.x+dx},${g.y+dy}`)));
-    if(cells.some(([cx,cy])=>occupied.has(`${cx},${cy}`)))return this.note('다른 장비와 겹칩니다. 원래 위치를 유지합니다.');
+    if(!this.canPlace(item,owner,x,y,turns))return this.note('경계를 벗어나거나 다른 장비와 겹칩니다. 원래 위치를 유지합니다.');
     item.owner=owner;item.x=x;item.y=y;item.turns=((turns%4)+4)%4;
     this.note(`${item.def.name} 장착 완료 · 능력치 적용`);return true;
   }
   unequip(id:number):boolean {
     const g=this.gear.find(g=>g.id===id);if(!g)return false;
-    g.owner=null;this.note(`${g.def.name} 장착 해제 · 공용 가방으로 이동`);return true;
+    const space=this.findBagSpace(g);
+    g.owner=null;Object.assign(g,space);
+    this.note(`${g.def.name} 장착 해제 · 공용 가방으로 이동`);return true;
+  }
+  private canPlace(item:Gear,owner:number|null,x:number,y:number,turns:number):boolean {
+    if(!Number.isInteger(x)||!Number.isInteger(y)||!Number.isInteger(turns))return false;
+    const cells=rotated(item.def.cells,turns).map(([dx,dy])=>[dx+x,dy+y]);
+    if(cells.some(([cx,cy])=>cx<0||cy<0||cx>=GRID.columns||(owner!==null&&cy>=GRID.rows)))return false;
+    const occupied=new Set(this.gear.filter(g=>g.owner===owner&&g.id!==item.id).flatMap(g=>rotated(g.def.cells,g.turns).map(([dx,dy])=>`${g.x+dx},${g.y+dy}`)));
+    return !cells.some(([cx,cy])=>occupied.has(`${cx},${cy}`));
+  }
+  private findBagSpace(item:Gear):{x:number;y:number} {
+    const bottom=this.gear.filter(g=>g.owner===null&&g.id!==item.id).reduce((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+1),0);
+    for(let y=0;y<=bottom;y++)for(let x=0;x<GRID.columns;x++)if(this.canPlace(item,null,x,y,item.turns))return {x,y};
+    return {x:0,y:bottom};
+  }
+  bagRows():number {
+    return this.gear.filter(g=>g.owner===null).reduce<number>((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+4),GRID.rows);
+  }
+  placeInBag(id:number,x:number,y:number,turns:number):boolean {
+    const item=this.gear.find(g=>g.id===id);if(!item)return false;
+    if(!this.canPlace(item,null,x,y,turns))return this.note('가방 경계를 벗어나거나 장비가 겹칩니다. 원래 위치를 유지합니다.');
+    item.owner=null;item.x=x;item.y=y;item.turns=((turns%4)+4)%4;
+    this.note(`${item.def.name} 공용 가방 배치 완료`);return true;
+  }
+  rotateGear(id:number):boolean {
+    const item=this.gear.find(g=>g.id===id);if(!item)return false;
+    const next=(item.turns+1)%4;
+    return item.owner===null?this.placeInBag(id,item.x,item.y,next):this.equip(id,item.owner,item.x,item.y,next);
   }
   sellGear(id:number):boolean {
     const g=this.gear.find(g=>g.id===id);if(!g)return false;
@@ -141,21 +187,33 @@ export class Defense {
       const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range)
         .sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
       if(!target){u.cooldown=0;continue;}
-      const hpBefore=target.hp;
-      target.hp=Math.max(0,target.hp-s.attack);u.cooldown=1/s.rate;
-      const damage=hpBefore-target.hp;
-      this.log('damage',`${this.unitName(u)} → 몬스터 #${target.id} · 공격 ${s.attack} / 실제 피해 ${damage} · 체력 ${hpBefore} → ${target.hp}`,
-        {sourceId:u.id,targetId:target.id,attack:s.attack,damage,hpBefore,hpAfter:target.hp});
+      u.cooldown=1/s.rate;
+      let area:AttackArea|undefined;
+      if(u.kind==='guard')area={kind:'sector',x:pos.x,y:pos.y,radius:s.range,angle:Math.atan2(target.y-pos.y,target.x-pos.x),halfAngle:AREA_ATTACK.guardHalfAngle,life:0.28,color:UNITS[u.kind].color};
+      if(u.kind==='mage')area={kind:'circle',x:target.x,y:target.y,radius:AREA_ATTACK.mageRadius,life:0.28,color:UNITS[u.kind].color};
+      if(area)this.attackAreas.push(area);
+      const targets=area?this.enemies.filter(e=>e.hp>0&&inAttackArea(area!,e.x,e.y)):[target];
       this.shots.push({x:pos.x,y:pos.y,tx:target.x,ty:target.y,life:0.16,color:UNITS[u.kind].color});
+      for(const victim of targets)this.hit(u,victim,s.attack);
+    }
+    this.enemies=this.enemies.filter(e=>e.hp>0);
+    for(const shot of this.shots)shot.life-=dt;
+    this.shots=this.shots.filter(s=>s.life>0);
+    for(const area of this.attackAreas)area.life-=dt;
+    this.attackAreas=this.attackAreas.filter(a=>a.life>0);
+  }
+  private hit(u:Unit,target:Enemy,attack:number):void {
+      if(target.hp<=0)return;
+      const hpBefore=target.hp;
+      target.hp=Math.max(0,target.hp-attack);
+      const damage=hpBefore-target.hp;
+      this.log('damage',`${this.unitName(u)} → 몬스터 #${target.id} · 공격 ${attack} / 실제 피해 ${damage} · 체력 ${hpBefore} → ${target.hp}`,
+        {sourceId:u.id,targetId:target.id,attack,damage,hpBefore,hpAfter:target.hp});
       if(target.hp<=0) {
         const bonus=this.heroes().reduce((sum,h)=>sum+this.stats(h).gold,0);
         const before=this.gold;
         this.gold+=Math.floor(RULES.killGold*(1+bonus));this.kills++;this.revision++;
         this.goldLog('reward',`${this.unitName(u)}이 몬스터 #${target.id} 처치${bonus>0?` (골드 보너스 +${Math.round(bonus*100)}%)`:''}`,before,{sourceId:u.id,targetId:target.id});
       }
-    }
-    this.enemies=this.enemies.filter(e=>e.hp>0);
-    for(const shot of this.shots)shot.life-=dt;
-    this.shots=this.shots.filter(s=>s.life>0);
   }
 }
