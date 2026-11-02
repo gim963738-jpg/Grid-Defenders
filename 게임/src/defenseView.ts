@@ -1,0 +1,63 @@
+import { Application, Container, Graphics, Text } from 'pixi.js';
+import { Defense } from './defense';
+import { RULES, SLOTS, UNITS } from './defenseConfig';
+
+export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void) {
+  const root=new Container();app.stage.addChild(root);
+  const field=new Graphics();root.addChild(field);
+  field.roundRect(4,4,382,322,18).fill(0x101d20).stroke({width:2,color:0x52614a});
+  field.roundRect(13,13,364,304,15).fill(0x8c7751);
+  field.roundRect(45,45,300,240,12).fill(0x344c36).stroke({width:3,color:0x504831});
+  field.roundRect(50,50,290,230,10).fill(0x3d583d);
+  for(let i=0;i<100;i++)field.rect(54+(i*83%280),54+(i*47%220),2,3).fill(i%2?0x4c6745:0x304c37);
+  for(let i=0;i<46;i++) {
+    const x=19+(i*79%350),y=18+(i*43%294);
+    if(x<43||x>346||y<43||y>286)field.rect(x,y,3,2).fill(0xa99167);
+  }
+  const slots=new Container();root.addChild(slots);
+  const slotGraphics=SLOTS.map((p,index)=>{
+    const slot=new Container();slot.position.set(p.x,p.y);
+    const g=new Graphics();
+    g.roundRect(-25,-23,50,46,6).fill({color:0x20382d,alpha:0.7}).stroke({width:1,color:0x63805b,alpha:0.65});
+    slot.eventMode='static';slot.cursor='pointer';slot.on('pointertap',()=>onSlot(index));slots.addChild(slot);
+    const t=new Text({text:'+',style:{fontFamily:'system-ui',fontSize:17,fill:0x739072}});t.anchor.set(0.5);slot.addChild(g,t);
+    return slot;
+  });
+  const selected=new Graphics();root.addChild(selected);
+  const actors=new Graphics();root.addChild(actors);
+  const badges=SLOTS.map(p=>{const t=new Text({text:'',style:{fontFamily:'system-ui',fontSize:10,fontWeight:'bold',fill:0xf5f4e7}});t.anchor.set(0.5);t.position.set(p.x,p.y+15);root.addChild(t);return t;});
+  const caption=new Text({text:'순환 디펜스 · 전투 시험',style:{fontFamily:'system-ui',fontSize:10,fill:0xdacdb1}});caption.position.set(13,RULES.height-17);root.addChild(caption);
+  return {
+    draw(selectedId:number|null,pending:boolean) {
+      actors.clear();selected.clear();
+      for(let i=0;i<SLOTS.length;i++) {
+        const u=game.units.find(u=>u.slot===i),p=SLOTS[i];
+        slotGraphics[i].children[1].visible=!u;
+        badges[i].text=u?`${UNITS[u.kind].hero?'영웅':`Lv.${u.level}`} ${UNITS[u.kind].icon}`:'';
+        if(pending&&!u)selected.roundRect(p.x-25,p.y-23,50,46,6).stroke({width:1,color:0xf3c76c,alpha:0.8});
+        if(!u)continue;
+        if(u.id===selectedId) {
+          selected.circle(p.x,p.y,game.stats(u).range).fill({color:UNITS[u.kind].color,alpha:0.035});
+          selected.roundRect(p.x-26,p.y-24,52,48,7).stroke({width:2,color:0xffd27b});
+        }
+        const color=UNITS[u.kind].color;
+        actors.ellipse(p.x,p.y+7,15,5).fill({color:0x0a1713,alpha:0.5});
+        actors.roundRect(p.x-10,p.y-9,20,21,4).fill(color).stroke({width:2,color:0x172731});
+        actors.circle(p.x,p.y-13,7).fill(0xe1c7a5).stroke({width:2,color:0x273943});
+        if(u.kind==='archer'||u.kind==='ranged')actors.moveTo(p.x+12,p.y-12).lineTo(p.x+17,p.y).lineTo(p.x+12,p.y+7).stroke({width:3,color:0xd2b47b});
+        else if(u.kind==='mage'||u.kind==='healer') {
+          actors.moveTo(p.x+13,p.y+9).lineTo(p.x+13,p.y-17).stroke({width:3,color:0xab8758});
+          actors.circle(p.x+13,p.y-17,4).fill(color);
+        } else actors.moveTo(p.x+12,p.y+3).lineTo(p.x+18,p.y-17).stroke({width:3,color:0xd9e4e6});
+      }
+      for(const e of game.enemies) {
+        actors.ellipse(e.x,e.y+7,10,4).fill({color:0x1d261d,alpha:0.4});
+        actors.roundRect(e.x-8,e.y-8,16,16,5).fill(0xbc6560).stroke({width:2,color:0x623f3d});
+        actors.rect(e.x-4,e.y-3,2,3).fill(0xffdb9c).rect(e.x+3,e.y-3,2,3).fill(0xffdb9c);
+        actors.rect(e.x-10,e.y-15,20,3).fill(0x332c29);
+        actors.rect(e.x-10,e.y-15,20*Math.max(0,e.hp/e.maxHp),3).fill(0xe4a27c);
+      }
+      for(const s of game.shots)actors.moveTo(s.x,s.y).lineTo(s.tx,s.ty).stroke({width:2,color:s.color,alpha:Math.min(1,s.life/0.12)});
+    },
+  };
+}

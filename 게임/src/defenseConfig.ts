@@ -1,0 +1,41 @@
+// WEB-002 시험 수치. 최종 밸런스가 아니다.
+export const RULES = { width: 390, height: 330, initialGold: 480, maxEnemies: 30,
+  spawnSeconds: 2.4, killGold: 12, heroLimit: 3, rerollGold: 20 } as const;
+export type UnitKind = 'guard' | 'archer' | 'mage' | 'tank' | 'melee' | 'ranged' | 'healer';
+export interface UnitDef { name: string; icon: string; hero: boolean; cost: number;
+  attack: number; rate: number; range: number; hp: number; armor: number; color: number; }
+export const UNITS: Record<UnitKind, UnitDef> = {
+  guard: { name:'보병',icon:'검',hero:false,cost:50,attack:26,rate:1,range:130,hp:400,armor:20,color:0x8bb8df },
+  archer: { name:'궁병',icon:'궁',hero:false,cost:75,attack:30,rate:1.2,range:230,hp:260,armor:10,color:0x70d9a0 },
+  mage: { name:'마법병',icon:'마',hero:false,cost:90,attack:48,rate:0.7,range:190,hp:240,armor:8,color:0xb9a0ef },
+  tank: { name:'탱커',icon:'방',hero:true,cost:0,attack:40,rate:0.8,range:130,hp:2000,armor:60,color:0xf3c76c },
+  melee: { name:'근접 딜러',icon:'검',hero:true,cost:0,attack:90,rate:1,range:130,hp:1100,armor:25,color:0xfa9583 },
+  ranged: { name:'원거리 딜러',icon:'술',hero:true,cost:0,attack:75,rate:1,range:230,hp:800,armor:15,color:0xb9a0ef },
+  healer: { name:'힐러',icon:'빛',hero:true,cost:0,attack:30,rate:1,range:190,hp:900,armor:20,color:0x70dbcf },
+};
+export type Cell = [number, number];
+export interface ItemDef { id:string; name:string; short:string; cells:Cell[]; color:string;
+  price:number; attack?:number; armor?:number; hp?:number; speed?:number; regen?:number; gold?:number; description:string; }
+export const ITEMS: ItemDef[] = [
+  {id:'I01',name:'철검',short:'검',cells:[[0,0],[1,0]],color:'#809bb9',price:60,attack:15,description:'공격력 +15'},
+  {id:'I02',name:'수호 방패',short:'방',cells:[[0,0],[1,0]],color:'#719aaf',price:60,armor:20,description:'방어력 +20'},
+  {id:'I03',name:'가속 룬',short:'속',cells:[[0,0],[1,0]],color:'#9a92c7',price:70,speed:0.1,description:'공격속도 +10%'},
+  {id:'I04',name:'활력의 수정',short:'체',cells:[[0,0],[1,0]],color:'#ae8192',price:60,hp:150,description:'체력 +150'},
+  {id:'I05',name:'황금 주머니',short:'금',cells:[[0,0]],color:'#c7a85c',price:100,gold:0.1,description:'골드 획득 +10%'},
+  {id:'I06',name:'정밀 검',short:'정',cells:[[0,0],[1,0],[2,0]],color:'#67ad8b',price:150,attack:40,description:'공격력 +40'},
+  {id:'I07',name:'룬 방패',short:'룬',cells:[[0,0],[0,1],[1,1]],color:'#67a3a2',price:160,armor:35,hp:200,description:'방어력 +35 · 체력 +200'},
+  {id:'I08',name:'질풍의 검',short:'질',cells:[[0,0],[0,1],[1,1]],color:'#83ae74',price:150,attack:20,speed:0.15,description:'공격력 +20 · 공속 +15%'},
+  {id:'I09',name:'재생의 부적',short:'재',cells:[[0,0],[1,0],[2,0]],color:'#6eac90',price:160,hp:350,regen:10,description:'체력 +350 · 초당 회복 +10'},
+];
+export const GRID = { columns:5, rows:6 } as const;
+export const PATH: Cell[] = [[28,28],[362,28],[362,302],[28,302]];
+export const SLOTS = Array.from({length:16},(_,i)=>({x:99+(i%4)*64,y:81+Math.floor(i/4)*56}));
+export function rotated(cells: Cell[], turns:number): Cell[] {
+  let result=cells.map(([x,y]):Cell=>[x,y]);
+  for(let i=0;i<(turns%4+4)%4;i++) {
+    result=result.map(([x,y]):Cell=>[-y,x]);
+    const minX=Math.min(...result.map(c=>c[0])),minY=Math.min(...result.map(c=>c[1]));
+    result=result.map(([x,y]):Cell=>[x-minX,y-minY]);
+  }
+  return result;
+}
