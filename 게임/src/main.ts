@@ -14,6 +14,27 @@ const events=new AbortController();
 let heroInfo:{kind:UnitKind;unitId:number|null;fromInventory?:boolean}|null=null;
 let noticeTimer:ReturnType<typeof setTimeout>|undefined;
 let heroInfoMarkup='';
+let centeredHeroKind:UnitKind='tank',heroCardsMarkup='',heroScrollFrame=0;
+function markCenteredHero(kind:UnitKind):void {
+  centeredHeroKind=kind;
+  const cards=Array.from(el('heroes').querySelectorAll<HTMLElement>('[data-summon]'));
+  cards.forEach(card=>{const active=card.dataset.summon===kind;card.classList.toggle('carousel-centered',active);if(active)card.setAttribute('aria-current','true');else card.removeAttribute('aria-current');});
+  const index=cards.findIndex(card=>card.dataset.summon===kind);
+  el('hero-carousel-position').textContent=`${Math.max(0,index)+1} / ${cards.length}`;
+  el<HTMLButtonElement>('hero-prev').disabled=index<=0;
+  el<HTMLButtonElement>('hero-next').disabled=index>=cards.length-1;
+}
+function centerHero(kind:UnitKind,behavior:ScrollBehavior='smooth'):void {
+  const track=el('heroes'),card=Array.from(track.querySelectorAll<HTMLElement>('[data-summon]')).find(c=>c.dataset.summon===kind);
+  if(!card)return;
+  markCenteredHero(kind);
+  if(track.clientWidth)track.scrollTo({left:card.offsetLeft-(track.clientWidth-card.offsetWidth)/2,behavior});
+}
+function moveHeroCarousel(direction:number):void {
+  const kinds=Object.entries(UNITS).filter(([,d])=>d.hero).map(([kind])=>kind as UnitKind),index=kinds.indexOf(centeredHeroKind);
+  centerHero(kinds[Math.max(0,Math.min(kinds.length-1,index+direction))]);
+}
+
 function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
 function positionHeroInfo():void {
   const popup=el('hero-info');if(!heroInfo)return;
@@ -95,6 +116,7 @@ function openTab(name:string):void {
   const inventory=tab==='gear'||tab==='shop';
   document.querySelectorAll<HTMLElement>('.panel').forEach(p=>p.hidden=inventory?!['gear','shop'].includes(p.id):p.id!==tab);
   document.querySelectorAll<HTMLButtonElement>('[data-tab]').forEach(b=>{const active=b.dataset.tab===tab||(inventory&&b.dataset.tab==='gear');b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+  if(tab==='summon')centerHero(centeredHeroKind,'auto');
 }
 function inventoryGrid(owner:number|null):string {
   const occupied=new Map<string,typeof game.gear>();
@@ -118,7 +140,9 @@ function refresh():void {
     if(hero)return `<button class="unit-card hero-card ${kind==='ranged'?'ranged-summon-card':''} ${pending===kind?'selected':''} ${blocked?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${kind==='ranged'?'<span class="ranged-portrait"></span>':d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
     return `<div class="soldier-choice"><button class="unit-card ${pending===kind?'selected':''} ${game.gold<d.cost?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><small>클릭하여 능력치 확인</small><span class="price">${d.cost} G</span></button>${chosenSoldier?.kind===kind?`<button class="card-upgrade" data-upgrade="${chosenSoldier.id}" ${chosenSoldier.level>=5||game.gold<game.upgradeCost(chosenSoldier)?'disabled':''}>#${chosenSoldier.id} 승급 ${chosenSoldier.level>=5?'MAX':game.upgradeCost(chosenSoldier)+'G'}</button>`:''}</div>`;
   }).join('');
-  el('soldiers').innerHTML=unitCards(false);el('heroes').innerHTML=unitCards(true);
+  el('soldiers').innerHTML=unitCards(false);
+  const heroMarkup=unitCards(true);
+  if(heroMarkup!==heroCardsMarkup){el('heroes').innerHTML=heroMarkup;heroCardsMarkup=heroMarkup;centerHero(centeredHeroKind,'auto');}
   el('hero-count').textContent=`배치 ${game.heroes().length} / 3 · 무료`;
   const u=game.units.find(u=>u.id===selectedUnit);
   el('unit-detail').hidden=!u||UNITS[u.kind].hero;
@@ -391,15 +415,29 @@ document.addEventListener('pointerup',(e)=>{
   drag.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;updateGearDrag();refreshLinks();
 },{signal:events.signal});
 document.addEventListener('pointercancel',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
+
+el('heroes').addEventListener('scroll',()=>{
+  cancelAnimationFrame(heroScrollFrame);
+  heroScrollFrame=requestAnimationFrame(()=>{
+    const track=el('heroes');if(!track.clientWidth)return;
+    const box=track.getBoundingClientRect(),center=box.left+box.width/2;
+    const nearest=Array.from(track.querySelectorAll<HTMLElement>('[data-summon]')).sort((a,b)=>{const ar=a.getBoundingClientRect(),br=b.getBoundingClientRect();return Math.abs(ar.left+ar.width/2-center)-Math.abs(br.left+br.width/2-center);})[0];
+    if(nearest)markCenteredHero(nearest.dataset.summon as UnitKind);
+  });
+},{passive:true,signal:events.signal});
+el('heroes').addEventListener('keydown',(e)=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();moveHeroCarousel(e.key==='ArrowLeft'?-1:1);}},{signal:events.signal});
 el('app').addEventListener('click',(e)=>{
   if(suppressClick)return;
   const b=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!b||b.disabled)return;
   const d=b.dataset;
   if(d.tab){closeHeroInfo();openTab(d.tab);}
+  else if(b.id==='hero-prev')moveHeroCarousel(-1);
+  else if(b.id==='hero-next')moveHeroCarousel(1);
   else if('heroEquipment'in d){closeHeroInfo();openTab('gear');}
   else if('heroStats'in d){const hero=game.heroes().find(h=>h.id===selectedHero);if(hero)heroInfo={kind:hero.kind,unitId:hero.id,fromInventory:true};}
   else if(d.summon){
     const kind=d.summon as UnitKind;
+    if(UNITS[kind].hero)centerHero(kind);
     if(!game.units.some(u=>u.id===selectedUnit&&u.kind===kind))selectedUnit=null;
     if(UNITS[kind].hero){
       const placed=game.heroes().find(u=>u.kind===kind);
@@ -444,7 +482,7 @@ window.addEventListener('blur',()=>{drag?.ghost?.remove();drag=null;pressedGear=
 el('field-upgrade').addEventListener('click',()=>{const id=Number(el('field-upgrade').dataset.upgrade);game.upgrade(id);refresh();},{signal:events.signal});
 el('hero-info').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-info'))closeHeroInfo();},{signal:events.signal});
 document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},{signal:events.signal});
-window.addEventListener('resize',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{signal:events.signal});
+window.addEventListener('resize',()=>{centerHero(centeredHeroKind,'auto');positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{signal:events.signal});
 document.addEventListener('scroll',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
 el('app').addEventListener('dblclick',(e)=>{
@@ -488,6 +526,6 @@ async function start():Promise<void> {
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}
     if(lastRevision!==game.revision&&!drag&&!unitDrag){lastRevision=game.revision;refresh();}
   });
-  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
+  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();cancelAnimationFrame(heroScrollFrame);clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
 void start().catch((error:unknown)=>{el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';console.error(error);});

@@ -338,3 +338,23 @@
 @media(max-width:350px){#shop #shop-market::before{left:-8px;}}
 
 @media(max-width:350px){#shop #shop-market::before{--overlap-x:calc((100cqw - 14px)/3 + 15px);}}
+
+/* WEB-039: swipeable hero illustrations with a larger centered card. */
+.hero-carousel-controls{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.hero-carousel-controls button{width:25px;height:25px;padding:0;border:1px solid #657654;border-radius:5px;background:#22342b;color:#ead09a;font-size:21px;line-height:1;}
+#hero-carousel-position{font-size:9px;color:#aebda5;font-variant-numeric:tabular-nums;}
+#heroes{--hero-card-width:clamp(130px,42vw,174px);position:relative;display:flex;align-items:center;gap:12px;height:230px;width:100%;padding:18px calc((100% - var(--hero-card-width))/2);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:calc((100% - var(--hero-card-width))/2);scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y pinch-zoom;}
+#heroes::-webkit-scrollbar{display:none;}
+#heroes .hero-card{position:relative;isolation:isolate;display:block;flex:0 0 var(--hero-card-width);width:var(--hero-card-width);height:184px;min-height:184px;margin:0;padding:0;border:2px solid #596b56;border-radius:10px;background:linear-gradient(150deg,#263d32,#11211c);scroll-snap-align:center;scroll-snap-stop:always;transform:scale(.88);opacity:.7;transition:transform .18s ease,opacity .18s ease,border-color .18s ease;overflow:hidden;}
+#heroes .hero-card.carousel-centered{transform:scale(1.06);opacity:1;border-color:#c6a667;box-shadow:0 4px 12px #0005;}
+#heroes .hero-card.selected{border-color:#ffe19c;}
+#heroes .hero-card.unavailable{filter:saturate(.6);}
+#heroes .hero-card .unit-icon{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:70px;height:70px;margin:0;border-color:#647a60;border-radius:12px;background:#10231dcc;font-size:38px;}
+#heroes .hero-card b,#heroes .hero-card .price{position:absolute;left:7px;right:7px;margin:0;text-align:center;text-shadow:0 1px 3px #000;white-space:normal;}
+#heroes .hero-card b{bottom:38px;font-size:14px;color:#eee9d6;}
+#heroes .hero-card .price{bottom:17px;font-size:11px;color:#e8c77e;}
+#heroes .ranged-summon-card::before{content:"";position:absolute;z-index:-2;inset:0;background:url(/assets/heroes/ranged-reference.png) 55% top/auto 155% no-repeat;}
+#heroes .ranged-summon-card::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(to bottom,transparent 35%,rgba(20,36,35,.5) 65%,#142423 100%);}
+#heroes .ranged-summon-card .unit-icon{display:none;}
+.hero-carousel-hint{margin:0 0 10px;text-align:center;font-size:9px;color:#92a58c;}
+@media(prefers-reduced-motion:reduce){#heroes .hero-card{transition:none;}}
