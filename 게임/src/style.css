@@ -209,3 +209,6 @@
 .shop-counter #shop-market #reroll{padding:5px 4px;}
 
 @media(max-width:350px){.shop-counter .shop-merchant{width:calc(100% + 8px);margin-left:-8px;}}
+
+/* Fade the merchant right edge while preserving the existing bottom fade. */
+.shop-counter .shop-merchant::after{background:linear-gradient(to right,transparent 68%,rgba(18,29,32,.35) 84%,#121d20 100%),linear-gradient(to bottom,transparent 78%,rgba(18,29,32,.2) 88%,rgba(18,29,32,.85) 97%,#121d20 100%);}
