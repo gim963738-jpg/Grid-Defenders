@@ -10,6 +10,13 @@ function art(a:BossActor):string {
   const weapon=a.kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':(a.kind==='mage'||a.kind==='healer')?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
   return `<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
 }
+function updateSkillFill(card:HTMLElement,remaining:number,duration:number,enabled:boolean,ready:boolean):void {
+  const state=!enabled?'blocked':remaining>0?'cooldown':ready?'ready':'blocked';
+  const progress=state==='blocked'?0:state==='ready'?1:Math.max(0,Math.min(1,1-remaining/duration));
+  card.dataset.skillState=state;
+  card.style.setProperty('--skill-fill',`${(progress*100).toFixed(2)}%`);
+  card.setAttribute('aria-disabled',String(state!=='ready'));
+}
 export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:BossBattle){
   const nodes=new Map<string,HTMLElement>();
   const trails=document.createElementNS('http://www.w3.org/2000/svg','svg');
@@ -57,6 +64,12 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
     const triple=document.getElementById('boss-triple-skill') as HTMLButtonElement;
     triple.disabled=!battle.canTriple();
     document.getElementById('hero-triple-cooldown')!.textContent=!hero?'전투 불가':battle.result!=='fighting'?'전투 종료':battle.heroSkillCooldown>0?`재사용 ${battle.heroSkillCooldown.toFixed(1)}초`:battle.canTriple()?'사용 가능':'사거리까지 접근 중';
+    const fighting=battle.result==='fighting';
+    const target=hero&&battle.target(hero);
+    const basicReady=!!hero&&!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
+    updateSkillFill(commander,battle.commanderCooldown,15,fighting&&battle.actors.some(a=>a.side==='ally'&&a.hp>0),!commander.disabled);
+    updateSkillFill(document.getElementById('boss-basic-skill')!,hero?.cooldown??0,hero?1/hero.rate:1,fighting&&!!hero,basicReady);
+    updateSkillFill(triple,battle.heroSkillCooldown,4,fighting&&!!hero,battle.canTriple());
     const allies=battle.actors.filter(a=>a.side==='ally'&&a.hp>0).length;
     const enemies=battle.actors.filter(a=>a.side==='enemy'&&a.hp>0).length;
     const text=!battle.actors.some(a=>a.side==='ally')?'웨이브전에서 아군을 먼저 배치하세요':battle.result==='victory'?'시험 승리':battle.result==='defeat'?'시험 패배':'전열 우선 교전';

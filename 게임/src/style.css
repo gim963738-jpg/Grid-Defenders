@@ -457,3 +457,13 @@
 
 .boss-skills-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;}.boss-skills-heading h2{margin:0;}
 #boss-auto-skills{padding:6px 9px;border:1px solid #746846;border-radius:5px;background:#21322d;color:#dccb9f;font-size:10px;cursor:pointer;}#boss-auto-skills[aria-pressed=true]{border-color:#a8d5a0;background:#345439;color:#e4ffd9;}
+
+/* Cooldown color returns from the bottom, driven by simulation time. */
+#boss-commander-skill,.boss-skill{position:relative;isolation:isolate;overflow:hidden;--skill-fill:0%;}
+#boss-commander-skill>* ,.boss-skill>*{position:relative;z-index:1;}
+#boss-commander-skill::before,.boss-skill::before{content:"";position:absolute;z-index:0;left:0;right:0;bottom:0;height:var(--skill-fill);background:linear-gradient(0deg,#65986b55,#91d39c20);transition:height 70ms linear;pointer-events:none;}
+#boss-commander-skill::after,.boss-skill::after{content:"";position:absolute;z-index:2;left:0;right:0;top:0;height:calc(100% - var(--skill-fill));background:#76767620;backdrop-filter:grayscale(1) brightness(.65);transition:height 70ms linear;pointer-events:none;}
+#boss-commander-skill:disabled,.boss-skill:disabled{opacity:1;}
+#boss-commander-skill[data-skill-state=ready],.boss-skill[data-skill-state=ready]{border-color:#b7d6a0;box-shadow:inset 0 0 14px #8ed59020;}
+#boss-basic-skill[data-skill-state=ready]{border-color:#8db4a0;}
+@media(prefers-reduced-motion:reduce){#boss-commander-skill::before,#boss-commander-skill::after,.boss-skill::before,.boss-skill::after{transition:none;}}
