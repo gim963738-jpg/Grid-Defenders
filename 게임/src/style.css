@@ -198,3 +198,12 @@
 #shop-cards .shop-card button{font-size:10px;white-space:nowrap;}
 .shop-bag-column{width:100%;}.shop-bag-column>.section-title{min-height:0;margin:4px 0 8px;}
 #shop .shop-bag-column .inventory-scroll{margin-inline:auto;}
+
+/* WEB-022: silver-haired merchant on the left, two offer columns on the right. */
+.shop-counter{display:grid;grid-template-columns:minmax(0,38fr) minmax(0,62fr);gap:8px;width:100%;margin-top:10px;align-items:stretch;}
+.shop-counter .shop-merchant{width:100%;height:100%;min-height:260px;aspect-ratio:auto;margin:0;background-image:url(/assets/shop/merchant-silver-cutout.png);background-size:auto 100%;background-position:53% top;border-radius:8px;}
+.shop-counter #shop-market{min-width:0;}
+.shop-counter #shop-cards{grid-template-columns:repeat(2,minmax(0,1fr));--shop-block:clamp(15px,4.8cqw,20px);}
+.shop-counter #shop-cards .shop-card{min-height:76px;}
+.shop-counter #shop-market .section-title{gap:4px;}
+.shop-counter #shop-market #reroll{padding:5px 4px;}
