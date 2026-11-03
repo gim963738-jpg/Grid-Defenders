@@ -216,8 +216,12 @@ function updateHud():void {
   bountyButton.title=`현상금 소환 · 대기 ${credits}/${RULES.bountyStackLimit}회 · 처치 보상 모루 ${RULES.bountyAnvils}개 / 기본 ${RULES.bountyGold}G`;
   bountyButton.setAttribute('aria-label',bountyActive?'현상금 몬스터 전투 중':`현상금 몬스터 소환 · 남은 ${credits}회`);
   el('bounty-label').textContent=bountyActive?'진행중':`소환${credits>1?' ×'+credits:''}`;
-  el('wave-number').textContent=`WAVE ${game.wave} · 무한 시험`;
-  el('wave-timer').textContent=`${Math.max(0,Math.ceil(RULES.waveSeconds-game.waveTime))}초`;
+  el('wave-number').textContent=`WAVE ${game.wave}`;
+  const remaining=Math.max(0,RULES.waveSeconds-game.waveTime),seconds=Math.ceil(remaining);
+  el('wave-timer').textContent=`${String(Math.floor(seconds/60)).padStart(2,'0')}:${String(seconds%60).padStart(2,'0')}`;
+  const progress=el<HTMLProgressElement>('wave-progress');progress.max=RULES.waveSeconds;progress.value=remaining;
+  progress.setAttribute('aria-valuetext',`남은 시간 ${seconds}초`);
+  el('wave-info').classList.toggle('wave-urgent',remaining<=5);
   el('wave-spawns').textContent=`일반 ${game.waveSpawned}/${RULES.waveMonsters} 소환`;
   el('wave-specials').textContent=`네임드 ${game.enemies.filter(e=>e.named).length} · 현상금 ${bountyActive?1:0} · 소환 대기 ${credits}/${RULES.bountyStackLimit}`;
   el('kills').textContent=String(game.kills);
@@ -446,7 +450,7 @@ el('app').addEventListener('dblclick',(e)=>{
 async function start():Promise<void> {
   const app=new Application();
   await app.init({width:RULES.width,height:RULES.height,background:'#172620',preference:'webgl',resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,antialias:true});
-  el('battlefield').append(app.canvas);app.canvas.setAttribute('aria-label','순환 전장, 병사와 영웅 배치 칸 16개');el('status').hidden=true;
+  el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','순환 전장, 병사와 영웅 배치 칸 16개');el('status').hidden=true;
   const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
   const view=createDefenseView(app,game,(slot)=>{
     if(unitDrag?.moved)return;

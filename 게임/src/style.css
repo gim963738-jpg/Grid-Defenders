@@ -113,8 +113,19 @@
 #bounty-summon span{font-size:clamp(6px,1.7vw,8px);line-height:1.2;color:#ffe5a1;white-space:nowrap}
 .bounty-hud{display:inline-block;font-size:8px;white-space:nowrap;color:#f0c87c;border:1px solid #8b6b39;border-radius:3px;padding:1px 2px;vertical-align:middle}
 
-#wave-info{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 8px;padding:10px;margin-bottom:9px;border:1px solid #4e5e50;border-radius:7px;background:#1b2927;font-size:10px;color:#b2c1ac}
-#wave-info strong{color:#edcf91;font-size:12px}#wave-timer{font-variant-numeric:tabular-nums;color:#f2ce85;font-size:14px}#wave-specials,#wave-info small{grid-column:1/-1;font-size:9px}
+/* WEB-017: shared battlefield frame; HUD never overlaps the canvas. */
+#battlefield{width:calc(100% + 24px);margin-inline:-12px;border-radius:14px;border:1px solid #59614b;background:#101e20;}
+#battle-scene{position:relative;}
+#wave-info{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 8px 6px;margin:0;border:0;border-bottom:1px solid #566047;background:radial-gradient(ellipse at top,#34413a,#152526 75%);color:#c2cebb;text-align:center;}
+#wave-info strong{padding:2px 16px;border:1px solid #b79c60;border-radius:5px;background:#1a2827;font-size:12px;line-height:1.2;letter-spacing:1px;color:#f4e3b8;}
+#wave-timer{font-size:27px;line-height:1.05;font-weight:850;font-variant-numeric:tabular-nums;color:#fff7dc;text-shadow:0 2px 2px #000;}
+#wave-progress{display:block;appearance:none;width:76%;height:6px;border:1px solid #99855a;border-radius:5px;overflow:hidden;background:#0d181b;}
+#wave-progress::-webkit-progress-bar{background:#0d181b;}#wave-progress::-webkit-progress-value{background:linear-gradient(90deg,#84c7c9,#e6d293);border-radius:3px;}
+#wave-progress::-moz-progress-bar{background:linear-gradient(90deg,#84c7c9,#e6d293);}
+.wave-details{display:flex;justify-content:center;flex-wrap:wrap;gap:2px 8px;font-size:9px;line-height:1.3;}
+#wave-info small{font-size:8px;color:#93a58f;line-height:1.2;}
+#wave-info.wave-urgent #wave-timer{color:#ffa284;}#wave-info.wave-urgent #wave-progress::-webkit-progress-value{background:#ed9878;}
+@media(max-width:350px){#battlefield{width:calc(100% + 16px);margin-inline:-8px;}.wave-details{font-size:8px;gap:2px 5px;}#wave-info small{font-size:7px;}}
 .combat-legend{display:flex;flex-wrap:wrap;gap:4px 8px;margin:0 0 8px;font-size:9px;color:#b7b9ad}.combat-legend .physical{color:#8fc8ee}.combat-legend .magic{color:#c7a1ef}
 .monster-test-tools{border-top:1px solid #5c5037;margin-top:13px;padding-top:10px}.monster-test-tools h3{font-size:12px;margin:0}
 #test-enemy-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:8px 0}#dev-next-wave{width:100%!important}
