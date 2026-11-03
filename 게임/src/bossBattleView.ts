@@ -46,6 +46,8 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
     }).join('');
     document.querySelector('.boss-skill-hero-card')!.classList.toggle('hero-absent',!battle.actors.some(a=>a.kind==='ranged'));
     document.querySelector('.boss-skill-hero-card small')!.textContent=battle.actors.some(a=>a.kind==='ranged')?'웨이브 편성 연동':'웨이브전 미배치';
+    const auto=document.getElementById('boss-auto-skills')!;
+    auto.textContent=`스킬 자동 ${battle.autoSkills?'ON':'OFF'}`;auto.setAttribute('aria-pressed',String(battle.autoSkills));
     const commander=document.getElementById('boss-commander-skill') as HTMLButtonElement;
     commander.disabled=battle.result!=='fighting'||!battle.actors.some(a=>a.side==='ally'&&a.hp>0)||battle.commanderCooldown>0;
     commander.classList.toggle('buff-active',battle.commanderBuff>0);

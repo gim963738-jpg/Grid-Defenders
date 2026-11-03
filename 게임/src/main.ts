@@ -17,6 +17,7 @@ function syncBossRoster(force=false):void {
 }
 const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle);
 let currentScene:BattleScene='defense',sceneTransitioning=false;
+let activeBossWave:number|null=null,bossReturnDelay=0;
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
 let selectedGear:number|null=null,turns=0,tab='summon';
 let shopFocus:number|null=null;
@@ -602,7 +603,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   else if(button.id==='dev-next-wave')game.nextTestWave();
   else if(button.id==='dev-reset'){
     clearSummonDrag();drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
-    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();syncBossRoster(true);bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
+    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=false;syncBossRoster(true);bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
     lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');el('speed').textContent='1×';
   }
   refresh();
@@ -614,7 +615,8 @@ document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},
 window.addEventListener('resize',()=>{centerHero(centeredHeroKind,'auto');positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{signal:events.signal});
 document.addEventListener('scroll',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
-el('boss-restart').addEventListener('click',()=>{syncBossRoster(true);bossBattleView.draw();},{signal:events.signal});
+el('boss-restart').addEventListener('click',()=>{bossReturnDelay=0;syncBossRoster(true);bossBattleView.draw();},{signal:events.signal});
+el('boss-auto-skills').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.autoSkills=!bossBattle.autoSkills;bossBattleView.draw();},{signal:events.signal});
 el('boss-commander-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.commanderSkill();bossBattleView.draw();},{signal:events.signal});
 el('boss-triple-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.tripleSkill();bossBattleView.draw();},{signal:events.signal});
 el('app').addEventListener('dblclick',(e)=>{
@@ -678,7 +680,21 @@ async function start():Promise<void> {
   refresh();
   app.ticker.add(ticker=>{
     if(sceneTransitioning)return;
-    if(currentScene==='boss'){bossBattle.tick(Math.min(ticker.deltaMS/1000,.05));bossBattleView.draw();return;}
+    if(activeBossWave!==null&&(!game.bossPending||activeBossWave!==game.wave)){activeBossWave=null;bossReturnDelay=0;}
+    if(currentScene==='boss'){
+      const dt=Math.min(ticker.deltaMS/1000,.05);bossBattle.tick(dt);bossBattleView.draw();
+      if(activeBossWave===game.wave&&bossBattle.result==='victory'){
+        bossReturnDelay+=dt;
+        if(bossReturnDelay>=1.2&&game.completeBossWave()){
+          activeBossWave=null;bossReturnDelay=0;void sceneTransition.go('defense');
+        }
+      } else bossReturnDelay=0;
+      return;
+    }
+    if(game.bossPending&&activeBossWave!==game.wave){
+      activeBossWave=game.wave;bossReturnDelay=0;syncBossRoster(true);
+      void sceneTransition.go('boss');return;
+    }
     if(summonDrag?.active){
       const step=Math.min(ticker.deltaMS,40)*.4;
       if(summonDrag.y<70)window.scrollBy(0,-step);else if(summonDrag.y>innerHeight-70)window.scrollBy(0,step);

@@ -19,6 +19,7 @@ export class BossBattle {
   iceProjectiles:BossIceProjectile[]=[];
   iceBursts:BossIceBurst[]=[];
   private roster:BossAlly[]=[];
+  autoSkills=false;
   commanderCooldown=0;
   commanderBuff=0;
   heroSkillCooldown=0;
@@ -84,6 +85,7 @@ export class BossBattle {
     this.commanderCooldown=Math.max(0,this.commanderCooldown-dt);
     this.commanderBuff=Math.max(0,this.commanderBuff-dt);
     this.heroSkillCooldown=Math.max(0,this.heroSkillCooldown-dt);
+    if(this.autoSkills){this.commanderSkill();if(!this.burst)this.tripleSkill();}
     this.hits=this.hits.filter(h=>(h.life-=dt)>0);
     for(const burst of this.iceBursts)burst.life-=dt;
     this.iceBursts=this.iceBursts.filter(b=>b.life>0);

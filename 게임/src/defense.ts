@@ -51,7 +51,7 @@ export class Defense {
   shopDiscounts:boolean[]=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);
   kills=0; elapsed=0; speed=1; revision=0;
   normalKills=0;bountySummons=0;pendingBounties=0;
-  wave=1;waveTime=0;waveSpawned=0;
+  wave=1;waveTime=0;waveSpawned=0;bossPending=false;
   damageNumbers:DamageNumber[]=[];
   private nextDamageId=1;
   anvils=0;
@@ -84,6 +84,11 @@ export class Defense {
       this.pendingBounties=Math.min(RULES.bountyStackLimit,this.pendingBounties+1);
       this.log('economy',`[웨이브 ${this.wave}] 현상금 소환 기회 · ${this.pendingBounties}/${RULES.bountyStackLimit}`);
     }
+    if(this.wave%RULES.bossEvery===0){
+      this.bossPending=true;
+      if(announce)this.note(`${this.wave}웨이브 · 보스전 시작`);
+      return;
+    }
     if(this.wave%RULES.namedEvery===0){
       const names=MONSTERS.filter(d=>d.named),def=names[(this.wave/RULES.namedEvery-1)%names.length];
       this.enemies.push(this.createMonster(def));this.log('economy',`[웨이브 ${this.wave}] 네임드 ${def.name} 등장`);
@@ -91,7 +96,12 @@ export class Defense {
     this.spawnWaveDue();
     if(announce)this.note(`${this.wave}웨이브 시작 · ${RULES.waveSeconds}초 시험 전투`);
   }
+  completeBossWave():boolean {
+    if(!this.bossPending)return false;
+    this.nextTestWave();return true;
+  }
   nextTestWave():void {
+    this.bossPending=false;
     const removed=this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
     this.enemies=this.enemies.filter(e=>(e.named||e.bounty)&&e.hp>0);
     this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.wave++;
@@ -100,7 +110,7 @@ export class Defense {
   }
   private advanceWaves(dt:number):void {
     let remaining=dt;
-    while(remaining>0){
+    while(remaining>0&&!this.bossPending){
       const step=Math.min(remaining,RULES.waveSeconds-this.waveTime);
       this.waveTime+=step;remaining-=step;this.spawnWaveDue();
       if(this.waveTime>=RULES.waveSeconds-1e-8)this.nextTestWave();
@@ -377,14 +387,16 @@ export class Defense {
   reset():void {
     this.iceProjectiles=[];this.iceBursts=[];
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
-    this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.damageNumbers=[];this.nextDamageId=1;
+    this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.bossPending=false;this.damageNumbers=[];this.nextDamageId=1;
     this.shop=ITEMS.slice(0,RULES.shopSlots);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.nextId=1;this.placementOrder=0;
     this.logs.damage.length=0;this.logs.reward.length=0;this.logs.economy.length=0;this.nextLogId=1;this.logRevision++;
     this.startWave(false);this.note('게임을 시작 상태로 초기화했습니다.');
   }
   tick(realSeconds:number):void {
+    if(this.bossPending)return;
     const dt=realSeconds*this.speed;this.elapsed+=dt;
     this.advanceWaves(dt);
+    if(this.bossPending)return;
     for(const e of this.enemies){e.distance+=e.speed*dt;Object.assign(e,pathPoint(e.distance));}
     for(const burst of this.iceBursts)burst.life-=dt;
     this.iceBursts=this.iceBursts.filter(b=>b.life>0);

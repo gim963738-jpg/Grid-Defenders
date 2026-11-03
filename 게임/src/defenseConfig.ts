@@ -1,7 +1,7 @@
 // WEB-002 시험 수치. 최종 밸런스가 아니다.
 export const RULES = { width: 390, height: 330, initialGold: 480, maxEnemies: 30,
   spawnSeconds: 2.4, killGold: 12, heroLimit: 3, rerollGold: 20, shopSlots:5, shopDiscountChance:0.2,
-  soldierCritChance:0.1, critMultiplier:1.5, waveSeconds:30, waveMonsters:10, waveSpawnSeconds:2, namedEvery:5, bountyEvery:3, bountyStackLimit:3, bountyHp:1600, bountySpeed:32, bountyGold:100, bountyAnvils:1 } as const;
+  soldierCritChance:0.1, critMultiplier:1.5, waveSeconds:30, bossEvery:10, waveMonsters:10, waveSpawnSeconds:2, namedEvery:5, bountyEvery:3, bountyStackLimit:3, bountyHp:1600, bountySpeed:32, bountyGold:100, bountyAnvils:1 } as const;
 export type DamageType = 'physical' | 'magic';
 export type DefenseType = 'normal' | 'physical' | 'magic';
 export const DAMAGE_LABEL:Record<DamageType,string>={physical:'물리',magic:'마법'};

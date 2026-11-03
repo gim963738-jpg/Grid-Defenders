@@ -454,3 +454,6 @@
 #dev-tools #boss-restart{width:100%;margin:8px 0;}
 
 .boss-skill-hero-card.hero-absent{filter:grayscale(1) brightness(.55);}
+
+.boss-skills-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;}.boss-skills-heading h2{margin:0;}
+#boss-auto-skills{padding:6px 9px;border:1px solid #746846;border-radius:5px;background:#21322d;color:#dccb9f;font-size:10px;cursor:pointer;}#boss-auto-skills[aria-pressed=true]{border-color:#a8d5a0;background:#345439;color:#e4ffd9;}
