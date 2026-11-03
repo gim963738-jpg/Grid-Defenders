@@ -353,15 +353,20 @@ export class Defense {
   }
   combine(ids:readonly number[]):boolean {return this.combineMany([ids]);}
   devDeploySoldiers():void {
-    const layout:{kind:UnitKind;slot:number}[]=[{kind:'guard',slot:0},{kind:'guard',slot:1},{kind:'archer',slot:4},{kind:'archer',slot:5},{kind:'mage',slot:8},{kind:'mage',slot:9}];
+    const layout:{kind:UnitKind;slot:number;level?:number}[]=[
+      ...[0,1,2,3].map(slot=>({kind:'guard' as const,slot})),
+      {kind:'archer',slot:8},{kind:'ranged',slot:9},{kind:'archer',slot:10},{kind:'archer',slot:11},
+      {kind:'mage',slot:12,level:5},...[13,14,15].map(slot=>({kind:'mage' as const,slot})),
+    ];
     let added=0;
-    for(const {kind,slot} of layout){
+    for(const {kind,slot,level=1} of layout){
       if(this.units.some(u=>u.slot===slot))continue;
-      const unit:Unit={id:this.nextId++,kind,slot,level:1,spent:0,cooldown:0.3};
+      if(UNITS[kind].hero&&(this.heroes().some(u=>u.kind===kind)||this.heroes().length>=RULES.heroLimit))continue;
+      const unit:Unit={id:this.nextId++,kind,slot,level,spent:0,cooldown:0.3};
       this.units.push(unit);added++;
       this.log('economy',`[개발자] ${this.unitName(unit)} 테스트 배치 · 무료`,{sourceId:unit.id});
     }
-    this.note(added?`병사 테스트 배치 ${added}명 완료 · 기존 유닛 유지 · 무료`:'테스트 배치 위치가 이미 사용 중입니다.');
+    this.note(added?`테스트 배치 ${added}명 완료 · 기존 유닛 유지 · 무료`:'테스트 배치 위치가 이미 사용 중입니다.');
   }
   devGold():void {
     const before=this.gold;this.gold+=10000;this.goldLog('economy','[개발자] 골드 지급',before);this.note('개발자 골드 +10,000G');
