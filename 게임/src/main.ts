@@ -135,8 +135,8 @@ function refreshDamageMeter():void {
   const historyButton=el<HTMLButtonElement>('dps-last-boss');historyButton.hidden=!boss||!saved||currentScene!=='boss'||bossBattle.result!=='fighting';
   historyButton.textContent=showLastBoss?'실시간 보기':'최근 결과';historyButton.setAttribute('aria-pressed',String(showLastBoss));
   el('dps-total').textContent=`${stats.dps.toFixed(1)} DPS`;
-  el('dps-summary').textContent=`${label} · ${stats.elapsed.toFixed(1)}초 · 총 피해 ${Math.round(stats.total).toLocaleString()} · 평균 DPS · ${useSaved||waveRecord?'당시':'게임'} 최고 ${stats.peakDps.toFixed(1)} DPS`;
-  const markup=stats.rows.length?stats.rows.map((row,i)=>`<li class="dps-row"><div class="dps-bar" style="width:${(row.share*100).toFixed(2)}%;background:${row.color}"></div><div class="dps-row-top"><b>${i+1}. ${row.name}</b><strong>${row.dps.toFixed(1)} DPS</strong></div><div class="dps-row-bottom"><span>누적 ${Math.round(row.damage).toLocaleString()}</span><span class="dps-peak" title="이번 게임의 평균 DPS 최고값">최고 ${row.peakDps.toFixed(1)} DPS</span><span>${(row.share*100).toFixed(1)}%</span></div></li>`).join(''):'<li class="log-empty">실제 피해가 발생하면 표시됩니다.</li>';
+  el('dps-summary').textContent=`${label} · ${stats.elapsed.toFixed(1)}초 · 총 피해 ${Math.round(stats.total).toLocaleString()} · 평균 DPS · ${useSaved||waveRecord?'당시':'게임'} 최고(1초) ${stats.peakDps.toFixed(1)} DPS`;
+  const markup=stats.rows.length?stats.rows.map((row,i)=>`<li class="dps-row"><div class="dps-bar" style="width:${(row.share*100).toFixed(2)}%;background:${row.color}"></div><div class="dps-row-top"><b>${i+1}. ${row.name}</b><strong>${row.dps.toFixed(1)} DPS</strong></div><div class="dps-row-bottom"><span>누적 ${Math.round(row.damage).toLocaleString()}</span><span class="dps-peak" title="이번 게임에서 최근 1초간 실제 피해의 최고값">최고 ${row.peakDps.toFixed(1)} DPS</span><span>${(row.share*100).toFixed(1)}%</span></div></li>`).join(''):'<li class="log-empty">실제 피해가 발생하면 표시됩니다.</li>';
   if(markup!==damageMeterMarkup){const list=el('dps-meter'),top=list.scrollTop;list.innerHTML=markup;list.scrollTop=top;damageMeterMarkup=markup;}
 }
 function refreshLogs():void {
