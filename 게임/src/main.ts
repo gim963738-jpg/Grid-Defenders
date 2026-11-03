@@ -171,8 +171,9 @@ function refresh():void {
 
   const chosenSoldier=game.units.find(u=>u.id===selectedUnit&&!UNITS[u.kind].hero);
   const unitCards=(hero:boolean)=>Object.entries(UNITS).filter(([,d])=>d.hero===hero).map(([kind,d])=>{
-    const blocked=hero&&(game.heroes().length>=RULES.heroLimit||game.heroes().some(u=>u.kind===kind));
-    if(hero)return `<button class="unit-card hero-card ${kind==='ranged'?'ranged-summon-card':''} ${pending===kind?'selected':''} ${blocked?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${kind==='ranged'?'<span class="ranged-portrait"></span>':d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
+    const deployed=hero&&game.heroes().some(u=>u.kind===kind);
+    const blocked=hero&&(game.heroes().length>=RULES.heroLimit||deployed);
+    if(hero)return `<button class="unit-card hero-card ${kind==='ranged'?'ranged-summon-card':''} ${pending===kind?'selected':''} ${blocked?'unavailable':''} ${deployed?'deployed':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${kind==='ranged'?'<span class="ranged-portrait"></span>':d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
     return `<div class="soldier-choice"><button class="unit-card ${pending===kind?'selected':''} ${game.gold<d.cost?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><small>클릭하여 능력치 확인</small><span class="price">${d.cost} G</span></button>${chosenSoldier?.kind===kind?`<button class="card-upgrade" data-upgrade="${chosenSoldier.id}" ${chosenSoldier.level>=5||game.gold<game.upgradeCost(chosenSoldier)?'disabled':''}>#${chosenSoldier.id} 승급 ${chosenSoldier.level>=5?'MAX':game.upgradeCost(chosenSoldier)+'G'}</button>`:''}</div>`;
   }).join('');
   el('soldiers').innerHTML=unitCards(false);
@@ -557,7 +558,7 @@ el('app').addEventListener('click',(e)=>{
     if(!game.units.some(u=>u.id===selectedUnit&&u.kind===kind))selectedUnit=null;
     if(UNITS[kind].hero){
       const placed=game.heroes().find(u=>u.kind===kind);
-      if(placed){selectedUnit=placed.id;selectedHero=placed.id;pending=null;selectedGear=null;openTab('gear');heroInfo={kind,unitId:placed.id};game.note(`${UNITS[kind].name} 장비 선택`);}
+      if(placed){selectedUnit=placed.id;selectedHero=placed.id;pending=null;selectedGear=null;heroInfo={kind,unitId:placed.id};game.note(`${UNITS[kind].name} · 이미 소환된 영웅입니다.`);}
       else {heroInfo={kind,unitId:null};pending=game.heroes().length<RULES.heroLimit?kind:null;game.note(pending?`${UNITS[kind].name} 선택 · 빈 칸을 누르면 무료 소환`:'영웅 정원이 가득합니다. 기본 능력치를 확인할 수 있습니다.');}
     } else {heroInfo={kind,unitId:null};pending=game.gold>=UNITS[kind].cost?kind:null;game.note(pending?`${UNITS[kind].name} 선택 · 빈 칸을 누르면 소환`:'골드가 부족합니다. 기본 능력치는 확인할 수 있습니다.');}
   }

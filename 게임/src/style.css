@@ -400,3 +400,5 @@
 #summon [data-summon]:active{cursor:grabbing;}
 .summon-drag-ghost{position:fixed;z-index:35;pointer-events:none;display:flex;align-items:center;gap:6px;padding:6px 9px;border:2px solid #b49d68;border-radius:8px;background:#142820e8;color:#f4dfb1;transform:translate(-50%,-105%);font-size:11px;box-shadow:0 3px 12px #0006;}
 .summon-drag-ghost.valid-drop{border-color:#8af0a7;box-shadow:0 0 12px #7ddd8d66;}.summon-drag-ghost b{font-size:25px;}.summon-drag-ghost img{width:35px;height:45px;object-fit:contain;}
+
+#heroes .hero-card.deployed{filter:grayscale(1) brightness(.55);opacity:.8;}
