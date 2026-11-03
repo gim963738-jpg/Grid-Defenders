@@ -154,3 +154,17 @@
 .equipment-bag .inventory-grid{gap:2px;padding:4px;border-radius:5px;}
 .equipment-bag .gear-cell{font-size:8px;}
 .gear-combine-hint{font-size:9px;color:#96ab9a;line-height:1.6;margin:8px 0;}
+
+/* WEB-019: one cell size for 4-column equipment and both 5-column bags. */
+#gear,#shop{container-type:inline-size;--inventory-cell:calc((100cqw - 57px)/9);}
+#gear .equipment-layout{grid-template-columns:max-content max-content;gap:8px;}
+#equipment,#gear-bag,#shop-bag{grid-template-columns:repeat(5,var(--inventory-cell));width:max-content;gap:3px;padding:6px;border:1px solid #58654a;border-radius:8px;}
+#equipment{grid-template-columns:repeat(4,var(--inventory-cell));}
+#equipment .gear-cell,#gear-bag .gear-cell,#shop-bag .gear-cell{width:var(--inventory-cell);height:var(--inventory-cell);aspect-ratio:1;margin:0;padding:0;border:1px solid #506458;border-radius:3px;font-size:10px;}
+.gear-cell.board-dark:not([data-gear-id]){background:#1a2d28;}
+.gear-cell.board-light:not([data-gear-id]){background:#344b40;}
+.equipment-bag .inventory-scroll{scrollbar-width:none;}
+.equipment-bag .inventory-scroll::-webkit-scrollbar{display:none;}
+#shop .inventory-scroll{width:max-content;max-width:100%;}
+
+#gear .equipment-layout{padding-top:18px;}.equipment-bag{position:relative;}.equipment-bag h3{position:absolute;top:-18px;left:0;margin:0;}
