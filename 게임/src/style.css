@@ -318,3 +318,8 @@
 
 #gear .equipment-bag{width:calc(5 * var(--inventory-cell) + 36px);min-width:0;}
 #gear #item-detail{width:100%;min-width:0;overflow-wrap:anywhere;}
+
+/* WEB-035: plain shop heading and six equal offers in two rows. */
+#shop-market .section-title{background:none;border:0;box-shadow:none;}
+#shop{border-top:0;}
+#shop-cards .shop-card:nth-child(n){grid-column:span 2;}

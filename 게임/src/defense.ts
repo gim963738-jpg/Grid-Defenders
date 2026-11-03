@@ -47,7 +47,7 @@ export class Defense {
   gold:number=RULES.initialGold;
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
   iceProjectiles:IceProjectile[]=[];iceBursts:IceBurst[]=[];
-  shop:(ItemDef|null)[]=ITEMS.slice(0,5);
+  shop:(ItemDef|null)[]=ITEMS.slice(0,RULES.shopSlots);
   shopDiscounts:boolean[]=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);
   kills=0; elapsed=0; speed=1; revision=0;
   normalKills=0;bountySummons=0;pendingBounties=0;
@@ -210,7 +210,7 @@ export class Defense {
   reroll():boolean {
     if(this.gold<RULES.rerollGold)return this.note('리롤 골드가 부족합니다.');
     const before=this.gold;this.gold-=RULES.rerollGold;
-    this.shop=Array.from({length:5},()=>ITEMS[Math.floor(Math.random()*ITEMS.length)]);
+    this.shop=Array.from({length:RULES.shopSlots},()=>ITEMS[Math.floor(Math.random()*ITEMS.length)]);
     this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);
     this.goldLog('economy','상점 리롤',before);
     this.note('상점 상품을 새로 가져왔습니다.');return true;
@@ -362,7 +362,7 @@ export class Defense {
     this.iceProjectiles=[];this.iceBursts=[];
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
     this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.damageNumbers=[];this.nextDamageId=1;
-    this.shop=ITEMS.slice(0,5);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.nextId=1;this.placementOrder=0;
+    this.shop=ITEMS.slice(0,RULES.shopSlots);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.nextId=1;this.placementOrder=0;
     this.logs.damage.length=0;this.logs.reward.length=0;this.logs.economy.length=0;this.nextLogId=1;this.logRevision++;
     this.startWave(false);this.note('게임을 시작 상태로 초기화했습니다.');
   }
