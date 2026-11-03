@@ -85,8 +85,8 @@ function refreshLogs():void {
 }
 
 function shape(item:ItemDef,rotation=0,cellSize=9):string {
-  const cells=rotated(item.cells,rotation),width=Math.max(...cells.map(c=>c[0]))+1;
-  return `<span class="mini-shape" style="--shape-columns:${width};grid-template-columns:repeat(${width},${cellSize}px)">${cells.map(([x,y])=>`<i style="grid-column:${x+1};grid-row:${y+1};width:${cellSize}px;height:${cellSize}px;background:${item.color}"></i>`).join('')}</span>`;
+  const cells=rotated(item.cells,rotation),width=Math.max(...cells.map(c=>c[0]))+1,height=Math.max(...cells.map(c=>c[1]))+1;
+  return `<span class="mini-shape" style="--shape-columns:${width};--shape-rows:${height};grid-template-columns:repeat(${width},${cellSize}px)">${cells.map(([x,y])=>`<i style="grid-column:${x+1};grid-row:${y+1};width:${cellSize}px;height:${cellSize}px;background:${item.color}"></i>`).join('')}</span>`;
 }
 function openTab(name:string):void {
   tab=name;

@@ -271,3 +271,11 @@
 .bag-frame{width:max-content;padding:6px;border:1px solid #58654a;border-radius:8px;background:#0e1a18;overflow:hidden;}
 #gear .bag-frame .inventory-scroll,#shop .shop-counter .bag-frame .inventory-scroll{width:max-content;height:calc(3 * var(--inventory-cell) + 6px);min-height:0;max-height:calc(3 * var(--inventory-cell) + 6px);border-radius:0;margin:0;}
 #gear-bag,#shop-bag{padding:0;border:0;border-radius:0;}
+
+/* WEB-032: fixed product boxes with shape previews fitted inside a stable viewport. */
+#shop-cards .shop-card{height:124px;min-height:124px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:72px 26px;gap:6px;padding:8px 4px;align-content:center;justify-items:stretch;overflow:hidden;}
+#shop-cards .shop-item-visual{container-type:inline-size;height:72px;min-height:72px;overflow:hidden;}
+#shop-cards .mini-shape{--preview-cell:min(20px,calc((100cqw - 8px - 2px * (var(--shape-columns) - 1))/var(--shape-columns)),calc((72px - 2px * (var(--shape-rows) - 1))/var(--shape-rows)));grid-template-columns:repeat(var(--shape-columns),var(--preview-cell))!important;min-height:0;}
+#shop-cards .mini-shape i{width:var(--preview-cell)!important;height:var(--preview-cell)!important;}
+#shop-cards .shop-card button{height:26px;margin:0;padding:3px 2px;}
+#shop-cards .shop-item-name{width:max-content;max-width:100%;white-space:normal;font-size:9px;}

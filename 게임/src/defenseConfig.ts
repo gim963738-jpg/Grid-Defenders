@@ -31,6 +31,8 @@ export const ITEMS: ItemDef[] = [
   {id:'I07',name:'룬 방패',short:'룬',cells:[[0,0],[0,1],[1,1]],color:'#67a3a2',price:160,armor:35,hp:200,description:'물리 방어력 +35 · 체력 +200'},
   {id:'I08',name:'질풍의 검',short:'질',cells:[[0,0],[0,1],[1,1]],color:'#83ae74',price:150,attack:20,speed:0.15,description:'공격력 +20 · 공속 +15%'},
   {id:'I09',name:'재생의 부적',short:'재',cells:[[0,0],[1,0],[2,0]],color:'#6eac90',price:160,hp:350,regen:10,description:'체력 +350 · 초당 회복 +10'},
+  {id:'I10',name:'시험용 대형 방패',short:'대',cells:[[0,0],[1,0],[2,0],[0,1],[1,1],[2,1],[0,2],[1,2],[2,2]],color:'#668fb0',price:120,armor:50,hp:500,description:'시험용 3×3 · 물리 방어력 +50 · 체력 +500'},
+  {id:'I11',name:'시험용 장창',short:'창',cells:[[0,0],[1,0],[2,0],[3,0]],color:'#c59463',price:100,attack:35,description:'시험용 4×1 · 공격력 +35'},
 ];
 export const GRID = { columns:4, rows:5 } as const;
 export const BAG_GRID = { columns:5, rows:3 } as const;
