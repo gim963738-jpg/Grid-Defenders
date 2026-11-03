@@ -403,8 +403,8 @@
 
 #heroes .hero-card.deployed{filter:grayscale(1) brightness(.55);opacity:.8;}
 
-/* Boss staging board: centered four-column allied formation in eight columns. */
-#boss-party{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:0;margin:15px 0 0;background:#3d583d;border:1px solid #657557;border-radius:4px;overflow:hidden;}
+/* Vertical allied board: four columns, eight rows, centered formation. */
+#boss-party{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:15px 0 0;background:#3d583d;border:1px solid #657557;border-radius:4px;overflow:hidden;}
 .boss-grid-cell{position:relative;min-width:0;aspect-ratio:1;border:1px solid #c8d5aa18;background:radial-gradient(circle at 25% 75%,#6b82452b 1px,transparent 2px);}
 .boss-grid-unit{display:flex;align-items:center;justify-content:center;}
 .boss-grid-unit svg{width:90%;height:90%;overflow:visible;}
@@ -419,5 +419,6 @@
 .boss-side p{font-size:9px;color:#bda991;margin:5px 0 0;}
 .boss-allied-side{grid-column:1;grid-row:1;padding-right:8px;border-right:1px solid #8e6e4c66;}
 .boss-side{grid-column:2;grid-row:1;}
-.boss-allied-side #boss-party{margin-top:8px;}
+.boss-allied-side{display:flex;flex-direction:column;align-items:center;}
+.boss-allied-side #boss-party{margin-top:5px;width:clamp(64px,19vw,88px);max-width:100%;}
 .boss-grid-unit small{font-size:clamp(4px,1.3vw,6px);}

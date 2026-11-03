@@ -622,8 +622,8 @@ function renderBossScreen():void {
     ...[12,13,14,15].map(slot=>({kind:'mage' as const,slot,level:1})),
   ];
   el('boss-party').innerHTML=Array.from({length:32},(_,index)=>{
-    const col=index%8,row=Math.floor(index/8);
-    const unit=col>=2&&col<6?formation.find(u=>u.slot===(5-col)*4+row):undefined;
+    const col=index%4,row=Math.floor(index/4);
+    const unit=row>=2&&row<6?formation.find(u=>u.slot===(3-col)*4+row-2):undefined;
     if(!unit)return '<div class="boss-grid-cell" aria-hidden="true"></div>';
     const def=UNITS[unit.kind],color='#'+def.color.toString(16).padStart(6,'0');
     const weapon=unit.kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':unit.kind==='mage'||unit.kind==='healer'?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
