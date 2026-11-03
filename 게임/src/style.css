@@ -229,10 +229,10 @@
 
 /* WEB-026: compact bag, silhouette behind the raised shop, centered last row. */
 #shop .shop-layout{position:relative;isolation:isolate;gap:0;}
-#shop .shop-layout::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:10px;left:-12px;width:48%;height:clamp(300px,90cqw,370px);background:linear-gradient(to right,transparent 55%,#121d20 100%),url(/assets/shop/merchant-silver-cutout.png) 53% top/auto clamp(300px,90cqw,370px) no-repeat;filter:grayscale(1) brightness(.65);opacity:.35;mask-image:linear-gradient(to bottom,transparent 30%,#000 46%,#000 78%,transparent 100%);}
+#shop .shop-layout::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:10px;left:-12px;width:calc(100% - 5 * var(--inventory-cell) - 22px);height:clamp(260px,80cqw,340px);background:url(/assets/shop/merchant-silver-cutout.png) calc(53% + 28px) top/auto clamp(260px,80cqw,340px) no-repeat;mask-image:linear-gradient(to right,#000 64%,transparent 100%),linear-gradient(to bottom,#000 30%,rgba(0,0,0,.85) 43%,rgba(0,0,0,.25) 65%,transparent 100%);mask-composite:intersect;}
 #shop .shop-counter .shop-bag-column .inventory-scroll{height:clamp(120px,38cqw,150px);max-height:clamp(120px,38cqw,150px);}
 #shop .shop-counter .shop-merchant{height:clamp(140px,44cqw,180px);}
-#shop #shop-market{position:relative;margin-top:0;background:rgba(18,29,32,.48);}
+#shop #shop-market{position:relative;margin-top:0;background:linear-gradient(to bottom,rgba(18,29,32,0),rgba(18,29,32,.48) 65px);}
 #shop-market .section-title{min-height:18px;}
 #shop #reroll{position:absolute;top:-48px;left:12px;z-index:4;max-width:calc(45% - 16px);background:#363b2ddd;}
 #shop #shop-cards{grid-template-columns:repeat(6,minmax(0,1fr));}
@@ -240,3 +240,8 @@
 #shop-cards .shop-card:nth-child(4){grid-column:2/span 2;}
 #shop-cards .shop-card:nth-child(5){grid-column:4/span 2;}
 @media(max-width:350px){#shop .shop-layout::before{left:-8px;}#shop #reroll{top:-43px;left:8px;font-size:8px;}}
+
+/* WEB-027: a single continuously faded portrait, without a second silhouette. */
+#shop .shop-counter .shop-merchant{background:none;}
+#shop .shop-counter .shop-merchant::after{content:none;}
+@media(max-width:350px){#shop .shop-layout::before{width:calc(100% - 5 * var(--inventory-cell) - 26px);}}
