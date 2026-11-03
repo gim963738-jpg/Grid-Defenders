@@ -168,3 +168,18 @@
 #shop .inventory-scroll{width:max-content;max-width:100%;}
 
 #gear .equipment-layout{padding-top:18px;}.equipment-bag{position:relative;}.equipment-bag h3{position:absolute;top:-18px;left:0;margin:0;}
+
+/* WEB-020: large product blocks in one column to the right of the bag. */
+.shop-layout{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px;align-items:start;}
+.shop-bag-column{min-width:0;}.shop-bag-column>.section-title{min-height:48px;margin:10px 0 8px;}
+#shop-market{min-width:0;margin-top:10px;padding:6px;border-style:solid;}
+#shop-market .section-title{display:flex;flex-direction:column;gap:5px;margin:0 0 8px;align-items:stretch;}
+#shop-market h2{text-align:center;font-size:11px;}
+#shop-market #reroll{font-size:9px;padding:5px 1px;white-space:nowrap;}
+#shop-cards{grid-template-columns:minmax(0,1fr);gap:6px;}
+#shop-cards .shop-card{padding:7px 3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:74px;}
+#shop-cards .mini-shape{float:none;gap:2px;min-height:24px;}
+#shop-cards .shop-card button{font-size:11px;padding:5px 2px;}
+#shop-cards .discounted button{border-color:#deb85f;color:#ffe49c;}
+#shop-cards .sold-out{color:#6f8274;}
+#shop-sale-hint{font-size:8px;line-height:1.5;margin:7px 0 0;}

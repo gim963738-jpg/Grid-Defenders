@@ -84,9 +84,9 @@ function refreshLogs():void {
   }
 }
 
-function shape(item:ItemDef,rotation=0):string {
+function shape(item:ItemDef,rotation=0,cellSize=9):string {
   const cells=rotated(item.cells,rotation),width=Math.max(...cells.map(c=>c[0]))+1;
-  return `<span class="mini-shape" style="grid-template-columns:repeat(${width},9px)">${cells.map(([x,y])=>`<i style="grid-column:${x+1};grid-row:${y+1};background:${item.color}"></i>`).join('')}</span>`;
+  return `<span class="mini-shape" style="grid-template-columns:repeat(${width},${cellSize}px)">${cells.map(([x,y])=>`<i style="grid-column:${x+1};grid-row:${y+1};width:${cellSize}px;height:${cellSize}px;background:${item.color}"></i>`).join('')}</span>`;
 }
 function openTab(name:string):void {
   tab=name;
@@ -132,7 +132,7 @@ function refresh():void {
   const gear=game.gear.find(g=>g.id===selectedGear);
   const itemDetail=gear?`${shape(gear.def,turns)} <b>${gear.def.name} #${gear.id}</b> · ${gear.def.description}<br>방향 ${turns*90}° · ${gear.owner===null?'공용 가방':game.gearState(gear).active?'능력치 활성':`능력치 비활성 (${game.gearState(gear).reason})`}<div class="actions"><button data-rotate-selected>↻ 회전</button>${gear.owner===null?`<button data-open-gear>영웅에게 장착</button>`:''}<button class="danger" data-sell-gear="${gear.id}">판매 +${Math.floor(gear.costBasis/2)}G</button><button data-cancel-gear>취소</button></div>`:'블록을 선택하거나 끌어 놓으세요. 더블클릭·두 번 탭하면 회전합니다.';
   el('item-detail').innerHTML=itemDetail;el('shop-item-detail').innerHTML=itemDetail;
-  el('shop-cards').innerHTML=game.shop.map((item,index)=>item?`<article class="shop-card" data-shop-index="${index}" tabindex="0" aria-label="${item.name} · 공용 가방에 드래그하여 구매">${shape(item)}<b>${item.name}</b><p>${item.description}</p>${game.shopDiscounts[index]?`<span class="discount-tag">50% 할인</span> <del>${item.price}G</del>`:''}<button data-buy="${index}" ${game.gold<game.shopPrice(index)?'disabled':''}>구매 ${game.shopPrice(index)}G</button></article>`:'<article class="shop-card"><b>구매 완료</b><p>새로고침으로 상품을 보충하세요.</p></article>').join('');
+  el('shop-cards').innerHTML=game.shop.map((item,index)=>item?`<article class="shop-card ${game.shopDiscounts[index]?'discounted':''}" data-shop-index="${index}" tabindex="0" aria-label="${item.name} · ${game.shopPrice(index)}G · 공용 가방에 드래그하여 구매">${shape(item,0,22)}<button data-buy="${index}" aria-label="${item.name} ${game.shopPrice(index)}G 구매" ${game.gold<game.shopPrice(index)?'disabled':''}>${game.shopPrice(index)}G</button></article>`:'<article class="shop-card sold-out" aria-label="구매 완료">—</article>').join('');
   el('reroll').toggleAttribute('disabled',game.gold<RULES.rerollGold);
   updateHud();
   refreshLogs();

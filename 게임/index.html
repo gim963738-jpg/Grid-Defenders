@@ -50,11 +50,11 @@
         <p class="gear-combine-hint">조합 예정: 노란선 · 후순위: 회색선 · 누르는 동안: 파란 점선<br>재료 중복 사용 불가 · 완성품은 조합한 자리에 배치</p>
       </section>
       <section id="shop" class="panel" hidden>
-        <div class="section-title"><h2>공용 가방</h2><span>구매한 장비 보관</span></div>
-        <div class="inventory-scroll"><div id="shop-bag" class="inventory-grid" aria-label="상점 공용 가방"></div></div>
+        <div class="shop-layout">
+          <div class="shop-bag-column"><div class="section-title"><h2>공용 가방</h2></div><div class="inventory-scroll"><div id="shop-bag" class="inventory-grid" aria-label="상점 공용 가방"></div></div></div>
+          <section id="shop-market" aria-label="상점과 드래그 판매 영역"><div class="section-title"><h2>상점</h2><button id="reroll" class="small-button">새로고침 20G</button></div><div id="shop-cards" class="shop-cards"></div><p id="shop-sale-hint">아이템을 여기로 끌어 판매</p></section>
+        </div>
         <div id="shop-item-detail" class="detail"></div>
-        <section id="shop-market" aria-label="상점과 드래그 판매 영역"><p id="shop-sale-hint">보유 아이템을 이곳으로 끌어 판매</p><div class="section-title"><h2>전투 상점</h2><button id="reroll" class="small-button">새로고침 20G</button></div>
-        <div id="shop-cards" class="shop-cards"></div></section>
         <p class="hint">공용 가방은 아래로 확장됩니다. 블록 드래그: 이동 · 더블클릭·두 번 탭: 회전. 상점 상품을 공용 가방에 내려놓으면 구매합니다.</p>
       </section>
       <footer>WEB-014 · 무한 웨이브 시험 / 정식 방어 공식·영웅 스킬·보스·승패는 미구현</footer>
