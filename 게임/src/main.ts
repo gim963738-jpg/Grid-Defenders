@@ -1,4 +1,4 @@
-import { Application } from 'pixi.js';
+import { Application, Assets, Texture } from 'pixi.js';
 import { Defense, recipeForTypes, type LogCategory } from './defense';
 import { BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
@@ -48,7 +48,7 @@ function refreshHeroInfo():void {
   const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0,critChance:def.hero?0:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier,physicalAttack:def.damageType==='physical'?def.attack:0,magicAttack:def.damageType==='magic'?def.attack:0,physicalArmor:def.armor,magicArmor:def.magicArmor};
   const fields=[['hp','♥','최대 체력',stats.hp.toLocaleString()],['rate','↗','공격속도',`${stats.rate.toFixed(2)}/초`],['attack','⚔','물리 공격',String(stats.physicalAttack)],['attack','✦','마법 공격',String(stats.magicAttack)],['armor','⬡','물리 방어',String(stats.physicalArmor)],['armor','◇','마법 방어',String(stats.magicArmor)],['regen','✚','체력 재생',`${stats.regen}/초`],['gold','◇','골드 획득',`+${Math.round(stats.gold*100)}%`]];
   if(!def.hero)fields.push(['attack','✦','치명타 확률',`${Math.round(stats.critChance*100)}%`],['attack','✦','치명타 배율',`${stats.critMultiplier}배`]);
-  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(([key,icon,label,value])=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}">${value}</dd></div>`).join('')}</dl>`;
+  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${heroInfo.kind==='ranged'?'<span class="ranged-portrait"></span>':def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(([key,icon,label,value])=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}">${value}</dd></div>`).join('')}</dl>`;
   if(markup!==heroInfoMarkup){el('hero-info').innerHTML=markup;heroInfoMarkup=markup;}
   positionHeroInfo();
 }
@@ -112,7 +112,7 @@ function refresh():void {
   const chosenSoldier=game.units.find(u=>u.id===selectedUnit&&!UNITS[u.kind].hero);
   const unitCards=(hero:boolean)=>Object.entries(UNITS).filter(([,d])=>d.hero===hero).map(([kind,d])=>{
     const blocked=hero&&(game.heroes().length>=RULES.heroLimit||game.heroes().some(u=>u.kind===kind));
-    if(hero)return `<button class="unit-card hero-card ${pending===kind?'selected':''} ${blocked?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
+    if(hero)return `<button class="unit-card hero-card ${pending===kind?'selected':''} ${blocked?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${kind==='ranged'?'<span class="ranged-portrait"></span>':d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
     return `<div class="soldier-choice"><button class="unit-card ${pending===kind?'selected':''} ${game.gold<d.cost?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><small>클릭하여 능력치 확인</small><span class="price">${d.cost} G</span></button>${chosenSoldier?.kind===kind?`<button class="card-upgrade" data-upgrade="${chosenSoldier.id}" ${chosenSoldier.level>=5||game.gold<game.upgradeCost(chosenSoldier)?'disabled':''}>#${chosenSoldier.id} 승급 ${chosenSoldier.level>=5?'MAX':game.upgradeCost(chosenSoldier)+'G'}</button>`:''}</div>`;
   }).join('');
   el('soldiers').innerHTML=unitCards(false);el('heroes').innerHTML=unitCards(true);
@@ -447,6 +447,7 @@ async function start():Promise<void> {
   const app=new Application();
   await app.init({width:RULES.width,height:RULES.height,background:'#172620',preference:'webgl',resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,antialias:true});
   el('battlefield').append(app.canvas);app.canvas.setAttribute('aria-label','순환 전장, 병사와 영웅 배치 칸 16개');el('status').hidden=true;
+  const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
   const view=createDefenseView(app,game,(slot)=>{
     if(unitDrag?.moved)return;
     const unit=game.units.find(u=>u.slot===slot);
@@ -454,7 +455,7 @@ async function start():Promise<void> {
     else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
     else game.note('먼저 아래에서 소환할 병사 또는 영웅을 선택하세요.');
     refresh();
-  });
+  },rangedTexture);
   let lastRevision=-1,hudClock=0;
   renderMonsterTools();
   renderRecipeTree();

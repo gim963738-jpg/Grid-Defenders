@@ -120,3 +120,5 @@
 #test-enemy-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:8px 0}#dev-next-wave{width:100%!important}
 .monster-test-tools details{margin-top:10px}.monster-test-tools summary{cursor:pointer;color:#e4c68a;padding:5px 0}
 #test-enemy-stats article{padding:7px;border:1px solid #445344;border-radius:4px;margin-top:5px}#test-enemy-stats b{font-size:10px}#test-enemy-stats p{font-size:10px;margin:4px 0}
+
+.ranged-portrait{display:block;width:100%;height:100%;border-radius:inherit;background-image:url(/assets/heroes/ranged-reference.png);background-size:270% auto;background-position:55% 10%;}

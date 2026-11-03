@@ -11,6 +11,8 @@ export function recipeForTypes(a:string,b:string) {
 }
 export interface GearState { active:boolean; reason:string; }
 export interface Shot { x:number; y:number; tx:number; ty:number; life:number; color:number; }
+export interface IceProjectile {x:number;y:number;tx:number;ty:number;targetId:number;source:Unit;attack:number;}
+export interface IceBurst {x:number;y:number;life:number;}
 export type AttackArea =
   | { kind:'sector'; x:number; y:number; radius:number; angle:number; halfAngle:number; life:number; color:number }
   | { kind:'circle'; x:number; y:number; radius:number; life:number; color:number };
@@ -44,6 +46,7 @@ export function pathPoint(distance:number): {x:number;y:number} {
 export class Defense {
   gold:number=RULES.initialGold;
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
+  iceProjectiles:IceProjectile[]=[];iceBursts:IceBurst[]=[];
   shop:(ItemDef|null)[]=ITEMS.slice(0,5);
   shopDiscounts:boolean[]=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);
   kills=0; elapsed=0; speed=1; revision=0;
@@ -91,7 +94,7 @@ export class Defense {
   nextTestWave():void {
     const removed=this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
     this.enemies=this.enemies.filter(e=>(e.named||e.bounty)&&e.hp>0);
-    this.shots=[];this.attackAreas=[];this.wave++;
+    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.wave++;
     this.log('economy',`[웨이브 전환] 남은 일반 몬스터 ${removed}마리 정리 · 처치 보상 없음 · 네임드/현상금 유지`);
     this.startWave();
   }
@@ -356,6 +359,7 @@ export class Defense {
     const before=this.anvils;this.anvils+=10;this.log('economy',`[개발자] 모루 +10 · ${before} → ${this.anvils}`);this.note('개발자 모루 +10');
   }
   reset():void {
+    this.iceProjectiles=[];this.iceBursts=[];
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
     this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.damageNumbers=[];this.nextDamageId=1;
     this.shop=ITEMS.slice(0,5);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.nextId=1;this.placementOrder=0;
@@ -366,6 +370,19 @@ export class Defense {
     const dt=realSeconds*this.speed;this.elapsed+=dt;
     this.advanceWaves(dt);
     for(const e of this.enemies){e.distance+=e.speed*dt;Object.assign(e,pathPoint(e.distance));}
+    for(const burst of this.iceBursts)burst.life-=dt;
+    this.iceBursts=this.iceBursts.filter(b=>b.life>0);
+    // Advance existing projectiles before firing new ones: never deal damage on launch.
+    this.iceProjectiles=this.iceProjectiles.filter(p=>{
+      const target=this.enemies.find(e=>e.id===p.targetId&&e.hp>0);
+      if(target){p.tx=target.x;p.ty=target.y;}
+      const dx=p.tx-p.x,dy=p.ty-p.y,distance=Math.hypot(dx,dy),step=320*dt;
+      if(distance>step){p.x+=dx/distance*step;p.y+=dy/distance*step;return true;}
+      const area:AttackArea={kind:'circle',x:p.tx,y:p.ty,radius:AREA_ATTACK.mageRadius,life:0.28,color:0x88ddff};
+      this.iceBursts.push({x:p.tx,y:p.ty,life:0.45});
+      for(const enemy of this.enemies)if(enemy.hp>0&&inAttackArea(area,enemy.x,enemy.y))this.hit(p.source,enemy,p.attack);
+      return false;
+    });
     for(const u of this.units) {
       u.cooldown-=dt;if(u.cooldown>0)continue;
       const s=this.stats(u),pos=SLOTS[u.slot];
@@ -374,6 +391,10 @@ export class Defense {
         .sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
       if(!target){u.cooldown=0;continue;}
       u.cooldown=1/s.rate;
+      if(u.kind==='ranged'){
+        this.iceProjectiles.push({x:pos.x,y:pos.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...u},attack:s.attack});
+        continue;
+      }
       let area:AttackArea|undefined;
       if(u.kind==='guard')area={kind:'sector',x:pos.x,y:pos.y,radius:s.range,angle:Math.atan2(target.y-pos.y,target.x-pos.x),halfAngle:AREA_ATTACK.guardHalfAngle,life:0.28,color:UNITS[u.kind].color};
       if(u.kind==='mage')area={kind:'circle',x:target.x,y:target.y,radius:AREA_ATTACK.mageRadius,life:0.28,color:UNITS[u.kind].color};
