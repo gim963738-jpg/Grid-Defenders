@@ -266,3 +266,8 @@
 #gear-bag,#shop-bag{grid-template-columns:repeat(5,var(--inventory-cell));}
 #shop .shop-layout::before{width:calc(100% - 5 * var(--inventory-cell) - 22px);}
 @media(max-width:350px){#shop .shop-layout::before{width:calc(100% - 5 * var(--inventory-cell) - 26px);}}
+
+/* WEB-031: separate the frame padding from the exact three-row scroll viewport. */
+.bag-frame{width:max-content;padding:6px;border:1px solid #58654a;border-radius:8px;background:#0e1a18;overflow:hidden;}
+#gear .bag-frame .inventory-scroll,#shop .shop-counter .bag-frame .inventory-scroll{width:max-content;height:calc(3 * var(--inventory-cell) + 6px);min-height:0;max-height:calc(3 * var(--inventory-cell) + 6px);border-radius:0;margin:0;}
+#gear-bag,#shop-bag{padding:0;border:0;border-radius:0;}

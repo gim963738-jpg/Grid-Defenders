@@ -273,7 +273,7 @@ export class Defense {
     return {x:0,y:bottom};
   }
   bagRows():number {
-    return this.gear.filter(g=>g.owner===null).reduce<number>((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+4),BAG_GRID.rows);
+    return this.gear.filter(g=>g.owner===null).reduce<number>((n,g)=>Math.max(n,g.y+Math.max(...rotated(g.def.cells,g.turns).map(c=>c[1]))+1),BAG_GRID.rows);
   }
   placeInBag(id:number,x:number,y:number,turns:number):boolean {
     const item=this.gear.find(g=>g.id===id);if(!item)return false;
