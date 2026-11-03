@@ -33,7 +33,7 @@ export const ITEMS: ItemDef[] = [
   {id:'I09',name:'재생의 부적',short:'재',cells:[[0,0],[1,0],[2,0]],color:'#6eac90',price:160,hp:350,regen:10,description:'체력 +350 · 초당 회복 +10'},
 ];
 export const GRID = { columns:4, rows:5 } as const;
-export const BAG_GRID = { columns:3, rows:5 } as const;
+export const BAG_GRID = { columns:5, rows:3 } as const;
 export const RECIPES = [
   {id:'R01',materials:['I01','I01'],result:'I06'},
   {id:'R02',materials:['I02','I04'],result:'I07'},

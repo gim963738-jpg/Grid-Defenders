@@ -260,3 +260,9 @@
 #shop .shop-counter .shop-bag-column .inventory-scroll::-webkit-scrollbar{display:none;}
 #shop .shop-layout::before{width:calc(100% - 3 * var(--inventory-cell) - 16px);}
 @media(max-width:350px){#shop .shop-layout::before{width:calc(100% - 3 * var(--inventory-cell) - 20px);}}
+
+/* WEB-030: horizontal 5-column, 3-row bag, keeping equipment at 4x5. */
+#gear,#shop{--inventory-cell:calc((100cqw - 57px)/9);--bag-height:calc(3 * var(--inventory-cell) + 20px);}
+#gear-bag,#shop-bag{grid-template-columns:repeat(5,var(--inventory-cell));}
+#shop .shop-layout::before{width:calc(100% - 5 * var(--inventory-cell) - 22px);}
+@media(max-width:350px){#shop .shop-layout::before{width:calc(100% - 5 * var(--inventory-cell) - 26px);}}

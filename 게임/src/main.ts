@@ -474,7 +474,9 @@ async function start():Promise<void> {
       if(!node||node.scrollTop===before){if(drag.y<edge)window.scrollBy(0,-step);else if(drag.y>innerHeight-edge)window.scrollBy(0,step);}
     }
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
-    const dt=Math.min(ticker.deltaMS/1000,0.1);game.tick(dt);view.draw(selectedUnit,pending!==null,unitDrag?.moved?{id:unitDrag.id,slot:canvasSlot(unitDrag.x,unitDrag.y)}:undefined);
+    const dt=Math.min(ticker.deltaMS/1000,0.1);game.tick(dt);
+    const canSummon=pending!==null&&game.gold>=UNITS[pending].cost&&(!UNITS[pending].hero||(game.heroes().length<RULES.heroLimit&&!game.heroes().some(h=>h.kind===pending)));
+    view.draw(selectedUnit,canSummon,unitDrag?.moved?{id:unitDrag.id,slot:canvasSlot(unitDrag.x,unitDrag.y)}:undefined);
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}
     if(lastRevision!==game.revision&&!drag&&!unitDrag){lastRevision=game.revision;refresh();}
   });

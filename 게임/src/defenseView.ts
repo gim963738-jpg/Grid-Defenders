@@ -1,4 +1,4 @@
-import { Application, Container, Graphics, Sprite, Texture, Text } from 'pixi.js';
+import { Application, Container, Graphics, Sprite, Texture, Text, Rectangle } from 'pixi.js';
 import { Defense } from './defense';
 import { RULES, SLOTS, UNITS } from './defenseConfig';
 
@@ -18,9 +18,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const slotGraphics=SLOTS.map((p,index)=>{
     const slot=new Container();slot.position.set(p.x,p.y);
     const g=new Graphics();
-    g.roundRect(-25,-23,50,46,6).fill({color:0x20382d,alpha:0.7}).stroke({width:1,color:0x63805b,alpha:0.65});
-    slot.eventMode='static';slot.cursor='pointer';slot.on('pointertap',()=>onSlot(index));slots.addChild(slot);
-    const t=new Text({text:'+',style:{fontFamily:'system-ui',fontSize:17,fill:0x739072}});t.anchor.set(0.5);slot.addChild(g,t);
+    g.roundRect(-25,-23,50,46,6).fill({color:0xf3c76c,alpha:0.2}).stroke({width:2,color:0xffd47a,alpha:0.95});
+    slot.hitArea=new Rectangle(-25,-23,50,46);slot.eventMode='static';slot.cursor='pointer';slot.on('pointertap',()=>onSlot(index));slots.addChild(slot);
+    const t=new Text({text:'+',style:{fontFamily:'system-ui',fontSize:17,fill:0xffdf9b}});t.anchor.set(0.5);slot.addChild(g,t);
     return slot;
   });
   const selected=new Graphics();root.addChild(selected);
@@ -55,9 +55,10 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
       }
       for(let i=0;i<SLOTS.length;i++) {
         const u=game.units.find(u=>u.slot===i),p=SLOTS[i];
-        slotGraphics[i].children[1].visible=!u;
+        const available=pending&&!u;
+        slotGraphics[i].children[0].visible=available;
+        slotGraphics[i].children[1].visible=available;
         badges[i].text=u?`${UNITS[u.kind].hero?'영웅':`Lv.${u.level}`} ${UNITS[u.kind].icon}`:'';
-        if(pending&&!u)selected.roundRect(p.x-25,p.y-23,50,46,6).stroke({width:1,color:0xf3c76c,alpha:0.8});
         if(!u)continue;
         if(u.id===selectedId) {
           selected.circle(p.x,p.y,game.stats(u).range)
