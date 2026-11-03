@@ -226,3 +226,17 @@
 #shop .shop-counter .shop-bag-column .inventory-scroll{max-height:clamp(140px,48cqw,190px);margin:0;}
 #shop #shop-cards{grid-template-columns:repeat(3,minmax(0,1fr));--shop-block:clamp(16px,4.8cqw,20px);}
 @media(max-width:350px){.shop-counter .shop-merchant{width:calc(100% + 8px);}}
+
+/* WEB-026: compact bag, silhouette behind the raised shop, centered last row. */
+#shop .shop-layout{position:relative;isolation:isolate;gap:0;}
+#shop .shop-layout::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:10px;left:-12px;width:48%;height:clamp(300px,90cqw,370px);background:linear-gradient(to right,transparent 55%,#121d20 100%),url(/assets/shop/merchant-silver-cutout.png) 53% top/auto clamp(300px,90cqw,370px) no-repeat;filter:grayscale(1) brightness(.65);opacity:.35;mask-image:linear-gradient(to bottom,transparent 30%,#000 46%,#000 78%,transparent 100%);}
+#shop .shop-counter .shop-bag-column .inventory-scroll{height:clamp(120px,38cqw,150px);max-height:clamp(120px,38cqw,150px);}
+#shop .shop-counter .shop-merchant{height:clamp(140px,44cqw,180px);}
+#shop #shop-market{position:relative;margin-top:0;background:rgba(18,29,32,.48);}
+#shop-market .section-title{min-height:18px;}
+#shop #reroll{position:absolute;top:-48px;left:12px;z-index:4;max-width:calc(45% - 16px);background:#363b2ddd;}
+#shop #shop-cards{grid-template-columns:repeat(6,minmax(0,1fr));}
+#shop-cards .shop-card{grid-column:span 2;}
+#shop-cards .shop-card:nth-child(4){grid-column:2/span 2;}
+#shop-cards .shop-card:nth-child(5){grid-column:4/span 2;}
+@media(max-width:350px){#shop .shop-layout::before{left:-8px;}#shop #reroll{top:-43px;left:8px;font-size:8px;}}
