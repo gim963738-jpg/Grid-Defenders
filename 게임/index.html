@@ -29,8 +29,7 @@
       <p id="message" role="status">병사를 선택하고 전장의 빈 칸을 눌러주세요.</p>
       <nav class="tabs" aria-label="전투 조작 메뉴">
         <button data-tab="summon" class="active" aria-pressed="true">소환·지휘</button>
-        <button data-tab="gear" aria-pressed="false">영웅 장비</button>
-        <button data-tab="shop" aria-pressed="false">상점·가방</button>
+        <button data-tab="gear" aria-pressed="false">장비·가방·상점</button>
       </nav>
       <section id="summon" class="panel">
         <div class="section-title"><h2>병사 소환</h2><span>소환: 빈 칸 터치 · 이동: 유닛 드래그</span></div>
@@ -40,14 +39,13 @@
         <section id="unit-detail" class="detail"></section>
       </section>
       <section id="gear" class="panel" hidden>
-        <div class="section-title gear-heading"><h2 id="gear-title">영웅 장비</h2><button id="combine" class="small-button" disabled>조합</button></div>
+        <div class="inventory-hero-bar"><span id="inventory-hero-icon" class="inventory-hero-icon"></span><div class="inventory-hero-name"><small>선택 영웅</small><b id="inventory-hero-name">영웅 선택</b></div><button class="inventory-mode active" data-hero-equipment>장비</button><button class="inventory-mode" data-hero-stats>능력치</button><button id="combine" class="small-button" disabled>조합</button></div>
         <p id="combine-status" aria-live="polite"></p>
         <div class="equipment-layout">
-          <div id="equipment" aria-label="영웅 장비칸 4열 5행"></div>
-          <aside class="equipment-bag"><h3>공용 가방</h3><div class="bag-frame"><div class="inventory-scroll"><div id="gear-bag" class="inventory-grid" aria-label="영웅 장비창의 공용 가방 5열 3행 표시"></div></div></div></aside>
+          <section class="equipment-board"><h2 id="gear-title">영웅 장비</h2><div id="equipment" aria-label="영웅 장비칸 4열 5행"></div></section>
+          <aside class="equipment-bag"><h3>공용 가방</h3><div class="bag-frame"><div class="inventory-scroll"><div id="gear-bag" class="inventory-grid" aria-label="영웅 장비창의 공용 가방 5열 3행 표시"></div></div></div><div id="item-detail" class="detail"></div></aside>
         </div>
-        <div id="item-detail" class="detail"></div>
-        <p class="gear-combine-hint">조합 예정: 노란선 · 후순위: 회색선 · 누르는 동안: 파란 점선<br>재료 중복 사용 불가 · 완성품은 조합한 자리에 배치</p>
+        <p class="gear-combine-hint">조합 예정: 노란선 · 후순위: 회색선 · 누르는 동안: 파란 점선</p>
       </section>
       <section id="shop" class="panel" hidden>
         <div class="shop-layout">
@@ -55,7 +53,7 @@
             <div class="shop-merchant" role="img" aria-label="은발 상인 캐릭터"></div>
             <div class="shop-bag-column"><div class="section-title"><h2>공용 가방</h2></div><div class="bag-frame"><div class="inventory-scroll"><div id="shop-bag" class="inventory-grid" aria-label="상점 공용 가방 5열 3행 표시"></div></div></div></div>
           </div>
-          <section id="shop-market" aria-label="상점과 드래그 판매 영역"><div class="section-title"><button id="reroll" class="small-button">새로고침 20G</button></div><div id="shop-cards" class="shop-cards"></div><p id="shop-sale-hint">아이템을 여기로 끌어 판매</p></section>
+          <section id="shop-market" aria-label="상점과 드래그 판매 영역"><div class="section-title"><span class="merchant-mini" role="img" aria-label="상인"></span><h2>상점</h2><button id="reroll" class="small-button">새로고침 20G</button></div><div id="shop-cards" class="shop-cards"></div><p id="shop-sale-hint">아이템을 여기로 끌어 판매</p></section>
         </div>
         <div id="shop-item-detail" class="detail"></div>
         <p class="hint">공용 가방은 아래로 확장됩니다. 블록 드래그: 이동 · 더블클릭·두 번 탭: 회전. 상점 상품을 공용 가방에 내려놓으면 구매합니다.</p>

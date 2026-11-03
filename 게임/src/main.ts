@@ -11,14 +11,16 @@ let selectedGear:number|null=null,turns=0,tab='summon';
 let shopFocus:number|null=null;
 let pressedGear:number|null=null;
 const events=new AbortController();
-let heroInfo:{kind:UnitKind;unitId:number|null}|null=null;
+let heroInfo:{kind:UnitKind;unitId:number|null;fromInventory?:boolean}|null=null;
 let noticeTimer:ReturnType<typeof setTimeout>|undefined;
 let heroInfoMarkup='';
 function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
 function positionHeroInfo():void {
   const popup=el('hero-info');if(!heroInfo)return;
   let anchor:{left:number;right:number;top:number;bottom:number};
-  if(heroInfo.unitId!==null){
+  if(heroInfo.fromInventory){
+    anchor=document.querySelector<HTMLElement>('[data-hero-stats]')!.getBoundingClientRect();
+  } else if(heroInfo.unitId!==null){
     const unit=game.units.find(u=>u.id===heroInfo!.unitId),canvas=document.querySelector('canvas');
     if(!unit||!canvas){closeHeroInfo();return;}
     const box=canvas.getBoundingClientRect(),point=SLOTS[unit.slot];
@@ -90,8 +92,9 @@ function shape(item:ItemDef,rotation=0,cellSize=9):string {
 }
 function openTab(name:string):void {
   tab=name;
-  document.querySelectorAll<HTMLElement>('.panel').forEach(p=>p.hidden=p.id!==tab);
-  document.querySelectorAll<HTMLButtonElement>('[data-tab]').forEach(b=>{b.classList.toggle('active',b.dataset.tab===tab);b.setAttribute('aria-pressed',String(b.dataset.tab===tab));});
+  const inventory=tab==='gear'||tab==='shop';
+  document.querySelectorAll<HTMLElement>('.panel').forEach(p=>p.hidden=inventory?!['gear','shop'].includes(p.id):p.id!==tab);
+  document.querySelectorAll<HTMLButtonElement>('[data-tab]').forEach(b=>{const active=b.dataset.tab===tab||(inventory&&b.dataset.tab==='gear');b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
 }
 function inventoryGrid(owner:number|null):string {
   const occupied=new Map<string,typeof game.gear>();
@@ -125,8 +128,11 @@ function refresh():void {
   } else el('unit-detail').textContent='배치된 유닛을 누르면 정보와 병사 강화·판매를 확인합니다.';
   if(!game.heroes().some(h=>h.id===selectedHero))selectedHero=game.heroes()[0]?.id??null;
   const hero=game.heroes().find(h=>h.id===selectedHero);
-  el('gear-title').textContent=hero?`${UNITS[hero.kind].name} #${hero.id} 장비`:'영웅 장비';
-  el('equipment').innerHTML=hero?inventoryGrid(hero.id):'<p class="empty">영웅을 먼저 배치하세요.</p>';
+  el('gear-title').textContent='영웅 장비';
+  el('inventory-hero-name').textContent=hero?UNITS[hero.kind].name:'영웅 선택';
+  el('inventory-hero-icon').innerHTML=hero?(hero.kind==='ranged'?'<span class="ranged-portrait"></span>':UNITS[hero.kind].icon):'◇';
+  document.querySelector<HTMLButtonElement>('[data-hero-stats]')!.disabled=!hero;
+  el('equipment').innerHTML=inventoryGrid(hero?.id??-1);
   const bag=inventoryGrid(null);
   el('gear-bag').innerHTML=bag;el('shop-bag').innerHTML=bag;
   const gear=game.gear.find(g=>g.id===selectedGear);
@@ -146,7 +152,7 @@ function refreshTools():void {
   el('combine-status').textContent=`조합 ${count}회 · 모루 ${count}개 필요 / 보유 ${game.anvils}개`;
   const button=el<HTMLButtonElement>('combine');
   button.disabled=!count||game.anvils<count;
-  button.textContent=count?`조합 ${count}회 실행`:'조합 재료를 붙여주세요';
+  button.textContent=count?`조합 ${count}`:'조합';
   button.title=plan.map(pair=>pair.map(id=>{const g=game.gear.find(g=>g.id===id)!;return `${g.def.name} #${g.id}`;}).join(' + ')).join(' / ');
   const full=game.enemies.filter(e=>!e.bounty&&!e.named&&e.hp>0).length>=RULES.maxEnemies;
   document.querySelectorAll<HTMLButtonElement>('[data-monster-id]').forEach(button=>button.disabled=full&&!MONSTERS.find(d=>d.id===button.dataset.monsterId)?.named);
@@ -261,8 +267,8 @@ function refreshFieldUpgrade():void {
 function dragDestination(){
   if(!drag)return null;
   const hit=document.elementFromPoint(drag.x,drag.y),gear=game.gear.find(g=>g.id===drag!.id);
-  if(drag.shopIndex===undefined&&tab==='shop'&&hit?.closest('#shop-market'))return {kind:'sale' as const};
-  const hero=tab==='shop'&&gear?.owner===null&&hit?.closest('canvas')?game.heroes().find(h=>h.slot===canvasSlot(drag!.x,drag!.y)):null;
+  if(drag.shopIndex===undefined&&(tab==='shop'||tab==='gear')&&hit?.closest('#shop-market'))return {kind:'sale' as const};
+  const hero=(tab==='shop'||tab==='gear')&&gear?.owner===null&&hit?.closest('canvas')?game.heroes().find(h=>h.slot===canvasSlot(drag!.x,drag!.y)):null;
   if(hero)return {kind:'hero' as const,hero};
   const grids=['equipment','gear-bag','shop-bag'].map(id=>el(id)).filter(g=>g.getClientRects().length&&g.querySelector('[data-cell],[data-bag-cell]'));
   let grid=hit?.closest<HTMLElement>('#equipment,#gear-bag,#shop-bag');
@@ -390,6 +396,8 @@ el('app').addEventListener('click',(e)=>{
   const b=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!b||b.disabled)return;
   const d=b.dataset;
   if(d.tab){closeHeroInfo();openTab(d.tab);}
+  else if('heroEquipment'in d){closeHeroInfo();openTab('gear');}
+  else if('heroStats'in d){const hero=game.heroes().find(h=>h.id===selectedHero);if(hero)heroInfo={kind:hero.kind,unitId:hero.id,fromInventory:true};}
   else if(d.summon){
     const kind=d.summon as UnitKind;
     if(!game.units.some(u=>u.id===selectedUnit&&u.kind===kind))selectedUnit=null;
