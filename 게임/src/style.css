@@ -473,3 +473,5 @@
 .dps-bar{position:absolute;inset:0 auto 0 0;z-index:-1;opacity:.17;transition:width .15s linear;pointer-events:none;}
 .dps-row-top,.dps-row-bottom{display:flex;justify-content:space-between;gap:6px;align-items:center;}
 .dps-row-top b{font-size:10px;font-weight:600;color:#d4dedc;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.dps-row-top strong{font-size:10px;color:#f3d694;white-space:nowrap;}.dps-row-bottom{margin-top:3px;font-size:9px;color:#8fa69f;font-variant-numeric:tabular-nums;}
+
+.dps-row-bottom .dps-peak{color:#e5bc82;white-space:nowrap;}

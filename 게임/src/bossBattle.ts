@@ -1,4 +1,4 @@
-import { DamageMeter } from './damageMeter';
+import { DamageMeter, DamagePeaks } from './damageMeter';
 import type { Defense } from './defense';
 import { AREA_ATTACK, UNITS, type UnitKind, type DamageType, type DefenseType } from './defenseConfig';
 
@@ -15,7 +15,7 @@ export interface BossIceBurst {x:number;y:number;life:number;}
 export interface BossHit {from:string;to:string;x:number;y:number;damage:number;magic:boolean;life:number;ice?:boolean;critical?:boolean;splash?:boolean;}
 /** Independent temporary encounter: it never mutates defense units, equipment or rewards. */
 export class BossBattle {
-  readonly damageMeter=new DamageMeter();
+  readonly damageMeter:DamageMeter;
   actors:BossActor[]=[];
   hits:BossHit[]=[];
   iceProjectiles:BossIceProjectile[]=[];
@@ -28,7 +28,7 @@ export class BossBattle {
   private burst:{left:number;delay:number}|null=null;
   elapsed=0;
   result:'fighting'|'victory'|'defeat'='fighting';
-  constructor(roster:BossAlly[]=[],private random:()=>number=Math.random){this.reset(roster);}
+  constructor(roster:BossAlly[]=[],private random:()=>number=Math.random,peaks?:DamagePeaks){this.damageMeter=new DamageMeter(peaks);this.reset(roster);}
   reset(roster:BossAlly[]=this.roster):void {
     this.damageMeter.reset();
     this.roster=roster.map(u=>({...u,stats:{...u.stats}}));
@@ -145,7 +145,7 @@ export class BossBattle {
         const source=this.actors.find(a=>a.id===hit.from);
         if(source?.side==='ally'){
           const def=UNITS[source.kind as UnitKind];
-          this.damageMeter.record({id:source.id,name:`${source.name} #${source.id.replace('ally-','')} · Lv.${source.level??1}`,color:'#'+def.color.toString(16).padStart(6,'0')},actual*hit.damage/attempted);
+          this.damageMeter.record({id:source.id.replace('ally-',''),name:`${source.name} #${source.id.replace('ally-','')} · Lv.${source.level??1}`,color:'#'+def.color.toString(16).padStart(6,'0')},actual*hit.damage/attempted,this.elapsed);
         }
       }
       actor.hp=Math.max(0,actor.hp-attempted);

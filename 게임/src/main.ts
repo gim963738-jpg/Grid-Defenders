@@ -9,7 +9,7 @@ import './style.css';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense();
-const bossBattle=new BossBattle(waveBossRoster(game));
+const bossBattle=new BossBattle(waveBossRoster(game),Math.random,game.damageMeter.peaks);
 let bossRosterSignature='';
 function syncBossRoster(force=false):void {
   const roster=waveBossRoster(game),signature=JSON.stringify(roster);
@@ -123,8 +123,8 @@ let damageMeterMarkup='';
 function refreshDamageMeter():void {
   const boss=currentScene==='boss',stats=(boss?bossBattle.damageMeter:game.damageMeter).snapshot(boss?bossBattle.elapsed:game.waveTime);
   el('dps-total').textContent=`${stats.dps.toFixed(1)} DPS`;
-  el('dps-summary').textContent=`${boss?'보스전':'웨이브 '+game.wave} · ${stats.elapsed.toFixed(1)}초 · 총 피해 ${Math.round(stats.total).toLocaleString()} · 평균 DPS`;
-  const markup=stats.rows.length?stats.rows.map((row,i)=>`<li class="dps-row"><div class="dps-bar" style="width:${(row.share*100).toFixed(2)}%;background:${row.color}"></div><div class="dps-row-top"><b>${i+1}. ${row.name}</b><strong>${row.dps.toFixed(1)} DPS</strong></div><div class="dps-row-bottom"><span>누적 ${Math.round(row.damage).toLocaleString()}</span><span>${(row.share*100).toFixed(1)}%</span></div></li>`).join(''):'<li class="log-empty">실제 피해가 발생하면 표시됩니다.</li>';
+  el('dps-summary').textContent=`${boss?'보스전':'웨이브 '+game.wave} · ${stats.elapsed.toFixed(1)}초 · 총 피해 ${Math.round(stats.total).toLocaleString()} · 평균 DPS · 게임 최고 ${stats.peakDps.toFixed(1)} DPS`;
+  const markup=stats.rows.length?stats.rows.map((row,i)=>`<li class="dps-row"><div class="dps-bar" style="width:${(row.share*100).toFixed(2)}%;background:${row.color}"></div><div class="dps-row-top"><b>${i+1}. ${row.name}</b><strong>${row.dps.toFixed(1)} DPS</strong></div><div class="dps-row-bottom"><span>누적 ${Math.round(row.damage).toLocaleString()}</span><span class="dps-peak" title="이번 게임의 평균 DPS 최고값">최고 ${row.peakDps.toFixed(1)} DPS</span><span>${(row.share*100).toFixed(1)}%</span></div></li>`).join(''):'<li class="log-empty">실제 피해가 발생하면 표시됩니다.</li>';
   if(markup!==damageMeterMarkup){const list=el('dps-meter'),top=list.scrollTop;list.innerHTML=markup;list.scrollTop=top;damageMeterMarkup=markup;}
 }
 function refreshLogs():void {

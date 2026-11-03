@@ -388,6 +388,7 @@ export class Defense {
     const before=this.anvils;this.anvils+=10;this.log('economy',`[개발자] 모루 +10 · ${before} → ${this.anvils}`);this.note('개발자 모루 +10');
   }
   reset():void {
+    this.damageMeter.reset(true);
     this.iceProjectiles=[];this.iceBursts=[];
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
     this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.bossPending=false;this.damageNumbers=[];this.nextDamageId=1;
@@ -450,7 +451,7 @@ export class Defense {
       const damageType=UNITS[u.kind].damageType,multiplier=defenseMultiplier(damageType,target.defenseType),afterDefense=mitigatedDamage(attack,damageType,target.defenseType);
       target.hp=Math.max(0,target.hp-afterDefense);
       const damage=hpBefore-target.hp;
-      this.damageMeter.record({id:String(u.id),name:`${UNITS[u.kind].name} #${u.id} · Lv.${u.level}`,color:'#'+UNITS[u.kind].color.toString(16).padStart(6,'0')},damage);
+      this.damageMeter.record({id:String(u.id),name:`${UNITS[u.kind].name} #${u.id} · Lv.${u.level}`,color:'#'+UNITS[u.kind].color.toString(16).padStart(6,'0')},damage,this.waveTime);
       this.damageNumbers.push({id:this.nextDamageId++,x:target.x,y:target.y,damage,critical,life:0.75});
       if(this.damageNumbers.length>80)this.damageNumbers.splice(0,this.damageNumbers.length-80);
       const targetName=`${target.name} #${target.id} (${DEFENSE_LABEL[target.defenseType]})`;
