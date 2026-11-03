@@ -615,15 +615,7 @@ el('app').addEventListener('dblclick',(e)=>{
 
 function renderBossScreen():void {
   el('boss-wave-label').textContent=`BOSS · WAVE ${game.wave}`;
-  el('boss-party').innerHTML=Array.from({length:32},(_,index)=>{
-    const col=index%8,row=Math.floor(index/8);
-    const unit=col>=2&&col<6?game.units.find(u=>u.slot===row*4+col-2):undefined;
-    if(!unit)return '<div class="boss-grid-cell" aria-hidden="true"></div>';
-    const def=UNITS[unit.kind],color='#'+def.color.toString(16).padStart(6,'0');
-    const weapon=unit.kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':unit.kind==='mage'||unit.kind==='healer'?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
-    const art=unit.kind==='ranged'?`<img src="${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png" alt="" draggable="false">`:`<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
-    return `<div class="boss-grid-cell boss-grid-unit" aria-label="${row+1}행 ${col+1}열 ${def.name} ${unit.level}레벨">${art}<small>${def.hero?'영웅':`Lv.${unit.level}`} ${def.icon}</small></div>`;
-  }).join('');
+  el('boss-party').innerHTML=game.units.length?game.units.map(u=>`<span class="boss-party-unit" style="--unit-color:#${UNITS[u.kind].color.toString(16)}"><b>${UNITS[u.kind].icon}</b>${UNITS[u.kind].name}</span>`).join(''):'<span class="boss-empty-party">소환된 유닛 없음</span>';
 }
 const sceneTransition=createSceneTransition({
   root:el('app'),

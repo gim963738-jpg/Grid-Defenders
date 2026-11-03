@@ -402,12 +402,3 @@
 .summon-drag-ghost.valid-drop{border-color:#8af0a7;box-shadow:0 0 12px #7ddd8d66;}.summon-drag-ghost b{font-size:25px;}.summon-drag-ghost img{width:35px;height:45px;object-fit:contain;}
 
 #heroes .hero-card.deployed{filter:grayscale(1) brightness(.55);opacity:.8;}
-
-/* Boss staging board: centered four-column allied formation in eight columns. */
-.boss-arena{min-height:0;padding:10px;margin-top:12px;background:#344c36;border-color:#8c7751;border-width:8px;border-radius:12px;}
-#boss-party{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:0;margin:0;background:#3d583d;border:1px solid #657557;}
-.boss-grid-cell{position:relative;min-width:0;aspect-ratio:1;border:1px solid #c8d5aa18;background:radial-gradient(circle at 25% 75%,#6b82452b 1px,transparent 2px);}
-.boss-grid-unit{display:flex;align-items:center;justify-content:center;}
-.boss-grid-unit svg{width:90%;height:90%;overflow:visible;}
-.boss-grid-unit img{height:120%;width:110%;max-width:none;object-fit:contain;position:absolute;bottom:12%;pointer-events:none;}
-.boss-grid-unit small{position:absolute;bottom:0;left:0;right:0;font-size:clamp(5px,1.8vw,8px);line-height:1.2;color:#f5f4e7;text-shadow:0 1px 2px #14201d;white-space:nowrap;}
