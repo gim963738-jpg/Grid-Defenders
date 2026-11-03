@@ -2,10 +2,12 @@ import { Application, Assets, Texture } from 'pixi.js';
 import { Defense, recipeForTypes, type LogCategory } from './defense';
 import { BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
+import { createSceneTransition, type BattleScene } from './sceneTransition';
 import './style.css';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense();
+let currentScene:BattleScene='defense',sceneTransitioning=false;
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
 let selectedGear:number|null=null,turns=0,tab='summon';
 let shopFocus:number|null=null;
@@ -202,6 +204,7 @@ function refresh():void {
   refreshHeroInfo();
   refreshTools();
   refreshFieldUpgrade();
+  if(currentScene==='boss')renderBossScreen();
 }
 function refreshTools():void {
   el('dev-balance').textContent=`골드 ${game.gold.toLocaleString()}G · 모루 ${game.anvils}`;
@@ -314,7 +317,7 @@ function showCenterNotice(message:string):void {
 }
 function refreshFieldUpgrade():void {
   const button=el<HTMLButtonElement>('field-upgrade'),u=game.units.find(u=>u.id===selectedUnit&&!UNITS[u.kind].hero),canvas=document.querySelector('canvas');
-  button.hidden=!u||!canvas||!!unitDrag?.moved;if(!u||!canvas||unitDrag?.moved)return;
+  button.hidden=currentScene!=='defense'||sceneTransitioning||!u||!canvas||!!unitDrag?.moved;if(currentScene!=='defense'||sceneTransitioning||!u||!canvas||unitDrag?.moved)return;
   const r=canvas.getBoundingClientRect(),p=SLOTS[u.slot],x=r.left+p.x*r.width/RULES.width,y=r.top+(p.y+25)*r.height/RULES.height;
   button.hidden=y<0||y>innerHeight||r.bottom<0||r.top>innerHeight;
   button.style.left=`${Math.max(38,Math.min(innerWidth-38,x))}px`;button.style.top=`${y}px`;
@@ -523,6 +526,8 @@ el('app').addEventListener('click',(e)=>{
 },{signal:events.signal});
 el('dev-tools').addEventListener('click',(e)=>{
   const button=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!button||button.disabled)return;
+  if(button.id==='dev-boss-scene'){void sceneTransition.go('boss');return;}
+  if(button.id==='dev-defense-scene'){void sceneTransition.go('defense');return;}
   if(button.id==='dev-gold')game.devGold();
   else if(button.id==='dev-anvils')game.devAnvils();
   else if(button.dataset.monsterId)game.spawnTestMonster(button.dataset.monsterId);
@@ -549,6 +554,30 @@ el('app').addEventListener('dblclick',(e)=>{
   rotateSelected(id);refresh();
 },{signal:events.signal});
 
+function renderBossScreen():void {
+  el('boss-wave-label').textContent=`BOSS · WAVE ${game.wave}`;
+  el('boss-party').innerHTML=game.units.length?game.units.map(u=>`<span class="boss-party-unit" style="--unit-color:#${UNITS[u.kind].color.toString(16)}"><b>${UNITS[u.kind].icon}</b>${UNITS[u.kind].name}</span>`).join(''):'<span class="boss-empty-party">소환된 유닛 없음</span>';
+}
+const sceneTransition=createSceneTransition({
+  root:el('app'),
+  onBusy(busy){
+    sceneTransitioning=busy;
+    el<HTMLButtonElement>('dev-boss-scene').disabled=busy;el<HTMLButtonElement>('dev-defense-scene').disabled=busy;
+    if(busy){
+      closeHeroInfo();cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;
+      drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;pressedGear=null;shopFocus=null;updateGearDrag();refreshLinks();
+      el('field-upgrade').hidden=true;el('center-notice').hidden=true;
+    }
+  },
+  onCovered(scene){
+    currentScene=scene;renderBossScreen();
+    el('scene-dev-status').textContent=`현재 화면: ${scene==='boss'?'보스전':'웨이브전'}`;
+    el('dev-boss-scene').setAttribute('aria-pressed',String(scene==='boss'));el('dev-defense-scene').setAttribute('aria-pressed',String(scene==='defense'));
+    document.title=`Grid Defenders — ${scene==='boss'?'보스전':'디펜스 전투'}`;
+    if(scene==='defense'){refresh();if(tab==='summon')centerHero(centeredHeroKind,'auto');}
+  },
+});
+
 async function start():Promise<void> {
   const app=new Application();
   await app.init({width:RULES.width,height:RULES.height,background:'#172620',preference:'webgl',resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,antialias:true});
@@ -567,6 +596,7 @@ async function start():Promise<void> {
   renderRecipeTree();
   refresh();
   app.ticker.add(ticker=>{
+    if(currentScene!=='defense'||sceneTransitioning)return;
     if(drag?.moved){
       const edge=60,step=Math.min(ticker.deltaMS,40)*0.35;
       const node=document.elementFromPoint(drag.x,drag.y)?.closest<HTMLElement>('.inventory-scroll');
@@ -582,6 +612,6 @@ async function start():Promise<void> {
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}
     if(lastRevision!==game.revision&&!drag&&!unitDrag){lastRevision=game.revision;refresh();}
   });
-  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
+  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
 void start().catch((error:unknown)=>{el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';console.error(error);});

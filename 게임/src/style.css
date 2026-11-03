@@ -376,3 +376,21 @@
 #heroes.hero-rebasing .hero-card{transition:none;}
 
 #heroes{scroll-snap-type:none;}
+
+/* WEB-043: two sliding doors swap the isolated battle screens while fully closed. */
+#defense-screen{width:100%;}#boss-screen{min-height:100svh;padding-bottom:20px;background:radial-gradient(ellipse at 50% 25%,#392b30,#121d20 70%);}
+#boss-screen h1{color:#f1d9bb;}.boss-phase{padding:5px 9px;border:1px solid #bb795c;border-radius:5px;background:#472e2c;color:#ffcf9a;font-size:12px;font-weight:750;}
+.boss-wave-heading{display:flex;justify-content:space-between;align-items:center;padding:10px;border:1px solid #795448;border-radius:7px;background:#30282a;}
+.boss-wave-heading strong{font-size:12px;color:#f0bc83;}.boss-wave-heading span{font-size:10px;color:#bfa995;}
+.boss-arena{position:relative;min-height:470px;margin-top:12px;padding:32px 14px 20px;border:1px solid #705449;border-radius:14px;text-align:center;background:radial-gradient(ellipse at 50% 18%,#6b39383d,transparent 50%),repeating-linear-gradient(0deg,transparent 0 47px,#7f5d4a12 48px),repeating-linear-gradient(90deg,#101c20 0 47px,#7f5d4a12 48px);overflow:hidden;}
+.boss-emblem{display:grid;place-items:center;margin:0 auto 12px;width:100px;height:100px;border:2px solid #9f6a4b;border-radius:50%;background:#352729;color:#e3a773;font-size:70px;box-shadow:0 0 42px #9d49342b;}
+.boss-arena h2{font-size:24px;letter-spacing:3px;color:#f0d5b4;}.boss-arena>p{font-size:11px;color:#bda991;}
+.boss-divider{height:1px;margin:30px 0 18px;background:linear-gradient(90deg,transparent,#8e6e4c,transparent);}
+.boss-allies-label{font-size:11px;color:#bfc5ac;}#boss-party{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:15px;}
+.boss-party-unit{display:grid;place-items:center;gap:4px;min-width:58px;padding:8px 5px;border:1px solid #4d6252;border-radius:6px;background:#1b2d27;color:#c8d3bd;font-size:9px;}.boss-party-unit b{color:var(--unit-color);font-size:22px;}
+.boss-empty-party,.boss-scene-note{font-size:11px;color:#96a08e;}.boss-scene-note{text-align:center;margin:15px 0;}
+.scene-dev-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:8px 0;}.scene-dev-actions button{margin:0;padding:9px 4px;}.scene-dev-actions button[aria-pressed=true]{border-color:#dfbd76;background:#4b422b;color:#fff0bd;}
+#battle-doors{position:fixed;top:0;height:100dvh;overflow:hidden;z-index:1000;pointer-events:auto;}
+.battle-door{position:absolute;top:0;bottom:0;width:50%;display:flex;align-items:center;justify-content:center;will-change:transform;background:repeating-linear-gradient(0deg,transparent 0 89px,#a0824d1a 90px),linear-gradient(90deg,#111b1e,#263036 45%,#131b20);border-block:3px solid #756140;box-shadow:inset 0 0 24px #0008;}
+.door-left{left:0;transform:translateX(-101%);border-right:2px solid #b29156;}.door-right{right:0;transform:translateX(101%);border-left:2px solid #b29156;}
+.battle-door span{color:#d7bd85;letter-spacing:2px;font-size:clamp(13px,3vw,21px);font-weight:800;writing-mode:vertical-rl;text-shadow:0 2px 3px #000;}

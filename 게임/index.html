@@ -8,7 +8,8 @@
   </head>
   <body>
     <main id="app">
-      <header class="masthead"><div><span class="eyebrow">GRID DEFENDERS</span><h1>순환의 전장 <span>전투 시험</span></h1></div><span class="live"><i></i> LIVE</span></header>
+      <div id="defense-screen">
+      <header class="masthead"><div><span class="eyebrow">GRID DEFENDERS</span><h1 tabindex="-1">순환의 전장 <span>전투 시험</span></h1></div><span class="live"><i></i> LIVE</span></header>
       <section id="hud" aria-label="전투 정보">
         <div><span>보유 골드</span><strong id="gold">480 <small>G</small></strong></div>
         <div><span>몬스터</span><strong id="enemies">0 <small>/ 30</small></strong></div>
@@ -62,9 +63,17 @@
       </section>
       </div>
       <footer>WEB-014 · 무한 웨이브 시험 / 정식 방어 공식·영웅 스킬·보스·승패는 미구현</footer>
+      </div>
+      <section id="boss-screen" aria-label="보스전 화면" hidden>
+        <header class="masthead"><div><span class="eyebrow">GRID DEFENDERS</span><h1 tabindex="-1">보스전 <span>전장 준비</span></h1></div><span class="boss-phase">BOSS</span></header>
+        <div class="boss-wave-heading"><strong id="boss-wave-label">BOSS · WAVE 1</strong><span>보스 전장</span></div>
+        <section class="boss-arena" aria-label="보스전 전장 준비 영역"><div class="boss-emblem" aria-hidden="true">♛</div><h2>보스전</h2><p>전투 준비</p><div class="boss-divider"></div><span class="boss-allies-label">아군 진영</span><div id="boss-party"></div></section>
+        <p class="boss-scene-note">보스전 화면 준비 단계</p>
+      </section>
     </main>
     <aside id="dev-tools" aria-label="개발자 도구와 아이템 조합">
       <header class="tools-heading"><h2>개발자 도구 <span>임시</span></h2><p id="dev-balance">골드 480G · 모루 0</p></header>
+      <div class="scene-dev-actions"><button id="dev-boss-scene" aria-pressed="false">보스전 바로가기</button><button id="dev-defense-scene" aria-pressed="true">웨이브전 바로가기</button></div><p id="scene-dev-status" class="tools-hint" role="status">현재 화면: 웨이브전</p>
       <div class="dev-actions"><button id="dev-gold">골드 +10,000G</button><button id="dev-anvils">모루 +10</button><button id="dev-reset" class="danger">게임 리셋</button></div>
       <p class="tools-hint">리셋: 전투·재화·유닛·장비·기록 초기화.<br>3웨이브마다 현상금 소환 기회 적립(최대3회). 현상금 보상은 모루·골드입니다.</p>
       <p class="tools-hint">조합은 영웅 장비칸 오른쪽에서 실행합니다.<br>아이템을 누르는 동안 파란 점선으로 상대를 확인합니다. 변이 붙은 재료 중 조합 예정은 노란 실선, 재료를 공유하는 후순위는 회색 실선입니다.<br>조합 1회당 모루 1개를 사용합니다.</p>
