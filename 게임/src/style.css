@@ -410,3 +410,13 @@
 .boss-grid-unit svg{width:90%;height:90%;overflow:visible;}
 .boss-grid-unit img{height:120%;width:110%;max-width:none;object-fit:contain;position:absolute;bottom:12%;pointer-events:none;}
 .boss-grid-unit small{position:absolute;bottom:0;left:0;right:0;font-size:clamp(5px,1.8vw,8px);line-height:1.2;color:#f5f4e7;text-shadow:0 1px 2px #14201d;white-space:nowrap;}
+
+/* Horizontal boss field only; page and developer tools keep their layout. */
+.boss-arena{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);align-items:center;gap:10px;min-height:0;aspect-ratio:16/9;padding:12px 8px;}
+.boss-side,.boss-allied-side{min-width:0;}
+.boss-side .boss-emblem{width:clamp(35px,12vw,64px);height:clamp(35px,12vw,64px);font-size:clamp(25px,9vw,44px);margin:0 auto 8px;}
+.boss-side h2{font-size:clamp(11px,3vw,16px);letter-spacing:1px;margin:0;}
+.boss-side p{font-size:9px;color:#bda991;margin:5px 0 0;}
+.boss-allied-side{padding-left:8px;border-left:1px solid #8e6e4c66;}
+.boss-allied-side #boss-party{margin-top:8px;}
+.boss-grid-unit small{font-size:clamp(4px,1.3vw,6px);}
