@@ -218,3 +218,11 @@
 .shop-counter .shop-merchant{width:calc(42% + 12px);height:clamp(140px,44cqw,180px);min-height:0;flex:none;background-size:auto clamp(260px,80cqw,340px);background-position:calc(53% + 28px) top;}
 .shop-counter #shop-market{width:calc(100% - 16px);margin:-12px 0 0 16px;position:relative;z-index:1;}
 @media(max-width:350px){.shop-counter .shop-merchant{width:calc(42% + 8px);}}
+
+/* WEB-025: bag beside the merchant; offers in rows of three then two. */
+.shop-counter{display:grid;grid-template-columns:minmax(0,1fr) max-content;gap:8px;align-items:start;}
+.shop-counter .shop-merchant{width:calc(100% + 12px);}
+.shop-counter .shop-bag-column{width:max-content;min-width:0;}
+#shop .shop-counter .shop-bag-column .inventory-scroll{max-height:clamp(140px,48cqw,190px);margin:0;}
+#shop #shop-cards{grid-template-columns:repeat(3,minmax(0,1fr));--shop-block:clamp(16px,4.8cqw,20px);}
+@media(max-width:350px){.shop-counter .shop-merchant{width:calc(100% + 8px);}}
