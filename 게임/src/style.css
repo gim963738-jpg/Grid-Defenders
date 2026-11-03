@@ -368,8 +368,8 @@
 /* WEB-041: centered hero silhouette across the entire command/summon area. */
 #command-area{position:relative;isolation:isolate;overflow:clip;border-radius:8px;}
 #command-area::before,#command-area::after{position:absolute;z-index:-1;pointer-events:none;inset:0;opacity:0;transition:opacity .25s;}
-#command-area::before{content:"";background:radial-gradient(ellipse at 50% 40%,#74978377,transparent 75%);filter:blur(13px) grayscale(1);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 85%,transparent);}
-#command-area.summon-background::before{opacity:.2;}
+#command-area::before{content:"";background:radial-gradient(ellipse at 50% 40%,#74978377,transparent 75%);filter:blur(6px) grayscale(.4);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 85%,transparent);}
+#command-area.summon-background::before{opacity:.35;}
 #command-area[data-hero-backdrop=ranged]::before{background-image:url(/assets/heroes/ranged-reference.png);background-size:auto 175%;background-position:55% top;background-repeat:no-repeat;}
 #command-area::after{content:var(--hero-symbol,"◇");display:grid;place-items:center;font-size:clamp(160px,60vw,260px);color:#acbda9;filter:blur(7px);}
 #command-area.summon-background:not([data-hero-backdrop=ranged])::after{opacity:.09;}
