@@ -308,6 +308,29 @@ function placeGear(x:number,y:number,bag=false):void {
 type Drag={shopIndex?:number;cellSize?:number;id:number;x:number;y:number;pointer:number;moved:boolean;ghost:HTMLElement|null;dx:number;dy:number};
 let drag:Drag|null=null;
 let unitDrag:Drag|null=null;
+type SummonDrag={kind:UnitKind;pointer:number;startX:number;startY:number;x:number;y:number;active:boolean;hero:boolean;previous:UnitKind|null;ghost:HTMLElement|null};
+let summonDrag:SummonDrag|null=null,summonSuppressClickUntil=0;
+function summonReason(kind:UnitKind):string|null {
+  if(currentScene!=='defense'||sceneTransitioning)return '웨이브전에서 소환해 주세요.';
+  const def=UNITS[kind];
+  if(game.gold<def.cost)return '소환에 필요한 골드가 부족합니다.';
+  if(def.hero&&game.heroes().some(u=>u.kind===kind))return '이미 배치된 영웅입니다. 전장의 영웅을 끌어 이동하세요.';
+  if(def.hero&&game.heroes().length>=RULES.heroLimit)return '영웅은 최대 3명까지 배치할 수 있습니다.';
+  if(game.units.length>=SLOTS.length)return '전장에 빈 배치 칸이 없습니다.';
+  return null;
+}
+function clearSummonDrag():void {
+  if(!summonDrag)return;
+  if(summonDrag.active)pending=summonDrag.previous;
+  summonDrag.ghost?.remove();summonDrag=null;
+}
+function updateSummonGhost():void {
+  if(!summonDrag?.active||!summonDrag.ghost)return;
+  const slot=canvasSlot(summonDrag.x,summonDrag.y),valid=slot>=0&&!game.units.some(u=>u.slot===slot)&&!summonReason(summonDrag.kind);
+  summonDrag.ghost.style.left=`${summonDrag.x}px`;summonDrag.ghost.style.top=`${summonDrag.y}px`;
+  summonDrag.ghost.classList.toggle('valid-drop',valid);
+}
+
 let suppressClick=false;
 let lastGearTap:{id:number;context:string;time:number}|null=null;
 let lastRotation:{id:number;time:number}|null=null;
@@ -387,6 +410,11 @@ function canvasSlot(x:number,y:number):number {
 document.addEventListener('pointerdown',(e)=>{
   if(e.button!==0)return;
   const target=e.target as HTMLElement;
+  const summon=target.closest<HTMLElement>('[data-summon]');
+  if(summon&&currentScene==='defense'&&!sceneTransitioning){
+    const kind=summon.dataset.summon as UnitKind;
+    summonDrag={kind,pointer:e.pointerId,startX:e.clientX,startY:e.clientY,x:e.clientX,y:e.clientY,active:false,hero:UNITS[kind].hero,previous:pending,ghost:null};
+  }
   if(!target.closest('#hero-info')&&!target.closest('.unit-card'))closeHeroInfo();
   const button=target.closest<HTMLElement>('[data-gear-id]');
   const product=target.closest<HTMLElement>('[data-shop-index]');
@@ -406,6 +434,22 @@ document.addEventListener('pointerdown',(e)=>{
   }
 },{signal:events.signal});
 document.addEventListener('pointermove',(e)=>{
+  if(summonDrag?.pointer===e.pointerId){
+    const g=summonDrag,dx=e.clientX-g.startX,dy=e.clientY-g.startY;
+    if(!g.active&&Math.hypot(dx,dy)>8){
+      if(g.hero&&Math.abs(dx)>Math.abs(dy)){summonDrag=null;}
+      else if(!g.hero||dy < -10){
+        const reason=summonReason(g.kind);
+        if(reason){heroGesture=null;summonSuppressClickUntil=performance.now()+500;clearSummonDrag();game.note(reason);showCenterNotice(reason);return;}
+        g.active=true;heroGesture=null;cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;
+        if(g.hero)centerHero(g.kind,'auto');
+        pending=g.kind;closeHeroInfo();g.ghost=document.createElement('div');g.ghost.className='summon-drag-ghost';g.ghost.setAttribute('aria-hidden','true');
+        g.ghost.innerHTML=g.kind==='ranged'?`<img src="${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png" alt=""><span>${UNITS[g.kind].name}</span>`:`<b style="color:#${UNITS[g.kind].color.toString(16)}">${UNITS[g.kind].icon}</b><span>${UNITS[g.kind].name}</span>`;
+        document.body.append(g.ghost);
+      }
+    }
+    if(summonDrag?.active){e.preventDefault();summonDrag.x=e.clientX;summonDrag.y=e.clientY;updateSummonGhost();return;}
+  }
   if(unitDrag&&unitDrag.pointer===e.pointerId){
     if(!unitDrag.moved&&Math.hypot(e.clientX-unitDrag.x,e.clientY-unitDrag.y)>7){
       unitDrag.moved=true;selectedUnit=unitDrag.id;pending=null;
@@ -427,6 +471,18 @@ document.addEventListener('pointermove',(e)=>{
   refreshLinks();
 },{signal:events.signal});
 document.addEventListener('pointerup',(e)=>{
+  if(summonDrag?.pointer===e.pointerId){
+    const g=summonDrag;summonDrag=null;
+    if(g.active){
+      heroGesture=null;summonSuppressClickUntil=performance.now()+350;g.ghost?.remove();
+      const slot=canvasSlot(e.clientX,e.clientY);pending=g.previous;
+      if(slot<0){game.note('전장의 빈 배치 칸에 놓아주세요.');showCenterNotice(game.message);}
+      else if(game.summon(g.kind,slot)){
+        selectedUnit=game.units.at(-1)!.id;if(UNITS[g.kind].hero)selectedHero=selectedUnit;pending=null;closeHeroInfo();
+      } else showCenterNotice(game.message);
+      refresh();return;
+    }
+  }
   if(unitDrag&&unitDrag.pointer===e.pointerId){
     if(unitDrag.moved){game.moveUnit(unitDrag.id,canvasSlot(e.clientX,e.clientY));refresh();}
     unitDrag.ghost?.remove();unitDrag=null;
@@ -450,7 +506,7 @@ document.addEventListener('pointerup',(e)=>{
   }
   drag.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;updateGearDrag();refreshLinks();
 },{signal:events.signal});
-document.addEventListener('pointercancel',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
+document.addEventListener('pointercancel',()=>{clearSummonDrag();drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
 
 
 el('heroes').addEventListener('pointerdown',(e)=>{
@@ -459,7 +515,7 @@ el('heroes').addEventListener('pointerdown',(e)=>{
   heroGesture={pointer:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,startScroll:el('heroes').scrollLeft,index:heroPhysicalIndex,dragged:false};
 },{signal:events.signal});
 document.addEventListener('pointermove',(e)=>{
-  const g=heroGesture;if(!g||g.pointer!==e.pointerId)return;
+  const g=heroGesture;if(!g||g.pointer!==e.pointerId||summonDrag?.active)return;
   const dx=e.clientX-g.x,dy=e.clientY-g.y;
   if(!g.dragged){if(Math.abs(dy)>Math.abs(dx)&&Math.abs(dy)>7){heroGesture=null;return;}if(Math.abs(dx)<7)return;g.dragged=true;closeHeroInfo();el('heroes').style.scrollSnapType='none';}
   e.preventDefault();g.lastX=e.clientX;
@@ -486,6 +542,7 @@ el('heroes').addEventListener('scroll',()=>{
 el('heroes').addEventListener('scrollend',()=>{if(!heroAnimationFrame&&!heroGesture&&!heroRebasing)rebaseHero(centeredHeroKind);},{signal:events.signal});
 el('heroes').addEventListener('keydown',(e)=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();moveHeroCarousel(e.key==='ArrowLeft'?-1:1);}},{signal:events.signal});
 el('app').addEventListener('click',(e)=>{
+  if((e.target as HTMLElement).closest('[data-summon]')&&performance.now()<summonSuppressClickUntil)return;
   if(suppressClick||((e.target as HTMLElement).closest('#heroes')&&performance.now()<heroSuppressClickUntil))return;
   const b=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!b||b.disabled)return;
   const d=b.dataset;
@@ -528,18 +585,19 @@ el('dev-tools').addEventListener('click',(e)=>{
   const button=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!button||button.disabled)return;
   if(button.id==='dev-boss-scene'){void sceneTransition.go('boss');return;}
   if(button.id==='dev-defense-scene'){void sceneTransition.go('defense');return;}
-  if(button.id==='dev-gold')game.devGold();
+  if(button.id==='dev-test-deploy')game.devDeploySoldiers();
+  else if(button.id==='dev-gold')game.devGold();
   else if(button.id==='dev-anvils')game.devAnvils();
   else if(button.dataset.monsterId)game.spawnTestMonster(button.dataset.monsterId);
   else if(button.id==='dev-next-wave')game.nextTestWave();
   else if(button.id==='dev-reset'){
-    drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
+    clearSummonDrag();drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
     clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
     lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');el('speed').textContent='1×';
   }
   refresh();
 },{signal:events.signal});
-window.addEventListener('blur',()=>{if(heroGesture){heroGesture=null;centerHero(centeredHeroKind,'auto');}drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
+window.addEventListener('blur',()=>{clearSummonDrag();if(heroGesture){heroGesture=null;centerHero(centeredHeroKind,'auto');}drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
 el('field-upgrade').addEventListener('click',()=>{const id=Number(el('field-upgrade').dataset.upgrade);game.upgrade(id);refresh();},{signal:events.signal});
 el('hero-info').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-info'))closeHeroInfo();},{signal:events.signal});
 document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},{signal:events.signal});
@@ -564,7 +622,7 @@ const sceneTransition=createSceneTransition({
     sceneTransitioning=busy;
     el<HTMLButtonElement>('dev-boss-scene').disabled=busy;el<HTMLButtonElement>('dev-defense-scene').disabled=busy;
     if(busy){
-      closeHeroInfo();cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;
+      clearSummonDrag();closeHeroInfo();cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;
       drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;pressedGear=null;shopFocus=null;updateGearDrag();refreshLinks();
       el('field-upgrade').hidden=true;el('center-notice').hidden=true;
     }
@@ -584,7 +642,7 @@ async function start():Promise<void> {
   el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','순환 전장, 병사와 영웅 배치 칸 16개');el('status').hidden=true;
   const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
   const view=createDefenseView(app,game,(slot)=>{
-    if(unitDrag?.moved)return;
+    if(unitDrag?.moved||summonDrag?.active)return;
     const unit=game.units.find(u=>u.slot===slot);
     if(unit){selectedUnit=unit.id;pending=null;if(UNITS[unit.kind].hero){selectedHero=unit.id;selectedGear=null;openTab('gear');}else openTab('summon');heroInfo={kind:unit.kind,unitId:unit.id};game.note(`${UNITS[unit.kind].name} 선택 · 드래그로 이동·자리교체`);}
     else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
@@ -597,6 +655,11 @@ async function start():Promise<void> {
   refresh();
   app.ticker.add(ticker=>{
     if(currentScene!=='defense'||sceneTransitioning)return;
+    if(summonDrag?.active){
+      const step=Math.min(ticker.deltaMS,40)*.4;
+      if(summonDrag.y<70)window.scrollBy(0,-step);else if(summonDrag.y>innerHeight-70)window.scrollBy(0,step);
+      updateSummonGhost();
+    }
     if(drag?.moved){
       const edge=60,step=Math.min(ticker.deltaMS,40)*0.35;
       const node=document.elementFromPoint(drag.x,drag.y)?.closest<HTMLElement>('.inventory-scroll');
@@ -607,11 +670,11 @@ async function start():Promise<void> {
     }
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
     const dt=Math.min(ticker.deltaMS/1000,0.1);game.tick(dt);
-    const canSummon=pending!==null&&game.gold>=UNITS[pending].cost&&(!UNITS[pending].hero||(game.heroes().length<RULES.heroLimit&&!game.heroes().some(h=>h.kind===pending)));
+    const canSummon=pending!==null&&!summonReason(pending);
     view.draw(selectedUnit,canSummon,unitDrag?.moved?{id:unitDrag.id,slot:canvasSlot(unitDrag.x,unitDrag.y)}:undefined);
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}
-    if(lastRevision!==game.revision&&!drag&&!unitDrag){lastRevision=game.revision;refresh();}
+    if(lastRevision!==game.revision&&!drag&&!unitDrag&&!summonDrag){lastRevision=game.revision;refresh();}
   });
-  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
+  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
 void start().catch((error:unknown)=>{el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';console.error(error);});

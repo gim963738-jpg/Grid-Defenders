@@ -352,6 +352,17 @@ export class Defense {
     this.note(`조합 ${pairs.length}회 완료 · 모루 ${pairs.length}개 사용 · 완성품은 재료가 있던 자리에서 확인하세요.`);return true;
   }
   combine(ids:readonly number[]):boolean {return this.combineMany([ids]);}
+  devDeploySoldiers():void {
+    const layout:{kind:UnitKind;slot:number}[]=[{kind:'guard',slot:0},{kind:'guard',slot:1},{kind:'archer',slot:4},{kind:'archer',slot:5},{kind:'mage',slot:8},{kind:'mage',slot:9}];
+    let added=0;
+    for(const {kind,slot} of layout){
+      if(this.units.some(u=>u.slot===slot))continue;
+      const unit:Unit={id:this.nextId++,kind,slot,level:1,spent:0,cooldown:0.3};
+      this.units.push(unit);added++;
+      this.log('economy',`[개발자] ${this.unitName(unit)} 테스트 배치 · 무료`,{sourceId:unit.id});
+    }
+    this.note(added?`병사 테스트 배치 ${added}명 완료 · 기존 유닛 유지 · 무료`:'테스트 배치 위치가 이미 사용 중입니다.');
+  }
   devGold():void {
     const before=this.gold;this.gold+=10000;this.goldLog('economy','[개발자] 골드 지급',before);this.note('개발자 골드 +10,000G');
   }
