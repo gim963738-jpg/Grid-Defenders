@@ -10,11 +10,16 @@ export interface BossHit {from:string;to:string;x:number;y:number;damage:number;
 export class BossBattle {
   actors:BossActor[]=[];
   hits:BossHit[]=[];
+  commanderCooldown=0;
+  commanderBuff=0;
+  heroSkillCooldown=0;
+  private burst:{left:number;delay:number}|null=null;
   elapsed=0;
   result:'fighting'|'victory'|'defeat'='fighting';
   constructor(){this.reset();}
   reset():void {
     this.actors=[];this.hits=[];this.elapsed=0;this.result='fighting';
+    this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.burst=null;
     for(let row=0;row<4;row++)for(const col of [0,1,3]){
       const kind:UnitKind=col===3?'guard':col===0?'mage':row===1?'ranged':'archer';
       const d=UNITS[kind];
@@ -36,9 +41,29 @@ export class BossBattle {
     return opponents.filter(a=>a.rank===rank).sort((a,b)=>
       Math.hypot(a.x-actor.x,a.y-actor.y)-Math.hypot(b.x-actor.x,b.y-actor.y)||a.id.localeCompare(b.id))[0];
   }
+  hero():BossActor|undefined{return this.actors.find(a=>a.kind==='ranged'&&a.hp>0);}
+  canTriple():boolean {
+    const hero=this.hero(),target=hero&&this.target(hero);
+    return this.result==='fighting'&&this.heroSkillCooldown<=0&&!!hero&&!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
+  }
+  commanderSkill():boolean {
+    if(this.result!=='fighting'||this.commanderCooldown>0)return false;
+    this.commanderBuff=10;this.commanderCooldown=15;return true;
+  }
+  tripleSkill():boolean {
+    if(!this.canTriple())return false;
+    this.heroSkillCooldown=4;this.burst={left:3,delay:0};return true;
+  }
+  private attackDamage(actor:BossActor,target:BossActor):number {
+    const bonus=actor.side==='ally'&&['guard','archer','mage'].includes(actor.kind)&&this.commanderBuff>0?100:0;
+    return (actor.attack+bonus)*(target.defenseType===actor.damageType ? .75 : 1);
+  }
   tick(seconds:number):void {
     if(this.result!=='fighting')return;
     const dt=Math.min(.05,Math.max(0,seconds));this.elapsed+=dt;
+    this.commanderCooldown=Math.max(0,this.commanderCooldown-dt);
+    this.commanderBuff=Math.max(0,this.commanderBuff-dt);
+    this.heroSkillCooldown=Math.max(0,this.heroSkillCooldown-dt);
     this.hits=this.hits.filter(h=>(h.life-=dt)>0);
     const live=this.actors.filter(a=>a.hp>0);
     const plans=live.map(actor=>({actor,target:this.target(actor)}));
@@ -51,10 +76,26 @@ export class BossBattle {
         const step=Math.min(actor.speed*dt,dist-actor.range);
         actor.x+=dx/dist*step;actor.y+=dy/dist*step;
       } else if(actor.cooldown<=0){
-        const amount=actor.attack*(target.defenseType===actor.damageType ? .75 : 1);
+        const amount=this.attackDamage(actor,target);
         damage.set(target.id,(damage.get(target.id)??0)+amount);
         this.hits.push({from:actor.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:actor.damageType==='magic',life:.32});
         actor.cooldown=1/actor.rate;
+      }
+    }
+    if(this.burst){
+      this.burst.delay-=dt;
+      if(this.burst.delay<=0){
+        const hero=this.hero(),target=hero&&this.target(hero);
+        if(!hero||!target){this.burst=null;}
+        else {
+          if(Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range){
+            const amount=this.attackDamage(hero,target);
+            damage.set(target.id,(damage.get(target.id)??0)+amount);
+            this.hits.push({from:hero.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:true,life:.32});
+          }
+          this.burst.left--;this.burst.delay=.12;
+          if(!this.burst.left)this.burst=null;
+        }
       }
     }
     // Apply both sides' attacks together, avoiding iteration-order advantages.

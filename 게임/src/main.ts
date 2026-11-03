@@ -610,6 +610,8 @@ window.addEventListener('resize',()=>{centerHero(centeredHeroKind,'auto');positi
 document.addEventListener('scroll',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
 el('boss-restart').addEventListener('click',()=>{bossBattle.reset();bossBattleView.draw();},{signal:events.signal});
+el('boss-commander-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.commanderSkill();bossBattleView.draw();},{signal:events.signal});
+el('boss-triple-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.tripleSkill();bossBattleView.draw();},{signal:events.signal});
 el('app').addEventListener('dblclick',(e)=>{
   const block=(e.target as HTMLElement).closest<HTMLElement>('[data-gear-id]');
   if(!block)return;

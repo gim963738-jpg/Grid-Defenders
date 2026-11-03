@@ -32,6 +32,15 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       const from=battle.actors.find(a=>a.id===h.from)!;
       return `<g opacity="${Math.min(1,h.life/.15)}"><path d="M${from.x} ${from.y} L${h.x} ${h.y}" stroke="${h.magic?'#8bdeff':'#ffe3a1'}" stroke-width="${h.magic?4:2}"/><circle cx="${h.x}" cy="${h.y}" r="${h.magic?14:6}" fill="${h.magic?'#8bdeff88':'#ffe3a188'}"/><text x="${h.x}" y="${h.y-35-(.32-h.life)*70}" text-anchor="middle" fill="#fff0bf" font-size="22" stroke="#14201d" stroke-width="3" paint-order="stroke">${Math.round(h.damage)}</text></g>`;
     }).join('');
+    const commander=document.getElementById('boss-commander-skill') as HTMLButtonElement;
+    commander.disabled=battle.result!=='fighting'||battle.commanderCooldown>0;
+    commander.classList.toggle('buff-active',battle.commanderBuff>0);
+    document.getElementById('commander-skill-cooldown')!.textContent=battle.commanderBuff>0?`강화 ${battle.commanderBuff.toFixed(1)}초 · 재사용 ${battle.commanderCooldown.toFixed(1)}초`:battle.commanderCooldown>0?`재사용 ${battle.commanderCooldown.toFixed(1)}초`:'사용 가능 · 쿨타임 15초';
+    const hero=battle.hero();
+    document.getElementById('hero-basic-cooldown')!.textContent=!hero?'전투 불가':battle.result!=='fighting'?'전투 종료':`공격 딜레이 ${hero.cooldown.toFixed(1)}초 / ${(1/hero.rate).toFixed(1)}초`;
+    const triple=document.getElementById('boss-triple-skill') as HTMLButtonElement;
+    triple.disabled=!battle.canTriple();
+    document.getElementById('hero-triple-cooldown')!.textContent=!hero?'전투 불가':battle.result!=='fighting'?'전투 종료':battle.heroSkillCooldown>0?`재사용 ${battle.heroSkillCooldown.toFixed(1)}초`:battle.canTriple()?'사용 가능':'사거리까지 접근 중';
     const allies=battle.actors.filter(a=>a.side==='ally'&&a.hp>0).length;
     const enemies=battle.actors.filter(a=>a.side==='enemy'&&a.hp>0).length;
     const text=battle.result==='victory'?'시험 승리':battle.result==='defeat'?'시험 패배':'전열 우선 교전';
