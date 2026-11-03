@@ -17,38 +17,53 @@ let heroInfoMarkup='';
 let centeredHeroKind:UnitKind='tank',heroCardsMarkup='',heroScrollFrame=0,heroAnimationFrame=0,heroSuppressClickUntil=0;
 let heroGesture:{pointer:number;x:number;y:number;lastX:number;startScroll:number;index:number;dragged:boolean}|null=null;
 const heroKinds=Object.entries(UNITS).filter(([,d])=>d.hero).map(([kind])=>kind as UnitKind);
-function markCenteredHero(kind:UnitKind):void {
-  centeredHeroKind=kind;
+let heroPhysicalIndex=heroKinds.length,heroRebasing=false;
+const heroNavigationQueue:number[]=[];
+function markCenteredHero(kind:UnitKind,physicalIndex=heroPhysicalIndex):void {
+  centeredHeroKind=kind;heroPhysicalIndex=physicalIndex;
   const cards=Array.from(el('heroes').querySelectorAll<HTMLElement>('[data-summon]'));
-  cards.forEach(card=>{const active=card.dataset.summon===kind;card.classList.toggle('carousel-centered',active);if(active)card.setAttribute('aria-current','true');else card.removeAttribute('aria-current');});
-  const index=cards.findIndex(card=>card.dataset.summon===kind);
-  el('hero-carousel-position').textContent=`${Math.max(0,index)+1} / ${cards.length}`;
-  el<HTMLButtonElement>('hero-prev').disabled=index<=0;
-  el<HTMLButtonElement>('hero-next').disabled=index>=cards.length-1;
+  cards.forEach((card,i)=>{const active=i===physicalIndex;card.classList.toggle('carousel-centered',active);card.tabIndex=active?0:-1;if(active)card.setAttribute('aria-current','true');else card.removeAttribute('aria-current');});
+  el('hero-carousel-position').textContent=`${heroKinds.indexOf(kind)+1} / ${heroKinds.length}`;
+  el<HTMLButtonElement>('hero-prev').disabled=heroKinds.length<2;
+  el<HTMLButtonElement>('hero-next').disabled=heroKinds.length<2;
+  el('command-area').dataset.heroBackdrop=kind;
+  el('command-area').style.setProperty('--hero-symbol',`"${UNITS[kind].icon}"`);
 }
-function heroOffset(kind:UnitKind):number {
-  const track=el('heroes'),card=Array.from(track.querySelectorAll<HTMLElement>('[data-summon]')).find(c=>c.dataset.summon===kind);
+function heroOffset(index:number):number {
+  const track=el('heroes'),card=track.querySelectorAll<HTMLElement>('[data-summon]')[index];
   return card?Math.max(0,card.offsetLeft-(track.clientWidth-card.offsetWidth)/2):0;
 }
-function centerHero(kind:UnitKind,behavior:ScrollBehavior='smooth'):void {
-  const track=el('heroes');if(!track.querySelector('[data-summon]'))return;
-  cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;
-  markCenteredHero(kind);if(!track.clientWidth)return;
-  const target=heroOffset(kind),start=track.scrollLeft;
+function rebaseHero(kind:UnitKind):void {
+  const track=el('heroes'),middle=heroKinds.length+heroKinds.indexOf(kind);
+  if(heroPhysicalIndex===middle)return;
+  heroRebasing=true;track.classList.add('hero-rebasing');track.style.scrollSnapType='none';
+  markCenteredHero(kind,middle);track.scrollLeft=heroOffset(middle);
+  void track.offsetWidth;
+  track.classList.remove('hero-rebasing');track.style.scrollSnapType='';heroRebasing=false;
+}
+function centerHero(kind:UnitKind,behavior:ScrollBehavior='smooth',requestedIndex?:number):void {
+  const track=el('heroes'),cards=Array.from(track.querySelectorAll<HTMLElement>('[data-summon]'));if(!cards.length)return;
+  const candidates=cards.map((card,index)=>({card,index})).filter(v=>v.card.dataset.summon===kind);
+  const physical=requestedIndex??candidates.sort((a,b)=>Math.abs(a.index-heroPhysicalIndex)-Math.abs(b.index-heroPhysicalIndex))[0].index;
+  cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;track.setAttribute('aria-busy','false');
+  markCenteredHero(kind,physical);if(!track.clientWidth)return;
+  const target=heroOffset(physical),start=track.scrollLeft;
   track.style.scrollSnapType='none';
-  if(behavior!=='smooth'||matchMedia('(prefers-reduced-motion: reduce)').matches||Math.abs(target-start)<1){track.scrollLeft=target;track.style.scrollSnapType='';return;}
+  if(behavior!=='smooth'||matchMedia('(prefers-reduced-motion: reduce)').matches||Math.abs(target-start)<1){track.scrollLeft=target;track.style.scrollSnapType='';rebaseHero(kind);return;}
+  track.setAttribute('aria-busy','true');
   const started=performance.now();
   const animate=(now:number)=>{
     const t=Math.min(1,(now-started)/520),ease=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
     track.scrollLeft=start+(target-start)*ease;
     if(t<1)heroAnimationFrame=requestAnimationFrame(animate);
-    else {heroAnimationFrame=0;track.style.scrollSnapType='';markCenteredHero(kind);}
+    else {heroAnimationFrame=0;track.setAttribute('aria-busy','false');track.style.scrollSnapType='';markCenteredHero(kind,physical);rebaseHero(kind);const next=heroNavigationQueue.shift();if(next!==undefined)moveHeroCarousel(next);}
   };
   heroAnimationFrame=requestAnimationFrame(animate);
 }
 function moveHeroCarousel(direction:number):void {
-  closeHeroInfo();const index=heroKinds.indexOf(centeredHeroKind);
-  centerHero(heroKinds[Math.max(0,Math.min(heroKinds.length-1,index+direction))]);
+  closeHeroInfo();if(heroAnimationFrame||heroRebasing){heroNavigationQueue.push(direction);return;}
+  rebaseHero(centeredHeroKind);const target=heroPhysicalIndex+direction;
+  centerHero(heroKinds[(target+heroKinds.length)%heroKinds.length],'smooth',target);
 }
 
 function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
@@ -64,7 +79,7 @@ function positionHeroInfo():void {
     const x=box.left+point.x*box.width/RULES.width,y=box.top+point.y*box.height/RULES.height;
     anchor={left:x-20,right:x+20,top:y-22,bottom:y+22};
   } else {
-    const card=document.querySelector<HTMLElement>(`[data-summon="${heroInfo.kind}"]`);
+    const card=document.querySelector<HTMLElement>(`#heroes .carousel-centered[data-summon="${heroInfo.kind}"]`)??document.querySelector<HTMLElement>(`[data-summon="${heroInfo.kind}"]`);
     if(!card||el('summon').hidden){popup.hidden=true;return;}
     anchor=card.getBoundingClientRect();
   }
@@ -129,6 +144,8 @@ function shape(item:ItemDef,rotation=0,cellSize=9):string {
 }
 function openTab(name:string):void {
   tab=name;
+  el('command-area').classList.toggle('summon-background',tab==='summon');
+  if(tab!=='summon'){cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;el('heroes').setAttribute('aria-busy','false');}
   const inventory=tab==='gear'||tab==='shop';
   document.querySelectorAll<HTMLElement>('.panel').forEach(p=>p.hidden=inventory?!['gear','shop'].includes(p.id):p.id!==tab);
   document.querySelectorAll<HTMLButtonElement>('[data-tab]').forEach(b=>{const active=b.dataset.tab===tab||(inventory&&b.dataset.tab==='gear');b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
@@ -158,7 +175,7 @@ function refresh():void {
   }).join('');
   el('soldiers').innerHTML=unitCards(false);
   const heroMarkup=unitCards(true);
-  if(heroMarkup!==heroCardsMarkup){el('heroes').innerHTML=heroMarkup;heroCardsMarkup=heroMarkup;centerHero(centeredHeroKind,'auto');}
+  if(heroMarkup!==heroCardsMarkup){el('heroes').innerHTML=heroMarkup.repeat(3);heroCardsMarkup=heroMarkup;centerHero(centeredHeroKind,'auto');}
   el('hero-count').textContent=`배치 ${game.heroes().length} / 3 · 무료`;
   const u=game.units.find(u=>u.id===selectedUnit);
   el('unit-detail').hidden=!u||UNITS[u.kind].hero;
@@ -435,15 +452,15 @@ document.addEventListener('pointercancel',()=>{drag?.ghost?.remove();drag=null;p
 
 el('heroes').addEventListener('pointerdown',(e)=>{
   if(e.button!==0||!e.isPrimary)return;
-  cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;
-  heroGesture={pointer:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,startScroll:el('heroes').scrollLeft,index:heroKinds.indexOf(centeredHeroKind),dragged:false};
+  cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;el('heroes').setAttribute('aria-busy','false');
+  heroGesture={pointer:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,startScroll:el('heroes').scrollLeft,index:heroPhysicalIndex,dragged:false};
 },{signal:events.signal});
 document.addEventListener('pointermove',(e)=>{
   const g=heroGesture;if(!g||g.pointer!==e.pointerId)return;
   const dx=e.clientX-g.x,dy=e.clientY-g.y;
   if(!g.dragged){if(Math.abs(dy)>Math.abs(dx)&&Math.abs(dy)>7){heroGesture=null;return;}if(Math.abs(dx)<7)return;g.dragged=true;closeHeroInfo();el('heroes').style.scrollSnapType='none';}
   e.preventDefault();g.lastX=e.clientX;
-  const lo=heroOffset(heroKinds[Math.max(0,g.index-1)]),hi=heroOffset(heroKinds[Math.min(heroKinds.length-1,g.index+1)]);
+  const lo=heroOffset(g.index-1),hi=heroOffset(g.index+1);
   el('heroes').scrollLeft=Math.max(lo,Math.min(hi,g.startScroll-dx*.7));
 },{passive:false,signal:events.signal});
 document.addEventListener('pointerup',(e)=>{
@@ -451,18 +468,19 @@ document.addEventListener('pointerup',(e)=>{
   if(!g.dragged)return;
   heroSuppressClickUntil=performance.now()+350;
   const dx=e.clientX-g.x,advance=Math.abs(dx)>30?(dx<0?1:-1):0;
-  centerHero(heroKinds[Math.max(0,Math.min(heroKinds.length-1,g.index+advance))]);
+  const target=g.index+advance;centerHero(heroKinds[(target+heroKinds.length)%heroKinds.length],'smooth',target);
 },{signal:events.signal});
 document.addEventListener('pointercancel',(e)=>{if(heroGesture?.pointer===e.pointerId){heroGesture=null;centerHero(centeredHeroKind);}},{signal:events.signal});
 el('heroes').addEventListener('scroll',()=>{
   cancelAnimationFrame(heroScrollFrame);
   heroScrollFrame=requestAnimationFrame(()=>{
-    const track=el('heroes');if(!track.clientWidth)return;
+    const track=el('heroes');if(!track.clientWidth||heroAnimationFrame||heroRebasing||track.getAttribute('aria-busy')==='true')return;
     const box=track.getBoundingClientRect(),center=box.left+box.width/2;
     const nearest=Array.from(track.querySelectorAll<HTMLElement>('[data-summon]')).sort((a,b)=>{const ar=a.getBoundingClientRect(),br=b.getBoundingClientRect();return Math.abs(ar.left+ar.width/2-center)-Math.abs(br.left+br.width/2-center);})[0];
-    if(nearest)markCenteredHero(nearest.dataset.summon as UnitKind);
+    if(nearest)markCenteredHero(nearest.dataset.summon as UnitKind,Array.from(track.querySelectorAll('[data-summon]')).indexOf(nearest));
   });
 },{passive:true,signal:events.signal});
+el('heroes').addEventListener('scrollend',()=>{if(!heroAnimationFrame&&!heroGesture&&!heroRebasing)rebaseHero(centeredHeroKind);},{signal:events.signal});
 el('heroes').addEventListener('keydown',(e)=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();moveHeroCarousel(e.key==='ArrowLeft'?-1:1);}},{signal:events.signal});
 el('app').addEventListener('click',(e)=>{
   if(suppressClick||((e.target as HTMLElement).closest('#heroes')&&performance.now()<heroSuppressClickUntil))return;
@@ -475,7 +493,7 @@ el('app').addEventListener('click',(e)=>{
   else if('heroStats'in d){const hero=game.heroes().find(h=>h.id===selectedHero);if(hero)heroInfo={kind:hero.kind,unitId:hero.id,fromInventory:true};}
   else if(d.summon){
     const kind=d.summon as UnitKind;
-    if(UNITS[kind].hero&&kind!==centeredHeroKind){closeHeroInfo();centerHero(kind);return;}
+    if(UNITS[kind].hero&&kind!==centeredHeroKind){closeHeroInfo();centerHero(kind,'smooth',Array.from(el('heroes').querySelectorAll('[data-summon]')).indexOf(b));return;}
     if(!game.units.some(u=>u.id===selectedUnit&&u.kind===kind))selectedUnit=null;
     if(UNITS[kind].hero){
       const placed=game.heroes().find(u=>u.kind===kind);
