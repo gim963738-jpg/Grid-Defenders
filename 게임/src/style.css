@@ -122,3 +122,11 @@
 #test-enemy-stats article{padding:7px;border:1px solid #445344;border-radius:4px;margin-top:5px}#test-enemy-stats b{font-size:10px}#test-enemy-stats p{font-size:10px;margin:4px 0}
 
 .ranged-portrait{display:block;width:100%;height:100%;border-radius:inherit;background-image:url(/assets/heroes/ranged-reference.png);background-size:270% auto;background-position:55% 10%;}
+
+/* WEB-016: only the ranged hero summon card uses the illustration banner. */
+.unit-card.hero-card.ranged-summon-card{position:relative;isolation:isolate;overflow:hidden;min-height:82px;grid-template-columns:minmax(0,1fr);padding:12px 8px 12px 55%;background:#142423;gap:5px;}
+.ranged-summon-card::before{content:"";position:absolute;z-index:-2;inset:0;background-image:url(/assets/heroes/ranged-reference.png);background-repeat:no-repeat;background-size:auto 250%;background-position:left -48px top -4px;}
+.ranged-summon-card::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,transparent 12%,rgba(20,36,35,.15) 30%,rgba(20,36,35,.88) 55%,#142423 72%);}
+.ranged-summon-card .unit-icon{display:none;}
+.ranged-summon-card b,.ranged-summon-card .price{grid-column:1;position:relative;text-shadow:0 1px 3px #07120e;overflow-wrap:anywhere;}
+.unit-card.ranged-summon-card.selected{border-color:#f2c879;box-shadow:inset 0 0 0 1px #f2c879;}
