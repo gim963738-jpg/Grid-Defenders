@@ -1,7 +1,7 @@
-import { BossBattle } from '../src/bossBattle';
+import { bossFixture } from './boss-fixture';
 export function checkBossBattle():string[]{
   const passed:string[]=[];const check=(ok:boolean,label:string)=>{if(!ok)throw new Error(label);passed.push(label);};
-  const battle=new BossBattle();
+  const battle=bossFixture();
   check(battle.actors.filter(a=>a.side==='ally').length===12&&battle.actors.filter(a=>a.side==='enemy').length===3,'twelve allies, boss and two retainers');
   const guards=battle.actors.filter(a=>a.kind==='retainer'),boss=battle.actors.find(a=>a.kind==='boss')!;
   check(guards[0].x===guards[1].x&&guards[0].y<guards[1].y&&guards[0].x<boss.x,'retainers stand vertically ahead of boss');
@@ -11,7 +11,7 @@ export function checkBossBattle():string[]{
   guards.forEach(a=>a.hp=0);
   check(battle.target(ally)===boss,'boss becomes target after all retainers fall');
   battle.actors.filter(a=>a.kind==='guard').forEach(a=>a.hp=0);
-  check(battle.target(boss)?.rank===1,'enemies advance to second allied rank');
+  check(battle.target(boss)?.rank===2,'enemies advance to second allied rank');
   battle.reset();let damageSeen=false;
   for(let i=0;i<7200&&battle.result==='fighting';i++){
     battle.tick(.05);
@@ -27,7 +27,7 @@ export function checkBossBattle():string[]{
     const enemyFront=battle.actors.some(a=>a.side==='enemy'&&a.rank===0&&a.hp>0);
     const allyFront=battle.actors.some(a=>a.side==='ally'&&a.rank===0&&a.hp>0);
     battle.hits=[];battle.tick(.05);
-    if(enemyFront&&battle.hits.some(h=>h.to==='tester-boss'))protectedBoss=false;
+    if(enemyFront&&battle.hits.some(h=>h.to==='tester-boss'&&!h.splash))protectedBoss=false;
     if(allyFront&&battle.hits.some(h=>{const a=battle.actors.find(a=>a.id===h.to)!;return a.side==='ally'&&a.rank>0;}))protectedRear=false;
   }
   check(protectedBoss&&protectedRear,'no rear targets attacked while front rank remains');

@@ -1,5 +1,6 @@
 import { Application, Container, Graphics, Sprite, Texture, Text, Rectangle } from 'pixi.js';
 import { Defense } from './defense';
+import { iceProjectileShape, iceBurstShape } from './iceEffects';
 import { RULES, SLOTS, UNITS } from './defenseConfig';
 
 export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture) {
@@ -99,18 +100,15 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
       for(let i=game.enemies.length;i<enemyLabels.length;i++)enemyLabels[i].visible=false;
       for(const s of game.shots)actors.moveTo(s.x,s.y).lineTo(s.tx,s.ty).stroke({width:2,color:s.color,alpha:Math.min(1,s.life/0.12)});
       for(const p of game.iceProjectiles){
-        const angle=Math.atan2(p.ty-p.y,p.tx-p.x),dx=Math.cos(angle),dy=Math.sin(angle);
-        iceEffects.moveTo(p.x-dx*22,p.y-dy*22).lineTo(p.x,p.y).stroke({width:5,color:0x62baff,alpha:0.25});
+        const shape=iceProjectileShape(p);
+        iceEffects.moveTo(shape.trail[0],shape.trail[1]).lineTo(p.x,p.y).stroke({width:5,color:0x62baff,alpha:0.25});
         iceEffects.circle(p.x,p.y,10).fill({color:0x66ccff,alpha:0.14});
-        iceEffects.poly([p.x+dx*10,p.y+dy*10,p.x-dy*4,p.y+dx*4,p.x-dx*7,p.y-dy*7,p.x+dy*4,p.y-dx*4]).fill(0x80dfff).stroke({width:1,color:0xe8fbff});
+        iceEffects.poly(shape.crystal).fill(0x80dfff).stroke({width:1,color:0xe8fbff});
       }
       for(const b of game.iceBursts){
-        const progress=1-b.life/0.45,radius=48*progress,alpha=1-progress;
+        const {radius,alpha,shards}=iceBurstShape(b);
         iceEffects.circle(b.x,b.y,radius).fill({color:0x87dcff,alpha:alpha*0.2}).stroke({width:2,color:0xb9efff,alpha});
-        for(let i=0;i<8;i++){
-          const a=i*Math.PI/4+0.2,x=b.x+Math.cos(a)*radius,y=b.y+Math.sin(a)*radius;
-          iceEffects.poly([x,y-6,x+3,y,x,y+6,x-3,y]).fill({color:i%2?0xd9faff:0x69c7ff,alpha});
-        }
+        shards.forEach((points,i)=>iceEffects.poly(points).fill({color:i%2?0xd9faff:0x69c7ff,alpha}));
       }
       for(let i=0;i<Math.max(numberPool.length,game.damageNumbers.length);i++){
         const number=game.damageNumbers[i];

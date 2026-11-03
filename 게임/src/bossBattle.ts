@@ -1,32 +1,42 @@
-import { UNITS, type UnitKind, type DamageType, type DefenseType } from './defenseConfig';
+import type { Defense } from './defense';
+import { AREA_ATTACK, UNITS, type UnitKind, type DamageType, type DefenseType } from './defenseConfig';
 
+export interface BossAlly {id:number;kind:UnitKind;slot:number;level:number;stats:ReturnType<Defense['stats']>;}
+export function waveBossRoster(game:Defense):BossAlly[]{return game.units.map(u=>({id:u.id,kind:u.kind,slot:u.slot,level:u.level,stats:{...game.stats(u)}}));}
 export interface BossActor {
+  level?:number;sourceSlot?:number;regen?:number;critChance?:number;critMultiplier?:number;physicalArmor?:number;magicArmor?:number;
   id:string;side:'ally'|'enemy';kind:UnitKind|'boss'|'retainer';name:string;
   x:number;y:number;hp:number;maxHp:number;attack:number;rate:number;range:number;
   speed:number;rank:number;damageType:DamageType;defenseType:DefenseType;cooldown:number;
 }
-export interface BossHit {from:string;to:string;x:number;y:number;damage:number;magic:boolean;life:number;}
+export interface BossIceProjectile {x:number;y:number;tx:number;ty:number;targetId:string;source:BossActor;attack:number;}
+export interface BossIceBurst {x:number;y:number;life:number;}
+export interface BossHit {from:string;to:string;x:number;y:number;damage:number;magic:boolean;life:number;ice?:boolean;critical?:boolean;splash?:boolean;}
 /** Independent temporary encounter: it never mutates defense units, equipment or rewards. */
 export class BossBattle {
   actors:BossActor[]=[];
   hits:BossHit[]=[];
+  iceProjectiles:BossIceProjectile[]=[];
+  iceBursts:BossIceBurst[]=[];
+  private roster:BossAlly[]=[];
   commanderCooldown=0;
   commanderBuff=0;
   heroSkillCooldown=0;
   private burst:{left:number;delay:number}|null=null;
   elapsed=0;
   result:'fighting'|'victory'|'defeat'='fighting';
-  constructor(){this.reset();}
-  reset():void {
-    this.actors=[];this.hits=[];this.elapsed=0;this.result='fighting';
+  constructor(roster:BossAlly[]=[],private random:()=>number=Math.random){this.reset(roster);}
+  reset(roster:BossAlly[]=this.roster):void {
+    this.roster=roster.map(u=>({...u,stats:{...u.stats}}));
+    this.actors=[];this.hits=[];this.iceProjectiles=[];this.iceBursts=[];this.elapsed=0;this.result='fighting';
     this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.burst=null;
-    for(let row=0;row<4;row++)for(const col of [0,1,3]){
-      const kind:UnitKind=col===3?'guard':col===0?'mage':row===1?'ranged':'archer';
-      const d=UNITS[kind];
-      this.actors.push({id:`ally-${row}-${col}`,side:'ally',kind,name:d.name,
-        x:(col+.5)*70.3125,y:(row+2.5)*70.3125,hp:d.hp,maxHp:d.hp,attack:d.attack,
-        rate:d.rate,range:kind==='guard'?48:kind==='mage'?185:220,speed:kind==='guard'?64:53,
-        rank:col===3?0:col===1?1:2,damageType:d.damageType,defenseType:'normal',cooldown:.25});
+    for(const u of this.roster){
+      const d=UNITS[u.kind],s=u.stats,col=3-Math.floor(u.slot/4),row=u.slot%4+2;
+      this.actors.push({id:`ally-${u.id}`,side:'ally',kind:u.kind,name:d.name,level:u.level,sourceSlot:u.slot,
+        x:(col+.5)*70.3125,y:(row+.5)*70.3125,hp:s.hp,maxHp:s.hp,attack:s.attack,
+        rate:s.rate,range:s.range*(u.kind==='ranged'?1.5:1),speed:u.kind==='guard'||u.kind==='tank'||u.kind==='melee'?64:53,
+        rank:Math.floor(u.slot/4),damageType:s.damageType,defenseType:'normal',cooldown:.25,
+        regen:s.regen,physicalArmor:s.physicalArmor,magicArmor:s.magicArmor,critChance:s.critChance,critMultiplier:s.critMultiplier});
     }
     this.actors.push(
       {id:'retainer-top',side:'enemy',kind:'retainer',name:'친위대 · 강철 감시자',x:760,y:215,hp:1800,maxHp:1800,attack:70,rate:.8,range:50,speed:50,rank:0,damageType:'physical',defenseType:'physical',cooldown:.25},
@@ -47,16 +57,26 @@ export class BossBattle {
     return this.result==='fighting'&&this.heroSkillCooldown<=0&&!!hero&&!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
   }
   commanderSkill():boolean {
-    if(this.result!=='fighting'||this.commanderCooldown>0)return false;
+    if(this.result!=='fighting'||!this.actors.some(a=>a.side==='ally'&&a.hp>0)||this.commanderCooldown>0)return false;
     this.commanderBuff=10;this.commanderCooldown=15;return true;
   }
   tripleSkill():boolean {
     if(!this.canTriple())return false;
     this.heroSkillCooldown=4;this.burst={left:3,delay:0};return true;
   }
-  private attackDamage(actor:BossActor,target:BossActor):number {
+  private attackPower(actor:BossActor):number {
     const bonus=actor.side==='ally'&&['guard','archer','mage'].includes(actor.kind)&&this.commanderBuff>0?100:0;
-    return (actor.attack+bonus)*(target.defenseType===actor.damageType ? .75 : 1);
+    return actor.attack+bonus;
+  }
+  private strike(actor:BossActor,target:BossActor,damage:Map<string,number>):void {
+    if(actor.kind==='ranged'){
+      this.iceProjectiles.push({x:actor.x,y:actor.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...actor},attack:this.attackPower(actor)});
+      return;
+    }
+    const critical=(actor.critChance??0)>this.random();
+    const amount=this.attackPower(actor)*(critical?(actor.critMultiplier??1.5):1)*(target.defenseType===actor.damageType ? .75 : 1);
+    damage.set(target.id,(damage.get(target.id)??0)+amount);
+    this.hits.push({from:actor.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:actor.damageType==='magic',life:.32,critical});
   }
   tick(seconds:number):void {
     if(this.result!=='fighting')return;
@@ -65,9 +85,26 @@ export class BossBattle {
     this.commanderBuff=Math.max(0,this.commanderBuff-dt);
     this.heroSkillCooldown=Math.max(0,this.heroSkillCooldown-dt);
     this.hits=this.hits.filter(h=>(h.life-=dt)>0);
+    for(const burst of this.iceBursts)burst.life-=dt;
+    this.iceBursts=this.iceBursts.filter(b=>b.life>0);
     const live=this.actors.filter(a=>a.hp>0);
+    for(const a of live)if(a.regen)a.hp=Math.min(a.maxHp,a.hp+a.regen*dt);
     const plans=live.map(actor=>({actor,target:this.target(actor)}));
     const damage=new Map<string,number>();
+    // Same homing speed, impact lifetime and AoE radius as the wave ice attack.
+    this.iceProjectiles=this.iceProjectiles.filter(p=>{
+      const target=live.find(a=>a.id===p.targetId);
+      if(target){p.tx=target.x;p.ty=target.y;}
+      const dx=p.tx-p.x,dy=p.ty-p.y,distance=Math.hypot(dx,dy),step=320*dt;
+      if(distance>step){p.x+=dx/distance*step;p.y+=dy/distance*step;return true;}
+      this.iceBursts.push({x:p.tx,y:p.ty,life:.45});
+      for(const victim of live)if(victim.side!==p.source.side&&Math.hypot(victim.x-p.tx,victim.y-p.ty)<=AREA_ATTACK.mageRadius){
+        const amount=p.attack*(victim.defenseType===p.source.damageType ? .75 : 1);
+        damage.set(victim.id,(damage.get(victim.id)??0)+amount);
+        this.hits.push({from:p.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,splash:victim.id!==p.targetId});
+      }
+      return false;
+    });
     for(const {actor,target} of plans){
       if(!target)continue;
       actor.cooldown=Math.max(0,actor.cooldown-dt);
@@ -76,9 +113,7 @@ export class BossBattle {
         const step=Math.min(actor.speed*dt,dist-actor.range);
         actor.x+=dx/dist*step;actor.y+=dy/dist*step;
       } else if(actor.cooldown<=0){
-        const amount=this.attackDamage(actor,target);
-        damage.set(target.id,(damage.get(target.id)??0)+amount);
-        this.hits.push({from:actor.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:actor.damageType==='magic',life:.32});
+        this.strike(actor,target,damage);
         actor.cooldown=1/actor.rate;
       }
     }
@@ -89,9 +124,7 @@ export class BossBattle {
         if(!hero||!target){this.burst=null;}
         else {
           if(Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range){
-            const amount=this.attackDamage(hero,target);
-            damage.set(target.id,(damage.get(target.id)??0)+amount);
-            this.hits.push({from:hero.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:true,life:.32});
+            this.strike(hero,target,damage);
           }
           this.burst.left--;this.burst.delay=.12;
           if(!this.burst.left)this.burst=null;

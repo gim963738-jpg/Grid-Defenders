@@ -3,13 +3,18 @@ import { Defense, recipeForTypes, type LogCategory } from './defense';
 import { BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
 import { createSceneTransition, type BattleScene } from './sceneTransition';
-import { BossBattle } from './bossBattle';
+import { BossBattle, waveBossRoster } from './bossBattle';
 import { createBossBattleView } from './bossBattleView';
 import './style.css';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense();
-const bossBattle=new BossBattle();
+const bossBattle=new BossBattle(waveBossRoster(game));
+let bossRosterSignature='';
+function syncBossRoster(force=false):void {
+  const roster=waveBossRoster(game),signature=JSON.stringify(roster);
+  if(force||signature!==bossRosterSignature){bossBattle.reset(roster);bossRosterSignature=signature;}
+}
 const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle);
 let currentScene:BattleScene='defense',sceneTransitioning=false;
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
@@ -597,7 +602,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   else if(button.id==='dev-next-wave')game.nextTestWave();
   else if(button.id==='dev-reset'){
     clearSummonDrag();drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
-    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();bossBattle.reset();bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
+    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();syncBossRoster(true);bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
     lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');el('speed').textContent='1×';
   }
   refresh();
@@ -609,7 +614,7 @@ document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},
 window.addEventListener('resize',()=>{centerHero(centeredHeroKind,'auto');positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{signal:events.signal});
 document.addEventListener('scroll',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
-el('boss-restart').addEventListener('click',()=>{bossBattle.reset();bossBattleView.draw();},{signal:events.signal});
+el('boss-restart').addEventListener('click',()=>{syncBossRoster(true);bossBattleView.draw();},{signal:events.signal});
 el('boss-commander-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.commanderSkill();bossBattleView.draw();},{signal:events.signal});
 el('boss-triple-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.tripleSkill();bossBattleView.draw();},{signal:events.signal});
 el('app').addEventListener('dblclick',(e)=>{
@@ -623,12 +628,7 @@ el('app').addEventListener('dblclick',(e)=>{
 function renderBossScreen():void {
   el('boss-wave-label').textContent=`BOSS · WAVE ${game.wave}`;
   bossBattleView.draw();
-  const formation:{kind:UnitKind;slot:number;level:number}[]=[
-    ...[0,1,2,3].map(slot=>({kind:'guard' as const,slot,level:1})),
-    {kind:'archer',slot:8,level:1},{kind:'ranged',slot:9,level:1},
-    ...[10,11].map(slot=>({kind:'archer' as const,slot,level:1})),
-    ...[12,13,14,15].map(slot=>({kind:'mage' as const,slot,level:1})),
-  ];
+  const formation=game.units;
   el('boss-party').innerHTML=Array.from({length:32},(_,index)=>{
     const col=index%4,row=Math.floor(index/4);
     const unit=row>=2&&row<6?formation.find(u=>u.slot===(3-col)*4+row-2):undefined;
@@ -651,7 +651,7 @@ const sceneTransition=createSceneTransition({
     }
   },
   onCovered(scene){
-    currentScene=scene;renderBossScreen();
+    currentScene=scene;if(scene==='boss')syncBossRoster();renderBossScreen();
     el('scene-dev-status').textContent=`현재 화면: ${scene==='boss'?'보스전':'웨이브전'}`;
     el('dev-boss-scene').setAttribute('aria-pressed',String(scene==='boss'));el('dev-defense-scene').setAttribute('aria-pressed',String(scene==='defense'));
     document.title=`Grid Defenders — ${scene==='boss'?'보스전':'디펜스 전투'}`;
