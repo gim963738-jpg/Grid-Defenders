@@ -412,13 +412,14 @@
 .boss-grid-unit small{position:absolute;bottom:0;left:0;right:0;font-size:clamp(5px,1.8vw,8px);line-height:1.2;color:#f5f4e7;text-shadow:0 1px 2px #14201d;white-space:nowrap;}
 
 /* Horizontal boss field only; page and developer tools keep their layout. */
-.boss-arena{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);align-items:center;gap:10px;min-height:0;aspect-ratio:16/9;padding:12px 8px;}
+.boss-arena{display:block;min-height:0;aspect-ratio:16/9;padding:0;}
 .boss-side,.boss-allied-side{min-width:0;}
 .boss-side .boss-emblem{width:clamp(35px,12vw,64px);height:clamp(35px,12vw,64px);font-size:clamp(25px,9vw,44px);margin:0 auto 8px;}
 .boss-side h2{font-size:clamp(11px,3vw,16px);letter-spacing:1px;margin:0;}
 .boss-side p{font-size:9px;color:#bda991;margin:5px 0 0;}
-.boss-allied-side{grid-column:1;grid-row:1;padding-right:8px;border-right:1px solid #8e6e4c66;}
-.boss-side{grid-column:2;grid-row:1;}
-.boss-allied-side{display:flex;flex-direction:column;align-items:center;}
-.boss-allied-side #boss-party{margin-top:5px;width:clamp(64px,19vw,88px);max-width:100%;}
+.boss-allied-side{position:absolute;left:0;top:0;bottom:0;width:28.125%;}
+.boss-side{position:absolute;right:5%;top:50%;width:25%;transform:translateY(-50%);}
+.boss-allied-side .boss-allies-label{position:absolute;z-index:1;top:5px;left:0;right:0;font-size:8px;pointer-events:none;text-shadow:0 1px 2px #14201d;}
+.boss-allied-side #boss-party{margin:0;width:100%;height:100%;grid-template-rows:repeat(8,minmax(0,1fr));border-radius:0;border-width:0 1px 0 0;}
+.boss-allied-side .boss-grid-cell{min-height:0;aspect-ratio:auto;}
 .boss-grid-unit small{font-size:clamp(4px,1.3vw,6px);}
