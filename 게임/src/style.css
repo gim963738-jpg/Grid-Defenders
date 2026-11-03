@@ -423,3 +423,26 @@
 .boss-allied-side #boss-party{margin:0;width:100%;height:100%;grid-template-rows:repeat(8,minmax(0,1fr));border-radius:0;border-width:0 1px 0 0;}
 .boss-allied-side .boss-grid-cell{min-height:0;aspect-ratio:auto;}
 .boss-grid-unit small{font-size:clamp(4px,1.3vw,6px);}
+
+/* Temporary boss encounter: actors use the same 16:9 field coordinates. */
+.boss-arena.fighting .boss-side{visibility:hidden;}
+.boss-arena.fighting .boss-grid-unit>*{visibility:hidden;}
+#boss-combat{position:absolute;inset:0;pointer-events:none;}
+.boss-fighter{position:absolute;width:5.2%;height:13%;transform:translate(-50%,-50%);z-index:2;}
+.boss-fighter[hidden]{display:none;}
+.boss-fighter-art{position:absolute;inset:0;display:grid;place-items:center;}
+.boss-fighter-art svg{width:100%;height:100%;overflow:visible;}
+.boss-fighter-art img{width:150%;height:160%;max-width:none;object-fit:contain;transform:translateY(-17%);}
+.boss-fighter-hp{position:absolute;bottom:-6%;height:3px;left:0;right:0;background:#271c22;border:1px solid #15201d;border-radius:2px;overflow:hidden;}
+.boss-fighter-hp i{display:block;height:100%;background:#8ede94;}
+.boss-fighter.enemy .boss-fighter-hp i{background:#f28e78;}
+.boss-fighter small{position:absolute;top:112%;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:clamp(4px,1.4vw,7px);color:#dce8cb;text-shadow:0 1px 2px #0a1713;}
+.boss-fighter.enemy small{color:#ffd3a7;}
+.boss-fighter.boss{width:9%;height:22%;}
+.boss-fighter.retainer{width:6.5%;height:16%;}
+.boss-test-monster{position:relative;display:grid;place-items:center;width:90%;height:90%;border:1px solid #d7b36a;border-radius:25% 25% 15% 15%;background:#73518b;color:#f0c878;font-size:clamp(12px,4vw,24px);box-shadow:0 2px 5px #0006;}
+.boss-test-monster.physical{background:#3c6880;}.boss-test-chief{background:#8f3f46;border-width:2px;}
+.boss-test-monster i{position:absolute;bottom:5%;font-size:8px;color:#ffe6b8;}
+.boss-fighter.attacking .boss-fighter-art{filter:brightness(1.35);}
+.boss-hit-trails{position:absolute;inset:0;width:100%;height:100%;z-index:3;overflow:visible;}
+#boss-restart{display:block;margin:0 auto 16px;padding:7px 14px;font-size:11px;border:1px solid #9c8556;border-radius:5px;background:#493f2c;color:#f5dca4;cursor:pointer;}

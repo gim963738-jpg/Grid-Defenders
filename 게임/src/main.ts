@@ -3,10 +3,14 @@ import { Defense, recipeForTypes, type LogCategory } from './defense';
 import { BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
 import { createSceneTransition, type BattleScene } from './sceneTransition';
+import { BossBattle } from './bossBattle';
+import { createBossBattleView } from './bossBattleView';
 import './style.css';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense();
+const bossBattle=new BossBattle();
+const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle);
 let currentScene:BattleScene='defense',sceneTransitioning=false;
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
 let selectedGear:number|null=null,turns=0,tab='summon';
@@ -593,7 +597,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   else if(button.id==='dev-next-wave')game.nextTestWave();
   else if(button.id==='dev-reset'){
     clearSummonDrag();drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
-    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
+    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();bossBattle.reset();bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
     lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');el('speed').textContent='1×';
   }
   refresh();
@@ -605,6 +609,7 @@ document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},
 window.addEventListener('resize',()=>{centerHero(centeredHeroKind,'auto');positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{signal:events.signal});
 document.addEventListener('scroll',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
+el('boss-restart').addEventListener('click',()=>{bossBattle.reset();bossBattleView.draw();},{signal:events.signal});
 el('app').addEventListener('dblclick',(e)=>{
   const block=(e.target as HTMLElement).closest<HTMLElement>('[data-gear-id]');
   if(!block)return;
@@ -615,6 +620,7 @@ el('app').addEventListener('dblclick',(e)=>{
 
 function renderBossScreen():void {
   el('boss-wave-label').textContent=`BOSS · WAVE ${game.wave}`;
+  bossBattleView.draw();
   const formation:{kind:UnitKind;slot:number;level:number}[]=[
     ...[0,1,2,3].map(slot=>({kind:'guard' as const,slot,level:1})),
     {kind:'archer',slot:8,level:1},{kind:'ranged',slot:9,level:1},
@@ -669,7 +675,8 @@ async function start():Promise<void> {
   renderRecipeTree();
   refresh();
   app.ticker.add(ticker=>{
-    if(currentScene!=='defense'||sceneTransitioning)return;
+    if(sceneTransitioning)return;
+    if(currentScene==='boss'){bossBattle.tick(Math.min(ticker.deltaMS/1000,.05));bossBattleView.draw();return;}
     if(summonDrag?.active){
       const step=Math.min(ticker.deltaMS,40)*.4;
       if(summonDrag.y<70)window.scrollBy(0,-step);else if(summonDrag.y>innerHeight-70)window.scrollBy(0,step);
