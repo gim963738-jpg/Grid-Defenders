@@ -40,11 +40,14 @@
         <section id="unit-detail" class="detail"></section>
       </section>
       <section id="gear" class="panel" hidden>
-        <div class="section-title"><h2 id="gear-title">영웅 장비</h2><span>전장의 영웅을 눌러 선택</span></div>
-        <div class="equipment-layout"><div id="equipment" aria-label="영웅 장비칸 4열 5행"></div><aside><b>아이템 조합</b><p>누르는 동안 파란 점선<br>조합 예정: 노란 실선<br>후순위: 회색 실선</p><p id="combine-status" aria-live="polite"></p><button id="combine" disabled>조합</button><p>재료는 중복 사용하지 않습니다.<br>완성품은 조합한 자리에서 확인</p></aside></div>
+        <div class="section-title gear-heading"><h2 id="gear-title">영웅 장비</h2><button id="combine" class="small-button" disabled>조합</button></div>
+        <p id="combine-status" aria-live="polite"></p>
+        <div class="equipment-layout">
+          <div id="equipment" aria-label="영웅 장비칸 4열 5행"></div>
+          <aside class="equipment-bag"><h3>공용 가방</h3><div class="inventory-scroll"><div id="gear-bag" class="inventory-grid" aria-label="영웅 장비창의 공용 가방"></div></div></aside>
+        </div>
         <div id="item-detail" class="detail"></div>
-        <div class="section-title"><h2>공용 가방</h2><span>수량 제한 없음</span></div>
-        <div class="inventory-scroll"><div id="gear-bag" class="inventory-grid" aria-label="영웅 장비창의 공용 가방"></div></div>
+        <p class="gear-combine-hint">조합 예정: 노란선 · 후순위: 회색선 · 누르는 동안: 파란 점선<br>재료 중복 사용 불가 · 완성품은 조합한 자리에 배치</p>
       </section>
       <section id="shop" class="panel" hidden>
         <div class="section-title"><h2>공용 가방</h2><span>구매한 장비 보관</span></div>
