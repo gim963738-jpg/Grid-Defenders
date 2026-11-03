@@ -16,6 +16,7 @@ export interface BossHit {from:string;to:string;x:number;y:number;damage:number;
 /** Independent temporary encounter: it never mutates defense units, equipment or rewards. */
 export class BossBattle {
   readonly damageMeter:DamageMeter;
+  encounter=0;
   actors:BossActor[]=[];
   hits:BossHit[]=[];
   iceProjectiles:BossIceProjectile[]=[];
@@ -30,6 +31,7 @@ export class BossBattle {
   result:'fighting'|'victory'|'defeat'='fighting';
   constructor(roster:BossAlly[]=[],private random:()=>number=Math.random,peaks?:DamagePeaks){this.damageMeter=new DamageMeter(peaks);this.reset(roster);}
   reset(roster:BossAlly[]=this.roster):void {
+    this.encounter++;
     this.damageMeter.reset();
     this.roster=roster.map(u=>({...u,stats:{...u.stats}}));
     this.actors=[];this.hits=[];this.iceProjectiles=[];this.iceBursts=[];this.elapsed=0;this.result='fighting';

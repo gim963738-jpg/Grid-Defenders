@@ -475,3 +475,5 @@
 .dps-row-top b{font-size:10px;font-weight:600;color:#d4dedc;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.dps-row-top strong{font-size:10px;color:#f3d694;white-space:nowrap;}.dps-row-bottom{margin-top:3px;font-size:9px;color:#8fa69f;font-variant-numeric:tabular-nums;}
 
 .dps-row-bottom .dps-peak{color:#e5bc82;white-space:nowrap;}
+
+.log-section .dps-heading{flex-wrap:wrap;align-items:center;gap:5px;}.dps-heading>span:first-child{white-space:nowrap;}.dps-tabs{display:flex;gap:3px;margin-left:auto;}.dps-tabs button,#dps-last-boss{padding:3px 5px;border:1px solid #4d635f;border-radius:4px;background:#152724;color:#9dafaa;font-size:9px;cursor:pointer;}.dps-tabs button[aria-pressed=true]{background:#46573b;border-color:#b7bf80;color:#fff0b6;}#dps-last-boss{align-self:flex-end;margin:4px 7px 0;}#dps-last-boss[hidden]{display:none;}.dps-heading #dps-total{white-space:nowrap;font-size:9px;}

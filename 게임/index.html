@@ -85,7 +85,7 @@
     <aside id="dev-log" aria-label="임시 개발자 기록창">
       <header class="dev-log-heading"><h2>개발자 기록창 <span>임시</span></h2><p>전투 경과 시간 · 최신 기록 위 · 구역별 최근 100건</p></header>
       <section class="log-section"><h3>① 전투 피해 <small id="damage-count">0건</small></h3><ol id="damage-log" aria-label="피해 기록"><li class="log-empty">공격이 발생하면 표시됩니다.</li></ol></section>
-      <section class="log-section dps-section"><h3>② 데미지 미터기 <small id="dps-total">0.0 DPS</small></h3><p id="dps-summary">현재 전투 · 누적 실제 피해 / 경과시간</p><ol id="dps-meter" aria-label="유닛별 누적 피해와 평균 DPS"><li class="log-empty">피해가 발생하면 표시됩니다.</li></ol></section>
+      <section class="log-section dps-section"><h3 class="dps-heading"><span>② 데미지 미터기</span><span class="dps-tabs" aria-label="DPS 전투 선택"><button id="dps-tab-defense" aria-pressed="true">웨이브전</button><button id="dps-tab-boss" aria-pressed="false">보스전</button></span><small id="dps-total">0.0 DPS</small></h3><button id="dps-last-boss" hidden aria-pressed="false">최근 결과</button><p id="dps-summary">현재 전투 · 누적 실제 피해 / 경과시간</p><ol id="dps-meter" aria-label="유닛별 누적 피해와 평균 DPS"><li class="log-empty">피해가 발생하면 표시됩니다.</li></ol></section>
       <section class="log-section"><h3>③ 처치 · 골드 획득 <small id="reward-count">0건</small></h3><ol id="reward-log" aria-label="처치 보상 기록"><li class="log-empty">처치 보상이 발생하면 표시됩니다.</li></ol></section>
       <section class="log-section"><h3>④ 재화 사용 · 판매 · 조합 <small id="economy-count">0건</small></h3><ol id="economy-log" aria-label="재화 사용 판매 조합 기록"><li class="log-empty">소환·강화·구매·판매·조합 시 표시됩니다.</li></ol></section>
     </aside>

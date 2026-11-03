@@ -5,15 +5,19 @@ import { createDefenseView } from './defenseView';
 import { createSceneTransition, type BattleScene } from './sceneTransition';
 import { BossBattle, waveBossRoster } from './bossBattle';
 import { createBossBattleView } from './bossBattleView';
+import { BossDamageHistory } from './bossDamageHistory';
 import './style.css';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense();
 const bossBattle=new BossBattle(waveBossRoster(game),Math.random,game.damageMeter.peaks);
 let bossRosterSignature='';
-function syncBossRoster(force=false):void {
+const bossDamageHistory=new BossDamageHistory();
+let bossEncounterWave=game.wave;
+let damageMeterMode:'defense'|'boss'='defense',showLastBoss=false;
+function syncBossRoster(force=false,discardPrevious=false):void {
   const roster=waveBossRoster(game),signature=JSON.stringify(roster);
-  if(force||signature!==bossRosterSignature){bossBattle.reset(roster);bossRosterSignature=signature;}
+  if(force||signature!==bossRosterSignature){if(!discardPrevious)bossDamageHistory.capture(bossBattle,bossEncounterWave,true);bossBattle.reset(roster);bossEncounterWave=game.wave;bossRosterSignature=signature;showLastBoss=false;}
 }
 const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle);
 let currentScene:BattleScene='defense',sceneTransitioning=false;
@@ -121,9 +125,17 @@ function refreshHeroInfo():void {
 const logHeads:Record<LogCategory,number>={damage:0,reward:0,economy:0};
 let damageMeterMarkup='';
 function refreshDamageMeter():void {
-  const boss=currentScene==='boss',stats=(boss?bossBattle.damageMeter:game.damageMeter).snapshot(boss?bossBattle.elapsed:game.waveTime);
+  const boss=damageMeterMode==='boss',saved=bossDamageHistory.last;
+  const useSaved=boss&&!!saved&&(showLastBoss||currentScene!=='boss'||bossBattle.result!=='fighting');
+  const waveRecord=game.bossPending?game.lastWaveDamage:null;
+  const empty={elapsed:0,total:0,dps:0,peakDps:game.damageMeter.peaks.overall,rows:[]};
+  const stats=boss?(useSaved?saved!.stats:currentScene==='boss'?bossBattle.damageMeter.snapshot(bossBattle.elapsed):empty):(waveRecord?.stats??game.damageMeter.snapshot(game.waveTime));
+  const label=boss?(useSaved?`최근 보스 · WAVE ${saved!.wave} · ${saved!.outcome}`:currentScene==='boss'?`보스 · WAVE ${bossEncounterWave} · 진행 중`:'보스전 기록 없음'):`웨이브 ${waveRecord?.wave??game.wave}${currentScene==='boss'?' · 일시정지':''}`;
+  for(const mode of ['defense','boss'])el(`dps-tab-${mode}`).setAttribute('aria-pressed',String(damageMeterMode===mode));
+  const historyButton=el<HTMLButtonElement>('dps-last-boss');historyButton.hidden=!boss||!saved||currentScene!=='boss'||bossBattle.result!=='fighting';
+  historyButton.textContent=showLastBoss?'실시간 보기':'최근 결과';historyButton.setAttribute('aria-pressed',String(showLastBoss));
   el('dps-total').textContent=`${stats.dps.toFixed(1)} DPS`;
-  el('dps-summary').textContent=`${boss?'보스전':'웨이브 '+game.wave} · ${stats.elapsed.toFixed(1)}초 · 총 피해 ${Math.round(stats.total).toLocaleString()} · 평균 DPS · 게임 최고 ${stats.peakDps.toFixed(1)} DPS`;
+  el('dps-summary').textContent=`${label} · ${stats.elapsed.toFixed(1)}초 · 총 피해 ${Math.round(stats.total).toLocaleString()} · 평균 DPS · ${useSaved||waveRecord?'당시':'게임'} 최고 ${stats.peakDps.toFixed(1)} DPS`;
   const markup=stats.rows.length?stats.rows.map((row,i)=>`<li class="dps-row"><div class="dps-bar" style="width:${(row.share*100).toFixed(2)}%;background:${row.color}"></div><div class="dps-row-top"><b>${i+1}. ${row.name}</b><strong>${row.dps.toFixed(1)} DPS</strong></div><div class="dps-row-bottom"><span>누적 ${Math.round(row.damage).toLocaleString()}</span><span class="dps-peak" title="이번 게임의 평균 DPS 최고값">최고 ${row.peakDps.toFixed(1)} DPS</span><span>${(row.share*100).toFixed(1)}%</span></div></li>`).join(''):'<li class="log-empty">실제 피해가 발생하면 표시됩니다.</li>';
   if(markup!==damageMeterMarkup){const list=el('dps-meter'),top=list.scrollTop;list.innerHTML=markup;list.scrollTop=top;damageMeterMarkup=markup;}
 }
@@ -612,7 +624,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   else if(button.id==='dev-next-wave')game.nextTestWave();
   else if(button.id==='dev-reset'){
     clearSummonDrag();drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
-    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=false;syncBossRoster(true);bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
+    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();bossDamageHistory.clear();damageMeterMode='defense';showLastBoss=false;activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=false;syncBossRoster(true,true);bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
     lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');el('speed').textContent='1×';
   }
   refresh();
@@ -624,6 +636,9 @@ document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},
 window.addEventListener('resize',()=>{centerHero(centeredHeroKind,'auto');positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{signal:events.signal});
 document.addEventListener('scroll',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
+el('dps-tab-defense').addEventListener('click',()=>{damageMeterMode='defense';showLastBoss=false;refreshDamageMeter();},{signal:events.signal});
+el('dps-tab-boss').addEventListener('click',()=>{damageMeterMode='boss';showLastBoss=false;refreshDamageMeter();},{signal:events.signal});
+el('dps-last-boss').addEventListener('click',()=>{showLastBoss=!showLastBoss;refreshDamageMeter();},{signal:events.signal});
 el('boss-restart').addEventListener('click',()=>{bossReturnDelay=0;syncBossRoster(true);bossBattleView.draw();},{signal:events.signal});
 el('boss-auto-skills').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.autoSkills=!bossBattle.autoSkills;bossBattleView.draw();},{signal:events.signal});
 el('boss-commander-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.commanderSkill();bossBattleView.draw();},{signal:events.signal});
@@ -662,6 +677,7 @@ const sceneTransition=createSceneTransition({
     }
   },
   onCovered(scene){
+    if(currentScene==='boss'&&scene==='defense')bossDamageHistory.capture(bossBattle,bossEncounterWave,true);
     currentScene=scene;if(scene==='boss')syncBossRoster();renderBossScreen();
     el('scene-dev-status').textContent=`현재 화면: ${scene==='boss'?'보스전':'웨이브전'}`;
     el('dev-boss-scene').setAttribute('aria-pressed',String(scene==='boss'));el('dev-defense-scene').setAttribute('aria-pressed',String(scene==='defense'));
@@ -691,7 +707,7 @@ async function start():Promise<void> {
     if(sceneTransitioning)return;
     if(activeBossWave!==null&&(!game.bossPending||activeBossWave!==game.wave)){activeBossWave=null;bossReturnDelay=0;}
     if(currentScene==='boss'){
-      const dt=Math.min(ticker.deltaMS/1000,.05);bossBattle.tick(dt);bossBattleView.draw();
+      const dt=Math.min(ticker.deltaMS/1000,.05);bossBattle.tick(dt);bossDamageHistory.capture(bossBattle,bossEncounterWave);bossBattleView.draw();
       meterClock+=dt;if(meterClock>=.15){meterClock=0;refreshDamageMeter();}
       if(activeBossWave===game.wave&&bossBattle.result==='victory'){
         bossReturnDelay+=dt;

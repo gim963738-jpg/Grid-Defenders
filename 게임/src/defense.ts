@@ -46,6 +46,7 @@ export function pathPoint(distance:number): {x:number;y:number} {
 
 export class Defense {
   readonly damageMeter=new DamageMeter();
+  lastWaveDamage:{wave:number;stats:ReturnType<DamageMeter['snapshot']>}|null=null;
   gold:number=RULES.initialGold;
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
   iceProjectiles:IceProjectile[]=[];iceBursts:IceBurst[]=[];
@@ -104,6 +105,7 @@ export class Defense {
     this.nextTestWave();return true;
   }
   nextTestWave():void {
+    if(!this.bossPending&&this.waveTime>0)this.lastWaveDamage={wave:this.wave,stats:this.damageMeter.snapshot(this.waveTime)};
     this.bossPending=false;
     const removed=this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
     this.enemies=this.enemies.filter(e=>(e.named||e.bounty)&&e.hp>0);
@@ -388,6 +390,7 @@ export class Defense {
     const before=this.anvils;this.anvils+=10;this.log('economy',`[개발자] 모루 +10 · ${before} → ${this.anvils}`);this.note('개발자 모루 +10');
   }
   reset():void {
+    this.lastWaveDamage=null;
     this.damageMeter.reset(true);
     this.iceProjectiles=[];this.iceBursts=[];
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
