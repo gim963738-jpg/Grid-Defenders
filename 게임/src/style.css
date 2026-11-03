@@ -323,3 +323,8 @@
 #shop-market .section-title{background:none;border:0;box-shadow:none;}
 #shop{border-top:0;}
 #shop-cards .shop-card:nth-child(n){grid-column:span 2;}
+
+/* WEB-036: first grid position is the merchant artwork, followed by five offers. */
+#shop-market .section-title{justify-content:flex-end;min-height:30px;}
+.shop-merchant-slot{grid-column:span 2;position:relative;height:114px;min-width:0;background:url(/assets/shop/merchant-silver-cutout.png) center top/auto 190% no-repeat;}
+.shop-merchant-slot::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,transparent 65%,#121d20 100%);}
