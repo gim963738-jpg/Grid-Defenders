@@ -1,3 +1,4 @@
+import { DamageMeter } from './damageMeter';
 import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
@@ -44,6 +45,7 @@ export function pathPoint(distance:number): {x:number;y:number} {
 }
 
 export class Defense {
+  readonly damageMeter=new DamageMeter();
   gold:number=RULES.initialGold;
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
   iceProjectiles:IceProjectile[]=[];iceBursts:IceBurst[]=[];
@@ -79,6 +81,7 @@ export class Defense {
     }
   }
   private startWave(announce=true):void {
+    this.damageMeter.reset();
     this.waveTime=0;this.waveSpawned=0;
     if(this.wave%RULES.bountyEvery===0){
       this.pendingBounties=Math.min(RULES.bountyStackLimit,this.pendingBounties+1);
@@ -447,6 +450,7 @@ export class Defense {
       const damageType=UNITS[u.kind].damageType,multiplier=defenseMultiplier(damageType,target.defenseType),afterDefense=mitigatedDamage(attack,damageType,target.defenseType);
       target.hp=Math.max(0,target.hp-afterDefense);
       const damage=hpBefore-target.hp;
+      this.damageMeter.record({id:String(u.id),name:`${UNITS[u.kind].name} #${u.id} · Lv.${u.level}`,color:'#'+UNITS[u.kind].color.toString(16).padStart(6,'0')},damage);
       this.damageNumbers.push({id:this.nextDamageId++,x:target.x,y:target.y,damage,critical,life:0.75});
       if(this.damageNumbers.length>80)this.damageNumbers.splice(0,this.damageNumbers.length-80);
       const targetName=`${target.name} #${target.id} (${DEFENSE_LABEL[target.defenseType]})`;

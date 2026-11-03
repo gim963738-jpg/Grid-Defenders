@@ -119,7 +119,16 @@ function refreshHeroInfo():void {
   positionHeroInfo();
 }
 const logHeads:Record<LogCategory,number>={damage:0,reward:0,economy:0};
+let damageMeterMarkup='';
+function refreshDamageMeter():void {
+  const boss=currentScene==='boss',stats=(boss?bossBattle.damageMeter:game.damageMeter).snapshot(boss?bossBattle.elapsed:game.waveTime);
+  el('dps-total').textContent=`${stats.dps.toFixed(1)} DPS`;
+  el('dps-summary').textContent=`${boss?'보스전':'웨이브 '+game.wave} · ${stats.elapsed.toFixed(1)}초 · 총 피해 ${Math.round(stats.total).toLocaleString()} · 평균 DPS`;
+  const markup=stats.rows.length?stats.rows.map((row,i)=>`<li class="dps-row"><div class="dps-bar" style="width:${(row.share*100).toFixed(2)}%;background:${row.color}"></div><div class="dps-row-top"><b>${i+1}. ${row.name}</b><strong>${row.dps.toFixed(1)} DPS</strong></div><div class="dps-row-bottom"><span>누적 ${Math.round(row.damage).toLocaleString()}</span><span>${(row.share*100).toFixed(1)}%</span></div></li>`).join(''):'<li class="log-empty">실제 피해가 발생하면 표시됩니다.</li>';
+  if(markup!==damageMeterMarkup){const list=el('dps-meter'),top=list.scrollTop;list.innerHTML=markup;list.scrollTop=top;damageMeterMarkup=markup;}
+}
 function refreshLogs():void {
+  refreshDamageMeter();
   for(const category of ['damage','reward','economy'] as const) {
     const records=game.logs[category];
     if(!records.length){
@@ -629,7 +638,7 @@ el('app').addEventListener('dblclick',(e)=>{
 
 function renderBossScreen():void {
   el('boss-wave-label').textContent=`BOSS · WAVE ${game.wave}`;
-  bossBattleView.draw();
+  bossBattleView.draw();refreshDamageMeter();
   const formation=game.units;
   el('boss-party').innerHTML=Array.from({length:32},(_,index)=>{
     const col=index%4,row=Math.floor(index/4);
@@ -674,7 +683,7 @@ async function start():Promise<void> {
     else game.note('먼저 아래에서 소환할 병사 또는 영웅을 선택하세요.');
     refresh();
   },rangedTexture);
-  let lastRevision=-1,hudClock=0;
+  let lastRevision=-1,hudClock=0,meterClock=0;
   renderMonsterTools();
   renderRecipeTree();
   refresh();
@@ -683,6 +692,7 @@ async function start():Promise<void> {
     if(activeBossWave!==null&&(!game.bossPending||activeBossWave!==game.wave)){activeBossWave=null;bossReturnDelay=0;}
     if(currentScene==='boss'){
       const dt=Math.min(ticker.deltaMS/1000,.05);bossBattle.tick(dt);bossBattleView.draw();
+      meterClock+=dt;if(meterClock>=.15){meterClock=0;refreshDamageMeter();}
       if(activeBossWave===game.wave&&bossBattle.result==='victory'){
         bossReturnDelay+=dt;
         if(bossReturnDelay>=1.2&&game.completeBossWave()){

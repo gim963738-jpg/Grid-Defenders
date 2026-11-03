@@ -467,3 +467,9 @@
 #boss-commander-skill[data-skill-state=ready],.boss-skill[data-skill-state=ready]{border-color:#b7d6a0;box-shadow:inset 0 0 14px #8ed59020;}
 #boss-basic-skill[data-skill-state=ready]{border-color:#8db4a0;}
 @media(prefers-reduced-motion:reduce){#boss-commander-skill::before,#boss-commander-skill::after,.boss-skill::before,.boss-skill::after{transition:none;}}
+
+#dps-summary{margin:0;padding:6px 9px;color:#91aaa5;font-size:9px;border-bottom:1px solid #33464e;font-variant-numeric:tabular-nums;}
+#dps-meter .dps-row{position:relative;isolation:isolate;padding:8px 9px;overflow:hidden;}
+.dps-bar{position:absolute;inset:0 auto 0 0;z-index:-1;opacity:.17;transition:width .15s linear;pointer-events:none;}
+.dps-row-top,.dps-row-bottom{display:flex;justify-content:space-between;gap:6px;align-items:center;}
+.dps-row-top b{font-size:10px;font-weight:600;color:#d4dedc;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.dps-row-top strong{font-size:10px;color:#f3d694;white-space:nowrap;}.dps-row-bottom{margin-top:3px;font-size:9px;color:#8fa69f;font-variant-numeric:tabular-nums;}

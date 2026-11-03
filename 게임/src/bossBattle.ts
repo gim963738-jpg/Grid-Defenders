@@ -1,3 +1,4 @@
+import { DamageMeter } from './damageMeter';
 import type { Defense } from './defense';
 import { AREA_ATTACK, UNITS, type UnitKind, type DamageType, type DefenseType } from './defenseConfig';
 
@@ -14,6 +15,7 @@ export interface BossIceBurst {x:number;y:number;life:number;}
 export interface BossHit {from:string;to:string;x:number;y:number;damage:number;magic:boolean;life:number;ice?:boolean;critical?:boolean;splash?:boolean;}
 /** Independent temporary encounter: it never mutates defense units, equipment or rewards. */
 export class BossBattle {
+  readonly damageMeter=new DamageMeter();
   actors:BossActor[]=[];
   hits:BossHit[]=[];
   iceProjectiles:BossIceProjectile[]=[];
@@ -28,6 +30,7 @@ export class BossBattle {
   result:'fighting'|'victory'|'defeat'='fighting';
   constructor(roster:BossAlly[]=[],private random:()=>number=Math.random){this.reset(roster);}
   reset(roster:BossAlly[]=this.roster):void {
+    this.damageMeter.reset();
     this.roster=roster.map(u=>({...u,stats:{...u.stats}}));
     this.actors=[];this.hits=[];this.iceProjectiles=[];this.iceBursts=[];this.elapsed=0;this.result='fighting';
     this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.burst=null;
@@ -89,6 +92,7 @@ export class BossBattle {
     this.hits=this.hits.filter(h=>(h.life-=dt)>0);
     for(const burst of this.iceBursts)burst.life-=dt;
     this.iceBursts=this.iceBursts.filter(b=>b.life>0);
+    const firstNewHit=this.hits.length;
     const live=this.actors.filter(a=>a.hp>0);
     for(const a of live)if(a.regen)a.hp=Math.min(a.maxHp,a.hp+a.regen*dt);
     const plans=live.map(actor=>({actor,target:this.target(actor)}));
@@ -134,7 +138,18 @@ export class BossBattle {
       }
     }
     // Apply both sides' attacks together, avoiding iteration-order advantages.
-    for(const actor of live)actor.hp=Math.max(0,actor.hp-(damage.get(actor.id)??0));
+    const freshHits=this.hits.slice(firstNewHit);
+    for(const actor of live){
+      const attempted=damage.get(actor.id)??0,actual=Math.min(actor.hp,attempted);
+      if(actual>0)for(const hit of freshHits.filter(h=>h.to===actor.id)){
+        const source=this.actors.find(a=>a.id===hit.from);
+        if(source?.side==='ally'){
+          const def=UNITS[source.kind as UnitKind];
+          this.damageMeter.record({id:source.id,name:`${source.name} #${source.id.replace('ally-','')} · Lv.${source.level??1}`,color:'#'+def.color.toString(16).padStart(6,'0')},actual*hit.damage/attempted);
+        }
+      }
+      actor.hp=Math.max(0,actor.hp-attempted);
+    }
     if(!this.actors.some(a=>a.side==='ally'&&a.hp>0))this.result='defeat';
     else if(!this.actors.some(a=>a.side==='enemy'&&a.hp>0))this.result='victory';
   }
