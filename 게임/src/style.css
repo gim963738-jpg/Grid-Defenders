@@ -328,3 +328,11 @@
 #shop-market .section-title{justify-content:flex-end;min-height:30px;}
 .shop-merchant-slot{grid-column:span 2;position:relative;height:114px;min-width:0;background:url(/assets/shop/merchant-silver-cutout.png) center top/auto 190% no-repeat;}
 .shop-merchant-slot::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,transparent 65%,#121d20 100%);}
+
+/* WEB-037: one large merchant layer behind the unchanged five offer positions. */
+#shop #shop-market{isolation:isolate;}
+#shop #shop-market::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:0;left:-12px;width:58%;height:100%;background:url(/assets/shop/merchant-silver-cutout.png) 45% top/auto 100% no-repeat;mask-image:linear-gradient(to right,#000 62%,transparent 100%),linear-gradient(to bottom,#000 0%,#000 40%,rgba(0,0,0,.35) 56%,rgba(0,0,0,.18) 86%,transparent 100%);mask-composite:intersect;}
+.shop-merchant-slot{background:none;}
+.shop-merchant-slot::after{content:none;}
+#shop-cards .shop-card{background:rgba(28,44,39,.78);}
+@media(max-width:350px){#shop #shop-market::before{left:-8px;}}
