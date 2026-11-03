@@ -201,7 +201,7 @@
 
 /* WEB-022: silver-haired merchant on the left, two offer columns on the right. */
 .shop-counter{display:grid;grid-template-columns:minmax(0,38fr) minmax(0,62fr);gap:8px;width:100%;margin-top:10px;align-items:stretch;}
-.shop-counter .shop-merchant{width:calc(100% + 12px);height:100%;min-height:260px;aspect-ratio:auto;margin:0 0 0 -12px;background-image:url(/assets/shop/merchant-silver-cutout.png);background-size:auto 100%;background-position:calc(53% + 20px) top;border-radius:8px;}
+.shop-counter .shop-merchant{width:calc(100% + 12px);height:100%;min-height:260px;aspect-ratio:auto;margin:0 0 0 -12px;background-image:url(/assets/shop/merchant-silver-cutout.png);background-size:auto 100%;background-position:calc(53% + 28px) top;border-radius:8px;}
 .shop-counter #shop-market{min-width:0;}
 .shop-counter #shop-cards{grid-template-columns:repeat(2,minmax(0,1fr));--shop-block:clamp(15px,4.8cqw,20px);}
 .shop-counter #shop-cards .shop-card{min-height:76px;}
