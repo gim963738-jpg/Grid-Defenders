@@ -14,7 +14,9 @@ const events=new AbortController();
 let heroInfo:{kind:UnitKind;unitId:number|null;fromInventory?:boolean}|null=null;
 let noticeTimer:ReturnType<typeof setTimeout>|undefined;
 let heroInfoMarkup='';
-let centeredHeroKind:UnitKind='tank',heroCardsMarkup='',heroScrollFrame=0;
+let centeredHeroKind:UnitKind='tank',heroCardsMarkup='',heroScrollFrame=0,heroAnimationFrame=0,heroSuppressClickUntil=0;
+let heroGesture:{pointer:number;x:number;y:number;lastX:number;startScroll:number;index:number;dragged:boolean}|null=null;
+const heroKinds=Object.entries(UNITS).filter(([,d])=>d.hero).map(([kind])=>kind as UnitKind);
 function markCenteredHero(kind:UnitKind):void {
   centeredHeroKind=kind;
   const cards=Array.from(el('heroes').querySelectorAll<HTMLElement>('[data-summon]'));
@@ -24,15 +26,29 @@ function markCenteredHero(kind:UnitKind):void {
   el<HTMLButtonElement>('hero-prev').disabled=index<=0;
   el<HTMLButtonElement>('hero-next').disabled=index>=cards.length-1;
 }
-function centerHero(kind:UnitKind,behavior:ScrollBehavior='smooth'):void {
+function heroOffset(kind:UnitKind):number {
   const track=el('heroes'),card=Array.from(track.querySelectorAll<HTMLElement>('[data-summon]')).find(c=>c.dataset.summon===kind);
-  if(!card)return;
-  markCenteredHero(kind);
-  if(track.clientWidth)track.scrollTo({left:card.offsetLeft-(track.clientWidth-card.offsetWidth)/2,behavior});
+  return card?Math.max(0,card.offsetLeft-(track.clientWidth-card.offsetWidth)/2):0;
+}
+function centerHero(kind:UnitKind,behavior:ScrollBehavior='smooth'):void {
+  const track=el('heroes');if(!track.querySelector('[data-summon]'))return;
+  cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;
+  markCenteredHero(kind);if(!track.clientWidth)return;
+  const target=heroOffset(kind),start=track.scrollLeft;
+  track.style.scrollSnapType='none';
+  if(behavior!=='smooth'||matchMedia('(prefers-reduced-motion: reduce)').matches||Math.abs(target-start)<1){track.scrollLeft=target;track.style.scrollSnapType='';return;}
+  const started=performance.now();
+  const animate=(now:number)=>{
+    const t=Math.min(1,(now-started)/520),ease=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+    track.scrollLeft=start+(target-start)*ease;
+    if(t<1)heroAnimationFrame=requestAnimationFrame(animate);
+    else {heroAnimationFrame=0;track.style.scrollSnapType='';markCenteredHero(kind);}
+  };
+  heroAnimationFrame=requestAnimationFrame(animate);
 }
 function moveHeroCarousel(direction:number):void {
-  const kinds=Object.entries(UNITS).filter(([,d])=>d.hero).map(([kind])=>kind as UnitKind),index=kinds.indexOf(centeredHeroKind);
-  centerHero(kinds[Math.max(0,Math.min(kinds.length-1,index+direction))]);
+  closeHeroInfo();const index=heroKinds.indexOf(centeredHeroKind);
+  centerHero(heroKinds[Math.max(0,Math.min(heroKinds.length-1,index+direction))]);
 }
 
 function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
@@ -416,6 +432,28 @@ document.addEventListener('pointerup',(e)=>{
 },{signal:events.signal});
 document.addEventListener('pointercancel',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
 
+
+el('heroes').addEventListener('pointerdown',(e)=>{
+  if(e.button!==0||!e.isPrimary)return;
+  cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;
+  heroGesture={pointer:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,startScroll:el('heroes').scrollLeft,index:heroKinds.indexOf(centeredHeroKind),dragged:false};
+},{signal:events.signal});
+document.addEventListener('pointermove',(e)=>{
+  const g=heroGesture;if(!g||g.pointer!==e.pointerId)return;
+  const dx=e.clientX-g.x,dy=e.clientY-g.y;
+  if(!g.dragged){if(Math.abs(dy)>Math.abs(dx)&&Math.abs(dy)>7){heroGesture=null;return;}if(Math.abs(dx)<7)return;g.dragged=true;closeHeroInfo();el('heroes').style.scrollSnapType='none';}
+  e.preventDefault();g.lastX=e.clientX;
+  const lo=heroOffset(heroKinds[Math.max(0,g.index-1)]),hi=heroOffset(heroKinds[Math.min(heroKinds.length-1,g.index+1)]);
+  el('heroes').scrollLeft=Math.max(lo,Math.min(hi,g.startScroll-dx*.7));
+},{passive:false,signal:events.signal});
+document.addEventListener('pointerup',(e)=>{
+  const g=heroGesture;if(!g||g.pointer!==e.pointerId)return;heroGesture=null;
+  if(!g.dragged)return;
+  heroSuppressClickUntil=performance.now()+350;
+  const dx=e.clientX-g.x,advance=Math.abs(dx)>30?(dx<0?1:-1):0;
+  centerHero(heroKinds[Math.max(0,Math.min(heroKinds.length-1,g.index+advance))]);
+},{signal:events.signal});
+document.addEventListener('pointercancel',(e)=>{if(heroGesture?.pointer===e.pointerId){heroGesture=null;centerHero(centeredHeroKind);}},{signal:events.signal});
 el('heroes').addEventListener('scroll',()=>{
   cancelAnimationFrame(heroScrollFrame);
   heroScrollFrame=requestAnimationFrame(()=>{
@@ -427,7 +465,7 @@ el('heroes').addEventListener('scroll',()=>{
 },{passive:true,signal:events.signal});
 el('heroes').addEventListener('keydown',(e)=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();moveHeroCarousel(e.key==='ArrowLeft'?-1:1);}},{signal:events.signal});
 el('app').addEventListener('click',(e)=>{
-  if(suppressClick)return;
+  if(suppressClick||((e.target as HTMLElement).closest('#heroes')&&performance.now()<heroSuppressClickUntil))return;
   const b=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!b||b.disabled)return;
   const d=b.dataset;
   if(d.tab){closeHeroInfo();openTab(d.tab);}
@@ -437,7 +475,7 @@ el('app').addEventListener('click',(e)=>{
   else if('heroStats'in d){const hero=game.heroes().find(h=>h.id===selectedHero);if(hero)heroInfo={kind:hero.kind,unitId:hero.id,fromInventory:true};}
   else if(d.summon){
     const kind=d.summon as UnitKind;
-    if(UNITS[kind].hero)centerHero(kind);
+    if(UNITS[kind].hero&&kind!==centeredHeroKind){closeHeroInfo();centerHero(kind);return;}
     if(!game.units.some(u=>u.id===selectedUnit&&u.kind===kind))selectedUnit=null;
     if(UNITS[kind].hero){
       const placed=game.heroes().find(u=>u.kind===kind);
@@ -478,7 +516,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   }
   refresh();
 },{signal:events.signal});
-window.addEventListener('blur',()=>{drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
+window.addEventListener('blur',()=>{if(heroGesture){heroGesture=null;centerHero(centeredHeroKind,'auto');}drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
 el('field-upgrade').addEventListener('click',()=>{const id=Number(el('field-upgrade').dataset.upgrade);game.upgrade(id);refresh();},{signal:events.signal});
 el('hero-info').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-info'))closeHeroInfo();},{signal:events.signal});
 document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},{signal:events.signal});
@@ -526,6 +564,6 @@ async function start():Promise<void> {
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}
     if(lastRevision!==game.revision&&!drag&&!unitDrag){lastRevision=game.revision;refresh();}
   });
-  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();cancelAnimationFrame(heroScrollFrame);clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
+  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
 void start().catch((error:unknown)=>{el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';console.error(error);});

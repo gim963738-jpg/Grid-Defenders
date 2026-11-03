@@ -358,3 +358,9 @@
 #heroes .ranged-summon-card .unit-icon{display:none;}
 .hero-carousel-hint{margin:0 0 10px;text-align:center;font-size:9px;color:#92a58c;}
 @media(prefers-reduced-motion:reduce){#heroes .hero-card{transition:none;}}
+
+/* WEB-040: slightly overlapping cards, one-card drags and faded viewport edges. */
+#heroes{gap:0;touch-action:pan-y pinch-zoom;mask-image:linear-gradient(to right,transparent 0,#000 22px,#000 calc(100% - 22px),transparent 100%);}
+#heroes .hero-card{z-index:1;user-select:none;}
+#heroes .hero-card+.hero-card{margin-left:-20px;}
+#heroes .hero-card.carousel-centered{z-index:3;}
