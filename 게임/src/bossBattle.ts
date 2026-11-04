@@ -5,6 +5,7 @@ import { DamageMeter, DamagePeaks } from './damageMeter';
 import type { Defense } from './defense';
 import { AREA_ATTACK, UNITS, type UnitKind, type DamageType, type DefenseType } from './defenseConfig';
 
+export interface BossTuning {healthScale:number;attackScale:number;}
 export interface BossAlly {id:number;kind:UnitKind;slot:number;level:number;stats:ReturnType<Defense['stats']>;}
 export function waveBossRoster(game:Defense):BossAlly[]{return game.units.map(u=>({id:u.id,kind:u.kind,slot:u.slot,level:u.level,stats:{...game.stats(u)}}));}
 export interface BossActor {
@@ -20,6 +21,7 @@ export interface BossHit {from:string;to:string;x:number;y:number;damage:number;
 export class BossBattle {
   readonly damageMeter:DamageMeter;
   encounter=0;
+  tuning:BossTuning={healthScale:1,attackScale:1};
   actors:BossActor[]=[];
   hits:BossHit[]=[];
   iceProjectiles:BossIceProjectile[]=[];
@@ -37,7 +39,8 @@ export class BossBattle {
   elapsed=0;
   result:'fighting'|'victory'|'defeat'='fighting';
   constructor(roster:BossAlly[]=[],private random:()=>number=Math.random,peaks?:DamagePeaks){this.damageMeter=new DamageMeter(peaks);this.reset(roster);}
-  reset(roster:BossAlly[]=this.roster):void {
+  reset(roster:BossAlly[]=this.roster,tuning:BossTuning={healthScale:1,attackScale:1}):void {
+    this.tuning={...tuning};
     this.encounter++;
     this.damageMeter.reset();
     this.roster=roster.map(u=>({...u,stats:{...u.stats}}));
@@ -56,6 +59,10 @@ export class BossBattle {
       {id:'retainer-bottom',side:'enemy',kind:'retainer',name:'친위대 · 비전 파수꾼',x:760,y:347.5,hp:1800,maxHp:1800,attack:70,rate:.8,range:50,speed:50,rank:0,damageType:'magic',defenseType:'magic',cooldown:.25},
       {id:'tester-boss',side:'enemy',kind:'boss',name:'시험 보스',x:900,y:281.25,hp:6000,maxHp:6000,attack:120,rate:.7,range:80,speed:34,rank:1,damageType:'physical',defenseType:'normal',cooldown:.25},
     );
+    for(const enemy of this.actors.filter(a=>a.side==='enemy')){
+      enemy.hp=enemy.maxHp=Math.max(1,Math.ceil(enemy.maxHp*tuning.healthScale));
+      enemy.attack=Math.max(1,Math.floor(enemy.attack*tuning.attackScale));
+    }
   }
   target(actor:BossActor):BossActor|undefined {
     const opponents=this.actors.filter(a=>a.side!==actor.side&&a.hp>0);
