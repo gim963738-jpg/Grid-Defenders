@@ -180,9 +180,17 @@ function refreshHeroInfo():void {
   const def=UNITS[heroInfo.kind],unit=game.units.find(u=>u.id===heroInfo!.unitId);
   if(heroInfo.unitId!==null&&!unit){closeHeroInfo();return;}
   const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0,critChance:def.hero?0:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier,physicalAttack:def.damageType==='physical'?def.attack:0,magicAttack:def.damageType==='magic'?def.attack:0,physicalArmor:def.armor,magicArmor:def.magicArmor};
-  const fields=[['hp','♥','최대 체력',stats.hp.toLocaleString()],['rate','↗','공격속도',`${stats.rate.toFixed(2)}/초`],['attack','⚔','물리 공격',String(stats.physicalAttack)],['attack','✦','마법 공격',String(stats.magicAttack)],['armor','⬡','물리 방어',String(stats.physicalArmor)],['armor','◇','마법 방어',String(stats.magicArmor)],['regen','✚','체력 재생',`${stats.regen}/초`],['gold','◇','골드 획득',`+${Math.round(stats.gold*100)}%`]];
-  if(!def.hero)fields.push(['attack','✦','치명타 확률',`${Math.round(stats.critChance*100)}%`],['attack','✦','치명타 배율',`${stats.critMultiplier}배`]);
-  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${heroInfo.kind==='ranged'||heroInfo.kind==='melee'?`<span class="${heroInfo.kind}-portrait"></span>`:def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(([key,icon,label,value])=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}">${value}</dd></div>`).join('')}</dl>`;
+  const field=(key:string,icon:string,label:string,current:number,base:number,format=(n:number)=>n.toLocaleString(),prefix='')=>{
+    const gain=unit&&def.hero?current-base:0;
+    return {key,icon,label,value:prefix+format(current),bonus:gain>1e-8?`(+${format(gain)})`:''};
+  };
+  const baseAttack=Math.round(def.attack*(1+((unit?.level??1)-1)*.25));
+  const fields=[field('hp','♥','최대 체력',stats.hp,def.hp),field('rate','↗','공격속도',stats.rate,def.rate,n=>`${n.toFixed(2)}/초`),
+    field('attack','⚔','물리 공격',stats.physicalAttack,def.damageType==='physical'?baseAttack:0),field('attack','✦','마법 공격',stats.magicAttack,def.damageType==='magic'?baseAttack:0),
+    field('armor','⬡','물리 방어',stats.physicalArmor,def.armor),field('armor','◇','마법 방어',stats.magicArmor,def.magicArmor),
+    field('regen','✚','체력 재생',stats.regen,0,n=>`${n.toLocaleString()}/초`),field('gold','◇','골드 획득',stats.gold,0,n=>`${Math.round(n*100)}%`,'+')];
+  if(!def.hero)fields.push(field('attack','✦','치명타 확률',stats.critChance,stats.critChance,n=>`${Math.round(n*100)}%`),field('attack','✦','치명타 배율',stats.critMultiplier,stats.critMultiplier,n=>`${n}배`));
+  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${heroInfo.kind==='ranged'||heroInfo.kind==='melee'?`<span class="${heroInfo.kind}-portrait"></span>`:def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(({key,icon,label,value,bonus})=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}"${bonus?' class="stat-increased"':''}><span>${value}</span>${bonus?`<small class="gear-stat-bonus" aria-label="장비 증가분 ${bonus}">${bonus}</small>`:''}</dd></div>`).join('')}</dl>`;
   if(markup!==heroInfoMarkup){el('hero-info').innerHTML=markup;heroInfoMarkup=markup;}
   positionHeroInfo();
 }
