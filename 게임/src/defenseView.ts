@@ -1,4 +1,4 @@
-import {bladeFrame,bladePlacement,BLADE_ALPHA_MATRIX} from './bladeSkill';
+import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_ALPHA_MATRIX} from './bladeSkill';
 import {swordVisuals,SWORD_ALPHA_MATRIX} from './swordAttack';
 import {FIRE_SKILL,fireFrame,firePlacement,FIRE_ALPHA_MATRIX} from './fireSkill';
 import { Application, ColorMatrixFilter, Container, Graphics, Sprite, Texture, Text, Rectangle } from 'pixi.js';
@@ -80,7 +80,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         if(!u)continue;
         const skill=u.kind==='ranged'?game.rangedSkills.get(u.id):u.kind==='melee'?game.meleeSkills.get(u.id):undefined;
         if(skill&&skill.casts>0){
-          const progress=Math.max(0,Math.min(1,1-skill.cooldown/FIRE_SKILL.cooldown));
+          const progress=Math.max(0,Math.min(1,1-skill.cooldown/(u.kind==='melee'?BLADE_SKILL.cooldown:FIRE_SKILL.cooldown)));
           skillBars.roundRect(p.x-23,p.y+24,46,8,3).fill(0x10232d).stroke({width:1,color:0x557783});
           if(progress>0)skillBars.roundRect(p.x-22,p.y+25,44*progress,6,2).fill(skill.cooldown>0?0x6ebee9:0x82dfa3);
           const text=skillLabels[i];text.visible=true;text.text=skill.cooldown>0?`${skill.cooldown.toFixed(1)}s`:'준비';

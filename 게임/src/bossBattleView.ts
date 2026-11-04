@@ -1,4 +1,4 @@
-import {bladeFrame,bladePlacement,BLADE_SHEET_URL,BLADE_ALPHA_MATRIX} from './bladeSkill';
+import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_SHEET_URL,BLADE_ALPHA_MATRIX} from './bladeSkill';
 import {swordVisuals,SWORD_SHEET_URL,SWORD_ALPHA_MATRIX} from './swordAttack';
 import {FIRE_SKILL,fireFrame,firePlacement,FIRE_SHEET_URL,FIRE_ALPHA_MATRIX} from './fireSkill';
 import { BossBattle, type BossActor } from './bossBattle';
@@ -77,7 +77,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       skillRoot.innerHTML=heroes.length?heroes.map(h=>{
         const def=UNITS[h.kind as keyof typeof UNITS],hasSkill=h.kind==='ranged'||h.kind==='melee';
         const portrait=h.kind==='ranged'||h.kind==='melee'?`<img src="${import.meta.env.BASE_URL}assets/heroes/${h.kind}-idle.png" alt="">`:`<span class="boss-hero-symbol" style="color:#${def.color.toString(16)}">${def.icon}</span>`;
-        return `<div class="boss-hero-skill-row" data-skill-hero="${h.id}"><div class="boss-skill-hero-card">${portrait}<b>${def.name}</b><small>웨이브 편성 연동</small></div><div class="boss-skill-column"><div class="boss-skill boss-basic-skill" data-basic-delay><b>1 · 평타</b><span>자동 공격 · 공속 기준</span><strong></strong></div>${hasSkill?`<button class="boss-skill" data-hero-skill="${h.id}"><b>2 · ${h.kind==='melee'?'연속 검격':'화염 기둥'}</b><span>기본 피해 ×3 · 범위 공격</span><strong></strong></button>`:`<div class="boss-skill boss-skill-empty" aria-label="${def.name} 스킬 미배정"></div>`}</div></div>`;
+        return `<div class="boss-hero-skill-row" data-skill-hero="${h.id}"><div class="boss-skill-hero-card">${portrait}<b>${def.name}</b><small>웨이브 편성 연동</small></div><div class="boss-skill-column"><div class="boss-skill boss-basic-skill" data-basic-delay><b>1 · 평타</b><span>자동 공격 · 공속 기준</span><strong></strong></div>${hasSkill?`<button class="boss-skill" data-hero-skill="${h.id}"><b>2 · ${h.kind==='melee'?'연속 검격':'화염 기둥'}</b><span>${h.kind==='melee'?'75% ×5 + 225% · 범위':'기본 피해 ×3 · 범위 공격'}</span><strong></strong></button>`:`<div class="boss-skill boss-skill-empty" aria-label="${def.name} 스킬 미배정"></div>`}</div></div>`;
       }).join(''):'<p class="boss-scene-note">웨이브전에서 영웅을 배치하세요.</p>';
     }
     for(const hero of heroes){
@@ -88,9 +88,9 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       updateSkillFill(basic,hero.cooldown,1/hero.rate,fighting&&alive,ready);
       const skill=row.querySelector<HTMLButtonElement>('[data-hero-skill]');
       if(skill){
-        const cooldown=battle.skillCooldown(hero.id),canUse=battle.canHeroSkill(hero.id);skill.disabled=!canUse;
-        skill.querySelector('strong')!.textContent=!alive?'전투 불가':!fighting?'전투 종료':cooldown>0?`재사용 ${cooldown.toFixed(1)}초 / 4초`:canUse?'사용 가능 · 쿨타임 4초':'사거리까지 접근 중';
-        updateSkillFill(skill,cooldown,FIRE_SKILL.cooldown,fighting&&alive,canUse);
+        const cooldown=battle.skillCooldown(hero.id),canUse=battle.canHeroSkill(hero.id),duration=hero.kind==='melee'?BLADE_SKILL.cooldown:FIRE_SKILL.cooldown;skill.disabled=!canUse;
+        skill.querySelector('strong')!.textContent=!alive?'전투 불가':!fighting?'전투 종료':cooldown>0?`재사용 ${cooldown.toFixed(1)}초 / ${duration}초`:canUse?`사용 가능 · 쿨타임 ${duration}초`:'사거리까지 접근 중';
+        updateSkillFill(skill,cooldown,duration,fighting&&alive,canUse);
       }
     }
     const auto=document.getElementById('boss-auto-skills')!;

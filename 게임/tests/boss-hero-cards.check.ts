@@ -10,8 +10,9 @@ export function checkBossHeroCards(){
  check(cards.querySelectorAll('[data-hero-skill]').length===2&&cards.querySelectorAll('.boss-skill-empty').length===1,'assigned heroes get skill cards and tank keeps an empty slot');
  check(cards.querySelector('.boss-skill-empty')!.children.length===0,'unassigned skill slot has no fake label or cooldown');
  const melee=battle.actors.find(a=>a.kind==='melee')!,ranged=battle.hero()!,enemy=battle.actors.find(a=>a.side==='enemy')!;melee.x=enemy.x-20;melee.y=enemy.y;battle.useHeroSkill(melee.id);view.draw();
- const skill=cards.querySelector<HTMLButtonElement>(`[data-hero-skill="${melee.id}"]`)!;check(skill.disabled&&skill.dataset.skillState==='cooldown'&&skill.textContent!.includes('4.0'),'melee skill shows its own four second cooldown');
+ const skill=cards.querySelector<HTMLButtonElement>(`[data-hero-skill="${melee.id}"]`)!;check(skill.disabled&&skill.dataset.skillState==='cooldown'&&skill.textContent!.includes('8.0'),'melee skill shows its own eight second cooldown');
  check(cards.querySelector(`[data-hero-skill="${ranged.id}"]`)!.textContent!.includes('접근'),'ranged skill cooldown is independent');
+ battle.heroSkillCooldowns.set(melee.id,4);view.draw();check(skill.style.getPropertyValue('--skill-fill')==='50.00%','melee cooldown bar uses eight second duration');
  melee.hp=0;view.draw();check(cards.querySelector(`[data-skill-hero="${melee.id}"] .boss-skill-hero-card`)!.classList.contains('hero-absent'),'fallen hero card is dimmed');
  const another=new Defense();another.summon('healer',0);battle.reset(waveBossRoster(another));view.draw();check(cards.querySelectorAll('[data-skill-hero]').length===1&&cards.querySelectorAll('.boss-skill-empty').length===1,'roster change replaces old cards and leaves healer skill blank');
  battle.reset([]);view.draw();check(!cards.querySelector('[data-basic-delay]')&&!cards.querySelector('[data-hero-skill]'),'empty roster shows no phantom hero skill cards');

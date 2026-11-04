@@ -8,7 +8,7 @@ import {FIRE_SHEET_URL} from '../src/fireSkill';
 import {SWORD_SHEET_URL} from '../src/swordAttack';
 export async function showBladeVisual(){
  const overlay=document.createElement('div');overlay.id='blade-visual-fixture';overlay.style.cssText='position:fixed;inset:0;z-index:99999;background:#101d20;overflow:auto;display:flex;flex-direction:column;align-items:center';
- const label=document.createElement('p');label.textContent='검 영웅 · 범위 3연격';label.style.color='#fff';overlay.append(label);document.body.append(overlay);
+ const label=document.createElement('p');label.textContent='검 영웅 · 범위 6연격';label.style.color='#fff';overlay.append(label);document.body.append(overlay);
  const game=new Defense();game.summon('melee',5);game.summon('ranged',9);game.summon('tank',1);game.enemies=[{...game.enemies[0],x:245,y:160,speed:0}];
  game.meleeSkills.set(game.units[0].id,{cooldown:2,casts:1});const cast=createBladeCast({...game.units[0]},1,90,245,160);cast.age=.98;game.bladeCasts=[cast];
  const app=new Application();await app.init({width:390,height:330,background:'#172620',preference:'webgl',antialias:true});overlay.append(app.canvas);

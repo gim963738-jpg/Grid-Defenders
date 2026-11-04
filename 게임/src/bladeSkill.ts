@@ -1,12 +1,16 @@
 import {FIRE_SKILL,type FireFrame} from './fireSkill';
-export const BLADE_SKILL={cooldown:FIRE_SKILL.cooldown,radius:FIRE_SKILL.radius,damageMultiplier:FIRE_SKILL.damageMultiplier,hits:FIRE_SKILL.hits,peakTimes:FIRE_SKILL.peakTimes,duration:1.39} as const;
+// Checked frames: trail 3/7/9, final swirl, falling blade 3, peak blast 3.
+export const BLADE_SKILL={cooldown:8,radius:FIRE_SKILL.radius,hits:6,
+ damageMultipliers:[.75,.75,.75,.75,.75,2.25],
+ hitTimes:[.0625,.1625,.2125,.675,.7+.2/7*2.5,1.075],duration:1.39} as const;
+export const bladeDamageMultiplier=(hitIndex:number)=>BLADE_SKILL.damageMultipliers[hitIndex]??0;
 export const BLADE_SHEET_URL=`${import.meta.env.BASE_URL}assets/effects/blade-skill-sheet.png`;
 export const BLADE_ALPHA_MATRIX:[number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number]=[1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,.8,.3,1.2,0,-.38];
 export interface BladeCast<S,Id>{source:S;targetId:Id;attack:number;x:number;y:number;footOffset:number;age:number;hits:number;}
 export function createBladeCast<S,Id>(source:S,targetId:Id,attack:number,x:number,y:number,footOffset=8):BladeCast<S,Id>{return {source,targetId,attack,x,y,footOffset,age:0,hits:0};}
 export function advanceBlade(cast:BladeCast<unknown,unknown>,dt:number):number{
  cast.age+=dt;let beats=0;
- while(cast.hits<BLADE_SKILL.hits&&cast.age+1e-8>=BLADE_SKILL.peakTimes[cast.hits]){cast.hits++;beats++;}
+ while(cast.hits<BLADE_SKILL.hits&&cast.age+1e-8>=BLADE_SKILL.hitTimes[cast.hits]){cast.hits++;beats++;}
  return beats;
 }
 export const bladeAlive=(cast:BladeCast<unknown,unknown>)=>cast.age<BLADE_SKILL.duration;

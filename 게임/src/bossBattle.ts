@@ -1,4 +1,4 @@
-import {BLADE_SKILL,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
+import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
 import {createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
 import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter, DamagePeaks } from './damageMeter';
@@ -176,7 +176,7 @@ export class BossBattle {
     for(const cast of this.bladeCasts){
       const beats=advanceBlade(cast,dt);
       for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.x,victim.y-cast.y)<=BLADE_SKILL.radius){
-        const amount=cast.attack*BLADE_SKILL.damageMultiplier*(victim.defenseType===cast.source.damageType?.75:1);
+        const amount=cast.attack*bladeDamageMultiplier(cast.hits-beats+i)*(victim.defenseType===cast.source.damageType?.75:1);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
         this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,sword:true,splash:victim.id!==cast.targetId});
       }

@@ -1,4 +1,4 @@
-import {BLADE_SKILL,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
+import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
 import {createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
 import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter } from './damageMeter';
@@ -468,7 +468,7 @@ export class Defense {
     for(const cast of this.bladeCasts){
       const beats=advanceBlade(cast,dt);
       for(let i=0;i<beats;i++)for(const enemy of this.enemies)
-        if(enemy.hp>0&&Math.hypot(enemy.x-cast.x,enemy.y-cast.y)<=BLADE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*BLADE_SKILL.damageMultiplier);
+        if(enemy.hp>0&&Math.hypot(enemy.x-cast.x,enemy.y-cast.y)<=BLADE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*bladeDamageMultiplier(cast.hits-beats+i));
     }
     this.bladeCasts=this.bladeCasts.filter(bladeAlive);
     this.swordAttacks=this.swordAttacks.filter(s=>this.units.some(u=>u.id===s.sourceId));
@@ -524,7 +524,7 @@ export class Defense {
       if(skill.cooldown<=1e-8&&target){
         skill.cooldown=BLADE_SKILL.cooldown;skill.casts++;
         this.bladeCasts.push(createBladeCast({...u},target.id,stats.attack,target.x,target.y,enemyRadius(target)));
-        this.log('economy',`${this.unitName(u)} · 연속 검격 발동 · 범위 3회 타격 · 재사용 ${BLADE_SKILL.cooldown}초`,{sourceId:u.id});
+        this.log('economy',`${this.unitName(u)} · 연속 검격 발동 · 범위 6회 타격 (75% ×5 + 225%) · 재사용 ${BLADE_SKILL.cooldown}초`,{sourceId:u.id});
       }
     }
     this.enemies=this.enemies.filter(e=>e.hp>0);
