@@ -31,6 +31,7 @@
         <div id="soldiers" class="cards three" aria-label="병사 선택 · 클릭하여 능력치 확인"></div>
         <div class="section-title"><h2>영웅 소환</h2><span id="hero-count">무료 · 최대 3명</span><div class="hero-carousel-controls"><button id="hero-prev" aria-label="이전 영웅">‹</button><span id="hero-carousel-position" aria-live="polite">1 / 4</span><button id="hero-next" aria-label="다음 영웅">›</button></div></div>
         <div id="heroes" class="hero-carousel" role="group" aria-roledescription="캐러셀" aria-label="영웅 선택 · 좌우로 넘긴 뒤 클릭하여 소환" tabindex="0"></div>
+        <div id="hero-skill-slots" class="hero-skill-slots" role="group" aria-label="중앙 영웅 스킬"></div>
         <p class="hero-carousel-hint">좌우: 카드 넘기기 · 위로 드래그: 전장 소환</p>
         <section id="unit-detail" class="detail"></section>
       </section>
@@ -96,6 +97,7 @@
     <div id="hero-drop-target" hidden></div>
     <div id="gear-drag-layer" aria-hidden="true"></div>
     <section id="hero-info" role="dialog" aria-modal="false" aria-label="유닛 능력치" hidden></section>
+    <section id="hero-skill-tooltip" role="dialog" aria-modal="false" aria-labelledby="hero-skill-tooltip-title" hidden></section>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

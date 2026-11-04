@@ -556,3 +556,20 @@
 .unit-drag-ghost img,.unit-drag-ghost svg{display:block;width:35px;height:45px;object-fit:contain;}
 .inventory-stats-button{flex:none;align-self:flex-start;margin:2px 0 0 auto;padding:4px 5px;border:1px solid #657350;border-radius:4px;background:#2b392a;color:#e8d5a1;font-size:9px;line-height:1.2;white-space:nowrap;}
 .inventory-stats-button:disabled{opacity:.45;cursor:default;}
+
+/* WEB-082: three active-skill slots for the centered summon hero. */
+.hero-skill-slots{position:relative;z-index:4;display:flex;justify-content:center;gap:6px;width:max-content;margin:-8px auto 9px;}
+.hero-skill-slot{display:grid;place-items:center;width:42px;height:42px;flex:none;padding:0;border:1px solid #b49a60;border-radius:6px;background:#172722;overflow:hidden;box-shadow:0 2px 5px #0005;}
+.hero-skill-slot svg,.hero-skill-tooltip-icon svg{display:block;width:100%;height:100%;overflow:hidden;}
+.hero-skill-slot svg{pointer-events:none;}
+.hero-skill-slot.assigned:hover,.hero-skill-slot.assigned[aria-expanded=true]{border-color:#ffe1a0;box-shadow:0 0 9px #d7b85e55;}
+.hero-skill-slot.assigned:focus-visible{outline:2px solid #ffe1a0;outline-offset:3px;}
+.hero-skill-slot.empty:disabled{opacity:1;border-color:#50635b;background:#15231f;color:#657b70;cursor:default;}
+#hero-skill-tooltip{position:fixed;z-index:31;width:280px;max-width:calc(100vw - 16px);max-height:calc(100svh - 16px);overflow:auto;padding:10px;border:1px solid #b49a60;border-radius:8px;background:linear-gradient(145deg,#211e17,#101c19);color:#eadfbd;box-shadow:0 7px 25px #000a;font-size:11px;}
+#hero-skill-tooltip header{display:flex;align-items:center;gap:8px;}
+.hero-skill-tooltip-icon{flex:none;display:block;width:40px;height:40px;overflow:hidden;border:1px solid #a68b54;border-radius:5px;}
+#hero-skill-tooltip header div{flex:1;min-width:0;}#hero-skill-tooltip small{font-size:9px;color:#b0b79c;}#hero-skill-tooltip h2{margin:3px 0 0;font-size:14px;}
+#hero-skill-tooltip header button{align-self:flex-start;border:0;padding:0 3px;background:transparent;color:#d9c18c;font-size:20px;line-height:1;}
+#hero-skill-tooltip p{margin:10px 0;color:#bdc8b8;line-height:1.6;}
+#hero-skill-tooltip dl{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0;}#hero-skill-tooltip dl div{padding:6px;background:#0b1411;border:1px solid #37483b;border-radius:4px;}
+#hero-skill-tooltip dt{font-size:9px;color:#9daa92;}#hero-skill-tooltip dd{margin:4px 0 0;font-size:12px;color:#efd799;font-weight:700;}#hero-skill-tooltip .skill-damage{grid-column:1/-1;}

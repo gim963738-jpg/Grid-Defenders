@@ -1,8 +1,8 @@
 import {calibrateBossTest,type BossTestProfile} from './bossTestBalance';
 import {nextCombatSpeed,stepCombat} from './combatPlayback';
-import {BLADE_SHEET_URL} from './bladeSkill';
+import {BLADE_SKILL,BLADE_SHEET_URL} from './bladeSkill';
 import {SWORD_SHEET_URL} from './swordAttack';
-import {FIRE_SHEET_URL} from './fireSkill';
+import {FIRE_SKILL,FIRE_SHEET_URL} from './fireSkill';
 import { Application, Assets, Texture } from 'pixi.js';
 import { Defense, recipeForTypes, type LogCategory } from './defense';
 import { BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
@@ -43,12 +43,14 @@ const events=new AbortController();
 let heroInfo:{kind:UnitKind;unitId:number|null;anchor?:'inventory'}|null=null;
 let noticeTimer:ReturnType<typeof setTimeout>|undefined;
 let heroInfoMarkup='';
+let heroSkillTooltipKind:UnitKind|null=null,heroSkillSlotsMarkup='';
 let centeredHeroKind:UnitKind='tank',heroCardsMarkup='',heroScrollFrame=0,heroAnimationFrame=0,heroSuppressClickUntil=0;
 let heroGesture:{pointer:number;x:number;y:number;lastX:number;startScroll:number;index:number;dragged:boolean}|null=null;
 const heroKinds=Object.entries(UNITS).filter(([,d])=>d.hero).map(([kind])=>kind as UnitKind);
 let heroPhysicalIndex=heroKinds.length,heroRebasing=false;
 const heroNavigationQueue:number[]=[];
 function markCenteredHero(kind:UnitKind,physicalIndex=heroPhysicalIndex):void {
+  if(centeredHeroKind!==kind)closeHeroSkillTooltip();
   centeredHeroKind=kind;heroPhysicalIndex=physicalIndex;
   const cards=Array.from(el('heroes').querySelectorAll<HTMLElement>('[data-summon]'));
   cards.forEach((card,i)=>{const active=i===physicalIndex;card.classList.toggle('carousel-centered',active);card.tabIndex=active?0:-1;if(active)card.setAttribute('aria-current','true');else card.removeAttribute('aria-current');});
@@ -57,6 +59,7 @@ function markCenteredHero(kind:UnitKind,physicalIndex=heroPhysicalIndex):void {
   el<HTMLButtonElement>('hero-next').disabled=heroKinds.length<2;
   el('command-area').dataset.heroBackdrop=kind;
   el('command-area').style.setProperty('--hero-symbol',`"${UNITS[kind].icon}"`);
+  refreshHeroSkillSlots();
 }
 function heroOffset(index:number):number {
   const track=el('heroes'),card=track.querySelectorAll<HTMLElement>('[data-summon]')[index];
@@ -90,9 +93,56 @@ function centerHero(kind:UnitKind,behavior:ScrollBehavior='smooth',requestedInde
   heroAnimationFrame=requestAnimationFrame(animate);
 }
 function moveHeroCarousel(direction:number):void {
-  closeHeroInfo();if(heroAnimationFrame||heroRebasing){heroNavigationQueue.push(direction);return;}
+  closeHeroInfo();closeHeroSkillTooltip();if(heroAnimationFrame||heroRebasing){heroNavigationQueue.push(direction);return;}
   rebaseHero(centeredHeroKind);const target=heroPhysicalIndex+direction;
   centerHero(heroKinds[(target+heroKinds.length)%heroKinds.length],'smooth',target);
+}
+
+// The summon strip describes assigned active skills; basic attacks are not slots.
+function summonHeroSkill(kind:UnitKind){
+  if(kind==='melee')return {name:'연속 검격',sheet:BLADE_SHEET_URL,crop:'16 338 193 194',cooldown:BLADE_SKILL.cooldown,hits:BLADE_SKILL.hits,
+    damage:`${BLADE_SKILL.damageMultipliers[0]*100}% × ${BLADE_SKILL.hits-1} + ${BLADE_SKILL.damageMultipliers.at(-1)!*100}%`,
+    description:'대상 주변을 연속으로 베고 마지막 일격으로 강하게 내려칩니다.'};
+  if(kind==='ranged')return {name:'화염 기둥',sheet:FIRE_SHEET_URL,crop:'37 369 198 198',cooldown:FIRE_SKILL.cooldown,hits:FIRE_SKILL.hits,
+    damage:`${FIRE_SKILL.damageMultiplier*100}% × ${FIRE_SKILL.hits}`,
+    description:'대상 발밑에 화염 기둥을 생성해 주변 적을 연속 타격합니다.'};
+  return null;
+}
+function summonSkillIcon(kind:UnitKind):string {
+  const skill=summonHeroSkill(kind);return skill?`<svg viewBox="${skill.crop}" aria-hidden="true"><image href="${skill.sheet}" width="1536" height="1024"/></svg>`:'';
+}
+function refreshHeroSkillSlots():void {
+  const root=el('hero-skill-slots'),skill=summonHeroSkill(centeredHeroKind);
+  const markup=Array.from({length:3},(_,i)=>i===0&&skill
+    ?`<button class="hero-skill-slot assigned" data-hero-skill-info="${centeredHeroKind}" aria-label="${skill.name} 스킬 설명" aria-haspopup="dialog" aria-expanded="false" aria-controls="hero-skill-tooltip">${summonSkillIcon(centeredHeroKind)}</button>`
+    :`<button class="hero-skill-slot empty" disabled aria-label="미구현 스킬 ${i+1}"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m10 10 12 12m0-12L10 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>`).join('');
+  if(markup!==heroSkillSlotsMarkup){root.innerHTML=markup;heroSkillSlotsMarkup=markup;}
+  root.dataset.heroKind=centeredHeroKind;root.setAttribute('aria-label',`${UNITS[centeredHeroKind].name} 스킬`);
+}
+function closeHeroSkillTooltip():void {
+  heroSkillTooltipKind=null;el('hero-skill-tooltip').hidden=true;
+  el('hero-skill-slots').querySelectorAll('button[aria-expanded]').forEach(b=>b.setAttribute('aria-expanded','false'));
+}
+function positionHeroSkillTooltip():void {
+  if(heroSkillTooltipKind===null)return;
+  const popup=el('hero-skill-tooltip'),button=el('hero-skill-slots').querySelector<HTMLElement>('[data-hero-skill-info]');
+  if(!button||tab!=='summon'||currentScene!=='defense'||sceneTransitioning){popup.hidden=true;return;}
+  const anchor=button.getBoundingClientRect();
+  if(anchor.bottom<0||anchor.top>innerHeight){popup.hidden=true;return;}
+  popup.hidden=false;
+  const bounds=el('app').getBoundingClientRect(),width=Math.min(280,bounds.width-16,innerWidth-16);
+  popup.style.width=`${width}px`;
+  const height=popup.getBoundingClientRect().height;
+  const left=Math.max(8,bounds.left+8,Math.min(innerWidth-width-8,bounds.right-width-8,(anchor.left+anchor.right-width)/2));
+  const top=anchor.top-height-10>=8?anchor.top-height-10:anchor.bottom+10;
+  popup.style.left=`${left}px`;popup.style.top=`${Math.max(8,Math.min(innerHeight-height-8,top))}px`;
+}
+function toggleHeroSkillTooltip(kind:UnitKind):void {
+  const skill=summonHeroSkill(kind);if(!skill||kind!==centeredHeroKind)return;
+  if(heroSkillTooltipKind===kind){closeHeroSkillTooltip();return;}
+  closeHeroInfo();heroSkillTooltipKind=kind;
+  el('hero-skill-tooltip').innerHTML=`<header><span class="hero-skill-tooltip-icon">${summonSkillIcon(kind)}</span><div><small>${UNITS[kind].name} · 범위 ${DAMAGE_LABEL[UNITS[kind].damageType]} 피해</small><h2 id="hero-skill-tooltip-title">${skill.name}</h2></div><button id="close-hero-skill-tooltip" aria-label="스킬 설명 닫기">×</button></header><p>${skill.description}</p><dl><div><dt>쿨타임</dt><dd>${skill.cooldown}초</dd></div><div><dt>타격 횟수</dt><dd>${skill.hits}회</dd></div><div class="skill-damage"><dt>기본 공격력 대비 피해</dt><dd>${skill.damage}</dd></div></dl>`;
+  el('hero-skill-slots').querySelector('[data-hero-skill-info]')?.setAttribute('aria-expanded','true');positionHeroSkillTooltip();
 }
 
 function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
@@ -190,7 +240,7 @@ function shape(item:ItemDef,rotation=0,cellSize=9):string {
   return `<span class="mini-shape" style="--shape-columns:${width};--shape-rows:${height};grid-template-columns:repeat(${width},${cellSize}px)">${cells.map(([x,y])=>`<i style="grid-column:${x+1};grid-row:${y+1};width:${cellSize}px;height:${cellSize}px;background:${item.color}"></i>`).join('')}</span>`;
 }
 function openTab(name:string):void {
-  tab=name;
+  closeHeroSkillTooltip();tab=name;
   el('command-area').classList.toggle('summon-background',tab==='summon');
   if(tab!=='summon'){cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;el('heroes').setAttribute('aria-busy','false');}
   const inventory=tab==='gear'||tab==='shop';
@@ -482,6 +532,7 @@ document.addEventListener('pointerdown',(e)=>{
     summonDrag={kind,pointer:e.pointerId,startX:e.clientX,startY:e.clientY,x:e.clientX,y:e.clientY,active:false,hero:UNITS[kind].hero,previous:pending,ghost:null};
   }
   if(!target.closest('#hero-info')&&!target.closest('.unit-card'))closeHeroInfo();
+  if(!target.closest('#hero-skill-tooltip')&&!target.closest('[data-hero-skill-info]'))closeHeroSkillTooltip();
   const button=target.closest<HTMLElement>('[data-gear-id]');
   const product=target.closest<HTMLElement>('[data-shop-index]');
   if(product){
@@ -615,7 +666,9 @@ el('app').addEventListener('click',(e)=>{
   if(d.tab){closeHeroInfo();openTab(d.tab);}
   else if(b.id==='hero-prev')moveHeroCarousel(-1);
   else if(b.id==='hero-next')moveHeroCarousel(1);
+  else if(d.heroSkillInfo){toggleHeroSkillTooltip(d.heroSkillInfo as UnitKind);return;}
   else if(d.summon){
+    closeHeroSkillTooltip();
     const kind=d.summon as UnitKind;
     if(UNITS[kind].hero&&kind!==centeredHeroKind){closeHeroInfo();centerHero(kind,'smooth',Array.from(el('heroes').querySelectorAll('[data-summon]')).indexOf(b));return;}
     if(!game.units.some(u=>u.id===selectedUnit&&u.kind===kind))selectedUnit=null;
@@ -676,9 +729,10 @@ el('dev-tools').addEventListener('click',(e)=>{
 window.addEventListener('blur',()=>{clearSummonDrag();if(heroGesture){heroGesture=null;centerHero(centeredHeroKind,'auto');}drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
 el('field-upgrade').addEventListener('click',()=>{const id=Number(el('field-upgrade').dataset.upgrade);game.upgrade(id);refresh();},{signal:events.signal});
 el('hero-info').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-info'))closeHeroInfo();},{signal:events.signal});
-document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeHeroInfo();},{signal:events.signal});
-window.addEventListener('resize',()=>{centerHero(centeredHeroKind,'auto');positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{signal:events.signal});
-document.addEventListener('scroll',()=>{positionHeroInfo();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
+el('hero-skill-tooltip').addEventListener('click',(e)=>{if((e.target as HTMLElement).closest('#close-hero-skill-tooltip'))closeHeroSkillTooltip();},{signal:events.signal});
+document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){closeHeroInfo();closeHeroSkillTooltip();}},{signal:events.signal});
+window.addEventListener('resize',()=>{centerHero(centeredHeroKind,'auto');positionHeroInfo();positionHeroSkillTooltip();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{signal:events.signal});
+document.addEventListener('scroll',()=>{positionHeroInfo();positionHeroSkillTooltip();refreshFieldUpgrade();updateGearDrag();refreshLinks();},{capture:true,signal:events.signal});
 // DOM이 갱신되어도 두 번 클릭한 블록 ID로 회전을 판정한다. 네이티브 dblclick 단독 입력도 지원.
 el('dps-tab-defense').addEventListener('click',()=>{damageMeterMode='defense';showLastBoss=false;refreshDamageMeter();},{signal:events.signal});
 el('dps-tab-boss').addEventListener('click',()=>{damageMeterMode='boss';showLastBoss=false;refreshDamageMeter();},{signal:events.signal});
@@ -715,7 +769,7 @@ const sceneTransition=createSceneTransition({
     sceneTransitioning=busy;
     el<HTMLButtonElement>('dev-boss-scene').disabled=busy;el<HTMLButtonElement>('dev-defense-scene').disabled=busy;
     if(busy){
-      clearSummonDrag();closeHeroInfo();cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;
+      clearSummonDrag();closeHeroInfo();closeHeroSkillTooltip();cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;
       drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;pressedGear=null;shopFocus=null;updateGearDrag();refreshLinks();
       el('field-upgrade').hidden=true;el('center-notice').hidden=true;
     }
