@@ -27,7 +27,7 @@ let selectedGear:number|null=null,turns=0,tab='summon';
 let shopFocus:number|null=null;
 let pressedGear:number|null=null;
 const events=new AbortController();
-let heroInfo:{kind:UnitKind;unitId:number|null;fromInventory?:boolean}|null=null;
+let heroInfo:{kind:UnitKind;unitId:number|null}|null=null;
 let noticeTimer:ReturnType<typeof setTimeout>|undefined;
 let heroInfoMarkup='';
 let centeredHeroKind:UnitKind='tank',heroCardsMarkup='',heroScrollFrame=0,heroAnimationFrame=0,heroSuppressClickUntil=0;
@@ -86,9 +86,7 @@ function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
 function positionHeroInfo():void {
   const popup=el('hero-info');if(!heroInfo)return;
   let anchor:{left:number;right:number;top:number;bottom:number};
-  if(heroInfo.fromInventory){
-    anchor=document.querySelector<HTMLElement>('[data-hero-stats]')!.getBoundingClientRect();
-  } else if(heroInfo.unitId!==null){
+  if(heroInfo.unitId!==null){
     const unit=game.units.find(u=>u.id===heroInfo!.unitId),canvas=document.querySelector('canvas');
     if(!unit||!canvas){closeHeroInfo();return;}
     const box=canvas.getBoundingClientRect(),point=SLOTS[unit.slot];
@@ -222,7 +220,6 @@ function refresh():void {
   el('gear-title').textContent='영웅 장비';
   el('inventory-hero-name').textContent=hero?UNITS[hero.kind].name:'영웅 선택';
   el('inventory-hero-icon').innerHTML=hero?(hero.kind==='ranged'?'<span class="ranged-portrait"></span>':UNITS[hero.kind].icon):'◇';
-  document.querySelector<HTMLButtonElement>('[data-hero-stats]')!.disabled=!hero;
   el('equipment').innerHTML=inventoryGrid(hero?.id??-1);
   const bag=inventoryGrid(null);
   el('gear-bag').innerHTML=bag;el('shop-bag').innerHTML=bag;
@@ -581,8 +578,6 @@ el('app').addEventListener('click',(e)=>{
   if(d.tab){closeHeroInfo();openTab(d.tab);}
   else if(b.id==='hero-prev')moveHeroCarousel(-1);
   else if(b.id==='hero-next')moveHeroCarousel(1);
-  else if('heroEquipment'in d){closeHeroInfo();openTab('gear');}
-  else if('heroStats'in d){const hero=game.heroes().find(h=>h.id===selectedHero);if(hero)heroInfo={kind:hero.kind,unitId:hero.id,fromInventory:true};}
   else if(d.summon){
     const kind=d.summon as UnitKind;
     if(UNITS[kind].hero&&kind!==centeredHeroKind){closeHeroInfo();centerHero(kind,'smooth',Array.from(el('heroes').querySelectorAll('[data-summon]')).indexOf(b));return;}
