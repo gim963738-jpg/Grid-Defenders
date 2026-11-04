@@ -541,3 +541,12 @@
 #wave-info.is-paused #wave-timer{color:#aebfba;}
 .boss-battle-controls{display:flex;align-items:center;gap:4px;}
 .boss-battle-controls .pause-control{height:28px;}
+
+/* WEB-080: owned-gear drags replace the offer area with a sale target. */
+.gear-sale-layer{position:absolute;inset:0;z-index:5;display:grid;place-items:center;border:2px dashed #b5a779;border-radius:8px;background:rgba(17,31,29,.9);color:#eadbb9;backdrop-filter:blur(1px);pointer-events:none;transition:background .12s,border-color .12s;}
+.gear-sale-layer[hidden]{display:none;}
+.gear-sale-prompt{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px;text-align:center;}
+.gear-sale-prompt svg{width:36px;height:36px;}.gear-sale-prompt b{font-size:16px;}.gear-sale-prompt span{font-size:11px;}.gear-sale-prompt strong{font-size:22px;color:#ffe4a5;font-variant-numeric:tabular-nums;}
+#shop #shop-market.sale-drop-active{border:0;background:none;}
+#shop-market.sale-drop-active .gear-sale-layer{border-style:solid;border-color:#ff8990;background:rgba(130,30,42,.92);color:#fff0ec;box-shadow:inset 0 0 30px #ff6f7f25;}
+#shop-market.sale-drop-active #shop-sale-hint{color:#ffd2d6;}

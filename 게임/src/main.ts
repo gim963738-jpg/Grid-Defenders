@@ -419,9 +419,14 @@ function dragDestination(){
 function updateGearDrag():void {
   document.querySelectorAll<HTMLElement>('.drop-preview').forEach(node=>{node.classList.remove('drop-preview','drop-warning');node.style.removeProperty('--preview-color');});
   el('hero-drop-target').hidden=true;el('shop-market').classList.remove('sale-drop-active');el('shop-sale-hint').textContent='보유 아이템을 이곳으로 끌어 판매';
+  el('gear-sale-layer').hidden=true;
   if(!drag?.moved||!drag.ghost)return;
   const gear=game.gear.find(g=>g.id===drag!.id),def=drag.shopIndex===undefined?gear?.def:game.shop[drag.shopIndex];if(!def)return;
   const rotation=gear?.turns??0,cells=rotated(def.cells,rotation),destination=dragDestination();
+  if(drag.shopIndex===undefined&&gear&&(tab==='gear'||tab==='shop')){
+    el('gear-sale-layer').hidden=false;el('gear-sale-title').textContent=destination?.kind==='sale'?'놓아서 판매':'아이템 판매';
+    el('gear-sale-value').textContent=`+${Math.floor(gear.costBasis/2).toLocaleString()}G`;
+  }
   const size=destination?.kind==='grid'?destination.size:drag.cellSize??32,step=size+3,ghost=drag.ghost;
   ghost.innerHTML=cells.map(([x,y])=>`<i style="left:${x*step}px;top:${y*step}px;width:${size}px;height:${size}px;background:${def.color}"></i>`).join('');
   ghost.style.width=`${(Math.max(...cells.map(c=>c[0]))+1)*step-3}px`;ghost.style.height=`${(Math.max(...cells.map(c=>c[1]))+1)*step-3}px`;
