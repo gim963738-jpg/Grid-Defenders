@@ -231,16 +231,19 @@ export class Defense {
     this.goldLog('economy',`${this.unitName(u)} 판매`,before,{sourceId:u.id});
     this.units=this.units.filter(v=>v.id!==id);this.note(`병사 판매 · ${refund}G 환급`);return true;
   }
-  buy(index:number,position?:{x:number;y:number}):boolean {
+  buy(index:number,position?:{x:number;y:number},owner:number|null=null):boolean {
     const item=this.shop[index];if(!item)return false;
     const price=this.shopPrice(index);
     if(this.gold<price)return this.note('구매 골드가 부족합니다.');
+    if(owner!==null&&!this.heroes().some(h=>h.id===owner))return this.note('장비를 받을 영웅을 선택해 주세요.');
+    const destination=owner===null?this.purchasePosition(item,position):this.nearestFree({id:-1,def:item},owner,position?.x??0,position?.y??0,0);
+    if(!destination)return this.note('영웅 장비칸에 빈칸이 없습니다.');
     const before=this.gold;this.gold-=price;this.shop[index]=null;
-    const gear:Gear={id:this.nextId++,def:item,owner:null,x:0,y:0,turns:0,order:++this.placementOrder,costBasis:price};
-    Object.assign(gear,this.purchasePosition(item,position));
+    const gear:Gear={id:this.nextId++,def:item,owner,x:0,y:0,turns:0,order:++this.placementOrder,costBasis:price};
+    Object.assign(gear,destination);
     this.gear.push(gear);
     this.goldLog('economy',`${item.name} #${gear.id} 구매${this.shopDiscounts[index]?' (반값 할인)':''}`,before);
-    this.note(`${item.name}을 공용 가방에 넣었습니다.`);return true;
+    this.note(owner===null?`${item.name}을 공용 가방에 넣었습니다.`:`${item.name} 구매·영웅 장착 완료`);return true;
   }
   shopPrice(index:number):number {return Math.floor((this.shop[index]?.price??0)*(this.shopDiscounts[index]?0.5:1));}
   reroll():boolean {

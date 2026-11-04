@@ -1,3 +1,4 @@
+import {itemArt,hasItemArt} from './itemArt';
 import {battleResolution} from './renderQuality';
 import {loadHeroArt,heroImage,heroPortrait,sheetHero,assassinSkillIcon} from './heroArt';
 import {ASSASSIN} from './assassinCombat';
@@ -258,6 +259,7 @@ function refreshLogs():void {
 
 function shape(item:ItemDef,rotation=0,cellSize=9):string {
   const cells=rotated(item.cells,rotation),width=Math.max(...cells.map(c=>c[0]))+1,height=Math.max(...cells.map(c=>c[1]))+1;
+  if(hasItemArt(item))return `<span class="mini-shape illustrated-shape" style="width:${width*cellSize+(width-1)*2}px;height:${height*cellSize+(height-1)*2}px">${itemArt(item,rotation)}</span>`;
   return `<span class="mini-shape" style="--shape-columns:${width};--shape-rows:${height};grid-template-columns:repeat(${width},${cellSize}px)">${cells.map(([x,y])=>`<i style="grid-column:${x+1};grid-row:${y+1};width:${cellSize}px;height:${cellSize}px;background:${item.color}"></i>`).join('')}</span>`;
 }
 function openTab(name:string):void {
@@ -280,7 +282,10 @@ function inventoryGrid(owner:number|null):string {
     const x=i%columns,y=Math.floor(i/columns),stack=occupied.get(`${x},${y}`)??[];
     const g=stack.find(g=>g.id===selectedGear)??stack.at(-1),inactive=g&&states&&!states.get(g.id)?.active;
     const address=owner===null?`data-bag-cell="${x},${y}"`:`data-cell="${x},${y}"`;
-    return `<button class="gear-cell ${(x+y)%2?'board-light':'board-dark'} ${g?.id===selectedGear?'picked':''} ${inactive?'gear-inactive':''} " ${address} ${g?`data-gear-id="${g.id}" ${inactive?'data-inactive="true"':''} style="background-color:${g.def.color}" title="${stack.map(v=>`${v.def.name} #${v.id}`).join(' / ')} · 더블클릭 회전"`:''} aria-label="${owner===null?'공용 가방':'영웅 장비'} ${x+1}열 ${y+1}행${g?' '+g.def.name:''}${inactive?' 비활성':''}">${g?g.def.short:''}${stack.length>1?`<sup>${stack.length}</sup>`:''}</button>`;
+    const illustrated=g&&hasItemArt(g.def),anchor=illustrated&&x===g.x&&y===g.y;
+    const footprint=g?rotated(g.def.cells,g.turns):[],w=footprint.length?Math.max(...footprint.map(c=>c[0]))+1:1,h=footprint.length?Math.max(...footprint.map(c=>c[1]))+1:1;
+    const art=anchor?`<span class="inventory-item-art" style="width:calc(var(--inventory-cell) * ${w} + ${(w-1)*3}px);height:calc(var(--inventory-cell) * ${h} + ${(h-1)*3}px)">${itemArt(g.def,g.turns)}</span>`:'';
+    return `<button class="gear-cell ${illustrated?'illustrated-cell':''} ${(x+y)%2?'board-light':'board-dark'} ${g?.id===selectedGear?'picked':''} ${inactive?'gear-inactive':''} " ${address} ${g?`data-gear-id="${g.id}" ${inactive?'data-inactive="true"':''} style="background-color:${g.def.color}" title="${stack.map(v=>`${v.def.name} #${v.id}`).join(' / ')} · 더블클릭 회전"`:''} aria-label="${owner===null?'공용 가방':'영웅 장비'} ${x+1}열 ${y+1}행${g?' '+g.def.name:''}${inactive?' 비활성':''}">${art}${g&&!illustrated?g.def.short:''}${stack.length>1?`<sup>${stack.length}</sup>`:''}</button>`;
   }).join('');
 }
 function refresh():void {
@@ -316,7 +321,7 @@ function refresh():void {
   const gear=game.gear.find(g=>g.id===selectedGear);
   const itemDetail=gear?`${shape(gear.def,turns)} <b>${gear.def.name} #${gear.id}</b> · ${gear.def.description}<br>방향 ${turns*90}° · ${gear.owner===null?'공용 가방':game.gearState(gear).active?'능력치 활성':`능력치 비활성 (${game.gearState(gear).reason})`}<div class="actions"><button data-rotate-selected>↻ 회전</button>${gear.owner===null?`<button data-open-gear>영웅에게 장착</button>`:''}<button class="danger" data-sell-gear="${gear.id}">판매 +${Math.floor(gear.costBasis/2)}G</button><button data-cancel-gear>취소</button></div>`:'블록을 선택하거나 끌어 놓으세요. 더블클릭·두 번 탭하면 회전합니다.';
   el('item-detail').innerHTML=itemDetail;el('shop-item-detail').innerHTML=itemDetail;
-  el('shop-cards').innerHTML='<div class="shop-merchant-slot" role="img" aria-label="상인 일러스트"></div>'+game.shop.map((item,index)=>item?`<article class="shop-card ${game.shopDiscounts[index]?'discounted':''}" data-shop-index="${index}" tabindex="0" aria-label="${item.name} · ${game.shopPrice(index)}G · 공용 가방에 드래그하여 구매">${`<span class="shop-item-visual">${shape(item,0,22)}<span class="shop-item-name">${item.name}</span></span>`}<button data-buy="${index}" aria-label="${item.name} ${game.shopPrice(index)}G 구매" ${game.gold<game.shopPrice(index)?'disabled':''}>${game.shopPrice(index)}G</button></article>`:'<article class="shop-card sold-out" aria-label="구매 완료">—</article>').join('');
+  el('shop-cards').innerHTML='<div class="shop-merchant-slot" role="img" aria-label="상인 일러스트"></div>'+game.shop.map((item,index)=>item?`<article class="shop-card ${game.shopDiscounts[index]?'discounted':''}" data-shop-index="${index}" tabindex="0" aria-label="${item.name} · ${game.shopPrice(index)}G · 공용 가방 또는 영웅 장비칸에 드래그하여 구매">${`<span class="shop-item-visual">${shape(item,0,22)}<span class="shop-item-name">${item.name}</span></span>`}<button data-buy="${index}" aria-label="${item.name} ${game.shopPrice(index)}G 구매" ${game.gold<game.shopPrice(index)?'disabled':''}>${game.shopPrice(index)}G</button></article>`:'<article class="shop-card sold-out" aria-label="구매 완료">—</article>').join('');
   el('reroll').toggleAttribute('disabled',game.gold<RULES.rerollGold);
   updateHud();
   refreshLogs();
@@ -501,11 +506,11 @@ function dragDestination(){
   if(!drag)return null;
   const hit=document.elementFromPoint(drag.x,drag.y),gear=game.gear.find(g=>g.id===drag!.id);
   if(drag.shopIndex===undefined&&(tab==='shop'||tab==='gear')&&hit?.closest('#shop-market'))return {kind:'sale' as const};
-  const hero=(tab==='shop'||tab==='gear')&&gear?.owner===null&&hit?.closest('canvas')?game.heroes().find(h=>h.slot===canvasSlot(drag!.x,drag!.y)):null;
+  const hero=(tab==='shop'||tab==='gear')&&(drag.shopIndex!==undefined||gear?.owner===null)&&hit?.closest('canvas')?game.heroes().find(h=>h.slot===canvasSlot(drag!.x,drag!.y)):null;
   if(hero)return {kind:'hero' as const,hero};
   const grids=['equipment','gear-bag','shop-bag'].map(id=>el(id)).filter(g=>g.getClientRects().length&&g.querySelector('[data-cell],[data-bag-cell]'));
   let grid=hit?.closest<HTMLElement>('#equipment,#gear-bag,#shop-bag');
-  // 영역 밖 드롭도 가장 가까운 보이는 격자의 좌표로 보정한다. 상점 미구매품은 가방 위에서만 구매.
+  // 영역 밖 드롭도 가장 가까운 보이는 격자의 좌표로 보정한다. 상점 미구매품은 가방 또는 영웅 장비칸 위에서 구매.
   if(!grid&&drag.shopIndex===undefined)grid=grids.sort((a,b)=>{
     const distance=(g:HTMLElement)=>{const r=g.getBoundingClientRect();return Math.max(r.left-drag!.x,0,drag!.x-r.right)**2+Math.max(r.top-drag!.y,0,drag!.y-r.bottom)**2};return distance(a)-distance(b);
   })[0]??null;
@@ -528,7 +533,7 @@ function updateGearDrag():void {
     el('gear-sale-value').textContent=`+${Math.floor(gear.costBasis/2).toLocaleString()}G`;
   }
   const size=destination?.kind==='grid'?destination.size:drag.cellSize??32,step=size+3,ghost=drag.ghost;
-  ghost.innerHTML=cells.map(([x,y])=>`<i style="left:${x*step}px;top:${y*step}px;width:${size}px;height:${size}px;background:${def.color}"></i>`).join('');
+  ghost.innerHTML=hasItemArt(def)?itemArt(def,rotation):cells.map(([x,y])=>`<i style="left:${x*step}px;top:${y*step}px;width:${size}px;height:${size}px;background:${def.color}"></i>`).join('');
   ghost.style.width=`${(Math.max(...cells.map(c=>c[0]))+1)*step-3}px`;ghost.style.height=`${(Math.max(...cells.map(c=>c[1]))+1)*step-3}px`;
   ghost.style.left=`${drag.x-drag.dx*step-size/2}px`;ghost.style.top=`${drag.y-drag.dy*step-size/2}px`;
   let valid=true;
@@ -538,12 +543,12 @@ function updateGearDrag():void {
     const point=fieldToScreen(r,{x:p.x-25,y:p.y-23});
     outline.hidden=false;outline.style.left=`${point.x}px`;outline.style.top=`${point.y}px`;
     outline.style.width=`${50*r.width/RULES.width}px`;outline.style.height=`${46*r.height/DEFENSE_FIELD.height}px`;
-    valid=!!game.nearestFree({id:drag.id,def},destination.hero.id,0,0,rotation);outline.classList.toggle('no-space',!valid);
+    valid=!!game.nearestFree({id:drag.id,def},destination.hero.id,0,0,rotation)&&(drag.shopIndex===undefined||game.gold>=game.shopPrice(drag.shopIndex));outline.classList.toggle('no-space',!valid);
   } else if(destination?.kind==='grid'){
     const {bag,owner,grid}=destination;
-    let position=drag.shopIndex!==undefined?(bag?game.purchasePosition(def,{x:destination.x,y:destination.y}):null):game.correctedPosition({id:drag.id,def},owner,destination.x,destination.y,rotation);
+    let position=drag.shopIndex!==undefined?(bag?game.purchasePosition(def,{x:destination.x,y:destination.y}):owner!==null?game.nearestFree({id:-1,def},owner,destination.x,destination.y,0):null):game.correctedPosition({id:drag.id,def},owner,destination.x,destination.y,rotation);
     valid=!!position&&(bag||owner!==null)&&game.canPlace({id:drag.id,def},owner,position.x,position.y,rotation);
-    if(drag.shopIndex!==undefined)valid=!!position&&bag&&game.gold>=game.shopPrice(drag.shopIndex);
+    if(drag.shopIndex!==undefined)valid=!!position&&(bag||owner!==null)&&game.gold>=game.shopPrice(drag.shopIndex);
     if(position)for(const [dx,dy] of cells){
       const node=Array.from(grid.querySelectorAll<HTMLElement>('[data-cell],[data-bag-cell]')).find(n=>(n.dataset.cell??n.dataset.bagCell)===`${position.x+dx},${position.y+dy}`);
       if(node){node.classList.add('drop-preview');node.classList.toggle('drop-warning',!valid);node.style.setProperty('--preview-color',def.color);}
@@ -649,8 +654,9 @@ document.addEventListener('pointerup',(e)=>{
     suppressClick=true;
     drag.x=e.clientX;drag.y=e.clientY;const destination=dragDestination();
     if(drag.shopIndex!==undefined){
-      if(destination?.kind==='grid'&&destination.bag)game.buy(drag.shopIndex,{x:destination.x,y:destination.y});
-      else game.note('공용 가방에 내려놓을 때만 구매합니다.');
+      if(destination?.kind==='grid'){if(!destination.bag&&destination.owner===null)game.note('장비를 받을 영웅을 선택해 주세요.');else game.buy(drag.shopIndex,{x:destination.x,y:destination.y},destination.bag?null:destination.owner);}
+      else if(destination?.kind==='hero'){if(game.buy(drag.shopIndex,undefined,destination.hero.id))selectedHero=destination.hero.id;}
+      else game.note('공용 가방이나 영웅 장비칸에 내려놓으면 구매합니다.');
     } else if(destination?.kind==='sale'){game.sellGear(drag.id);selectedGear=null;}
     else if(destination?.kind==='hero'){
       if(game.autoEquip(drag.id,destination.hero.id)){selectedHero=destination.hero.id;selectedGear=null;}
