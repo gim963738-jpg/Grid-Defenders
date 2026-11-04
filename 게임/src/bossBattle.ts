@@ -1,3 +1,4 @@
+import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter, DamagePeaks } from './damageMeter';
 import type { Defense } from './defense';
 import { AREA_ATTACK, UNITS, type UnitKind, type DamageType, type DefenseType } from './defenseConfig';
@@ -26,7 +27,7 @@ export class BossBattle {
   commanderCooldown=0;
   commanderBuff=0;
   heroSkillCooldown=0;
-  private burst:{left:number;delay:number}|null=null;
+  fireCasts:FireCast<BossActor,string>[]=[];
   elapsed=0;
   result:'fighting'|'victory'|'defeat'='fighting';
   constructor(roster:BossAlly[]=[],private random:()=>number=Math.random,peaks?:DamagePeaks){this.damageMeter=new DamageMeter(peaks);this.reset(roster);}
@@ -35,7 +36,7 @@ export class BossBattle {
     this.damageMeter.reset();
     this.roster=roster.map(u=>({...u,stats:{...u.stats}}));
     this.actors=[];this.hits=[];this.iceProjectiles=[];this.iceBursts=[];this.elapsed=0;this.result='fighting';
-    this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.burst=null;
+    this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.fireCasts=[];
     for(const u of this.roster){
       const d=UNITS[u.kind],s=u.stats,col=3-Math.floor(u.slot/4),row=u.slot%4+2;
       this.actors.push({id:`ally-${u.id}`,side:'ally',kind:u.kind,name:d.name,level:u.level,sourceSlot:u.slot,
@@ -68,7 +69,9 @@ export class BossBattle {
   }
   tripleSkill():boolean {
     if(!this.canTriple())return false;
-    this.heroSkillCooldown=4;this.burst={left:3,delay:0};return true;
+    const hero=this.hero()!,target=this.target(hero)!;
+    this.heroSkillCooldown=FIRE_SKILL.cooldown;
+    this.fireCasts.push(createFireCast({...hero},target.id,this.attackPower(hero),hero.x,hero.y-12,target.x,target.y));return true;
   }
   private attackPower(actor:BossActor):number {
     const bonus=actor.side==='ally'&&['guard','archer','mage'].includes(actor.kind)&&this.commanderBuff>0?100:0;
@@ -90,7 +93,7 @@ export class BossBattle {
     this.commanderCooldown=Math.max(0,this.commanderCooldown-dt);
     this.commanderBuff=Math.max(0,this.commanderBuff-dt);
     this.heroSkillCooldown=Math.max(0,this.heroSkillCooldown-dt);
-    if(this.autoSkills){this.commanderSkill();if(!this.burst)this.tripleSkill();}
+    if(this.autoSkills){this.commanderSkill();this.tripleSkill();}
     this.hits=this.hits.filter(h=>(h.life-=dt)>0);
     for(const burst of this.iceBursts)burst.life-=dt;
     this.iceBursts=this.iceBursts.filter(b=>b.life>0);
@@ -125,20 +128,15 @@ export class BossBattle {
         actor.cooldown=1/actor.rate;
       }
     }
-    if(this.burst){
-      this.burst.delay-=dt;
-      if(this.burst.delay<=0){
-        const hero=this.hero(),target=hero&&this.target(hero);
-        if(!hero||!target){this.burst=null;}
-        else {
-          if(Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range){
-            this.strike(hero,target,damage);
-          }
-          this.burst.left--;this.burst.delay=.12;
-          if(!this.burst.left)this.burst=null;
-        }
+    for(const cast of this.fireCasts){
+      const target=live.find(a=>a.id===cast.targetId),beats=advanceFire(cast,dt,target);
+      for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.tx,victim.y-cast.ty)<=FIRE_SKILL.radius){
+        const amount=cast.attack*FIRE_SKILL.damageMultiplier*(victim.defenseType===cast.source.damageType?.75:1);
+        damage.set(victim.id,(damage.get(victim.id)??0)+amount);
+        this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,splash:victim.id!==cast.targetId});
       }
     }
+    this.fireCasts=this.fireCasts.filter(fireAlive);
     // Apply both sides' attacks together, avoiding iteration-order advantages.
     const freshHits=this.hits.slice(firstNewHit);
     for(const actor of live){

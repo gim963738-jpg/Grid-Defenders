@@ -1,5 +1,6 @@
+import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter } from './damageMeter';
-import { WAVE_RANGED_SKILL, AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
+import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
 export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; named:boolean;name:string;defenseType:DefenseType;damageType:DamageType;attack:number;armor:number;magicArmor:number;rate:number;goldReward:number;wave:number; }
@@ -51,6 +52,7 @@ export class Defense {
   lastWaveDamage:{wave:number;stats:ReturnType<DamageMeter['snapshot']>}|null=null;
   gold:number=RULES.initialGold;
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
+  fireCasts:FireCast<Unit,number>[]=[];
   iceProjectiles:IceProjectile[]=[];iceBursts:IceBurst[]=[];
   shop:(ItemDef|null)[]=ITEMS.slice(0,RULES.shopSlots);
   shopDiscounts:boolean[]=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);
@@ -112,7 +114,7 @@ export class Defense {
     this.bossPending=false;
     const removed=this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
     this.enemies=this.enemies.filter(e=>(e.named||e.bounty)&&e.hp>0);
-    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.wave++;
+    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.wave++;
     this.log('economy',`[웨이브 전환] 남은 일반 몬스터 ${removed}마리 정리 · 처치 보상 없음 · 네임드/현상금 유지`);
     this.startWave();
   }
@@ -396,7 +398,7 @@ export class Defense {
     this.rangedSkills.clear();
     this.lastWaveDamage=null;
     this.damageMeter.reset(true);
-    this.iceProjectiles=[];this.iceBursts=[];
+    this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
     this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.bossPending=false;this.damageNumbers=[];this.nextDamageId=1;
     this.shop=ITEMS.slice(0,RULES.shopSlots);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.nextId=1;this.placementOrder=0;
@@ -422,6 +424,12 @@ export class Defense {
       for(const enemy of this.enemies)if(enemy.hp>0&&inAttackArea(area,enemy.x,enemy.y))this.hit(p.source,enemy,p.attack);
       return false;
     });
+    for(const cast of this.fireCasts){
+      const target=this.enemies.find(e=>e.id===cast.targetId&&e.hp>0),beats=advanceFire(cast,dt,target);
+      for(let i=0;i<beats;i++)for(const enemy of this.enemies)
+        if(enemy.hp>0&&Math.hypot(enemy.x-cast.tx,enemy.y-cast.ty)<=FIRE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*FIRE_SKILL.damageMultiplier);
+    }
+    this.fireCasts=this.fireCasts.filter(fireAlive);
     for(const u of this.units) {
       u.cooldown-=dt;if(u.cooldown>0)continue;
       const s=this.stats(u),pos=SLOTS[u.slot];
@@ -450,17 +458,11 @@ export class Defense {
       skill.cooldown=Math.max(0,skill.cooldown-dt);
       const s=this.stats(u),pos=SLOTS[u.slot];
       const target=()=>this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
-      if(skill.cooldown<=1e-8&&!skill.shotsLeft&&target()){
-        skill.cooldown=WAVE_RANGED_SKILL.cooldown;skill.shotsLeft=WAVE_RANGED_SKILL.hits;skill.delay=0;skill.casts++;
-        this.log('economy',`${this.unitName(u)} · 스킬 3연타 발동 · 재사용 ${WAVE_RANGED_SKILL.cooldown}초`,{sourceId:u.id});
-      }
-      if(skill.shotsLeft){
-        skill.delay-=dt;
-        while(skill.shotsLeft&&skill.delay<=1e-8){
-          const victim=target();if(!victim){skill.shotsLeft=0;break;}
-          this.iceProjectiles.push({x:pos.x,y:pos.y-12,tx:victim.x,ty:victim.y,targetId:victim.id,source:{...u},attack:s.attack,skill:true});
-          skill.shotsLeft--;skill.delay+=WAVE_RANGED_SKILL.hitInterval;
-        }
+      const victim=target();
+      if(skill.cooldown<=1e-8&&victim){
+        skill.cooldown=FIRE_SKILL.cooldown;skill.shotsLeft=0;skill.delay=0;skill.casts++;
+        this.fireCasts.push(createFireCast({...u},victim.id,s.attack,pos.x,pos.y-12,victim.x,victim.y));
+        this.log('economy',`${this.unitName(u)} · 화염 기둥 발동 · 최고 화염 3회 타격 · 재사용 ${FIRE_SKILL.cooldown}초`,{sourceId:u.id});
       }
     }
     this.enemies=this.enemies.filter(e=>e.hp>0);

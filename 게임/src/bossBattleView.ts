@@ -1,3 +1,4 @@
+import {FIRE_SKILL,fireFrame,firePlacement,FIRE_SHEET_URL,FIRE_ALPHA_MATRIX} from './fireSkill';
 import { BossBattle, type BossActor } from './bossBattle';
 import { UNITS } from './defenseConfig';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
@@ -41,7 +42,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       node.setAttribute('aria-label',`${actor.name} Lv.${actor.level??1} 체력 ${Math.ceil(actor.hp)}/${actor.maxHp} 공격 ${actor.attack} 사거리 ${actor.range}`);
       node.querySelector<HTMLElement>('.boss-fighter-hp i')!.style.width=`${actor.hp/actor.maxHp*100}%`;
     }
-    trails.innerHTML=battle.hits.map(h=>{
+    trails.innerHTML=`<defs><filter id="boss-fire-alpha" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${FIRE_ALPHA_MATRIX.join(' ')}"/></filter></defs>`+battle.hits.map(h=>{
       const from=battle.actors.find(a=>a.id===h.from)!;
       return `<g opacity="${Math.min(1,h.life/.15)}">${h.ice?'':`<path d="M${from.x} ${from.y} L${h.x} ${h.y}" stroke="${h.magic?'#8bdeff':'#ffe3a1'}" stroke-width="${h.magic?4:2}"/>`}<circle cx="${h.x}" cy="${h.y}" r="${h.magic?14:6}" fill="${h.magic?'#8bdeff88':'#ffe3a188'}"/><text x="${h.x}" y="${h.y-35-(.32-h.life)*70}" text-anchor="middle" fill="#fff0bf" font-size="22" stroke="#14201d" stroke-width="3" paint-order="stroke">${Math.round(h.damage)}</text></g>`;
     }).join('')+battle.iceProjectiles.map(p=>{
@@ -50,6 +51,10 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
     }).join('')+battle.iceBursts.map(b=>{
       const {radius,alpha,shards}=iceBurstShape(b);
       return `<g class="boss-ice-burst"><circle cx="${b.x}" cy="${b.y}" r="${radius}" fill="#87dcff" fill-opacity="${alpha*.2}" stroke="#b9efff" stroke-opacity="${alpha}" stroke-width="2"/>${shards.map((points,i)=>`<polygon points="${points.join(' ')}" fill="${i%2?'#d9faff':'#69c7ff'}" opacity="${alpha}"/>`).join('')}</g>`;
+    }).join('');
+    trails.innerHTML+=battle.fireCasts.map(cast=>{
+      const f=fireFrame(cast),p=firePlacement(cast),x=p.x-p.width/2,y=p.y-p.height*p.anchorY;
+      return `<g class="boss-fire-skill" transform="rotate(${p.rotation*180/Math.PI} ${p.x} ${p.y})" filter="url(#boss-fire-alpha)"><svg x="${x}" y="${y}" width="${p.width}" height="${p.height}" viewBox="${f.x} ${f.y} ${f.width} ${f.height}" preserveAspectRatio="none" overflow="hidden"><image href="${FIRE_SHEET_URL}" width="1536" height="1024"/></svg></g>`;
     }).join('');
     document.querySelector('.boss-skill-hero-card')!.classList.toggle('hero-absent',!battle.actors.some(a=>a.kind==='ranged'));
     document.querySelector('.boss-skill-hero-card small')!.textContent=battle.actors.some(a=>a.kind==='ranged')?'웨이브 편성 연동':'웨이브전 미배치';
@@ -69,7 +74,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
     const basicReady=!!hero&&!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
     updateSkillFill(commander,battle.commanderCooldown,15,fighting&&battle.actors.some(a=>a.side==='ally'&&a.hp>0),!commander.disabled);
     updateSkillFill(document.getElementById('boss-basic-skill')!,hero?.cooldown??0,hero?1/hero.rate:1,fighting&&!!hero,basicReady);
-    updateSkillFill(triple,battle.heroSkillCooldown,4,fighting&&!!hero,battle.canTriple());
+    updateSkillFill(triple,battle.heroSkillCooldown,FIRE_SKILL.cooldown,fighting&&!!hero,battle.canTriple());
     const allies=battle.actors.filter(a=>a.side==='ally'&&a.hp>0).length;
     const enemies=battle.actors.filter(a=>a.side==='enemy'&&a.hp>0).length;
     const text=!battle.actors.some(a=>a.side==='ally')?'웨이브전에서 아군을 먼저 배치하세요':battle.result==='victory'?'시험 승리':battle.result==='defeat'?'시험 패배':'전열 우선 교전';

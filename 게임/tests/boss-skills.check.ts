@@ -14,8 +14,8 @@ export function checkBossSkills():string[]{
  check(g.tripleSkill()&&g.heroSkillCooldown===4,'triple starts four-second cooldown');
  check(!g.tripleSkill(),'triple cannot be recast during cooldown');
  const hp=target.hp;let strikes=0;
- for(let i=0;i<20;i++){g.hits=[];g.tick(.05);strikes+=g.hits.filter(h=>h.from===hero.id).length;}
- check(strikes===3&&hp-target.hp===hero.attack*3,'triple deals exactly three normal hits');
+ for(let i=0;i<50;i++){g.hits=[];g.tick(.05);strikes+=g.hits.filter(h=>h.from===hero.id).length;}
+ check(strikes===3&&hp-target.hp===hero.attack*3,'fire skill deals exactly three base damage hits');
  g.reset();const h=g.hero()!,t=g.actors.find(a=>a.kind==='retainer')!;g.actors=[h,t];h.x=t.x-10;h.y=t.y;h.cooldown=0;t.cooldown=999;g.commanderSkill();const old=t.hp;g.tick(.05);for(let i=0;i<10;i++){h.cooldown=999;g.tick(.05);}
  check(old-t.hp===h.attack,'commander does not buff hero');
  h.cooldown=0;g.tick(.05);check(Math.abs(h.cooldown-1/h.rate)<.001,'basic attack delay follows attack rate');

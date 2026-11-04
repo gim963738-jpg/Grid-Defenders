@@ -1,9 +1,10 @@
-import { Application, Container, Graphics, Sprite, Texture, Text, Rectangle } from 'pixi.js';
+import {FIRE_SKILL,fireFrame,firePlacement,FIRE_ALPHA_MATRIX} from './fireSkill';
+import { Application, ColorMatrixFilter, Container, Graphics, Sprite, Texture, Text, Rectangle } from 'pixi.js';
 import { Defense } from './defense';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
-import { WAVE_RANGED_SKILL, RULES, SLOTS, UNITS } from './defenseConfig';
+import {  RULES, SLOTS, UNITS } from './defenseConfig';
 
-export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture) {
+export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture,fireTexture:Texture) {
   const root=new Container();app.stage.addChild(root);
   const field=new Graphics();root.addChild(field);
   field.roundRect(4,4,382,322,18).fill(0x101d20).stroke({width:2,color:0x52614a});
@@ -39,6 +40,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const caption=new Text({text:'순환 디펜스 · 전투 시험',style:{fontFamily:'system-ui',fontSize:10,fill:0xdacdb1}});caption.position.set(13,RULES.height-17);root.addChild(caption);
   const skillBars=new Graphics();skillBars.eventMode='none';root.addChild(skillBars);
   const skillLabels=SLOTS.map(p=>{const text=new Text({text:'',style:{fontFamily:'system-ui',fontSize:7,fill:0xeafaff,stroke:{color:0x10282f,width:1}}});text.anchor.set(.5);text.position.set(p.x,p.y+28);text.eventMode='none';text.visible=false;root.addChild(text);return text;});
+  const fireLayer=new Container();fireLayer.eventMode='none';root.addChild(fireLayer);
+  const fireFilter=new ColorMatrixFilter();fireFilter.matrix=FIRE_ALPHA_MATRIX;fireLayer.filters=[fireFilter];
+  const fireSprites:Sprite[]=[],fireTextures=new Map<string,Texture>();
   const numberPool:Text[]=[];
   const enemyLabels:Text[]=[];
   return {
@@ -68,7 +72,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         if(!u)continue;
         const skill=u.kind==='ranged'?game.rangedSkills.get(u.id):undefined;
         if(skill&&skill.casts>0){
-          const progress=Math.max(0,Math.min(1,1-skill.cooldown/WAVE_RANGED_SKILL.cooldown));
+          const progress=Math.max(0,Math.min(1,1-skill.cooldown/FIRE_SKILL.cooldown));
           skillBars.roundRect(p.x-23,p.y+24,46,8,3).fill(0x10232d).stroke({width:1,color:0x557783});
           if(progress>0)skillBars.roundRect(p.x-22,p.y+25,44*progress,6,2).fill(skill.cooldown>0?0x6ebee9:0x82dfa3);
           const text=skillLabels[i];text.visible=true;text.text=skill.cooldown>0?`${skill.cooldown.toFixed(1)}s`:'준비';
@@ -122,6 +126,14 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         iceEffects.circle(b.x,b.y,radius).fill({color:0x87dcff,alpha:alpha*0.2}).stroke({width:2,color:0xb9efff,alpha});
         shards.forEach((points,i)=>iceEffects.poly(points).fill({color:i%2?0xd9faff:0x69c7ff,alpha}));
       }
+      fireSprites.forEach(sprite=>sprite.visible=false);
+      game.fireCasts.forEach((cast,i)=>{
+        const frame=fireFrame(cast),placement=firePlacement(cast),key=`${frame.x}:${frame.y}:${frame.width}:${frame.height}`;
+        let texture=fireTextures.get(key);
+        if(!texture){texture=new Texture({source:fireTexture.source,frame:new Rectangle(frame.x,frame.y,frame.width,frame.height)});fireTextures.set(key,texture);}
+        if(!fireSprites[i]){const sprite=new Sprite(texture);sprite.eventMode='none';fireSprites.push(sprite);fireLayer.addChild(sprite);}
+        const sprite=fireSprites[i];sprite.texture=texture;sprite.visible=true;sprite.anchor.set(.5,placement.anchorY);sprite.position.set(placement.x,placement.y);sprite.width=placement.width;sprite.height=placement.height;sprite.rotation=placement.rotation;
+      });
       for(let i=0;i<Math.max(numberPool.length,game.damageNumbers.length);i++){
         const number=game.damageNumbers[i];
         if(!number){numberPool[i].visible=false;continue;}
