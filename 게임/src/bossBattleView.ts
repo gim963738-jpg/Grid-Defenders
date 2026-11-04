@@ -1,4 +1,5 @@
 import {heroImage,sheetHero,assassinArt,assassinSkillIcon} from './heroArt';
+import {skillFramePlacement} from './skillVisual';
 import {ASSASSIN,assassinFrame} from './assassinCombat';
 import {BROKEN_SHIELD_SVG,effectiveArmor} from './armorBreak';
 import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_SHEET_URL,BLADE_ALPHA_MATRIX} from './bladeSkill';
@@ -9,7 +10,7 @@ import { UNITS, type UnitKind } from './defenseConfig';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 
 function art(a:BossActor,battle?:BossBattle):string {
-  if(battle&&a.kind==='assassin'){const action=battle.assassinActions.find(c=>c.sourceId===a.id&&!c.cancelled);if(action){const frame=assassinArt(action.kind==='basic'?'basic':'boss',assassinFrame(action));if(frame)return `<img src="${frame.url}" alt="" draggable="false">`;}}
+  if(battle&&a.kind==='assassin'){const action=battle.assassinActions.find(c=>c.sourceId===a.id&&!c.cancelled);if(action){const frame=assassinArt(action.kind==='basic'?'basic':'boss',assassinFrame(action));if(frame)return `<svg class="boss-assassin-frame" viewBox="0 0 ${frame.contentWidth} ${frame.contentHeight}" preserveAspectRatio="xMidYMax meet" overflow="visible" aria-hidden="true"><image href="${frame.url}" x="${-frame.padding}" y="${-frame.padding}" width="${frame.texture.width}" height="${frame.texture.height}"/></svg>`;}}
   if(a.kind in UNITS&&UNITS[a.kind as UnitKind].hero){const target=battle?.target(a),walking=!!target&&Math.hypot(target.x-a.x,target.y-a.y)>a.range;return heroImage(a.kind as UnitKind,walking?'walk':a.cooldown>1/a.rate-.2?'attack':'idle',Math.floor((battle?.elapsed??0)*8));}
   if(a.kind==='ranged'||a.kind==='melee')return `<img src="${import.meta.env.BASE_URL}assets/heroes/${a.kind}-idle.png" alt="" draggable="false">`;
   if(a.kind==='boss')return '<span class="boss-test-monster boss-test-chief">♛<i>◆</i></span>';
@@ -31,6 +32,8 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
   const trails=document.createElementNS('http://www.w3.org/2000/svg','svg');
   trails.setAttribute('viewBox','0 0 1000 562.5');trails.classList.add('boss-hit-trails');
   root.append(trails);
+  const assassinEffects=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  assassinEffects.setAttribute('viewBox','0 0 1000 562.5');assassinEffects.classList.add('boss-hit-trails','boss-assassin-effects');root.append(assassinEffects);
   return {draw(){
     const stopped=paused();
     const current=new Set(battle.actors.map(a=>a.id));
@@ -84,7 +87,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       const f=bladeFrame(cast),p=bladePlacement(cast);
       return `<g class="boss-blade-skill" filter="url(#boss-blade-alpha)"><svg x="${p.x-p.width*p.anchorX}" y="${p.y-p.height*p.anchorY}" width="${p.width}" height="${p.height}" viewBox="${f.x} ${f.y} ${f.width} ${f.height}" preserveAspectRatio="none" overflow="hidden"><image href="${BLADE_SHEET_URL}" width="1536" height="1024"/></svg></g>`;
     }).join('');
-    trails.innerHTML+=battle.assassinImpacts.map(impact=>{const image=assassinArt('impact',impact.kind);return image?`<image class="boss-assassin-impact" href="${image.url}" x="${impact.x-45}" y="${impact.y-30}" width="90" height="70" opacity="${Math.min(1,impact.life/.1)}"/>`:'';}).join('');
+    assassinEffects.innerHTML=battle.assassinImpacts.map(impact=>{const image=assassinArt('impact',impact.kind);if(!image)return '';const p=skillFramePlacement(image,impact.x,impact.y,70);return `<image class="boss-assassin-impact" href="${image.url}" x="${p.x-p.width*p.anchorX}" y="${p.y-p.height*p.anchorY}" width="${p.width}" height="${p.height}" opacity="${Math.min(1,impact.life/.1)}"/>`;}).join('');
     const heroes=battle.actors.filter(a=>a.side==='ally'&&UNITS[a.kind as keyof typeof UNITS]?.hero);
     const signature=heroes.map(h=>`${h.id}:${h.kind}`).join('|');
     if(signature!==heroSignature||!skillRoot.children.length){

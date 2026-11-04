@@ -645,7 +645,8 @@
 #command-area[data-hero-backdrop=assassin]::before{background-position:32% 66.666%;}
 #command-area[data-hero-backdrop=healer]::before{background-position:32% 100%;}
 .boss-fighter.sheet-hero .boss-fighter-art img{width:200%;max-width:none;height:160%;object-fit:contain;}
-.boss-fighter.assassin-motion .boss-fighter-art img{width:160%;height:155%;transform:translateY(-20%);}
+.boss-fighter.assassin-motion .boss-assassin-frame{width:160%;height:155%;transform:translateY(-20%);overflow:visible;}
+.boss-hit-trails.boss-assassin-effects{z-index:1;overflow:visible;}
 .boss-armor-break{position:absolute;left:50%;bottom:125%;transform:translateX(-50%);width:22px;height:25px;pointer-events:none;}
 .boss-armor-break svg{width:100%;height:100%;}
 .boss-assassin-skill-icon{display:block;width:32px;height:32px;float:left;margin-right:7px;border:1px solid #9b6270;border-radius:4px;overflow:hidden;}

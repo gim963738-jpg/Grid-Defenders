@@ -1,4 +1,5 @@
 import {smoothTexture} from './renderQuality';
+import {skillFramePlacement} from './skillVisual';
 import {heroFrame,assassinArt} from './heroArt';
 import {ASSASSIN,assassinFrame,assassinBasicTrail} from './assassinCombat';
 import type {UnitKind} from './defenseConfig';
@@ -35,6 +36,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const effects=new Graphics();effects.eventMode='none';root.addChild(effects);
   const movementPreview=new Graphics();movementPreview.eventMode='none';root.addChild(movementPreview);
   const assassinTrails=new Graphics();assassinTrails.eventMode='none';root.addChild(assassinTrails);
+  // Unclipped effect layer beneath actors and labels; its bounds never use a placement slot.
+  const assassinLayer=new Container();assassinLayer.eventMode='none';root.addChild(assassinLayer);
+  const assassinSprites:Sprite[]=[];
   const actors=new Graphics();root.addChild(actors);
   actors.eventMode='none';
   const heroSprites:Partial<Record<UnitKind,Sprite>>={ranged:new Sprite(rangedTexture),melee:new Sprite(meleeTexture)};
@@ -55,8 +59,6 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const bladeLayer=new Container();bladeLayer.eventMode='none';root.addChild(bladeLayer);
   const bladeFilter=new ColorMatrixFilter();bladeFilter.matrix=BLADE_ALPHA_MATRIX;bladeLayer.filters=[bladeFilter];
   const bladeSprites:Sprite[]=[],bladeTextures=new Map<string,Texture>();
-  const assassinLayer=new Container();assassinLayer.eventMode='none';root.addChild(assassinLayer);
-  const assassinSprites:Sprite[]=[];
   const numberPool:Text[]=[];
   const enemyLabels:Text[]=[];
   return {
@@ -102,8 +104,12 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         if(heroSprites[u.kind]){
           const sprite=heroSprites[u.kind]!;sprite.visible=true;sprite.position.set(p.x,p.y+12);
           const action=game.assassinActions.find(a=>a.sourceId===u.id&&!a.cancelled&&(a.kind==='basic'||a.kind==='wave'&&assassinFrame(a)<=9));
-          const art=action?assassinArt(action.kind==='basic'?'basic':'wave',assassinFrame(action)):heroFrame(u.kind,u.cooldown>1/game.stats(u).rate-.2?'attack':'idle');
-          if(art){sprite.texture=art.texture;sprite.height=action?65:57;sprite.scale.x=sprite.scale.y;sprite.anchor.set(.5,1);}
+          const motion=action?assassinArt(action.kind==='basic'?'basic':'wave',assassinFrame(action)):undefined;
+          const art=motion??heroFrame(u.kind,u.cooldown>1/game.stats(u).rate-.2?'attack':'idle');
+          if(art){sprite.texture=art.texture;
+            if(motion){const v=skillFramePlacement(motion,p.x,p.y+12,65);sprite.anchor.set(v.anchorX,v.anchorY);sprite.width=v.width;sprite.height=v.height;}
+            else{sprite.height=57;sprite.scale.x=sprite.scale.y;sprite.anchor.set(.5,1);}
+          }
           continue;
         }
         actors.roundRect(p.x-10,p.y-9,20,21,4).fill(color).stroke({width:2,color:0x172731});
@@ -181,9 +187,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         const sprite=bladeSprites[i];sprite.texture=texture;sprite.visible=true;sprite.anchor.set(p.anchorX,p.anchorY);sprite.position.set(p.x,p.y);sprite.width=p.width;sprite.height=p.height;
       });
       assassinSprites.forEach(sprite=>sprite.visible=false);
-      const assassinVisuals=game.assassinActions.filter(a=>a.kind==='wave'&&assassinFrame(a)>=10).map(a=>({art:assassinArt('wave',assassinFrame(a)),x:a.impact?.x??game.enemies.find(e=>e.id===a.targets[0])?.x??a.origin.x,y:a.impact?.y??game.enemies.find(e=>e.id===a.targets[0])?.y??a.origin.y,width:80,height:90,alpha:1}));
-      for(const impact of game.assassinImpacts)assassinVisuals.push({art:assassinArt('impact',impact.kind),x:impact.x,y:impact.y,width:50,height:42,alpha:Math.min(1,impact.life/.1)});
-      assassinVisuals.forEach((v,i)=>{if(!v.art)return;if(!assassinSprites[i]){const sprite=new Sprite(v.art.texture);sprite.eventMode='none';assassinSprites.push(sprite);assassinLayer.addChild(sprite);}const sprite=assassinSprites[i];sprite.texture=v.art.texture;sprite.visible=true;sprite.anchor.set(.5,1);sprite.position.set(v.x,v.y+10);sprite.width=v.width;sprite.height=v.height;sprite.alpha=v.alpha;});
+      const assassinVisuals=game.assassinActions.filter(a=>!a.cancelled&&a.kind==='wave'&&assassinFrame(a)>=10).map(a=>({art:assassinArt('wave',assassinFrame(a)),x:a.impact?.x??game.enemies.find(e=>e.id===a.targets[0])?.x??a.origin.x,y:(a.impact?.y??game.enemies.find(e=>e.id===a.targets[0])?.y??a.origin.y)+10,height:90,alpha:1}));
+      for(const impact of game.assassinImpacts)assassinVisuals.push({art:assassinArt('impact',impact.kind),x:impact.x,y:impact.y,height:48,alpha:Math.min(1,impact.life/.1)});
+      assassinVisuals.forEach((v,i)=>{if(!v.art)return;if(!assassinSprites[i]){const sprite=new Sprite(v.art.texture);sprite.eventMode='none';assassinSprites.push(sprite);assassinLayer.addChild(sprite);}const sprite=assassinSprites[i],p=skillFramePlacement(v.art,v.x,v.y,v.height);sprite.texture=v.art.texture;sprite.visible=true;sprite.anchor.set(p.anchorX,p.anchorY);sprite.position.set(p.x,p.y);sprite.width=p.width;sprite.height=p.height;sprite.alpha=v.alpha;});
       for(let i=0;i<Math.max(numberPool.length,game.damageNumbers.length);i++){
         const number=game.damageNumbers[i];
         if(!number||!showDamageNumbers()){if(numberPool[i])numberPool[i].visible=false;continue;}
