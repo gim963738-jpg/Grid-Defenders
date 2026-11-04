@@ -34,7 +34,7 @@
         <button data-tab="gear" aria-pressed="false">장비·가방·상점</button>
       </nav>
       <section id="summon" class="panel">
-        <div class="section-title"><h2>병사 소환</h2><span>카드 → 전장 드래그 또는 클릭 소환</span></div>
+        <div class="section-title summon-heading"><h2>병사 소환</h2><div class="resource-wallet" role="group" aria-label="소환 재화"><span class="resource-token resource-gold"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="#d8a83e" stroke="#ffe298"/><circle cx="8" cy="8" r="4.1" fill="none" stroke="#8d6225"/><path d="M8 4.8v6.4M6.4 6h2.1c1.7 0 1.7 2 0 2H7.5c-1.7 0-1.7 2 0 2h2.1" fill="none" stroke="#fff0b8" stroke-width=".8"/></svg><span class="resource-label">골드</span><strong data-resource-value="gold">480</strong></span><span class="resource-token resource-anvils"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12v2H9.5v2.5L12 11v2H4v-2l2.5-2.5V6H4L1 4Z" fill="#a7bec9" stroke="#d9e7ed" stroke-width=".7"/><path d="M4 13h8" stroke="#627f8b" stroke-width="2"/></svg><span class="resource-label">모루</span><strong data-resource-value="anvils">0</strong></span></div></div>
         <div id="soldiers" class="cards three" aria-label="병사 선택 · 클릭하여 능력치 확인"></div>
         <div class="section-title"><h2>영웅 소환</h2><span id="hero-count">무료 · 최대 3명</span><div class="hero-carousel-controls"><button id="hero-prev" aria-label="이전 영웅">‹</button><span id="hero-carousel-position" aria-live="polite">1 / 4</span><button id="hero-next" aria-label="다음 영웅">›</button></div></div>
         <div id="heroes" class="hero-carousel" role="group" aria-roledescription="캐러셀" aria-label="영웅 선택 · 좌우로 넘긴 뒤 클릭하여 소환" tabindex="0"></div>
@@ -48,7 +48,7 @@
             <h2 id="gear-title">영웅 장비</h2><div id="equipment" aria-label="영웅 장비칸 4열 5행"></div>
           </section>
           <aside class="equipment-bag">
-            <div class="inventory-actions" aria-hidden="true"></div>
+            <div class="inventory-actions"><div class="resource-wallet" role="group" aria-label="공용 가방 재화"><span class="resource-token resource-gold"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="#d8a83e" stroke="#ffe298"/><circle cx="8" cy="8" r="4.1" fill="none" stroke="#8d6225"/><path d="M8 4.8v6.4M6.4 6h2.1c1.7 0 1.7 2 0 2H7.5c-1.7 0-1.7 2 0 2h2.1" fill="none" stroke="#fff0b8" stroke-width=".8"/></svg><span class="resource-label">골드</span><strong data-resource-value="gold">480</strong></span><span class="resource-token resource-anvils"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12v2H9.5v2.5L12 11v2H4v-2l2.5-2.5V6H4L1 4Z" fill="#a7bec9" stroke="#d9e7ed" stroke-width=".7"/><path d="M4 13h8" stroke="#627f8b" stroke-width="2"/></svg><span class="resource-label">모루</span><strong data-resource-value="anvils">0</strong></span></div></div>
             <h3>공용 가방</h3><div class="bag-frame"><div class="inventory-scroll"><div id="gear-bag" class="inventory-grid" aria-label="영웅 장비창의 공용 가방 5열 3행 표시"></div></div></div>
             <p id="combine-status" aria-live="polite"></p><div class="inventory-combine-action" aria-label="아이템 조합"><button id="combine" class="small-button" disabled>조합</button></div><div id="item-detail" class="detail"></div>
             <p class="gear-combine-hint">조합 예정: 노란선 · 후순위: 회색선 · 누르는 동안: 파란 점선</p>

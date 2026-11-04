@@ -323,6 +323,7 @@ function refreshLinks():void {
   svg.innerHTML=lines.join('');
 }
 function updateHud():void {
+  for(const key of ['gold','anvils'] as const)document.querySelectorAll<HTMLElement>(`[data-resource-value="${key}"]`).forEach(node=>{node.textContent=game[key].toLocaleString();});
   el('gold').innerHTML=`${game.gold} <small>G</small>`;
   const bountyActive=game.enemies.some(e=>e.bounty&&e.hp>0),credits=game.bountyCredits();
   el('enemies').innerHTML=`${game.enemies.filter(e=>!e.bounty&&!e.named).length} <small>/ ${RULES.maxEnemies}</small>${bountyActive?' <small class="bounty-hud">현상금1</small>':''}`;
