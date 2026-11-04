@@ -71,7 +71,8 @@ export class BossBattle {
     if(!this.canTriple())return false;
     const hero=this.hero()!,target=this.target(hero)!;
     this.heroSkillCooldown=FIRE_SKILL.cooldown;
-    this.fireCasts.push(createFireCast({...hero},target.id,this.attackPower(hero),hero.x,hero.y-12,target.x,target.y));return true;
+    // Bottom of the 90%-height monster art in the 562.5-high boss field.
+    this.fireCasts.push(createFireCast({...hero},target.id,this.attackPower(hero),hero.x,hero.y-12,target.x,target.y,target.kind==='boss'?55.6875:40.5));return true;
   }
   private attackPower(actor:BossActor):number {
     const bonus=actor.side==='ally'&&['guard','archer','mage'].includes(actor.kind)&&this.commanderBuff>0?100:0;

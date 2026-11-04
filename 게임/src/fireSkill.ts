@@ -4,13 +4,14 @@ export const FIRE_SKILL={cooldown:4,speed:320,radius:48,damageMultiplier:1,hits:
 export const FIRE_SHEET_URL=`${import.meta.env.BASE_URL}assets/effects/fire-skill-sheet.png`;
 // Dark blue backgrounds and gray cell dividers are discarded at render time.
 export const FIRE_ALPHA_MATRIX:[number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number]=[1,0,0,0,0, 0,1,0,0,0, 0,0,1,0,0, 2,-.5,-2,0,-.08];
-export interface FireCast<S,Id>{source:S;targetId:Id;attack:number;x:number;y:number;tx:number;ty:number;stage:'flight'|'pillar';age:number;hits:number;}
-export function createFireCast<S,Id>(source:S,targetId:Id,attack:number,x:number,y:number,tx:number,ty:number):FireCast<S,Id>{
- return {source,targetId,attack,x,y,tx,ty,stage:'flight',age:0,hits:0};
+export interface FireCast<S,Id>{source:S;targetId:Id;attack:number;x:number;y:number;tx:number;ty:number;stage:'flight'|'pillar';age:number;hits:number;footOffset:number;}
+export function createFireCast<S,Id>(source:S,targetId:Id,attack:number,x:number,y:number,tx:number,ty:number,footOffset=8):FireCast<S,Id>{
+ return {source,targetId,attack,x,y,tx,ty,stage:'flight',age:0,hits:0,footOffset};
 }
 /** Returns newly crossed damage beats. Landing and magic-circle creation deal no damage. */
 export function advanceFire<S,Id>(cast:FireCast<S,Id>,dt:number,target?:{x:number;y:number}):number{
- if(target&&(cast.stage==='flight'||cast.hits===0)){cast.tx=target.x;cast.ty=target.y;}
+ // Only the airborne projectile follows the enemy. Landing locks the damage center.
+ if(target&&cast.stage==='flight'){cast.tx=target.x;cast.ty=target.y;}
  if(cast.stage==='flight'){
   const dx=cast.tx-cast.x,dy=cast.ty-cast.y,d=Math.hypot(dx,dy),step=FIRE_SKILL.speed*dt;
   if(d>step){cast.x+=dx/d*step;cast.y+=dy/d*step;cast.age+=dt;return 0;}
@@ -21,9 +22,22 @@ export function advanceFire<S,Id>(cast:FireCast<S,Id>,dt:number,target?:{x:numbe
  return beats;
 }
 export const fireAlive=(cast:FireCast<unknown,unknown>)=>cast.stage==='flight'||cast.age<FIRE_SKILL.duration;
-export interface FireFrame{x:number;y:number;width:number;height:number;}
-const row=(x:number,y:number,width:number,height:number,count:number):FireFrame[]=>Array.from({length:count},(_,i)=>({x:Math.round(x+i*width/count)+2,y:y+2,width:Math.round(width/count)-4,height:height-4}));
-const flight=row(268,351,1240,85,10),impact=row(268,481,1240,98,7),rise=row(268,623,1240,139,9),fade=row(268,808,1240,170,9);
+export interface FireFrame{x:number;y:number;width:number;height:number;pivotX:number;pivotY:number;}
+// The supplied sheet uses uneven cell widths. Each ground frame has its own
+// measured magic-circle center, independent of the surrounding empty pixels.
+function frames(bounds:number[],y:number,height:number,pivots?:[number,number][]):FireFrame[]{
+ return bounds.slice(0,-1).map((left,i)=>{
+  const x=left+2,top=y+2,width=bounds[i+1]-left-4,h=height-4;
+  return {x,y:top,width,height:h,pivotX:pivots?pivots[i][0]-x:width/2,pivotY:pivots?pivots[i][1]-top:h/2};
+ });
+}
+const flight=frames([268,382,499,618,740,863,989,1119,1248,1381,1508],351,85);
+const impact=frames([268,391,538,715,907,1099,1301,1508],481,98,
+ [[330,537],[464,537.5],[625.5,544],[809,544],[1001.5,543.5],[1198,544],[1402,544]]);
+const rise=frames([268,402,535,669,804,940,1077,1215,1355,1508],623,139,
+ [[336.5,730],[469,729.5],[602.5,730],[737,730],[873,730.5],[1009,730.5],[1146,731],[1284.5,731.5],[1429.5,732.5]]);
+const fade=frames([268,405,544,682,820,959,1096,1232,1369,1508],808,170,
+ [[336,948],[474.5,948],[614,948],[752.5,948.5],[891,948.5],[1031,949],[1170,949],[1307,949],[1444,949]]);
 export function fireFrame(cast:FireCast<unknown,unknown>):FireFrame{
  if(cast.stage==='flight')return flight[Math.min(9,Math.floor(cast.age/.035))];
  const t=cast.age;if(t<.35)return impact[Math.min(6,Math.floor((t+1e-8)/.05))];
@@ -31,6 +45,10 @@ export function fireFrame(cast:FireCast<unknown,unknown>):FireFrame{
  return fade[Math.min(8,Math.max(0,Math.floor((t-.98+1e-8)/.07)))];
 }
 export function firePlacement(cast:FireCast<unknown,unknown>){
- if(cast.stage==='flight')return {x:cast.x,y:cast.y,width:54,height:34,anchorY:.5,rotation:Math.atan2(cast.ty-cast.y,cast.tx-cast.x)};
- return {x:cast.tx,y:cast.ty+14,width:100,height:cast.age<.35?58:cast.age<.98?104:128,anchorY:1,rotation:0};
+ if(cast.stage==='flight')return {x:cast.x,y:cast.y,width:54,height:34,anchorX:.5,anchorY:.5,rotation:Math.atan2(cast.ty-cast.y,cast.tx-cast.x)};
+ const frame=fireFrame(cast),scale=.75;
+ // One source-pixel scale throughout the pillar keeps the circle grounded
+ // while its flames grow. The collision point remains the monster's center.
+ return {x:cast.tx,y:cast.ty+cast.footOffset,width:frame.width*scale,height:frame.height*scale,
+  anchorX:frame.pivotX/frame.width,anchorY:frame.pivotY/frame.height,rotation:0};
 }

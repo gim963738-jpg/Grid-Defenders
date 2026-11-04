@@ -1,6 +1,6 @@
 import {FIRE_SKILL,fireFrame,firePlacement,FIRE_ALPHA_MATRIX} from './fireSkill';
 import { Application, ColorMatrixFilter, Container, Graphics, Sprite, Texture, Text, Rectangle } from 'pixi.js';
-import { Defense } from './defense';
+import { Defense,enemyRadius } from './defense';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 import {  RULES, SLOTS, UNITS } from './defenseConfig';
 
@@ -99,7 +99,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
       }
       for(const [index,e] of game.enemies.entries()) {
         actors.ellipse(e.x,e.y+7,10,4).fill({color:0x1d261d,alpha:0.4});
-        const radius=e.named?14:e.bounty?12:8,color=e.bounty?0xb87a30:e.defenseType==='physical'?0x518db2:e.defenseType==='magic'?0x9660b4:0xbc6560;
+        const radius=enemyRadius(e),color=e.bounty?0xb87a30:e.defenseType==='physical'?0x518db2:e.defenseType==='magic'?0x9660b4:0xbc6560;
         actors.roundRect(e.x-radius,e.y-radius,radius*2,radius*2,5).fill(color).stroke({width:2,color:e.bounty||e.named?0xffdc73:0x394550});
         if(e.bounty)actors.moveTo(e.x-8,e.y-12).lineTo(e.x-8,e.y-18).lineTo(e.x-2,e.y-12).moveTo(e.x+8,e.y-12).lineTo(e.x+8,e.y-18).lineTo(e.x+2,e.y-12).stroke({width:3,color:0xffdc73});
         if(e.named)actors.moveTo(e.x-10,e.y-radius-1).lineTo(e.x-11,e.y-radius-7).lineTo(e.x-5,e.y-radius-4).lineTo(e.x,e.y-radius-10).lineTo(e.x+5,e.y-radius-4).lineTo(e.x+11,e.y-radius-7).lineTo(e.x+10,e.y-radius-1).closePath().fill(0xffdc73);
@@ -132,7 +132,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         let texture=fireTextures.get(key);
         if(!texture){texture=new Texture({source:fireTexture.source,frame:new Rectangle(frame.x,frame.y,frame.width,frame.height)});fireTextures.set(key,texture);}
         if(!fireSprites[i]){const sprite=new Sprite(texture);sprite.eventMode='none';fireSprites.push(sprite);fireLayer.addChild(sprite);}
-        const sprite=fireSprites[i];sprite.texture=texture;sprite.visible=true;sprite.anchor.set(.5,placement.anchorY);sprite.position.set(placement.x,placement.y);sprite.width=placement.width;sprite.height=placement.height;sprite.rotation=placement.rotation;
+        const sprite=fireSprites[i];sprite.texture=texture;sprite.visible=true;sprite.anchor.set(placement.anchorX,placement.anchorY);sprite.position.set(placement.x,placement.y);sprite.width=placement.width;sprite.height=placement.height;sprite.rotation=placement.rotation;
       });
       for(let i=0;i<Math.max(numberPool.length,game.damageNumbers.length);i++){
         const number=game.damageNumbers[i];

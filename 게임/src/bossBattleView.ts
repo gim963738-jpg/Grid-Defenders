@@ -53,7 +53,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       return `<g class="boss-ice-burst"><circle cx="${b.x}" cy="${b.y}" r="${radius}" fill="#87dcff" fill-opacity="${alpha*.2}" stroke="#b9efff" stroke-opacity="${alpha}" stroke-width="2"/>${shards.map((points,i)=>`<polygon points="${points.join(' ')}" fill="${i%2?'#d9faff':'#69c7ff'}" opacity="${alpha}"/>`).join('')}</g>`;
     }).join('');
     trails.innerHTML+=battle.fireCasts.map(cast=>{
-      const f=fireFrame(cast),p=firePlacement(cast),x=p.x-p.width/2,y=p.y-p.height*p.anchorY;
+      const f=fireFrame(cast),p=firePlacement(cast),x=p.x-p.width*p.anchorX,y=p.y-p.height*p.anchorY;
       return `<g class="boss-fire-skill" transform="rotate(${p.rotation*180/Math.PI} ${p.x} ${p.y})" filter="url(#boss-fire-alpha)"><svg x="${x}" y="${y}" width="${p.width}" height="${p.height}" viewBox="${f.x} ${f.y} ${f.width} ${f.height}" preserveAspectRatio="none" overflow="hidden"><image href="${FIRE_SHEET_URL}" width="1536" height="1024"/></svg></g>`;
     }).join('');
     document.querySelector('.boss-skill-hero-card')!.classList.toggle('hero-absent',!battle.actors.some(a=>a.kind==='ranged'));

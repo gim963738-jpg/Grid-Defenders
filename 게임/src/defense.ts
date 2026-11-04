@@ -4,6 +4,7 @@ import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LAB
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
 export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; named:boolean;name:string;defenseType:DefenseType;damageType:DamageType;attack:number;armor:number;magicArmor:number;rate:number;goldReward:number;wave:number; }
+export function enemyRadius(enemy:Pick<Enemy,'named'|'bounty'>):number{return enemy.named?14:enemy.bounty?12:8;}
 export function defenseMultiplier(attack:DamageType,defense:DefenseType):number {return attack===defense?0.75:1;}
 export function mitigatedDamage(attack:number,type:DamageType,defense:DefenseType):number {return Math.round(attack*defenseMultiplier(type,defense));}
 export interface DamageNumber {id:number;x:number;y:number;damage:number;critical:boolean;life:number;}
@@ -461,7 +462,7 @@ export class Defense {
       const victim=target();
       if(skill.cooldown<=1e-8&&victim){
         skill.cooldown=FIRE_SKILL.cooldown;skill.shotsLeft=0;skill.delay=0;skill.casts++;
-        this.fireCasts.push(createFireCast({...u},victim.id,s.attack,pos.x,pos.y-12,victim.x,victim.y));
+        this.fireCasts.push(createFireCast({...u},victim.id,s.attack,pos.x,pos.y-12,victim.x,victim.y,enemyRadius(victim)));
         this.log('economy',`${this.unitName(u)} · 화염 기둥 발동 · 최고 화염 3회 타격 · 재사용 ${FIRE_SKILL.cooldown}초`,{sourceId:u.id});
       }
     }
