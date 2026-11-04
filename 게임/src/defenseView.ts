@@ -39,7 +39,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const actors=new Graphics();root.addChild(actors);
   actors.eventMode='none';
   const heroSprites:Partial<Record<UnitKind,Sprite>>={ranged:new Sprite(rangedTexture),melee:new Sprite(meleeTexture)};
-  for(const kind of ['tank','healer','arcanist','assassin'] as const){const art=heroFrame(kind);if(art)heroSprites[kind]=new Sprite(art.texture);}
+  for(const kind of ['melee','tank','healer','arcanist','assassin'] as const){const art=heroFrame(kind);if(art)heroSprites[kind]=new Sprite(art.texture);}
   for(const sprite of Object.values(heroSprites)){
     sprite.anchor.set(.5,1);sprite.eventMode='none';sprite.height=57;sprite.scale.x=sprite.scale.y;sprite.visible=false;root.addChild(sprite);
   }
@@ -105,7 +105,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
           const sprite=heroSprites[u.kind]!;sprite.visible=true;sprite.position.set(p.x,p.y+12);
           const action=game.assassinActions.find(a=>a.sourceId===u.id&&!a.cancelled&&(a.kind==='basic'||a.kind==='wave'&&assassinFrame(a)<=9));
           const motion=action?assassinArt(action.kind==='basic'?'basic':'wave',assassinFrame(action)):undefined;
-          const art=motion??heroFrame(u.kind,u.cooldown>1/game.stats(u).rate-.2?'attack':'idle');
+          const art=motion??heroFrame(u.kind,u.cooldown>1/game.stats(u).rate-.2?'attack':'idle',Math.floor(game.elapsed*5));
           if(art){sprite.texture=art.texture;
             if(motion){const v=skillFramePlacement(motion,p.x,p.y+12,65);sprite.anchor.set(v.anchorX,v.anchorY);sprite.width=v.width;sprite.height=v.height;}
             else{sprite.height=57;sprite.scale.x=sprite.scale.y;sprite.anchor.set(.5,1);}

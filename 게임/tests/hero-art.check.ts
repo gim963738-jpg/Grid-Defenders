@@ -5,6 +5,10 @@ import {createBossBattleView} from '../src/bossBattleView';
 export async function checkHeroArt(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};await loadHeroArt();
  const decode=async(url:string)=>{const image=new Image();image.src=url;await image.decode();return image;};
+ const idle=Array.from({length:4},(_,i)=>heroFrame('melee','idle',i)!),walk=Array.from({length:8},(_,i)=>heroFrame('melee','walk',i)!);
+ check(new Set(idle.map(f=>f.url)).size===4&&new Set(walk.map(f=>f.url)).size===8,'melee atlas supplies four idle and eight distinct walking frames');
+ check([...idle,...walk].every(f=>f.texture.width===320&&f.texture.height===340),'melee poses share stable canvas dimensions and ground placement');
+ check(heroFrame('melee','idle',4)===idle[0]&&heroFrame('melee','walk',8)===walk[0],'melee idle and walk loops wrap at their own frame counts');
  const sheet=await decode(ASSASSIN_SHEET_URL);check(sheet.naturalWidth===1536&&sheet.naturalHeight===1024,'assassin uses replacement high-resolution source');
  for(const kind of ['tank','arcanist','assassin','healer'] as const){
   const frames=await Promise.all(['idle','walk','attack'].map((p,i)=>decode(heroFrame(kind,p as 'idle'|'walk'|'attack',i)!.url)));
