@@ -1,3 +1,4 @@
+import {createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
 import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter, DamagePeaks } from './damageMeter';
 import type { Defense } from './defense';
@@ -13,7 +14,7 @@ export interface BossActor {
 }
 export interface BossIceProjectile {x:number;y:number;tx:number;ty:number;targetId:string;source:BossActor;attack:number;}
 export interface BossIceBurst {x:number;y:number;life:number;}
-export interface BossHit {from:string;to:string;x:number;y:number;damage:number;magic:boolean;life:number;ice?:boolean;critical?:boolean;splash?:boolean;}
+export interface BossHit {from:string;to:string;x:number;y:number;damage:number;magic:boolean;life:number;ice?:boolean;sword?:boolean;critical?:boolean;splash?:boolean;}
 /** Independent temporary encounter: it never mutates defense units, equipment or rewards. */
 export class BossBattle {
   readonly damageMeter:DamageMeter;
@@ -27,6 +28,8 @@ export class BossBattle {
   commanderCooldown=0;
   commanderBuff=0;
   heroSkillCooldown=0;
+  swordAttacks:SwordAttack<string,string>[]=[];
+  readonly swordSwingCounts=new Map<string,number>();
   fireCasts:FireCast<BossActor,string>[]=[];
   elapsed=0;
   result:'fighting'|'victory'|'defeat'='fighting';
@@ -36,7 +39,7 @@ export class BossBattle {
     this.damageMeter.reset();
     this.roster=roster.map(u=>({...u,stats:{...u.stats}}));
     this.actors=[];this.hits=[];this.iceProjectiles=[];this.iceBursts=[];this.elapsed=0;this.result='fighting';
-    this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.fireCasts=[];
+    this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.fireCasts=[];this.swordAttacks=[];this.swordSwingCounts.clear();
     for(const u of this.roster){
       const d=UNITS[u.kind],s=u.stats,col=3-Math.floor(u.slot/4),row=u.slot%4+2;
       this.actors.push({id:`ally-${u.id}`,side:'ally',kind:u.kind,name:d.name,level:u.level,sourceSlot:u.slot,
@@ -83,14 +86,23 @@ export class BossBattle {
       this.iceProjectiles.push({x:actor.x,y:actor.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...actor},attack:this.attackPower(actor)});
       return;
     }
+    if(actor.kind==='melee'){
+      const sequence=this.swordSwingCounts.get(actor.id)??0;this.swordSwingCounts.set(actor.id,sequence+1);
+      this.swordAttacks.push(createSwordAttack(actor.id,target.id,this.attackPower(actor),false,sequence,actor.rate,target.x,target.y));return;
+    }
     const critical=(actor.critChance??0)>this.random();
     const amount=this.attackPower(actor)*(critical?(actor.critMultiplier??1.5):1)*(target.defenseType===actor.damageType ? .75 : 1);
     damage.set(target.id,(damage.get(target.id)??0)+amount);
     this.hits.push({from:actor.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:actor.damageType==='magic',life:.32,critical});
   }
   tick(seconds:number):void {
-    if(this.result!=='fighting')return;
-    const dt=Math.min(.05,Math.max(0,seconds));this.elapsed+=dt;
+    const dt=Math.min(.05,Math.max(0,seconds));
+    if(this.result!=='fighting'){
+      // Finish the final sword flash without extending combat time or dealing damage.
+      for(const swing of this.swordAttacks)swing.age+=dt;
+      this.swordAttacks=this.swordAttacks.filter(swordAlive);return;
+    }
+    this.elapsed+=dt;
     this.commanderCooldown=Math.max(0,this.commanderCooldown-dt);
     this.commanderBuff=Math.max(0,this.commanderBuff-dt);
     this.heroSkillCooldown=Math.max(0,this.heroSkillCooldown-dt);
@@ -117,6 +129,16 @@ export class BossBattle {
       }
       return false;
     });
+    this.swordAttacks=this.swordAttacks.filter(s=>live.some(a=>a.id===s.sourceId));
+    for(const swing of this.swordAttacks){
+      const source=live.find(a=>a.id===swing.sourceId)!,target=live.find(a=>a.id===swing.targetId);
+      if(advanceSword(swing,dt,target)&&target){
+        const amount=swing.attack*(target.defenseType===source.damageType?.75:1);
+        damage.set(target.id,(damage.get(target.id)??0)+amount);
+        this.hits.push({from:source.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:false,life:.32,sword:true});
+      }
+    }
+    this.swordAttacks=this.swordAttacks.filter(swordAlive);
     for(const {actor,target} of plans){
       if(!target)continue;
       actor.cooldown=Math.max(0,actor.cooldown-dt);

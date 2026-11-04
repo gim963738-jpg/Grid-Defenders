@@ -1,3 +1,4 @@
+import {SWORD_SHEET_URL} from './swordAttack';
 import {FIRE_SHEET_URL} from './fireSkill';
 import { Application, Assets, Texture } from 'pixi.js';
 import { Defense, recipeForTypes, type LogCategory } from './defense';
@@ -689,6 +690,7 @@ async function start():Promise<void> {
   const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
   const meleeTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/melee-idle.png`);
   const fireTexture=await Assets.load<Texture>(FIRE_SHEET_URL);
+  const swordTexture=await Assets.load<Texture>(SWORD_SHEET_URL);
   const view=createDefenseView(app,game,(slot)=>{
     if(unitDrag?.moved||summonDrag?.active)return;
     const unit=game.units.find(u=>u.slot===slot);
@@ -696,7 +698,7 @@ async function start():Promise<void> {
     else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
     else game.note('먼저 아래에서 소환할 병사 또는 영웅을 선택하세요.');
     refresh();
-  },rangedTexture,meleeTexture,fireTexture);
+  },rangedTexture,meleeTexture,fireTexture,swordTexture);
   let lastRevision=-1,hudClock=0,meterClock=0;
   renderMonsterTools();
   renderRecipeTree();

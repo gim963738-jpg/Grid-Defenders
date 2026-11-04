@@ -1,3 +1,4 @@
+import {createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
 import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter } from './damageMeter';
 import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
@@ -53,6 +54,8 @@ export class Defense {
   lastWaveDamage:{wave:number;stats:ReturnType<DamageMeter['snapshot']>}|null=null;
   gold:number=RULES.initialGold;
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
+  swordAttacks:SwordAttack<number,number>[]=[];
+  readonly swordSwingCounts=new Map<number,number>();
   fireCasts:FireCast<Unit,number>[]=[];
   iceProjectiles:IceProjectile[]=[];iceBursts:IceBurst[]=[];
   shop:(ItemDef|null)[]=ITEMS.slice(0,RULES.shopSlots);
@@ -115,7 +118,7 @@ export class Defense {
     this.bossPending=false;
     const removed=this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
     this.enemies=this.enemies.filter(e=>(e.named||e.bounty)&&e.hp>0);
-    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.wave++;
+    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.wave++;
     this.log('economy',`[웨이브 전환] 남은 일반 몬스터 ${removed}마리 정리 · 처치 보상 없음 · 네임드/현상금 유지`);
     this.startWave();
   }
@@ -396,10 +399,10 @@ export class Defense {
     const before=this.anvils;this.anvils+=10;this.log('economy',`[개발자] 모루 +10 · ${before} → ${this.anvils}`);this.note('개발자 모루 +10');
   }
   reset():void {
-    this.rangedSkills.clear();
+    this.rangedSkills.clear();this.swordSwingCounts.clear();
     this.lastWaveDamage=null;
     this.damageMeter.reset(true);
-    this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];
+    this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
     this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.bossPending=false;this.damageNumbers=[];this.nextDamageId=1;
     this.shop=ITEMS.slice(0,RULES.shopSlots);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.nextId=1;this.placementOrder=0;
@@ -431,6 +434,12 @@ export class Defense {
         if(enemy.hp>0&&Math.hypot(enemy.x-cast.tx,enemy.y-cast.ty)<=FIRE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*FIRE_SKILL.damageMultiplier);
     }
     this.fireCasts=this.fireCasts.filter(fireAlive);
+    this.swordAttacks=this.swordAttacks.filter(s=>this.units.some(u=>u.id===s.sourceId));
+    for(const swing of this.swordAttacks){
+      const source=this.units.find(u=>u.id===swing.sourceId)!,target=this.enemies.find(e=>e.id===swing.targetId&&e.hp>0);
+      if(advanceSword(swing,dt,target)&&target)this.hit(source,target,swing.attack,swing.critical);
+    }
+    this.swordAttacks=this.swordAttacks.filter(swordAlive);
     for(const u of this.units) {
       u.cooldown-=dt;if(u.cooldown>0)continue;
       const s=this.stats(u),pos=SLOTS[u.slot];
@@ -441,6 +450,11 @@ export class Defense {
       u.cooldown=1/s.rate;
       if(u.kind==='ranged'){
         this.iceProjectiles.push({x:pos.x,y:pos.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...u},attack:s.attack});
+        continue;
+      }
+      if(u.kind==='melee'){
+        const sequence=this.swordSwingCounts.get(u.id)??0;this.swordSwingCounts.set(u.id,sequence+1);
+        this.swordAttacks.push(createSwordAttack(u.id,target.id,s.attack,false,sequence,s.rate,target.x,target.y));
         continue;
       }
       let area:AttackArea|undefined;

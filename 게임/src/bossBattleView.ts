@@ -1,3 +1,4 @@
+import {swordVisuals,SWORD_SHEET_URL,SWORD_ALPHA_MATRIX} from './swordAttack';
 import {FIRE_SKILL,fireFrame,firePlacement,FIRE_SHEET_URL,FIRE_ALPHA_MATRIX} from './fireSkill';
 import { BossBattle, type BossActor } from './bossBattle';
 import { UNITS } from './defenseConfig';
@@ -44,7 +45,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
     }
     trails.innerHTML=`<defs><filter id="boss-fire-alpha" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${FIRE_ALPHA_MATRIX.join(' ')}"/></filter></defs>`+battle.hits.map(h=>{
       const from=battle.actors.find(a=>a.id===h.from)!;
-      return `<g opacity="${Math.min(1,h.life/.15)}">${h.ice?'':`<path d="M${from.x} ${from.y} L${h.x} ${h.y}" stroke="${h.magic?'#8bdeff':'#ffe3a1'}" stroke-width="${h.magic?4:2}"/>`}<circle cx="${h.x}" cy="${h.y}" r="${h.magic?14:6}" fill="${h.magic?'#8bdeff88':'#ffe3a188'}"/><text x="${h.x}" y="${h.y-35-(.32-h.life)*70}" text-anchor="middle" fill="#fff0bf" font-size="22" stroke="#14201d" stroke-width="3" paint-order="stroke">${Math.round(h.damage)}</text></g>`;
+      return `<g opacity="${Math.min(1,h.life/.15)}">${h.ice||h.sword?'':`<path d="M${from.x} ${from.y} L${h.x} ${h.y}" stroke="${h.magic?'#8bdeff':'#ffe3a1'}" stroke-width="${h.magic?4:2}"/>`}<circle cx="${h.x}" cy="${h.y}" r="${h.magic?14:6}" fill="${h.sword?'none':h.magic?'#8bdeff88':'#ffe3a188'}"/><text x="${h.x}" y="${h.y-35-(.32-h.life)*70}" text-anchor="middle" fill="#fff0bf" font-size="22" stroke="#14201d" stroke-width="3" paint-order="stroke">${Math.round(h.damage)}</text></g>`;
     }).join('')+battle.iceProjectiles.map(p=>{
       const {trail,crystal}=iceProjectileShape(p);
       return `<g class="boss-ice-projectile"><path d="M${trail[0]} ${trail[1]} L${p.x} ${p.y}" stroke="#62baff" stroke-opacity=".25" stroke-width="5"/><circle cx="${p.x}" cy="${p.y}" r="10" fill="#66ccff" fill-opacity=".14"/><polygon points="${crystal.join(' ')}" fill="#80dfff" stroke="#e8fbff" stroke-width="1"/></g>`;
@@ -55,6 +56,13 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
     trails.innerHTML+=battle.fireCasts.map(cast=>{
       const f=fireFrame(cast),p=firePlacement(cast),x=p.x-p.width*p.anchorX,y=p.y-p.height*p.anchorY;
       return `<g class="boss-fire-skill" transform="rotate(${p.rotation*180/Math.PI} ${p.x} ${p.y})" filter="url(#boss-fire-alpha)"><svg x="${x}" y="${y}" width="${p.width}" height="${p.height}" viewBox="${f.x} ${f.y} ${f.width} ${f.height}" preserveAspectRatio="none" overflow="hidden"><image href="${FIRE_SHEET_URL}" width="1536" height="1024"/></svg></g>`;
+    }).join('');
+    trails.innerHTML+=`<defs><filter id="boss-sword-alpha" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${SWORD_ALPHA_MATRIX.join(' ')}"/></filter></defs>`+battle.swordAttacks.flatMap(swing=>{
+      const source=battle.actors.find(a=>a.id===swing.sourceId&&a.hp>0);if(!source)return [];
+      return swordVisuals(swing,source.x+14,source.y-30,2).map(v=>{
+        const f=v.frame;
+        return `<g class="boss-sword-${v.part}" transform="rotate(${v.rotation*180/Math.PI} ${v.x} ${v.y})" opacity="${v.alpha}" filter="url(#boss-sword-alpha)"><svg x="${v.x-v.width/2}" y="${v.y-v.height/2}" width="${v.width}" height="${v.height}" viewBox="${f.x} ${f.y} ${f.width} ${f.height}" preserveAspectRatio="none" overflow="hidden"><image href="${SWORD_SHEET_URL}" width="1536" height="1024"/></svg></g>`;
+      });
     }).join('');
     document.querySelector('.boss-skill-hero-card')!.classList.toggle('hero-absent',!battle.actors.some(a=>a.kind==='ranged'));
     document.querySelector('.boss-skill-hero-card small')!.textContent=battle.actors.some(a=>a.kind==='ranged')?'웨이브 편성 연동':'웨이브전 미배치';

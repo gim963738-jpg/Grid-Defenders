@@ -1,10 +1,11 @@
+import {swordVisuals,SWORD_ALPHA_MATRIX} from './swordAttack';
 import {FIRE_SKILL,fireFrame,firePlacement,FIRE_ALPHA_MATRIX} from './fireSkill';
 import { Application, ColorMatrixFilter, Container, Graphics, Sprite, Texture, Text, Rectangle } from 'pixi.js';
 import { Defense,enemyRadius } from './defense';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 import {  RULES, SLOTS, UNITS } from './defenseConfig';
 
-export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture,fireTexture:Texture) {
+export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture,fireTexture:Texture,swordTexture:Texture) {
   const root=new Container();app.stage.addChild(root);
   const field=new Graphics();root.addChild(field);
   field.roundRect(4,4,382,322,18).fill(0x101d20).stroke({width:2,color:0x52614a});
@@ -43,6 +44,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const fireLayer=new Container();fireLayer.eventMode='none';root.addChild(fireLayer);
   const fireFilter=new ColorMatrixFilter();fireFilter.matrix=FIRE_ALPHA_MATRIX;fireLayer.filters=[fireFilter];
   const fireSprites:Sprite[]=[],fireTextures=new Map<string,Texture>();
+  const swordLayer=new Container();swordLayer.eventMode='none';root.addChild(swordLayer);
+  const swordFilter=new ColorMatrixFilter();swordFilter.matrix=SWORD_ALPHA_MATRIX;swordLayer.filters=[swordFilter];
+  const swordSprites:Sprite[]=[],swordTextures=new Map<string,Texture>();
   const numberPool:Text[]=[];
   const enemyLabels:Text[]=[];
   return {
@@ -133,6 +137,17 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         if(!texture){texture=new Texture({source:fireTexture.source,frame:new Rectangle(frame.x,frame.y,frame.width,frame.height)});fireTextures.set(key,texture);}
         if(!fireSprites[i]){const sprite=new Sprite(texture);sprite.eventMode='none';fireSprites.push(sprite);fireLayer.addChild(sprite);}
         const sprite=fireSprites[i];sprite.texture=texture;sprite.visible=true;sprite.anchor.set(placement.anchorX,placement.anchorY);sprite.position.set(placement.x,placement.y);sprite.width=placement.width;sprite.height=placement.height;sprite.rotation=placement.rotation;
+      });
+      swordSprites.forEach(sprite=>sprite.visible=false);
+      const swordFrames=game.swordAttacks.flatMap(swing=>{
+        const source=game.units.find(u=>u.id===swing.sourceId);if(!source)return [];
+        const pos=SLOTS[source.slot];return swordVisuals(swing,pos.x+7,pos.y-21);
+      });
+      swordFrames.forEach((v,i)=>{
+        const f=v.frame,key=`${f.x}:${f.y}:${f.width}:${f.height}`;
+        let texture=swordTextures.get(key);if(!texture){texture=new Texture({source:swordTexture.source,frame:new Rectangle(f.x,f.y,f.width,f.height)});swordTextures.set(key,texture);}
+        if(!swordSprites[i]){const sprite=new Sprite(texture);sprite.eventMode='none';swordSprites.push(sprite);swordLayer.addChild(sprite);}
+        const sprite=swordSprites[i];sprite.texture=texture;sprite.visible=true;sprite.anchor.set(.5);sprite.position.set(v.x,v.y);sprite.width=v.width;sprite.height=v.height;sprite.rotation=v.rotation;sprite.alpha=v.alpha;
       });
       for(let i=0;i<Math.max(numberPool.length,game.damageNumbers.length);i++){
         const number=game.damageNumbers[i];
