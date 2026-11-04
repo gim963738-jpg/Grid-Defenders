@@ -1,0 +1,48 @@
+import {ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinPosition,inAssassinPath,assassinFrame,assassinAlive} from '../src/assassinCombat';
+import {effectiveArmor,combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from '../src/armorBreak';
+import {Defense,pathPoint} from '../src/defense';
+import {UNITS,SLOTS} from '../src/defenseConfig';
+import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {createSwordAttack} from '../src/swordAttack';
+export function checkAssassinCombat(){
+ const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);},near=(a:number,b:number)=>Math.abs(a-b)<1e-6;
+ check(Object.values(UNITS).filter(d=>d.hero).length===6,'six heroes include new mage and assassin');
+ check(UNITS.arcanist.damageType==='magic'&&UNITS.assassin.damageType==='physical','new heroes use the assigned damage types');
+ const a=createAssassinAction('basic',{},1,[2,3,4],100,0,0,{x:50,y:0},1),fs=a.frameSeconds;
+ check(advanceAssassin(a,5.99*fs).length===0&&assassinFrame(a)===6,'entering sixth frame has not dealt damage');
+ check(advanceAssassin(a,.01*fs).join()=== '0','first hit commits only at sixth frame completion');
+ check(advanceAssassin(a,1.5*fs).length===0&&assassinFrame(a)===8,'eighth frame still pending while animation is inside it');
+ cancelAssassin(a);check(advanceAssassin(a,20*fs).length===0&&a.hits===1&&!assassinAlive(a),'skill cancel preserves completed hit and drops pending eighth and tenth');
+ const all=createAssassinAction('basic',{},1,[2,3,4],100,0,0,{x:50,y:0});check(advanceAssassin(all,2).join()==='0,1,2','large step keeps three basic hit events');
+ check(near(ASSASSIN.basicMultiplier*3,1.05)&&new Set(all.targets).size===3,'basic hits distinct targets for thirty-five percent each');
+ const armor={defenseType:'physical' as const,physicalArmor:100,magicArmor:80};const phys=combatDefenseMultiplier('physical',armor),magic=combatDefenseMultiplier('magic',armor);
+ applyArmorBreak(armor);check(effectiveArmor(armor,'physical')===70&&effectiveArmor(armor,'magic')===56,'shred affects both physical and magic defense');
+ check(combatDefenseMultiplier('physical',armor)>phys&&combatDefenseMultiplier('magic',armor)>magic,'both damage types benefit from reduced defense');
+ tickArmorBreak(armor,3);applyArmorBreak(armor);check(effectiveArmor(armor,'physical')===70,'refresh never stacks defense reduction');tickArmorBreak(armor,5);check(combatDefenseMultiplier('physical',armor)===phys&&combatDefenseMultiplier('magic',armor)===magic,'both armor values recover after five seconds');
+ const dash=createAssassinAction('boss',{},1,[2],100,100,100,{x:200,y:100});advanceAssassin(dash,16*ASSASSIN.frameSeconds);
+ check(assassinPosition(dash).x===100,'boss frames one through sixteen stay at origin');advanceAssassin(dash,4*ASSASSIN.frameSeconds);
+ check(near(assassinPosition(dash).x,100+ASSASSIN.cell),'twentieth frame completes one formation-cell advance');
+ check(inAssassinPath(dash,{x:150,y:110})&&!inAssassinPath(dash,{x:150,y:150})&&!inAssassinPath(dash,{x:220,y:100}),'dash capsule includes path enemies and excludes outside enemies');
+ check(advanceAssassin(dash,4*ASSASSIN.frameSeconds).length===0&&near(assassinPosition(dash).x,100),'retreat returns one cell without a fifth hit');
+ const wave=()=>{const g=new Defense(),base=g.enemies[0];g.waveSpawned=10;g.enemies=[0,8,16].map((d,i)=>({...base,id:100+i,distance:36-d,...pathPoint(36-d),speed:0,hp:10000,maxHp:10000,defenseType:'normal' as const,armor:0,magicArmor:0}));g.summon('assassin',0);g.units[0].cooldown=0;g.assassinSkills.set(g.units[0].id,{cooldown:999,casts:0});return g;};
+ const g=wave(),h=g.units[0];g.tick(.001);h.cooldown=999;for(let i=0;i<16;i++)g.tick(.05);
+ check(g.enemies.every(e=>e.hp===9965)&&g.damageMeter.snapshot(g.waveTime).total===105,'wave basic deals one thirty-five percent hit to each of three monsters');
+ const single=wave();single.enemies=single.enemies.slice(0,1);single.tick(.001);single.units[0].cooldown=999;for(let i=0;i<16;i++)single.tick(.05);check(single.enemies[0].hp===9965,'missing second and third targets do not repeat damage on first target');
+ const cast=wave(),caster=cast.units[0];caster.cooldown=999;cast.assassinSkills.get(caster.id)!.cooldown=0;check(cast.useAssassinSkill(caster.id)&&cast.assassinSkills.get(caster.id)!.cooldown===4,'wave slam starts four-second cooldown');
+ for(let i=0;i<12;i++)cast.tick(.05);check(cast.enemies[0].hp===10000,'wave frame ten damage waits for completion');cast.tick(.05);check(cast.enemies[0].hp===9750&&cast.enemies[1].hp===10000&&near(cast.enemies[0].armorBreakRemaining!,5),'wave slam deals single-target two-hundred-fifty percent and applies five-second shred');
+ const cancel=wave(),ch=cancel.units[0];cancel.tick(.001);ch.cooldown=999;cancel.tick(cancel.assassinActions[0].frameSeconds*7.5);cancel.assassinSkills.get(ch.id)!.cooldown=0;cancel.useAssassinSkill(ch.id);cancel.tick(.001);check(cancel.enemies[0].hp===9965&&cancel.enemies[1].hp===10000,'wave skill interrupts basic eighth frame without granting its damage');
+ const prep=new Defense();prep.summon('assassin',0);const b=new BossBattle(waveBossRoster(prep));check(b.autoSkills,'boss automatic skills are on by default');b.autoSkills=false;b.reset();check(!b.autoSkills,'retry preserves explicitly disabled automatic skills');
+ const hero=b.actors.find(x=>x.kind==='assassin')!,target=b.actors.find(x=>x.kind==='retainer')!;hero.x=100;hero.y=100;hero.cooldown=999;target.x=160;target.y=100;target.defenseType='normal';target.physicalArmor=0;target.magicArmor=0;target.hp=target.maxHp=10000;target.cooldown=999;target.speed=0;
+ const path={...target,id:'path',rank:1,x:135,y:110},out={...target,id:'out',rank:1,x:135,y:160};b.actors=[hero,target,path,out];
+ check(b.useHeroSkill(hero.id)&&b.skillCooldown(hero.id)===5,'boss assassin skill starts five-second cooldown');
+ for(let i=0;i<26;i++)b.tick(.05);check(near(target.hp,9645)&&path.hp===9750&&out.hp===10000,'boss skill deals three single hits then one damage event to all path enemies');
+ check(target.armorBreakRemaining!>4.9&&path.armorBreakRemaining!>4.9&&!out.armorBreakRemaining,'only path victims receive defense reduction');
+ check(near(b.damageMeter.snapshot(b.elapsed).total,605),'boss DPS records three basic-strength beats and two path victims exactly once');
+ for(let i=0;i<6;i++)b.tick(.05);check(near(hero.x,100)&&near(hero.y,100)&&target.hp===9645&&path.hp===9750,'boss retreat returns to original position without extra damage');
+ const cancelBoss=new BossBattle(waveBossRoster(prep));cancelBoss.autoSkills=false;const bh=cancelBoss.actors.find(x=>x.kind==='assassin')!,bt=cancelBoss.actors.find(x=>x.kind==='boss')!;bh.x=100;bh.y=100;bt.x=160;bt.y=100;bt.cooldown=999;bt.speed=0;cancelBoss.actors=[bh,bt];bh.cooldown=0;cancelBoss.tick(.001);bh.cooldown=999;const pending=cancelBoss.assassinActions[0];cancelBoss.tick(pending.frameSeconds*7.5); // Boss clamps each tick; advance remaining time explicitly.
+ while(pending.age<7.5*pending.frameSeconds-.001)cancelBoss.tick(.01);
+ const before=bt.hp;check(cancelBoss.useHeroSkill(bh.id),'boss skill can interrupt an active basic motion');cancelBoss.tick(.001);check(bt.hp===before&&pending.cancelled,'boss cancel drops pending basic hits immediately');
+ const old=new Defense();old.summon('melee',0);const mb=new BossBattle(waveBossRoster(old));mb.autoSkills=false;const mh=mb.actors.find(x=>x.kind==='melee')!,mt=mb.actors.find(x=>x.kind==='boss')!;mh.x=mt.x-20;mh.y=mt.y;mh.cooldown=999;mt.cooldown=999;mb.actors=[mh,mt];mb.swordAttacks=[createSwordAttack(mh.id,mt.id,90,false,0,1,mt.x,mt.y)];mb.swordAttacks[0].age=.19;mb.useHeroSkill(mh.id);mb.tick(.02);check(!mb.hits.length&&mb.swordAttacks[0].cancelled,'existing sword basic also cancels its uncompleted damage frame');
+ const cleanup=wave();cleanup.tick(.01);cleanup.nextTestWave();check(!cleanup.assassinActions.length&&!cleanup.assassinImpacts.length,'wave transition clears assassin motions and effects');cleanup.reset();check(!cleanup.assassinSkills.size,'new game resets assassin skill cooldown state');
+ return passed;
+}

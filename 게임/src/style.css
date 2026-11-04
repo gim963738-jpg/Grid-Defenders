@@ -633,3 +633,20 @@
 @media(max-width:350px){#lobby-screen{margin-inline:-8px;padding-inline:20px;}.lobby-emblem{width:56px;height:63px;}#lobby-screen h1{font-size:42px;}#lobby-screen h1 span{font-size:24px;}.run-mode-badge{left:6px;top:7px;font-size:7px;}.boss-time-limit{font-size:9px;}}
 
 .dev-lobby-button{width:100%;margin:0 0 10px;padding:6px;border:1px solid #57694d;border-radius:5px;background:#192820;color:#aec09f;font-size:10px;}
+
+/* WEB-089: supplied roster portraits, animation atlas and armor-break marker. */
+.hero-sheet-portrait{display:block;width:100%;height:100%;border-radius:inherit;overflow:hidden;}
+#heroes .sheet-summon-card .unit-icon{display:none;}
+#heroes .hero-card-art{position:absolute;z-index:-2;inset:0;pointer-events:none;}
+#heroes .sheet-summon-card::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(to bottom,transparent 40%,#142423 100%);}
+#command-area[data-hero-backdrop=tank]::before,#command-area[data-hero-backdrop=arcanist]::before,#command-area[data-hero-backdrop=assassin]::before,#command-area[data-hero-backdrop=healer]::before{background-image:url(/assets/heroes/hero-roster-sheet.png);background-size:auto 400%;background-repeat:no-repeat;}
+#command-area[data-hero-backdrop=tank]::before{background-position:32% 0%;}
+#command-area[data-hero-backdrop=arcanist]::before{background-position:32% 33.333%;}
+#command-area[data-hero-backdrop=assassin]::before{background-position:32% 66.666%;}
+#command-area[data-hero-backdrop=healer]::before{background-position:32% 100%;}
+.boss-fighter.sheet-hero .boss-fighter-art img{width:200%;max-width:none;height:160%;object-fit:contain;}
+.boss-fighter.assassin-motion .boss-fighter-art img{width:160%;height:155%;transform:translateY(-20%);}
+.boss-armor-break{position:absolute;left:50%;bottom:125%;transform:translateX(-50%);width:22px;height:25px;pointer-events:none;}
+.boss-armor-break svg{width:100%;height:100%;}
+.boss-assassin-skill-icon{display:block;width:32px;height:32px;float:left;margin-right:7px;border:1px solid #9b6270;border-radius:4px;overflow:hidden;}
+.boss-assassin-skill-icon svg{display:block;width:100%;height:100%;}

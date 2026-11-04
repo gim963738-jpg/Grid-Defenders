@@ -1,11 +1,16 @@
+import {heroImage,sheetHero,assassinArt,assassinSkillIcon} from './heroArt';
+import {ASSASSIN,assassinFrame} from './assassinCombat';
+import {BROKEN_SHIELD_SVG,effectiveArmor} from './armorBreak';
 import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_SHEET_URL,BLADE_ALPHA_MATRIX} from './bladeSkill';
 import {swordVisuals,SWORD_SHEET_URL,SWORD_ALPHA_MATRIX} from './swordAttack';
 import {FIRE_SKILL,fireFrame,firePlacement,FIRE_SHEET_URL,FIRE_ALPHA_MATRIX} from './fireSkill';
 import { BossBattle, type BossActor } from './bossBattle';
-import { UNITS } from './defenseConfig';
+import { UNITS, type UnitKind } from './defenseConfig';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 
-function art(a:BossActor):string {
+function art(a:BossActor,battle?:BossBattle):string {
+  if(battle&&a.kind==='assassin'){const action=battle.assassinActions.find(c=>c.sourceId===a.id&&!c.cancelled);if(action){const frame=assassinArt(action.kind==='basic'?'basic':'boss',assassinFrame(action));if(frame)return `<img src="${frame.url}" alt="" draggable="false">`;}}
+  if(a.kind in UNITS&&UNITS[a.kind as UnitKind].hero){const target=battle?.target(a),walking=!!target&&Math.hypot(target.x-a.x,target.y-a.y)>a.range;return heroImage(a.kind as UnitKind,walking?'walk':a.cooldown>1/a.rate-.2?'attack':'idle',Math.floor((battle?.elapsed??0)*8));}
   if(a.kind==='ranged'||a.kind==='melee')return `<img src="${import.meta.env.BASE_URL}assets/heroes/${a.kind}-idle.png" alt="" draggable="false">`;
   if(a.kind==='boss')return '<span class="boss-test-monster boss-test-chief">♛<i>◆</i></span>';
   if(a.kind==='retainer')return `<span class="boss-test-monster ${a.defenseType}">♜<i>◆</i></span>`;
@@ -36,10 +41,18 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       if(!node){
         node=document.createElement('div');node.className=`boss-fighter ${actor.side} ${actor.kind}`;
         node.dataset.bossActor=actor.id;node.dataset.kind=actor.kind;
-        node.innerHTML=`<div class="boss-fighter-art">${art(actor)}</div><div class="boss-fighter-hp"><i></i></div><small></small>`;
+        node.innerHTML=`<div class="boss-fighter-art">${art(actor)}</div><div class="boss-fighter-hp"><i></i></div><span class="boss-armor-break" hidden></span><small></small>`;
         root.append(node);nodes.set(actor.id,node);
       }
       node.hidden=actor.hp<=0;
+      const heroKind=actor.kind in UNITS?actor.kind as UnitKind:null;
+      node.classList.toggle('sheet-hero',!!heroKind&&sheetHero(heroKind));
+      node.classList.toggle('assassin-motion',battle.assassinActions.some(a=>a.sourceId===actor.id&&!a.cancelled));
+      const nextArt=art(actor,battle),artNode=node.querySelector<HTMLElement>('.boss-fighter-art')!;
+      if(artNode.dataset.frameArt!==nextArt){artNode.innerHTML=nextArt;artNode.dataset.frameArt=nextArt;}
+      const broken=node.querySelector<HTMLElement>('.boss-armor-break')!;broken.hidden=!(actor.armorBreakRemaining!>0);
+      if(!broken.hidden){if(!broken.children.length)broken.innerHTML=BROKEN_SHIELD_SVG;broken.title=`방어력 30% 감소 · ${actor.armorBreakRemaining!.toFixed(1)}초 · 물리 ${effectiveArmor(actor,'physical').toFixed(1)} / 마법 ${effectiveArmor(actor,'magic').toFixed(1)}`;}
+
       node.querySelector('small')!.textContent=actor.side==='enemy'?actor.name:`Lv.${actor.level??1} ${UNITS[actor.kind as keyof typeof UNITS]?.icon??''}`;
       node.style.left=`${actor.x/10}%`;node.style.top=`${actor.y/5.625}%`;
       node.classList.toggle('attacking',battle.hits.some(h=>h.from===actor.id));
@@ -71,14 +84,15 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       const f=bladeFrame(cast),p=bladePlacement(cast);
       return `<g class="boss-blade-skill" filter="url(#boss-blade-alpha)"><svg x="${p.x-p.width*p.anchorX}" y="${p.y-p.height*p.anchorY}" width="${p.width}" height="${p.height}" viewBox="${f.x} ${f.y} ${f.width} ${f.height}" preserveAspectRatio="none" overflow="hidden"><image href="${BLADE_SHEET_URL}" width="1536" height="1024"/></svg></g>`;
     }).join('');
+    trails.innerHTML+=battle.assassinImpacts.map(impact=>{const image=assassinArt('impact',impact.kind);return image?`<image class="boss-assassin-impact" href="${image.url}" x="${impact.x-45}" y="${impact.y-30}" width="90" height="70" opacity="${Math.min(1,impact.life/.1)}"/>`:'';}).join('');
     const heroes=battle.actors.filter(a=>a.side==='ally'&&UNITS[a.kind as keyof typeof UNITS]?.hero);
     const signature=heroes.map(h=>`${h.id}:${h.kind}`).join('|');
     if(signature!==heroSignature||!skillRoot.children.length){
       heroSignature=signature;
       skillRoot.innerHTML=heroes.length?heroes.map(h=>{
-        const def=UNITS[h.kind as keyof typeof UNITS],hasSkill=h.kind==='ranged'||h.kind==='melee';
-        const portrait=h.kind==='ranged'||h.kind==='melee'?`<img src="${import.meta.env.BASE_URL}assets/heroes/${h.kind}-idle.png" alt="">`:`<span class="boss-hero-symbol" style="color:#${def.color.toString(16)}">${def.icon}</span>`;
-        return `<div class="boss-hero-skill-row" data-skill-hero="${h.id}"><div class="boss-skill-hero-card">${portrait}<b>${def.name}</b><small>웨이브 편성 연동</small></div><div class="boss-skill-column"><div class="boss-skill boss-basic-skill" data-basic-delay><b>1 · 평타</b><span>자동 공격 · 공속 기준</span><strong></strong></div>${hasSkill?`<button class="boss-skill" data-hero-skill="${h.id}"><b>2 · ${h.kind==='melee'?'연속 검격':'화염 기둥'}</b><span>${h.kind==='melee'?'75% ×5 + 225% · 범위':'기본 피해 ×3 · 범위 공격'}</span><strong></strong></button>`:`<div class="boss-skill boss-skill-empty" aria-label="${def.name} 스킬 미배정"></div>`}</div></div>`;
+        const def=UNITS[h.kind as keyof typeof UNITS],hasSkill=h.kind==='ranged'||h.kind==='melee'||h.kind==='assassin';
+        const portrait=heroImage(h.kind as UnitKind);
+        return `<div class="boss-hero-skill-row" data-skill-hero="${h.id}"><div class="boss-skill-hero-card">${portrait}<b>${def.name}</b><small>웨이브 편성 연동</small></div><div class="boss-skill-column"><div class="boss-skill boss-basic-skill" data-basic-delay><b>1 · 평타</b><span>자동 공격 · 공속 기준</span><strong></strong></div>${hasSkill?`<button class="boss-skill" data-hero-skill="${h.id}">${h.kind==='assassin'?`<i class="boss-assassin-skill-icon">${assassinSkillIcon('boss')}</i>`:''}<b>2 · ${h.kind==='assassin'?'삼연참·돌진':h.kind==='melee'?'연속 검격':'화염 기둥'}</b><span>${h.kind==='assassin'?'35% ×3 + 250% · 경로 / 방어 -30%':h.kind==='melee'?'75% ×5 + 225% · 범위':'기본 피해 ×3 · 범위 공격'}</span><strong></strong></button>`:`<div class="boss-skill boss-skill-empty" aria-label="${def.name} 스킬 미배정"></div>`}</div></div>`;
       }).join(''):'<p class="boss-scene-note">웨이브전에서 영웅을 배치하세요.</p>';
     }
     for(const hero of heroes){
@@ -89,7 +103,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       updateSkillFill(basic,hero.cooldown,1/hero.rate,fighting&&alive,ready);
       const skill=row.querySelector<HTMLButtonElement>('[data-hero-skill]');
       if(skill){
-        const cooldown=battle.skillCooldown(hero.id),canUse=!stopped&&battle.canHeroSkill(hero.id),duration=hero.kind==='melee'?BLADE_SKILL.cooldown:FIRE_SKILL.cooldown;skill.disabled=!canUse;
+        const cooldown=battle.skillCooldown(hero.id),canUse=!stopped&&battle.canHeroSkill(hero.id),duration=hero.kind==='assassin'?ASSASSIN.bossCooldown:hero.kind==='melee'?BLADE_SKILL.cooldown:FIRE_SKILL.cooldown;skill.disabled=!canUse;
         skill.querySelector('strong')!.textContent=!alive?'전투 불가':stopped?'일시정지':!fighting?'전투 종료':cooldown>0?`재사용 ${cooldown.toFixed(1)}초 / ${duration}초`:canUse?`사용 가능 · 쿨타임 ${duration}초`:'사거리까지 접근 중';
         updateSkillFill(skill,cooldown,duration,fighting&&alive,canUse);
       }

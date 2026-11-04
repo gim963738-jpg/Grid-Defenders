@@ -16,7 +16,7 @@ export function checkBossWaveAuto():string[]{
  game.completeBossWave();while(game.wave<30)game.nextTestWave();check(game.bossPending,'wave thirty also starts a boss');
  game.reset();check(game.wave===1&&!game.bossPending,'game reset clears boss gate');
  game.devDeploySoldiers();const battle=new BossBattle(waveBossRoster(game),()=>1);
- check(!battle.autoSkills,'auto skills default off');battle.autoSkills=true;
+ check(battle.autoSkills,'auto skills default on');
  battle.actors.forEach(a=>a.attack=0);
  let automaticTriple=false;
  for(let i=0;i<800&&battle.result==='fighting';i++){battle.tick(.05);if(battle.heroSkillCooldown>0){automaticTriple=true;break;}}

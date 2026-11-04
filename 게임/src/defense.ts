@@ -1,11 +1,13 @@
+import {ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinSourceBusy,type AssassinAction,type AssassinImpact} from './assassinCombat';
+import {combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from './armorBreak';
 import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
-import {createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
+import {cancelSword,createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
 import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter } from './damageMeter';
 import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
-export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; named:boolean;name:string;defenseType:DefenseType;damageType:DamageType;attack:number;armor:number;magicArmor:number;rate:number;goldReward:number;wave:number; }
+export interface Enemy { armorBreakRemaining?:number; id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; named:boolean;name:string;defenseType:DefenseType;damageType:DamageType;attack:number;armor:number;magicArmor:number;rate:number;goldReward:number;wave:number; }
 export function enemyRadius(enemy:Pick<Enemy,'named'|'bounty'>):number{return enemy.named?14:enemy.bounty?12:8;}
 export function defenseMultiplier(attack:DamageType,defense:DefenseType):number {return attack===defense?0.75:1;}
 export function mitigatedDamage(attack:number,type:DamageType,defense:DefenseType):number {return Math.round(attack*defenseMultiplier(type,defense));}
@@ -51,6 +53,9 @@ export function pathPoint(distance:number): {x:number;y:number} {
 
 export class Defense {
   readonly damageMeter=new DamageMeter();
+  assassinActions:AssassinAction<Unit,number>[]=[];
+  assassinImpacts:AssassinImpact[]=[];
+  readonly assassinSkills=new Map<number,{cooldown:number;casts:number}>();
   readonly meleeSkills=new Map<number,{cooldown:number;casts:number}>();
   bladeCasts:BladeCast<Unit,number>[]=[];
   readonly rangedSkills=new Map<number,RangedSkillState>();
@@ -123,7 +128,7 @@ export class Defense {
     this.bossPending=false;
     const removed=this.keepWaveMonsters?0:this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
     this.enemies=this.enemies.filter(e=>e.hp>0&&(this.keepWaveMonsters||e.named||e.bounty));
-    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.bladeCasts=[];this.wave++;
+    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.bladeCasts=[];this.assassinActions=[];this.assassinImpacts=[];this.wave++;
     this.log('economy',this.keepWaveMonsters?`[웨이브 전환] 생존 몬스터 ${this.enemies.length}마리 유지`:`[웨이브 전환] 남은 일반 몬스터 ${removed}마리 정리 · 처치 보상 없음 · 네임드/현상금 유지`);
     this.startWave();
   }
@@ -434,7 +439,7 @@ export class Defense {
   }
   reset():void {
     this.keepWaveMonsters=false;
-    this.rangedSkills.clear();this.meleeSkills.clear();this.swordSwingCounts.clear();
+    this.rangedSkills.clear();this.meleeSkills.clear();this.assassinSkills.clear();this.assassinActions=[];this.assassinImpacts=[];this.swordSwingCounts.clear();
     this.lastWaveDamage=null;
     this.damageMeter.reset(true);
     this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.bladeCasts=[];
@@ -444,12 +449,25 @@ export class Defense {
     this.logs.damage.length=0;this.logs.reward.length=0;this.logs.economy.length=0;this.nextLogId=1;this.logRevision++;
     this.startWave(false);this.note('게임을 시작 상태로 초기화했습니다.');
   }
+  private cancelBasic(id:number):void {
+    for(const swing of this.swordAttacks)if(swing.sourceId===id)cancelSword(swing);
+    for(const action of this.assassinActions)if(action.sourceId===id&&action.kind==='basic')cancelAssassin(action);
+  }
+  useAssassinSkill(id:number):boolean {
+    const unit=this.units.find(u=>u.id===id&&u.kind==='assassin');if(!unit||this.bossPending)return false;
+    const state=this.assassinSkills.get(id)??{cooldown:0,casts:0},stats=this.stats(unit),pos=SLOTS[unit.slot];
+    if(state.cooldown>1e-8)return false;
+    const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=stats.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
+    if(!target)return false;
+    this.cancelBasic(id);state.cooldown=ASSASSIN.waveCooldown;state.casts++;this.assassinSkills.set(id,state);
+    this.assassinActions.push(createAssassinAction('wave',{...unit},id,[target.id],stats.attack,pos.x,pos.y,target,stats.rate));return true;
+  }
   tick(realSeconds:number):void {
     if(this.bossPending||(this.keepWaveMonsters&&this.monsterLimitReached))return;
     const dt=realSeconds*this.speed;this.elapsed+=dt;
     this.advanceWaves(dt);
     if(this.bossPending||(this.keepWaveMonsters&&this.monsterLimitReached))return;
-    for(const e of this.enemies){e.distance+=e.speed*dt;Object.assign(e,pathPoint(e.distance));}
+    for(const e of this.enemies){tickArmorBreak(e,dt);e.distance+=e.speed*dt;Object.assign(e,pathPoint(e.distance));}
     for(const burst of this.iceBursts)burst.life-=dt;
     this.iceBursts=this.iceBursts.filter(b=>b.life>0);
     // Advance existing projectiles before firing new ones: never deal damage on launch.
@@ -475,6 +493,50 @@ export class Defense {
         if(enemy.hp>0&&Math.hypot(enemy.x-cast.x,enemy.y-cast.y)<=BLADE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*bladeDamageMultiplier(cast.hits-beats+i));
     }
     this.bladeCasts=this.bladeCasts.filter(bladeAlive);
+    const startedSkills=new Set<number>();
+    for(const u of this.units.filter(u=>u.kind==='ranged')){
+      let skill=this.rangedSkills.get(u.id);
+      if(!skill){skill={cooldown:0,shotsLeft:0,delay:0,casts:0};this.rangedSkills.set(u.id,skill);}
+      skill.cooldown=Math.max(0,skill.cooldown-dt);
+      const s=this.stats(u),pos=SLOTS[u.slot];
+      const target=()=>this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
+      const victim=target();
+      if(skill.cooldown<=1e-8&&victim){
+        skill.cooldown=FIRE_SKILL.cooldown;skill.shotsLeft=0;skill.delay=0;skill.casts++;this.cancelBasic(u.id);startedSkills.add(u.id);
+        this.fireCasts.push(createFireCast({...u},victim.id,s.attack,pos.x,pos.y-12,victim.x,victim.y,enemyRadius(victim)));
+        this.log('economy',`${this.unitName(u)} · 화염 기둥 발동 · 최고 화염 3회 타격 · 재사용 ${FIRE_SKILL.cooldown}초`,{sourceId:u.id});
+      }
+    }
+    for(const u of this.units.filter(u=>u.kind==='melee')){
+      let skill=this.meleeSkills.get(u.id);if(!skill){skill={cooldown:0,casts:0};this.meleeSkills.set(u.id,skill);}
+      skill.cooldown=Math.max(0,skill.cooldown-dt);const stats=this.stats(u),pos=SLOTS[u.slot];
+      const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=stats.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
+      if(skill.cooldown<=1e-8&&target){
+        skill.cooldown=BLADE_SKILL.cooldown;skill.casts++;this.cancelBasic(u.id);startedSkills.add(u.id);
+        this.bladeCasts.push(createBladeCast({...u},target.id,stats.attack,target.x,target.y,enemyRadius(target)));
+        this.log('economy',`${this.unitName(u)} · 연속 검격 발동 · 범위 6회 타격 (75% ×5 + 225%) · 재사용 ${BLADE_SKILL.cooldown}초`,{sourceId:u.id});
+      }
+    }
+    for(const u of this.units.filter(u=>u.kind==='assassin')){
+      const state=this.assassinSkills.get(u.id)??{cooldown:0,casts:0};this.assassinSkills.set(u.id,state);
+      state.cooldown=Math.max(0,state.cooldown-dt);
+      if(this.useAssassinSkill(u.id))startedSkills.add(u.id);
+    }
+    for(const impact of this.assassinImpacts)impact.life-=dt;
+    this.assassinImpacts=this.assassinImpacts.filter(i=>i.life>0);
+    for(const action of this.assassinActions){
+      if(!this.units.some(u=>u.id===action.sourceId)){cancelAssassin(action);continue;}
+      const beats=advanceAssassin(action,dt);
+      if(action.kind==='wave'&&!action.impact&&action.age>=9*action.frameSeconds){const target=this.enemies.find(e=>e.id===action.targets[0]);if(target)action.impact={x:target.x,y:target.y};}
+      for(const beat of beats){
+        const target=this.enemies.find(e=>e.id===action.targets[action.kind==='basic'?beat:0]&&e.hp>0);
+        if(!target)continue;
+        this.hit(action.source,target,action.attack*(action.kind==='basic'?ASSASSIN.basicMultiplier:ASSASSIN.waveMultiplier));
+        if(action.kind==='wave')applyArmorBreak(target);
+        else this.assassinImpacts.push({x:target.x,y:target.y,kind:([1,2,5] as const)[beat],life:.24});
+      }
+    }
+    this.assassinActions=this.assassinActions.filter(assassinAlive);
     this.swordAttacks=this.swordAttacks.filter(s=>this.units.some(u=>u.id===s.sourceId));
     for(const swing of this.swordAttacks){
       const source=this.units.find(u=>u.id===swing.sourceId)!,target=this.enemies.find(e=>e.id===swing.targetId&&e.hp>0);
@@ -482,7 +544,7 @@ export class Defense {
     }
     this.swordAttacks=this.swordAttacks.filter(swordAlive);
     for(const u of this.units) {
-      u.cooldown-=dt;if(u.cooldown>0)continue;
+      u.cooldown-=dt;if(u.cooldown>0||startedSkills.has(u.id)||this.assassinActions.some(a=>a.sourceId===u.id&&assassinSourceBusy(a)))continue;
       const s=this.stats(u),pos=SLOTS[u.slot];
       // 순환 일반전의 임시 선두 판정: 총 이동 거리 최대, 동률은 먼저 생성된 대상.
       const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range)
@@ -492,6 +554,10 @@ export class Defense {
       if(u.kind==='ranged'){
         this.iceProjectiles.push({x:pos.x,y:pos.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...u},attack:s.attack});
         continue;
+      }
+      if(u.kind==='assassin'){
+        const targets=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range).sort((a,b)=>b.distance-a.distance||a.id-b.id).slice(0,3);
+        this.assassinActions.push(createAssassinAction('basic',{...u},u.id,targets.map(e=>e.id),s.attack,pos.x,pos.y,target,s.rate));continue;
       }
       if(u.kind==='melee'){
         const sequence=this.swordSwingCounts.get(u.id)??0;this.swordSwingCounts.set(u.id,sequence+1);
@@ -508,29 +574,6 @@ export class Defense {
       const attack=s.attack*(critical?s.critMultiplier:1);
       for(const victim of targets)this.hit(u,victim,attack,critical);
     }
-    for(const u of this.units.filter(u=>u.kind==='ranged')){
-      let skill=this.rangedSkills.get(u.id);
-      if(!skill){skill={cooldown:0,shotsLeft:0,delay:0,casts:0};this.rangedSkills.set(u.id,skill);}
-      skill.cooldown=Math.max(0,skill.cooldown-dt);
-      const s=this.stats(u),pos=SLOTS[u.slot];
-      const target=()=>this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
-      const victim=target();
-      if(skill.cooldown<=1e-8&&victim){
-        skill.cooldown=FIRE_SKILL.cooldown;skill.shotsLeft=0;skill.delay=0;skill.casts++;
-        this.fireCasts.push(createFireCast({...u},victim.id,s.attack,pos.x,pos.y-12,victim.x,victim.y,enemyRadius(victim)));
-        this.log('economy',`${this.unitName(u)} · 화염 기둥 발동 · 최고 화염 3회 타격 · 재사용 ${FIRE_SKILL.cooldown}초`,{sourceId:u.id});
-      }
-    }
-    for(const u of this.units.filter(u=>u.kind==='melee')){
-      let skill=this.meleeSkills.get(u.id);if(!skill){skill={cooldown:0,casts:0};this.meleeSkills.set(u.id,skill);}
-      skill.cooldown=Math.max(0,skill.cooldown-dt);const stats=this.stats(u),pos=SLOTS[u.slot];
-      const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=stats.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
-      if(skill.cooldown<=1e-8&&target){
-        skill.cooldown=BLADE_SKILL.cooldown;skill.casts++;
-        this.bladeCasts.push(createBladeCast({...u},target.id,stats.attack,target.x,target.y,enemyRadius(target)));
-        this.log('economy',`${this.unitName(u)} · 연속 검격 발동 · 범위 6회 타격 (75% ×5 + 225%) · 재사용 ${BLADE_SKILL.cooldown}초`,{sourceId:u.id});
-      }
-    }
     this.enemies=this.enemies.filter(e=>e.hp>0);
     for(const shot of this.shots)shot.life-=dt;
     this.shots=this.shots.filter(s=>s.life>0);
@@ -542,7 +585,7 @@ export class Defense {
   private hit(u:Unit,target:Enemy,attack:number,critical=false):void {
       if(target.hp<=0)return;
       const hpBefore=target.hp;
-      const damageType=UNITS[u.kind].damageType,multiplier=defenseMultiplier(damageType,target.defenseType),afterDefense=mitigatedDamage(attack,damageType,target.defenseType);
+      const damageType=UNITS[u.kind].damageType,multiplier=combatDefenseMultiplier(damageType,target),afterDefense=Math.round(attack*multiplier);
       target.hp=Math.max(0,target.hp-afterDefense);
       const damage=hpBefore-target.hp;
       this.damageMeter.record({id:String(u.id),name:`${UNITS[u.kind].name} #${u.id} · Lv.${u.level}`,color:'#'+UNITS[u.kind].color.toString(16).padStart(6,'0')},damage,this.waveTime);

@@ -20,7 +20,7 @@ export function checkBladeSkill(){
  check(g.damageMeter.snapshot(g.elapsed).total===1086,'wave sword area damage is counted in DPS');
  check(g.meleeSkills.get(hero.id)!.casts===1,'cooldown prevents extra cast');g.nextTestWave();check(g.bladeCasts.length===0&&g.meleeSkills.get(hero.id)!.cooldown>0,'wave change clears blade effects while retaining cooldown');g.reset();check(g.meleeSkills.size===0&&g.bladeCasts.length===0,'reset clears sword skill state');
  const batched=setup();batched.tick(.01);batched.bladeCasts[0].attack=100;batched.tick(1.1);check(batched.enemies[0].hp===4400&&batched.enemies[1].hp===4400,'batched update uses five seventy-five damage hits and final two-hundred-twenty-five damage hit');
- const wave=new Defense();wave.summon('melee',0);wave.summon('ranged',1);wave.summon('healer',2);const b=new BossBattle(waveBossRoster(wave));
+ const wave=new Defense();wave.summon('melee',0);wave.summon('ranged',1);wave.summon('healer',2);const b=new BossBattle(waveBossRoster(wave));b.autoSkills=false;
  const m=b.actors.find(a=>a.kind==='melee')!,r=b.hero()!,h=b.actors.find(a=>a.kind==='healer')!,t=b.actors.find(a=>a.kind==='retainer')!,n={...t,id:'nearby',x:508,defenseType:'normal' as const};t.x=500;t.y=280;t.defenseType='normal';n.y=280;
  b.actors=[m,r,h,t,n];b.actors.forEach(a=>{a.speed=0;a.cooldown=999;a.hp=a.maxHp=10000;});m.x=480;r.x=475;h.x=470;m.y=r.y=h.y=280;
  check(b.useHeroSkill(m.id)&&b.useHeroSkill(r.id)&&b.skillCooldown(m.id)===8&&b.skillCooldown(r.id)===4,'boss sword and ranged skills have independent cooldowns');

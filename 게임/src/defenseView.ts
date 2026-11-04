@@ -1,3 +1,6 @@
+import {heroFrame,assassinArt} from './heroArt';
+import {ASSASSIN,assassinFrame} from './assassinCombat';
+import type {UnitKind} from './defenseConfig';
 import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_ALPHA_MATRIX} from './bladeSkill';
 import {swordVisuals,SWORD_ALPHA_MATRIX} from './swordAttack';
 import {FIRE_SKILL,fireFrame,firePlacement,FIRE_ALPHA_MATRIX} from './fireSkill';
@@ -31,7 +34,8 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const movementPreview=new Graphics();movementPreview.eventMode='none';root.addChild(movementPreview);
   const actors=new Graphics();root.addChild(actors);
   actors.eventMode='none';
-  const heroSprites={ranged:new Sprite(rangedTexture),melee:new Sprite(meleeTexture)};
+  const heroSprites:Partial<Record<UnitKind,Sprite>>={ranged:new Sprite(rangedTexture),melee:new Sprite(meleeTexture)};
+  for(const kind of ['tank','healer','arcanist','assassin'] as const){const art=heroFrame(kind);if(art)heroSprites[kind]=new Sprite(art.texture);}
   for(const sprite of Object.values(heroSprites)){
     sprite.anchor.set(.5,1);sprite.eventMode='none';sprite.height=57;sprite.scale.x=sprite.scale.y;sprite.visible=false;root.addChild(sprite);
   }
@@ -48,6 +52,8 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const bladeLayer=new Container();bladeLayer.eventMode='none';root.addChild(bladeLayer);
   const bladeFilter=new ColorMatrixFilter();bladeFilter.matrix=BLADE_ALPHA_MATRIX;bladeLayer.filters=[bladeFilter];
   const bladeSprites:Sprite[]=[],bladeTextures=new Map<string,Texture>();
+  const assassinLayer=new Container();assassinLayer.eventMode='none';root.addChild(assassinLayer);
+  const assassinSprites:Sprite[]=[];
   const numberPool:Text[]=[];
   const enemyLabels:Text[]=[];
   return {
@@ -75,9 +81,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         slotGraphics[i].children[1].visible=available;
         badges[i].text=u?`${UNITS[u.kind].hero?'영웅':`Lv.${u.level}`} ${UNITS[u.kind].icon}`:'';
         if(!u)continue;
-        const skill=u.kind==='ranged'?game.rangedSkills.get(u.id):u.kind==='melee'?game.meleeSkills.get(u.id):undefined;
+        const skill=u.kind==='ranged'?game.rangedSkills.get(u.id):u.kind==='melee'?game.meleeSkills.get(u.id):u.kind==='assassin'?game.assassinSkills.get(u.id):undefined;
         if(skill&&skill.casts>0){
-          const progress=Math.max(0,Math.min(1,1-skill.cooldown/(u.kind==='melee'?BLADE_SKILL.cooldown:FIRE_SKILL.cooldown)));
+          const progress=Math.max(0,Math.min(1,1-skill.cooldown/(u.kind==='assassin'?ASSASSIN.waveCooldown:u.kind==='melee'?BLADE_SKILL.cooldown:FIRE_SKILL.cooldown)));
           skillBars.roundRect(p.x-23,p.y+24,46,8,3).fill(0x10232d).stroke({width:1,color:0x557783});
           if(progress>0)skillBars.roundRect(p.x-22,p.y+25,44*progress,6,2).fill(skill.cooldown>0?0x6ebee9:0x82dfa3);
           const text=skillLabels[i];text.visible=true;text.text=skill.cooldown>0?`${skill.cooldown.toFixed(1)}s`:'준비';
@@ -90,8 +96,11 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         }
         const color=UNITS[u.kind].color;
         actors.ellipse(p.x,p.y+7,15,5).fill({color:0x0a1713,alpha:0.5});
-        if(u.kind==='ranged'||u.kind==='melee'){
-          const sprite=heroSprites[u.kind];sprite.visible=true;sprite.position.set(p.x,p.y+12);
+        if(heroSprites[u.kind]){
+          const sprite=heroSprites[u.kind]!;sprite.visible=true;sprite.position.set(p.x,p.y+12);
+          const action=game.assassinActions.find(a=>a.sourceId===u.id&&!a.cancelled&&(a.kind==='basic'||a.kind==='wave'&&assassinFrame(a)<=9));
+          const art=action?assassinArt(action.kind==='basic'?'basic':'wave',assassinFrame(action)):heroFrame(u.kind,u.cooldown>1/game.stats(u).rate-.2?'attack':'idle');
+          if(art){sprite.texture=art.texture;sprite.height=action?65:57;sprite.scale.x=sprite.scale.y;sprite.anchor.set(.5,1);}
           continue;
         }
         actors.roundRect(p.x-10,p.y-9,20,21,4).fill(color).stroke({width:2,color:0x172731});
@@ -157,6 +166,10 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         if(!bladeSprites[i]){const sprite=new Sprite(texture);sprite.eventMode='none';bladeSprites.push(sprite);bladeLayer.addChild(sprite);}
         const sprite=bladeSprites[i];sprite.texture=texture;sprite.visible=true;sprite.anchor.set(p.anchorX,p.anchorY);sprite.position.set(p.x,p.y);sprite.width=p.width;sprite.height=p.height;
       });
+      assassinSprites.forEach(sprite=>sprite.visible=false);
+      const assassinVisuals=game.assassinActions.filter(a=>a.kind==='wave'&&assassinFrame(a)>=10).map(a=>({art:assassinArt('wave',assassinFrame(a)),x:a.impact?.x??game.enemies.find(e=>e.id===a.targets[0])?.x??a.origin.x,y:a.impact?.y??game.enemies.find(e=>e.id===a.targets[0])?.y??a.origin.y,width:80,height:90,alpha:1}));
+      for(const impact of game.assassinImpacts)assassinVisuals.push({art:assassinArt('impact',impact.kind),x:impact.x,y:impact.y,width:50,height:42,alpha:Math.min(1,impact.life/.1)});
+      assassinVisuals.forEach((v,i)=>{if(!v.art)return;if(!assassinSprites[i]){const sprite=new Sprite(v.art.texture);sprite.eventMode='none';assassinSprites.push(sprite);assassinLayer.addChild(sprite);}const sprite=assassinSprites[i];sprite.texture=v.art.texture;sprite.visible=true;sprite.anchor.set(.5,1);sprite.position.set(v.x,v.y+10);sprite.width=v.width;sprite.height=v.height;sprite.alpha=v.alpha;});
       for(let i=0;i<Math.max(numberPool.length,game.damageNumbers.length);i++){
         const number=game.damageNumbers[i];
         if(!number||!showDamageNumbers()){if(numberPool[i])numberPool[i].visible=false;continue;}

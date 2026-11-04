@@ -6,7 +6,7 @@ export function checkBossRosterIce():string[]{
  const wave=new Defense();wave.gold=10000;wave.summon('guard',3);wave.summon('ranged',5);wave.summon('tank',12);
  const soldier=wave.units[0],ranged=wave.units[1];wave.upgrade(soldier.id);wave.buy(0);wave.equip(wave.gear[0].id,ranged.id,0,0,0);
  const snapshot=JSON.stringify({units:wave.units,gear:wave.gear,gold:wave.gold});
- const battle=new BossBattle(waveBossRoster(wave),()=>1),allies=battle.actors.filter(a=>a.side==='ally');
+ const battle=new BossBattle(waveBossRoster(wave),()=>1),allies=battle.actors.filter(a=>a.side==='ally');battle.autoSkills=false;
  check(allies.length===3&&allies.map(a=>a.kind).join(',')==='guard,ranged,tank','exact wave roster with no phantom units');
  check(allies[0].sourceSlot===3&&allies[0].x===246.09375&&allies[0].y===386.71875,'wave slot rotates into boss formation');
  check(allies[0].level===2&&allies[0].attack===wave.stats(soldier).attack,'soldier level and attack transfer');

@@ -6,17 +6,19 @@ export type DamageType = 'physical' | 'magic';
 export type DefenseType = 'normal' | 'physical' | 'magic';
 export const DAMAGE_LABEL:Record<DamageType,string>={physical:'물리',magic:'마법'};
 export const DEFENSE_LABEL:Record<DefenseType,string>={normal:'일반형',physical:'물리 방어형',magic:'마법 방어형'};
-export type UnitKind = 'guard' | 'archer' | 'mage' | 'tank' | 'melee' | 'ranged' | 'healer';
+export type UnitKind = 'guard' | 'archer' | 'mage' | 'tank' | 'melee' | 'ranged' | 'healer' | 'arcanist' | 'assassin';
 export interface UnitDef { name: string; icon: string; hero: boolean; cost: number;
   attack: number; damageType:DamageType; rate: number; range: number; hp: number; armor: number; magicArmor:number; color: number; }
 export const UNITS: Record<UnitKind, UnitDef> = {
   guard: { damageType:'physical',magicArmor:10,name:'보병',icon:'검',hero:false,cost:50,attack:26,rate:1,range:130,hp:400,armor:20,color:0x8bb8df },
   archer: { damageType:'physical',magicArmor:5,name:'궁병',icon:'궁',hero:false,cost:75,attack:30,rate:1.2,range:230,hp:260,armor:10,color:0x70d9a0 },
   mage: { damageType:'magic',magicArmor:15,name:'마법병',icon:'마',hero:false,cost:90,attack:48,rate:0.7,range:190,hp:240,armor:8,color:0xb9a0ef },
-  tank: { damageType:'physical',magicArmor:40,name:'탱커',icon:'방',hero:true,cost:0,attack:40,rate:0.8,range:130,hp:2000,armor:60,color:0xf3c76c },
+  tank: { damageType:'physical',magicArmor:45,name:'탱커',icon:'방',hero:true,cost:0,attack:45,rate:0.8,range:130,hp:2200,armor:65,color:0xf3c76c },
   melee: { damageType:'physical',magicArmor:15,name:'근접 딜러',icon:'검',hero:true,cost:0,attack:90,rate:1,range:130,hp:1100,armor:25,color:0xfa9583 },
   ranged: { damageType:'magic',magicArmor:20,name:'원거리 딜러',icon:'술',hero:true,cost:0,attack:75,rate:1,range:230,hp:800,armor:15,color:0xb9a0ef },
-  healer: { damageType:'magic',magicArmor:25,name:'힐러',icon:'빛',hero:true,cost:0,attack:30,rate:1,range:190,hp:900,armor:20,color:0x70dbcf },
+  healer: { damageType:'magic',magicArmor:35,name:'힐러',icon:'빛',hero:true,cost:0,attack:35,rate:1,range:210,hp:950,armor:20,color:0x70dbcf },
+  arcanist:{damageType:'magic',magicArmor:35,name:'마법 딜러',icon:'법',hero:true,cost:0,attack:100,rate:.8,range:240,hp:780,armor:15,color:0xbe93ed},
+  assassin:{damageType:'physical',magicArmor:15,name:'암살자',icon:'암',hero:true,cost:0,attack:100,rate:1.2,range:130,hp:1000,armor:25,color:0xf16e79},
 };
 export type Cell = [number, number];
 export interface ItemDef { id:string; name:string; short:string; cells:Cell[]; color:string;

@@ -2,14 +2,15 @@ export const SWORD_SHEET_URL=`${import.meta.env.BASE_URL}assets/effects/sword-ba
 export const SWORD_ORDER=[5,4,3] as const;
 export const SWORD_ALPHA_MATRIX:[number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number]=
  [1,0,0,0,0, 0,1,0,0,0, 0,0,1,0,0, .8,.8,.8,0,-1.6];
-export interface SwordAttack<Id,TargetId>{sourceId:Id;targetId:TargetId;attack:number;critical:boolean;kind:3|4|5;age:number;duration:number;hit:boolean;connected:boolean;x:number;y:number;}
+export interface SwordAttack<Id,TargetId>{sourceId:Id;targetId:TargetId;attack:number;critical:boolean;kind:3|4|5;age:number;duration:number;hit:boolean;cancelled?:boolean;connected:boolean;x:number;y:number;}
 export function createSwordAttack<Id,TargetId>(sourceId:Id,targetId:TargetId,attack:number,critical:boolean,sequence:number,rate:number,x:number,y:number):SwordAttack<Id,TargetId>{
  return {sourceId,targetId,attack,critical,kind:SWORD_ORDER[sequence%3],age:0,duration:Math.min(.5,.9/rate),hit:false,connected:false,x,y};
 }
-export const swordImpactTime=(s:SwordAttack<unknown,unknown>)=>s.duration*.3;
+export const swordImpactTime=(s:SwordAttack<unknown,unknown>)=>s.duration*.4;
 /** The sword's light peaks once; visual frames never inflict damage themselves. */
 export function advanceSword(s:SwordAttack<unknown,unknown>,dt:number,target?:{x:number;y:number}):boolean{
  s.age+=dt;
+ if(s.cancelled)return false;
  if(!s.hit&&target){s.x=target.x;s.y=target.y;}
  if(!s.hit&&s.age+1e-8>=swordImpactTime(s)){s.hit=true;s.connected=!!target;return s.connected;}
  return false;
@@ -26,7 +27,7 @@ export function swordSlashFrame(kind:3|4|5,index:number):SwordFrame{
 export interface SwordVisual {frame:SwordFrame;x:number;y:number;width:number;height:number;rotation:number;alpha:number;part:'glint'|'slash';}
 export function swordVisuals(s:SwordAttack<unknown,unknown>,glintX:number,glintY:number,scale=1):SwordVisual[]{
  const visuals:SwordVisual[]=[];
- if(s.age<s.duration*.8){
+ if(!s.cancelled&&s.age<s.duration*.8){
   const i=Math.min(7,Math.floor(s.age/(s.duration*.8)*8)),alpha=[0,.1,.45,1,1,.8,.25,0][i];
   if(alpha>0)visuals.push({frame:glints[i],x:glintX,y:glintY,width:20*scale,height:18*scale,rotation:-Math.PI/2,alpha,part:'glint'});
  }
@@ -36,3 +37,5 @@ export function swordVisuals(s:SwordAttack<unknown,unknown>,glintX:number,glintY
  }
  return visuals;
 }
+
+export function cancelSword(s:SwordAttack<unknown,unknown>):void {s.cancelled=true;}

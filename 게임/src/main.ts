@@ -1,3 +1,5 @@
+import {loadHeroArt,heroImage,heroPortrait,sheetHero,assassinSkillIcon} from './heroArt';
+import {ASSASSIN} from './assassinCombat';
 import {GameRun,FAILURE_TEXT,RUN_LIMITS,type RunMode,type RunFailure} from './gameRun';
 import {upcomingWaveWarning} from './waveWarning';
 import {DEFENSE_FIELD,FOREST_TERRAIN_URL,fieldToScreen,screenToField} from './defenseFieldLayout';
@@ -50,7 +52,7 @@ let heroInfo:{kind:UnitKind;unitId:number|null;anchor?:'inventory'}|null=null;
 let noticeTimer:ReturnType<typeof setTimeout>|undefined;
 let waveWarningKey='';
 let heroInfoMarkup='';
-let heroSkillTooltipKind:UnitKind|null=null,heroSkillSlotsMarkup='';
+let heroSkillTooltipKind:UnitKind|null=null,heroSkillTooltipSlot=0,heroSkillSlotsMarkup='';
 let centeredHeroKind:UnitKind='tank',heroCardsMarkup='',heroScrollFrame=0,heroAnimationFrame=0,heroSuppressClickUntil=0;
 let heroGesture:{pointer:number;x:number;y:number;lastX:number;startScroll:number;index:number;dragged:boolean}|null=null;
 const heroKinds=Object.entries(UNITS).filter(([,d])=>d.hero).map(([kind])=>kind as UnitKind);
@@ -106,7 +108,9 @@ function moveHeroCarousel(direction:number):void {
 }
 
 // The summon strip describes assigned active skills; basic attacks are not slots.
-function summonHeroSkill(kind:UnitKind){
+function summonHeroSkill(kind:UnitKind,slot=0){
+  if(kind==='assassin')return slot===0?{name:'참격 · 웨이브',cooldown:ASSASSIN.waveCooldown,hits:1,damage:'250%',description:'제자리에서 뛰어 내려쳐 한 대상을 공격하고, 5초 동안 물리·마법 방어력을 30% 감소시킵니다.'}:slot===1?{name:'삼연참·돌진 · 보스',cooldown:ASSASSIN.bossCooldown,hits:4,damage:'35% × 3 + 250%',description:'한 대상을 3회 벤 뒤 한 칸 전진하며 경로의 모든 적을 타격하고 원위치로 돌아옵니다. 경로 타격은 5초 동안 물리·마법 방어력을 30% 감소시킵니다.'}:null;
+  if(slot!==0)return null;
   if(kind==='melee')return {name:'연속 검격',sheet:BLADE_SHEET_URL,crop:'16 338 193 194',cooldown:BLADE_SKILL.cooldown,hits:BLADE_SKILL.hits,
     damage:`${BLADE_SKILL.damageMultipliers[0]*100}% × ${BLADE_SKILL.hits-1} + ${BLADE_SKILL.damageMultipliers.at(-1)!*100}%`,
     description:'대상 주변을 연속으로 베고 마지막 일격으로 강하게 내려칩니다.'};
@@ -115,14 +119,15 @@ function summonHeroSkill(kind:UnitKind){
     description:'대상 발밑에 화염 기둥을 생성해 주변 적을 연속 타격합니다.'};
   return null;
 }
-function summonSkillIcon(kind:UnitKind):string {
-  const skill=summonHeroSkill(kind);return skill?`<svg viewBox="${skill.crop}" aria-hidden="true"><image href="${skill.sheet}" width="1536" height="1024"/></svg>`:'';
+function summonSkillIcon(kind:UnitKind,slot=0):string {
+  if(kind==='assassin')return assassinSkillIcon(slot===0?'wave':'boss');
+  const skill=summonHeroSkill(kind,slot);return skill&&'crop' in skill?`<svg viewBox="${skill.crop}" aria-hidden="true"><image href="${skill.sheet}" width="1536" height="1024"/></svg>`:'';
 }
 function refreshHeroSkillSlots():void {
-  const root=el('hero-skill-slots'),skill=summonHeroSkill(centeredHeroKind);
-  const markup=Array.from({length:3},(_,i)=>i===0&&skill
-    ?`<button class="hero-skill-slot assigned" data-hero-skill-info="${centeredHeroKind}" aria-label="${skill.name} 스킬 설명" aria-haspopup="dialog" aria-expanded="false" aria-controls="hero-skill-tooltip">${summonSkillIcon(centeredHeroKind)}</button>`
-    :`<button class="hero-skill-slot empty" disabled aria-label="미구현 스킬 ${i+1}"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m10 10 12 12m0-12L10 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>`).join('');
+  const root=el('hero-skill-slots');
+  const markup=Array.from({length:3},(_,i)=>{const skill=summonHeroSkill(centeredHeroKind,i);return skill
+    ?`<button class="hero-skill-slot assigned" data-hero-skill-info="${centeredHeroKind}" data-skill-index="${i}" aria-label="${skill.name} 스킬 설명" aria-haspopup="dialog" aria-expanded="false" aria-controls="hero-skill-tooltip">${summonSkillIcon(centeredHeroKind,i)}</button>`
+    :`<button class="hero-skill-slot empty" disabled aria-label="미구현 스킬 ${i+1}"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m10 10 12 12m0-12L10 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>`;}).join('');
   if(markup!==heroSkillSlotsMarkup){root.innerHTML=markup;heroSkillSlotsMarkup=markup;}
   root.dataset.heroKind=centeredHeroKind;root.setAttribute('aria-label',`${UNITS[centeredHeroKind].name} 스킬`);
 }
@@ -132,7 +137,7 @@ function closeHeroSkillTooltip():void {
 }
 function positionHeroSkillTooltip():void {
   if(heroSkillTooltipKind===null)return;
-  const popup=el('hero-skill-tooltip'),button=el('hero-skill-slots').querySelector<HTMLElement>('[data-hero-skill-info]');
+  const popup=el('hero-skill-tooltip'),button=el('hero-skill-slots').querySelector<HTMLElement>(`[data-hero-skill-info][data-skill-index="${heroSkillTooltipSlot}"]`);
   if(!button||tab!=='summon'||currentScene!=='defense'||sceneTransitioning){popup.hidden=true;return;}
   const anchor=button.getBoundingClientRect();
   if(anchor.bottom<0||anchor.top>innerHeight){popup.hidden=true;return;}
@@ -144,12 +149,12 @@ function positionHeroSkillTooltip():void {
   const top=anchor.top-height-10>=8?anchor.top-height-10:anchor.bottom+10;
   popup.style.left=`${left}px`;popup.style.top=`${Math.max(8,Math.min(innerHeight-height-8,top))}px`;
 }
-function toggleHeroSkillTooltip(kind:UnitKind):void {
-  const skill=summonHeroSkill(kind);if(!skill||kind!==centeredHeroKind)return;
-  if(heroSkillTooltipKind===kind){closeHeroSkillTooltip();return;}
-  closeHeroInfo();heroSkillTooltipKind=kind;
-  el('hero-skill-tooltip').innerHTML=`<header><span class="hero-skill-tooltip-icon">${summonSkillIcon(kind)}</span><div><small>${UNITS[kind].name} · 범위 ${DAMAGE_LABEL[UNITS[kind].damageType]} 피해</small><h2 id="hero-skill-tooltip-title">${skill.name}</h2></div><button id="close-hero-skill-tooltip" aria-label="스킬 설명 닫기">×</button></header><p>${skill.description}</p><dl><div><dt>쿨타임</dt><dd>${skill.cooldown}초</dd></div><div><dt>타격 횟수</dt><dd>${skill.hits}회</dd></div><div class="skill-damage"><dt>기본 공격력 대비 피해</dt><dd>${skill.damage}</dd></div></dl>`;
-  el('hero-skill-slots').querySelector('[data-hero-skill-info]')?.setAttribute('aria-expanded','true');positionHeroSkillTooltip();
+function toggleHeroSkillTooltip(kind:UnitKind,slot=0):void {
+  const skill=summonHeroSkill(kind,slot);if(!skill||kind!==centeredHeroKind)return;
+  if(heroSkillTooltipKind===kind&&heroSkillTooltipSlot===slot){closeHeroSkillTooltip();return;}
+  closeHeroInfo();heroSkillTooltipKind=kind;heroSkillTooltipSlot=slot;
+  el('hero-skill-tooltip').innerHTML=`<header><span class="hero-skill-tooltip-icon">${summonSkillIcon(kind,slot)}</span><div><small>${UNITS[kind].name} · ${kind==='assassin'?'단일·경로':'범위'} ${DAMAGE_LABEL[UNITS[kind].damageType]} 피해</small><h2 id="hero-skill-tooltip-title">${skill.name}</h2></div><button id="close-hero-skill-tooltip" aria-label="스킬 설명 닫기">×</button></header><p>${skill.description}</p><dl><div><dt>쿨타임</dt><dd>${skill.cooldown}초</dd></div><div><dt>타격 횟수</dt><dd>${skill.hits}회</dd></div><div class="skill-damage"><dt>기본 공격력 대비 피해</dt><dd>${skill.damage}</dd></div></dl>`;
+  el('hero-skill-slots').querySelector(`[data-hero-skill-info][data-skill-index="${slot}"]`)?.setAttribute('aria-expanded','true');positionHeroSkillTooltip();
 }
 
 function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
@@ -197,7 +202,7 @@ function refreshHeroInfo():void {
     field('armor','⬡','물리 방어',stats.physicalArmor,def.armor),field('armor','◇','마법 방어',stats.magicArmor,def.magicArmor),
     field('regen','✚','체력 재생',stats.regen,0,n=>`${n.toLocaleString()}/초`),field('gold','◇','골드 획득',stats.gold,0,n=>`${Math.round(n*100)}%`,'+')];
   if(!def.hero)fields.push(field('attack','✦','치명타 확률',stats.critChance,stats.critChance,n=>`${Math.round(n*100)}%`),field('attack','✦','치명타 배율',stats.critMultiplier,stats.critMultiplier,n=>`${n}배`));
-  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${heroInfo.kind==='ranged'||heroInfo.kind==='melee'?`<span class="${heroInfo.kind}-portrait"></span>`:def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(({key,icon,label,value,bonus})=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}"${bonus?' class="stat-increased"':''}><span>${value}</span>${bonus?`<small class="gear-stat-bonus" aria-label="장비 증가분 ${bonus}">${bonus}</small>`:''}</dd></div>`).join('')}</dl>`;
+  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${def.hero?heroPortrait(heroInfo.kind):def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(({key,icon,label,value,bonus})=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}"${bonus?' class="stat-increased"':''}><span>${value}</span>${bonus?`<small class="gear-stat-bonus" aria-label="장비 증가분 ${bonus}">${bonus}</small>`:''}</dd></div>`).join('')}</dl>`;
   if(markup!==heroInfoMarkup){el('hero-info').innerHTML=markup;heroInfoMarkup=markup;}
   positionHeroInfo();
 }
@@ -280,10 +285,11 @@ function inventoryGrid(owner:number|null):string {
 function refresh():void {
 
   const chosenSoldier=game.units.find(u=>u.id===selectedUnit&&!UNITS[u.kind].hero);
-  const unitCards=(hero:boolean)=>Object.entries(UNITS).filter(([,d])=>d.hero===hero).map(([kind,d])=>{
+  const unitCards=(hero:boolean)=>Object.entries(UNITS).filter(([,d])=>d.hero===hero).map(([key,d])=>{
+    const kind=key as UnitKind;
     const deployed=hero&&game.heroes().some(u=>u.kind===kind);
     const blocked=hero&&(game.heroes().length>=RULES.heroLimit||deployed);
-    if(hero)return `<button class="unit-card hero-card ${kind==='ranged'||kind==='melee'?`${kind}-summon-card`:''} ${pending===kind?'selected':''} ${blocked?'unavailable':''} ${deployed?'deployed':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${kind==='ranged'||kind==='melee'?`<span class="${kind}-portrait"></span>`:d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
+    if(hero)return `<button class="unit-card hero-card ${kind}-summon-card ${sheetHero(kind)?'sheet-summon-card':''} ${pending===kind?'selected':''} ${blocked?'unavailable':''} ${deployed?'deployed':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="hero-card-art">${sheetHero(kind)?heroPortrait(kind):''}</span><span class="unit-icon" style="color:#${d.color.toString(16)}">${heroPortrait(kind)}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
     return `<div class="soldier-choice"><button class="unit-card ${pending===kind?'selected':''} ${game.gold<d.cost?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><small>클릭하여 능력치 확인</small><span class="price">${d.cost} G</span></button>${chosenSoldier?.kind===kind?`<button class="card-upgrade" data-upgrade="${chosenSoldier.id}" ${chosenSoldier.level>=5||game.gold<game.upgradeCost(chosenSoldier)?'disabled':''}>#${chosenSoldier.id} 승급 ${chosenSoldier.level>=5?'MAX':game.upgradeCost(chosenSoldier)+'G'}</button>`:''}</div>`;
   }).join('');
   el('soldiers').innerHTML=unitCards(false);
@@ -302,7 +308,7 @@ function refresh():void {
   el('inventory-hero-name').textContent=hero?UNITS[hero.kind].name:'영웅 선택';
   const statsButton=el<HTMLButtonElement>('inventory-hero-stats');statsButton.disabled=!hero;
   statsButton.setAttribute('aria-label',hero?`${UNITS[hero.kind].name} 능력치 보기`:'영웅 능력치 보기');
-  el('inventory-hero-icon').innerHTML=hero?(hero.kind==='ranged'||hero.kind==='melee'?`<span class="${hero.kind}-portrait"></span>`:UNITS[hero.kind].icon):'◇';
+  el('inventory-hero-icon').innerHTML=hero?heroPortrait(hero.kind):'◇';
   el('equipment').innerHTML=inventoryGrid(hero?.id??-1);
   const bag=inventoryGrid(null);
   el('gear-bag').innerHTML=bag;el('shop-bag').innerHTML=bag;
@@ -462,7 +468,7 @@ function clearSummonDrag():void {
   summonDrag.ghost?.remove();summonDrag=null;
 }
 function unitDragImage(kind:UnitKind):string {
-  if(kind==='ranged'||kind==='melee')return `<img src="${import.meta.env.BASE_URL}assets/heroes/${kind}-idle.png" alt="">`;
+  if(UNITS[kind].hero)return heroImage(kind);
   const color='#'+UNITS[kind].color.toString(16).padStart(6,'0');
   const weapon=kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':kind==='mage'||kind==='healer'?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
   return `<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
@@ -701,7 +707,7 @@ el('app').addEventListener('click',(e)=>{
   if(d.tab){closeHeroInfo();openTab(d.tab);}
   else if(b.id==='hero-prev')moveHeroCarousel(-1);
   else if(b.id==='hero-next')moveHeroCarousel(1);
-  else if(d.heroSkillInfo){toggleHeroSkillTooltip(d.heroSkillInfo as UnitKind);return;}
+  else if(d.heroSkillInfo){toggleHeroSkillTooltip(d.heroSkillInfo as UnitKind,Number(d.skillIndex??0));return;}
   else if(d.summon){
     closeHeroSkillTooltip();
     const kind=d.summon as UnitKind;
@@ -822,7 +828,7 @@ function clearBattleInteraction():void {
   clearTimeout(noticeTimer);el('center-notice').hidden=true;el('field-upgrade').hidden=true;updateGearDrag();refreshLinks();
 }
 function resetBattleState():void {
-  clearBattleInteraction();game.reset();combatPaused=false;bossDamageHistory.clear();defeatedBossEnemies.clear();damageMeterMode='defense';showLastBoss=false;activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=false;bossTestMode=false;
+  clearBattleInteraction();game.reset();combatPaused=false;bossDamageHistory.clear();defeatedBossEnemies.clear();damageMeterMode='defense';showLastBoss=false;activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=true;bossTestMode=false;
   pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;lastGearTap=null;lastRotation=null;suppressClick=false;
   centeredHeroKind='tank';heroPhysicalIndex=heroKinds.length;heroCardsMarkup='';syncBossRoster(true,true);bossBattleView.draw();openTab('summon');refreshCombatControls();
 }
@@ -855,7 +861,7 @@ function renderBossScreen():void {
     if(!unit)return '<div class="boss-grid-cell" aria-hidden="true"></div>';
     const def=UNITS[unit.kind],color='#'+def.color.toString(16).padStart(6,'0');
     const weapon=unit.kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':unit.kind==='mage'||unit.kind==='healer'?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
-    const art=unit.kind==='ranged'||unit.kind==='melee'?`<img src="${import.meta.env.BASE_URL}assets/heroes/${unit.kind}-idle.png" alt="" draggable="false">`:`<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
+    const art=def.hero?heroImage(unit.kind):`<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
     return `<div class="boss-grid-cell boss-grid-unit" aria-label="${row+1}행 ${col+1}열 ${def.name} ${unit.level}레벨">${art}<small>${def.hero?'영웅':`Lv.${unit.level}`} ${def.icon}</small></div>`;
   }).join('');
 }
@@ -882,6 +888,7 @@ async function start():Promise<void> {
   await app.init({width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,background:'#172620',preference:'webgl',resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,antialias:true});
   el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','숲 순환 전장, 상단 정보와 아군 배치 영역');el('status').hidden=true;
   el('battlefield').style.setProperty('--field-top',`${DEFENSE_FIELD.top/DEFENSE_FIELD.height*100}%`);
+  await loadHeroArt();
   const forestTexture=await Assets.load<Texture>(FOREST_TERRAIN_URL);
   const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
   const meleeTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/melee-idle.png`);
