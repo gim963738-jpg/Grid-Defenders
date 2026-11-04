@@ -522,3 +522,9 @@
 .resource-token strong{grid-column:1/-1;text-align:right;font-size:11px;line-height:13px;font-weight:700;white-space:nowrap;}
 .resource-gold strong{color:#f0cd7e;}.resource-anvils strong{color:#d2e2ea;}
 .summon-heading h2{flex:none;}
+
+/* WEB-078: currency floats outside the bag card at the summon header's coordinates. */
+#gear .equipment-layout{grid-template-columns:max-content minmax(0,1fr);}
+#gear .equipment-bag-column{display:flex;flex-direction:column;min-width:0;}
+#gear .equipment-bag-column>.inventory-actions{height:48px;align-items:flex-start;justify-content:flex-end;padding-top:8px;margin-bottom:0;border:0;background:none;}
+#gear .equipment-bag-column>.equipment-bag{flex:1;width:100%;}

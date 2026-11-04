@@ -47,12 +47,14 @@
             <div class="inventory-hero-bar"><span id="inventory-hero-icon" class="inventory-hero-icon"></span><div class="inventory-hero-name"><small>선택 영웅</small><b id="inventory-hero-name">영웅 선택</b></div></div>
             <h2 id="gear-title">영웅 장비</h2><div id="equipment" aria-label="영웅 장비칸 4열 5행"></div>
           </section>
-          <aside class="equipment-bag">
+          <div class="equipment-bag-column">
             <div class="inventory-actions"><div class="resource-wallet" role="group" aria-label="공용 가방 재화"><span class="resource-token resource-gold"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="#d8a83e" stroke="#ffe298"/><circle cx="8" cy="8" r="4.1" fill="none" stroke="#8d6225"/><path d="M8 4.8v6.4M6.4 6h2.1c1.7 0 1.7 2 0 2H7.5c-1.7 0-1.7 2 0 2h2.1" fill="none" stroke="#fff0b8" stroke-width=".8"/></svg><span class="resource-label">골드</span><strong data-resource-value="gold">480</strong></span><span class="resource-token resource-anvils"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12v2H9.5v2.5L12 11v2H4v-2l2.5-2.5V6H4L1 4Z" fill="#a7bec9" stroke="#d9e7ed" stroke-width=".7"/><path d="M4 13h8" stroke="#627f8b" stroke-width="2"/></svg><span class="resource-label">모루</span><strong data-resource-value="anvils">0</strong></span></div></div>
-            <h3>공용 가방</h3><div class="bag-frame"><div class="inventory-scroll"><div id="gear-bag" class="inventory-grid" aria-label="영웅 장비창의 공용 가방 5열 3행 표시"></div></div></div>
-            <p id="combine-status" aria-live="polite"></p><div class="inventory-combine-action" aria-label="아이템 조합"><button id="combine" class="small-button" disabled>조합</button></div><div id="item-detail" class="detail"></div>
-            <p class="gear-combine-hint">조합 예정: 노란선 · 후순위: 회색선 · 누르는 동안: 파란 점선</p>
-          </aside>
+            <aside class="equipment-bag">
+              <h3>공용 가방</h3><div class="bag-frame"><div class="inventory-scroll"><div id="gear-bag" class="inventory-grid" aria-label="영웅 장비창의 공용 가방 5열 3행 표시"></div></div></div>
+              <p id="combine-status" aria-live="polite"></p><div class="inventory-combine-action" aria-label="아이템 조합"><button id="combine" class="small-button" disabled>조합</button></div><div id="item-detail" class="detail"></div>
+              <p class="gear-combine-hint">조합 예정: 노란선 · 후순위: 회색선 · 누르는 동안: 파란 점선</p>
+            </aside>
+          </div>
         </div>
       </section>
       <section id="shop" class="panel" hidden>
