@@ -477,3 +477,13 @@
 .dps-row-bottom .dps-peak{color:#e5bc82;white-space:nowrap;}
 
 .log-section .dps-heading{flex-wrap:wrap;align-items:center;gap:5px;}.dps-heading>span:first-child{white-space:nowrap;}.dps-tabs{display:flex;gap:3px;margin-left:auto;}.dps-tabs button,#dps-last-boss{padding:3px 5px;border:1px solid #4d635f;border-radius:4px;background:#152724;color:#9dafaa;font-size:9px;cursor:pointer;}.dps-tabs button[aria-pressed=true]{background:#46573b;border-color:#b7bf80;color:#fff0b6;}#dps-last-boss{align-self:flex-end;margin:4px 7px 0;}#dps-last-boss[hidden]{display:none;}.dps-heading #dps-total{white-space:nowrap;font-size:9px;}
+
+/* WEB-062: hero identity belongs to equipment; actions belong to the shared bag. */
+#gear .equipment-board>.inventory-hero-bar{height:44px;padding:3px;margin:0 0 4px;border:0;border-bottom:1px solid #3c4c42;border-radius:0;background:none;}
+#gear .inventory-actions{display:flex;align-items:center;gap:4px;height:44px;flex:none;margin-bottom:4px;border-bottom:1px solid #3c4c42;}
+#gear .inventory-actions .inventory-mode,#gear .inventory-actions #combine{flex:1 1 0;width:auto;max-width:none;min-width:0;margin:0;padding:5px 3px;font-size:10px;}
+#gear .equipment-bag{height:auto;min-height:0;}
+#gear .equipment-bag #combine-status{flex:none;min-height:10px;margin:4px 1px;color:#cabb80;font-size:8px;}
+#gear .equipment-bag #item-detail{min-height:30px;margin-top:0;}
+#gear .equipment-bag .gear-combine-hint{flex:none;margin:4px 0 0;font-size:7px;line-height:1.4;}
+@media(max-width:350px){#gear .inventory-actions{gap:3px;}#gear .inventory-actions .inventory-mode,#gear .inventory-actions #combine{font-size:9px;padding:5px 2px;}}
