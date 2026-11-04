@@ -1,5 +1,5 @@
 import { DamageMeter } from './damageMeter';
-import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
+import { WAVE_RANGED_SKILL, AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
 export interface Enemy { id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; named:boolean;name:string;defenseType:DefenseType;damageType:DamageType;attack:number;armor:number;magicArmor:number;rate:number;goldReward:number;wave:number; }
@@ -12,7 +12,8 @@ export function recipeForTypes(a:string,b:string) {
 }
 export interface GearState { active:boolean; reason:string; }
 export interface Shot { x:number; y:number; tx:number; ty:number; life:number; color:number; }
-export interface IceProjectile {x:number;y:number;tx:number;ty:number;targetId:number;source:Unit;attack:number;}
+export interface RangedSkillState {cooldown:number;shotsLeft:number;delay:number;casts:number;}
+export interface IceProjectile {skill?:boolean;x:number;y:number;tx:number;ty:number;targetId:number;source:Unit;attack:number;}
 export interface IceBurst {x:number;y:number;life:number;}
 export type AttackArea =
   | { kind:'sector'; x:number; y:number; radius:number; angle:number; halfAngle:number; life:number; color:number }
@@ -46,6 +47,7 @@ export function pathPoint(distance:number): {x:number;y:number} {
 
 export class Defense {
   readonly damageMeter=new DamageMeter();
+  readonly rangedSkills=new Map<number,RangedSkillState>();
   lastWaveDamage:{wave:number;stats:ReturnType<DamageMeter['snapshot']>}|null=null;
   gold:number=RULES.initialGold;
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
@@ -105,6 +107,7 @@ export class Defense {
     this.nextTestWave();return true;
   }
   nextTestWave():void {
+    for(const skill of this.rangedSkills.values()){skill.shotsLeft=0;skill.delay=0;}
     if(!this.bossPending&&this.waveTime>0)this.lastWaveDamage={wave:this.wave,stats:this.damageMeter.snapshot(this.waveTime)};
     this.bossPending=false;
     const removed=this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
@@ -390,6 +393,7 @@ export class Defense {
     const before=this.anvils;this.anvils+=10;this.log('economy',`[개발자] 모루 +10 · ${before} → ${this.anvils}`);this.note('개발자 모루 +10');
   }
   reset():void {
+    this.rangedSkills.clear();
     this.lastWaveDamage=null;
     this.damageMeter.reset(true);
     this.iceProjectiles=[];this.iceBursts=[];
@@ -439,6 +443,25 @@ export class Defense {
       const critical=s.critChance>0&&Math.random()<s.critChance;
       const attack=s.attack*(critical?s.critMultiplier:1);
       for(const victim of targets)this.hit(u,victim,attack,critical);
+    }
+    for(const u of this.units.filter(u=>u.kind==='ranged')){
+      let skill=this.rangedSkills.get(u.id);
+      if(!skill){skill={cooldown:0,shotsLeft:0,delay:0,casts:0};this.rangedSkills.set(u.id,skill);}
+      skill.cooldown=Math.max(0,skill.cooldown-dt);
+      const s=this.stats(u),pos=SLOTS[u.slot];
+      const target=()=>this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
+      if(skill.cooldown<=1e-8&&!skill.shotsLeft&&target()){
+        skill.cooldown=WAVE_RANGED_SKILL.cooldown;skill.shotsLeft=WAVE_RANGED_SKILL.hits;skill.delay=0;skill.casts++;
+        this.log('economy',`${this.unitName(u)} · 스킬 3연타 발동 · 재사용 ${WAVE_RANGED_SKILL.cooldown}초`,{sourceId:u.id});
+      }
+      if(skill.shotsLeft){
+        skill.delay-=dt;
+        while(skill.shotsLeft&&skill.delay<=1e-8){
+          const victim=target();if(!victim){skill.shotsLeft=0;break;}
+          this.iceProjectiles.push({x:pos.x,y:pos.y-12,tx:victim.x,ty:victim.y,targetId:victim.id,source:{...u},attack:s.attack,skill:true});
+          skill.shotsLeft--;skill.delay+=WAVE_RANGED_SKILL.hitInterval;
+        }
+      }
     }
     this.enemies=this.enemies.filter(e=>e.hp>0);
     for(const shot of this.shots)shot.life-=dt;

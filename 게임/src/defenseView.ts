@@ -1,7 +1,7 @@
 import { Application, Container, Graphics, Sprite, Texture, Text, Rectangle } from 'pixi.js';
 import { Defense } from './defense';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
-import { RULES, SLOTS, UNITS } from './defenseConfig';
+import { WAVE_RANGED_SKILL, RULES, SLOTS, UNITS } from './defenseConfig';
 
 export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture) {
   const root=new Container();app.stage.addChild(root);
@@ -35,11 +35,14 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const iceEffects=new Graphics();iceEffects.eventMode='none';root.addChild(iceEffects);
   const badges=SLOTS.map(p=>{const t=new Text({text:'',style:{fontFamily:'system-ui',fontSize:10,fontWeight:'bold',fill:0xf5f4e7}});t.anchor.set(0.5);t.position.set(p.x,p.y+15);root.addChild(t);return t;});
   const caption=new Text({text:'순환 디펜스 · 전투 시험',style:{fontFamily:'system-ui',fontSize:10,fill:0xdacdb1}});caption.position.set(13,RULES.height-17);root.addChild(caption);
+  const skillBars=new Graphics();skillBars.eventMode='none';root.addChild(skillBars);
+  const skillLabels=SLOTS.map(p=>{const text=new Text({text:'',style:{fontFamily:'system-ui',fontSize:7,fill:0xeafaff,stroke:{color:0x10282f,width:1}}});text.anchor.set(.5);text.position.set(p.x,p.y+28);text.eventMode='none';text.visible=false;root.addChild(text);return text;});
   const numberPool:Text[]=[];
   const enemyLabels:Text[]=[];
   return {
     draw(selectedId:number|null,pending:boolean,movement?:{id:number;slot:number}) {
       actors.clear();selected.clear();effects.clear();
+      skillBars.clear();skillLabels.forEach(t=>t.visible=false);
       rangedSprite.visible=false;iceEffects.clear();
       movementPreview.clear();
       const moving=game.units.find(u=>u.id===movement?.id);
@@ -61,6 +64,13 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         slotGraphics[i].children[1].visible=available;
         badges[i].text=u?`${UNITS[u.kind].hero?'영웅':`Lv.${u.level}`} ${UNITS[u.kind].icon}`:'';
         if(!u)continue;
+        const skill=u.kind==='ranged'?game.rangedSkills.get(u.id):undefined;
+        if(skill&&skill.casts>0){
+          const progress=Math.max(0,Math.min(1,1-skill.cooldown/WAVE_RANGED_SKILL.cooldown));
+          skillBars.roundRect(p.x-23,p.y+24,46,8,3).fill(0x10232d).stroke({width:1,color:0x557783});
+          if(progress>0)skillBars.roundRect(p.x-22,p.y+25,44*progress,6,2).fill(skill.cooldown>0?0x6ebee9:0x82dfa3);
+          const text=skillLabels[i];text.visible=true;text.text=skill.cooldown>0?`${skill.cooldown.toFixed(1)}s`:'준비';
+        }
         if(u.id===selectedId) {
           selected.circle(p.x,p.y,game.stats(u).range)
             .fill({color:UNITS[u.kind].color,alpha:UNITS[u.kind].hero?0.16:0.07})

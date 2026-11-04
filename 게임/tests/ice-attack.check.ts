@@ -5,7 +5,7 @@ export function checkIceAttack():string[] {
   const passed:string[]=[];
   const check=(ok:boolean,name:string)=>{if(!ok)throw new Error(name);passed.push(name);};
   const setup=()=>{
-    const g=new Defense();g.enemies=[];g.waveSpawned=10;g.summon('ranged',0);g.units[0].cooldown=0;
+    const g=new Defense();g.enemies=[];g.waveSpawned=10;g.summon('ranged',0);g.units[0].cooldown=0;g.rangedSkills.set(g.units[0].id,{cooldown:999,shotsLeft:0,delay:0,casts:0});
     const base=new Defense().enemies[0];
     g.enemies=[0,1,2].map(i=>({...base,id:100+i}));
     g.enemies.forEach((e,i)=>Object.assign(e,{distance:i===2?200:20+i*8,...pathPoint(i===2?200:20+i*8),speed:0,hp:500,maxHp:500,defenseType:i===1?'magic':'normal'}));

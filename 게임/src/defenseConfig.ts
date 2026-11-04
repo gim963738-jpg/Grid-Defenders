@@ -42,6 +42,7 @@ export const RECIPES = [
   {id:'R03',materials:['I01','I03'],result:'I08'},
   {id:'R04',materials:['I04','I04'],result:'I09'},
 ] as const;
+export const WAVE_RANGED_SKILL={cooldown:4,hits:3,hitInterval:0.12} as const;
 export const AREA_ATTACK = { guardHalfAngle:Math.PI/4, mageRadius:48 } as const;
 export const PATH: Cell[] = [[28,28],[362,28],[362,302],[28,302]];
 export const SLOTS = Array.from({length:16},(_,i)=>({x:99+(i%4)*64,y:81+Math.floor(i/4)*56}));
