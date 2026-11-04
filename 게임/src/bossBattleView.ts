@@ -20,7 +20,7 @@ function updateSkillFill(card:HTMLElement,remaining:number,duration:number,enabl
   card.style.setProperty('--skill-fill',`${(progress*100).toFixed(2)}%`);
   card.setAttribute('aria-disabled',String(state!=='ready'));
 }
-export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:BossBattle){
+export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:BossBattle,showDamageNumbers:()=>boolean=()=>true){
   const nodes=new Map<string,HTMLElement>();
   const skillRoot=document.getElementById('boss-hero-skills')!;let heroSignature='';
   const trails=document.createElementNS('http://www.w3.org/2000/svg','svg');
@@ -47,7 +47,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
     }
     trails.innerHTML=`<defs><filter id="boss-fire-alpha" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${FIRE_ALPHA_MATRIX.join(' ')}"/></filter></defs>`+battle.hits.map(h=>{
       const from=battle.actors.find(a=>a.id===h.from)!;
-      return `<g opacity="${Math.min(1,h.life/.15)}">${h.ice||h.sword?'':`<path d="M${from.x} ${from.y} L${h.x} ${h.y}" stroke="${h.magic?'#8bdeff':'#ffe3a1'}" stroke-width="${h.magic?4:2}"/>`}<circle cx="${h.x}" cy="${h.y}" r="${h.magic?14:6}" fill="${h.sword?'none':h.magic?'#8bdeff88':'#ffe3a188'}"/><text x="${h.x}" y="${h.y-35-(.32-h.life)*70}" text-anchor="middle" fill="#fff0bf" font-size="22" stroke="#14201d" stroke-width="3" paint-order="stroke">${Math.round(h.damage)}</text></g>`;
+      return `<g opacity="${Math.min(1,h.life/.15)}">${h.ice||h.sword?'':`<path d="M${from.x} ${from.y} L${h.x} ${h.y}" stroke="${h.magic?'#8bdeff':'#ffe3a1'}" stroke-width="${h.magic?4:2}"/>`}<circle cx="${h.x}" cy="${h.y}" r="${h.magic?14:6}" fill="${h.sword?'none':h.magic?'#8bdeff88':'#ffe3a188'}"/>${showDamageNumbers()?`<text class="boss-damage-number" x="${h.x}" y="${h.y-35-(.32-h.life)*70}" text-anchor="middle" fill="#fff0bf" font-size="22" stroke="#14201d" stroke-width="3" paint-order="stroke">${Math.round(h.damage)}</text>`:''}</g>`;
     }).join('')+battle.iceProjectiles.map(p=>{
       const {trail,crystal}=iceProjectileShape(p);
       return `<g class="boss-ice-projectile"><path d="M${trail[0]} ${trail[1]} L${p.x} ${p.y}" stroke="#62baff" stroke-opacity=".25" stroke-width="5"/><circle cx="${p.x}" cy="${p.y}" r="10" fill="#66ccff" fill-opacity=".14"/><polygon points="${crystal.join(' ')}" fill="#80dfff" stroke="#e8fbff" stroke-width="1"/></g>`;

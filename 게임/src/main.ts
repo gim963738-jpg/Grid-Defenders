@@ -1,3 +1,4 @@
+import {nextCombatSpeed,stepCombat} from './combatPlayback';
 import {BLADE_SHEET_URL} from './bladeSkill';
 import {SWORD_SHEET_URL} from './swordAttack';
 import {FIRE_SHEET_URL} from './fireSkill';
@@ -13,6 +14,7 @@ import './style.css';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense();
+let showDamageNumbers=true;
 const bossBattle=new BossBattle(waveBossRoster(game),Math.random,game.damageMeter.peaks);
 let bossRosterSignature='';
 const bossDamageHistory=new BossDamageHistory();
@@ -22,7 +24,7 @@ function syncBossRoster(force=false,discardPrevious=false):void {
   const roster=waveBossRoster(game),signature=JSON.stringify(roster);
   if(force||signature!==bossRosterSignature){if(!discardPrevious)bossDamageHistory.capture(bossBattle,bossEncounterWave,true);bossBattle.reset(roster);bossEncounterWave=game.wave;bossRosterSignature=signature;showLastBoss=false;}
 }
-const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle);
+const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle,()=>showDamageNumbers);
 let currentScene:BattleScene='defense',sceneTransitioning=false;
 let activeBossWave:number|null=null,bossReturnDelay=0;
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
@@ -238,7 +240,12 @@ function refresh():void {
   refreshFieldUpgrade();
   if(currentScene==='boss')renderBossScreen();
 }
+function refreshCombatControls():void {
+  for(const id of ['speed','boss-speed']){el(id).textContent=`${game.speed}×`;el(id).setAttribute('aria-label',`전투 배속 변경 · 현재 ${game.speed}배`);}
+  const numbers=el('dev-damage-numbers');numbers.textContent=`데미지 숫자 ${showDamageNumbers?'ON':'OFF'}`;numbers.setAttribute('aria-pressed',String(showDamageNumbers));
+}
 function refreshTools():void {
+  refreshCombatControls();
   el('dev-balance').textContent=`골드 ${game.gold.toLocaleString()}G · 모루 ${game.anvils}`;
   el<HTMLButtonElement>('dev-test-gear').disabled=!game.heroes().some(u=>u.id===selectedHero);
   const plan=game.combinationPlan(selectedHero),count=plan.length;
@@ -609,7 +616,7 @@ el('app').addEventListener('click',(e)=>{
   else if(b.id==='combine'){if(game.combineMany(game.combinationPlan(selectedHero))){selectedGear=null;pressedGear=null;shopFocus=null;}}
   else if(b.id==='reroll')game.reroll();
   else if(b.id==='bounty-summon')game.summonBounty();
-  else if(b.id==='speed'){game.speed=game.speed===1?2:game.speed===2?3:1;b.textContent=`${game.speed}×`;}
+  else if(b.id==='speed'||b.id==='boss-speed'){game.speed=nextCombatSpeed(game.speed);refreshCombatControls();}
   refresh();
 },{signal:events.signal});
 el('dev-tools').addEventListener('click',(e)=>{
@@ -620,6 +627,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   else if(button.id==='dev-test-gear'){
     if(game.devEquipHero(selectedHero)){selectedUnit=selectedHero;pending=null;selectedGear=null;pressedGear=null;shopFocus=null;turns=0;openTab('gear');}
   }
+  else if(button.id==='dev-damage-numbers'){showDamageNumbers=!showDamageNumbers;if(currentScene==='boss')bossBattleView.draw();}
   else if(button.id==='dev-gold')game.devGold();
   else if(button.id==='dev-anvils')game.devAnvils();
   else if(button.dataset.monsterId)game.spawnTestMonster(button.dataset.monsterId);
@@ -627,7 +635,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   else if(button.id==='dev-reset'){
     clearSummonDrag();drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
     clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();bossDamageHistory.clear();damageMeterMode='defense';showLastBoss=false;activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=false;syncBossRoster(true,true);bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
-    lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');el('speed').textContent='1×';
+    lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');refreshCombatControls();
   }
   refresh();
 },{signal:events.signal});
@@ -704,7 +712,7 @@ async function start():Promise<void> {
     else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
     else game.note('먼저 아래에서 소환할 병사 또는 영웅을 선택하세요.');
     refresh();
-  },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture);
+  },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture,()=>showDamageNumbers);
   let lastRevision=-1,hudClock=0,meterClock=0;
   renderMonsterTools();
   renderRecipeTree();
@@ -713,7 +721,7 @@ async function start():Promise<void> {
     if(sceneTransitioning)return;
     if(activeBossWave!==null&&(!game.bossPending||activeBossWave!==game.wave)){activeBossWave=null;bossReturnDelay=0;}
     if(currentScene==='boss'){
-      const dt=Math.min(ticker.deltaMS/1000,.05);bossBattle.tick(dt);bossDamageHistory.capture(bossBattle,bossEncounterWave);bossBattleView.draw();
+      const dt=Math.min(ticker.deltaMS/1000,.1);stepCombat(dt,game.speed,seconds=>bossBattle.tick(seconds));bossDamageHistory.capture(bossBattle,bossEncounterWave);bossBattleView.draw();
       meterClock+=dt;if(meterClock>=.15){meterClock=0;refreshDamageMeter();}
       if(activeBossWave===game.wave&&bossBattle.result==='victory'){
         bossReturnDelay+=dt;
@@ -741,7 +749,7 @@ async function start():Promise<void> {
       if(!node||node.scrollTop===before){if(drag.y<edge)window.scrollBy(0,-step);else if(drag.y>innerHeight-edge)window.scrollBy(0,step);}
     }
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
-    const dt=Math.min(ticker.deltaMS/1000,0.1);game.tick(dt);
+    const dt=Math.min(ticker.deltaMS/1000,0.1);stepCombat(dt,game.speed,(_seconds,realSeconds)=>game.tick(realSeconds));
     const canSummon=pending!==null&&!summonReason(pending);
     view.draw(selectedUnit,canSummon,unitDrag?.moved?{id:unitDrag.id,slot:canvasSlot(unitDrag.x,unitDrag.y)}:undefined);
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}

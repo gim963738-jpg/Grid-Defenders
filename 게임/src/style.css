@@ -504,3 +504,8 @@
 .boss-skill-empty{background:#12211e;border-style:dashed;min-height:65px;}
 .boss-skill-empty::before,.boss-skill-empty::after{display:none;}
 .boss-basic-skill{border-color:#4b6455;}
+
+/* WEB-073: shared battle speed and developer floating damage visibility. */
+.boss-wave-heading{gap:8px;}
+.boss-wave-heading #boss-speed{min-width:52px;padding:6px 8px;border:1px solid #756444;border-radius:5px;background:#3a3526;color:#e9c37c;}
+#dev-damage-numbers{grid-column:1/-1;}

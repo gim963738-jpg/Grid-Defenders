@@ -6,7 +6,7 @@ import { Defense,enemyRadius } from './defense';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 import {  RULES, SLOTS, UNITS } from './defenseConfig';
 
-export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture,fireTexture:Texture,swordTexture:Texture,bladeTexture:Texture) {
+export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture,fireTexture:Texture,swordTexture:Texture,bladeTexture:Texture,showDamageNumbers:()=>boolean=()=>true) {
   const root=new Container();app.stage.addChild(root);
   const field=new Graphics();root.addChild(field);
   field.roundRect(4,4,382,322,18).fill(0x101d20).stroke({width:2,color:0x52614a});
@@ -162,7 +162,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
       });
       for(let i=0;i<Math.max(numberPool.length,game.damageNumbers.length);i++){
         const number=game.damageNumbers[i];
-        if(!number){numberPool[i].visible=false;continue;}
+        if(!number||!showDamageNumbers()){if(numberPool[i])numberPool[i].visible=false;continue;}
         if(!numberPool[i]){const t=new Text({style:{fontFamily:'system-ui',fontSize:14,fontWeight:'bold',fill:0xffffff,stroke:{color:0x15201c,width:3}}});t.anchor.set(0.5);t.eventMode='none';root.addChild(t);numberPool.push(t);}
         const t=numberPool[i],progress=1-number.life/0.75;t.visible=true;
         t.text=number.critical?`치명 ${number.damage}`:String(number.damage);
