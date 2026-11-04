@@ -36,9 +36,6 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const effects=new Graphics();effects.eventMode='none';root.addChild(effects);
   const movementPreview=new Graphics();movementPreview.eventMode='none';root.addChild(movementPreview);
   const assassinTrails=new Graphics();assassinTrails.eventMode='none';root.addChild(assassinTrails);
-  // Unclipped effect layer beneath actors and labels; its bounds never use a placement slot.
-  const assassinLayer=new Container();assassinLayer.eventMode='none';root.addChild(assassinLayer);
-  const assassinSprites:Sprite[]=[];
   const actors=new Graphics();root.addChild(actors);
   actors.eventMode='none';
   const heroSprites:Partial<Record<UnitKind,Sprite>>={ranged:new Sprite(rangedTexture),melee:new Sprite(meleeTexture)};
@@ -47,6 +44,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
     sprite.anchor.set(.5,1);sprite.eventMode='none';sprite.height=57;sprite.scale.x=sprite.scale.y;sprite.visible=false;root.addChild(sprite);
   }
   const iceEffects=new Graphics();iceEffects.eventMode='none';root.addChild(iceEffects);
+  // Unclipped effect layer above actors, below labels; its bounds never use a placement slot.
+  const assassinLayer=new Container();assassinLayer.eventMode='none';root.addChild(assassinLayer);
+  const assassinSprites:Sprite[]=[];
   const badges=SLOTS.map(p=>{const t=new Text({text:'',style:{fontFamily:'system-ui',fontSize:10,fontWeight:'bold',fill:0xf5f4e7}});t.anchor.set(0.5);t.position.set(p.x,p.y+15);root.addChild(t);return t;});
   const skillBars=new Graphics();skillBars.eventMode='none';root.addChild(skillBars);
   const skillLabels=SLOTS.map(p=>{const text=new Text({text:'',style:{fontFamily:'system-ui',fontSize:7,fill:0xeafaff,stroke:{color:0x10282f,width:1}}});text.anchor.set(.5);text.position.set(p.x,p.y+28);text.eventMode='none';text.visible=false;root.addChild(text);return text;});
