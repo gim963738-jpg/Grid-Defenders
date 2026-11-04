@@ -376,6 +376,34 @@ export class Defense {
     this.note(`조합 ${pairs.length}회 완료 · 모루 ${pairs.length}개 사용 · 완성품은 재료가 있던 자리에서 확인하세요.`);return true;
   }
   combine(ids:readonly number[]):boolean {return this.combineMany([ids]);}
+  devEquipHero(owner:number|null):boolean {
+    const hero=this.heroes().find(u=>u.id===owner);
+    if(!hero)return this.note('테스트 장비를 배치할 영웅을 먼저 선택하세요.');
+    // Five L triominoes + two dominoes occupy 19 of the 4×5 board's 20 cells.
+    const layout:[string,number,number,number][]=[
+      ['I08',0,0,0],['I08',2,1,0],['I08',1,2,0],['I08',0,3,0],['I08',2,3,3],
+      ['I03',1,0,0],['I03',3,0,1],
+    ];
+    const owned=this.gear.filter(g=>g.owner===owner),available=[...owned];
+    const planned:Gear[]=layout.map(([type,x,y,turns],i)=>{
+      const index=available.findIndex(g=>g.def.id===type),existing=index<0?undefined:available.splice(index,1)[0];
+      return {id:existing?.id??-i-1,def:ITEMS.find(d=>d.id===type)!,owner:hero.id,x,y,turns,order:0,costBasis:existing?.costBasis??0};
+    });
+    if(planned.some(g=>!this.canPlace(g,hero.id,g.x,g.y,g.turns,planned)))
+      return this.note('테스트 장비가 장비칸에 맞지 않습니다. 기존 장비를 유지합니다.');
+    const keep=new Set(planned.map(g=>g.id));
+    for(const old of owned)if(!keep.has(old.id)){
+      const position=this.findBagSpace(old);Object.assign(old,position,{owner:null});
+    }
+    for(const item of planned){
+      const existing=this.gear.find(g=>g.id===item.id);
+      if(existing)Object.assign(existing,{x:item.x,y:item.y,turns:item.turns,order:++this.placementOrder});
+      else this.gear.push({...item,id:this.nextId++,order:++this.placementOrder});
+    }
+    this.log('economy',`[개발자] ${this.unitName(hero)} · 질풍의 검 5개 + 가속 룬 2개 자동 배치 · 19/20칸 · 무료`,{sourceId:hero.id});
+    this.note(`${UNITS[hero.kind].name} · 질풍의 검 5개 + 가속 룬 2개 배치 완료 · 기존 장비는 공용 가방 보관`);
+    return true;
+  }
   devDeploySoldiers():void {
     const layout:{kind:UnitKind;slot:number;level?:number}[]=[
       ...[0,1,2,3].map(slot=>({kind:'guard' as const,slot})),

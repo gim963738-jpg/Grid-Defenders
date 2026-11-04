@@ -239,6 +239,7 @@ function refresh():void {
 }
 function refreshTools():void {
   el('dev-balance').textContent=`골드 ${game.gold.toLocaleString()}G · 모루 ${game.anvils}`;
+  el<HTMLButtonElement>('dev-test-gear').disabled=!game.heroes().some(u=>u.id===selectedHero);
   const plan=game.combinationPlan(selectedHero),count=plan.length;
   el('combine-status').textContent=`조합 ${count}회 · 모루 ${count}개 필요 / 보유 ${game.anvils}개`;
   const button=el<HTMLButtonElement>('combine');
@@ -615,6 +616,9 @@ el('dev-tools').addEventListener('click',(e)=>{
   if(button.id==='dev-boss-scene'){void sceneTransition.go('boss');return;}
   if(button.id==='dev-defense-scene'){void sceneTransition.go('defense');return;}
   if(button.id==='dev-test-deploy')game.devDeploySoldiers();
+  else if(button.id==='dev-test-gear'){
+    if(game.devEquipHero(selectedHero)){selectedUnit=selectedHero;pending=null;selectedGear=null;pressedGear=null;shopFocus=null;turns=0;openTab('gear');}
+  }
   else if(button.id==='dev-gold')game.devGold();
   else if(button.id==='dev-anvils')game.devAnvils();
   else if(button.dataset.monsterId)game.spawnTestMonster(button.dataset.monsterId);
