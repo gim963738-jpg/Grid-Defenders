@@ -2,9 +2,9 @@ import {Defense} from '../src/defense';
 import {ITEMS,rotated,UNITS} from '../src/defenseConfig';
 export function checkDevGear(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};
- const empty=new Defense();check(!empty.devEquipHero(null)&&!empty.gear.length,'missing hero causes no equipment changes');
+ const empty=new Defense(()=>1);check(!empty.devEquipHero(null)&&!empty.gear.length,'missing hero causes no equipment changes');
  empty.summon('guard',0);check(!empty.devEquipHero(empty.units[0].id)&&!empty.gear.length,'soldiers cannot receive hero test gear');
- const g=new Defense();g.summon('melee',0);g.summon('ranged',1);const hero=g.units[0],other=g.units[1],gold=g.gold,anvils=g.anvils;
+ const g=new Defense(()=>1);g.summon('melee',0);g.summon('ranged',1);const hero=g.units[0],other=g.units[1],gold=g.gold,anvils=g.anvils;
  check(g.devEquipHero(hero.id),'one click equips selected hero');
  const gear=g.gear.filter(item=>item.owner===hero.id);
  check(gear.length===7&&gear.filter(x=>x.def.id==='I08').length===5&&gear.filter(x=>x.def.id==='I03').length===2,'exactly five gale swords and two haste runes');
@@ -18,14 +18,14 @@ export function checkDevGear(){
  const ids=gear.map(x=>x.id).join(',');g.devEquipHero(hero.id);
  check(g.gear.length===7&&g.gear.filter(x=>x.owner===hero.id).map(x=>x.id).join(',')===ids,'repeated click reuses seven items without duplication');
  g.devEquipHero(other.id);check(g.gear.filter(x=>x.owner===hero.id).length===7&&g.gear.filter(x=>x.owner===other.id).length===7,'another selected hero receives its own set');
- const existing=new Defense();existing.summon('tank',0);existing.summon('ranged',1);existing.gold=10000;existing.buy(0);const owned=existing.gear[0];existing.equip(owned.id,existing.units[0].id,0,0,0);existing.buy(1);const bagItem=existing.gear[1];existing.shop[0]=ITEMS[0];existing.buy(0);const otherGear=existing.gear[2];existing.equip(otherGear.id,existing.units[1].id,0,0,0);
+ const existing=new Defense(()=>1);existing.summon('tank',0);existing.summon('ranged',1);existing.gold=10000;existing.buy(0);const owned=existing.gear[0];existing.equip(owned.id,existing.units[0].id,0,0,0);existing.buy(1);const bagItem=existing.gear[1];existing.shop[0]=ITEMS[0];existing.buy(0);const otherGear=existing.gear[2];existing.equip(otherGear.id,existing.units[1].id,0,0,0);
  const bagBefore=JSON.stringify(bagItem),otherBefore=JSON.stringify(otherGear),balance=existing.gold;
  existing.devEquipHero(existing.units[0].id);
  check(owned.owner===null&&existing.gear.includes(owned),'existing incompatible equipment is preserved in bag');
  check(JSON.stringify(bagItem)===bagBefore&&JSON.stringify(otherGear)===otherBefore,'existing bag items and other hero gear keep their position');
  check(existing.canPlace(owned,null,owned.x,owned.y,owned.turns),'moved old equipment does not overlap existing bag items');
  check(existing.gold===balance,'old equipment transfer does not change gold');
- const partial=new Defense();partial.summon('ranged',0);partial.gold=10000;partial.shop[0]=ITEMS.find(x=>x.id==='I08')!;partial.buy(0);const sword=partial.gear[0],paid=sword.costBasis;partial.equip(sword.id,partial.units[0].id,0,0,2);partial.devEquipHero(partial.units[0].id);
+ const partial=new Defense(()=>1);partial.summon('ranged',0);partial.gold=10000;partial.shop[0]=ITEMS.find(x=>x.id==='I08')!;partial.buy(0);const sword=partial.gear[0],paid=sword.costBasis;partial.equip(sword.id,partial.units[0].id,0,0,2);partial.devEquipHero(partial.units[0].id);
  check(partial.gear.length===7&&partial.gear.includes(sword)&&sword.costBasis===paid,'existing matching item is reused and retains original resale basis');
  return passed;
 }

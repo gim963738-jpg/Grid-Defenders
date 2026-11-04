@@ -13,7 +13,7 @@ export function checkBossDpsHistory():string[]{
  battle.damageMeter.record({id:'1',name:'보병',color:'#fff'},300,3);battle.elapsed=3;history.capture(battle,20,true);check(history.last===archived,'interrupted new trial cannot erase a completed result');check(history.last!.stats.total===150,'archive is detached from live damage data');
  battle.elapsed=3;battle.result='defeat';history.capture(battle,20);check(history.last!.wave===20&&history.last!.outcome==='패배'&&history.last!.stats.total===300,'latest finished attempt replaces old result');
  history.clear();check(history.last===null,'game reset can clear boss archive');
- const game=new Defense();game.damageMeter.record({id:'2',name:'병사',color:'#fff'},80,4);game.waveTime=4;game.nextTestWave();
+ const game=new Defense(()=>1);game.damageMeter.record({id:'2',name:'병사',color:'#fff'},80,4);game.waveTime=4;game.nextTestWave();
  check(game.lastWaveDamage?.wave===1&&game.lastWaveDamage.stats.total===80,'completed wave retains its own detached snapshot');
  const waveRecord=game.lastWaveDamage;game.wave=10;game.bossPending=true;game.completeBossWave();check(game.lastWaveDamage===waveRecord,'boss completion does not overwrite prior wave record');
  game.reset();check(game.lastWaveDamage===null,'game reset clears wave archive');

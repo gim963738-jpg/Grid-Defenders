@@ -3,7 +3,7 @@ import { BossBattle, waveBossRoster } from '../src/bossBattle';
 import { iceProjectileShape, iceBurstShape } from '../src/iceEffects';
 export function checkBossRosterIce():string[]{
  const passed:string[]=[];const check=(ok:boolean,label:string)=>{if(!ok)throw new Error(label);passed.push(label);};
- const wave=new Defense();wave.gold=10000;wave.summon('guard',3);wave.summon('ranged',5);wave.summon('tank',12);
+ const wave=new Defense(()=>1);wave.gold=10000;wave.summon('guard',3);wave.summon('ranged',5);wave.summon('tank',12);
  const soldier=wave.units[0],ranged=wave.units[1];wave.upgrade(soldier.id);wave.buy(0);wave.equip(wave.gear[0].id,ranged.id,0,0,0);
  const snapshot=JSON.stringify({units:wave.units,gear:wave.gear,gold:wave.gold});
  const battle=new BossBattle(waveBossRoster(wave),()=>1),allies=battle.actors.filter(a=>a.side==='ally');battle.autoSkills=false;

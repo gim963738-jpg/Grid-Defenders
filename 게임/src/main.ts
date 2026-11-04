@@ -192,7 +192,7 @@ function refreshHeroInfo():void {
   if(!heroInfo)return;
   const def=UNITS[heroInfo.kind],unit=game.units.find(u=>u.id===heroInfo!.unitId);
   if(heroInfo.unitId!==null&&!unit){closeHeroInfo();return;}
-  const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0,critChance:def.hero?0:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier,physicalAttack:def.damageType==='physical'?def.attack:0,magicAttack:def.damageType==='magic'?def.attack:0,physicalArmor:def.armor,magicArmor:def.magicArmor};
+  const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0,critChance:def.hero?RULES.heroCritChance:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier,physicalAttack:def.damageType==='physical'?def.attack:0,magicAttack:def.damageType==='magic'?def.attack:0,physicalArmor:def.armor,magicArmor:def.magicArmor};
   const field=(key:string,icon:string,label:string,current:number,base:number,format=(n:number)=>n.toLocaleString(),prefix='')=>{
     const gain=unit&&def.hero?current-base:0;
     return {key,icon,label,value:prefix+format(current),bonus:gain>1e-8?`(+${format(gain)})`:''};
@@ -202,7 +202,7 @@ function refreshHeroInfo():void {
     field('attack','⚔','물리 공격',stats.physicalAttack,def.damageType==='physical'?baseAttack:0),field('attack','✦','마법 공격',stats.magicAttack,def.damageType==='magic'?baseAttack:0),
     field('armor','⬡','물리 방어',stats.physicalArmor,def.armor),field('armor','◇','마법 방어',stats.magicArmor,def.magicArmor),
     field('regen','✚','체력 재생',stats.regen,0,n=>`${n.toLocaleString()}/초`),field('gold','◇','골드 획득',stats.gold,0,n=>`${Math.round(n*100)}%`,'+')];
-  if(!def.hero)fields.push(field('attack','✦','치명타 확률',stats.critChance,stats.critChance,n=>`${Math.round(n*100)}%`),field('attack','✦','치명타 배율',stats.critMultiplier,stats.critMultiplier,n=>`${n}배`));
+  fields.push(field('attack','✦','치명타 확률',stats.critChance,stats.critChance,n=>`${Math.round(n*100)}%`),field('attack','✦','치명타 데미지',stats.critMultiplier,stats.critMultiplier,n=>`${n}배`));
   const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${def.hero?heroPortrait(heroInfo.kind):def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(({key,icon,label,value,bonus})=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}"${bonus?' class="stat-increased"':''}><span>${value}</span>${bonus?`<small class="gear-stat-bonus" aria-label="장비 증가분 ${bonus}">${bonus}</small>`:''}</dd></div>`).join('')}</dl>`;
   if(markup!==heroInfoMarkup){el('hero-info').innerHTML=markup;heroInfoMarkup=markup;}
   positionHeroInfo();

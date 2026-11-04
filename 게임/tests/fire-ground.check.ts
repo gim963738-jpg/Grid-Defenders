@@ -13,7 +13,7 @@ export function checkFireGround(){
  check(aligned,'measured circle centers align across uneven frames and animation rows');
  check(pivots.every(([age])=>{c.age=age;const f=fireFrame(c),p=firePlacement(c);return p.width/f.width===.75&&p.height/f.height===.75;}),'ground frames keep a constant pixel scale');
  check(enemyRadius({named:false})===8&&enemyRadius({named:false,bounty:true})===12&&enemyRadius({named:true})===14,'ground offsets match regular bounty and named monster feet');
- const w=new Defense();w.enemies[0].speed=0;w.waveSpawned=10;w.summon('ranged',0);w.units[0].cooldown=999;w.tick(.01);
+ const w=new Defense(()=>1);w.enemies[0].speed=0;w.waveSpawned=10;w.summon('ranged',0);w.units[0].cooldown=999;w.tick(.01);
  check(w.fireCasts[0].footOffset===8,'wave cast receives the rendered monster foot offset');
  const b=bossFixture(),h=b.hero()!,t=b.actors.find(a=>a.kind==='retainer')!;b.actors=[h,t];h.x=t.x-20;h.y=t.y;h.cooldown=999;t.cooldown=999;b.tripleSkill();
  check(b.fireCasts[0].footOffset===40.5,'boss retainer flame is based at its feet');

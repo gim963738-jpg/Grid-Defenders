@@ -6,7 +6,7 @@ export const BLADE_SKILL={cooldown:8,radius:FIRE_SKILL.radius,hits:6,
 export const bladeDamageMultiplier=(hitIndex:number)=>BLADE_SKILL.damageMultipliers[hitIndex]??0;
 export const BLADE_SHEET_URL=`${import.meta.env.BASE_URL}assets/effects/blade-skill-sheet.png`;
 export const BLADE_ALPHA_MATRIX:[number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number]=[1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,.8,.3,1.2,0,-.38];
-export interface BladeCast<S,Id>{source:S;targetId:Id;attack:number;x:number;y:number;footOffset:number;age:number;hits:number;}
+export interface BladeCast<S,Id>{critical?:boolean;source:S;targetId:Id;attack:number;x:number;y:number;footOffset:number;age:number;hits:number;}
 export function createBladeCast<S,Id>(source:S,targetId:Id,attack:number,x:number,y:number,footOffset=8):BladeCast<S,Id>{return {source,targetId,attack,x,y,footOffset,age:0,hits:0};}
 export function advanceBlade(cast:BladeCast<unknown,unknown>,dt:number):number{
  cast.age+=dt;let beats=0;

@@ -10,8 +10,8 @@ export function checkFireSkill(){
  beats+=advanceFire(c,.07);check(beats===3&&fireFrame(c).x>270,'third hit coincides with next maximum flame frame');
  check(advanceFire(c,.5)===0&&c.hits===3,'no extra damage during fade');advanceFire(c,.1);check(!fireAlive(c),'effect expires after fade');
  const skip=createFireCast({},1,75,0,0,0,0);advanceFire(skip,.01);check(advanceFire(skip,1.1)===3,'large simulation step preserves all three hits');
- const w=new Defense();w.enemies=[];w.waveSpawned=10;w.summon('ranged',0);const hero=w.units[0];hero.cooldown=999;
- const base=new Defense().enemies[0];w.enemies=[{...base,id:100,distance:20,...pathPoint(20),speed:0,hp:5000,maxHp:5000,defenseType:'normal'}];
+ const w=new Defense(()=>1);w.enemies=[];w.waveSpawned=10;w.summon('ranged',0);const hero=w.units[0];hero.cooldown=999;
+ const base=new Defense(()=>1).enemies[0];w.enemies=[{...base,id:100,distance:20,...pathPoint(20),speed:0,hp:5000,maxHp:5000,defenseType:'normal'}];
  w.tick(.01);const hp=w.enemies[0].hp;for(let i=0;i<10;i++)w.tick(.05);check(w.enemies[0].hp===hp,'wave has no early impact damage');
  for(let i=0;i<35;i++)w.tick(.05);check(hp-w.enemies[0].hp===w.stats(hero).attack*3,'wave total equals three base attacks');
  check(w.damageMeter.snapshot(w.elapsed).total===225,'fire damage is counted in wave DPS');

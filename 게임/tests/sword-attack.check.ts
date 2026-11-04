@@ -14,7 +14,7 @@ export function checkSwordAttack(){
  const quick=createSwordAttack(1,2,90,false,0,4,0,0);check(quick.duration<.25&&swordImpactTime(quick)<swordImpactTime(s),'fast attack animation fits attack interval');
  const lost=createSwordAttack(1,2,90,false,0,1,0,0);check(!advanceSword(lost,.2)&&!lost.connected,'dead target before impact causes no ghost hit');
  check([3,4,5].every(kind=>swordSlashFrame(kind as 3|4|5,4).y>=720),'only selected lower three slash rows are used');
- const setup=()=>{const g=new Defense();const base=g.enemies[0];g.enemies=[{...base,id:100,distance:20,...pathPoint(20),speed:0,hp:5000,maxHp:5000,defenseType:'normal' as const}];g.waveSpawned=10;g.summon('melee',0);g.units[0].cooldown=0;g.meleeSkills.set(g.units[0].id,{cooldown:999,casts:0});return g;};
+ const setup=()=>{const g=new Defense(()=>1);const base=g.enemies[0];g.enemies=[{...base,id:100,distance:20,...pathPoint(20),speed:0,hp:5000,maxHp:5000,defenseType:'normal' as const}];g.waveSpawned=10;g.summon('melee',0);g.units[0].cooldown=0;g.meleeSkills.set(g.units[0].id,{cooldown:999,casts:0});return g;};
  const g=setup(),target=g.enemies[0],hero=g.units[0];g.tick(.01);check(target.hp===5000&&g.swordAttacks.length===1&&g.shots.length===0,'wave queues sword motion instead of instant hit or old beam');
  hero.cooldown=999;g.tick(.1);check(target.hp===5000,'wave waits for sword light peak');g.tick(.1);check(target.hp===4910,'wave peak deals exactly one base attack');
  for(let i=0;i<15;i++)g.tick(.1);check(target.hp===4910&&g.damageMeter.snapshot(g.elapsed).total===90,'ten slash frames do not multiply damage or DPS');
@@ -22,7 +22,7 @@ export function checkSwordAttack(){
  check(kinds.join(',')==='5,4,3,5','successive wave attacks use the approved sequence');
  g.units[0].cooldown=0;g.tick(.01);g.nextTestWave();check(g.swordAttacks.length===0,'wave change clears pending sword damage and effects');g.reset();check(g.swordSwingCounts.size===0,'game reset restarts swing sequence');
  const removed=setup();removed.tick(.01);removed.units=[];removed.tick(.2);check(removed.enemies[0].hp===5000&&removed.swordAttacks.length===0,'removed source cannot finish a sword strike');
- const wave=new Defense();wave.summon('melee',0);const b=new BossBattle(waveBossRoster(wave));b.autoSkills=false;const h=b.actors.find(a=>a.kind==='melee')!,t=b.actors.find(a=>a.kind==='retainer')!;b.actors=[h,t];h.x=t.x-20;h.y=t.y;h.cooldown=0;t.cooldown=999;t.defenseType='normal';const hp=t.hp;
+ const wave=new Defense(()=>1);wave.summon('melee',0);const b=new BossBattle(waveBossRoster(wave),()=>1);b.autoSkills=false;const h=b.actors.find(a=>a.kind==='melee')!,t=b.actors.find(a=>a.kind==='retainer')!;b.actors=[h,t];h.x=t.x-20;h.y=t.y;h.cooldown=0;t.cooldown=999;t.defenseType='normal';const hp=t.hp;
  b.tick(.01);check(t.hp===hp&&b.swordAttacks[0].kind===5,'boss starts with the same windup and fifth slash');h.cooldown=999;for(let i=0;i<4;i++)b.tick(.05);check(hp-t.hp===h.attack&&b.hits.filter(hit=>hit.sword).length===1,'boss sword peak deals one physical attack');
  for(let i=0;i<12;i++)b.tick(.05);check(hp-t.hp===h.attack,'boss slash animation causes no extra hits');
  const final=createSwordAttack(h.id,t.id,90,false,0,1,t.x,t.y);final.connected=true;final.hit=true;final.age=.15;b.swordAttacks=[final];b.result='victory';const combatTime=b.elapsed,finalHp=t.hp;

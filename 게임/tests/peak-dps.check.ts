@@ -12,7 +12,7 @@ export function checkPeakDps():string[]{
  wave.record(source,1,2);check(wave.snapshot(2).rows[0].peakDps===180,'wave sees peak earned in boss combat');
  boss.reset();check(boss.snapshot(0).peakDps===180,'boss retry retains peak');
  wave.reset(true);check(boss.snapshot(0).peakDps===0&&history.units.size===0,'game reset clears shared peaks');
- const g=new Defense();g.devDeploySoldiers();const b=new BossBattle(waveBossRoster(g),()=>1,g.damageMeter.peaks);
+ const g=new Defense(()=>1);g.devDeploySoldiers();const b=new BossBattle(waveBossRoster(g),()=>1,g.damageMeter.peaks);
  g.damageMeter.record({id:String(g.units[0].id),name:'보병',color:'#fff'},50,1);b.reset();check(b.damageMeter.snapshot(0).peakDps===50,'boss reset preserves actual game peak history');
  g.nextTestWave();check(g.damageMeter.snapshot(0).peakDps===50,'actual next wave preserves game peak');
  g.reset();check(g.damageMeter.snapshot(0).peakDps===0&&b.damageMeter.snapshot(0).peakDps===0,'actual game reset clears both scene histories');

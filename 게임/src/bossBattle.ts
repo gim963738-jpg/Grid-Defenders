@@ -1,3 +1,4 @@
+import {criticalAttack} from './critical';
 import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinPosition,inAssassinPath,type AssassinAction,type AssassinImpact} from './assassinCombat';
 import {combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from './armorBreak';
 import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
@@ -17,7 +18,7 @@ export interface BossActor {
   x:number;y:number;hp:number;maxHp:number;attack:number;rate:number;range:number;
   speed:number;rank:number;damageType:DamageType;defenseType:DefenseType;cooldown:number;
 }
-export interface BossIceProjectile {x:number;y:number;tx:number;ty:number;targetId:string;source:BossActor;attack:number;}
+export interface BossIceProjectile {critical?:boolean;x:number;y:number;tx:number;ty:number;targetId:string;source:BossActor;attack:number;}
 export interface BossIceBurst {x:number;y:number;life:number;}
 export interface BossHit {from:string;to:string;x:number;y:number;damage:number;magic:boolean;life:number;ice?:boolean;sword?:boolean;critical?:boolean;splash?:boolean;}
 /** Independent temporary encounter: it never mutates defense units, equipment or rewards. */
@@ -94,13 +95,13 @@ export class BossBattle {
     for(const action of this.assassinActions)if(action.sourceId===id&&action.kind==='basic')cancelAssassin(action);
     if(hero.kind==='assassin'){
       this.heroSkillCooldowns.set(id,ASSASSIN.bossCooldown);
-      this.assassinActions.push(createAssassinAction('boss',{...hero},id,[target.id],this.attackPower(hero),hero.x,hero.y,target,hero.rate));
+      this.assassinActions.push(criticalAttack(createAssassinAction('boss',{...hero},id,[target.id],this.attackPower(hero),hero.x,hero.y,target,hero.rate),hero,this.random));
     }else if(hero.kind==='melee'){
       this.heroSkillCooldowns.set(id,BLADE_SKILL.cooldown);
-      this.bladeCasts.push(createBladeCast({...hero},target.id,this.attackPower(hero),target.x,target.y,footOffset));
+      this.bladeCasts.push(criticalAttack(createBladeCast({...hero},target.id,this.attackPower(hero),target.x,target.y,footOffset),hero,this.random));
     }else{
       this.heroSkillCooldown=FIRE_SKILL.cooldown;
-      this.fireCasts.push(createFireCast({...hero},target.id,this.attackPower(hero),hero.x,hero.y-12,target.x,target.y,footOffset));
+      this.fireCasts.push(criticalAttack(createFireCast({...hero},target.id,this.attackPower(hero),hero.x,hero.y-12,target.x,target.y,footOffset),hero,this.random));
     }
     return true;
   }
@@ -111,16 +112,16 @@ export class BossBattle {
   }
   private strike(actor:BossActor,target:BossActor,damage:Map<string,number>):void {
     if(actor.kind==='ranged'){
-      this.iceProjectiles.push({x:actor.x,y:actor.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...actor},attack:this.attackPower(actor)});
+      this.iceProjectiles.push(criticalAttack({x:actor.x,y:actor.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...actor},attack:this.attackPower(actor)},actor,this.random));
       return;
     }
     if(actor.kind==='assassin'){
       const targets=this.actors.filter(a=>a.side!==actor.side&&a.hp>0&&Math.hypot(a.x-actor.x,a.y-actor.y)<=actor.range).sort((a,b)=>a.rank-b.rank||Math.hypot(a.x-actor.x,a.y-actor.y)-Math.hypot(b.x-actor.x,b.y-actor.y)||a.id.localeCompare(b.id)).slice(0,3);
-      this.assassinActions.push(createAssassinAction('basic',{...actor},actor.id,targets.map(a=>a.id),this.attackPower(actor),actor.x,actor.y,target,actor.rate));return;
+      this.assassinActions.push(criticalAttack(createAssassinAction('basic',{...actor},actor.id,targets.map(a=>a.id),this.attackPower(actor),actor.x,actor.y,target,actor.rate),actor,this.random));return;
     }
     if(actor.kind==='melee'){
       const sequence=this.swordSwingCounts.get(actor.id)??0;this.swordSwingCounts.set(actor.id,sequence+1);
-      this.swordAttacks.push(createSwordAttack(actor.id,target.id,this.attackPower(actor),false,sequence,actor.rate,target.x,target.y));return;
+      const rolled=criticalAttack({attack:this.attackPower(actor)},actor,this.random);this.swordAttacks.push(createSwordAttack(actor.id,target.id,rolled.attack,rolled.critical,sequence,actor.rate,target.x,target.y));return;
     }
     const critical=(actor.critChance??0)>this.random();
     const amount=this.attackPower(actor)*(critical?(actor.critMultiplier??1.5):1)*combatDefenseMultiplier(actor.damageType,target);
@@ -163,7 +164,7 @@ export class BossBattle {
       for(const victim of live)if(victim.side!==p.source.side&&Math.hypot(victim.x-p.tx,victim.y-p.ty)<=AREA_ATTACK.mageRadius){
         const amount=p.attack*combatDefenseMultiplier(p.source.damageType,victim);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
-        this.hits.push({from:p.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,splash:victim.id!==p.targetId});
+        this.hits.push({from:p.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,critical:p.critical,splash:victim.id!==p.targetId});
       }
       return false;
     });
@@ -173,7 +174,7 @@ export class BossBattle {
       if(advanceSword(swing,dt,target)&&target){
         const amount=swing.attack*combatDefenseMultiplier(source.damageType,target);
         damage.set(target.id,(damage.get(target.id)??0)+amount);
-        this.hits.push({from:source.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:false,life:.32,sword:true});
+        this.hits.push({from:source.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:false,life:.32,sword:true,critical:swing.critical});
       }
     }
     this.swordAttacks=this.swordAttacks.filter(swordAlive);
@@ -188,7 +189,7 @@ export class BossBattle {
           const multiplier=action.kind==='basic'?ASSASSIN.basicMultiplier:ASSASSIN.bossMultipliers[beat];
           const amount=action.attack*multiplier*combatDefenseMultiplier(source.damageType,victim);
           damage.set(victim.id,(damage.get(victim.id)??0)+amount);
-          this.hits.push({from:source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,sword:true});
+          this.hits.push({from:source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,sword:true,critical:action.critical});
           if(action.kind==='boss'&&beat===3)applyArmorBreak(victim);
           else this.assassinImpacts.push({x:victim.x,y:victim.y,kind:([1,2,5] as const)[beat],life:.24});
         }
@@ -214,7 +215,7 @@ export class BossBattle {
       for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.tx,victim.y-cast.ty)<=FIRE_SKILL.radius){
         const amount=cast.attack*FIRE_SKILL.damageMultiplier*combatDefenseMultiplier(cast.source.damageType,victim);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
-        this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,splash:victim.id!==cast.targetId});
+        this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,critical:cast.critical,splash:victim.id!==cast.targetId});
       }
     }
     this.fireCasts=this.fireCasts.filter(fireAlive);
@@ -223,7 +224,7 @@ export class BossBattle {
       for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.x,victim.y-cast.y)<=BLADE_SKILL.radius){
         const amount=cast.attack*bladeDamageMultiplier(cast.hits-beats+i)*combatDefenseMultiplier(cast.source.damageType,victim);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
-        this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,sword:true,splash:victim.id!==cast.targetId});
+        this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,sword:true,critical:cast.critical,splash:victim.id!==cast.targetId});
       }
     }
     this.bladeCasts=this.bladeCasts.filter(bladeAlive);

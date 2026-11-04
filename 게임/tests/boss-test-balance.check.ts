@@ -4,9 +4,9 @@ import {calibrateBossTest} from '../src/bossTestBalance';
 export function checkBossTestBalance(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};
  check(calibrateBossTest([])===null,'empty formation cannot calibrate a test boss');
- const weak=new Defense();weak.summon('mage',0);
- const normal=new Defense();normal.devDeploySoldiers();
- const strong=new Defense();strong.devDeploySoldiers();strong.summon('melee',4);strong.summon('tank',5);strong.devEquipHero(strong.units.find(u=>u.kind==='melee')!.id);strong.devEquipHero(strong.units.find(u=>u.kind==='ranged')!.id);
+ const weak=new Defense(()=>1);weak.summon('mage',0);
+ const normal=new Defense(()=>1);normal.devDeploySoldiers();
+ const strong=new Defense(()=>1);strong.devDeploySoldiers();strong.summon('melee',4);strong.summon('tank',5);strong.devEquipHero(strong.units.find(u=>u.kind==='melee')!.id);strong.devEquipHero(strong.units.find(u=>u.kind==='ranged')!.id);
  const cases=[['single mage',weak],['saved twelve',normal],['equipped fourteen',strong]] as const;
  const profiles=[];
  for(const [name,game] of cases){
@@ -24,7 +24,7 @@ export function checkBossTestBalance(){
   check(manual.result==='fighting',`${name} does not wipe before fifty seconds with auto skills off`);
  }
  check(profiles[2].healthScale>profiles[1].healthScale&&profiles[1].healthScale>profiles[0].healthScale,'stronger equipment and formations increase test enemy health');
- const b=new BossBattle(waveBossRoster(normal));b.reset(waveBossRoster(normal),profiles[1]);const boss=b.actors.find(a=>a.kind==='boss')!;
+ const b=new BossBattle(waveBossRoster(normal),()=>1);b.reset(waveBossRoster(normal),profiles[1]);const boss=b.actors.find(a=>a.kind==='boss')!;
  check(boss.maxHp>6000&&boss.attack>0&&boss.attack<120,'manual test has adjusted health and positive survivable attack');
  b.reset();check(b.actors.find(a=>a.kind==='boss')!.maxHp===6000&&b.actors.find(a=>a.kind==='boss')!.attack===120,'default reset restores normal wave boss stats');
  return passed;

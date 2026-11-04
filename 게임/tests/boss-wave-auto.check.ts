@@ -2,7 +2,7 @@ import { Defense } from '../src/defense';
 import { BossBattle, waveBossRoster } from '../src/bossBattle';
 export function checkBossWaveAuto():string[]{
  const passed:string[]=[];const check=(ok:boolean,label:string)=>{if(!ok)throw new Error(label);passed.push(label);};
- const game=new Defense();check(!game.bossPending&&!game.completeBossWave(),'ordinary wave cannot complete a boss');
+ const game=new Defense(()=>1);check(!game.bossPending&&!game.completeBossWave(),'ordinary wave cannot complete a boss');
  while(game.wave<9)game.nextTestWave();const named=game.enemies.filter(e=>e.named).length;
  game.waveTime=29.99;game.tick(.02);
  check(game.wave===10&&game.bossPending,'wave timer enters boss at ten');

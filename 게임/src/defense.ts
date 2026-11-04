@@ -1,3 +1,4 @@
+import {criticalAttack} from './critical';
 import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinSourceBusy,type AssassinAction,type AssassinImpact} from './assassinCombat';
 import {combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from './armorBreak';
 import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
@@ -19,7 +20,7 @@ export function recipeForTypes(a:string,b:string) {
 export interface GearState { active:boolean; reason:string; }
 export interface Shot { x:number; y:number; tx:number; ty:number; life:number; color:number; }
 export interface RangedSkillState {cooldown:number;shotsLeft:number;delay:number;casts:number;}
-export interface IceProjectile {skill?:boolean;x:number;y:number;tx:number;ty:number;targetId:number;source:Unit;attack:number;}
+export interface IceProjectile {critical?:boolean;skill?:boolean;x:number;y:number;tx:number;ty:number;targetId:number;source:Unit;attack:number;}
 export interface IceBurst {x:number;y:number;life:number;}
 export type AttackArea =
   | { kind:'sector'; x:number; y:number; radius:number; angle:number; halfAngle:number; life:number; color:number }
@@ -82,7 +83,7 @@ export class Defense {
   private nextLogId=1;
   private nextId=1;
   private placementOrder=0;
-  constructor(){this.startWave(false);}
+  constructor(private readonly random:()=>number=Math.random){this.startWave(false);}
   private createMonster(def:MonsterDef):Enemy {
     const factor=1+(this.wave-1)*0.1,maxHp=Math.round(def.hp*factor);
     return {id:this.nextId++,distance:0,...pathPoint(0),hp:maxHp,maxHp,speed:def.speed,named:def.named,name:def.name,defenseType:def.defenseType,damageType:def.damageType,
@@ -188,7 +189,7 @@ export class Defense {
     return {attack,damageType:base.damageType,physicalAttack:base.damageType==='physical'?attack:0,magicAttack:base.damageType==='magic'?attack:0,physicalArmor,magicArmor,
       rate:base.rate*(1+total('speed')),range:base.range,
       hp:base.hp+total('hp'),armor:physicalArmor,regen:total('regen'),gold:total('gold'),
-      critChance:base.hero?0:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier};
+      critChance:base.hero?RULES.heroCritChance:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier};
   }
   summon(kind:UnitKind,slot:number):boolean {
     const def=UNITS[kind];
@@ -460,7 +461,7 @@ export class Defense {
     const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=stats.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
     if(!target)return false;
     this.cancelBasic(id);state.cooldown=ASSASSIN.waveCooldown;state.casts++;this.assassinSkills.set(id,state);
-    this.assassinActions.push(createAssassinAction('wave',{...unit},id,[target.id],stats.attack,pos.x,pos.y,target,stats.rate));return true;
+    this.assassinActions.push(criticalAttack(createAssassinAction('wave',{...unit},id,[target.id],stats.attack,pos.x,pos.y,target,stats.rate),stats,this.random));return true;
   }
   tick(realSeconds:number):void {
     if(this.bossPending||(this.keepWaveMonsters&&this.monsterLimitReached))return;
@@ -478,19 +479,19 @@ export class Defense {
       if(distance>step){p.x+=dx/distance*step;p.y+=dy/distance*step;return true;}
       const area:AttackArea={kind:'circle',x:p.tx,y:p.ty,radius:AREA_ATTACK.mageRadius,life:0.28,color:0x88ddff};
       this.iceBursts.push({x:p.tx,y:p.ty,life:0.45});
-      for(const enemy of this.enemies)if(enemy.hp>0&&inAttackArea(area,enemy.x,enemy.y))this.hit(p.source,enemy,p.attack);
+      for(const enemy of this.enemies)if(enemy.hp>0&&inAttackArea(area,enemy.x,enemy.y))this.hit(p.source,enemy,p.attack,p.critical);
       return false;
     });
     for(const cast of this.fireCasts){
       const target=this.enemies.find(e=>e.id===cast.targetId&&e.hp>0),beats=advanceFire(cast,dt,target);
       for(let i=0;i<beats;i++)for(const enemy of this.enemies)
-        if(enemy.hp>0&&Math.hypot(enemy.x-cast.tx,enemy.y-cast.ty)<=FIRE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*FIRE_SKILL.damageMultiplier);
+        if(enemy.hp>0&&Math.hypot(enemy.x-cast.tx,enemy.y-cast.ty)<=FIRE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*FIRE_SKILL.damageMultiplier,cast.critical);
     }
     this.fireCasts=this.fireCasts.filter(fireAlive);
     for(const cast of this.bladeCasts){
       const beats=advanceBlade(cast,dt);
       for(let i=0;i<beats;i++)for(const enemy of this.enemies)
-        if(enemy.hp>0&&Math.hypot(enemy.x-cast.x,enemy.y-cast.y)<=BLADE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*bladeDamageMultiplier(cast.hits-beats+i));
+        if(enemy.hp>0&&Math.hypot(enemy.x-cast.x,enemy.y-cast.y)<=BLADE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*bladeDamageMultiplier(cast.hits-beats+i),cast.critical);
     }
     this.bladeCasts=this.bladeCasts.filter(bladeAlive);
     const startedSkills=new Set<number>();
@@ -503,7 +504,7 @@ export class Defense {
       const victim=target();
       if(skill.cooldown<=1e-8&&victim){
         skill.cooldown=FIRE_SKILL.cooldown;skill.shotsLeft=0;skill.delay=0;skill.casts++;this.cancelBasic(u.id);startedSkills.add(u.id);
-        this.fireCasts.push(createFireCast({...u},victim.id,s.attack,pos.x,pos.y-12,victim.x,victim.y,enemyRadius(victim)));
+        this.fireCasts.push(criticalAttack(createFireCast({...u},victim.id,s.attack,pos.x,pos.y-12,victim.x,victim.y,enemyRadius(victim)),s,this.random));
         this.log('economy',`${this.unitName(u)} · 화염 기둥 발동 · 최고 화염 3회 타격 · 재사용 ${FIRE_SKILL.cooldown}초`,{sourceId:u.id});
       }
     }
@@ -513,7 +514,7 @@ export class Defense {
       const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=stats.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
       if(skill.cooldown<=1e-8&&target){
         skill.cooldown=BLADE_SKILL.cooldown;skill.casts++;this.cancelBasic(u.id);startedSkills.add(u.id);
-        this.bladeCasts.push(createBladeCast({...u},target.id,stats.attack,target.x,target.y,enemyRadius(target)));
+        this.bladeCasts.push(criticalAttack(createBladeCast({...u},target.id,stats.attack,target.x,target.y,enemyRadius(target)),stats,this.random));
         this.log('economy',`${this.unitName(u)} · 연속 검격 발동 · 범위 6회 타격 (75% ×5 + 225%) · 재사용 ${BLADE_SKILL.cooldown}초`,{sourceId:u.id});
       }
     }
@@ -534,7 +535,7 @@ export class Defense {
         const targetId=action.kind==='basic'?assassinBasicTarget(action.targets,beat,available.map(e=>e.id)):action.targets[0];
         const target=this.enemies.find(e=>e.id===targetId&&e.hp>0);
         if(!target)continue;
-        this.hit(action.source,target,action.attack*(action.kind==='basic'?ASSASSIN.basicMultiplier:ASSASSIN.waveMultiplier));
+        this.hit(action.source,target,action.attack*(action.kind==='basic'?ASSASSIN.basicMultiplier:ASSASSIN.waveMultiplier),action.critical);
         if(action.kind==='wave')applyArmorBreak(target);
         else this.assassinImpacts.push({x:target.x,y:target.y,kind:([1,2,5] as const)[beat],life:.24});
       }
@@ -555,16 +556,16 @@ export class Defense {
       if(!target){u.cooldown=0;continue;}
       u.cooldown=1/s.rate;
       if(u.kind==='ranged'){
-        this.iceProjectiles.push({x:pos.x,y:pos.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...u},attack:s.attack});
+        this.iceProjectiles.push(criticalAttack({x:pos.x,y:pos.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...u},attack:s.attack},s,this.random));
         continue;
       }
       if(u.kind==='assassin'){
         const targets=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range).sort((a,b)=>b.distance-a.distance||a.id-b.id).slice(0,3);
-        this.assassinActions.push(createAssassinAction('basic',{...u},u.id,targets.map(e=>e.id),s.attack,pos.x,pos.y,target,s.rate));continue;
+        this.assassinActions.push(criticalAttack(createAssassinAction('basic',{...u},u.id,targets.map(e=>e.id),s.attack,pos.x,pos.y,target,s.rate),s,this.random));continue;
       }
       if(u.kind==='melee'){
         const sequence=this.swordSwingCounts.get(u.id)??0;this.swordSwingCounts.set(u.id,sequence+1);
-        this.swordAttacks.push(createSwordAttack(u.id,target.id,s.attack,false,sequence,s.rate,target.x,target.y));
+        const rolled=criticalAttack({attack:s.attack},s,this.random);this.swordAttacks.push(createSwordAttack(u.id,target.id,rolled.attack,rolled.critical,sequence,s.rate,target.x,target.y));
         continue;
       }
       let area:AttackArea|undefined;
@@ -573,7 +574,7 @@ export class Defense {
       if(area)this.attackAreas.push(area);
       const targets=area?this.enemies.filter(e=>e.hp>0&&inAttackArea(area!,e.x,e.y)):[target];
       this.shots.push({x:pos.x,y:pos.y,tx:target.x,ty:target.y,life:0.16,color:UNITS[u.kind].color});
-      const critical=s.critChance>0&&Math.random()<s.critChance;
+      const critical=s.critChance>0&&this.random()<s.critChance;
       const attack=s.attack*(critical?s.critMultiplier:1);
       for(const victim of targets)this.hit(u,victim,attack,critical);
     }
@@ -595,7 +596,7 @@ export class Defense {
       this.damageNumbers.push({id:this.nextDamageId++,x:target.x,y:target.y,damage,critical,life:0.75});
       if(this.damageNumbers.length>80)this.damageNumbers.splice(0,this.damageNumbers.length-80);
       const targetName=`${target.name} #${target.id} (${DEFENSE_LABEL[target.defenseType]})`;
-      this.log('damage',`${this.unitName(u)} → ${targetName}${critical?' [치명타 ×1.5]':''} · ${DAMAGE_LABEL[damageType]} 공격 ${attack} → 방어 ×${multiplier} = ${afterDefense} / 실제 피해 ${damage} · 체력 ${hpBefore} → ${target.hp}`,
+      this.log('damage',`${this.unitName(u)} → ${targetName}${critical?' [치명타]':''} · ${DAMAGE_LABEL[damageType]} 공격 ${attack} → 방어 ×${multiplier} = ${afterDefense} / 실제 피해 ${damage} · 체력 ${hpBefore} → ${target.hp}`,
         {sourceId:u.id,targetId:target.id,attack,damage,hpBefore,hpAfter:target.hp,critical,damageType,defenseType:target.defenseType,defenseMultiplier:multiplier});
       if(target.hp<=0) {
         const bonus=this.heroes().reduce((sum,h)=>sum+this.stats(h).gold,0);

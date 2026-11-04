@@ -10,7 +10,7 @@ export function checkDamageMeter():string[]{
  meter.record(a,NaN);meter.record(a,-1);meter.record(a,Infinity);check(meter.snapshot(2).total===200,'invalid or nonpositive damage ignored');
  check(meter.snapshot(0).dps===0&&meter.snapshot(0).rows.every(r=>r.dps===0),'zero time never produces infinite DPS');
  meter.reset();check(meter.snapshot(1).total===0&&!meter.snapshot(1).rows.length,'meter reset clears entries');
- const wave=new Defense();wave.summon('guard',0);wave.units[0].cooldown=0;wave.enemies=wave.enemies.slice(0,1);wave.enemies[0].hp=5;wave.enemies[0].speed=0;wave.waveSpawned=10;
+ const wave=new Defense(()=>1);wave.summon('guard',0);wave.units[0].cooldown=0;wave.enemies=wave.enemies.slice(0,1);wave.enemies[0].hp=5;wave.enemies[0].speed=0;wave.waveSpawned=10;
  wave.tick(.01);check(wave.damageMeter.snapshot(wave.waveTime).total===5,'wave overkill counts only actual five HP');
  wave.nextTestWave();check(wave.damageMeter.snapshot(wave.waveTime).total===0,'new wave clears DPS');
  wave.reset();check(wave.damageMeter.snapshot(1).total===0,'game reset clears wave DPS');

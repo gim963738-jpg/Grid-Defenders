@@ -26,22 +26,22 @@ export function checkGameRun(){
  check(run.failure({scene:'boss',result:'defeat',elapsed:100})===null&&run.failure({scene:'boss',result:'fighting',elapsed:100})===null,'infinite test ignores boss failure and deadline');
  check(run.bossStep(.05,100)===.05&&run.finish('boss-timeout',10,0)===null&&run.active,'infinite test preserves legacy boss simulation');
  run.reset();check(!run.active&&run.result===null&&run.mode==='normal','reset restores lobby state');
- const normal=new Defense();normal.keepWaveMonsters=true;const first=normal.enemies[0].id;normal.waveTime=29.99;normal.tick(.02);
+ const normal=new Defense(()=>1);normal.keepWaveMonsters=true;const first=normal.enemies[0].id;normal.waveTime=29.99;normal.tick(.02);
  check(normal.wave===2&&normal.enemies.some(e=>e.id===first)&&normal.enemies.length===11,'normal wave carries live monsters across boundary');
  for(let i=0;i<400&&!normal.monsterLimitReached;i++)normal.tick(.05);
  check(normal.monsterLimitReached&&normal.enemies.length===20&&normal.wave===2,'two uncleared waves reach twenty monsters');
  const elapsed=normal.elapsed;normal.tick(100);check(normal.elapsed===elapsed&&normal.enemies.length===20,'overloaded normal wave cannot attack away the loss or keep spawning');
  normal.enemies[0].hp=0;check(!normal.monsterLimitReached,'dead monsters do not count toward loss');
  normal.reset();check(!normal.keepWaveMonsters&&normal.wave===1,'model reset preserves legacy default for new test setup');
- const legacy=new Defense(),old=legacy.enemies[0].id;legacy.waveTime=29.99;legacy.tick(.02);
+ const legacy=new Defense(()=>1),old=legacy.enemies[0].id;legacy.waveTime=29.99;legacy.tick(.02);
  check(legacy.wave===2&&legacy.enemies.length===1&&!legacy.enemies.some(e=>e.id===old),'infinite test retains old normal-monster cleanup');
- const prep=new Defense();prep.devDeploySoldiers();
+ const prep=new Defense(()=>1);prep.devDeploySoldiers();
  for(const speed of [.25,.5,1,2,3,5]){
-  const active=new GameRun();active.start('normal');const boss=new BossBattle(waveBossRoster(prep));boss.actors.forEach(a=>{a.attack=0;a.speed=0;});boss.elapsed=59.98;
+  const active=new GameRun();active.start('normal');const boss=new BossBattle(waveBossRoster(prep),()=>1);boss.actors.forEach(a=>{a.attack=0;a.speed=0;});boss.elapsed=59.98;
   stepCombat(.2,speed,seconds=>{if(!active.active)return;const before=boss.elapsed,dt=active.bossStep(seconds,boss.elapsed);if(dt>0)boss.tick(dt);active.advance(boss.elapsed-before);const reason=active.failure({scene:'boss',result:boss.result,elapsed:boss.elapsed});if(reason)active.finish(reason,10,0);});
   check(active.result?.reason==='boss-timeout'&&Math.abs(boss.elapsed-RUN_LIMITS.bossSeconds)<1e-8,`deadline remains sixty simulated seconds at ${speed}x`);
  }
- const paused=new GameRun();paused.start('normal');const boss=new BossBattle(waveBossRoster(prep));stepCombat(10,5,dt=>{boss.tick(dt);paused.advance(dt);},true);
+ const paused=new GameRun();paused.start('normal');const boss=new BossBattle(waveBossRoster(prep),()=>1);stepCombat(10,5,dt=>{boss.tick(dt);paused.advance(dt);},true);
  check(boss.elapsed===0&&paused.elapsed===0,'pause freezes boss deadline and run time');
  return passed;
 }

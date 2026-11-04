@@ -17,10 +17,10 @@ export function checkWaveWarning(){
  check(upcomingWaveWarning(state(9,20,true))===null,'boss gate suppresses preview');
  check(upcomingWaveWarning(state(4,19.999999999999996))?.seconds===10,'floating point boundary never shows eleven seconds');
  for(const speed of [.25,.5,1,2,3,5]){
-  const g=new Defense();while(g.wave<4)g.nextTestWave();g.waveTime=19.9;g.speed=speed;g.tick(.2/speed);
+  const g=new Defense(()=>1);while(g.wave<4)g.nextTestWave();g.waveTime=19.9;g.speed=speed;g.tick(.2/speed);
   check(upcomingWaveWarning(g)?.seconds===10,`warning follows simulated time at ${speed}x`);
  }
- const g=new Defense();while(g.wave<4)g.nextTestWave();g.waveTime=20;const before=JSON.stringify({wave:g.wave,time:g.waveTime,enemies:g.enemies});upcomingWaveWarning(g);
+ const g=new Defense(()=>1);while(g.wave<4)g.nextTestWave();g.waveTime=20;const before=JSON.stringify({wave:g.wave,time:g.waveTime,enemies:g.enemies});upcomingWaveWarning(g);
  check(JSON.stringify({wave:g.wave,time:g.waveTime,enemies:g.enemies})===before,'warning lookup does not mutate combat');
  g.tick(10.01);check(g.wave===5&&upcomingWaveWarning(g)===null,'named start clears the preview');
  g.reset();check(upcomingWaveWarning(g)===null,'reset clears upcoming warning');

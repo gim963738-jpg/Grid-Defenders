@@ -1,7 +1,7 @@
 import {Defense,pathPoint} from '../src/defense';
 export function checkWaveRangedSkill(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};
- const setup=()=>{const g=new Defense();const base=g.enemies[0];g.enemies=[];g.waveSpawned=10;g.summon('ranged',0);g.units[0].cooldown=999;g.enemies=[0,1].map(i=>({...base,id:100+i,distance:20+i*8,...pathPoint(20+i*8),speed:0,hp:5000,maxHp:5000,defenseType:'normal' as const}));return g;};
+ const setup=()=>{const g=new Defense(()=>1);const base=g.enemies[0];g.enemies=[];g.waveSpawned=10;g.summon('ranged',0);g.units[0].cooldown=999;g.enemies=[0,1].map(i=>({...base,id:100+i,distance:20+i*8,...pathPoint(20+i*8),speed:0,hp:5000,maxHp:5000,defenseType:'normal' as const}));return g;};
  const g=setup();g.tick(.01);const id=g.units[0].id;const state=g.rangedSkills.get(id)!;
  check(state.casts===1&&state.cooldown===4,'automatic cast starts four second cooldown');
  check(g.fireCasts.length===1&&g.iceProjectiles.length===0,'one fire cast replaces ice volley');

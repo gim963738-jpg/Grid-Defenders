@@ -1,6 +1,6 @@
 export const ASSASSIN={basicFrames:[6,8,10],basicMultiplier:.35,waveFrame:10,waveMultiplier:2.5,waveCooldown:4,bossFrames:[6,10,14,20],bossMultipliers:[.35,.35,.35,2.5],bossCooldown:5,frameSeconds:.065,cell:70.3125,breakSeconds:5,breakRatio:.3} as const;
 export type AssassinActionKind='basic'|'wave'|'boss';
-export interface AssassinAction<S,Id>{impact?:{x:number;y:number};kind:AssassinActionKind;source:S;sourceId:Id;targets:Id[];attack:number;age:number;frameSeconds:number;hits:number;origin:{x:number;y:number};direction:{x:number;y:number};cancelled:boolean;}
+export interface AssassinAction<S,Id>{critical?:boolean;impact?:{x:number;y:number};kind:AssassinActionKind;source:S;sourceId:Id;targets:Id[];attack:number;age:number;frameSeconds:number;hits:number;origin:{x:number;y:number};direction:{x:number;y:number};cancelled:boolean;}
 export function createAssassinAction<S,Id>(kind:AssassinActionKind,source:S,sourceId:Id,targets:Id[],attack:number,x:number,y:number,target:{x:number;y:number},rate=1):AssassinAction<S,Id>{
  const distance=Math.hypot(target.x-x,target.y-y)||1;
  return {kind,source,sourceId,targets:[...targets],attack,age:0,frameSeconds:kind==='basic'?.9/(Math.max(.1,rate)*12):ASSASSIN.frameSeconds,hits:0,origin:{x,y},direction:{x:(target.x-x)/distance,y:(target.y-y)/distance},cancelled:false};

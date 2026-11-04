@@ -4,7 +4,7 @@ export const FIRE_SKILL={cooldown:4,speed:320,radius:48,damageMultiplier:1,hits:
 export const FIRE_SHEET_URL=`${import.meta.env.BASE_URL}assets/effects/fire-skill-sheet.png`;
 // Dark blue backgrounds and gray cell dividers are discarded at render time.
 export const FIRE_ALPHA_MATRIX:[number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number,number]=[1,0,0,0,0, 0,1,0,0,0, 0,0,1,0,0, 2,-.5,-2,0,-.08];
-export interface FireCast<S,Id>{source:S;targetId:Id;attack:number;x:number;y:number;tx:number;ty:number;stage:'flight'|'pillar';age:number;hits:number;footOffset:number;}
+export interface FireCast<S,Id>{critical?:boolean;source:S;targetId:Id;attack:number;x:number;y:number;tx:number;ty:number;stage:'flight'|'pillar';age:number;hits:number;footOffset:number;}
 export function createFireCast<S,Id>(source:S,targetId:Id,attack:number,x:number,y:number,tx:number,ty:number,footOffset=8):FireCast<S,Id>{
  return {source,targetId,attack,x,y,tx,ty,stage:'flight',age:0,hits:0,footOffset};
 }
