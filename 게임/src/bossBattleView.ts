@@ -3,7 +3,7 @@ import { UNITS } from './defenseConfig';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 
 function art(a:BossActor):string {
-  if(a.kind==='ranged')return `<img src="${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png" alt="" draggable="false">`;
+  if(a.kind==='ranged'||a.kind==='melee')return `<img src="${import.meta.env.BASE_URL}assets/heroes/${a.kind}-idle.png" alt="" draggable="false">`;
   if(a.kind==='boss')return '<span class="boss-test-monster boss-test-chief">♛<i>◆</i></span>';
   if(a.kind==='retainer')return `<span class="boss-test-monster ${a.defenseType}">♜<i>◆</i></span>`;
   const color='#'+UNITS[a.kind].color.toString(16).padStart(6,'0');

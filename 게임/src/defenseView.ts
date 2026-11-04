@@ -3,7 +3,7 @@ import { Defense } from './defense';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 import { WAVE_RANGED_SKILL, RULES, SLOTS, UNITS } from './defenseConfig';
 
-export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture) {
+export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture) {
   const root=new Container();app.stage.addChild(root);
   const field=new Graphics();root.addChild(field);
   field.roundRect(4,4,382,322,18).fill(0x101d20).stroke({width:2,color:0x52614a});
@@ -30,8 +30,10 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const movementPreview=new Graphics();movementPreview.eventMode='none';root.addChild(movementPreview);
   const actors=new Graphics();root.addChild(actors);
   actors.eventMode='none';
-  const rangedSprite=new Sprite(rangedTexture);rangedSprite.anchor.set(0.5,1);rangedSprite.eventMode='none';
-  rangedSprite.height=57;rangedSprite.scale.x=rangedSprite.scale.y;rangedSprite.visible=false;root.addChild(rangedSprite);
+  const heroSprites={ranged:new Sprite(rangedTexture),melee:new Sprite(meleeTexture)};
+  for(const sprite of Object.values(heroSprites)){
+    sprite.anchor.set(.5,1);sprite.eventMode='none';sprite.height=57;sprite.scale.x=sprite.scale.y;sprite.visible=false;root.addChild(sprite);
+  }
   const iceEffects=new Graphics();iceEffects.eventMode='none';root.addChild(iceEffects);
   const badges=SLOTS.map(p=>{const t=new Text({text:'',style:{fontFamily:'system-ui',fontSize:10,fontWeight:'bold',fill:0xf5f4e7}});t.anchor.set(0.5);t.position.set(p.x,p.y+15);root.addChild(t);return t;});
   const caption=new Text({text:'순환 디펜스 · 전투 시험',style:{fontFamily:'system-ui',fontSize:10,fill:0xdacdb1}});caption.position.set(13,RULES.height-17);root.addChild(caption);
@@ -43,7 +45,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
     draw(selectedId:number|null,pending:boolean,movement?:{id:number;slot:number}) {
       actors.clear();selected.clear();effects.clear();
       skillBars.clear();skillLabels.forEach(t=>t.visible=false);
-      rangedSprite.visible=false;iceEffects.clear();
+      Object.values(heroSprites).forEach(sprite=>sprite.visible=false);iceEffects.clear();
       movementPreview.clear();
       const moving=game.units.find(u=>u.id===movement?.id);
       if(moving&&!UNITS[moving.kind].hero&&movement&&SLOTS[movement.slot]&&movement.slot!==moving.slot){
@@ -79,8 +81,8 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         }
         const color=UNITS[u.kind].color;
         actors.ellipse(p.x,p.y+7,15,5).fill({color:0x0a1713,alpha:0.5});
-        if(u.kind==='ranged'){
-          rangedSprite.visible=true;rangedSprite.position.set(p.x,p.y+12);
+        if(u.kind==='ranged'||u.kind==='melee'){
+          const sprite=heroSprites[u.kind];sprite.visible=true;sprite.position.set(p.x,p.y+12);
           continue;
         }
         actors.roundRect(p.x-10,p.y-9,20,21,4).fill(color).stroke({width:2,color:0x172731});

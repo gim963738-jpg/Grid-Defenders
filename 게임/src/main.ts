@@ -116,7 +116,7 @@ function refreshHeroInfo():void {
   const stats=unit?game.stats(unit):{hp:def.hp,attack:def.attack,armor:def.armor,rate:def.rate,regen:0,gold:0,critChance:def.hero?0:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier,physicalAttack:def.damageType==='physical'?def.attack:0,magicAttack:def.damageType==='magic'?def.attack:0,physicalArmor:def.armor,magicArmor:def.magicArmor};
   const fields=[['hp','♥','최대 체력',stats.hp.toLocaleString()],['rate','↗','공격속도',`${stats.rate.toFixed(2)}/초`],['attack','⚔','물리 공격',String(stats.physicalAttack)],['attack','✦','마법 공격',String(stats.magicAttack)],['armor','⬡','물리 방어',String(stats.physicalArmor)],['armor','◇','마법 방어',String(stats.magicArmor)],['regen','✚','체력 재생',`${stats.regen}/초`],['gold','◇','골드 획득',`+${Math.round(stats.gold*100)}%`]];
   if(!def.hero)fields.push(['attack','✦','치명타 확률',`${Math.round(stats.critChance*100)}%`],['attack','✦','치명타 배율',`${stats.critMultiplier}배`]);
-  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${heroInfo.kind==='ranged'?'<span class="ranged-portrait"></span>':def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(([key,icon,label,value])=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}">${value}</dd></div>`).join('')}</dl>`;
+  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${heroInfo.kind==='ranged'||heroInfo.kind==='melee'?`<span class="${heroInfo.kind}-portrait"></span>`:def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(([key,icon,label,value])=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}">${value}</dd></div>`).join('')}</dl>`;
   if(markup!==heroInfoMarkup){el('hero-info').innerHTML=markup;heroInfoMarkup=markup;}
   positionHeroInfo();
 }
@@ -202,7 +202,7 @@ function refresh():void {
   const unitCards=(hero:boolean)=>Object.entries(UNITS).filter(([,d])=>d.hero===hero).map(([kind,d])=>{
     const deployed=hero&&game.heroes().some(u=>u.kind===kind);
     const blocked=hero&&(game.heroes().length>=RULES.heroLimit||deployed);
-    if(hero)return `<button class="unit-card hero-card ${kind==='ranged'?'ranged-summon-card':''} ${pending===kind?'selected':''} ${blocked?'unavailable':''} ${deployed?'deployed':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${kind==='ranged'?'<span class="ranged-portrait"></span>':d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
+    if(hero)return `<button class="unit-card hero-card ${kind==='ranged'||kind==='melee'?`${kind}-summon-card`:''} ${pending===kind?'selected':''} ${blocked?'unavailable':''} ${deployed?'deployed':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog" aria-label="${d.name} 능력치 확인"><span class="unit-icon" style="color:#${d.color.toString(16)}">${kind==='ranged'||kind==='melee'?`<span class="${kind}-portrait"></span>`:d.icon}</span><b>${d.name}</b><span class="price">${game.heroes().some(u=>u.kind===kind)?'배치됨':blocked?'정원 가득':'무료 소환'}</span></button>`;
     return `<div class="soldier-choice"><button class="unit-card ${pending===kind?'selected':''} ${game.gold<d.cost?'unavailable':''}" data-summon="${kind}" aria-pressed="${pending===kind}" aria-haspopup="dialog"><span class="unit-icon" style="color:#${d.color.toString(16)}">${d.icon}</span><b>${d.name}</b><small>클릭하여 능력치 확인</small><span class="price">${d.cost} G</span></button>${chosenSoldier?.kind===kind?`<button class="card-upgrade" data-upgrade="${chosenSoldier.id}" ${chosenSoldier.level>=5||game.gold<game.upgradeCost(chosenSoldier)?'disabled':''}>#${chosenSoldier.id} 승급 ${chosenSoldier.level>=5?'MAX':game.upgradeCost(chosenSoldier)+'G'}</button>`:''}</div>`;
   }).join('');
   el('soldiers').innerHTML=unitCards(false);
@@ -219,7 +219,7 @@ function refresh():void {
   const hero=game.heroes().find(h=>h.id===selectedHero);
   el('gear-title').textContent='영웅 장비';
   el('inventory-hero-name').textContent=hero?UNITS[hero.kind].name:'영웅 선택';
-  el('inventory-hero-icon').innerHTML=hero?(hero.kind==='ranged'?'<span class="ranged-portrait"></span>':UNITS[hero.kind].icon):'◇';
+  el('inventory-hero-icon').innerHTML=hero?(hero.kind==='ranged'||hero.kind==='melee'?`<span class="${hero.kind}-portrait"></span>`:UNITS[hero.kind].icon):'◇';
   el('equipment').innerHTML=inventoryGrid(hero?.id??-1);
   const bag=inventoryGrid(null);
   el('gear-bag').innerHTML=bag;el('shop-bag').innerHTML=bag;
@@ -473,7 +473,7 @@ document.addEventListener('pointermove',(e)=>{
         g.active=true;heroGesture=null;cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;
         if(g.hero)centerHero(g.kind,'auto');
         pending=g.kind;closeHeroInfo();g.ghost=document.createElement('div');g.ghost.className='summon-drag-ghost';g.ghost.setAttribute('aria-hidden','true');
-        g.ghost.innerHTML=g.kind==='ranged'?`<img src="${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png" alt=""><span>${UNITS[g.kind].name}</span>`:`<b style="color:#${UNITS[g.kind].color.toString(16)}">${UNITS[g.kind].icon}</b><span>${UNITS[g.kind].name}</span>`;
+        g.ghost.innerHTML=g.kind==='ranged'||g.kind==='melee'?`<img src="${import.meta.env.BASE_URL}assets/heroes/${g.kind}-idle.png" alt=""><span>${UNITS[g.kind].name}</span>`:`<b style="color:#${UNITS[g.kind].color.toString(16)}">${UNITS[g.kind].icon}</b><span>${UNITS[g.kind].name}</span>`;
         document.body.append(g.ghost);
       }
     }
@@ -656,7 +656,7 @@ function renderBossScreen():void {
     if(!unit)return '<div class="boss-grid-cell" aria-hidden="true"></div>';
     const def=UNITS[unit.kind],color='#'+def.color.toString(16).padStart(6,'0');
     const weapon=unit.kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':unit.kind==='mage'||unit.kind==='healer'?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
-    const art=unit.kind==='ranged'?`<img src="${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png" alt="" draggable="false">`:`<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
+    const art=unit.kind==='ranged'||unit.kind==='melee'?`<img src="${import.meta.env.BASE_URL}assets/heroes/${unit.kind}-idle.png" alt="" draggable="false">`:`<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
     return `<div class="boss-grid-cell boss-grid-unit" aria-label="${row+1}행 ${col+1}열 ${def.name} ${unit.level}레벨">${art}<small>${def.hero?'영웅':`Lv.${unit.level}`} ${def.icon}</small></div>`;
   }).join('');
 }
@@ -686,6 +686,7 @@ async function start():Promise<void> {
   await app.init({width:RULES.width,height:RULES.height,background:'#172620',preference:'webgl',resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,antialias:true});
   el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','순환 전장, 병사와 영웅 배치 칸 16개');el('status').hidden=true;
   const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
+  const meleeTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/melee-idle.png`);
   const view=createDefenseView(app,game,(slot)=>{
     if(unitDrag?.moved||summonDrag?.active)return;
     const unit=game.units.find(u=>u.slot===slot);
@@ -693,7 +694,7 @@ async function start():Promise<void> {
     else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
     else game.note('먼저 아래에서 소환할 병사 또는 영웅을 선택하세요.');
     refresh();
-  },rangedTexture);
+  },rangedTexture,meleeTexture);
   let lastRevision=-1,hudClock=0,meterClock=0;
   renderMonsterTools();
   renderRecipeTree();
