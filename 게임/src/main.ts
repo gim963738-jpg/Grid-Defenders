@@ -282,9 +282,10 @@ function inventoryGrid(owner:number|null):string {
     const x=i%columns,y=Math.floor(i/columns),stack=occupied.get(`${x},${y}`)??[];
     const g=stack.find(g=>g.id===selectedGear)??stack.at(-1),inactive=g&&states&&!states.get(g.id)?.active;
     const address=owner===null?`data-bag-cell="${x},${y}"`:`data-cell="${x},${y}"`;
-    const illustrated=g&&hasItemArt(g.def),anchor=illustrated&&x===g.x&&y===g.y;
+    const illustrated=g&&hasItemArt(g.def);
     const footprint=g?rotated(g.def.cells,g.turns):[],w=footprint.length?Math.max(...footprint.map(c=>c[0]))+1:1,h=footprint.length?Math.max(...footprint.map(c=>c[1]))+1:1;
-    const art=anchor?`<span class="inventory-item-art" style="width:calc(var(--inventory-cell) * ${w} + ${(w-1)*3}px);height:calc(var(--inventory-cell) * ${h} + ${(h-1)*3}px)">${itemArt(g.def,g.turns)}</span>`:'';
+    const first=footprint.slice().sort((a,b)=>a[1]-b[1]||a[0]-b[0])[0],anchor=illustrated&&first&&x===g.x+first[0]&&y===g.y+first[1];
+    const art=anchor?`<span class="inventory-item-art" style="left:calc(-1px - (var(--inventory-cell) + 3px) * ${first[0]});top:calc(-1px - (var(--inventory-cell) + 3px) * ${first[1]});width:calc(var(--inventory-cell) * ${w} + ${(w-1)*3}px);height:calc(var(--inventory-cell) * ${h} + ${(h-1)*3}px)">${itemArt(g.def,g.turns)}</span>`:'';
     return `<button class="gear-cell ${illustrated?'illustrated-cell':''} ${(x+y)%2?'board-light':'board-dark'} ${g?.id===selectedGear?'picked':''} ${inactive?'gear-inactive':''} " ${address} ${g?`data-gear-id="${g.id}" ${inactive?'data-inactive="true"':''} style="background-color:${g.def.color}" title="${stack.map(v=>`${v.def.name} #${v.id}`).join(' / ')} · 더블클릭 회전"`:''} aria-label="${owner===null?'공용 가방':'영웅 장비'} ${x+1}열 ${y+1}행${g?' '+g.def.name:''}${inactive?' 비활성':''}">${art}${g&&!illustrated?g.def.short:''}${stack.length>1?`<sup>${stack.length}</sup>`:''}</button>`;
   }).join('');
 }

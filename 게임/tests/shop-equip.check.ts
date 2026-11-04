@@ -12,7 +12,7 @@ export async function checkShopEquip(){
  for(let i=0;i<20;i++)g.gear.push({id:100+i,def:ITEMS[4],owner:hero.id,x:i%4,y:Math.floor(i/4),turns:0,order:i+10,costBasis:100});
  state=snap();check(!g.buy(1,undefined,hero.id)&&snap()===state,'full hero board rejects payment and preserves product');
  check(g.buy(1)&&g.gear.at(-1)!.owner===null,'normal bag purchase remains available even when hero board is full');
- check(ITEMS.slice(0,5).every(hasItemArt)&&!hasItemArt(ITEMS[5]),'only tier-one equipment gets new art');
+ check(ITEMS.slice(0,5).every(hasItemArt)&&!hasItemArt(ITEMS[5]),'tier-one equipment retains art and unassigned higher-tier items retain blocks');
  check(ITEMS.slice(0,5).every(item=>itemArt(item).includes('equipment-item-art')&&itemArt(item).includes(ITEM_ATLAS_URL)),'all five icons reference shared complete atlas');
  const image=new Image();image.src=ITEM_ATLAS_URL;await image.decode();const c=document.createElement('canvas');c.width=image.width;c.height=image.height;const ctx=c.getContext('2d')!;ctx.drawImage(image,0,0);
  check(ctx.getImageData(0,0,1,1).data[3]===0&&ctx.getImageData(20,500,1,1).data[3]===0,'atlas background is truly transparent');
