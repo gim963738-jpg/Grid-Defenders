@@ -1,3 +1,4 @@
+import {GameRun,FAILURE_TEXT,RUN_LIMITS,type RunMode,type RunFailure} from './gameRun';
 import {upcomingWaveWarning} from './waveWarning';
 import {DEFENSE_FIELD,FOREST_TERRAIN_URL,fieldToScreen,screenToField} from './defenseFieldLayout';
 import {calibrateBossTest,type BossTestProfile} from './bossTestBalance';
@@ -17,11 +18,14 @@ import './style.css';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense();
+const run=new GameRun();
+let assetsReady=false;
 let showDamageNumbers=true,combatPaused=false;
 const bossBattle=new BossBattle(waveBossRoster(game),Math.random,game.damageMeter.peaks);
 let bossRosterSignature='';
 let bossTestMode=false,bossTestProfile:BossTestProfile|null=null;
 const bossDamageHistory=new BossDamageHistory();
+const defeatedBossEnemies=new Set<string>();
 let bossEncounterWave=game.wave;
 let damageMeterMode:'defense'|'boss'='defense',showLastBoss=false;
 function syncBossRoster(force=false,discardPrevious=false):void {
@@ -34,8 +38,8 @@ function syncBossRoster(force=false,discardPrevious=false):void {
     summary.title=bossBattle.actors.filter(a=>a.side==='enemy').map(a=>`${a.name}: 체력 ${a.maxHp.toLocaleString()}, 공격력 ${a.attack}`).join(' / ');
   }
 }
-const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle,()=>showDamageNumbers,()=>combatPaused);
-let currentScene:BattleScene='defense',sceneTransitioning=false;
+const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle,()=>showDamageNumbers,()=>combatPaused||!run.active);
+let currentScene:BattleScene='lobby',sceneTransitioning=false;
 let activeBossWave:number|null=null,bossReturnDelay=0;
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
 let selectedGear:number|null=null,turns=0,tab='summon';
@@ -333,9 +337,7 @@ function refreshTools():void {
   button.disabled=!count||game.anvils<count;
   button.textContent=count?`조합 ${count}`:'조합';
   button.title=plan.map(pair=>pair.map(id=>{const g=game.gear.find(g=>g.id===id)!;return `${g.def.name} #${g.id}`;}).join(' + ')).join(' / ');
-  const full=game.enemies.filter(e=>!e.bounty&&!e.named&&e.hp>0).length>=RULES.maxEnemies;
-  document.querySelectorAll<HTMLButtonElement>('[data-monster-id]').forEach(button=>button.disabled=full&&!MONSTERS.find(d=>d.id===button.dataset.monsterId)?.named);
-  refreshLinks();
+  refreshLinks();refreshRunControls();
 }
 function renderMonsterTools():void {
   el('test-enemy-buttons').innerHTML=MONSTERS.map(def=>`<button data-monster-id="${def.id}">${def.named?'네임드 · ':''}${def.name}</button>`).join('');
@@ -394,7 +396,7 @@ function refreshLinks():void {
   svg.innerHTML=lines.join('');
 }
 function refreshWaveAlert():void {
-  const root=el('wave-alert'),warning=currentScene==='defense'&&!sceneTransitioning?upcomingWaveWarning(game):null;
+  const root=el('wave-alert'),warning=run.active&&currentScene==='defense'&&!sceneTransitioning?upcomingWaveWarning(game):null;
   if(!warning){if(!root.hidden)root.hidden=true;waveWarningKey='';return;}
   const key=`${warning.kind}:${warning.wave}`;
   if(key!==waveWarningKey){
@@ -412,8 +414,9 @@ function updateHud():void {
   const bountyActive=game.enemies.some(e=>e.bounty&&e.hp>0),credits=game.bountyCredits();
   const alive=game.enemies.filter(e=>e.hp>0).length,limit=RULES.waveMonsters*2;
   el('enemies').textContent=String(alive);el('enemy-limit').textContent=String(limit);
+  el('enemy-limit').title=run.mode==='normal'?`생존 몬스터 ${limit}마리 누적 시 패배`:'2웨이브 분량 기준 · 테스트 모드 패배 없음';
   el('enemy-limit').parentElement!.setAttribute('aria-label',`현재 몬스터 ${alive}마리 / 2웨이브 분량 ${limit}마리`);
-  refreshWaveAlert();
+  refreshWaveAlert();refreshBossTimer();
   const bountyButton=el<HTMLButtonElement>('bounty-summon');bountyButton.hidden=credits<1;bountyButton.disabled=bountyActive;
   bountyButton.title=`현상금 소환 · 대기 ${credits}/${RULES.bountyStackLimit}회 · 처치 보상 모루 ${RULES.bountyAnvils}개 / 기본 ${RULES.bountyGold}G`;
   bountyButton.setAttribute('aria-label',bountyActive?'현상금 몬스터 전투 중':`현상금 몬스터 소환 · 남은 ${credits}회`);
@@ -444,6 +447,7 @@ let unitDrag:Drag|null=null;
 type SummonDrag={kind:UnitKind;pointer:number;startX:number;startY:number;x:number;y:number;active:boolean;hero:boolean;previous:UnitKind|null;ghost:HTMLElement|null};
 let summonDrag:SummonDrag|null=null,summonSuppressClickUntil=0;
 function summonReason(kind:UnitKind):string|null {
+  if(!run.active)return '로비에서 게임을 시작하세요.';
   if(currentScene!=='defense'||sceneTransitioning)return '웨이브전에서 소환해 주세요.';
   const def=UNITS[kind];
   if(game.gold<def.cost)return '소환에 필요한 골드가 부족합니다.';
@@ -692,6 +696,8 @@ el('app').addEventListener('click',(e)=>{
   if(suppressClick||((e.target as HTMLElement).closest('#heroes')&&performance.now()<heroSuppressClickUntil))return;
   const b=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!b||b.disabled)return;
   const d=b.dataset;
+  if(b.id==='game-start'){startRun('normal');return;}
+  if(!run.active||sceneTransitioning)return;
   if(d.tab){closeHeroInfo();openTab(d.tab);}
   else if(b.id==='hero-prev')moveHeroCarousel(-1);
   else if(b.id==='hero-next')moveHeroCarousel(1);
@@ -733,7 +739,14 @@ el('app').addEventListener('click',(e)=>{
   refresh();
 },{signal:events.signal});
 el('dev-tools').addEventListener('click',(e)=>{
-  const button=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!button||button.disabled)return;
+  const button=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!button||button.disabled||sceneTransitioning)return;
+  if(button.id==='dev-infinite-test'){startRun('infinite-test');return;}
+  if(button.id==='dev-lobby'){run.reset();clearBattleInteraction();renderLobby();refreshWaveAlert();refreshRunControls();void sceneTransition.go('lobby');return;}
+  if(button.id==='dev-reset'){
+    if(run.active)startRun(run.mode);else {resetBattleState();run.reset();renderLobby();refresh();}
+    return;
+  }
+  if(!run.active&&button.id!=='dev-damage-numbers')return;
   if(button.id==='dev-boss-scene'){
     if(!game.units.length){game.note('50초 시험 보스와 싸울 아군을 먼저 배치하세요.');refresh();return;}
     bossTestMode=true;activeBossWave=null;bossReturnDelay=0;syncBossRoster(true);renderBossScreen();void sceneTransition.go('boss');return;
@@ -748,12 +761,8 @@ el('dev-tools').addEventListener('click',(e)=>{
   else if(button.id==='dev-anvils')game.devAnvils();
   else if(button.dataset.monsterId)game.spawnTestMonster(button.dataset.monsterId);
   else if(button.id==='dev-next-wave')game.nextTestWave();
-  else if(button.id==='dev-reset'){
-    clearSummonDrag();drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
-    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();combatPaused=false;bossDamageHistory.clear();damageMeterMode='defense';showLastBoss=false;activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=false;bossTestMode=false;syncBossRoster(true,true);bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
-    lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');refreshCombatControls();
-  }
-  refresh();
+
+  refresh();checkRunFailure();
 },{signal:events.signal});
 window.addEventListener('blur',()=>{clearSummonDrag();if(heroGesture){heroGesture=null;centerHero(centeredHeroKind,'auto');}drag?.ghost?.remove();drag=null;pressedGear=null;shopFocus=null;unitDrag?.ghost?.remove();unitDrag=null;updateGearDrag();refreshLinks();},{signal:events.signal});
 el('field-upgrade').addEventListener('click',()=>{const id=Number(el('field-upgrade').dataset.upgrade);game.upgrade(id);refresh();},{signal:events.signal});
@@ -766,10 +775,10 @@ document.addEventListener('scroll',()=>{positionHeroInfo();positionHeroSkillTool
 el('dps-tab-defense').addEventListener('click',()=>{damageMeterMode='defense';showLastBoss=false;refreshDamageMeter();},{signal:events.signal});
 el('dps-tab-boss').addEventListener('click',()=>{damageMeterMode='boss';showLastBoss=false;refreshDamageMeter();},{signal:events.signal});
 el('dps-last-boss').addEventListener('click',()=>{showLastBoss=!showLastBoss;refreshDamageMeter();},{signal:events.signal});
-el('boss-restart').addEventListener('click',()=>{bossReturnDelay=0;syncBossRoster(true);renderBossScreen();},{signal:events.signal});
-el('boss-auto-skills').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.autoSkills=!bossBattle.autoSkills;bossBattleView.draw();},{signal:events.signal});
-el('boss-commander-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning&&!combatPaused)bossBattle.commanderSkill();bossBattleView.draw();},{signal:events.signal});
-el('boss-hero-skills').addEventListener('click',(e)=>{const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-hero-skill]');if(button&&!button.disabled&&currentScene==='boss'&&!sceneTransitioning&&!combatPaused)bossBattle.useHeroSkill(button.dataset.heroSkill!);bossBattleView.draw();},{signal:events.signal});
+el('boss-restart').addEventListener('click',()=>{if(!run.active||sceneTransitioning)return;bossReturnDelay=0;syncBossRoster(true);renderBossScreen();},{signal:events.signal});
+el('boss-auto-skills').addEventListener('click',()=>{if(run.active&&currentScene==='boss'&&!sceneTransitioning)bossBattle.autoSkills=!bossBattle.autoSkills;bossBattleView.draw();},{signal:events.signal});
+el('boss-commander-skill').addEventListener('click',()=>{if(run.active&&currentScene==='boss'&&!sceneTransitioning&&!combatPaused)bossBattle.commanderSkill();bossBattleView.draw();},{signal:events.signal});
+el('boss-hero-skills').addEventListener('click',(e)=>{const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-hero-skill]');if(button&&!button.disabled&&run.active&&currentScene==='boss'&&!sceneTransitioning&&!combatPaused)bossBattle.useHeroSkill(button.dataset.heroSkill!);bossBattleView.draw();},{signal:events.signal});
 el('app').addEventListener('dblclick',(e)=>{
   const block=(e.target as HTMLElement).closest<HTMLElement>('[data-gear-id]');
   if(!block)return;
@@ -778,8 +787,66 @@ el('app').addEventListener('dblclick',(e)=>{
   rotateSelected(id);refresh();
 },{signal:events.signal});
 
+function formatRunTime(seconds:number):string {
+  const whole=Math.max(0,Math.floor(seconds));return `${String(Math.floor(whole/60)).padStart(2,'0')}:${String(whole%60).padStart(2,'0')}`;
+}
+function renderLobby():void {
+  const result=run.result;el('run-result').hidden=!result;
+  el('game-start').innerHTML=`${result?'다시 게임 시작':'게임 시작'} <span>›</span>`;
+  if(result){
+    el('run-result-title').textContent=result.reason==='monster-limit'?'전장 방어 실패':result.reason==='boss-timeout'?'보스전 시간 초과':'보스전 패배';
+    el('run-result-reason').textContent=FAILURE_TEXT[result.reason];
+    el('run-result-wave').textContent=String(result.wave);el('run-result-kills').textContent=String(result.kills);el('run-result-time').textContent=formatRunTime(result.seconds);
+  }
+}
+function refreshBossTimer():void {
+  const timer=el('boss-time-limit'),limited=run.mode==='normal',remaining=Math.max(0,RUN_LIMITS.bossSeconds-bossBattle.elapsed),seconds=Math.ceil(remaining-1e-8);
+  timer.textContent=limited?`남은 시간 ${formatRunTime(seconds)}`:'시간 제한 없음';timer.classList.toggle('urgent',limited&&remaining<=10);
+  timer.setAttribute('aria-label',limited?`보스전 남은 시간 ${seconds}초`:'무한웨이브 테스트 · 보스 시간 제한 없음');
+}
+function refreshRunControls():void {
+  const enabled=run.active&&!sceneTransitioning;
+  el('app').dataset.runMode=run.mode;el('app').dataset.runState=run.active?'playing':'lobby';el('dev-log').hidden=!run.active;
+  el('run-mode-label').textContent=run.mode==='normal'?'일반전':'무한 테스트';
+  el<HTMLButtonElement>('game-start').disabled=!assetsReady||sceneTransitioning;
+  const infinite=el<HTMLButtonElement>('dev-infinite-test');infinite.disabled=!assetsReady||sceneTransitioning;infinite.setAttribute('aria-pressed',String(run.active&&run.mode==='infinite-test'));
+  for(const id of ['dev-lobby','dev-boss-scene','dev-defense-scene','boss-restart','dev-gold','dev-anvils','dev-test-deploy','dev-next-wave'])el<HTMLButtonElement>(id).disabled=!enabled;
+  el<HTMLButtonElement>('dev-test-gear').disabled=!enabled||!game.heroes().some(u=>u.id===selectedHero);
+  el<HTMLButtonElement>('dev-reset').disabled=sceneTransitioning;
+  const full=game.enemies.filter(e=>!e.bounty&&!e.named&&e.hp>0).length>=RULES.maxEnemies;
+  document.querySelectorAll<HTMLButtonElement>('[data-monster-id]').forEach(button=>button.disabled=!enabled||(full&&!MONSTERS.find(d=>d.id===button.dataset.monsterId)?.named));
+}
+function clearBattleInteraction():void {
+  clearSummonDrag();closeHeroInfo();closeHeroSkillTooltip();cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;
+  drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;pressedGear=null;shopFocus=null;
+  clearTimeout(noticeTimer);el('center-notice').hidden=true;el('field-upgrade').hidden=true;updateGearDrag();refreshLinks();
+}
+function resetBattleState():void {
+  clearBattleInteraction();game.reset();combatPaused=false;bossDamageHistory.clear();defeatedBossEnemies.clear();damageMeterMode='defense';showLastBoss=false;activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=false;bossTestMode=false;
+  pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;lastGearTap=null;lastRotation=null;suppressClick=false;
+  centeredHeroKind='tank';heroPhysicalIndex=heroKinds.length;heroCardsMarkup='';syncBossRoster(true,true);bossBattleView.draw();openTab('summon');refreshCombatControls();
+}
+function startRun(mode:RunMode):void {
+  if(!assetsReady||sceneTransitioning)return;
+  resetBattleState();run.start(mode);game.keepWaveMonsters=mode==='normal';renderLobby();refresh();
+  if(currentScene!=='defense')void sceneTransition.go('defense');else window.scrollTo(0,0);
+}
+function finishRun(reason:RunFailure):void {
+  if(!run.finish(reason,game.wave,game.kills+defeatedBossEnemies.size))return;
+  if(currentScene==='boss'){
+    if(reason==='boss-timeout')bossBattle.result='defeat';
+    bossDamageHistory.capture(bossBattle,bossEncounterWave);
+  }
+  updateHud();clearBattleInteraction();refreshWaveAlert();renderLobby();refreshRunControls();void sceneTransition.go('lobby');
+}
+function checkRunFailure():boolean {
+  if(!run.active||currentScene==='lobby'||sceneTransitioning)return false;
+  const reason=run.failure(currentScene==='defense'?{scene:'defense',monsters:game.enemies.filter(e=>e.hp>0).length}:{scene:'boss',result:bossBattle.result,elapsed:bossBattle.elapsed});
+  if(!reason)return false;finishRun(reason);return true;
+}
+
 function renderBossScreen():void {
-  el('boss-wave-label').textContent=`BOSS · WAVE ${game.wave}`;
+  el('boss-wave-label').textContent=`BOSS · WAVE ${game.wave}`;refreshBossTimer();
   bossBattleView.draw();refreshDamageMeter();
   const formation=game.units;
   el('boss-party').innerHTML=Array.from({length:32},(_,index)=>{
@@ -793,23 +860,20 @@ function renderBossScreen():void {
   }).join('');
 }
 const sceneTransition=createSceneTransition({
-  root:el('app'),
+  root:el('app'),initialScene:'lobby',
   onBusy(busy){
     sceneTransitioning=busy;refreshWaveAlert();
-    el<HTMLButtonElement>('dev-boss-scene').disabled=busy;el<HTMLButtonElement>('dev-defense-scene').disabled=busy;
-    if(busy){
-      clearSummonDrag();closeHeroInfo();closeHeroSkillTooltip();cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;
-      drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;pressedGear=null;shopFocus=null;updateGearDrag();refreshLinks();
-      el('field-upgrade').hidden=true;el('center-notice').hidden=true;
-    }
+    refreshRunControls();if(busy)clearBattleInteraction();
   },
   onCovered(scene){
-    if(currentScene==='boss'&&scene==='defense')bossDamageHistory.capture(bossBattle,bossEncounterWave,true);
-    currentScene=scene;if(scene==='boss')syncBossRoster();renderBossScreen();
-    el('scene-dev-status').textContent=`현재 화면: ${scene==='boss'?'보스전':'웨이브전'}`;
+    if(currentScene==='boss'&&scene!=='boss')bossDamageHistory.capture(bossBattle,bossEncounterWave,true);
+    currentScene=scene;if(scene==='boss'){syncBossRoster();renderBossScreen();}
+    const label=scene==='boss'?'보스전':scene==='defense'?'웨이브전':'로비';
+    el('scene-dev-status').textContent=`현재 화면: ${label}`;
     el('dev-boss-scene').setAttribute('aria-pressed',String(scene==='boss'));el('dev-defense-scene').setAttribute('aria-pressed',String(scene==='defense'));
-    document.title=`Grid Defenders — ${scene==='boss'?'보스전':'디펜스 전투'}`;
-    if(scene==='defense'){refresh();if(tab==='summon')centerHero(centeredHeroKind,'auto');}
+    document.title=`Grid Defenders — ${label}`;
+    if(scene==='defense'){refresh();if(tab==='summon')centerHero(centeredHeroKind,'auto');}else if(scene==='lobby')renderLobby();
+    refreshRunControls();
   },
 });
 
@@ -825,7 +889,7 @@ async function start():Promise<void> {
   const swordTexture=await Assets.load<Texture>(SWORD_SHEET_URL);
   const bladeTexture=await Assets.load<Texture>(BLADE_SHEET_URL);
   const view=createDefenseView(app,game,(slot)=>{
-    if(unitDrag?.moved||summonDrag?.active)return;
+    if(!run.active||unitDrag?.moved||summonDrag?.active)return;
     const unit=game.units.find(u=>u.slot===slot);
     if(unit){closeHeroInfo();selectedUnit=unit.id;pending=null;if(UNITS[unit.kind].hero){selectedHero=unit.id;selectedGear=null;openTab('gear');}else openTab('summon');game.note(`${UNITS[unit.kind].name} 선택 · 드래그로 이동·자리교체`);}
     else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
@@ -834,13 +898,22 @@ async function start():Promise<void> {
   },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture,()=>showDamageNumbers,{top:DEFENSE_FIELD.top,terrain:forestTexture});
   let lastRevision=-1,hudClock=0,meterClock=0;
   renderMonsterTools();
-  renderRecipeTree();
+  renderRecipeTree();assetsReady=true;document.title='Grid Defenders — 로비';el('lobby-hint').textContent='병사와 영웅을 배치하고 몬스터를 막아내세요.';renderLobby();
   refresh();
   app.ticker.add(ticker=>{
-    if(sceneTransitioning)return;
+    if(sceneTransitioning||!run.active||currentScene==='lobby')return;
+    if(checkRunFailure())return;
     if(activeBossWave!==null&&(!game.bossPending||activeBossWave!==game.wave)){activeBossWave=null;bossReturnDelay=0;}
     if(currentScene==='boss'){
-      const dt=Math.min(ticker.deltaMS/1000,.1);stepCombat(dt,game.speed,seconds=>bossBattle.tick(seconds),combatPaused);bossDamageHistory.capture(bossBattle,bossEncounterWave);bossBattleView.draw();
+      const dt=Math.min(ticker.deltaMS/1000,.1);stepCombat(dt,game.speed,seconds=>{
+        if(!run.active)return;
+        const step=bossBattle.result==='fighting'?run.bossStep(seconds,bossBattle.elapsed):seconds,before=bossBattle.elapsed;
+        if(step>0)bossBattle.tick(step);
+        for(const enemy of bossBattle.actors)if(enemy.side==='enemy'&&enemy.hp<=0)defeatedBossEnemies.add(`${bossBattle.encounter}:${enemy.id}`);
+        run.advance(bossBattle.elapsed-before);checkRunFailure();
+      },combatPaused);
+      if(!run.active)return;
+      bossDamageHistory.capture(bossBattle,bossEncounterWave);bossBattleView.draw();refreshBossTimer();
       meterClock+=dt;if(meterClock>=.15){meterClock=0;refreshDamageMeter();}
       if(activeBossWave===game.wave&&bossBattle.result==='victory'){
         if(!combatPaused)bossReturnDelay+=dt;
@@ -868,7 +941,10 @@ async function start():Promise<void> {
       if(!node||node.scrollTop===before){if(drag.y<edge)window.scrollBy(0,-step);else if(drag.y>innerHeight-edge)window.scrollBy(0,step);}
     }
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
-    const dt=Math.min(ticker.deltaMS/1000,0.1);stepCombat(dt,game.speed,(_seconds,realSeconds)=>game.tick(realSeconds),combatPaused);
+    const dt=Math.min(ticker.deltaMS/1000,0.1);stepCombat(dt,game.speed,(_seconds,realSeconds)=>{
+      if(!run.active)return;const before=game.elapsed;game.tick(realSeconds);run.advance(game.elapsed-before);checkRunFailure();
+    },combatPaused);
+    if(!run.active)return;
     refreshWaveAlert();
     const canSummon=pending!==null&&!summonReason(pending);
     view.draw(selectedUnit,canSummon,unitDrag?.moved?{id:unitDrag.id,slot:canvasSlot(unitDrag.x,unitDrag.y)}:undefined);
@@ -877,4 +953,4 @@ async function start():Promise<void> {
   });
   if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
-void start().catch((error:unknown)=>{el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';console.error(error);});
+void start().catch((error:unknown)=>{el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';el('lobby-hint').textContent='전장을 불러오지 못했습니다. 새로고침해 주세요.';console.error(error);});

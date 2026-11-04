@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Grid Defenders — 디펜스 전투</title>
+    <title>Grid Defenders — 로비</title>
     <link rel="icon" href="data:," />
   </head>
   <body>
     <main id="app">
-      <div id="defense-screen">
+      <section id="lobby-screen" class="lobby-screen" aria-label="게임 로비">
+        <div class="lobby-glow" aria-hidden="true"></div>
+        <div class="lobby-emblem" aria-hidden="true"><svg viewBox="0 0 80 88"><path d="M40 4 70 20v29L40 82 10 49V20Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m25 24 30 39m0-39L25 63M22 53l13 10m10 0 13-10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="m40 14 5 7-5 7-5-7Z" fill="currentColor"/></svg></div>
+        <span class="lobby-eyebrow">DEFEND THE FOREST</span><h1 tabindex="-1">GRID<br><span>DEFENDERS</span></h1>
+        <p class="lobby-subtitle">숲을 지키는 새로운 전투</p>
+        <section id="run-result" class="run-result" aria-label="지난 전투 결과" hidden><small>전투 종료</small><h2 id="run-result-title">전장 방어 실패</h2><p id="run-result-reason"></p><dl><div><dt>도달 웨이브</dt><dd id="run-result-wave">1</dd></div><div><dt>처치</dt><dd id="run-result-kills">0</dd></div><div><dt>전투 시간</dt><dd id="run-result-time">00:00</dd></div></dl></section>
+        <div class="lobby-start-area"><button id="game-start" disabled>게임 시작 <span>›</span></button><p id="lobby-hint">전장을 준비하는 중입니다.</p></div>
+      </section>
+      <div id="defense-screen" hidden>
       <section id="battlefield" aria-label="순환 전장">
-        <section id="wave-info" aria-label="무한 웨이브 시험 상태">
+        <span id="run-mode-label" class="run-mode-badge">일반전</span>
+        <section id="wave-info" aria-label="웨이브 전투 상태">
           <div class="wave-controls" aria-label="전투 배속과 일시정지"><button id="speed" aria-label="전투 배속 변경">1×</button><button id="pause" class="pause-control" aria-label="전투 일시정지" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" fill="currentColor"/></svg></button></div>
           <strong id="wave-number">WAVE 1</strong><b id="wave-timer">00:30</b>
           <progress id="wave-progress" max="30" value="30" aria-label="현재 웨이브 남은 시간"></progress>
@@ -67,11 +76,11 @@
         <p class="hint">공용 가방은 아래로 확장됩니다. 블록 드래그: 이동 · 더블클릭·두 번 탭: 회전. 상점 상품을 공용 가방에 내려놓으면 구매합니다.</p>
       </section>
       </div>
-      <footer>WEB-014 · 무한 웨이브 시험 / 정식 방어 공식·영웅 스킬·보스·승패는 미구현</footer>
+      <footer>몬스터 누적 20마리 · 보스전 전멸 또는 제한시간 초과 시 전투 종료</footer>
       </div>
       <section id="boss-screen" aria-label="보스전 화면" hidden>
         <header class="masthead"><div><span class="eyebrow">GRID DEFENDERS</span><h1 tabindex="-1">보스전 <span>전투 시험</span></h1></div><span class="boss-phase">BOSS</span></header>
-        <div class="boss-wave-heading"><strong id="boss-wave-label">BOSS · WAVE 1</strong><span>보스 전장</span><div class="boss-battle-controls"><button id="boss-speed" aria-label="보스전 배속 변경">1×</button><button id="boss-pause" class="pause-control" aria-label="전투 일시정지" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" fill="currentColor"/></svg></button></div></div>
+        <div class="boss-wave-heading"><strong id="boss-wave-label">BOSS · WAVE 1</strong><span id="boss-time-limit" class="boss-time-limit">남은 시간 01:00</span><div class="boss-battle-controls"><button id="boss-speed" aria-label="보스전 배속 변경">1×</button><button id="boss-pause" class="pause-control" aria-label="전투 일시정지" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" fill="currentColor"/></svg></button></div></div>
         <p id="boss-test-profile" class="boss-scene-note" hidden></p>
         <section class="boss-arena fighting" aria-label="보스전 시험 전장"><div class="boss-side"><div class="boss-emblem" aria-hidden="true">♛</div><h2>보스전</h2><p>전투 준비</p></div><div class="boss-allied-side"><span class="boss-allies-label">아군 진영</span><div id="boss-party" role="img" aria-label="아군 진영 가로 4칸 세로 8칸, 중앙 참고 편성"></div></div><div id="boss-combat" aria-label="양측 전열 우선 자동 전투"></div></section>
         <p id="boss-combat-status" class="boss-scene-note" role="status">전열 우선 교전 준비</p>
@@ -81,7 +90,7 @@
     </main>
     <aside id="dev-tools" aria-label="개발자 도구와 아이템 조합">
       <header class="tools-heading"><h2>개발자 도구 <span>임시</span></h2><p id="dev-balance">골드 480G · 모루 0</p></header>
-      <div class="scene-dev-actions"><button id="dev-boss-scene" aria-pressed="false" title="현재 아군 편성에 맞춘 50초 이상 시험 보스 준비">보스전 바로가기</button><button id="dev-defense-scene" aria-pressed="true">웨이브전 바로가기</button></div><button id="boss-restart">보스전 다시 시험</button><p id="scene-dev-status" class="tools-hint" role="status">현재 화면: 웨이브전</p>
+      <button id="dev-infinite-test" class="infinite-test-button" disabled title="전투를 초기화하고 기존 무한웨이브 시험 시작 · 누적 패배 및 보스 시간 제한 없음">무한웨이브 테스트</button><button id="dev-lobby" class="dev-lobby-button" disabled>로비로 돌아가기</button><div class="scene-dev-actions"><button id="dev-boss-scene" aria-pressed="false" title="현재 아군 편성에 맞춘 50초 이상 시험 보스 준비">보스전 바로가기</button><button id="dev-defense-scene" aria-pressed="false">웨이브전 바로가기</button></div><button id="boss-restart">보스전 다시 시험</button><p id="scene-dev-status" class="tools-hint" role="status">현재 화면: 로비</p>
       <div class="dev-actions"><button id="dev-gold">골드 +10,000G</button><button id="dev-anvils">모루 +10</button><button id="dev-test-deploy">영웅·병사 테스트 배치 ×12</button><button id="dev-test-gear" disabled title="선택 영웅에게 무료 배치 · 기존 장비는 공용 가방 보관 · 반복 시 재사용">선택 영웅 장비 테스트<br>질풍의 검 ×5 · 가속 룬 ×2</button><button id="dev-damage-numbers" aria-pressed="true">데미지 숫자 ON</button><button id="dev-reset" class="danger">게임 리셋</button></div>
       <p class="tools-hint">리셋: 전투·재화·유닛·장비·기록 초기화.<br>3웨이브마다 현상금 소환 기회 적립(최대3회). 현상금 보상은 모루·골드입니다.<br>10웨이브마다 보스전 · 승리 후 다음 웨이브 진행.</p>
       <p class="tools-hint">조합은 영웅 장비칸 오른쪽에서 실행합니다.<br>아이템을 누르는 동안 파란 점선으로 상대를 확인합니다. 변이 붙은 재료 중 조합 예정은 노란 실선, 재료를 공유하는 후순위는 회색 실선입니다.<br>조합 1회당 모루 1개를 사용합니다.</p>

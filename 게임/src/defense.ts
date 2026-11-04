@@ -66,6 +66,8 @@ export class Defense {
   kills=0; elapsed=0; speed=1; revision=0;
   normalKills=0;bountySummons=0;pendingBounties=0;
   wave=1;waveTime=0;waveSpawned=0;bossPending=false;
+  keepWaveMonsters=false;
+  get monsterLimitReached():boolean {return this.enemies.filter(e=>e.hp>0).length>=RULES.waveMonsters*2;}
   damageNumbers:DamageNumber[]=[];
   private nextDamageId=1;
   anvils=0;
@@ -119,10 +121,10 @@ export class Defense {
     for(const skill of this.rangedSkills.values()){skill.shotsLeft=0;skill.delay=0;}
     if(!this.bossPending&&this.waveTime>0)this.lastWaveDamage={wave:this.wave,stats:this.damageMeter.snapshot(this.waveTime)};
     this.bossPending=false;
-    const removed=this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
-    this.enemies=this.enemies.filter(e=>(e.named||e.bounty)&&e.hp>0);
+    const removed=this.keepWaveMonsters?0:this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
+    this.enemies=this.enemies.filter(e=>e.hp>0&&(this.keepWaveMonsters||e.named||e.bounty));
     this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.bladeCasts=[];this.wave++;
-    this.log('economy',`[웨이브 전환] 남은 일반 몬스터 ${removed}마리 정리 · 처치 보상 없음 · 네임드/현상금 유지`);
+    this.log('economy',this.keepWaveMonsters?`[웨이브 전환] 생존 몬스터 ${this.enemies.length}마리 유지`:`[웨이브 전환] 남은 일반 몬스터 ${removed}마리 정리 · 처치 보상 없음 · 네임드/현상금 유지`);
     this.startWave();
   }
   private advanceWaves(dt:number):void {
@@ -130,6 +132,7 @@ export class Defense {
     while(remaining>0&&!this.bossPending){
       const step=Math.min(remaining,RULES.waveSeconds-this.waveTime);
       this.waveTime+=step;remaining-=step;this.spawnWaveDue();
+      if(this.keepWaveMonsters&&this.monsterLimitReached)return;
       if(this.waveTime>=RULES.waveSeconds-1e-8)this.nextTestWave();
     }
   }
@@ -430,6 +433,7 @@ export class Defense {
     const before=this.anvils;this.anvils+=10;this.log('economy',`[개발자] 모루 +10 · ${before} → ${this.anvils}`);this.note('개발자 모루 +10');
   }
   reset():void {
+    this.keepWaveMonsters=false;
     this.rangedSkills.clear();this.meleeSkills.clear();this.swordSwingCounts.clear();
     this.lastWaveDamage=null;
     this.damageMeter.reset(true);
@@ -441,10 +445,10 @@ export class Defense {
     this.startWave(false);this.note('게임을 시작 상태로 초기화했습니다.');
   }
   tick(realSeconds:number):void {
-    if(this.bossPending)return;
+    if(this.bossPending||(this.keepWaveMonsters&&this.monsterLimitReached))return;
     const dt=realSeconds*this.speed;this.elapsed+=dt;
     this.advanceWaves(dt);
-    if(this.bossPending)return;
+    if(this.bossPending||(this.keepWaveMonsters&&this.monsterLimitReached))return;
     for(const e of this.enemies){e.distance+=e.speed*dt;Object.assign(e,pathPoint(e.distance));}
     for(const burst of this.iceBursts)burst.life-=dt;
     this.iceBursts=this.iceBursts.filter(b=>b.life>0);

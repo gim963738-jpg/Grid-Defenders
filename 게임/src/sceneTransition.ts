@@ -1,11 +1,12 @@
-export type BattleScene = 'defense' | 'boss';
+export type BattleScene = 'defense' | 'boss' | 'lobby';
 
 export function createSceneTransition(options:{
   root:HTMLElement;
+  initialScene?:BattleScene;
   onBusy:(busy:boolean)=>void;
   onCovered:(scene:BattleScene)=>void;
 }) {
-  let current:BattleScene='defense',busy=false,disposed=false;
+  let current:BattleScene=options.initialScene??'defense',busy=false,disposed=false;
   const layer=document.createElement('div');layer.id='battle-doors';layer.hidden=true;layer.setAttribute('aria-hidden','true');
   layer.innerHTML='<div class="battle-door door-left"><span>GRID</span></div><div class="battle-door door-right"><span>DEFENDERS</span></div>';
   document.body.append(layer);
@@ -29,8 +30,7 @@ export function createSceneTransition(options:{
       position();layer.hidden=false;
       try {
         await doors(true);if(disposed)return false;
-        document.getElementById('defense-screen')!.hidden=next!=='defense';
-        document.getElementById('boss-screen')!.hidden=next!=='boss';
+        for(const scene of ['defense','boss','lobby'] as const){const screen=document.getElementById(`${scene}-screen`);if(screen)screen.hidden=next!==scene;}
         current=next;options.root.dataset.battleScene=next;
         options.onCovered(next);window.scrollTo(0,0);
         await doors(false);return true;
@@ -40,7 +40,7 @@ export function createSceneTransition(options:{
       } finally {
         layer.hidden=true;animations.splice(0).forEach(animation=>animation.cancel());
         options.root.inert=false;options.root.setAttribute('aria-busy','false');busy=false;
-        if(!disposed){options.onBusy(false);document.querySelector<HTMLElement>(`#${current==='boss'?'boss':'defense'}-screen h1`)?.focus({preventScroll:true});}
+        if(!disposed){options.onBusy(false);document.querySelector<HTMLElement>(`#${current}-screen h1`)?.focus({preventScroll:true});}
       }
     },
     dispose(){disposed=true;animations.splice(0).forEach(animation=>animation.cancel());window.removeEventListener('resize',position);layer.remove();options.root.inert=false;},

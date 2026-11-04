@@ -607,3 +607,29 @@
 #app[data-combat-paused=true] .wave-alert::before{animation-play-state:paused;}
 @media(max-width:350px){.wave-alert{width:calc(100% - 20px);min-height:78px;padding:11px 24px 11px 46px;}.wave-alert-rune{left:11px;width:26px;height:34px;}.wave-alert-copy>strong{font-size:17px;}.wave-alert-copy small{font-size:7px;letter-spacing:1.6px;}}
 @media(prefers-reduced-motion:reduce){.wave-alert,.wave-alert::before{animation:none;}}
+
+/* WEB-088: a complete normal run returns to the forest lobby; legacy tests remain available. */
+#lobby-screen{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:calc(100svh - 16px);margin:0 -12px -16px;padding:42px 24px;text-align:center;background:#13271d;}
+#lobby-screen::before{content:"";position:absolute;z-index:-2;inset:0;background:linear-gradient(180deg,#09180d30,#0c1f15a6 42%,#07130ff5 90%),url(/assets/battlefields/forest-clearing-v1.png) center/cover no-repeat;}
+#lobby-screen::after{content:"";position:absolute;z-index:-1;inset:12px;border:1px solid #adc07833;pointer-events:none;border-radius:4px;}
+.lobby-glow{position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 50% 24%,#e0cd7730,transparent 54%);pointer-events:none;}
+.lobby-emblem{width:66px;height:74px;margin-bottom:13px;color:#d8c78d;filter:drop-shadow(0 3px 9px #0008);}.lobby-emblem svg{width:100%;height:100%;}
+.lobby-eyebrow{color:#c1c394;font-size:8px;font-weight:700;letter-spacing:3px;}
+#lobby-screen h1{margin:6px 0 0;color:#fff2cf;font-size:48px;font-weight:850;line-height:.95;letter-spacing:5px;text-shadow:0 3px 14px #0009;}
+#lobby-screen h1 span{display:inline-block;margin:0;color:#dfc98d;font-size:28px;font-weight:800;line-height:1.3;letter-spacing:2.5px;}
+.lobby-subtitle{margin:8px 0 0;color:#b8c9ad;font-size:12px;letter-spacing:1px;}
+.lobby-start-area{width:100%;max-width:280px;margin-top:24px;}
+#game-start{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:14px 20px;border:1px solid #ebd395;border-radius:6px;background:linear-gradient(110deg,#d6bc7b,#b99b5f);color:#18251a;box-shadow:0 4px 0 #736039,0 6px 20px #0006;font-size:16px;font-weight:800;letter-spacing:1px;}
+#game-start span{font-size:25px;line-height:1;}#game-start:hover{filter:brightness(1.08);}
+#lobby-hint{margin:13px 0 0;color:#a4b89c;font-size:10px;line-height:1.6;}
+.run-result{width:100%;max-width:300px;margin-top:22px;padding:16px 13px;border:1px solid #ad735e88;border-radius:8px;background:#0b1714e8;box-shadow:0 5px 18px #0005;}
+.run-result>small{color:#d3997a;font-size:9px;letter-spacing:2px;}.run-result h2{margin:6px 0 0;color:#f0dac3;font-size:17px;}.run-result p{margin:9px 0 14px;color:#adbcaa;font-size:11px;line-height:1.6;}
+.run-result dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:0;}.run-result dl div{padding:8px 3px;background:#d7dca608;border:1px solid #67784f33;border-radius:4px;}.run-result dt{color:#91a486;font-size:8px;}.run-result dd{margin:5px 0 0;color:#e7d298;font-size:17px;font-weight:800;font-variant-numeric:tabular-nums;}
+.run-mode-badge{position:absolute;z-index:4;left:8px;top:9px;padding:3px 6px;border:1px solid #b7b77b55;border-radius:4px;background:#102117b8;color:#d4d5a9;font-size:8px;line-height:1.2;letter-spacing:.5px;pointer-events:none;}
+#app[data-run-mode=infinite-test] .run-mode-badge{border-color:#70a59877;color:#99d6c4;}
+.infinite-test-button{width:100%;margin:8px 0 10px;padding:10px;border:1px solid #91875a;border-radius:5px;background:#2e3c2b;color:#e2d7a4;font-size:12px;font-weight:700;}
+.infinite-test-button[aria-pressed=true]{border-color:#9ed6b5;background:#254437;color:#b9f0cc;}
+.boss-time-limit{margin-left:auto;color:#c9d4be;font-size:10px;white-space:nowrap;font-variant-numeric:tabular-nums;}.boss-time-limit.urgent{color:#ff9a7d;}
+@media(max-width:350px){#lobby-screen{margin-inline:-8px;padding-inline:20px;}.lobby-emblem{width:56px;height:63px;}#lobby-screen h1{font-size:42px;}#lobby-screen h1 span{font-size:24px;}.run-mode-badge{left:6px;top:7px;font-size:7px;}.boss-time-limit{font-size:9px;}}
+
+.dev-lobby-button{width:100%;margin:0 0 10px;padding:6px;border:1px solid #57694d;border-radius:5px;background:#192820;color:#aec09f;font-size:10px;}
