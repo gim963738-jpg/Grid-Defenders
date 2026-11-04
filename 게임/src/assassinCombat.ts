@@ -27,3 +27,15 @@ export function inAssassinPath(a:AssassinAction<unknown,unknown>,p:{x:number;y:n
  return Math.hypot(dx-a.direction.x*along,dy-a.direction.y*along)<=radius;
 }
 export interface AssassinImpact {x:number;y:number;kind:1|2|5;life:number;}
+
+/** Resolve each basic beat against the live in-range roster, repeating its last enemy when short. */
+export function assassinBasicTarget<Id>(planned:readonly Id[],beat:number,available:readonly Id[]):Id|undefined {
+ const intended=planned[Math.min(beat,planned.length-1)];
+ return available.includes(intended)?intended:available[Math.min(beat,available.length-1)];
+}
+export function assassinBasicTrail(action:AssassinAction<unknown,unknown>){
+ const frame=action.age/action.frameSeconds;
+ if(action.kind!=='basic'||action.cancelled||frame<3||frame>=11)return null;
+ const fade=Math.min(1,(frame-3)/1.5,(11-frame)/1.5),phase=(frame-3)/8;
+ return {alpha:Math.max(0,fade)*.58,phase,angle:Math.atan2(action.direction.y,action.direction.x)*.22,reach:46};
+}

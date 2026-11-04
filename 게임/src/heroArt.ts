@@ -1,3 +1,4 @@
+import {smoothTexture,removeSheetBackground} from './renderQuality';
 import {Texture} from 'pixi.js';
 import type {UnitKind} from './defenseConfig';
 export const HERO_SHEET_URL=`${import.meta.env.BASE_URL}assets/heroes/hero-roster-sheet.png`;
@@ -9,11 +10,12 @@ const frames=new Map<string,FrameArt>();let heroSource:HTMLImageElement,assassin
 function cut(key:string,image:HTMLImageElement,x:number,y:number,w:number,h:number,canvasWidth=w,canvasHeight=h,dx=0,dy=0):FrameArt {
  const cached=frames.get(key);if(cached)return cached;
  const canvas=document.createElement('canvas');canvas.width=canvasWidth;canvas.height=canvasHeight;const ctx=canvas.getContext('2d')!;
- ctx.drawImage(image,x,y,w,h,dx,dy,w,h);const pixels=ctx.getImageData(0,0,canvas.width,canvas.height),d=pixels.data;
- for(let i=0;i<d.length;i+=4){if(!d[i+3])continue;const brightness=Math.max(d[i],d[i+1],d[i+2]);const isEffect=key.startsWith('basic:')||key.startsWith('wave:')||key.startsWith('boss:')||key.startsWith('impact:');
-  const colorSignal=isEffect?Math.max(d[i]-Math.max(d[i+1],d[i+2]),brightness-50):Math.max(d[i]-d[i+2],d[i+1]-d[i+2],brightness-42);
-  d[i+3]*=Math.max(0,Math.min(1,(colorSignal-5)/20));}
- ctx.putImageData(pixels,0,0);const art={url:canvas.toDataURL(),texture:Texture.from(canvas)};frames.set(key,art);return art;
+ ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.drawImage(image,x,y,w,h,dx,dy,w,h);
+ const pixels=ctx.getImageData(0,0,canvas.width,canvas.height),[row,frame]=key.split(':');
+ const effect=['basic','wave','boss','impact'].includes(row),actor=row==='basic'||row==='wave'&&Number(frame)<=9||row==='boss'&&Number(frame)<=19;
+ removeSheetBackground(pixels,row==='basic',effect?actor:undefined);
+ ctx.putImageData(pixels,0,0);const texture=Texture.from(canvas);smoothTexture(texture);
+ const art={url:canvas.toDataURL(),texture};frames.set(key,art);return art;
 }
 function load(url:string):Promise<HTMLImageElement>{return new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=reject;image.src=url;});}
 export async function loadHeroArt():Promise<void>{

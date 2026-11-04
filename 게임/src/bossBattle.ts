@@ -1,4 +1,4 @@
-import {ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinPosition,inAssassinPath,type AssassinAction,type AssassinImpact} from './assassinCombat';
+import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinPosition,inAssassinPath,type AssassinAction,type AssassinImpact} from './assassinCombat';
 import {combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from './armorBreak';
 import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
 import {cancelSword,createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
@@ -180,7 +180,9 @@ export class BossBattle {
     for(const action of this.assassinActions){
       const source=live.find(a=>a.id===action.sourceId);if(!source){cancelAssassin(action);continue;}
       for(const beat of advanceAssassin(action,dt)){
-        const primary=live.find(a=>a.id===action.targets[action.kind==='basic'?beat:0]);
+        const available=live.filter(a=>a.side!==source.side&&a.hp>(damage.get(a.id)??0)&&Math.hypot(a.x-source.x,a.y-source.y)<=source.range).sort((a,b)=>a.rank-b.rank||Math.hypot(a.x-source.x,a.y-source.y)-Math.hypot(b.x-source.x,b.y-source.y)||a.id.localeCompare(b.id));
+        const primaryId=action.kind==='basic'?assassinBasicTarget(action.targets,beat,available.map(a=>a.id)):action.targets[0];
+        const primary=live.find(a=>a.id===primaryId);
         const victims=action.kind==='boss'&&beat===3?live.filter(a=>a.side!==source.side&&inAssassinPath(action,a)):primary?[primary]:[];
         for(const victim of victims){
           const multiplier=action.kind==='basic'?ASSASSIN.basicMultiplier:ASSASSIN.bossMultipliers[beat];

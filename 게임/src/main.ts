@@ -1,3 +1,4 @@
+import {battleResolution} from './renderQuality';
 import {loadHeroArt,heroImage,heroPortrait,sheetHero,assassinSkillIcon} from './heroArt';
 import {ASSASSIN} from './assassinCombat';
 import {GameRun,FAILURE_TEXT,RUN_LIMITS,type RunMode,type RunFailure} from './gameRun';
@@ -885,7 +886,7 @@ const sceneTransition=createSceneTransition({
 
 async function start():Promise<void> {
   const app=new Application();
-  await app.init({width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,background:'#172620',preference:'webgl',resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,antialias:true});
+  await app.init({width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,background:'#172620',preference:'webgl',resolution:battleResolution(devicePixelRatio),autoDensity:true,antialias:true});
   el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','숲 순환 전장, 상단 정보와 아군 배치 영역');el('status').hidden=true;
   el('battlefield').style.setProperty('--field-top',`${DEFENSE_FIELD.top/DEFENSE_FIELD.height*100}%`);
   await loadHeroArt();

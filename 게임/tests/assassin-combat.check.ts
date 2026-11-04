@@ -1,4 +1,4 @@
-import {ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinPosition,inAssassinPath,assassinFrame,assassinAlive} from '../src/assassinCombat';
+import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinPosition,inAssassinPath,assassinFrame,assassinAlive} from '../src/assassinCombat';
 import {effectiveArmor,combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from '../src/armorBreak';
 import {Defense,pathPoint} from '../src/defense';
 import {UNITS,SLOTS} from '../src/defenseConfig';
@@ -27,7 +27,17 @@ export function checkAssassinCombat(){
  const wave=()=>{const g=new Defense(),base=g.enemies[0];g.waveSpawned=10;g.enemies=[0,8,16].map((d,i)=>({...base,id:100+i,distance:36-d,...pathPoint(36-d),speed:0,hp:10000,maxHp:10000,defenseType:'normal' as const,armor:0,magicArmor:0}));g.summon('assassin',0);g.units[0].cooldown=0;g.assassinSkills.set(g.units[0].id,{cooldown:999,casts:0});return g;};
  const g=wave(),h=g.units[0];g.tick(.001);h.cooldown=999;for(let i=0;i<16;i++)g.tick(.05);
  check(g.enemies.every(e=>e.hp===9965)&&g.damageMeter.snapshot(g.waveTime).total===105,'wave basic deals one thirty-five percent hit to each of three monsters');
- const single=wave();single.enemies=single.enemies.slice(0,1);single.tick(.001);single.units[0].cooldown=999;for(let i=0;i<16;i++)single.tick(.05);check(single.enemies[0].hp===9965,'missing second and third targets do not repeat damage on first target');
+ const single=wave();single.enemies=single.enemies.slice(0,1);single.tick(.001);single.units[0].cooldown=999;for(let i=0;i<16;i++)single.tick(.05);check(single.enemies[0].hp===9895,'one wave enemy receives all three thirty-five percent hits');
+ const double=wave();double.enemies=double.enemies.slice(0,2);double.tick(.001);double.units[0].cooldown=999;for(let i=0;i<16;i++)double.tick(.05);check(double.enemies[0].hp===9965&&double.enemies[1].hp===9930,'two wave enemies split basic hits one then two');
+ check(single.damageMeter.snapshot(single.waveTime).total===105&&double.damageMeter.snapshot(double.waveTime).total===105,'concentrated hits retain exactly one-hundred-five percent total DPS');
+ check(assassinBasicTarget([1,2,3],2,[1,2])===2&&assassinBasicTarget([1,2,3],1,[1])===1,'missing or dead planned target falls back to the last available enemy');
+ check(assassinBasicTarget([1],2,[])===undefined,'no living in-range enemy receives no phantom strike');
+ const shifted=wave();shifted.tick(.001);shifted.units[0].cooldown=999;for(const enemy of shifted.enemies.slice(0,2)){enemy.distance=500;Object.assign(enemy,pathPoint(500));}for(let i=0;i<16;i++)shifted.tick(.05);check(shifted.enemies[0].hp===10000&&shifted.enemies[1].hp===10000&&shifted.enemies[2].hp===9895,'enemies leaving range redirect the remaining combo to the one still in range');
+ const bossBasic=(count:number)=>{const g=new Defense();g.summon('assassin',0);const battle=new BossBattle(waveBossRoster(g));battle.autoSkills=false;const hero=battle.actors.find(a=>a.kind==='assassin')!,template=battle.actors.find(a=>a.kind==='boss')!;Object.assign(hero,{x:100,y:100,cooldown:0,speed:0});const enemies=Array.from({length:count},(_,i)=>({...template,id:'test-'+i,x:150+i*8,y:100,hp:10000,maxHp:10000,rank:i,physicalArmor:0,speed:0,cooldown:999}));battle.actors=[hero,...enemies];battle.tick(.001);hero.cooldown=999;for(let i=0;i<16;i++)battle.tick(.05);return {battle,enemies};};
+ const bossOne=bossBasic(1),bossTwo=bossBasic(2),bossThree=bossBasic(3);
+ check(bossOne.enemies[0].hp===9895,'one boss enemy takes all three basic hits');
+ check(bossTwo.enemies[0].hp===9965&&bossTwo.enemies[1].hp===9930,'two boss enemies take one then two basic hits');
+ check(bossThree.enemies.every(e=>e.hp===9965),'three boss enemies each take one basic hit');
  const cast=wave(),caster=cast.units[0];caster.cooldown=999;cast.assassinSkills.get(caster.id)!.cooldown=0;check(cast.useAssassinSkill(caster.id)&&cast.assassinSkills.get(caster.id)!.cooldown===4,'wave slam starts four-second cooldown');
  for(let i=0;i<12;i++)cast.tick(.05);check(cast.enemies[0].hp===10000,'wave frame ten damage waits for completion');cast.tick(.05);check(cast.enemies[0].hp===9750&&cast.enemies[1].hp===10000&&near(cast.enemies[0].armorBreakRemaining!,5),'wave slam deals single-target two-hundred-fifty percent and applies five-second shred');
  const cancel=wave(),ch=cancel.units[0];cancel.tick(.001);ch.cooldown=999;cancel.tick(cancel.assassinActions[0].frameSeconds*7.5);cancel.assassinSkills.get(ch.id)!.cooldown=0;cancel.useAssassinSkill(ch.id);cancel.tick(.001);check(cancel.enemies[0].hp===9965&&cancel.enemies[1].hp===10000,'wave skill interrupts basic eighth frame without granting its damage');

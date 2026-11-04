@@ -1,4 +1,4 @@
-import {ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinSourceBusy,type AssassinAction,type AssassinImpact} from './assassinCombat';
+import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinSourceBusy,type AssassinAction,type AssassinImpact} from './assassinCombat';
 import {combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from './armorBreak';
 import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
 import {cancelSword,createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
@@ -529,7 +529,10 @@ export class Defense {
       const beats=advanceAssassin(action,dt);
       if(action.kind==='wave'&&!action.impact&&action.age>=9*action.frameSeconds){const target=this.enemies.find(e=>e.id===action.targets[0]);if(target)action.impact={x:target.x,y:target.y};}
       for(const beat of beats){
-        const target=this.enemies.find(e=>e.id===action.targets[action.kind==='basic'?beat:0]&&e.hp>0);
+        const pos=SLOTS[this.units.find(u=>u.id===action.sourceId)!.slot],range=this.stats(action.source).range;
+        const available=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=range).sort((a,b)=>b.distance-a.distance||a.id-b.id);
+        const targetId=action.kind==='basic'?assassinBasicTarget(action.targets,beat,available.map(e=>e.id)):action.targets[0];
+        const target=this.enemies.find(e=>e.id===targetId&&e.hp>0);
         if(!target)continue;
         this.hit(action.source,target,action.attack*(action.kind==='basic'?ASSASSIN.basicMultiplier:ASSASSIN.waveMultiplier));
         if(action.kind==='wave')applyArmorBreak(target);
