@@ -509,3 +509,7 @@
 .boss-wave-heading{gap:8px;}
 .boss-wave-heading #boss-speed{min-width:52px;padding:6px 8px;border:1px solid #756444;border-radius:5px;background:#3a3526;color:#e9c37c;}
 #dev-damage-numbers{grid-column:1/-1;}
+
+/* WEB-075: keep the top spacer and place combine below the shared bag. */
+#gear .inventory-combine-action{flex:none;margin:4px 0;}
+#gear .inventory-combine-action #combine{width:100%;max-width:none;min-width:0;margin:0;padding:5px 3px;font-size:10px;}
