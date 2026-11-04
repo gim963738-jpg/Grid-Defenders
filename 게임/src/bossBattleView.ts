@@ -1,3 +1,4 @@
+import {bladeFrame,bladePlacement,BLADE_SHEET_URL,BLADE_ALPHA_MATRIX} from './bladeSkill';
 import {swordVisuals,SWORD_SHEET_URL,SWORD_ALPHA_MATRIX} from './swordAttack';
 import {FIRE_SKILL,fireFrame,firePlacement,FIRE_SHEET_URL,FIRE_ALPHA_MATRIX} from './fireSkill';
 import { BossBattle, type BossActor } from './bossBattle';
@@ -21,6 +22,7 @@ function updateSkillFill(card:HTMLElement,remaining:number,duration:number,enabl
 }
 export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:BossBattle){
   const nodes=new Map<string,HTMLElement>();
+  const skillRoot=document.getElementById('boss-hero-skills')!;let heroSignature='';
   const trails=document.createElementNS('http://www.w3.org/2000/svg','svg');
   trails.setAttribute('viewBox','0 0 1000 562.5');trails.classList.add('boss-hit-trails');
   root.append(trails);
@@ -64,25 +66,41 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
         return `<g class="boss-sword-${v.part}" transform="rotate(${v.rotation*180/Math.PI} ${v.x} ${v.y})" opacity="${v.alpha}" filter="url(#boss-sword-alpha)"><svg x="${v.x-v.width/2}" y="${v.y-v.height/2}" width="${v.width}" height="${v.height}" viewBox="${f.x} ${f.y} ${f.width} ${f.height}" preserveAspectRatio="none" overflow="hidden"><image href="${SWORD_SHEET_URL}" width="1536" height="1024"/></svg></g>`;
       });
     }).join('');
-    document.querySelector('.boss-skill-hero-card')!.classList.toggle('hero-absent',!battle.actors.some(a=>a.kind==='ranged'));
-    document.querySelector('.boss-skill-hero-card small')!.textContent=battle.actors.some(a=>a.kind==='ranged')?'웨이브 편성 연동':'웨이브전 미배치';
+    trails.innerHTML+=`<defs><filter id="boss-blade-alpha" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${BLADE_ALPHA_MATRIX.join(' ')}"/></filter></defs>`+battle.bladeCasts.map(cast=>{
+      const f=bladeFrame(cast),p=bladePlacement(cast);
+      return `<g class="boss-blade-skill" filter="url(#boss-blade-alpha)"><svg x="${p.x-p.width*p.anchorX}" y="${p.y-p.height*p.anchorY}" width="${p.width}" height="${p.height}" viewBox="${f.x} ${f.y} ${f.width} ${f.height}" preserveAspectRatio="none" overflow="hidden"><image href="${BLADE_SHEET_URL}" width="1536" height="1024"/></svg></g>`;
+    }).join('');
+    const heroes=battle.actors.filter(a=>a.side==='ally'&&UNITS[a.kind as keyof typeof UNITS]?.hero);
+    const signature=heroes.map(h=>`${h.id}:${h.kind}`).join('|');
+    if(signature!==heroSignature||!skillRoot.children.length){
+      heroSignature=signature;
+      skillRoot.innerHTML=heroes.length?heroes.map(h=>{
+        const def=UNITS[h.kind as keyof typeof UNITS],hasSkill=h.kind==='ranged'||h.kind==='melee';
+        const portrait=h.kind==='ranged'||h.kind==='melee'?`<img src="${import.meta.env.BASE_URL}assets/heroes/${h.kind}-idle.png" alt="">`:`<span class="boss-hero-symbol" style="color:#${def.color.toString(16)}">${def.icon}</span>`;
+        return `<div class="boss-hero-skill-row" data-skill-hero="${h.id}"><div class="boss-skill-hero-card">${portrait}<b>${def.name}</b><small>웨이브 편성 연동</small></div><div class="boss-skill-column"><div class="boss-skill boss-basic-skill" data-basic-delay><b>1 · 평타</b><span>자동 공격 · 공속 기준</span><strong></strong></div>${hasSkill?`<button class="boss-skill" data-hero-skill="${h.id}"><b>2 · ${h.kind==='melee'?'연속 검격':'화염 기둥'}</b><span>기본 피해 ×3 · 범위 공격</span><strong></strong></button>`:`<div class="boss-skill boss-skill-empty" aria-label="${def.name} 스킬 미배정"></div>`}</div></div>`;
+      }).join(''):'<p class="boss-scene-note">웨이브전에서 영웅을 배치하세요.</p>';
+    }
+    for(const hero of heroes){
+      const row=skillRoot.querySelector<HTMLElement>(`[data-skill-hero="${hero.id}"]`)!,basic=row.querySelector<HTMLElement>('[data-basic-delay]')!;
+      const alive=hero.hp>0,fighting=battle.result==='fighting',target=alive&&battle.target(hero),ready=!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
+      row.querySelector('.boss-skill-hero-card')!.classList.toggle('hero-absent',!alive);
+      basic.querySelector('strong')!.textContent=!alive?'전투 불가':!fighting?'전투 종료':`공격 딜레이 ${hero.cooldown.toFixed(1)}초 / ${(1/hero.rate).toFixed(2)}초`;
+      updateSkillFill(basic,hero.cooldown,1/hero.rate,fighting&&alive,ready);
+      const skill=row.querySelector<HTMLButtonElement>('[data-hero-skill]');
+      if(skill){
+        const cooldown=battle.skillCooldown(hero.id),canUse=battle.canHeroSkill(hero.id);skill.disabled=!canUse;
+        skill.querySelector('strong')!.textContent=!alive?'전투 불가':!fighting?'전투 종료':cooldown>0?`재사용 ${cooldown.toFixed(1)}초 / 4초`:canUse?'사용 가능 · 쿨타임 4초':'사거리까지 접근 중';
+        updateSkillFill(skill,cooldown,FIRE_SKILL.cooldown,fighting&&alive,canUse);
+      }
+    }
     const auto=document.getElementById('boss-auto-skills')!;
     auto.textContent=`스킬 자동 ${battle.autoSkills?'ON':'OFF'}`;auto.setAttribute('aria-pressed',String(battle.autoSkills));
     const commander=document.getElementById('boss-commander-skill') as HTMLButtonElement;
     commander.disabled=battle.result!=='fighting'||!battle.actors.some(a=>a.side==='ally'&&a.hp>0)||battle.commanderCooldown>0;
     commander.classList.toggle('buff-active',battle.commanderBuff>0);
     document.getElementById('commander-skill-cooldown')!.textContent=battle.commanderBuff>0?`강화 ${battle.commanderBuff.toFixed(1)}초 · 재사용 ${battle.commanderCooldown.toFixed(1)}초`:battle.commanderCooldown>0?`재사용 ${battle.commanderCooldown.toFixed(1)}초`:'사용 가능 · 쿨타임 15초';
-    const hero=battle.hero();
-    document.getElementById('hero-basic-cooldown')!.textContent=!hero?'전투 불가':battle.result!=='fighting'?'전투 종료':`공격 딜레이 ${hero.cooldown.toFixed(1)}초 / ${(1/hero.rate).toFixed(1)}초`;
-    const triple=document.getElementById('boss-triple-skill') as HTMLButtonElement;
-    triple.disabled=!battle.canTriple();
-    document.getElementById('hero-triple-cooldown')!.textContent=!hero?'전투 불가':battle.result!=='fighting'?'전투 종료':battle.heroSkillCooldown>0?`재사용 ${battle.heroSkillCooldown.toFixed(1)}초`:battle.canTriple()?'사용 가능':'사거리까지 접근 중';
     const fighting=battle.result==='fighting';
-    const target=hero&&battle.target(hero);
-    const basicReady=!!hero&&!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
     updateSkillFill(commander,battle.commanderCooldown,15,fighting&&battle.actors.some(a=>a.side==='ally'&&a.hp>0),!commander.disabled);
-    updateSkillFill(document.getElementById('boss-basic-skill')!,hero?.cooldown??0,hero?1/hero.rate:1,fighting&&!!hero,basicReady);
-    updateSkillFill(triple,battle.heroSkillCooldown,FIRE_SKILL.cooldown,fighting&&!!hero,battle.canTriple());
     const allies=battle.actors.filter(a=>a.side==='ally'&&a.hp>0).length;
     const enemies=battle.actors.filter(a=>a.side==='enemy'&&a.hp>0).length;
     const text=!battle.actors.some(a=>a.side==='ally')?'웨이브전에서 아군을 먼저 배치하세요':battle.result==='victory'?'시험 승리':battle.result==='defeat'?'시험 패배':'전열 우선 교전';

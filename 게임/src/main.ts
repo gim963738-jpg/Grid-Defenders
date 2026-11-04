@@ -1,3 +1,4 @@
+import {BLADE_SHEET_URL} from './bladeSkill';
 import {SWORD_SHEET_URL} from './swordAttack';
 import {FIRE_SHEET_URL} from './fireSkill';
 import { Application, Assets, Texture } from 'pixi.js';
@@ -643,7 +644,7 @@ el('dps-last-boss').addEventListener('click',()=>{showLastBoss=!showLastBoss;ref
 el('boss-restart').addEventListener('click',()=>{bossReturnDelay=0;syncBossRoster(true);bossBattleView.draw();},{signal:events.signal});
 el('boss-auto-skills').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.autoSkills=!bossBattle.autoSkills;bossBattleView.draw();},{signal:events.signal});
 el('boss-commander-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.commanderSkill();bossBattleView.draw();},{signal:events.signal});
-el('boss-triple-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.tripleSkill();bossBattleView.draw();},{signal:events.signal});
+el('boss-hero-skills').addEventListener('click',(e)=>{const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-hero-skill]');if(button&&!button.disabled&&currentScene==='boss'&&!sceneTransitioning)bossBattle.useHeroSkill(button.dataset.heroSkill!);bossBattleView.draw();},{signal:events.signal});
 el('app').addEventListener('dblclick',(e)=>{
   const block=(e.target as HTMLElement).closest<HTMLElement>('[data-gear-id]');
   if(!block)return;
@@ -695,6 +696,7 @@ async function start():Promise<void> {
   const meleeTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/melee-idle.png`);
   const fireTexture=await Assets.load<Texture>(FIRE_SHEET_URL);
   const swordTexture=await Assets.load<Texture>(SWORD_SHEET_URL);
+  const bladeTexture=await Assets.load<Texture>(BLADE_SHEET_URL);
   const view=createDefenseView(app,game,(slot)=>{
     if(unitDrag?.moved||summonDrag?.active)return;
     const unit=game.units.find(u=>u.slot===slot);
@@ -702,7 +704,7 @@ async function start():Promise<void> {
     else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
     else game.note('먼저 아래에서 소환할 병사 또는 영웅을 선택하세요.');
     refresh();
-  },rangedTexture,meleeTexture,fireTexture,swordTexture);
+  },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture);
   let lastRevision=-1,hudClock=0,meterClock=0;
   renderMonsterTools();
   renderRecipeTree();

@@ -495,3 +495,12 @@
 #heroes .melee-summon-card .unit-icon{display:none;}
 #command-area[data-hero-backdrop=melee]::before{background:url(/assets/heroes/melee-reference.png) 58% top/auto 180% no-repeat;}
 #command-area.summon-background[data-hero-backdrop=melee]::after{opacity:0;}
+
+/* WEB-071: one basic-delay and skill-delay pair for every deployed hero. */
+.boss-hero-skills{grid-template-columns:minmax(0,1fr);gap:10px;}
+.boss-hero-skill-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:10px;}
+.boss-hero-skill-row .boss-skill-hero-card{min-height:150px;}
+.boss-hero-symbol{position:absolute;inset:0;display:grid;place-items:center;padding-bottom:35px;font-size:52px;text-shadow:0 0 22px #a9c5a544;}
+.boss-skill-empty{background:#12211e;border-style:dashed;min-height:65px;}
+.boss-skill-empty::before,.boss-skill-empty::after{display:none;}
+.boss-basic-skill{border-color:#4b6455;}

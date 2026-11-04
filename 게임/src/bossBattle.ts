@@ -1,3 +1,4 @@
+import {BLADE_SKILL,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
 import {createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
 import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter, DamagePeaks } from './damageMeter';
@@ -28,6 +29,8 @@ export class BossBattle {
   commanderCooldown=0;
   commanderBuff=0;
   heroSkillCooldown=0;
+  readonly heroSkillCooldowns=new Map<string,number>();
+  bladeCasts:BladeCast<BossActor,string>[]=[];
   swordAttacks:SwordAttack<string,string>[]=[];
   readonly swordSwingCounts=new Map<string,number>();
   fireCasts:FireCast<BossActor,string>[]=[];
@@ -39,7 +42,7 @@ export class BossBattle {
     this.damageMeter.reset();
     this.roster=roster.map(u=>({...u,stats:{...u.stats}}));
     this.actors=[];this.hits=[];this.iceProjectiles=[];this.iceBursts=[];this.elapsed=0;this.result='fighting';
-    this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.fireCasts=[];this.swordAttacks=[];this.swordSwingCounts.clear();
+    this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.fireCasts=[];this.swordAttacks=[];this.swordSwingCounts.clear();this.heroSkillCooldowns.clear();this.bladeCasts=[];
     for(const u of this.roster){
       const d=UNITS[u.kind],s=u.stats,col=3-Math.floor(u.slot/4),row=u.slot%4+2;
       this.actors.push({id:`ally-${u.id}`,side:'ally',kind:u.kind,name:d.name,level:u.level,sourceSlot:u.slot,
@@ -62,21 +65,29 @@ export class BossBattle {
       Math.hypot(a.x-actor.x,a.y-actor.y)-Math.hypot(b.x-actor.x,b.y-actor.y)||a.id.localeCompare(b.id))[0];
   }
   hero():BossActor|undefined{return this.actors.find(a=>a.kind==='ranged'&&a.hp>0);}
-  canTriple():boolean {
-    const hero=this.hero(),target=hero&&this.target(hero);
-    return this.result==='fighting'&&this.heroSkillCooldown<=0&&!!hero&&!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
+  skillCooldown(id:string):number {return this.actors.find(a=>a.id===id)?.kind==='ranged'?this.heroSkillCooldown:this.heroSkillCooldowns.get(id)??0;}
+  canHeroSkill(id:string):boolean {
+    const hero=this.actors.find(a=>a.id===id&&a.side==='ally'&&a.hp>0&&(a.kind==='ranged'||a.kind==='melee')),target=hero&&this.target(hero);
+    return this.result==='fighting'&&this.skillCooldown(id)<=0&&!!hero&&!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
   }
+  canTriple():boolean {const hero=this.hero();return !!hero&&this.canHeroSkill(hero.id);}
   commanderSkill():boolean {
     if(this.result!=='fighting'||!this.actors.some(a=>a.side==='ally'&&a.hp>0)||this.commanderCooldown>0)return false;
     this.commanderBuff=10;this.commanderCooldown=15;return true;
   }
-  tripleSkill():boolean {
-    if(!this.canTriple())return false;
-    const hero=this.hero()!,target=this.target(hero)!;
-    this.heroSkillCooldown=FIRE_SKILL.cooldown;
-    // Bottom of the 90%-height monster art in the 562.5-high boss field.
-    this.fireCasts.push(createFireCast({...hero},target.id,this.attackPower(hero),hero.x,hero.y-12,target.x,target.y,target.kind==='boss'?55.6875:40.5));return true;
+  useHeroSkill(id:string):boolean {
+    if(!this.canHeroSkill(id))return false;
+    const hero=this.actors.find(a=>a.id===id)!,target=this.target(hero)!,footOffset=target.kind==='boss'?55.6875:40.5;
+    if(hero.kind==='melee'){
+      this.heroSkillCooldowns.set(id,BLADE_SKILL.cooldown);
+      this.bladeCasts.push(createBladeCast({...hero},target.id,this.attackPower(hero),target.x,target.y,footOffset));
+    }else{
+      this.heroSkillCooldown=FIRE_SKILL.cooldown;
+      this.fireCasts.push(createFireCast({...hero},target.id,this.attackPower(hero),hero.x,hero.y-12,target.x,target.y,footOffset));
+    }
+    return true;
   }
+  tripleSkill():boolean {const hero=this.hero();return !!hero&&this.useHeroSkill(hero.id);}
   private attackPower(actor:BossActor):number {
     const bonus=actor.side==='ally'&&['guard','archer','mage'].includes(actor.kind)&&this.commanderBuff>0?100:0;
     return actor.attack+bonus;
@@ -100,13 +111,15 @@ export class BossBattle {
     if(this.result!=='fighting'){
       // Finish the final sword flash without extending combat time or dealing damage.
       for(const swing of this.swordAttacks)swing.age+=dt;
-      this.swordAttacks=this.swordAttacks.filter(swordAlive);return;
+      this.swordAttacks=this.swordAttacks.filter(swordAlive);
+      for(const cast of this.bladeCasts)cast.age+=dt;this.bladeCasts=this.bladeCasts.filter(bladeAlive);return;
     }
     this.elapsed+=dt;
     this.commanderCooldown=Math.max(0,this.commanderCooldown-dt);
     this.commanderBuff=Math.max(0,this.commanderBuff-dt);
     this.heroSkillCooldown=Math.max(0,this.heroSkillCooldown-dt);
-    if(this.autoSkills){this.commanderSkill();this.tripleSkill();}
+    for(const [id,cooldown] of this.heroSkillCooldowns)this.heroSkillCooldowns.set(id,Math.max(0,cooldown-dt));
+    if(this.autoSkills){this.commanderSkill();for(const hero of this.actors.filter(a=>a.side==='ally'&&(a.kind==='ranged'||a.kind==='melee')))this.useHeroSkill(hero.id);}
     this.hits=this.hits.filter(h=>(h.life-=dt)>0);
     for(const burst of this.iceBursts)burst.life-=dt;
     this.iceBursts=this.iceBursts.filter(b=>b.life>0);
@@ -160,6 +173,15 @@ export class BossBattle {
       }
     }
     this.fireCasts=this.fireCasts.filter(fireAlive);
+    for(const cast of this.bladeCasts){
+      const beats=advanceBlade(cast,dt);
+      for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.x,victim.y-cast.y)<=BLADE_SKILL.radius){
+        const amount=cast.attack*BLADE_SKILL.damageMultiplier*(victim.defenseType===cast.source.damageType?.75:1);
+        damage.set(victim.id,(damage.get(victim.id)??0)+amount);
+        this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,sword:true,splash:victim.id!==cast.targetId});
+      }
+    }
+    this.bladeCasts=this.bladeCasts.filter(bladeAlive);
     // Apply both sides' attacks together, avoiding iteration-order advantages.
     const freshHits=this.hits.slice(firstNewHit);
     for(const actor of live){

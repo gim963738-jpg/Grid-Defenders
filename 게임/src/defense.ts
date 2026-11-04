@@ -1,3 +1,4 @@
+import {BLADE_SKILL,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
 import {createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
 import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter } from './damageMeter';
@@ -50,6 +51,8 @@ export function pathPoint(distance:number): {x:number;y:number} {
 
 export class Defense {
   readonly damageMeter=new DamageMeter();
+  readonly meleeSkills=new Map<number,{cooldown:number;casts:number}>();
+  bladeCasts:BladeCast<Unit,number>[]=[];
   readonly rangedSkills=new Map<number,RangedSkillState>();
   lastWaveDamage:{wave:number;stats:ReturnType<DamageMeter['snapshot']>}|null=null;
   gold:number=RULES.initialGold;
@@ -118,7 +121,7 @@ export class Defense {
     this.bossPending=false;
     const removed=this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
     this.enemies=this.enemies.filter(e=>(e.named||e.bounty)&&e.hp>0);
-    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.wave++;
+    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.bladeCasts=[];this.wave++;
     this.log('economy',`[웨이브 전환] 남은 일반 몬스터 ${removed}마리 정리 · 처치 보상 없음 · 네임드/현상금 유지`);
     this.startWave();
   }
@@ -427,10 +430,10 @@ export class Defense {
     const before=this.anvils;this.anvils+=10;this.log('economy',`[개발자] 모루 +10 · ${before} → ${this.anvils}`);this.note('개발자 모루 +10');
   }
   reset():void {
-    this.rangedSkills.clear();this.swordSwingCounts.clear();
+    this.rangedSkills.clear();this.meleeSkills.clear();this.swordSwingCounts.clear();
     this.lastWaveDamage=null;
     this.damageMeter.reset(true);
-    this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];
+    this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.bladeCasts=[];
     this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
     this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.bossPending=false;this.damageNumbers=[];this.nextDamageId=1;
     this.shop=ITEMS.slice(0,RULES.shopSlots);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.nextId=1;this.placementOrder=0;
@@ -462,6 +465,12 @@ export class Defense {
         if(enemy.hp>0&&Math.hypot(enemy.x-cast.tx,enemy.y-cast.ty)<=FIRE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*FIRE_SKILL.damageMultiplier);
     }
     this.fireCasts=this.fireCasts.filter(fireAlive);
+    for(const cast of this.bladeCasts){
+      const beats=advanceBlade(cast,dt);
+      for(let i=0;i<beats;i++)for(const enemy of this.enemies)
+        if(enemy.hp>0&&Math.hypot(enemy.x-cast.x,enemy.y-cast.y)<=BLADE_SKILL.radius)this.hit(cast.source,enemy,cast.attack*BLADE_SKILL.damageMultiplier);
+    }
+    this.bladeCasts=this.bladeCasts.filter(bladeAlive);
     this.swordAttacks=this.swordAttacks.filter(s=>this.units.some(u=>u.id===s.sourceId));
     for(const swing of this.swordAttacks){
       const source=this.units.find(u=>u.id===swing.sourceId)!,target=this.enemies.find(e=>e.id===swing.targetId&&e.hp>0);
@@ -506,6 +515,16 @@ export class Defense {
         skill.cooldown=FIRE_SKILL.cooldown;skill.shotsLeft=0;skill.delay=0;skill.casts++;
         this.fireCasts.push(createFireCast({...u},victim.id,s.attack,pos.x,pos.y-12,victim.x,victim.y,enemyRadius(victim)));
         this.log('economy',`${this.unitName(u)} · 화염 기둥 발동 · 최고 화염 3회 타격 · 재사용 ${FIRE_SKILL.cooldown}초`,{sourceId:u.id});
+      }
+    }
+    for(const u of this.units.filter(u=>u.kind==='melee')){
+      let skill=this.meleeSkills.get(u.id);if(!skill){skill={cooldown:0,casts:0};this.meleeSkills.set(u.id,skill);}
+      skill.cooldown=Math.max(0,skill.cooldown-dt);const stats=this.stats(u),pos=SLOTS[u.slot];
+      const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=stats.range).sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
+      if(skill.cooldown<=1e-8&&target){
+        skill.cooldown=BLADE_SKILL.cooldown;skill.casts++;
+        this.bladeCasts.push(createBladeCast({...u},target.id,stats.attack,target.x,target.y,enemyRadius(target)));
+        this.log('economy',`${this.unitName(u)} · 연속 검격 발동 · 범위 3회 타격 · 재사용 ${BLADE_SKILL.cooldown}초`,{sourceId:u.id});
       }
     }
     this.enemies=this.enemies.filter(e=>e.hp>0);

@@ -1,3 +1,4 @@
+import {BLADE_SHEET_URL} from '../src/bladeSkill';
 import {SWORD_SHEET_URL} from '../src/swordAttack';
 import {Application,Assets,Texture} from 'pixi.js';
 import {Defense} from '../src/defense';
@@ -14,7 +15,8 @@ export async function showFireVisual(age=.98){
  const cast=createFireCast({...game.units[0]},1,75,195,28,195,28);cast.stage='pillar';cast.age=age;cast.hits=2;game.fireCasts=[cast];
  const textures=await Promise.all(['ranged-idle.png','melee-idle.png'].map(name=>Assets.load<Texture>('/assets/heroes/'+name)));const sheet=await Assets.load<Texture>(FIRE_SHEET_URL);
  const sword=await Assets.load<Texture>(SWORD_SHEET_URL);
- const view=createDefenseView(app,game,()=>{},textures[0],textures[1],sheet,sword);view.draw(null,false);app.render();
+ const blade=await Assets.load<Texture>(BLADE_SHEET_URL);
+ const view=createDefenseView(app,game,()=>{},textures[0],textures[1],sheet,sword,blade);view.draw(null,false);app.render();
  const root=document.createElement('div');root.style.cssText='position:relative;width:390px;height:220px;background:#344c36;margin-top:20px';overlay.append(root);const status=document.createElement('p');overlay.append(status);
  const b=new BossBattle(waveBossRoster(game));b.actors.forEach(a=>{a.x=a.side==='ally'?160:560;a.y=280;});const h=b.hero()!,t=b.actors.find(a=>a.side==='enemy')!;
  b.actors=[h,t];const fire=createFireCast({...h},t.id,h.attack,h.x,h.y,t.x,t.y,40.5);fire.stage='pillar';fire.age=age;fire.hits=2;b.fireCasts=[fire];createBossBattleView(root,status,b).draw();
