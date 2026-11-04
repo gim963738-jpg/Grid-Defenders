@@ -1,3 +1,4 @@
+import {DEFENSE_FIELD,FOREST_TERRAIN_URL,fieldToScreen,screenToField} from './defenseFieldLayout';
 import {calibrateBossTest,type BossTestProfile} from './bossTestBalance';
 import {nextCombatSpeed,stepCombat} from './combatPlayback';
 import {BLADE_SKILL,BLADE_SHEET_URL} from './bladeSkill';
@@ -156,7 +157,7 @@ function positionHeroInfo():void {
     const unit=game.units.find(u=>u.id===heroInfo!.unitId),canvas=document.querySelector('canvas');
     if(!unit||!canvas){closeHeroInfo();return;}
     const box=canvas.getBoundingClientRect(),point=SLOTS[unit.slot];
-    const x=box.left+point.x*box.width/RULES.width,y=box.top+point.y*box.height/RULES.height;
+    const {x,y}=fieldToScreen(box,point);
     anchor={left:x-20,right:x+20,top:y-22,bottom:y+22};
   } else {
     const card=document.querySelector<HTMLElement>(`#heroes .carousel-centered[data-summon="${heroInfo.kind}"]`)??document.querySelector<HTMLElement>(`[data-summon="${heroInfo.kind}"]`);
@@ -460,7 +461,7 @@ function showCenterNotice(message:string):void {
 function refreshFieldUpgrade():void {
   const button=el<HTMLButtonElement>('field-upgrade'),u=game.units.find(u=>u.id===selectedUnit&&!UNITS[u.kind].hero),canvas=document.querySelector('canvas');
   button.hidden=currentScene!=='defense'||sceneTransitioning||!u||!canvas||!!unitDrag?.moved;if(currentScene!=='defense'||sceneTransitioning||!u||!canvas||unitDrag?.moved)return;
-  const r=canvas.getBoundingClientRect(),p=SLOTS[u.slot],x=r.left+p.x*r.width/RULES.width,y=r.top+(p.y+25)*r.height/RULES.height;
+  const r=canvas.getBoundingClientRect(),p=SLOTS[u.slot],{x,y}=fieldToScreen(r,{x:p.x,y:p.y+25});
   button.hidden=y<0||y>innerHeight||r.bottom<0||r.top>innerHeight;
   button.style.left=`${Math.max(38,Math.min(innerWidth-38,x))}px`;button.style.top=`${y}px`;
   button.textContent=`승급 ${u.level>=5?'MAX':game.upgradeCost(u)+'G'}`;
@@ -504,8 +505,9 @@ function updateGearDrag():void {
   if(destination?.kind==='sale'){el('shop-market').classList.add('sale-drop-active');el('shop-sale-hint').textContent=`놓으면 판매 +${Math.floor((gear?.costBasis??0)/2)}G`;}
   else if(destination?.kind==='hero'){
     const canvas=document.querySelector('canvas')!,r=canvas.getBoundingClientRect(),p=SLOTS[destination.hero.slot],outline=el('hero-drop-target');
-    outline.hidden=false;outline.style.left=`${r.left+(p.x-25)*r.width/RULES.width}px`;outline.style.top=`${r.top+(p.y-23)*r.height/RULES.height}px`;
-    outline.style.width=`${50*r.width/RULES.width}px`;outline.style.height=`${46*r.height/RULES.height}px`;
+    const point=fieldToScreen(r,{x:p.x-25,y:p.y-23});
+    outline.hidden=false;outline.style.left=`${point.x}px`;outline.style.top=`${point.y}px`;
+    outline.style.width=`${50*r.width/RULES.width}px`;outline.style.height=`${46*r.height/DEFENSE_FIELD.height}px`;
     valid=!!game.nearestFree({id:drag.id,def},destination.hero.id,0,0,rotation);outline.classList.toggle('no-space',!valid);
   } else if(destination?.kind==='grid'){
     const {bag,owner,grid}=destination;
@@ -528,7 +530,7 @@ function rotateSelected(id:number):void {
 function canvasSlot(x:number,y:number):number {
   const canvas=document.querySelector('canvas');if(!canvas)return -1;
   const rect=canvas.getBoundingClientRect();
-  const px=(x-rect.left)*RULES.width/rect.width,py=(y-rect.top)*RULES.height/rect.height;
+  const {x:px,y:py}=screenToField(rect,{x,y});
   return SLOTS.findIndex(p=>Math.abs(p.x-px)<=25&&Math.abs(p.y-py)<=23);
 }
 document.addEventListener('pointerdown',(e)=>{
@@ -794,8 +796,10 @@ const sceneTransition=createSceneTransition({
 
 async function start():Promise<void> {
   const app=new Application();
-  await app.init({width:RULES.width,height:RULES.height,background:'#172620',preference:'webgl',resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,antialias:true});
-  el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','순환 전장, 병사와 영웅 배치 칸 16개');el('status').hidden=true;
+  await app.init({width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,background:'#172620',preference:'webgl',resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,antialias:true});
+  el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','숲 순환 전장, 상단 정보와 아군 배치 영역');el('status').hidden=true;
+  el('battlefield').style.setProperty('--field-top',`${DEFENSE_FIELD.top/DEFENSE_FIELD.height*100}%`);
+  const forestTexture=await Assets.load<Texture>(FOREST_TERRAIN_URL);
   const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
   const meleeTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/melee-idle.png`);
   const fireTexture=await Assets.load<Texture>(FIRE_SHEET_URL);
@@ -808,7 +812,7 @@ async function start():Promise<void> {
     else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
     else game.note('먼저 아래에서 소환할 병사 또는 영웅을 선택하세요.');
     refresh();
-  },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture,()=>showDamageNumbers);
+  },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture,()=>showDamageNumbers,{top:DEFENSE_FIELD.top,terrain:forestTexture});
   let lastRevision=-1,hudClock=0,meterClock=0;
   renderMonsterTools();
   renderRecipeTree();

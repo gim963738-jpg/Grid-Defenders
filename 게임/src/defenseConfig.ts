@@ -43,7 +43,16 @@ export const RECIPES = [
   {id:'R04',materials:['I04','I04'],result:'I09'},
 ] as const;
 export const AREA_ATTACK = { guardHalfAngle:Math.PI/4, mageRadius:48 } as const;
-export const PATH: Cell[] = [[28,28],[362,28],[362,302],[28,302]];
+// The painted trail has rounded bends; each short segment follows its road center.
+export const PATH:Cell[]=(()=>{
+  const points:Cell[]=[[56,28]];
+  for(const [cx,cy,angle]of [[334,56,-90],[334,274,0],[56,274,90],[56,56,180]])
+    for(let i=0;i<=8;i++){
+      if(angle===180&&i===8)continue;
+      const a=(angle+i*90/8)*Math.PI/180;points.push([cx+Math.cos(a)*28,cy+Math.sin(a)*28]);
+    }
+  return points;
+})();
 export const SLOTS = Array.from({length:16},(_,i)=>({x:99+(i%4)*64,y:81+Math.floor(i/4)*56}));
 export function rotated(cells: Cell[], turns:number): Cell[] {
   let result=cells.map(([x,y]):Cell=>[x,y]);

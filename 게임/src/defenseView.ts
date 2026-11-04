@@ -6,25 +6,23 @@ import { Defense,enemyRadius } from './defense';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 import {  RULES, SLOTS, UNITS } from './defenseConfig';
 
-export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture,fireTexture:Texture,swordTexture:Texture,bladeTexture:Texture,showDamageNumbers:()=>boolean=()=>true) {
-  const root=new Container();app.stage.addChild(root);
-  const field=new Graphics();root.addChild(field);
-  field.roundRect(4,4,382,322,18).fill(0x101d20).stroke({width:2,color:0x52614a});
-  field.roundRect(13,13,364,304,15).fill(0x8c7751);
-  field.roundRect(45,45,300,240,12).fill(0x344c36).stroke({width:3,color:0x504831});
-  field.roundRect(50,50,290,230,10).fill(0x3d583d);
-  for(let i=0;i<100;i++)field.rect(54+(i*83%280),54+(i*47%220),2,3).fill(i%2?0x4c6745:0x304c37);
-  for(let i=0;i<46;i++) {
-    const x=19+(i*79%350),y=18+(i*43%294);
-    if(x<43||x>346||y<43||y>286)field.rect(x,y,3,2).fill(0xa99167);
+export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture,fireTexture:Texture,swordTexture:Texture,bladeTexture:Texture,showDamageNumbers:()=>boolean=()=>true,scene?:{top:number;terrain:Texture}) {
+  const sceneTop=scene?.top??0;
+  if(scene){
+    const terrain=new Sprite(scene.terrain);terrain.eventMode='none';terrain.width=RULES.width;
+    // Measured road centers in the supplied art align with local PATH y=28 and 302.
+    terrain.height=(RULES.height+sceneTop)*1.113;terrain.y=-(RULES.height+sceneTop)*.03325;
+    app.stage.addChild(terrain);
   }
+  const root=new Container();root.y=sceneTop;app.stage.addChild(root);
+  if(!scene)root.addChild(new Graphics().rect(0,0,RULES.width,RULES.height).fill(0x344c36));
   const slots=new Container();root.addChild(slots);
   const slotGraphics=SLOTS.map((p,index)=>{
     const slot=new Container();slot.position.set(p.x,p.y);
     const g=new Graphics();
-    g.roundRect(-25,-23,50,46,6).fill({color:0xf3c76c,alpha:0.2}).stroke({width:2,color:0xffd47a,alpha:0.95});
+    g.ellipse(0,7,21,10).fill({color:0xb5df8c,alpha:.14}).stroke({width:1,color:0xc9edb4,alpha:.65});
     slot.hitArea=new Rectangle(-25,-23,50,46);slot.eventMode='static';slot.cursor='pointer';slot.on('pointertap',()=>onSlot(index));slots.addChild(slot);
-    const t=new Text({text:'+',style:{fontFamily:'system-ui',fontSize:17,fill:0xffdf9b}});t.anchor.set(0.5);slot.addChild(g,t);
+    const marker=new Graphics().circle(0,7,2).fill({color:0xe5f6b7,alpha:.85});slot.addChild(g,marker);
     return slot;
   });
   const selected=new Graphics();root.addChild(selected);
@@ -39,7 +37,6 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   }
   const iceEffects=new Graphics();iceEffects.eventMode='none';root.addChild(iceEffects);
   const badges=SLOTS.map(p=>{const t=new Text({text:'',style:{fontFamily:'system-ui',fontSize:10,fontWeight:'bold',fill:0xf5f4e7}});t.anchor.set(0.5);t.position.set(p.x,p.y+15);root.addChild(t);return t;});
-  const caption=new Text({text:'순환 디펜스 · 전투 시험',style:{fontFamily:'system-ui',fontSize:10,fill:0xdacdb1}});caption.position.set(13,RULES.height-17);root.addChild(caption);
   const skillBars=new Graphics();skillBars.eventMode='none';root.addChild(skillBars);
   const skillLabels=SLOTS.map(p=>{const text=new Text({text:'',style:{fontFamily:'system-ui',fontSize:7,fill:0xeafaff,stroke:{color:0x10282f,width:1}}});text.anchor.set(.5);text.position.set(p.x,p.y+28);text.eventMode='none';text.visible=false;root.addChild(text);return text;});
   const fireLayer=new Container();fireLayer.eventMode='none';root.addChild(fireLayer);
@@ -62,7 +59,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
       const moving=game.units.find(u=>u.id===movement?.id);
       if(moving&&!UNITS[moving.kind].hero&&movement&&SLOTS[movement.slot]&&movement.slot!==moving.slot){
         const p=SLOTS[movement.slot],color=UNITS[moving.kind].color;
-        movementPreview.roundRect(p.x-25,p.y-23,50,46,6).fill({color,alpha:0.25}).stroke({width:2,color:0xc9efce,alpha:0.9});
+        movementPreview.ellipse(p.x,p.y+7,24,12).fill({color,alpha:.2}).stroke({width:2,color:0xc9efce,alpha:.9});
         movementPreview.roundRect(p.x-10,p.y-9,20,21,4).fill({color,alpha:0.45});
         movementPreview.circle(p.x,p.y-13,7).fill({color:0xe1c7a5,alpha:0.45});
       }
@@ -87,9 +84,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         }
         if(u.id===selectedId) {
           selected.circle(p.x,p.y,game.stats(u).range)
-            .fill({color:UNITS[u.kind].color,alpha:UNITS[u.kind].hero?0.16:0.07})
-            .stroke({width:2,color:UNITS[u.kind].color,alpha:UNITS[u.kind].hero?0.95:0.5});
-          selected.roundRect(p.x-26,p.y-24,52,48,7).stroke({width:2,color:0xffd27b});
+            .fill({color:UNITS[u.kind].color,alpha:UNITS[u.kind].hero?0.08:0.04})
+            .stroke({width:2,color:UNITS[u.kind].color,alpha:UNITS[u.kind].hero?0.65:0.4});
+          selected.ellipse(p.x,p.y+8,23,10).fill({color:0xf2d88a,alpha:.12}).stroke({width:2,color:0xffdc90,alpha:.9});
         }
         const color=UNITS[u.kind].color;
         actors.ellipse(p.x,p.y+7,15,5).fill({color:0x0a1713,alpha:0.5});
@@ -168,8 +165,8 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         t.text=number.critical?`치명 ${number.damage}`:String(number.damage);
         t.style.fill=number.critical?0xffd15c:0xf4f5e8;t.style.fontSize=number.critical?18:14;
         t.alpha=Math.min(1,number.life/0.25);
-        const y=number.y<65?number.y+22+progress*30+(number.id%3)*7:number.y-20-progress*30-(number.id%3)*7;
-        t.position.set(Math.max(t.width/2+3,Math.min(RULES.width-t.width/2-3,number.x+(number.id%5-2)*12)),Math.max(12,Math.min(RULES.height-12,y)));
+        const y=number.y-20-progress*30-(number.id%3)*7;
+        t.position.set(Math.max(t.width/2+3,Math.min(RULES.width-t.width/2-3,number.x+(number.id%5-2)*12)),Math.max(-sceneTop+12,Math.min(RULES.height-12,y)));
       }
     },
   };

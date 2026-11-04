@@ -38,12 +38,12 @@ export interface DevLog {
 }
 export const DEV_LOG_LIMIT=100;
 
-const lengths=PATH.map((p,i)=>Math.hypot(PATH[(i+1)%4][0]-p[0],PATH[(i+1)%4][1]-p[1]));
+const lengths=PATH.map((p,i)=>Math.hypot(PATH[(i+1)%PATH.length][0]-p[0],PATH[(i+1)%PATH.length][1]-p[1]));
 const perimeter=lengths.reduce((a,b)=>a+b,0);
 export function pathPoint(distance:number): {x:number;y:number} {
   let d=((distance%perimeter)+perimeter)%perimeter;
-  for(let i=0;i<4;i++) {
-    if(d<=lengths[i]) { const a=PATH[i],b=PATH[(i+1)%4];return {x:a[0]+(b[0]-a[0])*d/lengths[i],y:a[1]+(b[1]-a[1])*d/lengths[i]}; }
+  for(let i=0;i<PATH.length;i++) {
+    if(d<=lengths[i]) { const a=PATH[i],b=PATH[(i+1)%PATH.length];return {x:a[0]+(b[0]-a[0])*d/lengths[i],y:a[1]+(b[1]-a[1])*d/lengths[i]}; }
     d-=lengths[i];
   }
   return {x:PATH[0][0],y:PATH[0][1]};
