@@ -366,7 +366,7 @@
 #heroes .hero-card.carousel-centered{z-index:3;}
 
 /* WEB-041: centered hero silhouette across the entire command/summon area. */
-#command-area{position:relative;isolation:isolate;overflow:clip;border-radius:8px;}
+#command-area{position:relative;isolation:isolate;overflow:clip;border-radius:8px;margin-top:8px;}
 #command-area::before,#command-area::after{position:absolute;z-index:-1;pointer-events:none;inset:0;opacity:0;transition:opacity .25s;}
 #command-area::before{content:"";background:radial-gradient(ellipse at 50% 40%,#74978377,transparent 75%);filter:blur(6px) grayscale(.4);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 85%,transparent);}
 #command-area.summon-background::before{opacity:.35;}
