@@ -1,3 +1,4 @@
+import {upcomingWaveWarning} from './waveWarning';
 import {DEFENSE_FIELD,FOREST_TERRAIN_URL,fieldToScreen,screenToField} from './defenseFieldLayout';
 import {calibrateBossTest,type BossTestProfile} from './bossTestBalance';
 import {nextCombatSpeed,stepCombat} from './combatPlayback';
@@ -43,6 +44,7 @@ let pressedGear:number|null=null;
 const events=new AbortController();
 let heroInfo:{kind:UnitKind;unitId:number|null;anchor?:'inventory'}|null=null;
 let noticeTimer:ReturnType<typeof setTimeout>|undefined;
+let waveWarningKey='';
 let heroInfoMarkup='';
 let heroSkillTooltipKind:UnitKind|null=null,heroSkillSlotsMarkup='';
 let centeredHeroKind:UnitKind='tank',heroCardsMarkup='',heroScrollFrame=0,heroAnimationFrame=0,heroSuppressClickUntil=0;
@@ -391,10 +393,27 @@ function refreshLinks():void {
   }
   svg.innerHTML=lines.join('');
 }
+function refreshWaveAlert():void {
+  const root=el('wave-alert'),warning=currentScene==='defense'&&!sceneTransitioning?upcomingWaveWarning(game):null;
+  if(!warning){if(!root.hidden)root.hidden=true;waveWarningKey='';return;}
+  const key=`${warning.kind}:${warning.wave}`;
+  if(key!==waveWarningKey){
+    waveWarningKey=key;root.dataset.kind=warning.kind;
+    el('wave-alert-label').textContent=warning.kind==='boss'?'DANGER · BOSS INCOMING':'ELITE INCOMING';
+    el('wave-alert-title').textContent=warning.kind==='boss'?'보스전 임박':'네임드 출현 예고';
+    el('wave-alert-round').textContent=`WAVE ${warning.wave}`;
+    root.setAttribute('aria-label',`${warning.wave}웨이브 ${warning.kind==='boss'?'보스전':'네임드'} 시작 10초 전`);
+  }
+  const seconds=String(warning.seconds);if(el('wave-alert-seconds').textContent!==seconds)el('wave-alert-seconds').textContent=seconds;
+  if(root.hidden)root.hidden=false;
+}
 function updateHud():void {
   for(const key of ['gold','anvils'] as const)document.querySelectorAll<HTMLElement>(`[data-resource-value="${key}"]`).forEach(node=>{node.textContent=game[key].toLocaleString();});
   const bountyActive=game.enemies.some(e=>e.bounty&&e.hp>0),credits=game.bountyCredits();
-  el('enemies').textContent=String(game.enemies.filter(e=>e.hp>0).length);
+  const alive=game.enemies.filter(e=>e.hp>0).length,limit=RULES.waveMonsters*2;
+  el('enemies').textContent=String(alive);el('enemy-limit').textContent=String(limit);
+  el('enemy-limit').parentElement!.setAttribute('aria-label',`현재 몬스터 ${alive}마리 / 2웨이브 분량 ${limit}마리`);
+  refreshWaveAlert();
   const bountyButton=el<HTMLButtonElement>('bounty-summon');bountyButton.hidden=credits<1;bountyButton.disabled=bountyActive;
   bountyButton.title=`현상금 소환 · 대기 ${credits}/${RULES.bountyStackLimit}회 · 처치 보상 모루 ${RULES.bountyAnvils}개 / 기본 ${RULES.bountyGold}G`;
   bountyButton.setAttribute('aria-label',bountyActive?'현상금 몬스터 전투 중':`현상금 몬스터 소환 · 남은 ${credits}회`);
@@ -776,7 +795,7 @@ function renderBossScreen():void {
 const sceneTransition=createSceneTransition({
   root:el('app'),
   onBusy(busy){
-    sceneTransitioning=busy;
+    sceneTransitioning=busy;refreshWaveAlert();
     el<HTMLButtonElement>('dev-boss-scene').disabled=busy;el<HTMLButtonElement>('dev-defense-scene').disabled=busy;
     if(busy){
       clearSummonDrag();closeHeroInfo();closeHeroSkillTooltip();cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;
@@ -850,6 +869,7 @@ async function start():Promise<void> {
     }
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
     const dt=Math.min(ticker.deltaMS/1000,0.1);stepCombat(dt,game.speed,(_seconds,realSeconds)=>game.tick(realSeconds),combatPaused);
+    refreshWaveAlert();
     const canSummon=pending!==null&&!summonReason(pending);
     view.draw(selectedUnit,canSummon,unitDrag?.moved?{id:unitDrag.id,slot:canvasSlot(unitDrag.x,unitDrag.y)}:undefined);
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}

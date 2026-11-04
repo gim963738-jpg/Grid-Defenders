@@ -14,9 +14,13 @@
           <div class="wave-controls" aria-label="전투 배속과 일시정지"><button id="speed" aria-label="전투 배속 변경">1×</button><button id="pause" class="pause-control" aria-label="전투 일시정지" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" fill="currentColor"/></svg></button></div>
           <strong id="wave-number">WAVE 1</strong><b id="wave-timer">00:30</b>
           <progress id="wave-progress" max="30" value="30" aria-label="현재 웨이브 남은 시간"></progress>
-          <div class="wave-monster-count" aria-label="현재 전장 몬스터 수"><span>전장 몬스터</span><strong id="enemies">0</strong><span>마리</span></div>
+          <div class="wave-monster-count" aria-label="현재 전장 몬스터 수와 2웨이브 분량"><span>몬스터</span><strong id="enemies">0</strong><span class="monster-count-divider" aria-hidden="true">/</span><strong id="enemy-limit" title="2웨이브 분량">20</strong></div>
         </section>
         <div id="battle-scene"><button id="bounty-summon" hidden aria-label="현상금 몬스터 소환"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12 4 3l9 6h6l9-6-1 9v12l-5 5H10l-5-5Z" fill="#bb8034" stroke="#ffdd7a" stroke-width="2"/><path d="M9 14h4v5H9zm10 0h4v5h-4zm-7 9h8" fill="#fff0bc" stroke="#fff0bc"/></svg><span id="bounty-label">소환</span></button><p id="status" role="status">전장을 준비하는 중입니다.</p></div>
+        <div id="wave-alert" class="wave-alert" role="status" aria-live="polite" aria-atomic="true" hidden>
+          <span class="wave-alert-rune" aria-hidden="true"><svg viewBox="0 0 40 48"><path d="M20 2 36 13v19L20 46 4 32V13Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m20 8 11 8v14l-11 9-11-9V16Z" fill="currentColor" opacity=".12"/><path d="M20 15v12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="33" r="1.8" fill="currentColor"/></svg></span>
+          <div class="wave-alert-copy"><small id="wave-alert-label">ELITE INCOMING</small><strong id="wave-alert-title">네임드 출현 예고</strong><span class="wave-alert-meta" aria-hidden="true"><span id="wave-alert-round">WAVE 5</span><i></i><b id="wave-alert-seconds">10</b>초 후 시작</span></div>
+        </div>
       </section>
       <div id="command-area" class="summon-background" data-hero-backdrop="tank">
       <div class="field-caption" hidden><span>↻ 외곽 순환 · 아군 일방 공격</span><span id="population">배치 0 / 16</span></div>
