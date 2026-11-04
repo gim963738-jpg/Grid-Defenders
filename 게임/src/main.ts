@@ -40,7 +40,7 @@ let selectedGear:number|null=null,turns=0,tab='summon';
 let shopFocus:number|null=null;
 let pressedGear:number|null=null;
 const events=new AbortController();
-let heroInfo:{kind:UnitKind;unitId:number|null}|null=null;
+let heroInfo:{kind:UnitKind;unitId:number|null;anchor?:'inventory'}|null=null;
 let noticeTimer:ReturnType<typeof setTimeout>|undefined;
 let heroInfoMarkup='';
 let centeredHeroKind:UnitKind='tank',heroCardsMarkup='',heroScrollFrame=0,heroAnimationFrame=0,heroSuppressClickUntil=0;
@@ -99,7 +99,10 @@ function closeHeroInfo():void {heroInfo=null;el('hero-info').hidden=true;}
 function positionHeroInfo():void {
   const popup=el('hero-info');if(!heroInfo)return;
   let anchor:{left:number;right:number;top:number;bottom:number};
-  if(heroInfo.unitId!==null){
+  if(heroInfo.anchor==='inventory'){
+    const button=el('inventory-hero-stats');if(!button.getClientRects().length){popup.hidden=true;return;}
+    anchor=button.getBoundingClientRect();
+  } else if(heroInfo.unitId!==null){
     const unit=game.units.find(u=>u.id===heroInfo!.unitId),canvas=document.querySelector('canvas');
     if(!unit||!canvas){closeHeroInfo();return;}
     const box=canvas.getBoundingClientRect(),point=SLOTS[unit.slot];
@@ -232,6 +235,8 @@ function refresh():void {
   const hero=game.heroes().find(h=>h.id===selectedHero);
   el('gear-title').textContent='영웅 장비';
   el('inventory-hero-name').textContent=hero?UNITS[hero.kind].name:'영웅 선택';
+  const statsButton=el<HTMLButtonElement>('inventory-hero-stats');statsButton.disabled=!hero;
+  statsButton.setAttribute('aria-label',hero?`${UNITS[hero.kind].name} 능력치 보기`:'영웅 능력치 보기');
   el('inventory-hero-icon').innerHTML=hero?(hero.kind==='ranged'||hero.kind==='melee'?`<span class="${hero.kind}-portrait"></span>`:UNITS[hero.kind].icon):'◇';
   el('equipment').innerHTML=inventoryGrid(hero?.id??-1);
   const bag=inventoryGrid(null);
@@ -374,6 +379,12 @@ function clearSummonDrag():void {
   if(summonDrag.active)pending=summonDrag.previous;
   summonDrag.ghost?.remove();summonDrag=null;
 }
+function unitDragImage(kind:UnitKind):string {
+  if(kind==='ranged'||kind==='melee')return `<img src="${import.meta.env.BASE_URL}assets/heroes/${kind}-idle.png" alt="">`;
+  const color='#'+UNITS[kind].color.toString(16).padStart(6,'0');
+  const weapon=kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':kind==='mage'||kind==='healer'?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
+  return `<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
+}
 function updateSummonGhost():void {
   if(!summonDrag?.active||!summonDrag.ghost)return;
   const slot=canvasSlot(summonDrag.x,summonDrag.y),valid=slot>=0&&!game.units.some(u=>u.slot===slot)&&!summonReason(summonDrag.kind);
@@ -498,8 +509,8 @@ document.addEventListener('pointermove',(e)=>{
         if(reason){heroGesture=null;summonSuppressClickUntil=performance.now()+500;clearSummonDrag();game.note(reason);showCenterNotice(reason);return;}
         g.active=true;heroGesture=null;cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;
         if(g.hero)centerHero(g.kind,'auto');
-        pending=g.kind;closeHeroInfo();g.ghost=document.createElement('div');g.ghost.className='summon-drag-ghost';g.ghost.setAttribute('aria-hidden','true');
-        g.ghost.innerHTML=g.kind==='ranged'||g.kind==='melee'?`<img src="${import.meta.env.BASE_URL}assets/heroes/${g.kind}-idle.png" alt=""><span>${UNITS[g.kind].name}</span>`:`<b style="color:#${UNITS[g.kind].color.toString(16)}">${UNITS[g.kind].icon}</b><span>${UNITS[g.kind].name}</span>`;
+        pending=g.kind;closeHeroInfo();g.ghost=document.createElement('div');g.ghost.className='summon-drag-ghost unit-drag-ghost';g.ghost.setAttribute('aria-hidden','true');
+        g.ghost.innerHTML=unitDragImage(g.kind);
         document.body.append(g.ghost);
       }
     }
@@ -508,10 +519,10 @@ document.addEventListener('pointermove',(e)=>{
   if(unitDrag&&unitDrag.pointer===e.pointerId){
     if(!unitDrag.moved&&Math.hypot(e.clientX-unitDrag.x,e.clientY-unitDrag.y)>7){
       unitDrag.moved=true;selectedUnit=unitDrag.id;pending=null;
-      unitDrag.ghost=document.createElement('div');unitDrag.ghost.className='drag-ghost';
+      unitDrag.ghost=document.createElement('div');unitDrag.ghost.className='summon-drag-ghost unit-drag-ghost';unitDrag.ghost.setAttribute('aria-hidden','true');
       const unit=game.units.find(u=>u.id===unitDrag!.id);
       if(unit&&UNITS[unit.kind].hero)selectedHero=unit.id;
-      unitDrag.ghost.textContent=unit?`${UNITS[unit.kind].name} 이동`:'유닛 이동';document.body.append(unitDrag.ghost);
+      unitDrag.ghost.innerHTML=unit?unitDragImage(unit.kind):'';document.body.append(unitDrag.ghost);
     }
     if(unitDrag.ghost){unitDrag.ghost.style.left=`${e.clientX}px`;unitDrag.ghost.style.top=`${e.clientY}px`;}
     if(unitDrag.moved){unitDrag.x=e.clientX;unitDrag.y=e.clientY;}
@@ -613,6 +624,10 @@ el('app').addEventListener('click',(e)=>{
       if(placed){selectedUnit=placed.id;selectedHero=placed.id;pending=null;selectedGear=null;heroInfo={kind,unitId:placed.id};game.note(`${UNITS[kind].name} · 이미 소환된 영웅입니다.`);}
       else {heroInfo={kind,unitId:null};pending=game.heroes().length<RULES.heroLimit?kind:null;game.note(pending?`${UNITS[kind].name} 선택 · 빈 칸을 누르면 무료 소환`:'영웅 정원이 가득합니다. 기본 능력치를 확인할 수 있습니다.');}
     } else {heroInfo={kind,unitId:null};pending=game.gold>=UNITS[kind].cost?kind:null;game.note(pending?`${UNITS[kind].name} 선택 · 빈 칸을 누르면 소환`:'골드가 부족합니다. 기본 능력치는 확인할 수 있습니다.');}
+  }
+  else if(b.id==='inventory-hero-stats'){
+    const hero=game.heroes().find(u=>u.id===selectedHero);
+    if(hero)heroInfo={kind:hero.kind,unitId:hero.id,anchor:'inventory'};
   }
   else if(d.upgrade)game.upgrade(Number(d.upgrade));
   else if(d.sellUnit){game.sellUnit(Number(d.sellUnit));selectedUnit=null;}
