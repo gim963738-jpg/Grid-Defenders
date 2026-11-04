@@ -588,5 +588,8 @@
 #wave-timer{font-size:25px;text-shadow:0 2px 5px #07130a;}
 #wave-progress{width:72%;height:4px;border-color:#c1b27877;background:#0c2016a6;}
 .wave-monster-count{background:#0c2016b3;border-color:#a4b87744;backdrop-filter:blur(3px);}
-#bounty-summon{top:calc(var(--field-top,23.26%) + 11%);height:10%;background:#2b3822e6;border-color:#c2b36b;box-shadow:0 2px 10px #0005;}
+#bounty-summon{left:auto;right:8px;top:14%;height:10%;background:#2b3822e6;border-color:#c2b36b;box-shadow:0 2px 10px #0005;}
 @media(max-width:350px){#wave-info{padding:5px 6px 9px;gap:2px;}#wave-timer{font-size:22px;}#wave-number{font-size:9px;padding:1px 10px;}.wave-controls{top:5px;right:6px;gap:3px;}.wave-controls #speed{width:36px;height:24px;font-size:9px;}.wave-controls .pause-control{width:24px;height:24px;}}
+
+/* WEB-086: bounty card sits below the upper-right playback controls. */
+@media(max-width:350px){#bounty-summon{right:6px;}}
