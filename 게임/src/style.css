@@ -117,7 +117,7 @@
 #battlefield{width:calc(100% + 24px);margin-inline:-12px;border-radius:14px;border:1px solid #59614b;background:#101e20;}
 #battle-scene{position:relative;}
 #wave-info{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 8px 6px;margin:0;border:0;border-bottom:1px solid #566047;background:radial-gradient(ellipse at top,#34413a,#152526 75%);color:#c2cebb;text-align:center;}
-#wave-info strong{padding:2px 16px;border:1px solid #b79c60;border-radius:5px;background:#1a2827;font-size:12px;line-height:1.2;letter-spacing:1px;color:#f4e3b8;}
+#wave-number{padding:2px 16px;border:1px solid #b79c60;border-radius:5px;background:#1a2827;font-size:12px;line-height:1.2;letter-spacing:1px;color:#f4e3b8;}
 #wave-timer{font-size:27px;line-height:1.05;font-weight:850;font-variant-numeric:tabular-nums;color:#fff7dc;text-shadow:0 2px 2px #000;}
 #wave-progress{display:block;appearance:none;width:76%;height:6px;border:1px solid #99855a;border-radius:5px;overflow:hidden;background:#0d181b;}
 #wave-progress::-webkit-progress-bar{background:#0d181b;}#wave-progress::-webkit-progress-value{background:linear-gradient(90deg,#84c7c9,#e6d293);border-radius:3px;}
@@ -528,3 +528,16 @@
 #gear .equipment-bag-column{display:flex;flex-direction:column;min-width:0;}
 #gear .equipment-bag-column>.inventory-actions{height:48px;align-items:flex-start;justify-content:flex-end;padding-top:8px;margin-bottom:0;border:0;background:none;}
 #gear .equipment-bag-column>.equipment-bag{flex:1;width:100%;}
+
+/* WEB-079: field status and controls live in the wave card. */
+#defense-screen>#battlefield{margin-top:4px;}
+.wave-controls{position:absolute;top:7px;right:8px;display:flex;align-items:center;gap:4px;}
+.wave-controls #speed{width:48px;height:28px;padding:0;font-size:11px;font-variant-numeric:tabular-nums;}
+.pause-control{display:grid;place-items:center;width:28px;height:28px;padding:5px;border:1px solid #756444;border-radius:5px;background:#3a3526;color:#e9c37c;}
+.pause-control svg{width:16px;height:16px;}
+.pause-control[aria-pressed=true]{border-color:#d8c28c;background:#59492c;color:#fff0bd;}
+.wave-monster-count{display:flex;align-items:center;gap:6px;padding:2px 10px;border:1px solid #465b4b;border-radius:5px;background:#142522;color:#acbba5;font-size:10px;line-height:1.2;}
+.wave-monster-count #enemies{min-width:16px;color:#f4d28a;font-size:15px;font-variant-numeric:tabular-nums;}
+#wave-info.is-paused #wave-timer{color:#aebfba;}
+.boss-battle-controls{display:flex;align-items:center;gap:4px;}
+.boss-battle-controls .pause-control{height:28px;}

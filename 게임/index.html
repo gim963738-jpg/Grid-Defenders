@@ -9,19 +9,12 @@
   <body>
     <main id="app">
       <div id="defense-screen">
-      <header class="masthead"><div><span class="eyebrow">GRID DEFENDERS</span><h1 tabindex="-1">순환의 전장 <span>전투 시험</span></h1></div><span class="live"><i></i> LIVE</span></header>
-      <section id="hud" aria-label="전투 정보">
-        <div><span>보유 골드</span><strong id="gold">480 <small>G</small></strong></div>
-        <div><span>몬스터</span><strong id="enemies">0 <small>/ 30</small></strong></div>
-        <div><span>처치</span><strong id="kills">0</strong></div>
-        <button id="speed" aria-label="전투 배속 변경">1×</button>
-      </section>
       <section id="battlefield" aria-label="순환 전장">
         <section id="wave-info" aria-label="무한 웨이브 시험 상태">
+          <div class="wave-controls" aria-label="전투 배속과 일시정지"><button id="speed" aria-label="전투 배속 변경">1×</button><button id="pause" class="pause-control" aria-label="전투 일시정지" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" fill="currentColor"/></svg></button></div>
           <strong id="wave-number">WAVE 1</strong><b id="wave-timer">00:30</b>
           <progress id="wave-progress" max="30" value="30" aria-label="현재 웨이브 남은 시간"></progress>
-          <div class="wave-details"><span id="wave-spawns"></span><span id="wave-specials"></span></div>
-          <small>무한 시험 · 시간 종료 시 일반 정리 / 네임드·현상금 유지</small>
+          <div class="wave-monster-count" aria-label="현재 전장 몬스터 수"><span>전장 몬스터</span><strong id="enemies">0</strong><span>마리</span></div>
         </section>
         <div id="battle-scene"><button id="bounty-summon" hidden aria-label="현상금 몬스터 소환"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12 4 3l9 6h6l9-6-1 9v12l-5 5H10l-5-5Z" fill="#bb8034" stroke="#ffdd7a" stroke-width="2"/><path d="M9 14h4v5H9zm10 0h4v5h-4zm-7 9h8" fill="#fff0bc" stroke="#fff0bc"/></svg><span id="bounty-label">소환</span></button><p id="status" role="status">전장을 준비하는 중입니다.</p></div>
       </section>
@@ -73,7 +66,7 @@
       </div>
       <section id="boss-screen" aria-label="보스전 화면" hidden>
         <header class="masthead"><div><span class="eyebrow">GRID DEFENDERS</span><h1 tabindex="-1">보스전 <span>전투 시험</span></h1></div><span class="boss-phase">BOSS</span></header>
-        <div class="boss-wave-heading"><strong id="boss-wave-label">BOSS · WAVE 1</strong><span>보스 전장</span><button id="boss-speed" aria-label="보스전 배속 변경">1×</button></div>
+        <div class="boss-wave-heading"><strong id="boss-wave-label">BOSS · WAVE 1</strong><span>보스 전장</span><div class="boss-battle-controls"><button id="boss-speed" aria-label="보스전 배속 변경">1×</button><button id="boss-pause" class="pause-control" aria-label="전투 일시정지" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" fill="currentColor"/></svg></button></div></div>
         <p id="boss-test-profile" class="boss-scene-note" hidden></p>
         <section class="boss-arena fighting" aria-label="보스전 시험 전장"><div class="boss-side"><div class="boss-emblem" aria-hidden="true">♛</div><h2>보스전</h2><p>전투 준비</p></div><div class="boss-allied-side"><span class="boss-allies-label">아군 진영</span><div id="boss-party" role="img" aria-label="아군 진영 가로 4칸 세로 8칸, 중앙 참고 편성"></div></div><div id="boss-combat" aria-label="양측 전열 우선 자동 전투"></div></section>
         <p id="boss-combat-status" class="boss-scene-note" role="status">전열 우선 교전 준비</p>

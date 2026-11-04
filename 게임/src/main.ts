@@ -15,7 +15,7 @@ import './style.css';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense();
-let showDamageNumbers=true;
+let showDamageNumbers=true,combatPaused=false;
 const bossBattle=new BossBattle(waveBossRoster(game),Math.random,game.damageMeter.peaks);
 let bossRosterSignature='';
 let bossTestMode=false,bossTestProfile:BossTestProfile|null=null;
@@ -32,7 +32,7 @@ function syncBossRoster(force=false,discardPrevious=false):void {
     summary.title=bossBattle.actors.filter(a=>a.side==='enemy').map(a=>`${a.name}: 체력 ${a.maxHp.toLocaleString()}, 공격력 ${a.attack}`).join(' / ');
   }
 }
-const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle,()=>showDamageNumbers);
+const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle,()=>showDamageNumbers,()=>combatPaused);
 let currentScene:BattleScene='defense',sceneTransitioning=false;
 let activeBossWave:number|null=null,bossReturnDelay=0;
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
@@ -250,6 +250,11 @@ function refresh():void {
 }
 function refreshCombatControls():void {
   for(const id of ['speed','boss-speed']){el(id).textContent=`${game.speed}×`;el(id).setAttribute('aria-label',`전투 배속 변경 · 현재 ${game.speed}배`);}
+  for(const id of ['pause','boss-pause']){
+    const button=el(id);button.setAttribute('aria-pressed',String(combatPaused));button.setAttribute('aria-label',combatPaused?'전투 재개':'전투 일시정지');button.title=combatPaused?'전투 재개':'일시정지';
+    button.innerHTML=combatPaused?'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m5 2 9 6-9 6Z" fill="currentColor"/></svg>':'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" fill="currentColor"/></svg>';
+  }
+  el('app').dataset.combatPaused=String(combatPaused);el('wave-info').classList.toggle('is-paused',combatPaused);
   const numbers=el('dev-damage-numbers');numbers.textContent=`데미지 숫자 ${showDamageNumbers?'ON':'OFF'}`;numbers.setAttribute('aria-pressed',String(showDamageNumbers));
 }
 function refreshTools():void {
@@ -324,9 +329,8 @@ function refreshLinks():void {
 }
 function updateHud():void {
   for(const key of ['gold','anvils'] as const)document.querySelectorAll<HTMLElement>(`[data-resource-value="${key}"]`).forEach(node=>{node.textContent=game[key].toLocaleString();});
-  el('gold').innerHTML=`${game.gold} <small>G</small>`;
   const bountyActive=game.enemies.some(e=>e.bounty&&e.hp>0),credits=game.bountyCredits();
-  el('enemies').innerHTML=`${game.enemies.filter(e=>!e.bounty&&!e.named).length} <small>/ ${RULES.maxEnemies}</small>${bountyActive?' <small class="bounty-hud">현상금1</small>':''}`;
+  el('enemies').textContent=String(game.enemies.filter(e=>e.hp>0).length);
   const bountyButton=el<HTMLButtonElement>('bounty-summon');bountyButton.hidden=credits<1;bountyButton.disabled=bountyActive;
   bountyButton.title=`현상금 소환 · 대기 ${credits}/${RULES.bountyStackLimit}회 · 처치 보상 모루 ${RULES.bountyAnvils}개 / 기본 ${RULES.bountyGold}G`;
   bountyButton.setAttribute('aria-label',bountyActive?'현상금 몬스터 전투 중':`현상금 몬스터 소환 · 남은 ${credits}회`);
@@ -337,9 +341,6 @@ function updateHud():void {
   const progress=el<HTMLProgressElement>('wave-progress');progress.max=RULES.waveSeconds;progress.value=remaining;
   progress.setAttribute('aria-valuetext',`남은 시간 ${seconds}초`);
   el('wave-info').classList.toggle('wave-urgent',remaining<=5);
-  el('wave-spawns').textContent=`일반 ${game.waveSpawned}/${RULES.waveMonsters} 소환`;
-  el('wave-specials').textContent=`네임드 ${game.enemies.filter(e=>e.named).length} · 현상금 ${bountyActive?1:0} · 소환 대기 ${credits}/${RULES.bountyStackLimit}`;
-  el('kills').textContent=String(game.kills);
   el('population').textContent=`배치 ${game.units.length} / 16`;
   el('message').textContent=game.message;
 }
@@ -625,6 +626,7 @@ el('app').addEventListener('click',(e)=>{
   else if(b.id==='combine'){if(game.combineMany(game.combinationPlan(selectedHero))){selectedGear=null;pressedGear=null;shopFocus=null;}}
   else if(b.id==='reroll')game.reroll();
   else if(b.id==='bounty-summon')game.summonBounty();
+  else if(b.id==='pause'||b.id==='boss-pause'){combatPaused=!combatPaused;refreshCombatControls();if(currentScene==='boss')bossBattleView.draw();}
   else if(b.id==='speed'||b.id==='boss-speed'){game.speed=nextCombatSpeed(game.speed);refreshCombatControls();}
   refresh();
 },{signal:events.signal});
@@ -646,7 +648,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   else if(button.id==='dev-next-wave')game.nextTestWave();
   else if(button.id==='dev-reset'){
     clearSummonDrag();drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;
-    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();bossDamageHistory.clear();damageMeterMode='defense';showLastBoss=false;activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=false;bossTestMode=false;syncBossRoster(true,true);bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
+    clearTimeout(noticeTimer);el('center-notice').hidden=true;game.reset();combatPaused=false;bossDamageHistory.clear();damageMeterMode='defense';showLastBoss=false;activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=false;bossTestMode=false;syncBossRoster(true,true);bossBattleView.draw();pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;pressedGear=null;shopFocus=null;
     lastGearTap=null;lastRotation=null;suppressClick=false;closeHeroInfo();openTab('summon');refreshCombatControls();
   }
   refresh();
@@ -663,8 +665,8 @@ el('dps-tab-boss').addEventListener('click',()=>{damageMeterMode='boss';showLast
 el('dps-last-boss').addEventListener('click',()=>{showLastBoss=!showLastBoss;refreshDamageMeter();},{signal:events.signal});
 el('boss-restart').addEventListener('click',()=>{bossReturnDelay=0;syncBossRoster(true);renderBossScreen();},{signal:events.signal});
 el('boss-auto-skills').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.autoSkills=!bossBattle.autoSkills;bossBattleView.draw();},{signal:events.signal});
-el('boss-commander-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning)bossBattle.commanderSkill();bossBattleView.draw();},{signal:events.signal});
-el('boss-hero-skills').addEventListener('click',(e)=>{const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-hero-skill]');if(button&&!button.disabled&&currentScene==='boss'&&!sceneTransitioning)bossBattle.useHeroSkill(button.dataset.heroSkill!);bossBattleView.draw();},{signal:events.signal});
+el('boss-commander-skill').addEventListener('click',()=>{if(currentScene==='boss'&&!sceneTransitioning&&!combatPaused)bossBattle.commanderSkill();bossBattleView.draw();},{signal:events.signal});
+el('boss-hero-skills').addEventListener('click',(e)=>{const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-hero-skill]');if(button&&!button.disabled&&currentScene==='boss'&&!sceneTransitioning&&!combatPaused)bossBattle.useHeroSkill(button.dataset.heroSkill!);bossBattleView.draw();},{signal:events.signal});
 el('app').addEventListener('dblclick',(e)=>{
   const block=(e.target as HTMLElement).closest<HTMLElement>('[data-gear-id]');
   if(!block)return;
@@ -733,17 +735,17 @@ async function start():Promise<void> {
     if(sceneTransitioning)return;
     if(activeBossWave!==null&&(!game.bossPending||activeBossWave!==game.wave)){activeBossWave=null;bossReturnDelay=0;}
     if(currentScene==='boss'){
-      const dt=Math.min(ticker.deltaMS/1000,.1);stepCombat(dt,game.speed,seconds=>bossBattle.tick(seconds));bossDamageHistory.capture(bossBattle,bossEncounterWave);bossBattleView.draw();
+      const dt=Math.min(ticker.deltaMS/1000,.1);stepCombat(dt,game.speed,seconds=>bossBattle.tick(seconds),combatPaused);bossDamageHistory.capture(bossBattle,bossEncounterWave);bossBattleView.draw();
       meterClock+=dt;if(meterClock>=.15){meterClock=0;refreshDamageMeter();}
       if(activeBossWave===game.wave&&bossBattle.result==='victory'){
-        bossReturnDelay+=dt;
-        if(bossReturnDelay>=1.2&&game.completeBossWave()){
+        if(!combatPaused)bossReturnDelay+=dt;
+        if(!combatPaused&&bossReturnDelay>=1.2&&game.completeBossWave()){
           activeBossWave=null;bossReturnDelay=0;void sceneTransition.go('defense');
         }
       } else bossReturnDelay=0;
       return;
     }
-    if(game.bossPending&&activeBossWave!==game.wave){
+    if(!combatPaused&&game.bossPending&&activeBossWave!==game.wave){
       activeBossWave=game.wave;bossReturnDelay=0;bossTestMode=false;syncBossRoster(true);
       void sceneTransition.go('boss');return;
     }
@@ -761,7 +763,7 @@ async function start():Promise<void> {
       if(!node||node.scrollTop===before){if(drag.y<edge)window.scrollBy(0,-step);else if(drag.y>innerHeight-edge)window.scrollBy(0,step);}
     }
     // 복귀 시 대량 생성·일괄 피해가 생기지 않게 시뮬레이션 한 프레임을 제한.
-    const dt=Math.min(ticker.deltaMS/1000,0.1);stepCombat(dt,game.speed,(_seconds,realSeconds)=>game.tick(realSeconds));
+    const dt=Math.min(ticker.deltaMS/1000,0.1);stepCombat(dt,game.speed,(_seconds,realSeconds)=>game.tick(realSeconds),combatPaused);
     const canSummon=pending!==null&&!summonReason(pending);
     view.draw(selectedUnit,canSummon,unitDrag?.moved?{id:unitDrag.id,slot:canvasSlot(unitDrag.x,unitDrag.y)}:undefined);
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}

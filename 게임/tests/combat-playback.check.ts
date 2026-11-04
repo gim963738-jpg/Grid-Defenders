@@ -17,5 +17,10 @@ export function checkCombatPlayback(){
  stepCombat(1.15/5,5,(_s,r)=>wave.tick(r));check(wave.enemies[0].hp===4457,'five speed preserves all six sword skill hits and final multiplier');
  const boss=new BossBattle(waveBossRoster(wave)),hero=boss.actors.find(a=>a.kind==='melee')!,target=boss.actors.find(a=>a.side==='enemy')!;boss.actors=[hero,target];hero.x=target.x-20;hero.y=target.y;hero.cooldown=999;target.cooldown=999;hero.speed=target.speed=0;boss.useHeroSkill(hero.id);
  stepCombat(.2,5,s=>boss.tick(s));check(Math.abs(boss.skillCooldown(hero.id)-7)<1e-8,'boss cooldown advances one game second in one-fifth real second');
+ const heldWave=new Defense();heldWave.summon('ranged',0);heldWave.speed=5;const heldBoss=new BossBattle(waveBossRoster(heldWave));heldBoss.commanderSkill();
+ const snapshot=()=>JSON.stringify({waveTime:heldWave.waveTime,waveElapsed:heldWave.elapsed,enemies:heldWave.enemies,units:heldWave.units,bossTime:heldBoss.elapsed,actors:heldBoss.actors,commander:heldBoss.commanderCooldown});
+ const before=snapshot();let calls=0;const step=(s:number,r:number)=>{calls++;heldWave.tick(r);heldBoss.tick(s);};
+ stepCombat(12,5,step,true);check(calls===0,'pause skips every combat simulation update');check(snapshot()===before,'pause freezes both modes time positions health attacks and skill cooldown');
+ stepCombat(.2,5,step,false);check(Math.abs(heldWave.elapsed-1)<1e-8&&Math.abs(heldBoss.elapsed-1)<1e-8&&Math.abs(heldBoss.commanderCooldown-14)<1e-8,'resume advances normally without replaying paused time');
  return passed;
 }

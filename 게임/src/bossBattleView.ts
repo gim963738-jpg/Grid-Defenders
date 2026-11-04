@@ -20,13 +20,14 @@ function updateSkillFill(card:HTMLElement,remaining:number,duration:number,enabl
   card.style.setProperty('--skill-fill',`${(progress*100).toFixed(2)}%`);
   card.setAttribute('aria-disabled',String(state!=='ready'));
 }
-export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:BossBattle,showDamageNumbers:()=>boolean=()=>true){
+export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:BossBattle,showDamageNumbers:()=>boolean=()=>true,paused:()=>boolean=()=>false){
   const nodes=new Map<string,HTMLElement>();
   const skillRoot=document.getElementById('boss-hero-skills')!;let heroSignature='';
   const trails=document.createElementNS('http://www.w3.org/2000/svg','svg');
   trails.setAttribute('viewBox','0 0 1000 562.5');trails.classList.add('boss-hit-trails');
   root.append(trails);
   return {draw(){
+    const stopped=paused();
     const current=new Set(battle.actors.map(a=>a.id));
     for(const [id,node] of nodes)if(!current.has(id)){node.remove();nodes.delete(id);}
     for(const actor of battle.actors){
@@ -82,28 +83,28 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
     }
     for(const hero of heroes){
       const row=skillRoot.querySelector<HTMLElement>(`[data-skill-hero="${hero.id}"]`)!,basic=row.querySelector<HTMLElement>('[data-basic-delay]')!;
-      const alive=hero.hp>0,fighting=battle.result==='fighting',target=alive&&battle.target(hero),ready=!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
+      const alive=hero.hp>0,fighting=battle.result==='fighting'&&!stopped,target=alive&&battle.target(hero),ready=!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
       row.querySelector('.boss-skill-hero-card')!.classList.toggle('hero-absent',!alive);
-      basic.querySelector('strong')!.textContent=!alive?'전투 불가':!fighting?'전투 종료':`공격 딜레이 ${hero.cooldown.toFixed(1)}초 / ${(1/hero.rate).toFixed(2)}초`;
+      basic.querySelector('strong')!.textContent=!alive?'전투 불가':stopped?'일시정지':!fighting?'전투 종료':`공격 딜레이 ${hero.cooldown.toFixed(1)}초 / ${(1/hero.rate).toFixed(2)}초`;
       updateSkillFill(basic,hero.cooldown,1/hero.rate,fighting&&alive,ready);
       const skill=row.querySelector<HTMLButtonElement>('[data-hero-skill]');
       if(skill){
-        const cooldown=battle.skillCooldown(hero.id),canUse=battle.canHeroSkill(hero.id),duration=hero.kind==='melee'?BLADE_SKILL.cooldown:FIRE_SKILL.cooldown;skill.disabled=!canUse;
-        skill.querySelector('strong')!.textContent=!alive?'전투 불가':!fighting?'전투 종료':cooldown>0?`재사용 ${cooldown.toFixed(1)}초 / ${duration}초`:canUse?`사용 가능 · 쿨타임 ${duration}초`:'사거리까지 접근 중';
+        const cooldown=battle.skillCooldown(hero.id),canUse=!stopped&&battle.canHeroSkill(hero.id),duration=hero.kind==='melee'?BLADE_SKILL.cooldown:FIRE_SKILL.cooldown;skill.disabled=!canUse;
+        skill.querySelector('strong')!.textContent=!alive?'전투 불가':stopped?'일시정지':!fighting?'전투 종료':cooldown>0?`재사용 ${cooldown.toFixed(1)}초 / ${duration}초`:canUse?`사용 가능 · 쿨타임 ${duration}초`:'사거리까지 접근 중';
         updateSkillFill(skill,cooldown,duration,fighting&&alive,canUse);
       }
     }
     const auto=document.getElementById('boss-auto-skills')!;
     auto.textContent=`스킬 자동 ${battle.autoSkills?'ON':'OFF'}`;auto.setAttribute('aria-pressed',String(battle.autoSkills));
     const commander=document.getElementById('boss-commander-skill') as HTMLButtonElement;
-    commander.disabled=battle.result!=='fighting'||!battle.actors.some(a=>a.side==='ally'&&a.hp>0)||battle.commanderCooldown>0;
+    commander.disabled=stopped||battle.result!=='fighting'||!battle.actors.some(a=>a.side==='ally'&&a.hp>0)||battle.commanderCooldown>0;
     commander.classList.toggle('buff-active',battle.commanderBuff>0);
-    document.getElementById('commander-skill-cooldown')!.textContent=battle.commanderBuff>0?`강화 ${battle.commanderBuff.toFixed(1)}초 · 재사용 ${battle.commanderCooldown.toFixed(1)}초`:battle.commanderCooldown>0?`재사용 ${battle.commanderCooldown.toFixed(1)}초`:'사용 가능 · 쿨타임 15초';
-    const fighting=battle.result==='fighting';
+    document.getElementById('commander-skill-cooldown')!.textContent=stopped?'일시정지':battle.commanderBuff>0?`강화 ${battle.commanderBuff.toFixed(1)}초 · 재사용 ${battle.commanderCooldown.toFixed(1)}초`:battle.commanderCooldown>0?`재사용 ${battle.commanderCooldown.toFixed(1)}초`:'사용 가능 · 쿨타임 15초';
+    const fighting=battle.result==='fighting'&&!stopped;
     updateSkillFill(commander,battle.commanderCooldown,15,fighting&&battle.actors.some(a=>a.side==='ally'&&a.hp>0),!commander.disabled);
     const allies=battle.actors.filter(a=>a.side==='ally'&&a.hp>0).length;
     const enemies=battle.actors.filter(a=>a.side==='enemy'&&a.hp>0).length;
-    const text=!battle.actors.some(a=>a.side==='ally')?'웨이브전에서 아군을 먼저 배치하세요':battle.result==='victory'?'시험 승리':battle.result==='defeat'?'시험 패배':'전열 우선 교전';
+    const text=!battle.actors.some(a=>a.side==='ally')?'웨이브전에서 아군을 먼저 배치하세요':battle.result==='victory'?'시험 승리':battle.result==='defeat'?'시험 패배':stopped?'일시정지':'전열 우선 교전';
     status.textContent=`${text} · 아군 ${allies} / 적 ${enemies} · ${Math.floor(battle.elapsed)}초`;
   }};
 }
