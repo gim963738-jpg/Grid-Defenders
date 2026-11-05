@@ -85,10 +85,10 @@ export function mountHeroPreview() {
     isDetail=Boolean(routeHero);
     if(routeHero)selected=routeHero;
     const isHero=location.hash==='#heroes'||Boolean(routeHero);
-    lobby.hidden=isHero||location.hash==='#barracks'||location.hash==='#training'||location.hash==='#specialty';
+    lobby.hidden=isHero||location.hash==='#barracks'||location.hash==='#training'||(location.hash==='#specialty'||location.hash.startsWith('#specialty/'));
     screen.hidden=!isHero;
     if(isHero){render();window.scrollTo(0,!isDetail&&wasDetail?listScroll:0);if(!isDetail&&wasDetail)screen.querySelector<HTMLElement>(`.hero-card[data-select="${selected.id}"]`)?.focus({preventScroll:true});else screen.querySelector<HTMLElement>('h1')?.focus({preventScroll:true});}
-    else if(location.hash!=='#barracks'&&location.hash!=='#training'&&location.hash!=='#specialty'){window.scrollTo(0,0);opener?.focus({preventScroll:true});}
+    else if(location.hash!=='#barracks'&&location.hash!=='#training'&&location.hash!=='#specialty'&&!location.hash.startsWith('#specialty/')){window.scrollTo(0,0);opener?.focus({preventScroll:true});}
   }
   window.addEventListener('hashchange',syncRoute);
   syncRoute();
