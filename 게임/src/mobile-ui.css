@@ -31,7 +31,7 @@ body { padding:0; min-width:280px; }
 .settings { width:var(--app-touch); height:var(--app-touch); padding:12px; }
 .wallet>span { min-height:32px; padding:4px 6px; }
 .wallet b { font-size:14px; }
-.coin,.anvil { width:20px; height:20px; }
+.coin,.crystal { width:20px; height:20px; }
 .side-menu { right:var(--app-gutter); top:12px; gap:8px; }
 .side-menu button { width:48px; height:61px; }
 .stage { font-size:16px; }
