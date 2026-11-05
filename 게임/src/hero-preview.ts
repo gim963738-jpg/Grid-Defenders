@@ -30,7 +30,8 @@ export function mountHeroPreview() {
   lobby.after(screen);
   const growthPanel=mountHeroGrowthPanel();
   const slots:(string|null)[]=[...heroes.filter(h=>h.owned).map(h=>h.id),null,null];
-  let openFormation=()=>{};
+  let formationEditing=false;
+  let updateRoster=()=>{};
   let selected = heroes[1];
   let filter = '전체';
   let sort = 'level';
@@ -45,6 +46,7 @@ export function mountHeroPreview() {
   const portrait = previewHeroPortrait;
   function render() {
     screen.dataset.view = isDetail ? 'detail' : 'list';
+    screen.classList.toggle('formation-editing',formationEditing&&!isDetail);
     const list = heroes.filter(h => filter === '전체' || h.role === filter).sort((a,b) => Number(b.owned)-Number(a.owned) || (sort === 'level' ? b.level-a.level : a.name.localeCompare(b.name,'ko')));
     const ability = `<section class="hero-ability-section" aria-label="${selected.name} 능력치"><div class="hero-ability-heading"><h3>능력치</h3>${selected.id==='bran'?'<span>표본 수치</span>':''}</div><dl class="hero-stats ${selected.id==='bran'?'hero-sample-stats':''}">${selected.id==='bran'?BRAN_STAT_SAMPLE.map(stat=>`<div data-stat="${stat.id}"><dt>${stat.name}</dt><dd><strong>${stat.value}</strong>${stat.note?`<small>${stat.note}</small>`:''}</dd></div>`).join(''):`<div><dt>⚔ 공격력</dt><dd>${selected.attack.toLocaleString()}</dd></div><div><dt>♜ 방어력</dt><dd>${selected.defense.toLocaleString()}</dd></div><div><dt>♡ 체력</dt><dd>${selected.hp.toLocaleString()}</dd></div>`}</dl></section>`;
     screen.innerHTML = `
@@ -58,8 +60,8 @@ export function mountHeroPreview() {
       </section>
       <button class="hero-list-return" data-action="list">‹ 영웅 목록으로</button>
       ` : `
-      <button class="hero-formation-button" data-action="formation"><span>편성하기</span><small>${slots.filter(Boolean).length} / 8</small><span aria-hidden="true">›</span></button>
-      <section class="hero-collection" aria-label="보유 영웅"><div class="collection-heading"><h2>보유 영웅 <span>6 / 8</span></h2><div class="collection-tools"><select aria-label="영웅 정렬"><option value="level" ${sort==='level'?'selected':''}>레벨순</option><option value="name" ${sort==='name'?'selected':''}>이름순</option></select><button class="hero-filter-toggle ${filter!=='전체'?'has-filter':''}" data-action="filters" aria-label="역할 필터" aria-controls="hero-role-filters" aria-expanded="${filtersOpen}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M8 3v6m8 0v6m-7 0v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div></div><div id="hero-role-filters" class="hero-filters" role="group" aria-label="영웅 역할 필터" ${filtersOpen?'':'hidden'}>${['전체','탱커','근접','원거리','지원'].map(f=>`<button data-filter="${f}" class="${f===filter?'active':''}" aria-pressed="${f===filter}">${f}</button>`).join('')}</div><div class="hero-grid">${list.map(h=>`<button class="hero-card ${!h.owned?'unowned':''}" data-select="${h.id}" aria-label="${h.name}${slots.includes(h.id)?' 편성 중':''}${!h.owned?' 미보유':' 상세 보기'}">${portrait(h)}${slots.includes(h.id)?'<span class="hero-formation-badge" aria-hidden="true">편성</span>':''}<span class="role-badge">${roleIcons[h.role]}</span><span class="card-caption"><small>${h.owned?'Lv. '+h.level:'🔒 미보유'}</small><strong>${h.name}</strong><span class="hero-stars">★★★★★</span></span></button>`).join('')}${Array.from({length:Math.max(0,16-list.length)},()=>'<div class="hero-empty-slot" aria-hidden="true"></div>').join('')}</div></section>
+      <button class="hero-formation-button ${formationEditing?'is-editing':''}" data-action="formation" aria-pressed="${formationEditing}"><span>${formationEditing?'편성 완료':'편성하기'}</span><small>${slots.filter(Boolean).length} / 8</small><span aria-hidden="true">${formationEditing?'✓':'›'}</span></button>${formationEditing?'<p class="hero-formation-hint">영웅을 눌러 편성하거나 해제하세요.</p>':''}
+      <section class="hero-collection" aria-label="보유 영웅"><div class="collection-heading"><h2>보유 영웅 <span>6 / 8</span></h2><div class="collection-tools"><select aria-label="영웅 정렬"><option value="level" ${sort==='level'?'selected':''}>레벨순</option><option value="name" ${sort==='name'?'selected':''}>이름순</option></select><button class="hero-filter-toggle ${filter!=='전체'?'has-filter':''}" data-action="filters" aria-label="역할 필터" aria-controls="hero-role-filters" aria-expanded="${filtersOpen}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M8 3v6m8 0v6m-7 0v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div></div><div id="hero-role-filters" class="hero-filters" role="group" aria-label="영웅 역할 필터" ${filtersOpen?'':'hidden'}>${['전체','탱커','근접','원거리','지원'].map(f=>`<button data-filter="${f}" class="${f===filter?'active':''}" aria-pressed="${f===filter}">${f}</button>`).join('')}</div><div class="hero-grid">${list.map(h=>`<button class="hero-card ${!h.owned?'unowned':''} ${formationEditing&&slots.includes(h.id)?'formation-selected':''}" data-select="${h.id}" ${formationEditing&&h.owned?`aria-pressed="${slots.includes(h.id)}"`:''} aria-label="${h.name}${!h.owned?' 미보유':formationEditing?(slots.includes(h.id)?' 편성 해제':' 편성 추가'):(slots.includes(h.id)?' 편성 중 · 상세 보기':' 상세 보기')}">${portrait(h)}${slots.includes(h.id)?'<span class="hero-formation-badge" aria-hidden="true">편성</span>':''}<span class="role-badge">${roleIcons[h.role]}</span><span class="card-caption"><small>${h.owned?'Lv. '+h.level:'🔒 미보유'}</small><strong>${h.name}</strong><span class="hero-stars">★★★★★</span></span></button>`).join('')}${Array.from({length:Math.max(0,16-list.length)},()=>'<div class="hero-empty-slot" aria-hidden="true"></div>').join('')}</div></section>
       `}
       <p class="hero-preview-note">디자인 미리보기 · 게임 데이터 연결 전</p><p class="hero-notice" role="status" aria-live="polite"></p>`;
   }
@@ -80,7 +82,7 @@ export function mountHeroPreview() {
   screen.addEventListener('click',event=>{
     const button=(event.target as HTMLElement).closest<HTMLButtonElement>('button');
     if(!button)return;
-    if(button.dataset.action==='formation'){openFormation();return;}
+    if(button.dataset.action==='formation'){formationEditing=!formationEditing;rerender('[data-action="formation"]');return;}
     if(button.dataset.action==='growth'){growthPanel.open(selected);return;}
     if(button.dataset.action==='home'){location.hash='';return;}
     if(button.dataset.action==='back'){location.hash=isDetail?'heroes':'';return;}
@@ -89,11 +91,22 @@ export function mountHeroPreview() {
     if(button.dataset.action==='filters'){filtersOpen=!filtersOpen;rerender('[data-action="filters"]');return;}
     if(button.dataset.filter){filter=button.dataset.filter;rerender(`[data-filter="${filter}"]`);return;}
     if(button.dataset.detail){detailTab=button.dataset.detail;rerender(`[data-detail="${detailTab}"]`);return;}
-    if(button.dataset.select){const hero=heroes.find(h=>h.id===button.dataset.select)!;if(!hero.owned){notice('아직 보유하지 않은 영웅입니다.');return;}listScroll=window.scrollY;detailTab='스킬';location.hash=`heroes/${hero.id}`;return;}
+    if(button.dataset.select){
+      const hero=heroes.find(h=>h.id===button.dataset.select)!;if(!hero.owned){notice('아직 보유하지 않은 영웅입니다.');return;}
+      if(formationEditing){
+        const existing=slots.indexOf(hero.id);
+        if(existing!==-1)slots[existing]=null;
+        else{const empty=slots.indexOf(null);if(empty===-1){notice('최대 8명까지 편성할 수 있습니다.');return;}slots[empty]=hero.id;}
+        updateRoster();rerender(`[data-select="${hero.id}"]`);return;
+      }
+      listScroll=window.scrollY;detailTab='스킬';location.hash=`heroes/${hero.id}`;return;
+    }
   });
+  screen.addEventListener('keydown',event=>{if(event.key==='Escape'&&formationEditing){formationEditing=false;rerender('[data-action="formation"]');}});
   screen.addEventListener('change',event=>{if(event.target instanceof HTMLSelectElement){sort=event.target.value;rerender('select');}});
   function syncRoute(){
     const routeHero=heroes.find(h=>location.hash===`#heroes/${h.id}`&&h.owned);
+    if(location.hash!=='#heroes')formationEditing=false;
     const wasDetail=isDetail;
     isDetail=Boolean(routeHero);
     if(routeHero)selected=routeHero;
@@ -110,28 +123,22 @@ export function mountHeroPreview() {
     picker.className='roster-picker';
     picker.setAttribute('aria-labelledby','roster-picker-title');
     document.body.append(picker);
-    const formation=document.createElement('dialog');formation.className='hero-formation-panel';formation.setAttribute('aria-labelledby','formation-title');
-    formation.innerHTML='<header><div><small>HERO FORMATION</small><h2 id="formation-title">영웅 편성</h2></div><button data-formation-close aria-label="편성 창 닫기">×</button></header><p>변경할 슬롯을 선택하세요.</p><div class="formation-slots"></div><button class="formation-done" data-formation-close>편성 완료</button>';
-    document.body.append(formation);
     let slotIndex=0;
     const slotMarkup=()=>`<div class="roster-heading"><h2>영웅 편성</h2><span>${slots.filter(Boolean).length} / 8</span></div><div class="lobby-roster-grid">${slots.map((id,index)=>{const h=heroes.find(h=>h.id===id);return `<button class="lobby-roster-slot ${h?'filled':'vacant'}" data-roster-slot="${index}" aria-label="${index+1}번 편성 ${h?h.name:'빈칸'} 변경">${h?portrait(h):'<span class="roster-plus" aria-hidden="true">＋</span>'}<span class="roster-slot-label">${h?h.name:'빈 슬롯'}</span></button>`;}).join('')}</div>`;
     function drawSlots(){
-      container.innerHTML=slotMarkup();formation.querySelector('.formation-slots')!.innerHTML=slotMarkup();
-      if(!screen.hidden&&!isDetail)rerender();
+      container.innerHTML=slotMarkup();
     }
     function closePicker(){picker.close();}
-    picker.addEventListener('close',()=>{const target=formation.open?formation:container;target.querySelector<HTMLElement>(`[data-roster-slot="${slotIndex}"]`)?.focus({preventScroll:true});});
+    picker.addEventListener('close',()=>{container.querySelector<HTMLElement>(`[data-roster-slot="${slotIndex}"]`)?.focus({preventScroll:true});});
     const selectSlot=(event:Event)=>{
       const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-roster-slot]');if(!button)return;
       slotIndex=Number(button.dataset.rosterSlot);
       picker.innerHTML=`<button class="close" data-close aria-label="닫기">×</button><h1 id="roster-picker-title">${slotIndex+1}번 슬롯 · 영웅 선택</h1><div class="roster-picker-grid">${heroes.filter(h=>h.owned).map(h=>`<button data-roster-hero="${h.id}" aria-label="${h.name} 편성">${portrait(h)}<span>${h.name}</span></button>`).join('')}</div><p>이미 편성된 영웅을 고르면 서로 자리를 바꿉니다.</p><button class="dialog-confirm" data-remove>편성 해제</button>`;
       picker.showModal();
     };
-    container.addEventListener('click',selectSlot);formation.addEventListener('click',selectSlot);
-    formation.addEventListener('click',event=>{if((event.target as HTMLElement).closest('[data-formation-close]'))formation.close();});
-    formation.addEventListener('close',()=>screen.querySelector<HTMLElement>('[data-action="formation"]')?.focus({preventScroll:true}));
-    window.addEventListener('hashchange',()=>{if(picker.open)picker.close();if(formation.open)formation.close();});
-    openFormation=()=>{drawSlots();if(!formation.open)formation.showModal();};
+    container.addEventListener('click',selectSlot);
+    window.addEventListener('hashchange',()=>{if(picker.open)picker.close();});
+    updateRoster=drawSlots;
     picker.addEventListener('click',event=>{
       const button=(event.target as HTMLElement).closest<HTMLButtonElement>('button');
       if(!button)return;
