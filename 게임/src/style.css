@@ -662,6 +662,25 @@
 .gear-drag-ghost>.equipment-item-art{padding:3px;}
 .gear-drag-ghost.drag-warning>.equipment-item-art{filter:drop-shadow(0 0 3px #ff5555);}
 
+/* Separate shop access; equipment remains available below offers for direct purchase. */
+.tabs{grid-template-columns:repeat(3,minmax(0,1fr));}
+.tabs button{min-height:48px;font-size:14px;}
+.command-panels{display:flex;flex-direction:column;}
+.command-panels>#shop{order:-1;}
+
+/* Keep the battlefield and tab bar visible while the command content scrolls. */
+body.integrated-game #app{display:flex;flex-direction:column;height:100dvh;padding-bottom:env(safe-area-inset-bottom,0px);}
+body.integrated-game .battle-shell-header{flex:none;}
+body.integrated-game #defense-screen{display:flex;flex:1;flex-direction:column;min-height:0;}
+body.integrated-game #battlefield{flex:none;}
+body.integrated-game #command-area{display:flex;flex:1;flex-direction:column;min-height:160px;overflow:hidden;}
+body.integrated-game .tabs{flex:none;background:#121d20;}
+body.integrated-game .command-panels{flex:1;min-height:0;overflow-y:auto;overscroll-behavior-y:contain;padding-bottom:40px;scrollbar-width:thin;}
+body.integrated-game .command-panels>.panel{flex:none;}
+body.integrated-game #defense-screen>footer{display:none;}
+body.integrated-game #shop #reroll,body.integrated-game #shop-cards .shop-card button{min-height:48px;height:auto;font-size:14px;}
+body.integrated-game #shop-cards .shop-card{height:auto;min-height:146px;}
+
 /* Camp entry and battle return use the same mobile frame width. */
 body.integrated-game #app{width:min(100%,480px);min-height:100dvh;}.battle-shell-header{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:56px;padding:8px 0;border-bottom:1px solid #7c6a4444;color:#c9b98f;}.battle-shell-header[hidden]{display:none;}.battle-shell-header button{min-width:72px;min-height:48px;padding:10px 12px;border:1px solid #8c754b;border-radius:5px;background:#23362e;font-size:14px;color:#ead7ae;}.battle-shell-header>span{font-size:14px;}
 #leave-battle-dialog{width:min(calc(100% - 24px),432px);padding:24px 20px;border:1px solid #b7975a;border-radius:8px;background:#17292c;color:#e6d5af;box-shadow:0 18px 70px #000a;}#leave-battle-dialog::backdrop{background:#030b12bb;}#leave-battle-dialog h2{font-size:20px;margin:0 0 12px;}#leave-battle-dialog p{font-size:14px;line-height:1.7;color:#b4c2aa;}#leave-battle-dialog>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:20px;}#leave-battle-dialog button{min-height:48px;padding:10px;border:1px solid #9e8451;border-radius:5px;background:#2b4133;color:#ead6a6;font-size:14px;}#leave-battle-confirm{background:#796033!important;}

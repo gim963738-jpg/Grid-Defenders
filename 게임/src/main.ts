@@ -275,9 +275,9 @@ function openTab(name:string):void {
   closeHeroSkillTooltip();tab=name;
   el('command-area').classList.toggle('summon-background',tab==='summon');
   if(tab!=='summon'){cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;el('heroes').setAttribute('aria-busy','false');}
-  const inventory=tab==='gear'||tab==='shop';
-  document.querySelectorAll<HTMLElement>('.panel').forEach(p=>p.hidden=inventory?!['gear','shop'].includes(p.id):p.id!==tab);
-  document.querySelectorAll<HTMLButtonElement>('[data-tab]').forEach(b=>{const active=b.dataset.tab===tab||(inventory&&b.dataset.tab==='gear');b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+  document.querySelectorAll<HTMLElement>('.panel').forEach(p=>p.hidden=p.id!==tab&&!(tab==='shop'&&p.id==='gear'));
+  document.querySelectorAll<HTMLButtonElement>('[data-tab]').forEach(b=>{const active=b.dataset.tab===tab;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+  el('command-area').querySelector('.command-panels')?.scrollTo({top:0});
   if(tab==='summon')centerHero(centeredHeroKind,'auto');
 }
 function inventoryGrid(owner:number|null):string {

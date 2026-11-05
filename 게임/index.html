@@ -38,8 +38,10 @@
       <p id="message" role="status" hidden>병사를 선택하고 전장의 빈 칸을 눌러주세요.</p>
       <nav class="tabs" aria-label="전투 조작 메뉴">
         <button data-tab="summon" class="active" aria-pressed="true">소환·지휘</button>
-        <button data-tab="gear" aria-pressed="false">장비·가방·상점</button>
+        <button data-tab="gear" aria-pressed="false">장비·가방</button>
+        <button data-tab="shop" aria-pressed="false">상점</button>
       </nav>
+      <div class="command-panels">
       <section id="summon" class="panel">
         <div class="section-title summon-heading"><h2>병사 소환</h2><div class="resource-wallet" role="group" aria-label="소환 재화"><span class="resource-token resource-gold"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="#d8a83e" stroke="#ffe298"/><circle cx="8" cy="8" r="4.1" fill="none" stroke="#8d6225"/><path d="M8 4.8v6.4M6.4 6h2.1c1.7 0 1.7 2 0 2H7.5c-1.7 0-1.7 2 0 2h2.1" fill="none" stroke="#fff0b8" stroke-width=".8"/></svg><span class="resource-label">골드</span><strong data-resource-value="gold">480</strong></span><span class="resource-token resource-anvils"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12v2H9.5v2.5L12 11v2H4v-2l2.5-2.5V6H4L1 4Z" fill="#a7bec9" stroke="#d9e7ed" stroke-width=".7"/><path d="M4 13h8" stroke="#627f8b" stroke-width="2"/></svg><span class="resource-label">모루</span><strong data-resource-value="anvils">0</strong></span></div></div>
         <div id="soldiers" class="cards three" aria-label="병사 선택 · 클릭하여 능력치 확인"></div>
@@ -76,6 +78,7 @@
         <div id="shop-item-detail" class="detail"></div>
         <p class="hint">공용 가방은 아래로 확장됩니다. 블록 드래그: 이동 · 더블클릭·두 번 탭: 회전. 상점 상품을 공용 가방 또는 영웅 장비칸에 내려놓으면 구매합니다.</p>
       </section>
+      </div>
       </div>
       <footer>몬스터 누적 20마리 · 보스전 전멸 또는 제한시간 초과 시 전투 종료</footer>
       </div>
