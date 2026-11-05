@@ -1,3 +1,4 @@
+import {renderHeroSkills,renderHeroEquipment} from './hero-detail-panels';
 import {mountHeroGrowthPanel} from './hero-growth-panel';
 import {BRAN_STAT_SAMPLE} from './hero-stat-sample';
 ﻿// Presentation state only. Future game integration can replace this data adapter.
@@ -29,6 +30,7 @@ export function mountHeroPreview() {
   screen.setAttribute('aria-label','영웅 관리 시안');
   lobby.after(screen);
   const growthPanel=mountHeroGrowthPanel();
+  const detailNav=document.createElement('nav');detailNav.className='hero-detail-navigation';detailNav.hidden=true;detailNav.setAttribute('aria-label','영웅 상세 분류');document.body.append(detailNav);
   const slots:(string|null)[]=[...heroes.filter(h=>h.owned).map(h=>h.id),null,null];
   let formationEditing=false;
   let updateRoster=()=>{};
@@ -36,7 +38,8 @@ export function mountHeroPreview() {
   let filter = '전체';
   let sort = 'level';
   let filtersOpen = false;
-  let detailTab = '스킬';
+  let detailTab = '능력치';
+  let selectedInventory:string|undefined;
   let isDetail = false;
   let listScroll = 0;
   let opener: HTMLElement | null = null;
@@ -46,6 +49,9 @@ export function mountHeroPreview() {
   const portrait = previewHeroPortrait;
   function render() {
     screen.dataset.view = isDetail ? 'detail' : 'list';
+    screen.dataset.detailTab=detailTab;
+    detailNav.hidden=screen.hidden||!isDetail;
+    detailNav.innerHTML=isDetail?`<div role="tablist" aria-label="영웅 상세 탭">${['능력치','스킬','장비'].map((tab,i)=>`<button id="hero-detail-tab-${i}" data-detail="${tab}" role="tab" aria-selected="${tab===detailTab}" aria-controls="hero-detail-body" tabindex="${tab===detailTab?0:-1}">${tab}</button>`).join('')}</div>`:'';
     screen.classList.toggle('formation-editing',formationEditing&&!isDetail);
     const list = heroes.filter(h => filter === '전체' || h.role === filter).sort((a,b) => Number(b.owned)-Number(a.owned) || (sort === 'level' ? b.level-a.level : a.name.localeCompare(b.name,'ko')));
     const ability = `<section class="hero-ability-section" aria-label="${selected.name} 능력치"><div class="hero-ability-heading"><h3>능력치</h3>${selected.id==='bran'?'<span>표본 수치</span>':''}</div><dl class="hero-stats ${selected.id==='bran'?'hero-sample-stats':''}">${selected.id==='bran'?BRAN_STAT_SAMPLE.map(stat=>`<div data-stat="${stat.id}"><dt>${stat.name}</dt><dd><strong>${stat.value}</strong>${stat.note?`<small>${stat.note}</small>`:''}</dd></div>`).join(''):`<div><dt>⚔ 공격력</dt><dd>${selected.attack.toLocaleString()}</dd></div><div><dt>♜ 방어력</dt><dd>${selected.defense.toLocaleString()}</dd></div><div><dt>♡ 체력</dt><dd>${selected.hp.toLocaleString()}</dd></div>`}</dl></section>`;
@@ -55,8 +61,7 @@ export function mountHeroPreview() {
       <section class="hero-showcase" aria-label="선택 영웅 상세">
         <div class="hero-illustration ${selected.id === 'aria' ? 'aria-full' : ''}">${selected.id === 'aria' ? artwork(17,151,520,500,'hero-full-art') : portrait(selected,'large-portrait')}</div>
         <div class="hero-information"><span class="hero-role">${roleIcons[selected.role]} ${selected.role}${selected.role === '근접' ? ' 딜러' : ''}</span><p class="hero-affiliation"><span>소속</span><strong>${selected.affiliation??'미정'}</strong></p><h2>${selected.name}</h2><p class="hero-level">Lv. ${selected.level}<span><i style="width:${selected.level / 30 * 100}%"></i></span></p><div class="hero-stars" aria-label="5성">★★★★★</div><button class="hero-growth-button" data-action="growth">성장</button>
-        </div><div class="hero-detail-panel"><div class="hero-action-grid" role="group" aria-label="영웅 상세 분류">${['스킬','장비'].map(t=>`<button data-detail="${t}" aria-pressed="${t===detailTab}" class="${t===detailTab?'active':''}">${t}</button>`).join('')}</div>
-        <div class="hero-skills">${detailTab === '스킬' ? ['기본 공격','스킬 1','스킬 2','패시브'].map((s,i)=>`<button class="skill-art" aria-label="${s}" data-notice="${selected.name} · ${s} — 시안용 아이콘입니다.">${artwork([570,659,748,837][i],539,68,68,'skill-image')}</button>`).join('') : '<div class="preview-equipment">'+['무기','아티펙트'].map(s=>`<button aria-label="${s} 장비칸" data-notice="장비 연결은 추후 진행합니다."><span>＋</span>${s}</button>`).join('')+'</div>'}</div></div>${ability}
+        </div><div class="hero-detail-view" id="hero-detail-body" role="tabpanel" aria-labelledby="hero-detail-tab-${['능력치','스킬','장비'].indexOf(detailTab)}">${detailTab==='능력치'?ability:detailTab==='스킬'?renderHeroSkills(selected):renderHeroEquipment(selected,selectedInventory)}</div>
       </section>
       <button class="hero-list-return" data-action="list">‹ 영웅 목록으로</button>
       ` : `
@@ -90,7 +95,7 @@ export function mountHeroPreview() {
     if(button.dataset.notice){notice(button.dataset.notice);return;}
     if(button.dataset.action==='filters'){filtersOpen=!filtersOpen;rerender('[data-action="filters"]');return;}
     if(button.dataset.filter){filter=button.dataset.filter;rerender(`[data-filter="${filter}"]`);return;}
-    if(button.dataset.detail){detailTab=button.dataset.detail;rerender(`[data-detail="${detailTab}"]`);return;}
+    if(button.dataset.inventory){selectedInventory=button.dataset.inventory;rerender(`[data-inventory="${selectedInventory}"]`);return;}
     if(button.dataset.select){
       const hero=heroes.find(h=>h.id===button.dataset.select)!;if(!hero.owned){notice('아직 보유하지 않은 영웅입니다.');return;}
       if(formationEditing){
@@ -99,20 +104,27 @@ export function mountHeroPreview() {
         else{const empty=slots.indexOf(null);if(empty===-1){notice('최대 8명까지 편성할 수 있습니다.');return;}slots[empty]=hero.id;}
         updateRoster();rerender(`[data-select="${hero.id}"]`);return;
       }
-      listScroll=window.scrollY;detailTab='스킬';location.hash=`heroes/${hero.id}`;return;
+      listScroll=window.scrollY;detailTab='능력치';selectedInventory=undefined;location.hash=`heroes/${hero.id}`;return;
     }
   });
   screen.addEventListener('keydown',event=>{if(event.key==='Escape'&&formationEditing){formationEditing=false;rerender('[data-action="formation"]');}});
   screen.addEventListener('change',event=>{if(event.target instanceof HTMLSelectElement){sort=event.target.value;rerender('select');}});
+  function changeDetailTab(tab:string){
+    if(!['능력치','스킬','장비'].includes(tab))return;
+    detailTab=tab;render();window.scrollTo(0,0);detailNav.querySelector<HTMLElement>(`[data-detail="${tab}"]`)?.focus({preventScroll:true});
+  }
+  detailNav.addEventListener('click',event=>{const b=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-detail]');if(b)changeDetailTab(b.dataset.detail!);});
+  detailNav.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const tabs=['능력치','스킬','장비'],i=tabs.indexOf(detailTab);changeDetailTab(event.key==='Home'?tabs[0]:event.key==='End'?tabs[2]:tabs[(i+(event.key==='ArrowRight'?1:2))%3]);});
   function syncRoute(){
     const routeHero=heroes.find(h=>location.hash===`#heroes/${h.id}`&&h.owned);
     if(location.hash!=='#heroes')formationEditing=false;
     const wasDetail=isDetail;
     isDetail=Boolean(routeHero);
-    if(routeHero)selected=routeHero;
+    if(routeHero){if(routeHero.id!==selected.id||!wasDetail){detailTab='능력치';selectedInventory=undefined;}selected=routeHero;}
     const isHero=location.hash==='#heroes'||Boolean(routeHero);
     lobby.hidden=isHero||location.hash==='#barracks'||location.hash==='#training'||(location.hash==='#specialty'||location.hash.startsWith('#specialty/'));
     screen.hidden=!isHero;
+    detailNav.hidden=!isHero||!isDetail;
     if(isHero){render();window.scrollTo(0,!isDetail&&wasDetail?listScroll:0);if(!isDetail&&wasDetail)screen.querySelector<HTMLElement>(`.hero-card[data-select="${selected.id}"]`)?.focus({preventScroll:true});else screen.querySelector<HTMLElement>('h1')?.focus({preventScroll:true});}
     else if(location.hash!=='#barracks'&&location.hash!=='#training'&&location.hash!=='#specialty'&&!location.hash.startsWith('#specialty/')){window.scrollTo(0,0);opener?.focus({preventScroll:true});}
   }
