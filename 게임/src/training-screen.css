@@ -16,7 +16,6 @@
 .training-promotion{text-align:center;padding:16px 12px 0;}.training-promotion p{display:flex;justify-content:space-between;font:13px system-ui,sans-serif;color:#b5bba5;}.training-promotion p b{color:#e6c58b;}
 .training-promotion>button{width:100%;min-height:52px;background:linear-gradient(120deg,#9a6b2f,#e9c06e,#a47635);border:1px solid #e0c181;border-radius:6px;color:#241b10;font-size:18px;font-weight:700;}.training-promotion>small{display:block;margin-top:8px;color:#a8b29e;font:11px/18px system-ui,sans-serif;}
 .training-message{min-height:38px;margin:12px 12px 0;text-align:center;font:12px/19px system-ui,sans-serif;color:#dbc89d;}.training-help,.training-test{margin:8px 12px;font:12px/1.6 system-ui,sans-serif;color:#a8b7a9;}.training-help summary,.training-test summary{padding:12px 0;min-height:48px;cursor:pointer;}.training-test button{width:100%;min-height:48px;background:#26382f;border:1px solid #8e7a52;border-radius:4px;color:#e9d3a8;}
-.training-screen .hero-bottom-nav{margin-top:auto;flex:none;}
 @media(max-height:740px){.training-intro{padding-top:12px;}.training-step{height:17px;}.training-tower{gap:4px;}.training-promotion{padding-top:10px;}}
 
 /* Debug controls live outside the mobile game frame, in the desktop gutter. */
