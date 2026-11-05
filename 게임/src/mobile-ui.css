@@ -97,7 +97,7 @@ dialog .close { min-width:48px; min-height:48px; }
 .battle-lobby .scene{flex:1 0 190px;height:auto;min-height:190px;background:none;overflow:hidden;}
 .camp-scenery{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:hidden;}
 .battle-lobby .scene:after{inset:75% 0 -1px}
-.lobby-roster{position:relative;z-index:1;flex:none;margin:-16px 12px 8px;padding:8px;border:1px solid #9a80518c;border-radius:8px;background:linear-gradient(120deg,#142427f5,#111f23f5);box-shadow:0 6px 20px #0003}
+.lobby-roster{position:relative;z-index:1;flex:none;margin:-16px 12px 10px;padding:8px;border:1px solid #9a80518c;border-radius:8px;background:linear-gradient(120deg,#142427f5,#111f23f5);box-shadow:0 6px 20px #0003}
 .roster-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;padding:0 2px;color:#d9c297}
 .roster-heading h2{margin:0;font-size:12px;font-weight:600}.roster-heading>span{font:12px/1.3 system-ui,sans-serif}
 .lobby-roster-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
@@ -127,4 +127,4 @@ dialog .close { min-width:48px; min-height:48px; }
 
 .battle-lobby .lobby-stage-banner .stage{font-size:16px;min-height:34px;padding:5px 10px;}.battle-lobby .lobby-stage-banner .stage>span{width:16px;height:18px;}.battle-lobby .lobby-stage-banner .record{font-size:14px;margin:6px 8px 8px;}
 
-.battle-lobby .sweep-button{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;max-width:360px;min-height:48px;margin:0 auto 8px;padding:10px 16px;border:1px solid #9e8d5a;border-radius:6px;background:linear-gradient(120deg,#344b3c,#21382f);color:#ead8a8;font:600 16px/1.4 system-ui,sans-serif;}.sweep-button>span{font-size:20px;color:#d7bf7c;}
+.battle-lobby .sweep-button{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;max-width:360px;min-height:48px;margin:0 auto 10px;padding:10px 16px;border:1px solid #9e8d5a;border-radius:6px;background:linear-gradient(120deg,#344b3c,#21382f);color:#ead8a8;font:600 16px/1.4 system-ui,sans-serif;}.sweep-button>span{font-size:20px;color:#d7bf7c;}
