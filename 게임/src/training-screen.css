@@ -18,3 +18,11 @@
 .training-message{min-height:38px;margin:12px 12px 0;text-align:center;font:12px/19px system-ui,sans-serif;color:#dbc89d;}.training-help,.training-test{margin:8px 12px;font:12px/1.6 system-ui,sans-serif;color:#a8b7a9;}.training-help summary,.training-test summary{padding:12px 0;min-height:48px;cursor:pointer;}.training-test button{width:100%;min-height:48px;background:#26382f;border:1px solid #8e7a52;border-radius:4px;color:#e9d3a8;}
 .training-screen .hero-bottom-nav{margin-top:auto;flex:none;}
 @media(max-height:740px){.training-intro{padding-top:12px;}.training-step{height:17px;}.training-tower{gap:4px;}.training-promotion{padding-top:10px;}}
+
+/* Debug controls live outside the mobile game frame, in the desktop gutter. */
+.training-workspace{width:100%;}
+.training-support{width:min(calc(100% - 24px),480px);margin:16px auto;padding:16px;background:#141e20;border:1px solid #635438;border-radius:9px;color:#d9d5bb;font:12px/1.6 system-ui,sans-serif;}
+.training-support h2{margin:0 0 12px;font-size:16px;color:#e4c68f;}
+.training-support .training-help,.training-support .training-test{margin:8px 0;}
+.training-support button{min-width:48px;min-height:48px;cursor:pointer;}
+@media(min-width:1080px){.training-workspace{display:grid;grid-template-columns:minmax(0,1fr) 480px minmax(0,1fr);gap:16px;align-items:start;}.training-workspace>.training-screen{grid-column:2;margin:0;}.training-workspace>.training-support{grid-column:3;width:min(100%,260px);margin:16px 0;position:sticky;top:16px;}}
