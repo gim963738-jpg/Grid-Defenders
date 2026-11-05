@@ -38,6 +38,20 @@ const missionPanel = mountMissionPanel();
 const heroPreview = mountHeroPreview();
 heroPreview.mountRoster(document.querySelector<HTMLElement>('#lobby-roster')!);
 const barracksPreview = mountBarracksPreview(name => openPanel(name));
+// One viewport-anchored navigation bar, shared by every lobby route.
+const bottomNav=document.querySelector<HTMLElement>('.bottom-nav')!;
+bottomNav.classList.add('app-bottom-nav');document.body.append(bottomNav);
+document.body.classList.add('app-fixed-navigation');
+function syncBottomNav(label?:string){
+ const active=label??(location.hash.startsWith('#heroes')?'영웅':location.hash==='#barracks'||location.hash==='#training'||location.hash.startsWith('#specialty')?'병영':'전투');
+ bottomNav.querySelectorAll<HTMLButtonElement>('button').forEach(button=>{
+  const chosen=(button.id==='camp-tab'?'전투':button.dataset.panel)===active;
+  button.classList.toggle('selected',chosen);
+  if(chosen)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
+ });
+}
+window.addEventListener('hashchange',()=>syncBottomNav());syncBottomNav();
+
 const panel = document.querySelector<HTMLDialogElement>('#panel')!;
 const title = document.querySelector<HTMLElement>('#panel-title')!;
 const content = document.querySelector<HTMLElement>('#panel-content')!;
@@ -80,6 +94,7 @@ document.querySelectorAll<HTMLButtonElement>('[data-panel]').forEach(button => {
     else if(name === '도감') catalogPanel.open();
     else if(name === '병영' || name === '병영 관리') barracksPreview.open();
     else openPanel(name);
+    if(bottomNav.contains(button))syncBottomNav(name);
   });
 });
 document.querySelector('#battle')!.addEventListener('click', () => openPanel('전투 준비'));
@@ -90,7 +105,7 @@ panel.addEventListener('click', event => {
   const bounds = panel.getBoundingClientRect();
   if (event.target === panel && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) panel.close();
 });
-panel.addEventListener('close', () => returnFocus?.focus());
+panel.addEventListener('close', () => {returnFocus?.focus();syncBottomNav();});
 let toastTimer: ReturnType<typeof setTimeout>;
 function toast(message: string) {
   const element = document.querySelector<HTMLElement>('.toast')!;
@@ -99,4 +114,4 @@ function toast(message: string) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => element.classList.remove('visible'), 2800);
 }
-document.querySelector('#camp-tab')!.addEventListener('click', () => toast('현재 캠프 화면입니다.'));
+document.querySelector('#camp-tab')!.addEventListener('click', () => {if(location.hash)location.hash='';else toast('현재 캠프 화면입니다.');syncBottomNav('전투');});

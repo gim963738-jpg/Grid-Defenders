@@ -19,7 +19,7 @@ export function mountBarracksPreview(openPanel:(name:string)=>void) {
       <button class="diamond-card west undecided" data-card="미정" aria-label="서쪽 미정"><span class="diamond-content"><span class="diamond-unknown" aria-hidden="true">?</span><strong>미정</strong></span></button>
       <span class="barracks-center" aria-hidden="true">✦</span>
     </div><p class="barracks-status" role="status" aria-live="polite">훈련 · 특기 · 미정 · 미정</p></section>
-    <nav class="hero-bottom-nav" aria-label="로비 메뉴">${[['상점','♜'],['영웅','♞'],['전투','⚔'],['병영','⌂'],['기록','▤']].map(([name,art])=>`<button data-nav="${name}" ${name==='병영'?'class="active" aria-current="page"':''}><span>${art}</span>${name}</button>`).join('')}</nav><p class="hero-preview-note">디자인 미리보기 · 게임 데이터 연결 전</p>`;
+    <p class="hero-preview-note">디자인 미리보기 · 게임 데이터 연결 전</p>`;
   document.body.append(screen);
   mountTrainingScreen();
   mountSpecialtyScreen();

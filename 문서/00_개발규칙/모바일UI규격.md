@@ -20,3 +20,6 @@ WebView에서는 viewport와 폰트 확대를 검증하고, 네이티브 시스�
 ## 근거
 - Android 접근성의 터치 영역 권장: https://developer.android.com/guide/topics/ui/accessibility/views/apps-views
 - Android 시스템 안전 영역: https://developer.android.com/develop/ui/compose/system/insets
+
+## 공통 하단 메뉴 고정 (WEB-132, 2026-11-05)
+독립 로비의 상점·영웅·전투·병영·기록은 화면별 메뉴를 중복 생성하지 않고 body 하위의 공통 app-bottom-nav 하나를 사용한다. 화면 하단 안전영역+28px(현재 바닥 가이드 공간)에 고정, 높이72px, 최대폭456px/좌우12px. 본문은 하단116px+안전영역을 확보한다. 스크롤·화면 이동·활성 표시 변경 시 위치와 아이콘 크기는 유지한다. 영웅 상세·훈련·특기 하위 화면도 포함한다. 상점/기록은 현재 안내 패널이며 실제 메뉴 구현 후에도 이 기준을 유지한다.
