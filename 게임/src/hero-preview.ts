@@ -1,3 +1,4 @@
+import {mountHeroGrowthPanel} from './hero-growth-panel';
 import {BRAN_STAT_SAMPLE} from './hero-stat-sample';
 ﻿// Presentation state only. Future game integration can replace this data adapter.
 export interface PreviewHero {
@@ -22,6 +23,7 @@ export function mountHeroPreview() {
   screen.hidden = true;
   screen.setAttribute('aria-label','영웅 관리 시안');
   lobby.after(screen);
+  const growthPanel=mountHeroGrowthPanel();
   let selected = heroes[1];
   let filter = '전체';
   let sort = 'level';
@@ -44,7 +46,7 @@ export function mountHeroPreview() {
       ${isDetail ? `
       <section class="hero-showcase" aria-label="선택 영웅 상세">
         <div class="hero-illustration ${selected.id === 'aria' ? 'aria-full' : ''}">${selected.id === 'aria' ? artwork(17,151,520,500,'hero-full-art') : portrait(selected,'large-portrait')}</div>
-        <div class="hero-information"><span class="hero-role">${roleIcons[selected.role]} ${selected.role}${selected.role === '근접' ? ' 딜러' : ''}</span><h2>${selected.name}</h2><p class="hero-level">Lv. ${selected.level}<span><i style="width:${selected.level / 30 * 100}%"></i></span></p><div class="hero-stars" aria-label="5성">★★★★★</div><button class="hero-growth-button" data-notice="성장 기능은 준비 중입니다.">성장</button>${selected.id==='bran'?'':ability}
+        <div class="hero-information"><span class="hero-role">${roleIcons[selected.role]} ${selected.role}${selected.role === '근접' ? ' 딜러' : ''}</span><h2>${selected.name}</h2><p class="hero-level">Lv. ${selected.level}<span><i style="width:${selected.level / 30 * 100}%"></i></span></p><div class="hero-stars" aria-label="5성">★★★★★</div><button class="hero-growth-button" data-action="growth">성장</button>${selected.id==='bran'?'':ability}
         </div>${selected.id==='bran'?ability:''}<div class="hero-detail-panel"><div class="hero-detail-tabs" role="group" aria-label="영웅 상세 분류">${['스킬','장비'].map(t=>`<button data-detail="${t}" aria-pressed="${t===detailTab}" class="${t===detailTab?'active':''}">${t}</button>`).join('')}</div>
         <div class="hero-skills">${detailTab === '스킬' ? ['기본 공격','스킬 1','스킬 2','패시브'].map((s,i)=>`<button class="skill-art" aria-label="${s}" data-notice="${selected.name} · ${s} — 시안용 아이콘입니다.">${artwork([570,659,748,837][i],539,68,68,'skill-image')}</button>`).join('') : '<div class="preview-equipment">'+['무기','아티펙트'].map(s=>`<button aria-label="${s} 장비칸" data-notice="장비 연결은 추후 진행합니다."><span>＋</span>${s}</button>`).join('')+'</div>'}</div></div>
       </section>
@@ -71,6 +73,7 @@ export function mountHeroPreview() {
   screen.addEventListener('click',event=>{
     const button=(event.target as HTMLElement).closest<HTMLButtonElement>('button');
     if(!button)return;
+    if(button.dataset.action==='growth'){growthPanel.open(selected);return;}
     if(button.dataset.action==='home'){location.hash='';return;}
     if(button.dataset.action==='back'){location.hash=isDetail?'heroes':'';return;}
     if(button.dataset.action==='list'){location.hash='heroes';return;}
