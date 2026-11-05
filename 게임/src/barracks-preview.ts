@@ -1,4 +1,5 @@
 import {mountTrainingScreen} from './training-screen';
+import {mountSpecialtyScreen} from './specialty-screen';
 import './barracks-preview.css';
 
 export function mountBarracksPreview(openPanel:(name:string)=>void) {
@@ -21,6 +22,7 @@ export function mountBarracksPreview(openPanel:(name:string)=>void) {
     <nav class="hero-bottom-nav" aria-label="로비 메뉴">${[['상점','♜'],['영웅','♞'],['전투','⚔'],['병영','⌂'],['기록','▤']].map(([name,art])=>`<button data-nav="${name}" ${name==='병영'?'class="active" aria-current="page"':''}><span>${art}</span>${name}</button>`).join('')}</nav><p class="hero-preview-note">디자인 미리보기 · 게임 데이터 연결 전</p>`;
   document.body.append(screen);
   mountTrainingScreen();
+  mountSpecialtyScreen();
   let opener:HTMLElement|null=null;
   screen.addEventListener('click',event=>{
     const button=(event.target as HTMLElement).closest<HTMLButtonElement>('button');
@@ -28,6 +30,7 @@ export function mountBarracksPreview(openPanel:(name:string)=>void) {
     if(button.hasAttribute('data-home')||button.dataset.nav==='전투'){location.hash='';return;}
     if(button.dataset.nav==='영웅'){location.hash='heroes';return;}
     if(button.dataset.card==='훈련'){location.hash='training';return;}
+    if(button.dataset.card==='특기'){location.hash='specialty';return;}
     if(button.dataset.card){
       screen.querySelectorAll('.diamond-card').forEach(card=>card.classList.toggle('chosen',card===button));
       screen.querySelector<HTMLElement>('.barracks-status')!.textContent=button.dataset.card==='미정'?'아직 정해지지 않은 메뉴입니다.':`${button.dataset.card} 메뉴는 준비 중입니다.`;
