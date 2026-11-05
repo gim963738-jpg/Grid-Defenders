@@ -76,3 +76,5 @@
 .hero-screen .hero-information>.hero-role{font-size:14px;line-height:1.5;}.hero-screen .hero-information>h2{font-size:24px;}.hero-screen .hero-information>.hero-level{font-size:14px;}.hero-screen .hero-information>.hero-stars{font-size:18px;letter-spacing:.1em;}.hero-screen .hero-growth-button{width:100%;min-height:48px;margin-top:4px;padding:10px 12px;border:1px solid #d9b66f;border-radius:6px;background:linear-gradient(120deg,#a27a3d,#e6c47c,#af8648);color:#302515;font:600 16px/1.4 system-ui,sans-serif;cursor:pointer;}
 
 .hero-affiliation{display:flex;align-items:center;gap:8px;margin:0;font:12px/1.5 system-ui,sans-serif;color:#9eae9d;}.hero-affiliation strong{font-weight:400;color:#d4c8a9;}
+
+.hero-information{align-items:flex-end;text-align:right;}.hero-information>.hero-affiliation{justify-content:flex-end;}.hero-screen .hero-information>.hero-level{width:100%;flex-direction:row-reverse;}.hero-information>.hero-ability-section{width:100%;text-align:left;}
