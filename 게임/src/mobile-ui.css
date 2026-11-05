@@ -137,3 +137,7 @@ body.app-fixed-navigation .camp{padding-bottom:calc(116px + var(--app-safe-botto
 body.app-fixed-navigation .toast,body.app-fixed-navigation .hero-notice{bottom:calc(112px + var(--app-safe-bottom));}
 
 .app-bottom-nav .nav-art{display:grid;place-items:center;width:32px;height:32px;color:#c8ac75;}.app-bottom-nav .navigation-icon{display:block;width:32px;height:32px;overflow:visible;}.app-bottom-nav .selected .nav-art{color:#ffe3a0;filter:drop-shadow(0 1px 3px #e0a54855);}.app-bottom-nav button{gap:3px;}
+
+/* Reserve scrollbar space before long routes open, so centered UI stays put. */
+html:has(body.app-fixed-navigation){scrollbar-gutter:stable;}
+.app-bottom-nav button:active{transform:none;}
