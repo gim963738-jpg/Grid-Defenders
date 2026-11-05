@@ -9,7 +9,6 @@ export const BRAN_STAT_SAMPLE=[
  {id:'regeneration',name:'초당 회복',value:'12 / 초',note:'고정 회복량',cap:null},
  {id:'criticalChance',name:'치명타 확률',value:'18%',note:'',cap:'100%'},
  {id:'criticalDamage',name:'치명타 피해량',value:'175%',note:'총 피해 배율',cap:'500%'},
- {id:'moveSpeed',name:'이동속도',value:'110%',note:'기본 대비',cap:'500%'},
  {id:'evasion',name:'회피율',value:'8%',note:'',cap:'60%'},
  {id:'guard',name:'가드율',value:'20%',note:'',cap:'60%'},
  {id:'effectHit',name:'효과 적중',value:'125',note:'기본 100 + 추가 25',cap:'200%'},
