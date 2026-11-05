@@ -1,5 +1,6 @@
-// Standalone presentation only. No imports from the game or shared game state.
+// Standalone lobby UI. Catalog reads game configuration; no live combat state.
 export {};
+import { mountCatalogPanel } from './catalog-panel';
 import { mountMailPanel } from './mail-panel';
 import { mountMissionPanel } from './mission-panel';
 import { mountHeroPreview } from './hero-preview';
@@ -33,6 +34,7 @@ shortcuts.forEach((button,index) => {
   button.setAttribute('aria-label',index===0?'우편':'도감');
   button.innerHTML = `<svg class="lobby-icon" viewBox="812 ${index===0?225:374} 105 132" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><image href="${lobbyArtUrl}" width="948" height="1659" /></svg>`;
 });
+const catalogPanel = mountCatalogPanel();
 const mailPanel = mountMailPanel();
 const missionPanel = mountMissionPanel();
 const heroPreview = mountHeroPreview();
@@ -76,6 +78,7 @@ document.querySelectorAll<HTMLButtonElement>('[data-panel]').forEach(button => {
     if (name === '영웅' || name === '영웅 편성') heroPreview.open();
     else if(name === '임무') missionPanel.open();
     else if(name === '우편') mailPanel.open();
+    else if(name === '도감') catalogPanel.open();
     else if(name === '병영' || name === '병영 관리') barracksPreview.open();
     else openPanel(name);
   });

@@ -15,6 +15,11 @@ const heroes: PreviewHero[] = [
   { id:'jeno', name:'제노', role:'근접', level:1, attack:0, defense:0, hp:0, owned:false, portrait:6 },
   { id:'eira', name:'에이라', role:'지원', level:1, attack:0, defense:0, hp:0, owned:false, portrait:7 },
 ];
+export {heroes as PREVIEW_HEROES};
+export function previewHeroPortrait(hero:PreviewHero,extra=''){
+ const x=[39,266,492,719][hero.portrait%4],y=hero.portrait<4?968:1223;
+ return `<svg class="hero-portrait ${extra}" viewBox="${x} ${y} 192 108" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="${import.meta.env.BASE_URL}assets/lobby/hero-concept.png" width="948" height="1659"/></svg>`;
+}
 const roleIcons: Record<string,string> = {'탱커':'♜','근접':'⚔','원거리':'➶','지원':'✧'};
 export function mountHeroPreview() {
   const lobby = document.querySelector<HTMLElement>('main.camp')!;
@@ -35,7 +40,7 @@ export function mountHeroPreview() {
   const imageUrl = `${import.meta.env.BASE_URL}assets/lobby/hero-concept.png`;
   // Crop artwork only, excluding the labels and frames baked into the concept.
   const artwork = (x:number,y:number,w:number,h:number,className:string) => `<svg class="${className}" viewBox="${x} ${y} ${w} ${h}" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="${imageUrl}" width="948" height="1659" /></svg>`;
-  const portrait = (hero: PreviewHero, extra = '') => artwork([39,266,492,719][hero.portrait % 4],hero.portrait < 4 ? 968 : 1223,192,108,`hero-portrait ${extra}`);
+  const portrait = previewHeroPortrait;
   function render() {
     screen.dataset.view = isDetail ? 'detail' : 'list';
     const list = heroes.filter(h => filter === '전체' || h.role === filter).sort((a,b) => Number(b.owned)-Number(a.owned) || (sort === 'level' ? b.level-a.level : a.name.localeCompare(b.name,'ko')));
