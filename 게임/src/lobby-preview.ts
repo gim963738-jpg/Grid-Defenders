@@ -56,6 +56,7 @@ const messages: Record<string, string> = {
   '도감': '영웅과 장비의 이야기가 모이는 공간입니다.',
   '설정': '로비 화면 시안 · 사운드 및 계정 설정 연결 전',
   '전투 준비': '잊혀진 숲 · 제1구역',
+  '소탕': '소탕 기능은 준비 중입니다.',
 };
 let returnFocus: HTMLElement | null = null;
 function openPanel(name: string) {
