@@ -1,5 +1,6 @@
 // Standalone presentation only. No imports from the game or shared game state.
 export {};
+import { mountMailPanel } from './mail-panel';
 import { mountMissionPanel } from './mission-panel';
 import { mountHeroPreview } from './hero-preview';
 import { mountBarracksPreview } from './barracks-preview';
@@ -32,6 +33,7 @@ shortcuts.forEach((button,index) => {
   button.setAttribute('aria-label',index===0?'우편':'도감');
   button.innerHTML = `<svg class="lobby-icon" viewBox="812 ${index===0?225:374} 105 132" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><image href="${lobbyArtUrl}" width="948" height="1659" /></svg>`;
 });
+const mailPanel = mountMailPanel();
 const missionPanel = mountMissionPanel();
 const heroPreview = mountHeroPreview();
 heroPreview.mountRoster(document.querySelector<HTMLElement>('#lobby-roster')!);
@@ -73,6 +75,7 @@ document.querySelectorAll<HTMLButtonElement>('[data-panel]').forEach(button => {
     const name = button.dataset.panel!;
     if (name === '영웅' || name === '영웅 편성') heroPreview.open();
     else if(name === '임무') missionPanel.open();
+    else if(name === '우편') mailPanel.open();
     else if(name === '병영' || name === '병영 관리') barracksPreview.open();
     else openPanel(name);
   });
