@@ -6,7 +6,7 @@
     <title>Grid Defenders — 로비</title>
     <link rel="icon" href="data:," />
   </head>
-  <body>
+  <body style="visibility:hidden">
     <main id="app">
       <section id="lobby-screen" class="lobby-screen" aria-label="게임 로비">
         <div class="lobby-glow" aria-hidden="true"></div>
@@ -16,6 +16,7 @@
         <section id="run-result" class="run-result" aria-label="지난 전투 결과" hidden><small>전투 종료</small><h2 id="run-result-title">전장 방어 실패</h2><p id="run-result-reason"></p><dl><div><dt>도달 웨이브</dt><dd id="run-result-wave">1</dd></div><div><dt>처치</dt><dd id="run-result-kills">0</dd></div><div><dt>전투 시간</dt><dd id="run-result-time">00:00</dd></div></dl></section>
         <div class="lobby-start-area"><button id="game-start" disabled>게임 시작 <span>›</span></button><p id="lobby-hint">전장을 준비하는 중입니다.</p></div>
       </section>
+      <nav id="battle-shell-header" class="battle-shell-header" aria-label="전장 메뉴" hidden><button id="battle-return">‹ 로비</button><span>잊혀진 숲</span></nav>
       <div id="defense-screen" hidden>
       <section id="battlefield" aria-label="순환 전장">
         <span id="run-mode-label" class="run-mode-badge">일반전</span>
@@ -111,6 +112,7 @@
     <div id="gear-drag-layer" aria-hidden="true"></div>
     <section id="hero-info" role="dialog" aria-modal="false" aria-label="유닛 능력치" hidden></section>
     <section id="hero-skill-tooltip" role="dialog" aria-modal="false" aria-labelledby="hero-skill-tooltip-title" hidden></section>
-    <script type="module" src="/src/main.ts"></script>
+    <dialog id="leave-battle-dialog" aria-labelledby="leave-battle-title"><h2 id="leave-battle-title">로비로 돌아갈까요?</h2><p>진행 중인 전투는 종료되며, 이번 전투 보상은 지급되지 않습니다.</p><div><button id="leave-battle-cancel">계속 전투</button><button id="leave-battle-confirm">로비로 이동</button></div></dialog>
+    <script type="module" src="/src/game-entry.ts"></script>
   </body>
 </html>

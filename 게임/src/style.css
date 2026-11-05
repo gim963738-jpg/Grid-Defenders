@@ -661,3 +661,8 @@
 .inventory-item-art{position:absolute;left:-1px;top:-1px;padding:3px;z-index:2;pointer-events:none;}
 .gear-drag-ghost>.equipment-item-art{padding:3px;}
 .gear-drag-ghost.drag-warning>.equipment-item-art{filter:drop-shadow(0 0 3px #ff5555);}
+
+/* Camp entry and battle return use the same mobile frame width. */
+body.integrated-game #app{width:min(100%,480px);min-height:100dvh;}.battle-shell-header{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:56px;padding:8px 0;border-bottom:1px solid #7c6a4444;color:#c9b98f;}.battle-shell-header[hidden]{display:none;}.battle-shell-header button{min-width:72px;min-height:48px;padding:10px 12px;border:1px solid #8c754b;border-radius:5px;background:#23362e;font-size:14px;color:#ead7ae;}.battle-shell-header>span{font-size:14px;}
+#leave-battle-dialog{width:min(calc(100% - 24px),432px);padding:24px 20px;border:1px solid #b7975a;border-radius:8px;background:#17292c;color:#e6d5af;box-shadow:0 18px 70px #000a;}#leave-battle-dialog::backdrop{background:#030b12bb;}#leave-battle-dialog h2{font-size:20px;margin:0 0 12px;}#leave-battle-dialog p{font-size:14px;line-height:1.7;color:#b4c2aa;}#leave-battle-dialog>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:20px;}#leave-battle-dialog button{min-height:48px;padding:10px;border:1px solid #9e8451;border-radius:5px;background:#2b4133;color:#ead6a6;font-size:14px;}#leave-battle-confirm{background:#796033!important;}
+@media(min-width:1080px){body.integrated-game #dev-tools{left:calc(50% + 256px);width:min(320px,calc((100vw - 480px)/2 - 32px));}body.integrated-game #dev-log{left:max(12px,calc(50% - 660px));width:min(400px,calc((100vw - 480px)/2 - 32px));}}

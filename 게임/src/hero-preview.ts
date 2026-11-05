@@ -1,3 +1,5 @@
+import {loadFormation,saveFormation} from './campProgress';
+import {trainingProgress} from './training';
 import {renderHeroSkills,renderHeroEquipment} from './hero-detail-panels';
 import {mountHeroGrowthPanel} from './hero-growth-panel';
 import {BRAN_STAT_SAMPLE} from './hero-stat-sample';
@@ -31,7 +33,8 @@ export function mountHeroPreview() {
   lobby.after(screen);
   const growthPanel=mountHeroGrowthPanel();
   const detailNav=document.createElement('nav');detailNav.className='hero-detail-navigation';detailNav.hidden=true;detailNav.setAttribute('aria-label','영웅 상세 분류');document.body.append(detailNav);
-  const slots:(string|null)[]=[...heroes.filter(h=>h.owned).map(h=>h.id),null,null];
+  const ownedIds=heroes.filter(h=>h.owned).map(h=>h.id);
+  const slots:(string|null)[]=loadFormation(ownedIds);
   let formationEditing=false;
   let updateRoster=()=>{};
   let selected = heroes[1];
@@ -55,7 +58,7 @@ export function mountHeroPreview() {
     const list = heroes.filter(h => filter === '전체' || h.role === filter).sort((a,b) => Number(b.owned)-Number(a.owned) || (sort === 'level' ? b.level-a.level : a.name.localeCompare(b.name,'ko')));
     const ability = `<section class="hero-ability-section" aria-label="${selected.name} 능력치"><div class="hero-ability-heading"><h3>능력치</h3>${selected.id==='bran'?'<span>표본 수치</span>':''}</div><dl class="hero-stats ${selected.id==='bran'?'hero-sample-stats':''}">${selected.id==='bran'?BRAN_STAT_SAMPLE.map(stat=>`<div data-stat="${stat.id}"><dt>${stat.name}</dt><dd><strong>${stat.value}</strong>${stat.note?`<small>${stat.note}</small>`:''}</dd></div>`).join(''):`<div><dt>⚔ 공격력</dt><dd>${selected.attack.toLocaleString()}</dd></div><div><dt>♜ 방어력</dt><dd>${selected.defense.toLocaleString()}</dd></div><div><dt>♡ 체력</dt><dd>${selected.hp.toLocaleString()}</dd></div>`}</dl></section>`;
     screen.innerHTML = `
-      <header class="hero-header"><button data-action="back" aria-label="${isDetail?'영웅 목록으로 돌아가기':'로비로 돌아가기'}">‹</button><h1 tabindex="-1">${isDetail?'영웅 상세':'영웅'}</h1><div class="hero-wallet"><span>✦ <b>480</b></span><span>⚒ <b>0</b></span></div><button data-action="home" aria-label="로비 홈">⌂</button></header>
+      <header class="hero-header"><button data-action="back" aria-label="${isDetail?'영웅 목록으로 돌아가기':'로비로 돌아가기'}">‹</button><h1 tabindex="-1">${isDetail?'영웅 상세':'영웅'}</h1><div class="hero-wallet"><span aria-label="제국 골드">✦ <b>${trainingProgress.snapshot().gold.toLocaleString()}</b></span><span>⚒ <b>0</b></span></div><button data-action="home" aria-label="로비 홈">⌂</button></header>
       ${isDetail ? `
       <section class="hero-showcase" aria-label="선택 영웅 상세">
         <div class="hero-illustration ${selected.id === 'aria' ? 'aria-full' : ''}">${selected.id === 'aria' ? artwork(17,151,520,500,'hero-full-art') : portrait(selected,'large-portrait')}</div>
@@ -135,6 +138,7 @@ export function mountHeroPreview() {
     let slotIndex=0;
     const slotMarkup=()=>`<div class="roster-heading"><h2>영웅 편성</h2><span>${slots.filter(Boolean).length} / 8</span></div><div class="lobby-roster-grid">${slots.map((id,index)=>{const h=heroes.find(h=>h.id===id);return `<button class="lobby-roster-slot ${h?'filled':'vacant'}" data-roster-slot="${index}" aria-label="${index+1}번 편성 ${h?h.name:'빈칸'} 변경">${h?portrait(h):'<span class="roster-plus" aria-hidden="true">＋</span>'}<span class="roster-slot-label">${h?h.name:'빈 슬롯'}</span></button>`;}).join('')}</div>`;
     function drawSlots(){
+      saveFormation(slots,ownedIds);
       container.innerHTML=slotMarkup();
     }
     function closePicker(){picker.close();}

@@ -1,3 +1,4 @@
+import {campProgress,campPageUrl,launchMode,newBattleId} from './campProgress';
 import {trainingProgress} from './training';
 import {itemArt,hasItemArt} from './itemArt';
 import {battleResolution} from './renderQuality';
@@ -21,12 +22,16 @@ import { createBossBattleView } from './bossBattleView';
 import { BossDamageHistory } from './bossDamageHistory';
 import './style.css';
 import { mountScreenBottomGuide } from './screen-bottom-guide';
-mountScreenBottomGuide('430px');
+const fromCamp=new URLSearchParams(location.search).get('from')==='camp';
+if(fromCamp)document.body.classList.add('integrated-game');
+mountScreenBottomGuide(fromCamp?'480px':'430px');
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense(Math.random,()=>trainingProgress.bonuses());
 const run=new GameRun();
 let lastEmpireReward=0;
+let currentRunId=newBattleId();
+let returnPending=false,pausedBeforeReturn=false;
 let assetsReady=false;
 let showDamageNumbers=true,combatPaused=false;
 const bossBattle=new BossBattle(waveBossRoster(game),Math.random,game.damageMeter.peaks);
@@ -759,6 +764,7 @@ el('app').addEventListener('click',(e)=>{
 el('dev-tools').addEventListener('click',(e)=>{
   const button=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!button||button.disabled||sceneTransitioning)return;
   if(button.id==='dev-infinite-test'){startRun('infinite-test');return;}
+  if(button.id==='dev-lobby'&&fromCamp){requestCampReturn();return;}
   if(button.id==='dev-lobby'){run.reset();clearBattleInteraction();renderLobby();refreshWaveAlert();refreshRunControls();void sceneTransition.go('lobby');return;}
   if(button.id==='dev-reset'){
     if(run.active)startRun(run.mode);else {resetBattleState();run.reset();renderLobby();refresh();}
@@ -823,6 +829,8 @@ function refreshBossTimer():void {
   timer.setAttribute('aria-label',limited?`보스전 남은 시간 ${seconds}초`:'무한웨이브 테스트 · 보스 시간 제한 없음');
 }
 function refreshRunControls():void {
+  el('battle-shell-header').hidden=!run.active;
+  el<HTMLButtonElement>('battle-return').disabled=sceneTransitioning;
   const enabled=run.active&&!sceneTransitioning;
   el('app').dataset.runMode=run.mode;el('app').dataset.runState=run.active?'playing':'lobby';el('dev-log').hidden=!run.active;
   el('run-mode-label').textContent=run.mode==='normal'?'일반전':'무한 테스트';
@@ -847,6 +855,7 @@ function resetBattleState():void {
 }
 function startRun(mode:RunMode):void {
   if(!assetsReady||sceneTransitioning)return;
+  currentRunId=newBattleId();
   resetBattleState();run.start(mode);game.keepWaveMonsters=mode==='normal';renderLobby();refresh();
   if(currentScene!=='defense')void sceneTransition.go('defense');else window.scrollTo(0,0);
 }
@@ -858,8 +867,24 @@ function finishRun(reason:RunFailure):void {
     if(reason==='boss-timeout')bossBattle.result='defeat';
     bossDamageHistory.capture(bossBattle,bossEncounterWave);
   }
-  updateHud();clearBattleInteraction();refreshWaveAlert();renderLobby();refreshRunControls();void sceneTransition.go('lobby');
+  const result=run.result!;
+  try{campProgress.record({...result,id:currentRunId,empireGold:empireReward,finishedAt:Date.now()});}catch(error){console.error('전투 기록 저장 실패',error);}
+  updateHud();clearBattleInteraction();refreshWaveAlert();renderLobby();refreshRunControls();
+  if(fromCamp)location.replace(campPageUrl(location.href,currentRunId));else void sceneTransition.go('lobby');
 }
+function requestCampReturn():void {
+  if(!run.active){location.replace(campPageUrl(location.href));return;}
+  if(sceneTransitioning)return;
+  pausedBeforeReturn=combatPaused;combatPaused=true;refreshCombatControls();
+  el<HTMLDialogElement>('leave-battle-dialog').showModal();
+}
+el('battle-return').addEventListener('click',requestCampReturn,{signal:events.signal});
+el('leave-battle-cancel').addEventListener('click',()=>el<HTMLDialogElement>('leave-battle-dialog').close(),{signal:events.signal});
+el('leave-battle-confirm').addEventListener('click',()=>{
+ returnPending=true;run.reset();clearBattleInteraction();location.replace(campPageUrl(location.href));
+},{signal:events.signal});
+el('leave-battle-dialog').addEventListener('close',()=>{if(!returnPending){combatPaused=pausedBeforeReturn;refreshCombatControls();}},{signal:events.signal});
+
 function checkRunFailure():boolean {
   if(!run.active||currentScene==='lobby'||sceneTransitioning)return false;
   const reason=run.failure(currentScene==='defense'?{scene:'defense',monsters:game.enemies.filter(e=>e.hp>0).length}:{scene:'boss',result:bossBattle.result,elapsed:bossBattle.elapsed});
@@ -973,6 +998,7 @@ async function start():Promise<void> {
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}
     if(lastRevision!==game.revision&&!drag&&!unitDrag&&!summonDrag){lastRevision=game.revision;refresh();}
   });
+  const automaticMode=launchMode(location.search);if(automaticMode)startRun(automaticMode);
   if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
-void start().catch((error:unknown)=>{el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';el('lobby-hint').textContent='전장을 불러오지 못했습니다. 새로고침해 주세요.';console.error(error);});
+void start().catch((error:unknown)=>{el('battle-shell-header').hidden=false;el<HTMLButtonElement>('battle-return').disabled=false;el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';el('lobby-hint').textContent='전장을 불러오지 못했습니다. 새로고침해 주세요.';console.error(error);});

@@ -1,3 +1,6 @@
+import {battlePageUrl,campProgress,type BattleRecord} from './campProgress';
+import {trainingProgress} from './training';
+import {FAILURE_TEXT} from './gameRun';
 import {paintNavigationIcons} from './navigation-icons';
 // Standalone lobby UI. Catalog reads game configuration; no live combat state.
 export {};
@@ -72,6 +75,7 @@ function openPanel(name: string) {
   returnFocus = document.activeElement as HTMLElement;
   title.textContent = name;
   content.replaceChildren();
+  if(name==='기록'){renderBattleHistory();panel.showModal();return;}
   const detail = document.createElement('div');
   detail.className = 'panel-detail';
   detail.textContent = messages[name] ?? '';
@@ -94,7 +98,35 @@ document.querySelectorAll<HTMLButtonElement>('[data-panel]').forEach(button => {
     if(bottomNav.contains(button))syncBottomNav(name);
   });
 });
-document.querySelector('#battle')!.addEventListener('click', () => openPanel('전투 준비'));
+const battleButton=document.querySelector<HTMLButtonElement>('#battle')!;
+const battleButtonMarkup=battleButton.innerHTML;
+let battleStarting=false;
+function startBattle(){
+ if(battleStarting)return;battleStarting=true;battleButton.disabled=true;battleButton.textContent='전장 입장 중…';
+ location.assign(battlePageUrl(location.href));
+}
+battleButton.addEventListener('click',startBattle);
+window.addEventListener('pageshow',()=>{battleStarting=false;battleButton.disabled=false;battleButton.innerHTML=battleButtonMarkup;syncCampProgress();});
+content.addEventListener('click',event=>{if((event.target as HTMLElement).closest('[data-battle-retry]')){panel.close();startBattle();}});
+function formatBattleTime(seconds:number){const n=Math.floor(seconds);return `${String(Math.floor(n/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`;}
+function battleSummary(record:BattleRecord){
+ return `<p class="camp-result-reason">${FAILURE_TEXT[record.reason]}</p><dl class="camp-result-stats"><div><dt>도달 웨이브</dt><dd>${record.wave}</dd></div><div><dt>처치</dt><dd>${record.kills.toLocaleString()}</dd></div><div><dt>전투 시간</dt><dd>${formatBattleTime(record.seconds)}</dd></div></dl><p class="camp-result-reward">제국 골드 <strong>+${record.empireGold.toLocaleString()}</strong></p>`;
+}
+function renderBattleHistory(){
+ const progress=campProgress.snapshot();
+ content.innerHTML=`<div class="camp-record-best">최고 웨이브 <strong>${progress.bestWave}</strong></div>${progress.records.length?`<div class="camp-record-list">${progress.records.map(r=>`<article><h2>WAVE ${r.wave}<small>${new Date(r.finishedAt).toLocaleDateString('ko-KR')}</small></h2>${battleSummary(r)}</article>`).join('')}</div>`:'<p>아직 완료한 전투 기록이 없습니다.</p>'}`;
+}
+function syncCampProgress(){
+ document.querySelector('#gold')!.textContent=trainingProgress.snapshot().gold.toLocaleString();
+ document.querySelector('.record')!.innerHTML=`<span></span>최고 웨이브 ${campProgress.snapshot().bestWave}<span></span>`;
+}
+window.addEventListener('training-change',syncCampProgress);window.addEventListener('storage',syncCampProgress);syncCampProgress();
+const resultId=new URLSearchParams(location.search).get('result');
+if(resultId){
+ const result=campProgress.snapshot().records.find(r=>r.id===resultId);
+ if(result){returnFocus=battleButton;title.textContent='전투 종료';content.innerHTML=battleSummary(result)+'<button class="camp-result-retry" data-battle-retry>다시 전투</button>';panel.showModal();}
+ const cleaned=new URL(location.href);cleaned.searchParams.delete('result');history.replaceState(null,'',cleaned.pathname+cleaned.search+cleaned.hash);
+}
 document.querySelectorAll('#panel .close, #panel .dialog-confirm').forEach(button => {
   button.addEventListener('click', () => panel.close());
 });

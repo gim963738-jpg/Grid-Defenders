@@ -1,3 +1,4 @@
+import {trainingProgress} from './training';
 import {mountTrainingScreen} from './training-screen';
 import {mountSpecialtyScreen} from './specialty-screen';
 import './barracks-preview.css';
@@ -9,7 +10,7 @@ export function mountBarracksPreview(openPanel:(name:string)=>void) {
   screen.setAttribute('aria-label','병영');
   const asset=`${import.meta.env.BASE_URL}assets/lobby/camp-concept.png`;
   const icon=(x:number,y:number,w:number,h:number)=>`<svg viewBox="${x} ${y} ${w} ${h}" aria-hidden="true"><image href="${asset}" width="948" height="1659"/></svg>`;
-  screen.innerHTML=`<header class="hero-header"><button data-home aria-label="로비로 돌아가기">‹</button><h1 tabindex="-1">병영</h1><div class="hero-wallet"><span>✦ <b>480</b></span><span>⚒ <b>0</b></span></div><button data-home aria-label="로비 홈">⌂</button></header>
+  screen.innerHTML=`<header class="hero-header"><button data-home aria-label="로비로 돌아가기">‹</button><h1 tabindex="-1">병영</h1><div class="hero-wallet"><span aria-label="제국 골드">✦ <b data-barracks-gold>${trainingProgress.snapshot().gold.toLocaleString()}</b></span><span>⚒ <b>0</b></span></div><button data-home aria-label="로비 홈">⌂</button></header>
     <section class="barracks-content" aria-label="병영 메뉴"><div class="barracks-heading"><small>BARRACKS</small><h2>부대의 힘을 기르는 곳</h2><p>이용할 메뉴를 선택하세요.</p></div>
     <div class="barracks-compass">
       <div class="barracks-orbit" aria-hidden="true"></div>
@@ -42,7 +43,7 @@ export function mountBarracksPreview(openPanel:(name:string)=>void) {
     const visible=location.hash==='#barracks';
     const wasVisible=!screen.hidden;
     screen.hidden=!visible;
-    if(visible){window.scrollTo(0,0);screen.querySelector<HTMLElement>('h1')?.focus({preventScroll:true});}
+    if(visible){screen.querySelector('[data-barracks-gold]')!.textContent=trainingProgress.snapshot().gold.toLocaleString();window.scrollTo(0,0);screen.querySelector<HTMLElement>('h1')?.focus({preventScroll:true});}
     else if(wasVisible&&location.hash==='')opener?.focus({preventScroll:true});
   }
   window.addEventListener('hashchange',sync);
