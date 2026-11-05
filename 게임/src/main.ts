@@ -19,6 +19,8 @@ import { BossBattle, waveBossRoster } from './bossBattle';
 import { createBossBattleView } from './bossBattleView';
 import { BossDamageHistory } from './bossDamageHistory';
 import './style.css';
+import { mountScreenBottomGuide } from './screen-bottom-guide';
+mountScreenBottomGuide('430px');
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const game=new Defense();
