@@ -29,6 +29,8 @@ export function mountHeroPreview() {
   screen.setAttribute('aria-label','영웅 관리 시안');
   lobby.after(screen);
   const growthPanel=mountHeroGrowthPanel();
+  const slots:(string|null)[]=[...heroes.filter(h=>h.owned).map(h=>h.id),null,null];
+  let openFormation=()=>{};
   let selected = heroes[1];
   let filter = '전체';
   let sort = 'level';
@@ -56,7 +58,8 @@ export function mountHeroPreview() {
       </section>
       <button class="hero-list-return" data-action="list">‹ 영웅 목록으로</button>
       ` : `
-      <section class="hero-collection" aria-label="보유 영웅"><div class="collection-heading"><h2>보유 영웅 <span>6 / 8</span></h2><div class="collection-tools"><select aria-label="영웅 정렬"><option value="level" ${sort==='level'?'selected':''}>레벨순</option><option value="name" ${sort==='name'?'selected':''}>이름순</option></select><button class="hero-filter-toggle ${filter!=='전체'?'has-filter':''}" data-action="filters" aria-label="역할 필터" aria-controls="hero-role-filters" aria-expanded="${filtersOpen}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M8 3v6m8 0v6m-7 0v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div></div><div id="hero-role-filters" class="hero-filters" role="group" aria-label="영웅 역할 필터" ${filtersOpen?'':'hidden'}>${['전체','탱커','근접','원거리','지원'].map(f=>`<button data-filter="${f}" class="${f===filter?'active':''}" aria-pressed="${f===filter}">${f}</button>`).join('')}</div><div class="hero-grid">${list.map(h=>`<button class="hero-card ${!h.owned?'unowned':''}" data-select="${h.id}" aria-label="${h.name}${!h.owned?' 미보유':' 상세 보기'}">${portrait(h)}<span class="role-badge">${roleIcons[h.role]}</span><span class="card-caption"><small>${h.owned?'Lv. '+h.level:'🔒 미보유'}</small><strong>${h.name}</strong><span class="hero-stars">★★★★★</span></span></button>`).join('')}${Array.from({length:Math.max(0,16-list.length)},()=>'<div class="hero-empty-slot" aria-hidden="true"></div>').join('')}</div></section>
+      <button class="hero-formation-button" data-action="formation"><span>편성하기</span><small>${slots.filter(Boolean).length} / 8</small><span aria-hidden="true">›</span></button>
+      <section class="hero-collection" aria-label="보유 영웅"><div class="collection-heading"><h2>보유 영웅 <span>6 / 8</span></h2><div class="collection-tools"><select aria-label="영웅 정렬"><option value="level" ${sort==='level'?'selected':''}>레벨순</option><option value="name" ${sort==='name'?'selected':''}>이름순</option></select><button class="hero-filter-toggle ${filter!=='전체'?'has-filter':''}" data-action="filters" aria-label="역할 필터" aria-controls="hero-role-filters" aria-expanded="${filtersOpen}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M8 3v6m8 0v6m-7 0v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div></div><div id="hero-role-filters" class="hero-filters" role="group" aria-label="영웅 역할 필터" ${filtersOpen?'':'hidden'}>${['전체','탱커','근접','원거리','지원'].map(f=>`<button data-filter="${f}" class="${f===filter?'active':''}" aria-pressed="${f===filter}">${f}</button>`).join('')}</div><div class="hero-grid">${list.map(h=>`<button class="hero-card ${!h.owned?'unowned':''}" data-select="${h.id}" aria-label="${h.name}${slots.includes(h.id)?' 편성 중':''}${!h.owned?' 미보유':' 상세 보기'}">${portrait(h)}${slots.includes(h.id)?'<span class="hero-formation-badge" aria-hidden="true">편성</span>':''}<span class="role-badge">${roleIcons[h.role]}</span><span class="card-caption"><small>${h.owned?'Lv. '+h.level:'🔒 미보유'}</small><strong>${h.name}</strong><span class="hero-stars">★★★★★</span></span></button>`).join('')}${Array.from({length:Math.max(0,16-list.length)},()=>'<div class="hero-empty-slot" aria-hidden="true"></div>').join('')}</div></section>
       `}
       <p class="hero-preview-note">디자인 미리보기 · 게임 데이터 연결 전</p><p class="hero-notice" role="status" aria-live="polite"></p>`;
   }
@@ -77,6 +80,7 @@ export function mountHeroPreview() {
   screen.addEventListener('click',event=>{
     const button=(event.target as HTMLElement).closest<HTMLButtonElement>('button');
     if(!button)return;
+    if(button.dataset.action==='formation'){openFormation();return;}
     if(button.dataset.action==='growth'){growthPanel.open(selected);return;}
     if(button.dataset.action==='home'){location.hash='';return;}
     if(button.dataset.action==='back'){location.hash=isDetail?'heroes':'';return;}
@@ -102,23 +106,32 @@ export function mountHeroPreview() {
   window.addEventListener('hashchange',syncRoute);
   syncRoute();
   function mountRoster(container:HTMLElement) {
-    const slots: (string|null)[] = [...heroes.filter(h=>h.owned).map(h=>h.id),null,null];
     const picker=document.createElement('dialog');
     picker.className='roster-picker';
     picker.setAttribute('aria-labelledby','roster-picker-title');
     document.body.append(picker);
+    const formation=document.createElement('dialog');formation.className='hero-formation-panel';formation.setAttribute('aria-labelledby','formation-title');
+    formation.innerHTML='<header><div><small>HERO FORMATION</small><h2 id="formation-title">영웅 편성</h2></div><button data-formation-close aria-label="편성 창 닫기">×</button></header><p>변경할 슬롯을 선택하세요.</p><div class="formation-slots"></div><button class="formation-done" data-formation-close>편성 완료</button>';
+    document.body.append(formation);
     let slotIndex=0;
-    function drawSlots() {
-      container.innerHTML=`<div class="roster-heading"><h2>영웅 편성</h2><span>${slots.filter(Boolean).length} / 8</span></div><div class="lobby-roster-grid">${slots.map((id,index)=>{const h=heroes.find(h=>h.id===id);return `<button class="lobby-roster-slot ${h?'filled':'vacant'}" data-roster-slot="${index}" aria-label="${index+1}번 편성 ${h?h.name:'빈칸'} 변경">${h?portrait(h):'<span class="roster-plus" aria-hidden="true">＋</span>'}<span class="roster-slot-label">${h?h.name:'빈 슬롯'}</span></button>`;}).join('')}</div>`;
+    const slotMarkup=()=>`<div class="roster-heading"><h2>영웅 편성</h2><span>${slots.filter(Boolean).length} / 8</span></div><div class="lobby-roster-grid">${slots.map((id,index)=>{const h=heroes.find(h=>h.id===id);return `<button class="lobby-roster-slot ${h?'filled':'vacant'}" data-roster-slot="${index}" aria-label="${index+1}번 편성 ${h?h.name:'빈칸'} 변경">${h?portrait(h):'<span class="roster-plus" aria-hidden="true">＋</span>'}<span class="roster-slot-label">${h?h.name:'빈 슬롯'}</span></button>`;}).join('')}</div>`;
+    function drawSlots(){
+      container.innerHTML=slotMarkup();formation.querySelector('.formation-slots')!.innerHTML=slotMarkup();
+      if(!screen.hidden&&!isDetail)rerender();
     }
-    function closePicker() {picker.close();container.querySelector<HTMLElement>(`[data-roster-slot="${slotIndex}"]`)?.focus();}
-    container.addEventListener('click',event=>{
-      const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-roster-slot]');
-      if(!button)return;
+    function closePicker(){picker.close();}
+    picker.addEventListener('close',()=>{const target=formation.open?formation:container;target.querySelector<HTMLElement>(`[data-roster-slot="${slotIndex}"]`)?.focus({preventScroll:true});});
+    const selectSlot=(event:Event)=>{
+      const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-roster-slot]');if(!button)return;
       slotIndex=Number(button.dataset.rosterSlot);
       picker.innerHTML=`<button class="close" data-close aria-label="닫기">×</button><h1 id="roster-picker-title">${slotIndex+1}번 슬롯 · 영웅 선택</h1><div class="roster-picker-grid">${heroes.filter(h=>h.owned).map(h=>`<button data-roster-hero="${h.id}" aria-label="${h.name} 편성">${portrait(h)}<span>${h.name}</span></button>`).join('')}</div><p>이미 편성된 영웅을 고르면 서로 자리를 바꿉니다.</p><button class="dialog-confirm" data-remove>편성 해제</button>`;
       picker.showModal();
-    });
+    };
+    container.addEventListener('click',selectSlot);formation.addEventListener('click',selectSlot);
+    formation.addEventListener('click',event=>{if((event.target as HTMLElement).closest('[data-formation-close]'))formation.close();});
+    formation.addEventListener('close',()=>screen.querySelector<HTMLElement>('[data-action="formation"]')?.focus({preventScroll:true}));
+    window.addEventListener('hashchange',()=>{if(picker.open)picker.close();if(formation.open)formation.close();});
+    openFormation=()=>{drawSlots();if(!formation.open)formation.showModal();};
     picker.addEventListener('click',event=>{
       const button=(event.target as HTMLElement).closest<HTMLButtonElement>('button');
       if(!button)return;
