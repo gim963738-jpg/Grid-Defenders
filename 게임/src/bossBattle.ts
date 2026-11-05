@@ -12,7 +12,7 @@ export interface BossTuning {healthScale:number;attackScale:number;}
 export interface BossAlly {id:number;kind:UnitKind;slot:number;level:number;stats:ReturnType<Defense['stats']>;}
 export function waveBossRoster(game:Defense):BossAlly[]{return game.units.map(u=>({id:u.id,kind:u.kind,slot:u.slot,level:u.level,stats:{...game.stats(u)}}));}
 export interface BossActor {
-  armorBreakRemaining?:number;
+  normalDamageMultiplier?:number;bossDamageMultiplier?:number;armorBreakRemaining?:number;
   level?:number;sourceSlot?:number;regen?:number;critChance?:number;critMultiplier?:number;physicalArmor?:number;magicArmor?:number;
   id:string;side:'ally'|'enemy';kind:UnitKind|'boss'|'retainer';name:string;
   x:number;y:number;hp:number;maxHp:number;attack:number;rate:number;range:number;
@@ -58,7 +58,7 @@ export class BossBattle {
         x:(col+.5)*70.3125,y:(row+.5)*70.3125,hp:s.hp,maxHp:s.hp,attack:s.attack,
         rate:s.rate,range:u.kind==='assassin'?80:s.range*(u.kind==='ranged'||u.kind==='arcanist'?1.5:1),speed:u.kind==='guard'||u.kind==='tank'||u.kind==='melee'?64:53,
         rank:Math.floor(u.slot/4),damageType:s.damageType,defenseType:'normal',cooldown:.25,
-        regen:s.regen,physicalArmor:s.physicalArmor,magicArmor:s.magicArmor,critChance:s.critChance,critMultiplier:s.critMultiplier});
+        normalDamageMultiplier:s.normalDamageMultiplier,bossDamageMultiplier:s.bossDamageMultiplier,regen:s.regen,physicalArmor:s.physicalArmor,magicArmor:s.magicArmor,critChance:s.critChance,critMultiplier:s.critMultiplier});
     }
     this.actors.push(
       {id:'retainer-top',side:'enemy',kind:'retainer',name:'친위대 · 강철 감시자',x:760,y:215,hp:1800,maxHp:1800,attack:70,rate:.8,range:50,speed:50,rank:0,damageType:'physical',defenseType:'physical',physicalArmor:35,magicArmor:25,cooldown:.25},
@@ -110,6 +110,7 @@ export class BossBattle {
     const bonus=actor.side==='ally'&&['guard','archer','mage'].includes(actor.kind)&&this.commanderBuff>0?100:0;
     return actor.attack+bonus;
   }
+  private damageFactor(source:BossActor,target:BossActor):number {return combatDefenseMultiplier(source.damageType,target)*(source.side==='ally'?(target.kind==='boss'?source.bossDamageMultiplier??1:source.normalDamageMultiplier??1):1);}
   private strike(actor:BossActor,target:BossActor,damage:Map<string,number>):void {
     if(actor.kind==='ranged'){
       this.iceProjectiles.push(criticalAttack({x:actor.x,y:actor.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...actor},attack:this.attackPower(actor)},actor,this.random));
@@ -124,7 +125,7 @@ export class BossBattle {
       const rolled=criticalAttack({attack:this.attackPower(actor)},actor,this.random);this.swordAttacks.push(createSwordAttack(actor.id,target.id,rolled.attack,rolled.critical,sequence,actor.rate,target.x,target.y));return;
     }
     const critical=(actor.critChance??0)>this.random();
-    const amount=this.attackPower(actor)*(critical?(actor.critMultiplier??1.5):1)*combatDefenseMultiplier(actor.damageType,target);
+    const amount=this.attackPower(actor)*(critical?(actor.critMultiplier??1.5):1)*this.damageFactor(actor,target);
     damage.set(target.id,(damage.get(target.id)??0)+amount);
     this.hits.push({from:actor.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:actor.damageType==='magic',life:.32,critical});
   }
@@ -162,7 +163,7 @@ export class BossBattle {
       if(distance>step){p.x+=dx/distance*step;p.y+=dy/distance*step;return true;}
       this.iceBursts.push({x:p.tx,y:p.ty,life:.45});
       for(const victim of live)if(victim.side!==p.source.side&&Math.hypot(victim.x-p.tx,victim.y-p.ty)<=AREA_ATTACK.mageRadius){
-        const amount=p.attack*combatDefenseMultiplier(p.source.damageType,victim);
+        const amount=p.attack*this.damageFactor(p.source,victim);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
         this.hits.push({from:p.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,critical:p.critical,splash:victim.id!==p.targetId});
       }
@@ -172,7 +173,7 @@ export class BossBattle {
     for(const swing of this.swordAttacks){
       const source=live.find(a=>a.id===swing.sourceId)!,target=live.find(a=>a.id===swing.targetId);
       if(advanceSword(swing,dt,target)&&target){
-        const amount=swing.attack*combatDefenseMultiplier(source.damageType,target);
+        const amount=swing.attack*this.damageFactor(source,target);
         damage.set(target.id,(damage.get(target.id)??0)+amount);
         this.hits.push({from:source.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:false,life:.32,sword:true,critical:swing.critical});
       }
@@ -187,7 +188,7 @@ export class BossBattle {
         const victims=action.kind==='boss'&&beat===3?live.filter(a=>a.side!==source.side&&inAssassinPath(action,a)):primary?[primary]:[];
         for(const victim of victims){
           const multiplier=action.kind==='basic'?ASSASSIN.basicMultiplier:ASSASSIN.bossMultipliers[beat];
-          const amount=action.attack*multiplier*combatDefenseMultiplier(source.damageType,victim);
+          const amount=action.attack*multiplier*this.damageFactor(source,victim);
           damage.set(victim.id,(damage.get(victim.id)??0)+amount);
           this.hits.push({from:source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,sword:true,critical:action.critical});
           if(action.kind==='boss'&&beat===3)applyArmorBreak(victim);
@@ -213,7 +214,7 @@ export class BossBattle {
     for(const cast of this.fireCasts){
       const target=live.find(a=>a.id===cast.targetId),beats=advanceFire(cast,dt,target);
       for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.tx,victim.y-cast.ty)<=FIRE_SKILL.radius){
-        const amount=cast.attack*FIRE_SKILL.damageMultiplier*combatDefenseMultiplier(cast.source.damageType,victim);
+        const amount=cast.attack*FIRE_SKILL.damageMultiplier*this.damageFactor(cast.source,victim);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
         this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,critical:cast.critical,splash:victim.id!==cast.targetId});
       }
@@ -222,7 +223,7 @@ export class BossBattle {
     for(const cast of this.bladeCasts){
       const beats=advanceBlade(cast,dt);
       for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.x,victim.y-cast.y)<=BLADE_SKILL.radius){
-        const amount=cast.attack*bladeDamageMultiplier(cast.hits-beats+i)*combatDefenseMultiplier(cast.source.damageType,victim);
+        const amount=cast.attack*bladeDamageMultiplier(cast.hits-beats+i)*this.damageFactor(cast.source,victim);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
         this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,sword:true,critical:cast.critical,splash:victim.id!==cast.targetId});
       }

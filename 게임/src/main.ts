@@ -1,3 +1,4 @@
+import {trainingProgress} from './training';
 import {itemArt,hasItemArt} from './itemArt';
 import {battleResolution} from './renderQuality';
 import {loadHeroArt,heroImage,heroPortrait,sheetHero,assassinSkillIcon} from './heroArt';
@@ -23,8 +24,9 @@ import { mountScreenBottomGuide } from './screen-bottom-guide';
 mountScreenBottomGuide('430px');
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
-const game=new Defense();
+const game=new Defense(Math.random,()=>trainingProgress.bonuses());
 const run=new GameRun();
+let lastEmpireReward=0;
 let assetsReady=false;
 let showDamageNumbers=true,combatPaused=false;
 const bossBattle=new BossBattle(waveBossRoster(game),Math.random,game.damageMeter.peaks);
@@ -206,7 +208,7 @@ function refreshHeroInfo():void {
     field('armor','⬡','물리 방어',stats.physicalArmor,def.armor),field('armor','◇','마법 방어',stats.magicArmor,def.magicArmor),
     field('regen','✚','체력 재생',stats.regen,0,n=>`${n.toLocaleString()}/초`),field('gold','◇','골드 획득',stats.gold,0,n=>`${Math.round(n*100)}%`,'+')];
   fields.push(field('attack','✦','치명타 확률',stats.critChance,stats.critChance,n=>`${Math.round(n*100)}%`),field('attack','✦','치명타 데미지',stats.critMultiplier,stats.critMultiplier,n=>`${n}배`));
-  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${def.hero?heroPortrait(heroInfo.kind):def.icon}</span><div><small>${unit?(def.hero?'장비 적용 능력치':`강화 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(({key,icon,label,value,bonus})=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}"${bonus?' class="stat-increased"':''}><span>${value}</span>${bonus?`<small class="gear-stat-bonus" aria-label="장비 증가분 ${bonus}">${bonus}</small>`:''}</dd></div>`).join('')}</dl>`;
+  const markup=`<header><span class="hero-info-icon" style="color:#${def.color.toString(16)}">${def.hero?heroPortrait(heroInfo.kind):def.icon}</span><div><small>${unit?(def.hero?'장비·훈련 적용 능력치':`강화·훈련 적용 능력치 · Lv.${unit.level}`):'기본 능력치 · 배치 전'}</small><h2>${def.name}${unit?` #${unit.id}`:''}</h2></div><button id="close-hero-info" aria-label="유닛 능력치 닫기">×</button></header><dl>${fields.map(({key,icon,label,value,bonus})=>`<div class="hero-stat"><dt><span class="stat-symbol ${key}">${icon}</span>${label}</dt><dd data-stat="${key}"${bonus?' class="stat-increased"':''}><span>${value}</span>${bonus?`<small class="gear-stat-bonus" aria-label="장비 증가분 ${bonus}">${bonus}</small>`:''}</dd></div>`).join('')}</dl>`;
   if(markup!==heroInfoMarkup){el('hero-info').innerHTML=markup;heroInfoMarkup=markup;}
   positionHeroInfo();
 }
@@ -811,7 +813,7 @@ function renderLobby():void {
   el('game-start').innerHTML=`${result?'다시 게임 시작':'게임 시작'} <span>›</span>`;
   if(result){
     el('run-result-title').textContent=result.reason==='monster-limit'?'전장 방어 실패':result.reason==='boss-timeout'?'보스전 시간 초과':'보스전 패배';
-    el('run-result-reason').textContent=FAILURE_TEXT[result.reason];
+    el('run-result-reason').textContent=FAILURE_TEXT[result.reason]+` · 제국 골드 +${lastEmpireReward}`;
     el('run-result-wave').textContent=String(result.wave);el('run-result-kills').textContent=String(result.kills);el('run-result-time').textContent=formatRunTime(result.seconds);
   }
 }
@@ -838,6 +840,7 @@ function clearBattleInteraction():void {
   clearTimeout(noticeTimer);el('center-notice').hidden=true;el('field-upgrade').hidden=true;updateGearDrag();refreshLinks();
 }
 function resetBattleState():void {
+  lastEmpireReward=0;
   clearBattleInteraction();game.reset();combatPaused=false;bossDamageHistory.clear();defeatedBossEnemies.clear();damageMeterMode='defense';showLastBoss=false;activeBossWave=null;bossReturnDelay=0;bossBattle.autoSkills=true;bossTestMode=false;
   pending=null;selectedUnit=null;selectedHero=null;selectedGear=null;turns=0;lastGearTap=null;lastRotation=null;suppressClick=false;
   centeredHeroKind='tank';heroPhysicalIndex=heroKinds.length;heroCardsMarkup='';syncBossRoster(true,true);bossBattleView.draw();openTab('summon');refreshCombatControls();
@@ -849,6 +852,8 @@ function startRun(mode:RunMode):void {
 }
 function finishRun(reason:RunFailure):void {
   if(!run.finish(reason,game.wave,game.kills+defeatedBossEnemies.size))return;
+  const empireReward=trainingProgress.reward(game.wave,game.kills+defeatedBossEnemies.size);lastEmpireReward=empireReward;
+  if(empireReward>0)game.note(`전투 종료 보상 · 제국 골드 +${empireReward}`);
   if(currentScene==='boss'){
     if(reason==='boss-timeout')bossBattle.result='defeat';
     bossDamageHistory.capture(bossBattle,bossEncounterWave);

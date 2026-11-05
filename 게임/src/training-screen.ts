@@ -1,0 +1,28 @@
+import {TRAININGS,TRAINING_RULES,trainingProgress} from './training';
+import './training-screen.css';
+export function mountTrainingScreen(){
+ const screen=document.createElement('main');screen.className='camp training-screen';screen.hidden=true;screen.setAttribute('aria-label','병영 훈련소');document.body.append(screen);
+ let message='영웅과 병사 모두에게 같은 훈련 효과가 적용됩니다.';
+ function draw(focus?:string){
+  const openDetails=[...screen.querySelectorAll<HTMLDetailsElement>('details[open]')].map(n=>n.className);
+  const s=trainingProgress.snapshot(),bonuses=trainingProgress.bonuses(),complete=TRAININGS.filter(t=>s.levels[t.id]===10).length;
+  screen.innerHTML=`<header class="hero-header"><button data-back aria-label="병영으로 돌아가기">‹</button><h1 tabindex="-1">훈련소</h1><span class="training-wallet"><small>제국 골드</small><b>${s.gold.toLocaleString()}</b></span><button data-home aria-label="로비 홈">⌂</button></header>
+   <section class="training-intro"><span>IMPERIAL TRAINING</span><h2>부대의 한계를 높이세요</h2><p>영웅 · 병사 공통 강화</p><strong>${s.rank+1}등급 훈련</strong></section>
+   <section class="training-pillars" aria-label="네 가지 훈련">${TRAININGS.map((t,i)=>{const level=s.levels[t.id],cost=trainingProgress.cost(t.id),total=(s.rank*10+level)*t.step;return `<article class="training-pillar pillar-${t.id}"><div class="training-emblem" aria-hidden="true">${t.icon}</div><h3>${t.name}</h3><strong class="training-total">+${total}%</strong><div class="training-tower" role="img" aria-label="${t.name} ${level}/10단계">${Array.from({length:10},(_,i)=>{const n=10-i;return `<span class="training-step ${n<=level?'filled':''}" aria-hidden="true">${n}</span>`;}).join('')}</div><b class="training-level">${level}<small> / 10</small></b><p class="training-next">${cost===null?'훈련 완료':`다음 +${t.step}%`}</p><button data-train="${t.id}" ${cost===null||s.gold<cost?'disabled':''} aria-label="${t.name} 훈련${cost===null?' 완료':` · 제국 골드 ${cost}`}" >${cost===null?'MAX':`<span>훈련</span><small>${cost.toLocaleString()} G</small>`}</button></article>`;}).join('')}</section>
+   <section class="training-promotion"><p>최고 단계 달성 <b>${complete} / 4</b></p><button data-promote ${trainingProgress.canPromote()?'':'disabled'}>✦ ${s.rank+2}등급으로 승급</button><small>모든 훈련 10단계 달성 시 활성화됩니다.<br>승급해도 누적 능력치는 유지됩니다.</small></section>
+   <p class="training-message" role="status" aria-live="polite">${message}</p>
+   <details class="training-help"><summary>훈련 효과와 제국 골드</summary><p>공격력·체력은 단계당 +${TRAININGS[0].step}%, 일반·보스 피해는 +${TRAININGS[2].step}%입니다. 비용은 ${TRAINING_RULES.baseCost} × 등급 × 다음 단계입니다.</p><p>일반 전투 종료 보상: 처치 수 ×${TRAINING_RULES.killReward} + 완료 웨이브 ×${TRAINING_RULES.waveReward}. 전투 중 사용하는 골드와 별도 재화입니다.</p><p>현재 합계: 공격력 +${Math.round((bonuses.attackMultiplier-1)*100)}% · 체력 +${Math.round((bonuses.healthMultiplier-1)*100)}%</p></details>
+   <details class="training-test"><summary>개발자 테스트</summary><button data-grant>제국 골드 +10,000</button></details>
+   <nav class="hero-bottom-nav" aria-label="훈련소 이동"><button data-back><span>‹</span>병영</button><button data-home><span>⌂</span>로비</button></nav>`;
+  for(const name of openDetails)screen.querySelector<HTMLDetailsElement>(`details.${name}`)?.setAttribute('open','');
+  if(focus)screen.querySelector<HTMLElement>(focus)?.focus({preventScroll:true});
+ }
+ screen.addEventListener('click',event=>{const b=(event.target as HTMLElement).closest<HTMLButtonElement>('button');if(!b||b.disabled)return;
+  if(b.hasAttribute('data-back')){location.hash='barracks';return;}if(b.hasAttribute('data-home')){location.hash='';return;}
+  if(b.dataset.train){if(trainingProgress.train(b.dataset.train as typeof TRAININGS[number]['id']))message='훈련 완료 · 영웅과 병사의 능력치가 함께 상승했습니다.';draw(`[data-train="${b.dataset.train}"]`);}
+  else if(b.hasAttribute('data-promote')){if(trainingProgress.promote())message='승급 완료 · 누적 효과를 유지하고 다음 등급 훈련을 시작합니다.';draw('[data-promote]');}
+  else if(b.hasAttribute('data-grant')){trainingProgress.grant(10000);message='테스트 제국 골드 10,000을 지급했습니다.';draw('[data-grant]');}
+ });
+ const sync=()=>{screen.hidden=location.hash!=='#training';if(!screen.hidden){draw();window.scrollTo(0,0);screen.querySelector<HTMLElement>('h1')?.focus({preventScroll:true});}};
+ window.addEventListener('hashchange',sync);window.addEventListener('storage',()=>{if(!screen.hidden)draw();});window.addEventListener('training-change',()=>{if(!screen.hidden)draw();});sync();
+}

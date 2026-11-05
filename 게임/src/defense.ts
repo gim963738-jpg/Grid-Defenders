@@ -1,3 +1,4 @@
+import {NO_TRAINING,type TrainingBonuses} from './training';
 import {criticalAttack} from './critical';
 import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinSourceBusy,type AssassinAction,type AssassinImpact} from './assassinCombat';
 import {combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from './armorBreak';
@@ -83,7 +84,7 @@ export class Defense {
   private nextLogId=1;
   private nextId=1;
   private placementOrder=0;
-  constructor(private readonly random:()=>number=Math.random){this.startWave(false);}
+  constructor(private readonly random:()=>number=Math.random,private readonly training:()=>TrainingBonuses=()=>NO_TRAINING){this.startWave(false);}
   private createMonster(def:MonsterDef):Enemy {
     const factor=1+(this.wave-1)*0.1,maxHp=Math.round(def.hp*factor);
     return {id:this.nextId++,distance:0,...pathPoint(0),hp:maxHp,maxHp,speed:def.speed,named:def.named,name:def.name,defenseType:def.defenseType,damageType:def.damageType,
@@ -182,13 +183,13 @@ export class Defense {
     return item.owner===null?{active:false,reason:'공용 가방 보관'}:this.gearStates(item.owner).get(item.id)!;
   }
   stats(unit:Unit) {
-    const states=this.gearStates(unit.id);
+    const train=this.training(),states=this.gearStates(unit.id);
     const base=UNITS[unit.kind], gear=this.gear.filter(g=>g.owner===unit.id&&states.get(g.id)?.active);
     const total=(field:'attack'|'armor'|'magicArmor'|'hp'|'speed'|'regen'|'gold')=>gear.reduce((a,g)=>a+(g.def[field]??0),0);
-    const attack=Math.round(base.attack*(1+(unit.level-1)*0.25)+total('attack')),physicalArmor=base.armor+total('armor'),magicArmor=base.magicArmor+total('magicArmor');
+    const attack=Math.round((base.attack*(1+(unit.level-1)*0.25)+total('attack'))*train.attackMultiplier),physicalArmor=base.armor+total('armor'),magicArmor=base.magicArmor+total('magicArmor');
     return {attack,damageType:base.damageType,physicalAttack:base.damageType==='physical'?attack:0,magicAttack:base.damageType==='magic'?attack:0,physicalArmor,magicArmor,
       rate:base.rate*(1+total('speed')),range:base.range,
-      hp:base.hp+total('hp'),armor:physicalArmor,regen:total('regen'),gold:total('gold'),
+      hp:Math.round((base.hp+total('hp'))*train.healthMultiplier),normalDamageMultiplier:train.normalDamageMultiplier,bossDamageMultiplier:train.bossDamageMultiplier,armor:physicalArmor,regen:total('regen'),gold:total('gold'),
       critChance:base.hero?RULES.heroCritChance:RULES.soldierCritChance,critMultiplier:RULES.critMultiplier};
   }
   summon(kind:UnitKind,slot:number):boolean {
@@ -592,7 +593,7 @@ export class Defense {
   private hit(u:Unit,target:Enemy,attack:number,critical=false):void {
       if(target.hp<=0)return;
       const hpBefore=target.hp;
-      const damageType=UNITS[u.kind].damageType,multiplier=combatDefenseMultiplier(damageType,target),afterDefense=Math.round(attack*multiplier);
+      const damageType=UNITS[u.kind].damageType,multiplier=combatDefenseMultiplier(damageType,target),afterDefense=Math.round(attack*multiplier*this.training().normalDamageMultiplier);
       target.hp=Math.max(0,target.hp-afterDefense);
       const damage=hpBefore-target.hp;
       this.damageMeter.record({id:String(u.id),name:`${UNITS[u.kind].name} #${u.id} · Lv.${u.level}`,color:'#'+UNITS[u.kind].color.toString(16).padStart(6,'0')},damage,this.waveTime);
