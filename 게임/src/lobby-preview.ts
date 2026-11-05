@@ -1,3 +1,4 @@
+import {paintNavigationIcons} from './navigation-icons';
 // Standalone lobby UI. Catalog reads game configuration; no live combat state.
 export {};
 import { mountCatalogPanel } from './catalog-panel';
@@ -21,12 +22,8 @@ paintIcon('.portrait',[30,13,97,90]);
 paintIcon('.coin',[419,32,44,43]);
 paintIcon('.settings',[878,30,43,45]);
 paintIcon('.stage > span',[328,1130,25,35]);
+paintNavigationIcons();
 document.querySelector('.battle > span')!.innerHTML = `<svg class="lobby-icon" viewBox="0 0 40 40" aria-hidden="true"><g fill="#4b2c11" stroke="#ffe1a0" stroke-width=".7" stroke-linejoin="round"><path d="m7 3 5 2 18 22-4 4L5 10Z"/><path d="m33 3-5 2L10 27l4 4 21-21Z"/><path d="m6 24 10 10-3 3-10-10Zm18 10 10-10 3 3-10 10Z"/><path d="m7 31 3 3-5 5-3-3Zm23 3 3-3 5 5-3 3Z"/></g></svg>`;
-paintIcon('.art-shop',[77,1516,80,69]);
-paintIcon('.art-hero',[265,1516,64,69]);
-paintIcon('.art-battle',[435,1512,82,77]);
-paintIcon('.art-barracks',[613,1517,90,67]);
-paintIcon('.art-record',[803,1516,82,70]);
 const shortcuts = document.querySelectorAll<HTMLButtonElement>('.side-menu button:not([data-panel="임무"])');
 shortcuts.forEach((button,index) => {
   button.setAttribute('aria-label',index===0?'우편':'도감');

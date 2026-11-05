@@ -135,3 +135,5 @@ body.app-fixed-navigation .camp{padding-bottom:calc(116px + var(--app-safe-botto
 .app-bottom-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:48px;min-height:70px;padding:8px 2px;font-size:14px;line-height:1.3;}
 .app-bottom-nav .nav-art{display:block;flex:none;width:32px;height:28px;}.app-bottom-nav .selected:before{top:-9px;font-size:12px;}.app-bottom-nav button:last-child{border-right:0;}
 body.app-fixed-navigation .toast,body.app-fixed-navigation .hero-notice{bottom:calc(112px + var(--app-safe-bottom));}
+
+.app-bottom-nav .nav-art{display:grid;place-items:center;width:32px;height:32px;color:#c8ac75;}.app-bottom-nav .navigation-icon{display:block;width:32px;height:32px;overflow:visible;}.app-bottom-nav .selected .nav-art{color:#ffe3a0;filter:drop-shadow(0 1px 3px #e0a54855);}.app-bottom-nav button{gap:3px;}
