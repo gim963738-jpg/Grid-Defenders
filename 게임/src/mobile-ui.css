@@ -124,3 +124,5 @@ dialog .close { min-width:48px; min-height:48px; }
 
 /* Area and record sit over the upper camp scenery. */
 .lobby-stage-banner{position:absolute;z-index:2;top:clamp(24px,10%,48px);left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 128px);text-align:center;background:#101d22ba;border-radius:4px;text-shadow:0 1px 3px #000;pointer-events:none;}.battle-lobby .lobby-stage-banner .stage{width:100%;box-sizing:border-box;padding:4px 8px;gap:6px;line-height:1.5;word-break:keep-all;}.battle-lobby .lobby-stage-banner .record{margin:4px 8px 6px;gap:6px;white-space:nowrap;}.lobby-stage-banner .record span{flex:1;min-width:4px;max-width:32px;}.battle-lobby .side-menu{z-index:3;}
+
+.battle-lobby .lobby-stage-banner .stage{font-size:16px;min-height:34px;padding:5px 10px;}.battle-lobby .lobby-stage-banner .stage>span{width:16px;height:18px;}.battle-lobby .lobby-stage-banner .record{font-size:14px;margin:6px 8px 8px;}
