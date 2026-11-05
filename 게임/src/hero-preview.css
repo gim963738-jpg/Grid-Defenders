@@ -67,3 +67,6 @@
 .hero-filter-toggle svg{display:block;width:100%;height:100%}
 .hero-filter-toggle[aria-expanded="true"],.hero-filter-toggle.has-filter{border-color:#e6c476;color:#f5d78c;background:#354038}
 .hero-grid{margin-top:2.5cqw}
+
+.hero-ability-section{min-width:0;}.hero-ability-heading{display:flex;align-items:center;justify-content:space-between;gap:4px;margin:4px 0 8px;flex-wrap:wrap;}.hero-ability-heading h3{margin:0;font-size:14px;color:#e4c790;}.hero-ability-heading>span{font:12px/1.4 system-ui,sans-serif;color:#a9b8a4;}
+.hero-screen .hero-sample-stats{font:12px/1.5 system-ui,sans-serif;}.hero-screen .hero-sample-stats>div{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:8px;align-items:baseline;padding:7px 0;}.hero-sample-stats dt{white-space:normal;color:#bdc8b5;word-break:keep-all;}.hero-sample-stats dd{display:contents;}.hero-sample-stats dd strong{text-align:right;font-size:14px;font-weight:600;color:#eddaa6;}.hero-sample-stats dd small{grid-column:1/-1;text-align:right;display:block;font-size:12px;color:#94a890;overflow-wrap:anywhere;}
