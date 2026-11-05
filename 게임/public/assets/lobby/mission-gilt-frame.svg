@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+<defs><linearGradient id="gold" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse"><stop stop-color="#f3dda0"/><stop offset=".3" stop-color="#aa7939"/><stop offset=".56" stop-color="#dec084"/><stop offset="1" stop-color="#87602d"/></linearGradient><g id="corner" stroke="url(#gold)" stroke-width="1.2"><path d="M5 31V5h26M10 27V10h17M7 24c12 0 17-5 17-17M11 21c3-9 10-10 10-10M13 7l3 3-3 3-3-3z"/><path d="M5 32h3M32 5v3"/><path d="m23 16 3 4-3 4-3-4z" fill="#b38a49" stroke-width=".5"/></g></defs>
+<rect x="5" y="5" width="118" height="118" stroke="url(#gold)" stroke-width="1.2"/><rect x="10" y="10" width="108" height="108" stroke="#b08a4a" stroke-opacity=".4" stroke-width=".6"/>
+<use href="#corner"/><use href="#corner" transform="translate(128 0) rotate(90)"/><use href="#corner" transform="translate(128 128) rotate(180)"/><use href="#corner" transform="translate(0 128) rotate(270)"/>
+</svg>
