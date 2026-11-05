@@ -141,3 +141,5 @@ body.app-fixed-navigation .toast,body.app-fixed-navigation .hero-notice{bottom:c
 /* Reserve scrollbar space before long routes open, so centered UI stays put. */
 html:has(body.app-fixed-navigation){scrollbar-gutter:stable;}
 .app-bottom-nav button:active{transform:none;}
+
+.app-bottom-nav .selected:before{content:'';left:50%;right:auto;top:-7px;width:10px;height:10px;border-right:2px solid #ffda85;border-bottom:2px solid #ffda85;transform:translateX(-50%) rotate(45deg);filter:drop-shadow(0 0 3px #ffc05088);}
