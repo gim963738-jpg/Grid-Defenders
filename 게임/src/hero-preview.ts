@@ -47,7 +47,6 @@ export function mountHeroPreview() {
     const ability = `<section class="hero-ability-section" aria-label="${selected.name} 능력치"><div class="hero-ability-heading"><h3>능력치</h3>${selected.id==='bran'?'<span>표본 수치</span>':''}</div><dl class="hero-stats ${selected.id==='bran'?'hero-sample-stats':''}">${selected.id==='bran'?BRAN_STAT_SAMPLE.map(stat=>`<div data-stat="${stat.id}"><dt>${stat.name}</dt><dd><strong>${stat.value}</strong>${stat.note?`<small>${stat.note}</small>`:''}</dd></div>`).join(''):`<div><dt>⚔ 공격력</dt><dd>${selected.attack.toLocaleString()}</dd></div><div><dt>♜ 방어력</dt><dd>${selected.defense.toLocaleString()}</dd></div><div><dt>♡ 체력</dt><dd>${selected.hp.toLocaleString()}</dd></div>`}</dl></section>`;
     screen.innerHTML = `
       <header class="hero-header"><button data-action="back" aria-label="${isDetail?'영웅 목록으로 돌아가기':'로비로 돌아가기'}">‹</button><h1 tabindex="-1">${isDetail?'영웅 상세':'영웅'}</h1><div class="hero-wallet"><span>✦ <b>480</b></span><span>⚒ <b>0</b></span></div><button data-action="home" aria-label="로비 홈">⌂</button></header>
-      <nav class="hero-categories" aria-label="관리 분류"><button class="active" data-action="list" aria-current="page">영웅</button><button data-notice="병사 관리는 준비 중입니다.">병사</button><button data-notice="도감은 준비 중입니다.">도감</button></nav>
       ${isDetail ? `
       <section class="hero-showcase" aria-label="선택 영웅 상세">
         <div class="hero-illustration ${selected.id === 'aria' ? 'aria-full' : ''}">${selected.id === 'aria' ? artwork(17,151,520,500,'hero-full-art') : portrait(selected,'large-portrait')}</div>
