@@ -39,7 +39,6 @@ export function mountHeroPreview() {
   let sort = 'level';
   let filtersOpen = false;
   let detailTab = '능력치';
-  let selectedInventory:string|undefined;
   let isDetail = false;
   let listScroll = 0;
   let opener: HTMLElement | null = null;
@@ -61,7 +60,7 @@ export function mountHeroPreview() {
       <section class="hero-showcase" aria-label="선택 영웅 상세">
         <div class="hero-illustration ${selected.id === 'aria' ? 'aria-full' : ''}">${selected.id === 'aria' ? artwork(17,151,520,500,'hero-full-art') : portrait(selected,'large-portrait')}</div>
         <div class="hero-information"><span class="hero-role">${roleIcons[selected.role]} ${selected.role}${selected.role === '근접' ? ' 딜러' : ''}</span><p class="hero-affiliation"><span>소속</span><strong>${selected.affiliation??'미정'}</strong></p><h2>${selected.name}</h2><p class="hero-level">Lv. ${selected.level}<span><i style="width:${selected.level / 30 * 100}%"></i></span></p><div class="hero-stars" aria-label="5성">★★★★★</div><button class="hero-growth-button" data-action="growth">성장</button>
-        </div><div class="hero-detail-view" id="hero-detail-body" role="tabpanel" aria-labelledby="hero-detail-tab-${['능력치','스킬','장비'].indexOf(detailTab)}">${detailTab==='능력치'?ability:detailTab==='스킬'?renderHeroSkills(selected):renderHeroEquipment(selected,selectedInventory)}</div>
+        </div><div class="hero-detail-view" id="hero-detail-body" role="tabpanel" aria-labelledby="hero-detail-tab-${['능력치','스킬','장비'].indexOf(detailTab)}">${detailTab==='능력치'?ability:detailTab==='스킬'?renderHeroSkills(selected):renderHeroEquipment(selected)}</div>
       </section>
       ` : `
       <button class="hero-formation-button ${formationEditing?'is-editing':''}" data-action="formation" aria-pressed="${formationEditing}"><span>${formationEditing?'편성 완료':'편성하기'}</span><small>${slots.filter(Boolean).length} / 8</small><span aria-hidden="true">${formationEditing?'✓':'›'}</span></button>${formationEditing?'<p class="hero-formation-hint">영웅을 눌러 편성하거나 해제하세요.</p>':''}
@@ -94,7 +93,6 @@ export function mountHeroPreview() {
     if(button.dataset.notice){notice(button.dataset.notice);return;}
     if(button.dataset.action==='filters'){filtersOpen=!filtersOpen;rerender('[data-action="filters"]');return;}
     if(button.dataset.filter){filter=button.dataset.filter;rerender(`[data-filter="${filter}"]`);return;}
-    if(button.dataset.inventory){selectedInventory=button.dataset.inventory;rerender(`[data-inventory="${selectedInventory}"]`);return;}
     if(button.dataset.select){
       const hero=heroes.find(h=>h.id===button.dataset.select)!;if(!hero.owned){notice('아직 보유하지 않은 영웅입니다.');return;}
       if(formationEditing){
@@ -103,7 +101,7 @@ export function mountHeroPreview() {
         else{const empty=slots.indexOf(null);if(empty===-1){notice('최대 8명까지 편성할 수 있습니다.');return;}slots[empty]=hero.id;}
         updateRoster();rerender(`[data-select="${hero.id}"]`);return;
       }
-      listScroll=window.scrollY;detailTab='능력치';selectedInventory=undefined;location.hash=`heroes/${hero.id}`;return;
+      listScroll=window.scrollY;detailTab='능력치';location.hash=`heroes/${hero.id}`;return;
     }
   });
   screen.addEventListener('keydown',event=>{if(event.key==='Escape'&&formationEditing){formationEditing=false;rerender('[data-action="formation"]');}});
@@ -119,7 +117,7 @@ export function mountHeroPreview() {
     if(location.hash!=='#heroes')formationEditing=false;
     const wasDetail=isDetail;
     isDetail=Boolean(routeHero);
-    if(routeHero){if(routeHero.id!==selected.id||!wasDetail){detailTab='능력치';selectedInventory=undefined;}selected=routeHero;}
+    if(routeHero){if(routeHero.id!==selected.id||!wasDetail){detailTab='능력치';}selected=routeHero;}
     const isHero=location.hash==='#heroes'||Boolean(routeHero);
     lobby.hidden=isHero||location.hash==='#barracks'||location.hash==='#training'||(location.hash==='#specialty'||location.hash.startsWith('#specialty/'));
     screen.hidden=!isHero;
