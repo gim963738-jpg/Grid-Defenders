@@ -22,6 +22,7 @@ frame.insertAdjacentHTML('beforeend',`
   <svg id="live-links" viewBox="0 0 800 360" aria-hidden="true"></svg>
   <div id="live-drop-target" hidden aria-hidden="true"></div><div id="live-sale-target" hidden>여기로 끌어 판매 <b></b></div>
   <p id="live-notice" role="status"></p>`);
+const controls=el('live-controls');controls.hidden=true;controls.setAttribute('aria-label','전투 조작');el('app').append(controls);
 const wallet=document.querySelector<HTMLElement>('.inventory-actions .resource-wallet')!;
 wallet.id='live-wallet';wallet.setAttribute('aria-label','전투 재화');frame.append(wallet);
 const devArea=document.createElement('section');devArea.id='landscape-dev-area';devArea.setAttribute('aria-label','전투 개발자 도구');document.body.append(devArea);devArea.append(el('dev-tools'),el('dev-log'));
@@ -130,6 +131,7 @@ function renderHeroPanel(){
 }
 function render(){
   frame.dataset.menu=menu;tray.dataset.menu=menu;
+  controls.hidden=api.scene!=='defense'&&api.scene!=='boss';
   heroPanel.hidden=menu!=='hero'||tray.hidden||!interactive();
   if(!heroPanel.hidden)renderHeroPanel();
   if(gear!==null&&!g.gear.some(item=>item.id===gear))gear=null;
@@ -340,6 +342,10 @@ function beginVisualDrag(){
   dragFrame=requestAnimationFrame(scrollDrag);
 }
 
+controls.addEventListener('click',event=>{
+  const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-control]');
+  if(button&&!button.disabled)api[button.dataset.control as 'pause'|'speed'|'home']();
+},{signal});
 el('app').addEventListener('landscape-hero-selected',event=>{
   const id=(event as CustomEvent<{id:number}>).detail.id;
   if(!interactive()||!g.heroes().some(hero=>hero.id===id))return;
@@ -349,7 +355,6 @@ frame.addEventListener('click',event=>{
   if(performance.now()<suppressUntil){event.preventDefault();return;}
   const target=event.target as HTMLElement,b=target.closest<HTMLElement>('button,a');
   if(!b){if(target.closest('canvas')&&performance.now()<heroClickUntil&&heroAt(event.clientX,event.clientY)?.id===api.hero)return;if(!target.closest('#live-inventory,#live-tray,#live-hero-panel'))closeMenu();return;}
-  if(b.dataset.control){api[b.dataset.control as 'pause'|'speed'|'home']();return;}
   if(!interactive())return;
   if(b.dataset.menu){showMenu(b.dataset.menu as Menu);return;}
   if(b.dataset.liveUnit){
@@ -463,8 +468,8 @@ const clock=window.setInterval(()=>{
   if(observedRun!==api.runId||observedScene!==api.scene){observedRun=api.runId;observedScene=api.scene;closeMenu();}
   const wave=el('live-wave');wave.querySelector('strong')!.textContent=el('wave-number').textContent;
   wave.querySelector('b')!.textContent=el('wave-timer').textContent;wave.querySelector('small')!.textContent=`몬스터 ${el('enemies').textContent} / 20`;
-  frame.querySelector('[data-control=speed]')!.textContent=el('speed').textContent;
-  const pause=frame.querySelector('[data-control=pause]')!,paused=el('pause').getAttribute('aria-pressed')==='true';
+  controls.querySelector('[data-control=speed]')!.textContent=el('speed').textContent;
+  const pause=controls.querySelector('[data-control=pause]')!,paused=el('pause').getAttribute('aria-pressed')==='true';
   pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'전투 재개':'일시정지');pause.setAttribute('aria-pressed',String(paused));
   if(!api.active||api.scene!=='defense'){cancelDrag();tray.hidden=true;inventory.hidden=true;heroPanel.hidden=true;}
   render();
