@@ -110,8 +110,9 @@ function render(){
   const detail=el('live-gear-detail');
   detail.textContent=selected?`${selected.def.name} · ${selected.owner===null?'공용 가방':g.gearState(selected).reason}`:plan.length?`인접 조합 ${plan.length}개 · 모루 ${plan.length}개 필요`:'파랑: 조합 후보 · 노랑: 인접 조합';
   detail.title=selected?`${selected.def.description} · 두 번 클릭/탭 또는 R: 회전`:detail.textContent;
-  el('live-notice').hidden=menu==='hero';
-  el('live-notice').textContent=g.message;
+  const startupNotice=g.message==='게임을 시작 상태로 초기화했습니다.';
+  el('live-notice').hidden=menu==='hero'||startupNotice;
+  el('live-notice').textContent=startupNotice?'':g.message;
   actions.querySelectorAll<HTMLButtonElement>('button').forEach(button=>button.disabled=!interactive());
   drawConnections();
 }
