@@ -4,6 +4,7 @@ import {itemArt,hasItemArt} from './itemArt';
 import {battleResolution} from './renderQuality';
 import {loadHeroArt,heroImage,heroPortrait,sheetHero,assassinSkillIcon} from './heroArt';
 import {loadSoldierArt,soldierImage} from './soldierArt';
+import {loadSlimeArt} from './slimeArt';
 import {ASSASSIN} from './assassinCombat';
 import {GameRun,FAILURE_TEXT,RUN_LIMITS,type RunMode,type RunFailure} from './gameRun';
 import {upcomingWaveWarning} from './waveWarning';
@@ -928,7 +929,7 @@ async function start():Promise<void> {
   await app.init({width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,background:'#172620',backgroundAlpha:LANDSCAPE_BATTLE?0:1,preference:'webgl',resolution:battleResolution(devicePixelRatio),autoDensity:true,antialias:true});
   el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','숲 순환 전장, 상단 정보와 아군 배치 영역');el('status').hidden=true;
   el('battlefield').style.setProperty('--field-top',`${DEFENSE_FIELD.top/DEFENSE_FIELD.height*100}%`);
-  await Promise.all([loadHeroArt(),loadSoldierArt()]);
+  await Promise.all([loadHeroArt(),loadSoldierArt(),loadSlimeArt()]);
   const forestTexture=await Assets.load<Texture>(FOREST_TERRAIN_URL);
   const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
   const meleeTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/melee-idle.png`);

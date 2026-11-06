@@ -2,6 +2,7 @@ import {smoothTexture} from './renderQuality';
 import {skillFramePlacement} from './skillVisual';
 import {heroFrame,assassinArt} from './heroArt';
 import {soldierFrame,positionSoldier} from './soldierArt';
+import {slimeFrame} from './slimeArt';
 import {ASSASSIN,assassinFrame,assassinBasicTrail} from './assassinCombat';
 import type {UnitKind} from './defenseConfig';
 import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_ALPHA_MATRIX} from './bladeSkill';
@@ -38,6 +39,9 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const movementPreview=new Graphics();movementPreview.eventMode='none';root.addChild(movementPreview);
   const soldierPreview=new Sprite(Texture.EMPTY);soldierPreview.eventMode='none';soldierPreview.anchor.set(.5,1);soldierPreview.alpha=.45;soldierPreview.visible=false;root.addChild(soldierPreview);
   const assassinTrails=new Graphics();assassinTrails.eventMode='none';root.addChild(assassinTrails);
+  const enemyShadows=new Graphics();enemyShadows.eventMode='none';root.addChild(enemyShadows);
+  const slimeLayer=new Container();slimeLayer.eventMode='none';root.addChild(slimeLayer);
+  const slimeSprites=new Map<number,Sprite>();
   const actors=new Graphics();root.addChild(actors);
   actors.eventMode='none';
   const heroSprites:Partial<Record<UnitKind,Sprite>>={ranged:new Sprite(rangedTexture),melee:new Sprite(meleeTexture)};
@@ -68,6 +72,8 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   return {
     draw(selectedId:number|null,pending:boolean,movement?:{id:number;slot:number}) {
       actors.clear();selected.clear();effects.clear();assassinTrails.clear();
+      enemyShadows.clear();
+      for(const [id,sprite] of slimeSprites)if(!game.enemies.some(enemy=>enemy.id===id&&!enemy.named&&!enemy.bounty)){sprite.destroy();slimeSprites.delete(id);}
       skillBars.clear();skillLabels.forEach(t=>t.visible=false);
       Object.values(heroSprites).forEach(sprite=>sprite.visible=false);iceEffects.clear();
       movementPreview.clear();
@@ -143,18 +149,25 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         curve().stroke({width:1.1,color:0xffd4db,alpha:trail.alpha,cap:'round'});
       }
       for(const [index,e] of game.enemies.entries()) {
-        actors.ellipse(e.x,e.y+8,11,4).fill({color:0x142419,alpha:0.22});
-        actors.ellipse(e.x,e.y+7,8,2.6).fill({color:0x0f1c16,alpha:0.25});
+        enemyShadows.ellipse(e.x,e.y+8,11,4).fill({color:0x142419,alpha:0.22});
+        enemyShadows.ellipse(e.x,e.y+7,8,2.6).fill({color:0x0f1c16,alpha:0.25});
         const radius=enemyRadius(e),color=e.bounty?0xb87a30:e.defenseType==='physical'?0x518db2:e.defenseType==='magic'?0x9660b4:0xbc6560;
-        actors.roundRect(e.x-radius,e.y-radius,radius*2,radius*2,radius*.55).fill(color).stroke({width:1.25,color:e.bounty||e.named?0xffdc73:0x394550});
-        if(e.bounty)actors.moveTo(e.x-8,e.y-12).lineTo(e.x-8,e.y-18).lineTo(e.x-2,e.y-12).moveTo(e.x+8,e.y-12).lineTo(e.x+8,e.y-18).lineTo(e.x+2,e.y-12).stroke({width:3,color:0xffdc73});
-        if(e.named)actors.moveTo(e.x-10,e.y-radius-1).lineTo(e.x-11,e.y-radius-7).lineTo(e.x-5,e.y-radius-4).lineTo(e.x,e.y-radius-10).lineTo(e.x+5,e.y-radius-4).lineTo(e.x+11,e.y-radius-7).lineTo(e.x+10,e.y-radius-1).closePath().fill(0xffdc73);
-        actors.roundRect(e.x-radius+2,e.y-radius+2,radius*2-4,radius*.6,radius*.3).fill({color:0xffffff,alpha:.12});
-        actors.ellipse(e.x-3.5,e.y-1.5,1.3,1.8).ellipse(e.x+3.5,e.y-1.5,1.3,1.8).fill(0xffdfac);
-        actors.moveTo(e.x-2,e.y+3).quadraticCurveTo(e.x,e.y+4.4,e.x+2,e.y+3).stroke({width:.8,color:0x30252d,alpha:.8});
-        const bar=radius+2;
-        actors.roundRect(e.x-bar,e.y-radius-5,bar*2,3,1.2).fill(0x332c29);
-        actors.roundRect(e.x-bar,e.y-radius-5,bar*2*Math.max(0,e.hp/e.maxHp),3,1.2).fill(0xe4a27c);
+        const art=slimeFrame(e,game.elapsed);
+        if(art){
+          let sprite=slimeSprites.get(e.id);
+          if(!sprite){sprite=new Sprite(art.texture);sprite.eventMode='none';slimeLayer.addChild(sprite);slimeSprites.set(e.id,sprite);}
+          sprite.label=`slime-${art.palette}-${e.id}`;sprite.texture=art.texture;sprite.anchor.set(art.anchorX,art.anchorY);sprite.scale.set(art.scale);sprite.position.set(e.x,e.y+radius);
+        }else{
+          actors.roundRect(e.x-radius,e.y-radius,radius*2,radius*2,radius*.55).fill(color).stroke({width:1.25,color:e.bounty||e.named?0xffdc73:0x394550});
+          if(e.bounty)actors.moveTo(e.x-8,e.y-12).lineTo(e.x-8,e.y-18).lineTo(e.x-2,e.y-12).moveTo(e.x+8,e.y-12).lineTo(e.x+8,e.y-18).lineTo(e.x+2,e.y-12).stroke({width:3,color:0xffdc73});
+          if(e.named)actors.moveTo(e.x-10,e.y-radius-1).lineTo(e.x-11,e.y-radius-7).lineTo(e.x-5,e.y-radius-4).lineTo(e.x,e.y-radius-10).lineTo(e.x+5,e.y-radius-4).lineTo(e.x+11,e.y-radius-7).lineTo(e.x+10,e.y-radius-1).closePath().fill(0xffdc73);
+          actors.roundRect(e.x-radius+2,e.y-radius+2,radius*2-4,radius*.6,radius*.3).fill({color:0xffffff,alpha:.12});
+          actors.ellipse(e.x-3.5,e.y-1.5,1.3,1.8).ellipse(e.x+3.5,e.y-1.5,1.3,1.8).fill(0xffdfac);
+          actors.moveTo(e.x-2,e.y+3).quadraticCurveTo(e.x,e.y+4.4,e.x+2,e.y+3).stroke({width:.8,color:0x30252d,alpha:.8});
+        }
+        const bar=radius+2,barY=art?e.y-21:e.y-radius-5;
+        actors.roundRect(e.x-bar,barY,bar*2,3,1.2).fill(0x332c29);
+        actors.roundRect(e.x-bar,barY,bar*2*Math.max(0,e.hp/e.maxHp),3,1.2).fill(0xe4a27c);
         if(!enemyLabels[index]){const t=new Text({style:{fontFamily:'system-ui',fontSize:8,fill:0xf3e5c2,stroke:{color:0x14201d,width:2}}});t.anchor.set(0.5);t.eventMode='none';root.addChild(t);enemyLabels.push(t);}
         const label=enemyLabels[index];label.visible=true;
         label.text=e.named?e.name:e.bounty?'현상금':e.defenseType==='physical'?'물방':e.defenseType==='magic'?'마방':'일반';
