@@ -46,6 +46,7 @@ let lastTap:{id:number;time:number}|null=null,rotationAnimation:Animation|null=n
 let observedRun=api.runId,observedScene=api.scene;
 let heroClickUntil=0,pendingHeroFocus:number|null=null;
 let heroScrollReady=false,heroWheelTimer:number|undefined;
+let renderedHeroLimit:boolean|undefined;
 
 function interactive(){return api.ready&&api.active&&api.scene==='defense'&&el('app').getAttribute('aria-busy')!=='true';}
 function setHtml(node:HTMLElement,html:string){
@@ -81,14 +82,22 @@ const heroCards:[UnitKind,string,number][]=[['melee','아리아',1],['ranged','�
   ['healer','셀린',2],['arcanist','벨라',3],['assassin','제노',6],['melee','아리아',1],['ranged','카이',4],['healer','리나',5]];
 // Three fixed copies provide a buffer on both sides; selection/deployment uses the original card key.
 const HERO_CARD_STEP=74,HERO_CYCLE=heroCards.length*HERO_CARD_STEP;
+function heroLimitReached(){return g.heroes().length>=RULES.heroLimit;}
+function visibleHeroCards(){
+  const entries=heroCards.map(([kind,name,portrait],index)=>({kind,name,portrait,index}));
+  if(!heroLimitReached())return entries;
+  const deployed=new Set(g.heroes().map(hero=>hero.kind));
+  return entries.filter(entry=>deployed.delete(entry.kind));
+}
 function loopHeroLeft(left:number){return HERO_CYCLE+((left-HERO_CYCLE)%HERO_CYCLE+HERO_CYCLE)%HERO_CYCLE;}
 function scrollHeroes(left:number){
+  if(heroLimitReached()){tray.scrollTo({left:0,behavior:'instant'});return;}
   const wrapped=loopHeroLeft(left);
   if(drag?.scrolling)drag.scroll+=wrapped-left;
   tray.scrollTo({left:wrapped,behavior:'instant'});
 }
 function syncHeroCopies(){
-  if(menu!=='hero'||tray.hidden||!heroScrollReady)return;
+  if(menu!=='hero'||tray.hidden||!heroScrollReady||heroLimitReached())return;
   const buttons=[...tray.querySelectorAll<HTMLButtonElement>('[data-live-card]')],center=tray.scrollLeft+tray.clientWidth/2;
   for(let i=0;i<heroCards.length;i++){
     const copies=buttons.filter(button=>button.dataset.heroIndex===String(i));
@@ -102,6 +111,7 @@ function syncHeroCopies(){
 }
 function snapHeroes(){
   tray.classList.remove('scrolling');
+  if(heroLimitReached()){scrollHeroes(0);return;}
   tray.scrollTo({left:Math.round(tray.scrollLeft/HERO_CARD_STEP)*HERO_CARD_STEP,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
 }
 function emblem(kind:UnitKind){
@@ -158,6 +168,17 @@ function renderHeroPanel(){
 }
 function render(){
   frame.dataset.menu=menu;tray.dataset.menu=menu;
+  const heroEntries=visibleHeroCards(),atHeroLimit=heroLimitReached();
+  if(menu==='hero'){
+    tray.dataset.heroLoop=String(!atHeroLimit);
+    if(renderedHeroLimit!==atHeroLimit){
+      clearTimeout(heroWheelTimer);cancelDrag();heroScrollReady=false;renderedHeroLimit=atHeroLimit;
+    }
+    if(atHeroLimit&&selectedCard&&!heroEntries.some(entry=>`${entry.kind}-${entry.index}`===selectedCard)){
+      const kind=heroCards.find(([kind],index)=>`${kind}-${index}`===selectedCard)?.[0],entry=heroEntries.find(entry=>entry.kind===kind);
+      selectedCard=entry?`${entry.kind}-${entry.index}`:null;
+    }
+  }
   controls.hidden=api.scene!=='defense'&&api.scene!=='boss';
   heroPanel.hidden=menu!=='hero'||tray.hidden||!interactive();
   if(!heroPanel.hidden)renderHeroPanel();
@@ -169,8 +190,9 @@ function render(){
     setHtml(bagBoard,board(null,INVENTORY_CELL));
     if(menu==='soldier')setHtml(tray,(['guard','archer','mage'] as UnitKind[]).map((kind,i)=>card(kind,i)).join(''));
     if(menu==='hero'){
-      setHtml(tray,[0,1,2].map(cycle=>heroCards.map(([kind,name,portrait],i)=>card(kind,i,name,portrait,cycle)).join('')).join(''));
-      if(!tray.hidden&&!heroScrollReady){heroScrollReady=true;scrollHeroes(HERO_CYCLE);}
+      const cycles=atHeroLimit?[0]:[0,1,2];
+      setHtml(tray,cycles.map(cycle=>heroEntries.map(entry=>card(entry.kind,entry.index,entry.name,entry.portrait,cycle)).join('')).join(''));
+      if(!tray.hidden&&!heroScrollReady){heroScrollReady=true;scrollHeroes(atHeroLimit?0:HERO_CYCLE);}
     }
     if(menu==='shop')setHtml(tray,g.shop.map((item,i)=>item?`<div class="live-offer-wrap" data-offer-card="offer-${i}"><button class="live-buy" data-live-buy="${i}" aria-label="${item.name} ${g.shopPrice(i)}골드 구매" hidden ${g.gold<g.shopPrice(i)?'disabled':''}>구매</button><button class="live-offer" data-live-offer="${i}" aria-label="${item.name} ${g.shopPrice(i)}골드 선택" aria-pressed="false"><span class="live-item-art">${footprintArt(item)}</span><small>${g.shopPrice(i)}G</small></button></div>`:'<button disabled aria-label="구매 완료">구매 완료</button>').join('')+'<button data-action="reroll">새로고침<br>20G</button>');
   }
@@ -491,11 +513,13 @@ frame.addEventListener('focusin',event=>{
 frame.addEventListener('focusout',()=>{if(!drag){focusPick=null;drawConnections();}},{signal});
 tray.addEventListener('scroll',()=>{
   if(menu!=='hero'||tray.hidden||!heroScrollReady)return;
-  if(tray.scrollLeft<HERO_CYCLE||tray.scrollLeft>=HERO_CYCLE*2)scrollHeroes(tray.scrollLeft);
+  if(heroLimitReached()){if(tray.scrollLeft)scrollHeroes(0);return;}
+  // Fractional display scales can round a snapped card across the exact cycle boundary.
+  if(tray.scrollLeft<HERO_CYCLE-HERO_CARD_STEP/2||tray.scrollLeft>=HERO_CYCLE*2+HERO_CARD_STEP/2)scrollHeroes(tray.scrollLeft);
   syncHeroCopies();
 },{signal});
 tray.addEventListener('wheel',event=>{
-  if(menu!=='hero'||tray.hidden||drag||!interactive())return;
+  if(menu!=='hero'||tray.hidden||drag||!interactive()||heroLimitReached())return;
   const delta=Math.abs(event.deltaX)>Math.abs(event.deltaY)?event.deltaX:event.deltaY;
   if(!delta)return;event.preventDefault();clearTimeout(heroWheelTimer);tray.classList.add('scrolling');
   scrollHeroes(tray.scrollLeft+delta*(event.deltaMode===1?16:event.deltaMode===2?tray.clientWidth:1));
