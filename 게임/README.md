@@ -1,5 +1,5 @@
 # 가로형 실제 전투 (WEB-151)
-로비 전투시작은 `battle-landscape.html?battle=normal&from=camp`로 진입합니다. 원래 세로 전투는 `index.html?battle=manual`, 독립 시안은 `battle-landscape-preview.html`에 보존했습니다.
+로비 전투시작은 `battle-landscape.html?battle=normal&from=camp`로 진입합니다. 원래 세로 전투는 `index.html?battle=manual`, 독립 시안은 `battle-landscape-preview.html?mock=1`에 보존했습니다.
 가로 모드만800×360/5×4 배치를 사용합니다. 상점과 영웅 장비·공용가방은 단일 기존 Defense 모델을 공유합니다. 영웅 소환 최대3명, 구매/판매/연결효과/스킬/보스전/보상 규칙은 기존 모델을 따릅니다.
 
 # 로비·전투 연결 현황 (WEB-148, 2026-11-05)

@@ -12,3 +12,8 @@ body.landscape-live #boss-screen{width:800px;min-height:360px}body.landscape-liv
 body.landscape-live #app[data-battle-scene=boss] #battle-shell-header{display:flex!important}
 
 body.landscape-live #bounty-summon{left:12px;right:auto;top:72px;width:64px;height:40px}
+
+/* Keep the existing live developer controls below the game frame. */
+body.landscape-live #landscape-dev-area{width:800px;margin:16px auto;display:grid;grid-template-columns:392px 392px;gap:16px;align-items:start}
+body.landscape-live #landscape-dev-area #dev-tools,body.landscape-live #landscape-dev-area #dev-log{display:block!important;position:static!important;inset:auto!important;width:392px;min-width:0;max-width:none;max-height:none;height:auto;margin:0;padding:12px;overflow:visible;transform:none}
+body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
