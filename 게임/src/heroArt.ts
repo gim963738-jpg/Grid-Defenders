@@ -3,11 +3,12 @@ import {Texture} from 'pixi.js';
 import type {UnitKind} from './defenseConfig';
 import {createSkillFrame,type SkillFrameArt} from './skillVisual';
 import {assassinFrameSpec,type AssassinArtRow} from './assassinVisual';
+import {loadBlondArt,blondFrame,blondImage,BLOND_PORTRAIT_URL} from './blondArt';
 export const HERO_SHEET_URL=`${import.meta.env.BASE_URL}assets/heroes/hero-roster-sheet.png`;
 export const MELEE_SHEET_URL=`${import.meta.env.BASE_URL}assets/heroes/melee-motion-sheet.png`;
 export const ASSASSIN_SHEET_URL=`${import.meta.env.BASE_URL}assets/effects/assassin-sheet.png`;
 const rows:Partial<Record<UnitKind,number>>={tank:0,arcanist:1,assassin:2,healer:3};
-export const sheetHero=(kind:UnitKind)=>kind==='melee'||rows[kind]!==undefined;
+export const sheetHero=(kind:UnitKind)=>kind==='melee'||kind==='blond'||rows[kind]!==undefined;
 type FrameArt={url:string;texture:Texture};
 const frames=new Map<string,FrameArt>();let heroSource:HTMLImageElement,assassinSource:HTMLImageElement;
 const skillFrames=new Map<string,SkillFrameArt>();
@@ -22,7 +23,7 @@ function cut(key:string,image:HTMLImageElement,x:number,y:number,w:number,h:numb
 }
 function load(url:string):Promise<HTMLImageElement>{return new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=reject;image.src=url;});}
 export async function loadHeroArt():Promise<void>{
- const sources=await Promise.all([load(HERO_SHEET_URL),load(ASSASSIN_SHEET_URL),load(MELEE_SHEET_URL)]);
+ const sources=await Promise.all([load(HERO_SHEET_URL),load(ASSASSIN_SHEET_URL),load(MELEE_SHEET_URL),loadBlondArt()]);
  [heroSource,assassinSource]=sources;
  for(const pose of ['idle','walk'] as const)for(let i=0;i<(pose==='idle'?4:8);i++){
   const idle=pose==='idle',x=idle?180+i*390:38+i*216,y=idle?96:552,w=idle?240:195,h=idle?300:240,scale=idle?1:1.25;
@@ -42,11 +43,13 @@ export async function loadHeroArt():Promise<void>{
   cut(`${kind}:${i}`,heroSource,x,row!*200+24,w,158,256,180,128-(attack?90:56),12);
  }
 }
-export function heroFrame(kind:UnitKind,pose:'idle'|'walk'|'attack'='idle',index=0):FrameArt|undefined {if(kind==='melee')return frames.get(`melee:${pose==='walk'?'walk':'idle'}:${index%(pose==='walk'?8:4)}`);return frames.get(`${kind}:${pose==='attack'?4:pose==='walk'?index%4:0}`);}
+export function heroFrame(kind:UnitKind,pose:'idle'|'walk'|'attack'='idle',index=0):FrameArt|undefined {if(kind==='blond')return blondFrame();if(kind==='melee')return frames.get(`melee:${pose==='walk'?'walk':'idle'}:${index%(pose==='walk'?8:4)}`);return frames.get(`${kind}:${pose==='attack'?4:pose==='walk'?index%4:0}`);}
 export function heroImage(kind:UnitKind,pose:'idle'|'walk'|'attack'='idle',index=0):string {
+ if(kind==='blond')return blondImage();
  const art=heroFrame(kind,pose,index);return `<img src="${art?.url??`${import.meta.env.BASE_URL}assets/heroes/${kind}-idle.png`}" alt="" draggable="false">`;
 }
 export function heroPortrait(kind:UnitKind):string {
+ if(kind==='blond')return `<img class="blond-portrait" src="${BLOND_PORTRAIT_URL}" alt="" draggable="false">`;
  const row=rows[kind];return row===undefined?`<span class="${kind}-portrait"></span>`:`<svg class="hero-sheet-portrait" viewBox="240 ${row*200+3} 500 194" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="${HERO_SHEET_URL}" width="1536" height="801"/></svg>`;
 }
 export function assassinArt(row:AssassinArtRow,frame:number):SkillFrameArt|undefined {

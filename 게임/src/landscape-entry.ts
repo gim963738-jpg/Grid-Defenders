@@ -2,6 +2,7 @@ import './mobile-ui.css';
 import {UNITS,SLOTS,GRID,BAG_GRID,RULES,rotated,type UnitKind} from './defenseConfig';
 import {itemArt,hasItemArt} from './itemArt';
 import {COMMANDER_SKILL_ICON} from './bossSkillIcons';
+import {BLOND_PORTRAIT_URL} from './blondArt';
 import {inventoryPlacement,commitInventoryPlacement,pickedItem,combinationPartners,inventoryCombinationLinks,type InventoryPick,type InventoryPlacement} from './landscape-inventory';
 const params=new URLSearchParams(location.search);
 if(!params.has('battle')){params.set('battle','normal');params.set('from','camp');history.replaceState(null,'',`${location.pathname}?${params}`);}
@@ -92,7 +93,7 @@ function showMenu(value:Menu,heroId:number|null=null){
 
 // Presentation names/crops only: no lobby roster, levels or equipment are imported.
 const heroCards:[UnitKind,string,number][]=[['melee','아리아',1],['ranged','카이',4],['tank','브란',0],
-  ['healer','셀린',2],['arcanist','벨라',3],['assassin','제노',6],['melee','아리아',1],['ranged','카이',4],['healer','리나',5]];
+  ['healer','셀린',2],['arcanist','벨라',3],['assassin','제노',6],['melee','아리아',1],['ranged','카이',4],['healer','리나',5],['blond','금발 전사',0]];
 // Three fixed copies provide a buffer on both sides; selection/deployment uses the original card key.
 const HERO_CARD_STEP=74,HERO_CYCLE=heroCards.length*HERO_CARD_STEP;
 function heroLimitReached(){return g.heroes().length>=RULES.heroLimit;}
@@ -137,7 +138,8 @@ function card(kind:UnitKind,index:number,name?:string,portrait=0,cycle=0){
   const d=UNITS[kind],key=`${kind}-${index}`;
   if(!d.hero)return `<button class="live-unit-card live-soldier-card" data-live-unit="${kind}" data-live-card="${key}" aria-label="${d.name} ${d.cost}골드 소환" aria-pressed="false"><span class="class-emblem" title="${d.name}">${emblem(kind)}</span><span class="soldier-card-body">${api.unitArt(kind)}</span><small class="soldier-cost">${d.cost}G</small></button>`;
   const x=[39,266,492,719][portrait%4],y=portrait<4?968:1223;
-  return `<button class="live-unit-card live-hero-card" data-live-unit="${kind}" data-live-card="${key}" data-hero-index="${index}" data-hero-cycle="${cycle}" aria-label="${name} · ${d.name} 선택" aria-pressed="false"><svg class="live-card-portrait" viewBox="${x} ${y} 192 108" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="${import.meta.env.BASE_URL}assets/lobby/hero-concept.png" width="948" height="1659"/></svg><span class="hero-nameplate">${name}</span></button>`;
+  const image=kind==='blond'?`<img class="live-card-portrait" src="${BLOND_PORTRAIT_URL}" alt="" draggable="false">`:`<svg class="live-card-portrait" viewBox="${x} ${y} 192 108" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="${import.meta.env.BASE_URL}assets/lobby/hero-concept.png" width="948" height="1659"/></svg>`;
+  return `<button class="live-unit-card live-hero-card" data-live-unit="${kind}" data-live-card="${key}" data-hero-index="${index}" data-hero-cycle="${cycle}" aria-label="${name} · ${d.name} 선택" aria-pressed="false">${image}<span class="hero-nameplate">${name}</span></button>`;
 }
 function footprintArt(def:Parameters<typeof itemArt>[0],turns=0){
   if(hasItemArt(def))return itemArt(def,turns);

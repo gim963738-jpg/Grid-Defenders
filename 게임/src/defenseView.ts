@@ -3,6 +3,7 @@ import {skillFramePlacement} from './skillVisual';
 import {heroFrame,assassinArt} from './heroArt';
 import {soldierFrame,positionSoldier} from './soldierArt';
 import {slimeFrame} from './slimeArt';
+import {blondFrame,blondDirection,blondPlacement} from './blondArt';
 import {ASSASSIN,assassinFrame,assassinBasicTrail} from './assassinCombat';
 import type {UnitKind} from './defenseConfig';
 import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_ALPHA_MATRIX} from './bladeSkill';
@@ -45,7 +46,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const actors=new Graphics();root.addChild(actors);
   actors.eventMode='none';
   const heroSprites:Partial<Record<UnitKind,Sprite>>={ranged:new Sprite(rangedTexture),melee:new Sprite(meleeTexture)};
-  for(const kind of ['melee','tank','healer','arcanist','assassin'] as const){const art=heroFrame(kind);if(art)heroSprites[kind]=new Sprite(art.texture);}
+  for(const kind of ['melee','tank','healer','arcanist','assassin','blond'] as const){const art=heroFrame(kind);if(art)heroSprites[kind]=new Sprite(art.texture);}
   for(const sprite of Object.values(heroSprites)){
     sprite.anchor.set(.5,1);sprite.eventMode='none';sprite.height=57;sprite.scale.x=sprite.scale.y;sprite.visible=false;root.addChild(sprite);
   }
@@ -123,6 +124,13 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         }
         if(heroSprites[u.kind]){
           const sprite=heroSprites[u.kind]!;sprite.visible=true;sprite.position.set(p.x,p.y+12);
+          if(u.kind==='blond'){
+            const enemies=game.enemies.filter(e=>e.hp>0),range=game.stats(u).range;
+            const target=enemies.filter(e=>Math.hypot(e.x-p.x,e.y-p.y)<=range).sort((a,b)=>b.distance-a.distance)[0]??enemies.sort((a,b)=>Math.hypot(a.x-p.x,a.y-p.y)-Math.hypot(b.x-p.x,b.y-p.y))[0];
+            const art=blondFrame(target?blondDirection(target.x-p.x,target.y-p.y):2);
+            if(art){const v=blondPlacement(art,p.x,p.y+12,57);sprite.texture=art.texture;sprite.anchor.set(v.anchorX,v.anchorY);sprite.width=v.width;sprite.height=v.height;}
+            continue;
+          }
           const action=game.assassinActions.find(a=>a.sourceId===u.id&&!a.cancelled&&(a.kind==='basic'||a.kind==='wave'&&assassinFrame(a)<=9));
           const motion=action?assassinArt(action.kind==='basic'?'basic':'wave',assassinFrame(action)):undefined;
           const art=motion??heroFrame(u.kind,u.cooldown>1/game.stats(u).rate-.2?'attack':'idle',Math.floor(game.elapsed*5));

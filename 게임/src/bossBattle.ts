@@ -1,4 +1,5 @@
 import {LANDSCAPE_BATTLE} from './defenseConfig';
+import {blondDirection,type BlondWalk} from './blondMotion';
 import {criticalAttack} from './critical';
 import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinPosition,inAssassinPath,type AssassinAction,type AssassinImpact} from './assassinCombat';
 import {combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from './armorBreak';
@@ -13,6 +14,7 @@ export interface BossTuning {healthScale:number;attackScale:number;}
 export interface BossAlly {id:number;kind:UnitKind;slot:number;level:number;stats:ReturnType<Defense['stats']>;}
 export function waveBossRoster(game:Defense):BossAlly[]{return game.units.map(u=>({id:u.id,kind:u.kind,slot:u.slot,level:u.level,stats:{...game.stats(u)}}));}
 export interface BossActor {
+  walk?:BlondWalk;
   normalDamageMultiplier?:number;bossDamageMultiplier?:number;armorBreakRemaining?:number;
   level?:number;sourceSlot?:number;regen?:number;critChance?:number;critMultiplier?:number;physicalArmor?:number;magicArmor?:number;
   id:string;side:'ally'|'enemy';kind:UnitKind|'boss'|'retainer';name:string;
@@ -56,8 +58,9 @@ export class BossBattle {
     for(const u of this.roster){
       const d=UNITS[u.kind],s=u.stats,col=LANDSCAPE_BATTLE?3-u.slot%4:3-Math.floor(u.slot/4),row=LANDSCAPE_BATTLE?Math.floor(u.slot/4)+1:u.slot%4+2;
       this.actors.push({id:`ally-${u.id}`,side:'ally',kind:u.kind,name:d.name,level:u.level,sourceSlot:u.slot,
+        ...(u.kind==='blond'?{walk:{direction:2,moving:false,elapsed:0}}:{}),
         x:(col+.5)*70.3125,y:(row+.5)*70.3125,hp:s.hp,maxHp:s.hp,attack:s.attack,
-        rate:s.rate,range:u.kind==='assassin'?80:s.range*(u.kind==='ranged'||u.kind==='arcanist'?1.5:1),speed:u.kind==='guard'||u.kind==='tank'||u.kind==='melee'?64:53,
+        rate:s.rate,range:u.kind==='assassin'?80:s.range*(u.kind==='ranged'||u.kind==='arcanist'?1.5:1),speed:u.kind==='guard'||u.kind==='tank'||u.kind==='melee'||u.kind==='blond'?64:53,
         rank:Math.floor(u.slot/4),damageType:s.damageType,defenseType:'normal',cooldown:.25,
         normalDamageMultiplier:s.normalDamageMultiplier,bossDamageMultiplier:s.bossDamageMultiplier,regen:s.regen,physicalArmor:s.physicalArmor,magicArmor:s.magicArmor,critChance:s.critChance,critMultiplier:s.critMultiplier});
     }
@@ -133,6 +136,7 @@ export class BossBattle {
   tick(seconds:number):void {
     const dt=Math.min(.05,Math.max(0,seconds));
     if(this.result!=='fighting'){
+      for(const actor of this.actors)if(actor.walk){actor.walk.moving=false;actor.walk.elapsed=0;}
       // Finish the final sword flash without extending combat time or dealing damage.
       for(const swing of this.swordAttacks)swing.age+=dt;
       this.swordAttacks=this.swordAttacks.filter(swordAlive);
@@ -141,6 +145,7 @@ export class BossBattle {
       this.assassinActions=this.assassinActions.filter(assassinAlive);return;
     }
     this.elapsed+=dt;
+    for(const actor of this.actors)if(actor.walk)actor.walk.moving=false;
     for(const actor of this.actors)tickArmorBreak(actor,dt);
     for(const impact of this.assassinImpacts)impact.life-=dt;this.assassinImpacts=this.assassinImpacts.filter(i=>i.life>0);
     this.commanderCooldown=Math.max(0,this.commanderCooldown-dt);
@@ -204,14 +209,17 @@ export class BossBattle {
       actor.cooldown=Math.max(0,actor.cooldown-dt);
       if(this.assassinActions.some(a=>a.sourceId===actor.id&&a.kind==='boss'))continue;
       const dx=target.x-actor.x,dy=target.y-actor.y,dist=Math.hypot(dx,dy);
+      if(actor.walk)actor.walk.direction=blondDirection(dx,dy,actor.walk.direction);
       if(dist>actor.range){
         const step=Math.min(actor.speed*dt,dist-actor.range);
         actor.x+=dx/dist*step;actor.y+=dy/dist*step;
+        if(actor.walk&&step>0){actor.walk.moving=true;actor.walk.elapsed+=dt;}
       } else if(actor.cooldown<=0){
         this.strike(actor,target,damage);
         actor.cooldown=1/actor.rate;
       }
     }
+    for(const actor of this.actors)if(actor.walk&&!actor.walk.moving)actor.walk.elapsed=0;
     for(const cast of this.fireCasts){
       const target=live.find(a=>a.id===cast.targetId),beats=advanceFire(cast,dt,target);
       for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.tx,victim.y-cast.ty)<=FIRE_SKILL.radius){

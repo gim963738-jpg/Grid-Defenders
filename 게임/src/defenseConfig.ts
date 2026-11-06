@@ -7,7 +7,7 @@ export type DamageType = 'physical' | 'magic';
 export type DefenseType = 'normal' | 'physical' | 'magic';
 export const DAMAGE_LABEL:Record<DamageType,string>={physical:'물리',magic:'마법'};
 export const DEFENSE_LABEL:Record<DefenseType,string>={normal:'일반형',physical:'물리 방어형',magic:'마법 방어형'};
-export type UnitKind = 'guard' | 'archer' | 'mage' | 'tank' | 'melee' | 'ranged' | 'healer' | 'arcanist' | 'assassin';
+export type UnitKind = 'guard' | 'archer' | 'mage' | 'tank' | 'melee' | 'ranged' | 'healer' | 'arcanist' | 'assassin' | 'blond';
 export interface UnitDef { name: string; icon: string; hero: boolean; cost: number;
   attack: number; damageType:DamageType; rate: number; range: number; hp: number; armor: number; magicArmor:number; color: number; }
 export const UNITS: Record<UnitKind, UnitDef> = {
@@ -20,6 +20,8 @@ export const UNITS: Record<UnitKind, UnitDef> = {
   healer: { damageType:'magic',magicArmor:35,name:'힐러',icon:'빛',hero:true,cost:0,attack:35,rate:1,range:210,hp:950,armor:20,color:0x70dbcf },
   arcanist:{damageType:'magic',magicArmor:35,name:'마법 딜러',icon:'법',hero:true,cost:0,attack:100,rate:.8,range:240,hp:780,armor:15,color:0xbe93ed},
   assassin:{damageType:'physical',magicArmor:15,name:'암살자',icon:'암',hero:true,cost:0,attack:100,rate:1.2,range:130,hp:1000,armor:25,color:0xf16e79},
+  // WEB-170 temporary stats; no active skill is assigned.
+  blond:{damageType:'physical',magicArmor:20,name:'금발 전사',icon:'검',hero:true,cost:0,attack:85,rate:1.1,range:130,hp:1400,armor:35,color:0x85b8ed},
 };
 export type Cell = [number, number];
 export interface ItemDef { id:string; name:string; short:string; cells:Cell[]; color:string;

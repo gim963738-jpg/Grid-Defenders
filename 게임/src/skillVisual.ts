@@ -6,6 +6,7 @@ export interface SkillFrameSpec {
  x:number;y:number;width:number;height:number;
  pivot:{x:number;y:number};
  background:'transparent'|'dark';
+ bloom?:boolean;
  actor?:{x:number;y:number;rx:number;ry:number};
 }
 export interface SkillFrameArt {
@@ -45,7 +46,7 @@ export function createSkillFrame(image:CanvasImageSource,spec:SkillFrameSpec):Sk
  const padding=SKILL_FRAME_PADDING,canvas=document.createElement('canvas');canvas.width=core.width+padding*2;canvas.height=core.height+padding*2;
  const output=canvas.getContext('2d')!;
  // A low-opacity bloom continues into the gutter, so the source-cell border never becomes a visible rectangle.
- output.filter='blur(4px)';output.globalAlpha=.24;output.drawImage(core,padding,padding);
+ if(spec.bloom!==false){output.filter='blur(4px)';output.globalAlpha=.24;output.drawImage(core,padding,padding);}
  output.filter='none';output.globalAlpha=1;output.drawImage(core,padding,padding);
  const texture=Texture.from(canvas);smoothTexture(texture);
  return {url:canvas.toDataURL(),texture,contentWidth:core.width,contentHeight:core.height,padding,

@@ -1,4 +1,5 @@
-import {heroImage,sheetHero,assassinArt,assassinSkillIcon} from './heroArt';
+import {heroImage,heroPortrait,sheetHero,assassinArt,assassinSkillIcon} from './heroArt';
+import {blondBossImage} from './blondArt';
 import {skillFramePlacement} from './skillVisual';
 import {ASSASSIN,assassinFrame} from './assassinCombat';
 import {BROKEN_SHIELD_SVG,effectiveArmor} from './armorBreak';
@@ -13,6 +14,7 @@ import {soldierImage} from './soldierArt';
 import {bossSkillIcon} from './bossSkillIcons';
 
 function art(a:BossActor,battle?:BossBattle):string {
+  if(a.kind==='blond')return blondBossImage(a.walk?.direction??2,!!a.walk?.moving&&a.hp>0&&battle?.result==='fighting',a.walk?.elapsed??0);
   if(battle&&a.kind==='assassin'){const action=battle.assassinActions.find(c=>c.sourceId===a.id&&!c.cancelled);if(action){const frame=assassinArt(action.kind==='basic'?'basic':'boss',assassinFrame(action));if(frame)return `<svg class="boss-assassin-frame" viewBox="0 0 ${frame.contentWidth} ${frame.contentHeight}" preserveAspectRatio="xMidYMax meet" overflow="visible" aria-hidden="true"><image href="${frame.url}" x="${-frame.padding}" y="${-frame.padding}" width="${frame.texture.width}" height="${frame.texture.height}"/></svg>`;}}
   if(a.kind in UNITS&&UNITS[a.kind as UnitKind].hero){const target=battle?.target(a),walking=!!target&&Math.hypot(target.x-a.x,target.y-a.y)>a.range;return heroImage(a.kind as UnitKind,walking?'walk':a.cooldown>1/a.rate-.2?'attack':'idle',Math.floor((battle?.elapsed??0)*(a.kind==='melee'&&!walking?5:8)));}
   if(a.kind==='ranged'||a.kind==='melee')return `<img src="${import.meta.env.BASE_URL}assets/heroes/${a.kind}-idle.png" alt="" draggable="false">`;
@@ -108,9 +110,10 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       heroSignature=signature;
       skillRoot.innerHTML=heroes.length?heroes.map(h=>{
         const def=UNITS[h.kind as keyof typeof UNITS],hasSkill=h.kind==='ranged'||h.kind==='melee'||h.kind==='assassin';
-        const portrait=heroImage(h.kind as UnitKind);
+        const portrait=h.kind==='blond'?heroPortrait('blond'):heroImage(h.kind as UnitKind);
         const icon=(active:boolean)=>LANDSCAPE_BATTLE?`<i class="boss-skill-icon" aria-hidden="true">${bossSkillIcon(h.kind as UnitKind,active)}</i><small class="boss-skill-time" aria-hidden="true"></small><span class="boss-skill-label" aria-hidden="true">${active?'스킬':'평타'}</span>`:active&&h.kind==='assassin'?`<i class="boss-assassin-skill-icon">${assassinSkillIcon('boss')}</i>`:'';
-        return `<div class="boss-hero-skill-row" data-skill-hero="${h.id}" role="group" aria-label="${def.name} 보스전 스킬"><div class="boss-skill-hero-card" title="${def.name}">${portrait}<b>${def.name}</b><small>웨이브 편성 연동</small></div><div class="boss-skill-column"><div class="boss-skill boss-basic-skill" data-basic-delay${LANDSCAPE_BATTLE?' role="img"':''}>${icon(false)}<b>1 · 평타</b><span>자동 공격 · 공속 기준</span><strong></strong></div>${hasSkill?`<button class="boss-skill" data-hero-skill="${h.id}">${icon(true)}<b>2 · ${h.kind==='assassin'?'삼연참·돌진':h.kind==='melee'?'연속 검격':'화염 기둥'}</b><span>${h.kind==='assassin'?'35% ×3 + 250% · 경로 / 방어 -30%':h.kind==='melee'?'75% ×5 + 225% · 범위':'기본 피해 ×3 · 범위 공격'}</span><strong></strong></button>`:`<div class="boss-skill boss-skill-empty" aria-label="${def.name} 스킬 미배정"></div>`}</div></div>`;
+        const unassigned=h.kind==='blond'?`<div class="boss-skill boss-skill-empty boss-skill-preview" role="img" aria-disabled="true" aria-label="금발 전사 스킬 아이콘 시안 · 스킬 미부여" title="스킬 미부여 · 아이콘 시안"><i class="boss-skill-icon" aria-hidden="true">${bossSkillIcon('blond',true)}</i><span class="boss-skill-label" aria-hidden="true">미부여</span></div>`:`<div class="boss-skill boss-skill-empty" aria-label="${def.name} 스킬 미배정"></div>`;
+        return `<div class="boss-hero-skill-row" data-skill-hero="${h.id}" role="group" aria-label="${def.name} 보스전 스킬"><div class="boss-skill-hero-card" title="${def.name}">${portrait}<b>${def.name}</b><small>웨이브 편성 연동</small></div><div class="boss-skill-column"><div class="boss-skill boss-basic-skill" data-basic-delay${LANDSCAPE_BATTLE?' role="img"':''}>${icon(false)}<b>1 · 평타</b><span>자동 공격 · 공속 기준</span><strong></strong></div>${hasSkill?`<button class="boss-skill" data-hero-skill="${h.id}">${icon(true)}<b>2 · ${h.kind==='assassin'?'삼연참·돌진':h.kind==='melee'?'연속 검격':'화염 기둥'}</b><span>${h.kind==='assassin'?'35% ×3 + 250% · 경로 / 방어 -30%':h.kind==='melee'?'75% ×5 + 225% · 범위':'기본 피해 ×3 · 범위 공격'}</span><strong></strong></button>`:unassigned}</div></div>`;
       }).join(''):'<p class="boss-scene-note">웨이브전에서 영웅을 배치하세요.</p>';
     }
     for(const hero of heroes){

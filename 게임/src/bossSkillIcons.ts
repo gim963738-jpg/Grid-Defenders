@@ -2,10 +2,12 @@ import type {UnitKind} from './defenseConfig';
 import {assassinSkillIcon} from './heroArt';
 import {BLADE_SHEET_URL} from './bladeSkill';
 import {FIRE_SHEET_URL} from './fireSkill';
+import {BLOND_SKILL_ICON_URL} from './blondArt';
 
 export const COMMANDER_SKILL_ICON='<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 28V5m0 1h17l-4 6 4 6H9" fill="#79612d" stroke="#f2d48b" stroke-width="2" stroke-linejoin="round"/><path d="m13 14 4-6 4 6m-4-6v9M5 28h9" fill="none" stroke="#fff0bd" stroke-width="2" stroke-linecap="round"/></svg>';
 
 export function bossSkillIcon(kind:UnitKind,active=false):string{
+  if(kind==='blond'&&active)return `<img src="${BLOND_SKILL_ICON_URL}" alt="" draggable="false">`;
   if(active){
     if(kind==='assassin')return assassinSkillIcon('boss');
     if(kind==='melee'||kind==='ranged')return `<svg viewBox="${kind==='melee'?'16 338 193 194':'37 369 198 198'}" aria-hidden="true"><image href="${kind==='melee'?BLADE_SHEET_URL:FIRE_SHEET_URL}" width="1536" height="1024"/></svg>`;

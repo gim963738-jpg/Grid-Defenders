@@ -5,6 +5,7 @@ import {battleResolution} from './renderQuality';
 import {loadHeroArt,heroImage,heroPortrait,sheetHero,assassinSkillIcon} from './heroArt';
 import {loadSoldierArt,soldierImage} from './soldierArt';
 import {loadSlimeArt} from './slimeArt';
+import {BLOND_SKILL_ICON_URL} from './blondArt';
 import {ASSASSIN} from './assassinCombat';
 import {GameRun,FAILURE_TEXT,RUN_LIMITS,type RunMode,type RunFailure} from './gameRun';
 import {upcomingWaveWarning} from './waveWarning';
@@ -140,7 +141,7 @@ function refreshHeroSkillSlots():void {
   const root=el('hero-skill-slots');
   const markup=Array.from({length:3},(_,i)=>{const skill=summonHeroSkill(centeredHeroKind,i);return skill
     ?`<button class="hero-skill-slot assigned" data-hero-skill-info="${centeredHeroKind}" data-skill-index="${i}" aria-label="${skill.name} 스킬 설명" aria-haspopup="dialog" aria-expanded="false" aria-controls="hero-skill-tooltip">${summonSkillIcon(centeredHeroKind,i)}</button>`
-    :`<button class="hero-skill-slot empty" disabled aria-label="미구현 스킬 ${i+1}"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m10 10 12 12m0-12L10 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>`;}).join('');
+    :centeredHeroKind==='blond'&&i===0?`<button class="hero-skill-slot empty skill-preview" disabled aria-label="금발 전사 스킬 아이콘 시안 · 스킬 미부여" title="스킬 미부여 · 아이콘 시안"><img src="${BLOND_SKILL_ICON_URL}" alt="" draggable="false"></button>`:`<button class="hero-skill-slot empty" disabled aria-label="미구현 스킬 ${i+1}"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m10 10 12 12m0-12L10 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>`;}).join('');
   if(markup!==heroSkillSlotsMarkup){root.innerHTML=markup;heroSkillSlotsMarkup=markup;}
   root.dataset.heroKind=centeredHeroKind;root.setAttribute('aria-label',`${UNITS[centeredHeroKind].name} 스킬`);
 }
