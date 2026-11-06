@@ -428,7 +428,12 @@ frame.addEventListener('click',event=>{
     }
     api.selectHero(owner);render();return;
   }
-  if(b.dataset.liveOffer){selectedCard=`offer-${b.dataset.liveOffer}`;gear=null;focusPick={kind:'offer',index:Number(b.dataset.liveOffer)};render();return;}
+  if(b.dataset.liveOffer){
+    const key=`offer-${b.dataset.liveOffer}`;
+    selectedCard=selectedCard===key?null:key;gear=null;
+    focusPick=selectedCard?{kind:'offer',index:Number(b.dataset.liveOffer)}:null;
+    render();return;
+  }
   if(b.dataset.liveBuy){if(g.buy(Number(b.dataset.liveBuy))){selectedCard=null;focusPick=null;}finishMutation();return;}
   if(b.dataset.owner){
     selectedCard=null;
