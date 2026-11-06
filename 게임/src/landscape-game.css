@@ -70,3 +70,4 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 
 /* Seven-column shared bag and equally sized hero equipment cells. */
 #live-inventory{height:312px}#live-hero-bags{height:148px}.live-hero-bag{min-height:136px}
+#live-hero-bags>.live-hero-bag:first-child{margin-left:auto}#live-hero-bags>.live-hero-bag:last-child{margin-right:auto}
