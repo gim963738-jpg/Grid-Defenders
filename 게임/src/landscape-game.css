@@ -71,24 +71,25 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 /* Leave room for every hero row and a usable horizontal scrollbar. */
 #live-inventory{height:304px}#live-hero-bags{height:128px;scrollbar-width:thin;touch-action:pan-x}#live-hero-bags::-webkit-scrollbar{display:block;height:8px}#live-hero-bags::-webkit-scrollbar-thumb{background:#71836b;border-radius:4px}#live-hero-bags::-webkit-scrollbar-track{background:#1a2e24}
 
-.live-hero-bag-header{display:flex;gap:2px;height:18px;margin:0;padding:0}.live-hero-bag-header button{display:block;margin:0;min-height:18px;height:18px;border:0;padding:0;background:none;font-size:10px;line-height:18px}.live-hero-bag-header [data-live-hero]{flex:1;width:auto;white-space:nowrap}.live-hero-bag-header [data-live-stats]{flex:none;width:18px;font-size:14px;color:#d9cb97}#live-tray>.live-unit-card.unavailable{filter:saturate(.35);opacity:.6}
+.live-hero-bag-header{display:flex;gap:2px;height:24px;margin:0;padding:0}.live-hero-bag-header button{display:block;margin:0;min-height:24px;height:24px;border:0;padding:0;background:none;font-size:12px;line-height:24px}.live-hero-bag-header [data-live-hero]{flex:1;width:auto;white-space:nowrap}.live-hero-bag-header [data-live-stats]{flex:none;width:24px;font-size:18px;color:#d9cb97}#live-tray>.live-unit-card.unavailable{filter:saturate(.35);opacity:.6}
 
 /* Seven-column shared bag and equally sized hero equipment cells. */
 #live-inventory{height:312px}#live-hero-bags{height:148px}.live-hero-bag{min-height:136px}
 #live-hero-bags>.live-hero-bag:first-child{margin-left:auto}#live-hero-bags>.live-hero-bag:last-child{margin-right:auto}
 
-/* Compact shop: five offers, a fixed shared bag, and combination beside equipment. */
+/* Enlarged shop inventory: square cells and controls fit the marked right-hand area. */
 #live-controls,#live-actions{right:4px}
-#live-inventory{right:4px;top:44px;bottom:auto;width:208px;height:246px}
-#live-equipment{display:flex;align-items:flex-start;justify-content:center;gap:4px;min-height:148px;flex:none}
-#live-hero-bags{flex:0 0 146px;width:146px;min-width:146px}
-#live-combine{align-self:center;flex:0 0 40px;width:40px;height:32px;min-height:32px;padding:0;border:1px solid #a18e56;border-radius:4px;background:#31482e;color:#f3dca0;font-size:12px;line-height:14px;white-space:normal}
+#live-inventory{right:4px;top:44px;bottom:auto;width:260px;height:312px;padding:6px;gap:6px}
+#live-equipment{display:flex;align-items:flex-start;justify-content:center;gap:6px;min-height:190px;flex:none}
+#live-hero-bags{flex:0 0 180px;width:180px;min-width:180px;height:190px}
+.live-hero-bag{padding:4px;min-height:170px}
+#live-combine{align-self:center;flex:0 0 50px;width:50px;height:40px;min-height:40px;padding:0;border:1px solid #a18e56;border-radius:4px;background:#31482e;color:#f3dca0;font-size:16px;line-height:20px;white-space:normal}
 #live-combine:disabled{opacity:.4}
-#live-shared{flex:none;height:82px}
-#live-bag-board{flex:none;width:194px;height:82px;margin:0 auto;overflow:hidden;touch-action:none}
+#live-shared{flex:none;height:100px}
+#live-bag-board{flex:none;width:236px;height:100px;margin:0 auto;overflow:hidden;touch-action:none}
 #live-wallet{position:absolute;left:4px;top:144px;z-index:5;width:84px;height:72px;grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(2,34px);gap:4px}
 #live-landscape[data-menu=shop] #live-notice{left:4px;right:auto;top:224px;bottom:auto;width:84px;max-width:84px;max-height:24px;overflow:hidden}
-#live-tray[data-menu=shop]{left:102px;width:442px;height:108px}
+#live-tray[data-menu=shop]{left:90px;width:442px;height:108px}
 .live-offer-wrap{position:relative;flex:0 0 72px;width:72px;height:72px;isolation:isolate;transform:translateY(0);transition:transform 140ms ease-out}
 .live-offer-wrap.is-selected{transform:translateY(-6px);z-index:2}
 #live-tray .live-offer{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:72px;height:72px;min-height:72px;margin:0;padding:2px;border:2px solid #8b9567;border-radius:6px;background:#1a3028ec;overflow:hidden;touch-action:none;scroll-snap-align:start}
@@ -98,7 +99,7 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 #live-tray>[data-action=reroll]{font-size:12px;line-height:16px}
 #live-tray .live-offer:active,#live-tray .live-buy:active{transform:none}
 .live-offer-wrap:has(.dragging)>.live-buy{visibility:hidden}
-#live-sale-target{left:102px;width:442px}
+#live-sale-target{left:90px;width:442px}
 @media(prefers-reduced-motion:reduce){.live-offer-wrap{transition:none}}
 
 /* Hero inspection uses the right column; equipment management stays in the shop. */
