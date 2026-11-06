@@ -93,19 +93,22 @@ function footprintArt(def:Parameters<typeof itemArt>[0],turns=0){
   const shape=rotated(def.cells,turns),w=Math.max(...shape.map(p=>p[0]))+1,h=Math.max(...shape.map(p=>p[1]))+1;
   return `<svg class="live-block-art" viewBox="0 0 ${w*24} ${h*24}" aria-hidden="true">${shape.map(([x,y])=>`<rect x="${x*24+1}" y="${y*24+1}" width="22" height="22" rx="2" fill="${def.color}" stroke="#edddb1" stroke-width="1"/>`).join('')}</svg>`;
 }
-function board(owner:number|null,cell:number){
+function board(owner:number|null,cell:number,readOnly=false){
   const rows=owner===null?g.bagRows():GRID.rows,cols=owner===null?BAG_GRID.columns:GRID.columns;
   const items=g.gear.filter(item=>item.owner===owner),states=owner===null?null:g.gearStates(owner);
   const cells=Array.from({length:rows*cols},(_,i)=>{
     const x=i%cols,y=Math.floor(i/cols),item=items.find(item=>rotated(item.def.cells,item.turns).some(([dx,dy])=>item.x+dx===x&&item.y+dy===y));
-    return `<button class="live-cell${item?.id===gear?' picked':''}" data-owner="${owner??'bag'}" data-x="${x}" data-y="${y}" ${item?`data-live-gear="${item.id}"`:''} aria-label="${item?.def.name??'빈 칸'} ${y+1}행 ${x+1}열"></button>`;
+    const tag=readOnly?'span':'button';
+    const attributes=readOnly?'aria-hidden="true"':`data-owner="${owner??'bag'}" data-x="${x}" data-y="${y}" ${item?`data-live-gear="${item.id}"`:''} aria-label="${item?.def.name??'빈 칸'} ${y+1}행 ${x+1}열"`;
+    return `<${tag} class="live-cell${!readOnly&&item?.id===gear?' picked':''}" ${attributes}></${tag}>`;
   }).join('');
   const art=items.map(item=>{
     const shape=rotated(item.def.cells,item.turns),w=Math.max(...shape.map(p=>p[0]))+1,h=Math.max(...shape.map(p=>p[1]))+1;
     const active=owner===null||states?.get(item.id)?.active;
-    return `<span class="live-gear-art${active?'':' inactive'}" data-art-id="${item.id}" style="left:${item.x*(cell+2)}px;top:${item.y*(cell+2)}px;width:${w*(cell+2)-2}px;height:${h*(cell+2)-2}px">${footprintArt(item.def,item.turns)}</span>`;
+    const description=`${item.def.name} · ${item.def.description} · ${active?'활성':`비활성 · ${states?.get(item.id)?.reason??'효과 없음'}`}`;
+    return `<span class="live-gear-art${active?'':' inactive'}" ${readOnly?`data-preview-art-id="${item.id}" role="img" aria-label="${description}" title="${description}"`:`data-art-id="${item.id}"`} style="left:${item.x*(cell+2)}px;top:${item.y*(cell+2)}px;width:${w*(cell+2)-2}px;height:${h*(cell+2)-2}px">${footprintArt(item.def,item.turns)}</span>`;
   }).join('');
-  return `<div class="live-grid" data-grid-owner="${owner??'bag'}" data-rows="${rows}" data-columns="${cols}" style="--cell:${cell}px;--columns:${cols};width:${cols*(cell+2)-2}px;height:${rows*(cell+2)-2}px">${cells}${art}</div>`;
+  return `<div class="live-grid${readOnly?' live-equipment-preview':''}" ${readOnly?`data-preview-owner="${owner}" role="group" aria-label="착용 장비 배치"`:`data-grid-owner="${owner??'bag'}"`} data-rows="${rows}" data-columns="${cols}" style="--cell:${cell}px;--columns:${cols};width:${cols*(cell+2)-2}px;height:${rows*(cell+2)-2}px">${cells}${art}</div>`;
 }
 function renderHeroPanel(){
   const preview=heroCards.find(([kind],index)=>`${kind}-${index}`===selectedCard);
@@ -119,14 +122,11 @@ function renderHeroPanel(){
     ['critChance','치명타 확률',`${Math.round(stats.critChance*100)}%`],['critMultiplier','치명타 피해',`${Math.round(stats.critMultiplier*100)}%`],
     ['regen','체력 재생',`${stats.regen.toLocaleString()}/초`],['gold','골드 획득',`+${Math.round(stats.gold*100)}%`],
   ];
-  const items=unit?g.gear.filter(item=>item.owner===unit.id):[],states=unit?g.gearStates(unit.id):new Map();
+  const items=unit?g.gear.filter(item=>item.owner===unit.id):[];
   heroPanel.dataset.heroId=unit?String(unit.id):'';heroPanel.dataset.heroKind=kind;
   setHtml(heroPanel,`<header class="live-hero-heading"><span class="live-hero-avatar" aria-hidden="true">${api.unitArt(kind)}</span><div><h2>${identity[1]}</h2><small>Lv.${unit?.level??1} · ${unit?'배치 중':'배치 전'}</small></div></header>
     <section class="live-hero-stats" aria-label="능력치"><h3>능력치</h3><dl>${fields.map(([key,label,value])=>`<div><dt>${label}</dt><dd data-live-stat="${key}">${value}</dd></div>`).join('')}</dl></section>
-    <section class="live-worn-equipment" aria-label="착용 장비"><h3>착용 장비 <span>${items.length}</span></h3><ul>${items.map(item=>{
-      const state=states.get(item.id)!;
-      return `<li data-equipped-id="${item.id}" data-gear-active="${state.active}" class="${state.active?'':'is-inactive'}"><span class="live-worn-art" aria-hidden="true">${footprintArt(item.def,item.turns)}</span><span class="live-worn-copy"><strong>${item.def.name}</strong><small title="${state.active?item.def.description:state.reason}">${state.active?item.def.description:`비활성 · ${state.reason}`}</small></span></li>`;
-    }).join('')||'<li class="live-empty-equipment">착용 장비 없음</li>'}</ul></section>`);
+    <section class="live-worn-equipment" aria-label="착용 장비"><h3>착용 장비 <span>${items.length}</span></h3><div class="live-worn-layout">${board(unit?.id??-1,26,true)}</div></section>`);
 }
 function render(){
   frame.dataset.menu=menu;tray.dataset.menu=menu;
