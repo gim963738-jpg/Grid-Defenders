@@ -51,5 +51,12 @@ export function checkLandscapeInventory(){
  combo.buy(0,{x:0,y:0});combo.buy(1,{x:2,y:0});
  check(combo.combineMany(combo.combinationPlan(null))&&combo.anvils===0&&combo.gear.length===1,'the same yellow-line pair is consumed once by combine');
  check(inventoryCombinationLinks(combo).length===0&&combo.gear[0].def.id==='I06','completed combination removes obsolete links and uses the existing recipe');
+ const capacity=new Defense(()=>.5);capacity.gold=10000;capacity.shopDiscounts=[false];
+ for(let y=0;y<BAG_GRID.rows;y++)for(let x=0;x<BAG_GRID.columns;x++){
+  capacity.shop=[ITEMS[4]];capacity.buy(0,{x,y});
+ }
+ check(capacity.gear.length===BAG_GRID.columns*BAG_GRID.rows&&capacity.bagRows()===BAG_GRID.rows,'all initial bag columns are usable before extending below');
+ capacity.shop=[ITEMS[0]];capacity.buy(0);
+ check(capacity.gear.at(-1)!.y===BAG_GRID.rows&&capacity.bagRows()===BAG_GRID.rows+1,'full widened bag extends exactly one row for the next purchase');
  return passed;
 }

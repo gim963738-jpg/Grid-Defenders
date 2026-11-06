@@ -67,3 +67,6 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 #live-inventory{height:304px}#live-hero-bags{height:128px;scrollbar-width:thin;touch-action:pan-x}#live-hero-bags::-webkit-scrollbar{display:block;height:8px}#live-hero-bags::-webkit-scrollbar-thumb{background:#71836b;border-radius:4px}#live-hero-bags::-webkit-scrollbar-track{background:#1a2e24}
 
 .live-hero-bag-header{display:flex;gap:2px;height:18px;margin:0;padding:0}.live-hero-bag-header button{display:block;margin:0;min-height:18px;height:18px;border:0;padding:0;background:none;font-size:10px;line-height:18px}.live-hero-bag-header [data-live-hero]{flex:1;width:auto;white-space:nowrap}.live-hero-bag-header [data-live-stats]{flex:none;width:18px;font-size:14px;color:#d9cb97}#live-tray>.live-unit-card.unavailable{filter:saturate(.35);opacity:.6}
+
+/* Seven-column shared bag and equally sized hero equipment cells. */
+#live-inventory{height:312px}#live-hero-bags{height:148px}.live-hero-bag{min-height:136px}
