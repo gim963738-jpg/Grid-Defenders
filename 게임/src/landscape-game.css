@@ -28,7 +28,7 @@ body.landscape-live #battlefield{position:absolute;inset:0;width:800px;height:36
 /* Both battle scenes share one mobile viewport and one set of controls. */
 body.landscape-live #app{position:relative}
 body.landscape-live #boss-screen{position:relative;isolation:isolate;width:800px;height:360px;min-height:360px;margin:0;padding:0;overflow:hidden;background:radial-gradient(ellipse at 35% 50%,#293a31,#101b1d 80%)}
-body.landscape-live #boss-screen>.masthead,body.landscape-live #boss-screen>.boss-wave-heading,body.landscape-live #boss-screen>.boss-scene-note,body.landscape-live #boss-screen>.boss-commander-skills,body.landscape-live #boss-screen>.boss-hero-skills{display:none!important}
+body.landscape-live #boss-screen>.masthead,body.landscape-live #boss-screen>.boss-wave-heading,body.landscape-live #boss-screen>.boss-scene-note,body.landscape-live #boss-screen>.boss-commander-skills{display:none!important}
 body.landscape-live #boss-screen .boss-arena{--boss-cell:calc(360px / 8);position:absolute;inset:0;width:800px;height:360px;min-height:0;max-width:none;aspect-ratio:20/9;margin:0;padding:0;border:0;border-radius:0;background:radial-gradient(ellipse at 82% 50%,#6b393842,transparent 65%),repeating-linear-gradient(0deg,transparent 0 calc(var(--boss-cell) - 1px),#b6cba51c calc(var(--boss-cell) - 1px) var(--boss-cell)),repeating-linear-gradient(90deg,#172925 0 calc(var(--boss-cell) - 1px),#b6cba51c calc(var(--boss-cell) - 1px) var(--boss-cell))}
 body.landscape-live #boss-screen .boss-allies-label,body.landscape-live #boss-screen .boss-side{display:none}
 body.landscape-live #boss-screen #boss-party{border:0;background:#304a32}
@@ -149,3 +149,33 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 .live-worn-layout{display:flex;align-items:center;justify-content:center;flex:1;min-height:110px}
 .live-equipment-preview{flex:none;user-select:none}
 .live-equipment-preview .live-gear-art{pointer-events:auto}
+
+/* Boss skills reuse the original buttons and simulation-driven cooldowns. */
+body.landscape-live #live-controls #boss-auto-skills{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;width:40px;height:32px;min-height:32px;margin:0;padding:0;border:2px solid #75825e;border-radius:4px;background:#182c22dd;color:#c9d0b7;font-size:10px;line-height:12px}
+body.landscape-live #live-controls #boss-auto-skills span,body.landscape-live #live-controls #boss-auto-skills b{font-size:10px;line-height:12px}
+body.landscape-live #live-controls #boss-auto-skills[aria-pressed=true]{border-color:#b4d59d;background:#345439;color:#e4ffd9}
+body.landscape-live #boss-screen>#boss-hero-skills{position:absolute;left:8px;bottom:8px;z-index:6;display:flex;align-items:center;gap:8px;width:max-content;max-width:calc(100% - 88px);height:64px;margin:0;padding:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;touch-action:pan-x}
+body.landscape-live #boss-hero-skills::-webkit-scrollbar{display:none}
+body.landscape-live .boss-hero-skill-row{display:flex;align-items:center;gap:8px;flex:0 0 188px;width:188px;height:64px}
+body.landscape-live .boss-hero-skill-row .boss-skill-hero-card{flex:none;width:64px;height:64px;min-height:0;margin:0;padding:2px 2px 4px;border:2px solid #a18e60;border-radius:6px;background:radial-gradient(ellipse at 50% 30%,#395043,#142b27 85%)}
+body.landscape-live .boss-skill-hero-card img{inset:0;width:100%;height:48px;object-fit:contain}
+body.landscape-live .boss-skill-hero-card>b{max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:10px;line-height:12px}
+body.landscape-live .boss-skill-hero-card>small{display:none}
+body.landscape-live .boss-skill-column{display:flex;align-items:center;gap:4px;width:116px;height:56px}
+body.landscape-live .boss-skill-column>.boss-skill{display:block;flex:none;width:56px;height:56px;min-width:56px;min-height:56px;margin:0;padding:0;border-width:2px;border-radius:6px;background:#152d2c;cursor:default}
+body.landscape-live .boss-skill-column>button.boss-skill:not(:disabled){cursor:pointer}
+body.landscape-live .boss-skill-column>.boss-skill>b,body.landscape-live .boss-skill-column>.boss-skill>span:not(.boss-skill-label),body.landscape-live .boss-skill-column>.boss-skill>strong{display:none}
+body.landscape-live .boss-skill-icon{position:absolute;inset:2px;z-index:0;display:grid;place-items:center;margin:0;pointer-events:none}
+body.landscape-live .boss-skill-icon svg{display:block;width:100%;height:100%;overflow:hidden}
+body.landscape-live .boss-skill-time{position:absolute;top:18px;left:4px;right:4px;z-index:3;height:18px;border-radius:2px;background:#0c1c1bbd;color:#fff1cf;font-size:12px;font-style:normal;font-weight:800;line-height:18px;text-align:center;text-shadow:0 1px 2px #000;pointer-events:none}
+body.landscape-live .boss-skill-label{position:absolute;bottom:0;left:0;right:0;z-index:3;height:14px;background:#10251bf0;color:#ead6a6;font-size:10px!important;line-height:14px;text-align:center;pointer-events:none}
+body.landscape-live .boss-skill-column>.boss-skill-empty{border-style:dashed;background:#14272480;opacity:.65}
+body.landscape-live .boss-skill-empty::before{content:'—';inset:0;display:grid;place-items:center;height:auto;background:none;color:#657d6b;font-size:20px}
+body.landscape-live #boss-hero-skills>.boss-scene-note{display:none}
+body.landscape-live #boss-screen>#boss-commander-skill{position:absolute;right:8px;bottom:8px;z-index:6;display:block;width:64px;height:64px;min-height:64px;margin:0;padding:0;border:2px solid #b7a168;border-radius:6px;background:radial-gradient(ellipse at 50% 30%,#5b5130,#263c2d 85%)}
+body.landscape-live #boss-commander-skill>.boss-skill-icon{position:absolute;inset:4px 8px 16px;z-index:1}
+body.landscape-live #boss-commander-skill>span,body.landscape-live #boss-commander-skill>strong{display:none}
+body.landscape-live #boss-commander-skill>b{position:absolute;bottom:2px;left:2px;right:2px;z-index:3;font-size:10px;line-height:14px;text-align:center;color:#f4d99b;pointer-events:none}
+body.landscape-live #boss-commander-skill>.boss-skill-time{position:absolute;top:26px;left:6px;right:6px;z-index:3}
+body.landscape-live #boss-commander-skill.buff-active{border-color:#a9d99a;box-shadow:inset 0 0 16px #91c57838}
+body.landscape-live #boss-screen :is([data-hero-skill],#boss-commander-skill):focus-visible{outline:2px solid #ffe2a4;outline-offset:2px}

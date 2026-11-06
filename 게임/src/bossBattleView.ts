@@ -6,10 +6,11 @@ import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_SHEET_URL,BLADE_ALPHA_MATRIX
 import {swordVisuals,SWORD_SHEET_URL,SWORD_ALPHA_MATRIX} from './swordAttack';
 import {FIRE_SKILL,fireFrame,firePlacement,FIRE_SHEET_URL,FIRE_ALPHA_MATRIX} from './fireSkill';
 import { BossBattle, type BossActor } from './bossBattle';
-import { UNITS, type UnitKind } from './defenseConfig';
+import { LANDSCAPE_BATTLE, UNITS, type UnitKind } from './defenseConfig';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 import {BOSS_FIELD} from './bossField';
 import {soldierImage} from './soldierArt';
+import {bossSkillIcon} from './bossSkillIcons';
 
 function art(a:BossActor,battle?:BossBattle):string {
   if(battle&&a.kind==='assassin'){const action=battle.assassinActions.find(c=>c.sourceId===a.id&&!c.cancelled);if(action){const frame=assassinArt(action.kind==='basic'?'basic':'boss',assassinFrame(action));if(frame)return `<svg class="boss-assassin-frame" viewBox="0 0 ${frame.contentWidth} ${frame.contentHeight}" preserveAspectRatio="xMidYMax meet" overflow="visible" aria-hidden="true"><image href="${frame.url}" x="${-frame.padding}" y="${-frame.padding}" width="${frame.texture.width}" height="${frame.texture.height}"/></svg>`;}}
@@ -28,6 +29,13 @@ function updateSkillFill(card:HTMLElement,remaining:number,duration:number,enabl
   card.dataset.skillState=state;
   card.style.setProperty('--skill-fill',`${(progress*100).toFixed(2)}%`);
   card.setAttribute('aria-disabled',String(state!=='ready'));
+}
+function updateSkillStatus(card:HTMLElement,text:string,compact:string,label:string):void{
+  card.querySelector('strong')!.textContent=text;
+  if(!LANDSCAPE_BATTLE)return;
+  card.querySelector('.boss-skill-time')!.textContent=compact;
+  const description=card.querySelector('span:not(.boss-skill-label)')?.textContent;
+  card.title=[label,description,text].filter(Boolean).join(' · ');card.setAttribute('aria-label',card.title);
 }
 export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:BossBattle,showDamageNumbers:()=>boolean=()=>true,paused:()=>boolean=()=>false){
   const nodes=new Map<string,HTMLElement>();
@@ -101,28 +109,31 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       skillRoot.innerHTML=heroes.length?heroes.map(h=>{
         const def=UNITS[h.kind as keyof typeof UNITS],hasSkill=h.kind==='ranged'||h.kind==='melee'||h.kind==='assassin';
         const portrait=heroImage(h.kind as UnitKind);
-        return `<div class="boss-hero-skill-row" data-skill-hero="${h.id}"><div class="boss-skill-hero-card">${portrait}<b>${def.name}</b><small>웨이브 편성 연동</small></div><div class="boss-skill-column"><div class="boss-skill boss-basic-skill" data-basic-delay><b>1 · 평타</b><span>자동 공격 · 공속 기준</span><strong></strong></div>${hasSkill?`<button class="boss-skill" data-hero-skill="${h.id}">${h.kind==='assassin'?`<i class="boss-assassin-skill-icon">${assassinSkillIcon('boss')}</i>`:''}<b>2 · ${h.kind==='assassin'?'삼연참·돌진':h.kind==='melee'?'연속 검격':'화염 기둥'}</b><span>${h.kind==='assassin'?'35% ×3 + 250% · 경로 / 방어 -30%':h.kind==='melee'?'75% ×5 + 225% · 범위':'기본 피해 ×3 · 범위 공격'}</span><strong></strong></button>`:`<div class="boss-skill boss-skill-empty" aria-label="${def.name} 스킬 미배정"></div>`}</div></div>`;
+        const icon=(active:boolean)=>LANDSCAPE_BATTLE?`<i class="boss-skill-icon" aria-hidden="true">${bossSkillIcon(h.kind as UnitKind,active)}</i><small class="boss-skill-time" aria-hidden="true"></small><span class="boss-skill-label" aria-hidden="true">${active?'스킬':'평타'}</span>`:active&&h.kind==='assassin'?`<i class="boss-assassin-skill-icon">${assassinSkillIcon('boss')}</i>`:'';
+        return `<div class="boss-hero-skill-row" data-skill-hero="${h.id}" role="group" aria-label="${def.name} 보스전 스킬"><div class="boss-skill-hero-card" title="${def.name}">${portrait}<b>${def.name}</b><small>웨이브 편성 연동</small></div><div class="boss-skill-column"><div class="boss-skill boss-basic-skill" data-basic-delay${LANDSCAPE_BATTLE?' role="img"':''}>${icon(false)}<b>1 · 평타</b><span>자동 공격 · 공속 기준</span><strong></strong></div>${hasSkill?`<button class="boss-skill" data-hero-skill="${h.id}">${icon(true)}<b>2 · ${h.kind==='assassin'?'삼연참·돌진':h.kind==='melee'?'연속 검격':'화염 기둥'}</b><span>${h.kind==='assassin'?'35% ×3 + 250% · 경로 / 방어 -30%':h.kind==='melee'?'75% ×5 + 225% · 범위':'기본 피해 ×3 · 범위 공격'}</span><strong></strong></button>`:`<div class="boss-skill boss-skill-empty" aria-label="${def.name} 스킬 미배정"></div>`}</div></div>`;
       }).join(''):'<p class="boss-scene-note">웨이브전에서 영웅을 배치하세요.</p>';
     }
     for(const hero of heroes){
       const row=skillRoot.querySelector<HTMLElement>(`[data-skill-hero="${hero.id}"]`)!,basic=row.querySelector<HTMLElement>('[data-basic-delay]')!;
       const alive=hero.hp>0,fighting=battle.result==='fighting'&&!stopped,target=alive&&battle.target(hero),ready=!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
       row.querySelector('.boss-skill-hero-card')!.classList.toggle('hero-absent',!alive);
-      basic.querySelector('strong')!.textContent=!alive?'전투 불가':stopped?'일시정지':!fighting?'전투 종료':`공격 딜레이 ${hero.cooldown.toFixed(1)}초 / ${(1/hero.rate).toFixed(2)}초`;
+      updateSkillStatus(basic,!alive?'전투 불가':stopped?'일시정지':!fighting?'전투 종료':`공격 딜레이 ${hero.cooldown.toFixed(1)}초 / ${(1/hero.rate).toFixed(2)}초`,!alive?'불가':stopped?'정지':!fighting?'종료':!ready?'접근':hero.cooldown>0?hero.cooldown.toFixed(1):'자동',`${UNITS[hero.kind as UnitKind].name} 평타`);
       updateSkillFill(basic,hero.cooldown,1/hero.rate,fighting&&alive,ready);
       const skill=row.querySelector<HTMLButtonElement>('[data-hero-skill]');
       if(skill){
         const cooldown=battle.skillCooldown(hero.id),canUse=!stopped&&battle.canHeroSkill(hero.id),duration=hero.kind==='assassin'?ASSASSIN.bossCooldown:hero.kind==='melee'?BLADE_SKILL.cooldown:FIRE_SKILL.cooldown;skill.disabled=!canUse;
-        skill.querySelector('strong')!.textContent=!alive?'전투 불가':stopped?'일시정지':!fighting?'전투 종료':cooldown>0?`재사용 ${cooldown.toFixed(1)}초 / ${duration}초`:canUse?`사용 가능 · 쿨타임 ${duration}초`:'사거리까지 접근 중';
+        updateSkillStatus(skill,!alive?'전투 불가':stopped?'일시정지':!fighting?'전투 종료':cooldown>0?`재사용 ${cooldown.toFixed(1)}초 / ${duration}초`:canUse?`사용 가능 · 쿨타임 ${duration}초`:'사거리까지 접근 중',!alive?'불가':stopped?'정지':!fighting?'종료':cooldown>0?cooldown.toFixed(1):canUse?'준비':'접근',`${UNITS[hero.kind as UnitKind].name} · ${hero.kind==='assassin'?'삼연참·돌진':hero.kind==='melee'?'연속 검격':'화염 기둥'}`);
         updateSkillFill(skill,cooldown,duration,fighting&&alive,canUse);
       }
     }
     const auto=document.getElementById('boss-auto-skills')!;
-    auto.textContent=`스킬 자동 ${battle.autoSkills?'ON':'OFF'}`;auto.setAttribute('aria-pressed',String(battle.autoSkills));
+    const autoMarkup=LANDSCAPE_BATTLE?`<span>AUTO</span><b>${battle.autoSkills?'ON':'OFF'}</b>`:`스킬 자동 ${battle.autoSkills?'ON':'OFF'}`;
+    if(auto.innerHTML!==autoMarkup)auto.innerHTML=autoMarkup;
+    auto.setAttribute('aria-pressed',String(battle.autoSkills));auto.setAttribute('aria-label',`스킬 자동 사용 ${battle.autoSkills?'켜짐':'꺼짐'}`);auto.title=auto.getAttribute('aria-label')!;
     const commander=document.getElementById('boss-commander-skill') as HTMLButtonElement;
     commander.disabled=stopped||battle.result!=='fighting'||!battle.actors.some(a=>a.side==='ally'&&a.hp>0)||battle.commanderCooldown>0;
     commander.classList.toggle('buff-active',battle.commanderBuff>0);
-    document.getElementById('commander-skill-cooldown')!.textContent=stopped?'일시정지':battle.commanderBuff>0?`강화 ${battle.commanderBuff.toFixed(1)}초 · 재사용 ${battle.commanderCooldown.toFixed(1)}초`:battle.commanderCooldown>0?`재사용 ${battle.commanderCooldown.toFixed(1)}초`:'사용 가능 · 쿨타임 15초';
+    updateSkillStatus(commander,stopped?'일시정지':battle.commanderBuff>0?`강화 ${battle.commanderBuff.toFixed(1)}초 · 재사용 ${battle.commanderCooldown.toFixed(1)}초`:battle.commanderCooldown>0?`재사용 ${battle.commanderCooldown.toFixed(1)}초`:'사용 가능 · 쿨타임 15초',stopped?'정지':battle.result!=='fighting'?'종료':!battle.actors.some(a=>a.side==='ally'&&a.hp>0)?'불가':battle.commanderCooldown>0?battle.commanderCooldown.toFixed(1):'준비','공격 지휘');
     const fighting=battle.result==='fighting'&&!stopped;
     updateSkillFill(commander,battle.commanderCooldown,15,fighting&&battle.actors.some(a=>a.side==='ally'&&a.hp>0),!commander.disabled);
     const allies=battle.actors.filter(a=>a.side==='ally'&&a.hp>0).length;

@@ -1,6 +1,7 @@
 import './mobile-ui.css';
 import {UNITS,SLOTS,GRID,BAG_GRID,RULES,rotated,type UnitKind} from './defenseConfig';
 import {itemArt,hasItemArt} from './itemArt';
+import {COMMANDER_SKILL_ICON} from './bossSkillIcons';
 import {inventoryPlacement,commitInventoryPlacement,pickedItem,combinationPartners,inventoryCombinationLinks,type InventoryPick,type InventoryPlacement} from './landscape-inventory';
 const params=new URLSearchParams(location.search);
 if(!params.has('battle')){params.set('battle','normal');params.set('from','camp');history.replaceState(null,'',`${location.pathname}?${params}`);}
@@ -31,6 +32,10 @@ frame.insertAdjacentHTML('beforeend',`
   <div id="live-drop-target" hidden aria-hidden="true"></div><div id="live-sale-target" hidden>여기로 끌어 판매 <b></b></div>
   <p id="live-notice" role="status"></p>`);
 const controls=el('live-controls');controls.hidden=true;controls.setAttribute('aria-label','전투 조작');el('app').append(controls);
+const bossAuto=el('boss-auto-skills'),commander=el('boss-commander-skill');
+bossAuto.hidden=true;controls.prepend(bossAuto);
+commander.insertAdjacentHTML('afterbegin',`<i class="boss-skill-icon" aria-hidden="true">${COMMANDER_SKILL_ICON}</i><small class="boss-skill-time" aria-hidden="true"></small>`);
+el('boss-screen').append(commander);
 const wallet=document.querySelector<HTMLElement>('.inventory-actions .resource-wallet')!;
 wallet.id='live-wallet';wallet.setAttribute('aria-label','전투 재화');el('live-status').append(wallet);
 const devArea=document.createElement('section');devArea.id='landscape-dev-area';devArea.setAttribute('aria-label','전투 개발자 도구');document.body.append(devArea);devArea.append(el('dev-tools'),el('dev-log'));
@@ -188,6 +193,7 @@ function render(){
     }
   }
   controls.hidden=api.scene!=='defense'&&api.scene!=='boss';
+  bossAuto.hidden=api.scene!=='boss';
   heroPanel.hidden=menu!=='hero'||tray.hidden||!interactive();
   if(!heroPanel.hidden)renderHeroPanel();
   if(gear!==null&&!g.gear.some(item=>item.id===gear))gear=null;
