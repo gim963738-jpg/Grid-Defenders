@@ -16,6 +16,7 @@ export async function checkBlondWarrior(){
  check(g.summon('blond',0)&&g.gold===480,'blond warrior summons through the existing free hero rules');
  check(!g.summon('blond',1)&&g.units.length===1,'duplicate blond hero is rejected');
  const unit=g.units[0],stats=g.stats(unit);
+ check(unit.facing===0&&blondFrame()===blondFrame(0),'newly summoned blond warrior and default art face front');
  check(stats.physicalAttack===85&&stats.magicAttack===0&&stats.critChance===.1&&stats.critMultiplier===1.5,'new hero uses normal physical attack and shared critical stats');
  g.gear.push({id:100,def:ITEMS[0],owner:unit.id,x:0,y:0,turns:0,order:100,costBasis:60});
  check(g.stats(unit).attack===100,'existing equipment modifies the new hero stats');
@@ -50,8 +51,8 @@ export async function checkBlondWarrior(){
  check(clear&&same,'all sixty runtime frames preserve transparent borders and exact packed RGBA without added bloom');
  const b=new BossBattle(waveBossRoster(g),()=>1),hero=b.actors.find(a=>a.kind==='blond')!,target=b.actors.find(a=>a.kind==='boss')!;
  b.actors=[hero,target];b.autoSkills=false;target.speed=0;target.attack=0;hero.x=100;hero.y=target.y;target.x=700;
- check(hero.hp===1400&&hero.attack===100&&hero.walk?.direction===2,'boss roster receives equipped hero stats and fresh right-facing state');
- b.tick(.05);check(hero.x>100&&hero.walk!.moving&&hero.walk!.elapsed===.05,'actual boss movement advances the walking clock');
+ check(hero.hp===1400&&hero.attack===100&&hero.walk?.direction===0,'boss roster receives equipped hero stats and fresh front-facing state');
+ b.tick(.05);check(hero.x>100&&hero.walk!.direction===2&&hero.walk!.moving&&hero.walk!.elapsed===.05,'actual boss movement turns right and advances the walking clock');
  for(const speed of [.25,1,5]){
   const run=new BossBattle(waveBossRoster(g),()=>1),h=run.actors.find(a=>a.kind==='blond')!;run.autoSkills=false;
   stepCombat(.1,speed,sim=>run.tick(sim));
@@ -62,18 +63,25 @@ export async function checkBlondWarrior(){
  target.x=hero.x+hero.range-1;hero.cooldown=0;b.tick(.05);
  check(!hero.walk!.moving&&hero.walk!.elapsed===0&&b.hits.some(h=>h.from===hero.id&&h.damage>0&&!h.magic),'entering attack range stops walking and uses an ordinary physical basic attack');
  check(!b.canHeroSkill(hero.id)&&!b.useHeroSkill(hero.id)&&b.heroSkillCooldowns.size===0&&!b.fireCasts.length&&!b.bladeCasts.length&&!b.assassinActions.length,'preview icon grants no active skill or skill casts');
- b.reset(waveBossRoster(g));check(b.actors.find(a=>a.kind==='blond')!.walk!.elapsed===0,'boss reset clears old movement animation state');
+ b.reset(waveBossRoster(g));check(b.actors.find(a=>a.kind==='blond')!.walk!.elapsed===0&&b.actors.find(a=>a.kind==='blond')!.walk!.direction===0,'boss reset clears movement and restores the front pose');
  const stage=new Container(),view=createDefenseView({stage} as never,g,()=>{},Texture.EMPTY,Texture.EMPTY,Texture.EMPTY,Texture.EMPTY,Texture.EMPTY);
  const pos=SLOTS[0];g.enemies=[{...g.enemies[0],id:999,hp:160,x:pos.x,y:pos.y+70,distance:10}];
  const before=JSON.stringify(g.units);view.draw(null,false);
  const find=(n:Container):Sprite|undefined=>{for(const c of n.children){if(c instanceof Sprite&&c.texture===idle[0].texture)return c;const nested=find(c);if(nested)return nested;}};
- const sprite=find(stage)!;check(!!sprite&&sprite.visible&&sprite.scale.x===sprite.scale.y&&sprite.eventMode==='none'&&JSON.stringify(g.units)===before,'wave hero faces its target with independent art and unchanged combat state');stage.destroy({children:true});
+ const sprite=find(stage)!;check(!!sprite&&sprite.visible&&sprite.scale.x===sprite.scale.y&&sprite.eventMode==='none'&&JSON.stringify(g.units)===before,'summoned wave hero stays front-facing even with an enemy in range');
+ for(let i=0;i<5;i++)g.tick(.05);view.draw(null,false);
+ check(unit.facing===0&&sprite.texture===idle[0].texture,'waiting for the first attack keeps the front pose');
+ for(let i=0;i<2;i++)g.tick(.05);view.draw(null,false);
+ const shot=g.shots.find(s=>s.x===pos.x&&s.y===pos.y)!;
+ check(!!shot&&unit.facing===blondDirection(shot.tx-pos.x,shot.ty-pos.y)&&sprite.texture===idle[unit.facing!].texture,'actual first attack turns the hero toward its combat target');stage.destroy({children:true});
  const ids=['boss-hero-skills','boss-auto-skills','boss-commander-skill'],originals=ids.map(id=>document.getElementById(id));
  originals.forEach((n,i)=>{if(n)n.id=`blond-check-preserved-${ids[i]}`;});
  const fixture=document.createElement('div');fixture.hidden=true;fixture.innerHTML='<div id="boss-hero-skills"></div><button id="boss-auto-skills"></button><button id="boss-commander-skill"><i class="boss-skill-icon"></i><small class="boss-skill-time"></small><strong></strong></button>';document.body.append(fixture);
  try{
   const root=document.createElement('div'),status=document.createElement('p');fixture.append(root,status);
-  const a=b.actors.find(a=>a.kind==='blond')!;a.walk={direction:2,moving:true,elapsed:1};const v=createBossBattleView(root,status,b);v.draw();
+  const a=b.actors.find(a=>a.kind==='blond')!,v=createBossBattleView(root,status,b);v.draw();
+  check(root.querySelector('.boss-blond-frame')?.getAttribute('data-direction')==='0'&&root.querySelector('.boss-blond-frame')?.getAttribute('data-walk-frame')==='-1','boss spawn displays the original front cut before any action');
+  a.walk={direction:2,moving:true,elapsed:1};v.draw();
   check(root.querySelector('.boss-blond-frame')?.getAttribute('data-walk-frame')===String(blondWalkFrame(1)),'boss display uses the sixty-frame walk art at model time');
   check(!fixture.querySelector('[data-hero-skill]')&&fixture.querySelector('.boss-skill-preview')?.getAttribute('aria-disabled')==='true'&&!!fixture.querySelector('.boss-skill-preview img'),'boss preview icon is visibly unassigned and cannot activate a skill');
   check(heroPortrait('blond').includes('portrait.png')&&!!fixture.querySelector('.boss-skill-hero-card .blond-portrait'),'hero cards and boss HUD use the new blond portrait');

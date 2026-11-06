@@ -58,7 +58,7 @@ export class BossBattle {
     for(const u of this.roster){
       const d=UNITS[u.kind],s=u.stats,col=LANDSCAPE_BATTLE?3-u.slot%4:3-Math.floor(u.slot/4),row=LANDSCAPE_BATTLE?Math.floor(u.slot/4)+1:u.slot%4+2;
       this.actors.push({id:`ally-${u.id}`,side:'ally',kind:u.kind,name:d.name,level:u.level,sourceSlot:u.slot,
-        ...(u.kind==='blond'?{walk:{direction:2,moving:false,elapsed:0}}:{}),
+        ...(u.kind==='blond'?{walk:{direction:0,moving:false,elapsed:0}}:{}),
         x:(col+.5)*70.3125,y:(row+.5)*70.3125,hp:s.hp,maxHp:s.hp,attack:s.attack,
         rate:s.rate,range:u.kind==='assassin'?80:s.range*(u.kind==='ranged'||u.kind==='arcanist'?1.5:1),speed:u.kind==='guard'||u.kind==='tank'||u.kind==='melee'||u.kind==='blond'?64:53,
         rank:Math.floor(u.slot/4),damageType:s.damageType,defenseType:'normal',cooldown:.25,
@@ -209,12 +209,12 @@ export class BossBattle {
       actor.cooldown=Math.max(0,actor.cooldown-dt);
       if(this.assassinActions.some(a=>a.sourceId===actor.id&&a.kind==='boss'))continue;
       const dx=target.x-actor.x,dy=target.y-actor.y,dist=Math.hypot(dx,dy);
-      if(actor.walk)actor.walk.direction=blondDirection(dx,dy,actor.walk.direction);
       if(dist>actor.range){
         const step=Math.min(actor.speed*dt,dist-actor.range);
         actor.x+=dx/dist*step;actor.y+=dy/dist*step;
-        if(actor.walk&&step>0){actor.walk.moving=true;actor.walk.elapsed+=dt;}
+        if(actor.walk&&step>0){actor.walk.direction=blondDirection(dx,dy,actor.walk.direction);actor.walk.moving=true;actor.walk.elapsed+=dt;}
       } else if(actor.cooldown<=0){
+        if(actor.walk)actor.walk.direction=blondDirection(dx,dy,actor.walk.direction);
         this.strike(actor,target,damage);
         actor.cooldown=1/actor.rate;
       }

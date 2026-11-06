@@ -28,7 +28,7 @@ export function blondWalkFrame(seconds:number):number{
   for(let i=0;i<manifest.walk.frames.length;i++){if(time<manifest.walk.frames[i].duration!)return i;time-=manifest.walk.frames[i].duration!;}
   return 0;
 }
-export function blondFrame(direction=2,moving=false,elapsed=0):BlondFrame|undefined{
+export function blondFrame(direction=0,moving=false,elapsed=0):BlondFrame|undefined{
   const facing=((Math.round(direction)%BLOND_DIRECTIONS.length)+8)%8;
   return moving&&facing===2?walk[blondWalkFrame(elapsed)]:idle[facing];
 }

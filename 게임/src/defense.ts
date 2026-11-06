@@ -1,5 +1,6 @@
 import {NO_TRAINING,type TrainingBonuses} from './training';
 import {criticalAttack} from './critical';
+import {blondDirection} from './blondMotion';
 import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinSourceBusy,type AssassinAction,type AssassinImpact} from './assassinCombat';
 import {combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from './armorBreak';
 import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAlive,type BladeCast} from './bladeSkill';
@@ -8,7 +9,7 @@ import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './f
 import { DamageMeter } from './damageMeter';
 import { LANDSCAPE_BATTLE, AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
 
-export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
+export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; facing?:number; }
 export interface Enemy { armorBreakRemaining?:number; id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; named:boolean;name:string;defenseType:DefenseType;damageType:DamageType;attack:number;armor:number;magicArmor:number;rate:number;goldReward:number;wave:number; }
 export function enemyRadius(enemy:Pick<Enemy,'named'|'bounty'>):number{return enemy.named?14:enemy.bounty?12:8;}
 export function defenseMultiplier(attack:DamageType,defense:DefenseType):number {return attack===defense?0.75:1;}
@@ -199,7 +200,7 @@ export class Defense {
     if(def.hero&&this.units.some(u=>u.kind===kind))return this.note('같은 영웅은 한 명만 배치합니다. (시험 규칙)');
     if(this.gold<def.cost)return this.note('소환에 필요한 골드가 부족합니다.');
     const before=this.gold;this.gold-=def.cost;
-    const unit:Unit={id:this.nextId++,kind,slot,level:1,spent:def.cost,cooldown:0.3};
+    const unit:Unit={id:this.nextId++,kind,slot,level:1,spent:def.cost,cooldown:0.3,...(kind==='blond'?{facing:0}:{})};
     this.units.push(unit);
     this.goldLog('economy',`${this.unitName(unit)} 소환${def.hero?' (무료)':''}`,before,{sourceId:unit.id});
     this.note(`${def.name} 배치 완료`);return true;
@@ -570,6 +571,7 @@ export class Defense {
       const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range)
         .sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
       if(!target){u.cooldown=0;continue;}
+      if(u.kind==='blond')u.facing=blondDirection(target.x-pos.x,target.y-pos.y,u.facing??0);
       u.cooldown=1/s.rate;
       if(u.kind==='ranged'){
         this.iceProjectiles.push(criticalAttack({x:pos.x,y:pos.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...u},attack:s.attack},s,this.random));

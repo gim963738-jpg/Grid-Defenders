@@ -14,7 +14,7 @@ import {soldierImage} from './soldierArt';
 import {bossSkillIcon} from './bossSkillIcons';
 
 function art(a:BossActor,battle?:BossBattle):string {
-  if(a.kind==='blond')return blondBossImage(a.walk?.direction??2,!!a.walk?.moving&&a.hp>0&&battle?.result==='fighting',a.walk?.elapsed??0);
+  if(a.kind==='blond')return blondBossImage(a.walk?.direction??0,!!a.walk?.moving&&a.hp>0&&battle?.result==='fighting',a.walk?.elapsed??0);
   if(battle&&a.kind==='assassin'){const action=battle.assassinActions.find(c=>c.sourceId===a.id&&!c.cancelled);if(action){const frame=assassinArt(action.kind==='basic'?'basic':'boss',assassinFrame(action));if(frame)return `<svg class="boss-assassin-frame" viewBox="0 0 ${frame.contentWidth} ${frame.contentHeight}" preserveAspectRatio="xMidYMax meet" overflow="visible" aria-hidden="true"><image href="${frame.url}" x="${-frame.padding}" y="${-frame.padding}" width="${frame.texture.width}" height="${frame.texture.height}"/></svg>`;}}
   if(a.kind in UNITS&&UNITS[a.kind as UnitKind].hero){const target=battle?.target(a),walking=!!target&&Math.hypot(target.x-a.x,target.y-a.y)>a.range;return heroImage(a.kind as UnitKind,walking?'walk':a.cooldown>1/a.rate-.2?'attack':'idle',Math.floor((battle?.elapsed??0)*(a.kind==='melee'&&!walking?5:8)));}
   if(a.kind==='ranged'||a.kind==='melee')return `<img src="${import.meta.env.BASE_URL}assets/heroes/${a.kind}-idle.png" alt="" draggable="false">`;
