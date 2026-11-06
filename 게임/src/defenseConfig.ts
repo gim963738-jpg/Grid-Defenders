@@ -37,7 +37,7 @@ export const ITEMS: ItemDef[] = [
   {id:'I10',name:'시험용 대형 방패',short:'대',cells:[[0,0],[1,0],[2,0],[0,1],[1,1],[2,1],[0,2],[1,2],[2,2]],color:'#668fb0',price:120,armor:50,hp:500,description:'시험용 3×3 · 물리 방어력 +50 · 체력 +500'},
   {id:'I11',name:'시험용 장창',short:'창',cells:[[0,0],[1,0],[2,0],[3,0]],color:'#c59463',price:100,attack:35,description:'시험용 4×1 · 공격력 +35'},
 ];
-export const GRID = { columns:4, rows:5 } as const;
+export const GRID = { columns:LANDSCAPE_BATTLE?5:4, rows:LANDSCAPE_BATTLE?4:5 } as const;
 export const BAG_GRID = { columns:5, rows:3 } as const;
 export const RECIPES = [
   {id:'R01',materials:['I01','I01'],result:'I06'},

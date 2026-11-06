@@ -6,7 +6,7 @@ import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAliv
 import {cancelSword,createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
 import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter } from './damageMeter';
-import { AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
+import { LANDSCAPE_BATTLE, AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; }
 export interface Enemy { armorBreakRemaining?:number; id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; named:boolean;name:string;defenseType:DefenseType;damageType:DamageType;attack:number;armor:number;magicArmor:number;rate:number;goldReward:number;wave:number; }
@@ -400,6 +400,12 @@ export class Defense {
       ['I08',0,0,0],['I08',2,1,0],['I08',1,2,0],['I08',0,3,0],['I08',2,3,3],
       ['I03',1,0,0],['I03',3,0,1],
     ];
+    if(LANDSCAPE_BATTLE)for(let i=0;i<layout.length;i++){
+      const [type,x,y,turns]=layout[i],def=ITEMS.find(item=>item.id===type)!;
+      const target=rotated(def.cells,turns).map(([cx,cy])=>`${cy},${cx}`).sort().join(';');
+      const transposed=[0,1,2,3].find(turn=>rotated(def.cells,turn).map(([cx,cy])=>`${cx},${cy}`).sort().join(';')===target)!;
+      layout[i]=[type,y,x,transposed];
+    }
     const owned=this.gear.filter(g=>g.owner===owner),available=[...owned];
     const planned:Gear[]=layout.map(([type,x,y,turns],i)=>{
       const index=available.findIndex(g=>g.def.id===type),existing=index<0?undefined:available.splice(index,1)[0];

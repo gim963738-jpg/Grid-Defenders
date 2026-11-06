@@ -1,5 +1,5 @@
 import {Defense} from '../src/defense';
-import {ITEMS,rotated,UNITS} from '../src/defenseConfig';
+import {ITEMS,GRID,rotated,UNITS} from '../src/defenseConfig';
 export function checkDevGear(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};
  const empty=new Defense(()=>1);check(!empty.devEquipHero(null)&&!empty.gear.length,'missing hero causes no equipment changes');
@@ -10,7 +10,7 @@ export function checkDevGear(){
  check(gear.length===7&&gear.filter(x=>x.def.id==='I08').length===5&&gear.filter(x=>x.def.id==='I03').length===2,'exactly five gale swords and two haste runes');
  check(gear.every(x=>g.gearState(x).active),'all seven items are active');
  const cells=gear.flatMap(x=>rotated(x.def.cells,x.turns).map(([dx,dy])=>[x.x+dx,x.y+dy]));
- check(cells.length===19&&new Set(cells.map(c=>c.join(','))).size===19&&cells.every(([x,y])=>x>=0&&x<4&&y>=0&&y<5),'19 distinct in-bounds cells leave one empty cell');
+ check(cells.length===19&&new Set(cells.map(c=>c.join(','))).size===19&&cells.every(([x,y])=>x>=0&&x<GRID.columns&&y>=0&&y<GRID.rows),'19 distinct in-bounds cells leave one empty cell');
  check(g.gold===gold&&g.anvils===anvils,'developer equipment does not consume currencies');
  check(gear.every(x=>x.costBasis===0),'free equipment has no resale gold');
  const stats=g.stats(hero);check(stats.attack===UNITS.melee.attack+100&&Math.abs(stats.rate-UNITS.melee.rate*1.95)<1e-8,'all attack and speed bonuses are applied');

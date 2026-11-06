@@ -1004,8 +1004,10 @@ async function start():Promise<void> {
 void start().catch((error:unknown)=>{el('battle-shell-header').hidden=false;el<HTMLButtonElement>('battle-return').disabled=false;el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';el('lobby-hint').textContent='전장을 불러오지 못했습니다. 새로고침해 주세요.';console.error(error);});
 
 /** Shared live controls used by the landscape presentation. */
-export const liveBattle={game,get ready(){return assetsReady;},get hero(){return selectedHero;},get scene(){return currentScene;},get active(){return run.active;},refresh,
+export const liveBattle={game,get ready(){return assetsReady;},get hero(){return selectedHero;},get pending(){return pending;},get scene(){return currentScene;},get active(){return run.active;},get runId(){return currentRunId;},refresh,
  select(kind:UnitKind){const reason=summonReason(kind);if(reason){game.note(reason);return false;}pending=kind;refresh();return true;},
- selectHero(id:number){if(game.heroes().some(hero=>hero.id===id)){selectedHero=id;selectedUnit=id;refresh();}},
+ selectHero(id:number){if(game.heroes().some(hero=>hero.id===id)){selectedHero=id;selectedUnit=id;pending=null;refresh();}},
+ inspectUnit(id:number){const unit=game.units.find(unit=>unit.id===id);if(unit){heroInfo={kind:unit.kind,unitId:unit.id};refresh();}},
+ clearSelection(){pending=null;refresh();},unitArt:unitDragImage,
  deploy(kind:UnitKind,slot:number){const reason=summonReason(kind);if(reason){game.note(reason);return false;}const ok=game.summon(kind,slot);if(ok){selectedUnit=game.units.at(-1)!.id;if(UNITS[kind].hero)selectedHero=selectedUnit;pending=null;}refresh();return ok;},
  pause(){el('pause').click();},speed(){el('speed').click();},home:requestCampReturn};

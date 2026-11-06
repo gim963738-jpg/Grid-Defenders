@@ -1,5 +1,5 @@
 import {Defense} from '../src/defense';
-import {ITEMS} from '../src/defenseConfig';
+import {ITEMS,GRID} from '../src/defenseConfig';
 import {hasItemArt,itemArt,ITEM_ATLAS_URL} from '../src/itemArt';
 export async function checkShopEquip(){
  const passed:string[]=[];const check=(ok:boolean,s:string)=>{if(!ok)throw Error(s);passed.push(s);};
@@ -9,7 +9,7 @@ export async function checkShopEquip(){
  check(!g.buy(0,undefined,hero.id)&&g.gold===before-30,'sold-out product cannot charge twice');
  const snap=()=>JSON.stringify({gold:g.gold,shop:g.shop,gear:g.gear});let state=snap();check(!g.buy(1,undefined,999)&&snap()===state,'invalid hero rejects purchase without changing inventory or gold');
  g.gold=0;state=snap();check(!g.buy(1,undefined,hero.id)&&snap()===state,'insufficient gold leaves item for sale');g.gold=1000;
- for(let i=0;i<20;i++)g.gear.push({id:100+i,def:ITEMS[4],owner:hero.id,x:i%4,y:Math.floor(i/4),turns:0,order:i+10,costBasis:100});
+ for(let i=0;i<20;i++)g.gear.push({id:100+i,def:ITEMS[4],owner:hero.id,x:i%GRID.columns,y:Math.floor(i/GRID.columns),turns:0,order:i+10,costBasis:100});
  state=snap();check(!g.buy(1,undefined,hero.id)&&snap()===state,'full hero board rejects payment and preserves product');
  check(g.buy(1)&&g.gear.at(-1)!.owner===null,'normal bag purchase remains available even when hero board is full');
  check(ITEMS.slice(0,5).every(hasItemArt)&&!hasItemArt(ITEMS[5]),'tier-one equipment retains art and unassigned higher-tier items retain blocks');

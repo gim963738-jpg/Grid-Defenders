@@ -17,3 +17,53 @@ body.landscape-live #bounty-summon{left:12px;right:auto;top:72px;width:64px;heig
 body.landscape-live #landscape-dev-area{width:800px;margin:16px auto;display:grid;grid-template-columns:392px 392px;gap:16px;align-items:start}
 body.landscape-live #landscape-dev-area #dev-tools,body.landscape-live #landscape-dev-area #dev-log{display:block!important;position:static!important;inset:auto!important;width:392px;min-width:0;max-width:none;max-height:none;height:auto;margin:0;padding:12px;overflow:visible;transform:none}
 body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
+
+/* Horizontal 5 x 4 hero boards, 20 cells; the bag remains 5 x 3 and grows down. */
+#live-hero-bags{height:120px;align-items:flex-start;overflow-y:hidden;scrollbar-width:thin}
+.live-hero-bag{padding:2px;min-height:112px}
+.live-hero-bag>button{line-height:18px}
+.live-grid{overflow:hidden;isolation:isolate}
+.live-gear-art{overflow:hidden;isolation:isolate;box-sizing:border-box}
+.live-gear-art svg,.live-gear-art .equipment-item-art{display:block;width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;pointer-events:none}
+.live-gear-art .live-block-art{filter:drop-shadow(0 1px 1px #0006)}
+#live-gear-detail{flex:none;height:16px;line-height:16px;font-size:10px;margin:0;color:#d6c89d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#live-shared header{flex:none;line-height:18px}
+#live-gear-actions button:disabled{opacity:.4}
+/* Selection is a small lift, with the portrait and its own fixed name bar. */
+#live-tray{height:80px;align-items:flex-end}
+#live-tray>.live-unit-card{padding:0;transition:transform 140ms ease-out,border-color 140ms ease-out;transform:translateY(0)}
+#live-tray>.live-unit-card.is-selected{transform:translateY(-6px);border-color:#ffdd83;box-shadow:0 2px 8px #18200da0}
+#live-tray>.live-hero-card>.live-card-portrait{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#live-tray .hero-nameplate{position:absolute;z-index:1;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;height:18px;font-size:12px;line-height:14px;padding:2px;background:#12251ef2;border-top:1px solid #d4be7955;color:#fff1ca}
+#live-tray .class-emblem{position:absolute;left:2px;top:2px;z-index:1;display:grid;place-items:center;width:20px;height:20px;border:1px solid #cdbb77;border-radius:4px;background:#16291ff0;color:#f5d68c}
+#live-tray .class-emblem svg{position:static;width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#live-tray .soldier-card-body{display:grid;place-items:center;width:48px;height:50px;margin-bottom:14px}
+#live-tray .soldier-card-body svg{position:static;width:44px;height:48px}
+#live-tray .soldier-cost{position:absolute;left:0;right:0;bottom:0;height:18px;line-height:18px;background:#14281ef2;color:#edcf8a}
+/* Preview, drop and combination cues are separate from the item drawing. */
+#live-links{position:absolute;inset:0;width:800px;height:360px;z-index:9;pointer-events:none;overflow:hidden}
+#live-links path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+#live-links .combo-ready{stroke:#ffdc61;stroke-width:2;filter:drop-shadow(0 0 2px #e4b731)}
+#live-links .combo-deferred{stroke:#8e9d98;stroke-width:1;stroke-dasharray:3 3}
+#live-links .combo-hint{stroke:#45a8ff;stroke-width:2;stroke-dasharray:4 3;filter:drop-shadow(0 0 2px #1787e4)}
+.live-cell.live-combo-partner{box-shadow:inset 0 0 0 2px #45a8ff}
+.live-cell.live-drop-preview{background:#80cf8066!important;outline:2px solid #b9f4a5;outline-offset:-2px}
+.live-cell.live-drop-preview.drop-warning{background:#d4a94377!important;outline-color:#ffd978}
+.live-cell.live-drop-preview.drop-invalid{background:#d8575777!important;outline-color:#ff9a8a}
+#live-drop-target{position:absolute;z-index:10;border:2px solid #b8ef98;border-radius:4px;background:#9ed56822;pointer-events:none}
+#live-drop-target.invalid{border-color:#ff9a8a;background:#d8575733}
+.live-drag-ghost.item-ghost{transform:none;display:block;padding:2px;border:2px solid #cbeaaa;border-radius:4px;background:#1b3429bb;overflow:hidden}
+.live-drag-ghost.item-ghost svg{display:block;max-width:100%;max-height:100%;overflow:hidden}
+.live-drag-ghost.unit-ghost{background:none;overflow:visible}
+.live-drag-ghost.invalid{border-color:#ff8b7d;filter:drop-shadow(0 0 4px #dd584a)}
+#live-sale-target{position:absolute;z-index:11;left:116px;bottom:4px;width:368px;height:72px;display:flex;align-items:center;justify-content:center;gap:8px;border:2px dashed #c5b381;border-radius:6px;background:#24372fe8;color:#eed8a7;font-size:14px}
+#live-sale-target.is-target{border-color:#ffe3a1;background:#6b503ee8;box-shadow:inset 0 0 0 2px #e0ae66}
+@media(prefers-reduced-motion:reduce){#live-tray>.live-unit-card,#live-actions{transition:none}}
+
+.live-cell{margin:0}.live-hero-bag>button{display:block;margin:0}#live-hero-bags{scrollbar-width:none}#live-hero-bags::-webkit-scrollbar{display:none}
+#live-tray>button:disabled{font-size:12px;line-height:16px}
+
+/* Leave room for every hero row and a usable horizontal scrollbar. */
+#live-inventory{height:304px}#live-hero-bags{height:128px;scrollbar-width:thin;touch-action:pan-x}#live-hero-bags::-webkit-scrollbar{display:block;height:8px}#live-hero-bags::-webkit-scrollbar-thumb{background:#71836b;border-radius:4px}#live-hero-bags::-webkit-scrollbar-track{background:#1a2e24}
+
+.live-hero-bag-header{display:flex;gap:2px;height:18px;margin:0;padding:0}.live-hero-bag-header button{display:block;margin:0;min-height:18px;height:18px;border:0;padding:0;background:none;font-size:10px;line-height:18px}.live-hero-bag-header [data-live-hero]{flex:1;width:auto;white-space:nowrap}.live-hero-bag-header [data-live-stats]{flex:none;width:18px;font-size:14px;color:#d9cb97}#live-tray>.live-unit-card.unavailable{filter:saturate(.35);opacity:.6}
