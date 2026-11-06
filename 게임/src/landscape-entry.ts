@@ -10,7 +10,15 @@ const field=el('battlefield'),frame=document.createElement('section');frame.id='
 el('defense-screen').prepend(frame);frame.append(field);
 frame.insertAdjacentHTML('beforeend',`
   <div id="live-terrain"></div><div id="live-tiles"></div>
-  <section id="live-wave"><strong>WAVE 1</strong><b>00:30</b><small>몬스터 0 / 20</small></section>
+  <aside id="live-status" aria-label="전투 현황">
+    <section id="live-wave" aria-label="웨이브 1">
+      <header class="live-wave-heading"><span>WAVE</span><strong>01</strong></header>
+      <div class="live-wave-dial" role="timer" aria-label="웨이브 남은 시간"><span data-live-clock-label>남은 시간</span><b>00:30</b></div>
+      <div class="live-enemy-readout"><span>몬스터</span><small><em data-live-enemy-count>0</em><span data-live-enemy-limit>/ 20</span></small>
+        <div class="live-enemy-gauge" role="progressbar" aria-label="전장 몬스터 수" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><i></i></div>
+      </div>
+    </section>
+  </aside>
   <nav id="live-controls"><button data-control="pause" aria-label="일시정지">Ⅱ</button><button data-control="speed" aria-label="배속 변경">1×</button><button disabled aria-label="설정 준비중">⚙</button><button data-control="home" aria-label="로비로">⌂</button></nav>
   <nav id="live-actions"><button data-menu="soldier">병사</button><button data-menu="hero">영웅</button><button data-menu="shop">상점</button></nav>
   <div id="live-tray" hidden></div>
@@ -24,7 +32,7 @@ frame.insertAdjacentHTML('beforeend',`
   <p id="live-notice" role="status"></p>`);
 const controls=el('live-controls');controls.hidden=true;controls.setAttribute('aria-label','전투 조작');el('app').append(controls);
 const wallet=document.querySelector<HTMLElement>('.inventory-actions .resource-wallet')!;
-wallet.id='live-wallet';wallet.setAttribute('aria-label','전투 재화');frame.append(wallet);
+wallet.id='live-wallet';wallet.setAttribute('aria-label','전투 재화');el('live-status').append(wallet);
 const devArea=document.createElement('section');devArea.id='landscape-dev-area';devArea.setAttribute('aria-label','전투 개발자 도구');document.body.append(devArea);devArea.append(el('dev-tools'),el('dev-log'));
 const live=await import('./main');
 await import('./landscape-game.css');
@@ -216,6 +224,7 @@ function render(){
   const startupNotice=g.message==='게임을 시작 상태로 초기화했습니다.';
   el('live-notice').hidden=menu==='hero'||startupNotice;
   el('live-notice').textContent=startupNotice?'':g.message;
+  el('live-notice').title=startupNotice?'':g.message;
   if(pendingHeroFocus!==null&&!tray.hidden){
     const list=menu==='shop'?heroBags:tray;
     const target=menu==='shop'?heroBags.querySelector<HTMLElement>(`[data-bag-hero="${pendingHeroFocus}"]`):[...tray.querySelectorAll<HTMLElement>('[data-live-card]')].filter(card=>card.dataset.liveCard===selectedCard).sort((a,b)=>Math.abs(a.offsetLeft-tray.scrollLeft)-Math.abs(b.offsetLeft-tray.scrollLeft))[0];
@@ -539,11 +548,23 @@ document.addEventListener('keydown',event=>{
 
 const clock=window.setInterval(()=>{
   if(observedRun!==api.runId||observedScene!==api.scene){observedRun=api.runId;observedScene=api.scene;closeMenu();}
-  const wave=el('live-wave');wave.querySelector('strong')!.textContent=el('wave-number').textContent;
-  wave.querySelector('b')!.textContent=el('wave-timer').textContent;wave.querySelector('small')!.textContent=`몬스터 ${el('enemies').textContent} / 20`;
+  const wave=el('live-wave'),progress=el('wave-progress') as HTMLProgressElement;
+  wave.querySelector('strong')!.textContent=String(g.wave).padStart(2,'0');wave.setAttribute('aria-label',`웨이브 ${g.wave}`);
+  wave.querySelector('b')!.textContent=el('wave-timer').textContent;
+  wave.style.setProperty('--wave-fill',String(Math.max(0,Math.min(1,progress.max?progress.value/progress.max:0))));
+  wave.classList.toggle('is-urgent',progress.value>0&&progress.value<=5);
+  const enemies=Number(el('enemies').textContent)||0,limit=Number(el('enemy-limit').textContent)||RULES.maxEnemies;
+  wave.querySelector('[data-live-enemy-count]')!.textContent=String(enemies);wave.querySelector('[data-live-enemy-limit]')!.textContent=`/ ${limit}`;
+  const gauge=wave.querySelector<HTMLElement>('.live-enemy-gauge')!;
+  gauge.setAttribute('aria-valuenow',String(Math.max(0,Math.min(limit,enemies))));gauge.setAttribute('aria-valuemax',String(limit));
+  gauge.setAttribute('aria-valuetext',`${enemies}마리 / 기준 ${limit}마리`);
+  gauge.querySelector<HTMLElement>('i')!.style.transform=`scaleX(${Math.max(0,Math.min(1,enemies/limit))})`;
+  wave.classList.toggle('is-crowded',enemies>=limit*.75);
+  wallet.querySelectorAll<HTMLElement>('[data-resource-value]').forEach(value=>{value.classList.toggle('has-long-value',value.textContent!.length>7);value.title=value.textContent!;});
   controls.querySelector('[data-control=speed]')!.textContent=el('speed').textContent;
   const pause=controls.querySelector('[data-control=pause]')!,paused=el('pause').getAttribute('aria-pressed')==='true';
   pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'전투 재개':'일시정지');pause.setAttribute('aria-pressed',String(paused));
+  el('live-status').classList.toggle('is-paused',paused);wave.querySelector('[data-live-clock-label]')!.textContent=paused?'일시정지':'남은 시간';
   if(!api.active||api.scene!=='defense'){cancelDrag();tray.hidden=true;inventory.hidden=true;heroPanel.hidden=true;}
   render();
 },150);
