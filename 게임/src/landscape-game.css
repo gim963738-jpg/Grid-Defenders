@@ -72,7 +72,7 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 #live-inventory{height:312px}#live-hero-bags{height:148px}.live-hero-bag{min-height:136px}
 #live-hero-bags>.live-hero-bag:first-child{margin-left:auto}#live-hero-bags>.live-hero-bag:last-child{margin-right:auto}
 
-/* Compact shop: six offers, a fixed shared bag, and combination beside equipment. */
+/* Compact shop: five offers, a fixed shared bag, and combination beside equipment. */
 #live-controls,#live-actions{right:4px}
 #live-inventory{right:4px;top:44px;bottom:auto;width:208px;height:246px}
 #live-equipment{display:flex;align-items:flex-start;justify-content:center;gap:4px;min-height:148px;flex:none}
@@ -83,7 +83,7 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 #live-bag-board{flex:none;width:194px;height:82px;margin:0 auto;overflow:hidden;touch-action:none}
 #live-wallet{position:absolute;left:12px;top:144px;z-index:5;width:108px;height:72px;grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(2,34px);gap:4px}
 #live-landscape[data-menu=shop] #live-notice{left:12px;right:auto;top:224px;bottom:auto;width:108px;max-width:108px;max-height:24px;overflow:hidden}
-#live-tray[data-menu=shop]{left:68px;width:516px;height:108px}
+#live-tray[data-menu=shop]{left:142px;width:442px;height:108px}
 .live-offer-wrap{position:relative;flex:0 0 72px;width:72px;height:72px;isolation:isolate;transform:translateY(0);transition:transform 140ms ease-out}
 .live-offer-wrap.is-selected{transform:translateY(-6px);z-index:2}
 #live-tray .live-offer{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:72px;height:72px;min-height:72px;margin:0;padding:2px;border:2px solid #8b9567;border-radius:6px;background:#1a3028ec;overflow:hidden;touch-action:none;scroll-snap-align:start}
@@ -93,5 +93,5 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 #live-tray>[data-action=reroll]{font-size:12px;line-height:16px}
 #live-tray .live-offer:active,#live-tray .live-buy:active{transform:none}
 .live-offer-wrap:has(.dragging)>.live-buy{visibility:hidden}
-#live-sale-target{left:68px;width:516px}
+#live-sale-target{left:142px;width:442px}
 @media(prefers-reduced-motion:reduce){.live-offer-wrap{transition:none}}

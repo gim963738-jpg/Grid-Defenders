@@ -76,7 +76,7 @@ export function checkLandscapeInventory(){
   check(!rotation.rotateGear(sword.id)&&JSON.stringify(rotation.gear)===rotationBefore,'rotation without enough fixed-bag space retains the item and original orientation');
  }else check(purchased&&capacity.gear.at(-1)!.y===BAG_GRID.rows&&capacity.bagRows()===BAG_GRID.rows+1,'legacy bag still extends exactly one row for the next purchase');
  const shop=new Defense(()=>.5);
- check(shop.shop.length===RULES.shopSlots&&RULES.shopSlots===(LANDSCAPE_BATTLE?6:5),'shop starts with the requested slot count for its layout');
+ check(shop.shop.length===RULES.shopSlots&&RULES.shopSlots===5,'shop starts with five product slots');
  shop.reroll();check(shop.shop.length===RULES.shopSlots,'shop refresh retains every product slot');
  shop.reset();check(shop.shop.length===RULES.shopSlots,'new battle restores every product slot');
  return passed;
