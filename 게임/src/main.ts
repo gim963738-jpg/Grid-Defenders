@@ -14,7 +14,7 @@ import {SWORD_SHEET_URL} from './swordAttack';
 import {FIRE_SKILL,FIRE_SHEET_URL} from './fireSkill';
 import { Application, Assets, Texture } from 'pixi.js';
 import { Defense, recipeForTypes, type LogCategory } from './defense';
-import { BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+import { LANDSCAPE_BATTLE, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
 import { createSceneTransition, type BattleScene } from './sceneTransition';
 import { BossBattle, waveBossRoster } from './bossBattle';
@@ -449,7 +449,7 @@ function updateHud():void {
   const progress=el<HTMLProgressElement>('wave-progress');progress.max=RULES.waveSeconds;progress.value=remaining;
   progress.setAttribute('aria-valuetext',`남은 시간 ${seconds}초`);
   el('wave-info').classList.toggle('wave-urgent',remaining<=5);
-  el('population').textContent=`배치 ${game.units.length} / 16`;
+  el('population').textContent=`배치 ${game.units.length} / ${SLOTS.length}`;
   el('message').textContent=game.message;
 }
 function chooseGear(id:number):void {
@@ -897,7 +897,7 @@ function renderBossScreen():void {
   const formation=game.units;
   el('boss-party').innerHTML=Array.from({length:32},(_,index)=>{
     const col=index%4,row=Math.floor(index/4);
-    const unit=row>=2&&row<6?formation.find(u=>u.slot===(3-col)*4+row-2):undefined;
+    const unit=LANDSCAPE_BATTLE?(row>=1&&row<6?formation.find(u=>u.slot===(row-1)*4+3-col):undefined):(row>=2&&row<6?formation.find(u=>u.slot===(3-col)*4+row-2):undefined);
     if(!unit)return '<div class="boss-grid-cell" aria-hidden="true"></div>';
     const def=UNITS[unit.kind],color='#'+def.color.toString(16).padStart(6,'0');
     const weapon=unit.kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':unit.kind==='mage'||unit.kind==='healer'?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
@@ -925,7 +925,7 @@ const sceneTransition=createSceneTransition({
 
 async function start():Promise<void> {
   const app=new Application();
-  await app.init({width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,background:'#172620',preference:'webgl',resolution:battleResolution(devicePixelRatio),autoDensity:true,antialias:true});
+  await app.init({width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,background:'#172620',backgroundAlpha:LANDSCAPE_BATTLE?0:1,preference:'webgl',resolution:battleResolution(devicePixelRatio),autoDensity:true,antialias:true});
   el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','숲 순환 전장, 상단 정보와 아군 배치 영역');el('status').hidden=true;
   el('battlefield').style.setProperty('--field-top',`${DEFENSE_FIELD.top/DEFENSE_FIELD.height*100}%`);
   await loadHeroArt();
@@ -942,7 +942,7 @@ async function start():Promise<void> {
     else if(pending){if(game.summon(pending,slot)){selectedUnit=game.units.at(-1)!.id;if(UNITS[pending].hero){selectedHero=selectedUnit;pending=null;}closeHeroInfo();}}
     else game.note('먼저 아래에서 소환할 병사 또는 영웅을 선택하세요.');
     refresh();
-  },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture,()=>showDamageNumbers,{top:DEFENSE_FIELD.top,terrain:forestTexture});
+  },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture,()=>showDamageNumbers,{top:DEFENSE_FIELD.top,terrain:LANDSCAPE_BATTLE?undefined:forestTexture});
   let lastRevision=-1,hudClock=0,meterClock=0;
   renderMonsterTools();
   renderRecipeTree();assetsReady=true;document.title='Grid Defenders — 로비';el('lobby-hint').textContent='병사와 영웅을 배치하고 몬스터를 막아내세요.';renderLobby();
@@ -1002,3 +1002,10 @@ async function start():Promise<void> {
   if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
 void start().catch((error:unknown)=>{el('battle-shell-header').hidden=false;el<HTMLButtonElement>('battle-return').disabled=false;el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';el('lobby-hint').textContent='전장을 불러오지 못했습니다. 새로고침해 주세요.';console.error(error);});
+
+/** Shared live controls used by the landscape presentation. */
+export const liveBattle={game,get ready(){return assetsReady;},get hero(){return selectedHero;},get scene(){return currentScene;},get active(){return run.active;},refresh,
+ select(kind:UnitKind){const reason=summonReason(kind);if(reason){game.note(reason);return false;}pending=kind;refresh();return true;},
+ selectHero(id:number){if(game.heroes().some(hero=>hero.id===id)){selectedHero=id;selectedUnit=id;refresh();}},
+ deploy(kind:UnitKind,slot:number){const reason=summonReason(kind);if(reason){game.note(reason);return false;}const ok=game.summon(kind,slot);if(ok){selectedUnit=game.units.at(-1)!.id;if(UNITS[kind].hero)selectedHero=selectedUnit;pending=null;}refresh();return ok;},
+ pause(){el('pause').click();},speed(){el('speed').click();},home:requestCampReturn};

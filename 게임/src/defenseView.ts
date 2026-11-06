@@ -11,10 +11,10 @@ import { Defense,enemyRadius } from './defense';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 import {  RULES, SLOTS, UNITS } from './defenseConfig';
 
-export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture,fireTexture:Texture,swordTexture:Texture,bladeTexture:Texture,showDamageNumbers:()=>boolean=()=>true,scene?:{top:number;terrain:Texture}) {
+export function createDefenseView(app:Application,game:Defense,onSlot:(slot:number)=>void,rangedTexture:Texture,meleeTexture:Texture,fireTexture:Texture,swordTexture:Texture,bladeTexture:Texture,showDamageNumbers:()=>boolean=()=>true,scene?:{top:number;terrain?:Texture}) {
   const sceneTop=scene?.top??0;
-  for(const texture of [rangedTexture,meleeTexture,...(scene?[scene.terrain]:[])])smoothTexture(texture);
-  if(scene){
+  for(const texture of [rangedTexture,meleeTexture,...(scene?.terrain?[scene.terrain]:[])])smoothTexture(texture);
+  if(scene?.terrain){
     const terrain=new Sprite(scene.terrain);terrain.eventMode='none';terrain.width=RULES.width;
     // Measured road centers in the supplied art align with local PATH y=28 and 302.
     terrain.height=(RULES.height+sceneTop)*1.113;terrain.y=-(RULES.height+sceneTop)*.03325;

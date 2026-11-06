@@ -1,7 +1,7 @@
-import {RULES} from './defenseConfig';
+import {RULES,LANDSCAPE_BATTLE} from './defenseConfig';
 
 // Combat coordinates remain local to the clearing. The renderer also includes its canopy.
-export const DEFENSE_FIELD={width:RULES.width,top:100,height:RULES.height+100} as const;
+export const DEFENSE_FIELD={width:RULES.width,top:LANDSCAPE_BATTLE?0:100,height:RULES.height+(LANDSCAPE_BATTLE?0:100)} as const;
 export const FOREST_TERRAIN_URL=`${import.meta.env.BASE_URL}assets/battlefields/forest-clearing-v1.png`;
 export interface FieldViewport {left:number;top:number;width:number;height:number;}
 export function fieldToScreen(rect:FieldViewport,p:{x:number;y:number}):{x:number;y:number}{

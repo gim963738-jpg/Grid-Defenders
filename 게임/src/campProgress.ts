@@ -30,7 +30,7 @@ export function saveFormation(slots:readonly (string|null)[],ownedIds:readonly s
  const seen=new Set<string>();const cleaned=Array.from({length:FORMATION_SIZE},(_,i)=>{const id=slots[i];if(!id||!ownedIds.includes(id)||seen.has(id))return null;seen.add(id);return id;});saved?.setItem(FORMATION_KEY,JSON.stringify({slots:cleaned}));
 }
 export function battlePageUrl(current:string,mode:'normal'|'infinite-test'='normal'){
- const url=new URL('index.html',current);url.searchParams.set('battle',mode);url.searchParams.set('from','camp');return url.href;
+ const url=new URL('battle-landscape.html',current);url.searchParams.set('battle',mode);url.searchParams.set('from','camp');return url.href;
 }
 export function campPageUrl(current:string,resultId?:string){const url=new URL('lobby-preview.html',current);if(resultId)url.searchParams.set('result',resultId);return url.href;}
 export function launchMode(search:string):'normal'|'infinite-test'|null {const mode=new URLSearchParams(search).get('battle');return mode==='normal'||mode==='infinite-test'?mode:null;}

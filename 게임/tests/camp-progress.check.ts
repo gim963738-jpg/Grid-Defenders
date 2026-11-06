@@ -23,7 +23,7 @@ export function checkCampProgress(){
  check(formation.length===8&&formation[0]==='bran'&&formation[1]===null&&formation[2]===null&&formation[3]==='aria','formation rejects duplicates and unknown heroes');
  saveFormation(Array(8).fill(null),owned,storage);check(loadFormation(owned,storage).every(v=>v===null),'empty formation stays empty after navigation');
  data.set(FORMATION_KEY,'broken');check(loadFormation(owned,storage)[0]==='bran','corrupt formation falls back safely');
- check(battlePageUrl('https://example.test/game/lobby-preview.html#heroes')==='https://example.test/game/index.html?battle=normal&from=camp','battle entry stays inside deployed game directory');
+ check(battlePageUrl('https://example.test/game/lobby-preview.html#heroes')==='https://example.test/game/battle-landscape.html?battle=normal&from=camp','battle entry stays inside deployed game directory');
  check(campPageUrl('https://example.test/game/index.html?battle=normal','run-1')==='https://example.test/game/lobby-preview.html?result=run-1','battle result returns to the same camp origin');
  check(launchMode('?battle=normal')==='normal'&&launchMode('?battle=infinite-test')==='infinite-test','supported automatic launch modes are recognized');
  check(launchMode('?battle=manual')===null&&launchMode('?battle=other')===null,'unknown modes never auto-start a run');

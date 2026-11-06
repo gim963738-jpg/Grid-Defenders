@@ -1,3 +1,4 @@
+import {LANDSCAPE_BATTLE} from './defenseConfig';
 import {criticalAttack} from './critical';
 import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinPosition,inAssassinPath,type AssassinAction,type AssassinImpact} from './assassinCombat';
 import {combatDefenseMultiplier,applyArmorBreak,tickArmorBreak} from './armorBreak';
@@ -53,7 +54,7 @@ export class BossBattle {
     this.actors=[];this.hits=[];this.iceProjectiles=[];this.iceBursts=[];this.elapsed=0;this.result='fighting';
     this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.fireCasts=[];this.swordAttacks=[];this.swordSwingCounts.clear();this.heroSkillCooldowns.clear();this.bladeCasts=[];this.assassinActions=[];this.assassinImpacts=[];
     for(const u of this.roster){
-      const d=UNITS[u.kind],s=u.stats,col=3-Math.floor(u.slot/4),row=u.slot%4+2;
+      const d=UNITS[u.kind],s=u.stats,col=LANDSCAPE_BATTLE?3-u.slot%4:3-Math.floor(u.slot/4),row=LANDSCAPE_BATTLE?Math.floor(u.slot/4)+1:u.slot%4+2;
       this.actors.push({id:`ally-${u.id}`,side:'ally',kind:u.kind,name:d.name,level:u.level,sourceSlot:u.slot,
         x:(col+.5)*70.3125,y:(row+.5)*70.3125,hp:s.hp,maxHp:s.hp,attack:s.attack,
         rate:s.rate,range:u.kind==='assassin'?80:s.range*(u.kind==='ranged'||u.kind==='arcanist'?1.5:1),speed:u.kind==='guard'||u.kind==='tank'||u.kind==='melee'?64:53,

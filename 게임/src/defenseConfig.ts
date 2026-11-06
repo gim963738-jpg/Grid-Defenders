@@ -1,5 +1,6 @@
+export const LANDSCAPE_BATTLE=typeof location!=='undefined'&&location.pathname.endsWith('/battle-landscape.html');
 // WEB-002 시험 수치. 최종 밸런스가 아니다.
-export const RULES = { width: 390, height: 330, initialGold: 480, maxEnemies: 30,
+export const RULES = { width: LANDSCAPE_BATTLE?800:390, height: LANDSCAPE_BATTLE?360:330, initialGold: 480, maxEnemies: 30,
   spawnSeconds: 2.4, killGold: 12, heroLimit: 3, rerollGold: 20, shopSlots:5, shopDiscountChance:0.2,
   soldierCritChance:0.1, heroCritChance:0.1, critMultiplier:1.5, waveSeconds:30, bossEvery:10, waveMonsters:10, waveSpawnSeconds:2, namedEvery:5, bountyEvery:3, bountyStackLimit:3, bountyHp:1600, bountySpeed:32, bountyGold:100, bountyAnvils:1 } as const;
 export type DamageType = 'physical' | 'magic';
@@ -47,6 +48,7 @@ export const RECIPES = [
 export const AREA_ATTACK = { guardHalfAngle:Math.PI/4, mageRadius:48 } as const;
 // The painted trail has rounded bends; each short segment follows its road center.
 export const PATH:Cell[]=(()=>{
+  if(LANDSCAPE_BATTLE){const points:Cell[]=[[176,68]];for(const [cx,cy,angle]of [[434,116,-90],[434,216,0],[176,216,90],[176,116,180]])for(let i=0;i<=12;i++){if(angle===180&&i===12)continue;const a=(angle+i*90/12)*Math.PI/180;points.push([cx+Math.cos(a)*48,cy+Math.sin(a)*48]);}return points;}
   const points:Cell[]=[[56,28]];
   for(const [cx,cy,angle]of [[334,56,-90],[334,274,0],[56,274,90],[56,56,180]])
     for(let i=0;i<=8;i++){
@@ -55,7 +57,7 @@ export const PATH:Cell[]=(()=>{
     }
   return points;
 })();
-export const SLOTS = Array.from({length:16},(_,i)=>({x:99+(i%4)*64,y:81+Math.floor(i/4)*56}));
+export const SLOTS = LANDSCAPE_BATTLE?Array.from({length:20},(_,i)=>({x:189+(i%5)*58,y:105+Math.floor(i/5)*42})):Array.from({length:16},(_,i)=>({x:99+(i%4)*64,y:81+Math.floor(i/4)*56}));
 export function rotated(cells: Cell[], turns:number): Cell[] {
   let result=cells.map(([x,y]):Cell=>[x,y]);
   for(let i=0;i<(turns%4+4)%4;i++) {
