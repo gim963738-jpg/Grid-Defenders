@@ -41,6 +41,7 @@ function updateSkillStatus(card:HTMLElement,text:string,compact:string,label:str
 }
 export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:BossBattle,showDamageNumbers:()=>boolean=()=>true,paused:()=>boolean=()=>false){
   const nodes=new Map<string,HTMLElement>();
+  const actorLayer=document.createElement('div');actorLayer.className='boss-actor-layer';root.append(actorLayer);
   const skillRoot=document.getElementById('boss-hero-skills')!;let heroSignature='';
   const trails=document.createElementNS('http://www.w3.org/2000/svg','svg');
   const viewBox=`0 0 ${BOSS_FIELD.width} ${BOSS_FIELD.height}`;
@@ -60,7 +61,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
         node=document.createElement('div');node.className=`boss-fighter ${actor.side} ${actor.kind}`;
         node.dataset.bossActor=actor.id;node.dataset.kind=actor.kind;
         node.innerHTML=`<div class="boss-fighter-art">${art(actor)}</div><div class="boss-fighter-hp"><i></i></div><span class="boss-armor-break" hidden></span><small></small>`;
-        root.append(node);nodes.set(actor.id,node);
+        actorLayer.append(node);nodes.set(actor.id,node);
       }
       node.hidden=actor.hp<=0;
       const heroKind=actor.kind in UNITS?actor.kind as UnitKind:null;
@@ -74,6 +75,7 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       node.querySelector('small')!.textContent=actor.side==='enemy'?actor.name:`Lv.${actor.level??1} ${UNITS[actor.kind as keyof typeof UNITS]?.icon??''}`;
       node.style.left=`${actor.x/BOSS_FIELD.width*100}%`;node.style.top=`${actor.y/BOSS_FIELD.height*100}%`;
       node.style.width=`${(actor.kind==='boss'?90:actor.kind==='retainer'?65:52)/BOSS_FIELD.width*100}%`;
+      node.style.zIndex=String(Math.round((actor.y+(actor.kind==='boss'?55.6875:actor.kind==='retainer'?40.5:32))*100));
       node.classList.toggle('attacking',battle.hits.some(h=>h.from===actor.id));
       node.setAttribute('aria-label',`${actor.name} Lv.${actor.level??1} 체력 ${Math.ceil(actor.hp)}/${actor.maxHp} 공격 ${actor.attack} 사거리 ${actor.range}`);
       node.querySelector<HTMLElement>('.boss-fighter-hp i')!.style.width=`${actor.hp/actor.maxHp*100}%`;

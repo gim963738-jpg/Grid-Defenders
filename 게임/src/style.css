@@ -428,6 +428,7 @@
 .boss-arena.fighting .boss-side{visibility:hidden;}
 .boss-arena.fighting .boss-grid-unit>*{visibility:hidden;}
 #boss-combat{position:absolute;inset:0;pointer-events:none;}
+.boss-actor-layer{position:absolute;inset:0;z-index:2;isolation:isolate;pointer-events:none;}
 .boss-fighter{position:absolute;width:5.2%;height:13%;transform:translate(-50%,-50%);z-index:2;}
 .boss-fighter[hidden]{display:none;}
 .boss-fighter-art{position:absolute;inset:0;display:grid;place-items:center;}
