@@ -18,6 +18,7 @@ frame.insertAdjacentHTML('beforeend',`
     <section id="live-equipment"><div id="live-hero-bags"></div><button id="live-combine" data-action="combine">조합</button></section>
     <section id="live-shared" aria-label="공용 가방"><div id="live-bag-board"></div></section>
   </aside>
+  <aside id="live-hero-panel" aria-label="영웅 정보" hidden></aside>
   <svg id="live-links" viewBox="0 0 800 360" aria-hidden="true"></svg>
   <div id="live-drop-target" hidden aria-hidden="true"></div><div id="live-sale-target" hidden>여기로 끌어 판매 <b></b></div>
   <p id="live-notice" role="status"></p>`);
@@ -28,7 +29,7 @@ const live=await import('./main');
 await import('./landscape-game.css');
 const api=live.liveBattle,g=api.game;
 Object.assign(frame,{liveBattle:api});
-const tray=el('live-tray'),actions=el('live-actions'),inventory=el('live-inventory');
+const tray=el('live-tray'),actions=el('live-actions'),inventory=el('live-inventory'),heroPanel=el('live-hero-panel');
 const heroBags=el('live-hero-bags'),bagBoard=el('live-bag-board'),links=el('live-links');
 const lifetime=new AbortController(),signal=lifetime.signal;
 const htmlCache=new WeakMap<HTMLElement,string>();
@@ -52,18 +53,24 @@ function setHtml(node:HTMLElement,html:string){
 function finishMutation(){api.refresh();render();}
 function closeMenu(){
   clearTimeout(timer);cancelDrag();menu='';gear=null;focusPick=null;selectedCard=null;pendingHeroFocus=null;
-  tray.hidden=true;inventory.hidden=true;actions.classList.remove('away');actions.inert=false;
+  tray.hidden=true;inventory.hidden=true;heroPanel.hidden=true;actions.classList.remove('away');actions.inert=false;
   api.clearSelection();render();
 }
 function showMenu(value:Menu,heroId:number|null=null){
   if(!interactive())return;
-  if(value==='shop'&&menu==='shop'&&!inventory.hidden&&heroId!==null){
-    cancelDrag();gear=null;focusPick=null;selectedCard=null;pendingHeroFocus=heroId;render();return;
+  const alreadyOpen=menu===value&&!tray.hidden;
+  clearTimeout(timer);cancelDrag();menu=value;gear=null;focusPick=null;selectedCard=null;
+  if(heroId!==null&&api.hero!==heroId)api.selectHero(heroId);
+  pendingHeroFocus=value==='shop'||value==='hero'?(heroId??api.hero):null;
+  if(value==='hero'){
+    const hero=g.heroes().find(hero=>hero.id===(heroId??api.hero)),index=heroCards.findIndex(([kind])=>kind===hero?.kind);
+    if(index>=0)selectedCard=`${heroCards[index][0]}-${index}`;
   }
-  clearTimeout(timer);cancelDrag();menu=value;gear=null;focusPick=null;selectedCard=null;pendingHeroFocus=heroId;
-  api.clearSelection();tray.hidden=true;tray.scrollLeft=0;inventory.hidden=true;
+  api.clearSelection();
+  if(alreadyOpen){inventory.hidden=value!=='shop';heroPanel.hidden=value!=='hero';render();return;}
+  tray.hidden=true;tray.scrollLeft=0;inventory.hidden=true;heroPanel.hidden=true;
   actions.classList.add('away');actions.inert=true;
-  timer=window.setTimeout(()=>{tray.hidden=false;inventory.hidden=menu!=='shop';render();},200);
+  timer=window.setTimeout(()=>{if(!interactive()){closeMenu();return;}tray.hidden=false;inventory.hidden=menu!=='shop';heroPanel.hidden=menu!=='hero';render();},200);
 }
 
 // Presentation names/crops only: no lobby roster, levels or equipment are imported.
@@ -79,7 +86,7 @@ function card(kind:UnitKind,index:number,name?:string,portrait=0){
   const d=UNITS[kind],key=`${kind}-${index}`;
   if(!d.hero)return `<button class="live-unit-card live-soldier-card" data-live-unit="${kind}" data-live-card="${key}" aria-label="${d.name} ${d.cost}골드 소환" aria-pressed="false"><span class="class-emblem" title="${d.name}">${emblem(kind)}</span><span class="soldier-card-body">${api.unitArt(kind)}</span><small class="soldier-cost">${d.cost}G</small></button>`;
   const x=[39,266,492,719][portrait%4],y=portrait<4?968:1223;
-  return `<button class="live-unit-card live-hero-card" data-live-unit="${kind}" data-live-card="${key}" aria-label="${name} · ${d.name} 소환" aria-pressed="false"><svg class="live-card-portrait" viewBox="${x} ${y} 192 108" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="${import.meta.env.BASE_URL}assets/lobby/hero-concept.png" width="948" height="1659"/></svg><span class="hero-nameplate">${name}</span></button>`;
+  return `<button class="live-unit-card live-hero-card" data-live-unit="${kind}" data-live-card="${key}" aria-label="${name} · ${d.name} 선택" aria-pressed="false"><svg class="live-card-portrait" viewBox="${x} ${y} 192 108" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="${import.meta.env.BASE_URL}assets/lobby/hero-concept.png" width="948" height="1659"/></svg><span class="hero-nameplate">${name}</span></button>`;
 }
 function footprintArt(def:Parameters<typeof itemArt>[0],turns=0){
   if(hasItemArt(def))return itemArt(def,turns);
@@ -100,8 +107,31 @@ function board(owner:number|null,cell:number){
   }).join('');
   return `<div class="live-grid" data-grid-owner="${owner??'bag'}" data-rows="${rows}" data-columns="${cols}" style="--cell:${cell}px;--columns:${cols};width:${cols*(cell+2)-2}px;height:${rows*(cell+2)-2}px">${cells}${art}</div>`;
 }
+function renderHeroPanel(){
+  const preview=heroCards.find(([kind],index)=>`${kind}-${index}`===selectedCard);
+  const selected=g.heroes().find(hero=>hero.id===api.hero),kind=preview?.[0]??selected?.kind??heroCards[0][0];
+  const unit=g.heroes().find(hero=>hero.kind===kind),identity=preview??heroCards.find(([type])=>type===kind)!;
+  const stats=g.stats(unit??{id:-1,kind,slot:0,level:1,spent:0,cooldown:0});
+  const fields:[string,string,string][]=[
+    ['hp','체력',stats.hp.toLocaleString()],['attack',stats.damageType==='physical'?'물리 공격':'마법 공격',stats.attack.toLocaleString()],
+    ['rate','공격 속도',`${stats.rate.toFixed(2)}/초`],['physicalArmor','물리 방어',stats.physicalArmor.toLocaleString()],
+    ['magicArmor','마법 방어',stats.magicArmor.toLocaleString()],['range','사거리',stats.range.toLocaleString()],
+    ['critChance','치명타 확률',`${Math.round(stats.critChance*100)}%`],['critMultiplier','치명타 피해',`${Math.round(stats.critMultiplier*100)}%`],
+    ['regen','체력 재생',`${stats.regen.toLocaleString()}/초`],['gold','골드 획득',`+${Math.round(stats.gold*100)}%`],
+  ];
+  const items=unit?g.gear.filter(item=>item.owner===unit.id):[],states=unit?g.gearStates(unit.id):new Map();
+  heroPanel.dataset.heroId=unit?String(unit.id):'';heroPanel.dataset.heroKind=kind;
+  setHtml(heroPanel,`<header class="live-hero-heading"><span class="live-hero-avatar" aria-hidden="true">${api.unitArt(kind)}</span><div><h2>${identity[1]}</h2><small>Lv.${unit?.level??1} · ${unit?'배치 중':'배치 전'}</small></div></header>
+    <section class="live-hero-stats" aria-label="능력치"><h3>능력치</h3><dl>${fields.map(([key,label,value])=>`<div><dt>${label}</dt><dd data-live-stat="${key}">${value}</dd></div>`).join('')}</dl></section>
+    <section class="live-worn-equipment" aria-label="착용 장비"><h3>착용 장비 <span>${items.length}</span></h3><ul>${items.map(item=>{
+      const state=states.get(item.id)!;
+      return `<li data-equipped-id="${item.id}" data-gear-active="${state.active}" class="${state.active?'':'is-inactive'}"><span class="live-worn-art" aria-hidden="true">${footprintArt(item.def,item.turns)}</span><span class="live-worn-copy"><strong>${item.def.name}</strong><small title="${state.active?item.def.description:state.reason}">${state.active?item.def.description:`비활성 · ${state.reason}`}</small></span></li>`;
+    }).join('')||'<li class="live-empty-equipment">착용 장비 없음</li>'}</ul></section>`);
+}
 function render(){
   frame.dataset.menu=menu;tray.dataset.menu=menu;
+  heroPanel.hidden=menu!=='hero'||tray.hidden||!interactive();
+  if(!heroPanel.hidden)renderHeroPanel();
   if(gear!==null&&!g.gear.some(item=>item.id===gear))gear=null;
   if(focusPick&&!pickedItem(g,focusPick))focusPick=null;
   // Do not replace a node held by a pointer, including the pre-drag press interval.
@@ -117,7 +147,7 @@ function render(){
     button.classList.toggle('is-selected',selected);button.setAttribute('aria-pressed',String(selected));
     const kind=button.dataset.liveUnit as UnitKind,definition=UNITS[kind];
     const unavailable=g.gold<definition.cost||(definition.hero&&!g.heroes().some(hero=>hero.kind===kind)&&g.heroes().length>=RULES.heroLimit);
-    button.classList.toggle('unavailable',unavailable);button.setAttribute('aria-disabled',String(unavailable));
+    button.classList.toggle('unavailable',unavailable);button.setAttribute('aria-disabled',String(unavailable&&!definition.hero));
   });
   tray.querySelectorAll<HTMLElement>('[data-offer-card]').forEach(card=>{
     const selected=card.dataset.offerCard===selectedCard;
@@ -132,10 +162,11 @@ function render(){
   const startupNotice=g.message==='게임을 시작 상태로 초기화했습니다.';
   el('live-notice').hidden=menu==='hero'||startupNotice;
   el('live-notice').textContent=startupNotice?'':g.message;
-  if(pendingHeroFocus!==null&&!inventory.hidden){
-    const bag=heroBags.querySelector<HTMLElement>(`[data-bag-hero="${pendingHeroFocus}"]`);
-    if(bag){const r=bag.getBoundingClientRect(),list=heroBags.getBoundingClientRect();
-      heroBags.scrollTo({left:heroBags.scrollLeft+r.left-list.left-(heroBags.clientWidth-bag.offsetWidth)/2,behavior:'instant'});}
+  if(pendingHeroFocus!==null&&!tray.hidden){
+    const list=menu==='shop'?heroBags:tray;
+    const target=menu==='shop'?heroBags.querySelector<HTMLElement>(`[data-bag-hero="${pendingHeroFocus}"]`):[...tray.querySelectorAll<HTMLElement>('[data-live-card]')].find(card=>card.dataset.liveCard===selectedCard);
+    if(target){const r=target.getBoundingClientRect(),bounds=list.getBoundingClientRect();
+      list.scrollTo({left:list.scrollLeft+r.left-bounds.left-(list.clientWidth-target.offsetWidth)/2,behavior:'instant'});}
     pendingHeroFocus=null;
   }
   actions.querySelectorAll<HTMLButtonElement>('button').forEach(button=>button.disabled=!interactive());
@@ -312,18 +343,19 @@ function beginVisualDrag(){
 el('app').addEventListener('landscape-hero-selected',event=>{
   const id=(event as CustomEvent<{id:number}>).detail.id;
   if(!interactive()||!g.heroes().some(hero=>hero.id===id))return;
-  heroClickUntil=performance.now()+300;showMenu('shop',id);
+  heroClickUntil=performance.now()+300;showMenu(menu==='shop'?'shop':'hero',id);
 },{signal});
 frame.addEventListener('click',event=>{
   if(performance.now()<suppressUntil){event.preventDefault();return;}
   const target=event.target as HTMLElement,b=target.closest<HTMLElement>('button,a');
-  if(!b){if(target.closest('canvas')&&performance.now()<heroClickUntil&&heroAt(event.clientX,event.clientY)?.id===api.hero)return;if(!target.closest('#live-inventory,#live-tray'))closeMenu();return;}
+  if(!b){if(target.closest('canvas')&&performance.now()<heroClickUntil&&heroAt(event.clientX,event.clientY)?.id===api.hero)return;if(!target.closest('#live-inventory,#live-tray,#live-hero-panel'))closeMenu();return;}
   if(b.dataset.control){api[b.dataset.control as 'pause'|'speed'|'home']();return;}
   if(!interactive())return;
   if(b.dataset.menu){showMenu(b.dataset.menu as Menu);return;}
   if(b.dataset.liveUnit){
     const kind=b.dataset.liveUnit as UnitKind,existing=UNITS[kind].hero&&g.heroes().find(hero=>hero.kind===kind);
     if(existing){api.selectHero(existing.id);selectedCard=b.dataset.liveCard!;}
+    else if(UNITS[kind].hero){if(!api.select(kind))api.clearSelection();selectedCard=b.dataset.liveCard!;}
     else if(api.select(kind))selectedCard=b.dataset.liveCard!;
     gear=null;focusPick=null;render();return;
   }
@@ -434,7 +466,7 @@ const clock=window.setInterval(()=>{
   frame.querySelector('[data-control=speed]')!.textContent=el('speed').textContent;
   const pause=frame.querySelector('[data-control=pause]')!,paused=el('pause').getAttribute('aria-pressed')==='true';
   pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'전투 재개':'일시정지');pause.setAttribute('aria-pressed',String(paused));
-  if(!api.active||api.scene!=='defense'){cancelDrag();tray.hidden=true;inventory.hidden=true;}
+  if(!api.active||api.scene!=='defense'){cancelDrag();tray.hidden=true;inventory.hidden=true;heroPanel.hidden=true;}
   render();
 },150);
 if(import.meta.hot)import.meta.hot.dispose(()=>{cancelDrag();clearTimeout(timer);clearInterval(clock);lifetime.abort();});
