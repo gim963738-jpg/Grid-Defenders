@@ -16,12 +16,13 @@ frame.insertAdjacentHTML('beforeend',`
   <div id="live-tray" hidden></div>
   <aside id="live-inventory" hidden>
     <section id="live-equipment"><div id="live-hero-bags"></div><button id="live-combine" data-action="combine">조합</button></section>
-    <section id="live-shared"><header>공용 가방 <span id="live-gold"></span></header><div id="live-bag-board"></div></section>
-    <p id="live-gear-detail"></p>
+    <section id="live-shared" aria-label="공용 가방"><div id="live-bag-board"></div></section>
   </aside>
   <svg id="live-links" viewBox="0 0 800 360" aria-hidden="true"></svg>
   <div id="live-drop-target" hidden aria-hidden="true"></div><div id="live-sale-target" hidden>여기로 끌어 판매 <b></b></div>
   <p id="live-notice" role="status"></p>`);
+const wallet=document.querySelector<HTMLElement>('.inventory-actions .resource-wallet')!;
+wallet.id='live-wallet';wallet.setAttribute('aria-label','전투 재화');frame.append(wallet);
 const devArea=document.createElement('section');devArea.id='landscape-dev-area';devArea.setAttribute('aria-label','전투 개발자 도구');document.body.append(devArea);devArea.append(el('dev-tools'),el('dev-log'));
 const live=await import('./main');
 await import('./landscape-game.css');
@@ -105,7 +106,7 @@ function render(){
   if(focusPick&&!pickedItem(g,focusPick))focusPick=null;
   // Do not replace a node held by a pointer, including the pre-drag press interval.
   if(!drag){
-    setHtml(heroBags,g.heroes().map(hero=>`<section class="live-hero-bag${hero.id===api.hero?' selected':''}" data-bag-hero="${hero.id}"><header class="live-hero-bag-header"><button data-live-hero="${hero.id}" aria-pressed="${hero.id===api.hero}">${UNITS[hero.kind].name}</button><button data-live-stats="${hero.id}" aria-label="${UNITS[hero.kind].name} 능력치" aria-haspopup="dialog" aria-controls="hero-info">ⓘ</button></header>${board(hero.id,26)}</section>`).join('')||'<span class="no-heroes">영웅을 소환하면 장비칸이 열립니다.</span>');
+    setHtml(heroBags,g.heroes().map(hero=>`<section class="live-hero-bag${hero.id===api.hero?' selected':''}" data-bag-hero="${hero.id}"><header class="live-hero-bag-header"><button data-live-hero="${hero.id}" aria-label="${UNITS[hero.kind].name} 장비 선택" aria-pressed="${hero.id===api.hero}"></button><button data-live-stats="${hero.id}" aria-label="${UNITS[hero.kind].name} 능력치" aria-haspopup="dialog" aria-controls="hero-info">ⓘ</button></header>${board(hero.id,26)}</section>`).join(''));
     setHtml(bagBoard,board(null,26));
     if(menu==='soldier')setHtml(tray,(['guard','archer','mage'] as UnitKind[]).map((kind,i)=>card(kind,i)).join(''));
     if(menu==='hero')setHtml(tray,heroCards.map(([kind,name,portrait],i)=>card(kind,i,name,portrait)).join(''));
@@ -124,14 +125,10 @@ function render(){
     card.querySelector('.live-offer')!.setAttribute('aria-pressed',String(selected));
     (card.querySelector('.live-buy') as HTMLButtonElement).hidden=!selected;
   });
-  el('live-gold').textContent=`${g.gold}G · 모루 ${g.anvils}`;
-  const plan=g.combinationPlan(api.hero),selected=g.gear.find(item=>item.id===gear);
+  const plan=g.combinationPlan(api.hero);
   const combine=el('live-combine') as HTMLButtonElement;
   combine.disabled=!interactive()||plan.length===0||g.anvils<plan.length;
   combine.textContent=plan.length?`조합 ${plan.length}`:'조합';combine.title=`선택 영웅과 공용 가방 · 모루 ${plan.length}개 필요`;
-  const detail=el('live-gear-detail');
-  detail.textContent=selected?`${selected.def.name} · ${selected.owner===null?'공용 가방':g.gearState(selected).reason}`:plan.length?`인접 조합 ${plan.length}개 · 모루 ${plan.length}개 필요`:'파랑: 조합 후보 · 노랑: 인접 조합';
-  detail.title=selected?`${selected.def.description} · 두 번 클릭/탭 또는 R: 회전`:detail.textContent;
   const startupNotice=g.message==='게임을 시작 상태로 초기화했습니다.';
   el('live-notice').hidden=menu==='hero'||startupNotice;
   el('live-notice').textContent=startupNotice?'':g.message;
