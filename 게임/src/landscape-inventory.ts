@@ -27,7 +27,7 @@ export function inventoryPlacement(game:Defense,pick:InventoryPick,owner:number|
   const position=pick.kind==='offer'
     ?owner===null?game.purchasePosition(item.def,{x,y}):game.nearestFree(item,owner,x,y,0)
     :game.correctedPosition(item,owner,x,y,item.turns);
-  if(!position)return {...result,reason:'장비칸에 빈 공간이 없습니다.'};
+  if(!position)return {...result,reason:owner===null?'공용 가방에 빈 공간이 없습니다.':'장비칸에 빈 공간이 없습니다.'};
   Object.assign(result,position);
   // Hero overlaps are intentionally permitted by the original engine, but remain inactive.
   // Bag overlaps are rejected. Neither destination may extend beyond its board.

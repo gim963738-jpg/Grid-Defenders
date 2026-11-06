@@ -1,5 +1,5 @@
 import {Defense} from '../src/defense';
-import {GRID,BAG_GRID,ITEMS,rotated} from '../src/defenseConfig';
+import {GRID,BAG_GRID,ITEMS,RULES,LANDSCAPE_BATTLE,rotated} from '../src/defenseConfig';
 import {inventoryPlacement,commitInventoryPlacement,combinationPartners,inventoryCombinationLinks,type InventoryPick} from '../src/landscape-inventory';
 
 export function checkLandscapeInventory(){
@@ -56,7 +56,28 @@ export function checkLandscapeInventory(){
   capacity.shop=[ITEMS[4]];capacity.buy(0,{x,y});
  }
  check(capacity.gear.length===BAG_GRID.columns*BAG_GRID.rows&&capacity.bagRows()===BAG_GRID.rows,'all initial bag columns are usable before extending below');
- capacity.shop=[ITEMS[0]];capacity.buy(0);
- check(capacity.gear.at(-1)!.y===BAG_GRID.rows&&capacity.bagRows()===BAG_GRID.rows+1,'full widened bag extends exactly one row for the next purchase');
+ capacity.shop=[ITEMS[0]];
+ const capacitySnapshot=()=>JSON.stringify({gear:capacity.gear,gold:capacity.gold,shop:capacity.shop,anvils:capacity.anvils});
+ const capacityBefore=capacitySnapshot(),purchased=capacity.buy(0);
+ if(LANDSCAPE_BATTLE){
+  check(!purchased&&capacitySnapshot()===capacityBefore&&capacity.bagRows()===3,'full fixed bag rejects purchase without charging or extending');
+  check(!inventoryPlacement(capacity,{kind:'offer',index:0},null,0,0)!.allowed,'full bag purchase preview is invalid');
+  capacity.summon('melee',0);const owner=capacity.heroes()[0].id;
+  check(capacity.buy(0,undefined,owner),'full common bag still allows a direct hero equipment purchase');
+  const equipped=capacity.gear.at(-1)!,equippedBefore=capacitySnapshot();
+  check(!capacity.unequip(equipped.id)&&capacitySnapshot()===equippedBefore,'unequip into full bag preserves equipped item and currencies');
+  check(!capacity.placeInBag(equipped.id,0,3,0)&&capacitySnapshot()===equippedBefore,'out-of-bounds transfer into full bag preserves original owner');
+  check(!capacity.devEquipHero(owner)&&capacitySnapshot()===equippedBefore,'developer loadout is atomic when old equipment cannot fit in the fixed bag');
+  check(capacity.outside(equipped,null,0,3,0)&&!capacity.canPlace(equipped,null,0,3,0),'fixed bag bounds reject hidden fourth-row placements');
+  const rotation=new Defense(()=>.5);rotation.gold=10000;rotation.shop=[ITEMS[0]];rotation.shopDiscounts=[false];rotation.buy(0,{x:0,y:2});
+  const sword=rotation.gear[0];
+  for(let y=0;y<3;y++)for(let x=0;x<BAG_GRID.columns;x++)if(rotation.canPlace({id:-1,def:ITEMS[4]},null,x,y,0)){rotation.shop=[ITEMS[4]];rotation.buy(0,{x,y});}
+  const rotationBefore=JSON.stringify(rotation.gear);
+  check(!rotation.rotateGear(sword.id)&&JSON.stringify(rotation.gear)===rotationBefore,'rotation without enough fixed-bag space retains the item and original orientation');
+ }else check(purchased&&capacity.gear.at(-1)!.y===BAG_GRID.rows&&capacity.bagRows()===BAG_GRID.rows+1,'legacy bag still extends exactly one row for the next purchase');
+ const shop=new Defense(()=>.5);
+ check(shop.shop.length===RULES.shopSlots&&RULES.shopSlots===(LANDSCAPE_BATTLE?6:5),'shop starts with the requested slot count for its layout');
+ shop.reroll();check(shop.shop.length===RULES.shopSlots,'shop refresh retains every product slot');
+ shop.reset();check(shop.shop.length===RULES.shopSlots,'new battle restores every product slot');
  return passed;
 }

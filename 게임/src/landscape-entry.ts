@@ -8,14 +8,27 @@ document.body.classList.add('landscape-live');document.body.style.visibility='vi
 const el=(id:string)=>document.getElementById(id)!;
 const field=el('battlefield'),frame=document.createElement('section');frame.id='live-landscape';frame.setAttribute('aria-label','가로형 전투');
 el('defense-screen').prepend(frame);frame.append(field);
-frame.insertAdjacentHTML('beforeend',`<div id="live-terrain"></div><div id="live-tiles"></div><section id="live-wave"><strong>WAVE 1</strong><b>00:30</b><small>몬스터 0 / 20</small></section><nav id="live-controls"><button data-control="pause" aria-label="일시정지">Ⅱ</button><button data-control="speed" aria-label="배속 변경">1×</button><button disabled aria-label="설정 준비중">⚙</button><button data-control="home" aria-label="로비로">⌂</button></nav><nav id="live-actions"><button data-menu="soldier">병사</button><button data-menu="hero">영웅</button><button data-menu="shop">상점</button></nav><div id="live-tray" hidden></div><aside id="live-inventory" hidden><div id="live-hero-bags"></div><section id="live-shared"><header>공용 가방 <span id="live-gold"></span></header><div id="live-bag-scroll"></div></section><p id="live-gear-detail"></p><div id="live-gear-actions"><button data-action="rotate">회전</button><button data-action="unequip">해제</button><button data-action="sell">판매</button><button data-action="combine">조합</button></div></aside><svg id="live-links" viewBox="0 0 800 360" aria-hidden="true"></svg><div id="live-drop-target" hidden aria-hidden="true"></div><div id="live-sale-target" hidden>여기로 끌어 판매 <b></b></div><p id="live-notice" role="status"></p>`);
+frame.insertAdjacentHTML('beforeend',`
+  <div id="live-terrain"></div><div id="live-tiles"></div>
+  <section id="live-wave"><strong>WAVE 1</strong><b>00:30</b><small>몬스터 0 / 20</small></section>
+  <nav id="live-controls"><button data-control="pause" aria-label="일시정지">Ⅱ</button><button data-control="speed" aria-label="배속 변경">1×</button><button disabled aria-label="설정 준비중">⚙</button><button data-control="home" aria-label="로비로">⌂</button></nav>
+  <nav id="live-actions"><button data-menu="soldier">병사</button><button data-menu="hero">영웅</button><button data-menu="shop">상점</button></nav>
+  <div id="live-tray" hidden></div>
+  <aside id="live-inventory" hidden>
+    <section id="live-equipment"><div id="live-hero-bags"></div><button id="live-combine" data-action="combine">조합</button></section>
+    <section id="live-shared"><header>공용 가방 <span id="live-gold"></span></header><div id="live-bag-board"></div></section>
+    <p id="live-gear-detail"></p>
+  </aside>
+  <svg id="live-links" viewBox="0 0 800 360" aria-hidden="true"></svg>
+  <div id="live-drop-target" hidden aria-hidden="true"></div><div id="live-sale-target" hidden>여기로 끌어 판매 <b></b></div>
+  <p id="live-notice" role="status"></p>`);
 const devArea=document.createElement('section');devArea.id='landscape-dev-area';devArea.setAttribute('aria-label','전투 개발자 도구');document.body.append(devArea);devArea.append(el('dev-tools'),el('dev-log'));
 const live=await import('./main');
 await import('./landscape-game.css');
 const api=live.liveBattle,g=api.game;
 Object.assign(frame,{liveBattle:api});
 const tray=el('live-tray'),actions=el('live-actions'),inventory=el('live-inventory');
-const heroBags=el('live-hero-bags'),bagScroll=el('live-bag-scroll'),links=el('live-links');
+const heroBags=el('live-hero-bags'),bagBoard=el('live-bag-board'),links=el('live-links');
 const lifetime=new AbortController(),signal=lifetime.signal;
 const htmlCache=new WeakMap<HTMLElement,string>();
 type Menu='soldier'|'hero'|'shop'|'';
@@ -25,7 +38,7 @@ type Destination={kind:'grid';grid:HTMLElement;plan:InventoryPlacement}|{kind:'h
   {kind:'sale'}|{kind:'none'};
 let menu:Menu='',gear:number|null=null,focusPick:InventoryPick|null=null,drag:Drag|null=null;
 let selectedCard:string|null=null,suppressUntil=0,timer:number|undefined,dragFrame=0;
-let previewGrid:HTMLElement|null=null,lastTap:{id:number;time:number}|null=null;
+let lastTap:{id:number;time:number}|null=null,rotationAnimation:Animation|null=null;
 let observedRun=api.runId,observedScene=api.scene;
 let heroClickUntil=0,pendingHeroFocus:number|null=null;
 
@@ -87,15 +100,16 @@ function board(owner:number|null,cell:number){
   return `<div class="live-grid" data-grid-owner="${owner??'bag'}" data-rows="${rows}" data-columns="${cols}" style="--cell:${cell}px;--columns:${cols};width:${cols*(cell+2)-2}px;height:${rows*(cell+2)-2}px">${cells}${art}</div>`;
 }
 function render(){
+  frame.dataset.menu=menu;tray.dataset.menu=menu;
   if(gear!==null&&!g.gear.some(item=>item.id===gear))gear=null;
   if(focusPick&&!pickedItem(g,focusPick))focusPick=null;
   // Do not replace a node held by a pointer, including the pre-drag press interval.
   if(!drag){
     setHtml(heroBags,g.heroes().map(hero=>`<section class="live-hero-bag${hero.id===api.hero?' selected':''}" data-bag-hero="${hero.id}"><header class="live-hero-bag-header"><button data-live-hero="${hero.id}" aria-pressed="${hero.id===api.hero}">${UNITS[hero.kind].name}</button><button data-live-stats="${hero.id}" aria-label="${UNITS[hero.kind].name} 능력치" aria-haspopup="dialog" aria-controls="hero-info">ⓘ</button></header>${board(hero.id,26)}</section>`).join('')||'<span class="no-heroes">영웅을 소환하면 장비칸이 열립니다.</span>');
-    setHtml(bagScroll,board(null,26));
+    setHtml(bagBoard,board(null,26));
     if(menu==='soldier')setHtml(tray,(['guard','archer','mage'] as UnitKind[]).map((kind,i)=>card(kind,i)).join(''));
     if(menu==='hero')setHtml(tray,heroCards.map(([kind,name,portrait],i)=>card(kind,i,name,portrait)).join(''));
-    if(menu==='shop')setHtml(tray,g.shop.map((item,i)=>item?`<button class="live-offer" data-live-offer="${i}" aria-label="${item.name} ${g.shopPrice(i)}골드 구매" ${g.gold<g.shopPrice(i)?'disabled':''}><span class="live-item-art">${footprintArt(item)}</span><small>${g.shopPrice(i)}G</small></button>`:'<button disabled aria-label="구매 완료">구매 완료</button>').join('')+'<button data-action="reroll">새로고침<br>20G</button>');
+    if(menu==='shop')setHtml(tray,g.shop.map((item,i)=>item?`<div class="live-offer-wrap" data-offer-card="offer-${i}"><button class="live-buy" data-live-buy="${i}" aria-label="${item.name} ${g.shopPrice(i)}골드 구매" hidden ${g.gold<g.shopPrice(i)?'disabled':''}>구매</button><button class="live-offer" data-live-offer="${i}" aria-label="${item.name} ${g.shopPrice(i)}골드 선택" aria-pressed="false"><span class="live-item-art">${footprintArt(item)}</span><small>${g.shopPrice(i)}G</small></button></div>`:'<button disabled aria-label="구매 완료">구매 완료</button>').join('')+'<button data-action="reroll">새로고침<br>20G</button>');
   }
   tray.querySelectorAll<HTMLButtonElement>('[data-live-card]').forEach(button=>{
     const selected=button.dataset.liveCard===selectedCard;
@@ -104,13 +118,17 @@ function render(){
     const unavailable=g.gold<definition.cost||(definition.hero&&!g.heroes().some(hero=>hero.kind===kind)&&g.heroes().length>=RULES.heroLimit);
     button.classList.toggle('unavailable',unavailable);button.setAttribute('aria-disabled',String(unavailable));
   });
+  tray.querySelectorAll<HTMLElement>('[data-offer-card]').forEach(card=>{
+    const selected=card.dataset.offerCard===selectedCard;
+    card.classList.toggle('is-selected',selected);
+    card.querySelector('.live-offer')!.setAttribute('aria-pressed',String(selected));
+    (card.querySelector('.live-buy') as HTMLButtonElement).hidden=!selected;
+  });
   el('live-gold').textContent=`${g.gold}G · 모루 ${g.anvils}`;
   const plan=g.combinationPlan(api.hero),selected=g.gear.find(item=>item.id===gear);
-  frame.querySelectorAll<HTMLButtonElement>('#live-gear-actions button').forEach(button=>{
-    const action=button.dataset.action;
-    button.disabled=!interactive()||(action==='combine'?plan.length===0||g.anvils<plan.length:!selected)||(action==='unequip'&&selected?.owner===null);
-    if(action==='combine'){button.textContent=plan.length?`조합 ${plan.length}`:'조합';button.title=`선택 영웅과 공용 가방 · 모루 ${plan.length}개 필요`;}
-  });
+  const combine=el('live-combine') as HTMLButtonElement;
+  combine.disabled=!interactive()||plan.length===0||g.anvils<plan.length;
+  combine.textContent=plan.length?`조합 ${plan.length}`:'조합';combine.title=`선택 영웅과 공용 가방 · 모루 ${plan.length}개 필요`;
   const detail=el('live-gear-detail');
   detail.textContent=selected?`${selected.def.name} · ${selected.owner===null?'공용 가방':g.gearState(selected).reason}`:plan.length?`인접 조합 ${plan.length}개 · 모루 ${plan.length}개 필요`:'파랑: 조합 후보 · 노랑: 인접 조합';
   detail.title=selected?`${selected.def.description} · 두 번 클릭/탭 또는 R: 회전`:detail.textContent;
@@ -154,7 +172,8 @@ function drawConnections(){
     const a=itemCenter(pair.a),b=itemCenter(pair.b);
     if(a&&b)paths.push(`<path class="${pair.ready?'combo-ready':'combo-deferred'}" data-pair="${pair.a},${pair.b}" d="M${a.x},${a.y} L${b.x},${b.y}"/>`);
   }
-  const pick=drag?.moved?dragPick():focusPick??(gear===null?null:{kind:'gear',id:gear} as InventoryPick);
+  const offer=selectedCard?.startsWith('offer-')?Number(selectedCard.slice(6)):null;
+  const pick=drag?.moved?dragPick():focusPick??(gear!==null?{kind:'gear',id:gear} as InventoryPick:offer===null?null:{kind:'offer',index:offer} as InventoryPick);
   if(pick){
     let source=drag?.moved?localPoint(drag.x,drag.y):pick.kind==='gear'?itemCenter(pick.id):null;
     if(!source&&pick.kind==='offer'){
@@ -177,16 +196,14 @@ function heroAt(x:number,y:number){
 function destination(current:Drag):Destination {
   const pick=dragPick(current);if(!pick)return {kind:'none'};
   const target=document.elementFromPoint(current.x,current.y) as HTMLElement|null;
-  if(current.type==='gear'&&target?.closest('#live-sale-target,[data-action=sell]'))return {kind:'sale'};
+  if(current.type==='gear'&&target?.closest('#live-sale-target'))return {kind:'sale'};
   const grid=target?.closest<HTMLElement>('.live-grid');
   if(grid){
     const owner=grid.dataset.gridOwner==='bag'?null:Number(grid.dataset.gridOwner),r=grid.getBoundingClientRect();
     const cell=parseFloat(grid.style.getPropertyValue('--cell')),step=cell+2;
     const x=Math.floor((current.x-r.left)*grid.offsetWidth/r.width/step)-current.grabX;
     const row=Math.floor((current.y-r.top)*grid.offsetHeight/r.height/step);
-    // Extra preview rows show the item's footprint; they must not become a new
-    // anchor on every auto-scroll frame and grow the bag without a drop.
-    const y=(owner===null?Math.min(row,Number(grid.dataset.rows)-1):row)-current.grabY;
+    const y=row-current.grabY;
     const plan=inventoryPlacement(g,pick,owner,x,y);
     if(plan)return {kind:'grid',grid,plan};
   }
@@ -195,22 +212,6 @@ function destination(current:Drag):Destination {
   if(hero){const item=pickedItem(g,pick),free=item&&g.nearestFree(item,hero.id,0,0,item.turns);
     const plan=inventoryPlacement(g,pick,hero.id,free?.x??0,free?.y??0);if(plan)return {kind:'hero',hero:hero.id,plan};}
   return {kind:'none'};
-}
-function resetPreviewRows(){
-  if(previewGrid){
-    previewGrid.querySelectorAll('[data-preview-only]').forEach(node=>node.remove());
-    const cell=parseFloat(previewGrid.style.getPropertyValue('--cell'));previewGrid.style.height=`${Number(previewGrid.dataset.rows)*(cell+2)-2}px`;
-    previewGrid=null;
-  }
-}
-function ensurePreviewRows(grid:HTMLElement,rows:number){
-  if(previewGrid&&previewGrid!==grid)resetPreviewRows();
-  const base=Number(grid.dataset.rows),cols=Number(grid.dataset.columns),cell=parseFloat(grid.style.getPropertyValue('--cell'));
-  const current=base+grid.querySelectorAll('[data-preview-only]').length/cols;
-  if(rows<=current)return;
-  previewGrid=grid;
-  for(let y=current;y<rows;y++)for(let x=0;x<cols;x++)grid.insertAdjacentHTML('beforeend',`<button class="live-cell" data-preview-only data-owner="bag" data-x="${x}" data-y="${y}" aria-label="확장 예정 ${y+1}행 ${x+1}열"></button>`);
-  grid.style.height=`${rows*(cell+2)-2}px`;
 }
 function clearPreview(){
   frame.querySelectorAll('.live-drop-preview').forEach(node=>node.classList.remove('live-drop-preview','drop-warning','drop-invalid'));
@@ -245,13 +246,11 @@ function updateDrag(){
     current.ghost.classList.toggle('invalid',dest.kind==='none'||((dest.kind==='grid'||dest.kind==='hero')&&!dest.plan.allowed));
   }
   if(dest.kind==='grid'){
-    if(dest.plan.owner===null&&dest.plan.allowed)ensurePreviewRows(dest.grid,Math.max(...dest.plan.cells.map(p=>p[1]+dest.plan.y))+1);
-    else if(previewGrid&&previewGrid!==dest.grid)resetPreviewRows();
     for(const [dx,dy] of dest.plan.cells){
       const cell=dest.grid.querySelector<HTMLElement>(`[data-x="${dest.plan.x+dx}"][data-y="${dest.plan.y+dy}"]`);
       cell?.classList.add('live-drop-preview');cell?.classList.toggle('drop-invalid',!dest.plan.allowed);cell?.classList.toggle('drop-warning',dest.plan.allowed&&dest.plan.warning);
     }
-  }else{resetPreviewRows();
+  }else{
     if(dest.kind==='hero'){const p=SLOTS[g.heroes().find(hero=>hero.id===dest.hero)!.slot],r=frame.getBoundingClientRect();
       const bag=heroBags.querySelector<HTMLElement>(`[data-bag-hero="${dest.hero}"]`),target=document.elementFromPoint(current.x,current.y);
       const rect=target?.closest('[data-live-hero]')&&bag?visibleRect(bag):null;
@@ -268,31 +267,38 @@ function commitDrop(current:Drag){
   const pick=dragPick(current)!,dest=destination(current);
   if(dest.kind==='sale'&&pick.kind==='gear'){if(g.sellGear(pick.id))gear=null;}
   else if(dest.kind==='grid'||dest.kind==='hero'){
-    if(commitInventoryPlacement(g,pick,dest.plan)){gear=null;if(dest.plan.owner!==null)api.selectHero(dest.plan.owner);}
+    if(commitInventoryPlacement(g,pick,dest.plan)){gear=null;selectedCard=null;if(dest.plan.owner!==null)api.selectHero(dest.plan.owner);}
   }
   // An invalid/outside drop is a cancellation, never an implicit purchase.
 }
 function cancelDrag(){
   cancelAnimationFrame(dragFrame);dragFrame=0;
   const current=drag;drag=null;current?.node.classList.remove('dragging');current?.ghost?.remove();
-  tray.classList.remove('scrolling');el('live-sale-target').hidden=true;clearPreview();resetPreviewRows();
+  rotationAnimation?.cancel();rotationAnimation=null;
+  tray.classList.remove('scrolling');el('live-sale-target').hidden=true;clearPreview();
   if(current&&frame.hasPointerCapture(current.pointer))frame.releasePointerCapture(current.pointer);
 }
 function rotateSelected(){
   const id=drag?.type==='gear'?Number(drag.id):gear;if(id===null)return;
-  g.rotateGear(id);gear=id;lastTap=null;
+  rotationAnimation?.cancel();
+  const before=(drag?.ghost??inventory.querySelector<HTMLElement>(`[data-art-id="${id}"]`))?.getBoundingClientRect();
+  const didRotate=g.rotateGear(id);gear=id;lastTap=null;
   if(drag?.type==='gear'){
     const item=g.gear.find(item=>item.id===id);if(item){const cells=rotated(item.def.cells,item.turns);const nearest=cells.reduce((best,p)=>Math.hypot(p[0]-drag!.grabX,p[1]-drag!.grabY)<Math.hypot(best[0]-drag!.grabX,best[1]-drag!.grabY)?p:best);[drag.grabX,drag.grabY]=nearest;}
     updateDrag();
   }
   finishMutation();
+  const node=drag?.ghost??inventory.querySelector<HTMLElement>(`[data-art-id="${id}"]`);
+  if(didRotate&&before&&node&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const after=node.getBoundingClientRect(),dx=(before.left+before.right-after.left-after.right)/2,dy=(before.top+before.bottom-after.top-after.bottom)/2;
+    rotationAnimation=node.animate([{transform:`translate(${dx}px,${dy}px) rotate(-90deg)`},{transform:'translate(0px,0px) rotate(0deg)'}],{duration:180,easing:'ease-out'});
+  }
 }
 function scrollDrag(){
   if(!drag?.moved||drag.scrolling||!interactive()){if(drag&&!interactive())cancelDrag();return;}
-  const hit=document.elementFromPoint(drag.x,drag.y),scroll=hit?.closest<HTMLElement>('#live-bag-scroll,#live-hero-bags');
+  const hit=document.elementFromPoint(drag.x,drag.y),scroll=hit?.closest<HTMLElement>('#live-hero-bags');
   if(scroll){const r=scroll.getBoundingClientRect(),edge=18;
-    if(scroll===bagScroll){if(drag.y<r.top+edge)scroll.scrollTop-=3;else if(drag.y>r.bottom-edge)scroll.scrollTop+=3;}
-    else{if(drag.x<r.left+edge)scroll.scrollLeft-=3;else if(drag.x>r.right-edge)scroll.scrollLeft+=3;}
+    if(drag.x<r.left+edge)scroll.scrollLeft-=3;else if(drag.x>r.right-edge)scroll.scrollLeft+=3;
   }
   updateDrag();dragFrame=requestAnimationFrame(scrollDrag);
 }
@@ -335,8 +341,10 @@ frame.addEventListener('click',event=>{
     api.selectHero(owner);render();return;
   }
   if(b.dataset.liveStats){api.inspectUnit(Number(b.dataset.liveStats));return;}
-  if(b.dataset.liveOffer){g.buy(Number(b.dataset.liveOffer));focusPick=null;finishMutation();return;}
+  if(b.dataset.liveOffer){selectedCard=`offer-${b.dataset.liveOffer}`;gear=null;focusPick={kind:'offer',index:Number(b.dataset.liveOffer)};render();return;}
+  if(b.dataset.liveBuy){if(g.buy(Number(b.dataset.liveBuy))){selectedCard=null;focusPick=null;}finishMutation();return;}
   if(b.dataset.owner){
+    selectedCard=null;
     const id=b.dataset.liveGear===undefined?null:Number(b.dataset.liveGear);
     if(gear!==null&&id!==gear){
       const pick:InventoryPick={kind:'gear',id:gear},owner=b.dataset.owner==='bag'?null:Number(b.dataset.owner);
@@ -356,10 +364,8 @@ frame.addEventListener('click',event=>{
   }
   if(b.dataset.action){
     const action=b.dataset.action;
-    if(action==='reroll')g.reroll();
+    if(action==='reroll'){g.reroll();selectedCard=null;}
     else if(action==='combine'){g.combineMany(g.combinationPlan(api.hero));gear=null;}
-    else if(action==='rotate'){rotateSelected();return;}
-    else if(gear!==null){if(action==='unequip')g.unequip(gear);if(action==='sell'&&g.sellGear(gear))gear=null;}
     focusPick=null;lastTap=null;finishMutation();
   }
 },{signal});
@@ -396,10 +402,10 @@ document.addEventListener('pointerup',event=>{
   if(!drag||drag.pointer!==event.pointerId)return;
   const current=drag;current.x=event.clientX;current.y=event.clientY;
   if(current.moved){suppressUntil=performance.now()+180;if(!current.scrolling)commitDrop(current);}
-  const bagTop=bagScroll.scrollTop,heroLeft=heroBags.scrollLeft;
+  const heroLeft=heroBags.scrollLeft;
   cancelDrag();focusPick=gear===null?null:{kind:'gear',id:gear};
   if(current.scrolling)tray.scrollTo({left:Math.round(tray.scrollLeft/74)*74,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
-  if(current.moved){finishMutation();bagScroll.scrollTop=bagTop;heroBags.scrollLeft=heroLeft;drawConnections();}
+  if(current.moved){finishMutation();heroBags.scrollLeft=heroLeft;drawConnections();}
   else drawConnections();
 },{signal});
 document.addEventListener('pointercancel',event=>{if(drag&&event.pointerId!==drag.pointer)return;cancelDrag();focusPick=null;render();},{signal});

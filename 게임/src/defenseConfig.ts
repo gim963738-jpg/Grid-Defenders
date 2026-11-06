@@ -1,7 +1,7 @@
 export const LANDSCAPE_BATTLE=typeof location!=='undefined'&&location.pathname.endsWith('/battle-landscape.html');
 // WEB-002 시험 수치. 최종 밸런스가 아니다.
 export const RULES = { width: LANDSCAPE_BATTLE?800:390, height: LANDSCAPE_BATTLE?360:330, initialGold: 480, maxEnemies: 30,
-  spawnSeconds: 2.4, killGold: 12, heroLimit: 3, rerollGold: 20, shopSlots:5, shopDiscountChance:0.2,
+  spawnSeconds: 2.4, killGold: 12, heroLimit: 3, rerollGold: 20, shopSlots:LANDSCAPE_BATTLE?6:5, shopDiscountChance:0.2,
   soldierCritChance:0.1, heroCritChance:0.1, critMultiplier:1.5, waveSeconds:30, bossEvery:10, waveMonsters:10, waveSpawnSeconds:2, namedEvery:5, bountyEvery:3, bountyStackLimit:3, bountyHp:1600, bountySpeed:32, bountyGold:100, bountyAnvils:1 } as const;
 export type DamageType = 'physical' | 'magic';
 export type DefenseType = 'normal' | 'physical' | 'magic';
