@@ -44,6 +44,7 @@ let selectedCard:string|null=null,suppressUntil=0,timer:number|undefined,dragFra
 let lastTap:{id:number;time:number}|null=null,rotationAnimation:Animation|null=null;
 let observedRun=api.runId,observedScene=api.scene;
 let heroClickUntil=0,pendingHeroFocus:number|null=null;
+let heroScrollReady=false,heroWheelTimer:number|undefined;
 
 function interactive(){return api.ready&&api.active&&api.scene==='defense'&&el('app').getAttribute('aria-busy')!=='true';}
 function setHtml(node:HTMLElement,html:string){
@@ -53,14 +54,14 @@ function setHtml(node:HTMLElement,html:string){
 }
 function finishMutation(){api.refresh();render();}
 function closeMenu(){
-  clearTimeout(timer);cancelDrag();menu='';gear=null;focusPick=null;selectedCard=null;pendingHeroFocus=null;
+  clearTimeout(timer);clearTimeout(heroWheelTimer);cancelDrag();menu='';gear=null;focusPick=null;selectedCard=null;pendingHeroFocus=null;heroScrollReady=false;
   tray.hidden=true;inventory.hidden=true;heroPanel.hidden=true;actions.classList.remove('away');actions.inert=false;
   api.clearSelection();render();
 }
 function showMenu(value:Menu,heroId:number|null=null){
   if(!interactive())return;
   const alreadyOpen=menu===value&&!tray.hidden;
-  clearTimeout(timer);cancelDrag();menu=value;gear=null;focusPick=null;selectedCard=null;
+  clearTimeout(timer);clearTimeout(heroWheelTimer);cancelDrag();menu=value;gear=null;focusPick=null;selectedCard=null;
   if(heroId!==null&&api.hero!==heroId)api.selectHero(heroId);
   pendingHeroFocus=value==='shop'||value==='hero'?(heroId??api.hero):null;
   if(value==='hero'){
@@ -69,7 +70,7 @@ function showMenu(value:Menu,heroId:number|null=null){
   }
   api.clearSelection();
   if(alreadyOpen){inventory.hidden=value!=='shop';heroPanel.hidden=value!=='hero';render();return;}
-  tray.hidden=true;tray.scrollLeft=0;inventory.hidden=true;heroPanel.hidden=true;
+  heroScrollReady=false;tray.hidden=true;tray.scrollLeft=0;inventory.hidden=true;heroPanel.hidden=true;
   actions.classList.add('away');actions.inert=true;
   timer=window.setTimeout(()=>{if(!interactive()){closeMenu();return;}tray.hidden=false;inventory.hidden=menu!=='shop';heroPanel.hidden=menu!=='hero';render();},200);
 }
@@ -77,17 +78,42 @@ function showMenu(value:Menu,heroId:number|null=null){
 // Presentation names/crops only: no lobby roster, levels or equipment are imported.
 const heroCards:[UnitKind,string,number][]=[['melee','아리아',1],['ranged','카이',4],['tank','브란',0],
   ['healer','셀린',2],['arcanist','벨라',3],['assassin','제노',6],['melee','아리아',1],['ranged','카이',4],['healer','리나',5]];
+// Three fixed copies provide a buffer on both sides; selection/deployment uses the original card key.
+const HERO_CARD_STEP=74,HERO_CYCLE=heroCards.length*HERO_CARD_STEP;
+function loopHeroLeft(left:number){return HERO_CYCLE+((left-HERO_CYCLE)%HERO_CYCLE+HERO_CYCLE)%HERO_CYCLE;}
+function scrollHeroes(left:number){
+  const wrapped=loopHeroLeft(left);
+  if(drag?.scrolling)drag.scroll+=wrapped-left;
+  tray.scrollTo({left:wrapped,behavior:'instant'});
+}
+function syncHeroCopies(){
+  if(menu!=='hero'||tray.hidden||!heroScrollReady)return;
+  const buttons=[...tray.querySelectorAll<HTMLButtonElement>('[data-live-card]')],center=tray.scrollLeft+tray.clientWidth/2;
+  for(let i=0;i<heroCards.length;i++){
+    const copies=buttons.filter(button=>button.dataset.heroIndex===String(i));
+    const nearest=copies.reduce((best,button)=>Math.abs(button.offsetLeft+button.offsetWidth/2-center)<Math.abs(best.offsetLeft+best.offsetWidth/2-center)?button:best);
+    for(const button of copies){
+      const active=button===nearest;button.tabIndex=active?0:-1;
+      if(active)button.removeAttribute('aria-hidden');else button.setAttribute('aria-hidden','true');
+      if(!active&&document.activeElement===button)nearest.focus({preventScroll:true});
+    }
+  }
+}
+function snapHeroes(){
+  tray.classList.remove('scrolling');
+  tray.scrollTo({left:Math.round(tray.scrollLeft/HERO_CARD_STEP)*HERO_CARD_STEP,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+}
 function emblem(kind:UnitKind){
   const path=kind==='guard'?'<path d="m5 19 12-14 2 2L7 21M5 13l6 5M3 21l3-3"/>':
     kind==='archer'?'<path d="M6 3q17 9 0 18L11 12ZM3 12h18m-4-4 4 4-4 4"/>':
     '<path d="m7 21 7-14M10 5l4-3 4 3-4 4ZM4 7h3m12 6h2"/>';
   return `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${path}</svg>`;
 }
-function card(kind:UnitKind,index:number,name?:string,portrait=0){
+function card(kind:UnitKind,index:number,name?:string,portrait=0,cycle=0){
   const d=UNITS[kind],key=`${kind}-${index}`;
   if(!d.hero)return `<button class="live-unit-card live-soldier-card" data-live-unit="${kind}" data-live-card="${key}" aria-label="${d.name} ${d.cost}골드 소환" aria-pressed="false"><span class="class-emblem" title="${d.name}">${emblem(kind)}</span><span class="soldier-card-body">${api.unitArt(kind)}</span><small class="soldier-cost">${d.cost}G</small></button>`;
   const x=[39,266,492,719][portrait%4],y=portrait<4?968:1223;
-  return `<button class="live-unit-card live-hero-card" data-live-unit="${kind}" data-live-card="${key}" aria-label="${name} · ${d.name} 선택" aria-pressed="false"><svg class="live-card-portrait" viewBox="${x} ${y} 192 108" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="${import.meta.env.BASE_URL}assets/lobby/hero-concept.png" width="948" height="1659"/></svg><span class="hero-nameplate">${name}</span></button>`;
+  return `<button class="live-unit-card live-hero-card" data-live-unit="${kind}" data-live-card="${key}" data-hero-index="${index}" data-hero-cycle="${cycle}" aria-label="${name} · ${d.name} 선택" aria-pressed="false"><svg class="live-card-portrait" viewBox="${x} ${y} 192 108" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="${import.meta.env.BASE_URL}assets/lobby/hero-concept.png" width="948" height="1659"/></svg><span class="hero-nameplate">${name}</span></button>`;
 }
 function footprintArt(def:Parameters<typeof itemArt>[0],turns=0){
   if(hasItemArt(def))return itemArt(def,turns);
@@ -141,7 +167,10 @@ function render(){
     setHtml(heroBags,g.heroes().map(hero=>`<section class="live-hero-bag${hero.id===api.hero?' selected':''}" data-bag-hero="${hero.id}"><header class="live-hero-bag-header"><button data-live-hero="${hero.id}" aria-label="${UNITS[hero.kind].name} 장비 선택" aria-pressed="${hero.id===api.hero}"></button><button data-live-stats="${hero.id}" aria-label="${UNITS[hero.kind].name} 능력치" aria-haspopup="dialog" aria-controls="hero-info">ⓘ</button></header>${board(hero.id,26)}</section>`).join(''));
     setHtml(bagBoard,board(null,26));
     if(menu==='soldier')setHtml(tray,(['guard','archer','mage'] as UnitKind[]).map((kind,i)=>card(kind,i)).join(''));
-    if(menu==='hero')setHtml(tray,heroCards.map(([kind,name,portrait],i)=>card(kind,i,name,portrait)).join(''));
+    if(menu==='hero'){
+      setHtml(tray,[0,1,2].map(cycle=>heroCards.map(([kind,name,portrait],i)=>card(kind,i,name,portrait,cycle)).join('')).join(''));
+      if(!tray.hidden&&!heroScrollReady){heroScrollReady=true;scrollHeroes(HERO_CYCLE);}
+    }
     if(menu==='shop')setHtml(tray,g.shop.map((item,i)=>item?`<div class="live-offer-wrap" data-offer-card="offer-${i}"><button class="live-buy" data-live-buy="${i}" aria-label="${item.name} ${g.shopPrice(i)}골드 구매" hidden ${g.gold<g.shopPrice(i)?'disabled':''}>구매</button><button class="live-offer" data-live-offer="${i}" aria-label="${item.name} ${g.shopPrice(i)}골드 선택" aria-pressed="false"><span class="live-item-art">${footprintArt(item)}</span><small>${g.shopPrice(i)}G</small></button></div>`:'<button disabled aria-label="구매 완료">구매 완료</button>').join('')+'<button data-action="reroll">새로고침<br>20G</button>');
   }
   tray.querySelectorAll<HTMLButtonElement>('[data-live-card]').forEach(button=>{
@@ -166,12 +195,14 @@ function render(){
   el('live-notice').textContent=startupNotice?'':g.message;
   if(pendingHeroFocus!==null&&!tray.hidden){
     const list=menu==='shop'?heroBags:tray;
-    const target=menu==='shop'?heroBags.querySelector<HTMLElement>(`[data-bag-hero="${pendingHeroFocus}"]`):[...tray.querySelectorAll<HTMLElement>('[data-live-card]')].find(card=>card.dataset.liveCard===selectedCard);
+    const target=menu==='shop'?heroBags.querySelector<HTMLElement>(`[data-bag-hero="${pendingHeroFocus}"]`):[...tray.querySelectorAll<HTMLElement>('[data-live-card]')].filter(card=>card.dataset.liveCard===selectedCard).sort((a,b)=>Math.abs(a.offsetLeft-tray.scrollLeft)-Math.abs(b.offsetLeft-tray.scrollLeft))[0];
     if(target){const r=target.getBoundingClientRect(),bounds=list.getBoundingClientRect();
-      list.scrollTo({left:list.scrollLeft+r.left-bounds.left-(list.clientWidth-target.offsetWidth)/2,behavior:'instant'});}
+      const left=list.scrollLeft+r.left-bounds.left-(list.clientWidth-target.offsetWidth)/2;
+      if(menu==='hero')scrollHeroes(left);else list.scrollTo({left,behavior:'instant'});}
     pendingHeroFocus=null;
   }
   actions.querySelectorAll<HTMLButtonElement>('button').forEach(button=>button.disabled=!interactive());
+  syncHeroCopies();
   drawConnections();
 }
 
@@ -408,6 +439,7 @@ frame.addEventListener('pointerdown',event=>{
   if(event.button!==0||!interactive()||drag)return;
   const node=(event.target as HTMLElement).closest<HTMLElement>('[data-live-unit],[data-live-offer],[data-live-gear]');
   if(!node||(node as HTMLButtonElement).disabled)return;
+  clearTimeout(heroWheelTimer);tray.classList.remove('scrolling');
   const type=node.dataset.liveUnit?'unit':node.dataset.liveOffer?'offer':'gear';
   const item=type==='gear'?g.gear.find(item=>item.id===Number(node.dataset.liveGear)):null;
   drag={pointer:event.pointerId,type,id:node.dataset.liveUnit??node.dataset.liveOffer??node.dataset.liveGear!,node,
@@ -427,10 +459,10 @@ document.addEventListener('pointermove',event=>{
   }
   // A horizontal browse gesture may continue upward into a field deployment.
   if(drag.scrolling&&dy< -24&&event.clientY<tray.getBoundingClientRect().top-12){
-    drag.scrolling=false;tray.classList.remove('scrolling');tray.scrollTo({left:drag.scroll,behavior:'instant'});beginVisualDrag();
+    drag.scrolling=false;tray.classList.remove('scrolling');scrollHeroes(drag.scroll);beginVisualDrag();
   }
   if(drag.moved){event.preventDefault();drag.x=event.clientX;drag.y=event.clientY;
-    if(drag.scrolling)tray.scrollLeft=drag.scroll-dx;else updateDrag();}
+    if(drag.scrolling)scrollHeroes(drag.scroll-dx);else updateDrag();}
 },{passive:false,signal});
 document.addEventListener('pointerup',event=>{
   if(!drag||drag.pointer!==event.pointerId)return;
@@ -438,7 +470,7 @@ document.addEventListener('pointerup',event=>{
   if(current.moved){suppressUntil=performance.now()+180;if(!current.scrolling)commitDrop(current);}
   const heroLeft=heroBags.scrollLeft;
   cancelDrag();focusPick=gear===null?null:{kind:'gear',id:gear};
-  if(current.scrolling)tray.scrollTo({left:Math.round(tray.scrollLeft/74)*74,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+  if(current.scrolling)snapHeroes();
   if(current.moved){finishMutation();heroBags.scrollLeft=heroLeft;drawConnections();}
   else drawConnections();
 },{signal});
@@ -457,6 +489,18 @@ frame.addEventListener('focusin',event=>{
   if(node.dataset.liveOffer){focusPick={kind:'offer',index:Number(node.dataset.liveOffer)};drawConnections();}
 },{signal});
 frame.addEventListener('focusout',()=>{if(!drag){focusPick=null;drawConnections();}},{signal});
+tray.addEventListener('scroll',()=>{
+  if(menu!=='hero'||tray.hidden||!heroScrollReady)return;
+  if(tray.scrollLeft<HERO_CYCLE||tray.scrollLeft>=HERO_CYCLE*2)scrollHeroes(tray.scrollLeft);
+  syncHeroCopies();
+},{signal});
+tray.addEventListener('wheel',event=>{
+  if(menu!=='hero'||tray.hidden||drag||!interactive())return;
+  const delta=Math.abs(event.deltaX)>Math.abs(event.deltaY)?event.deltaX:event.deltaY;
+  if(!delta)return;event.preventDefault();clearTimeout(heroWheelTimer);tray.classList.add('scrolling');
+  scrollHeroes(tray.scrollLeft+delta*(event.deltaMode===1?16:event.deltaMode===2?tray.clientWidth:1));
+  heroWheelTimer=window.setTimeout(snapHeroes,120);
+},{passive:false,signal});
 frame.addEventListener('scroll',()=>{if(drag?.moved)updateDrag();else drawConnections();},{capture:true,signal});
 window.addEventListener('resize',()=>{if(drag?.moved)updateDrag();else drawConnections();},{signal});
 document.addEventListener('keydown',event=>{
@@ -474,4 +518,4 @@ const clock=window.setInterval(()=>{
   if(!api.active||api.scene!=='defense'){cancelDrag();tray.hidden=true;inventory.hidden=true;heroPanel.hidden=true;}
   render();
 },150);
-if(import.meta.hot)import.meta.hot.dispose(()=>{cancelDrag();clearTimeout(timer);clearInterval(clock);lifetime.abort();});
+if(import.meta.hot)import.meta.hot.dispose(()=>{cancelDrag();clearTimeout(timer);clearTimeout(heroWheelTimer);clearInterval(clock);lifetime.abort();});

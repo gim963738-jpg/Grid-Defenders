@@ -8,6 +8,7 @@ import {FIRE_SKILL,fireFrame,firePlacement,FIRE_SHEET_URL,FIRE_ALPHA_MATRIX} fro
 import { BossBattle, type BossActor } from './bossBattle';
 import { UNITS, type UnitKind } from './defenseConfig';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
+import {BOSS_FIELD} from './bossField';
 
 function art(a:BossActor,battle?:BossBattle):string {
   if(battle&&a.kind==='assassin'){const action=battle.assassinActions.find(c=>c.sourceId===a.id&&!c.cancelled);if(action){const frame=assassinArt(action.kind==='basic'?'basic':'boss',assassinFrame(action));if(frame)return `<svg class="boss-assassin-frame" viewBox="0 0 ${frame.contentWidth} ${frame.contentHeight}" preserveAspectRatio="xMidYMax meet" overflow="visible" aria-hidden="true"><image href="${frame.url}" x="${-frame.padding}" y="${-frame.padding}" width="${frame.texture.width}" height="${frame.texture.height}"/></svg>`;}}
@@ -30,10 +31,12 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
   const nodes=new Map<string,HTMLElement>();
   const skillRoot=document.getElementById('boss-hero-skills')!;let heroSignature='';
   const trails=document.createElementNS('http://www.w3.org/2000/svg','svg');
-  trails.setAttribute('viewBox','0 0 1000 562.5');trails.classList.add('boss-hit-trails');
+  const viewBox=`0 0 ${BOSS_FIELD.width} ${BOSS_FIELD.height}`;
+  root.closest('.boss-arena')?.querySelector<HTMLElement>('.boss-allied-side')?.style.setProperty('width',`${BOSS_FIELD.alliesWidth/BOSS_FIELD.width*100}%`);
+  trails.setAttribute('viewBox',viewBox);trails.classList.add('boss-hit-trails');
   root.append(trails);
   const assassinEffects=document.createElementNS('http://www.w3.org/2000/svg','svg');
-  assassinEffects.setAttribute('viewBox','0 0 1000 562.5');assassinEffects.classList.add('boss-hit-trails','boss-assassin-effects');root.append(assassinEffects);
+  assassinEffects.setAttribute('viewBox',viewBox);assassinEffects.classList.add('boss-hit-trails','boss-assassin-effects');root.append(assassinEffects);
   return {draw(){
     const stopped=paused();
     const current=new Set(battle.actors.map(a=>a.id));
@@ -57,7 +60,8 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
       if(!broken.hidden){if(!broken.children.length)broken.innerHTML=BROKEN_SHIELD_SVG;broken.title=`방어력 30% 감소 · ${actor.armorBreakRemaining!.toFixed(1)}초 · 물리 ${effectiveArmor(actor,'physical').toFixed(1)} / 마법 ${effectiveArmor(actor,'magic').toFixed(1)}`;}
 
       node.querySelector('small')!.textContent=actor.side==='enemy'?actor.name:`Lv.${actor.level??1} ${UNITS[actor.kind as keyof typeof UNITS]?.icon??''}`;
-      node.style.left=`${actor.x/10}%`;node.style.top=`${actor.y/5.625}%`;
+      node.style.left=`${actor.x/BOSS_FIELD.width*100}%`;node.style.top=`${actor.y/BOSS_FIELD.height*100}%`;
+      node.style.width=`${(actor.kind==='boss'?90:actor.kind==='retainer'?65:52)/BOSS_FIELD.width*100}%`;
       node.classList.toggle('attacking',battle.hits.some(h=>h.from===actor.id));
       node.setAttribute('aria-label',`${actor.name} Lv.${actor.level??1} 체력 ${Math.ceil(actor.hp)}/${actor.maxHp} 공격 ${actor.attack} 사거리 ${actor.range}`);
       node.querySelector<HTMLElement>('.boss-fighter-hp i')!.style.width=`${actor.hp/actor.maxHp*100}%`;
