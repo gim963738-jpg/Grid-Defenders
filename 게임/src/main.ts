@@ -718,6 +718,31 @@ el('heroes').addEventListener('scroll',()=>{
 },{passive:true,signal:events.signal});
 el('heroes').addEventListener('scrollend',()=>{if(!heroAnimationFrame&&!heroGesture&&!heroRebasing)rebaseHero(centeredHeroKind);},{signal:events.signal});
 el('heroes').addEventListener('keydown',(e)=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();moveHeroCarousel(e.key==='ArrowLeft'?-1:1);}},{signal:events.signal});
+function soldierSelectionAtPress(){
+  return {unit:game.units.find(u=>u.id===selectedUnit&&!UNITS[u.kind].hero)?.id??null,
+    kind:pending&&!UNITS[pending].hero?pending:null,dragged:false};
+}
+let soldierSelectionPress:ReturnType<typeof soldierSelectionAtPress>|null=null;
+document.addEventListener('pointerdown',e=>{if(e.button===0)soldierSelectionPress=soldierSelectionAtPress();},{capture:true,signal:events.signal});
+document.addEventListener('pointerup',()=>{
+  if(soldierSelectionPress)soldierSelectionPress.dragged=!!(unitDrag?.moved||summonDrag?.active||drag?.moved);
+},{capture:true,signal:events.signal});
+document.addEventListener('pointercancel',()=>{soldierSelectionPress=null;},{signal:events.signal});
+document.addEventListener('click',e=>{
+  if(!soldierSelectionPress||e.detail===0)soldierSelectionPress=soldierSelectionAtPress();
+},{capture:true,signal:events.signal});
+document.addEventListener('click',e=>{
+  const previous=soldierSelectionPress;soldierSelectionPress=null;
+  if(!previous||previous.dragged||e.defaultPrevented||!run.active||currentScene!=='defense'||sceneTransitioning)return;
+  let changed=false;
+  if(previous.unit!==null&&selectedUnit===previous.unit){
+    selectedUnit=null;if(heroInfo?.unitId===previous.unit)closeHeroInfo();changed=true;
+  }
+  if(previous.kind!==null&&pending===previous.kind){
+    pending=null;if(heroInfo?.kind===previous.kind&&!heroInfo.unitId)closeHeroInfo();changed=true;
+  }
+  if(changed){refresh();el('app').dispatchEvent(new Event('soldier-selection-cleared'));}
+},{signal:events.signal});
 el('app').addEventListener('click',(e)=>{
   if((e.target as HTMLElement).closest('[data-summon]')&&performance.now()<summonSuppressClickUntil)return;
   if(suppressClick||((e.target as HTMLElement).closest('#heroes')&&performance.now()<heroSuppressClickUntil))return;

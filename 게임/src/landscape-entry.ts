@@ -213,9 +213,9 @@ function render(){
     if(menu==='shop')setHtml(tray,g.shop.map((item,i)=>item?`<div class="live-offer-wrap" data-offer-card="offer-${i}"><button class="live-buy" data-live-buy="${i}" aria-label="${item.name} ${g.shopPrice(i)}골드 구매" hidden ${g.gold<g.shopPrice(i)?'disabled':''}>구매</button><button class="live-offer" data-live-offer="${i}" aria-label="${item.name} ${g.shopPrice(i)}골드 선택" aria-pressed="false"><span class="live-item-art">${footprintArt(item)}</span><small>${g.shopPrice(i)}G</small></button></div>`:'<button disabled aria-label="구매 완료">구매 완료</button>').join('')+'<button data-action="reroll">새로고침<br>20G</button>');
   }
   tray.querySelectorAll<HTMLButtonElement>('[data-live-card]').forEach(button=>{
-    const selected=button.dataset.liveCard===selectedCard;
-    button.classList.toggle('is-selected',selected);button.setAttribute('aria-pressed',String(selected));
     const kind=button.dataset.liveUnit as UnitKind,definition=UNITS[kind];
+    const selected=definition.hero?button.dataset.liveCard===selectedCard:api.pending===kind;
+    button.classList.toggle('is-selected',selected);button.setAttribute('aria-pressed',String(selected));
     const unavailable=g.gold<definition.cost||(definition.hero&&!g.heroes().some(hero=>hero.kind===kind)&&g.heroes().length>=RULES.heroLimit);
     button.classList.toggle('unavailable',unavailable);button.setAttribute('aria-disabled',String(unavailable&&!definition.hero));
   });
@@ -421,6 +421,9 @@ el('app').addEventListener('landscape-hero-selected',event=>{
   const id=(event as CustomEvent<{id:number}>).detail.id;
   if(!interactive()||!g.heroes().some(hero=>hero.id===id))return;
   heroClickUntil=performance.now()+300;showMenu(menu==='shop'?'shop':'hero',id);
+},{signal});
+el('app').addEventListener('soldier-selection-cleared',()=>{
+  if(menu==='soldier'&&api.pending===null){selectedCard=null;render();}
 },{signal});
 frame.addEventListener('click',event=>{
   if(performance.now()<suppressUntil){event.preventDefault();return;}
