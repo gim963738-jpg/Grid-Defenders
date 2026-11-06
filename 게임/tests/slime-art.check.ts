@@ -24,13 +24,14 @@ export async function checkSlimeArt(){
   distance+=length;
  }
  check(directions.size===8,'rounded path uses all eight supplied directions');
- const frames=Array.from({length:30},(_,i)=>slimeFrame(enemy,i/30)!);
- check(new Set(frames.map(f=>f.texture)).size===30,'all thirty original frames are used');
- check(slimeFrame(enemy,1)!.texture===frames[0].texture&&slimeFrame(enemy,29/30)!.texture===frames[29].texture,'one second loops from frame thirty back to frame one');
+ const frames=Array.from({length:23},(_,i)=>slimeFrame(enemy,i/30)!);
+ check(new Set(frames.map(f=>f.texture)).size===23&&frames.every((f,i)=>f.frame===i+1),'playback uses exactly original frames two through twenty-four');
+ check(slimeFrame(enemy,23/30)!.texture===frames[0].texture&&slimeFrame(enemy,22/30)!.texture===frames[22].texture,'twenty-fourth source frame loops back to second at 23/30 seconds');
+ check(Array.from({length:100},(_,i)=>slimePose(enemy,i/30)!.frame).every(f=>f>=1&&f<=23),'frame one and frames twenty-five through thirty never enter playback');
  check(frames.every(f=>f.anchorX===.5&&f.anchorY===228/256&&f.scale===frames[0].scale),'all frames keep one ground pivot and one uniform scale');
  const data=await fetch(`${import.meta.env.BASE_URL}assets/monsters/slimes-v1/yellow-right-ripple.frames.json`).then(r=>r.json());
  check(data.frameCount===30&&data.defaultFps===30&&data.columns===6&&data.rows===5,'runtime matches source sheet metadata');
- check(frames.every((f,i)=>f.texture.frame.x===data.frames[i].x&&f.texture.frame.y===data.frames[i].y&&f.texture.frame.width===256&&f.texture.frame.height===256),'frame extraction follows original row-major source coordinates');
+ check(frames.every((f,i)=>f.texture.frame.x===data.frames[i+1].x&&f.texture.frame.y===data.frames[i+1].y&&f.texture.frame.width===256&&f.texture.frame.height===256),'selected frames follow their original row-major source coordinates');
  const canvas=document.createElement('canvas');canvas.width=1536;canvas.height=1280;const context=canvas.getContext('2d')!;
  context.drawImage(frames[0].texture.source.resource as CanvasImageSource,0,0);
  const pixels=context.getImageData(0,0,1536,1280).data,alpha=(f:number,x:number,y:number)=>pixels[((Math.floor(f/6)*256+y)*1536+(f%6)*256+x)*4+3];
@@ -50,7 +51,7 @@ export async function checkSlimeArt(){
  check(lowerHashes.size>1,'only the lower ripple contains changing artwork');
  for(const speed of [.25,1,5]){
   const timed=new Defense(()=>1);timed.speed=speed;stepCombat(.1,speed,(_sim,real)=>timed.tick(real));
-  check(Math.abs(timed.elapsed-.1*speed)<1e-8&&slimePose(enemy,timed.elapsed)!.frame===(speed===.25?0:speed===1?3:15),`animation follows actual ${speed} speed game clock`);
+  check(Math.abs(timed.elapsed-.1*speed)<1e-8&&slimePose(enemy,timed.elapsed)!.frame===(speed===.25?1:speed===1?4:16),`animation follows actual ${speed} speed game clock`);
   const before=timed.elapsed,texture=slimeFrame(enemy,before)!.texture;stepCombat(1,speed,(_sim,real)=>timed.tick(real),true);
   check(timed.elapsed===before&&slimeFrame(enemy,timed.elapsed)!.texture===texture,`pause freezes the frame at ${speed} speed`);
  }

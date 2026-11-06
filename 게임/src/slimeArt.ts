@@ -3,7 +3,7 @@ import {pathPoint,type Enemy} from './defense';
 import {smoothTexture} from './renderQuality';
 
 export const SLIME_DIRECTIONS=['front','front-right','right','back-right','back','back-left','left','front-left'] as const;
-export const SLIME_RIPPLE={count:30,columns:6,cell:256,fps:30,anchorX:128,anchorY:228,visibleWidth:211} as const;
+export const SLIME_RIPPLE={count:30,columns:6,cell:256,fps:30,firstFrame:2,lastFrame:24,anchorX:128,anchorY:228,visibleWidth:211} as const;
 export const SLIME_DISPLAY_WIDTH=28;
 type Palette='yellow'|'blue'|'red';
 type SlimeEnemy=Pick<Enemy,'named'|'bounty'|'defenseType'|'distance'|'speed'>;
@@ -21,7 +21,8 @@ export function slimePose(enemy:SlimeEnemy,elapsed:number):SlimePose|null{
   const palette=enemy.defenseType==='physical'?'blue':enemy.defenseType==='magic'?'red':'yellow',direction=slimeDirection(enemy.distance);
   const animated=palette==='yellow'&&direction===2&&enemy.speed>0;
   const seconds=Number.isFinite(elapsed)?Math.max(0,elapsed):0;
-  return {palette,direction,animated,frame:animated?Math.floor(seconds*SLIME_RIPPLE.fps+1e-7)%SLIME_RIPPLE.count:direction};
+  const length=SLIME_RIPPLE.lastFrame-SLIME_RIPPLE.firstFrame+1;
+  return {palette,direction,animated,frame:animated?SLIME_RIPPLE.firstFrame-1+Math.floor(seconds*SLIME_RIPPLE.fps+1e-7)%length:direction};
 }
 export async function loadSlimeArt():Promise<void>{
   if(idle.size===3&&ripple.length===SLIME_RIPPLE.count)return;
