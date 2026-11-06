@@ -1,6 +1,7 @@
 import {smoothTexture} from './renderQuality';
 import {skillFramePlacement} from './skillVisual';
 import {heroFrame,assassinArt} from './heroArt';
+import {soldierFrame,positionSoldier} from './soldierArt';
 import {ASSASSIN,assassinFrame,assassinBasicTrail} from './assassinCombat';
 import type {UnitKind} from './defenseConfig';
 import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_ALPHA_MATRIX} from './bladeSkill';
@@ -35,6 +36,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   selected.eventMode='none';
   const effects=new Graphics();effects.eventMode='none';root.addChild(effects);
   const movementPreview=new Graphics();movementPreview.eventMode='none';root.addChild(movementPreview);
+  const soldierPreview=new Sprite(Texture.EMPTY);soldierPreview.eventMode='none';soldierPreview.anchor.set(.5,1);soldierPreview.alpha=.45;soldierPreview.visible=false;root.addChild(soldierPreview);
   const assassinTrails=new Graphics();assassinTrails.eventMode='none';root.addChild(assassinTrails);
   const actors=new Graphics();root.addChild(actors);
   actors.eventMode='none';
@@ -43,6 +45,8 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   for(const sprite of Object.values(heroSprites)){
     sprite.anchor.set(.5,1);sprite.eventMode='none';sprite.height=57;sprite.scale.x=sprite.scale.y;sprite.visible=false;root.addChild(sprite);
   }
+  const soldierLayer=new Container();soldierLayer.eventMode='none';root.addChild(soldierLayer);
+  const soldierSprites=new Map<number,Sprite>();
   const iceEffects=new Graphics();iceEffects.eventMode='none';root.addChild(iceEffects);
   // Unclipped effect layer above actors, below labels; its bounds never use a placement slot.
   const assassinLayer=new Container();assassinLayer.eventMode='none';root.addChild(assassinLayer);
@@ -67,12 +71,15 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
       skillBars.clear();skillLabels.forEach(t=>t.visible=false);
       Object.values(heroSprites).forEach(sprite=>sprite.visible=false);iceEffects.clear();
       movementPreview.clear();
+      soldierPreview.visible=false;
+      for(const [id,sprite] of soldierSprites)if(!game.units.some(unit=>unit.id===id&&soldierFrame(unit.kind))){sprite.destroy();soldierSprites.delete(id);}
       const moving=game.units.find(u=>u.id===movement?.id);
       if(moving&&!UNITS[moving.kind].hero&&movement&&SLOTS[movement.slot]&&movement.slot!==moving.slot){
         const p=SLOTS[movement.slot],color=UNITS[moving.kind].color;
         movementPreview.ellipse(p.x,p.y+7,24,12).fill({color,alpha:.2}).stroke({width:2,color:0xc9efce,alpha:.9});
-        movementPreview.roundRect(p.x-10,p.y-9,20,21,4).fill({color,alpha:0.45});
-        movementPreview.circle(p.x,p.y-13,7).fill({color:0xe1c7a5,alpha:0.45});
+        const art=soldierFrame(moving.kind);
+        if(art){positionSoldier(soldierPreview,art,p.x,p.y+12);soldierPreview.visible=true;}
+        else{movementPreview.roundRect(p.x-10,p.y-9,20,21,4).fill({color,alpha:0.45});movementPreview.circle(p.x,p.y-13,7).fill({color:0xe1c7a5,alpha:0.45});}
       }
       for(const area of game.attackAreas) {
         if(area.kind==='circle')effects.circle(area.x,area.y,area.radius);
@@ -101,6 +108,13 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
         }
         const color=UNITS[u.kind].color;
         actors.ellipse(p.x,p.y+7,15,5).fill({color:0x0a1713,alpha:0.5});
+        const soldier=soldierFrame(u.kind);
+        if(soldier){
+          let sprite=soldierSprites.get(u.id);
+          if(!sprite){sprite=new Sprite(soldier.texture);sprite.anchor.set(.5,1);sprite.eventMode='none';sprite.label=`soldier-${u.kind}-${u.id}`;soldierLayer.addChild(sprite);soldierSprites.set(u.id,sprite);}
+          positionSoldier(sprite,soldier,p.x,p.y+12);sprite.label=`soldier-${u.kind}-${u.id}`;
+          continue;
+        }
         if(heroSprites[u.kind]){
           const sprite=heroSprites[u.kind]!;sprite.visible=true;sprite.position.set(p.x,p.y+12);
           const action=game.assassinActions.find(a=>a.sourceId===u.id&&!a.cancelled&&(a.kind==='basic'||a.kind==='wave'&&assassinFrame(a)<=9));

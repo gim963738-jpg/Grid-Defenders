@@ -165,7 +165,7 @@ function render(){
   if(focusPick&&!pickedItem(g,focusPick))focusPick=null;
   // Do not replace a node held by a pointer, including the pre-drag press interval.
   if(!drag){
-    setHtml(heroBags,g.heroes().map(hero=>`<section class="live-hero-bag${hero.id===api.hero?' selected':''}" data-bag-hero="${hero.id}"><header class="live-hero-bag-header"><button data-live-hero="${hero.id}" aria-label="${UNITS[hero.kind].name} 장비 선택" aria-pressed="${hero.id===api.hero}"></button><button data-live-stats="${hero.id}" aria-label="${UNITS[hero.kind].name} 능력치" aria-haspopup="dialog" aria-controls="hero-info">ⓘ</button></header>${board(hero.id,INVENTORY_CELL)}</section>`).join(''));
+    setHtml(heroBags,g.heroes().map(hero=>`<section class="live-hero-bag${hero.id===api.hero?' selected':''}" data-bag-hero="${hero.id}"><header class="live-hero-bag-header"><button data-live-hero="${hero.id}" aria-label="${UNITS[hero.kind].name} 장비 선택" aria-pressed="${hero.id===api.hero}"></button></header>${board(hero.id,INVENTORY_CELL)}</section>`).join(''));
     setHtml(bagBoard,board(null,INVENTORY_CELL));
     if(menu==='soldier')setHtml(tray,(['guard','archer','mage'] as UnitKind[]).map((kind,i)=>card(kind,i)).join(''));
     if(menu==='hero'){
@@ -406,7 +406,6 @@ frame.addEventListener('click',event=>{
     }
     api.selectHero(owner);render();return;
   }
-  if(b.dataset.liveStats){api.inspectUnit(Number(b.dataset.liveStats));return;}
   if(b.dataset.liveOffer){selectedCard=`offer-${b.dataset.liveOffer}`;gear=null;focusPick={kind:'offer',index:Number(b.dataset.liveOffer)};render();return;}
   if(b.dataset.liveBuy){if(g.buy(Number(b.dataset.liveBuy))){selectedCard=null;focusPick=null;}finishMutation();return;}
   if(b.dataset.owner){

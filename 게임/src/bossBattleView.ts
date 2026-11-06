@@ -9,6 +9,7 @@ import { BossBattle, type BossActor } from './bossBattle';
 import { UNITS, type UnitKind } from './defenseConfig';
 import { iceProjectileShape, iceBurstShape } from './iceEffects';
 import {BOSS_FIELD} from './bossField';
+import {soldierImage} from './soldierArt';
 
 function art(a:BossActor,battle?:BossBattle):string {
   if(battle&&a.kind==='assassin'){const action=battle.assassinActions.find(c=>c.sourceId===a.id&&!c.cancelled);if(action){const frame=assassinArt(action.kind==='basic'?'basic':'boss',assassinFrame(action));if(frame)return `<svg class="boss-assassin-frame" viewBox="0 0 ${frame.contentWidth} ${frame.contentHeight}" preserveAspectRatio="xMidYMax meet" overflow="visible" aria-hidden="true"><image href="${frame.url}" x="${-frame.padding}" y="${-frame.padding}" width="${frame.texture.width}" height="${frame.texture.height}"/></svg>`;}}
@@ -16,6 +17,7 @@ function art(a:BossActor,battle?:BossBattle):string {
   if(a.kind==='ranged'||a.kind==='melee')return `<img src="${import.meta.env.BASE_URL}assets/heroes/${a.kind}-idle.png" alt="" draggable="false">`;
   if(a.kind==='boss')return '<span class="boss-test-monster boss-test-chief">♛<i>◆</i></span>';
   if(a.kind==='retainer')return `<span class="boss-test-monster ${a.defenseType}">♜<i>◆</i></span>`;
+  const soldier=soldierImage(a.kind);if(soldier)return soldier;
   const color='#'+UNITS[a.kind].color.toString(16).padStart(6,'0');
   const weapon=a.kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':(a.kind==='mage'||a.kind==='healer')?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
   return `<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;

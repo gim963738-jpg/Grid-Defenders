@@ -1,0 +1,17 @@
+{
+  "tool": "image_gen built-in",
+  "date": "2026-11-06",
+  "use": "Common infantry and archer idle sprites, summon cards and battlefield",
+  "background": "transparent",
+  "prompts": [
+    {
+      "kind": "guard",
+      "asset": "게임/public/assets/soldiers/guard-idle-v1.png",
+      "prompt": "Create exactly ONE production game character sprite: a common infantry foot soldier for a Korean fantasy tower-defense game. Full-body compact 3-head-tall chibi adult male soldier, three-quarter side view facing RIGHT, neutral grounded battle-ready idle pose, short steel arming sword held upward in the right hand and a plain small iron kite shield on the near left arm. Simple worn steel helmet with open face, steel pauldrons and breastplate over a muted blue cloth tunic, brown leather belt and boots. Match classic polished 2D JRPG pixel-art sprites with clean dark outlines, small controlled color clusters, readable silhouette, restrained metallic highlights. Ordinary troop, modest equipment, no royal/celestial ornament. Single centered standing figure, the entire sword, shield, helmet and both boots fully visible, around 80% canvas height with generous completely transparent margins. Even lighting suitable on bright green grass; clean anti-aliased alpha edge, NO black matte, NO glow, NO cast ground shadow, NO ground tile, NO background, NO border, NO UI, NO letters, NO text, NO character sheet, NO additional figures. Transparent RGBA background. Intended display height 44px; prioritize silhouette and strong blue-versus-steel blocks over tiny ornament."
+    },
+    {
+      "kind": "archer",
+      "asset": "게임/public/assets/soldiers/archer-idle-v1.png"
+    }
+  ]
+}

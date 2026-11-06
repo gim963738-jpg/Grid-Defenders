@@ -3,6 +3,7 @@ import {trainingProgress} from './training';
 import {itemArt,hasItemArt} from './itemArt';
 import {battleResolution} from './renderQuality';
 import {loadHeroArt,heroImage,heroPortrait,sheetHero,assassinSkillIcon} from './heroArt';
+import {loadSoldierArt,soldierImage} from './soldierArt';
 import {ASSASSIN} from './assassinCombat';
 import {GameRun,FAILURE_TEXT,RUN_LIMITS,type RunMode,type RunFailure} from './gameRun';
 import {upcomingWaveWarning} from './waveWarning';
@@ -485,6 +486,7 @@ function clearSummonDrag():void {
 }
 function unitDragImage(kind:UnitKind):string {
   if(UNITS[kind].hero)return heroImage(kind);
+  const soldier=soldierImage(kind);if(soldier)return soldier;
   const color='#'+UNITS[kind].color.toString(16).padStart(6,'0');
   const weapon=kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':kind==='mage'||kind==='healer'?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
   return `<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
@@ -899,9 +901,7 @@ function renderBossScreen():void {
     const col=index%4,row=Math.floor(index/4);
     const unit=LANDSCAPE_BATTLE?(row>=1&&row<6?formation.find(u=>u.slot===(row-1)*4+3-col):undefined):(row>=2&&row<6?formation.find(u=>u.slot===(3-col)*4+row-2):undefined);
     if(!unit)return '<div class="boss-grid-cell" aria-hidden="true"></div>';
-    const def=UNITS[unit.kind],color='#'+def.color.toString(16).padStart(6,'0');
-    const weapon=unit.kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':unit.kind==='mage'||unit.kind==='healer'?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
-    const art=def.hero?heroImage(unit.kind):`<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="36" rx="15" ry="5" fill="#0a171380"/><rect x="14" y="18" width="20" height="21" rx="4" fill="${color}" stroke="#172731" stroke-width="2"/><circle cx="24" cy="14" r="7" fill="#e1c7a5" stroke="#273943" stroke-width="2"/>${weapon}</svg>`;
+    const def=UNITS[unit.kind],art=unitDragImage(unit.kind);
     return `<div class="boss-grid-cell boss-grid-unit" aria-label="${row+1}행 ${col+1}열 ${def.name} ${unit.level}레벨">${art}<small>${def.hero?'영웅':`Lv.${unit.level}`} ${def.icon}</small></div>`;
   }).join('');
 }
@@ -928,7 +928,7 @@ async function start():Promise<void> {
   await app.init({width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,background:'#172620',backgroundAlpha:LANDSCAPE_BATTLE?0:1,preference:'webgl',resolution:battleResolution(devicePixelRatio),autoDensity:true,antialias:true});
   el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','숲 순환 전장, 상단 정보와 아군 배치 영역');el('status').hidden=true;
   el('battlefield').style.setProperty('--field-top',`${DEFENSE_FIELD.top/DEFENSE_FIELD.height*100}%`);
-  await loadHeroArt();
+  await Promise.all([loadHeroArt(),loadSoldierArt()]);
   const forestTexture=await Assets.load<Texture>(FOREST_TERRAIN_URL);
   const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
   const meleeTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/melee-idle.png`);
