@@ -6,7 +6,7 @@ import {BossBattle,waveBossRoster} from '../src/bossBattle';
 import {createSwordAttack} from '../src/swordAttack';
 export function checkAssassinCombat(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);},near=(a:number,b:number)=>Math.abs(a-b)<1e-6;
- check(Object.values(UNITS).filter(d=>d.hero).length===6,'six heroes include new mage and assassin');
+ check(Object.values(UNITS).filter(d=>d.hero).length===7,'seven heroes include mage, assassin and blond warrior');
  check(UNITS.arcanist.damageType==='magic'&&UNITS.assassin.damageType==='physical','new heroes use the assigned damage types');
  const a=createAssassinAction('basic',{},1,[2,3,4],100,0,0,{x:50,y:0},1),fs=a.frameSeconds;
  check(advanceAssassin(a,5.99*fs).length===0&&assassinFrame(a)===6,'entering sixth frame has not dealt damage');
@@ -52,7 +52,7 @@ export function checkAssassinCombat(){
  const cancelBoss=new BossBattle(waveBossRoster(prep),()=>1);cancelBoss.autoSkills=false;const bh=cancelBoss.actors.find(x=>x.kind==='assassin')!,bt=cancelBoss.actors.find(x=>x.kind==='boss')!;bh.x=100;bh.y=100;bt.x=160;bt.y=100;bt.cooldown=999;bt.speed=0;cancelBoss.actors=[bh,bt];bh.cooldown=0;cancelBoss.tick(.001);bh.cooldown=999;const pending=cancelBoss.assassinActions[0];cancelBoss.tick(pending.frameSeconds*7.5); // Boss clamps each tick; advance remaining time explicitly.
  while(pending.age<7.5*pending.frameSeconds-.001)cancelBoss.tick(.01);
  const before=bt.hp;check(cancelBoss.useHeroSkill(bh.id),'boss skill can interrupt an active basic motion');cancelBoss.tick(.001);check(bt.hp===before&&pending.cancelled,'boss cancel drops pending basic hits immediately');
- const old=new Defense(()=>1);old.summon('melee',0);const mb=new BossBattle(waveBossRoster(old),()=>1);mb.autoSkills=false;const mh=mb.actors.find(x=>x.kind==='melee')!,mt=mb.actors.find(x=>x.kind==='boss')!;mh.x=mt.x-20;mh.y=mt.y;mh.cooldown=999;mt.cooldown=999;mb.actors=[mh,mt];mb.swordAttacks=[createSwordAttack(mh.id,mt.id,90,false,0,1,mt.x,mt.y)];mb.swordAttacks[0].age=.19;mb.useHeroSkill(mh.id);mb.tick(.02);check(!mb.hits.length&&mb.swordAttacks[0].cancelled,'existing sword basic also cancels its uncompleted damage frame');
+ const old=new Defense(()=>1);old.summon('melee',0);const mb=new BossBattle(waveBossRoster(old),()=>1);mb.autoSkills=false;const mh=mb.actors.find(x=>x.kind==='melee')!,mt=mb.actors.find(x=>x.kind==='boss')!;mh.x=mt.x-20;mh.y=mt.y;mh.cooldown=999;mt.cooldown=999;mb.actors=[mh,mt];mb.swordAttacks=[createSwordAttack(mh.id,mt.id,90,false,0,1,mt.x,mt.y)];mb.swordAttacks[0].age=.19;mb.useHeroSkill(mh.id);mb.tick(.02);check(!mb.hits.length&&mb.swordAttacks[0].cancelled===true,'existing sword basic also cancels its uncompleted damage frame');
  const cleanup=wave();cleanup.tick(.01);cleanup.nextTestWave();check(!cleanup.assassinActions.length&&!cleanup.assassinImpacts.length,'wave transition clears assassin motions and effects');cleanup.reset();check(!cleanup.assassinSkills.size,'new game resets assassin skill cooldown state');
  return passed;
 }

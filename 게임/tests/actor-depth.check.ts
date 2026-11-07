@@ -36,9 +36,11 @@ export async function checkActorDepth(){
  [blond.slot,upper.slot]=[upper.slot,blond.slot];view.draw(null,false);
  check(behind(hero.parent!,guard.parent!),'reversing hero and soldier rows reverses their visible overlap');
  check(hero.parent===get('unit-slot-0')&&guard.parent===get('unit-slot-5'),'moving units reparents body art to its current tile');
- check(game.moveUnit(blond.id,16),'hero moves through the existing placement model');view.draw(null,false);
- check(hero.parent===get('unit-slot-16')&&behind(guard.parent!,hero.parent!)&&!get('unit-slot-0').visible,'moving to the front row updates depth and hides the old tile information');
- const enemy:Enemy={...sample,id:999,x:SLOTS[16].x,y:40,distance:20,named:false,bounty:false,defenseType:'normal',hp:160};game.enemies=[enemy];view.draw(null,false);
+ // Both layouts need a vacant front-row destination; portrait has no slot 16.
+ const frontSlot=SLOTS.length-1;game.units=game.units.filter(u=>u.slot!==frontSlot);
+ check(game.moveUnit(blond.id,frontSlot),'hero moves through the existing placement model');view.draw(null,false);
+ check(hero.parent===get(`unit-slot-${frontSlot}`)&&behind(guard.parent!,hero.parent!)&&!get('unit-slot-0').visible,'moving to the front row updates depth and hides the old tile information');
+ const enemy:Enemy={...sample,id:999,x:SLOTS[frontSlot].x,y:40,distance:20,named:false,bounty:false,defenseType:'normal',hp:160};game.enemies=[enemy];view.draw(null,false);
  const enemyNode=get('enemy-999'),slime=walk(stage).find(n=>n instanceof Sprite&&n.label==='slime-yellow-999') as Sprite;
  check(behind(enemyNode,hero.parent!)&&slime.parent===enemyNode,'monsters share ground depth with friendly sprites');
  enemy.y=300;view.draw(null,false);check(behind(hero.parent!,enemyNode),'a monster moving below the formation renders in front');
@@ -49,7 +51,7 @@ export async function checkActorDepth(){
  const number=walk(stage).find(n=>n instanceof Text&&n.text==='123')!;
  check(number.parent===depth.parent&&depth.parent!.children.indexOf(number)>depth.parent!.children.indexOf(depth),'damage numbers stay above all sorted actors');
  check(depth.parent!.children.indexOf(get('attack-effects'))>depth.parent!.children.indexOf(depth),'projectile and hit lines remain above character bodies');
- game.units=game.units.filter(u=>u.id!==blond.id);view.draw(null,false);check(!hero.visible&&!get('unit-slot-16').visible,'removed heroes leave no floating nameplate or body');
+ game.units=game.units.filter(u=>u.id!==blond.id);view.draw(null,false);check(!hero.visible&&!get(`unit-slot-${frontSlot}`).visible,'removed heroes leave no floating nameplate or body');
  stage.destroy({children:true});
 
  const ids=['boss-hero-skills','boss-auto-skills','boss-commander-skill'],originals=ids.map(id=>document.getElementById(id));originals.forEach((n,i)=>{if(n)n.id=`depth-check-preserved-${ids[i]}`;});

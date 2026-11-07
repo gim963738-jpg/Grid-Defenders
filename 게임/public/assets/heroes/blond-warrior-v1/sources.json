@@ -1,5 +1,7 @@
 {
     "source":  "character-design worktree/output/characters/gc9_longsword_dagger/pixel_8views_v01 and output/animation/dreamina-right-walk-60-v01",
+    "inputSource": "자료/아트원본/character-design",
+    "archiveManifest": "자료/아트원본/manifest.json",
     "processing":  "Read-only originals; uniform nearest-neighbor stationary atlas with fixed foot anchor. Walking cells uniformly reduced to one quarter for mobile; all60 source frames, alpha, order, original durations and common pivot retained. No background removal, motion synthesis, interpolation or mirroring.",
     "stationary":  [
                        {

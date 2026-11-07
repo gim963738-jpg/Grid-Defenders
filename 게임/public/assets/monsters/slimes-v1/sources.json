@@ -1,5 +1,7 @@
 {
     "source":  "monster-design worktree/output/monsters/round-slime",
+    "inputSource": "자료/아트원본/monster-design/round-slime",
+    "archiveManifest": "자료/아트원본/manifest.json",
     "processing":  "Read-only sources; 8-direction stationary atlas, uniform scale to104px visible width; fixed64/112 ground pivot; original30-frame animation copied byte-for-byte.",
     "idle":  {
                  "anchor":  {

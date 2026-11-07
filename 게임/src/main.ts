@@ -1019,12 +1019,14 @@ async function start():Promise<void> {
   el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','숲 순환 전장, 상단 정보와 아군 배치 영역');el('status').hidden=true;
   el('battlefield').style.setProperty('--field-top',`${DEFENSE_FIELD.top/DEFENSE_FIELD.height*100}%`);
   await Promise.all([loadHeroArt(),loadSoldierArt(),loadSlimeArt()]);
-  const forestTexture=await Assets.load<Texture>(FOREST_TERRAIN_URL);
-  const rangedTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`);
-  const meleeTexture=await Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/melee-idle.png`);
-  const fireTexture=await Assets.load<Texture>(FIRE_SHEET_URL);
-  const swordTexture=await Assets.load<Texture>(SWORD_SHEET_URL);
-  const bladeTexture=await Assets.load<Texture>(BLADE_SHEET_URL);
+  const [forestTexture,rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture]=await Promise.all([
+    Assets.load<Texture>(FOREST_TERRAIN_URL),
+    Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`),
+    Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/melee-idle.png`),
+    Assets.load<Texture>(FIRE_SHEET_URL),
+    Assets.load<Texture>(SWORD_SHEET_URL),
+    Assets.load<Texture>(BLADE_SHEET_URL),
+  ]);
   const view=createDefenseView(app,game,(slot)=>{
     if(!run.active||unitDrag?.moved||summonDrag?.active)return;
     const unit=game.units.find(u=>u.slot===slot);

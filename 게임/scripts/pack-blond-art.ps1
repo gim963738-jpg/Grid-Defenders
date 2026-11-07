@@ -1,8 +1,13 @@
-param([Parameter(Mandatory=$true)][string]$SourceRoot)
+﻿param([string]$SourceRoot,[string]$OutputRoot)
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $blondGameRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
-$blondOutput = Join-Path $blondGameRoot 'public/assets/heroes/blond-warrior-v1'
+$blondArchive = '자료/아트원본/character-design'
+$blondDefaultSource = [IO.Path]::GetFullPath((Join-Path (Split-Path $blondGameRoot -Parent) $blondArchive))
+if ([string]::IsNullOrWhiteSpace($SourceRoot)) { $SourceRoot = $blondDefaultSource }
+$SourceRoot = [IO.Path]::GetFullPath($SourceRoot)
+$blondInputSource = if ($SourceRoot -eq $blondDefaultSource) { $blondArchive } else { $SourceRoot }
+$blondOutput = if ([string]::IsNullOrWhiteSpace($OutputRoot)) { Join-Path $blondGameRoot 'public/assets/heroes/blond-warrior-v1' } else { [IO.Path]::GetFullPath($OutputRoot) }
 [IO.Directory]::CreateDirectory($blondOutput) | Out-Null
 $blondPacker = @'
 using System;
@@ -73,6 +78,8 @@ $blondFrames = [ordered]@{
 }
 $blondProvenance = [ordered]@{
  source='character-design worktree/output/characters/gc9_longsword_dagger/pixel_8views_v01 and output/animation/dreamina-right-walk-60-v01'
+ inputSource=$blondInputSource
+ archiveManifest=$(if ($SourceRoot -eq $blondDefaultSource) { '자료/아트원본/manifest.json' } else { $null })
  processing='Read-only originals; uniform nearest-neighbor stationary atlas with fixed foot anchor. Walking cells uniformly reduced to one quarter for mobile; all60 source frames, alpha, order, original durations and common pivot retained. No background removal, motion synthesis, interpolation or mirroring.'
  stationary=@($blondSources | ForEach-Object {@{file=$_.file;sha256=(Get-FileHash -LiteralPath (Join-Path $SourceRoot $_.file) -Algorithm SHA256).Hash.ToLowerInvariant();bounds=$_.bounds;pivot=@{x=$_.pivotX;y=$_.pivotY};scale=$_.scale}})
  walk=@{sheetSha256=(Get-FileHash -LiteralPath (Join-Path $blondAnimation 'walk_right_60_10x6.png') -Algorithm SHA256).Hash.ToLowerInvariant();metadataSha256=(Get-FileHash -LiteralPath (Join-Path $blondAnimation 'walk_right_60.json') -Algorithm SHA256).Hash.ToLowerInvariant();sourceCell=@{width=672;height=720;pivot=@{x=273;y=703}};scale=.25;frameCount=60;durationMs=$blondOriginal.meta.durationMs;originalLoopNote='Source first and final poses differ; looping retains this source boundary.'}

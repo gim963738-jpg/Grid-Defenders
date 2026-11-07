@@ -1,8 +1,13 @@
-param([Parameter(Mandatory=$true)][string]$SourceRoot)
+﻿param([string]$SourceRoot,[string]$OutputRoot)
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $slimeGameRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
-$slimeOutput = Join-Path $slimeGameRoot 'public/assets/monsters/slimes-v1'
+$slimeArchive = '자료/아트원본/monster-design/round-slime'
+$slimeDefaultSource = [IO.Path]::GetFullPath((Join-Path (Split-Path $slimeGameRoot -Parent) $slimeArchive))
+if ([string]::IsNullOrWhiteSpace($SourceRoot)) { $SourceRoot = $slimeDefaultSource }
+$SourceRoot = [IO.Path]::GetFullPath($SourceRoot)
+$slimeInputSource = if ($SourceRoot -eq $slimeDefaultSource) { $slimeArchive } else { $SourceRoot }
+$slimeOutput = if ([string]::IsNullOrWhiteSpace($OutputRoot)) { Join-Path $slimeGameRoot 'public/assets/monsters/slimes-v1' } else { [IO.Path]::GetFullPath($OutputRoot) }
 [IO.Directory]::CreateDirectory($slimeOutput) | Out-Null
 
 # Texture-atlas packaging only. The source worktree and its PNGs are never modified.
@@ -68,6 +73,8 @@ $slimeLeft = ($slimeBounds | ForEach-Object { $_[0] } | Measure-Object -Minimum)
 $slimeRight = ($slimeBounds | ForEach-Object { $_[2] } | Measure-Object -Maximum).Maximum
 $slimeRecord = [ordered]@{
  source = 'monster-design worktree/output/monsters/round-slime'
+ inputSource = $slimeInputSource
+ archiveManifest = $(if ($SourceRoot -eq $slimeDefaultSource) { '자료/아트원본/manifest.json' } else { $null })
  processing = 'Read-only sources; 8-direction stationary atlas, uniform scale to104px visible width; fixed64/112 ground pivot; original30-frame animation copied byte-for-byte.'
  idle = @{cell=128;columns=8;visibleWidth=104;anchor=@{x=64;y=112}}
  animation = @{file='yellow-right-ripple.png';sha256=(Get-FileHash -LiteralPath (Join-Path $slimeOutput 'yellow-right-ripple.png') -Algorithm SHA256).Hash.ToLowerInvariant();visibleWidth=($slimeRight-$slimeLeft);frameCount=$slimeFrameData.frameCount;fps=$slimeFrameData.defaultFps;anchor=$slimeFrameData.anchor}
