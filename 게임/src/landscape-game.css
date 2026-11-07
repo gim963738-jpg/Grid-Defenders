@@ -120,8 +120,8 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 #live-notice{left:4px;right:auto;top:296px;bottom:auto;width:84px;max-width:84px;max-height:56px;margin:0;padding:6px;border-left:2px solid #ccb174;border-radius:0 4px 4px 0;background:#172e26e8;color:#e5dcc0;font-size:12px;line-height:14px;text-shadow:none;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;word-break:keep-all;overflow-wrap:anywhere}
 #live-notice:empty{display:none}
 #live-tray[data-menu=shop]{left:90px;width:442px;height:108px}
-.live-offer-wrap{position:relative;flex:0 0 72px;width:72px;height:72px;isolation:isolate;transform:translateY(0);transition:transform 140ms ease-out}
-.live-offer-wrap.is-selected{transform:translateY(-6px);z-index:2}
+.live-offer-wrap{--offer-lift:-6px;position:relative;flex:0 0 72px;width:72px;height:72px;isolation:isolate;transform:translateY(0);transition:transform 140ms ease-out}
+.live-offer-wrap.is-selected{transform:translateY(var(--offer-lift));z-index:2}
 #live-tray .live-offer{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:72px;height:72px;min-height:72px;margin:0;padding:2px;border:2px solid #8b9567;border-radius:6px;background:#1a3028ec;overflow:hidden;touch-action:none;scroll-snap-align:start}
 #live-tray .is-selected>.live-offer{border-color:#ffdd83;box-shadow:0 2px 8px #18200da0}
 #live-tray .live-buy{position:absolute;left:0;bottom:70px;z-index:2;width:72px;height:24px;min-height:24px;margin:0;padding:0;border:2px solid #ffdd83;border-radius:4px 4px 2px 2px;background:#d8ba70;color:#203024;font-size:12px;line-height:20px}
@@ -129,6 +129,10 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 #live-tray>[data-action=reroll]{font-size:12px;line-height:16px}
 #live-tray .live-offer:active,#live-tray .live-buy:active{transform:none}
 .live-offer-wrap:has(.dragging)>.live-buy{visibility:hidden}
+#live-offer-tooltip{position:absolute;z-index:12;width:176px;padding:8px 10px;border:1px solid #c2a56b;border-radius:6px;background:#152a25f5;color:#f0dfb5;box-shadow:0 4px 12px #06140e70;pointer-events:none;text-align:center;}
+#live-offer-tooltip strong{display:block;font-size:14px;line-height:18px;font-weight:700;overflow-wrap:anywhere;}
+#live-offer-tooltip span{display:block;margin-top:4px;color:#c7d8be;font-size:12px;line-height:16px;word-break:keep-all;overflow-wrap:anywhere;}
+#live-offer-tooltip::after{content:'';position:absolute;left:calc(var(--tooltip-arrow) - 4px);bottom:-5px;width:8px;height:8px;border-right:1px solid #c2a56b;border-bottom:1px solid #c2a56b;background:#152a25;transform:rotate(45deg);}
 #live-sale-target{left:90px;width:442px}
 @media(prefers-reduced-motion:reduce){.live-offer-wrap{transition:none}}
 

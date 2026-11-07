@@ -1,5 +1,5 @@
 import './mobile-ui.css';
-import {UNITS,SLOTS,GRID,BAG_GRID,RULES,rotated,type UnitKind} from './defenseConfig';
+import {UNITS,SLOTS,GRID,BAG_GRID,RULES,rotated,type UnitKind,type ItemDef} from './defenseConfig';
 import {itemArt,hasItemArt} from './itemArt';
 import {COMMANDER_SKILL_ICON} from './bossSkillIcons';
 import {BLOND_PORTRAIT_URL} from './blondArt';
@@ -24,6 +24,7 @@ frame.insertAdjacentHTML('beforeend',`
   <nav id="live-controls"><button data-control="pause" aria-label="일시정지">Ⅱ</button><button data-control="speed" aria-label="배속 변경">1×</button><button disabled aria-label="설정 준비중">⚙</button><button data-control="home" aria-label="로비로">⌂</button></nav>
   <nav id="live-actions"><button data-menu="soldier">병사</button><button data-menu="hero">영웅</button><button data-menu="shop">상점</button></nav>
   <div id="live-tray" hidden></div>
+  <aside id="live-offer-tooltip" role="tooltip" hidden><strong></strong><span></span></aside>
   <aside id="live-inventory" hidden>
     <section id="live-equipment"><div id="live-hero-bags"></div><button id="live-combine" data-action="combine">조합</button></section>
     <section id="live-shared" aria-label="공용 가방"><div id="live-bag-board"></div></section>
@@ -45,6 +46,7 @@ await import('./landscape-game.css');
 const api=live.liveBattle,g=api.game;
 Object.assign(frame,{liveBattle:api});
 const tray=el('live-tray'),actions=el('live-actions'),inventory=el('live-inventory'),heroPanel=el('live-hero-panel');
+const offerTooltip=el('live-offer-tooltip');
 const heroBags=el('live-hero-bags'),bagBoard=el('live-bag-board'),links=el('live-links');
 const INVENTORY_CELL=32;
 const lifetime=new AbortController(),signal=lifetime.signal;
@@ -181,6 +183,32 @@ function renderHeroPanel(){
     <section class="live-hero-stats" aria-label="능력치"><h3>능력치</h3><dl>${fields.map(([key,label,value])=>`<div><dt>${label}</dt><dd data-live-stat="${key}">${value}</dd></div>`).join('')}</dl></section>
     <section class="live-worn-equipment" aria-label="착용 장비"><h3>착용 장비 <span>${items.length}</span></h3><div class="live-worn-layout">${board(unit?.id??-1,26,true)}</div></section>`);
 }
+function renderOfferTooltip(){
+  tray.querySelectorAll('[aria-describedby="live-offer-tooltip"]').forEach(node=>node.removeAttribute('aria-describedby'));
+  const index=selectedCard?.startsWith('offer-')?Number(selectedCard.slice(6)):null;
+  const item=index===null?null:g.shop[index];
+  const card=index===null?null:tray.querySelector<HTMLElement>(`[data-offer-card="offer-${index}"]`);
+  const buy=card?.querySelector<HTMLElement>('.live-buy');
+  if(menu!=='shop'||tray.hidden||!interactive()||drag?.moved||!item||!card||!buy||buy.hidden){offerTooltip.hidden=true;return;}
+  const fields:[keyof ItemDef,string,boolean?][]=[['attack','공격력'],['armor','물리 방어'],['magicArmor','마법 방어'],['hp','체력'],['speed','공속',true],['regen','초당 회복'],['gold','골드 획득',true]];
+  const stats=fields.flatMap(([key,label,percent])=>{
+    const value=item[key];if(typeof value!=='number'||value===0)return [];
+    const amount=percent?Math.round(value*100):value;
+    return [`${label} ${amount>0?'+':''}${amount}${percent?'%':''}`];
+  });
+  offerTooltip.querySelector('strong')!.textContent=item.name;
+  offerTooltip.querySelector('span')!.textContent=stats.join(' · ');
+  offerTooltip.hidden=false;
+  // Layout offsets reserve the final selected lift, so its animation never covers the tooltip.
+  const center=tray.offsetLeft+card.offsetLeft+buy.offsetLeft+buy.offsetWidth/2-tray.scrollLeft;
+  const lift=parseFloat(getComputedStyle(card).getPropertyValue('--offer-lift'));
+  const left=Math.max(tray.offsetLeft,Math.min(center-offerTooltip.offsetWidth/2,tray.offsetLeft+tray.clientWidth-offerTooltip.offsetWidth));
+  const top=Math.max(4,tray.offsetTop+card.offsetTop+buy.offsetTop+lift-offerTooltip.offsetHeight-8);
+  offerTooltip.style.left=`${left}px`;offerTooltip.style.top=`${top}px`;
+  offerTooltip.style.setProperty('--tooltip-arrow',`${Math.max(12,Math.min(offerTooltip.offsetWidth-12,center-left))}px`);
+  card.querySelector('.live-offer')!.setAttribute('aria-describedby','live-offer-tooltip');
+  buy.setAttribute('aria-describedby','live-offer-tooltip');
+}
 function render(){
   frame.dataset.menu=menu;tray.dataset.menu=menu;
   const heroEntries=visibleHeroCards(),atHeroLimit=heroLimitReached();
@@ -225,6 +253,7 @@ function render(){
     card.querySelector('.live-offer')!.setAttribute('aria-pressed',String(selected));
     (card.querySelector('.live-buy') as HTMLButtonElement).hidden=!selected;
   });
+  renderOfferTooltip();
   const plan=g.combinationPlan(api.hero);
   const combine=el('live-combine') as HTMLButtonElement;
   combine.disabled=!interactive()||plan.length===0||g.anvils<plan.length;
@@ -405,6 +434,7 @@ function scrollDrag(){
 }
 function beginVisualDrag(){
   if(!drag||drag.ghost)return;
+  offerTooltip.hidden=true;
   drag.node.classList.add('dragging');drag.ghost=document.createElement('div');
   drag.ghost.className=`live-drag-ghost ${drag.type==='unit'?'unit-ghost':'item-ghost'}`;
   if(drag.type==='unit')drag.ghost.innerHTML=api.unitArt(drag.id as UnitKind);
@@ -552,7 +582,8 @@ tray.addEventListener('wheel',event=>{
   heroWheelTimer=window.setTimeout(snapHeroes,120);
 },{passive:false,signal});
 frame.addEventListener('scroll',()=>{if(drag?.moved)updateDrag();else drawConnections();},{capture:true,signal});
-window.addEventListener('resize',()=>{if(drag?.moved)updateDrag();else drawConnections();},{signal});
+tray.addEventListener('scroll',renderOfferTooltip,{signal});
+window.addEventListener('resize',()=>{if(drag?.moved)updateDrag();else drawConnections();renderOfferTooltip();},{signal});
 document.addEventListener('keydown',event=>{
   if(event.key==='Escape'){closeMenu();return;}
   if(event.key.toLowerCase()==='r'&&interactive()&&!(event.target as HTMLElement).closest('input,textarea,select')){event.preventDefault();rotateSelected();}
