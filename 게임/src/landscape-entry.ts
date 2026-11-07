@@ -425,6 +425,7 @@ el('app').addEventListener('landscape-hero-selected',event=>{
 el('app').addEventListener('soldier-selection-cleared',()=>{
   if(menu==='soldier'&&api.pending===null){selectedCard=null;render();}
 },{signal});
+el('app').addEventListener('battle-suspended',closeMenu,{signal});
 frame.addEventListener('click',event=>{
   if(performance.now()<suppressUntil){event.preventDefault();return;}
   const target=event.target as HTMLElement,b=target.closest<HTMLElement>('button,a');

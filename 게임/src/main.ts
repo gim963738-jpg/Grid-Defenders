@@ -1,4 +1,6 @@
 import {campProgress,campPageUrl,launchMode,newBattleId} from './campProgress';
+import {battleSaveStore,captureBattle,restoreBattle} from './battleSave';
+import {createBattleContinuation} from './battleContinuation';
 import {trainingProgress} from './training';
 import {itemArt,hasItemArt} from './itemArt';
 import {battleResolution} from './renderQuality';
@@ -55,7 +57,7 @@ function syncBossRoster(force=false,discardPrevious=false):void {
   }
 }
 const bossBattleView=createBossBattleView(document.getElementById('boss-combat')!,document.getElementById('boss-combat-status')!,bossBattle,()=>showDamageNumbers,()=>combatPaused||!run.active);
-let currentScene:BattleScene='lobby',sceneTransitioning=false;
+let currentScene:BattleScene='lobby',sceneTransitioning=false,pendingScene:BattleScene|null=null;
 let activeBossWave:number|null=null,bossReturnDelay=0;
 let pending:UnitKind|null=null, selectedUnit:number|null=null, selectedHero:number|null=null;
 let selectedGear:number|null=null,turns=0,tab='summon';
@@ -794,7 +796,7 @@ el('dev-tools').addEventListener('click',(e)=>{
   const button=(e.target as HTMLElement).closest<HTMLButtonElement>('button');if(!button||button.disabled||sceneTransitioning)return;
   if(button.id==='dev-infinite-test'){startRun('infinite-test');return;}
   if(button.id==='dev-lobby'&&fromCamp){requestCampReturn();return;}
-  if(button.id==='dev-lobby'){run.reset();clearBattleInteraction();renderLobby();refreshWaveAlert();refreshRunControls();void sceneTransition.go('lobby');return;}
+  if(button.id==='dev-lobby'){discardBattleSave();run.reset();clearBattleInteraction();renderLobby();refreshWaveAlert();refreshRunControls();void goBattleScene('lobby');return;}
   if(button.id==='dev-reset'){
     if(run.active)startRun(run.mode);else {resetBattleState();run.reset();renderLobby();refresh();}
     return;
@@ -802,9 +804,9 @@ el('dev-tools').addEventListener('click',(e)=>{
   if(!run.active&&button.id!=='dev-damage-numbers')return;
   if(button.id==='dev-boss-scene'){
     if(!game.units.length){game.note('50초 시험 보스와 싸울 아군을 먼저 배치하세요.');refresh();return;}
-    bossTestMode=true;activeBossWave=null;bossReturnDelay=0;syncBossRoster(true);renderBossScreen();void sceneTransition.go('boss');return;
+    bossTestMode=true;activeBossWave=null;bossReturnDelay=0;syncBossRoster(true);renderBossScreen();void goBattleScene('boss');return;
   }
-  if(button.id==='dev-defense-scene'){void sceneTransition.go('defense');return;}
+  if(button.id==='dev-defense-scene'){void goBattleScene('defense');return;}
   if(button.id==='dev-test-deploy')game.devDeploySoldiers();
   else if(button.id==='dev-test-gear'){
     if(game.devEquipHero(selectedHero)){selectedUnit=selectedHero;pending=null;selectedGear=null;pressedGear=null;shopFocus=null;turns=0;openTab('gear');}
@@ -884,13 +886,21 @@ function resetBattleState():void {
 }
 function startRun(mode:RunMode):void {
   if(!assetsReady||sceneTransitioning)return;
+  continuation.clear();battleSaveStore.clear(mode);
   currentRunId=newBattleId();
   resetBattleState();run.start(mode);game.keepWaveMonsters=mode==='normal';renderLobby();refresh();
-  if(currentScene!=='defense')void sceneTransition.go('defense');else window.scrollTo(0,0);
+  if(currentScene!=='defense')void goBattleScene('defense');else {window.scrollTo(0,0);saveBattle();}
+  if(document.hidden)continuation.suspend();
 }
 function finishRun(reason:RunFailure):void {
   if(!run.finish(reason,game.wave,game.kills+defeatedBossEnemies.size))return;
-  const empireReward=trainingProgress.reward(game.wave,game.kills+defeatedBossEnemies.size);lastEmpireReward=empireReward;
+  let empireReward:number;
+  try{empireReward=trainingProgress.reward(game.wave,game.kills+defeatedBossEnemies.size,currentRunId);}
+  catch(error){
+    console.error('전투 보상 저장 실패',error);run.active=true;run.result=null;combatPaused=true;saveBattle();
+    continuation.offerRetry('전투를 정지한 상태로 유지했습니다. 브라우저 저장 공간을 확인한 뒤 다시 시도해 주세요.',()=>{combatPaused=false;finishRun(reason);});return;
+  }
+  discardBattleSave();lastEmpireReward=empireReward;
   if(empireReward>0)game.note(`전투 종료 보상 · 제국 골드 +${empireReward}`);
   if(currentScene==='boss'){
     if(reason==='boss-timeout')bossBattle.result='defeat';
@@ -899,7 +909,7 @@ function finishRun(reason:RunFailure):void {
   const result=run.result!;
   try{campProgress.record({...result,id:currentRunId,empireGold:empireReward,finishedAt:Date.now()});}catch(error){console.error('전투 기록 저장 실패',error);}
   updateHud();clearBattleInteraction();refreshWaveAlert();renderLobby();refreshRunControls();
-  if(fromCamp)location.replace(campPageUrl(location.href,currentRunId));else void sceneTransition.go('lobby');
+  if(fromCamp)location.replace(campPageUrl(location.href,currentRunId));else void goBattleScene('lobby');
 }
 function requestCampReturn():void {
   if(!run.active){location.replace(campPageUrl(location.href));return;}
@@ -910,12 +920,12 @@ function requestCampReturn():void {
 el('battle-return').addEventListener('click',requestCampReturn,{signal:events.signal});
 el('leave-battle-cancel').addEventListener('click',()=>el<HTMLDialogElement>('leave-battle-dialog').close(),{signal:events.signal});
 el('leave-battle-confirm').addEventListener('click',()=>{
- returnPending=true;run.reset();clearBattleInteraction();location.replace(campPageUrl(location.href));
+ returnPending=true;discardBattleSave();run.reset();clearBattleInteraction();location.replace(campPageUrl(location.href));
 },{signal:events.signal});
-el('leave-battle-dialog').addEventListener('close',()=>{if(!returnPending){combatPaused=pausedBeforeReturn;refreshCombatControls();}},{signal:events.signal});
+el('leave-battle-dialog').addEventListener('close',()=>{if(!returnPending){combatPaused=pausedBeforeReturn||document.hidden;refreshCombatControls();continuation.show();}},{signal:events.signal});
 
 function checkRunFailure():boolean {
-  if(!run.active||currentScene==='lobby'||sceneTransitioning)return false;
+  if(!run.active||combatPaused||currentScene==='lobby'||sceneTransitioning)return false;
   const reason=run.failure(currentScene==='defense'?{scene:'defense',monsters:game.enemies.filter(e=>e.hp>0).length}:{scene:'boss',result:bossBattle.result,elapsed:bossBattle.elapsed});
   if(!reason)return false;finishRun(reason);return true;
 }
@@ -937,6 +947,7 @@ const sceneTransition=createSceneTransition({
   onBusy(busy){
     sceneTransitioning=busy;refreshWaveAlert();
     refreshRunControls();if(busy)clearBattleInteraction();
+    if(!busy){saveBattle();continuation.show();}
   },
   onCovered(scene){
     if(currentScene==='boss'&&scene!=='boss')bossDamageHistory.capture(bossBattle,bossEncounterWave,true);
@@ -949,6 +960,58 @@ const sceneTransition=createSceneTransition({
     refreshRunControls();
   },
 });
+
+function saveBattle():boolean {
+  if(!assetsReady||!run.active)return true;
+  const scene=pendingScene??currentScene;if(scene==='lobby')return true;
+  const saved=captureBattle(game,bossBattle,run,{
+    runId:currentRunId,scene,activeBossWave,bossReturnDelay,bossTestMode,bossEncounterWave,
+    defeatedBossEnemies:[...defeatedBossEnemies],combatPaused,
+  });
+  return saved!==null&&battleSaveStore.save(saved);
+}
+function discardBattleSave(){continuation.clear();battleSaveStore.clear(run.mode,currentRunId);}
+function goBattleScene(scene:BattleScene):Promise<boolean> {
+  if(sceneTransitioning)return Promise.resolve(false);
+  pendingScene=scene;
+  return sceneTransition.go(scene).finally(()=>{pendingScene=null;saveBattle();continuation.show();});
+}
+const continuation=createBattleContinuation({
+  active:()=>run.active,
+  paused:()=>el<HTMLDialogElement>('leave-battle-dialog').open?pausedBeforeReturn:combatPaused,
+  canShow:()=>!sceneTransitioning&&!el<HTMLDialogElement>('leave-battle-dialog').open,
+  pause(){
+    combatPaused=true;
+    if(el<HTMLDialogElement>('leave-battle-dialog').open)pausedBeforeReturn=true;
+    clearBattleInteraction();pending=null;selectedGear=null;
+    el('app').dispatchEvent(new Event('battle-suspended'));refreshCombatControls();
+  },
+  resume(){combatPaused=false;refreshCombatControls();},
+  save:saveBattle,
+});
+async function startOrResume(mode:RunMode):Promise<void> {
+  const saved=battleSaveStore.load(mode);
+  if(!saved){startRun(mode);return;}
+  // A completed run may still have a stale checkpoint after a browser/storage interruption.
+  if(campProgress.snapshot().records.some(record=>record.id===saved.meta.runId)){
+    battleSaveStore.clear(mode,saved.meta.runId);startRun(mode);return;
+  }
+  const meta=restoreBattle(saved,game,bossBattle,run);
+  if(!meta){battleSaveStore.clear(mode,saved.meta.runId);startRun(mode);return;}
+  currentRunId=meta.runId;activeBossWave=meta.activeBossWave;bossReturnDelay=meta.bossReturnDelay;
+  bossTestMode=meta.bossTestMode;bossEncounterWave=meta.bossEncounterWave;
+  defeatedBossEnemies.clear();meta.defeatedBossEnemies.forEach(id=>defeatedBossEnemies.add(id));
+  bossRosterSignature=JSON.stringify({roster:waveBossRoster(game),testMode:bossTestMode});
+  bossTestProfile=bossTestMode?calibrateBossTest(waveBossRoster(game)):null;
+  combatPaused=true;pending=null;selectedUnit=null;selectedGear=null;selectedHero=null;
+  clearBattleInteraction();refresh();renderLobby();
+  const opening=goBattleScene(meta.scene);
+  continuation.offerSaved(`WAVE ${game.wave} · ${meta.scene==='boss'?'보스전':'웨이브전'} · 전투 시간 ${formatRunTime(run.elapsed)}\n전투가 정지된 상태로 복원되었습니다.`,()=>startRun(mode));
+  await opening;
+}
+const battleSaveTimer=window.setInterval(()=>{if(!sceneTransitioning)saveBattle();},2000);
+// Save after input commits as well as on lifecycle events; dragging itself never spends items.
+for(const type of ['click','pointerup'] as const)document.addEventListener(type,()=>queueMicrotask(()=>saveBattle()),{signal:events.signal});
 
 async function start():Promise<void> {
   const app=new Application();
@@ -975,6 +1038,7 @@ async function start():Promise<void> {
   renderRecipeTree();assetsReady=true;document.title='Grid Defenders — 로비';el('lobby-hint').textContent='병사와 영웅을 배치하고 몬스터를 막아내세요.';renderLobby();
   refresh();
   app.ticker.add(ticker=>{
+    if(document.hidden){if(run.active&&!combatPaused)continuation.suspend();return;}
     if(sceneTransitioning||!run.active||currentScene==='lobby')return;
     if(checkRunFailure())return;
     if(activeBossWave!==null&&(!game.bossPending||activeBossWave!==game.wave)){activeBossWave=null;bossReturnDelay=0;}
@@ -992,14 +1056,14 @@ async function start():Promise<void> {
       if(activeBossWave===game.wave&&bossBattle.result==='victory'){
         if(!combatPaused)bossReturnDelay+=dt;
         if(!combatPaused&&bossReturnDelay>=1.2&&game.completeBossWave()){
-          activeBossWave=null;bossReturnDelay=0;void sceneTransition.go('defense');
+          activeBossWave=null;bossReturnDelay=0;void goBattleScene('defense');
         }
       } else bossReturnDelay=0;
       return;
     }
     if(!combatPaused&&game.bossPending&&activeBossWave!==game.wave){
       activeBossWave=game.wave;bossReturnDelay=0;bossTestMode=false;syncBossRoster(true);
-      void sceneTransition.go('boss');return;
+      void goBattleScene('boss');return;
     }
     if(summonDrag?.active){
       const step=Math.min(ticker.deltaMS,40)*.4;
@@ -1025,8 +1089,8 @@ async function start():Promise<void> {
     hudClock+=dt;if(hudClock>0.15){hudClock=0;updateHud();refreshFieldUpgrade();refreshLogs();}
     if(lastRevision!==game.revision&&!drag&&!unitDrag&&!summonDrag){lastRevision=game.revision;refresh();}
   });
-  const automaticMode=launchMode(location.search);if(automaticMode)startRun(automaticMode);
-  if(import.meta.hot)import.meta.hot.dispose(()=>{events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
+  const automaticMode=launchMode(location.search);if(automaticMode)void startOrResume(automaticMode);
+  if(import.meta.hot)import.meta.hot.dispose(()=>{saveBattle();clearInterval(battleSaveTimer);continuation.dispose();events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
 void start().catch((error:unknown)=>{el('battle-shell-header').hidden=false;el<HTMLButtonElement>('battle-return').disabled=false;el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';el('lobby-hint').textContent='전장을 불러오지 못했습니다. 새로고침해 주세요.';console.error(error);});
 
