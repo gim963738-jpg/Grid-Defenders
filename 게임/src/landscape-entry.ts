@@ -22,7 +22,7 @@ frame.insertAdjacentHTML('beforeend',`
     </section>
   </aside>
   <nav id="live-controls"><button data-control="pause" aria-label="일시정지">Ⅱ</button><button data-control="speed" aria-label="배속 변경">1×</button><button disabled aria-label="설정 준비중">⚙</button><button data-control="home" aria-label="로비로">⌂</button></nav>
-  <nav id="live-actions"><button data-menu="soldier">병사</button><button data-menu="hero">영웅</button><button data-menu="shop">상점</button></nav>
+  <nav id="live-actions"><button data-menu="soldier">병사</button><button data-menu="hero">영웅</button><button data-menu="shop">상점</button><button data-action="formation">진형</button></nav>
   <div id="live-tray" hidden></div>
   <aside id="live-offer-tooltip" role="tooltip" hidden><strong></strong><span></span></aside>
   <p id="live-combine-tip" role="status" aria-live="polite" aria-atomic="true" hidden></p>
@@ -534,6 +534,7 @@ frame.addEventListener('click',event=>{
   if(b.dataset.action){
     const action=b.dataset.action;
     if(action==='reroll'){g.reroll();selectedCard=null;}
+    else if(action==='formation')g.note('진형 설정 준비 중');
     else if(action==='combine'){
       const plan=g.combinationPlan(api.hero);
       if(g.combineMany(plan)){hideCombineTip();gear=null;}
