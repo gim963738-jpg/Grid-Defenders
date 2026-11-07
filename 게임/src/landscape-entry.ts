@@ -25,6 +25,7 @@ frame.insertAdjacentHTML('beforeend',`
   <nav id="live-actions"><button data-menu="soldier">병사</button><button data-menu="hero">영웅</button><button data-menu="shop">상점</button></nav>
   <div id="live-tray" hidden></div>
   <aside id="live-offer-tooltip" role="tooltip" hidden><strong></strong><span></span></aside>
+  <p id="live-combine-tip" role="status" aria-live="polite" aria-atomic="true" hidden></p>
   <aside id="live-inventory" hidden>
     <section id="live-equipment"><div id="live-hero-bags"></div><button id="live-combine" data-action="combine">조합</button></section>
     <section id="live-shared" aria-label="공용 가방"><div id="live-bag-board"></div></section>
@@ -35,6 +36,7 @@ frame.insertAdjacentHTML('beforeend',`
   <p id="live-notice" role="status"></p>`);
 const controls=el('live-controls');controls.hidden=true;controls.setAttribute('aria-label','전투 조작');el('app').append(controls);
 const bossAuto=el('boss-auto-skills'),commander=el('boss-commander-skill');
+el('boss-time-limit').setAttribute('role','timer');
 bossAuto.hidden=true;controls.prepend(bossAuto);
 commander.insertAdjacentHTML('afterbegin',`<i class="boss-skill-icon" aria-hidden="true">${COMMANDER_SKILL_ICON}</i><small class="boss-skill-time" aria-hidden="true"></small>`);
 el('boss-screen').append(commander);
@@ -47,6 +49,7 @@ const api=live.liveBattle,g=api.game;
 Object.assign(frame,{liveBattle:api});
 const tray=el('live-tray'),actions=el('live-actions'),inventory=el('live-inventory'),heroPanel=el('live-hero-panel');
 const offerTooltip=el('live-offer-tooltip');
+const combineTip=el('live-combine-tip');
 const heroBags=el('live-hero-bags'),bagBoard=el('live-bag-board'),links=el('live-links');
 const INVENTORY_CELL=32;
 const lifetime=new AbortController(),signal=lifetime.signal;
@@ -63,6 +66,7 @@ let observedRun=api.runId,observedScene=api.scene;
 let heroClickUntil=0,pendingHeroFocus:number|null=null;
 let heroScrollReady=false,heroWheelTimer:number|undefined;
 let renderedHeroLimit:boolean|undefined;
+let combineTipTimer:number|undefined;
 
 function interactive(){return api.ready&&api.active&&api.scene==='defense'&&el('app').getAttribute('aria-busy')!=='true';}
 function setHtml(node:HTMLElement,html:string){
@@ -71,13 +75,33 @@ function setHtml(node:HTMLElement,html:string){
   node.innerHTML=html;htmlCache.set(node,html);node.scrollLeft=left;node.scrollTop=top;
 }
 function finishMutation(){api.refresh();render();}
+function hideCombineTip(){
+  clearTimeout(combineTipTimer);combineTip.hidden=true;combineTip.textContent='';
+  el('live-combine').removeAttribute('aria-describedby');
+}
+function positionCombineTip(){
+  if(combineTip.hidden)return;
+  const button=el('live-combine').getBoundingClientRect(),bounds=frame.getBoundingClientRect(),scale=bounds.width/RULES.width;
+  const center=(button.left+button.width/2-bounds.left)/scale;
+  const left=Math.max(4,Math.min(center-combineTip.offsetWidth/2,RULES.width-combineTip.offsetWidth-4));
+  combineTip.style.left=`${left}px`;
+  combineTip.style.top=`${Math.max(4,(button.top-bounds.top)/scale-combineTip.offsetHeight-8)}px`;
+  combineTip.style.setProperty('--tooltip-arrow',`${Math.max(12,Math.min(combineTip.offsetWidth-12,center-left))}px`);
+}
+function showCombineTip(message:string){
+  hideCombineTip();combineTip.textContent=message;combineTip.hidden=false;positionCombineTip();
+  el('live-combine').setAttribute('aria-describedby','live-combine-tip');
+  combineTipTimer=window.setTimeout(hideCombineTip,2800);
+}
 function closeMenu(){
+  hideCombineTip();
   clearTimeout(timer);clearTimeout(heroWheelTimer);cancelDrag();menu='';gear=null;focusPick=null;selectedCard=null;pendingHeroFocus=null;heroScrollReady=false;
   tray.hidden=true;inventory.hidden=true;heroPanel.hidden=true;actions.classList.remove('away');actions.inert=false;
   api.clearSelection();render();
 }
 function showMenu(value:Menu,heroId:number|null=null){
   if(!interactive())return;
+  hideCombineTip();
   const alreadyOpen=menu===value&&!tray.hidden;
   clearTimeout(timer);clearTimeout(heroWheelTimer);cancelDrag();menu=value;gear=null;focusPick=null;selectedCard=null;
   if(heroId!==null&&api.hero!==heroId)api.selectHero(heroId);
@@ -256,7 +280,7 @@ function render(){
   renderOfferTooltip();
   const plan=g.combinationPlan(api.hero);
   const combine=el('live-combine') as HTMLButtonElement;
-  combine.disabled=!interactive()||plan.length===0||g.anvils<plan.length;
+  combine.disabled=false;
   combine.textContent=plan.length?`조합 ${plan.length}`:'조합';combine.title=`선택 영웅과 공용 가방 · 모루 ${plan.length}개 필요`;
   const startupNotice=g.message==='게임을 시작 상태로 초기화했습니다.';
   el('live-notice').hidden=menu==='hero'||startupNotice;
@@ -434,6 +458,7 @@ function scrollDrag(){
 }
 function beginVisualDrag(){
   if(!drag||drag.ghost)return;
+  hideCombineTip();
   offerTooltip.hidden=true;
   drag.node.classList.add('dragging');drag.ghost=document.createElement('div');
   drag.ghost.className=`live-drag-ghost ${drag.type==='unit'?'unit-ghost':'item-ghost'}`;
@@ -461,6 +486,7 @@ frame.addEventListener('click',event=>{
   const target=event.target as HTMLElement,b=target.closest<HTMLElement>('button,a');
   if(!b){if(target.closest('canvas')&&performance.now()<heroClickUntil&&heroAt(event.clientX,event.clientY)?.id===api.hero)return;if(!target.closest('#live-inventory,#live-tray,#live-hero-panel'))closeMenu();return;}
   if(!interactive())return;
+  if(b.id!=='live-combine')hideCombineTip();
   if(b.dataset.menu){showMenu(b.dataset.menu as Menu);return;}
   if(b.dataset.liveUnit){
     const kind=b.dataset.liveUnit as UnitKind,existing=UNITS[kind].hero&&g.heroes().find(hero=>hero.kind===kind);
@@ -508,7 +534,11 @@ frame.addEventListener('click',event=>{
   if(b.dataset.action){
     const action=b.dataset.action;
     if(action==='reroll'){g.reroll();selectedCard=null;}
-    else if(action==='combine'){g.combineMany(g.combinationPlan(api.hero));gear=null;}
+    else if(action==='combine'){
+      const plan=g.combinationPlan(api.hero);
+      if(g.combineMany(plan)){hideCombineTip();gear=null;}
+      else showCombineTip(g.anvils<plan.length?'모루가 모자랍니다.':g.message);
+    }
     focusPick=null;lastTap=null;finishMutation();
   }
 },{signal});
@@ -583,7 +613,7 @@ tray.addEventListener('wheel',event=>{
 },{passive:false,signal});
 frame.addEventListener('scroll',()=>{if(drag?.moved)updateDrag();else drawConnections();},{capture:true,signal});
 tray.addEventListener('scroll',renderOfferTooltip,{signal});
-window.addEventListener('resize',()=>{if(drag?.moved)updateDrag();else drawConnections();renderOfferTooltip();},{signal});
+window.addEventListener('resize',()=>{if(drag?.moved)updateDrag();else drawConnections();renderOfferTooltip();positionCombineTip();},{signal});
 document.addEventListener('keydown',event=>{
   if(event.key==='Escape'){closeMenu();return;}
   if(event.key.toLowerCase()==='r'&&interactive()&&!(event.target as HTMLElement).closest('input,textarea,select')){event.preventDefault();rotateSelected();}
@@ -611,4 +641,4 @@ const clock=window.setInterval(()=>{
   if(!api.active||api.scene!=='defense'){cancelDrag();tray.hidden=true;inventory.hidden=true;heroPanel.hidden=true;}
   render();
 },150);
-if(import.meta.hot)import.meta.hot.dispose(()=>{cancelDrag();clearTimeout(timer);clearTimeout(heroWheelTimer);clearInterval(clock);lifetime.abort();});
+if(import.meta.hot)import.meta.hot.dispose(()=>{cancelDrag();hideCombineTip();clearTimeout(timer);clearTimeout(heroWheelTimer);clearInterval(clock);lifetime.abort();});

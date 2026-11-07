@@ -28,7 +28,11 @@ body.landscape-live #battlefield{position:absolute;inset:0;width:800px;height:36
 /* Both battle scenes share one mobile viewport and one set of controls. */
 body.landscape-live #app{position:relative}
 body.landscape-live #boss-screen{position:relative;isolation:isolate;width:800px;height:360px;min-height:360px;margin:0;padding:0;overflow:hidden;background:radial-gradient(ellipse at 35% 50%,#293a31,#101b1d 80%)}
-body.landscape-live #boss-screen>.masthead,body.landscape-live #boss-screen>.boss-wave-heading,body.landscape-live #boss-screen>.boss-scene-note,body.landscape-live #boss-screen>.boss-commander-skills{display:none!important}
+body.landscape-live #boss-screen>.masthead,body.landscape-live #boss-screen>.boss-scene-note,body.landscape-live #boss-screen>.boss-commander-skills{display:none!important}
+body.landscape-live #boss-screen>.boss-wave-heading{position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:5;display:flex;align-items:center;justify-content:center;width:168px;height:32px;margin:0;padding:4px 8px;gap:0;border:2px solid #9d8c5c88;border-radius:4px;background:#142820ee;pointer-events:none}
+body.landscape-live .boss-wave-heading>strong,body.landscape-live .boss-wave-heading>.boss-battle-controls{display:none}
+body.landscape-live #boss-time-limit{margin:0;color:#f3dca0;font-size:16px;line-height:20px;font-weight:700}
+body.landscape-live #boss-time-limit.urgent{color:#ff9a7d}
 body.landscape-live #boss-screen .boss-arena{--boss-cell:calc(360px / 8);position:absolute;inset:0;width:800px;height:360px;min-height:0;max-width:none;aspect-ratio:20/9;margin:0;padding:0;border:0;border-radius:0;background:radial-gradient(ellipse at 82% 50%,#6b393842,transparent 65%),repeating-linear-gradient(0deg,transparent 0 calc(var(--boss-cell) - 1px),#b6cba51c calc(var(--boss-cell) - 1px) var(--boss-cell)),repeating-linear-gradient(90deg,#172925 0 calc(var(--boss-cell) - 1px),#b6cba51c calc(var(--boss-cell) - 1px) var(--boss-cell))}
 body.landscape-live #boss-screen .boss-allies-label,body.landscape-live #boss-screen .boss-side{display:none}
 body.landscape-live #boss-screen #boss-party{border:0;background:#304a32}
@@ -133,6 +137,8 @@ body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
 #live-offer-tooltip strong{display:block;font-size:14px;line-height:18px;font-weight:700;overflow-wrap:anywhere;}
 #live-offer-tooltip span{display:block;margin-top:4px;color:#c7d8be;font-size:12px;line-height:16px;word-break:keep-all;overflow-wrap:anywhere;}
 #live-offer-tooltip::after{content:'';position:absolute;left:calc(var(--tooltip-arrow) - 4px);bottom:-5px;width:8px;height:8px;border-right:1px solid #c2a56b;border-bottom:1px solid #c2a56b;background:#152a25;transform:rotate(45deg);}
+#live-combine-tip{position:absolute;z-index:12;width:196px;margin:0;padding:8px 10px;border:1px solid #c2a56b;border-radius:6px;background:#152a25;color:#ffe3a1;box-shadow:0 4px 12px #06140d66;font-size:14px;line-height:20px;text-align:center;word-break:keep-all;overflow-wrap:anywhere;pointer-events:none}
+#live-combine-tip::after{content:'';position:absolute;left:calc(var(--tooltip-arrow) - 4px);bottom:-5px;width:8px;height:8px;border-right:1px solid #c2a56b;border-bottom:1px solid #c2a56b;background:#152a25;transform:rotate(45deg)}
 #live-sale-target{left:90px;width:442px}
 @media(prefers-reduced-motion:reduce){.live-offer-wrap{transition:none}}
 
