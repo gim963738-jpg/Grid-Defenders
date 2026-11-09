@@ -1,4 +1,5 @@
 import { bossFixture } from './boss-fixture';
+import {LANDSCAPE_BATTLE} from '../src/defenseConfig';
 export function checkBossBattle():string[]{
   const passed:string[]=[];const check=(ok:boolean,label:string)=>{if(!ok)throw new Error(label);passed.push(label);};
   const battle=bossFixture();
@@ -11,7 +12,7 @@ export function checkBossBattle():string[]{
   guards.forEach(a=>a.hp=0);
   check(battle.target(ally)===boss,'boss becomes target after all retainers fall');
   battle.actors.filter(a=>a.kind==='guard').forEach(a=>a.hp=0);
-  check(battle.target(boss)?.rank===2,'enemies advance to second allied rank');
+  check(battle.target(boss)?.rank===(LANDSCAPE_BATTLE?1:2),'enemies advance to the next surviving allied rank');
   battle.reset();let damageSeen=false;
   for(let i=0;i<7200&&battle.result==='fighting';i++){
     battle.tick(.05);

@@ -1,0 +1,56 @@
+{
+  "tool": "built-in image_gen",
+  "base": "Use case: ui-mockup. Create ONE high fidelity complete landscape game battle interface design concept for Grid Defenders. Reference image is a 16-screen contact sheet: use ONLY screen 1 at TOP LEFT as layout reference, do NOT recreate contact sheet or other 15 screens. Output single full landscape screen approximately 20:9, edge to edge, at least 1600x720 visual detail. Same layout for comparison: compact wave/time/resources top-left, small pause/speed/settings top-right, large top-down rectangular grassy battlefield occupying main center, visibly subtle 5-column x4-row deployment grid on left half with tiny allied soldiers, 6 small red/yellow/blue slimes on right half, 6 compact menu buttons aligned along bottom center. Keep reference's broad layout. Restyle ENTIRE interface, every button, icons, terrain together. No modal, no shops or inventory open, no phone device frame, no extra sidebars, no character portraits enlarged, no perspective tilt. UI text short and legible: \"WAVE 01\", \"00:18\", \"120\", \"3\", bottom \"UNITS\", \"HERO\", \"SHOP\", \"BAG\", \"FORM\", \"START\". Preserve battlefield legibility, do not obscure units with ornament or VFX. This is art direction concept, not implementation screenshot. Add small discreet upper-center concept number/title. ",
+  "styles": [
+    [
+      "01",
+      "클린 판타지",
+      "Modern clean fantasy. Deep teal matte UI, fine champagne gold lines, ivory numerals, soft rectangular buttons, painterly spring meadow with pale rectangular dirt circuit. Restrained ornament, premium readable silhouette."
+    ],
+    [
+      "02",
+      "토이 3D",
+      "Bright premium toy-like stylized 3D mobile strategy. Chunky cobalt and buttery yellow raised buttons with rounded bevels, tactile plastic controls, lush miniature grass diorama with sandy rectangular loop path, round trees. Cheerful readable forms."
+    ],
+    [
+      "03",
+      "코지 수채화",
+      "Cozy storybook watercolor fantasy. Warm cream paper panels, sage-green pill-shaped wood buttons, handpainted ink icons, sunlit watercolor garden field with daisies and rectangular earth circuit. Sophisticated soft organic design."
+    ],
+    [
+      "04",
+      "다크 룬",
+      "Dark runic fantasy. Charcoal basalt HUD with etched copper and restrained ember accents, angular carved stone buttons, misty ruined abbey grass field with rectangular worn cobblestone circuit. Moody yet gameplay stays bright and readable."
+    ],
+    [
+      "05",
+      "로열 아이보리",
+      "Royal ivory fantasy. Porcelain ivory and midnight-blue UI, elegant gold inlay, crisp chamfered jewel buttons, radiant white stone garden and emerald lawn with rectangular golden-sand route. Luxurious restrained architectural design."
+    ],
+    [
+      "06",
+      "애니 셀셰이딩",
+      "Contemporary anime cel-shaded fantasy tactical game. Crisp navy/white graphic panels, cyan accented sharp-edged buttons, large clean outlined icons, vivid cel-painted grass and limestone rectangular circuit. Energetic graphic diagonals confined within UI, not rearranging layout."
+    ],
+    [
+      "07",
+      "미니멀 로우폴리",
+      "Minimalist low-poly indie strategy. Flat cream HUD with black geometric glyphs and amber square buttons, simple clean typography, faceted ochre grass and sparse conical pines, rectangular terracotta loop. Beautiful understated warm sunset lighting."
+    ],
+    [
+      "08",
+      "HD 픽셀",
+      "Premium modern HD pixel-art fantasy. All UI and field rendered with intentional crisp pixel clusters, deep plum panels, stepped turquoise borders, chunky pixel buttons, richly tiled moss meadow and rectangular stone/dirt loop. No blur, no photographic textures."
+    ],
+    [
+      "09",
+      "비전 마도공학",
+      "Arcane magitech fantasy. Translucent smoked-indigo glass HUD, luminous lavender fine-line iconography, frosted violet buttons with controlled thin glows, twilight blue botanical garden and rectangular pale rune-stone route. Magical, refined, not a sci-fi shooter."
+    ],
+    [
+      "10",
+      "페이퍼 보드게임",
+      "Tactile contemporary tabletop fantasy. Layered warm paper and walnut HUD, embossed terracotta/red buttons, brass token icons, cut-paper miniature green forest field and rectangular ochre cardboard route. Raking light shows paper depth; elegant physical board-game finish."
+    ]
+  ]
+}

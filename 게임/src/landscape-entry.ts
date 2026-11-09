@@ -1,4 +1,6 @@
 import './mobile-ui.css';
+import {createFormationPanel} from './formation-panel';
+import {LANDSCAPE_GRID,landscapeTerrain} from './landscapeField';
 import {UNITS,SLOTS,GRID,BAG_GRID,RULES,rotated,type UnitKind,type ItemDef} from './defenseConfig';
 import {itemArt,hasItemArt} from './itemArt';
 import {COMMANDER_SKILL_ICON} from './bossSkillIcons';
@@ -10,8 +12,9 @@ document.body.classList.add('landscape-live');document.body.style.visibility='vi
 const el=(id:string)=>document.getElementById(id)!;
 const field=el('battlefield'),frame=document.createElement('section');frame.id='live-landscape';frame.setAttribute('aria-label','가로형 전투');
 el('defense-screen').prepend(frame);frame.append(field);
+for(const [key,value]of Object.entries({left:LANDSCAPE_GRID.left,top:LANDSCAPE_GRID.top,width:LANDSCAPE_GRID.columns*LANDSCAPE_GRID.cellWidth,height:LANDSCAPE_GRID.rows*LANDSCAPE_GRID.cellHeight,'cell-width':LANDSCAPE_GRID.cellWidth,'cell-height':LANDSCAPE_GRID.cellHeight}))frame.style.setProperty(`--live-grid-${key}`,`${value}px`);
 frame.insertAdjacentHTML('beforeend',`
-  <div id="live-terrain"></div><div id="live-tiles"></div>
+  <div id="live-terrain">${landscapeTerrain()}</div><div id="live-tiles"></div>
   <aside id="live-status" aria-label="전투 현황">
     <section id="live-wave" aria-label="웨이브 1">
       <header class="live-wave-heading"><span>WAVE</span><strong>01</strong></header>
@@ -53,6 +56,8 @@ const combineTip=el('live-combine-tip');
 const heroBags=el('live-hero-bags'),bagBoard=el('live-bag-board'),links=el('live-links');
 const INVENTORY_CELL=32;
 const lifetime=new AbortController(),signal=lifetime.signal;
+const formationPanel=createFormationPanel({game:g,host:frame,unitArt:api.unitArt,begin:()=>api.beginFormation(),end:()=>api.endFormation(),changed:()=>api.formationChanged()});
+el('app').addEventListener('battle-formation-ended',()=>{formationPanel.close();render();},{signal});
 const htmlCache=new WeakMap<HTMLElement,string>();
 type Menu='soldier'|'hero'|'shop'|'';
 type Drag={pointer:number;x:number;y:number;startX:number;startY:number;type:'unit'|'gear'|'offer';id:string;
@@ -68,7 +73,7 @@ let heroScrollReady=false,heroWheelTimer:number|undefined;
 let renderedHeroLimit:boolean|undefined;
 let combineTipTimer:number|undefined;
 
-function interactive(){return api.ready&&api.active&&api.scene==='defense'&&el('app').getAttribute('aria-busy')!=='true';}
+function interactive(){return api.ready&&api.active&&!api.formationOpen&&api.scene==='defense'&&el('app').getAttribute('aria-busy')!=='true';}
 function setHtml(node:HTMLElement,html:string){
   if(htmlCache.get(node)===html)return;
   const left=node.scrollLeft,top=node.scrollTop;
@@ -534,7 +539,7 @@ frame.addEventListener('click',event=>{
   if(b.dataset.action){
     const action=b.dataset.action;
     if(action==='reroll'){g.reroll();selectedCard=null;}
-    else if(action==='formation')g.note('진형 설정 준비 중');
+    else if(action==='formation'){closeMenu();formationPanel.open(b);return;}
     else if(action==='combine'){
       const plan=g.combinationPlan(api.hero);
       if(g.combineMany(plan)){hideCombineTip();gear=null;}
@@ -642,4 +647,4 @@ const clock=window.setInterval(()=>{
   if(!api.active||api.scene!=='defense'){cancelDrag();tray.hidden=true;inventory.hidden=true;heroPanel.hidden=true;}
   render();
 },150);
-if(import.meta.hot)import.meta.hot.dispose(()=>{cancelDrag();hideCombineTip();clearTimeout(timer);clearTimeout(heroWheelTimer);clearInterval(clock);lifetime.abort();});
+if(import.meta.hot)import.meta.hot.dispose(()=>{formationPanel.dispose();cancelDrag();hideCombineTip();clearTimeout(timer);clearTimeout(heroWheelTimer);clearInterval(clock);lifetime.abort();});

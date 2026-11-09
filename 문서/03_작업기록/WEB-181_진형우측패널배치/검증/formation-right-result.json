@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "name": "right formation panel opens and pauses combat",
+      "passed": true
+    },
+    {
+      "name": "panel uses requested right region at 524,44 with 272x312 size",
+      "passed": true
+    },
+    {
+      "name": "panel stays clear of battlefield and upper controls",
+      "passed": true
+    },
+    {
+      "name": "right and bottom margins are 4 pixels",
+      "passed": true
+    },
+    {
+      "name": "battlefield backdrop is transparent",
+      "passed": true
+    },
+    {
+      "name": "entire panel fits without scrolling or clipped content",
+      "passed": true
+    },
+    {
+      "name": "7 by 4 formation remains intact",
+      "passed": true
+    },
+    {
+      "name": "all compact cells fit inside panel",
+      "passed": true
+    },
+    {
+      "name": "auto and done buttons retain 48-pixel height",
+      "passed": true
+    },
+    {
+      "name": "auto remains to right of advance direction",
+      "passed": true
+    },
+    {
+      "name": "auto keeps all heroes in middle",
+      "passed": true
+    },
+    {
+      "name": "manual movement works inside right panel",
+      "passed": true
+    },
+    {
+      "name": "formation editing preserves wave placement and currency",
+      "passed": true
+    },
+    {
+      "name": "right panel still saves formation",
+      "passed": true
+    },
+    {
+      "name": "panel follows centered 800-pixel battlefield on wider screen",
+      "passed": true
+    },
+    {
+      "name": "panel returns to correct position after resize",
+      "passed": true
+    },
+    {
+      "name": "closing preserves prior manual pause",
+      "passed": true
+    },
+    {
+      "name": "keyboard focus returns to formation button",
+      "passed": true
+    },
+    {
+      "name": "Escape dismissal restores previously running combat",
+      "passed": true
+    },
+    {
+      "name": "clicking outside right panel closes it",
+      "passed": true
+    },
+    {
+      "name": "quick reopen ignores delayed previous close event",
+      "passed": true
+    },
+    {
+      "name": "background suspend closes editor and keeps battle paused",
+      "passed": true
+    },
+    {
+      "name": "no failed asset requests",
+      "passed": true
+    }
+  ],
+  "date": "2026-11-07",
+  "failed": null,
+  "result": "PASS"
+}

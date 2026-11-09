@@ -7,6 +7,7 @@ import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAliv
 import {cancelSword,createSwordAttack,advanceSword,swordAlive,type SwordAttack} from './swordAttack';
 import {FIRE_SKILL,createFireCast,advanceFire,fireAlive,type FireCast} from './fireSkill';
 import { DamageMeter } from './damageMeter';
+import {autoFormation,reconcileFormation,moveFormation,type FormationPlacement} from './battleFormation';
 import { LANDSCAPE_BATTLE, AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
 
 export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; facing?:number; }
@@ -65,6 +66,7 @@ export class Defense {
   lastWaveDamage:{wave:number;stats:ReturnType<DamageMeter['snapshot']>}|null=null;
   gold:number=RULES.initialGold;
   units:Unit[]=[]; enemies:Enemy[]=[]; gear:Gear[]=[]; shots:Shot[]=[]; attackAreas:AttackArea[]=[];
+  formation:FormationPlacement[]=[];
   swordAttacks:SwordAttack<number,number>[]=[];
   readonly swordSwingCounts=new Map<number,number>();
   fireCasts:FireCast<Unit,number>[]=[];
@@ -160,6 +162,16 @@ export class Defense {
   }
   note(message:string):false {this.message=message;this.revision++;return false;}
   heroes():Unit[] {return this.units.filter(u=>UNITS[u.kind].hero);}
+  formationSlots():FormationPlacement[] {
+    this.formation=reconcileFormation(this.units,this.formation);return this.formation;
+  }
+  autoArrangeFormation():boolean {
+    this.formation=autoFormation(this.units);this.revision++;return true;
+  }
+  moveFormationUnit(id:number,cell:number):boolean {
+    const moved=moveFormation(this.units,this.formation,id,cell);if(!moved)return false;
+    this.formation=moved;this.revision++;return true;
+  }
   bountyCredits():number {return this.pendingBounties;}
   summonBounty():boolean {
     if(this.bountyCredits()<1)return this.note('3웨이브마다 현상금 소환 기회를 얻습니다.');
@@ -201,7 +213,7 @@ export class Defense {
     if(this.gold<def.cost)return this.note('소환에 필요한 골드가 부족합니다.');
     const before=this.gold;this.gold-=def.cost;
     const unit:Unit={id:this.nextId++,kind,slot,level:1,spent:def.cost,cooldown:0.3,...(kind==='blond'?{facing:0}:{})};
-    this.units.push(unit);
+    this.units.push(unit);this.formationSlots();
     this.goldLog('economy',`${this.unitName(unit)} 소환${def.hero?' (무료)':''}`,before,{sourceId:unit.id});
     this.note(`${def.name} 배치 완료`);return true;
   }
@@ -231,7 +243,7 @@ export class Defense {
     if(!u||UNITS[u.kind].hero)return this.note('영웅은 판매할 수 없습니다. 위치 이동은 드래그로 가능합니다.');
     const before=this.gold,refund=Math.floor(u.spent/2);this.gold+=refund;
     this.goldLog('economy',`${this.unitName(u)} 판매`,before,{sourceId:u.id});
-    this.units=this.units.filter(v=>v.id!==id);this.note(`병사 판매 · ${refund}G 환급`);return true;
+    this.units=this.units.filter(v=>v.id!==id);this.formationSlots();this.note(`병사 판매 · ${refund}G 환급`);return true;
   }
   buy(index:number,position?:{x:number;y:number},owner:number|null=null):boolean {
     const item=this.shop[index];if(!item)return false;
@@ -447,6 +459,7 @@ export class Defense {
       this.units.push(unit);added++;
       this.log('economy',`[개발자] ${this.unitName(unit)} 테스트 배치 · 무료`,{sourceId:unit.id});
     }
+    this.formationSlots();
     this.note(added?`테스트 배치 ${added}명 완료 · 기존 유닛 유지 · 무료`:'테스트 배치 위치가 이미 사용 중입니다.');
   }
   devGold():void {
@@ -461,7 +474,7 @@ export class Defense {
     this.lastWaveDamage=null;
     this.damageMeter.reset(true);
     this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.bladeCasts=[];
-    this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
+    this.gold=RULES.initialGold;this.anvils=0;this.units=[];this.formation=[];this.enemies=[];this.gear=[];this.shots=[];this.attackAreas=[];
     this.normalKills=0;this.bountySummons=0;this.pendingBounties=0;this.wave=1;this.waveTime=0;this.waveSpawned=0;this.bossPending=false;this.damageNumbers=[];this.nextDamageId=1;
     this.shop=ITEMS.slice(0,RULES.shopSlots);this.shopDiscounts=this.shop.map(()=>Math.random()<RULES.shopDiscountChance);this.kills=0;this.elapsed=0;this.speed=1;this.nextId=1;this.placementOrder=0;
     this.logs.damage.length=0;this.logs.reward.length=0;this.logs.economy.length=0;this.nextLogId=1;this.logRevision++;
