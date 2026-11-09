@@ -1,0 +1,281 @@
+{
+  "method": "Read-only contrast bounding box: minimum RGB<180 OR max-min>45, light background; faint edges require visual check. No raster transformations or writes.",
+  "images": [
+    {
+      "file": "images\\c01_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1272067,
+      "sha256": "01077eb54c90783da0af280379c0be73c86679ff2ea915c9e956f720cac662ef",
+      "generation_id": "c01_front_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        184,
+        416,
+        843,
+        1407
+      ],
+      "margins_estimate": {
+        "top": 0.2708333333333333,
+        "left": 0.1796875,
+        "right": 0.1767578125,
+        "bottom": 0.083984375
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c01_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1279926,
+      "sha256": "e525856b2625fa67ce79b74566da87ec69db5d8801b14e76b1d4e161d4dcac65",
+      "generation_id": "c01_right_profile",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        168,
+        346,
+        630,
+        1426
+      ],
+      "margins_estimate": {
+        "top": 0.22526041666666666,
+        "left": 0.1640625,
+        "right": 0.384765625,
+        "bottom": 0.07161458333333337
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c01_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1230767,
+      "sha256": "35ba07b0590bf8a47a593f2911be1eff23a6ee3ecc7cb299b6ccc66c379cfe75",
+      "generation_id": "c01_right_threequarter_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        240,
+        419,
+        772,
+        1263
+      ],
+      "margins_estimate": {
+        "top": 0.2727864583333333,
+        "left": 0.234375,
+        "right": 0.24609375,
+        "bottom": 0.177734375
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c02_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1329354,
+      "sha256": "e9f35edc3012659f973dc0fbd8920495d2b540a2c9ecd51030ba272fe2b7048b",
+      "generation_id": "c02_front_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        220,
+        399,
+        802,
+        1442
+      ],
+      "margins_estimate": {
+        "top": 0.259765625,
+        "left": 0.21484375,
+        "right": 0.216796875,
+        "bottom": 0.06119791666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c02_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1247580,
+      "sha256": "9636e855e467d52a70d73eda36b9eeba191d6aed1f026b6199fb74168e665557",
+      "generation_id": "c02_right_profile",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        212,
+        338,
+        667,
+        1406
+      ],
+      "margins_estimate": {
+        "top": 0.22005208333333334,
+        "left": 0.20703125,
+        "right": 0.3486328125,
+        "bottom": 0.08463541666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c02_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1249469,
+      "sha256": "acc8838b56a6637cd45f8df6addf909d9ce5815828131cbcaf52a937d7e63ba8",
+      "generation_id": "c02_right_threequarter_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        252,
+        398,
+        730,
+        1311
+      ],
+      "margins_estimate": {
+        "top": 0.2591145833333333,
+        "left": 0.24609375,
+        "right": 0.287109375,
+        "bottom": 0.146484375
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c03_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1228819,
+      "sha256": "8a2b950f7789cb36bd8342c9f02a5769a4dff400aefe4b7d60dc350b3bdd765a",
+      "generation_id": "c03_front_baseline",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        375,
+        353,
+        661,
+        1418
+      ],
+      "margins_estimate": {
+        "top": 0.22981770833333334,
+        "left": 0.3662109375,
+        "right": 0.3544921875,
+        "bottom": 0.07682291666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c03_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1130148,
+      "sha256": "c40457e888913c65457f0dd1470b24457b239816a0703fe179e9bcbc24157980",
+      "generation_id": "c03_right_profile",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        396,
+        331,
+        601,
+        1430
+      ],
+      "margins_estimate": {
+        "top": 0.21549479166666666,
+        "left": 0.38671875,
+        "right": 0.4130859375,
+        "bottom": 0.06901041666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c03_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1119930,
+      "sha256": "194362d69d05dc7842fb50725c10b88ff65e91e35516803506e5a44eb38485c5",
+      "generation_id": "c03_right_threequarter_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        407,
+        380,
+        620,
+        1300
+      ],
+      "margins_estimate": {
+        "top": 0.24739583333333334,
+        "left": 0.3974609375,
+        "right": 0.39453125,
+        "bottom": 0.15364583333333337
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c04_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1497779,
+      "sha256": "800f1fcace165cb032022b3d960bc3055352296ab12afc612d49782d005d86ac",
+      "generation_id": "c04_front_baseline",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        332,
+        343,
+        696,
+        1443
+      ],
+      "margins_estimate": {
+        "top": 0.22330729166666666,
+        "left": 0.32421875,
+        "right": 0.3203125,
+        "bottom": 0.060546875
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c04_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1099469,
+      "sha256": "883ec0f30cc5748d356c923473592a7e5d595140d9d50414f6b82da828405468",
+      "generation_id": "c04_right_profile",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        391,
+        316,
+        620,
+        1441
+      ],
+      "margins_estimate": {
+        "top": 0.20572916666666666,
+        "left": 0.3818359375,
+        "right": 0.39453125,
+        "bottom": 0.06184895833333337
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c04_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1124793,
+      "sha256": "ae92d6ba0b4deaf41b3080b2d3b3b1ad2914a682f196f2a9cd753818003ec2fa",
+      "generation_id": "c04_right_threequarter_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        364,
+        367,
+        629,
+        1322
+      ],
+      "margins_estimate": {
+        "top": 0.23893229166666666,
+        "left": 0.35546875,
+        "right": 0.3857421875,
+        "bottom": 0.13932291666666663
+      },
+      "safe_area_numeric_pass": true
+    }
+  ]
+}

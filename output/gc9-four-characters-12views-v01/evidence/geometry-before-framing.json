@@ -1,0 +1,245 @@
+{
+  "method": "contrast mask min channel<180 or chroma>45; light background; visual check also required; no image writes",
+  "images": [
+    {
+      "file": "c01_front.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1380128,
+      "sha256": "53048ddf02bebccc2994d814b984dcf32cbc49c454f5e061e6b8c9eacdbedc7d",
+      "contrast_bounds": [
+        128,
+        275,
+        893,
+        1425
+      ],
+      "margins_estimate": {
+        "top": 0.17903645833333334,
+        "left": 0.125,
+        "right": 0.1279296875,
+        "bottom": 0.072265625
+      },
+      "safe_area_numeric_pass": false
+    },
+    {
+      "file": "c01_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1279926,
+      "sha256": "e525856b2625fa67ce79b74566da87ec69db5d8801b14e76b1d4e161d4dcac65",
+      "contrast_bounds": [
+        168,
+        346,
+        630,
+        1426
+      ],
+      "margins_estimate": {
+        "top": 0.22526041666666666,
+        "left": 0.1640625,
+        "right": 0.384765625,
+        "bottom": 0.07161458333333337
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "c01_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1362860,
+      "sha256": "93b2cc8e4959e7a1e50152b1c9d9a4302fc030117c2879f0a8b04901af0a21e9",
+      "contrast_bounds": [
+        146,
+        319,
+        842,
+        1438
+      ],
+      "margins_estimate": {
+        "top": 0.20768229166666666,
+        "left": 0.142578125,
+        "right": 0.177734375,
+        "bottom": 0.06380208333333337
+      },
+      "safe_area_numeric_pass": false
+    },
+    {
+      "file": "c02_front.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1369416,
+      "sha256": "e87b2512f4cc39d6535f6bfc9df128497744175f6694be766387ce3db37526d6",
+      "contrast_bounds": [
+        176,
+        244,
+        833,
+        1407
+      ],
+      "margins_estimate": {
+        "top": 0.15885416666666666,
+        "left": 0.171875,
+        "right": 0.1865234375,
+        "bottom": 0.083984375
+      },
+      "safe_area_numeric_pass": false
+    },
+    {
+      "file": "c02_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1247580,
+      "sha256": "9636e855e467d52a70d73eda36b9eeba191d6aed1f026b6199fb74168e665557",
+      "contrast_bounds": [
+        212,
+        338,
+        667,
+        1406
+      ],
+      "margins_estimate": {
+        "top": 0.22005208333333334,
+        "left": 0.20703125,
+        "right": 0.3486328125,
+        "bottom": 0.08463541666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "c02_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1317023,
+      "sha256": "01f7418b71524c1457b04781d30da698dce61eca802edb5ed933040a9547eb40",
+      "contrast_bounds": [
+        193,
+        326,
+        773,
+        1444
+      ],
+      "margins_estimate": {
+        "top": 0.21223958333333334,
+        "left": 0.1884765625,
+        "right": 0.2451171875,
+        "bottom": 0.05989583333333337
+      },
+      "safe_area_numeric_pass": false
+    },
+    {
+      "file": "c03_front.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1107699,
+      "sha256": "b944393dd903e23ea8a093ab878bbc004db832db66c24760ee3ee30799a5c42e",
+      "contrast_bounds": [
+        353,
+        192,
+        684,
+        1440
+      ],
+      "margins_estimate": {
+        "top": 0.125,
+        "left": 0.3447265625,
+        "right": 0.33203125,
+        "bottom": 0.0625
+      },
+      "safe_area_numeric_pass": false
+    },
+    {
+      "file": "c03_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1130148,
+      "sha256": "c40457e888913c65457f0dd1470b24457b239816a0703fe179e9bcbc24157980",
+      "contrast_bounds": [
+        396,
+        331,
+        601,
+        1430
+      ],
+      "margins_estimate": {
+        "top": 0.21549479166666666,
+        "left": 0.38671875,
+        "right": 0.4130859375,
+        "bottom": 0.06901041666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "c03_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1176340,
+      "sha256": "45a75465523b06943ae0ad63e9676285dd86ac2258f53ecd3f29914c5251a7e4",
+      "contrast_bounds": [
+        378,
+        279,
+        652,
+        1456
+      ],
+      "margins_estimate": {
+        "top": 0.181640625,
+        "left": 0.369140625,
+        "right": 0.36328125,
+        "bottom": 0.05208333333333337
+      },
+      "safe_area_numeric_pass": false
+    },
+    {
+      "file": "c04_front.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1170444,
+      "sha256": "1c5853cf27c2e02bcd074565c181b78032770a0998a23271a30a2e4774c9bf0b",
+      "contrast_bounds": [
+        302,
+        188,
+        722,
+        1465
+      ],
+      "margins_estimate": {
+        "top": 0.12239583333333333,
+        "left": 0.294921875,
+        "right": 0.294921875,
+        "bottom": 0.04622395833333337
+      },
+      "safe_area_numeric_pass": false
+    },
+    {
+      "file": "c04_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1099469,
+      "sha256": "883ec0f30cc5748d356c923473592a7e5d595140d9d50414f6b82da828405468",
+      "contrast_bounds": [
+        391,
+        316,
+        620,
+        1441
+      ],
+      "margins_estimate": {
+        "top": 0.20572916666666666,
+        "left": 0.3818359375,
+        "right": 0.39453125,
+        "bottom": 0.06184895833333337
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "c04_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1154627,
+      "sha256": "0269865d3b866f93f05f2ed2565c5c30e7828fbea83693e4850c12d680b404c9",
+      "contrast_bounds": [
+        336,
+        311,
+        649,
+        1458
+      ],
+      "margins_estimate": {
+        "top": 0.20247395833333334,
+        "left": 0.328125,
+        "right": 0.3662109375,
+        "bottom": 0.05078125
+      },
+      "safe_area_numeric_pass": false
+    }
+  ]
+}

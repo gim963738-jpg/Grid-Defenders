@@ -1,0 +1,66 @@
+{
+  "PNG_count": 6,
+  "unique_SHA256_count": 6,
+  "native_bytes_match": 6,
+  "zip_roundtrip_match": 6,
+  "current_reading_document_hashes": 17,
+  "reference_benchmark_hashes": 8,
+  "prior12_unchanged": true,
+  "margin_contrast_pass": 6,
+  "sets": {
+    "n01": {
+      "sole_baseline_proxy_px": [
+        1327,
+        1328,
+        1332
+      ],
+      "baseline_spread_px": 5,
+      "top_proxy_px": [
+        398,
+        398,
+        395
+      ],
+      "whole_subject_height_proxy_px": [
+        929,
+        930,
+        937
+      ],
+      "height_spread_px": 8,
+      "note": "Contrast bounds include balloon, hair and props; not anatomical measurement. Small native-generation deviations remain, no postprocessing."
+    },
+    "n02": {
+      "sole_baseline_proxy_px": [
+        1324,
+        1324,
+        1326
+      ],
+      "baseline_spread_px": 2,
+      "top_proxy_px": [
+        413,
+        411,
+        412
+      ],
+      "whole_subject_height_proxy_px": [
+        911,
+        913,
+        914
+      ],
+      "height_spread_px": 3,
+      "note": "Contrast bounds include balloon, hair and props; not anatomical measurement. Small native-generation deviations remain, no postprocessing."
+    }
+  },
+  "user_approval": false,
+  "native_calls": 9,
+  "selected_candidates": 6,
+  "preserved_previous_candidates": 3,
+  "all_generation_reference_hashes_current": true,
+  "local_link_missing": [],
+  "required_reports_exist": true,
+  "old_four_character_images_unchanged": 12,
+  "technical_file_validation": "passed",
+  "visual_approval": "pending",
+  "remaining_notes": [
+    "Native baseline spread N01=5px N02=2px; not exact pixel equality.",
+    "Hidden/inferred accessory structures and overlapped fingers require visual review."
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "task": "MAIN03-20261109-9D2018F2",
+  "iteration": 1,
+  "role": "splash",
+  "generated_deliverable_count": 12,
+  "total_native_calls": 24,
+  "artifact_generation_complete": true,
+  "all_requirements_complete": false,
+  "technical_review": "needs_revision_common_scale_and_baseline",
+  "user_visual_approval": "pending_not_claimed",
+  "inputs": [
+    {
+      "id": "c01",
+      "path": "C:\\Users\\user\\Downloads\\@EEleng__.jfif",
+      "copy": "references\\design_c01.jfif",
+      "sha256": "f05693e5476ca9574ec0807533d7fb070306b3f55c1af6f7be85a79cf9af6441",
+      "bytes": 77082,
+      "role": "character_design_only_not_style_master"
+    },
+    {
+      "id": "c02",
+      "path": "C:\\Users\\user\\Downloads\\Aesthetic Anime Drawing Ideas_ 45 Sketch Prompts.jfif",
+      "copy": "references\\design_c02.jfif",
+      "sha256": "438e8b9cb6c98eebda6ac462bb9a421798bd3c2cc060ec07c53320b09c6bb00f",
+      "bytes": 66928,
+      "role": "character_design_only_not_style_master"
+    },
+    {
+      "id": "c03",
+      "path": "C:\\Users\\user\\Downloads\\다운로드 (28).jfif",
+      "copy": "references\\design_c03.jfif",
+      "sha256": "ccc0af27551e1ab67a4941c600121d7c0477a975f67a0964b765f8c2eafbccdf",
+      "bytes": 90158,
+      "role": "character_design_only_not_style_master"
+    },
+    {
+      "id": "c04",
+      "path": "C:\\Users\\user\\Downloads\\다운로드 (29).jfif",
+      "copy": "references\\design_c04.jfif",
+      "sha256": "587d925872679eecf3bf0e612101ead6a5032fdef67302bf55f2756476e78fd1",
+      "bytes": 87245,
+      "role": "character_design_only_not_style_master"
+    }
+  ],
+  "gc9_references": [
+    {
+      "id": "c03_front",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_front.png",
+      "copy": "references\\gc9_c03_front.png",
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+      "role": "whole_style",
+      "priority": "전체 작화 기준의 구성원; 금속 면·두께·반사의 최우선 품질 사례"
+    },
+    {
+      "id": "c03_threequarter",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_threequarter.png",
+      "copy": "references\\gc9_c03_threequarter.png",
+      "sha256": "15448ca81c1c5ecc226993f403151fb70aa8b3d532549d368262e395a0374b95",
+      "role": "whole_style",
+      "priority": "전체 작화 기준의 구성원; 금속 면·두께·반사의 최우선 품질 사례"
+    },
+    {
+      "id": "c04_front",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_front.png",
+      "copy": "references\\gc9_c04_front.png",
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "role": "whole_style",
+      "priority": "전체 작화·얼굴 표현 최우선 사례; 금속도 긍정 평가"
+    },
+    {
+      "id": "c04_threequarter",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_threequarter.png",
+      "copy": "references\\gc9_c04_threequarter.png",
+      "sha256": "712d33a525be4f59a66fbabe884a33cc77205d6e00a9334fb31a8d362641761e",
+      "role": "whole_style",
+      "priority": "전체 작화·얼굴 표현 최우선 사례; 금속도 긍정 평가"
+    },
+    {
+      "id": "c05_front",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c05_front.png",
+      "copy": "references\\gc9_c05_front.png",
+      "sha256": "e313100fa85b8163e81eaabe1f48e499cc2e3e97383bd74b247278276b7e4345",
+      "role": "whole_style",
+      "priority": "남성형 폐쇄 투구·밀도 높은 판금의 전체 작화 사례; 얼굴은 가려져 판단 불가"
+    },
+    {
+      "id": "c05_threequarter",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c05_threequarter.png",
+      "copy": "references\\gc9_c05_threequarter.png",
+      "sha256": "59624b93b3d2bffa0899ddfcea15e8f99d586823e315e56007fba81e772b7457",
+      "role": "whole_style",
+      "priority": "남성형 폐쇄 투구·밀도 높은 판금의 전체 작화 사례; 얼굴은 가려져 판단 불가"
+    },
+    {
+      "id": "c06_front",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c06_front.png",
+      "copy": "references\\gc9_c06_front.png",
+      "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1",
+      "role": "whole_style",
+      "priority": "얼굴이 보이는 남성형·흰 판금·모피의 전체 작화 사례; 단독 전역 기준 아님"
+    },
+    {
+      "id": "c06_threequarter",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c06_threequarter.png",
+      "copy": "references\\gc9_c06_threequarter.png",
+      "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c",
+      "role": "whole_style",
+      "priority": "얼굴이 보이는 남성형·흰 판금·모피의 전체 작화 사례; 단독 전역 기준 아님"
+    }
+  ],
+  "images": [
+    {
+      "file": "images\\c01_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1272067,
+      "sha256": "01077eb54c90783da0af280379c0be73c86679ff2ea915c9e956f720cac662ef",
+      "generation_id": "c01_front_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        184,
+        416,
+        843,
+        1407
+      ],
+      "margins_estimate": {
+        "top": 0.2708333333333333,
+        "left": 0.1796875,
+        "right": 0.1767578125,
+        "bottom": 0.083984375
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c01_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1279926,
+      "sha256": "e525856b2625fa67ce79b74566da87ec69db5d8801b14e76b1d4e161d4dcac65",
+      "generation_id": "c01_right_profile",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        168,
+        346,
+        630,
+        1426
+      ],
+      "margins_estimate": {
+        "top": 0.22526041666666666,
+        "left": 0.1640625,
+        "right": 0.384765625,
+        "bottom": 0.07161458333333337
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c01_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1230767,
+      "sha256": "35ba07b0590bf8a47a593f2911be1eff23a6ee3ecc7cb299b6ccc66c379cfe75",
+      "generation_id": "c01_right_threequarter_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        240,
+        419,
+        772,
+        1263
+      ],
+      "margins_estimate": {
+        "top": 0.2727864583333333,
+        "left": 0.234375,
+        "right": 0.24609375,
+        "bottom": 0.177734375
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c02_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1329354,
+      "sha256": "e9f35edc3012659f973dc0fbd8920495d2b540a2c9ecd51030ba272fe2b7048b",
+      "generation_id": "c02_front_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        220,
+        399,
+        802,
+        1442
+      ],
+      "margins_estimate": {
+        "top": 0.259765625,
+        "left": 0.21484375,
+        "right": 0.216796875,
+        "bottom": 0.06119791666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c02_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1247580,
+      "sha256": "9636e855e467d52a70d73eda36b9eeba191d6aed1f026b6199fb74168e665557",
+      "generation_id": "c02_right_profile",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        212,
+        338,
+        667,
+        1406
+      ],
+      "margins_estimate": {
+        "top": 0.22005208333333334,
+        "left": 0.20703125,
+        "right": 0.3486328125,
+        "bottom": 0.08463541666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c02_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1249469,
+      "sha256": "acc8838b56a6637cd45f8df6addf909d9ce5815828131cbcaf52a937d7e63ba8",
+      "generation_id": "c02_right_threequarter_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        252,
+        398,
+        730,
+        1311
+      ],
+      "margins_estimate": {
+        "top": 0.2591145833333333,
+        "left": 0.24609375,
+        "right": 0.287109375,
+        "bottom": 0.146484375
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c03_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1228819,
+      "sha256": "8a2b950f7789cb36bd8342c9f02a5769a4dff400aefe4b7d60dc350b3bdd765a",
+      "generation_id": "c03_front_baseline",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        375,
+        353,
+        661,
+        1418
+      ],
+      "margins_estimate": {
+        "top": 0.22981770833333334,
+        "left": 0.3662109375,
+        "right": 0.3544921875,
+        "bottom": 0.07682291666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c03_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1130148,
+      "sha256": "c40457e888913c65457f0dd1470b24457b239816a0703fe179e9bcbc24157980",
+      "generation_id": "c03_right_profile",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        396,
+        331,
+        601,
+        1430
+      ],
+      "margins_estimate": {
+        "top": 0.21549479166666666,
+        "left": 0.38671875,
+        "right": 0.4130859375,
+        "bottom": 0.06901041666666663
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c03_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1119930,
+      "sha256": "194362d69d05dc7842fb50725c10b88ff65e91e35516803506e5a44eb38485c5",
+      "generation_id": "c03_right_threequarter_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        407,
+        380,
+        620,
+        1300
+      ],
+      "margins_estimate": {
+        "top": 0.24739583333333334,
+        "left": 0.3974609375,
+        "right": 0.39453125,
+        "bottom": 0.15364583333333337
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c04_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1497779,
+      "sha256": "800f1fcace165cb032022b3d960bc3055352296ab12afc612d49782d005d86ac",
+      "generation_id": "c04_front_baseline",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        332,
+        343,
+        696,
+        1443
+      ],
+      "margins_estimate": {
+        "top": 0.22330729166666666,
+        "left": 0.32421875,
+        "right": 0.3203125,
+        "bottom": 0.060546875
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c04_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1099469,
+      "sha256": "883ec0f30cc5748d356c923473592a7e5d595140d9d50414f6b82da828405468",
+      "generation_id": "c04_right_profile",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        391,
+        316,
+        620,
+        1441
+      ],
+      "margins_estimate": {
+        "top": 0.20572916666666666,
+        "left": 0.3818359375,
+        "right": 0.39453125,
+        "bottom": 0.06184895833333337
+      },
+      "safe_area_numeric_pass": true
+    },
+    {
+      "file": "images\\c04_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1124793,
+      "sha256": "ae92d6ba0b4deaf41b3080b2d3b3b1ad2914a682f196f2a9cd753818003ec2fa",
+      "generation_id": "c04_right_threequarter_framing",
+      "native_bytes_preserved": true,
+      "contrast_bounds": [
+        364,
+        367,
+        629,
+        1322
+      ],
+      "margins_estimate": {
+        "top": 0.23893229166666666,
+        "left": 0.35546875,
+        "right": 0.3857421875,
+        "bottom": 0.13932291666666663
+      },
+      "safe_area_numeric_pass": true
+    }
+  ],
+  "set_consistency": {
+    "c01": {
+      "sole_baseline_proxy_range_px": [
+        1263,
+        1426
+      ],
+      "baseline_spread_px": 163,
+      "whole_subject_height_proxy_range_px": [
+        844,
+        1080
+      ],
+      "note": "Whole-subject bound includes horns/bird/hair and is not anatomical height. Common scale and baseline NOT fully matched."
+    },
+    "c02": {
+      "sole_baseline_proxy_range_px": [
+        1311,
+        1442
+      ],
+      "baseline_spread_px": 131,
+      "whole_subject_height_proxy_range_px": [
+        913,
+        1068
+      ],
+      "note": "Whole-subject bound includes horns/bird/hair and is not anatomical height. Common scale and baseline NOT fully matched."
+    },
+    "c03": {
+      "sole_baseline_proxy_range_px": [
+        1300,
+        1430
+      ],
+      "baseline_spread_px": 130,
+      "whole_subject_height_proxy_range_px": [
+        920,
+        1099
+      ],
+      "note": "Whole-subject bound includes horns/bird/hair and is not anatomical height. Common scale and baseline NOT fully matched."
+    },
+    "c04": {
+      "sole_baseline_proxy_range_px": [
+        1322,
+        1443
+      ],
+      "baseline_spread_px": 121,
+      "whole_subject_height_proxy_range_px": [
+        955,
+        1125
+      ],
+      "note": "Whole-subject bound includes horns/bird/hair and is not anatomical height. Common scale and baseline NOT fully matched."
+    }
+  },
+  "inferences": [
+    "C04 unseen lower body minimally completed as black straight trousers and plain black low shoes.",
+    "C04 rear collar reads hood-like in side views; unseen rear construction is unverified, no user approval claimed."
+  ],
+  "native_postprocessing": false,
+  "zip": {
+    "file": "gc9-four-characters-12views-v01-png.zip",
+    "bytes": 12429883,
+    "sha256": "0f9973888df5e99d59f5d70b2dfadf775abc96a6d72575159c5fc87f64ef8c83",
+    "entries": 12,
+    "roundtrip_hash_match": true
+  }
+}

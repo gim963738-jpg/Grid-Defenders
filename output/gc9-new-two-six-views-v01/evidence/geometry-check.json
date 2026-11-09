@@ -1,0 +1,185 @@
+{
+  "method": "read-only RGB contrast bounding box min<180 OR chroma>45 on bright background; faint outline requires visual check",
+  "images": [
+    {
+      "file": "images/n01_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1210998,
+      "sha256": "af62a75158f82e592a5576cdc72f04e863ac7795bc8b78c731d2488927721dfa",
+      "native_bytes_preserved": true,
+      "generation_id": "n01_front_framing",
+      "contrast_bounds": [
+        328,
+        398,
+        687,
+        1327
+      ],
+      "margins_estimate": {
+        "top": 0.2591145833333333,
+        "left": 0.3203125,
+        "right": 0.3291015625,
+        "bottom": 0.13606770833333337
+      },
+      "margin_numeric_pass": true
+    },
+    {
+      "file": "images/n01_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1441623,
+      "sha256": "25865261cd3bcd9b2dcb2748bbee10f2ad145d96b7a011d92ee2a04666bc18e0",
+      "native_bytes_preserved": true,
+      "generation_id": "n01_right_profile",
+      "contrast_bounds": [
+        354,
+        398,
+        637,
+        1328
+      ],
+      "margins_estimate": {
+        "top": 0.2591145833333333,
+        "left": 0.345703125,
+        "right": 0.3779296875,
+        "bottom": 0.13541666666666663
+      },
+      "margin_numeric_pass": true
+    },
+    {
+      "file": "images/n01_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1584473,
+      "sha256": "1d01eb2fae94f47d3fa4a8bd22f9bfc037abe0074d5a56dfb81cd94fa2b71a44",
+      "native_bytes_preserved": true,
+      "generation_id": "n01_right_threequarter_face",
+      "contrast_bounds": [
+        315,
+        395,
+        664,
+        1332
+      ],
+      "margins_estimate": {
+        "top": 0.2571614583333333,
+        "left": 0.3076171875,
+        "right": 0.3515625,
+        "bottom": 0.1328125
+      },
+      "margin_numeric_pass": true
+    },
+    {
+      "file": "images/n02_front.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1168173,
+      "sha256": "8cea0d2809b6316820a2e932f445ba8d4089ac72003d2237deeb14e1d7fbd059",
+      "native_bytes_preserved": true,
+      "generation_id": "n02_front_framing",
+      "contrast_bounds": [
+        280,
+        413,
+        779,
+        1324
+      ],
+      "margins_estimate": {
+        "top": 0.2688802083333333,
+        "left": 0.2734375,
+        "right": 0.2392578125,
+        "bottom": 0.13802083333333337
+      },
+      "margin_numeric_pass": true
+    },
+    {
+      "file": "images/n02_right_profile.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1502984,
+      "sha256": "dd6cfa7ca3583f4aa81f1c264e80771a730705c71cba1242322b38725e44b566",
+      "native_bytes_preserved": true,
+      "generation_id": "n02_right_profile",
+      "contrast_bounds": [
+        267,
+        411,
+        735,
+        1324
+      ],
+      "margins_estimate": {
+        "top": 0.267578125,
+        "left": 0.2607421875,
+        "right": 0.2822265625,
+        "bottom": 0.13802083333333337
+      },
+      "margin_numeric_pass": true
+    },
+    {
+      "file": "images/n02_right_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 1448661,
+      "sha256": "b8c1a232d669583c7c8da0421595a2b227429b5713a19f98d10507cae9c90924",
+      "native_bytes_preserved": true,
+      "generation_id": "n02_right_threequarter",
+      "contrast_bounds": [
+        261,
+        412,
+        753,
+        1326
+      ],
+      "margins_estimate": {
+        "top": 0.2682291666666667,
+        "left": 0.2548828125,
+        "right": 0.2646484375,
+        "bottom": 0.13671875
+      },
+      "margin_numeric_pass": true
+    }
+  ],
+  "sets": {
+    "n01": {
+      "sole_baseline_proxy_px": [
+        1327,
+        1328,
+        1332
+      ],
+      "baseline_spread_px": 5,
+      "top_proxy_px": [
+        398,
+        398,
+        395
+      ],
+      "whole_subject_height_proxy_px": [
+        929,
+        930,
+        937
+      ],
+      "height_spread_px": 8,
+      "note": "Contrast bounds include balloon, hair and props; not anatomical measurement. Small native-generation deviations remain, no postprocessing."
+    },
+    "n02": {
+      "sole_baseline_proxy_px": [
+        1324,
+        1324,
+        1326
+      ],
+      "baseline_spread_px": 2,
+      "top_proxy_px": [
+        413,
+        411,
+        412
+      ],
+      "whole_subject_height_proxy_px": [
+        911,
+        913,
+        914
+      ],
+      "height_spread_px": 3,
+      "note": "Contrast bounds include balloon, hair and props; not anatomical measurement. Small native-generation deviations remain, no postprocessing."
+    }
+  }
+}

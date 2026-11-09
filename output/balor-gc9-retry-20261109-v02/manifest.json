@@ -1,0 +1,163 @@
+{
+  "task": "MAIN03-20261109-21F94B82",
+  "iteration": 2,
+  "actual_generated_pngs": 1,
+  "before": {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-gc9-retry-20261109-v02\\references\\before-v01.png",
+    "bytes": 1619428,
+    "sha256": "6675a0243f67018af29eaeea1af43f7ccf6e0d9ab96ef3d8f3be830d6afd96d9",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alpha": {
+      "zero": 1056394,
+      "partial": 516470,
+      "opaque": 0,
+      "extrema": [
+        0,
+        254
+      ]
+    },
+    "bounds_by_alpha": {
+      "1": [
+        0,
+        115,
+        980,
+        1455
+      ],
+      "32": [
+        138,
+        301,
+        875,
+        1431
+      ],
+      "128": [
+        138,
+        302,
+        875,
+        1430
+      ],
+      "254": [
+        145,
+        320,
+        861,
+        1423
+      ]
+    },
+    "margins_alpha32": {
+      "top": 0.19596354166666666,
+      "left": 0.134765625,
+      "right": 0.1455078125,
+      "bottom": 0.068359375
+    },
+    "safe_area_pass": false,
+    "outer_edge_alpha_max": 1
+  },
+  "after": {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-gc9-retry-20261109-v02\\front.png",
+    "bytes": 1645282,
+    "sha256": "061f23cc26b1f023918288446f9ac025de99bcf32550fb9be3e9850850f496fe",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alpha": {
+      "zero": 1058460,
+      "partial": 514404,
+      "opaque": 0,
+      "extrema": [
+        0,
+        254
+      ]
+    },
+    "bounds_by_alpha": {
+      "1": [
+        0,
+        191,
+        1002,
+        1438
+      ],
+      "32": [
+        138,
+        300,
+        883,
+        1431
+      ],
+      "128": [
+        139,
+        301,
+        882,
+        1431
+      ],
+      "254": [
+        145,
+        390,
+        877,
+        1423
+      ]
+    },
+    "margins_alpha32": {
+      "top": 0.1953125,
+      "left": 0.134765625,
+      "right": 0.1376953125,
+      "bottom": 0.068359375
+    },
+    "safe_area_pass": false,
+    "outer_edge_alpha_max": 1,
+    "source_copy_matches": true
+  },
+  "inputs": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-gc9-retry-20261109-v01\\front.png",
+      "bytes": 1619428,
+      "sha256": "6675a0243f67018af29eaeea1af43f7ccf6e0d9ab96ef3d8f3be830d6afd96d9",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "role": "actual edit target under latest explicit local-edit request; NOT approved style master",
+      "local": "references\\input1_front.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_front.png",
+      "bytes": 1643944,
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "C4 whole drawing/face benchmark support",
+      "local": "references\\input2_c04_front.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_front.png",
+      "bytes": 1545142,
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "C3 whole drawing/metal benchmark support",
+      "local": "references\\input3_c03_front.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터제작\\한손무기그립\\원본\\그립자세_참조.png",
+      "bytes": 199279,
+      "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+      "width": 335,
+      "height": 484,
+      "mode": "RGB",
+      "role": "grip pose anatomy only",
+      "local": "references\\input4_그립자세_참조.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터제작\\한손무기그립\\원본\\손가락연결_사용자표시.png",
+      "bytes": 83496,
+      "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a",
+      "width": 329,
+      "height": 298,
+      "mode": "RGB",
+      "role": "finger connection anatomy only",
+      "local": "references\\input5_손가락연결_사용자표시.png"
+    }
+  ],
+  "postprocessing": false,
+  "user_approval": null,
+  "technical_acceptance": false
+}
