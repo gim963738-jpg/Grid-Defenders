@@ -1,0 +1,12 @@
+#dev-range-dummy{min-width:48px;min-height:48px}
+#dev-range-dummy[aria-pressed=true]{border-color:#ffdc55;background:#3d492e;color:#ffeb9b}
+#dev-range-legend{grid-column:1/-1;margin:0;padding:8px;font-size:12px;line-height:18px}
+#dev-range-overlay{position:absolute;inset:0;z-index:4;overflow:hidden;pointer-events:none;isolation:isolate;line-height:normal}
+#dev-range-overlay>.dev-range-circles{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;pointer-events:none}
+#dev-range-overlay circle{fill:none;stroke-width:2;stroke-opacity:.95}
+#dev-range-overlay .dev-range-ray{stroke:#eff8dd;stroke-width:1;stroke-opacity:.45;vector-effect:non-scaling-stroke}
+#dev-range-overlay .dev-range-handle{position:absolute;z-index:2;width:48px;height:72px;min-width:48px;min-height:72px;margin:0;padding:0;border:0;background:transparent;transform:translate(-50%,-64px);pointer-events:auto;cursor:grab;touch-action:none;user-select:none}
+#dev-range-overlay .dev-range-handle:active{cursor:grabbing}
+#dev-range-overlay .dev-range-handle>svg{display:block;width:48px;height:64px;overflow:visible;filter:drop-shadow(0 1px 1px #102315)}
+#dev-range-overlay .dev-range-label{position:absolute;display:flex;flex-direction:column;align-items:flex-end;gap:0;width:38px;margin-left:-4px;padding:2px 4px;border-radius:4px;background:#102823dc;transform:translate(-100%,8px);font-size:12px;line-height:14px;white-space:nowrap;pointer-events:none}
+#dev-range-overlay .dev-range-label b,#dev-range-overlay .dev-range-label small{font-size:12px;line-height:14px;color:inherit}

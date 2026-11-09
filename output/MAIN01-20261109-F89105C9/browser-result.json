@@ -1,0 +1,183 @@
+{
+  "checks": [
+    {
+      "name": "actual game ready and comparison button enabled",
+      "passed": true
+    },
+    {
+      "name": "one button opens panel",
+      "passed": true
+    },
+    {
+      "name": "select cards and place multiple variants on real battlefield",
+      "passed": true
+    },
+    {
+      "name": "reselect and drag updates logical position",
+      "passed": true
+    },
+    {
+      "name": "200 percent keeps sole pivot and uniform image scale",
+      "passed": true
+    },
+    {
+      "name": "50 percent and 100 percent restore",
+      "passed": true
+    },
+    {
+      "name": "number editing permits partial digits and clamps only on commit",
+      "passed": true
+    },
+    {
+      "name": "actual variant1 right45 direction changes selected image",
+      "passed": true
+    },
+    {
+      "name": "delete selected only",
+      "passed": true
+    },
+    {
+      "name": "close retains images with no input interception",
+      "passed": true
+    },
+    {
+      "name": "preview operations leave gold roster and saved battle unchanged except normal autosave savedAt",
+      "passed": true
+    },
+    {
+      "name": "clear all immediately restores battlefield",
+      "passed": true
+    },
+    {
+      "name": "card drag to field places preview",
+      "passed": true
+    },
+    {
+      "name": "closed comparison restores actual soldier summon click",
+      "passed": true
+    },
+    {
+      "name": "boss switch clears previous previews selection and panel",
+      "passed": true
+    },
+    {
+      "name": "boss coordinate uses 1250 world width at 800 CSS pixels",
+      "passed": true
+    },
+    {
+      "name": "actual boss right45 right90 swaps preserve foot position and scale",
+      "passed": true
+    },
+    {
+      "name": "all four new variants place actual right45 art",
+      "passed": true
+    },
+    {
+      "name": "all four new variants swap to actual right90 art at fixed world foot",
+      "passed": true
+    },
+    {
+      "name": "panel fits narrow 320 pixel viewport without scaling UI",
+      "passed": true
+    },
+    {
+      "name": "panel buttons retain 48 pixel touch height",
+      "passed": true
+    },
+    {
+      "name": "return to wave clears boss previews",
+      "passed": true
+    },
+    {
+      "name": "closed comparison restores actual hero summon click",
+      "passed": true
+    },
+    {
+      "name": "coordinate conversion handles CSS offset half scale and canopy top",
+      "passed": true
+    },
+    {
+      "name": "out of bounds pointer is clamped to field",
+      "passed": true
+    },
+    {
+      "name": "all five distinct source framings normalize to 57 body units at sole anchor",
+      "passed": true
+    },
+    {
+      "name": "direction metadata swap preserves placed world foot position",
+      "passed": true
+    },
+    {
+      "name": "pointer cancellation releases capture and prevents stale drag",
+      "passed": true
+    },
+    {
+      "name": "touch input places a second preview on field",
+      "passed": true
+    },
+    {
+      "name": "dispose is idempotent and removes all owned UI",
+      "passed": true
+    },
+    {
+      "name": "all 15 actual direction PNGs load at original dimensions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "state": {
+    "before": {
+      "gold": 480,
+      "units": "[]",
+      "storage": "{\"grid-defenders.battle-save.v1.landscape.infinite-test\":\"{\\\"version\\\":1,\\\"layout\\\":\\\"landscape\\\",\\\"mode\\\":\\\"infinite-test\\\",\\\"savedAt\\\":1794215585416,\\\"meta\\\":{\\\"runId\\\":\\\"4f9123ba-5eee-4adb-af0f-a09d95080ee0\\\",\\\"scene\\\":\\\"defense\\\",\\\"activeBossWave\\\":null,\\\"bossReturnDelay\\\":0,\\\"bossTestMode\\\":false,\\\"bossEncounterWave\\\":1,\\\"defeatedBossEnemies\\\":[],\\\"combatPaused\\\":true},\\\"defense\\\":{\\\"gold\\\":480,\\\"anvils\\\":0,\\\"kills\\\":0,\\\"elapsed\\\":0.01659999999999991,\\\"normalKills\\\":0,\\\"bountySummons\\\":0,\\\"pendingBounties\\\":0,\\\"waveTime\\\":0.01659999999999991,\\\"waveSpawned\\\":1,\\\"revision\\\":1,\\\"logRevision\\\":1,\\\"placementOrder\\\":0,\\\"wave\\\":1,\\\"nextDamageId\\\":1,\\\"nextLogId\\\":1,\\\"nextId\\\":2,\\\"speed\\\":1,\\\"bossPending\\\":false,\\\"keepWaveMonsters\\\":false,\\\"message\\\":\\\"게임을 시작 상태로 초기화했습니다.\\\",\\\"units\\\":[],\\\"enemies\\\":[{\\\"id\\\":1,\\\"distance\\\":0.7137999999999961,\\\"x\\\":131.7138,\\\"y\\\":68,\\\"hp\\\":160,\\\"maxHp\\\":160,\\\"speed\\\":43,\\\"named\\\":false,\\\"name\\\":\\\"순환 괴물\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"damageType\\\":\\\"physical\\\",\\\"attack\\\":20,\\\"armor\\\":10,\\\"magicArmor\\\":10,\\\"rate\\\":0.8,\\\"goldReward\\\":12,\\\"wave\\\":1,\\\"armorBreakRemaining\\\":0}],\\\"shopDiscounts\\\":[false,false,false,false,false],\\\"shots\\\":[],\\\"attackAreas\\\":[],\\\"damageNumbers\\\":[],\\\"rangedSkills\\\":[],\\\"meleeSkills\\\":[],\\\"assassinSkills\\\":[],\\\"swordSwingCounts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"logs\\\":{\\\"damage\\\":[],\\\"reward\\\":[],\\\"economy\\\":[]},\\\"lastWaveDamage\\\":null,\\\"formation\\\":[],\\\"formationRows\\\":6,\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0.01659999999999991,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"gear\\\":[],\\\"shop\\\":[\\\"I01\\\",\\\"I02\\\",\\\"I03\\\",\\\"I04\\\",\\\"I05\\\"]},\\\"boss\\\":{\\\"encounter\\\":2,\\\"actors\\\":[{\\\"id\\\":\\\"retainer-top\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 강철 감시자\\\",\\\"x\\\":760,\\\"y\\\":215,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"physical\\\",\\\"physicalArmor\\\":35,\\\"magicArmor\\\":25,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"retainer-bottom\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 비전 파수꾼\\\",\\\"x\\\":760,\\\"y\\\":347.5,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"magic\\\",\\\"defenseType\\\":\\\"magic\\\",\\\"physicalArmor\\\":25,\\\"magicArmor\\\":35,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"tester-boss\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"boss\\\",\\\"name\\\":\\\"시험 보스\\\",\\\"x\\\":900,\\\"y\\\":281.25,\\\"hp\\\":6000,\\\"maxHp\\\":6000,\\\"attack\\\":120,\\\"rate\\\":0.7,\\\"range\\\":80,\\\"speed\\\":34,\\\"rank\\\":1,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"physicalArmor\\\":60,\\\"magicArmor\\\":40,\\\"cooldown\\\":0.25}],\\\"roster\\\":[],\\\"autoSkills\\\":true,\\\"commanderCooldown\\\":0,\\\"commanderBuff\\\":0,\\\"heroSkillCooldown\\\":0,\\\"elapsed\\\":0,\\\"result\\\":\\\"fighting\\\",\\\"heroSkillCooldowns\\\":[],\\\"swordSwingCounts\\\":[],\\\"hits\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"tuning\\\":{\\\"healthScale\\\":1,\\\"attackScale\\\":1}},\\\"run\\\":{\\\"mode\\\":\\\"infinite-test\\\",\\\"active\\\":true,\\\"elapsed\\\":0.01659999999999991,\\\"result\\\":null}}\"}"
+    },
+    "after": {
+      "gold": 480,
+      "units": "[]",
+      "storage": "{\"grid-defenders.battle-save.v1.landscape.infinite-test\":\"{\\\"version\\\":1,\\\"layout\\\":\\\"landscape\\\",\\\"mode\\\":\\\"infinite-test\\\",\\\"savedAt\\\":1794215586039,\\\"meta\\\":{\\\"runId\\\":\\\"4f9123ba-5eee-4adb-af0f-a09d95080ee0\\\",\\\"scene\\\":\\\"defense\\\",\\\"activeBossWave\\\":null,\\\"bossReturnDelay\\\":0,\\\"bossTestMode\\\":false,\\\"bossEncounterWave\\\":1,\\\"defeatedBossEnemies\\\":[],\\\"combatPaused\\\":true},\\\"defense\\\":{\\\"gold\\\":480,\\\"anvils\\\":0,\\\"kills\\\":0,\\\"elapsed\\\":0.01659999999999991,\\\"normalKills\\\":0,\\\"bountySummons\\\":0,\\\"pendingBounties\\\":0,\\\"waveTime\\\":0.01659999999999991,\\\"waveSpawned\\\":1,\\\"revision\\\":1,\\\"logRevision\\\":1,\\\"placementOrder\\\":0,\\\"wave\\\":1,\\\"nextDamageId\\\":1,\\\"nextLogId\\\":1,\\\"nextId\\\":2,\\\"speed\\\":1,\\\"bossPending\\\":false,\\\"keepWaveMonsters\\\":false,\\\"message\\\":\\\"게임을 시작 상태로 초기화했습니다.\\\",\\\"units\\\":[],\\\"enemies\\\":[{\\\"id\\\":1,\\\"distance\\\":0.7137999999999961,\\\"x\\\":131.7138,\\\"y\\\":68,\\\"hp\\\":160,\\\"maxHp\\\":160,\\\"speed\\\":43,\\\"named\\\":false,\\\"name\\\":\\\"순환 괴물\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"damageType\\\":\\\"physical\\\",\\\"attack\\\":20,\\\"armor\\\":10,\\\"magicArmor\\\":10,\\\"rate\\\":0.8,\\\"goldReward\\\":12,\\\"wave\\\":1,\\\"armorBreakRemaining\\\":0}],\\\"shopDiscounts\\\":[false,false,false,false,false],\\\"shots\\\":[],\\\"attackAreas\\\":[],\\\"damageNumbers\\\":[],\\\"rangedSkills\\\":[],\\\"meleeSkills\\\":[],\\\"assassinSkills\\\":[],\\\"swordSwingCounts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"logs\\\":{\\\"damage\\\":[],\\\"reward\\\":[],\\\"economy\\\":[]},\\\"lastWaveDamage\\\":null,\\\"formation\\\":[],\\\"formationRows\\\":6,\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0.01659999999999991,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"gear\\\":[],\\\"shop\\\":[\\\"I01\\\",\\\"I02\\\",\\\"I03\\\",\\\"I04\\\",\\\"I05\\\"]},\\\"boss\\\":{\\\"encounter\\\":2,\\\"actors\\\":[{\\\"id\\\":\\\"retainer-top\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 강철 감시자\\\",\\\"x\\\":760,\\\"y\\\":215,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"physical\\\",\\\"physicalArmor\\\":35,\\\"magicArmor\\\":25,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"retainer-bottom\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 비전 파수꾼\\\",\\\"x\\\":760,\\\"y\\\":347.5,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"magic\\\",\\\"defenseType\\\":\\\"magic\\\",\\\"physicalArmor\\\":25,\\\"magicArmor\\\":35,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"tester-boss\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"boss\\\",\\\"name\\\":\\\"시험 보스\\\",\\\"x\\\":900,\\\"y\\\":281.25,\\\"hp\\\":6000,\\\"maxHp\\\":6000,\\\"attack\\\":120,\\\"rate\\\":0.7,\\\"range\\\":80,\\\"speed\\\":34,\\\"rank\\\":1,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"physicalArmor\\\":60,\\\"magicArmor\\\":40,\\\"cooldown\\\":0.25}],\\\"roster\\\":[],\\\"autoSkills\\\":true,\\\"commanderCooldown\\\":0,\\\"commanderBuff\\\":0,\\\"heroSkillCooldown\\\":0,\\\"elapsed\\\":0,\\\"result\\\":\\\"fighting\\\",\\\"heroSkillCooldowns\\\":[],\\\"swordSwingCounts\\\":[],\\\"hits\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"tuning\\\":{\\\"healthScale\\\":1,\\\"attackScale\\\":1}},\\\"run\\\":{\\\"mode\\\":\\\"infinite-test\\\",\\\"active\\\":true,\\\"elapsed\\\":0.01659999999999991,\\\"result\\\":null}}\"}"
+    }
+  },
+  "drag": {
+    "log": [
+      [
+        "pointerdown",
+        "",
+        613,
+        180.796875
+      ],
+      [
+        "lostpointercapture",
+        "",
+        260,
+        170
+      ]
+    ],
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 800,
+      "height": 360,
+      "top": 0,
+      "right": 800,
+      "bottom": 360,
+      "left": 0
+    },
+    "card": {
+      "x": 581,
+      "y": 132,
+      "width": 64,
+      "height": 97.59375,
+      "top": 132,
+      "right": 645,
+      "bottom": 229.59375,
+      "left": 581
+    },
+    "panel": false
+  },
+  "heroInput": [
+    "guard",
+    "blond"
+  ],
+  "result": "PASS"
+}

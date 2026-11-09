@@ -1,9 +1,10 @@
-import type {Defense} from './defense';
+import {pathPoint,type Defense} from './defense';
 import type {BossBattle} from './bossBattle';
 import type {DamageMeter} from './damageMeter';
 import type {GameRun,RunMode} from './gameRun';
 import {ITEMS,LANDSCAPE_BATTLE,RULES,SLOTS,UNITS} from './defenseConfig';
 import {COMBAT_SPEEDS} from './combatPlayback';
+import {FORMATION,isFormationCell,canPlaceFormationUnit,type FormationUnit,type FormationPlacement} from './battleFormation';
 
 export type BattleLayout='landscape'|'portrait';
 export type BattleSaveStorage=Pick<Storage,'getItem'|'setItem'|'removeItem'>;
@@ -85,9 +86,11 @@ const defenseFields:Record<string,Validator>={
  logs:shape({damage:list(log,100),reward:list(log,100),economy:list(log,100)}),
  lastWaveDamage:nullable(shape({wave:id,stats:damageSnapshot})),damageMeter:meter,
 };
+// Optional for version-one checkpoints created before the formation editor.
+const defenseOptionalFields={formation:list(shape({unitId:id,cell:isFormationCell}),FORMATION.size),formationRows:choice(4,FORMATION.rows)};
 const bossFields:Record<string,Validator>={
  encounter:integer,tuning:shape({healthScale:positive,attackScale:positive}),actors:list(actor,128),
- roster:list(shape({id,kind,slot:integer,level:id,stats}),SLOTS.length),autoSkills:bool,
+ roster:list(shape({id,kind,slot:integer,level:id,stats},{formationCell:isFormationCell}),SLOTS.length),autoSkills:bool,
  ...fields('commanderCooldown commanderBuff heroSkillCooldown elapsed',nonnegative),
  result:choice('fighting','victory','defeat'),heroSkillCooldowns:map(token,number),swordSwingCounts:map(token,integer),
  hits:list(shape({from:token,to:token,...fields('x y damage life'),magic:bool},{ice:bool,sword:bool,critical:bool,splash:bool})),
@@ -98,7 +101,7 @@ const runFields={mode:choice('normal','infinite-test'),active:choice(true),elaps
 const meta=shape({runId:token,scene:choice('defense','boss'),activeBossWave:nullable(id),bossReturnDelay:nonnegative,bossTestMode:bool,
  bossEncounterWave:id,defeatedBossEnemies:list(token,10000),combatPaused:bool});
 const envelope=shape({version:choice(BATTLE_SAVE_VERSION),layout:choice('landscape','portrait'),mode:runFields.mode,savedAt:nonnegative,
- meta,defense:shape(defenseFields),boss:shape(bossFields),run:shape(runFields)});
+ meta,defense:shape(defenseFields,defenseOptionalFields),boss:shape(bossFields),run:shape(runFields)});
 
 // Only this version's named data fields are read/written. Model prototypes, RNG,
 // training providers and the shared DamagePeaks instance never enter the save.
@@ -131,6 +134,12 @@ function writeFields(model:object,data:Fields,omit:readonly string[]=[]):void {
 }
 function writeMeter(model:DamageMeter,data:Fields):void {writeFields(model,data,['peaks']);writeFields(model.peaks,data.peaks as Fields);}
 function unique(values:unknown[]):boolean{return new Set(values).size===values.length;}
+function savedFormationCell(unit:FormationUnit,cell:number,rows:Value|undefined):boolean {
+ // Old v1 checkpoints used four rows with no size marker. Shift them by one
+ // row so front/middle/rear membership survives the new outside rows.
+ return rows===FORMATION.rows?canPlaceFormationUnit(unit,cell):
+  Number.isInteger(cell)&&cell>=0&&cell<28&&canPlaceFormationUnit(unit,cell+FORMATION.columns);
+}
 export function validBattleSave(value:unknown,layout:BattleLayout=battleLayout):value is BattleSave {
  if(!envelope(value))return false;
  const save=value as BattleSave;if(save.layout!==layout||save.mode!==save.run.mode)return false;
@@ -138,6 +147,12 @@ export function validBattleSave(value:unknown,layout:BattleLayout=battleLayout):
  const allIds=[...units,...enemies,...gear].map(item=>item.id as number);
  if(!unique(allIds)||!unique(units.map(u=>u.slot))||!unique(actors.map(a=>a.id))||allIds.some(i=>i>=(d.nextId as number)))return false;
  if(units.filter(u=>UNITS[u.kind as keyof typeof UNITS].hero).length>RULES.heroLimit)return false;
+ if(d.formation!==undefined){
+  const placements=d.formation as Fields[];
+  if(placements.length!==units.length||!unique(placements.map(p=>p.unitId))||!unique(placements.map(p=>p.cell)))return false;
+  if(placements.some(p=>{const unit=units.find(u=>u.id===p.unitId);return !unit||!savedFormationCell(unit as unknown as FormationUnit,p.cell as number,d.formationRows);}))return false;
+ }
+ if((save.boss.roster as Fields[]).some(u=>u.formationCell!==undefined&&!savedFormationCell(u as unknown as FormationUnit,u.formationCell as number,d.formationRows)))return false;
  if(gear.some(item=>item.owner!==null&&!units.some(u=>u.id===item.owner&&UNITS[u.kind as keyof typeof UNITS].hero)))return false;
  if((d.waveTime as number)>RULES.waveSeconds||(d.waveSpawned as number)>RULES.waveMonsters)return false;
  if(save.mode==='normal'&&!d.keepWaveMonsters||save.mode==='infinite-test'&&d.keepWaveMonsters)return false;
@@ -149,6 +164,8 @@ export function validBattleSave(value:unknown,layout:BattleLayout=battleLayout):
 export function captureBattle(game:Defense,boss:BossBattle,run:GameRun,details:BattleSaveMeta,now=Date.now()):BattleSave|null {
  try {
   const defense=readFields(game,defenseFields,['damageMeter','gear','shop']);
+  defense.formation=copy(game.formationSlots());
+  defense.formationRows=FORMATION.rows;
   defense.damageMeter=readMeter(game.damageMeter);
   defense.gear=game.gear.map(item=>({...item,def:item.def.id}));
   defense.shop=game.shop.map(item=>item?.id??null);
@@ -166,7 +183,15 @@ export function restoreBattle(value:unknown,game:Defense,boss:BossBattle,run:Gam
   // callbacks or class instances can be replaced by data loaded from storage.
   const save=copy(value);if(!validBattleSave(save))return null;
   const d=save.defense;
-  writeFields(game,d,['damageMeter','gear','shop']);
+  if(d.formationRows!==FORMATION.rows){
+   for(const p of (d.formation??[]) as Fields[])p.cell=(p.cell as number)+FORMATION.columns;
+   for(const u of save.boss.roster as Fields[])if(u.formationCell!==undefined)u.formationCell=(u.formationCell as number)+FORMATION.columns;
+  }
+  writeFields(game,d,['damageMeter','gear','shop','formationRows']);
+  // Distance is authoritative when a landscape checkpoint used an older road.
+  if(LANDSCAPE_BATTLE)for(const enemy of game.enemies)Object.assign(enemy,pathPoint(enemy.distance));
+  game.formation=(d.formation??[]) as unknown as FormationPlacement[];
+  game.formationSlots();
   game.gear=(d.gear as Fields[]).map(item=>({...item,def:ITEMS.find(def=>def.id===item.def)!})) as unknown as Defense['gear'];
   game.shop=(d.shop as (string|null)[]).map(item=>item===null?null:ITEMS.find(def=>def.id===item)!);
   writeMeter(game.damageMeter,d.damageMeter as Fields);

@@ -1,0 +1,77 @@
+{
+  "task": "MAIN01-20261109-F89105C9",
+  "iteration": 2,
+  "role": "gameplay",
+  "outcome": "succeeded",
+  "rootIntegrated": false,
+  "browserChecks": 49,
+  "browserResult": "PASS",
+  "tscBuild": "PASS",
+  "actualAssets": 19,
+  "newByteIdenticalPNGs": 4,
+  "productFiles": [
+    {
+      "target": "게임/src/devImageCompare.ts",
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\devImageCompare.ts",
+      "beforeSha256": "291d70afd98932c528d1f16e8a0743a732d5adf3542d9801b2397c83c1fbb106",
+      "afterSha256": "961c487b685af57d83208baf2b29c7481c2b183db44258977691f6ec00eba787",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\files\\게임\\src\\devImageCompare.ts"
+    },
+    {
+      "target": "게임/src/devImageCompareArt.ts",
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\devImageCompareArt.ts",
+      "beforeSha256": "c9992bedcebaa3e118467d125b4832b9ba85548fedbf672e11865e143a7d54c6",
+      "afterSha256": "4025261b3e1d2e7c977042235856a012b684c3806ff75f8a38bd00b22b140283",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\files\\게임\\src\\devImageCompareArt.ts"
+    },
+    {
+      "target": "게임/src/devImageCompare.css",
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\devImageCompare.css",
+      "beforeSha256": "d9a69ea657f5c5666412e3c97f67f000be5c3da7232ca6991009ae375b2b20fc",
+      "afterSha256": "599c0d70eace19c5ad50d3362ae588a0363a82dd13de6444d0359f1fcc108e29",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\files\\게임\\src\\devImageCompare.css"
+    },
+    {
+      "target": "게임/public/assets/dev-image-compare/scalp_face_v03/asset-manifest.json",
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\blond-scalp-v03\\asset-manifest.json",
+      "beforeSha256": null,
+      "afterSha256": "db80b238b0fee88304e53a5b65ea9578ff1af44243ba4329e53342cb568b09fa",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\files\\게임\\public\\assets\\dev-image-compare\\scalp_face_v03\\asset-manifest.json"
+    },
+    {
+      "target": "게임/public/assets/dev-image-compare/scalp_face_v03/variant-1-front.png",
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\blond-scalp-v03\\variant-1-front.png",
+      "beforeSha256": null,
+      "afterSha256": "b8db43a3ce43703be4d06a752d2b700691681a798ec9486a3e3c339ff472c8f8",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\files\\게임\\public\\assets\\dev-image-compare\\scalp_face_v03\\variant-1-front.png"
+    },
+    {
+      "target": "게임/public/assets/dev-image-compare/scalp_face_v03/variant-2-front.png",
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\blond-scalp-v03\\variant-2-front.png",
+      "beforeSha256": null,
+      "afterSha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\files\\게임\\public\\assets\\dev-image-compare\\scalp_face_v03\\variant-2-front.png"
+    },
+    {
+      "target": "게임/public/assets/dev-image-compare/scalp_face_v03/variant-3-front.png",
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\blond-scalp-v03\\variant-3-front.png",
+      "beforeSha256": null,
+      "afterSha256": "b356136aa05fc02d571288403f90f00a007032e0470344103cc949df551fe51d",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\files\\게임\\public\\assets\\dev-image-compare\\scalp_face_v03\\variant-3-front.png"
+    },
+    {
+      "target": "게임/public/assets/dev-image-compare/scalp_face_v03/variant-4-front.png",
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\blond-scalp-v03\\variant-4-front.png",
+      "beforeSha256": null,
+      "afterSha256": "248ecac2c87a582f4e21c88a0759fb5d8565d4137cc6d06a5a9d3da8112b1e6d",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\files\\게임\\public\\assets\\dev-image-compare\\scalp_face_v03\\variant-4-front.png"
+    }
+  ],
+  "report": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\검증.md",
+  "patch": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\통합.patch",
+  "remaining": [
+    "main01 narrow UI/root integration",
+    "independent QA/user aesthetic assessment",
+    "real device APK outside performed verification"
+  ]
+}

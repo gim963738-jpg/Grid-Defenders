@@ -1,0 +1,194 @@
+[
+  {
+    "direction": "front",
+    "sha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+    "dimensions": [
+      1133,
+      1388
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bounds": [
+      125,
+      25,
+      908,
+      1356
+    ],
+    "measurement": {
+      "alphaThreshold": 32,
+      "headROI": [
+        280,
+        0,
+        570,
+        500
+      ],
+      "feetROI": [
+        390,
+        1200,
+        390,
+        175
+      ],
+      "headAlphaBounds": [
+        336,
+        25,
+        814,
+        500
+      ],
+      "feetAlphaBounds": [
+        396,
+        1200,
+        761,
+        1356
+      ],
+      "bodyHeightMethod": "hairTop from head ROI through sole from feet ROI inclusive, excludes sword tips",
+      "footXMethod": "Manual estimate of support center between visible sole contacts; cannot infer hidden contact exactly",
+      "footXUncertaintyPx": 30,
+      "footYUncertaintyPx": 3,
+      "bodyHeightUncertaintyPx": 4
+    },
+    "ROIBoundsVerified": {
+      "head": [
+        336,
+        25,
+        814,
+        500
+      ],
+      "feet": [
+        396,
+        1200,
+        761,
+        1356
+      ]
+    }
+  },
+  {
+    "direction": "right45",
+    "sha256": "b8b5e19b5763082da15a7e7d1913ac43b04f52b66b09157343f8f39f61b94fff",
+    "dimensions": [
+      1133,
+      1388
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bounds": [
+      187,
+      19,
+      862,
+      1352
+    ],
+    "measurement": {
+      "alphaThreshold": 32,
+      "headROI": [
+        300,
+        0,
+        490,
+        470
+      ],
+      "feetROI": [
+        395,
+        1200,
+        390,
+        170
+      ],
+      "headAlphaBounds": [
+        325,
+        19,
+        759,
+        470
+      ],
+      "feetAlphaBounds": [
+        403,
+        1200,
+        777,
+        1345
+      ],
+      "bodyHeightMethod": "hairTop from head ROI through sole from feet ROI inclusive, excludes sword tips",
+      "footXMethod": "Manual estimate of support center between visible sole contacts; cannot infer hidden contact exactly",
+      "footXUncertaintyPx": 30,
+      "footYUncertaintyPx": 3,
+      "bodyHeightUncertaintyPx": 4
+    },
+    "ROIBoundsVerified": {
+      "head": [
+        325,
+        19,
+        759,
+        470
+      ],
+      "feet": [
+        403,
+        1200,
+        777,
+        1345
+      ]
+    }
+  },
+  {
+    "direction": "right90",
+    "sha256": "2bc66a3b3f738b809c65c378ab9b30d0d523220ad27bb59bce1ae74e12221072",
+    "dimensions": [
+      1077,
+      1460
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bounds": [
+      255,
+      13,
+      762,
+      1412
+    ],
+    "measurement": {
+      "alphaThreshold": 32,
+      "headROI": [
+        230,
+        0,
+        560,
+        500
+      ],
+      "feetROI": [
+        450,
+        1280,
+        280,
+        170
+      ],
+      "headAlphaBounds": [
+        255,
+        13,
+        762,
+        500
+      ],
+      "feetAlphaBounds": [
+        450,
+        1280,
+        694,
+        1412
+      ],
+      "bodyHeightMethod": "hairTop from head ROI through sole from feet ROI inclusive, excludes sword tips",
+      "footXMethod": "Manual estimate of support center between visible sole contacts; cannot infer hidden contact exactly",
+      "footXUncertaintyPx": 30,
+      "footYUncertaintyPx": 3,
+      "bodyHeightUncertaintyPx": 4
+    },
+    "ROIBoundsVerified": {
+      "head": [
+        255,
+        13,
+        762,
+        500
+      ],
+      "feet": [
+        450,
+        1280,
+        694,
+        1412
+      ]
+    }
+  }
+]

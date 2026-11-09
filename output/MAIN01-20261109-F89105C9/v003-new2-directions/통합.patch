@@ -1,0 +1,58 @@
+--- a/게임/src/devImageCompare.ts
++++ b/게임/src/devImageCompare.ts
+@@ -7,7 +7,7 @@
+ type Point={x:number;y:number};
+ export type CompareDirection='front'|'right45'|'right90';
+ export type CompareArt={file:string;label:string;bodyHeight:number;footX:number;footY:number;variant:number;direction:CompareDirection;width:number;height:number};
+-// Catalog IDs 0..4 preserve the original three-direction sets; 5..8 are new front-only art.
++// Catalog IDs 0..4 preserve the original three-direction sets; 5..8 are new art; ID6 has three directions, IDs5/7/8 are front-only.
+ export const COMPARE_ART:readonly CompareArt[]=DIRECTION_COMPARE_ART.filter(a=>a.direction==='front');
+ export function compareLocal(client:Point,rect:Pick<DOMRect,'left'|'top'|'width'|'height'>,field:Omit<Field,'element'>):Point{
+  return {x:Math.max(0,Math.min(field.width,(client.x-rect.left)*field.width/rect.width)),y:Math.max(-field.top,Math.min(field.height-field.top,(client.y-rect.top)*field.height/rect.height-field.top))};
+@@ -56,7 +56,7 @@
+   modeButton.disabled=!assets.some(a=>a.variant===assets[artIndex].variant&&a.direction===direction);
+   const target=assets[item?.art??artIndex];
+   for(const option of directionSelect.options)option.disabled=!assets.some(a=>a.variant===target.variant&&a.direction===option.value);
+-  panel.querySelector<HTMLElement>('[data-support]')!.textContent=group==='scalp'?'신규 두상·얼굴 4안 · 정면만 지원합니다.':'원본·기존4안 · 정면/오른쪽45°/90°';
++  panel.querySelector<HTMLElement>('[data-support]')!.textContent=group==='scalp'?'신규2안: 정면/45°/90° · 신규1·3·4안: 정면 전용':'원본·기존4안 · 정면/오른쪽45°/90°';
+   panel.querySelectorAll<HTMLButtonElement>('[data-group]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.group===group)));
+   cards.querySelectorAll('button').forEach(b=>{const variant=Number(b.dataset.variant),front=assets.findIndex(a=>a.variant===variant&&a.direction==='front'),found=assets.findIndex(a=>a.variant===variant&&a.direction===direction),index=found>=0?found:front;b.hidden=(variant>=5?'scalp':'legacy')!==group;b.disabled=index<0;b.setAttribute('aria-pressed',String(placing&&index===artIndex));if(index>=0){const img=b.querySelector('img')!,url=base+assets[index].file;if(img.getAttribute('src')!==url)img.src=url;}});
+   directionSelect.value=item?assets[item.art].direction:direction;
+--- a/게임/src/devImageCompareArt.ts
++++ b/게임/src/devImageCompareArt.ts
+@@ -1,5 +1,5 @@
+ // Source: directions_v02/asset-manifest.json (characters iteration 2).
+-// Native pixels; footY uncertainty <=3px, footX support-center estimate <=20px.
++// Native pixels; footY uncertainty <=3px; new variant2 direction footX estimate +/-30px, bodyHeight +/-4px.
+ export const DIRECTION_COMPARE_ART=[
+  {
+   "variant": 0,
+@@ -212,4 +212,28 @@
+   "footX": 626,
+   "footY": 1244
+  }
++,
++
++ {
++  "variant": 6,
++  "direction": "right45",
++  "width": 1133,
++  "height": 1388,
++  "bodyHeight": 1326,
++  "footX": 585,
++  "footY": 1344,
++  "label": "신규2안",
++  "file": "scalp_face_v03/variant2_directions_v04/variant-2-right-045.png"
++ },
++ {
++  "variant": 6,
++  "direction": "right90",
++  "width": 1077,
++  "height": 1460,
++  "bodyHeight": 1399,
++  "footX": 580,
++  "footY": 1411,
++  "label": "신규2안",
++  "file": "scalp_face_v03/variant2_directions_v04/variant-2-right-090.png"
++ }
+ ] as const;

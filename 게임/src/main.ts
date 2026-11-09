@@ -21,8 +21,11 @@ import { Application, Assets, Texture } from 'pixi.js';
 import { Defense, recipeForTypes, type LogCategory } from './defense';
 import { LANDSCAPE_BATTLE, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
 import { createDefenseView } from './defenseView';
+import {createRangeDummy} from './devRangeDummy';
 import { createSceneTransition, type BattleScene } from './sceneTransition';
-import { BossBattle, waveBossRoster } from './bossBattle';
+import { BossBattle, waveBossRoster, BOSS_FORMATION } from './bossBattle';
+import {FORMATION} from './battleFormation';
+import {BOSS_FIELD} from './bossField';
 import { createBossBattleView } from './bossBattleView';
 import { BossDamageHistory } from './bossDamageHistory';
 import './style.css';
@@ -39,6 +42,8 @@ let currentRunId=newBattleId();
 let returnPending=false,pausedBeforeReturn=false;
 let assetsReady=false;
 let showDamageNumbers=true,combatPaused=false;
+let rangeDummy:ReturnType<typeof createRangeDummy>|undefined;
+let formationEditing=false,formationPausedBefore=false;
 const bossBattle=new BossBattle(waveBossRoster(game),Math.random,game.damageMeter.peaks);
 let bossRosterSignature='';
 let bossTestMode=false,bossTestProfile:BossTestProfile|null=null;
@@ -872,11 +877,25 @@ function refreshRunControls():void {
   el<HTMLButtonElement>('dev-reset').disabled=sceneTransitioning;
   const full=game.enemies.filter(e=>!e.bounty&&!e.named&&e.hp>0).length>=RULES.maxEnemies;
   document.querySelectorAll<HTMLButtonElement>('[data-monster-id]').forEach(button=>button.disabled=!enabled||(full&&!MONSTERS.find(d=>d.id===button.dataset.monsterId)?.named));
+  rangeDummy?.sync();
 }
 function clearBattleInteraction():void {
+  endFormation(false);
   clearSummonDrag();closeHeroInfo();closeHeroSkillTooltip();cancelAnimationFrame(heroAnimationFrame);heroAnimationFrame=0;heroNavigationQueue.length=0;heroGesture=null;
   drag?.ghost?.remove();unitDrag?.ghost?.remove();drag=null;unitDrag=null;pressedGear=null;shopFocus=null;
   clearTimeout(noticeTimer);el('center-notice').hidden=true;el('field-upgrade').hidden=true;updateGearDrag();refreshLinks();
+}
+function beginFormation():boolean {
+  if(!LANDSCAPE_BATTLE||!assetsReady||!run.active||currentScene!=='defense'||sceneTransitioning||formationEditing||document.hidden||document.querySelector('dialog[open]'))return false;
+  clearBattleInteraction();pending=null;selectedUnit=null;selectedGear=null;
+  formationPausedBefore=combatPaused;formationEditing=true;combatPaused=true;
+  game.formationSlots();refresh();saveBattle();return true;
+}
+function endFormation(persist=true):void {
+  if(!formationEditing)return;
+  formationEditing=false;combatPaused=formationPausedBefore||document.hidden||sceneTransitioning||!run.active;
+  refreshCombatControls();if(persist&&!sceneTransitioning)saveBattle();
+  el('app').dispatchEvent(new Event('battle-formation-ended'));continuation.show();
 }
 function resetBattleState():void {
   lastEmpireReward=0;
@@ -934,9 +953,25 @@ function renderBossScreen():void {
   el('boss-wave-label').textContent=`BOSS · WAVE ${game.wave}`;refreshBossTimer();
   bossBattleView.draw();refreshDamageMeter();
   const formation=game.units;
+  if(LANDSCAPE_BATTLE){
+    const board=el('boss-party'),cells=new Map(game.formationSlots().map(entry=>[entry.cell,entry.unitId]));
+    // Width/height are shared with live actor coordinates; the seven rows stop above the skill HUD.
+    board.style.setProperty('--boss-formation-width',`${BOSS_FORMATION.columns*BOSS_FORMATION.cell/BOSS_FIELD.width*800}px`);
+    board.style.setProperty('--boss-formation-height',`${BOSS_FORMATION.rows*BOSS_FORMATION.cell/BOSS_FIELD.height*360}px`);
+    board.style.setProperty('--boss-formation-top',`${BOSS_FORMATION.top/BOSS_FIELD.height*360}px`);
+    board.style.setProperty('--boss-formation-columns',String(BOSS_FORMATION.columns));
+    board.innerHTML=Array.from({length:FORMATION.size},(_,index)=>{
+      const column=index%BOSS_FORMATION.columns,row=Math.floor(index/BOSS_FORMATION.columns),editorCell=(FORMATION.rows-1-column)*FORMATION.columns+row;
+      const unit=formation.find(unit=>unit.id===cells.get(editorCell));
+      if(!unit)return '<div class="boss-grid-cell" aria-hidden="true"></div>';
+      const def=UNITS[unit.kind];
+      return `<div class="boss-grid-cell boss-grid-unit" data-formation-cell="${editorCell}" aria-label="진형 ${Math.floor(editorCell/FORMATION.columns)+1}행 ${editorCell%FORMATION.columns+1}열 ${def.name}">${unitDragImage(unit.kind)}<small>${def.hero?'영웅':`Lv.${unit.level}`} ${def.icon}</small></div>`;
+    }).join('');
+    return;
+  }
   el('boss-party').innerHTML=Array.from({length:32},(_,index)=>{
     const col=index%4,row=Math.floor(index/4);
-    const unit=LANDSCAPE_BATTLE?(row>=1&&row<6?formation.find(u=>u.slot===(row-1)*4+3-col):undefined):(row>=2&&row<6?formation.find(u=>u.slot===(3-col)*4+row-2):undefined);
+    const unit=row>=2&&row<6?formation.find(u=>u.slot===(3-col)*4+row-2):undefined;
     if(!unit)return '<div class="boss-grid-cell" aria-hidden="true"></div>';
     const def=UNITS[unit.kind],art=unitDragImage(unit.kind);
     return `<div class="boss-grid-cell boss-grid-unit" aria-label="${row+1}행 ${col+1}열 ${def.name} ${unit.level}레벨">${art}<small>${def.hero?'영웅':`Lv.${unit.level}`} ${def.icon}</small></div>`;
@@ -979,8 +1014,9 @@ function goBattleScene(scene:BattleScene):Promise<boolean> {
 const continuation=createBattleContinuation({
   active:()=>run.active,
   paused:()=>el<HTMLDialogElement>('leave-battle-dialog').open?pausedBeforeReturn:combatPaused,
-  canShow:()=>!sceneTransitioning&&!el<HTMLDialogElement>('leave-battle-dialog').open,
+  canShow:()=>!sceneTransitioning&&!formationEditing&&!el<HTMLDialogElement>('leave-battle-dialog').open,
   pause(){
+    if(formationEditing)formationPausedBefore=true;
     combatPaused=true;
     if(el<HTMLDialogElement>('leave-battle-dialog').open)pausedBeforeReturn=true;
     clearBattleInteraction();pending=null;selectedGear=null;
@@ -1036,6 +1072,9 @@ async function start():Promise<void> {
     refresh();
   },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture,()=>showDamageNumbers,{top:DEFENSE_FIELD.top,terrain:LANDSCAPE_BATTLE?undefined:forestTexture});
   let lastRevision=-1,hudClock=0,meterClock=0;
+  rangeDummy=createRangeDummy({controls:el('dev-tools'),active:()=>assetsReady&&run.active&&!sceneTransitioning,scene:()=>currentScene,
+   fields:{defense:{element:el('battle-scene'),width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,top:DEFENSE_FIELD.top},
+    boss:{element:el('boss-screen').querySelector<HTMLElement>('.boss-arena')!,width:BOSS_FIELD.width,height:BOSS_FIELD.height,top:0}}});
   renderMonsterTools();
   renderRecipeTree();assetsReady=true;document.title='Grid Defenders — 로비';el('lobby-hint').textContent='병사와 영웅을 배치하고 몬스터를 막아내세요.';renderLobby();
   refresh();
@@ -1092,12 +1131,13 @@ async function start():Promise<void> {
     if(lastRevision!==game.revision&&!drag&&!unitDrag&&!summonDrag){lastRevision=game.revision;refresh();}
   });
   const automaticMode=launchMode(location.search);if(automaticMode)void startOrResume(automaticMode);
-  if(import.meta.hot)import.meta.hot.dispose(()=>{saveBattle();clearInterval(battleSaveTimer);continuation.dispose();events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
+  if(import.meta.hot)import.meta.hot.dispose(()=>{saveBattle();clearInterval(battleSaveTimer);continuation.dispose();rangeDummy?.dispose();events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
 }
 void start().catch((error:unknown)=>{el('battle-shell-header').hidden=false;el<HTMLButtonElement>('battle-return').disabled=false;el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';el('lobby-hint').textContent='전장을 불러오지 못했습니다. 새로고침해 주세요.';console.error(error);});
 
 /** Shared live controls used by the landscape presentation. */
-export const liveBattle={game,get ready(){return assetsReady;},get hero(){return selectedHero;},get pending(){return pending;},get scene(){return currentScene;},get active(){return run.active;},get runId(){return currentRunId;},refresh,
+export const liveBattle={game,get ready(){return assetsReady;},get hero(){return selectedHero;},get pending(){return pending;},get scene(){return currentScene;},get active(){return run.active;},get runId(){return currentRunId;},get formationOpen(){return formationEditing;},refresh,
+ beginFormation,endFormation,formationChanged(){if(formationEditing){refresh();saveBattle();}},
  select(kind:UnitKind){const reason=summonReason(kind);if(reason){game.note(reason);return false;}pending=kind;refresh();return true;},
  selectHero(id:number){if(game.heroes().some(hero=>hero.id===id)){selectedHero=id;selectedUnit=id;pending=null;refresh();}},
  inspectUnit(id:number){const unit=game.units.find(unit=>unit.id===id);if(unit){heroInfo={kind:unit.kind,unitId:unit.id};refresh();}},

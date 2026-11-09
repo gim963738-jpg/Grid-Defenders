@@ -1,0 +1,797 @@
+[
+  {
+    "variant": 0,
+    "direction": "front",
+    "file": "original-front.png",
+    "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+    "bodyHeight": 1215,
+    "footX": 635,
+    "footY": 1231,
+    "bodyBounds": {
+      "x": 330,
+      "y": 17,
+      "width": 586,
+      "height": 1215
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        417,
+        17,
+        835,
+        510
+      ],
+      "feetAlphaBounds": [
+        447,
+        1100,
+        829,
+        1232
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 366,
+      "hairInclusiveHeadUnits": 3.471
+    }
+  },
+  {
+    "variant": 0,
+    "direction": "right45",
+    "file": "original-right-045.png",
+    "sha256": "973415cd6ebf92cc6bb2d0c0e97085ef52746948d249e09be643e8ee8d5c8491",
+    "bodyHeight": 1231,
+    "footX": 638,
+    "footY": 1238,
+    "bodyBounds": {
+      "x": 340,
+      "y": 8,
+      "width": 574,
+      "height": 1231
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        415,
+        8,
+        829,
+        510
+      ],
+      "feetAlphaBounds": [
+        449,
+        1100,
+        838,
+        1239
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 380,
+      "hairInclusiveHeadUnits": 3.3
+    }
+  },
+  {
+    "variant": 0,
+    "direction": "right90",
+    "file": "original-right-090.png",
+    "sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+    "bodyHeight": 1229,
+    "footX": 580,
+    "footY": 1238,
+    "bodyBounds": {
+      "x": 382,
+      "y": 10,
+      "width": 363,
+      "height": 1229
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        310,
+        145
+      ],
+      "headAlphaBounds": [
+        382,
+        10,
+        759,
+        510
+      ],
+      "feetAlphaBounds": [
+        433,
+        1100,
+        730,
+        1239
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": true,
+      "chinYEstimated": 365,
+      "hairInclusiveHeadUnits": 3.452
+    }
+  },
+  {
+    "variant": 1,
+    "direction": "front",
+    "file": "variant-1-front.png",
+    "sha256": "a16150f514590ec5bbc1a3e3f2dad99e9cef1a862cb770204dc04112dbde3d6a",
+    "bodyHeight": 1057,
+    "footX": 620,
+    "footY": 1181,
+    "bodyBounds": {
+      "x": 390,
+      "y": 125,
+      "width": 443,
+      "height": 1057
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        426,
+        125,
+        814,
+        510
+      ],
+      "feetAlphaBounds": [
+        462,
+        1100,
+        780,
+        1182
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 474,
+      "hairInclusiveHeadUnits": 3.02
+    }
+  },
+  {
+    "variant": 1,
+    "direction": "right45",
+    "file": "variant-1-right-045.png",
+    "sha256": "33ee63acea74b3e3f37966a9dd020afcab63417b56cc976d079c999d7d98dd6b",
+    "bodyHeight": 1050,
+    "footX": 623,
+    "footY": 1172,
+    "bodyBounds": {
+      "x": 420,
+      "y": 123,
+      "width": 385,
+      "height": 1050
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        420,
+        123,
+        777,
+        510
+      ],
+      "feetAlphaBounds": [
+        459,
+        1100,
+        785,
+        1173
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 464,
+      "hairInclusiveHeadUnits": 3.07
+    }
+  },
+  {
+    "variant": 1,
+    "direction": "right90",
+    "file": "variant-1-right-090.png",
+    "sha256": "aaabd1b3a0eed3a3566038cec719dc736c4af723166c77346acfd376568cf499",
+    "bodyHeight": 1086,
+    "footX": 619,
+    "footY": 1183,
+    "bodyBounds": {
+      "x": 422,
+      "y": 98,
+      "width": 358,
+      "height": 1086
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        310,
+        145
+      ],
+      "headAlphaBounds": [
+        421,
+        98,
+        785,
+        510
+      ],
+      "feetAlphaBounds": [
+        502,
+        1100,
+        707,
+        1184
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": true,
+      "chinYEstimated": 429,
+      "hairInclusiveHeadUnits": 3.271
+    }
+  },
+  {
+    "variant": 2,
+    "direction": "front",
+    "file": "variant-2-front.png",
+    "sha256": "d2d5ee208e491a1a5270c0c08a3f17cd777715560addfdc2584f01229f0db948",
+    "bodyHeight": 1065,
+    "footX": 634,
+    "footY": 1172,
+    "bodyBounds": {
+      "x": 410,
+      "y": 108,
+      "width": 430,
+      "height": 1065
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        438,
+        108,
+        841,
+        510
+      ],
+      "feetAlphaBounds": [
+        476,
+        1100,
+        794,
+        1173
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 461,
+      "hairInclusiveHeadUnits": 3.008
+    }
+  },
+  {
+    "variant": 2,
+    "direction": "right45",
+    "file": "variant-2-right-045.png",
+    "sha256": "5b99c078eac6d363b610e099cf6b5f10f4854932701ff758cc24d94edf477813",
+    "bodyHeight": 1073,
+    "footX": 636,
+    "footY": 1176,
+    "bodyBounds": {
+      "x": 419,
+      "y": 104,
+      "width": 405,
+      "height": 1073
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        418,
+        104,
+        795,
+        510
+      ],
+      "feetAlphaBounds": [
+        473,
+        1100,
+        802,
+        1177
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 448,
+      "hairInclusiveHeadUnits": 3.11
+    }
+  },
+  {
+    "variant": 2,
+    "direction": "right90",
+    "file": "variant-2-right-090.png",
+    "sha256": "b0ce6aca07d820e4d78fc093a25956dcdadf3c9aa1e13ffdbee126a061b77b2a",
+    "bodyHeight": 1074,
+    "footX": 630,
+    "footY": 1175,
+    "bodyBounds": {
+      "x": 414,
+      "y": 102,
+      "width": 370,
+      "height": 1074
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        310,
+        145
+      ],
+      "headAlphaBounds": [
+        412,
+        102,
+        792,
+        510
+      ],
+      "feetAlphaBounds": [
+        532,
+        1100,
+        719,
+        1176
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": true,
+      "chinYEstimated": 442,
+      "hairInclusiveHeadUnits": 3.15
+    }
+  },
+  {
+    "variant": 3,
+    "direction": "front",
+    "file": "variant-3-front.png",
+    "sha256": "a099888f5afc36cc111052edaa929284e8e293836bb9d028a9debe4edce26314",
+    "bodyHeight": 1106,
+    "footX": 628,
+    "footY": 1196,
+    "bodyBounds": {
+      "x": 344,
+      "y": 91,
+      "width": 550,
+      "height": 1106
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        401,
+        91,
+        857,
+        510
+      ],
+      "feetAlphaBounds": [
+        432,
+        1100,
+        820,
+        1197
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 438,
+      "hairInclusiveHeadUnits": 3.178
+    }
+  },
+  {
+    "variant": 3,
+    "direction": "right45",
+    "file": "variant-3-right-045.png",
+    "sha256": "e111d3c8965be203a79430617aa69097e7caa7a861fee9afaf35dc504626d110",
+    "bodyHeight": 1121,
+    "footX": 636,
+    "footY": 1191,
+    "bodyBounds": {
+      "x": 385,
+      "y": 71,
+      "width": 475,
+      "height": 1121
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        425,
+        71,
+        805,
+        510
+      ],
+      "feetAlphaBounds": [
+        439,
+        1100,
+        830,
+        1192
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 407,
+      "hairInclusiveHeadUnits": 3.326
+    }
+  },
+  {
+    "variant": 3,
+    "direction": "right90",
+    "file": "variant-3-right-090.png",
+    "sha256": "0e42452d690cdbd4e760356bce7fd70fcd436177cd35eaaebc557a65dee8c9d8",
+    "bodyHeight": 1109,
+    "footX": 625,
+    "footY": 1195,
+    "bodyBounds": {
+      "x": 420,
+      "y": 87,
+      "width": 346,
+      "height": 1109
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        310,
+        145
+      ],
+      "headAlphaBounds": [
+        414,
+        87,
+        766,
+        510
+      ],
+      "feetAlphaBounds": [
+        499,
+        1100,
+        717,
+        1196
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": true,
+      "chinYEstimated": 414,
+      "hairInclusiveHeadUnits": 3.381
+    }
+  },
+  {
+    "variant": 4,
+    "direction": "front",
+    "file": "variant-4-front.png",
+    "sha256": "ee851c6c6bbd1daf1dbc7b5033267e1bd81e5e7c54a9c5e3a7133c92318dc9aa",
+    "bodyHeight": 1062,
+    "footX": 620,
+    "footY": 1187,
+    "bodyBounds": {
+      "x": 390,
+      "y": 126,
+      "width": 445,
+      "height": 1062
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        443,
+        126,
+        802,
+        510
+      ],
+      "feetAlphaBounds": [
+        460,
+        1100,
+        776,
+        1188
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 460,
+      "hairInclusiveHeadUnits": 3.17
+    }
+  },
+  {
+    "variant": 4,
+    "direction": "right45",
+    "file": "variant-4-right-045.png",
+    "sha256": "549b82e5963bbf66167b9ff1a60f0cdefc60beb7c7468327436681179acc01d5",
+    "bodyHeight": 1056,
+    "footX": 628,
+    "footY": 1180,
+    "bodyBounds": {
+      "x": 425,
+      "y": 125,
+      "width": 383,
+      "height": 1056
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        420,
+        145
+      ],
+      "headAlphaBounds": [
+        445,
+        125,
+        781,
+        510
+      ],
+      "feetAlphaBounds": [
+        476,
+        1100,
+        791,
+        1181
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": false,
+      "chinYEstimated": 450,
+      "hairInclusiveHeadUnits": 3.239
+    }
+  },
+  {
+    "variant": 4,
+    "direction": "right90",
+    "file": "variant-4-right-090.png",
+    "sha256": "deeebb413c196d77845d30dbb183282723d9e1d9ce81b7edda9b0dbb889dd9e8",
+    "bodyHeight": 1040,
+    "footX": 621,
+    "footY": 1162,
+    "bodyBounds": {
+      "x": 414,
+      "y": 123,
+      "width": 338,
+      "height": 1040
+    },
+    "measurement": {
+      "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+      "headROI": [
+        300,
+        0,
+        600,
+        510
+      ],
+      "feetROI": [
+        420,
+        1100,
+        310,
+        145
+      ],
+      "headAlphaBounds": [
+        412,
+        123,
+        749,
+        510
+      ],
+      "feetAlphaBounds": [
+        513,
+        1100,
+        702,
+        1163
+      ],
+      "bodyXEstimated": true,
+      "footXEstimated": true,
+      "footYAlphaMeasured": true,
+      "bodyYAlphaMeasured": true,
+      "estimated": true,
+      "footYUncertaintyPx": 3,
+      "footXUncertaintyPx": 20,
+      "bodyXUncertaintyPx": 20,
+      "occludedFarFoot": true,
+      "chinYEstimated": 437,
+      "hairInclusiveHeadUnits": 3.302
+    }
+  }
+]

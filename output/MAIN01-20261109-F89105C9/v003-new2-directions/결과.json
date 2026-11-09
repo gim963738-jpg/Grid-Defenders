@@ -1,0 +1,67 @@
+{
+  "task": "MAIN01-20261109-F89105C9",
+  "iteration": 3,
+  "role": "gameplay",
+  "outcome": "succeeded",
+  "rootIntegrated": false,
+  "browserChecks": 48,
+  "browserResult": "PASS",
+  "runtimeExceptions": 0,
+  "tscBuild": "PASS",
+  "catalogAssets": 21,
+  "cards": 9,
+  "newByteIdenticalPNGs": 2,
+  "frontDuplicated": false,
+  "productFiles": [
+    {
+      "target": "게임/src/devImageCompare.ts",
+      "beforeSha256": "961c487b685af57d83208baf2b29c7481c2b183db44258977691f6ec00eba787",
+      "afterSha256": "01ce5c5bf25226f81c41c5f3750b80968910724c91e2740c3338812f530a3f1b",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v003-new2-directions\\files\\게임\\src\\devImageCompare.ts",
+      "baseSource": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\devImageCompare.ts"
+    },
+    {
+      "target": "게임/src/devImageCompareArt.ts",
+      "beforeSha256": "4025261b3e1d2e7c977042235856a012b684c3806ff75f8a38bd00b22b140283",
+      "afterSha256": "6cb57d755d98eeedae2c99e8df666044df8e574cc9318f8a2c9707437b55e65b",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v003-new2-directions\\files\\게임\\src\\devImageCompareArt.ts",
+      "baseSource": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\devImageCompareArt.ts"
+    },
+    {
+      "target": "게임/public/assets/dev-image-compare/scalp_face_v03/variant2_directions_v04/asset-manifest.json",
+      "beforeSha256": null,
+      "afterSha256": "4f230be7f49705244778f5119d99c52feddb641d392ffc554960564ed8c9b458",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v003-new2-directions\\files\\게임\\public\\assets\\dev-image-compare\\scalp_face_v03\\variant2_directions_v04\\asset-manifest.json",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\asset-manifest.json",
+      "sourceSha256": "ec489049dbbd63511a15b03b65f50e355b8f415c0d87d22b464257f026c1c74d",
+      "byteIdentical": false
+    },
+    {
+      "target": "게임/public/assets/dev-image-compare/scalp_face_v03/variant2_directions_v04/variant-2-right-045.png",
+      "beforeSha256": null,
+      "afterSha256": "b8b5e19b5763082da15a7e7d1913ac43b04f52b66b09157343f8f39f61b94fff",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v003-new2-directions\\files\\게임\\public\\assets\\dev-image-compare\\scalp_face_v03\\variant2_directions_v04\\variant-2-right-045.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\variant-2-right-045.png",
+      "sourceSha256": "b8b5e19b5763082da15a7e7d1913ac43b04f52b66b09157343f8f39f61b94fff",
+      "byteIdentical": true
+    },
+    {
+      "target": "게임/public/assets/dev-image-compare/scalp_face_v03/variant2_directions_v04/variant-2-right-090.png",
+      "beforeSha256": null,
+      "afterSha256": "2bc66a3b3f738b809c65c378ab9b30d0d523220ad27bb59bce1ae74e12221072",
+      "delivery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v003-new2-directions\\files\\게임\\public\\assets\\dev-image-compare\\scalp_face_v03\\variant2_directions_v04\\variant-2-right-090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\variant-2-right-090.png",
+      "sourceSha256": "2bc66a3b3f738b809c65c378ab9b30d0d523220ad27bb59bce1ae74e12221072",
+      "byteIdentical": true
+    }
+  ],
+  "patch": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v003-new2-directions\\통합.patch",
+  "report": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v003-new2-directions\\검증.md",
+  "sourceManifest": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\asset-manifest.json",
+  "sourceManifestSha256": "ec489049dbbd63511a15b03b65f50e355b8f415c0d87d22b464257f026c1c74d",
+  "remaining": [
+    "main01 narrow UI/root integration",
+    "independent QA/user aesthetic judgment",
+    "real APK/device and portrait verification outside performed scope"
+  ]
+}
