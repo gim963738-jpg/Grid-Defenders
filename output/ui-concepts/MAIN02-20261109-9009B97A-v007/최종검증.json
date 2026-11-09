@@ -1,0 +1,133 @@
+{
+  "layoutPass": true,
+  "checks": {
+    "sixScreens": true,
+    "buttons48": true,
+    "noOutside": true,
+    "noOverlap": true,
+    "tabOrder": true,
+    "enemyHiddenNormal": true,
+    "enemyOnlyPreMidboss": true,
+    "combineAccess": true,
+    "same54Grids": true,
+    "sameThreeColumns": true,
+    "noCodexCommerce": true,
+    "noOverlappingEquipment": true,
+    "recipeMatches": true,
+    "basicNoCraft": true,
+    "fullCodex": true,
+    "codexReturnPreserves": true,
+    "readyRecipe": true,
+    "insufficientDisabled": true,
+    "result3Cells": true,
+    "rankDirection": true,
+    "rankSizes": true,
+    "rankLabels": true,
+    "heroStatsSkills": true,
+    "hero8": true,
+    "fiveCandidates": true,
+    "autoNoEditing": true
+  },
+  "finals": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v007\\01-normal-equipment.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "351ed2c2b22909cc26db80ee576db9cf0fa24877f488ebb5b33cab6183878439"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v007\\02-item-codex.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "16365e95391faba4797836a75a3ca558b0acaf646213defa05c835d34000139f"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v007\\03-combination.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "b311213318dd2c0c51dcc218b8efff79e265bc8b4b0c2ce0b1a0296b672082a6"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v007\\04-deployment-ranks.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "a424ccb8377feaf6eae9f31a142f12ab88ca76af8c23679b300a949db2124fcf"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v007\\05-pre-midboss.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "b726627ce1cbfd23cfcea8d57c343841f8cda1d918813ea76709fce955a298e0"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v007\\06-enemy-info.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "afdaeca5f25f733eb9099f172722b0176938af55b0fab51474b7e15fd1980384"
+    }
+  ],
+  "preservedFiles": 455,
+  "changedOriginals": [],
+  "parallelExcluded": [],
+  "cell": 54,
+  "gridTop": 120,
+  "recipes": [
+    "I01+I01=I06",
+    "I02+I04=I07",
+    "I01+I03=I08",
+    "I04+I04=I09"
+  ],
+  "selectedMaterialsOwner": "warehouse",
+  "selectedMaterialsAdjacent": true,
+  "anvilCost": 1,
+  "resultSpaceValid": true,
+  "equippedAriaGalePreserved": true,
+  "warehouseUsedBefore": 5,
+  "warehouseUsedAfter": 4,
+  "rankOrder": [
+    "rear",
+    "middle",
+    "front"
+  ],
+  "rankColumns": [
+    2,
+    1,
+    2
+  ],
+  "gameIntegrated": false,
+  "userAcceptance": false,
+  "readingHashesCurrent": true,
+  "galleryChecks": {
+    "sixCards": true,
+    "imagesLoaded": true,
+    "open": true,
+    "original": true,
+    "large": true,
+    "next": true,
+    "previous": true,
+    "keyboard": true,
+    "native800": true,
+    "close": true
+  },
+  "galleryPass": true,
+  "finalVisualReview": {
+    "individualFullScreens": 6,
+    "native800Screens": 6,
+    "koreanReadable": true,
+    "craftTitleVisible": true,
+    "rankDirectionConfirmed": true
+  },
+  "missingDeliverables": []
+}

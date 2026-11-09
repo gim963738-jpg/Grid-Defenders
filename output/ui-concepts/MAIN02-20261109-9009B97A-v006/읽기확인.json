@@ -1,0 +1,88 @@
+{
+  "task": "MAIN02-20261109-9009B97A",
+  "iteration": 6,
+  "role": "ui",
+  "workSummary": "차수6 승인범위6장과영웅후보보조1장만신규v006제작; 상점→영웅→창고3열과전장중심정보위계를재설계; D3알파.74와동일셀/48px/14·12글자/원본보존/800배율행동경로검수.",
+  "documents": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\AGENTS.md",
+      "sha256": "a4fee6387b17ffa27ec90c9ccdab1c7ebfb93722945f729b24e60b93f0593ba7",
+      "applies": "800×360·48px共通터치,게임과이전작업보존,이펙트수정없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\작업진행방법.md",
+      "sha256": "3eebec5fd956a74fcfa287271e4d44de645339a1c0822c652ab7885169e3d2fd",
+      "applies": "새차수본문재독·적용기록·start후제작,사용자추가확인없이승인범위실행."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "sha256": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "applies": "요청6장과필수5종기록,이전실패분석과변경을연결,자체검수와합격분리."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "sha256": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "applies": "담당main02로공식Orca반환,예전미커밋과공유파일보존."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "sha256": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "applies": "직접제작·하위담당없음,독립테스터를임의생성하지않고검수자료반환."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "sha256": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "applies": "게임/src·공통CSS·다른팀아트편집금지,허용v006독립표시소스만작성."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\규정.md",
+      "sha256": "f1a0a3140e7639c13b4f4ea3eedf0383bb6a8d1bb1a73db6bc68584d62a20de1",
+      "applies": "800×360기준과D3미술유지,실패배치승격금지,규정보완은별도제안."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "sha256": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "applies": "read-pack필독16문서path/sha256/applies로차수6정확start,추가참조별도확인."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "sha256": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "applies": "UI팀책임과담당main02·독립검수경계유지,다른영역생성없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "sha256": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "applies": "원자료위치와조직을구분하고기존아트읽기전용사용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "sha256": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "applies": "UI·아이템외세계관·몬스터·캐릭터설정새확정없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v006.md",
+      "sha256": "f33eee7ff313d9a9c153a94066dc28b7698198853dc530d5e9c4fa52ea00f450",
+      "applies": "끼워맞춘구성수정판정:큰캡슐·안내·디버그ID삭제,상점영웅창고3열새위계."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\장르분석-v006.md",
+      "sha256": "74f83380f7a2cc3c4458edb60aa1c89c8543d79b69210eff123fd418cd36d557",
+      "applies": "모집배치/정비/자동전투분리,선택맥락정보·동일격자·직접전달원리를모바일에변형."
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\문서\\00_개발규칙\\모바일UI규격.md",
+      "sha256": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+      "applies": "본문14/보조12/터치48,동일54px셀과5후보,제거된보스진형복구없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "sha256": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+      "applies": "실제승인요청하지말고진행및후속배치요청범위로반복허락없이제작."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+      "sha256": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+      "applies": "산출물최소기록만작성,Git커밋·푸시·통합·예약백업실행없음."
+    }
+  ]
+}

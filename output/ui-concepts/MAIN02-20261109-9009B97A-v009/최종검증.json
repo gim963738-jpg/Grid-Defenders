@@ -1,0 +1,130 @@
+{
+  "iteration": 9,
+  "role": "ui",
+  "finals": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v009\\01-soldier-summary.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "209bf189f04b971b7df1bef31aa6820c70fc74763be1c79250e19d9a914020a8"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v009\\02-hero-summary.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "d1857ff61cf6a96efe36fc2aa0b216991e16061a16f13832b8a503c0685c1910"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v009\\03-skill-description.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "bfb3ae615022854fa601b6afa6254fbf368c51c2b641dcebb7573b4a5165bc12"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v009\\04-full-stats-skills.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "a48ab819dc9b275e2d44f9a3692a739dfe8efae529a7f0fafaa36adb9aef623e"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v009\\05-item-information.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "b73c8f42cad0250dd137d84a8e673a5cf35666ae5d5c352bb6d78c8edfbaf178"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v009\\06-item-comparison.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "eb55faa3572f832a5a6bb3a01386be538e5114a7a6393b5f7919d7f1e3a7f86e"
+    }
+  ],
+  "layoutPass": true,
+  "layoutChecks": {
+    "sixScreens": true,
+    "minTouch48": true,
+    "bounds": true,
+    "oneCard": true,
+    "soldierOne": true,
+    "quietEmpty": true,
+    "fiveCandidates": true,
+    "board25": true,
+    "sameBoard": true,
+    "armySix": true,
+    "ranks": true,
+    "leftArrow": true,
+    "startSeparated": true,
+    "coreFour": true,
+    "summaryNoLongSkill": true,
+    "heroFour": true,
+    "actualIcon": true,
+    "threeSamples": true,
+    "art32": true,
+    "heroEight": true,
+    "openA": true,
+    "replaceB": true,
+    "cardAvoidsIcons": true,
+    "longTitleFits": true,
+    "closePreserves": true,
+    "outsideStartNoAction": true,
+    "outsideSummonNoAction": true,
+    "shieldCloses": true,
+    "pagePreserved": true,
+    "tenAndFour": true,
+    "statsSingle": true,
+    "knownContent": true,
+    "noCast": true,
+    "infoNoLine5": true,
+    "columns5": true,
+    "cell54_5": true,
+    "infoNoLine6": true,
+    "columns6": true,
+    "cell54_6": true,
+    "compareTarget": true,
+    "compareOptionsOnly": true,
+    "actualFootprints": true,
+    "outsidePurchaseNoAction": true,
+    "compareOnRequest": true,
+    "heldContract": true
+  },
+  "linePhases": {
+    "idle": true,
+    "clicked": true,
+    "purchased": true,
+    "held": true,
+    "dropped": true,
+    "cancelled": true
+  },
+  "mockActions": {
+    "purchase": 0,
+    "summon": 0,
+    "start": 0,
+    "cast": 0
+  },
+  "preservedFiles": 557,
+  "changedOriginals": [],
+  "readingHashesCurrent": true,
+  "readings": 18,
+  "newScreens": 6,
+  "referenceScreens": 3,
+  "gameIntegrated": false,
+  "userAccepted": false,
+  "visualReviewNative800": 6,
+  "galleryPass": true,
+  "galleryChecks": {
+    "newSix": true,
+    "referenceThree": true,
+    "allImagesLoaded": true,
+    "refsReadOnly": true,
+    "open": true,
+    "original": true,
+    "large": true,
+    "next": true,
+    "previous": true,
+    "keyboard": true,
+    "native800": true,
+    "close": true
+  },
+  "allLinksExist": true,
+  "missingDeliverables": []
+}

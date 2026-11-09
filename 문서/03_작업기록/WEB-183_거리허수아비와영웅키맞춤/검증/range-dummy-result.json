@@ -1,0 +1,115 @@
+{
+  "bossGeometry": {
+    "oneRDiameter": 166.39137268066406,
+    "threeRDiameter": 499.17413330078125
+  },
+  "checks": [
+    {
+      "name": "dummy moved through actual browser pointer drag",
+      "passed": true
+    },
+    {
+      "name": "developer tool enables persistent measuring dummy",
+      "passed": true
+    },
+    {
+      "name": "six circles measure 0.5R steps through 3R",
+      "passed": true
+    },
+    {
+      "name": "rings alternate blue and yellow",
+      "passed": true
+    },
+    {
+      "name": "all distance labels identify their R multiplier",
+      "passed": true
+    },
+    {
+      "name": "labels include actual combat-coordinate distances",
+      "passed": true
+    },
+    {
+      "name": "wave 1R diameter equals 260 logical screen pixels",
+      "passed": true
+    },
+    {
+      "name": "measurement stays visible after clearing normal unit selection",
+      "passed": true
+    },
+    {
+      "name": "keyboard movement shifts the same measuring origin",
+      "passed": true
+    },
+    {
+      "name": "all circles follow the dummy ground reference",
+      "passed": true
+    },
+    {
+      "name": "developer toggle hides dummy and circles together",
+      "passed": true
+    },
+    {
+      "name": "toggle restores the chosen location",
+      "passed": true
+    },
+    {
+      "name": "measuring tool never changes roster equipment or currency",
+      "passed": true
+    },
+    {
+      "name": "dummy has an actual 48 by 72 pointer target",
+      "passed": true
+    },
+    {
+      "name": "formation controls move to board left edge and eight pixels below placement tiles",
+      "passed": true
+    },
+    {
+      "name": "moved controls and hint stay clear of the right panel",
+      "passed": true
+    },
+    {
+      "name": "moving controls preserves all formation cells",
+      "passed": true
+    },
+    {
+      "name": "relocated done button still closes formation editor",
+      "passed": true
+    },
+    {
+      "name": "same persistent dummy appears in boss battle",
+      "passed": true
+    },
+    {
+      "name": "boss ruler uses actual boss-world coordinates",
+      "passed": true
+    },
+    {
+      "name": "boss 1R and 3R use the correct 0.64 display scale",
+      "passed": true
+    },
+    {
+      "name": "boss mode retains the same 130-unit R definition",
+      "passed": true
+    },
+    {
+      "name": "boss renders the original blond reference through its normal frame renderer",
+      "passed": true
+    },
+    {
+      "name": "boss measuring overlay can also be turned off",
+      "passed": true
+    },
+    {
+      "name": "scene return preserves wave-specific dummy location",
+      "passed": true
+    },
+    {
+      "name": "no runtime asset requests fail",
+      "passed": true
+    }
+  ],
+  "date": "2026-11-08",
+  "failed": null,
+  "result": "PASS"
+}

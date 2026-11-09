@@ -1,4 +1,5 @@
 import {LANDSCAPE_BATTLE} from './defenseConfig';
+import {FORMATION,formationRank,isFormationCell} from './battleFormation';
 import {blondDirection,type BlondWalk} from './blondMotion';
 import {criticalAttack} from './critical';
 import {assassinBasicTarget,ASSASSIN,createAssassinAction,advanceAssassin,cancelAssassin,assassinAlive,assassinPosition,inAssassinPath,type AssassinAction,type AssassinImpact} from './assassinCombat';
@@ -11,8 +12,17 @@ import type { Defense } from './defense';
 import { AREA_ATTACK, UNITS, type UnitKind, type DamageType, type DefenseType } from './defenseConfig';
 
 export interface BossTuning {healthScale:number;attackScale:number;}
-export interface BossAlly {id:number;kind:UnitKind;slot:number;level:number;stats:ReturnType<Defense['stats']>;}
-export function waveBossRoster(game:Defense):BossAlly[]{return game.units.map(u=>({id:u.id,kind:u.kind,slot:u.slot,level:u.level,stats:{...game.stats(u)}}));}
+export interface BossAlly {id:number;kind:UnitKind;slot:number;level:number;stats:ReturnType<Defense['stats']>;formationCell?:number;}
+/** The editor faces north; the live encounter rotates it clockwise toward the enemies. */
+export const BOSS_FORMATION={cell:56.25,top:37.5,columns:FORMATION.rows,rows:FORMATION.columns} as const;
+export function bossFormationPoint(cell:number):{x:number;y:number}{
+  const row=Math.floor(cell/FORMATION.columns),column=cell%FORMATION.columns;
+  return {x:(FORMATION.rows-row-.5)*BOSS_FORMATION.cell,y:BOSS_FORMATION.top+(column+.5)*BOSS_FORMATION.cell};
+}
+export function waveBossRoster(game:Defense):BossAlly[]{
+  const cells=LANDSCAPE_BATTLE?new Map(game.formationSlots().map(entry=>[entry.unitId,entry.cell])):null;
+  return game.units.map(u=>({id:u.id,kind:u.kind,slot:u.slot,level:u.level,stats:{...game.stats(u)},...(cells?{formationCell:cells.get(u.id)}:{})}));
+}
 export interface BossActor {
   walk?:BlondWalk;
   normalDamageMultiplier?:number;bossDamageMultiplier?:number;armorBreakRemaining?:number;
@@ -57,11 +67,12 @@ export class BossBattle {
     this.commanderCooldown=0;this.commanderBuff=0;this.heroSkillCooldown=0;this.fireCasts=[];this.swordAttacks=[];this.swordSwingCounts.clear();this.heroSkillCooldowns.clear();this.bladeCasts=[];this.assassinActions=[];this.assassinImpacts=[];
     for(const u of this.roster){
       const d=UNITS[u.kind],s=u.stats,col=LANDSCAPE_BATTLE?3-u.slot%4:3-Math.floor(u.slot/4),row=LANDSCAPE_BATTLE?Math.floor(u.slot/4)+1:u.slot%4+2;
+      const formed=LANDSCAPE_BATTLE&&isFormationCell(u.formationCell),position=formed?bossFormationPoint(u.formationCell!):{x:(col+.5)*70.3125,y:(row+.5)*70.3125};
       this.actors.push({id:`ally-${u.id}`,side:'ally',kind:u.kind,name:d.name,level:u.level,sourceSlot:u.slot,
         ...(u.kind==='blond'?{walk:{direction:0,moving:false,elapsed:0}}:{}),
-        x:(col+.5)*70.3125,y:(row+.5)*70.3125,hp:s.hp,maxHp:s.hp,attack:s.attack,
+        ...position,hp:s.hp,maxHp:s.hp,attack:s.attack,
         rate:s.rate,range:u.kind==='assassin'?80:s.range*(u.kind==='ranged'||u.kind==='arcanist'?1.5:1),speed:u.kind==='guard'||u.kind==='tank'||u.kind==='melee'||u.kind==='blond'?64:53,
-        rank:Math.floor(u.slot/4),damageType:s.damageType,defenseType:'normal',cooldown:.25,
+        rank:formed?formationRank(u.formationCell!):Math.floor(u.slot/4),damageType:s.damageType,defenseType:'normal',cooldown:.25,
         normalDamageMultiplier:s.normalDamageMultiplier,bossDamageMultiplier:s.bossDamageMultiplier,regen:s.regen,physicalArmor:s.physicalArmor,magicArmor:s.magicArmor,critChance:s.critChance,critMultiplier:s.critMultiplier});
     }
     this.actors.push(

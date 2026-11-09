@@ -1,0 +1,192 @@
+{
+  "bossAllies": [
+    {
+      "id": "ally-10",
+      "rank": 0,
+      "x": 196.875,
+      "y": 234.375
+    },
+    {
+      "id": "ally-11",
+      "rank": 0,
+      "x": 196.875,
+      "y": 178.125
+    },
+    {
+      "id": "ally-12",
+      "rank": 0,
+      "x": 196.875,
+      "y": 290.625
+    },
+    {
+      "id": "ally-13",
+      "rank": 2,
+      "x": 28.125,
+      "y": 234.375
+    },
+    {
+      "id": "ally-14",
+      "rank": 2,
+      "x": 28.125,
+      "y": 178.125
+    },
+    {
+      "id": "ally-15",
+      "rank": 2,
+      "x": 28.125,
+      "y": 290.625
+    },
+    {
+      "id": "ally-16",
+      "rank": 1,
+      "x": 140.625,
+      "y": 234.375
+    },
+    {
+      "id": "ally-17",
+      "rank": 1,
+      "x": 140.625,
+      "y": 178.125
+    },
+    {
+      "id": "ally-18",
+      "rank": 1,
+      "x": 140.625,
+      "y": 290.625
+    }
+  ],
+  "checks": [
+    {
+      "name": "formation menu opens native dialog and pauses combat",
+      "passed": true
+    },
+    {
+      "name": "exactly 28 cells",
+      "passed": true
+    },
+    {
+      "name": "7 columns and 4 rows",
+      "passed": true
+    },
+    {
+      "name": "whole dialog fits 800x360 with edge spacing",
+      "passed": true
+    },
+    {
+      "name": "no dialog or board scrolling at landscape reference size",
+      "passed": true
+    },
+    {
+      "name": "every formation target is at least 48 CSS pixels within rounding",
+      "passed": true
+    },
+    {
+      "name": "automatic arrangement sits to right of upward direction icon",
+      "passed": true
+    },
+    {
+      "name": "page scroll locked during edit",
+      "passed": true
+    },
+    {
+      "name": "all heroes automatically placed in middle rows",
+      "passed": true
+    },
+    {
+      "name": "infantry automatically placed in front row",
+      "passed": true
+    },
+    {
+      "name": "archer and mage automatically placed in rear row",
+      "passed": true
+    },
+    {
+      "name": "all units assigned exactly once with no overlap",
+      "passed": true
+    },
+    {
+      "name": "click selected unit then empty cell moves it",
+      "passed": true
+    },
+    {
+      "name": "occupied destination swaps units",
+      "passed": true
+    },
+    {
+      "name": "hero move outside middle rejected without changing placement",
+      "passed": true
+    },
+    {
+      "name": "hero can move to second middle row",
+      "passed": true
+    },
+    {
+      "name": "editing leaves wave slots and currency unchanged",
+      "passed": true
+    },
+    {
+      "name": "manual formation immediately saved in checkpoint",
+      "passed": true
+    },
+    {
+      "name": "closing restores previously running combat",
+      "passed": true
+    },
+    {
+      "name": "closing releases page scroll lock",
+      "passed": true
+    },
+    {
+      "name": "closing returns keyboard focus to formation button",
+      "passed": true
+    },
+    {
+      "name": "rapid close and reopen ignores previous native close event",
+      "passed": true
+    },
+    {
+      "name": "closing preserves previously paused combat",
+      "passed": true
+    },
+    {
+      "name": "empty roster keeps 28 empty cells and disables auto",
+      "passed": true
+    },
+    {
+      "name": "page freeze closes editor and keeps combat paused",
+      "passed": true
+    },
+    {
+      "name": "automatic arrangement persisted before boss entry",
+      "passed": true
+    },
+    {
+      "name": "developer transition reaches actual boss scene",
+      "passed": true
+    },
+    {
+      "name": "actual boss receives all deployed allies",
+      "passed": true
+    },
+    {
+      "name": "actual paused boss positions and ranks match edited north-facing formation rotated toward enemy",
+      "passed": true
+    },
+    {
+      "name": "boss preview grid uses matching 4x7 area above skill HUD",
+      "passed": true
+    },
+    {
+      "name": "formation editor does not alter an in-progress boss",
+      "passed": true
+    },
+    {
+      "name": "no failed runtime asset request",
+      "passed": true
+    }
+  ],
+  "date": "2026-11-07",
+  "failed": null,
+  "result": "PASS",
+  "scope": "isolated origin, 800x360 iframe, existing game UI"
+}

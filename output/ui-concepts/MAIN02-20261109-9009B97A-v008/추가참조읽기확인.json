@@ -1,0 +1,32 @@
+[
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\defenseConfig.ts",
+    "sha256": "9029f5e5f81b0f49dc6414c9082fbc7c5b6e3d094d1769bec76c24f316b0a2bb",
+    "applies": "실제11아이템4레시피/5몬스터기본값;시안5x5와창고5x2는게임규격변경아님"
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\defense.ts",
+    "sha256": "5fce5c07de0f628091c040ed41ffea13eb7f329b06609bf2ab84ee1de5c91192",
+    "applies": "인접같은소유자/중복소모방지/모루1/결과공간선검증/원래선택영웅+가방계획"
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\landscape-inventory.ts",
+    "sha256": "939221d911fd125daaa3d70dd56d9486995877dbe8444f03ea1ed4e5480a75b9",
+    "applies": "조합상대는실제recipeForTypes;인벤배치/commit조건"
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\landscape-entry.ts",
+    "sha256": "62f313ca1a473200c991716adc08b3de5bb1fd3e23e16efa1a3fe0c440da03a2",
+    "applies": "기존drawConnections는정지인접쌍과focusPick도그림;이번최신정정held전용과차이가있어시안만정정/게임읽기전용"
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\defenseView.ts",
+    "sha256": "64bb40656de19d068cf5eec4dde143ac9356184d48298e65f864b0933880fc59",
+    "applies": "네임드는색상+왕관기존표현"
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\slimeArt.ts",
+    "sha256": "a813959d1e66a4920e00d63e64668a00a51a714a042dfebdee06fc8f6d3757e2",
+    "applies": "일반yellow/물방blue/마방red;네임드는슬라임스프라이트아님"
+  }
+]

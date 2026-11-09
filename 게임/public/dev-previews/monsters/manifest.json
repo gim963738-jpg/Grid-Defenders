@@ -1,0 +1,464 @@
+{
+  "task": "MAIN01-20261109-7AE73F23",
+  "iteration": 1,
+  "count": 9,
+  "coordinateSystem": "origin top-left, bounds [left,top,rightExclusive,bottomExclusive], alpha16 excludes faint fringe; body excludes projecting gear and halo",
+  "relativeHeightPolicy": "same canvas display scale; no canonical inter-species height approved",
+  "summary": {
+    "green-warrior": {
+      "bodyHeightRange": [
+        1074,
+        1103
+      ],
+      "footLineSpread": 15
+    },
+    "blue-golem": {
+      "bodyHeightRange": [
+        1030,
+        1035
+      ],
+      "footLineSpread": 4
+    },
+    "undead-warrior": {
+      "bodyHeightRange": [
+        1000,
+        1041
+      ],
+      "footLineSpread": 1
+    }
+  },
+  "images": [
+    {
+      "file": "green-warrior/front_000.png",
+      "species": "green-warrior",
+      "direction": "정면",
+      "angle": 0,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "6634efb3d7c52b6f5a8a6688ca7ab3b121dd782e99e7bf2a26b170f2099b3408",
+      "sourceSha256": "6634efb3d7c52b6f5a8a6688ca7ab3b121dd782e99e7bf2a26b170f2099b3408",
+      "bytePreserved": true,
+      "alpha": {
+        "zero": 1023229,
+        "opaque": 556,
+        "partial": 548731,
+        "visibleBoundsAlpha16": [
+          269,
+          108,
+          995,
+          1211
+        ],
+        "solidBoundsAlpha240": [
+          271,
+          110,
+          994,
+          1209
+        ],
+        "edgeClear": true
+      },
+      "bodyBounds": [
+        274,
+        108,
+        990,
+        1211
+      ],
+      "footAnchor": [
+        615,
+        1208
+      ],
+      "measurement": "Full image visual manual bounding boxes, approximate ±8px; body excludes arrows/hilt/airborne chips/top flame; golem body includes functional lower energy contact. Foot y uses visible solid boot/energy contact baseline near alpha>=240. Head box includes hair/headgear for humanoids, rock face only for golem; profile width changes by projection.",
+      "bodyHeight": 1103,
+      "headBounds": [
+        438,
+        110,
+        817,
+        469
+      ]
+    },
+    {
+      "file": "green-warrior/left_270.png",
+      "species": "green-warrior",
+      "direction": "좌측 정측면",
+      "angle": 270,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "fb720a064f027cefc298740788e3faac4787b62867a1f8a90b9bbe3a8eb7567e",
+      "sourceSha256": "fb720a064f027cefc298740788e3faac4787b62867a1f8a90b9bbe3a8eb7567e",
+      "bytePreserved": true,
+      "alpha": {
+        "zero": 1282915,
+        "opaque": 606,
+        "partial": 288995,
+        "visibleBoundsAlpha16": [
+          441,
+          122,
+          817,
+          1196
+        ],
+        "solidBoundsAlpha240": [
+          443,
+          124,
+          815,
+          1194
+        ],
+        "edgeClear": true
+      },
+      "bodyBounds": [
+        442,
+        122,
+        800,
+        1196
+      ],
+      "footAnchor": [
+        590,
+        1193
+      ],
+      "measurement": "Full image visual manual bounding boxes, approximate ±8px; body excludes arrows/hilt/airborne chips/top flame; golem body includes functional lower energy contact. Foot y uses visible solid boot/energy contact baseline near alpha>=240. Head box includes hair/headgear for humanoids, rock face only for golem; profile width changes by projection.",
+      "bodyHeight": 1074,
+      "headBounds": [
+        458,
+        124,
+        774,
+        441
+      ]
+    },
+    {
+      "file": "green-warrior/right_090.png",
+      "species": "green-warrior",
+      "direction": "우측 정측면",
+      "angle": 90,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "28c563890852cc1bb1c83a09f32c32eb1e98988d69da47fa38fcc26e204c6dfa",
+      "sourceSha256": "28c563890852cc1bb1c83a09f32c32eb1e98988d69da47fa38fcc26e204c6dfa",
+      "bytePreserved": true,
+      "alpha": {
+        "zero": 1250461,
+        "opaque": 668,
+        "partial": 321387,
+        "visibleBoundsAlpha16": [
+          392,
+          110,
+          798,
+          1206
+        ],
+        "solidBoundsAlpha240": [
+          394,
+          112,
+          796,
+          1205
+        ],
+        "edgeClear": true
+      },
+      "bodyBounds": [
+        396,
+        110,
+        798,
+        1206
+      ],
+      "footAnchor": [
+        640,
+        1204
+      ],
+      "measurement": "Full image visual manual bounding boxes, approximate ±8px; body excludes arrows/hilt/airborne chips/top flame; golem body includes functional lower energy contact. Foot y uses visible solid boot/energy contact baseline near alpha>=240. Head box includes hair/headgear for humanoids, rock face only for golem; profile width changes by projection.",
+      "bodyHeight": 1096,
+      "headBounds": [
+        461,
+        112,
+        775,
+        435
+      ]
+    },
+    {
+      "file": "blue-golem/front_000.png",
+      "species": "blue-golem",
+      "direction": "정면",
+      "angle": 0,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "7df07108446495cc956389eb59347901984237962fde4cc586af1969191c3fb4",
+      "sourceSha256": "7df07108446495cc956389eb59347901984237962fde4cc586af1969191c3fb4",
+      "bytePreserved": true,
+      "alpha": {
+        "zero": 820380,
+        "opaque": 1394,
+        "partial": 750742,
+        "visibleBoundsAlpha16": [
+          124,
+          90,
+          1129,
+          1163
+        ],
+        "solidBoundsAlpha240": [
+          125,
+          91,
+          1128,
+          1161
+        ],
+        "edgeClear": true
+      },
+      "bodyBounds": [
+        125,
+        130,
+        1128,
+        1163
+      ],
+      "footAnchor": [
+        620,
+        1160
+      ],
+      "measurement": "Full image visual manual bounding boxes, approximate ±8px; body excludes arrows/hilt/airborne chips/top flame; golem body includes functional lower energy contact. Foot y uses visible solid boot/energy contact baseline near alpha>=240. Head box includes hair/headgear for humanoids, rock face only for golem; profile width changes by projection.",
+      "bodyHeight": 1033,
+      "headBounds": [
+        554,
+        332,
+        687,
+        465
+      ]
+    },
+    {
+      "file": "blue-golem/left_270.png",
+      "species": "blue-golem",
+      "direction": "좌측 정측면",
+      "angle": 270,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "65ae6ec587b3cbe311c55c8bedf14c40abf9aa82e57380d7df8a1372510b424d",
+      "sourceSha256": "65ae6ec587b3cbe311c55c8bedf14c40abf9aa82e57380d7df8a1372510b424d",
+      "bytePreserved": true,
+      "alpha": {
+        "zero": 1228937,
+        "opaque": 516,
+        "partial": 343063,
+        "visibleBoundsAlpha16": [
+          417,
+          88,
+          900,
+          1164
+        ],
+        "solidBoundsAlpha240": [
+          419,
+          90,
+          898,
+          1163
+        ],
+        "edgeClear": true
+      },
+      "bodyBounds": [
+        433,
+        134,
+        900,
+        1164
+      ],
+      "footAnchor": [
+        545,
+        1162
+      ],
+      "measurement": "Full image visual manual bounding boxes, approximate ±8px; body excludes arrows/hilt/airborne chips/top flame; golem body includes functional lower energy contact. Foot y uses visible solid boot/energy contact baseline near alpha>=240. Head box includes hair/headgear for humanoids, rock face only for golem; profile width changes by projection.",
+      "bodyHeight": 1030,
+      "headBounds": [
+        444,
+        353,
+        535,
+        470
+      ]
+    },
+    {
+      "file": "blue-golem/right_090.png",
+      "species": "blue-golem",
+      "direction": "우측 정측면",
+      "angle": 90,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "078742601eb830797f529db5e0177dc6c24f19625591f6dd2422b8a31bba3210",
+      "sourceSha256": "078742601eb830797f529db5e0177dc6c24f19625591f6dd2422b8a31bba3210",
+      "bytePreserved": true,
+      "alpha": {
+        "zero": 1207260,
+        "opaque": 615,
+        "partial": 364641,
+        "visibleBoundsAlpha16": [
+          346,
+          109,
+          820,
+          1167
+        ],
+        "solidBoundsAlpha240": [
+          347,
+          110,
+          818,
+          1165
+        ],
+        "edgeClear": true
+      },
+      "bodyBounds": [
+        346,
+        132,
+        820,
+        1167
+      ],
+      "footAnchor": [
+        640,
+        1164
+      ],
+      "measurement": "Full image visual manual bounding boxes, approximate ±8px; body excludes arrows/hilt/airborne chips/top flame; golem body includes functional lower energy contact. Foot y uses visible solid boot/energy contact baseline near alpha>=240. Head box includes hair/headgear for humanoids, rock face only for golem; profile width changes by projection.",
+      "bodyHeight": 1035,
+      "headBounds": [
+        714,
+        354,
+        794,
+        460
+      ]
+    },
+    {
+      "file": "undead-warrior/front_000.png",
+      "species": "undead-warrior",
+      "direction": "정면",
+      "angle": 0,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "5e635d98082ad1bbeb0236a5e1adbd192eb0407f11d6c023267605cfcdc66d53",
+      "sourceSha256": "5e635d98082ad1bbeb0236a5e1adbd192eb0407f11d6c023267605cfcdc66d53",
+      "bytePreserved": true,
+      "alpha": {
+        "zero": 1100137,
+        "opaque": 1310,
+        "partial": 471069,
+        "visibleBoundsAlpha16": [
+          261,
+          38,
+          941,
+          1207
+        ],
+        "solidBoundsAlpha240": [
+          263,
+          39,
+          940,
+          1205
+        ],
+        "edgeClear": true
+      },
+      "bodyBounds": [
+        362,
+        166,
+        884,
+        1207
+      ],
+      "footAnchor": [
+        608,
+        1204
+      ],
+      "measurement": "Full image visual manual bounding boxes, approximate ±8px; body excludes arrows/hilt/airborne chips/top flame; golem body includes functional lower energy contact. Foot y uses visible solid boot/energy contact baseline near alpha>=240. Head box includes hair/headgear for humanoids, rock face only for golem; profile width changes by projection.",
+      "bodyHeight": 1041,
+      "headBounds": [
+        485,
+        166,
+        735,
+        505
+      ]
+    },
+    {
+      "file": "undead-warrior/left_270.png",
+      "species": "undead-warrior",
+      "direction": "좌측 정측면",
+      "angle": 270,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "609e974a148f3561cb04247de256be1737ad3a8a90c3488c82478e4738fc9ded",
+      "sourceSha256": "609e974a148f3561cb04247de256be1737ad3a8a90c3488c82478e4738fc9ded",
+      "bytePreserved": true,
+      "alpha": {
+        "zero": 1301101,
+        "opaque": 1538,
+        "partial": 269877,
+        "visibleBoundsAlpha16": [
+          455,
+          36,
+          881,
+          1205
+        ],
+        "solidBoundsAlpha240": [
+          456,
+          37,
+          879,
+          1204
+        ],
+        "edgeClear": true
+      },
+      "bodyBounds": [
+        455,
+        178,
+        792,
+        1205
+      ],
+      "footAnchor": [
+        614,
+        1203
+      ],
+      "measurement": "Full image visual manual bounding boxes, approximate ±8px; body excludes arrows/hilt/airborne chips/top flame; golem body includes functional lower energy contact. Foot y uses visible solid boot/energy contact baseline near alpha>=240. Head box includes hair/headgear for humanoids, rock face only for golem; profile width changes by projection.",
+      "bodyHeight": 1027,
+      "headBounds": [
+        456,
+        178,
+        788,
+        515
+      ]
+    },
+    {
+      "file": "undead-warrior/right_090.png",
+      "species": "undead-warrior",
+      "direction": "우측 정측면",
+      "angle": 90,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "da9ba574c509b8027c8b5657b5009120d4099d2c0ec905a143b214242be8b32f",
+      "sourceSha256": "da9ba574c509b8027c8b5657b5009120d4099d2c0ec905a143b214242be8b32f",
+      "bytePreserved": true,
+      "alpha": {
+        "zero": 1277056,
+        "opaque": 854,
+        "partial": 294606,
+        "visibleBoundsAlpha16": [
+          418,
+          50,
+          794,
+          1205
+        ],
+        "solidBoundsAlpha240": [
+          420,
+          52,
+          793,
+          1204
+        ],
+        "edgeClear": true
+      },
+      "bodyBounds": [
+        419,
+        205,
+        794,
+        1205
+      ],
+      "footAnchor": [
+        620,
+        1203
+      ],
+      "measurement": "Full image visual manual bounding boxes, approximate ±8px; body excludes arrows/hilt/airborne chips/top flame; golem body includes functional lower energy contact. Foot y uses visible solid boot/energy contact baseline near alpha>=240. Head box includes hair/headgear for humanoids, rock face only for golem; profile width changes by projection.",
+      "bodyHeight": 1000,
+      "headBounds": [
+        420,
+        205,
+        793,
+        532
+      ]
+    }
+  ]
+}

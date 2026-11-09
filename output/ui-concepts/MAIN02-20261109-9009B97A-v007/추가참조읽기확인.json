@@ -1,0 +1,27 @@
+[
+  {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\발송지시-v007.md",
+    "sha256": "329eeafbce9d0d4cd20eec3b7dbfd302a00bd0be3f2c29055f3a5585f43275f9",
+    "applies": "도감조회·조건부적정보·조합·배치3색6장범위와변경제외준수."
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\defenseConfig.ts",
+    "sha256": "9029f5e5f81b0f49dc6414c9082fbc7c5b6e3d094d1769bec76c24f316b0a2bb",
+    "applies": "ITEMS/RECIPES원래효과·칸·네임드기본값을사용,4웨이브스케줄임의확정없음."
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\defense.ts",
+    "sha256": "5fce5c07de0f628091c040ed41ffea13eb7f329b06609bf2ab84ee1de5c91192",
+    "applies": "조합은동일소유자·변인접/중복소모금지·모루1·결과공간선검증;명시적창고재료선택. 적HP/공격은웨이브보정됨."
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\defenseView.ts",
+    "sha256": "64bb40656de19d068cf5eec4dde143ac9356184d48298e65f864b0933880fc59",
+    "applies": "네임드왕관·파란둥근네모의실제표시근거;일반슬라임아트를새중보스로오인복제안함."
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\itemArt.ts",
+    "sha256": "86347291f5f02daf01b8bce2b389a50697878e1ff0bb02bf504e547a784f6dfe",
+    "applies": "원본crop와I08전체그림비례·실점유표시,없는결과원화는실제칸모양도형으로명시."
+  }
+]

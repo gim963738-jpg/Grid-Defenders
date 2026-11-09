@@ -1,0 +1,83 @@
+{
+  "task": "MAIN02-20261109-9009B97A",
+  "iteration": 5,
+  "role": "ui",
+  "workSummary": "사용자 진행 승인과불합격원문을반영해 D3만승계하고 큰전장실배치/독립장비정리/자동전투·정비복귀를연결한PNG9장과보조상태를신규v005에제작; 원본읽기전용·48px·실배율·행동경로검수.",
+  "documents": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\AGENTS.md",
+      "sha256": "a4fee6387b17ffa27ec90c9ccdab1c7ebfb93722945f729b24e60b93f0593ba7",
+      "applies": "공통800×360·48px터치, 이전원본과게임보존, 차수5읽기후start. 이펙트수정없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\작업진행방법.md",
+      "sha256": "3eebec5fd956a74fcfa287271e4d44de645339a1c0822c652ab7885169e3d2fd",
+      "applies": "본문재독·적용기록·차수5start후제작하고 자체검수와사용자합격을구분."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "sha256": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "applies": "실제9개연결상태와5종기록, 실패배치를재사용하지않고미확정수치는제안명시."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "sha256": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "applies": "담당main02회신, 이전미커밋보존, 실제OrcaTask/Dispatch에결과연결."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "sha256": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "applies": "하위담당없이직접제작, 정적검수범위와사용자합격분리, 외주서비스미사용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "sha256": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "applies": "게임src·공통CSS·타팀원본편집금지, 신규v005전용표시소스만작성."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\규정.md",
+      "sha256": "f1a0a3140e7639c13b4f4ea3eedf0383bb6a8d1bb1a73db6bc68584d62a20de1",
+      "applies": "800×360 공통크기·기존D3선택유지, 최신불합격피드백우선, 규정개선은별도제안."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "sha256": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "applies": "read-pack전체본문·해시·적용기록으로차수5start, 원본start이력보존."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "sha256": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "applies": "UI팀책임과독립테스터경계유지, 직접제작후담당메인반환."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "sha256": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "applies": "자료계층과조직구분, 실제기존아트소스읽기전용사용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "sha256": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "applies": "UI/아이템의기존위치보존, 새세계관·능력치확정없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v005.md",
+      "sha256": "a00b92aaea6aa375e837a8cd93a4889d2727048eabfc943634b35421ebd52771",
+      "applies": "이전maintenance불합격을근거로큰전장실배치/별도장비/자동전투/정비복귀9장으로재설계."
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\문서\\00_개발규칙\\모바일UI규격.md",
+      "sha256": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+      "applies": "14px본문12px보조48px터치,5×4웨이브판을48px이상확대표시, 제거된보스진형복구안함."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "sha256": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+      "applies": "사용자차수5 진행확인범위만제작, 같은허락재요구없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+      "sha256": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+      "applies": "요청산출물과최소기록만작성, Git커밋·푸시·예약백업없음."
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-11-07T17:01:16.949Z",
+  "checks": [
+    "actual landscape field loads",
+    "four straight sides and ninety-degree corners",
+    "existing twenty placement tiles keep their positions",
+    "vertical road width stays one 58px tile",
+    "monsters occupy all four rectangular corners",
+    "original field texture loads and is reused",
+    "all four road corners are filled with no rounded cutouts",
+    "all four corners use soil without source grass patches",
+    "placement grid remains clear of soil",
+    "outside the rectangle retains the original field",
+    "soil edges blend softly into grass",
+    "soldier still deploys into original first tile",
+    "boss fullscreen field remains available",
+    "returning from boss preserves rectangular field",
+    "actual monster turns ninety degrees at top-right corner"
+  ],
+  "conditions": "Isolated 800x360 iframe; original storage backed up; QA scrollbars and developer notice hidden for capture.",
+  "corners": [
+    {
+      "rgba": [
+        225,
+        160,
+        62,
+        255
+      ],
+      "x": 110,
+      "y": 60
+    },
+    {
+      "rgba": [
+        221,
+        162,
+        69,
+        255
+      ],
+      "x": 500,
+      "y": 60
+    },
+    {
+      "rgba": [
+        224,
+        162,
+        69,
+        255
+      ],
+      "x": 500,
+      "y": 268
+    },
+    {
+      "rgba": [
+        230,
+        166,
+        71,
+        255
+      ],
+      "x": 110,
+      "y": 268
+    }
+  ],
+  "grid": {
+    "height": 168,
+    "left": 160,
+    "top": 84,
+    "width": 290
+  },
+  "origin": "http://127.0.0.1:5197",
+  "path": [
+    [
+      131,
+      68
+    ],
+    [
+      479,
+      68
+    ],
+    [
+      479,
+      264
+    ],
+    [
+      131,
+      264
+    ]
+  ],
+  "perimeter": 1088,
+  "status": "PASS"
+}

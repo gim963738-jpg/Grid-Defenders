@@ -1,0 +1,88 @@
+{
+  "task": "MAIN02-20261109-9009B97A",
+  "iteration": 7,
+  "role": "ui",
+  "workSummary": "v006긍정평가배치를보존하고동일UI후속4건만신규v007에6PNG제작;도감조회/기존원레시피조합/중보스직전만적정보/가로전중후열색표시;54셀·48터치·800배율·소스근거·원본해시검수.",
+  "documents": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\AGENTS.md",
+      "sha256": "a4fee6387b17ffa27ec90c9ccdab1c7ebfb93722945f729b24e60b93f0593ba7",
+      "applies": "800×360/48px共通터치·원본보존·차수7착수후작업,이펙트수정없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\작업진행방법.md",
+      "sha256": "3eebec5fd956a74fcfa287271e4d44de645339a1c0822c652ab7885169e3d2fd",
+      "applies": "매새작업본문재독·적용기록·start·자체검증후반환."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "sha256": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "applies": "승인된세부4건과6PNG·5종기록,이전긍정평가와전체합격/통합구분."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "sha256": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "applies": "담당main02로공식Orca회신,타메인/미커밋원본보존."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "sha256": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "applies": "직접수행,다른담당·테스터임의생성없음,본인검수는사용자합격아님."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "sha256": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "applies": "UI신규v007만작성,게임src·공통CSS·다른담당아트읽기전용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\규정.md",
+      "sha256": "f1a0a3140e7639c13b4f4ea3eedf0383bb6a8d1bb1a73db6bc68584d62a20de1",
+      "applies": "v006깔끔한3열/D3/54셀유지,새규정은별도제안."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "sha256": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "applies": "필독16문서path/sha256/applies로현재iteration7 role ui start,추가실제소스참조별도기록."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "sha256": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "applies": "UI팀책임과독립검수경계보존,외주·계정·타영역제작없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "sha256": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "applies": "자료분류와실제조직구분,기존아트소스위치보존."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "sha256": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "applies": "새몬스터나장비스킬원본을창작하지않고기존UI표시만보완."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v007.md",
+      "sha256": "10faaf28bd7f35ab41428d479decda0cae1412f90dfdec678c4bf4a4259067fc",
+      "applies": "긍정평가한v006에도감/조건부적정보/조합접근과열림/가로전중후열3색만보완,추가승인질문없음."
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v006\\결과보고.md",
+      "sha256": "4f09fa86bf81bb470066f2833656872e1b45433eec6f117cd46aa44b55ebe1e8",
+      "applies": "v006의3열x12/216/508·격자y120·셀54/D3.74·간결한위계를유지,4건만변경."
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\문서\\00_개발규칙\\모바일UI규격.md",
+      "sha256": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+      "applies": "본문14/보조12/터치48/800×360유지,오른쪽전열색만표시하고보스진형편집·제한신설없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "sha256": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+      "applies": "같은UI후속에대한최신직접진행지시근거유지,이번발화에진행이있었다고날조없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+      "sha256": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+      "applies": "제작과필수기록만작성,Git커밋·푸시·통합·예약백업없음."
+    }
+  ]
+}

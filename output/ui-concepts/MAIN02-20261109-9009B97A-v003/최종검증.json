@@ -1,0 +1,64 @@
+{
+  "task": "MAIN02-20261109-9009B97A",
+  "iteration": 3,
+  "finals": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v003\\01-soldier.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "8650bf4466d4abe4e48a4d4417c13e697cf9b48d4e573352c61bd70ed4b7d71c"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v003\\02-hero.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "9815a7cca939b586b5ccff62663b1de02a2dbc9b289810e18745b56885021262"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v003\\03-shop.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "05bbabce2507a78526202b1d76235c23807c057de62c7c4f4d5f184e4fea5abd"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v003\\04-formation.png",
+      "size": [
+        2400,
+        1080
+      ],
+      "sha256": "e2c531d452ce2de8db218661aebdaf1ee06ece1a3b9494ac1b9eb3026cb6b1c6"
+    }
+  ],
+  "layoutPass": true,
+  "buttonsAcross4": 79,
+  "galleryPass": true,
+  "hudBackgroundOnlyChanged": true,
+  "missingLinks": [],
+  "preservedFiles": 213,
+  "excludedParallelChanges": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\devImageCompare.css",
+      "before": "d9a69ea657f5c5666412e3c97f67f000be5c3da7232ca6991009ae375b2b20fc",
+      "after": "599c0d70eace19c5ad50d3362ae588a0363a82dd13de6444d0359f1fcc108e29"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\devImageCompare.ts",
+      "before": "291d70afd98932c528d1f16e8a0743a732d5adf3542d9801b2397c83c1fbb106",
+      "after": "961c487b685af57d83208baf2b29c7481c2b183db44258977691f6ec00eba787"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\devImageCompareArt.ts",
+      "before": "c9992bedcebaa3e118467d125b4832b9ba85548fedbf672e11865e143a7d54c6",
+      "after": "4025261b3e1d2e7c977042235856a012b684c3806ff75f8a38bd00b22b140283"
+    }
+  ],
+  "changedOriginals": [],
+  "userAestheticAcceptance": false,
+  "gameIntegrated": false
+}

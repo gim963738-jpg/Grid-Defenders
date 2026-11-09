@@ -1,0 +1,10 @@
+from pathlib import Path
+p=Path(__file__).resolve().parent/'information.js';s=p.read_text(encoding='utf-8')
+s=s.replace('const getUnit=()=>unitData[selectedUnit];',"const getUnit=()=>({...unitData[selectedUnit],name:typeof selectedRoster==='string'?selectedRoster:unitData[selectedUnit].name});")
+s=s.replace("selectedUnit=n===1?'guard':'ranged';page9=0;","selectedUnit=n===1?'guard':'ranged';selectedRoster=0;page9=0;")
+s=s.replace("selectedUnit=b.dataset.kind9==='hero'?'ranged':'guard';page9=0;","selectedUnit=b.dataset.kind9==='hero'?'ranged':'guard';selectedRoster=0;page9=0;")
+s=s.replace("roster8.find(r=>r[0]===d.kind)","roster8.find(r=>r[0]===d.kind&&r[1]===d.name)")
+s=s.replace('<span>좌상단 L자 장비 · 3칸</span></div></div>', '<span>좌상단 L자 장비 · 3칸</span><span class="compare-target-art">\'+itemSVG(5)+\'</span></div></div>')
+s=s.replace('차이: 선택 − 대상 옵션 · 교체/착용 없이 비교<br>복수 착용 유지 · 단일 무기 슬롯 규칙 아님','선택 − 대상 옵션 차이 · 복수 착용 유지 · 교체 없음')
+s=s.replace("window.render=render9;", "stage.addEventListener('click',e=>{if(layer9&&!e.target.closest('.reader-card,.skill-button')){e.preventDefault();e.stopImmediatePropagation();layer9=null;render9(infoState,{preserve:true});}},true);window.render=render9;")
+p.write_text(s,encoding='utf-8')

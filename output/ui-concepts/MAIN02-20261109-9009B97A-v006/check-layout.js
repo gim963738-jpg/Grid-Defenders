@@ -1,0 +1,18 @@
+﻿(()=>{
+const results=[];
+for(let n=1;n<=7;n++){
+ render(n);const scale=innerWidth/800,base=stage.getBoundingClientRect();
+ const rect=e=>{const r=e.getBoundingClientRect();return {x:(r.x-base.x)/scale,y:(r.y-base.y)/scale,w:r.width/scale,h:r.height/scale}};
+ const buttons=Array.from(stage.querySelectorAll('button')).filter(e=>e.getBoundingClientRect().width>0&&getComputedStyle(e).visibility!=='hidden').map(e=>({text:e.getAttribute('aria-label')||e.innerText.trim(),...rect(e)}));
+ const small=buttons.filter(b=>b.w<47.9||b.h<47.9),outside=buttons.filter(b=>b.x<-.1||b.y<-.1||b.x+b.w>800.1||b.y+b.h>360.1),overlap=[];
+ for(let i=0;i<buttons.length;i++)for(let j=i+1;j<buttons.length;j++){const a=buttons[i],b=buttons[j],w=Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x),h=Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y);if(w>.5&&h>.5)overlap.push([a.text,b.text,w,h])}
+ const count=s=>stage.querySelectorAll(s).length;
+ results.push({state:n,buttons,small,outside,overlap,grids:Array.from(stage.querySelectorAll('.grid-board')).map(e=>({kind:e.dataset.grid,...rect(e),cell:rect(e.querySelector('.cell'))})),columns:Array.from(stage.querySelectorAll('.column')).map(e=>({class:e.className,...rect(e),heading:rect(e.querySelector('header'))})),products:count('.product'),cards:count('.cards .card'),roster:Array.from(stage.querySelectorAll('[data-roster]')).map(e=>e.dataset.roster).filter(Boolean),stats:count('.detail dl div'),skill:count('.skill'),field:count('.field-cell'),units:Array.from(stage.querySelectorAll('.actor:not(.ghost-unit):not(.moving)')).map(e=>({kind:e.dataset.kind,cell:e.dataset.cell})),context:stage.querySelector('.item-context')?rect(stage.querySelector('.item-context')):null,visibleText:stage.innerText});
+}
+const names=[...new Set([results[4],results[6]].flatMap(x=>x.roster))];
+const check={buttons48:results.every(r=>!r.small.length),noOutside:results.every(r=>!r.outside.length),noOverlap:results.every(r=>!r.overlap.length),threeColumns:results.slice(0,3).every(r=>r.columns[0].x<r.columns[1].x&&r.columns[1].x<r.columns[2].x),sameGridStart:results.slice(0,3).every(r=>Math.abs(r.grids[0].y-r.grids[1].y)<.1),sameCell54:results.slice(0,3).every(r=>r.grids.every(g=>Math.abs(g.cell.w-54)<.1&&Math.abs(g.cell.h-54)<.1)),sameHeadings:results.slice(0,3).every(r=>Math.abs(r.columns[0].heading.y-r.columns[1].heading.y)<.1&&Math.abs(r.columns[1].heading.y-r.columns[2].heading.y)<.1),fiveProducts:results.slice(0,3).every(r=>r.products===5),fiveCandidates:[results[3],results[4],results[6]].every(r=>r.cards===5),roster8:names.length>=8,statsAndSkill:[results[4],results[6]].every(r=>r.stats===10&&r.skill===1),largeField:results[3].field===20,battleEditorHidden:results[5].cards===0&&results[5].products===0&&results[5].grids.length===0&&results[5].field===0,sameArmy:JSON.stringify(results[3].units)===JSON.stringify(results[5].units),noDebugIds:results.every(r=>!/[GH]0[1-9]|시안|준비 중|구현/.test(r.visibleText)),noBagFormation:results.every(r=>r.buttons.every(b=>!/가방|진형/.test(b.text)))};
+ render(4);const old=Array.from(stage.querySelectorAll('[data-field]')).find(e=>e.dataset.field==='4,0');old.click();const movement=stage.dataset.mode==='move'&&stage.querySelector('.actor.moving')!==null&&stage.querySelector('.cost-tag').textContent==='이동';check.existingUnitMove=movement;
+render(1);stage.querySelector('[data-boss]').click();check.bossAccess=!!stage.querySelector('.boss-pop');stage.querySelector('.boss-pop button').click();check.bossCloses=!stage.querySelector('.boss-pop');
+return JSON.stringify({pass:Object.values(check).every(Boolean),checks:check,rosterNames:names,results});
+})()
+

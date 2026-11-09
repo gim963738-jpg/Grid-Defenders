@@ -1,0 +1,202 @@
+{
+  "iteration": 8,
+  "role": "ui",
+  "layoutChecks": {
+    "sevenScreens": true,
+    "touch48": true,
+    "inBounds": true,
+    "noButtonOverlap": true,
+    "lineOnlyHeld": true,
+    "allPhases": true,
+    "onlyRecipePartner": true,
+    "heldGhost": true,
+    "adjacentReady": true,
+    "inlineCombine": true,
+    "materialConsumed": true,
+    "outputAnchor": true,
+    "pouchPreserved": true,
+    "wornPreserved": true,
+    "anvilConsumed": true,
+    "noDedicatedCombineNodes": true,
+    "same54Cell": true,
+    "codexLarge": true,
+    "artAboveBlocks": true,
+    "optionsInOldArtSpace": true,
+    "recipeExact": true,
+    "noCodexCommerce": true,
+    "codex11": true,
+    "actual9Footprint": true,
+    "basicNoRecipe": true,
+    "grid25": true,
+    "gridNotShrunk": true,
+    "newRowEmpty": true,
+    "rightCandidates": true,
+    "rankDirection": true,
+    "rightStart": true,
+    "heroes8": true,
+    "statsSkills": true,
+    "autoHidesEditor": true,
+    "enemyList5": true,
+    "enemyListLeft": true,
+    "enemiesMatch": true,
+    "enemyConditional": true,
+    "preMidbossAccess": true
+  },
+  "phaseChecks": {
+    "idle": true,
+    "clicked": true,
+    "purchased": true,
+    "held": true,
+    "dropped": true,
+    "cancelled": true,
+    "combined": true
+  },
+  "layoutPass": true,
+  "finals": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\01-codex-large.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "e8b88b55d200564682f8bd97c8ff7ce7f5f6886d122cd5b1e1800feb7702c145"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\02-equipment-idle.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "512953d8879c18c6954e342c4bb3963e9b09eef4b9e0f59a063cc5346f6da5d5"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\03-item-held.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "93ceeaa2d2797e81842f82add8a96715d9d51b48c9b52230589ec33918d98bf6"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\04-dropped-adjacent.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "0bc316d6455d748df36d6a7f215d4abd2deecc7d44bfe040802645a4d21ed764"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\05-combined-inline.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "d43270761787e59411c584f21254ce0681acba47029d84fdd6dd2d61eecf9518"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\06-deployment-5x5.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "737bf9b77345ca81b87ab2a506d68583a72a7e12eddba52ff616a46ae5b30801"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\07-enemy-list.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "d8559df216aa71faffddc4888af881461bd85a6a805f5abcf1949c390a7502e1"
+    }
+  ],
+  "readingHashesCurrent": true,
+  "preservedFiles": 503,
+  "changedOriginals": [],
+  "visualReviewedNative800": 7,
+  "visualNotes": "한글/숫자/제목/아이콘비율/겹침/복귀/라인상태/25칸/좌몬스터우상세 직접 확인",
+  "stateContinuity": {
+    "owner": "warehouse",
+    "ironIdle": [
+      0,
+      1
+    ],
+    "ironDrop": [
+      0,
+      0
+    ],
+    "rune": [
+      2,
+      0
+    ],
+    "pouch": [
+      4,
+      0
+    ],
+    "result": [
+      0,
+      0
+    ],
+    "anvilsBefore": 1,
+    "anvilsAfter": 0,
+    "goldUnchanged": 495,
+    "adjacentOnlyAfterDrop": true,
+    "resultSpaceFits": true,
+    "wornGearUnchanged": true
+  },
+  "gameIntegrated": false,
+  "userAcceptance": false,
+  "galleryPass": true,
+  "galleryChecks": {
+    "sevenCards": true,
+    "imagesLoaded": true,
+    "open": true,
+    "original": true,
+    "large": true,
+    "next": true,
+    "previous": true,
+    "keyboard": true,
+    "native800": true,
+    "close": true
+  },
+  "linksExist": true,
+  "missingDeliverables": [],
+  "directionCorrection": {
+    "task": "MAIN02-20261109-9009B97A",
+    "iteration": 8,
+    "correction": "06 적진입 세로쓰기→가로 ← 적 진입",
+    "sourceReview": "C:/Users/user/Desktop/Grid Defenders/작업관리/작업/MAIN02-20261109-9009B97A/메인02검수-v008-보완요청.json",
+    "direction": {
+      "text": "← 적 진입",
+      "writingMode": "horizontal-tb",
+      "x": 306.00003269269706,
+      "y": 334.0000358565065,
+      "width": 86.00000500936487,
+      "height": 22.000006723094966,
+      "boardCells": 25,
+      "actors": 6,
+      "rightCandidates": 5
+    },
+    "before06": "75b8b29df1189d9a504c9060663e313ee9f683bcac0eb8d85dfb2249320100c7",
+    "after06": "737bf9b77345ca81b87ab2a506d68583a72a7e12eddba52ff616a46ae5b30801",
+    "otherSixUnchanged": [
+      {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\01-codex-large.png",
+        "sha256": "e8b88b55d200564682f8bd97c8ff7ce7f5f6886d122cd5b1e1800feb7702c145"
+      },
+      {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\02-equipment-idle.png",
+        "sha256": "512953d8879c18c6954e342c4bb3963e9b09eef4b9e0f59a063cc5346f6da5d5"
+      },
+      {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\03-item-held.png",
+        "sha256": "93ceeaa2d2797e81842f82add8a96715d9d51b48c9b52230589ec33918d98bf6"
+      },
+      {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\04-dropped-adjacent.png",
+        "sha256": "0bc316d6455d748df36d6a7f215d4abd2deecc7d44bfe040802645a4d21ed764"
+      },
+      {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\05-combined-inline.png",
+        "sha256": "d43270761787e59411c584f21254ce0681acba47029d84fdd6dd2d61eecf9518"
+      },
+      {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\07-enemy-list.png",
+        "sha256": "d8559df216aa71faffddc4888af881461bd85a6a805f5abcf1949c390a7502e1"
+      }
+    ],
+    "layout39Passed": true,
+    "readings17Current": true,
+    "originals503Unchanged": true,
+    "visualReviewed800": true,
+    "galleryHtmlUnchanged": true,
+    "userAccepted": false,
+    "gameIntegrated": false
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\defenseConfig.ts",
+    "sha256": "9029f5e5f81b0f49dc6414c9082fbc7c5b6e3d094d1769bec76c24f316b0a2bb",
+    "applies": "단위별기본수치/11아이템4레시피;새수치스킬창작없음"
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\bossBattle.ts",
+    "sha256": "f011098410ab6a9a191b8e74c7600569069a095b76939ce0bdcc2be797a4ada9",
+    "applies": "ranged화염기둥실제보스스킬과대상·발동조건;정비조회는발동아님"
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\fireSkill.ts",
+    "sha256": "2d0bd2776f30cf4bcfdfdf51b2b8c670735a2fa4a00e0b1f51dc48150992cbf6",
+    "applies": "cooldown4/radius48/배율1/hits3;추적은비행단계·착지후중심고정"
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\bossSkillIcons.ts",
+    "sha256": "959dbe9bae7c42c0c9fb3ea321ed14f18263252bd3a5215db86a0167e86b9479",
+    "applies": "ranged실제스킬아이콘fire-sheet crop37,369,198,198 재사용"
+  },
+  {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\defense.ts",
+    "sha256": "5fce5c07de0f628091c040ed41ffea13eb7f329b06609bf2ab84ee1de5c91192",
+    "applies": "기존동일소유/변인접/모루1/결과공간선검사참조;별도조합창없음"
+  }
+]
