@@ -1,0 +1,1039 @@
+{
+    "format":  "gd.effect-sheet@1",
+    "name":  "같은 점에서 동시에 갈라지는 녹색 빛",
+    "background":  "transparent",
+    "fps":  29.999999,
+    "loop":  false,
+    "contentWidth":  128,
+    "contentHeight":  128,
+    "padding":  24,
+    "cellWidth":  176,
+    "cellHeight":  176,
+    "columns":  6,
+    "rows":  6,
+    "displaySize":  110,
+    "durationMs":  1100.000036666668,
+    "impactFrame":  10,
+    "impactTimeMs":  333.33334444444483,
+    "impactSemantics":  "frame-complete-marker-only",
+    "drawing":  {
+                    "version":  1,
+                    "enabled":  true,
+                    "showBase":  false,
+                    "prompt":  "두 빛이 중앙의 같은 점에서 동시에 출발해 왼쪽 아래와 오른쪽 위로 갈라집니다.",
+                    "strokes":  [
+                                    {
+                                        "id":  "5ba771df-3e71-47c3-ab0e-d6bbde1ee69f",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.5,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.27,
+                                                           0.73
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  1,
+                                        "delay":  0,
+                                        "linger":  0.1,
+                                        "color":  "#9be8b3",
+                                        "width":  0.015,
+                                        "style":  "trail",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "",
+                                        "purpose":  "direction",
+                                        "directionTarget":  "effect",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.5,
+                                                            0.5
+                                                        ],
+                                                        [
+                                                            0.27,
+                                                            0.73
+                                                        ]
+                                                    ],
+                                        "meaning":  "빛1 이동 방향",
+                                        "guideColor":  "#f4ce55"
+                                    },
+                                    {
+                                        "id":  "f27163e9-c594-4d31-8540-147fd99a7140",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.47,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.5,
+                                                           0.47
+                                                       ],
+                                                       [
+                                                           0.53,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.5,
+                                                           0.53
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  1,
+                                        "delay":  0,
+                                        "linger":  0.1,
+                                        "color":  "#9af4b7",
+                                        "width":  0.015,
+                                        "style":  "field",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "",
+                                        "purpose":  "appearance",
+                                        "meaning":  "빛1 모양",
+                                        "directionId":  "5ba771df-3e71-47c3-ab0e-d6bbde1ee69f"
+                                    },
+                                    {
+                                        "id":  "8e818ff3-45f1-41bc-bda8-abce34dfa8ff",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.5,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.73,
+                                                           0.27
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  1,
+                                        "delay":  0,
+                                        "linger":  0.1,
+                                        "color":  "#9be8b3",
+                                        "width":  0.015,
+                                        "style":  "trail",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "",
+                                        "purpose":  "direction",
+                                        "directionTarget":  "effect",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.5,
+                                                            0.5
+                                                        ],
+                                                        [
+                                                            0.73,
+                                                            0.27
+                                                        ]
+                                                    ],
+                                        "meaning":  "빛2 이동 방향",
+                                        "guideColor":  "#ff777b"
+                                    },
+                                    {
+                                        "id":  "eb09453f-a5ff-4c0c-bce3-6e8fd067ef53",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.47,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.5,
+                                                           0.47
+                                                       ],
+                                                       [
+                                                           0.53,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.5,
+                                                           0.53
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  1,
+                                        "delay":  0,
+                                        "linger":  0.1,
+                                        "color":  "#4cce8a",
+                                        "width":  0.015,
+                                        "style":  "field",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "",
+                                        "purpose":  "appearance",
+                                        "meaning":  "빛2 모양",
+                                        "directionId":  "8e818ff3-45f1-41bc-bda8-abce34dfa8ff"
+                                    }
+                                ]
+                },
+    "actorMotion":  [
+                        {
+                            "frame":  1,
+                            "position":  null
+                        },
+                        {
+                            "frame":  2,
+                            "position":  null
+                        },
+                        {
+                            "frame":  3,
+                            "position":  null
+                        },
+                        {
+                            "frame":  4,
+                            "position":  null
+                        },
+                        {
+                            "frame":  5,
+                            "position":  null
+                        },
+                        {
+                            "frame":  6,
+                            "position":  null
+                        },
+                        {
+                            "frame":  7,
+                            "position":  null
+                        },
+                        {
+                            "frame":  8,
+                            "position":  null
+                        },
+                        {
+                            "frame":  9,
+                            "position":  null
+                        },
+                        {
+                            "frame":  10,
+                            "position":  null
+                        },
+                        {
+                            "frame":  11,
+                            "position":  null
+                        },
+                        {
+                            "frame":  12,
+                            "position":  null
+                        },
+                        {
+                            "frame":  13,
+                            "position":  null
+                        },
+                        {
+                            "frame":  14,
+                            "position":  null
+                        },
+                        {
+                            "frame":  15,
+                            "position":  null
+                        },
+                        {
+                            "frame":  16,
+                            "position":  null
+                        },
+                        {
+                            "frame":  17,
+                            "position":  null
+                        },
+                        {
+                            "frame":  18,
+                            "position":  null
+                        },
+                        {
+                            "frame":  19,
+                            "position":  null
+                        },
+                        {
+                            "frame":  20,
+                            "position":  null
+                        },
+                        {
+                            "frame":  21,
+                            "position":  null
+                        },
+                        {
+                            "frame":  22,
+                            "position":  null
+                        },
+                        {
+                            "frame":  23,
+                            "position":  null
+                        },
+                        {
+                            "frame":  24,
+                            "position":  null
+                        },
+                        {
+                            "frame":  25,
+                            "position":  null
+                        },
+                        {
+                            "frame":  26,
+                            "position":  null
+                        },
+                        {
+                            "frame":  27,
+                            "position":  null
+                        },
+                        {
+                            "frame":  28,
+                            "position":  null
+                        },
+                        {
+                            "frame":  29,
+                            "position":  null
+                        },
+                        {
+                            "frame":  30,
+                            "position":  null
+                        },
+                        {
+                            "frame":  31,
+                            "position":  null
+                        },
+                        {
+                            "frame":  32,
+                            "position":  null
+                        },
+                        {
+                            "frame":  33,
+                            "position":  null
+                        }
+                    ],
+    "actorMotionSpace":  "normalized-content-relative-to-pivot",
+    "includesActorPixels":  false,
+    "frames":  [
+                   {
+                       "frame":  1,
+                       "x":  0,
+                       "y":  0,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  24,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  2,
+                       "x":  176,
+                       "y":  0,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  200,
+                                           "y":  24,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  3,
+                       "x":  352,
+                       "y":  0,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  376,
+                                           "y":  24,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  4,
+                       "x":  528,
+                       "y":  0,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  552,
+                                           "y":  24,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  5,
+                       "x":  704,
+                       "y":  0,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  728,
+                                           "y":  24,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  6,
+                       "x":  880,
+                       "y":  0,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  904,
+                                           "y":  24,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  7,
+                       "x":  0,
+                       "y":  176,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  200,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  8,
+                       "x":  176,
+                       "y":  176,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  200,
+                                           "y":  200,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  9,
+                       "x":  352,
+                       "y":  176,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  376,
+                                           "y":  200,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  10,
+                       "x":  528,
+                       "y":  176,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  552,
+                                           "y":  200,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  11,
+                       "x":  704,
+                       "y":  176,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  728,
+                                           "y":  200,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  12,
+                       "x":  880,
+                       "y":  176,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  904,
+                                           "y":  200,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  13,
+                       "x":  0,
+                       "y":  352,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  376,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  14,
+                       "x":  176,
+                       "y":  352,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  200,
+                                           "y":  376,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  15,
+                       "x":  352,
+                       "y":  352,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  376,
+                                           "y":  376,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  16,
+                       "x":  528,
+                       "y":  352,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  552,
+                                           "y":  376,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  17,
+                       "x":  704,
+                       "y":  352,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  728,
+                                           "y":  376,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  18,
+                       "x":  880,
+                       "y":  352,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  904,
+                                           "y":  376,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  19,
+                       "x":  0,
+                       "y":  528,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  552,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  20,
+                       "x":  176,
+                       "y":  528,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  200,
+                                           "y":  552,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  21,
+                       "x":  352,
+                       "y":  528,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  376,
+                                           "y":  552,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  22,
+                       "x":  528,
+                       "y":  528,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  552,
+                                           "y":  552,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  23,
+                       "x":  704,
+                       "y":  528,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  728,
+                                           "y":  552,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  24,
+                       "x":  880,
+                       "y":  528,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  904,
+                                           "y":  552,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  25,
+                       "x":  0,
+                       "y":  704,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  728,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  26,
+                       "x":  176,
+                       "y":  704,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  200,
+                                           "y":  728,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  27,
+                       "x":  352,
+                       "y":  704,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  376,
+                                           "y":  728,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  28,
+                       "x":  528,
+                       "y":  704,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  552,
+                                           "y":  728,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  29,
+                       "x":  704,
+                       "y":  704,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  728,
+                                           "y":  728,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  30,
+                       "x":  880,
+                       "y":  704,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  904,
+                                           "y":  728,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  31,
+                       "x":  0,
+                       "y":  880,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  904,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  32,
+                       "x":  176,
+                       "y":  880,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  200,
+                                           "y":  904,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   },
+                   {
+                       "frame":  33,
+                       "x":  352,
+                       "y":  880,
+                       "width":  176,
+                       "height":  176,
+                       "contentRect":  {
+                                           "x":  376,
+                                           "y":  904,
+                                           "width":  128,
+                                           "height":  128
+                                       },
+                       "pivot":  {
+                                     "x":  88,
+                                     "y":  88
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  33.33333444444448
+                   }
+               ]
+}

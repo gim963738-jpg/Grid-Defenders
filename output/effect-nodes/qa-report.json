@@ -1,0 +1,55 @@
+{
+    "date":  "2026-11-07",
+    "total":  286,
+    "core":  [
+                 {
+                     "suite":  "workshop",
+                     "passed":  80
+                 },
+                 {
+                     "suite":  "drawing",
+                     "passed":  34
+                 },
+                 {
+                     "suite":  "paint",
+                     "passed":  27
+                 },
+                 {
+                     "suite":  "nodes",
+                     "passed":  36
+                 },
+                 {
+                     "suite":  "visual",
+                     "passed":  13
+                 },
+                 {
+                     "suite":  "playback",
+                     "passed":  15
+                 }
+             ],
+    "ui":  {
+               "workshop":  32,
+               "paint":  23,
+               "nodes":  26
+           },
+    "nativePortDrag":  true,
+    "mobile":  [
+                   "390px, DPR1: no overflow, external controls \u003e=48px, 14px text",
+                   "320px, DPR3: no overflow, external controls \u003e=48px",
+                   "320px battlefield: 274x302 CSS px, 780x860 render"
+               ],
+    "visual":  [
+                   "all 24 graph frames on green/gray",
+                   "battlefield top and center",
+                   "desktop graph and mobile graph"
+               ],
+    "productionBuild":  "passed",
+    "diffCheck":  "passed",
+    "testOrigin":  "http://localhost:5182",
+    "userOrigin":  "http://127.0.0.1:5182 preserved",
+    "limitations":  [
+                        "2D image and direction nodes",
+                        "no real-time 3D or PXF import",
+                        "no automatic skill damage integration"
+                    ]
+}

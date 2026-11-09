@@ -1,0 +1,1493 @@
+{
+    "format":  "gd.effect-sheet@1",
+    "name":  "수평 일섬",
+    "background":  "transparent",
+    "fps":  40,
+    "loop":  false,
+    "contentWidth":  256,
+    "contentHeight":  256,
+    "padding":  24,
+    "cellWidth":  304,
+    "cellHeight":  304,
+    "columns":  8,
+    "rows":  7,
+    "displaySize":  220,
+    "durationMs":  1300,
+    "impactFrame":  4,
+    "impactTimeMs":  100,
+    "impactSemantics":  "frame-complete-marker-only",
+    "drawing":  {
+                    "version":  1,
+                    "enabled":  true,
+                    "showBase":  false,
+                    "prompt":  "가로 일직선의 진한 검상이 먼저 한 번에 나타납니다. 움직이는 점과 뻗어나가는 보조 선은 없습니다. 잠깐 선명하게 남았다가 왼쪽 시작점부터 오른쪽 끝을 향해 천천히 연해지며 지워집니다.",
+                    "strokes":  [
+                                    {
+                                        "id":  "horizontal-scar",
+                                        "meaning":  "시작점부터 천천히 소멸하는 진한 수평 검상",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.09,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.22,
+                                                           0.49
+                                                       ],
+                                                       [
+                                                           0.78,
+                                                           0.494
+                                                       ],
+                                                       [
+                                                           0.91,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.78,
+                                                           0.506
+                                                       ],
+                                                       [
+                                                           0.22,
+                                                           0.51
+                                                       ]
+                                                   ],
+                                        "purpose":  "appearance",
+                                        "color":  "#2C6EB5",
+                                        "guideColor":  "#70baff",
+                                        "step":  1,
+                                        "duration":  0.9,
+                                        "delay":  0.015,
+                                        "linger":  0.385,
+                                        "width":  0.014,
+                                        "style":  "field",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "시작점부터 천천히 소멸하는 진한 수평 검상",
+                                        "tool":  "pen",
+                                        "fadeAlong":  {
+                                                          "from":  [
+                                                                       0.09,
+                                                                       0.5
+                                                                   ],
+                                                          "to":  [
+                                                                     0.91,
+                                                                     0.5
+                                                                 ],
+                                                          "start":  0.12,
+                                                          "end":  0.94,
+                                                          "softness":  0.18
+                                                      }
+                                    },
+                                    {
+                                        "id":  "horizontal-core",
+                                        "meaning":  "검상 중앙의 가느다란 검광",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.09,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.91,
+                                                           0.5
+                                                       ]
+                                                   ],
+                                        "purpose":  "appearance",
+                                        "color":  "#9AE7FF",
+                                        "guideColor":  "#70baff",
+                                        "step":  1,
+                                        "duration":  0.9,
+                                        "delay":  0.015,
+                                        "linger":  0.385,
+                                        "width":  0.005,
+                                        "style":  "trail",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "검상 중앙의 가느다란 검광",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.09,
+                                                            0.5
+                                                        ],
+                                                        [
+                                                            0.91,
+                                                            0.5
+                                                        ]
+                                                    ],
+                                        "fadeAlong":  {
+                                                          "from":  [
+                                                                       0.09,
+                                                                       0.5
+                                                                   ],
+                                                          "to":  [
+                                                                     0.91,
+                                                                     0.5
+                                                                 ],
+                                                          "start":  0.12,
+                                                          "end":  0.94,
+                                                          "softness":  0.18
+                                                      }
+                                    }
+                                ]
+                },
+    "actorMotion":  [
+                        {
+                            "frame":  1,
+                            "position":  null
+                        },
+                        {
+                            "frame":  2,
+                            "position":  null
+                        },
+                        {
+                            "frame":  3,
+                            "position":  null
+                        },
+                        {
+                            "frame":  4,
+                            "position":  null
+                        },
+                        {
+                            "frame":  5,
+                            "position":  null
+                        },
+                        {
+                            "frame":  6,
+                            "position":  null
+                        },
+                        {
+                            "frame":  7,
+                            "position":  null
+                        },
+                        {
+                            "frame":  8,
+                            "position":  null
+                        },
+                        {
+                            "frame":  9,
+                            "position":  null
+                        },
+                        {
+                            "frame":  10,
+                            "position":  null
+                        },
+                        {
+                            "frame":  11,
+                            "position":  null
+                        },
+                        {
+                            "frame":  12,
+                            "position":  null
+                        },
+                        {
+                            "frame":  13,
+                            "position":  null
+                        },
+                        {
+                            "frame":  14,
+                            "position":  null
+                        },
+                        {
+                            "frame":  15,
+                            "position":  null
+                        },
+                        {
+                            "frame":  16,
+                            "position":  null
+                        },
+                        {
+                            "frame":  17,
+                            "position":  null
+                        },
+                        {
+                            "frame":  18,
+                            "position":  null
+                        },
+                        {
+                            "frame":  19,
+                            "position":  null
+                        },
+                        {
+                            "frame":  20,
+                            "position":  null
+                        },
+                        {
+                            "frame":  21,
+                            "position":  null
+                        },
+                        {
+                            "frame":  22,
+                            "position":  null
+                        },
+                        {
+                            "frame":  23,
+                            "position":  null
+                        },
+                        {
+                            "frame":  24,
+                            "position":  null
+                        },
+                        {
+                            "frame":  25,
+                            "position":  null
+                        },
+                        {
+                            "frame":  26,
+                            "position":  null
+                        },
+                        {
+                            "frame":  27,
+                            "position":  null
+                        },
+                        {
+                            "frame":  28,
+                            "position":  null
+                        },
+                        {
+                            "frame":  29,
+                            "position":  null
+                        },
+                        {
+                            "frame":  30,
+                            "position":  null
+                        },
+                        {
+                            "frame":  31,
+                            "position":  null
+                        },
+                        {
+                            "frame":  32,
+                            "position":  null
+                        },
+                        {
+                            "frame":  33,
+                            "position":  null
+                        },
+                        {
+                            "frame":  34,
+                            "position":  null
+                        },
+                        {
+                            "frame":  35,
+                            "position":  null
+                        },
+                        {
+                            "frame":  36,
+                            "position":  null
+                        },
+                        {
+                            "frame":  37,
+                            "position":  null
+                        },
+                        {
+                            "frame":  38,
+                            "position":  null
+                        },
+                        {
+                            "frame":  39,
+                            "position":  null
+                        },
+                        {
+                            "frame":  40,
+                            "position":  null
+                        },
+                        {
+                            "frame":  41,
+                            "position":  null
+                        },
+                        {
+                            "frame":  42,
+                            "position":  null
+                        },
+                        {
+                            "frame":  43,
+                            "position":  null
+                        },
+                        {
+                            "frame":  44,
+                            "position":  null
+                        },
+                        {
+                            "frame":  45,
+                            "position":  null
+                        },
+                        {
+                            "frame":  46,
+                            "position":  null
+                        },
+                        {
+                            "frame":  47,
+                            "position":  null
+                        },
+                        {
+                            "frame":  48,
+                            "position":  null
+                        },
+                        {
+                            "frame":  49,
+                            "position":  null
+                        },
+                        {
+                            "frame":  50,
+                            "position":  null
+                        },
+                        {
+                            "frame":  51,
+                            "position":  null
+                        },
+                        {
+                            "frame":  52,
+                            "position":  null
+                        }
+                    ],
+    "actorMotionSpace":  "normalized-content-relative-to-pivot",
+    "includesActorPixels":  false,
+    "frames":  [
+                   {
+                       "frame":  1,
+                       "x":  0,
+                       "y":  0,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  24,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  2,
+                       "x":  304,
+                       "y":  0,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  328,
+                                           "y":  24,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  3,
+                       "x":  608,
+                       "y":  0,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  632,
+                                           "y":  24,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  4,
+                       "x":  912,
+                       "y":  0,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  936,
+                                           "y":  24,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  5,
+                       "x":  1216,
+                       "y":  0,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1240,
+                                           "y":  24,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  6,
+                       "x":  1520,
+                       "y":  0,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1544,
+                                           "y":  24,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  7,
+                       "x":  1824,
+                       "y":  0,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1848,
+                                           "y":  24,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  8,
+                       "x":  2128,
+                       "y":  0,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  2152,
+                                           "y":  24,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  9,
+                       "x":  0,
+                       "y":  304,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  328,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  10,
+                       "x":  304,
+                       "y":  304,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  328,
+                                           "y":  328,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  11,
+                       "x":  608,
+                       "y":  304,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  632,
+                                           "y":  328,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  12,
+                       "x":  912,
+                       "y":  304,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  936,
+                                           "y":  328,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  13,
+                       "x":  1216,
+                       "y":  304,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1240,
+                                           "y":  328,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  14,
+                       "x":  1520,
+                       "y":  304,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1544,
+                                           "y":  328,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  15,
+                       "x":  1824,
+                       "y":  304,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1848,
+                                           "y":  328,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  16,
+                       "x":  2128,
+                       "y":  304,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  2152,
+                                           "y":  328,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  17,
+                       "x":  0,
+                       "y":  608,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  632,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  18,
+                       "x":  304,
+                       "y":  608,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  328,
+                                           "y":  632,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  19,
+                       "x":  608,
+                       "y":  608,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  632,
+                                           "y":  632,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  20,
+                       "x":  912,
+                       "y":  608,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  936,
+                                           "y":  632,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  21,
+                       "x":  1216,
+                       "y":  608,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1240,
+                                           "y":  632,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  22,
+                       "x":  1520,
+                       "y":  608,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1544,
+                                           "y":  632,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  23,
+                       "x":  1824,
+                       "y":  608,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1848,
+                                           "y":  632,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  24,
+                       "x":  2128,
+                       "y":  608,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  2152,
+                                           "y":  632,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  25,
+                       "x":  0,
+                       "y":  912,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  936,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  26,
+                       "x":  304,
+                       "y":  912,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  328,
+                                           "y":  936,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  27,
+                       "x":  608,
+                       "y":  912,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  632,
+                                           "y":  936,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  28,
+                       "x":  912,
+                       "y":  912,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  936,
+                                           "y":  936,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  29,
+                       "x":  1216,
+                       "y":  912,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1240,
+                                           "y":  936,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  30,
+                       "x":  1520,
+                       "y":  912,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1544,
+                                           "y":  936,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  31,
+                       "x":  1824,
+                       "y":  912,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1848,
+                                           "y":  936,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  32,
+                       "x":  2128,
+                       "y":  912,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  2152,
+                                           "y":  936,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  33,
+                       "x":  0,
+                       "y":  1216,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  1240,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  34,
+                       "x":  304,
+                       "y":  1216,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  328,
+                                           "y":  1240,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  35,
+                       "x":  608,
+                       "y":  1216,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  632,
+                                           "y":  1240,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  36,
+                       "x":  912,
+                       "y":  1216,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  936,
+                                           "y":  1240,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  37,
+                       "x":  1216,
+                       "y":  1216,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1240,
+                                           "y":  1240,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  38,
+                       "x":  1520,
+                       "y":  1216,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1544,
+                                           "y":  1240,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  39,
+                       "x":  1824,
+                       "y":  1216,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1848,
+                                           "y":  1240,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  40,
+                       "x":  2128,
+                       "y":  1216,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  2152,
+                                           "y":  1240,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  41,
+                       "x":  0,
+                       "y":  1520,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  1544,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  42,
+                       "x":  304,
+                       "y":  1520,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  328,
+                                           "y":  1544,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  43,
+                       "x":  608,
+                       "y":  1520,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  632,
+                                           "y":  1544,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  44,
+                       "x":  912,
+                       "y":  1520,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  936,
+                                           "y":  1544,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  45,
+                       "x":  1216,
+                       "y":  1520,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1240,
+                                           "y":  1544,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  46,
+                       "x":  1520,
+                       "y":  1520,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1544,
+                                           "y":  1544,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  47,
+                       "x":  1824,
+                       "y":  1520,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  1848,
+                                           "y":  1544,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  48,
+                       "x":  2128,
+                       "y":  1520,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  2152,
+                                           "y":  1544,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  49,
+                       "x":  0,
+                       "y":  1824,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  24,
+                                           "y":  1848,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  50,
+                       "x":  304,
+                       "y":  1824,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  328,
+                                           "y":  1848,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  51,
+                       "x":  608,
+                       "y":  1824,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  632,
+                                           "y":  1848,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   },
+                   {
+                       "frame":  52,
+                       "x":  912,
+                       "y":  1824,
+                       "width":  304,
+                       "height":  304,
+                       "contentRect":  {
+                                           "x":  936,
+                                           "y":  1848,
+                                           "width":  256,
+                                           "height":  256
+                                       },
+                       "pivot":  {
+                                     "x":  152,
+                                     "y":  152
+                                 },
+                       "anchor":  {
+                                      "x":  0.5,
+                                      "y":  0.5
+                                  },
+                       "durationMs":  25
+                   }
+               ]
+}

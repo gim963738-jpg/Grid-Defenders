@@ -1,0 +1,83 @@
+from browser_helper import P,PAGE,ev
+from pathlib import Path
+from PIL import Image
+import json,hashlib
+def write(n,s):(P/n).write_text(s,encoding='utf-8')
+def j(n):return json.loads((P/n).read_text(encoding='utf-8-sig'))
+for d in j('읽기확인.json')['documents']:assert hashlib.sha256(Path(d['path']).read_bytes()).hexdigest()==d['sha256']
+preserved=[]
+for name in ['MAIN02-20261109-C970BE7A','MAIN02-20261109-C970BE7A-v002','MAIN02-20261109-78E189DC','MAIN02-20261109-78E189DC-v002']:
+ root=P.parent/name;manifest=json.loads((root/'manifest.json').read_text(encoding='utf-8'))
+ for f in manifest:assert hashlib.sha256((root/f['path']).read_bytes()).hexdigest()==f['sha256'],str(root/f['path'])
+ preserved.append(dict(folder=str(root),files=len(manifest),unchanged=True))
+write('preservation-audit.json',json.dumps(preserved,ensure_ascii=False,indent=2))
+adjust=ev("""(()=>{let h=demo.spec.hits[0],backup=JSON.parse(JSON.stringify(h));function area(time){let c=demo.effect(time),a=c.getContext('2d').getImageData(0,0,c.width,c.height).data,n=0;for(let i=3;i<a.length;i+=4)n+=a[i]>=64;return n}let oldArea=area(.25);h.thickness*=1.25;let widerArea=area(.25);Object.assign(h,backup);let oldPoint=demo.point(h,.5,0);h.clockwise=false;let reversePoint=demo.point(h,.5,0);Object.assign(h,backup);let before=area(.45);h.duration=.42;let after=area(.45);Object.assign(h,backup);return {oldArea,widerArea,widthIncreasesArea:widerArea>oldArea,reversesSweep:Math.hypot(oldPoint[0]-reversePoint[0],oldPoint[1]-reversePoint[1])>100,oldTailArea:before,extendedTailArea:after,extendsLifetime:before===0&&after>0,restored:JSON.stringify(h)===JSON.stringify(backup)}})()""")
+assert adjust['widthIncreasesArea']and adjust['reversesSweep']and adjust['extendsLifetime']and adjust['restored'],adjust
+write('parameter-audit.json',json.dumps(adjust,indent=2))
+spec=j('effect.json');audit=j('frame-audit.json');wide=j('width-audit.json');minmargin=min(m['margin'] for group in audit.values() for m in group['metrics']if m['margin']is not None)
+for group in ['combo','hit1','hit2','hit3']:
+ c=spec['clips'][group];im=Image.open(P/c['sheet']).convert('RGBA')
+ for f in c['frames']:
+  x,y,w,h=f['rect'];assert im.crop((x,y,x+w,y+h)).tobytes()==Image.open(P/f['file']).convert('RGBA').tobytes()
+link=lambda n:f'[{n}]({(P/n).as_posix()})'
+table='\n'.join(f"|{h['id']}|{h['name']}|{h['start']:.2f}|{h['emphasis']:.2f}|{h['fadeStart']:.2f}|{h['end']:.2f}|{h['gapAfter']:.2f}|{h['visibleFrameRange']}|"for h in spec['hits'])
+write('결과보고.md',f'''{link('combo-sheet.png')} · {link('combo-grey.gif')} · {link('combo-battle.mp4')} · {link('preview.html')}
+
+# MAIN02-20261109-78E189DC / 차수3 / effects / main02
+
+**캐릭터 없는 흰색 검격VFX만** 실제 제작했다. 내려치기→올려치기→오른쪽아래사선내려치기의3타이며 두껍고넓은곡면/밝은외측코어/안쪽투명감쇠/양끝테이퍼/짧은블룸을 사용한다. 사용자호평6타의백색광량언어는 유지하되 얇은곡선에서 넓은칼날면으로 바꿨다. 24포즈캐릭터나 미래150번예시에 맞추지 않았으며 캐릭터·무기본체·적을 그리지않았다.1배1.6초는 **제안 초기값**이고 최종속도/시각합격은 사용자 판단이다.
+
+## 제출 파일
+
+- 통합 투명PNG {link('combo-sheet.png')}:8열12행·96프레임·셀992×572, 실제RGBA알파. 개별알파 frames/combo/frame-000.png~095.png.
+- 독립1타 {link('hit1-sheet.png')} / {link('hit1-dark.gif')}; 독립2타 {link('hit2-sheet.png')} / {link('hit2-dark.gif')}; 독립3타 {link('hit3-sheet.png')} / {link('hit3-dark.gif')}. 각각6열5행·30프레임·0.5초·알파PNG와별도클립. frames/hit1~3에각원본30PNG가있다.
+- 밝은회색 {link('combo-grey.gif')} / {link('combo-grey.mp4')}; 초록 {link('combo-green.gif')} / {link('combo-green.mp4')}; 어두운 {link('combo-dark.gif')} / {link('combo-dark.mp4')}; 전장 {link('combo-battle.gif')} / {link('combo-battle.mp4')}. 이들영상은 배경합성으로알파없으며 렌더출력/시트재생이고 AI영상생성이아니다.
+- {link('preview.html')}:서버없이재생, 재생정지/재시작/반복/0.25·0.5·1·2배속/배경4종/타격별선택/프레임스크럽/이전다음. 독립타격선택은0.5초클립, 전체선택은1.6초콤보다. HTTP 확인 http://127.0.0.1:5200/preview.html.
+- {link('effect.json')}와 {link('renderer.js')}:타격별형태/시간편집과실제출력원본. 각타대표 hit1/2/3-grey.png·green.png·dark.png·battle.png, 전체 {link('contact-grey.jpg')} / {link('contact-green.jpg')} / {link('contact-dark.jpg')} / {link('contact-battle.jpg')}.
+- {link('width-comparison.png')} / {link('width-audit.json')}:호평6타와동일셀해상도비교. alpha≥64의최대내접직경은약{wide['oldDiameterPx']:.1f}→{wide['newDiameterPx']:.1f}px, 해당면적{wide['oldAreaAlpha64']}→{wide['newAreaAlpha64']}px로 넓어진면을확인했다. 이것은피해반경/실물검두께측정이아니다.
+
+## 독립 편집 명세와 시간
+
+타격별 `pivot`, `radiusX/Y`, `lengthScale`, `thickness`, `rotation`, `startAngle/endAngle`, `clockwise`, `start`, `duration`, `sweep`, `emphasis`, `fadeStart`, `tailEraseStart`, `gapAfter`를 분리했다. **기존캐릭터에고정된값이아니다.** 원점은콘텐츠(340,270), 패딩후(356,286)이며 현재3타모두같다. 다른캐릭터맞춤시 사용자지정후해당타의피벗/각도/폭/길이/시간만 조정할수있다. `clockwise`는화면좌표(y아래)의회전방향이다.
+
+|타|형태|시작s|스윕완료/강조s|밝기감쇠시작s|종료s|뒤간격s|가시프레임(1부터)|
+|---|---|---|---|---|---|---|---|
+{table}
+
+첫타는위→아래로오른쪽공격공간을훑고, 둘째는그반대로아래→위, 셋째는끝점이시작보다오른쪽/아래로이동한다. 최종타는폭76px·잔광지속0.4초의절제된강세다. 첫/둘째폭64/60px와전체시간은임시제안이다. 각타스윕팁 시작/끝 실제좌표도JSON에있다. 타격완료표시는연출명세이며 실제피해판정은없다.
+
+JSON을별도사본에서수정한뒤 `python build.py --spec <사본.json>`으로독립뷰어/렌더입력을갱신하고, serve.py에서뷰어를열어 `demo.exportFrames()`를호출한후 export.py로시트/영상을출력한다. build.py만호출하면기본제안으로돌아가므로편집시--spec을사용한다. 출력검증은경계/알파/타수/방향을다시검사하며검증실패값을최종시트로승격하지않는다. parameter-audit에서실제로두께증가→면적증가·회전방향반전·수명증가를렌더검사하고원값으로복원했다.
+
+## 원본·피벗·여백과 범위
+
+원본은 Canvas2D의백색곡면메시/연속적인방사방향광량감쇠·블룸 합성으로생성한 투명렌더다. 이미지를모델로생성/분해한것이아니며 완성외주시트자동재조립이없다. 원본전체콘텐츠960×540를사방16px여백으로감싼992×572셀에출력했다. 모든프레임의실제최소외곽여백은{minmargin}px, 셀가장자리알파0. 밝은배경에서검은매트/불투명사각배경/잘림을확인했다. 물리캐릭터/검본체가없어캐릭터암부제거도하지않았다.
+
+추출영역/여백/anchor/표시범위를피해와분리했다. 모든셀의pivot은(356,286)이며 전체셀을동일비율로표시한다. 게임피해/판정/사거리/쿨타임/영웅/캐릭터연결은전부미정. 실제SkillFrameArt연결/실전공격검사는이번범위가아니다.
+
+## 적용 규정·도구·프롬프트
+
+차수3 발송지시와최신피드백/호평6타보고/저장운영규정등15개본문을읽고현재차수path/sha256/applies로start를통과했다. 제출전현재해시를재확인했다. 사용자확인 **“이펙트 만들어와”**에따라캐릭터단계는제외했다. 차수2캐릭터결과는잘못해석한범위의보존자료이며이펙트궤적기준으로사용하지않았다.
+
+기존호평백색6타의Canvas출력기를사본으로읽고블룸/백색/테이퍼방식을재사용하되타수/메시기하/폭/시간을새독립사본에서수정했다. reference-six-slash-renderer.js는읽기전용참조사본, renderer.js/effect.json/build.py가이번원본이다. 상세실행의도는 {link('제작프롬프트.md')}에보존했다. 실제도구는Canvas2D/Python/Pillow/OpenCV/FFmpeg/Orca내장브라우저. **이미지모델호출0·영상AI/Grok호출0·외주모델전환0**이며생성모델/토큰사용량을허위기록하지않았다.
+
+## 검증과 한계
+
+- frame-audit:통합96프레임가시구간정확히3개 {audit['combo']['visibleSegments']}; 독립각30프레임은가시구간1개씩. 모든186프레임 R=G=B(무채색),검정매트alpha>16픽셀0,첫/끝투명,16px안전여백/잘림0. 출력시트셀과원본프레임픽셀일치.
+- 전체밝은회색/초록연락판·어두운대표·전장합성대표를직접열어넓은곡면/테이퍼/시간차스윕을확인했다. 기존전장배경이미지위비파괴합성이며캐릭터맞춤/실전게임통합이아니다. 스윕과잔광은현재도형제안이고사용자최종시각합격이아니다.
+- 뷰어배속0.25/0.5/1/2·속도별정지·재시작·비반복종료/반복재시작·배경4종·타격1/2/3/전체선택·프레임스크럽을검사했다. 서버없는file프로토콜재생과전장배경로딩통과, 브라우저최종콘솔오류0.320/390px에서가로넘침0/48px조작을확인했으며큰창은Orca실측값을그대로기록했다. 실기기/APK검사는아니다.
+- MP4네종992×572·96프레임·60FPS·1.6초전프레임디코드오류0; GIF전체네종1.6초·독립세종0.5초/무한반복확인. GIF50FPS표본과60FPS원본은구분한다. MP4/GIF에투명알파가있다고부르지않는다.
+- **한계:** 흰색의특성상매우밝은회색배경은어두운배경보다대비가낮다. 폭/곡률/간격/최종속도는사용자미확정이며새캐릭터지정시수정가능하다. 세번째사선은구체캐릭터의검궤적이아닌현재독립곡면스윕제안이다. 독립테스터/사용자합격·실제게임내다른유닛과겹침검사는미실시다.
+- 이전6타두버전·차수1실패·차수2캐릭터 모든manifest파일해시가불변이다. 기존게임/src·공방/재료함·규정/다른팀원본미수정. 사용자저장요청없는commit/push/예약백업없고이번은제작파일/검증기록만작성했다.
+
+별도 기준보완제안.md는미확정제안이며활성규정은변경하지않았다.
+''')
+write('기준보완제안.md','미확정 제안 / 차수3: 범위가VFX단독으로정정되면이전캐릭터시트의프레임수/검궤적/시간을자동승계하지않고, 각타의독립피벗·스윕·폭·종료시간을명세해두자. 이미지/시트/게임적용/캐릭터맞춤은서로구분한다. 이번활성규정변경없음.\n')
+write('1_대화기록.md','사용자 최신확인 이펙트 만들어와. 현재는캐릭터없는넓은백색3타VFX만, 캐릭터150번/이펙트1번은미래예시. 캐릭터단계로전환안함.\n')
+write('3_작업일지.md','필독15본문→차수3start→첨부직접확인/호평6타렌더사본조사→곡면칼날메시/광량감쇠3타→통합96+독립90RGBA프레임→시트/배경4종/클립→밝은전체프레임/폭비교/파라미터/뷰어/영상디코드검증→보존해시/보고. 초기JS거듭제곱문법오류와밝기층줄무늬는수정하고최종검증했다.\n')
+write('4_정의문서.md','effect.json의3타별파라미터/96프레임통합/독립30프레임3종이원본명세다. 콘텐츠960x540/패딩16/셀992x572/pivot356,286. 최종속도미정/피해미정/캐릭터연결없음.\n')
+write('5_버전관리.md','신규v003폴더제작산출물/검증기록만작성. 이전전부보존. 사용자저장요청없는commit/push/예약백업없음. manifest.json은제작산출물sha256검증기록.\n')
+manifest=[]
+for f in sorted(P.rglob('*')):
+ if f.is_file()and f.name!='manifest.json'and '__pycache__'not in f.parts:manifest.append(dict(path=str(f.relative_to(P)),bytes=f.stat().st_size,sha256=hashlib.sha256(f.read_bytes()).hexdigest()))
+write('manifest.json',json.dumps(manifest,ensure_ascii=False,indent=2))
+print('V003 FINAL VERIFIED',len(manifest),'files')

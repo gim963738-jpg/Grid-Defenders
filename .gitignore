@@ -1,0 +1,9 @@
+# Downloaded third-party art stays in this personal workspace, outside application builds.
+.local/effect-materials/
+# Local visual QA includes licensed artwork; keep it out of source distributions.
+output/effect-materials/*.png
+output/effect-materials/*.jpg
+output/effect-materials/*.zip
+output/material-unified/*.png
+output/material-unified/*.jpg
+output/material-unified/*.zip

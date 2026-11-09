@@ -1,0 +1,260 @@
+{
+    "format":  "gd.effect@1",
+    "name":  "같은 점에서 동시에 갈라지는 녹색 빛",
+    "settings":  {
+                     "size":  128,
+                     "frames":  33,
+                     "fps":  29.999999,
+                     "pixelSize":  1,
+                     "loop":  false
+                 },
+    "palette":  [
+                    "#27aa87",
+                    "#86efb3",
+                    "#f1ffcb"
+                ],
+    "placement":  {
+                      "pivotX":  0.5,
+                      "pivotY":  0.5,
+                      "displaySize":  110,
+                      "impactFrame":  10
+                  },
+    "layers":  [
+                   {
+                       "id":  "7302e6a9-4a89-4ed0-a093-8fcaef5265bb",
+                       "name":  "충격파",
+                       "type":  "ring",
+                       "enabled":  true,
+                       "blend":  "add",
+                       "color":  1,
+                       "x":  0.5,
+                       "y":  0.65,
+                       "start":  0,
+                       "end":  1,
+                       "radius":  0.31,
+                       "thickness":  0.03,
+                       "rotation":  -30,
+                       "spread":  180,
+                       "amount":  16,
+                       "speed":  0.8,
+                       "opacity":  1,
+                       "seed":  173
+                   },
+                   {
+                       "id":  "a223f3bc-88c1-4de0-bf3d-03f02ab3e73d",
+                       "name":  "마법진",
+                       "type":  "rune",
+                       "enabled":  true,
+                       "blend":  "add",
+                       "color":  0,
+                       "x":  0.5,
+                       "y":  0.65,
+                       "start":  0,
+                       "end":  1,
+                       "radius":  0.24,
+                       "thickness":  0.01,
+                       "rotation":  -30,
+                       "spread":  180,
+                       "amount":  4,
+                       "speed":  0.8,
+                       "opacity":  1,
+                       "seed":  173
+                   },
+                   {
+                       "id":  "b8c82227-677f-42bb-975a-0f14610e4ee0",
+                       "name":  "파티클",
+                       "type":  "particles",
+                       "enabled":  true,
+                       "blend":  "add",
+                       "color":  1,
+                       "x":  0.5,
+                       "y":  0.6,
+                       "start":  0,
+                       "end":  1,
+                       "radius":  0.22,
+                       "thickness":  0.035,
+                       "rotation":  -90,
+                       "spread":  30,
+                       "amount":  22,
+                       "speed":  0.8,
+                       "opacity":  1,
+                       "seed":  173
+                   },
+                   {
+                       "id":  "7d288364-963a-4f09-998c-ce26dadcb8af",
+                       "name":  "섬광",
+                       "type":  "burst",
+                       "enabled":  true,
+                       "blend":  "add",
+                       "color":  2,
+                       "x":  0.5,
+                       "y":  0.4,
+                       "start":  0.2,
+                       "end":  0.9,
+                       "radius":  0.12,
+                       "thickness":  0.035,
+                       "rotation":  -30,
+                       "spread":  180,
+                       "amount":  4,
+                       "speed":  0.8,
+                       "opacity":  1,
+                       "seed":  173
+                   }
+               ],
+    "drawing":  {
+                    "version":  1,
+                    "enabled":  true,
+                    "showBase":  false,
+                    "prompt":  "두 빛이 중앙의 같은 점에서 동시에 출발해 왼쪽 아래와 오른쪽 위로 갈라집니다.",
+                    "strokes":  [
+                                    {
+                                        "id":  "5ba771df-3e71-47c3-ab0e-d6bbde1ee69f",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.5,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.27,
+                                                           0.73
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  1,
+                                        "delay":  0,
+                                        "linger":  0.1,
+                                        "color":  "#9be8b3",
+                                        "width":  0.015,
+                                        "style":  "trail",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "",
+                                        "purpose":  "direction",
+                                        "directionTarget":  "effect",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.5,
+                                                            0.5
+                                                        ],
+                                                        [
+                                                            0.27,
+                                                            0.73
+                                                        ]
+                                                    ],
+                                        "meaning":  "빛1 이동 방향",
+                                        "guideColor":  "#f4ce55"
+                                    },
+                                    {
+                                        "id":  "f27163e9-c594-4d31-8540-147fd99a7140",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.47,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.5,
+                                                           0.47
+                                                       ],
+                                                       [
+                                                           0.53,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.5,
+                                                           0.53
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  1,
+                                        "delay":  0,
+                                        "linger":  0.1,
+                                        "color":  "#9af4b7",
+                                        "width":  0.015,
+                                        "style":  "field",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "",
+                                        "purpose":  "appearance",
+                                        "meaning":  "빛1 모양",
+                                        "directionId":  "5ba771df-3e71-47c3-ab0e-d6bbde1ee69f"
+                                    },
+                                    {
+                                        "id":  "8e818ff3-45f1-41bc-bda8-abce34dfa8ff",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.5,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.73,
+                                                           0.27
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  1,
+                                        "delay":  0,
+                                        "linger":  0.1,
+                                        "color":  "#9be8b3",
+                                        "width":  0.015,
+                                        "style":  "trail",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "",
+                                        "purpose":  "direction",
+                                        "directionTarget":  "effect",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.5,
+                                                            0.5
+                                                        ],
+                                                        [
+                                                            0.73,
+                                                            0.27
+                                                        ]
+                                                    ],
+                                        "meaning":  "빛2 이동 방향",
+                                        "guideColor":  "#ff777b"
+                                    },
+                                    {
+                                        "id":  "eb09453f-a5ff-4c0c-bce3-6e8fd067ef53",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.47,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.5,
+                                                           0.47
+                                                       ],
+                                                       [
+                                                           0.53,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.5,
+                                                           0.53
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  1,
+                                        "delay":  0,
+                                        "linger":  0.1,
+                                        "color":  "#4cce8a",
+                                        "width":  0.015,
+                                        "style":  "field",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "",
+                                        "purpose":  "appearance",
+                                        "meaning":  "빛2 모양",
+                                        "directionId":  "8e818ff3-45f1-41bc-bda8-abce34dfa8ff"
+                                    }
+                                ]
+                }
+}

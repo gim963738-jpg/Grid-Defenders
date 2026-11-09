@@ -1,0 +1,82 @@
+﻿{
+    "task":  "WEB-164",
+    "date":  "2026-11-07",
+    "sources":  10,
+    "frames":  348,
+    "checks":  {
+                   "sources":  81,
+                   "workshop":  188,
+                   "gallery":  27,
+                   "ui":  15,
+                   "total":  311
+               },
+    "battleScenes":  20,
+    "playback":  {
+                     "value":  [
+                                   {
+                                       "speed":  "0.25",
+                                       "moves":  true,
+                                       "paused":  true,
+                                       "hidden":  false
+                                   },
+                                   {
+                                       "speed":  "1",
+                                       "moves":  true,
+                                       "paused":  true,
+                                       "hidden":  false
+                                   },
+                                   {
+                                       "speed":  "5",
+                                       "moves":  true,
+                                       "paused":  true,
+                                       "hidden":  false
+                                   }
+                               ],
+                     "Count":  3
+                 },
+    "mobile":  {
+                   "width":  320,
+                   "scroll":  320,
+                   "dpr":  3,
+                   "columns":  "144px 144px",
+                   "cards":  10,
+                   "downloadVisible":  true,
+                   "downloadOK":  true,
+                   "bytes":  2008709,
+                   "manifest":  10,
+                   "minTouch":  48
+               },
+    "animation":  {
+                      "count":  10,
+                      "frameCounts":  [
+                                          17,
+                                          17,
+                                          17,
+                                          12,
+                                          20,
+                                          17,
+                                          17,
+                                          12,
+                                          18,
+                                          12
+                                      ],
+                      "hidden":  false,
+                      "width":  1107,
+                      "scroll":  1107,
+                      "columns":  "200.7px 200.7px 200.7px 200.7px 200.7px",
+                      "allAnimated":  true
+                  },
+    "userStorage":  {
+                        "unchanged":  true,
+                        "count":  13
+                    },
+    "zipBytes":  2008709,
+    "zipIncludedInBuild":  true,
+    "build":  "TypeScript and Vite passed",
+    "visualChecks":  [
+                         "All bright contact frames",
+                         "Battle top and center for all 10 sources",
+                         "390px gallery at scale1"
+                     ],
+    "limits":  "DPR3 Orca screenshots tiled; used DOM/Canvas size checks plus scale1 visual capture. Actual game movement wiring is not included."
+}

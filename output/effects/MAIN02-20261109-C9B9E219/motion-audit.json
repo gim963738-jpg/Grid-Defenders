@@ -1,0 +1,31 @@
+{
+  "slashVisibleRuns": [
+    [
+      9,
+      26
+    ]
+  ],
+  "flashVisibleRuns": [
+    [
+      19,
+      24
+    ]
+  ],
+  "impactCount": 1,
+  "contactTime": 0.3,
+  "reactsBeforeContact": false,
+  "debrisModel": "x=vx*t, y=depth-vy*t+0.5*g*t²; angular spin; opacity ramps in and fades on landing/lifetime",
+  "gravity": 1500,
+  "representativeVy": 300,
+  "apexAge": 0.2,
+  "yRelativeAtAges": {
+    "0": 0.0,
+    "0.1": -22.5,
+    "0.2": -30.0,
+    "0.3": -22.5,
+    "0.4": 0.0
+  },
+  "dustModel": "outward velocity exponentially decays; particle radius grows; opacity decays quadratically; fixed deterministic seeds",
+  "allClearBy": 0.9166666666666666,
+  "finalFrameBlank": true
+}

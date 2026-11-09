@@ -1,0 +1,267 @@
+﻿{
+    "checks":  [
+                   "run-soft: all source frames stay inside their extraction bounds",
+                   "run-soft: transparent beginning and end",
+                   "run-soft: visible throughout the authored action",
+                   "run-soft: padded PNG outer edge is completely transparent",
+                   "run-soft: repeated rendering is deterministic",
+                   "run-soft: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-soft: rendering and export preserve editable source data",
+                   "run-soft: foot pivot remains fixed in every cell",
+                   "run-heavy: all source frames stay inside their extraction bounds",
+                   "run-heavy: transparent beginning and end",
+                   "run-heavy: visible throughout the authored action",
+                   "run-heavy: padded PNG outer edge is completely transparent",
+                   "run-heavy: repeated rendering is deterministic",
+                   "run-heavy: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-heavy: rendering and export preserve editable source data",
+                   "run-heavy: foot pivot remains fixed in every cell",
+                   "run-sand: all source frames stay inside their extraction bounds",
+                   "run-sand: transparent beginning and end",
+                   "run-sand: visible throughout the authored action",
+                   "run-sand: padded PNG outer edge is completely transparent",
+                   "run-sand: repeated rendering is deterministic",
+                   "run-sand: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-sand: rendering and export preserve editable source data",
+                   "run-sand: foot pivot remains fixed in every cell",
+                   "run-launch: all source frames stay inside their extraction bounds",
+                   "run-launch: transparent beginning and end",
+                   "run-launch: visible throughout the authored action",
+                   "run-launch: padded PNG outer edge is completely transparent",
+                   "run-launch: repeated rendering is deterministic",
+                   "run-launch: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-launch: rendering and export preserve editable source data",
+                   "run-launch: foot pivot remains fixed in every cell",
+                   "run-skid: all source frames stay inside their extraction bounds",
+                   "run-skid: transparent beginning and end",
+                   "run-skid: visible throughout the authored action",
+                   "run-skid: padded PNG outer edge is completely transparent",
+                   "run-skid: repeated rendering is deterministic",
+                   "run-skid: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-skid: rendering and export preserve editable source data",
+                   "run-skid: foot pivot remains fixed in every cell",
+                   "run-snow: all source frames stay inside their extraction bounds",
+                   "run-snow: transparent beginning and end",
+                   "run-snow: visible throughout the authored action",
+                   "run-snow: padded PNG outer edge is completely transparent",
+                   "run-snow: repeated rendering is deterministic",
+                   "run-snow: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-snow: rendering and export preserve editable source data",
+                   "run-snow: foot pivot remains fixed in every cell",
+                   "run-water: all source frames stay inside their extraction bounds",
+                   "run-water: transparent beginning and end",
+                   "run-water: visible throughout the authored action",
+                   "run-water: padded PNG outer edge is completely transparent",
+                   "run-water: repeated rendering is deterministic",
+                   "run-water: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-water: rendering and export preserve editable source data",
+                   "run-water: foot pivot remains fixed in every cell",
+                   "run-wind: all source frames stay inside their extraction bounds",
+                   "run-wind: transparent beginning and end",
+                   "run-wind: visible throughout the authored action",
+                   "run-wind: padded PNG outer edge is completely transparent",
+                   "run-wind: repeated rendering is deterministic",
+                   "run-wind: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-wind: rendering and export preserve editable source data",
+                   "run-wind: foot pivot remains fixed in every cell",
+                   "run-fire: all source frames stay inside their extraction bounds",
+                   "run-fire: transparent beginning and end",
+                   "run-fire: visible throughout the authored action",
+                   "run-fire: padded PNG outer edge is completely transparent",
+                   "run-fire: repeated rendering is deterministic",
+                   "run-fire: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-fire: rendering and export preserve editable source data",
+                   "run-fire: foot pivot remains fixed in every cell",
+                   "run-lightning: all source frames stay inside their extraction bounds",
+                   "run-lightning: transparent beginning and end",
+                   "run-lightning: visible throughout the authored action",
+                   "run-lightning: padded PNG outer edge is completely transparent",
+                   "run-lightning: repeated rendering is deterministic",
+                   "run-lightning: node composition preserves source pixels within 8-bit alpha rounding",
+                   "run-lightning: rendering and export preserve editable source data",
+                   "run-lightning: foot pivot remains fixed in every cell",
+                   "AI requests preserve all supported movement layer types"
+               ],
+    "metrics":  [
+                    {
+                        "id":  "run-soft",
+                        "frames":  36,
+                        "visible":  34,
+                        "touchesEdge":  0,
+                        "duration":  0.9,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  132,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "dust",
+                                       "dust",
+                                       "dust"
+                                   ]
+                    },
+                    {
+                        "id":  "run-heavy",
+                        "frames":  36,
+                        "visible":  33,
+                        "touchesEdge":  0,
+                        "duration":  0.9,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  148,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "ring",
+                                       "dust",
+                                       "dust",
+                                       "particles"
+                                   ]
+                    },
+                    {
+                        "id":  "run-sand",
+                        "frames":  48,
+                        "visible":  46,
+                        "touchesEdge":  0,
+                        "duration":  1.2,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  132,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "dust",
+                                       "dust",
+                                       "wind"
+                                   ]
+                    },
+                    {
+                        "id":  "run-launch",
+                        "frames":  28,
+                        "visible":  22,
+                        "touchesEdge":  0,
+                        "duration":  0.7,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  132,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "dust",
+                                       "wind",
+                                       "particles"
+                                   ]
+                    },
+                    {
+                        "id":  "run-skid",
+                        "frames":  40,
+                        "visible":  38,
+                        "touchesEdge":  0,
+                        "duration":  1,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  132,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "wind",
+                                       "dust",
+                                       "dust",
+                                       "dust"
+                                   ]
+                    },
+                    {
+                        "id":  "run-snow",
+                        "frames":  36,
+                        "visible":  33,
+                        "touchesEdge":  0,
+                        "duration":  0.9,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  132,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "dust",
+                                       "dust",
+                                       "particles"
+                                   ]
+                    },
+                    {
+                        "id":  "run-water",
+                        "frames":  36,
+                        "visible":  34,
+                        "touchesEdge":  0,
+                        "duration":  0.9,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  132,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "ring",
+                                       "splash",
+                                       "splash",
+                                       "ring"
+                                   ]
+                    },
+                    {
+                        "id":  "run-wind",
+                        "frames":  28,
+                        "visible":  26,
+                        "touchesEdge":  0,
+                        "duration":  0.7,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  166,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "wind",
+                                       "wind"
+                                   ]
+                    },
+                    {
+                        "id":  "run-fire",
+                        "frames":  32,
+                        "visible":  30,
+                        "touchesEdge":  0,
+                        "duration":  0.8,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  154,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "flame",
+                                       "wind",
+                                       "particles"
+                                   ]
+                    },
+                    {
+                        "id":  "run-lightning",
+                        "frames":  28,
+                        "visible":  25,
+                        "touchesEdge":  0,
+                        "duration":  0.7,
+                        "pivot":  {
+                                      "pivotX":  0.68,
+                                      "pivotY":  0.68,
+                                      "displaySize":  164,
+                                      "impactFrame":  5
+                                  },
+                        "layers":  [
+                                       "wind"
+                                   ]
+                    }
+                ]
+}

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
+    "workshop": "vite --host 127.0.0.1 --port 5182 --strictPort --open /effect-workshop.html",
     "check": "tsc --noEmit",
     "build": "npm run check && vite build --base=./",
     "preview": "vite preview --host 127.0.0.1"

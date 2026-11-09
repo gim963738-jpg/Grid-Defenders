@@ -1,0 +1,356 @@
+{
+  "frameCount": 24,
+  "uniqueFrameHashes": 24,
+  "outputEdgeContact": 0,
+  "paddingMin": 16,
+  "pivot": [
+    256,
+    592
+  ],
+  "pivotMethod": "manual boot stance midpoint with source coordinates; translation only; not per-frame bbox scaling",
+  "needsUserMotionApproval": true,
+  "frames": [
+    {
+      "frame": 1,
+      "box": [
+        185,
+        167,
+        364,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 366700,
+      "alphaPartial": 42677,
+      "sha256": "bdbba057077c4214e197a94c8cc947dccb7a71cca736481b2928793c91526404"
+    },
+    {
+      "frame": 2,
+      "box": [
+        97,
+        174,
+        406,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 361324,
+      "alphaPartial": 48055,
+      "sha256": "9771cf43a0f9c62b8a1d68ed037a1e93392d0c4f12b13f3ed187d4d39f1bfa0b"
+    },
+    {
+      "frame": 3,
+      "box": [
+        163,
+        80,
+        395,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 360715,
+      "alphaPartial": 48637,
+      "sha256": "6c71f67c040e6b3b8a7450f66757d9b0f3afc52af74cd362152678507f0dba3b"
+    },
+    {
+      "frame": 4,
+      "box": [
+        158,
+        171,
+        427,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 364262,
+      "alphaPartial": 45145,
+      "sha256": "927b3f8c64d28e6b25c6844865802543c6f823c1be0fe76f5d2acf6874bda241"
+    },
+    {
+      "frame": 5,
+      "box": [
+        149,
+        197,
+        476,
+        593
+      ],
+      "margin": 47,
+      "alphaZero": 362212,
+      "alphaPartial": 47149,
+      "sha256": "b15ad824205fd8cf4582529bc659b4a46dd8822f24e7ab160cf6490750b1b976"
+    },
+    {
+      "frame": 6,
+      "box": [
+        149,
+        204,
+        461,
+        593
+      ],
+      "margin": 47,
+      "alphaZero": 361963,
+      "alphaPartial": 47431,
+      "sha256": "38394523bff80d0b60c3e12f4a0e658ac616b0ff921288fea8b19be59e7820b1"
+    },
+    {
+      "frame": 7,
+      "box": [
+        150,
+        217,
+        450,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 365394,
+      "alphaPartial": 44067,
+      "sha256": "a0c2d37a9d1a5472ea3c958922464df0378278cfd737de34851c0ae5e9211c79"
+    },
+    {
+      "frame": 8,
+      "box": [
+        151,
+        215,
+        445,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 366212,
+      "alphaPartial": 43195,
+      "sha256": "01feb056120970bc1fb5d772ed6d8ed9b9a448b52a4a9d53ea25e54e735da93f"
+    },
+    {
+      "source": "downcut",
+      "nativeSize": [
+        1448,
+        1086
+      ],
+      "nativeAlpha": true,
+      "hygieneRemoved": 223489,
+      "method": "alpha<=4 cleared; alpha5..31 retained only within2px of alpha>=32; all remaining artwork assigned to nearest of8 connected character owners, no largest-part deletion"
+    },
+    {
+      "frame": 9,
+      "box": [
+        143,
+        218,
+        442,
+        592
+      ],
+      "margin": 48,
+      "alphaZero": 364811,
+      "alphaPartial": 44746,
+      "sha256": "3bc48db46f5921508cffccb6cd4d1ac3f87b53abce595120a7aa6d43bd5c7543"
+    },
+    {
+      "frame": 10,
+      "box": [
+        145,
+        230,
+        427,
+        592
+      ],
+      "margin": 48,
+      "alphaZero": 366388,
+      "alphaPartial": 43173,
+      "sha256": "57eebbcb011c0ca8db75d7313bbf59e22122dfc7e30bb7acfffa629853e74153"
+    },
+    {
+      "frame": 11,
+      "box": [
+        146,
+        229,
+        451,
+        592
+      ],
+      "margin": 48,
+      "alphaZero": 366754,
+      "alphaPartial": 42799,
+      "sha256": "a621e16c8ed95f2780ad6d9d9e54c57d1bae1eeb7e686eb8814446eed6be6da5"
+    },
+    {
+      "frame": 12,
+      "box": [
+        145,
+        216,
+        462,
+        593
+      ],
+      "margin": 47,
+      "alphaZero": 366251,
+      "alphaPartial": 43303,
+      "sha256": "717ecf9c481b12ee2f9f4531380be1223808abc6369ab4d1b8115c98d5a73429"
+    },
+    {
+      "frame": 13,
+      "box": [
+        144,
+        218,
+        444,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 365693,
+      "alphaPartial": 43837,
+      "sha256": "154713fa329fb3d4dd2899fe93f961170e4a94a0e558c838705c2bc564645d7f"
+    },
+    {
+      "frame": 14,
+      "box": [
+        145,
+        198,
+        411,
+        593
+      ],
+      "margin": 47,
+      "alphaZero": 367283,
+      "alphaPartial": 42239,
+      "sha256": "ed3d3321fd0e11a46f191eb85e7364e87b2a30f2d1723ab104bf0324857fbbb1"
+    },
+    {
+      "frame": 15,
+      "box": [
+        144,
+        141,
+        385,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 368602,
+      "alphaPartial": 40933,
+      "sha256": "6866f8f9bb2c4008ce30216f6d1f9c0100fa2757515aa0a3b9847a110ac662fa"
+    },
+    {
+      "frame": 16,
+      "box": [
+        149,
+        94,
+        367,
+        593
+      ],
+      "margin": 47,
+      "alphaZero": 368348,
+      "alphaPartial": 41204,
+      "sha256": "0211538286a8f50a88cbf91a1d13762c182451c513438e10ae1ed0461fe222c5"
+    },
+    {
+      "source": "upcut",
+      "nativeSize": [
+        1448,
+        1086
+      ],
+      "nativeAlpha": true,
+      "hygieneRemoved": 234306,
+      "method": "alpha<=4 cleared; alpha5..31 retained only within2px of alpha>=32; all remaining artwork assigned to nearest of8 connected character owners, no largest-part deletion"
+    },
+    {
+      "frame": 17,
+      "box": [
+        150,
+        87,
+        368,
+        593
+      ],
+      "margin": 47,
+      "alphaZero": 365556,
+      "alphaPartial": 43875,
+      "sha256": "ddad78a1e28f2ce4be939319a4d01f5c1a6b9db53fe2fcfa7b7152817dce4252"
+    },
+    {
+      "frame": 18,
+      "box": [
+        137,
+        135,
+        378,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 360085,
+      "alphaPartial": 49329,
+      "sha256": "dcd5bd943a2e4bc2489ea078299617c633f0fdf6d9427664ee55a2f4dabaf389"
+    },
+    {
+      "frame": 19,
+      "box": [
+        131,
+        177,
+        505,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 362391,
+      "alphaPartial": 47007,
+      "sha256": "047b0eaa5b08c315096bc95a5dd463f21c7cb7b508c58d5418f1679fbdb28843"
+    },
+    {
+      "frame": 20,
+      "box": [
+        116,
+        250,
+        546,
+        594
+      ],
+      "margin": 46,
+      "alphaZero": 362163,
+      "alphaPartial": 47220,
+      "sha256": "a4ca7c9950cb95162a9fb2b3f2a8828f88bf8f90eaf333c02a2fb99a0cab1165"
+    },
+    {
+      "frame": 21,
+      "box": [
+        129,
+        223,
+        455,
+        592
+      ],
+      "margin": 48,
+      "alphaZero": 361287,
+      "alphaPartial": 48177,
+      "sha256": "820d0e484bc10f806f77295c298647569a523c4088878314603aae7d866079ff"
+    },
+    {
+      "frame": 22,
+      "box": [
+        132,
+        243,
+        453,
+        611
+      ],
+      "margin": 29,
+      "alphaZero": 360912,
+      "alphaPartial": 48568,
+      "sha256": "a37d4d5775bf57ef731f15fda2d54525b6dd2741b6209f4e95038eb81696d68b"
+    },
+    {
+      "frame": 23,
+      "box": [
+        150,
+        201,
+        401,
+        592
+      ],
+      "margin": 48,
+      "alphaZero": 365299,
+      "alphaPartial": 44150,
+      "sha256": "f1eecc79de02c19b2c99b47ab03dcafd82f4274fda4a00ff1f5fd8d3189f671c"
+    },
+    {
+      "frame": 24,
+      "box": [
+        178,
+        182,
+        369,
+        592
+      ],
+      "margin": 48,
+      "alphaZero": 366145,
+      "alphaPartial": 43272,
+      "sha256": "42cf5f94f2634d296bd42e5f3ca34609f079a8aea34f9282748af06065668f06"
+    },
+    {
+      "source": "diagonal",
+      "nativeSize": [
+        1448,
+        1086
+      ],
+      "nativeAlpha": true,
+      "hygieneRemoved": 164212,
+      "method": "alpha<=4 cleared; alpha5..31 retained only within2px of alpha>=32; all remaining artwork assigned to nearest of8 connected character owners, no largest-part deletion"
+    }
+  ]
+}

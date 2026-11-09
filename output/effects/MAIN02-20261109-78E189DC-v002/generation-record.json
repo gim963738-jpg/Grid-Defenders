@@ -1,0 +1,90 @@
+[
+  {
+    "action": 1,
+    "route": "built-in image_gen",
+    "model": "not exposed in tool response",
+    "calls": 1,
+    "returnedOriginal": "C:\\Users\\user\\.codex\\generated_images\\01a1bf7d-b7e0-71a0-906d-cd676cfc66f7\\exec-c5e7d7fc-bb91-45cf-ab23-9d109ace394e.png",
+    "projectCopy": "source-downcut.png",
+    "sha256": "d66d774488e1d95446df1bd86ea58d1cd431d3f743955ff0b3dadc5daf03a2cb",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "prompt": "prompt-downcut.txt",
+    "references": [
+      "right-master.png"
+    ],
+    "referenceRoles": [
+      "identity"
+    ],
+    "apiSwitches": 0,
+    "videoCalls": 0,
+    "usageBilling": "not exposed; no estimate claimed"
+  },
+  {
+    "action": 2,
+    "route": "built-in image_gen",
+    "model": "not exposed in tool response",
+    "calls": 1,
+    "returnedOriginal": "C:\\Users\\user\\.codex\\generated_images\\01a1bf7d-b7e0-71a0-906d-cd676cfc66f7\\exec-8e7fad25-8135-4c59-82d4-827820707282.png",
+    "projectCopy": "source-upcut.png",
+    "sha256": "5326da828d16e2414feb0f853f69da218039710b07af15438cfb1bca7d5160ed",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "prompt": "prompt-upcut.txt",
+    "references": [
+      "right-master.png",
+      "downcut-end-reference.png"
+    ],
+    "referenceRoles": [
+      "identity",
+      "previous action end pose"
+    ],
+    "apiSwitches": 0,
+    "videoCalls": 0,
+    "usageBilling": "not exposed; no estimate claimed"
+  },
+  {
+    "action": 3,
+    "route": "built-in image_gen",
+    "model": "not exposed in tool response",
+    "calls": 1,
+    "returnedOriginal": "C:\\Users\\user\\.codex\\generated_images\\01a1bf7d-b7e0-71a0-906d-cd676cfc66f7\\exec-1610a197-02ce-4c12-88a5-af5f61933a55.png",
+    "projectCopy": "source-diagonal.png",
+    "sha256": "219e2ba89e0112bcaa4ab46298e559dfb92337eb25e63d3d98d8cd14bf86d617",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "prompt": "prompt-diagonal.txt",
+    "references": [
+      "right-master.png",
+      "upcut-end-reference.png"
+    ],
+    "referenceRoles": [
+      "identity",
+      "previous action end pose"
+    ],
+    "apiSwitches": 0,
+    "videoCalls": 0,
+    "usageBilling": "not exposed; no estimate claimed"
+  }
+]

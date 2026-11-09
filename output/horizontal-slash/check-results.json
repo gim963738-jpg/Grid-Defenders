@@ -1,0 +1,11 @@
+﻿{
+  "id": "73804d6e-d655-46d7-818a-32b5714a52f4",
+  "ok": true,
+  "result": {
+    "result": "{\"fade\":13,\"common\":98,\"checks\":[\"the effect contains only the scar and its core, with no growing paths or moving dots\",\"the entire mark appears together before spatial fading begins\",\"fading advances from the start toward the far end\",\"the spatial fade eventually removes the full line\",\"the spatial fade axis, timing and soft edge survive editable JSON import\",\"early frames show the complete scar strongly across its length\",\"actual exported pixels erase the starting side while preserving the far side\",\"all52 frames preserve transparent endpoints and safe source margins\",\"the erased starting side does not reappear later\",\"the per-stroke fade never erases unrelated artwork already on the canvas\",\"reversing the mark also reverses its fade direction\",\"the same spatial fade is preserved through node output\",\"a zero-length fade axis is rejected before canvas rendering\"]}",
+    "origin": "http://localhost:5182/effect-workshop.html"
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

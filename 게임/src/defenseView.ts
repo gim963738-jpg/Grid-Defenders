@@ -62,6 +62,8 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const numberPool:Text[]=[];
   const enemyLabels:Text[]=[];
   return {
+    // Authoring previews may attach visuals here, above actors and below labels.
+    effectLayer:assassinLayer,
     draw(selectedId:number|null,pending:boolean,movement?:{id:number;slot:number}) {
       actors.clear();selected.clear();effects.clear();assassinTrails.clear();
       skillBars.clear();skillLabels.forEach(t=>t.visible=false);

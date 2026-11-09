@@ -1,0 +1,330 @@
+{
+    "format":  "gd.effect@1",
+    "name":  "수평 일섬",
+    "settings":  {
+                     "size":  256,
+                     "frames":  32,
+                     "fps":  40,
+                     "pixelSize":  1,
+                     "loop":  false
+                 },
+    "palette":  [
+                    "#2C6EB5",
+                    "#9AE7FF",
+                    "#F3FCFF"
+                ],
+    "placement":  {
+                      "pivotX":  0.5,
+                      "pivotY":  0.5,
+                      "displaySize":  220,
+                      "impactFrame":  6
+                  },
+    "layers":  [
+                   {
+                       "id":  "horizontal-optional-flash",
+                       "name":  "보조 섬광",
+                       "type":  "burst",
+                       "blend":  "add",
+                       "enabled":  false,
+                       "color":  2,
+                       "x":  0.5,
+                       "y":  0.5,
+                       "start":  0.08,
+                       "end":  0.25,
+                       "radius":  0.04,
+                       "thickness":  0.008,
+                       "rotation":  0,
+                       "spread":  360,
+                       "amount":  4,
+                       "speed":  1,
+                       "opacity":  0.6,
+                       "seed":  162
+                   }
+               ],
+    "drawing":  {
+                    "version":  1,
+                    "enabled":  true,
+                    "showBase":  false,
+                    "prompt":  "왼쪽에서 오른쪽으로 가로 일직선을 빠르게 베고 지나갑니다. 양 끝이 뾰족한 은백색 검광이 길게 번쩍이고, 지나간 자리의 얇은 푸른 검상과 작은 불티만 잠시 남아 사라집니다.",
+                    "strokes":  [
+                                    {
+                                        "id":  "horizontal-pass",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.1,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.9,
+                                                           0.5
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  0.105,
+                                        "delay":  0.015,
+                                        "linger":  0.055,
+                                        "color":  "#9AE7FF",
+                                        "width":  0.01,
+                                        "style":  "orb",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "왼쪽에서 오른쪽으로 빠르게 통과하는 칼끝",
+                                        "purpose":  "path",
+                                        "meaning":  "왼쪽에서 오른쪽으로 빠르게 통과하는 칼끝",
+                                        "guideColor":  "#f4ce55",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.1,
+                                                            0.5
+                                                        ],
+                                                        [
+                                                            0.9,
+                                                            0.5
+                                                        ]
+                                                    ]
+                                    },
+                                    {
+                                        "id":  "horizontal-flare",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.09,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.28,
+                                                           0.487
+                                                       ],
+                                                       [
+                                                           0.75,
+                                                           0.491
+                                                       ],
+                                                       [
+                                                           0.91,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.75,
+                                                           0.509
+                                                       ],
+                                                       [
+                                                           0.28,
+                                                           0.513
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  0.1,
+                                        "delay":  0.065,
+                                        "linger":  0.13,
+                                        "color":  "#9AE7FF",
+                                        "width":  0.007,
+                                        "style":  "field",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "양 끝이 뾰족한 긴 검광의 외곽",
+                                        "purpose":  "appearance",
+                                        "meaning":  "양 끝이 뾰족한 긴 검광의 외곽",
+                                        "guideColor":  "#70baff",
+                                        "tool":  "pen"
+                                    },
+                                    {
+                                        "id":  "horizontal-core",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.1,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.26,
+                                                           0.497
+                                                       ],
+                                                       [
+                                                           0.77,
+                                                           0.498
+                                                       ],
+                                                       [
+                                                           0.9,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.77,
+                                                           0.502
+                                                       ],
+                                                       [
+                                                           0.26,
+                                                           0.503
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  0.1,
+                                        "delay":  0.075,
+                                        "linger":  0.16,
+                                        "color":  "#F3FCFF",
+                                        "width":  0.005,
+                                        "style":  "field",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "가운데가 날카롭게 빛나는 은백색 절단선",
+                                        "purpose":  "appearance",
+                                        "meaning":  "가운데가 날카롭게 빛나는 은백색 절단선",
+                                        "guideColor":  "#70baff",
+                                        "tool":  "pen"
+                                    },
+                                    {
+                                        "id":  "horizontal-scar",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.12,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.88,
+                                                           0.5
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  0.16,
+                                        "delay":  0.105,
+                                        "linger":  0.4,
+                                        "color":  "#2C6EB5",
+                                        "width":  0.006,
+                                        "style":  "trail",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "베고 지나간 자리에 남는 가느다란 검상",
+                                        "purpose":  "appearance",
+                                        "meaning":  "베고 지나간 자리에 남는 가느다란 검상",
+                                        "guideColor":  "#70baff",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.12,
+                                                            0.5
+                                                        ],
+                                                        [
+                                                            0.88,
+                                                            0.5
+                                                        ]
+                                                    ]
+                                    },
+                                    {
+                                        "id":  "horizontal-spark-up",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.79,
+                                                           0.498
+                                                       ],
+                                                       [
+                                                           0.87,
+                                                           0.455
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  0.18,
+                                        "delay":  0.12,
+                                        "linger":  0.02,
+                                        "color":  "#9AE7FF",
+                                        "width":  0.005,
+                                        "style":  "orb",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "오른쪽 위로 흩어지는 작은 검광 조각",
+                                        "purpose":  "path",
+                                        "meaning":  "오른쪽 위로 흩어지는 작은 검광 조각",
+                                        "guideColor":  "#f4ce55",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.79,
+                                                            0.498
+                                                        ],
+                                                        [
+                                                            0.87,
+                                                            0.455
+                                                        ]
+                                                    ]
+                                    },
+                                    {
+                                        "id":  "horizontal-spark-down",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.71,
+                                                           0.502
+                                                       ],
+                                                       [
+                                                           0.79,
+                                                           0.54
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  0.2,
+                                        "delay":  0.13,
+                                        "linger":  0.025,
+                                        "color":  "#9AE7FF",
+                                        "width":  0.005,
+                                        "style":  "orb",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "오른쪽 아래로 떨어지는 작은 검광 조각",
+                                        "purpose":  "path",
+                                        "meaning":  "오른쪽 아래로 떨어지는 작은 검광 조각",
+                                        "guideColor":  "#f4ce55",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.71,
+                                                            0.502
+                                                        ],
+                                                        [
+                                                            0.79,
+                                                            0.54
+                                                        ]
+                                                    ]
+                                    },
+                                    {
+                                        "id":  "horizontal-spark-mid",
+                                        "role":  "effect",
+                                        "points":  [
+                                                       [
+                                                           0.48,
+                                                           0.499
+                                                       ],
+                                                       [
+                                                           0.55,
+                                                           0.48
+                                                       ]
+                                                   ],
+                                        "step":  1,
+                                        "duration":  0.16,
+                                        "delay":  0.09,
+                                        "linger":  0.02,
+                                        "color":  "#F3FCFF",
+                                        "width":  0.005,
+                                        "style":  "trail",
+                                        "followActor":  false,
+                                        "fold":  false,
+                                        "note":  "검상 옆의 짧은 잔광",
+                                        "purpose":  "path",
+                                        "meaning":  "검상 옆의 짧은 잔광",
+                                        "guideColor":  "#f4ce55",
+                                        "tool":  "line",
+                                        "anchors":  [
+                                                        [
+                                                            0.48,
+                                                            0.499
+                                                        ],
+                                                        [
+                                                            0.55,
+                                                            0.48
+                                                        ]
+                                                    ]
+                                    }
+                                ]
+                }
+}

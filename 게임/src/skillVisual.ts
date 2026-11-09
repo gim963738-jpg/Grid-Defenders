@@ -37,16 +37,21 @@ export function matteSkillFrame(pixels:ImageData,actor?:SkillFrameSpec['actor'])
  }
 }
 
-/** One cached transparent texture, safe gutter and a stable pivot for Canvas and DOM renderers. */
-export function createSkillFrame(image:CanvasImageSource,spec:SkillFrameSpec):SkillFrameArt {
- const core=document.createElement('canvas');core.width=spec.width;core.height=spec.height;
- const ctx=core.getContext('2d')!;ctx.drawImage(image,spec.x,spec.y,spec.width,spec.height,0,0,spec.width,spec.height);
- if(spec.background==='dark'){const pixels=ctx.getImageData(0,0,core.width,core.height);matteSkillFrame(pixels,spec.actor);ctx.putImageData(pixels,0,0);}
+/** Shared transparent gutter and bloom, also used by lightweight canvas previews. */
+export function padSkillFrameCanvas(core:HTMLCanvasElement):HTMLCanvasElement {
  const padding=SKILL_FRAME_PADDING,canvas=document.createElement('canvas');canvas.width=core.width+padding*2;canvas.height=core.height+padding*2;
  const output=canvas.getContext('2d')!;
  // A low-opacity bloom continues into the gutter, so the source-cell border never becomes a visible rectangle.
  output.filter='blur(4px)';output.globalAlpha=.24;output.drawImage(core,padding,padding);
  output.filter='none';output.globalAlpha=1;output.drawImage(core,padding,padding);
+ return canvas;
+}
+/** One cached transparent texture, safe gutter and a stable pivot for Canvas and DOM renderers. */
+export function createSkillFrame(image:CanvasImageSource,spec:SkillFrameSpec):SkillFrameArt {
+ const core=document.createElement('canvas');core.width=spec.width;core.height=spec.height;
+ const ctx=core.getContext('2d')!;ctx.drawImage(image,spec.x,spec.y,spec.width,spec.height,0,0,spec.width,spec.height);
+ if(spec.background==='dark'){const pixels=ctx.getImageData(0,0,core.width,core.height);matteSkillFrame(pixels,spec.actor);ctx.putImageData(pixels,0,0);}
+ const padding=SKILL_FRAME_PADDING,canvas=padSkillFrameCanvas(core);
  const texture=Texture.from(canvas);smoothTexture(texture);
  return {url:canvas.toDataURL(),texture,contentWidth:core.width,contentHeight:core.height,padding,
   anchorX:(padding+spec.pivot.x)/canvas.width,anchorY:(padding+spec.pivot.y)/canvas.height};

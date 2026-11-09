@@ -1,0 +1,73 @@
+﻿{
+    "format":  "gd.effect-qa@1",
+    "name":  "수평 일섬",
+    "request":  "잔상을 유지하며 기존보다2배 빠르게 소멸",
+    "checks":  {
+                   "fade":  13,
+                   "common":  98
+               },
+    "passed":  111,
+    "frames":  {
+                   "frames":  39,
+                   "duration":  0.65,
+                   "visible":  35,
+                   "edges":  0,
+                   "firstTransparent":  true,
+                   "lastTransparent":  true
+               },
+    "speedRatio":  2,
+    "application":  {
+                        "name":  "수평 일섬",
+                        "countBefore":  13,
+                        "countAfter":  13,
+                        "sameId":  true,
+                        "otherWorksPreserved":  true,
+                        "artworkPreserved":  true,
+                        "oldDuration":  1.3,
+                        "duration":  0.65,
+                        "frames":  39,
+                        "fps":  60,
+                        "status":  "자동 저장됨",
+                        "playing":  true
+                    },
+    "playbackAndMobile":  {
+                              "mobile":  {
+                                             "width":  320,
+                                             "scroll":  320,
+                                             "dpr":  3,
+                                             "canvasWidth":  780,
+                                             "canvasHeight":  860
+                                         },
+                              "playback":  [
+                                               {
+                                                   "speed":  "0.25",
+                                                   "actual":  11,
+                                                   "expected":  11,
+                                                   "advances":  true,
+                                                   "paused":  true
+                                               },
+                                               {
+                                                   "speed":  "1",
+                                                   "actual":  38,
+                                                   "expected":  38,
+                                                   "advances":  true,
+                                                   "paused":  true
+                                               },
+                                               {
+                                                   "speed":  "5",
+                                                   "actual":  38,
+                                                   "expected":  38,
+                                                   "advances":  true,
+                                                   "paused":  true
+                                               }
+                                           ]
+                          },
+    "visuals":  [
+                    "bright green/gray all39 frames",
+                    "battle top frame5",
+                    "battle center frame20"
+                ],
+    "combat":  "visual-only; no damage or actual skill assignment",
+    "build":  "tsc and Vite passed",
+    "limitation":  "No physical device test; user appearance feedback pending"
+}

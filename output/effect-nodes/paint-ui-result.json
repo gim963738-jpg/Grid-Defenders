@@ -1,0 +1,11 @@
+﻿{
+  "id": "a1b7d074-be86-4b02-bf30-37c2f998ee93",
+  "ok": true,
+  "result": {
+    "result": "{\"passed\":23,\"checks\":[\"straight tool creates an exact two-endpoint line despite a noisy drag\",\"drawing alone leaves the new line unassigned\",\"preview refuses to invent an effect for unassigned sketches\",\"a blue line can explicitly mean direction instead of an effect\",\"curve tool waits for a bend before saving a line\",\"the second curve gesture saves a real editable quadratic curve\",\"finished appearance can be bound to a separate direction in the same stage\",\"select mode edits the curve bend while keeping its curve geometry\",\"drawing-toolbar back restores the previous bend\",\"drawing-toolbar redo restores the revised bend\",\"back cancels an unfinished curve without undoing a saved line\",\"free-form meanings have a separately selected preview behavior\",\"custom meaning markup remains inert text inside the editor\",\"deleting a direction safely detaches dependent appearances\",\"undo restores the direction and its shape binding together\",\"reset clears the current drawing and description and returns to unassigned freehand drawing\",\"reset preserves all other library works\",\"back restores the complete drawing, meanings and description after reset\",\"redo can reapply a reversible reset\",\"AI request includes custom semantics, curves and direction bindings\",\"in-app help explains the new tools and reversible reset\",\"new example demonstrates a separately drawn direction and finished appearance\",\"only explicitly configured lines enter the animation preview\"]}",
+    "origin": "http://localhost:5182/effect-workshop.html#nodes"
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

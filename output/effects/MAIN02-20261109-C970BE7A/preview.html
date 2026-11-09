@@ -1,0 +1,560 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>청백 사선 · 6연격</title><link rel="stylesheet" href="mobile-ui.css"><style>
+*{box-sizing:border-box}body{margin:0;background:#0b1420;color:#e7f5ff;font:14px system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:20px 12px}h1{font-size:22px;margin:0 0 8px}p{color:#acc2d5;margin:8px 0 16px;line-height:1.6}canvas{display:block;width:100%;height:auto;border:1px solid #355067;border-radius:8px}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}button,select,label{min-height:48px;min-width:48px;padding:10px 12px;background:#20374b;border:1px solid #48677f;border-radius:6px;color:white;font:14px system-ui}label{display:flex;align-items:center;gap:8px}input[type=checkbox]{width:22px;height:22px}input[type=range]{width:100%;height:48px}#status{font-variant-numeric:tabular-nums;font-size:14px}a{color:#9fe1ff}.files{display:flex;gap:16px;flex-wrap:wrap}.hint{font-size:12px}
+</style><main><h1>청백 사선 · 6연격</h1><p>가늘게 가르고, 푸른 바람만 짧게 남는 여섯 번의 검격.</p><canvas width="992" height="572" aria-label="6연격 재생 화면"></canvas><div class="controls"><button id="play">일시정지</button><button id="restart">처음부터</button><label><input id="loop" type="checkbox" checked>반복</label><select id="speed" aria-label="재생 속도"><option value=".25">0.25×</option><option value=".5">0.5×</option><option value="1" selected>1× · 제안 초기값</option><option value="2">2×</option></select><select id="bg" aria-label="배경"><option value="battle">전장 배경 합성</option><option value="grey">밝은 회색</option><option value="green">밝은 초록</option><option value="dark">어두운 배경</option></select></div><input id="scrub" aria-label="시간 탐색" type="range" min="0" max="2.5" step=".0166666667" value="0"><div class="controls"><button id="prev">이전 프레임</button><button id="next">다음 프레임</button><span id="status"></span></div><p class="hint">속도와 최종 외관은 사용자 결정입니다. 전장 이미지를 사용한 독립 합성이며 실제 게임 스킬 적용이나 피해 판정은 포함하지 않습니다.</p><div class="files"><a href="six-slash-battle.mp4">전장 MP4</a><a href="six-slash-grey.mp4">밝은 MP4</a><a href="six-slash-dark.mp4">어두운 MP4</a><a href="six-slash-battle.gif">반복 GIF</a><a href="contact-grey.jpg">전체 프레임</a></div></main><script>const DRAW_PURPOSES = {
+	unassigned: "미지정 · 나중에 부여",
+	direction: "방향·이동 경로",
+	appearance: "완성됐을 때의 모습",
+	path: "선을 따라 발생하는 연출",
+	reference: "참고·위치 표시",
+	custom: "직접 의미 정의"
+};
+const DRAW_BEHAVIORS = {
+	reference: "참고 자료로만 보관",
+	direction: "이동 방향으로 적용",
+	appearance: "그린 모양 그대로 표시",
+	path: "선을 따라 순차 재생"
+};
+const DRAW_TOOLS = {
+	pen: "자유선",
+	line: "직선",
+	curve: "곡선"
+};
+const DRAW_ROLES = {
+	move: {
+		name: "돌진·이동",
+		color: "#f4ce55"
+	},
+	slash: {
+		name: "검로",
+		color: "#ff777b"
+	},
+	effect: {
+		name: "이펙트",
+		color: "#70baff"
+	}
+};
+const DRAW_STYLES = {
+	trail: "빛나는 선",
+	orb: "빛 이동",
+	burst: "끝점 폭발",
+	field: "장판·외곽 연결"
+};
+const emptyDrawing = () => ({
+	version: 1,
+	enabled: true,
+	showBase: false,
+	prompt: "",
+	strokes: []
+});
+const newStroke = (role, points, step, color = "#9be8b3") => ({
+	id: crypto.randomUUID(),
+	role,
+	points,
+	step,
+	duration: .6,
+	delay: 0,
+	linger: .2,
+	color,
+	width: role === "slash" ? .025 : .015,
+	style: "trail",
+	followActor: false,
+	fold: false,
+	note: ""
+});
+const strokePurpose = (stroke) => stroke.purpose ?? (stroke.role === "move" ? "direction" : "path");
+function strokeBehavior(stroke) {
+	const purpose = strokePurpose(stroke);
+	if (purpose === "custom") return stroke.behavior ?? "reference";
+	return purpose === "unassigned" || purpose === "reference" ? "reference" : purpose;
+}
+/** Legacy move paths retain actor motion; authored VFX directions default to independent effects. */
+const directionTarget = (stroke) => stroke.directionTarget ?? (stroke.role === "move" ? "actor" : "effect");
+const actorDirection = (stroke) => strokeBehavior(stroke) === "direction" && directionTarget(stroke) === "actor";
+const strokeLabel = (stroke) => stroke.meaning?.trim() || DRAW_PURPOSES[strokePurpose(stroke)];
+const guideColor = (stroke) => stroke.guideColor ?? DRAW_ROLES[stroke.role].color;
+/** Spatial opacity along the axis; the soft front advances from the start toward the end. */
+function strokeFadeOpacity(fade, life, position) {
+	if (life <= fade.start) return 1;
+	if (life >= fade.end) return 0;
+	const progress = (life - fade.start) / (fade.end - fade.start), front = progress * (1 + fade.softness) - fade.softness;
+	const t = Math.max(0, Math.min(1, (position - front) / fade.softness));
+	return t * t * (3 - 2 * t);
+}
+function geometryPoints(tool, anchors) {
+	if (tool !== "curve") return anchors.map((p) => [...p]);
+	const [a, c, b] = anchors;
+	return Array.from({ length: 33 }, (_, i) => {
+		const t = i / 32, u = 1 - t;
+		return [u * u * a[0] + 2 * u * t * c[0] + t * t * b[0], u * u * a[1] + 2 * u * t * c[1] + t * t * b[1]];
+	});
+}
+function reverseStroke(stroke) {
+	if (stroke.fadeAlong) [stroke.fadeAlong.from, stroke.fadeAlong.to] = [stroke.fadeAlong.to, stroke.fadeAlong.from];
+	if (stroke.tool === "curve" && stroke.anchors) {
+		stroke.anchors = [
+			stroke.anchors[2],
+			stroke.anchors[1],
+			stroke.anchors[0]
+		];
+		stroke.points = geometryPoints("curve", stroke.anchors);
+	} else {
+		stroke.points.reverse();
+		if (stroke.anchors) stroke.anchors.reverse();
+	}
+}
+function drawingSchedule(plan) {
+	const result = [];
+	let clock = 0;
+	const active = plan.strokes.filter((s) => strokeBehavior(s) !== "reference");
+	for (const step of [...new Set(active.map((s) => s.step))].sort((a, b) => a - b)) {
+		const group = active.filter((s) => s.step === step);
+		group.forEach((stroke) => result.push({
+			stroke,
+			start: clock + stroke.delay,
+			end: clock + stroke.delay + stroke.duration,
+			finish: clock + stroke.delay + stroke.duration + stroke.linger
+		}));
+		clock += Math.max(...group.map((s) => s.delay + s.duration));
+	}
+	return result;
+}
+const drawingDuration = (plan) => Math.max(.1, ...drawingSchedule(plan).map((s) => s.finish));
+const drawingTime = (recipe, index) => index / Math.max(1, recipe.settings.frames - 1) * (recipe.settings.frames / recipe.settings.fps);
+/** Arc-length interpolation makes a hand-drawn path independent of pointer sampling density. */
+function samplePath(points, progress) {
+	if (!points.length) return [.5, .5];
+	if (progress <= 0) return [...points[0]];
+	if (progress >= 1) return [...points[points.length - 1]];
+	const lengths = points.slice(1).map((p, i) => Math.hypot(p[0] - points[i][0], p[1] - points[i][1]));
+	const length = lengths.reduce((sum, n) => sum + n, 0);
+	if (length < 1e-8) return [...points[0]];
+	let distance = length * progress;
+	for (let i = 0; i < lengths.length; i++) {
+		if (distance <= lengths[i] && lengths[i] > 0) {
+			const p = distance / lengths[i];
+			return [points[i][0] + (points[i + 1][0] - points[i][0]) * p, points[i][1] + (points[i + 1][1] - points[i][1]) * p];
+		}
+		distance -= lengths[i];
+	}
+	return [...points[points.length - 1]];
+}
+function drawingActor(plan, time) {
+	if (!plan?.enabled) return null;
+	const moves = drawingSchedule(plan).filter((s) => actorDirection(s.stroke));
+	if (!moves.length) return null;
+	let position = samplePath(moves[0].stroke.points, 0);
+	for (const entry of moves) {
+		if (time < entry.start) break;
+		position = samplePath(entry.stroke.points, Math.min(1, (time - entry.start) / entry.stroke.duration));
+	}
+	return position;
+}
+function fitDrawingTiming(recipe) {
+	if (!recipe.drawing?.strokes.some((s) => strokeBehavior(s) !== "reference") || !recipe.drawing.enabled) return;
+	const duration = Math.round(drawingDuration(recipe.drawing) * 1e4) / 1e4;
+	recipe.settings.frames = Math.max(2, Math.min(64, Math.ceil(duration * 30 - 1e-6)));
+	recipe.settings.fps = Math.floor(recipe.settings.frames / duration * 1e6) / 1e6;
+	recipe.placement.impactFrame = Math.min(recipe.placement.impactFrame, recipe.settings.frames);
+}
+const obj = (v) => {
+	if (!v || typeof v !== "object" || Array.isArray(v)) throw Error("그리기 데이터 형식이 올바르지 않습니다.");
+	return v;
+};
+const num = (v, lo, hi, label, integer = false) => {
+	if (typeof v !== "number" || !Number.isFinite(v) || v < lo || v > hi || integer && !Number.isInteger(v)) throw Error(`${label}: ${lo}~${hi} 범위를 확인해 주세요.`);
+	return v;
+};
+const bool = (v) => {
+	if (typeof v !== "boolean") throw Error("그리기 옵션은 true 또는 false여야 합니다.");
+	return v;
+};
+const text = (v, max) => {
+	if (typeof v !== "string" || v.length > max) throw Error(`그리기 설명은 ${max}자 이하로 적어 주세요.`);
+	return v;
+};
+function validateDrawing(raw) {
+	const r = obj(raw);
+	if (r.version !== 1 || !Array.isArray(r.strokes) || r.strokes.length > 24) throw Error("그리기는 version 1, 선 24개까지 지원합니다.");
+	const ids = new Set(), moveSteps = new Set();
+	const strokes = r.strokes.map((raw) => {
+		const s = obj(raw), id = text(s.id, 80);
+		if (!/^[a-z\d_-]+$/i.test(id) || ids.has(id)) throw Error("그린 선 ID는 중복 없는 영문·숫자·밑줄·하이픈이어야 합니다.");
+		ids.add(id);
+		if (!Object.hasOwn(DRAW_ROLES, s.role) || !Object.hasOwn(DRAW_STYLES, s.style)) throw Error("그린 선의 역할 또는 표현을 확인해 주세요.");
+		if (!Array.isArray(s.points) || s.points.length < 2 || s.points.length > 256) throw Error("선마다 좌표가 2~256개 필요합니다.");
+		const points = s.points.map((p) => {
+			if (!Array.isArray(p) || p.length !== 2) throw Error("선 좌표는 [x,y]입니다.");
+			return [num(p[0], 0, 1, "선 X"), num(p[1], 0, 1, "선 Y")];
+		});
+		const step = num(s.step, 1, 24, "단계", true), role = s.role;
+		const color = text(s.color, 7);
+		if (!/^#[\da-f]{6}$/i.test(color)) throw Error("실제 효과색은 #RRGGBB 형식입니다.");
+		const result = {
+			id,
+			role,
+			points,
+			step,
+			duration: num(s.duration, .1, 5, "선 재생 시간"),
+			delay: num(s.delay, 0, 5, "선 시작 지연"),
+			linger: num(s.linger, 0, 5, "잔상 시간"),
+			color,
+			width: num(s.width, .005, .06, "선 두께"),
+			style: s.style,
+			followActor: bool(s.followActor),
+			fold: bool(s.fold),
+			note: text(s.note, 600)
+		};
+		if (s.purpose !== undefined) {
+			if (!Object.hasOwn(DRAW_PURPOSES, s.purpose)) throw Error("선의 의미를 확인해 주세요.");
+			result.purpose = s.purpose;
+		}
+		if (s.meaning !== undefined) result.meaning = text(s.meaning, 160);
+		if (s.behavior !== undefined) {
+			if (!Object.hasOwn(DRAW_BEHAVIORS, s.behavior)) throw Error("미리보기 적용 방법을 확인해 주세요.");
+			result.behavior = s.behavior;
+		}
+		if (s.guideColor !== undefined) {
+			const c = text(s.guideColor, 7);
+			if (!/^#[\da-f]{6}$/i.test(c)) throw Error("편집용 선 색을 확인해 주세요.");
+			result.guideColor = c;
+		}
+		if (s.directionTarget !== undefined) {
+			if (s.directionTarget !== "actor" && s.directionTarget !== "effect") throw Error("방향선의 이동 대상을 확인해 주세요.");
+			result.directionTarget = s.directionTarget;
+		} else if (s.purpose !== undefined && strokeBehavior(result) === "direction") result.directionTarget = directionTarget(result);
+		if (s.directionId !== undefined) {
+			const link = text(s.directionId, 80);
+			if (!/^[a-z\d_-]+$/i.test(link)) throw Error("연결할 방향선 ID를 확인해 주세요.");
+			result.directionId = link;
+		}
+		if (s.fadeAlong !== undefined) {
+			const f = obj(s.fadeAlong), point = (v) => {
+				if (!Array.isArray(v) || v.length !== 2) throw Error("소멸 방향 좌표는 [x,y]입니다.");
+				return [num(v[0], 0, 1, "소멸 X"), num(v[1], 0, 1, "소멸 Y")];
+			};
+			const from = point(f.from), to = point(f.to), start = num(f.start, 0, .99, "소멸 시작"), end = num(f.end, .01, 1, "소멸 종료");
+			if (start >= end || Math.hypot(to[0] - from[0], to[1] - from[1]) < 1e-5) throw Error("소멸 방향의 두 점과 시작·종료 시간을 구분해 주세요.");
+			result.fadeAlong = {
+				from,
+				to,
+				start,
+				end,
+				softness: num(f.softness, .02, .5, "소멸 경계 부드러움")
+			};
+		}
+		if (s.tool !== undefined) {
+			if (!Object.hasOwn(DRAW_TOOLS, s.tool)) throw Error("그리기 도구를 확인해 주세요.");
+			result.tool = s.tool;
+			if (result.tool !== "pen") {
+				const count = result.tool === "curve" ? 3 : 2;
+				if (!Array.isArray(s.anchors) || s.anchors.length !== count) throw Error(`이 도구는 기준점 ${count}개가 필요합니다.`);
+				result.anchors = s.anchors.map((p) => {
+					if (!Array.isArray(p) || p.length !== 2) throw Error("기준점은 [x,y]입니다.");
+					return [num(p[0], 0, 1, "기준점 X"), num(p[1], 0, 1, "기준점 Y")];
+				});
+				const expected = geometryPoints(result.tool, result.anchors);
+				if (points.length !== expected.length || points.some((p, i) => Math.hypot(p[0] - expected[i][0], p[1] - expected[i][1]) > 1e-5)) throw Error("직선·곡선의 기준점과 경로 좌표가 일치하지 않습니다.");
+			}
+		}
+		if (strokeBehavior(result) === "appearance" && !["trail", "field"].includes(result.style)) throw Error("완성 모습은 그린 윤곽 또는 채운 모양으로 표시해 주세요.");
+		if (actorDirection(result)) {
+			if (moveSteps.has(step)) throw Error("한 캐릭터의 동시 이동 방향은 하나입니다. 빛을 여러 갈래로 분열하려면 방향선 대상을 ‘연결할 모양·이펙트의 이동’으로 지정해 주세요.");
+			moveSteps.add(step);
+		}
+		return result;
+	});
+	for (const stroke of strokes) if (stroke.directionId) {
+		const target = strokes.find((s) => s.id === stroke.directionId);
+		if (!target || target.id === stroke.id || strokeBehavior(target) !== "direction") throw Error("연결할 방향선이 없거나 방향 용도가 아닙니다.");
+		if (!["appearance", "path"].includes(strokeBehavior(stroke)) || stroke.followActor) throw Error("방향선 연결은 모양·연출 경로에만 적용하며 돌진 따라가기와 중복할 수 없습니다.");
+	}
+	const plan = {
+		version: 1,
+		enabled: bool(r.enabled),
+		showBase: bool(r.showBase),
+		prompt: text(r.prompt, 3e3),
+		strokes
+	};
+	if (drawingDuration(plan) > 60) throw Error("그림 전체 길이는 잔상을 포함해 60초 이하로 맞춰 주세요.");
+	return plan;
+}
+/** Explicit local keyword support; not an AI endpoint. Manual fields remain authoritative. */
+function applyDrawingDescription(plan) {
+	const result = structuredClone(plan);
+	let changed = 0;
+	for (const stroke of result.strokes) {
+		if (!["appearance", "path"].includes(strokeBehavior(stroke))) continue;
+		const description = `${result.prompt} ${stroke.note}`.replace(/(?:노란|노랑|빨간|빨강|파란|파랑)\s*선/g, "");
+		const old = JSON.stringify(stroke);
+		const colors = [
+			[/녹색|초록|green/i, "#65ed9a"],
+			[/노란|노랑|yellow/i, "#ffe082"],
+			[/빨간|빨강|적색|red/i, "#ff7979"],
+			[/파란|파랑|청색|blue/i, "#7fcfff"],
+			[/보라|purple/i, "#c09bff"],
+			[/하얀|흰색|white/i, "#f0fff6"]
+		];
+		for (const [pattern, color] of colors) if (pattern.test(description)) stroke.color = color;
+		if (stroke.role === "effect" && strokeBehavior(stroke) !== "appearance") {
+			const styleText = /장판|외곽|다각형|폭발|폭팔|빛\s*이동|구슬|빛덩이|연결|번개|빛나는\s*선/.test(stroke.note) ? stroke.note : result.prompt;
+			if (/장판|외곽|다각형/.test(styleText)) stroke.style = "field";
+			else if (/폭발|폭팔/.test(styleText)) stroke.style = "burst";
+			else if (/빛\s*이동|구슬|빛덩이/.test(styleText)) stroke.style = "orb";
+			else if (/연결|번개|빛나는\s*선/.test(styleText)) stroke.style = "trail";
+		}
+		if (/접히|접힘|접어|꼬이|꼬임/.test(description)) stroke.fold = true;
+		if (/잔상|유지/.test(description)) stroke.linger = Math.max(stroke.linger, .6);
+		if (JSON.stringify(stroke) !== old) changed++;
+	}
+	return {
+		plan: result,
+		changed
+	};
+}
+function drawingExample() {
+	const move = newStroke("move", [
+		[.22, .62],
+		[.38, .57],
+		[.58, .48],
+		[.72, .4]
+	], 1);
+	move.duration = .85;
+	move.note = "노란선을 따라 돌진";
+	const slash = newStroke("slash", [
+		[.3, .32],
+		[.42, .28],
+		[.57, .32],
+		[.7, .46],
+		[.69, .62]
+	], 1, "#b5f8d0");
+	slash.duration = .85;
+	slash.note = "돌진과 동시에 녹색 검격";
+	const burst = newStroke("effect", [[.63, .43], [.71, .46]], 2, "#65ed9a");
+	burst.style = "burst";
+	burst.duration = .6;
+	burst.linger = .2;
+	burst.width = .025;
+	burst.note = "파란선 끝점에서 녹색 폭발";
+	return {
+		version: 1,
+		enabled: true,
+		showBase: false,
+		prompt: "노란선을 따라 돌진하면서 빨간 검로로 베고, 파란선 끝에서 녹색 폭발.",
+		strokes: [
+			move,
+			slash,
+			burst
+		]
+	};
+}
+function drawingDesignExample() {
+	const direction = newStroke("move", [[.24, .6], [.7, .4]], 1);
+	direction.purpose = "direction";
+	direction.directionTarget = "effect";
+	direction.meaning = "검기의 이동 방향";
+	direction.guideColor = "#f4ce55";
+	direction.tool = "line";
+	direction.anchors = direction.points.map((p) => [...p]);
+	direction.duration = 1.2;
+	const anchors = [
+		[.35, .5],
+		[.5, .25],
+		[.65, .5]
+	];
+	const appearance = newStroke("effect", geometryPoints("curve", anchors), 1, "#65ed9a");
+	appearance.purpose = "appearance";
+	appearance.meaning = "완성됐을 때 보이는 검기 모양";
+	appearance.guideColor = "#ff777b";
+	appearance.tool = "curve";
+	appearance.anchors = anchors;
+	appearance.directionId = direction.id;
+	appearance.duration = 1.2;
+	const reference = newStroke("effect", [[.22, .68], [.75, .68]], 1);
+	reference.purpose = "custom";
+	reference.behavior = "reference";
+	reference.meaning = "지면 높이 참고";
+	reference.guideColor = "#70baff";
+	reference.note = "이 선은 위치를 설명하는 참고선이며 화면에 표시하지 않는다.";
+	reference.tool = "line";
+	reference.anchors = reference.points.map((p) => [...p]);
+	return {
+		version: 1,
+		enabled: true,
+		showBase: false,
+		prompt: "노란 직선은 이동 방향, 빨간 곡선은 구현됐을 때의 모습. 곡선 모양을 녹색으로 구현해 방향선을 따라 이동한다. 파란선은 지면 기준 참고다.",
+		strokes: [
+			direction,
+			appearance,
+			reference
+		]
+	};
+}
+
+
+function pointsUntil(points, progress) {
+	const lengths = points.slice(1).map((p, i) => Math.hypot(p[0] - points[i][0], p[1] - points[i][1]));
+	let remaining = lengths.reduce((sum, v) => sum + v, 0) * progress;
+	const result = [points[0]];
+	for (let i = 0; i < lengths.length; i++) {
+		if (remaining < lengths[i]) {
+			result.push(samplePath(points, progress));
+			break;
+		}
+		result.push(points[i + 1]);
+		remaining -= lengths[i];
+	}
+	return result;
+}
+function path(ctx, points, size, closed = false) {
+	ctx.beginPath();
+	points.forEach((p, i) => {
+		if (i === 0) ctx.moveTo(p[0] * size, p[1] * size);
+		else ctx.lineTo(p[0] * size, p[1] * size);
+	});
+	if (closed) ctx.closePath();
+}
+function folded(stroke, progress) {
+	if (!stroke.fold) return stroke.points;
+	const center = stroke.points.reduce((p, q) => [p[0] + q[0] / stroke.points.length, p[1] + q[1] / stroke.points.length], [0, 0]);
+	const t = Math.max(0, (progress - .3) / .7), angle = t * Math.PI * 1.5;
+	return stroke.points.map((p, i) => {
+		const shrink = 1 - t * (i % 2 ? .9 : .6), dx = (p[0] - center[0]) * shrink, dy = (p[1] - center[1]) * shrink;
+		return [center[0] + dx * Math.cos(angle) - dy * Math.sin(angle), center[1] + dx * Math.sin(angle) + dy * Math.cos(angle)];
+	});
+}
+function renderDrawing(target, plan, time, size, onlyId) {
+	if (!plan?.enabled) return;
+	const schedule = drawingSchedule(plan);
+	let scratch;
+	for (const entry of schedule) {
+		const s = entry.stroke;
+		if (onlyId && s.id !== onlyId) continue;
+		const behavior = strokeBehavior(s);
+		if (behavior === "direction" || time <= entry.start || time >= entry.finish) continue;
+		const progress = Math.min(1, (time - entry.start) / s.duration), age = time - entry.start;
+		const life = age / (s.duration + s.linger);
+		if (s.fadeAlong && life >= s.fadeAlong.end) continue;
+		let ctx = target;
+		if (s.fadeAlong) {
+			scratch ??= document.createElement("canvas");
+			scratch.width = scratch.height = size;
+			ctx = scratch.getContext("2d");
+		}
+		const fade = Math.min(1, age / .06, (entry.finish - time) / Math.max(.08, Math.min(.25, s.duration * .3)));
+		const points = folded(s, progress), actor = s.followActor ? drawingActor(plan, time) : null;
+		ctx.save();
+		if (actor) ctx.translate((actor[0] - .5) * size, (actor[1] - .5) * size);
+		const direction = s.directionId ? schedule.find((e) => e.stroke.id === s.directionId) : undefined;
+		if (direction) {
+			const position = samplePath(direction.stroke.points, Math.max(0, Math.min(1, (time - direction.start) / direction.stroke.duration)));
+			const center = s.points.reduce((p, q) => [p[0] + q[0] / s.points.length, p[1] + q[1] / s.points.length], [0, 0]);
+			ctx.translate((position[0] - center[0]) * size, (position[1] - center[1]) * size);
+		}
+		ctx.globalAlpha = Math.max(0, fade);
+		ctx.strokeStyle = s.color;
+		ctx.fillStyle = s.color;
+		ctx.lineCap = "round";
+		ctx.lineJoin = "round";
+		const width = s.width * size;
+		if ((s.role === "effect" || behavior === "appearance") && s.style === "field") {
+			path(ctx, points, size, true);
+			ctx.globalAlpha *= .23;
+			ctx.fill();
+			ctx.globalAlpha = fade;
+			ctx.lineWidth = width;
+			ctx.stroke();
+			ctx.globalAlpha *= .3;
+			ctx.lineWidth = width * 2;
+			ctx.stroke();
+		} else if (s.role === "effect" && s.style === "burst") {
+			const center = points[points.length - 1], extent = Math.max(.065, Math.min(.22, Math.hypot(points[0][0] - center[0], points[0][1] - center[1])));
+			const radius = extent * size * (1 - (1 - progress) ** 3), angle = progress * .4;
+			ctx.translate(center[0] * size, center[1] * size);
+			ctx.rotate(angle);
+			ctx.beginPath();
+			for (let i = 0; i < 24; i++) {
+				const a = i * Math.PI / 12, r = radius * (i % 2 ? .14 : 1);
+				ctx.lineTo(Math.cos(a) * r, Math.sin(a) * r);
+			}
+			ctx.closePath();
+			ctx.fill();
+			ctx.lineWidth = Math.max(.6, width * (1 - progress * .7));
+			ctx.beginPath();
+			ctx.arc(0, 0, radius * .8, 0, Math.PI * 2);
+			ctx.stroke();
+			ctx.fillStyle = "#edfff0";
+			ctx.beginPath();
+			ctx.arc(0, 0, Math.max(1, radius * .12), 0, Math.PI * 2);
+			ctx.fill();
+		} else {
+			const visible = behavior === "appearance" ? points : pointsUntil(points, progress);
+			path(ctx, visible, size);
+			ctx.globalAlpha *= .22;
+			ctx.lineWidth = width * 2.2;
+			ctx.stroke();
+			ctx.globalAlpha = fade;
+			ctx.lineWidth = width;
+			ctx.stroke();
+			ctx.strokeStyle = "#f0fff5";
+			ctx.lineWidth = Math.max(.4, width * .25);
+			ctx.stroke();
+			if (s.role === "effect" && s.style === "orb") {
+				const p = samplePath(points, progress);
+				ctx.fillStyle = s.color;
+				ctx.beginPath();
+				ctx.arc(p[0] * size, p[1] * size, width * 1.7, 0, Math.PI * 2);
+				ctx.fill();
+				ctx.fillStyle = "#f0fff5";
+				ctx.beginPath();
+				ctx.arc(p[0] * size, p[1] * size, width * .65, 0, Math.PI * 2);
+				ctx.fill();
+			}
+		}
+		ctx.restore();
+		if (s.fadeAlong && scratch) {
+			const f = s.fadeAlong, gradient = ctx.createLinearGradient(f.from[0] * size, f.from[1] * size, f.to[0] * size, f.to[1] * size);
+			for (let i = 0; i <= 32; i++) gradient.addColorStop(i / 32, `rgba(255,255,255,${strokeFadeOpacity(f, life, i / 32)})`);
+			ctx.globalCompositeOperation = "destination-in";
+			ctx.fillStyle = gradient;
+			ctx.fillRect(0, 0, size, size);
+			target.save();
+			target.globalAlpha = 1;
+			target.drawImage(scratch, 0, 0);
+			target.restore();
+		}
+	}
+}
+
+
+
+const spec={"task": "MAIN02-20261109-C970BE7A", "iteration": 1, "role": "effects", "fps": 60, "frames": 150, "duration": 2.5, "speed": "1x proposed initial value; user decides final speed", "hits": [{"number": 1, "start": 0.16, "emphasis": 0.26, "fadeStart": 0.28, "end": 0.4, "angle": 25, "offset": -8, "length": 0.82}, {"number": 2, "start": 0.43, "emphasis": 0.53, "fadeStart": 0.55, "end": 0.67, "angle": 28, "offset": 5, "length": 0.79}, {"number": 3, "start": 0.69, "emphasis": 0.79, "fadeStart": 0.81, "end": 0.93, "angle": 23, "offset": -5, "length": 0.84}, {"number": 4, "start": 0.96, "emphasis": 1.06, "fadeStart": 1.08, "end": 1.2, "angle": 27, "offset": 9, "length": 0.8}, {"number": 5, "start": 1.23, "emphasis": 1.33, "fadeStart": 1.35, "end": 1.47, "angle": 24, "offset": -2, "length": 0.83}, {"number": 6, "start": 1.55, "emphasis": 1.65, "fadeStart": 1.67, "end": 1.85, "angle": 26, "offset": 0, "length": 0.86}], "sourceRect": {"x": 0, "y": 0, "width": 960, "height": 540}, "padding": 16, "frameSize": [992, 572], "pivotSource": [480, 270], "pivotPadded": [496, 286], "displayBounds": "whole padded frame; uniform scale; target center fixed", "alpha": true, "alphaFormat": "straight RGBA PNG sequence", "damage": null, "range": null, "hero": null, "combatIntegration": false};
+const view=document.querySelector('canvas'), ctx=view.getContext('2d');
+const fx=document.createElement('canvas');fx.width=992;fx.height=572;
+const scratch=document.createElement('canvas');scratch.width=scratch.height=960;
+const sc=scratch.getContext('2d'), fc=fx.getContext('2d');
+const battle=new Image();battle.src='battlefield-display.png';
+let t=0,playing=true,loop=true,speed=1,last=performance.now(),background='battle';
+function point(h,u,v=0){const a=h.angle*Math.PI/180,x=(u-.5)*h.length,y=v;return [.5+x*Math.cos(a)-y*Math.sin(a),.5+h.offset/960+x*Math.sin(a)+y*Math.cos(a)]}
+function stroke(h,kind){let points;
+ if(kind==='core')points=[point(h,0),point(h,1)];
+ else {points=[point(h,0),point(h,1)];for(let j=30;j>=0;j--){let u=j/30;points.push(point(h,u,.042*Math.pow(Math.sin(Math.PI*u),1.5)))} }
+ return {id:'hit'+h.number+'-'+kind,role:'effect',purpose:kind==='core'?'path':'appearance',step:1,duration:.10,delay:0,linger:h.end-h.start-.10,points,color:kind==='core'?'#BAF3FF':'#4C93DA',width:kind==='core'?.0022:.00035,style:kind==='core'?'trail':'field',fold:false,followActor:false,note:'same diagonal reference; no damage',fadeAlong:{from:point(h,0),to:point(h,1),start:.45,end:1,softness:.24}};
+}
+const plans=spec.hits.map(h=>({hit:h,wind:stroke(h,'wind'),core:stroke(h,'core')}));
+function effect(time){fc.clearRect(0,0,992,572);for(const p of plans){const age=time-p.hit.start;if(age<=0||time>=p.hit.end)continue;
+ for(const kind of ['wind','core']){sc.clearRect(0,0,960,960);sc.save();if(kind==='wind'){const a=point(p.hit,0),b=point(p.hit,Math.min(1,age/.10));sc.beginPath();sc.rect(0,0,Math.max(0,b[0]*960),960);sc.clip()}
+ renderDrawing(sc,{version:1,enabled:true,showBase:false,prompt:'reference diagonal slash',strokes:[p[kind]]},age,960);sc.restore();
+ fc.save();fc.globalAlpha=kind==='wind'?.80:1;fc.filter=kind==='wind'?'blur(3px)':'none';fc.drawImage(scratch,0,210,960,540,16,16,960,540);fc.restore();
+ }}return fx;}
+function render(time=t){document.querySelector('#play').textContent=playing?'일시정지':'재생';const f=effect(time);ctx.clearRect(0,0,992,572);ctx.fillStyle=background==='dark'?'#101E30':background==='green'?'#A5C9A0':'#DADFE3';ctx.fillRect(0,0,992,572);if(background==='battle'&&battle.complete&&battle.naturalWidth)ctx.drawImage(battle,0,0,992,572);ctx.drawImage(f,0,0);document.querySelector('#scrub').value=time;let n=spec.hits.filter(h=>time>=h.emphasis).length;document.querySelector('#status').textContent=`${n} / 6타 · ${time.toFixed(3)}s · 프레임 ${Math.min(150,Math.floor(time*60)+1)} / 150`;}
+function tick(now){let dt=(now-last)/1000;last=now;if(playing){t+=dt*speed;if(t>=2.5){if(loop)t%=2.5;else{t=2.5;playing=false}}}render();requestAnimationFrame(tick)}
+document.querySelector('#play').onclick=()=>{playing=!playing;document.querySelector('#play').textContent=playing?'일시정지':'재생'};
+document.querySelector('#restart').onclick=()=>{t=0;last=performance.now();render()};
+document.querySelector('#loop').onchange=e=>loop=e.target.checked;
+document.querySelector('#speed').onchange=e=>speed=+e.target.value;
+document.querySelector('#bg').onchange=e=>{background=e.target.value;render()};
+document.querySelector('#scrub').oninput=e=>{t=+e.target.value;playing=false;document.querySelector('#play').textContent='재생';render()};
+document.querySelector('#prev').onclick=()=>{playing=false;t=Math.max(0,t-1/60);render()};document.querySelector('#next').onclick=()=>{playing=false;t=Math.min(2.5,t+1/60);render()};
+window.demo={spec,plans,effect,render,state:()=>({t,playing,loop,speed,background}),seek:x=>{playing=false;t=x;render()},exportFrames:async()=>{playing=false;for(let i=0;i<150;i++){const data=effect(i/60).toDataURL('image/png').split(',')[1];const r=await fetch('/save/frame-'+String(i).padStart(3,'0')+'.png',{method:'POST',body:data});if(!r.ok)throw Error('save failed '+i)}return '150 RGBA frames exported'}};
+requestAnimationFrame(tick);
+</script></html>

@@ -1,0 +1,956 @@
+{
+  "format": "gd.effect-sheet@1",
+  "name": "번개 질주",
+  "background": "transparent",
+  "fps": 40,
+  "loop": false,
+  "contentWidth": 192,
+  "contentHeight": 192,
+  "padding": 24,
+  "cellWidth": 240,
+  "cellHeight": 240,
+  "columns": 8,
+  "rows": 4,
+  "displaySize": 164,
+  "durationMs": 700,
+  "impactFrame": 5,
+  "impactTimeMs": 125,
+  "impactSemantics": "frame-complete-marker-only",
+  "drawing": {
+    "version": 1,
+    "enabled": true,
+    "showBase": true,
+    "prompt": "오른쪽으로 질주할 때 뒤에 남는 세 갈래 지그재그 번개. 짧은 점멸 후 꼬리부터 사라집니다. 캐릭터 이동과 피해는 포함하지 않습니다.",
+    "strokes": [
+      {
+        "id": "run-lightning-bolt-0",
+        "role": "effect",
+        "points": [
+          [
+            0.77,
+            0.61
+          ],
+          [
+            0.64,
+            0.57
+          ],
+          [
+            0.67,
+            0.62
+          ],
+          [
+            0.51,
+            0.59
+          ],
+          [
+            0.56,
+            0.65
+          ],
+          [
+            0.37,
+            0.61
+          ],
+          [
+            0.42,
+            0.66
+          ],
+          [
+            0.18,
+            0.64
+          ]
+        ],
+        "step": 1,
+        "duration": 0.14,
+        "delay": 0.02,
+        "linger": 0.12,
+        "color": "#76B8FF",
+        "width": 0.006,
+        "style": "trail",
+        "followActor": false,
+        "fold": false,
+        "note": "짧게 켜진 뒤 꼬리부터 소멸하는 이동 번개",
+        "purpose": "appearance",
+        "meaning": "점멸 번개 1",
+        "guideColor": "#70BAFF",
+        "fadeAlong": {
+          "from": [
+            0.15,
+            0.65
+          ],
+          "to": [
+            0.78,
+            0.65
+          ],
+          "start": 0.35,
+          "end": 1,
+          "softness": 0.25
+        },
+        "tool": "pen"
+      },
+      {
+        "id": "run-lightning-bolt-1",
+        "role": "effect",
+        "points": [
+          [
+            0.74,
+            0.68
+          ],
+          [
+            0.61,
+            0.72
+          ],
+          [
+            0.65,
+            0.67
+          ],
+          [
+            0.5,
+            0.7
+          ],
+          [
+            0.53,
+            0.64
+          ],
+          [
+            0.32,
+            0.7
+          ],
+          [
+            0.37,
+            0.64
+          ],
+          [
+            0.15,
+            0.68
+          ]
+        ],
+        "step": 1,
+        "duration": 0.14,
+        "delay": 0.15,
+        "linger": 0.12,
+        "color": "#76B8FF",
+        "width": 0.007,
+        "style": "trail",
+        "followActor": false,
+        "fold": false,
+        "note": "짧게 켜진 뒤 꼬리부터 소멸하는 이동 번개",
+        "purpose": "appearance",
+        "meaning": "점멸 번개 2",
+        "guideColor": "#70BAFF",
+        "fadeAlong": {
+          "from": [
+            0.15,
+            0.65
+          ],
+          "to": [
+            0.78,
+            0.65
+          ],
+          "start": 0.35,
+          "end": 1,
+          "softness": 0.25
+        },
+        "tool": "pen"
+      },
+      {
+        "id": "run-lightning-bolt-2",
+        "role": "effect",
+        "points": [
+          [
+            0.75,
+            0.6
+          ],
+          [
+            0.61,
+            0.51
+          ],
+          [
+            0.64,
+            0.58
+          ],
+          [
+            0.48,
+            0.53
+          ],
+          [
+            0.53,
+            0.59
+          ],
+          [
+            0.3,
+            0.55
+          ],
+          [
+            0.36,
+            0.6
+          ],
+          [
+            0.21,
+            0.57
+          ]
+        ],
+        "step": 1,
+        "duration": 0.14,
+        "delay": 0.28,
+        "linger": 0.12,
+        "color": "#76B8FF",
+        "width": 0.008,
+        "style": "trail",
+        "followActor": false,
+        "fold": false,
+        "note": "짧게 켜진 뒤 꼬리부터 소멸하는 이동 번개",
+        "purpose": "appearance",
+        "meaning": "점멸 번개 3",
+        "guideColor": "#70BAFF",
+        "fadeAlong": {
+          "from": [
+            0.15,
+            0.65
+          ],
+          "to": [
+            0.78,
+            0.65
+          ],
+          "start": 0.35,
+          "end": 1,
+          "softness": 0.25
+        },
+        "tool": "pen"
+      }
+    ]
+  },
+  "actorMotion": [
+    {
+      "frame": 1,
+      "position": null
+    },
+    {
+      "frame": 2,
+      "position": null
+    },
+    {
+      "frame": 3,
+      "position": null
+    },
+    {
+      "frame": 4,
+      "position": null
+    },
+    {
+      "frame": 5,
+      "position": null
+    },
+    {
+      "frame": 6,
+      "position": null
+    },
+    {
+      "frame": 7,
+      "position": null
+    },
+    {
+      "frame": 8,
+      "position": null
+    },
+    {
+      "frame": 9,
+      "position": null
+    },
+    {
+      "frame": 10,
+      "position": null
+    },
+    {
+      "frame": 11,
+      "position": null
+    },
+    {
+      "frame": 12,
+      "position": null
+    },
+    {
+      "frame": 13,
+      "position": null
+    },
+    {
+      "frame": 14,
+      "position": null
+    },
+    {
+      "frame": 15,
+      "position": null
+    },
+    {
+      "frame": 16,
+      "position": null
+    },
+    {
+      "frame": 17,
+      "position": null
+    },
+    {
+      "frame": 18,
+      "position": null
+    },
+    {
+      "frame": 19,
+      "position": null
+    },
+    {
+      "frame": 20,
+      "position": null
+    },
+    {
+      "frame": 21,
+      "position": null
+    },
+    {
+      "frame": 22,
+      "position": null
+    },
+    {
+      "frame": 23,
+      "position": null
+    },
+    {
+      "frame": 24,
+      "position": null
+    },
+    {
+      "frame": 25,
+      "position": null
+    },
+    {
+      "frame": 26,
+      "position": null
+    },
+    {
+      "frame": 27,
+      "position": null
+    },
+    {
+      "frame": 28,
+      "position": null
+    }
+  ],
+  "actorMotionSpace": "normalized-content-relative-to-pivot",
+  "includesActorPixels": false,
+  "frames": [
+    {
+      "frame": 1,
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 24,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 2,
+      "x": 240,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 264,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 3,
+      "x": 480,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 504,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 4,
+      "x": 720,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 744,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 5,
+      "x": 960,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 984,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 6,
+      "x": 1200,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1224,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 7,
+      "x": 1440,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1464,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 8,
+      "x": 1680,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1704,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 9,
+      "x": 0,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 24,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 10,
+      "x": 240,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 264,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 11,
+      "x": 480,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 504,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 12,
+      "x": 720,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 744,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 13,
+      "x": 960,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 984,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 14,
+      "x": 1200,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1224,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 15,
+      "x": 1440,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1464,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 16,
+      "x": 1680,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1704,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 17,
+      "x": 0,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 24,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 18,
+      "x": 240,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 264,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 19,
+      "x": 480,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 504,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 20,
+      "x": 720,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 744,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 21,
+      "x": 960,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 984,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 22,
+      "x": 1200,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1224,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 23,
+      "x": 1440,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1464,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 24,
+      "x": 1680,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1704,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 25,
+      "x": 0,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 24,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 26,
+      "x": 240,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 264,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 27,
+      "x": 480,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 504,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 28,
+      "x": 720,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 744,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    }
+  ]
+}

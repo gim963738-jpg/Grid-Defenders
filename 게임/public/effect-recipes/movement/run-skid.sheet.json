@@ -1,0 +1,901 @@
+{
+  "format": "gd.effect-sheet@1",
+  "name": "급정지 스키드",
+  "background": "transparent",
+  "fps": 40,
+  "loop": false,
+  "contentWidth": 192,
+  "contentHeight": 192,
+  "padding": 24,
+  "cellWidth": 240,
+  "cellHeight": 240,
+  "columns": 8,
+  "rows": 5,
+  "displaySize": 132,
+  "durationMs": 1000,
+  "impactFrame": 5,
+  "impactTimeMs": 125,
+  "impactSemantics": "frame-complete-marker-only",
+  "frames": [
+    {
+      "frame": 1,
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 24,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 2,
+      "x": 240,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 264,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 3,
+      "x": 480,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 504,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 4,
+      "x": 720,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 744,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 5,
+      "x": 960,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 984,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 6,
+      "x": 1200,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1224,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 7,
+      "x": 1440,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1464,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 8,
+      "x": 1680,
+      "y": 0,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1704,
+        "y": 24,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 9,
+      "x": 0,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 24,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 10,
+      "x": 240,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 264,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 11,
+      "x": 480,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 504,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 12,
+      "x": 720,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 744,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 13,
+      "x": 960,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 984,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 14,
+      "x": 1200,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1224,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 15,
+      "x": 1440,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1464,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 16,
+      "x": 1680,
+      "y": 240,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1704,
+        "y": 264,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 17,
+      "x": 0,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 24,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 18,
+      "x": 240,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 264,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 19,
+      "x": 480,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 504,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 20,
+      "x": 720,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 744,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 21,
+      "x": 960,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 984,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 22,
+      "x": 1200,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1224,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 23,
+      "x": 1440,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1464,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 24,
+      "x": 1680,
+      "y": 480,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1704,
+        "y": 504,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 25,
+      "x": 0,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 24,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 26,
+      "x": 240,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 264,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 27,
+      "x": 480,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 504,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 28,
+      "x": 720,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 744,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 29,
+      "x": 960,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 984,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 30,
+      "x": 1200,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1224,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 31,
+      "x": 1440,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1464,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 32,
+      "x": 1680,
+      "y": 720,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1704,
+        "y": 744,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 33,
+      "x": 0,
+      "y": 960,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 24,
+        "y": 984,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 34,
+      "x": 240,
+      "y": 960,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 264,
+        "y": 984,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 35,
+      "x": 480,
+      "y": 960,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 504,
+        "y": 984,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 36,
+      "x": 720,
+      "y": 960,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 744,
+        "y": 984,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 37,
+      "x": 960,
+      "y": 960,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 984,
+        "y": 984,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 38,
+      "x": 1200,
+      "y": 960,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1224,
+        "y": 984,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 39,
+      "x": 1440,
+      "y": 960,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1464,
+        "y": 984,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    },
+    {
+      "frame": 40,
+      "x": 1680,
+      "y": 960,
+      "width": 240,
+      "height": 240,
+      "contentRect": {
+        "x": 1704,
+        "y": 984,
+        "width": 192,
+        "height": 192
+      },
+      "pivot": {
+        "x": 154.56,
+        "y": 154.56
+      },
+      "anchor": {
+        "x": 0.644,
+        "y": 0.644
+      },
+      "durationMs": 25
+    }
+  ]
+}

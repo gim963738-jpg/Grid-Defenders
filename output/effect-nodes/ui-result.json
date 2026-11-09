@@ -1,0 +1,11 @@
+﻿{
+  "id": "9a518783-a64a-49dc-8618-b3c9584ff046",
+  "ok": true,
+  "result": {
+    "result": "{\"passed\":26,\"checks\":[\"node workspace opens with its own graph properties instead of duplicate inspectors\",\"cards and curved wires represent the persisted graph\",\"property editing updates the selected processor and autosaves\",\"node result previews respond to real processor changes\",\"node toolbar undo restores a parameter change\",\"node toolbar redo reapplies it\",\"accessible connection form replaces the final image source\",\"tapping an output and input connects their actual graph slots\",\"deleting a processing node removes its edges and preserves original artwork\",\"undo restores the deleted node and its connections together\",\"dragging a title persists node coordinates at the current zoom\",\"one undo reverses the complete node drag\",\"the unique output cannot be deleted accidentally\",\"removing a source node preserves its layer and makes it available to add again\",\"a preserved layer can be returned to the graph\",\"the processor menu adds a real mask node\",\"graph enable switch retains the graph while restoring base rendering\",\"rebuilding derives the graph from current original layers and drawings\",\"rebuilding the graph can be undone\",\"in-app help explains typed ports and image processing\",\"undoing first graph creation restores the original work without recreating the graph\",\"redo restores the complete first graph conversion\",\"disconnecting a direction also changes the drawing editor binding\",\"connecting direction-to-appearance synchronizes both authoring views\",\"connection form filters incompatible image destinations for direction outputs\",\"result playback uses the same graph-generated animation in the standard preview\"]}",
+    "origin": "http://localhost:5182/effect-workshop.html#nodes"
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

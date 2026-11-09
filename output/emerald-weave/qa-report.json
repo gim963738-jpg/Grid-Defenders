@@ -1,0 +1,66 @@
+{
+    "date":  "2026-11-07",
+    "total":  362,
+    "core":  [
+                 {
+                     "name":  "workshop",
+                     "passed":  89
+                 },
+                 {
+                     "name":  "drawing",
+                     "passed":  34
+                 },
+                 {
+                     "name":  "paint",
+                     "passed":  27
+                 },
+                 {
+                     "name":  "nodes",
+                     "passed":  36
+                 },
+                 {
+                     "name":  "branch",
+                     "passed":  12
+                 },
+                 {
+                     "name":  "sequence",
+                     "passed":  28
+                 },
+                 {
+                     "name":  "visual",
+                     "passed":  13
+                 },
+                 {
+                     "name":  "playback",
+                     "passed":  15
+                 }
+             ],
+    "ui":  {
+               "workshop":  32,
+               "branch":  17,
+               "sequence":  10,
+               "paint":  23,
+               "nodes":  26
+           },
+    "defaultVisibleFrames":  62,
+    "edgeFrames":  0,
+    "outerAlpha":  0,
+    "visual":  [
+                   "all64 bright green/gray frames",
+                   "actual battlefield top and center",
+                   "desktop and mobile"
+               ],
+    "mobile":  "320/390 no overflow, range controls48px, DPR3",
+    "applied":  {
+                    "name":  "에메랄드 매듭",
+                    "saved":  "자동 저장됨",
+                    "before":  8,
+                    "after":  9,
+                    "oldWorkRetained":  true,
+                    "playing":  "일시정지"
+                },
+    "build":  "passed",
+    "diffCheck":  "passed",
+    "testOrigin":  "localhost:5182",
+    "applicationOrigin":  "127.0.0.1:5182"
+}

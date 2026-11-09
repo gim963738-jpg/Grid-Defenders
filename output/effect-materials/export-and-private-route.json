@@ -1,0 +1,52 @@
+{
+  "exportFrames": 39,
+  "zipCRC": true,
+  "transparentEdges": true,
+  "routeChecks": [
+    [
+      "catalog.json",
+      200
+    ],
+    [
+      "sources/craftpix-category.html",
+      404
+    ],
+    [
+      "archives/..%2F..%2F..%2F..%2Fpackage.json",
+      404
+    ],
+    [
+      "catalog.json",
+      403
+    ],
+    [
+      "catalog.json",
+      405
+    ],
+    [
+      "catalog.json",
+      403
+    ],
+    [
+      "catalog.json",
+      404
+    ]
+  ],
+  "buildExcludesLocalMaterials": true,
+  "originalAttachmentDownloads": {
+    "png": 200,
+    "psd": 200,
+    "zip": 200
+  },
+  "battlePlayback": {
+    "speeds": [
+      0.25,
+      1,
+      5
+    ],
+    "allAdvanced": true,
+    "allPaused": true
+  },
+  "finalBuild": "passed",
+  "gitDiffCheck": "passed"
+}

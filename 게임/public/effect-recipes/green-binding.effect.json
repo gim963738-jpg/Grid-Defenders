@@ -1,0 +1,81 @@
+{
+  "format": "gd.effect@1",
+  "name": "녹색 결속 · 분열과 붕괴",
+  "settings": { "size": 256, "frames": 64, "fps": 20, "pixelSize": 1, "loop": false },
+  "palette": ["#159447", "#8ef0a0", "#d8ffbc"],
+  "placement": { "pivotX": 0.5, "pivotY": 0.5, "displaySize": 170, "impactFrame": 58 },
+  "layers": [
+    {
+      "id": "green-origin", "name": "01 · 중심에 녹색빛 등장", "type": "burst",
+      "enabled": true, "blend": "add", "color": 1, "x": 0.5, "y": 0.5,
+      "start": 0, "end": 0.18, "radius": 0.065, "thickness": 0.035,
+      "rotation": 0, "spread": 360, "amount": 8, "speed": 1, "opacity": 1, "seed": 173
+    },
+    {
+      "id": "green-one-split", "name": "02 · 빛1 왼쪽 아래 분열 궤적", "type": "particles",
+      "enabled": true, "blend": "add", "color": 1, "x": 0.5, "y": 0.5,
+      "start": 0.07, "end": 0.42, "radius": 0.02, "thickness": 0.02,
+      "rotation": 135, "spread": 10, "amount": 3, "speed": 1.8, "opacity": 1, "seed": 173
+    },
+    {
+      "id": "green-two-split", "name": "03 · 빛2 오른쪽 위 분열 궤적", "type": "particles",
+      "enabled": true, "blend": "add", "color": 1, "x": 0.5, "y": 0.5,
+      "start": 0.07, "end": 0.42, "radius": 0.02, "thickness": 0.02,
+      "rotation": -45, "spread": 10, "amount": 3, "speed": 1.8, "opacity": 1, "seed": 173
+    },
+    {
+      "id": "green-first-link", "name": "04 · 두 빛 사이 연결 잔광", "type": "slash",
+      "enabled": true, "blend": "add", "color": 0, "x": 0.5, "y": 0.5,
+      "start": 0.2, "end": 0.68, "radius": 0.235, "thickness": 0.012,
+      "rotation": -45, "spread": 180, "amount": 3, "speed": 1, "opacity": 0.8, "seed": 173
+    },
+    {
+      "id": "green-three", "name": "05 · 왼쪽 아래에 빛3 생성", "type": "burst",
+      "enabled": true, "blend": "add", "color": 1, "x": 0.34, "y": 0.66,
+      "start": 0.35, "end": 0.88, "radius": 0.045, "thickness": 0.025,
+      "rotation": 45, "spread": 360, "amount": 6, "speed": 1, "opacity": 1, "seed": 301
+    },
+    {
+      "id": "green-four", "name": "06 · 오른쪽 위에 빛4 생성", "type": "burst",
+      "enabled": true, "blend": "add", "color": 1, "x": 0.66, "y": 0.34,
+      "start": 0.35, "end": 0.88, "radius": 0.045, "thickness": 0.025,
+      "rotation": 45, "spread": 360, "amount": 6, "speed": 1, "opacity": 1, "seed": 401
+    },
+    {
+      "id": "green-one-rise", "name": "07 · 빛1 위로 이동하는 궤적", "type": "particles",
+      "enabled": true, "blend": "add", "color": 1, "x": 0.34, "y": 0.66,
+      "start": 0.43, "end": 0.8, "radius": 0.02, "thickness": 0.02,
+      "rotation": -90, "spread": 10, "amount": 3, "speed": 2, "opacity": 1, "seed": 173
+    },
+    {
+      "id": "green-two-fall", "name": "08 · 빛2 아래로 이동하는 궤적", "type": "particles",
+      "enabled": true, "blend": "add", "color": 1, "x": 0.66, "y": 0.34,
+      "start": 0.43, "end": 0.8, "radius": 0.02, "thickness": 0.02,
+      "rotation": 90, "spread": 10, "amount": 3, "speed": 2, "opacity": 1, "seed": 173
+    },
+    {
+      "id": "green-field", "name": "09 · 결속 안쪽 연녹색 장판", "type": "burst",
+      "enabled": true, "blend": "normal", "color": 1, "x": 0.5, "y": 0.5,
+      "start": 0.64, "end": 0.9, "radius": 0.255, "thickness": 0.12,
+      "rotation": 0, "spread": 360, "amount": 64, "speed": 1, "opacity": 0.28, "seed": 509
+    },
+    {
+      "id": "green-fourfold-link", "name": "10 · 네 빛의 진녹색 사각 결속", "type": "rune",
+      "enabled": true, "blend": "normal", "color": 0, "x": 0.5, "y": 0.5,
+      "start": 0.64, "end": 0.91, "radius": 0.3, "thickness": 0.02,
+      "rotation": 45, "spread": 360, "amount": 4, "speed": 2, "opacity": 1, "seed": 610
+    },
+    {
+      "id": "green-folding", "name": "11 · 연결선이 꼬이며 접히는 잔광", "type": "slash",
+      "enabled": true, "blend": "add", "color": 0, "x": 0.5, "y": 0.5,
+      "start": 0.76, "end": 0.95, "radius": 0.255, "thickness": 0.03,
+      "rotation": 120, "spread": 320, "amount": 4, "speed": 2, "opacity": 1, "seed": 711
+    },
+    {
+      "id": "green-detonation", "name": "12 · 결속 붕괴와 녹색 폭발", "type": "burst",
+      "enabled": true, "blend": "add", "color": 1, "x": 0.5, "y": 0.5,
+      "start": 0.86, "end": 1, "radius": 0.365, "thickness": 0.035,
+      "rotation": 15, "spread": 360, "amount": 12, "speed": 2, "opacity": 1, "seed": 812
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "format": "gd.effect-pack@1",
+  "name": "달리기·이동 이펙트 10종",
+  "facing": "right",
+  "background": "transparent",
+  "recipes": [
+    {
+      "id": "run-soft",
+      "name": "가벼운 발먼지",
+      "description": "이동 소스 · 작은 먼지가 발걸음마다 번갈아 피어남",
+      "color": "#D2B48A",
+      "recipe": "run-soft.effect.json",
+      "sheet": "run-soft.sheet.png",
+      "metadata": "run-soft.sheet.json"
+    },
+    {
+      "id": "run-heavy",
+      "name": "묵직한 발구름",
+      "description": "이동 소스 · 눌렸다가 터지는 흙먼지와 굵은 자갈",
+      "color": "#B89066",
+      "recipe": "run-heavy.effect.json",
+      "sheet": "run-heavy.sheet.png",
+      "metadata": "run-heavy.sheet.json"
+    },
+    {
+      "id": "run-sand",
+      "name": "모래 질주",
+      "description": "이동 소스 · 뒤로 길게 흘러가는 부드러운 모래 꼬리",
+      "color": "#E6BC72",
+      "recipe": "run-sand.effect.json",
+      "sheet": "run-sand.sheet.png",
+      "metadata": "run-sand.sheet.json"
+    },
+    {
+      "id": "run-launch",
+      "name": "출발 먼지",
+      "description": "이동 소스 · 한 번 박차며 뒤로 부채꼴로 터지는 먼지",
+      "color": "#CFA681",
+      "recipe": "run-launch.effect.json",
+      "sheet": "run-launch.sheet.png",
+      "metadata": "run-launch.sheet.json"
+    },
+    {
+      "id": "run-skid",
+      "name": "급정지 스키드",
+      "description": "이동 소스 · 지면을 긁는 긴 자국과 밀려 쌓이는 먼지",
+      "color": "#C89A6C",
+      "recipe": "run-skid.effect.json",
+      "sheet": "run-skid.sheet.png",
+      "metadata": "run-skid.sheet.json"
+    },
+    {
+      "id": "run-snow",
+      "name": "눈가루 발걸음",
+      "description": "이동 소스 · 낮게 흩날리는 가는 눈가루와 얼음 입자",
+      "color": "#CFEBFF",
+      "recipe": "run-snow.effect.json",
+      "sheet": "run-snow.sheet.png",
+      "metadata": "run-snow.sheet.json"
+    },
+    {
+      "id": "run-water",
+      "name": "물웅덩이 질주",
+      "description": "이동 소스 · 발끝에서 튀어 오르는 물방울과 낮은 물결",
+      "color": "#61CBEB",
+      "recipe": "run-water.effect.json",
+      "sheet": "run-water.sheet.png",
+      "metadata": "run-water.sheet.json"
+    },
+    {
+      "id": "run-wind",
+      "name": "바람 대시",
+      "description": "이동 소스 · 서로 감기는 가늘고 긴 곡선 바람 띠",
+      "color": "#ADE7DC",
+      "recipe": "run-wind.effect.json",
+      "sheet": "run-wind.sheet.png",
+      "metadata": "run-wind.sheet.json"
+    },
+    {
+      "id": "run-fire",
+      "name": "불꽃 추진",
+      "description": "이동 소스 · 뒤로 뻗는 불꽃과 짧게 튀는 금빛 불씨",
+      "color": "#FF9B48",
+      "recipe": "run-fire.effect.json",
+      "sheet": "run-fire.sheet.png",
+      "metadata": "run-fire.sheet.json"
+    },
+    {
+      "id": "run-lightning",
+      "name": "번개 질주",
+      "description": "이동 소스 · 지그재그 번개가 짧게 점멸하며 잔광 소멸",
+      "color": "#83BCFF",
+      "recipe": "run-lightning.effect.json",
+      "sheet": "run-lightning.sheet.png",
+      "metadata": "run-lightning.sheet.json"
+    }
+  ]
+}

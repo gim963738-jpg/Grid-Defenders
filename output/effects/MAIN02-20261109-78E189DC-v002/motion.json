@@ -1,0 +1,997 @@
+{
+  "task": "MAIN02-20261109-78E189DC",
+  "iteration": 2,
+  "role": "effects",
+  "format": "gd.character-motion-sheet@1",
+  "art_source": "host_image",
+  "route": "built-in image_gen",
+  "model": "not exposed by tool",
+  "effectsIncluded": false,
+  "facing": "right",
+  "frames": [
+    {
+      "frame": 1,
+      "action": 1,
+      "pose": 1,
+      "phase": "neutral",
+      "source": "source-downcut.png",
+      "sourceRect": [
+        87,
+        94,
+        266,
+        521
+      ],
+      "sourceFootPivot": [
+        158,
+        519
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        185,
+        167
+      ],
+      "atlasRect": [
+        0,
+        0,
+        640,
+        640
+      ],
+      "durationMs": 150,
+      "file": "frames/frame-01.png",
+      "alpha": true,
+      "ownershipMask": "downcut-ownership.png",
+      "ownershipValue": 1,
+      "startMs": 0,
+      "endMs": 150
+    },
+    {
+      "frame": 2,
+      "action": 1,
+      "pose": 2,
+      "phase": "raise",
+      "source": "source-downcut.png",
+      "sourceRect": [
+        348,
+        100,
+        657,
+        520
+      ],
+      "sourceFootPivot": [
+        507,
+        518
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        97,
+        174
+      ],
+      "atlasRect": [
+        640,
+        0,
+        640,
+        640
+      ],
+      "durationMs": 100,
+      "file": "frames/frame-02.png",
+      "alpha": true,
+      "ownershipMask": "downcut-ownership.png",
+      "ownershipValue": 2,
+      "startMs": 150,
+      "endMs": 250
+    },
+    {
+      "frame": 3,
+      "action": 1,
+      "pose": 3,
+      "phase": "overhead anticipation",
+      "source": "source-downcut.png",
+      "sourceRect": [
+        782,
+        7,
+        1014,
+        521
+      ],
+      "sourceFootPivot": [
+        875,
+        519
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        163,
+        80
+      ],
+      "atlasRect": [
+        1280,
+        0,
+        640,
+        640
+      ],
+      "durationMs": 110,
+      "file": "frames/frame-03.png",
+      "alpha": true,
+      "ownershipMask": "downcut-ownership.png",
+      "ownershipValue": 3,
+      "startMs": 250,
+      "endMs": 360
+    },
+    {
+      "frame": 4,
+      "action": 1,
+      "pose": 4,
+      "phase": "swing high",
+      "source": "source-downcut.png",
+      "sourceRect": [
+        1132,
+        98,
+        1401,
+        521
+      ],
+      "sourceFootPivot": [
+        1230,
+        519
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        158,
+        171
+      ],
+      "atlasRect": [
+        1920,
+        0,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-04.png",
+      "alpha": true,
+      "ownershipMask": "downcut-ownership.png",
+      "ownershipValue": 4,
+      "startMs": 360,
+      "endMs": 420
+    },
+    {
+      "frame": 5,
+      "action": 1,
+      "pose": 5,
+      "phase": "swing middle",
+      "source": "source-downcut.png",
+      "sourceRect": [
+        43,
+        651,
+        370,
+        1047
+      ],
+      "sourceFootPivot": [
+        150,
+        1046
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        149,
+        197
+      ],
+      "atlasRect": [
+        2560,
+        0,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-05.png",
+      "alpha": true,
+      "ownershipMask": "downcut-ownership.png",
+      "ownershipValue": 5,
+      "startMs": 420,
+      "endMs": 480
+    },
+    {
+      "frame": 6,
+      "action": 1,
+      "pose": 6,
+      "phase": "swing low",
+      "source": "source-downcut.png",
+      "sourceRect": [
+        393,
+        658,
+        705,
+        1047
+      ],
+      "sourceFootPivot": [
+        500,
+        1046
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        149,
+        204
+      ],
+      "atlasRect": [
+        3200,
+        0,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-06.png",
+      "alpha": true,
+      "ownershipMask": "downcut-ownership.png",
+      "ownershipValue": 6,
+      "startMs": 480,
+      "endMs": 540
+    },
+    {
+      "frame": 7,
+      "action": 1,
+      "pose": 7,
+      "phase": "downcut complete",
+      "source": "source-downcut.png",
+      "sourceRect": [
+        749,
+        671,
+        1049,
+        1048
+      ],
+      "sourceFootPivot": [
+        855,
+        1046
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        150,
+        217
+      ],
+      "atlasRect": [
+        0,
+        640,
+        640,
+        640
+      ],
+      "durationMs": 80,
+      "file": "frames/frame-07.png",
+      "alpha": true,
+      "ownershipMask": "downcut-ownership.png",
+      "ownershipValue": 7,
+      "startMs": 540,
+      "endMs": 620
+    },
+    {
+      "frame": 8,
+      "action": 1,
+      "pose": 8,
+      "phase": "low connection",
+      "source": "source-downcut.png",
+      "sourceRect": [
+        1109,
+        669,
+        1403,
+        1048
+      ],
+      "sourceFootPivot": [
+        1214,
+        1046
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        151,
+        215
+      ],
+      "atlasRect": [
+        640,
+        640,
+        640,
+        640
+      ],
+      "durationMs": 90,
+      "file": "frames/frame-08.png",
+      "alpha": true,
+      "ownershipMask": "downcut-ownership.png",
+      "ownershipValue": 8,
+      "startMs": 620,
+      "endMs": 710
+    },
+    {
+      "frame": 9,
+      "action": 2,
+      "pose": 1,
+      "phase": "low connection",
+      "source": "source-upcut.png",
+      "sourceRect": [
+        44,
+        103,
+        343,
+        477
+      ],
+      "sourceFootPivot": [
+        157,
+        477
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        143,
+        218
+      ],
+      "atlasRect": [
+        1280,
+        640,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-09.png",
+      "alpha": true,
+      "ownershipMask": "upcut-ownership.png",
+      "ownershipValue": 1,
+      "startMs": 710,
+      "endMs": 770
+    },
+    {
+      "frame": 10,
+      "action": 2,
+      "pose": 2,
+      "phase": "low anticipation",
+      "source": "source-upcut.png",
+      "sourceRect": [
+        409,
+        115,
+        691,
+        477
+      ],
+      "sourceFootPivot": [
+        520,
+        477
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        145,
+        230
+      ],
+      "atlasRect": [
+        1920,
+        640,
+        640,
+        640
+      ],
+      "durationMs": 100,
+      "file": "frames/frame-10.png",
+      "alpha": true,
+      "ownershipMask": "upcut-ownership.png",
+      "ownershipValue": 2,
+      "startMs": 770,
+      "endMs": 870
+    },
+    {
+      "frame": 11,
+      "action": 2,
+      "pose": 3,
+      "phase": "upward acceleration",
+      "source": "source-upcut.png",
+      "sourceRect": [
+        766,
+        113,
+        1071,
+        476
+      ],
+      "sourceFootPivot": [
+        876,
+        476
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        146,
+        229
+      ],
+      "atlasRect": [
+        2560,
+        640,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-11.png",
+      "alpha": true,
+      "ownershipMask": "upcut-ownership.png",
+      "ownershipValue": 3,
+      "startMs": 870,
+      "endMs": 930
+    },
+    {
+      "frame": 12,
+      "action": 2,
+      "pose": 4,
+      "phase": "upward middle",
+      "source": "source-upcut.png",
+      "sourceRect": [
+        1119,
+        100,
+        1436,
+        477
+      ],
+      "sourceFootPivot": [
+        1230,
+        476
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        145,
+        216
+      ],
+      "atlasRect": [
+        3200,
+        640,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-12.png",
+      "alpha": true,
+      "ownershipMask": "upcut-ownership.png",
+      "ownershipValue": 4,
+      "startMs": 930,
+      "endMs": 990
+    },
+    {
+      "frame": 13,
+      "action": 2,
+      "pose": 5,
+      "phase": "upward high",
+      "source": "source-upcut.png",
+      "sourceRect": [
+        51,
+        675,
+        351,
+        1051
+      ],
+      "sourceFootPivot": [
+        163,
+        1049
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        144,
+        218
+      ],
+      "atlasRect": [
+        0,
+        1280,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-13.png",
+      "alpha": true,
+      "ownershipMask": "upcut-ownership.png",
+      "ownershipValue": 5,
+      "startMs": 990,
+      "endMs": 1050
+    },
+    {
+      "frame": 14,
+      "action": 2,
+      "pose": 6,
+      "phase": "raise above face",
+      "source": "source-upcut.png",
+      "sourceRect": [
+        409,
+        656,
+        675,
+        1051
+      ],
+      "sourceFootPivot": [
+        520,
+        1050
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        145,
+        198
+      ],
+      "atlasRect": [
+        640,
+        1280,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-14.png",
+      "alpha": true,
+      "ownershipMask": "upcut-ownership.png",
+      "ownershipValue": 6,
+      "startMs": 1050,
+      "endMs": 1110
+    },
+    {
+      "frame": 15,
+      "action": 2,
+      "pose": 7,
+      "phase": "high extension",
+      "source": "source-upcut.png",
+      "sourceRect": [
+        772,
+        598,
+        1013,
+        1051
+      ],
+      "sourceFootPivot": [
+        884,
+        1049
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        144,
+        141
+      ],
+      "atlasRect": [
+        1280,
+        1280,
+        640,
+        640
+      ],
+      "durationMs": 80,
+      "file": "frames/frame-15.png",
+      "alpha": true,
+      "ownershipMask": "upcut-ownership.png",
+      "ownershipValue": 7,
+      "startMs": 1110,
+      "endMs": 1190
+    },
+    {
+      "frame": 16,
+      "action": 2,
+      "pose": 8,
+      "phase": "upcut complete",
+      "source": "source-upcut.png",
+      "sourceRect": [
+        1133,
+        552,
+        1351,
+        1051
+      ],
+      "sourceFootPivot": [
+        1240,
+        1050
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        149,
+        94
+      ],
+      "atlasRect": [
+        1920,
+        1280,
+        640,
+        640
+      ],
+      "durationMs": 100,
+      "file": "frames/frame-16.png",
+      "alpha": true,
+      "ownershipMask": "upcut-ownership.png",
+      "ownershipValue": 8,
+      "startMs": 1190,
+      "endMs": 1290
+    },
+    {
+      "frame": 17,
+      "action": 3,
+      "pose": 1,
+      "phase": "high connection",
+      "source": "source-diagonal.png",
+      "sourceRect": [
+        45,
+        13,
+        263,
+        519
+      ],
+      "sourceFootPivot": [
+        151,
+        518
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        150,
+        87
+      ],
+      "atlasRect": [
+        2560,
+        1280,
+        640,
+        640
+      ],
+      "durationMs": 70,
+      "file": "frames/frame-17.png",
+      "alpha": true,
+      "ownershipMask": "diagonal-ownership.png",
+      "ownershipValue": 1,
+      "startMs": 1290,
+      "endMs": 1360
+    },
+    {
+      "frame": 18,
+      "action": 3,
+      "pose": 2,
+      "phase": "diagonal anticipation",
+      "source": "source-diagonal.png",
+      "sourceRect": [
+        354,
+        60,
+        595,
+        519
+      ],
+      "sourceFootPivot": [
+        473,
+        517
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        137,
+        135
+      ],
+      "atlasRect": [
+        3200,
+        1280,
+        640,
+        640
+      ],
+      "durationMs": 110,
+      "file": "frames/frame-18.png",
+      "alpha": true,
+      "ownershipMask": "diagonal-ownership.png",
+      "ownershipValue": 2,
+      "startMs": 1360,
+      "endMs": 1470
+    },
+    {
+      "frame": 19,
+      "action": 3,
+      "pose": 3,
+      "phase": "swing upper-right",
+      "source": "source-diagonal.png",
+      "sourceRect": [
+        675,
+        102,
+        1049,
+        519
+      ],
+      "sourceFootPivot": [
+        800,
+        517
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        131,
+        177
+      ],
+      "atlasRect": [
+        0,
+        1920,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-19.png",
+      "alpha": true,
+      "ownershipMask": "diagonal-ownership.png",
+      "ownershipValue": 3,
+      "startMs": 1470,
+      "endMs": 1530
+    },
+    {
+      "frame": 20,
+      "action": 3,
+      "pose": 4,
+      "phase": "swing middle",
+      "source": "source-diagonal.png",
+      "sourceRect": [
+        1005,
+        175,
+        1435,
+        519
+      ],
+      "sourceFootPivot": [
+        1145,
+        517
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        116,
+        250
+      ],
+      "atlasRect": [
+        640,
+        1920,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-20.png",
+      "alpha": true,
+      "ownershipMask": "diagonal-ownership.png",
+      "ownershipValue": 4,
+      "startMs": 1530,
+      "endMs": 1590
+    },
+    {
+      "frame": 21,
+      "action": 3,
+      "pose": 5,
+      "phase": "swing lower-right",
+      "source": "source-diagonal.png",
+      "sourceRect": [
+        18,
+        664,
+        344,
+        1033
+      ],
+      "sourceFootPivot": [
+        145,
+        1033
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        129,
+        223
+      ],
+      "atlasRect": [
+        1280,
+        1920,
+        640,
+        640
+      ],
+      "durationMs": 60,
+      "file": "frames/frame-21.png",
+      "alpha": true,
+      "ownershipMask": "diagonal-ownership.png",
+      "ownershipValue": 5,
+      "startMs": 1590,
+      "endMs": 1650
+    },
+    {
+      "frame": 22,
+      "action": 3,
+      "pose": 6,
+      "phase": "diagonal complete",
+      "source": "source-diagonal.png",
+      "sourceRect": [
+        365,
+        684,
+        686,
+        1052
+      ],
+      "sourceFootPivot": [
+        489,
+        1033
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        132,
+        243
+      ],
+      "atlasRect": [
+        1920,
+        1920,
+        640,
+        640
+      ],
+      "durationMs": 90,
+      "file": "frames/frame-22.png",
+      "alpha": true,
+      "ownershipMask": "diagonal-ownership.png",
+      "ownershipValue": 6,
+      "startMs": 1650,
+      "endMs": 1740
+    },
+    {
+      "frame": 23,
+      "action": 3,
+      "pose": 7,
+      "phase": "recovery",
+      "source": "source-diagonal.png",
+      "sourceRect": [
+        759,
+        643,
+        1010,
+        1034
+      ],
+      "sourceFootPivot": [
+        865,
+        1034
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        150,
+        201
+      ],
+      "atlasRect": [
+        2560,
+        1920,
+        640,
+        640
+      ],
+      "durationMs": 110,
+      "file": "frames/frame-23.png",
+      "alpha": true,
+      "ownershipMask": "diagonal-ownership.png",
+      "ownershipValue": 7,
+      "startMs": 1740,
+      "endMs": 1850
+    },
+    {
+      "frame": 24,
+      "action": 3,
+      "pose": 8,
+      "phase": "neutral",
+      "source": "source-diagonal.png",
+      "sourceRect": [
+        1147,
+        624,
+        1338,
+        1034
+      ],
+      "sourceFootPivot": [
+        1225,
+        1034
+      ],
+      "outputPivot": [
+        256,
+        592
+      ],
+      "sourceToOutputScale": 1,
+      "offset": [
+        178,
+        182
+      ],
+      "atlasRect": [
+        3200,
+        1920,
+        640,
+        640
+      ],
+      "durationMs": 200,
+      "file": "frames/frame-24.png",
+      "alpha": true,
+      "ownershipMask": "diagonal-ownership.png",
+      "ownershipValue": 8,
+      "startMs": 1850,
+      "endMs": 2050
+    }
+  ],
+  "frameCount": 24,
+  "sheet": "combo-sheet.png",
+  "columns": 6,
+  "rows": 4,
+  "cellSize": [
+    640,
+    640
+  ],
+  "sourceScale": 1,
+  "pivot": [
+    256,
+    592
+  ],
+  "durationMs": 2050,
+  "alpha": true,
+  "speed": "1x provisional; user decides",
+  "damage": null,
+  "hero": null,
+  "combatIntegration": false,
+  "actions": [
+    {
+      "id": 1,
+      "name": "downcut",
+      "frames": [
+        1,
+        8
+      ],
+      "completeFrame": 7
+    },
+    {
+      "id": 2,
+      "name": "upcut",
+      "frames": [
+        9,
+        16
+      ],
+      "completeFrame": 16
+    },
+    {
+      "id": 3,
+      "name": "diagonal-downcut",
+      "frames": [
+        17,
+        24
+      ],
+      "completeFrame": 22
+    }
+  ]
+}

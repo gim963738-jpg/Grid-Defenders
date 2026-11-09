@@ -1,0 +1,64 @@
+{
+  "format": "gd.effect@1",
+  "name": "바람 대시",
+  "settings": {
+    "size": 192,
+    "frames": 28,
+    "fps": 40,
+    "pixelSize": 1,
+    "loop": false
+  },
+  "palette": [
+    "#438E91",
+    "#A7DED4",
+    "#EDFFF7"
+  ],
+  "placement": {
+    "pivotX": 0.68,
+    "pivotY": 0.68,
+    "displaySize": 166,
+    "impactFrame": 5
+  },
+  "layers": [
+    {
+      "id": "run-wind-1",
+      "name": "위아래로 감기는 긴 바람 띠",
+      "type": "wind",
+      "blend": "normal",
+      "enabled": true,
+      "color": 1,
+      "x": 0.78,
+      "y": 0.58,
+      "start": 0,
+      "end": 0.9,
+      "radius": 0.43,
+      "thickness": 0.02,
+      "rotation": 180,
+      "spread": 70,
+      "amount": 5,
+      "speed": 1,
+      "opacity": 0.9,
+      "seed": 195
+    },
+    {
+      "id": "run-wind-2",
+      "name": "반대로 비끼는 가는 바람",
+      "type": "wind",
+      "blend": "normal",
+      "enabled": true,
+      "color": 0,
+      "x": 0.74,
+      "y": 0.62,
+      "start": 0.09,
+      "end": 1,
+      "radius": 0.35,
+      "thickness": 0.007,
+      "rotation": 180,
+      "spread": 100,
+      "amount": 4,
+      "speed": 1,
+      "opacity": 0.8,
+      "seed": 226
+    }
+  ]
+}
