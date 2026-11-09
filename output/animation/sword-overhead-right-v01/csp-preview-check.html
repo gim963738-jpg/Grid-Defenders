@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><title>채팅 재생 정책 검사</title>
+<style>body{margin:0}iframe{width:500px;height:720px;border:0}</style>
+<iframe id="player" sandbox="allow-scripts allow-same-origin"></iframe>
+<script>
+window.checkReady=(async()=>{
+ const html=await(await fetch('sword-strike-frames-v02.html')).text();
+ const csp="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; font-src data:; media-src 'none'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'";
+ const frame=document.getElementById('player');
+ frame.srcdoc='<meta http-equiv="Content-Security-Policy" content="'+csp+'">'+html;
+ await new Promise(resolve=>frame.onload=resolve);
+ for(let i=0;i<100;i++){if(frame.contentWindow.playerState?.ready)return true;await new Promise(r=>setTimeout(r,50))}
+ throw Error('Frame player did not load under the media-src none policy');
+})();
+</script>
