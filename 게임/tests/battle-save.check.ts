@@ -1,4 +1,4 @@
-import {Defense} from '../src/defense';
+import {Defense,pathPoint} from '../src/defense';
 import {BossBattle,waveBossRoster} from '../src/bossBattle';
 import {GameRun} from '../src/gameRun';
 import {ITEMS,LANDSCAPE_BATTLE,RULES} from '../src/defenseConfig';
@@ -9,6 +9,7 @@ import {createSwordAttack} from '../src/swordAttack';
 import {createAssassinAction} from '../src/assassinCombat';
 import {COMBAT_SPEEDS} from '../src/combatPlayback';
 import {calibrateBossTest} from '../src/bossTestBalance';
+import {formationRank} from '../src/battleFormation';
 import {BattleSaveStore,battleSaveKey,battleLayout,captureBattle,restoreBattle,validBattleSave,type BattleSave,type BattleSaveMeta} from '../src/battleSave';
 
 export function checkBattleSave(){
@@ -21,6 +22,7 @@ export function checkBattleSave(){
  }
  const source=fixture(),g=source.game,b=source.boss,r=source.run;
  g.gold=10000;g.anvils=4;g.summon('ranged',0);g.summon('melee',1);g.summon('assassin',2);g.summon('guard',3);
+ g.autoArrangeFormation();g.moveFormationUnit(g.units[0].id,20);
  g.buy(0);g.equip(g.gear[0].id,g.units[0].id,0,0,1);g.buy(2);g.speed=3;
  for(let i=0;i<80;i++){g.tick(.05);r.advance(.05);}
  b.reset(waveBossRoster(g));b.autoSkills=false;
@@ -38,10 +40,35 @@ export function checkBattleSave(){
  check(target.game instanceof Defense&&target.boss instanceof BossBattle&&target.run instanceof GameRun,'keeps model class methods and prototypes');
  check(target.game.damageMeter===meter&&target.game.rangedSkills===skillMap&&target.boss.damageMeter.peaks===peaks,'keeps live Map, meter and shared damage peaks identities');
  check(target.game.gold===g.gold&&target.game.anvils===g.anvils&&target.game.speed===3,'restores actual currency and speed');
+ if(LANDSCAPE_BATTLE){
+  const oldRoad=clone(saved),oldEnemy=oldRoad.defense.enemies as {x:number;y:number;distance:number;hp:number}[];
+  oldEnemy[0].x=220;oldEnemy[0].y=78;
+  const migrated=fixture(),expected=pathPoint(oldEnemy[0].distance);
+  check(!!restoreBattle(oldRoad,migrated.game,migrated.boss,migrated.run)&&migrated.game.enemies[0].x===expected.x&&migrated.game.enemies[0].y===expected.y&&migrated.game.enemies[0].distance===oldEnemy[0].distance&&migrated.game.enemies[0].hp===oldEnemy[0].hp,'older rounded-road saves immediately resume on the rectangular road without advancing time or changing HP');
+ }
  check(json(target.game.units)===json(g.units)&&json(target.game.enemies)===json(g.enemies),'restores formation, enemy HP, position and cooldowns');
+ check(json(target.game.formation)===json(g.formation)&&target.game.formation.find(p=>p.unitId===g.units[0].id)?.cell===20,'restores manually arranged boss formation without moving wave slots');
  check(json(target.game.gear)===json(g.gear)&&target.game.gear.every(item=>ITEMS.includes(item.def)),'restores item placement using canonical item definitions');
  check(target.game.shop.every((item,index)=>item===g.shop[index])&&json(target.game.shopDiscounts)===json(g.shopDiscounts),'restores purchased slots, offer definitions and discount flags');
  check(json(target.game.stats(target.game.units[0]))===json(g.stats(g.units[0])),'restored model still calls its training provider');
+ const legacy=clone(saved);delete legacy.defense.formation;delete legacy.defense.formationRows;
+ for(const ally of legacy.boss.roster as Record<string,unknown>[])delete ally.formationCell;
+ const legacyTarget=fixture();legacyTarget.game.summon('guard',0);
+ check(validBattleSave(legacy)&&!!restoreBattle(legacy,legacyTarget.game,legacyTarget.boss,legacyTarget.run),'version-one checkpoints without new formation fields remain resumable');
+ check(legacyTarget.game.formation.length===g.units.length&&legacyTarget.game.heroes().every(u=>formationRank(legacyTarget.game.formation.find(p=>p.unitId===u.id)!.cell)===1),'legacy restore creates role-appropriate cells and removes preexisting target assignments');
+ check(saved.defense.formationRows===6,'new checkpoints record six-row formation geometry');
+ const fourRows=clone(saved),oldCells=[10,9,11,3];delete fourRows.defense.formationRows;
+ fourRows.defense.formation=g.units.map((u,i)=>({unitId:u.id,cell:oldCells[i]}));
+ if(LANDSCAPE_BATTLE)for(const [i,ally] of (fourRows.boss.roster as Record<string,unknown>[]).entries())ally.formationCell=oldCells[i];
+ const fourSnapshot=json(fourRows),oldActors=json(fourRows.boss.actors),migrated=fixture();
+ check(validBattleSave(fourRows)&&!!restoreBattle(fourRows,migrated.game,migrated.boss,migrated.run),'four-row v1 checkpoints remain resumable after expanding the board');
+ check(migrated.game.formation.every((p,i)=>p.cell===oldCells[i]+7)&&migrated.game.heroes().every(u=>formationRank(migrated.game.formation.find(p=>p.unitId===u.id)!.cell)===1),'old cells move down one row while heroes remain middle rank');
+ check(json(migrated.boss.actors)===oldActors&&json(fourRows)===fourSnapshot,'migration never teleports saved boss actors or mutates the input checkpoint');
+ check(!LANDSCAPE_BATTLE||(migrated.boss as unknown as {roster:{formationCell:number}[]}).roster.every((u,i)=>u.formationCell===oldCells[i]+7),'saved boss roster also upgrades to six rows for later resets');
+ const migratedSave=captureBattle(migrated.game,migrated.boss,migrated.run,details,1000);
+ check(!!migratedSave&&migratedSave.defense.formationRows===6&&validBattleSave(migratedSave),'migrated state can be saved again using the new geometry marker');
+ const invalidLegacy=clone(fourRows);(invalidLegacy.defense.formation as Record<string,unknown>[])[3].cell=35;
+ check(!validBattleSave(invalidLegacy),'unmarked legacy saves cannot smuggle cells outside their original board');
  check(json(target.game.damageMeter.snapshot(g.waveTime))===json(g.damageMeter.snapshot(g.waveTime)),'restores damage totals and rolling peaks');
  check(target.run.active&&target.run.mode===r.mode&&target.run.elapsed===r.elapsed,'restores active run time without elapsed offline time');
  const normalized=(save:BattleSave)=>{const copy=clone(save);copy.defense.revision=0;copy.defense.logRevision=0;return json(copy);};
@@ -128,6 +155,13 @@ export function checkBattleSave(){
   ['negative boss timer',s=>{s.boss.elapsed=-1;}],
   ['missing field',s=>{delete s.defense.enemies;}],
   ['unknown executable field',s=>{s.defense.random='override';}],
+  ['out-of-board formation cell',s=>{(s.defense.formation as Record<string,unknown>[])[0].cell=42;}],
+  ['unsupported formation geometry',s=>{s.defense.formationRows=8;}],
+  ['duplicate formation cell',s=>{const cells=s.defense.formation as Record<string,unknown>[];cells[1].cell=cells[0].cell;}],
+  ['unknown formation unit',s=>{(s.defense.formation as Record<string,unknown>[])[0].unitId=99999;}],
+  ['missing formation unit',s=>{(s.defense.formation as Record<string,unknown>[]).pop();}],
+  ['hero outside middle formation',s=>{(s.defense.formation as Record<string,unknown>[])[0].cell=0;}],
+  ['invalid saved boss formation cell',s=>{(s.boss.roster as Record<string,unknown>[])[0].formationCell=42;}],
  ];
  for(const [label,change] of badCases){const bad=clone(saved);change(bad);const clean=fixture(),before=json(clean.game.units);
   check(!validBattleSave(bad)&&restoreBattle(bad,clean.game,clean.boss,clean.run)===null&&json(clean.game.units)===before,'rejects '+label+' before model mutation');

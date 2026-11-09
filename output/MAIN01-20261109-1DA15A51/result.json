@@ -1,0 +1,255 @@
+{
+  "task": "MAIN01-20261109-1DA15A51",
+  "iteration": 1,
+  "role": "qa",
+  "at": "2026-11-09T18:28:10.338422+09:00",
+  "technicalResult": "PASS",
+  "runtimeExceptions": 0,
+  "url": "http://127.0.0.1:5173/battle-landscape.html?battle=normal&from=camp",
+  "checks": [
+    {
+      "item": "actual game ready and comparison button enabled",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "one button opens panel",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "select cards and place multiple variants on real battlefield",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "reselect and drag updates logical position",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "200 percent keeps sole pivot and uniform image scale",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "50 percent and 100 percent restore",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "number editing permits partial digits and clamps only on commit",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "actual variant1 right45 direction changes selected image",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "delete selected only",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "close retains images with no input interception",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "preview operations leave gold roster and saved battle unchanged except normal autosave savedAt",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "clear all immediately restores battlefield",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "card drag to field places preview",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "closed comparison restores actual soldier summon click",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA actual battlefield CDP touch places preview",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA pointercancel cancels capture and stale drag on actual field",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA blur cancels capture and stale drag on actual field",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA resize cancels capture and stale drag on actual field",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA ESC retains image and closes panel",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA reopen preserves image",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA all 15 distinct images selectable and placed through live panel",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA all 15 placed PNGs decoded without breakage",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA direction and scale selected only with fixed feet",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA 50 percent preserves native aspect ratio and measured sole pixel anchor",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA 100 percent preserves native aspect ratio and measured sole pixel anchor",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA 200 percent preserves native aspect ratio and measured sole pixel anchor",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA viewport resize reattaches overlay to battlefield without changing world coordinates",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA panel close during drag releases capture and prevents ghost movement",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "boss switch clears previous previews selection and panel",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "boss coordinate uses 1250 world width at 800 CSS pixels",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "actual boss right45 right90 swaps preserve foot position and scale",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "all four new variants place actual right45 art",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "all four new variants swap to actual right90 art at fixed world foot",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "panel fits narrow 320 pixel viewport without scaling UI",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "panel buttons retain 48 pixel touch height",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "return to wave clears boss previews",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "closed comparison restores actual hero summon click",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "all 15 actual direction PNGs load at original dimensions",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA static fullframes decode on bright background",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA no runtime exceptions before isolated static gallery",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    }
+  ],
+  "additionalChecks": [
+    {
+      "item": "root/UI 40 integrated hashes unchanged after QA",
+      "status": "PASS",
+      "evidence": "target-hashes.json"
+    },
+    {
+      "item": "15PNG source bytes/alpha32/dimensions/nonmirror directions",
+      "status": "PASS",
+      "evidence": "asset-audit.json; fullframes-light.png; fullframes-dark.png"
+    },
+    {
+      "item": "main.ts minimal patch: 7 added / 1 replaced",
+      "status": "PASS",
+      "evidence": "live-root-main.diff; ui-main.diff"
+    }
+  ],
+  "unverified": [
+    {
+      "item": "사용자 미적 합격",
+      "status": "미검증",
+      "reason": "사용자 판정 영역"
+    },
+    {
+      "item": "실기기 Android/APK/WebView/실제 멀티터치/OS 앱전환",
+      "status": "미검증",
+      "reason": "headless CDP; blur/pointercancel 일부 합성 이벤트"
+    },
+    {
+      "item": "세로 실제전투/장기 자연 웨이브진행/기존15 browser suites",
+      "status": "미검증",
+      "reason": "지정 가로 URL 및 개발자 전환으로 한정"
+    },
+    {
+      "item": "제작자 isolated dispose2회 fixture와 수학 단위검사",
+      "status": "미검증",
+      "reason": "제품 DOM 동등40항목으로 대체; fixture 제품 추가 없음"
+    }
+  ],
+  "productFilesModified": false,
+  "existingServerRestarted": false,
+  "userProfileTouched": false,
+  "productionBuildRerun": false,
+  "artAcceptance": "pending_user"
+}
