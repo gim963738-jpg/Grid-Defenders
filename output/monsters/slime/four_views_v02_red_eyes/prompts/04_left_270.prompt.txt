@@ -1,0 +1,5 @@
+Use case: precise-object-edit.
+Input image 1 = the existing slime sprite to edit.
+Make ONE precise color edit only: recolor the single visible round eye at the screen-left leading edge from pale ivory/yellow to vivid saturated SCARLET RED. Use bright red interiors and a slightly darker crimson red outer pixel rim, retaining the exact existing round eye shapes, dimensions, positions, pupil-free design and pixel edge pattern. The eyes must clearly read as RED at small game scale, with red highlights rather than a large white/yellow center. Keep any eye glow confined to the eye region.
+Preserve everything else in the image: exact green jelly body colors, silhouette, crown curl, drips, surface highlights, dark outline, mouth and friendly expression, pose, direction, scale, position, pixel density, framing and true transparent alpha background. Do not redraw, rescale, crop, sharpen, smooth or otherwise modify the body. Do not add eyes, eyebrows, pupils, objects, text, backdrop, ground or shadow.
+Return the SAME single sprite on the SAME 1254x1254 transparent canvas. This is the left-facing view; preserve its orientation exactly.

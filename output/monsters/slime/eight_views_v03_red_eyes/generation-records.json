@@ -1,0 +1,86 @@
+{
+  "request_changes": [
+    "Change eyes to red.",
+    "Latest user request: expand slime from4to8directions."
+  ],
+  "version": "eight_views_v03_red_eyes",
+  "step_degrees": 45,
+  "requested_canvas": [
+    1254,
+    1254
+  ],
+  "transparent_background": true,
+  "copied_cardinal_views": [
+    {
+      "file": "images/01_front_000.png",
+      "source": "../four_views_v02_red_eyes/images/01_front_000.png"
+    },
+    {
+      "file": "images/03_right_090.png",
+      "source": "../four_views_v02_red_eyes/images/03_right_090.png"
+    },
+    {
+      "file": "images/05_back_180.png",
+      "source": "../four_views_v02_red_eyes/images/02_back_180.png"
+    },
+    {
+      "file": "images/07_left_270.png",
+      "source": "../four_views_v02_red_eyes/images/04_left_270.png"
+    }
+  ],
+  "new_diagonal_views": [
+    {
+      "direction": "front_right",
+      "file": "images/02_front_right_045.png",
+      "prompt": "prompts/02_front_right_045.prompt.txt",
+      "input_order": [
+        "images/01_front_000.png",
+        "images/03_right_090.png",
+        "images/05_back_180.png",
+        "images/07_left_270.png"
+      ],
+      "tool": "built-in image_gen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf as C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf\\exec-95fd00df-97ce-4986-a176-7fe5b91a7547.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "direction": "back_right",
+      "file": "images/04_back_right_135.png",
+      "prompt": "prompts/04_back_right_135.prompt.txt",
+      "input_order": [
+        "images/01_front_000.png",
+        "images/03_right_090.png",
+        "images/05_back_180.png",
+        "images/07_left_270.png"
+      ],
+      "tool": "built-in image_gen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf as C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf\\exec-9bf1cb9f-99f3-4a0b-b1d9-73ebf7456a00.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "direction": "back_left",
+      "file": "images/06_back_left_225.png",
+      "prompt": "prompts/06_back_left_225.prompt.txt",
+      "input_order": [
+        "images/01_front_000.png",
+        "images/03_right_090.png",
+        "images/05_back_180.png",
+        "images/07_left_270.png"
+      ],
+      "tool": "built-in image_gen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf as C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf\\exec-448cf3e8-7246-4aec-a812-695066bec04e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "direction": "front_left",
+      "file": "images/08_front_left_315.png",
+      "prompt": "prompts/08_front_left_315.prompt.txt",
+      "input_order": [
+        "images/01_front_000.png",
+        "images/03_right_090.png",
+        "images/05_back_180.png",
+        "images/07_left_270.png"
+      ],
+      "tool": "built-in image_gen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf as C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf\\exec-755a961a-21ac-4009-94de-dd432a5315ff.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "scope": "8 stationary directional design PNGs. Game animation and foot-anchor normalization not integrated."
+}

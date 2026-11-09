@@ -1,0 +1,75 @@
+{
+  "tool": "built-in image_gen",
+  "user_request": "Current yellow right-facing slime: ripple only the bottom red-marked skirt region,30frames.",
+  "source_master": "source/yellow-right-idle.png",
+  "annotation": "source/annotated-motion-region.png",
+  "attempts": [
+    {
+      "file": "generated/ripple-sheet-attempt01.png",
+      "prompt": "prompts/ripple-sheet-30f.prompt.txt",
+      "references": [
+        "source/yellow-right-idle.png",
+        "source/annotated-motion-region.png"
+      ],
+      "selected": false,
+      "reason": "Upper pose varied between frames.",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf as C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf\\exec-6bd2af1c-fbab-4afb-80a4-2a4cd7cf1d24.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "generated/ripple-sheet-attempt02.png",
+      "prompt": "prompts/ripple-sheet-30f-refined.prompt.txt",
+      "references": [
+        "source/yellow-right-idle.png"
+      ],
+      "selected": true,
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf as C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf\\exec-24e08a15-fe30-4188-87e8-e78e8a1c161f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "assembly": {
+    "script": "pack-frames.ps1",
+    "measured_source_size": [
+      1374,
+      1145
+    ],
+    "measured_source_cell": [
+      229,
+      229
+    ],
+    "grid": [
+      6,
+      5
+    ],
+    "source_order": "row-major",
+    "resampled_artwork": false,
+    "upper_stamp": "Upper138rows of sourcecell001 repeated in all30frames.",
+    "padding": [
+      13,
+      20
+    ],
+    "export_size": [
+      1536,
+      1280
+    ],
+    "export_cell": [
+      256,
+      256
+    ],
+    "frozen_output_rows": [
+      0,
+      158
+    ],
+    "default_fps": 30,
+    "loop": true,
+    "anchor": [
+      128,
+      228
+    ],
+    "outputs": {
+      "atlas": "ripple-30f-sheet.png",
+      "frames": "frames/frame-001.png through frames/frame-030.png",
+      "data": "frames.json",
+      "viewer": "미리보기.html"
+    }
+  },
+  "scope": "Stationary yellow90degree lower-skirt ripple asset only; no game simulation, collision or damage changes."
+}

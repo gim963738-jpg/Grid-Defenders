@@ -1,0 +1,8 @@
+Use case: precise-object-edit.
+Input image1: the BLUE LEFT,270 degrees view of the existing round slime sprite, the EDIT TARGET.
+Input image2: current RED FRONT palette master only. Match its scarlet/crimson/maroon body and pale coral highlights. Do not copy its front-facing eye arrangement or replace the target's direction.
+Primary request: recolor ONLY this creature's blue/cyan gelatinous body to RED. Keep its exact existing design and orientation.
+PALETTE: saturated scarlet and crimson red body, deep maroon shadow planes and outline, warm red/coral stepped highlights, tiny pale coral-white specular glints. The dominant body must read clearly as RED, not pink or orange. The eyes remain BLACK or very dark burgundy with their existing small pale highlights. Do not turn the eyes into red-filled eyes.
+INVARIANTS: same rounded dome, connected wavy puddle base, exact silhouette, neutral settled idle pose, same round eye positions/shapes/number where visible, no mouth, same discrete square pixel cluster grid/density, contour, shading layout, camera elevation, direction, scale and framing. No new spikes, dripping strands, limbs, accessories, symbols or facial features. Preserve the fact that the eyes are hidden in back views and only the near eye is visible in side profiles.
+Canvas: same1254x1254 square as input, same body bounds and base height, actual transparent alpha outside the silhouette. Do not crop, rescale, flip, rotate, smooth, redraw into a new design, add ground/shadow/backdrop, checkerboard, text or multiple sprites.
+THIS FILE ONLY: retain the exact LEFT,270 degrees orientation of the edit target. One red color variant of that one sprite.

@@ -1,0 +1,1290 @@
+{
+    "frame_count":  30,
+    "unique_rgba_frames":  30,
+    "all_frames_256_square":  true,
+    "atlas_width":  1536,
+    "atlas_height":  1280,
+    "atlas_file_sha256":  "57f1e826c2966b745f138ff4b5c05849e26a42849351fa13872208fc818e1388",
+    "all_frames_equal_corresponding_atlas_cells":  true,
+    "all_upper_rows_0_to_157_identical":  true,
+    "all_frame_edges_alpha_zero":  true,
+    "frames":  [
+                   {
+                       "file":  "frame-001.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "cd2a659a5407da32a5d2186dce73121eb8b900452ba1a70493f21205933c4294",
+                       "file_sha256":  "110045aaa6d10b54f099a554027439a55b7dccf72a8a3de35093b3ba20a95174",
+                       "transparent_pixels":  40865,
+                       "opaque_pixels":  97,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       228
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  0,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  null,
+                                                        "mean_absolute_rgba_difference":  0
+                                                    }
+                   },
+                   {
+                       "file":  "frame-002.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "e6fa60763633c6060ea033509ac7ccca6ab15474472acc8feddbfc2d2bb5361e",
+                       "file_sha256":  "a7b7f6dbeb4cc8e55ee02e96e4d330a377593b0c7f75c05a9f648d60286c9e33",
+                       "transparent_pixels":  40913,
+                       "opaque_pixels":  118,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       228
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  11905,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  0.85376358032226563
+                                                    }
+                   },
+                   {
+                       "file":  "frame-003.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "a189be74527848de57fa40aa905bf42227fd92aaf3ff6bfa133215dc743f2ef3",
+                       "file_sha256":  "a070929eafca559b2da64a8260685cfb1a0c3948e5ef34b724bff0e15a4a162d",
+                       "transparent_pixels":  40930,
+                       "opaque_pixels":  119,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       228
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  11947,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  0.96490478515625
+                                                    }
+                   },
+                   {
+                       "file":  "frame-004.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "d3bd85b62ec92e439607b521df92136637b244654bc1cd685180535cb119f08c",
+                       "file_sha256":  "a33bbff84a42ecb4bce5d27005ebdcd2bc6e1460bf56fc41334eeb606e2e7af3",
+                       "transparent_pixels":  40945,
+                       "opaque_pixels":  97,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       22,
+                                                       60,
+                                                       233,
+                                                       227
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  11919,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             22,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  1.2665481567382813
+                                                    }
+                   },
+                   {
+                       "file":  "frame-005.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "ff2215d1017025ac10ad4069d6beea3260744630cdb2c1f6bb04379217e1bd4d",
+                       "file_sha256":  "d833471e44887ae0355697e4fd1a2142c0ac99db609f3f2cdba04a1011f736af",
+                       "transparent_pixels":  40894,
+                       "opaque_pixels":  87,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       227
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12030,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  2.1145095825195313
+                                                    }
+                   },
+                   {
+                       "file":  "frame-006.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "4c2fe1230824890025ec9ce298d5f8e4916b1e525e9e3baa08bf15525e518829",
+                       "file_sha256":  "32c0a73ba41428313e7d41b839c9df2fc63ef5b657a9573c1f511ab095d3fa7d",
+                       "transparent_pixels":  40796,
+                       "opaque_pixels":  69,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       228
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12190,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  2.9741363525390625
+                                                    }
+                   },
+                   {
+                       "file":  "frame-007.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "bad02d91ef2dc4ad7a8563c6788a5ea05a5c659164afc4bf7a09b4de1c2ce875",
+                       "file_sha256":  "b0da513aaaae7c32a8dac4963660c59cee1362f6b657ba0f595ce4109d8de1b1",
+                       "transparent_pixels":  40701,
+                       "opaque_pixels":  97,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       227
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12365,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  3.9344444274902344
+                                                    }
+                   },
+                   {
+                       "file":  "frame-008.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "6397fd52428fe4906c76ca76baab60f102e0eabba0ae74dd7d50932b5406390c",
+                       "file_sha256":  "b21a768f868f3ad06162e52a93b3e868281a6a6d62c9c4a3a3f5968cced470fe",
+                       "transparent_pixels":  40890,
+                       "opaque_pixels":  59,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       225
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12342,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  4.30560302734375
+                                                    }
+                   },
+                   {
+                       "file":  "frame-009.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "0214664bb670dffed0c5f540622d22b63bd68d4c1d235f03d53adbcfa265ace2",
+                       "file_sha256":  "f2e28ca840ad523b0fdc2135abd5ee267f947bc2474f8c896a400c57c1bfd2c1",
+                       "transparent_pixels":  40903,
+                       "opaque_pixels":  68,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       225
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12428,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  4.7048568725585938
+                                                    }
+                   },
+                   {
+                       "file":  "frame-010.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "60ecca72a16db99f2bde2b78adeac3501df198b5de8d3cf3d7391e3acc36c3b2",
+                       "file_sha256":  "ca321ef405d1c374f1e67f4a13695d98d60df3f019d4c558df45063a2e12ea0d",
+                       "transparent_pixels":  40902,
+                       "opaque_pixels":  63,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       22,
+                                                       60,
+                                                       233,
+                                                       226
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12470,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             22,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  5.006683349609375
+                                                    }
+                   },
+                   {
+                       "file":  "frame-011.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "530449be0c10245a4eb39dfd2a36b03e761be9258390cd5291cd157c129c0a76",
+                       "file_sha256":  "5ab7f5c976a6f7417e04d8a624df8ab7f620da5df1289f61fa2dbbbd7be7c154",
+                       "transparent_pixels":  41086,
+                       "opaque_pixels":  64,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       225
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12473,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  5.4063873291015625
+                                                    }
+                   },
+                   {
+                       "file":  "frame-012.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "0ff17b64019add96ba20c979feaa2bbce0f497b8529b798385df6d86cc25c3c8",
+                       "file_sha256":  "48a4fe90cd20ef631096d93ccb420d3ee2cdf031eb5b65782f53459eeaf6cdef",
+                       "transparent_pixels":  41173,
+                       "opaque_pixels":  67,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       225
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12389,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  5.4308700561523438
+                                                    }
+                   },
+                   {
+                       "file":  "frame-013.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "9d433f910faac94c4f4b4eb09269d0deddc52d582837e6b5491497f7ac4e4f6c",
+                       "file_sha256":  "b2aa9b5682a4c429721e5a1d6f6e66739d2dd816f4a4a50f4c4ece20eec99dba",
+                       "transparent_pixels":  40988,
+                       "opaque_pixels":  49,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       226
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12515,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  5.5074958801269531
+                                                    }
+                   },
+                   {
+                       "file":  "frame-014.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "5880d4aa35ec08508e953c105fde547b22cd2f58f99b04eda9de75404354affd",
+                       "file_sha256":  "f4bc16ccc3999e1956f6353c9f8fddc115384f7515f3d05931de31cee1a15098",
+                       "transparent_pixels":  40919,
+                       "opaque_pixels":  79,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       225
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12590,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  5.600433349609375
+                                                    }
+                   },
+                   {
+                       "file":  "frame-015.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "67cff9c23a7a5657a79053c5890fccab37261a5edab865c6d7ff4b6427e56e07",
+                       "file_sha256":  "3a07615228ca5f62d733d8122d5a9558b861706063ad2cba9b699428becfbb50",
+                       "transparent_pixels":  40956,
+                       "opaque_pixels":  60,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       226
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12602,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  5.6836166381835938
+                                                    }
+                   },
+                   {
+                       "file":  "frame-016.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "66934e2cc2bad1c4cb30a188469f042925b20532829549029a0e8b5376a113b9",
+                       "file_sha256":  "68b4221a67a3ae8f847d1b9d8f68d1a1c366ac455f2b4427d1cbdafd20717ad0",
+                       "transparent_pixels":  41027,
+                       "opaque_pixels":  49,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       22,
+                                                       60,
+                                                       233,
+                                                       225
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12474,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             22,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  5.1769790649414063
+                                                    }
+                   },
+                   {
+                       "file":  "frame-017.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "1c142d23b24ac6faba1816fec61bfe13fd60270690a766c30f22b3bdb8f09eef",
+                       "file_sha256":  "d738f180688e9da5e3dca4e402b1c81bcfd0f430dd009cbf59c731d6b1488cb6",
+                       "transparent_pixels":  41142,
+                       "opaque_pixels":  48,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       225
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12341,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  4.8526763916015625
+                                                    }
+                   },
+                   {
+                       "file":  "frame-018.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "d33c34ac47d17a3f5a6b4685c78dbc48fc3debdb137be3d83b01b9c96bf7c097",
+                       "file_sha256":  "2096a57669e0ff642c7c83f88d3f03e5939d439c8ff364ad3697e254091d1f37",
+                       "transparent_pixels":  41242,
+                       "opaque_pixels":  49,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       225
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12226,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  4.8740119934082031
+                                                    }
+                   },
+                   {
+                       "file":  "frame-019.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "88fe3da05f35d88bc55a20d0ea1d98240e082b221f2c926ce36b5c9225a27999",
+                       "file_sha256":  "83783c1cdad0036ebeb16e9a86c6f6bce59845644182f05d41cdc6852bb05e22",
+                       "transparent_pixels":  41086,
+                       "opaque_pixels":  45,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       228
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12274,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  4.5819625854492188
+                                                    }
+                   },
+                   {
+                       "file":  "frame-020.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "9ef230ff29ad2fcd6aecce60f7a14992bae5a07c9b09631df4ce0f9f81aecc96",
+                       "file_sha256":  "c0599dd3549f05e86bfdac0169566da874328baeef959c0266c48caf23e51a28",
+                       "transparent_pixels":  41120,
+                       "opaque_pixels":  70,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       227
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12171,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  3.9661331176757813
+                                                    }
+                   },
+                   {
+                       "file":  "frame-021.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "b2d113e096e9c8e4dce5bc65a1179ca0f9d84f025a0f0c9a10b2587e494e696a",
+                       "file_sha256":  "ffd3b3a6df31c0b305ae5adde7f8a639e469852761902c7184e3f72f1d39826b",
+                       "transparent_pixels":  41135,
+                       "opaque_pixels":  59,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       227
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12135,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  3.5732460021972656
+                                                    }
+                   },
+                   {
+                       "file":  "frame-022.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "a9ff49c08c4b76e97455258f5843d7d6ec001f218a6995e4dcbb71746a579864",
+                       "file_sha256":  "388a2637124ecf34a72c3dd368f0ab957a050d67972b947e0cdd84e2a5076d99",
+                       "transparent_pixels":  40877,
+                       "opaque_pixels":  48,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       22,
+                                                       60,
+                                                       232,
+                                                       227
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12084,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             22,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  2.3663825988769531
+                                                    }
+                   },
+                   {
+                       "file":  "frame-023.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "e56577660a3b51f58222a5e089cafd93d09bdd9165e5550aacd0381e6ea64697",
+                       "file_sha256":  "ad66ed35c0d0e8a36b8d0ac029bde3ed2cdea4d400e354442677a805802aa761",
+                       "transparent_pixels":  40872,
+                       "opaque_pixels":  49,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       228
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12071,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  2.1555862426757813
+                                                    }
+                   },
+                   {
+                       "file":  "frame-024.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "664b24ec99bca53eca195e886f89e95bd11a9620a5c0bc48e109cd21838d40a1",
+                       "file_sha256":  "22b9ff8338b10a67f1feefe6e21d6b401a991b6fb7ffc794b89d9662e40e03a2",
+                       "transparent_pixels":  40900,
+                       "opaque_pixels":  49,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       227
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12033,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  1.9196281433105469
+                                                    }
+                   },
+                   {
+                       "file":  "frame-025.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "ac9bad393a2e49dff746e3a7c2dbb9f7736c867520aa6b397b1fb9d96a342b8a",
+                       "file_sha256":  "977de475397b35bc808f780c6c52cb5fa6e1617cb60a048c3f582bc58c5f58b7",
+                       "transparent_pixels":  40803,
+                       "opaque_pixels":  87,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       229
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12051,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             229
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  1.5810394287109375
+                                                    }
+                   },
+                   {
+                       "file":  "frame-026.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "17c0181f3f6cb78beeab88f3a0faf06765ebf9bc0826761212d5ef9b55573def",
+                       "file_sha256":  "9a4c82f450965350361e23df7eee220b1159c797d2c879fe3286683367638bef",
+                       "transparent_pixels":  40818,
+                       "opaque_pixels":  93,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       228
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12031,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  1.4873847961425781
+                                                    }
+                   },
+                   {
+                       "file":  "frame-027.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "21faf87b67f6a541a708665ad3f64b64414b009bcd022e6319961a170b430dd9",
+                       "file_sha256":  "382a79e2991b71f38f35569e8f580b9d5db78dada871db43fb2c2aad8c50d0e6",
+                       "transparent_pixels":  40816,
+                       "opaque_pixels":  98,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       229
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12058,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             229
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  1.4821548461914063
+                                                    }
+                   },
+                   {
+                       "file":  "frame-028.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "94b1c770c0145629a71957391e79f309410d3ef447a5ed65c00c04e39a647eaf",
+                       "file_sha256":  "4de00c07d735ffc43dcda8da92875e5344ef04867856e5f3d798ee1c06d25b9f",
+                       "transparent_pixels":  40780,
+                       "opaque_pixels":  96,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       22,
+                                                       60,
+                                                       233,
+                                                       229
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12095,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             22,
+                                                                             158,
+                                                                             233,
+                                                                             229
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  1.5322113037109375
+                                                    }
+                   },
+                   {
+                       "file":  "frame-029.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "86d6de31a719c5ad12c32047048e0267efeb0b61ce1add4bef8a2695f262cb78",
+                       "file_sha256":  "91dfab7b82a729022c61e36b45aaed59ead5cf16c28e17b54e55545eca4414c3",
+                       "transparent_pixels":  40802,
+                       "opaque_pixels":  97,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       232,
+                                                       228
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12078,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  1.4978179931640625
+                                                    }
+                   },
+                   {
+                       "file":  "frame-030.png",
+                       "width":  256,
+                       "height":  256,
+                       "pixel_sha256":  "fdb1eb7aded9bb3bdf7a0a904566fbd8b81a0c3ac98ad0cdf7615e9ac980f2c9",
+                       "file_sha256":  "6086e58a9184645d9260b4ac4a5babcd0b8bc02af1f26b28a2c410412bd0a017",
+                       "transparent_pixels":  40784,
+                       "opaque_pixels":  78,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       23,
+                                                       60,
+                                                       233,
+                                                       228
+                                                   ],
+                       "nontransparent_edge_pixels":  0,
+                       "atlas_changed_pixels":  0,
+                       "equals_atlas_cell":  true,
+                       "difference_from_frame001":  {
+                                                        "changed_pixels":  12094,
+                                                        "upper_changed_pixels":  0,
+                                                        "changed_bbox":  [
+                                                                             23,
+                                                                             158,
+                                                                             233,
+                                                                             228
+                                                                         ],
+                                                        "mean_absolute_rgba_difference":  1.6159591674804688
+                                                    }
+                   }
+               ],
+    "adjacent_transitions":  [
+                                 {
+                                     "changed_pixels":  11905,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  0.85376358032226563,
+                                     "from":  1,
+                                     "to":  2
+                                 },
+                                 {
+                                     "changed_pixels":  11845,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  0.80531692504882813,
+                                     "from":  2,
+                                     "to":  3
+                                 },
+                                 {
+                                     "changed_pixels":  11878,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          233,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.1054229736328125,
+                                     "from":  3,
+                                     "to":  4
+                                 },
+                                 {
+                                     "changed_pixels":  11956,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          233,
+                                                          227
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.502685546875,
+                                     "from":  4,
+                                     "to":  5
+                                 },
+                                 {
+                                     "changed_pixels":  12042,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          232,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.583038330078125,
+                                     "from":  5,
+                                     "to":  6
+                                 },
+                                 {
+                                     "changed_pixels":  12223,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  2.0514717102050781,
+                                     "from":  6,
+                                     "to":  7
+                                 },
+                                 {
+                                     "changed_pixels":  12099,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          227
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.8732109069824219,
+                                     "from":  7,
+                                     "to":  8
+                                 },
+                                 {
+                                     "changed_pixels":  12005,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          225
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.4874954223632813,
+                                     "from":  8,
+                                     "to":  9
+                                 },
+                                 {
+                                     "changed_pixels":  12010,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          233,
+                                                          226
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.7046051025390625,
+                                     "from":  9,
+                                     "to":  10
+                                 },
+                                 {
+                                     "changed_pixels":  11938,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          233,
+                                                          226
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.8928985595703125,
+                                     "from":  10,
+                                     "to":  11
+                                 },
+                                 {
+                                     "changed_pixels":  11753,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          232,
+                                                          225
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.3228530883789063,
+                                     "from":  11,
+                                     "to":  12
+                                 },
+                                 {
+                                     "changed_pixels":  11915,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          226
+                                                      ],
+                                     "mean_absolute_rgba_difference":  2.3409614562988281,
+                                     "from":  12,
+                                     "to":  13
+                                 },
+                                 {
+                                     "changed_pixels":  11953,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          226
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.5839805603027344,
+                                     "from":  13,
+                                     "to":  14
+                                 },
+                                 {
+                                     "changed_pixels":  11992,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          226
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.7888565063476563,
+                                     "from":  14,
+                                     "to":  15
+                                 },
+                                 {
+                                     "changed_pixels":  12042,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          233,
+                                                          226
+                                                      ],
+                                     "mean_absolute_rgba_difference":  2.5267333984375,
+                                     "from":  15,
+                                     "to":  16
+                                 },
+                                 {
+                                     "changed_pixels":  11824,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          233,
+                                                          225
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.911529541015625,
+                                     "from":  16,
+                                     "to":  17
+                                 },
+                                 {
+                                     "changed_pixels":  11715,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          232,
+                                                          225
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.8753089904785156,
+                                     "from":  17,
+                                     "to":  18
+                                 },
+                                 {
+                                     "changed_pixels":  11921,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  3.0433235168457031,
+                                     "from":  18,
+                                     "to":  19
+                                 },
+                                 {
+                                     "changed_pixels":  11799,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.8826980590820313,
+                                     "from":  19,
+                                     "to":  20
+                                 },
+                                 {
+                                     "changed_pixels":  11717,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          227
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.2846870422363281,
+                                     "from":  20,
+                                     "to":  21
+                                 },
+                                 {
+                                     "changed_pixels":  11963,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          233,
+                                                          227
+                                                      ],
+                                     "mean_absolute_rgba_difference":  2.1554946899414063,
+                                     "from":  21,
+                                     "to":  22
+                                 },
+                                 {
+                                     "changed_pixels":  11949,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          232,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.0071678161621094,
+                                     "from":  22,
+                                     "to":  23
+                                 },
+                                 {
+                                     "changed_pixels":  11919,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          232,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.1425132751464844,
+                                     "from":  23,
+                                     "to":  24
+                                 },
+                                 {
+                                     "changed_pixels":  12062,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          229
+                                                      ],
+                                     "mean_absolute_rgba_difference":  1.8068351745605469,
+                                     "from":  24,
+                                     "to":  25
+                                 },
+                                 {
+                                     "changed_pixels":  11973,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          229
+                                                      ],
+                                     "mean_absolute_rgba_difference":  0.83192062377929688,
+                                     "from":  25,
+                                     "to":  26
+                                 },
+                                 {
+                                     "changed_pixels":  11949,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          229
+                                                      ],
+                                     "mean_absolute_rgba_difference":  0.79285049438476563,
+                                     "from":  26,
+                                     "to":  27
+                                 },
+                                 {
+                                     "changed_pixels":  12009,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          233,
+                                                          229
+                                                      ],
+                                     "mean_absolute_rgba_difference":  0.830657958984375,
+                                     "from":  27,
+                                     "to":  28
+                                 },
+                                 {
+                                     "changed_pixels":  11976,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          22,
+                                                          158,
+                                                          233,
+                                                          229
+                                                      ],
+                                     "mean_absolute_rgba_difference":  0.75139617919921875,
+                                     "from":  28,
+                                     "to":  29
+                                 },
+                                 {
+                                     "changed_pixels":  11999,
+                                     "upper_changed_pixels":  0,
+                                     "changed_bbox":  [
+                                                          23,
+                                                          158,
+                                                          233,
+                                                          228
+                                                      ],
+                                     "mean_absolute_rgba_difference":  0.81653594970703125,
+                                     "from":  29,
+                                     "to":  30
+                                 }
+                             ],
+    "adjacent_changed_pixel_median":  11953,
+    "adjacent_mean_absolute_rgba_difference_median":  1.583038330078125,
+    "loop_transition_030_to_001":  {
+                                       "changed_pixels":  12094,
+                                       "upper_changed_pixels":  0,
+                                       "changed_bbox":  [
+                                                            23,
+                                                            158,
+                                                            233,
+                                                            228
+                                                        ],
+                                       "mean_absolute_rgba_difference":  1.6159591674804688,
+                                       "from":  30,
+                                       "to":  1,
+                                       "changed_pixel_ratio_to_adjacent_median":  1.0117962017903455,
+                                       "mean_absolute_difference_ratio_to_adjacent_median":  1.0207959824957107
+                                   },
+    "sourceTouchesCellEdge_all_false":  true,
+    "validation_method":  "Read-only System.Drawing decoded RGBA scan, exact atlas-cell comparison and SHA-256. No image pixels changed by validator.",
+    "validation_time":  "2026-11-07T00:57:11.5736226+09:00",
+    "browser_visual_review":  "Performed separately by parent; not claimed by this read-only validation.",
+    "actual_battlefield_integrated":  false,
+    "browser_review_by_parent":  {
+                                     "tool":  "Orca embedded browser",
+                                     "sheet_loaded":  true,
+                                     "light_gray_all_30_checked":  true,
+                                     "bright_green_all_30_checked":  true,
+                                     "default_30fps_setting_verified":  true,
+                                     "quarter_speed_setting_verified":  true,
+                                     "pause_verified":  true,
+                                     "actual_battlefield_checked":  false,
+                                     "notes":  "Asset-only export; source artwork generated with built-in image_gen, upper layer frozen during atlas assembly."
+                                 }
+}

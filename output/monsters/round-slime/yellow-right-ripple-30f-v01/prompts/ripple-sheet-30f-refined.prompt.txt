@@ -1,0 +1,18 @@
+Use case: precise-object-edit.
+Input1 is the ONLY clean master image. Create ONE transparent sprite sheet of EXACTLY30animation frames of this SAME gold/yellow slime facing SCREEN RIGHT, one BLACK oval eye, no mouth.
+LAYOUT: EXACTLY6columns x5rows, uniform square cells, requested1536x1280 total (256x256each). Row-major reading order1through30. Fully visible ONE sprite percell, ample transparent cell margins, identical scale/groundpivot. No drawn lines,numbers,labels,UI,borders,red pixels or decoration.
+
+STRICTLY LOCKED UPPER LAYER: copy the SAME dome/eye/top highlights into everyframe, at IDENTICAL pixel coordinates. Dome silhouette, eye shape and center, large right cheek highlight and all details above the lower skirt must NOT change or drift. No whole-body squash, bob, sway, eye blink or turn. This is NOT a different drawing or pose in eachcell.
+ANIMATE ONLY THE LOWER JELLY SKIRT: reference source is1254square; ONLY region BELOW y760 (~bottom35%ofvisiblebody) can move. Keep the belly/skirt join smooth, preserve upperedge width. A low smooth wave rolls along the connected flared pudding rim, with broad golden/amber horizontal bands and cream skirt highlights following it. At the smallframe scale, lowcrest lifts2–3pixels while adjacent trough sinks2–3pixels. Do not deform dome or eye.
+
+The30frames must form a single slow,seamless traveling-wave cycle. Use coherent matched incremental changes,not random outlines or shading perframe.
+- Frames1–6: low crest starts at left rear edge and moves smoothly toward left-middle.
+- Frames7–12: same crest passes center-left of broad base; previous left rim settles.
+- Frames13–18: same crest passes center,then center-right.
+- Frames19–24: same crest passes the right/front rim; center relaxes.
+- Frames25–30: right crest settles and left crest gradually reforms,leading seamlessly backtoframe1.
+Maintain a gentle second shallow counter-wave in the base to keep body volume. LAST→FIRST should be as small and natural a step as any adjacent pair. Exactly30distinct phases,no duplicatefillerframes.
+
+DESIGN/STYLE LOCK: same rounded soft bell-shaped dome, same broad connected irregularpoolbase, same neutral right-profile pose, same thick dark brown stair-step outline, same square pixel clusters and density, same gold/ochre shadows,lemonyellowbody,cream highlights,blackeye andsmallwarmreflection. No spikes/curl,drips,tentacles,splashes,particles,mouth,extraeyes.
+Only stationary lower-edge liquid motion on true transparent alpha. No ground,shadow,glow,background,checkerboard,smooth vector/3D/airbrush,blur,text or watermark.
+Frameplacement: centerx128;domestartnear y64;normalbasenear y229;preservefullsprite. SameupperlayerrepeatedEXACTLY30times.

@@ -1,0 +1,334 @@
+{
+  "inspection_date": "2026-11-07T00:13:36",
+  "method": "Pillow read-only inspection; SHA-256. No image pixels modified.",
+  "images": [
+    {
+      "file": "images/01_front_000.png",
+      "sha256": "1a7a9285333552819418ce32b9dfbded8ad7dda9eb68d6cf31acac9e3d8e6c5d",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 993072,
+      "partial_alpha_pixels_1_to_254": 578032,
+      "opaque_pixels_alpha_255": 1412,
+      "visible_bbox_alpha_gt_0": [
+        0,
+        80,
+        1222,
+        1254
+      ],
+      "visible_bbox_alpha_ge_16": [
+        110,
+        317,
+        1145,
+        1117
+      ],
+      "visible_bbox_alpha_ge_128": [
+        110,
+        318,
+        1144,
+        1116
+      ],
+      "subject_touches_edge_alpha_ge_16": false
+    },
+    {
+      "file": "images/02_front_right_045.png",
+      "sha256": "a150252c185ec11481743eb9f3771fd8fda3c8063d158248c0d1f2e876111d91",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 985657,
+      "partial_alpha_pixels_1_to_254": 584981,
+      "opaque_pixels_alpha_255": 1878,
+      "visible_bbox_alpha_gt_0": [
+        0,
+        97,
+        1160,
+        1238
+      ],
+      "visible_bbox_alpha_ge_16": [
+        104,
+        315,
+        1149,
+        1121
+      ],
+      "visible_bbox_alpha_ge_128": [
+        105,
+        316,
+        1148,
+        1120
+      ],
+      "subject_touches_edge_alpha_ge_16": false
+    },
+    {
+      "file": "images/03_right_090.png",
+      "sha256": "66c5efc1b4d479d5e799e7b40fe8c2e035c19bcd288e3adb7cc00e1dbe71c05b",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 1000579,
+      "partial_alpha_pixels_1_to_254": 570410,
+      "opaque_pixels_alpha_255": 1527,
+      "visible_bbox_alpha_gt_0": [
+        0,
+        46,
+        1232,
+        1254
+      ],
+      "visible_bbox_alpha_ge_16": [
+        112,
+        316,
+        1140,
+        1118
+      ],
+      "visible_bbox_alpha_ge_128": [
+        113,
+        317,
+        1139,
+        1117
+      ],
+      "subject_touches_edge_alpha_ge_16": false
+    },
+    {
+      "file": "images/04_back_right_135.png",
+      "sha256": "67462da11de4b776b539cb5c0af3c272e1aef329e6f273a72f2c911c5124fd3c",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 991270,
+      "partial_alpha_pixels_1_to_254": 579667,
+      "opaque_pixels_alpha_255": 1579,
+      "visible_bbox_alpha_gt_0": [
+        0,
+        103,
+        1240,
+        1254
+      ],
+      "visible_bbox_alpha_ge_16": [
+        114,
+        313,
+        1142,
+        1121
+      ],
+      "visible_bbox_alpha_ge_128": [
+        115,
+        314,
+        1141,
+        1120
+      ],
+      "subject_touches_edge_alpha_ge_16": false
+    },
+    {
+      "file": "images/05_back_180.png",
+      "sha256": "e65fa0f5d4019502ed739d061a3b58803518983d88cd42832e41054c7888d366",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 988805,
+      "partial_alpha_pixels_1_to_254": 582033,
+      "opaque_pixels_alpha_255": 1678,
+      "visible_bbox_alpha_gt_0": [
+        0,
+        16,
+        1219,
+        1254
+      ],
+      "visible_bbox_alpha_ge_16": [
+        108,
+        316,
+        1147,
+        1118
+      ],
+      "visible_bbox_alpha_ge_128": [
+        109,
+        316,
+        1146,
+        1117
+      ],
+      "subject_touches_edge_alpha_ge_16": false
+    },
+    {
+      "file": "images/06_back_left_225.png",
+      "sha256": "a026c7e42af49411435704f99c4367a3d90b78569077f67c055f720868ac2bde",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 992612,
+      "partial_alpha_pixels_1_to_254": 578515,
+      "opaque_pixels_alpha_255": 1389,
+      "visible_bbox_alpha_gt_0": [
+        0,
+        55,
+        1238,
+        1254
+      ],
+      "visible_bbox_alpha_ge_16": [
+        110,
+        317,
+        1145,
+        1121
+      ],
+      "visible_bbox_alpha_ge_128": [
+        111,
+        318,
+        1144,
+        1120
+      ],
+      "subject_touches_edge_alpha_ge_16": false
+    },
+    {
+      "file": "images/07_left_270.png",
+      "sha256": "a3cc7fc3bdf8f0865ac57c637254f4e67e91629a28458fc176c6081ca5b41341",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 1002892,
+      "partial_alpha_pixels_1_to_254": 567819,
+      "opaque_pixels_alpha_255": 1805,
+      "visible_bbox_alpha_gt_0": [
+        71,
+        148,
+        1230,
+        1138
+      ],
+      "visible_bbox_alpha_ge_16": [
+        106,
+        325,
+        1149,
+        1122
+      ],
+      "visible_bbox_alpha_ge_128": [
+        107,
+        326,
+        1148,
+        1121
+      ],
+      "subject_touches_edge_alpha_ge_16": false
+    },
+    {
+      "file": "images/08_front_left_315.png",
+      "sha256": "2b21b17b2b35442cfa144740932234b1ddcc888d0b7c409bc62b85a1fe817ba4",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 990496,
+      "partial_alpha_pixels_1_to_254": 580547,
+      "opaque_pixels_alpha_255": 1473,
+      "visible_bbox_alpha_gt_0": [
+        41,
+        21,
+        1214,
+        1254
+      ],
+      "visible_bbox_alpha_ge_16": [
+        109,
+        314,
+        1149,
+        1122
+      ],
+      "visible_bbox_alpha_ge_128": [
+        109,
+        315,
+        1148,
+        1121
+      ],
+      "subject_touches_edge_alpha_ge_16": false
+    }
+  ],
+  "summary": {
+    "image_count": 8,
+    "all_1254_square_rgba": true,
+    "all_have_fully_transparent_pixels": true,
+    "all_subjects_have_margin_at_alpha_ge_16": true,
+    "visible_base_y_min_alpha_ge_128": 1115,
+    "visible_base_y_max_alpha_ge_128": 1120,
+    "visible_base_y_spread_pixels": 5,
+    "browser_checked": false,
+    "actual_battlefield_checked": false
+  },
+  "viewer_links": {
+    "direction_names_in_html_match_expected": true,
+    "palettes_in_html_match_expected": true,
+    "shared_asset_links_exist": {
+      "source/mobile-ui.css": true,
+      "source/design-reference.jfif": true
+    },
+    "expected_image_paths": [
+      "yellow/images/01_front_000.png",
+      "yellow/images/02_front_right_045.png",
+      "yellow/images/03_right_090.png",
+      "yellow/images/04_back_right_135.png",
+      "yellow/images/05_back_180.png",
+      "yellow/images/06_back_left_225.png",
+      "yellow/images/07_left_270.png",
+      "yellow/images/08_front_left_315.png",
+      "blue/images/01_front_000.png",
+      "blue/images/02_front_right_045.png",
+      "blue/images/03_right_090.png",
+      "blue/images/04_back_right_135.png",
+      "blue/images/05_back_180.png",
+      "blue/images/06_back_left_225.png",
+      "blue/images/07_left_270.png",
+      "blue/images/08_front_left_315.png",
+      "red/images/01_front_000.png",
+      "red/images/02_front_right_045.png",
+      "red/images/03_right_090.png",
+      "red/images/04_back_right_135.png",
+      "red/images/05_back_180.png",
+      "red/images/06_back_left_225.png",
+      "red/images/07_left_270.png",
+      "red/images/08_front_left_315.png"
+    ],
+    "missing_image_paths_at_inspection": [
+      "yellow/images/02_front_right_045.png",
+      "yellow/images/04_back_right_135.png",
+      "yellow/images/06_back_left_225.png",
+      "yellow/images/08_front_left_315.png",
+      "red/images/02_front_right_045.png",
+      "red/images/04_back_right_135.png",
+      "red/images/06_back_left_225.png",
+      "red/images/08_front_left_315.png"
+    ],
+    "note": "Yellow/red diagonal generation may still be in progress. Viewer path schema matches the agreed package layout."
+  }
+}

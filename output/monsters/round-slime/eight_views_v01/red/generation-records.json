@@ -1,0 +1,83 @@
+{
+  "tool": "built-in image_gen",
+  "variant": "red",
+  "status": "complete;8directions",
+  "transparent_background": true,
+  "requested_canvas": [
+    1254,
+    1254
+  ],
+  "records": [
+    {
+      "file": "images/01_front_000.png",
+      "prompt": "prompts/01_front_000.prompt.txt",
+      "inputs": [
+        "../blue/images/01_front_000.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412 as C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412\\exec-e0d7ece5-4acd-49b9-9143-86183688e358.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "images/02_front_right_045.png",
+      "prompt": "prompts/02_front_right_045.prompt.txt",
+      "inputs": [
+        "../blue/images/02_front_right_045.png",
+        "images/01_front_000.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412 as C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412\\exec-f40a02f8-1880-446d-81a5-3c389f97109f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "images/03_right_090.png",
+      "prompt": "prompts/03_right_090.prompt.txt",
+      "inputs": [
+        "../blue/images/03_right_090.png",
+        "images/01_front_000.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412 as C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412\\exec-fd250975-f734-4f4e-ad1c-dd5fc9bf8f81.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "images/04_back_right_135.png",
+      "prompt": "prompts/04_back_right_135.prompt.txt",
+      "inputs": [
+        "../blue/images/04_back_right_135.png",
+        "images/01_front_000.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412 as C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412\\exec-a3f4b05a-c880-44e2-b761-68b6cefb5913.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "images/05_back_180.png",
+      "prompt": "prompts/05_back_180.prompt.txt",
+      "inputs": [
+        "../blue/images/05_back_180.png",
+        "images/01_front_000.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412 as C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412\\exec-1f1dfa89-cce1-485f-a285-18f1a74a31b0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "images/06_back_left_225.png",
+      "prompt": "prompts/06_back_left_225.prompt.txt",
+      "inputs": [
+        "../blue/images/06_back_left_225.png",
+        "images/01_front_000.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412 as C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412\\exec-5be3affc-e3fe-49e8-8811-878a58c8e7ad.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "images/07_left_270.png",
+      "prompt": "prompts/07_left_270.prompt.txt",
+      "inputs": [
+        "../blue/images/07_left_270.png",
+        "images/01_front_000.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412 as C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412\\exec-18004739-eaa0-459d-ba25-2d292a4982e8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "images/08_front_left_315.png",
+      "prompt": "prompts/08_front_left_315.prompt.txt",
+      "inputs": [
+        "../blue/images/08_front_left_315.png",
+        "images/01_front_000.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412 as C:\\Users\\user\\.codex\\generated_images\\01a1b162-8461-7973-b127-ced4c664d412\\exec-b03234d4-e9c3-492b-b604-bc3a258a09fe.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

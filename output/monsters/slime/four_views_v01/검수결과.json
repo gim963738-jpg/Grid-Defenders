@@ -1,0 +1,224 @@
+{
+    "inspection_date":  "2026-11-06",
+    "method":  "Python Pillow read-only image inspection and SHA-256; image pixels were not modified.",
+    "sources":  [
+                    {
+                        "file":  "source/pixel-style-front.png",
+                        "sha256":  "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f",
+                        "width":  1254,
+                        "height":  1254,
+                        "mode":  "RGBA",
+                        "format":  "PNG"
+                    },
+                    {
+                        "file":  "source/slime-reference.jfif",
+                        "sha256":  "ba99bc37b71521f9d657344a58dcf2d30f406495cf511f682923dcc657fef1aa",
+                        "width":  736,
+                        "height":  736,
+                        "mode":  "RGB",
+                        "format":  "JPEG"
+                    }
+                ],
+    "images":  [
+                   {
+                       "file":  "images/01_front_000.png",
+                       "sha256":  "97a63a5c690f3dc4663265ac1e001b230a471e69001692f240395306d239e146",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1028329,
+                       "partial_alpha_pixels_1_to_254":  542775,
+                       "opaque_pixels_alpha_255":  1412,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       0,
+                                                       18,
+                                                       1236,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        196,
+                                                        327,
+                                                        1055,
+                                                        1143
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         196,
+                                                         327,
+                                                         1054,
+                                                         1142
+                                                     ],
+                       "visible_bottom_y_alpha_gt_0":  1253,
+                       "visible_bottom_y_alpha_ge_128":  1141,
+                       "visible_touches_canvas_edge":  true,
+                       "canvas_edge_max_alpha":  1,
+                       "very_low_alpha_pixels_1_to_15":  78118,
+                       "bbox_alpha_ge_16_touches_canvas_edge":  false
+                   },
+                   {
+                       "file":  "images/02_back_180.png",
+                       "sha256":  "3c8a8d84ac98a3e32abed4a37f562de171fe172dbe2a5f0f235b7a6c431ed7e8",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1068326,
+                       "partial_alpha_pixels_1_to_254":  503137,
+                       "opaque_pixels_alpha_255":  1053,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       33,
+                                                       134,
+                                                       1216,
+                                                       1234
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        199,
+                                                        323,
+                                                        1054,
+                                                        1144
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         199,
+                                                         324,
+                                                         1053,
+                                                         1144
+                                                     ],
+                       "visible_bottom_y_alpha_gt_0":  1233,
+                       "visible_bottom_y_alpha_ge_128":  1143,
+                       "visible_touches_canvas_edge":  false,
+                       "canvas_edge_max_alpha":  0,
+                       "very_low_alpha_pixels_1_to_15":  40686,
+                       "bbox_alpha_ge_16_touches_canvas_edge":  false
+                   },
+                   {
+                       "file":  "images/03_right_090.png",
+                       "sha256":  "3114ddc572083f5e4a93639598b13f8fa791be774f2c7ee741e6a526de238dbb",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1072625,
+                       "partial_alpha_pixels_1_to_254":  498552,
+                       "opaque_pixels_alpha_255":  1339,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       33,
+                                                       41,
+                                                       1222,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        199,
+                                                        287,
+                                                        1060,
+                                                        1144
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         199,
+                                                         287,
+                                                         1059,
+                                                         1143
+                                                     ],
+                       "visible_bottom_y_alpha_gt_0":  1253,
+                       "visible_bottom_y_alpha_ge_128":  1142,
+                       "visible_touches_canvas_edge":  true,
+                       "canvas_edge_max_alpha":  1,
+                       "very_low_alpha_pixels_1_to_15":  22585,
+                       "bbox_alpha_ge_16_touches_canvas_edge":  false
+                   },
+                   {
+                       "file":  "images/04_left_270.png",
+                       "sha256":  "efef12304dcc505a349d8947164eafc3c526d14249081499eaeda1b86b3679cf",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1001950,
+                       "partial_alpha_pixels_1_to_254":  569561,
+                       "opaque_pixels_alpha_255":  1005,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       0,
+                                                       0,
+                                                       1240,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        195,
+                                                        317,
+                                                        1059,
+                                                        1135
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         196,
+                                                         318,
+                                                         1058,
+                                                         1134
+                                                     ],
+                       "visible_bottom_y_alpha_gt_0":  1253,
+                       "visible_bottom_y_alpha_ge_128":  1133,
+                       "visible_touches_canvas_edge":  true,
+                       "canvas_edge_max_alpha":  1,
+                       "very_low_alpha_pixels_1_to_15":  135611,
+                       "bbox_alpha_ge_16_touches_canvas_edge":  false
+                   }
+               ],
+    "summary":  {
+                    "all_rgba":  true,
+                    "all_same_canvas":  true,
+                    "all_have_fully_transparent_pixels":  true,
+                    "any_visible_bbox_touches_canvas_edge":  true,
+                    "visible_bottom_y_range_alpha_gt_0":  [
+                                                              1233,
+                                                              1253
+                                                          ],
+                    "visible_bottom_y_spread_alpha_gt_0_px":  20,
+                    "visible_bottom_y_range_alpha_ge_128":  [
+                                                                1133,
+                                                                1143
+                                                            ],
+                    "visible_bottom_y_spread_alpha_ge_128_px":  10,
+                    "footbase_note":  "Visible lower bounds are a contact-line proxy only; slime has no feet. No pivot normalization has been applied.",
+                    "right_vs_flipped_left":  {
+                                                  "same_dimensions":  true,
+                                                  "exact_pixel_mirror":  false,
+                                                  "different_rgba_pixels":  626669
+                                              },
+                    "any_bbox_alpha_ge_16_touches_canvas_edge":  false,
+                    "alpha_edge_note":  "Three files contain nonzero alpha at the canvas edge. Edge maximum alpha is \u003c=1 in all four; alpha\u003e=16 subject bounds have padding on every side. This does not establish mathematically clean alpha or game-ready normalization."
+                },
+    "viewer":  {
+                   "file":  "비교.html",
+                   "shared_css_relative_path":  "../../../../게임/src/mobile-ui.css",
+                   "shared_css_resolves":  true
+               },
+    "not_verified":  [
+                         "browser rendering",
+                         "actual battlefield integration",
+                         "animation frames",
+                         "game pivot normalization"
+                     ],
+    "browser_review_by_parent":  {
+                                     "tool":  "Orca embedded browser",
+                                     "all_four_images_loaded":  true,
+                                     "light_full_frame_checked":  true,
+                                     "dark_full_frame_checked":  true,
+                                     "original_100_percent_dialog_checked":  true,
+                                     "actual_battlefield_checked":  false,
+                                     "notes":  "Design asset task only; no game integration or pixel foot-anchor normalization."
+                                 }
+}
