@@ -1,0 +1,442 @@
+{
+  "task": "MAIN01-20261109-1DA15A51",
+  "iteration": 2,
+  "role": "qa",
+  "at": "2026-11-09T19:56:25.151298+09:00",
+  "technicalResult": "PASS",
+  "runtimeExceptions": 0,
+  "checks": [
+    {
+      "item": "current root integration ready",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "nine distinct cards with new four immediately discoverable",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "old and new variant labels are unambiguous",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "catalog keeps old fifteen and four front-only assets",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "all nineteen PNGs load at their own native dimensions",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "all fifteen legacy card-direction combinations still select and place distinct assets",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "each new card clicks to place its correct transparent PNG",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 1 50% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 1 200% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 1 100% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 2 50% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 2 200% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 2 100% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 3 50% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 3 200% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 3 100% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 4 50% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 4 200% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new variant 4 100% fixes foot and isolates selection",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 1 50% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 1 100% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 1 200% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 1 direct numeric 150 applies",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 1 movement after scaling",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 2 50% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 2 100% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 2 200% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 2 direct numeric 150 applies",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 2 movement after scaling",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 3 50% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 3 100% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 3 200% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 3 direct numeric 150 applies",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 3 movement after scaling",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 4 50% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 4 100% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 4 200% source aspect measured pixel foot and body height preserved",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 4 direct numeric 150 applies",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new 4 movement after scaling",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "non-square new variant2 preserves 1133 by 1388 aspect",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "number editing supports partial digits",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "100 percent reset applies to selected new actor",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new placed preview reselects and moves",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "all four new cards support drag to battlefield",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "unsupported new direction keeps image foot scale and disables side choices",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "return to old variant restores actual right45",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "old right90 still works",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "all new fronts remain selectable while old direction is right90",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "choosing new from old right90 explicitly selects new front",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA mixed legacy reselect restores legacy group right90 and own scale",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA mixed new reselect restores new group front own scale",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA forced right45 on new keeps all mixed images positions and sizes",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA forced right90 on new keeps all mixed images positions and sizes",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA mixed legacy scale survives roundtrip",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "previews do not change gold actual units or saved battle apart from normal savedAt",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "individual delete leaves other previews",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "close preserves drawings and restores game input",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "real soldier summon works with closed preview layer",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA actual hero summons with closed comparison",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "clear all restores battlefield",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA placement disabled with panel open permits actual soldier summon",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA touch places new front on actual battlefield",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA new actor drag cancel prevents stale movement",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "boss transition resets new previews and panel",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "new actor uses actual boss world scale",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "resize preserves logical new actor foot position",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "320px group legacy card 0 reachable at full touch size",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "320px group legacy card 1 reachable at full touch size",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "320px group legacy card 2 reachable at full touch size",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "320px group legacy card 3 reachable at full touch size",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "320px group legacy card 4 reachable at full touch size",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "320px group scalp card 5 reachable at full touch size",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "320px group scalp card 6 reachable at full touch size",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "320px group scalp card 7 reachable at full touch size",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "320px group scalp card 8 reachable at full touch size",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "wave reentry clears boss previews",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    },
+    {
+      "item": "QA no runtime exceptions on actual root and isolated gallery",
+      "status": "PASS",
+      "evidence": "browser-result.json; independent-browser.mjs"
+    }
+  ],
+  "additionalChecks": [
+    {
+      "item": "root/UI changed16 + preserved34 hashes match and remain unchanged",
+      "status": "PASS",
+      "evidence": "target-hashes.json"
+    },
+    {
+      "item": "four new PNG source SHA/alpha/dimensions/runtime metadata",
+      "status": "PASS",
+      "evidence": "asset-audit.json"
+    },
+    {
+      "item": "bright/dark full native canvases and live battlefield visual inspection",
+      "status": "PASS",
+      "evidence": "fullframes-light.png; fullframes-dark.png; new-four-wave.png; new-boss.png; narrow-320.png"
+    }
+  ],
+  "unverified": [
+    {
+      "item": "실기기/APK/WebView/세로전투전체",
+      "status": "미검증",
+      "reason": "지정 가로5173 URL의headless검사"
+    },
+    {
+      "item": "실제손가락/멀티터치/OS앱전환/장기자연웨이브",
+      "status": "미검증",
+      "reason": "CDP터치및마우스/합성pointercancel/개발자전환사용"
+    },
+    {
+      "item": "dispose/setAssets isolated fixture 및 전체기존모델/브라우저suite",
+      "status": "미검증",
+      "reason": "변경관련실제게임77항목완료;제품fixture추가/반복모델테스트불필요"
+    },
+    {
+      "item": "사용자미적합격/공통비율채택/무기각도·유색알파외곽잔여해소",
+      "status": "미검증",
+      "reason": "원작품검수한계를보존하며기능QA로대신하지않음"
+    }
+  ],
+  "productFilesModified": false,
+  "existingServerRestarted": false,
+  "userProfileTouched": false,
+  "committed": false,
+  "pushed": false,
+  "scheduledBackup": false,
+  "build": "main root tsc+Vite801 PASS report referenced; not rerun",
+  "artAcceptance": "pending_user"
+}

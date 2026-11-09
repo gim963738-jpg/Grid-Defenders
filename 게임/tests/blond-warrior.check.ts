@@ -1,12 +1,13 @@
-import {Container,Sprite,Texture} from 'pixi.js';
+import {Assets,Container,Sprite,Texture} from 'pixi.js';
 import {Defense} from '../src/defense';
 import {UNITS,ITEMS,SLOTS} from '../src/defenseConfig';
 import {BossBattle,waveBossRoster} from '../src/bossBattle';
 import {createBossBattleView} from '../src/bossBattleView';
 import {createDefenseView} from '../src/defenseView';
 import {loadHeroArt,heroPortrait} from '../src/heroArt';
-import {blondFrame,blondDirection,blondPlacement,blondWalkFrame,blondBossImage,type BlondFrame} from '../src/blondArt';
+import {blondFrame,blondDirection,blondPlacement,blondWalkFrame,blondBossImage,BLOND_WAVE_BODY_HEIGHT,BLOND_BOSS_BODY_HEIGHT,type BlondFrame} from '../src/blondArt';
 import {stepCombat} from '../src/combatPlayback';
+import {RANGED_IDLE_URL,RANGED_SOURCE_BODY_HEIGHT} from '../src/rangedArt';
 
 export async function checkBlondWarrior(){
  const passed:string[]=[],check=(ok:boolean,label:string)=>{if(!ok)throw Error(label);passed.push(label);};
@@ -69,6 +70,8 @@ export async function checkBlondWarrior(){
  const before=JSON.stringify(g.units);view.draw(null,false);
  const find=(n:Container):Sprite|undefined=>{for(const c of n.children){if(c instanceof Sprite&&c.texture===idle[0].texture)return c;const nested=find(c);if(nested)return nested;}};
  const sprite=find(stage)!;check(!!sprite&&sprite.visible&&sprite.scale.x===sprite.scale.y&&sprite.eventMode==='none'&&JSON.stringify(g.units)===before,'summoned wave hero stays front-facing even with an enemy in range');
+ check(Math.abs(sprite.scale.y*idle[0].bodyHeight-57)<.01&&BLOND_WAVE_BODY_HEIGHT===57&&sprite.x===pos.x&&sprite.y===pos.y+12,'wave blond retains its original body height and foot position');
+ check(BLOND_BOSS_BODY_HEIGHT===72&&blondBossImage(0,false,0).includes('boss-blond-frame'),'boss blond retains its original body height through the original pivot renderer');
  for(let i=0;i<5;i++)g.tick(.05);view.draw(null,false);
  check(unit.facing===0&&sprite.texture===idle[0].texture,'waiting for the first attack keeps the front pose');
  for(let i=0;i<2;i++)g.tick(.05);view.draw(null,false);
@@ -88,5 +91,14 @@ export async function checkBlondWarrior(){
   a.walk={direction:6,moving:true,elapsed:1};v.draw();check(root.querySelector('.boss-blond-frame')?.getAttribute('data-walk-frame')==='-1'&&blondBossImage(6,true,1).includes('data-direction="6"'),'other boss directions use the supplied idle image');
   b.actors=[];v.draw();check(!root.querySelector('.boss-fighter.blond'),'cleared roster removes the blond actor display');
  }finally{fixture.remove();originals.forEach((n,i)=>{if(n)n.id=ids[i];});}
+ const comparison=new Defense(()=>1);comparison.summon('ranged',0);comparison.summon('blond',1);
+ const reference=await Assets.load<Texture>(RANGED_IDLE_URL),comparisonStage=new Container();
+ const comparisonView=createDefenseView({stage:comparisonStage} as never,comparison,()=>{},reference,Texture.EMPTY,Texture.EMPTY,Texture.EMPTY,Texture.EMPTY);
+ const comparisonState=JSON.stringify(comparison.units);comparisonView.draw(null,false);
+ const allSprites:Sprite[]=[];const visit=(node:Container)=>{for(const child of node.children){if(child instanceof Sprite)allSprites.push(child);if(child instanceof Container)visit(child);}};visit(comparisonStage);
+ const caster=allSprites.find(s=>s.visible&&s.texture===reference)!,warrior=allSprites.find(s=>s.visible&&s.texture===idle[0].texture)!;
+ check(!!caster&&!!warrior&&Math.abs(caster.scale.y*RANGED_SOURCE_BODY_HEIGHT-warrior.scale.y*idle[0].bodyHeight)<.01,'actual caster and blond wave sprites share the same head-to-foot body height');
+ check(caster.height>57&&Math.abs(warrior.scale.y*idle[0].bodyHeight-57)<.01&&JSON.stringify(comparison.units)===comparisonState,'caster grows to the unchanged blond reference without changing combat stats');
+ comparisonStage.destroy({children:true});
  return passed;
 }

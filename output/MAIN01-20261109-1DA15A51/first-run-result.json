@@ -1,0 +1,424 @@
+{
+  "checks": [
+    {
+      "name": "actual game ready and comparison button enabled",
+      "passed": true
+    },
+    {
+      "name": "one button opens panel",
+      "passed": true
+    },
+    {
+      "name": "select cards and place multiple variants on real battlefield",
+      "passed": true
+    },
+    {
+      "name": "reselect and drag updates logical position",
+      "passed": true
+    },
+    {
+      "name": "200 percent keeps sole pivot and uniform image scale",
+      "passed": true
+    },
+    {
+      "name": "50 percent and 100 percent restore",
+      "passed": true
+    },
+    {
+      "name": "number editing permits partial digits and clamps only on commit",
+      "passed": true
+    },
+    {
+      "name": "actual variant1 right45 direction changes selected image",
+      "passed": true
+    },
+    {
+      "name": "delete selected only",
+      "passed": true
+    },
+    {
+      "name": "close retains images with no input interception",
+      "passed": true
+    },
+    {
+      "name": "preview operations leave gold roster and saved battle unchanged except normal autosave savedAt",
+      "passed": true
+    },
+    {
+      "name": "clear all immediately restores battlefield",
+      "passed": true
+    },
+    {
+      "name": "card drag to field places preview",
+      "passed": true
+    },
+    {
+      "name": "closed comparison restores actual soldier summon click",
+      "passed": true
+    },
+    {
+      "name": "boss switch clears previous previews selection and panel",
+      "passed": true
+    },
+    {
+      "name": "boss coordinate uses 1250 world width at 800 CSS pixels",
+      "passed": true
+    },
+    {
+      "name": "actual boss right45 right90 swaps preserve foot position and scale",
+      "passed": true
+    },
+    {
+      "name": "all four new variants place actual right45 art",
+      "passed": true
+    },
+    {
+      "name": "all four new variants swap to actual right90 art at fixed world foot",
+      "passed": true
+    },
+    {
+      "name": "panel fits narrow 320 pixel viewport without scaling UI",
+      "passed": true
+    },
+    {
+      "name": "panel buttons retain 48 pixel touch height",
+      "passed": true
+    },
+    {
+      "name": "return to wave clears boss previews",
+      "passed": true
+    },
+    {
+      "name": "closed comparison restores actual hero summon click",
+      "passed": true
+    },
+    {
+      "name": "all 15 actual direction PNGs load at original dimensions",
+      "passed": true
+    }
+  ],
+  "errors": [
+    {
+      "timestamp": 1794216016559.812,
+      "exceptionDetails": {
+        "exceptionId": 1,
+        "text": "Uncaught",
+        "lineNumber": 1173,
+        "columnNumber": 6,
+        "scriptId": "6",
+        "url": "http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624",
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624",
+              "lineNumber": 1173,
+              "columnNumber": 6
+            }
+          ]
+        },
+        "exception": {
+          "type": "object",
+          "subtype": "error",
+          "className": "TypeError",
+          "description": "TypeError: Cannot read properties of null (reading 'querySelector')\n    at http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624:1174:7",
+          "objectId": "-7981824508315945212.2.1",
+          "preview": {
+            "type": "object",
+            "subtype": "error",
+            "description": "TypeError: Cannot read properties of null (reading 'querySelector')\n    at http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624:1174:7",
+            "overflow": false,
+            "properties": [
+              {
+                "name": "stack",
+                "type": "string",
+                "value": "TypeError: Cannot read properties of null (reading…173/src/landscape-entry.ts?t=1794215805624:1174:7"
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "value": "Cannot read properties of null (reading 'querySelector')"
+              }
+            ]
+          }
+        },
+        "executionContextId": 2
+      }
+    },
+    {
+      "timestamp": 1794216016561.388,
+      "exceptionDetails": {
+        "exceptionId": 2,
+        "text": "Uncaught",
+        "lineNumber": 654,
+        "columnNumber": 12,
+        "scriptId": "44",
+        "url": "http://127.0.0.1:5173/src/main.ts?t=1794215805624",
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "refreshWaveAlert",
+              "scriptId": "44",
+              "url": "http://127.0.0.1:5173/src/main.ts?t=1794215805624",
+              "lineNumber": 654,
+              "columnNumber": 12
+            },
+            {
+              "functionName": "",
+              "scriptId": "44",
+              "url": "http://127.0.0.1:5173/src/main.ts?t=1794215805624",
+              "lineNumber": 2113,
+              "columnNumber": 2
+            },
+            {
+              "functionName": "emit",
+              "scriptId": "37",
+              "url": "http://127.0.0.1:5173/node_modules/.vite/deps/Filter-CteG7TAT.js?v=77e5214f",
+              "lineNumber": 2922,
+              "columnNumber": 13
+            },
+            {
+              "functionName": "update",
+              "scriptId": "37",
+              "url": "http://127.0.0.1:5173/node_modules/.vite/deps/Filter-CteG7TAT.js?v=77e5214f",
+              "lineNumber": 3368,
+              "columnNumber": 40
+            },
+            {
+              "functionName": "_tick",
+              "scriptId": "37",
+              "url": "http://127.0.0.1:5173/node_modules/.vite/deps/Filter-CteG7TAT.js?v=77e5214f",
+              "lineNumber": 3079,
+              "columnNumber": 9
+            }
+          ]
+        },
+        "exception": {
+          "type": "object",
+          "subtype": "error",
+          "className": "TypeError",
+          "description": "TypeError: Cannot read properties of null (reading 'hidden')\n    at refreshWaveAlert (http://127.0.0.1:5173/src/main.ts?t=1794215805624:655:13)\n    at TickerListener._fn (http://127.0.0.1:5173/src/main.ts?t=1794215805624:2114:3)\n    at TickerListener.emit (http://127.0.0.1:5173/node_modules/.vite/deps/Filter-CteG7TAT.js?v=77e5214f:2923:14)\n    at _Ticker.update (http://127.0.0.1:5173/node_modules/.vite/deps/Filter-CteG7TAT.js?v=77e5214f:3369:41)\n    at _tick (http://127.0.0.1:5173/node_modules/.vite/deps/Filter-CteG7TAT.js?v=77e5214f:3080:10)",
+          "objectId": "-7981824508315945212.2.2",
+          "preview": {
+            "type": "object",
+            "subtype": "error",
+            "description": "TypeError: Cannot read properties of null (reading 'hidden')\n    at refreshWaveAlert (http://127.0.0.1:5173/src/main.ts?t=1794215805624:655:13)\n    at TickerListener._fn (http://127.0.0.1:5173/src/main.ts?t=1794215805624:2114:3)\n    at TickerListener.emit (http://127.0.0.1:5173/node_modules/.vite/deps/Filter-CteG7TAT.js?v=77e5214f:2923:14)\n    at _Ticker.update (http://127.0.0.1:5173/node_modules/.vite/deps/Filter-CteG7TAT.js?v=77e5214f:3369:41)\n    at _tick (http://127.0.0.1:5173/node_modules/.vite/deps/Filter-CteG7TAT.js?v=77e5214f:3080:10)",
+            "overflow": false,
+            "properties": [
+              {
+                "name": "stack",
+                "type": "string",
+                "value": "TypeError: Cannot read properties of null (reading….vite/deps/Filter-CteG7TAT.js?v=77e5214f:3080:10)"
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "value": "Cannot read properties of null (reading 'hidden')"
+              }
+            ]
+          }
+        },
+        "executionContextId": 2
+      }
+    },
+    {
+      "timestamp": 1794216016711.118,
+      "exceptionDetails": {
+        "exceptionId": 3,
+        "text": "Uncaught",
+        "lineNumber": 1173,
+        "columnNumber": 6,
+        "scriptId": "6",
+        "url": "http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624",
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624",
+              "lineNumber": 1173,
+              "columnNumber": 6
+            }
+          ]
+        },
+        "exception": {
+          "type": "object",
+          "subtype": "error",
+          "className": "TypeError",
+          "description": "TypeError: Cannot read properties of null (reading 'querySelector')\n    at http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624:1174:7",
+          "objectId": "-7981824508315945212.2.3",
+          "preview": {
+            "type": "object",
+            "subtype": "error",
+            "description": "TypeError: Cannot read properties of null (reading 'querySelector')\n    at http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624:1174:7",
+            "overflow": false,
+            "properties": [
+              {
+                "name": "stack",
+                "type": "string",
+                "value": "TypeError: Cannot read properties of null (reading…173/src/landscape-entry.ts?t=1794215805624:1174:7"
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "value": "Cannot read properties of null (reading 'querySelector')"
+              }
+            ]
+          }
+        },
+        "executionContextId": 2
+      }
+    },
+    {
+      "timestamp": 1794216016861.185,
+      "exceptionDetails": {
+        "exceptionId": 4,
+        "text": "Uncaught",
+        "lineNumber": 1173,
+        "columnNumber": 6,
+        "scriptId": "6",
+        "url": "http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624",
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624",
+              "lineNumber": 1173,
+              "columnNumber": 6
+            }
+          ]
+        },
+        "exception": {
+          "type": "object",
+          "subtype": "error",
+          "className": "TypeError",
+          "description": "TypeError: Cannot read properties of null (reading 'querySelector')\n    at http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624:1174:7",
+          "objectId": "-7981824508315945212.2.4",
+          "preview": {
+            "type": "object",
+            "subtype": "error",
+            "description": "TypeError: Cannot read properties of null (reading 'querySelector')\n    at http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624:1174:7",
+            "overflow": false,
+            "properties": [
+              {
+                "name": "stack",
+                "type": "string",
+                "value": "TypeError: Cannot read properties of null (reading…173/src/landscape-entry.ts?t=1794215805624:1174:7"
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "value": "Cannot read properties of null (reading 'querySelector')"
+              }
+            ]
+          }
+        },
+        "executionContextId": 2
+      }
+    },
+    {
+      "timestamp": 1794216017011.11,
+      "exceptionDetails": {
+        "exceptionId": 5,
+        "text": "Uncaught",
+        "lineNumber": 1173,
+        "columnNumber": 6,
+        "scriptId": "6",
+        "url": "http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624",
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624",
+              "lineNumber": 1173,
+              "columnNumber": 6
+            }
+          ]
+        },
+        "exception": {
+          "type": "object",
+          "subtype": "error",
+          "className": "TypeError",
+          "description": "TypeError: Cannot read properties of null (reading 'querySelector')\n    at http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624:1174:7",
+          "objectId": "-7981824508315945212.2.5",
+          "preview": {
+            "type": "object",
+            "subtype": "error",
+            "description": "TypeError: Cannot read properties of null (reading 'querySelector')\n    at http://127.0.0.1:5173/src/landscape-entry.ts?t=1794215805624:1174:7",
+            "overflow": false,
+            "properties": [
+              {
+                "name": "stack",
+                "type": "string",
+                "value": "TypeError: Cannot read properties of null (reading…173/src/landscape-entry.ts?t=1794215805624:1174:7"
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "value": "Cannot read properties of null (reading 'querySelector')"
+              }
+            ]
+          }
+        },
+        "executionContextId": 2
+      }
+    }
+  ],
+  "state": {
+    "before": {
+      "gold": 480,
+      "units": "[]",
+      "storage": "{\"grid-defenders.battle-save.v1.landscape.normal\":\"{\\\"version\\\":1,\\\"layout\\\":\\\"landscape\\\",\\\"mode\\\":\\\"normal\\\",\\\"savedAt\\\":1794216012798,\\\"meta\\\":{\\\"runId\\\":\\\"52d95a36-59fa-48bf-b753-a981a8dc2ed9\\\",\\\"scene\\\":\\\"defense\\\",\\\"activeBossWave\\\":null,\\\"bossReturnDelay\\\":0,\\\"bossTestMode\\\":false,\\\"bossEncounterWave\\\":1,\\\"defeatedBossEnemies\\\":[],\\\"combatPaused\\\":true},\\\"defense\\\":{\\\"gold\\\":480,\\\"anvils\\\":0,\\\"kills\\\":0,\\\"elapsed\\\":0.016700000000000045,\\\"normalKills\\\":0,\\\"bountySummons\\\":0,\\\"pendingBounties\\\":0,\\\"waveTime\\\":0.016700000000000045,\\\"waveSpawned\\\":1,\\\"revision\\\":1,\\\"logRevision\\\":1,\\\"placementOrder\\\":0,\\\"wave\\\":1,\\\"nextDamageId\\\":1,\\\"nextLogId\\\":1,\\\"nextId\\\":2,\\\"speed\\\":1,\\\"bossPending\\\":false,\\\"keepWaveMonsters\\\":true,\\\"message\\\":\\\"게임을 시작 상태로 초기화했습니다.\\\",\\\"units\\\":[],\\\"enemies\\\":[{\\\"id\\\":1,\\\"distance\\\":0.718100000000002,\\\"x\\\":131.71810000000005,\\\"y\\\":68,\\\"hp\\\":160,\\\"maxHp\\\":160,\\\"speed\\\":43,\\\"named\\\":false,\\\"name\\\":\\\"순환 괴물\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"damageType\\\":\\\"physical\\\",\\\"attack\\\":20,\\\"armor\\\":10,\\\"magicArmor\\\":10,\\\"rate\\\":0.8,\\\"goldReward\\\":12,\\\"wave\\\":1,\\\"armorBreakRemaining\\\":0}],\\\"shopDiscounts\\\":[false,false,false,false,true],\\\"shots\\\":[],\\\"attackAreas\\\":[],\\\"damageNumbers\\\":[],\\\"rangedSkills\\\":[],\\\"meleeSkills\\\":[],\\\"assassinSkills\\\":[],\\\"swordSwingCounts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"logs\\\":{\\\"damage\\\":[],\\\"reward\\\":[],\\\"economy\\\":[]},\\\"lastWaveDamage\\\":null,\\\"formation\\\":[],\\\"formationRows\\\":6,\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0.016700000000000045,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"gear\\\":[],\\\"shop\\\":[\\\"I01\\\",\\\"I02\\\",\\\"I03\\\",\\\"I04\\\",\\\"I05\\\"]},\\\"boss\\\":{\\\"encounter\\\":2,\\\"actors\\\":[{\\\"id\\\":\\\"retainer-top\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 강철 감시자\\\",\\\"x\\\":760,\\\"y\\\":215,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"physical\\\",\\\"physicalArmor\\\":35,\\\"magicArmor\\\":25,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"retainer-bottom\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 비전 파수꾼\\\",\\\"x\\\":760,\\\"y\\\":347.5,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"magic\\\",\\\"defenseType\\\":\\\"magic\\\",\\\"physicalArmor\\\":25,\\\"magicArmor\\\":35,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"tester-boss\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"boss\\\",\\\"name\\\":\\\"시험 보스\\\",\\\"x\\\":900,\\\"y\\\":281.25,\\\"hp\\\":6000,\\\"maxHp\\\":6000,\\\"attack\\\":120,\\\"rate\\\":0.7,\\\"range\\\":80,\\\"speed\\\":34,\\\"rank\\\":1,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"physicalArmor\\\":60,\\\"magicArmor\\\":40,\\\"cooldown\\\":0.25}],\\\"roster\\\":[],\\\"autoSkills\\\":true,\\\"commanderCooldown\\\":0,\\\"commanderBuff\\\":0,\\\"heroSkillCooldown\\\":0,\\\"elapsed\\\":0,\\\"result\\\":\\\"fighting\\\",\\\"heroSkillCooldowns\\\":[],\\\"swordSwingCounts\\\":[],\\\"hits\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"tuning\\\":{\\\"healthScale\\\":1,\\\"attackScale\\\":1}},\\\"run\\\":{\\\"mode\\\":\\\"normal\\\",\\\"active\\\":true,\\\"elapsed\\\":0.016700000000000045,\\\"result\\\":null}}\"}"
+    },
+    "after": {
+      "gold": 480,
+      "units": "[]",
+      "storage": "{\"grid-defenders.battle-save.v1.landscape.normal\":\"{\\\"version\\\":1,\\\"layout\\\":\\\"landscape\\\",\\\"mode\\\":\\\"normal\\\",\\\"savedAt\\\":1794216013595,\\\"meta\\\":{\\\"runId\\\":\\\"52d95a36-59fa-48bf-b753-a981a8dc2ed9\\\",\\\"scene\\\":\\\"defense\\\",\\\"activeBossWave\\\":null,\\\"bossReturnDelay\\\":0,\\\"bossTestMode\\\":false,\\\"bossEncounterWave\\\":1,\\\"defeatedBossEnemies\\\":[],\\\"combatPaused\\\":true},\\\"defense\\\":{\\\"gold\\\":480,\\\"anvils\\\":0,\\\"kills\\\":0,\\\"elapsed\\\":0.016700000000000045,\\\"normalKills\\\":0,\\\"bountySummons\\\":0,\\\"pendingBounties\\\":0,\\\"waveTime\\\":0.016700000000000045,\\\"waveSpawned\\\":1,\\\"revision\\\":1,\\\"logRevision\\\":1,\\\"placementOrder\\\":0,\\\"wave\\\":1,\\\"nextDamageId\\\":1,\\\"nextLogId\\\":1,\\\"nextId\\\":2,\\\"speed\\\":1,\\\"bossPending\\\":false,\\\"keepWaveMonsters\\\":true,\\\"message\\\":\\\"게임을 시작 상태로 초기화했습니다.\\\",\\\"units\\\":[],\\\"enemies\\\":[{\\\"id\\\":1,\\\"distance\\\":0.718100000000002,\\\"x\\\":131.71810000000005,\\\"y\\\":68,\\\"hp\\\":160,\\\"maxHp\\\":160,\\\"speed\\\":43,\\\"named\\\":false,\\\"name\\\":\\\"순환 괴물\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"damageType\\\":\\\"physical\\\",\\\"attack\\\":20,\\\"armor\\\":10,\\\"magicArmor\\\":10,\\\"rate\\\":0.8,\\\"goldReward\\\":12,\\\"wave\\\":1,\\\"armorBreakRemaining\\\":0}],\\\"shopDiscounts\\\":[false,false,false,false,true],\\\"shots\\\":[],\\\"attackAreas\\\":[],\\\"damageNumbers\\\":[],\\\"rangedSkills\\\":[],\\\"meleeSkills\\\":[],\\\"assassinSkills\\\":[],\\\"swordSwingCounts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"logs\\\":{\\\"damage\\\":[],\\\"reward\\\":[],\\\"economy\\\":[]},\\\"lastWaveDamage\\\":null,\\\"formation\\\":[],\\\"formationRows\\\":6,\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0.016700000000000045,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"gear\\\":[],\\\"shop\\\":[\\\"I01\\\",\\\"I02\\\",\\\"I03\\\",\\\"I04\\\",\\\"I05\\\"]},\\\"boss\\\":{\\\"encounter\\\":2,\\\"actors\\\":[{\\\"id\\\":\\\"retainer-top\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 강철 감시자\\\",\\\"x\\\":760,\\\"y\\\":215,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"physical\\\",\\\"physicalArmor\\\":35,\\\"magicArmor\\\":25,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"retainer-bottom\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 비전 파수꾼\\\",\\\"x\\\":760,\\\"y\\\":347.5,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"magic\\\",\\\"defenseType\\\":\\\"magic\\\",\\\"physicalArmor\\\":25,\\\"magicArmor\\\":35,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"tester-boss\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"boss\\\",\\\"name\\\":\\\"시험 보스\\\",\\\"x\\\":900,\\\"y\\\":281.25,\\\"hp\\\":6000,\\\"maxHp\\\":6000,\\\"attack\\\":120,\\\"rate\\\":0.7,\\\"range\\\":80,\\\"speed\\\":34,\\\"rank\\\":1,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"physicalArmor\\\":60,\\\"magicArmor\\\":40,\\\"cooldown\\\":0.25}],\\\"roster\\\":[],\\\"autoSkills\\\":true,\\\"commanderCooldown\\\":0,\\\"commanderBuff\\\":0,\\\"heroSkillCooldown\\\":0,\\\"elapsed\\\":0,\\\"result\\\":\\\"fighting\\\",\\\"heroSkillCooldowns\\\":[],\\\"swordSwingCounts\\\":[],\\\"hits\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"tuning\\\":{\\\"healthScale\\\":1,\\\"attackScale\\\":1}},\\\"run\\\":{\\\"mode\\\":\\\"normal\\\",\\\"active\\\":true,\\\"elapsed\\\":0.016700000000000045,\\\"result\\\":null}}\"}"
+    }
+  },
+  "drag": {
+    "log": [
+      [
+        "pointerdown",
+        "",
+        613,
+        180.796875
+      ],
+      [
+        "lostpointercapture",
+        "",
+        260,
+        170
+      ]
+    ],
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 800,
+      "height": 360,
+      "top": 0,
+      "right": 800,
+      "bottom": 360,
+      "left": 0
+    },
+    "card": {
+      "x": 581,
+      "y": 132,
+      "width": 64,
+      "height": 97.59375,
+      "top": 132,
+      "right": 645,
+      "bottom": 229.59375,
+      "left": 581
+    },
+    "panel": false
+  },
+  "heroInput": [
+    "guard",
+    "blond"
+  ],
+  "result": "PASS"
+}

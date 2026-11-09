@@ -1,0 +1,134 @@
+{
+  "checks": [
+    {
+      "file": "variant-1-front.png",
+      "sha256": "b8db43a3ce43703be4d06a752d2b700691681a798ec9486a3e3c339ff472c8f8",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2dc42e53-9880-4a8b-9f67-91a5e7b811ad.png",
+      "sourceBytesMatch": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha32Bounds": [
+        290,
+        18,
+        963,
+        1226
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "runtime": {
+        "variant": 5,
+        "direction": "front",
+        "file": "scalp_face_v03/variant-1-front.png",
+        "label": "신규1안",
+        "width": 1254,
+        "height": 1254,
+        "bodyHeight": 1208,
+        "footX": 630,
+        "footY": 1225
+      },
+      "passed": true
+    },
+    {
+      "file": "variant-2-front.png",
+      "sha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-f8f932c4-494d-46cc-bcb2-dc9bfc654d4b.png",
+      "sourceBytesMatch": true,
+      "size": [
+        1133,
+        1388
+      ],
+      "alpha32Bounds": [
+        125,
+        25,
+        908,
+        1356
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "runtime": {
+        "variant": 6,
+        "direction": "front",
+        "file": "scalp_face_v03/variant-2-front.png",
+        "label": "신규2안",
+        "width": 1133,
+        "height": 1388,
+        "bodyHeight": 1331,
+        "footX": 578,
+        "footY": 1355
+      },
+      "passed": true
+    },
+    {
+      "file": "variant-3-front.png",
+      "sha256": "b356136aa05fc02d571288403f90f00a007032e0470344103cc949df551fe51d",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-97d02753-9938-4617-853b-a2064d4a61d0.png",
+      "sourceBytesMatch": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha32Bounds": [
+        274,
+        13,
+        982,
+        1244
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "runtime": {
+        "variant": 7,
+        "direction": "front",
+        "file": "scalp_face_v03/variant-3-front.png",
+        "label": "신규3안",
+        "width": 1254,
+        "height": 1254,
+        "bodyHeight": 1231,
+        "footX": 615,
+        "footY": 1243
+      },
+      "passed": true
+    },
+    {
+      "file": "variant-4-front.png",
+      "sha256": "248ecac2c87a582f4e21c88a0759fb5d8565d4137cc6d06a5a9d3da8112b1e6d",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-69eef8d8-a18e-4dd6-9fee-c421124869e2.png",
+      "sourceBytesMatch": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha32Bounds": [
+        270,
+        11,
+        986,
+        1245
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "runtime": {
+        "variant": 8,
+        "direction": "front",
+        "file": "scalp_face_v03/variant-4-front.png",
+        "label": "신규4안",
+        "width": 1254,
+        "height": 1254,
+        "bodyHeight": 1234,
+        "footX": 626,
+        "footY": 1244
+      },
+      "passed": true
+    }
+  ],
+  "runtimeCatalogCount": 19,
+  "passed": true
+}

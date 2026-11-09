@@ -1,0 +1,336 @@
+﻿{
+  "checks": [
+    {
+      "name": "current root integration ready",
+      "passed": true
+    },
+    {
+      "name": "nine distinct cards with new four immediately discoverable",
+      "passed": true
+    },
+    {
+      "name": "old and new variant labels are unambiguous",
+      "passed": true
+    },
+    {
+      "name": "catalog keeps old fifteen and four front-only assets",
+      "passed": true
+    },
+    {
+      "name": "all nineteen PNGs load at their own native dimensions",
+      "passed": true
+    },
+    {
+      "name": "all fifteen legacy card-direction combinations still select and place distinct assets",
+      "passed": true
+    },
+    {
+      "name": "each new card clicks to place its correct transparent PNG",
+      "passed": true
+    },
+    {
+      "name": "new variant 1 50% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 1 200% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 1 100% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 2 50% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 2 200% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 2 100% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 3 50% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 3 200% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 3 100% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 4 50% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 4 200% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "new variant 4 100% fixes foot and isolates selection",
+      "passed": true
+    },
+    {
+      "name": "QA new 1 50% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 1 100% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 1 200% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 1 direct numeric 150 applies",
+      "passed": true
+    },
+    {
+      "name": "QA new 1 movement after scaling",
+      "passed": true
+    },
+    {
+      "name": "QA new 2 50% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 2 100% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 2 200% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 2 direct numeric 150 applies",
+      "passed": true
+    },
+    {
+      "name": "QA new 2 movement after scaling",
+      "passed": true
+    },
+    {
+      "name": "QA new 3 50% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 3 100% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 3 200% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 3 direct numeric 150 applies",
+      "passed": true
+    },
+    {
+      "name": "QA new 3 movement after scaling",
+      "passed": true
+    },
+    {
+      "name": "QA new 4 50% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 4 100% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 4 200% source aspect measured pixel foot and body height preserved",
+      "passed": true
+    },
+    {
+      "name": "QA new 4 direct numeric 150 applies",
+      "passed": true
+    },
+    {
+      "name": "QA new 4 movement after scaling",
+      "passed": true
+    },
+    {
+      "name": "non-square new variant2 preserves 1133 by 1388 aspect",
+      "passed": true
+    },
+    {
+      "name": "number editing supports partial digits",
+      "passed": true
+    },
+    {
+      "name": "100 percent reset applies to selected new actor",
+      "passed": true
+    },
+    {
+      "name": "new placed preview reselects and moves",
+      "passed": true
+    },
+    {
+      "name": "all four new cards support drag to battlefield",
+      "passed": true
+    },
+    {
+      "name": "unsupported new direction keeps image foot scale and disables side choices",
+      "passed": true
+    },
+    {
+      "name": "return to old variant restores actual right45",
+      "passed": true
+    },
+    {
+      "name": "old right90 still works",
+      "passed": true
+    },
+    {
+      "name": "all new fronts remain selectable while old direction is right90",
+      "passed": true
+    },
+    {
+      "name": "choosing new from old right90 explicitly selects new front",
+      "passed": true
+    },
+    {
+      "name": "QA mixed legacy reselect restores legacy group right90 and own scale",
+      "passed": true
+    },
+    {
+      "name": "QA mixed new reselect restores new group front own scale",
+      "passed": true
+    },
+    {
+      "name": "QA forced right45 on new keeps all mixed images positions and sizes",
+      "passed": true
+    },
+    {
+      "name": "QA forced right90 on new keeps all mixed images positions and sizes",
+      "passed": true
+    },
+    {
+      "name": "QA mixed legacy scale survives roundtrip",
+      "passed": true
+    },
+    {
+      "name": "previews do not change gold actual units or saved battle apart from normal savedAt",
+      "passed": true
+    },
+    {
+      "name": "individual delete leaves other previews",
+      "passed": true
+    },
+    {
+      "name": "close preserves drawings and restores game input",
+      "passed": true
+    },
+    {
+      "name": "real soldier summon works with closed preview layer",
+      "passed": true
+    },
+    {
+      "name": "QA actual hero summons with closed comparison",
+      "passed": true
+    },
+    {
+      "name": "clear all restores battlefield",
+      "passed": true
+    },
+    {
+      "name": "QA placement disabled with panel open permits actual soldier summon",
+      "passed": true
+    },
+    {
+      "name": "QA touch places new front on actual battlefield",
+      "passed": true
+    },
+    {
+      "name": "QA new actor drag cancel prevents stale movement",
+      "passed": true
+    },
+    {
+      "name": "boss transition resets new previews and panel",
+      "passed": true
+    },
+    {
+      "name": "new actor uses actual boss world scale",
+      "passed": true
+    },
+    {
+      "name": "resize preserves logical new actor foot position",
+      "passed": true
+    },
+    {
+      "name": "320px group legacy card 0 reachable at full touch size",
+      "passed": true
+    },
+    {
+      "name": "320px group legacy card 1 reachable at full touch size",
+      "passed": true
+    },
+    {
+      "name": "320px group legacy card 2 reachable at full touch size",
+      "passed": true
+    },
+    {
+      "name": "320px group legacy card 3 reachable at full touch size",
+      "passed": true
+    },
+    {
+      "name": "320px group legacy card 4 reachable at full touch size",
+      "passed": true
+    },
+    {
+      "name": "320px group scalp card 5 reachable at full touch size",
+      "passed": true
+    },
+    {
+      "name": "320px group scalp card 6 reachable at full touch size",
+      "passed": true
+    },
+    {
+      "name": "320px group scalp card 7 reachable at full touch size",
+      "passed": true
+    },
+    {
+      "name": "320px group scalp card 8 reachable at full touch size",
+      "passed": true
+    },
+    {
+      "name": "wave reentry clears boss previews",
+      "passed": true
+    },
+    {
+      "name": "QA no runtime exceptions on actual root and isolated gallery",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "dragged": [
+    "http://127.0.0.1:5173/assets/dev-image-compare/scalp_face_v03/variant-1-front.png",
+    "http://127.0.0.1:5173/assets/dev-image-compare/scalp_face_v03/variant-2-front.png",
+    "http://127.0.0.1:5173/assets/dev-image-compare/scalp_face_v03/variant-3-front.png",
+    "http://127.0.0.1:5173/assets/dev-image-compare/scalp_face_v03/variant-4-front.png",
+    "http://127.0.0.1:5173/assets/dev-image-compare/scalp_face_v03/variant-1-front.png",
+    "http://127.0.0.1:5173/assets/dev-image-compare/scalp_face_v03/variant-2-front.png",
+    "http://127.0.0.1:5173/assets/dev-image-compare/scalp_face_v03/variant-3-front.png",
+    "http://127.0.0.1:5173/assets/dev-image-compare/scalp_face_v03/variant-4-front.png"
+  ],
+  "state": {
+    "before": {
+      "gold": 480,
+      "units": "[]",
+      "storage": "{\"grid-defenders.battle-save.v1.landscape.normal\":\"{\\\"version\\\":1,\\\"layout\\\":\\\"landscape\\\",\\\"mode\\\":\\\"normal\\\",\\\"savedAt\\\":1794221650512,\\\"meta\\\":{\\\"runId\\\":\\\"d01a699d-096a-40b9-aeb9-1530f0e592e0\\\",\\\"scene\\\":\\\"defense\\\",\\\"activeBossWave\\\":null,\\\"bossReturnDelay\\\":0,\\\"bossTestMode\\\":false,\\\"bossEncounterWave\\\":1,\\\"defeatedBossEnemies\\\":[],\\\"combatPaused\\\":true},\\\"defense\\\":{\\\"gold\\\":480,\\\"anvils\\\":0,\\\"kills\\\":0,\\\"elapsed\\\":0.016600000000000135,\\\"normalKills\\\":0,\\\"bountySummons\\\":0,\\\"pendingBounties\\\":0,\\\"waveTime\\\":0.016600000000000135,\\\"waveSpawned\\\":1,\\\"revision\\\":1,\\\"logRevision\\\":1,\\\"placementOrder\\\":0,\\\"wave\\\":1,\\\"nextDamageId\\\":1,\\\"nextLogId\\\":1,\\\"nextId\\\":2,\\\"speed\\\":1,\\\"bossPending\\\":false,\\\"keepWaveMonsters\\\":true,\\\"message\\\":\\\"게임을 시작 상태로 초기화했습니다.\\\",\\\"units\\\":[],\\\"enemies\\\":[{\\\"id\\\":1,\\\"distance\\\":0.7138000000000059,\\\"x\\\":131.7138,\\\"y\\\":68,\\\"hp\\\":160,\\\"maxHp\\\":160,\\\"speed\\\":43,\\\"named\\\":false,\\\"name\\\":\\\"순환 괴물\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"damageType\\\":\\\"physical\\\",\\\"attack\\\":20,\\\"armor\\\":10,\\\"magicArmor\\\":10,\\\"rate\\\":0.8,\\\"goldReward\\\":12,\\\"wave\\\":1,\\\"armorBreakRemaining\\\":0}],\\\"shopDiscounts\\\":[true,false,false,false,true],\\\"shots\\\":[],\\\"attackAreas\\\":[],\\\"damageNumbers\\\":[],\\\"rangedSkills\\\":[],\\\"meleeSkills\\\":[],\\\"assassinSkills\\\":[],\\\"swordSwingCounts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"logs\\\":{\\\"damage\\\":[],\\\"reward\\\":[],\\\"economy\\\":[]},\\\"lastWaveDamage\\\":null,\\\"formation\\\":[],\\\"formationRows\\\":6,\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0.016600000000000135,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"gear\\\":[],\\\"shop\\\":[\\\"I01\\\",\\\"I02\\\",\\\"I03\\\",\\\"I04\\\",\\\"I05\\\"]},\\\"boss\\\":{\\\"encounter\\\":2,\\\"actors\\\":[{\\\"id\\\":\\\"retainer-top\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 강철 감시자\\\",\\\"x\\\":760,\\\"y\\\":215,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"physical\\\",\\\"physicalArmor\\\":35,\\\"magicArmor\\\":25,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"retainer-bottom\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 비전 파수꾼\\\",\\\"x\\\":760,\\\"y\\\":347.5,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"magic\\\",\\\"defenseType\\\":\\\"magic\\\",\\\"physicalArmor\\\":25,\\\"magicArmor\\\":35,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"tester-boss\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"boss\\\",\\\"name\\\":\\\"시험 보스\\\",\\\"x\\\":900,\\\"y\\\":281.25,\\\"hp\\\":6000,\\\"maxHp\\\":6000,\\\"attack\\\":120,\\\"rate\\\":0.7,\\\"range\\\":80,\\\"speed\\\":34,\\\"rank\\\":1,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"physicalArmor\\\":60,\\\"magicArmor\\\":40,\\\"cooldown\\\":0.25}],\\\"roster\\\":[],\\\"autoSkills\\\":true,\\\"commanderCooldown\\\":0,\\\"commanderBuff\\\":0,\\\"heroSkillCooldown\\\":0,\\\"elapsed\\\":0,\\\"result\\\":\\\"fighting\\\",\\\"heroSkillCooldowns\\\":[],\\\"swordSwingCounts\\\":[],\\\"hits\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"tuning\\\":{\\\"healthScale\\\":1,\\\"attackScale\\\":1}},\\\"run\\\":{\\\"mode\\\":\\\"normal\\\",\\\"active\\\":true,\\\"elapsed\\\":0.016600000000000135,\\\"result\\\":null}}\"}"
+    },
+    "after": {
+      "gold": 480,
+      "units": "[]",
+      "storage": "{\"grid-defenders.battle-save.v1.landscape.normal\":\"{\\\"version\\\":1,\\\"layout\\\":\\\"landscape\\\",\\\"mode\\\":\\\"normal\\\",\\\"savedAt\\\":1794221658713,\\\"meta\\\":{\\\"runId\\\":\\\"d01a699d-096a-40b9-aeb9-1530f0e592e0\\\",\\\"scene\\\":\\\"defense\\\",\\\"activeBossWave\\\":null,\\\"bossReturnDelay\\\":0,\\\"bossTestMode\\\":false,\\\"bossEncounterWave\\\":1,\\\"defeatedBossEnemies\\\":[],\\\"combatPaused\\\":true},\\\"defense\\\":{\\\"gold\\\":480,\\\"anvils\\\":0,\\\"kills\\\":0,\\\"elapsed\\\":0.016600000000000135,\\\"normalKills\\\":0,\\\"bountySummons\\\":0,\\\"pendingBounties\\\":0,\\\"waveTime\\\":0.016600000000000135,\\\"waveSpawned\\\":1,\\\"revision\\\":1,\\\"logRevision\\\":1,\\\"placementOrder\\\":0,\\\"wave\\\":1,\\\"nextDamageId\\\":1,\\\"nextLogId\\\":1,\\\"nextId\\\":2,\\\"speed\\\":1,\\\"bossPending\\\":false,\\\"keepWaveMonsters\\\":true,\\\"message\\\":\\\"게임을 시작 상태로 초기화했습니다.\\\",\\\"units\\\":[],\\\"enemies\\\":[{\\\"id\\\":1,\\\"distance\\\":0.7138000000000059,\\\"x\\\":131.7138,\\\"y\\\":68,\\\"hp\\\":160,\\\"maxHp\\\":160,\\\"speed\\\":43,\\\"named\\\":false,\\\"name\\\":\\\"순환 괴물\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"damageType\\\":\\\"physical\\\",\\\"attack\\\":20,\\\"armor\\\":10,\\\"magicArmor\\\":10,\\\"rate\\\":0.8,\\\"goldReward\\\":12,\\\"wave\\\":1,\\\"armorBreakRemaining\\\":0}],\\\"shopDiscounts\\\":[true,false,false,false,true],\\\"shots\\\":[],\\\"attackAreas\\\":[],\\\"damageNumbers\\\":[],\\\"rangedSkills\\\":[],\\\"meleeSkills\\\":[],\\\"assassinSkills\\\":[],\\\"swordSwingCounts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"logs\\\":{\\\"damage\\\":[],\\\"reward\\\":[],\\\"economy\\\":[]},\\\"lastWaveDamage\\\":null,\\\"formation\\\":[],\\\"formationRows\\\":6,\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0.016600000000000135,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"gear\\\":[],\\\"shop\\\":[\\\"I01\\\",\\\"I02\\\",\\\"I03\\\",\\\"I04\\\",\\\"I05\\\"]},\\\"boss\\\":{\\\"encounter\\\":2,\\\"actors\\\":[{\\\"id\\\":\\\"retainer-top\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 강철 감시자\\\",\\\"x\\\":760,\\\"y\\\":215,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"physical\\\",\\\"physicalArmor\\\":35,\\\"magicArmor\\\":25,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"retainer-bottom\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"retainer\\\",\\\"name\\\":\\\"친위대 · 비전 파수꾼\\\",\\\"x\\\":760,\\\"y\\\":347.5,\\\"hp\\\":1800,\\\"maxHp\\\":1800,\\\"attack\\\":70,\\\"rate\\\":0.8,\\\"range\\\":50,\\\"speed\\\":50,\\\"rank\\\":0,\\\"damageType\\\":\\\"magic\\\",\\\"defenseType\\\":\\\"magic\\\",\\\"physicalArmor\\\":25,\\\"magicArmor\\\":35,\\\"cooldown\\\":0.25},{\\\"id\\\":\\\"tester-boss\\\",\\\"side\\\":\\\"enemy\\\",\\\"kind\\\":\\\"boss\\\",\\\"name\\\":\\\"시험 보스\\\",\\\"x\\\":900,\\\"y\\\":281.25,\\\"hp\\\":6000,\\\"maxHp\\\":6000,\\\"attack\\\":120,\\\"rate\\\":0.7,\\\"range\\\":80,\\\"speed\\\":34,\\\"rank\\\":1,\\\"damageType\\\":\\\"physical\\\",\\\"defenseType\\\":\\\"normal\\\",\\\"physicalArmor\\\":60,\\\"magicArmor\\\":40,\\\"cooldown\\\":0.25}],\\\"roster\\\":[],\\\"autoSkills\\\":true,\\\"commanderCooldown\\\":0,\\\"commanderBuff\\\":0,\\\"heroSkillCooldown\\\":0,\\\"elapsed\\\":0,\\\"result\\\":\\\"fighting\\\",\\\"heroSkillCooldowns\\\":[],\\\"swordSwingCounts\\\":[],\\\"hits\\\":[],\\\"iceProjectiles\\\":[],\\\"iceBursts\\\":[],\\\"fireCasts\\\":[],\\\"bladeCasts\\\":[],\\\"swordAttacks\\\":[],\\\"assassinActions\\\":[],\\\"assassinImpacts\\\":[],\\\"damageMeter\\\":{\\\"entries\\\":[],\\\"recent\\\":[],\\\"recentTotals\\\":[],\\\"recentTotal\\\":0,\\\"clock\\\":0,\\\"peaks\\\":{\\\"units\\\":[],\\\"overall\\\":0}},\\\"tuning\\\":{\\\"healthScale\\\":1,\\\"attackScale\\\":1}},\\\"run\\\":{\\\"mode\\\":\\\"normal\\\",\\\"active\\\":true,\\\"elapsed\\\":0.016600000000000135,\\\"result\\\":null}}\"}"
+    }
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,208 @@
+﻿{
+  "checks": [
+    {
+      "name": "actual game ready and comparison button enabled",
+      "passed": true
+    },
+    {
+      "name": "one button opens panel",
+      "passed": true
+    },
+    {
+      "name": "select cards and place multiple variants on real battlefield",
+      "passed": true
+    },
+    {
+      "name": "reselect and drag updates logical position",
+      "passed": true
+    },
+    {
+      "name": "200 percent keeps sole pivot and uniform image scale",
+      "passed": true
+    },
+    {
+      "name": "50 percent and 100 percent restore",
+      "passed": true
+    },
+    {
+      "name": "number editing permits partial digits and clamps only on commit",
+      "passed": true
+    },
+    {
+      "name": "actual variant1 right45 direction changes selected image",
+      "passed": true
+    },
+    {
+      "name": "delete selected only",
+      "passed": true
+    },
+    {
+      "name": "close retains images with no input interception",
+      "passed": true
+    },
+    {
+      "name": "preview operations leave gold roster and saved battle unchanged except normal autosave savedAt",
+      "passed": true
+    },
+    {
+      "name": "clear all immediately restores battlefield",
+      "passed": true
+    },
+    {
+      "name": "card drag to field places preview",
+      "passed": true
+    },
+    {
+      "name": "closed comparison restores actual soldier summon click",
+      "passed": true
+    },
+    {
+      "name": "QA actual battlefield CDP touch places preview",
+      "passed": true
+    },
+    {
+      "name": "QA pointercancel cancels capture and stale drag on actual field",
+      "passed": true
+    },
+    {
+      "name": "QA blur cancels capture and stale drag on actual field",
+      "passed": true
+    },
+    {
+      "name": "QA resize cancels capture and stale drag on actual field",
+      "passed": true
+    },
+    {
+      "name": "QA ESC retains image and closes panel",
+      "passed": true
+    },
+    {
+      "name": "QA reopen preserves image",
+      "passed": true
+    },
+    {
+      "name": "QA all 15 distinct images selectable and placed through live panel",
+      "passed": true
+    },
+    {
+      "name": "QA all 15 placed PNGs decoded without breakage",
+      "passed": true
+    },
+    {
+      "name": "QA direction and scale selected only with fixed feet",
+      "passed": true
+    },
+    {
+      "name": "QA 50 percent preserves native aspect ratio and measured sole pixel anchor",
+      "passed": true
+    },
+    {
+      "name": "QA 100 percent preserves native aspect ratio and measured sole pixel anchor",
+      "passed": true
+    },
+    {
+      "name": "QA 200 percent preserves native aspect ratio and measured sole pixel anchor",
+      "passed": true
+    },
+    {
+      "name": "QA viewport resize reattaches overlay to battlefield without changing world coordinates",
+      "passed": true
+    },
+    {
+      "name": "QA panel close during drag releases capture and prevents ghost movement",
+      "passed": true
+    },
+    {
+      "name": "boss switch clears previous previews selection and panel",
+      "passed": true
+    },
+    {
+      "name": "boss coordinate uses 1250 world width at 800 CSS pixels",
+      "passed": true
+    },
+    {
+      "name": "actual boss right45 right90 swaps preserve foot position and scale",
+      "passed": true
+    },
+    {
+      "name": "all four new variants place actual right45 art",
+      "passed": true
+    },
+    {
+      "name": "all four new variants swap to actual right90 art at fixed world foot",
+      "passed": true
+    },
+    {
+      "name": "panel fits narrow 320 pixel viewport without scaling UI",
+      "passed": true
+    },
+    {
+      "name": "panel buttons retain 48 pixel touch height",
+      "passed": true
+    },
+    {
+      "name": "return to wave clears boss previews",
+      "passed": true
+    },
+    {
+      "name": "closed comparison restores actual hero summon click",
+      "passed": true
+    },
+    {
+      "name": "all 15 actual direction PNGs load at original dimensions",
+      "passed": true
+    },
+    {
+      "name": "QA static fullframes decode on bright background",
+      "passed": true
+    },
+    {
+      "name": "QA no runtime exceptions before isolated static gallery",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "state": "see browser-result.json",
+  "drag": {
+    "log": [
+      [
+        "pointerdown",
+        "",
+        613,
+        180.796875
+      ],
+      [
+        "lostpointercapture",
+        "",
+        260,
+        170
+      ]
+    ],
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 800,
+      "height": 360,
+      "top": 0,
+      "right": 800,
+      "bottom": 360,
+      "left": 0
+    },
+    "card": {
+      "x": 581,
+      "y": 132,
+      "width": 64,
+      "height": 97.59375,
+      "top": 132,
+      "right": 645,
+      "bottom": 229.59375,
+      "left": 581
+    },
+    "panel": false
+  },
+  "heroInput": [
+    "guard",
+    "blond"
+  ],
+  "result": "PASS"
+}

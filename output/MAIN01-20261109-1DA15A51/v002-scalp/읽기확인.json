@@ -1,0 +1,88 @@
+﻿{
+    "task":  "MAIN01-20261109-1DA15A51",
+    "iteration":  2,
+    "role":  "qa",
+    "workSummary":  "신규4안정면+기존15개 root통합을새headless프로필에서검사한다.선택묶음/방향/스케일/저장분리/게임입력복구와해시를확인하며제품/기존결과수정과Git저장을하지않는다.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\AGENTS.md",
+                          "sha256":  "db85907459edfe3491f1ae2e9f07355e24bf0ca7c57ba69acdc3342ad1d7461b",
+                          "applies":  "효과제작 없이 전체프레임과 모바일48px 기준을 검증한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\작업진행방법.md",
+                          "sha256":  "7cca62cd4801a5fe43692cbbc943894ec2641bdca157cdc4d655495287dd1fa8",
+                          "applies":  "차수2 지시와 현재해시를 읽고 독립브라우저 검증하며 원본수정금지."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+                          "applies":  "사용자의 신규4안추가 직접지시 범위에서 QA와5종기록을 유지한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+                          "applies":  "main01 소유 작업에 증거 반환하며 기존서버와미커밋보존."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+                          "applies":  "독립테스터로 제작팀과분리하고 미적합격을대신하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "테스터 output와해당작업기록만편집한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\규정.md",
+                          "sha256":  "afeeb75712ebaf5123392ec531b991b51fb932f2499e61b7af7c89bf7bb38458",
+                          "applies":  "기능/자산/모바일을재현증거로검사하고 수정은제작팀으로돌린다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "차수2 새ACK와start통과후 검사하며 과거ACK재사용금지."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+                          "applies":  "qa의독립역할과main01회신책임을확인한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "자료분류와조직을구분하고Desktop실행원본을검사한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "qa외부역할을유지하고캐릭터제작과기능QA를구분한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자신규4안추가-v002.md",
+                          "sha256":  "be55dfe6d20e3fa31becaa8897d78a41e6810441cec707fc7f651d2728fb07dd",
+                          "applies":  "기존15개보존및신규정면4개연결을검사하며실유닛교체나측면생성없음."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\신규4안-v002-통합사전확인.json",
+                          "sha256":  "85e04f69f6bc6985717454871045093f3a5500c0030be32bd32459ff99f22933",
+                          "applies":  "3모듈과신규4PNG/manifest8개씩좁은반영해시검사."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\신규4안-v002-통합결과.json",
+                          "sha256":  "99f1c70899f5075aefa2daadf13686ad0c6a0bb23a8dfe9c7aed17fd9fea33ea",
+                          "applies":  "root/UI16해시및main.ts/기존15PNG보존을실파일대조한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+                          "sha256":  "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+                          "applies":  "기능요청은저장요청아님;커밋/푸시/예약백업하지않음."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\검증.md",
+                          "sha256":  "86dc6da462d7e5eb22c4ec590ee8ac8b818c005127cde71475e1efc470d54d89",
+                          "applies":  "49PASS는방법참고로만사용하고새프로필에서실제검사를재현한다."
+                      }
+                  ]
+}

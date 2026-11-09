@@ -1,0 +1,52 @@
+--- before
+
++++ live-root
+
+@@ -22,6 +22,7 @@
+
+ import { LANDSCAPE_BATTLE, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef } from './defenseConfig';
+ import { createDefenseView } from './defenseView';
+ import {createRangeDummy} from './devRangeDummy';
++import {createDevImageCompare} from './devImageCompare';
+ import { createSceneTransition, type BattleScene } from './sceneTransition';
+ import { BossBattle, waveBossRoster, BOSS_FORMATION } from './bossBattle';
+ import {FORMATION} from './battleFormation';
+@@ -43,6 +44,7 @@
+
+ let assetsReady=false;
+ let showDamageNumbers=true,combatPaused=false;
+ let rangeDummy:ReturnType<typeof createRangeDummy>|undefined;
++let imageCompare:ReturnType<typeof createDevImageCompare>|undefined;
+ let formationEditing=false,formationPausedBefore=false;
+ const bossBattle=new BossBattle(waveBossRoster(game),Math.random,game.damageMeter.peaks);
+ let bossRosterSignature='';
+@@ -878,6 +880,7 @@
+
+   const full=game.enemies.filter(e=>!e.bounty&&!e.named&&e.hp>0).length>=RULES.maxEnemies;
+   document.querySelectorAll<HTMLButtonElement>('[data-monster-id]').forEach(button=>button.disabled=!enabled||(full&&!MONSTERS.find(d=>d.id===button.dataset.monsterId)?.named));
+   rangeDummy?.sync();
++  imageCompare?.sync();
+ }
+ function clearBattleInteraction():void {
+   endFormation(false);
+@@ -1073,6 +1076,9 @@
+
+   },rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture,()=>showDamageNumbers,{top:DEFENSE_FIELD.top,terrain:LANDSCAPE_BATTLE?undefined:forestTexture});
+   let lastRevision=-1,hudClock=0,meterClock=0;
+   rangeDummy=createRangeDummy({controls:el('dev-tools'),active:()=>assetsReady&&run.active&&!sceneTransitioning,scene:()=>currentScene,
++   fields:{defense:{element:el('battle-scene'),width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,top:DEFENSE_FIELD.top},
++    boss:{element:el('boss-screen').querySelector<HTMLElement>('.boss-arena')!,width:BOSS_FIELD.width,height:BOSS_FIELD.height,top:0}}});
++  imageCompare=createDevImageCompare({controls:el('dev-tools'),active:()=>assetsReady&&run.active&&!sceneTransitioning,scene:()=>currentScene,
+    fields:{defense:{element:el('battle-scene'),width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,top:DEFENSE_FIELD.top},
+     boss:{element:el('boss-screen').querySelector<HTMLElement>('.boss-arena')!,width:BOSS_FIELD.width,height:BOSS_FIELD.height,top:0}}});
+   renderMonsterTools();
+@@ -1131,7 +1137,7 @@
+
+     if(lastRevision!==game.revision&&!drag&&!unitDrag&&!summonDrag){lastRevision=game.revision;refresh();}
+   });
+   const automaticMode=launchMode(location.search);if(automaticMode)void startOrResume(automaticMode);
+-  if(import.meta.hot)import.meta.hot.dispose(()=>{saveBattle();clearInterval(battleSaveTimer);continuation.dispose();rangeDummy?.dispose();events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
++  if(import.meta.hot)import.meta.hot.dispose(()=>{saveBattle();clearInterval(battleSaveTimer);continuation.dispose();rangeDummy?.dispose();imageCompare?.dispose();events.abort();clearSummonDrag();sceneTransition.dispose();cancelAnimationFrame(heroScrollFrame);cancelAnimationFrame(heroAnimationFrame);heroGesture=null;clearTimeout(noticeTimer);drag?.ghost?.remove();drag=null;updateGearDrag();unitDrag?.ghost?.remove();app.destroy(true,{children:true});});
+ }
+ void start().catch((error:unknown)=>{el('battle-shell-header').hidden=false;el<HTMLButtonElement>('battle-return').disabled=false;el('status').hidden=false;el('status').textContent='전장을 시작하지 못했습니다. 브라우저 그래픽 지원을 확인해 주세요.';el('lobby-hint').textContent='전장을 불러오지 못했습니다. 새로고침해 주세요.';console.error(error);});
+ 

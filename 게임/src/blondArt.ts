@@ -5,6 +5,8 @@ export {blondDirection} from './blondMotion';
 const base=`${import.meta.env.BASE_URL}assets/heroes/blond-warrior-v1/`;
 export const BLOND_PORTRAIT_URL=`${base}portrait.png`;
 export const BLOND_SKILL_ICON_URL=`${base}skill-preview.png`;
+// Original blond-warrior body heights; other reference-matched heroes use these.
+export const BLOND_WAVE_BODY_HEIGHT=57,BLOND_BOSS_BODY_HEIGHT=72;
 type FrameSpec=Omit<SkillFrameSpec,'background'>&{bodyHeight:number;duration?:number};
 type Manifest={idle:FrameSpec[];walk:{durationMs:number;fps:number;frames:FrameSpec[]}};
 export type BlondFrame=SkillFrameArt&{bodyHeight:number;frame:number;direction:number;walking:boolean};
@@ -41,6 +43,6 @@ export function blondImage(direction=0):string{
 /** Frame and pivot use the same world-unit scale as the parent actor, with visible overflow. */
 export function blondBossImage(direction:number,moving:boolean,elapsed:number):string{
   const art=blondFrame(direction,moving,elapsed);if(!art)return '';
-  const p=blondPlacement(art,26,68.5625,72);
+  const p=blondPlacement(art,26,68.5625,BLOND_BOSS_BODY_HEIGHT);
   return `<svg class="boss-blond-frame" data-direction="${art.direction}" data-walk-frame="${art.walking?art.frame:-1}" viewBox="0 0 52 73.125" overflow="visible" aria-hidden="true"><image href="${art.url}" x="${p.x-p.width*p.anchorX}" y="${p.y-p.height*p.anchorY}" width="${p.width}" height="${p.height}"/></svg>`;
 }
