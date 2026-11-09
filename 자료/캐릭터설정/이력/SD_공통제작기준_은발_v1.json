@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "sd_silver_staff_standard_v1",
+  "name": "기존 SD · 은발 날개 지팡이 공통 기준",
+  "adopted_on": "2026-11-08",
+  "status": "user_confirmed",
+  "selected_style": "existing_pixel_SD",
+  "applies_to": "앞으로 제작하는 SD 캐릭터와 방향 세트",
+  "scope_excludes": "GC9 일러스트의 성인형 비율",
+  "reference": {
+    "character": "은발·날개 지팡이",
+    "front_path": "output/silver-staff-8views-v1/images/01_front_000.png",
+    "front_right_path": "output/silver-staff-8views-v1/images/02_front_right_045.png",
+    "right_path": "output/silver-staff-8views-v1/images/03_right_090.png",
+    "back_path": "output/silver-staff-8views-v1/images/05_back_180.png",
+    "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f"
+  },
+  "reference_canvas": {
+    "width": 1254,
+    "height": 1254
+  },
+  "body_framing": {
+    "head_top_y": 253,
+    "foot_baseline_y": 1178,
+    "body_height_px": 926,
+    "head_top_ratio": 0.20175438596491227,
+    "foot_baseline_ratio": 0.9393939393939394,
+    "body_height_ratio": 0.7384370015948963,
+    "center_x_ratio": 0.5,
+    "measurement_alpha_threshold": 32,
+    "head_roi": [
+      350,
+      150,
+      350,
+      350
+    ],
+    "feet_roi": [
+      450,
+      1020,
+      340,
+      190
+    ]
+  },
+  "proportions": {
+    "source": "실제 은발 캐릭터 원본",
+    "match": [
+      "머리 크기",
+      "머리와 몸의 등신",
+      "몸통·다리 길이",
+      "인물 본체 높이",
+      "발 기준선",
+      "카메라 높이"
+    ],
+    "class_based_size_changes": false,
+    "preserve_requested_species_gender_and_build": true,
+    "explicit_height_or_species_exception": "명시한 종족 체격·개별 키 차이는 별도 적용하며 직업 차이로 확대하지 않는다"
+  },
+  "equipment": {
+    "measure_separately": true,
+    "excluded_from_body_height": [
+      "지팡이",
+      "검끝",
+      "방패끝",
+      "망토 끝",
+      "깃털·머리 장식"
+    ],
+    "rule": "장비 길이로 인물 본체의 크기를 바꾸지 않는다"
+  },
+  "generation": {
+    "attach_actual_standard_reference": true,
+    "attach_character_identity_separately": true,
+    "match_framing_at_generation": true,
+    "native_dimensions_and_bytes_preserved": true,
+    "scale_original_files_automatically": false,
+    "keep_same_body_scale_and_ground_anchor_across_views": true,
+    "match_head_and_foot_to_height_guide": true
+  },
+  "verification": {
+    "body_height_ratio_tolerance": 0.01,
+    "foot_baseline_ratio_tolerance": 0.005,
+    "review_head_and_body_proportions_visually": true,
+    "review_on_light_and_dark": true,
+    "review_height_guide_before_save": true
+  },
+  "in_game": {
+    "reference_relative_size": "은발·날개 지팡이와 같은 본체 표시 높이",
+    "target_body_height_px": null,
+    "ground_anchor": "발바닥 기준선",
+    "separate_equipment_bounds": true
+  },
+  "measurements": "자료/캐릭터설정/SD_공통제작기준_실측.json",
+  "viewer": "output/characters/sd-standard/index.html",
+  "height_guide": {
+    "meaning": "body_height_only",
+    "axis": "vertical",
+    "top": "일반 모발을 포함한 머리끝",
+    "bottom": "발바닥",
+    "match_both_red_lines": true,
+    "uniform_width_required": false,
+    "preserve_character_build": true,
+    "reference_path": "자료/캐릭터제작/SD공통기준/원본/키_사용자표시.png",
+    "sha256": "9b1d3b58acb70fb1289cb0cf954f2d246e67e04ba320fa06d1d38d081846075f",
+    "source_kind": "cropped_UI_annotation",
+    "use_screenshot_pixels_as_canvas_coordinates": false,
+    "canonical_body_framing_unchanged": true,
+    "render_red_lines_in_character": false,
+    "user_confirmation": "키기준인거알지?"
+  }
+}

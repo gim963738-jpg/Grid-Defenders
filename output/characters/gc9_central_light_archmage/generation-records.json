@@ -1,0 +1,163 @@
+{
+  "task": "중앙제국 수석 빛 마법사 GC9 첫 시안",
+  "generation_tool": "built-in image_gen",
+  "status": "complete",
+  "requested_count": 1,
+  "selected_count": 1,
+  "style_id": "GC9",
+  "style_version": "1.1",
+  "references": [
+    {
+      "id": "M02",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+      "role": "GC9 male body, fine linework, restrained male expression and flowing layered cloth; style only",
+      "order": 1,
+      "sha256": "cf92cc0757201ca5f9b05117b2d065ef1a2862d87f8e0bed906e1e2a726d67dc",
+      "project_path": "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif"
+    },
+    {
+      "id": "A07",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/A07_Hwarin.jfif",
+      "role": "pale blue-gray cel shadows on layered WHITE cloth only; do not copy female face, body, hair, costume or large halo",
+      "order": 2,
+      "sha256": "4e6067db5acc168cf612d0a5e4cea6663e3d2e8e1d29ada3e34e5dc0a540aa52",
+      "project_path": "자료/캐릭터그림체/GC9/원본/A07_Hwarin.jfif"
+    },
+    {
+      "id": "C4",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+      "role": "user-preferred clean eyelid/nose/mouth line quality only; new adult MALE face",
+      "order": 3,
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "project_path": "output/character-redesign-6x2/images/c04_front.png"
+    },
+    {
+      "id": "C3",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+      "role": "user-preferred faceted gold metal rendering on glasses/staff hardware only; do not copy green hair or archer outfit",
+      "order": 4,
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+      "project_path": "output/character-redesign-6x2/images/c03_front.png"
+    },
+    {
+      "id": "WORLD_V17",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/world/maps/continent_world_final_v17.png",
+      "role": "central magical imperial capital architecture/palette/world context only, not drawing style and not a requested background",
+      "order": 5,
+      "sha256": "0e0b0b31df95bb9e61e7226c0237f2bdab0948053a9dc833c9e4cb6cc483c178",
+      "project_path": "output/world/maps/continent_world_final_v17.png"
+    }
+  ],
+  "calls": [
+    {
+      "id": "main_threequarter_v01",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE polished GC9 v1.1 full-body fantasy game character design, portrait 2:3 framing, genuine transparent PNG.\n\nINPUT IMAGE ROLES:\n1 = M02 Harpe: PRIMARY GC9 drawing-language reference for an elegant adult male, fine anime linework, calm expression, coherent cloth folds and long proportions. Do not copy this man's identity, white short hair, red eyes, Japanese costume, weapon or pose.\n2 = A07 Hwarin: WHITE CLOTH MATERIAL reference only: pale cool blue-gray cel shadows separating overlapping white fabric. Do not copy female anatomy, childlike face, exposed legs, hair, kimono, red ribbons or giant halo.\n3 = C4: user-preferred CLEAN FACE/LINE quality only: intentional upper eyelids, simple nose/mouth, clear jaw and restrained skin shading. This new person is an adult HUMAN MAN with his own face.\n4 = C3: user-preferred METAL PLANES only, for small gold fittings on spectacles, staff and clothing. Faceted light/dark planes, firm edges and believable attachments. Do not copy the archer, elf ears, hair ornament, bow, exposed clothing or green palette.\n5 = world map: WORLD CONTEXT only. The central continent's luminous western magical imperial capital has white/gold architecture, blue domes and slender arcane spires. Echo its restrained visual vocabulary in the man's robe details. Do not draw the map, city, scenery, terrain or lettering in the output. Do not use the map's miniature painted style.\n\nNEW CHARACTER / USER IDENTITY:\nA wise, intellectual HUMAN MALE, chief light-mage of the central continent's magic empire, who has left the imperial academy to defend the continent against an enemy invasion. Calm, composed, observant and compassionate, carrying the authority of an experienced scholar who will protect others. Visually a mature adult in his thirties, tall and lean, approximately 7.5-head adult male proportions, a natural male shoulder/chest structure under the robe and long straight legs. Not SD, not a boy, not an elf. Light human skin, normal rounded ears.\n\nFACE, GLASSES AND HAIR ARE ESSENTIAL:\nA composed masculine face with a defined but not excessively angular jaw, subtly mature brows, warm hazel-brown intelligent eyes, clean simple nose/mouth and a very small reassuring smile. No beard. Thin champagne-gold, softly rectangular spectacles with two clear lenses, an actual bridge and correctly attached temples. Both eyes and both lenses must read clearly. Tiny corner reflections only, never white glare hiding the eyes.\nLong dark chestnut-brown hair reaching the middle of the back, built from elegant coherent locks and tapered tips. Side part, forehead partly open, hair tucked behind the ears and loosely half-tied low behind the neck with one small functional clasp. Keep glasses and face unobstructed. A few long locks may fall in front of the shoulders.\n\nWHITE ROBE / IMPERIAL SCHOLAR:\nA predominantly WHITE, ankle-length men's archmage robe, not armor: a modest high collar, layered white inner tunic, long structured outer robe, broad draping sleeves, a fitted dark blue waist sash and a short white shoulder mantle. The robe reads as refined matte fabric, not shiny plated metal. Use pale blue-gray shadows to distinguish white layers and larger purposeful folds. Small restrained champagne-gold edging and a few muted royal-blue inset panels echo the central capital. One small geometric sun-and-orbit arcane brooch at the upper chest and sparse elegant architectural line ornaments at the cuffs/hem. Ornamental lines follow garment construction, without dense random micro-patterns. Modest covered chest, natural waist, straight split robe panels, practical closed dark blue/brown low boots visible under the hem. No royal crown, no helmet, no heavy shoulder plates, no religious cross, no bridal silhouette or huge decorative ribbons.\n\nEQUIPMENT / LIGHT MAGIC:\nOne slender ivory-and-gold arcane staff in his anatomical LEFT hand, near vertical beside his body with the foot resting at ground height. The staff head is a small geometric open ring embracing a pale warm-white prismatic focus, with clean connected gold fittings. Keep it elegant and practical rather than a huge weapon. His anatomical RIGHT hand is held slightly forward in an open, natural protective gesture, forming one SMALL translucent warm-white/gold geometric light ward above the palm. Only a short restrained glow around that hand and the staff focus; no giant blast, wings, surrounding halo or particles covering his silhouette. One small closed navy leather grimoire can be secured to the belt as a scholar's accessory, not floating. Natural clearly drawn fingers and staff grip.\n\nGC9 DRAWING / MATERIAL LANGUAGE:\nClean fine 2D anime illustration, firm silhouette and overlap contours, delicate facial/interior lines. Clearly separated cel-shaded base/main-shadow/deep-overlap planes with restrained soft transitions only where appropriate. Hair in large coherent locks, soft economical skin shading, broad matte white cloth planes and selectively sharp faceted gold reflections. Clarity at native 100% size, particularly spectacles, eyelids, fingers, staff hardware and robe borders. No soft plastic doll face, glossy airbrushed skin, fuzzy ornament, heavy uniform outlines, realistic pores, 3D render, watercolor or pixel-art treatment.\n\nCOMPOSITION / OUTPUT:\nSingle full-body standing character in a gentle FRONT-RIGHT THREE-QUARTER view, body about 30–40 degrees toward screen right, face turned enough toward the viewer that both eyes/spectacle lenses are visible. Stable upright posture, both feet grounded, calm readiness and subtle cloth/hair movement. Full hair, staff tip/head, both hands, light ward and boots entirely inside the portrait canvas with clean padding. Keep the face large enough to read. Soft upper-left light and only a slight warm accent from his own magic.\nActual transparent alpha outside the complete character and local magic, including gaps between arm and staff; preserve all WHITE ROBE fabric as opaque fabric. No opaque white/black background, checkerboard painted into the file, floor, shadow ellipse, landscape, name label, text, watermark, frame, multiple panels or additional characters. Produce only this one new character design.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/A07_Hwarin.jfif",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/world/maps/continent_world_final_v17.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-89c303ee-34c9-4cda-82dc-1b096c832c6d.png",
+      "output_file": "images/main_threequarter_v01.png",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-89c303ee-34c9-4cda-82dc-1b096c832c6d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "actual_width": 1024,
+      "actual_height": 1536,
+      "alpha": {
+        "width": 1024,
+        "height": 1536,
+        "transparent_pixels": 689572,
+        "partial_alpha_pixels": 101323,
+        "near_opaque_pixels": 781969,
+        "max_alpha": 254,
+        "visible_pixels": 813110,
+        "visible_bounds": {
+          "x": 96,
+          "y": 7,
+          "width": 873,
+          "height": 1523,
+          "right": 968,
+          "bottom": 1529
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0
+      },
+      "output_sha256": "f43a06d1e6cef50c9ca5fb2416095118f48a8176280a8afb3a95e8a8a46d2910",
+      "references": [
+        {
+          "id": "M02",
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+          "role": "GC9 male body, fine linework, restrained male expression and flowing layered cloth; style only",
+          "order": 1,
+          "sha256": "cf92cc0757201ca5f9b05117b2d065ef1a2862d87f8e0bed906e1e2a726d67dc",
+          "project_path": "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif"
+        },
+        {
+          "id": "A07",
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/A07_Hwarin.jfif",
+          "role": "pale blue-gray cel shadows on layered WHITE cloth only; do not copy female face, body, hair, costume or large halo",
+          "order": 2,
+          "sha256": "4e6067db5acc168cf612d0a5e4cea6663e3d2e8e1d29ada3e34e5dc0a540aa52",
+          "project_path": "자료/캐릭터그림체/GC9/원본/A07_Hwarin.jfif"
+        },
+        {
+          "id": "C4",
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+          "role": "user-preferred clean eyelid/nose/mouth line quality only; new adult MALE face",
+          "order": 3,
+          "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+          "project_path": "output/character-redesign-6x2/images/c04_front.png"
+        },
+        {
+          "id": "C3",
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+          "role": "user-preferred faceted gold metal rendering on glasses/staff hardware only; do not copy green hair or archer outfit",
+          "order": 4,
+          "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+          "project_path": "output/character-redesign-6x2/images/c03_front.png"
+        },
+        {
+          "id": "WORLD_V17",
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/world/maps/continent_world_final_v17.png",
+          "role": "central magical imperial capital architecture/palette/world context only, not drawing style and not a requested background",
+          "order": 5,
+          "sha256": "0e0b0b31df95bb9e61e7226c0237f2bdab0948053a9dc833c9e4cb6cc483c178",
+          "project_path": "output/world/maps/continent_world_final_v17.png"
+        }
+      ],
+      "resampled": false,
+      "prompt_file": "images/main_threequarter_v01.prompt.txt"
+    }
+  ],
+  "completed_on": "2026-11-07",
+  "user_approved": false,
+  "output": {
+    "path": "images/main_threequarter_v01.png",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "f43a06d1e6cef50c9ca5fb2416095118f48a8176280a8afb3a95e8a8a46d2910",
+    "alpha": {
+      "width": 1024,
+      "height": 1536,
+      "transparent_pixels": 689572,
+      "partial_alpha_pixels": 101323,
+      "near_opaque_pixels": 781969,
+      "max_alpha": 254,
+      "visible_pixels": 813110,
+      "visible_bounds": {
+        "x": 96,
+        "y": 7,
+        "width": 873,
+        "height": 1523,
+        "right": 968,
+        "bottom": 1529
+      },
+      "red_edge_alpha16": 0,
+      "red_edge_alpha128": 0
+    }
+  },
+  "visual_review": "visual-review.json"
+}

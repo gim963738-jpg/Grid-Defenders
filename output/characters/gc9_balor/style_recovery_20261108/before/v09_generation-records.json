@@ -1,0 +1,200 @@
+{
+  "character": "발로르",
+  "version": 9,
+  "tool": "built-in image_gen",
+  "style": "GC9 v1.1",
+  "status": "awaiting_gc9_rebuild_concept_review",
+  "transparent_background_requested": true,
+  "post_generation_resampled": false,
+  "gc9_fixed_block_verbatim": true,
+  "gc9_fixed_block_sha256": "f2c853430363f4f67cfe339bc3e53f7fa5dc340473628ef9284a93ec0c9dd394",
+  "calls": [
+    {
+      "id": "gc9_rebuild_initial_v09",
+      "prompt_file": "output/characters/gc9_balor/gc9_rebuild_v09/front_v09.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v06/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "output": "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_initial.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-3e9360a2-b55d-4d45-b7d3-2bd82c7a4f6a.png",
+      "started_at": "2026-11-07T17:34:49.003Z",
+      "finished_at": "2026-11-07T17:35:25.520Z",
+      "disposition": "superseded_style_and_framing",
+      "stage": "gc9_rebuild_initial_v09",
+      "revision_scope": "gc9_style_rebuild",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "cef4e5d8a29bac1245bfba7f439a91d41dc338a8398d7637586083fb40b0ed53",
+      "copy_matches_generated_original": true,
+      "gc9_fixed_block_verbatim": true,
+      "reference_files": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+          "sha256": "08216e0256ed417cd336da8d7d462b7cac86f6e3a8b957302ee1a379bac944a3"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+          "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+          "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v06/front.png",
+          "sha256": "edd0ef05e12b4b6b381d74063bf6d368adb78044cb6245a8f41783483cd0ccd4"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+          "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a"
+        }
+      ]
+    },
+    {
+      "id": "gc9_rebuild_style_v09",
+      "prompt_file": "output/characters/gc9_balor/gc9_rebuild_v09/front_v09_final.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "output": "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_style_master.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-4d3ffc5e-c6d9-43a5-a6a7-2e54dbaa8d22.png",
+      "started_at": "2026-11-07T17:36:27.606Z",
+      "finished_at": "2026-11-07T17:37:05.087Z",
+      "disposition": "style_master_before_framing",
+      "stage": "gc9_rebuild_style_v09",
+      "revision_scope": "gc9_style_rebuild",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "186c8e4f84310ce2b028fe53a933c864d714592af20bd0a994310a3550a0e7fa",
+      "copy_matches_generated_original": true,
+      "gc9_fixed_block_verbatim": true,
+      "reference_files": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+          "sha256": "08216e0256ed417cd336da8d7d462b7cac86f6e3a8b957302ee1a379bac944a3"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+          "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+          "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+          "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+          "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a"
+        }
+      ]
+    },
+    {
+      "id": "gc9_rebuild_framing_v09",
+      "prompt_file": "output/characters/gc9_balor/gc9_rebuild_v09/front_v09_framing.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v09/variants/front_style_master.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/inputs/framing_guide_portrait_v09.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png"
+      ],
+      "output": "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_before_shield.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-9e47c2a4-dceb-4105-9a14-49635b180e6f.png",
+      "started_at": "2026-11-07T17:38:08.962Z",
+      "finished_at": "2026-11-07T17:38:41.251Z",
+      "disposition": "shield_scale_revision_needed",
+      "stage": "gc9_rebuild_framing_v09",
+      "revision_scope": "gc9_style_rebuild",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "0fed8df5894b718b9091fd8575a1bb7c4d1236f50301be86d3ff1b63991d254c",
+      "copy_matches_generated_original": true,
+      "gc9_fixed_block_verbatim": true,
+      "reference_files": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v09/variants/front_style_master.png",
+          "sha256": "186c8e4f84310ce2b028fe53a933c864d714592af20bd0a994310a3550a0e7fa"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/inputs/framing_guide_portrait_v09.png",
+          "sha256": "29de566eb43913c986ab3ab0ed9523190192f5fa411824da436ddc4086a9cb4c"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+          "sha256": "08216e0256ed417cd336da8d7d462b7cac86f6e3a8b957302ee1a379bac944a3"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+          "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+          "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+        }
+      ]
+    },
+    {
+      "id": "gc9_rebuild_shield_scale_v09",
+      "prompt_file": "output/characters/gc9_balor/gc9_rebuild_v09/front_v09_shield.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v09/variants/front_before_shield.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "output": "output/characters/gc9_balor/gc9_rebuild_v09/front_v09.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-497ed4b0-1ae8-4f50-9c2e-b7b4ffef4c35.png",
+      "started_at": "2026-11-07T17:40:46.733Z",
+      "finished_at": "2026-11-07T17:41:20.701Z",
+      "disposition": "approval_candidate",
+      "stage": "gc9_rebuild_shield_scale_v09",
+      "revision_scope": "gc9_style_rebuild",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "copy_matches_generated_original": true,
+      "gc9_fixed_block_verbatim": true,
+      "reference_files": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v09/variants/front_before_shield.png",
+          "sha256": "0fed8df5894b718b9091fd8575a1bb7c4d1236f50301be86d3ff1b63991d254c"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+          "sha256": "08216e0256ed417cd336da8d7d462b7cac86f6e3a8b957302ee1a379bac944a3"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+          "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+          "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+          "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a"
+        }
+      ]
+    }
+  ],
+  "approval_candidate": {
+    "view": "front",
+    "path": "output/characters/gc9_balor/gc9_rebuild_v09/front_v09.png"
+  },
+  "user_approval": null,
+  "comparison_reference": "output/character-redesign-6x2/images/c06_front.png",
+  "comparison_display_only": "머리끝~발바닥 높이 정규화; 이미지 원본 바이트·크기 불변"
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "face",
+    "part": "얼굴/헤어",
+    "observed": "투구없는짧은갈색분리헤어,청회눈,다부진성인남성기사의부드러운차분한표정",
+    "invariant": "눈썹/입기본인상유지,큰SD얼굴/두개골로재설계;금발얼굴/유아표정복사금지",
+    "sourceROI": [
+      430,
+      300,
+      590,
+      465
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  },
+  {
+    "id": "armor",
+    "part": "청은갑옷/견갑",
+    "observed": "청색안쪽과은테두리판금,양어깨의위로선노출층진견갑과청색층사이공간",
+    "invariant": "어깨를망토로덮지않고큰판금분할유지;미세반사선수만축약",
+    "sourceROI": [
+      295,
+      445,
+      705,
+      690
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  },
+  {
+    "id": "lion",
+    "part": "가슴사자",
+    "observed": "청색흉갑중앙의흰/은색측면사자전신. 머리/앞발은화면왼쪽,몸통/뒷발/오른쪽으로말린꼬리",
+    "invariant": "사자머리만/정면얼굴/다른동물/황금문장으로교체금지",
+    "sourceROI": [
+      450,
+      510,
+      565,
+      650
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  },
+  {
+    "id": "pins",
+    "part": "원형핀2개",
+    "observed": "어깨앞둥근은핀2개,안쪽교차/별모양금속분할,별도연결끈없음",
+    "invariant": "두개유지,가느다란연결로프추가금지;금속테두리/핀직접고정구분",
+    "sourceROI": [
+      405,
+      500,
+      620,
+      555
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  },
+  {
+    "id": "grip",
+    "part": "검그립/폼멜",
+    "observed": "파란감김이보이는원통형그립,손이중간을감쌈,끝은둥글고다각면있는은색폼멜",
+    "invariant": "금색/빨간그립/검은민자/고리폼멜/다른손잡이로변경금지",
+    "sourceROI": [
+      190,
+      770,
+      315,
+      925
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  },
+  {
+    "id": "guard",
+    "part": "검가드/보석",
+    "observed": "은색날개형의넓게뻗은곡선가드,중앙은은테두리의붉은마름모보석",
+    "invariant": "직선막대가드/황금손보호대/청보석/금발전사의고리너클가드복제금지",
+    "sourceROI": [
+      248,
+      873,
+      404,
+      995
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  },
+  {
+    "id": "blade",
+    "part": "검신",
+    "observed": "은색의곧고넓은양날,중앙면/테두리가읽히고끝으로가늘어짐. 손잡이축에서일관되게오른아래로이어짐",
+    "invariant": "청색사선인레이/구멍/새칼날문양추가금지",
+    "sourceROI": [
+      325,
+      938,
+      657,
+      1390
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  },
+  {
+    "id": "shield",
+    "part": "방패외곽/문장",
+    "observed": "은색대형카이트실드,넓은윗부분과긴하단끝,상단/하단은각진금속장식. 중앙긴검은십자와대칭검은날개",
+    "invariant": "크기는몸높이약2/3시각범위,문장노출하려고방패축소금지. 십자/날개단순화는전체구조유지",
+    "sourceROI": [
+      552,
+      545,
+      832,
+      1282
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  },
+  {
+    "id": "cape",
+    "part": "망토/용문양",
+    "observed": "청색겉면·흰안감의긴망토,양옆아래흰색말린용옆모습과작은마름모표식",
+    "invariant": "짧은후드/청스카프복제금지,두문양을새새/날개로교체금지",
+    "sourceROI": [
+      130,
+      840,
+      886,
+      1385
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  },
+  {
+    "id": "belt",
+    "part": "벨트/허리천/다리",
+    "observed": "검은벨트·은색네모버클,청색긴중앙허리천과흰기하테두리/마름모. 양다리모두청은판금/부츠",
+    "invariant": "갈색주머니띠/비대칭청천부츠/신규장식복제금지",
+    "sourceROI": [
+      340,
+      675,
+      680,
+      1435
+    ],
+    "status": "observed in approved source; occluded back/hidden shield grip not confirmed"
+  }
+]

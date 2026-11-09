@@ -1,0 +1,56 @@
+{
+  "id": "08_guardian_tales",
+  "status": "returned_selected_for_review",
+  "tool": "builtin image_gen.imagegen",
+  "promptFile": "08_guardian_tales/generation-input.json",
+  "inputs": [
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+      "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "role": "OUR POSE/IDENTITY only"
+    },
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\guardian_tales\\frame-022.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\guardian_tales\\frame-022.png",
+      "sha256": "08161543aa2918d9414080e5a2d7ac8b5caffca38c63d3eea9c51be2fbb00fcf",
+      "nativeDimensions": [
+        960,
+        540
+      ],
+      "role": "GAME COMBAT RENDERING/PROPORTION only"
+    },
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\guardian_tales\\frame-003.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\guardian_tales\\frame-003.png",
+      "sha256": "b47d7e2b58370867770ab2e6ed7b81a156490362a662925da621ea6e2324c987",
+      "nativeDimensions": [
+        960,
+        540
+      ],
+      "role": "auxiliary in-game pixel sprite visibility only"
+    }
+  ],
+  "settings": {
+    "transparent_background": true,
+    "imageModel": "tool managed; no paid fallback or text-model substitution"
+  },
+  "resultFile": "08_guardian_tales/generation-result.json",
+  "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-7b944332-88ec-42a8-bd14-206141ca3ccf.png",
+  "savedOutput": "08_guardian_tales/character.png",
+  "savedSha256": "ac66fc0e3f67b2d534a6db635210d87defd55080db948608ce5f031bc387e29b",
+  "rawBytesIdentical": true,
+  "nativeDimensions": [
+    1312,
+    1199
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "userAestheticApproval": false
+}

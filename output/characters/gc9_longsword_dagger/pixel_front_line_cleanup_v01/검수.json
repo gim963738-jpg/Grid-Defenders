@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-11-09T21:19:01.171556+09:00",
+  "assets": [
+    {
+      "file": "original.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        145,
+        17,
+        993,
+        1232
+      ],
+      "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4"
+    },
+    {
+      "file": "front-cleanup.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        144,
+        17,
+        994,
+        1232
+      ],
+      "sha256": "085a098a4a0487329837d8d35709edda88b5b5464e51dc102b6e044beea70e4f"
+    }
+  ],
+  "originalSourceUnchanged": true,
+  "generatedOutputSourceBytesMatch": true,
+  "originalAndEditedViewed": true,
+  "lightDarkBrowserScreenshotsViewed": true,
+  "actualGameValidated": false,
+  "userAestheticApproved": false,
+  "notes": [
+    "Pixel contour cleanup; material blocks and original proportions retained",
+    "Minor generated microdetail changes remain",
+    "Very-low-alpha colored fringe not certified zero"
+  ],
+  "outputPath": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_front_line_cleanup_v01\\front-cleanup.png",
+  "comparisonPath": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_front_line_cleanup_v01\\comparison.png"
+}

@@ -1,0 +1,1232 @@
+{
+  "isolatedHeadless": true,
+  "userUiTouched": false,
+  "cases": [
+    {
+      "file": "comparison.png",
+      "dark": false,
+      "mode": "art",
+      "loaded": [
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "source-variant-1.png",
+          "width": 1312,
+          "height": 1199
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "source-variant-4.png",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleRegistration": [
+        {
+          "id": "variant-1-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-1-right-045",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-1-right-090",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-right-045",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-right-090",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        }
+      ]
+    },
+    {
+      "file": "comparison-variant-1.png",
+      "dark": false,
+      "mode": "art",
+      "loaded": [
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "source-variant-1.png",
+          "width": 1312,
+          "height": 1199
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "source-variant-4.png",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleRegistration": [
+        {
+          "id": "variant-1-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-1-right-045",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-1-right-090",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        }
+      ]
+    },
+    {
+      "file": "comparison-variant-4.png",
+      "dark": false,
+      "mode": "art",
+      "loaded": [
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "source-variant-1.png",
+          "width": 1312,
+          "height": 1199
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "source-variant-4.png",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleRegistration": [
+        {
+          "id": "variant-4-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-right-045",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-right-090",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        }
+      ]
+    },
+    {
+      "file": "qa-dark.png",
+      "dark": true,
+      "mode": "art",
+      "loaded": [
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "source-variant-1.png",
+          "width": 1312,
+          "height": 1199
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "source-variant-4.png",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleRegistration": [
+        {
+          "id": "variant-1-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-1-right-045",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-1-right-090",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-right-045",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-right-090",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        }
+      ]
+    },
+    {
+      "file": "qa-unlabeled.png",
+      "dark": false,
+      "mode": "unlabeled",
+      "loaded": [
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "source-variant-1.png",
+          "width": 1312,
+          "height": 1199
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "source-variant-4.png",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleRegistration": [
+        {
+          "id": "variant-1-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-1-right-045",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-1-right-090",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-right-045",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-right-090",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        }
+      ]
+    },
+    {
+      "file": "qa-small-light.png",
+      "dark": false,
+      "mode": "small",
+      "loaded": [
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "source-variant-1.png",
+          "width": 1312,
+          "height": 1199
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "source-variant-4.png",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleRegistration": [
+        {
+          "id": "variant-1-front",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-1-right-045",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-1-right-090",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-4-front",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-4-right-045",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-4-right-090",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-1-front",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-1-right-045",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-1-right-090",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-4-front",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-4-right-045",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-4-right-090",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        }
+      ]
+    },
+    {
+      "file": "qa-small-dark.png",
+      "dark": true,
+      "mode": "small",
+      "loaded": [
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "source-variant-1.png",
+          "width": 1312,
+          "height": 1199
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "source-variant-4.png",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleRegistration": [
+        {
+          "id": "variant-1-front",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-1-right-045",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-1-right-090",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-4-front",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-4-right-045",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-4-right-090",
+          "bodyHeight": 57,
+          "baseline": 106.55657708628006
+        },
+        {
+          "id": "variant-1-front",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-1-right-045",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-1-right-090",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-4-front",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-4-right-045",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        },
+        {
+          "id": "variant-4-right-090",
+          "bodyHeight": 72,
+          "baseline": 106.43988684582744
+        }
+      ]
+    },
+    {
+      "file": "original-comparison.png",
+      "dark": false,
+      "mode": "sources",
+      "loaded": [
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "source-variant-1.png",
+          "width": 1312,
+          "height": 1199
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "source-variant-4.png",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-1-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-045.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-1-right-090.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "variant-4-front.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-045.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "variant-4-right-090.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleRegistration": [
+        {
+          "id": "original-1",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-1-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "original-4",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        },
+        {
+          "id": "variant-4-front",
+          "bodyHeight": 360,
+          "baseline": 434.1994342291372
+        }
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "zoomOpen": true,
+      "nativeWidth": 1070
+    },
+    {
+      "narrowBounds": [
+        {
+          "id": "variant-1-front",
+          "left": 16.20833468224299,
+          "right": 157.29407019626169,
+          "top": 18.178827943925235,
+          "bottom": 260.29554009345793,
+          "width": 198,
+          "height": 280
+        },
+        {
+          "id": "variant-1-right-045",
+          "left": 38.91529495327104,
+          "right": 148.41879401869159,
+          "top": 18.17776644859813,
+          "bottom": 261.5386271962617,
+          "width": 198,
+          "height": 280
+        },
+        {
+          "id": "variant-1-right-090",
+          "left": 54.897770308411204,
+          "right": 126.31870488785046,
+          "top": 18.178566822429907,
+          "bottom": 260.29553504672896,
+          "width": 198,
+          "height": 280
+        },
+        {
+          "id": "variant-4-front",
+          "left": 20.51846234375,
+          "right": 148.5120678125,
+          "top": 18.17554296875,
+          "bottom": 261.52141015625,
+          "width": 198,
+          "height": 280
+        },
+        {
+          "id": "variant-4-right-045",
+          "left": 40.9259575,
+          "right": 143.5293325,
+          "top": 18.1693125,
+          "bottom": 260.9634375,
+          "width": 198,
+          "height": 280
+        },
+        {
+          "id": "variant-4-right-090",
+          "left": 57.734171328124994,
+          "right": 119.033979921875,
+          "top": 18.171283984375002,
+          "bottom": 262.17191875,
+          "width": 198,
+          "height": 280
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C1 수정 전후 원본 비교</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:22px;background:#f3f5f8;color:#202530;font:15px/1.6 'Segoe UI','Malgun Gothic',sans-serif}main{max-width:1250px;margin:auto}h1{font-size:24px;margin:4px 0 10px}p{margin:8px 0}.muted{font-size:13px;color:#5e697b}.controls{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0;align-items:center}select,button{font:inherit;padding:9px 12px;border:1px solid #cbd1dc;border-radius:7px;background:#fff;color:inherit;min-height:44px}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}article{background:white;padding:14px;border:1px solid #d9dfe8;border-radius:10px;min-width:0}h2{font-size:17px;margin:0 0 8px}.window{overflow:auto;background:#202020;border-radius:6px}.crop{position:relative;overflow:hidden;margin:auto}.crop img{position:absolute;max-width:none;display:block}.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}a{color:#294e91;text-underline-offset:3px}footer{margin-top:22px;font-size:13px;color:#5e697b}@media(max-width:620px){body{padding:12px}.pair{grid-template-columns:1fr}.controls{gap:8px}}
+</style>
+</head>
+<body><main>
+<h1>C1 수정 전후 · 원본 PNG 비교</h1>
+<p>얼굴 표현은 C4, 금속 표현은 C3를 기준으로 정리했습니다. 은발·별 장식·흰금 갑옷·검·새 문양 방패와 여성형 비율은 유지했습니다.</p>
+<p class="muted">두 버전 모두 실제 1024 × 1536입니다. 이 화면은 JPEG 축소본을 사용하지 않습니다. 100%에서는 이미지 1픽셀을 CSS 1픽셀로 표시하며, 200%는 관찰용 픽셀 확대입니다.</p>
+<div class="controls">
+<label for="view">구도</label><select id="view"><option value="front">c1-1 정면</option><option value="angle">c1-2 사선</option></select>
+<label for="region">검수 영역</label><select id="region"><option value="face">얼굴·머리</option><option value="chest">흉갑·금테</option><option value="shield">방패·금속 문양</option><option value="hand">손·검 손잡이</option><option value="waist">허리·체인</option><option value="full">전체 원본 · 스크롤</option></select>
+<label for="zoom">배율</label><select id="zoom"><option value="1">100% 원본 배율</option><option value="2">200% 픽셀 확대</option></select>
+</div>
+<div class="pair">
+<article><h2>수정 전 C1 V1</h2><div class="window"><div class="crop"><img id="old" alt="수정 전 원본"></div></div><div class="links"><a id="old-link" href="../../images/c01_front.png">이전 원본 PNG 열기</a></div></article>
+<article><h2>수정 후 C1 V2</h2><div class="window"><div class="crop"><img id="new" alt="수정 후 원본"></div></div><div class="links"><a id="new-link" href="c1-1_v2.png">수정 원본 PNG 열기</a></div></article>
+</div>
+<footer><a href="c1_v2_png.zip">C1 수정 PNG 2장 묶음</a> · <a href="생성기록.json">정확한 생성 프롬프트·참조 순서</a> · <a href="피드백.md">사용자 평가와 수정 기준</a><br>참조: <a href="../../images/c04_front.png">C4 얼굴</a> · <a href="../../images/c03_front.png">C3 금속</a>. 화면 비교는 품질을 확인하기 위한 것이며 수정본의 최종 사용자 평가는 별도입니다.</footer>
+</main><script>
+'use strict';
+const views={front:['../../images/c01_front.png','c1-1_v2.png'],angle:['../../images/c01_threequarter.png','c1-2_v2.png']};
+const areas={face:{x:390,y:95,w:275,h:260},chest:{x:300,y:285,w:380,h:325},shield:{x:590,y:350,w:300,h:535},hand:{x:215,y:595,w:255,h:285},waist:{x:395,y:495,w:300,h:295},full:{x:0,y:0,w:1024,h:1536}};
+function render(){const v=document.getElementById('view').value,a=areas[document.getElementById('region').value],z=Number(document.getElementById('zoom').value);['old','new'].forEach((id,i)=>{const img=document.getElementById(id);img.src=views[v][i];img.style.width=(1024*z)+'px';img.style.height=(1536*z)+'px';img.style.left=(-a.x*z)+'px';img.style.top=(-a.y*z)+'px';const crop=img.parentElement;crop.style.width=(a.w*z)+'px';crop.style.height=(a.h*z)+'px';crop.parentElement.style.height=Math.min(a.h*z,620)+'px';document.getElementById(id+'-link').href=views[v][i]})}
+document.querySelectorAll('select').forEach(s=>s.addEventListener('change',render));render();
+</script></body></html>

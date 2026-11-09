@@ -1,0 +1,14 @@
+{
+  "id": "11_woodcut",
+  "name": "목판화",
+  "model": "a",
+  "file": "11_woodcut/model-a.png",
+  "referenced_image_paths": [
+    "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/style20_two_models_main01-20261109-e1fd458c/11_woodcut/model-a-candidate-initial.png"
+  ],
+  "transparent_background": true,
+  "prompt": "Use case: style-transfer. Redraw this SAME character, exact body/head ratios, right-facing front3/4 combat-ready stance, all joint positions and both weapon angles. This image is the edit target; do not redesign costume or anatomy.\nCreate an EXTREME BLACK AND WHITE WOODCUT: ONLY opaque black ink and opaque white reserves with transparent outside. REMOVE EVERY yellow/gold/blue/brown/peach hue, even from hair, skin, scarf and sword inlays. Translate them into black/white print. Hair still same spiky shape, face same age/features; NO colored accents anywhere.\nDifferentiate sharply from brush ink and manga: broad heavy BLACK silhouette blocks with exceptionally thick straight/angular WHITE KNIFE GOUGES, large triangular chisel-cut channels and rough serrated carved edges. At least70% of costume mass is solid ink black; white channels cut across it. No little bristle strokes, no swooping brushmarks, no fine hatching or dots. Woodblock carving with deliberate very coarse cuts readable at thumbnail size, not a monochrome anime cel filter.\nRight hand one longsword points up-right in front; left hand one short angular dagger near chest; preserve ring/wing guard, crescent right pauldron, right plated shin and left cloth boot as coarse cut motifs. Keep A large-head short-limb SD proportions. All hair, boot soles, blades inside with at least5% clear transparent margins; one isolated full-body character only, no background, panels, paper rectangle, text or extra props. Preserve pose and outfit while entirely translating marks into this extremely coarse monochrome carved medium.",
+  "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-54527f24-e87b-47d0-b687-ce71d504c3c8.png",
+  "tool": "builtin image_gen",
+  "reason": "initial colored woodcut too close to brush ink; strengthen coarse black/white carving"
+}

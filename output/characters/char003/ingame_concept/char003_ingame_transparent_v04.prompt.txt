@@ -1,0 +1,9 @@
+Tool: built-in image_gen, transparent_background=true.
+Edit target: char003_ingame_concept_v03.png.
+User: 배경제거
+Change: Extract hero and sword onto alpha transparency; remove forest, ground and cast shadow. Preserve current pose, style and complete silhouette. Static concept, not finalized animation.
+
+Use case: background-extraction.
+Remove the entire forest, sky, foliage, grass, ground and cast ground shadow from this exact image. Output the SAME hero and his complete sword isolated on a genuinely transparent alpha background.
+Preserve the character exactly: original scale and placement on the same landscape canvas, right-facing 3/4 stance, straight lowered sword arm, sword pointing forward-right, face, hair, costume, cape, armor, belt pouches, exposed fingertips, boots, shading and crisp anime linework. Do not redesign, repose or change colors.
+Clean precise silhouette along auburn hair tufts, cape tips, blade edges and sword tip, fingers and boot soles. Remove background also from all negative-space gaps between arms/body, legs and blade. No dark forest fringes, opaque halo, matte color, checkerboard baked into pixels, replacement background or ground shadow. Preserve natural anti-aliased character edges. Entire sword and figure within frame. Deliver transparent RGBA PNG, no text.

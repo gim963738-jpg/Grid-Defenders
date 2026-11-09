@@ -1,0 +1,25 @@
+Tool: built-in image_gen (local leg-only edit).
+Edit target: char003_illustration_forest_pose_v06.png. Earlier versions preserved.
+Output: char003_illustration_forest_legs_v07.png
+User request: 주인공 · 측면 돌진 v06 이거 맞는데 무릎 살작만 내리고 다리만 바꿔봐
+Changes: Slightly lower the lifted front knee while retaining its bend and adapting the trouser folds/boot naturally. Preserve the approved upper body, profile, sword, trailing leg, cape, camera and forest/slime composition. Interpret 다리만 as limiting the edit to leg posture, not swapping leg identity. Static illustration under 캐릭터스프라이트제작규약 v1.2; no animation or gameplay changes.
+
+Use case: precise-object-edit.
+Asset type: char003 forest action v07, tiny leg-only adjustment.
+Input image 1 is the EXACT EDIT TARGET: char003_illustration_forest_pose_v06.png. The user approves this composition and upper body.
+
+User request: "주인공 · 측면 돌진 v06 이거 맞는데 무릎 살작만 내리고 다리만 바꿔봐"
+Meaning: v06 is the right pose; lower the lifted knee just a little, change ONLY the legs. This is a restrained local edit, not a new action scene or redesign.
+
+ONLY CHANGE:
+Lower the currently raised FRONT knee on the RIGHT side of the image modestly, about 35–50 pixels down in this 1254px square image (roughly 3–4% image height). The knee and its small silver knee plate currently sit almost at waist level around x=1025,y=535. Lower this knee slightly to around y=575–585, keeping the hip/pelvis position unchanged. The thigh should now angle gently downward from the hip rather than being lifted quite so high.
+Keep this front knee bent and its lower leg/boot naturally folded downward. Refit the dark trouser folds, knee plate and boot position coherently to that small change. Preserve all leg lengths and compact adult anatomy.
+Keep the OTHER leg extended backward/down-left in almost exactly its present position and its toe push-off/dust. Maintain the strong rightward side-charge silhouette. No swapping of left/right legs, no new huge stride, no straight front kick, no squat, no upright standing pose.
+Restore any tiny newly exposed forest ground seamlessly.
+
+LOCK EVERYTHING ELSE:
+Preserve the exact head position, smiling profile face, short reddish-brown hair, gaze, neck, torso lean and body proportions. Preserve both arms and hands, sword pointing backward to upper left, armor, red cloak folds and overall silhouette above the hips.
+Same crimson/ivory/dark-leather costume, partial steel shoulder/forearm armor, silver badge, belts and pouches. Only trouser/knee/boot pixels necessary for the leg adjustment may change.
+Preserve the sunlit forest, floor, camera, square framing, lighting, green slime droplets, small green splashes and thin silver-white already-completed slash wake.
+Same crisp anime line art and cel rendering. No global restyling, no image squeezing or recropping.
+Entire character and sword stay within margins. One still image, no text, watermark, UI or collage.

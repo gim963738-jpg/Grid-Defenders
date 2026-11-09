@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SP13 · 스플래시 배경 분석</title>
+<style>
+:root{color-scheme:light;--bg:#f5f3ef;--panel:#fff;--ink:#252d31;--muted:#626e72;--line:#dcded9;--accent:#285f59;--tint:#e7f1ee}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 "Segoe UI","Malgun Gothic",sans-serif}button,select{font:inherit}button,a,select{-webkit-tap-highlight-color:transparent}a{color:var(--accent);text-underline-offset:3px}button,select{min-height:44px}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #b4642b;outline-offset:3px}button{cursor:pointer}main{max-width:1440px;margin:auto;padding:36px 28px 60px}h1{margin:4px 0 12px;font-size:clamp(26px,4vw,42px);line-height:1.25;letter-spacing:-1px}h2{font-size:21px;line-height:1.4;margin:0 0 12px}h3{font-size:17px;line-height:1.5;margin:0}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--accent)}.intro{max-width:900px;font-size:17px}.muted{color:var(--muted)}.links{display:flex;flex-wrap:wrap;gap:12px 22px;margin:18px 0 28px}.topline{display:flex;flex-wrap:wrap;gap:8px 16px;margin:10px 0;color:var(--muted);font-size:13px}.core{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin:26px 0}.sequence{font-weight:700;color:var(--accent)}.layers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.layer{background:var(--bg);padding:14px;border-radius:8px}.layer strong{display:block}.layer p{font-size:14px;margin:5px 0 0;color:var(--muted)}.controls{margin:28px 0 20px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);border-radius:9px;background:var(--panel);padding:8px 12px;color:var(--ink);text-align:left}.filter[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}.type-summary{border-left:3px solid var(--accent);padding:8px 15px;margin:16px 0;background:var(--tint)}.control-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}.control-row label{display:flex;align-items:center;flex-wrap:wrap;gap:10px}select{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);padding:5px 9px;max-width:100%}#gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}article{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}article[hidden]{display:none}.picture{background:#e9ece9;border-bottom:1px solid var(--line);padding:12px}.picture img{display:block;object-fit:contain;width:100%;height:270px}.card-body{padding:18px}.card-id{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--accent)}.filename{font-size:12px;overflow-wrap:anywhere;color:var(--muted);margin:4px 0 10px}.tag{display:inline-block;border-radius:5px;background:var(--tint);color:var(--accent);padding:2px 7px;font-size:12px;margin:0 5px 6px 0}.secondary{background:var(--bg);color:var(--muted)}.note{font-size:14px;min-height:5em;margin:10px 0 16px}.card-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:13px}.view-btn{border:1px solid var(--line);border-radius:7px;padding:5px 10px;background:var(--panel);color:var(--accent)}details{margin-top:15px;border-top:1px solid var(--line);padding-top:10px;font-size:13px}summary{cursor:pointer;color:var(--accent);min-height:32px}dl{margin:8px 0 0}dt{font-weight:700;margin-top:10px}dd{margin:2px 0 0;color:var(--muted)}footer{border-top:1px solid var(--line);margin-top:28px;padding-top:18px;font-size:13px;color:var(--muted)}dialog{border:0;border-radius:12px;padding:0;max-width:calc(100vw - 28px);width:max-content;max-height:calc(100dvh - 28px);background:var(--panel);color:var(--ink)}dialog::backdrop{background:#111c}#viewer header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;max-width:900px}#viewer-title{font-weight:700;font-size:14px;margin:0}#close-viewer{border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);padding:4px 12px}.viewer-canvas{max-width:calc(100vw - 28px);max-height:calc(100dvh - 125px);overflow:auto;background:#d6dad7}#viewer-image{display:block;width:auto;height:auto;max-width:none}#viewer-info{padding:8px 16px;margin:0;font-size:12px;color:var(--muted)}
+@media(max-width:1050px){#gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.picture img{height:300px}}@media(max-width:620px){main{padding:24px 16px 40px}.intro{font-size:15px}.core{padding:17px}.layers{grid-template-columns:1fr;gap:8px}.layer{padding:11px 13px}.layer p{margin:2px 0 0}.sequence{font-size:14px}#gallery{grid-template-columns:1fr;gap:16px}.picture img{height:330px}.filter{font-size:13px;padding:7px 10px}.note{min-height:0}.control-row{align-items:flex-start}.control-row label{width:100%}#viewer header{align-items:flex-start}#viewer-title{max-width:240px}}
+</style>
+</head>
+<body><main>
+<header>
+<div class="eyebrow">SP13 / BACKGROUND &amp; COMPOSITION / v1.0</div>
+<h1>캐릭터의 콘셉트가 배경이 되는 방식</h1>
+<p class="intro">사용자 제공 스플래시 아트 13장을 <strong>8가지 배경 구성 유형</strong>으로 정리했습니다. 장면의 소재를 그대로 옮기기보다, 인물의 행동과 상징이 공간·형태·빛으로 이어지는 방식을 가져옵니다.</p>
+<div class="topline"><span>GC9 v1.1 = 캐릭터 그림체</span><span>SP13 v1.0 = 배경 구성</span><span>C4 얼굴 · C3 금속 기준 유지</span></div>
+<nav class="links" aria-label="관련 문서">
+<a href="../../../문서/02_세부기획/02_영웅/스플래시아트/SP13_배경구성규칙.md">배경 구성 규칙</a>
+<a href="../../../문서/02_세부기획/02_영웅/스플래시아트/SP13_생성프롬프트.md">생성 프롬프트 양식</a>
+<a href="../../../문서/02_세부기획/02_영웅/스플래시아트/SP13_입력양식.json">기획 입력 JSON</a>
+<a href="../../../문서/02_세부기획/02_영웅/캐릭터그림체/GC9_그림체기준.md">GC9 그림체 기준</a>
+<a href="참조목록.json">원본 목록과 개별 분석</a>
+</nav></header>
+<section class="core" aria-labelledby="grammar-title">
+<h2 id="grammar-title">먼저 정할 것</h2>
+<div class="sequence">캐릭터 콘셉트 → 대표 상징 → 주 배경 유형 → 공간의 세 층 → 행동과의 연결 → 광원과 색</div>
+<div class="layers">
+<div class="layer"><strong>전경 · 깊이와 진입</strong><p>가까운 파편·바닥 끝·천·소품 일부. 얼굴과 중요한 손·장비를 가리지 않습니다.</p></div>
+<div class="layer"><strong>중경 · 주인공과 행동</strong><p>얼굴·장비·포즈를 먼저 읽히게 합니다. 확정된 캐릭터 디자인을 유지합니다.</p></div>
+<div class="layer"><strong>후경 · 콘셉트의 확장</strong><p>큰 공간·상징·흐름으로 인물을 감쌉니다. 빛과 시선이 주인공으로 돌아옵니다.</p></div>
+</div></section>
+<section class="controls" aria-labelledby="analysis-title">
+<h2 id="analysis-title">13장 관찰과 분류</h2>
+<p class="muted">필터는 주 유형을 기준으로 합니다. 카드에는 보조 유형도 표시합니다.</p>
+<div id="filters" class="filters" aria-label="주 유형 선택"></div>
+<p id="type-summary" class="type-summary"></p>
+<div class="control-row"><label for="focus">비교할 항목 <select id="focus">
+<option value="composition">구도와 시선 흐름</option><option value="elements">관찰 요소</option><option value="foreground">전경</option><option value="midground">중경</option><option value="background">후경</option><option value="lighting_palette">광원과 색</option><option value="concept_reading">제작상 해석</option><option value="transfer_rule">새 작업에 적용</option><option value="avoid_copying">자동으로 옮기지 않을 것</option>
+</select></label><span id="count" class="muted" aria-live="polite"></span></div>
+</section>
+<div id="gallery"></div>
+<footer>각 카드의 미리보기와 원본 보기는 같은 원본 JFIF를 사용합니다. 원본 보기는 100% 픽셀 크기로 열리며 작은 화면에서는 내부를 스크롤할 수 있습니다. 원본 13장은 알파가 없는 JPEG입니다. 흰 여백과 검은 외곽은 원본에 포함된 색입니다.<br>파일명은 식별용이며, ‘제작상 해석’은 화면에서 받은 인상을 제작 규칙으로 옮긴 것입니다. 공식 설정을 판정한 자료가 아닙니다. 현재 범위는 분석과 프롬프트 준비이며 신규 스플래시 생성 검증 전입니다.</footer>
+</main>
+<dialog id="viewer" aria-labelledby="viewer-title"><header><p id="viewer-title"></p><button id="close-viewer" type="button">닫기</button></header><div class="viewer-canvas"><img id="viewer-image" alt=""></div><p id="viewer-info"></p></dialog>
+<script id="sp13-data" type="application/json">{
+    "collection_id":  "SP13",
+    "version":  "1.0",
+    "reference_count":  13,
+    "source":  "사용자 제공 로컬 JFIF 13장 직접 관찰",
+    "scope":  "캐릭터 콘셉트를 배경·구도·상징물·조명으로 확장하는 스플래시 아트 참조. GC9 캐릭터 화풍 참조와 구분.",
+    "status":  "분석과 프롬프트 양식 준비. 신규 스플래시 생성 검증 전.",
+    "interpretation_note":  "파일명은 식별용이다. 관찰 요소와 제작상 해석을 구분하며 공식 설정·이름·능력을 판정하지 않는다.",
+    "originals_have_alpha":  false,
+    "taxonomy":  [
+                     {
+                         "id":  "T01",
+                         "label":  "파편과 무장 전개",
+                         "description":  "사선 무장·사슬·깨진 구조가 위압감과 추진력을 만드는 배경",
+                         "primary_references":  [
+                                                    "S01"
+                                                ]
+                     },
+                     {
+                         "id":  "T02",
+                         "label":  "실공간과 의식 무대",
+                         "description":  "계단·기둥·문·바닥 같은 공간이 인물을 위한 무대를 만드는 배경",
+                         "primary_references":  [
+                                                    "S03",
+                                                    "S05"
+                                                ]
+                     },
+                     {
+                         "id":  "T03",
+                         "label":  "매체와 지식의 공간화",
+                         "description":  "두루마리·그림·책·수식 같은 캐릭터의 매체가 공간과 현상으로 펼쳐지는 배경",
+                         "primary_references":  [
+                                                    "S04",
+                                                    "S11"
+                                                ]
+                     },
+                     {
+                         "id":  "T04",
+                         "label":  "속성 흐름의 프레임",
+                         "description":  "결정·물결·바람 등 속성의 형태와 운동이 인물을 감싸는 배경",
+                         "primary_references":  [
+                                                    "S06",
+                                                    "S08"
+                                                ]
+                     },
+                     {
+                         "id":  "T05",
+                         "label":  "거대 배후 형상",
+                         "description":  "인물보다 큰 생물·석상·군상 등의 배후 형상이 존재감을 확장하는 배경",
+                         "primary_references":  [
+                                                    "S02",
+                                                    "S07",
+                                                    "S13"
+                                                ]
+                     },
+                     {
+                         "id":  "T06",
+                         "label":  "소품군과 공연 무대",
+                         "description":  "공연·축제·직업 관련 소품을 하나의 장면으로 묶는 배경",
+                         "primary_references":  [
+                                                    "S09"
+                                                ]
+                     },
+                     {
+                         "id":  "T07",
+                         "label":  "디지털 기하와 투영",
+                         "description":  "격자·사각 룬·투영물·픽셀 분해 같은 시각 문법이 공간을 만드는 배경",
+                         "primary_references":  [
+                                                    "S10"
+                                                ]
+                     },
+                     {
+                         "id":  "T08",
+                         "label":  "확대 초상과 이중 상징",
+                         "description":  "주인공 뒤의 큰 초상·그림자·상징적 다른 모습이 인물의 개념을 확장하는 배경",
+                         "primary_references":  [
+                                                    "S12"
+                                                ]
+                     }
+                 ],
+    "references":  [
+                       {
+                           "id":  "S01",
+                           "label":  "camille 파일",
+                           "original_filename":  "camille - splash art.jfif",
+                           "file":  "원본/S01_camille.jfif",
+                           "primary_type":  "T01",
+                           "secondary_types":  [
+                                                   "T05"
+                                               ],
+                           "layout_tags":  [
+                                               "대각선",
+                                               "큰 삼각형",
+                                               "중앙 인물"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "검붉은 큰 날개형 장비, 붉은 긴 무장, 푸른 사슬, 뾰족한 검은 파편과 뒤쪽 건축 윤곽",
+                                            "composition":  "날개와 무장이 위 왼쪽에서 아래 오른쪽으로 큰 사선을 만들고, 붉은 곡선과 사슬이 중앙 인물로 시선을 되돌린다.",
+                                            "foreground":  "검은 판·날카로운 파편·비스듬한 발밑 구조",
+                                            "midground":  "어두운 복장의 전신 인물과 붉은 무장",
+                                            "background":  "연한 첨탑·붉은 선형 표식·큰 사슬·날개형 외곽",
+                                            "lighting_palette":  "검정·냉청색을 바탕으로 붉은 발광이 인물 주변에 집중. 배경 건축은 더 밝고 약하게 처리.",
+                                            "concept_reading":  "구속·위압·날카로운 무장이라는 인상이 배경 형태로 확장된 사례로 해석할 수 있다.",
+                                            "transfer_rule":  "인물 장비의 뾰족한 형태를 큰 대각선·파편·반복 윤곽으로 확장하고, 보조 구조는 낮은 대비로 뒤에 둔다.",
+                                            "avoid_copying":  "새 캐릭터에게 같은 날개·사슬·첨탑·붉은 무기를 자동 부여하지 않는다."
+                                        },
+                           "width":  735,
+                           "height":  670,
+                           "bytes":  95511,
+                           "sha256":  "d8cbf94132644ebcc710547e0a08fef1ff1be028231eb92f436b8d558177c1be",
+                           "original_path":  "C:\\Users\\user\\Downloads\\camille - splash art.jfif"
+                       },
+                       {
+                           "id":  "S02",
+                           "label":  "다운로드 16 · 거대 형상과 충돌",
+                           "original_filename":  "다운로드 (16).jfif",
+                           "file":  "원본/S02_download16.jfif",
+                           "primary_type":  "T05",
+                           "secondary_types":  [
+                                                   "T01"
+                                               ],
+                           "layout_tags":  [
+                                               "열린 원호",
+                                               "전진 대각선",
+                                               "중앙 밝은 틈"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "역동적인 은발 인물, 큰 검은 날개·발톱형 생물 윤곽, 휘는 사슬과 날, 검은 파편, 분홍빛 긴 선",
+                                            "composition":  "배후의 큰 형상이 열린 원을 만들고, 중앙의 밝은 틈에서 인물이 앞으로 튀어나오는 방향을 만든다.",
+                                            "foreground":  "곡선형 날·사슬·부서진 판과 튀는 파편",
+                                            "midground":  "몸을 비튼 전신 인물과 휘날리는 옷자락",
+                                            "background":  "거대한 어두운 생물형 덩어리와 압축된 충돌광",
+                                            "lighting_palette":  "흑백·회색의 큰 대비에 분홍·청록 선광을 제한적으로 사용.",
+                                            "concept_reading":  "큰 힘을 배후에 둔 돌진·충돌 장면으로 읽힌다. 공식 동료·소환 관계는 판정하지 않는다.",
+                                            "transfer_rule":  "큰 배후 실루엣을 둘레 프레임으로 쓰고 중앙의 빈 밝은 영역과 몸의 사선으로 전진을 강조한다.",
+                                            "avoid_copying":  "거대 형상을 실제 추가 인물로 오인하거나 모든 장면에 괴수·사슬을 넣지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  736,
+                           "bytes":  91147,
+                           "sha256":  "7de9e2690693ee16c4176e80e2c206d016e486491885a6b4cd8938e17fc08098",
+                           "original_path":  "C:\\Users\\user\\Downloads\\다운로드 (16).jfif"
+                       },
+                       {
+                           "id":  "S03",
+                           "label":  "Cantarella 파일",
+                           "original_filename":  "Cantarella.jfif",
+                           "file":  "원본/S03_Cantarella.jfif",
+                           "primary_type":  "T02",
+                           "secondary_types":  [
+                                                   "T04"
+                                               ],
+                           "layout_tags":  [
+                                               "계단 원근",
+                                               "지붕형 프레임",
+                                               "원형 반복"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "아치와 계단이 있는 푸른 실내, 양산을 든 인물, 해파리 모양 발광체·물고기, 전경 촉수와 물의 원형 흔적",
+                                            "composition":  "실내의 어두운 양옆과 상부 빛이 중앙 인물을 감싸고, 바닥의 원과 양산·해파리의 둥근 형태가 반복된다.",
+                                            "foreground":  "바닥 물결·물방울·양옆 촉수와 어두운 곡선",
+                                            "midground":  "양산과 드레스가 펼쳐진 중앙 인물",
+                                            "background":  "계단·연속 아치·상부에서 내려오는 차가운 빛과 수중 생물형 포인트",
+                                            "lighting_palette":  "짙은 남청·청록·보라, 해파리의 작은 분홍빛. 위쪽 밝은 광원과 바닥 반사광으로 공간 통일.",
+                                            "concept_reading":  "고요한 수중 공간·환상적 생태·우아한 연출이라는 인상을 준다.",
+                                            "transfer_rule":  "캐릭터의 소품 형태를 생태와 건축의 반복 형태로 연결하고, 바닥과 상부 빛으로 공간 깊이를 만든다.",
+                                            "avoid_copying":  "모든 우아한 인물에 해파리·촉수·양산을 붙이지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  736,
+                           "bytes":  80994,
+                           "sha256":  "70750d7fd2777d71fd640056490714703e3393f121c5df8208a3f14fbcfc149f",
+                           "original_path":  "C:\\Users\\user\\Downloads\\Cantarella.jfif"
+                       },
+                       {
+                           "id":  "S04",
+                           "label":  "Zhezhi 파일",
+                           "original_filename":  "Zhezhi Splash Art.jfif",
+                           "file":  "원본/S04_Zhezhi.jfif",
+                           "primary_type":  "T03",
+                           "secondary_types":  [
+                                                   "T02"
+                                               ],
+                           "layout_tags":  [
+                                               "접힌 S곡선",
+                                               "펼친 매체",
+                                               "앞으로 나오는 형상"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "펼쳐지고 접힌 두루마리 그림, 분홍 꽃나무·청록 산수·목재 구조, 전경의 큰 학 모양 새와 얇은 구름선",
+                                            "composition":  "종이 면과 말린 끝이 공간을 접어 보여 주며, 그림 속 새와 풍경이 인물 앞뒤로 튀어나오는 구도다.",
+                                            "foreground":  "크게 펼친 새의 날개·두루마리 끝·꽃과 구름선",
+                                            "midground":  "흐르는 머리와 옷자락의 중앙 인물",
+                                            "background":  "두루마리 안 산수·꽃나무·목재 틀과 열린 밝은 여백",
+                                            "lighting_palette":  "밝은 종이색·연한 청록·분홍이 중심. 검은 종이 가장자리와 목재가 형태를 묶는다.",
+                                            "concept_reading":  "그림·창작이라는 매체가 실제 공간과 생명으로 펼쳐지는 방식으로 읽힌다.",
+                                            "transfer_rule":  "캐릭터의 도구나 매체를 배경 구조로 키우고, 매체 안의 모티프 하나를 전경으로 꺼내 인물과 연결한다.",
+                                            "avoid_copying":  "창작자라는 이유로 같은 학·꽃나무·두루마리를 그대로 복제하지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  736,
+                           "bytes":  73066,
+                           "sha256":  "acb160f414000b68120d4fb20b7b36b4979cd4c1b23ed20d40450beae1ef001b",
+                           "original_path":  "C:\\Users\\user\\Downloads\\Zhezhi Splash Art.jfif"
+                       },
+                       {
+                           "id":  "S05",
+                           "label":  "suoming 파일",
+                           "original_filename":  "suoming - splash art.jfif",
+                           "file":  "원본/S05_suoming.jfif",
+                           "primary_type":  "T02",
+                           "secondary_types":  [
+                                                   "T05"
+                                               ],
+                           "layout_tags":  [
+                                               "수직 중심축",
+                                               "중앙 제단",
+                                               "좌우 문틀"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "붉은 머리 인물과 검붉은 단, 큰 암석·수직 기둥, 양옆 장식 문틀, 붉은 나뭇잎·연무, 하단의 회색 인물 실루엣",
+                                            "composition":  "가운데 높은 단과 수직 구조가 인물을 위로 세우고, 낮은 좌우 실루엣·안개가 높이 차와 무대의 위계를 만든다.",
+                                            "foreground":  "단의 모서리·어두운 판·회색 실루엣과 얇은 연무",
+                                            "midground":  "중앙 단 위의 붉은 머리 인물",
+                                            "background":  "큰 암석·세로 기둥·대칭에 가까운 문틀과 붉은 형상",
+                                            "lighting_palette":  "검정·회청색에 붉은 머리·잎·연무가 집중. 인물과 단의 선명함 대비로 중심 강조.",
+                                            "concept_reading":  "의식·권위·긴장감 있는 등장 장면으로 해석할 수 있다.",
+                                            "transfer_rule":  "높은 중심 무대와 낮은 전경을 대비시키고, 캐릭터의 상징색을 무대의 제한된 영역에 반복한다.",
+                                            "avoid_copying":  "붉은 머리만 보고 제단·혼령·특정 문화의 문틀을 필수 설정으로 넣지 않는다."
+                                        },
+                           "width":  735,
+                           "height":  778,
+                           "bytes":  93514,
+                           "sha256":  "fa127c7679d2a173788e0d05d5aee869791fbd1da9c11d6a847ad3c62860af29",
+                           "original_path":  "C:\\Users\\user\\Downloads\\suoming - splash art.jfif"
+                       },
+                       {
+                           "id":  "S06",
+                           "label":  "last rite 파일",
+                           "original_filename":  "last rite - splash art.jfif",
+                           "file":  "원본/S06_last_rite.jfif",
+                           "primary_type":  "T04",
+                           "secondary_types":  [
+                                                   "T05"
+                                               ],
+                           "layout_tags":  [
+                                               "결정 V프레임",
+                                               "대각 무장",
+                                               "배후 원호"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "푸른 머리 인물과 긴 무장, 크게 솟은 얼음 같은 결정, 위쪽 어두운 용형 윤곽, 작은 파편과 하단 자홍 포인트",
+                                            "composition":  "전경 결정의 뾰족한 사선들이 인물 주변에서 V와 마름모를 만들고, 위쪽 큰 형상과 무장의 사선이 이를 닫는다.",
+                                            "foreground":  "길고 투명한 결정·작은 깨진 조각·날카로운 프레임",
+                                            "midground":  "무장을 사선으로 든 전신 인물",
+                                            "background":  "짙은 남청의 큰 생물형 윤곽과 옅은 결정 면",
+                                            "lighting_palette":  "청록·하늘색·남색·흰색 중심, 하단에 작은 자홍 대비. 결정 모서리에 선택적인 강한 빛.",
+                                            "concept_reading":  "차가움·절단·응축된 힘을 각진 형태로 표현하는 사례다.",
+                                            "transfer_rule":  "속성의 물성을 배경 모양과 경계로 번역한다. 차가운 결정은 날카로운 면·투명 경계로, 무장의 방향과 연결한다.",
+                                            "avoid_copying":  "파란 캐릭터마다 얼음·용을 추가하거나 얼굴을 과한 결정과 빛으로 가리지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  687,
+                           "bytes":  104436,
+                           "sha256":  "310ba9db0c1496a78d5e47c56ace95ce852f9b11f9edf6b5bc5d712e2332dc02",
+                           "original_path":  "C:\\Users\\user\\Downloads\\last rite - splash art.jfif"
+                       },
+                       {
+                           "id":  "S07",
+                           "label":  "Aoqi Legend 파일",
+                           "original_filename":  "Aoqi Legend.jfif",
+                           "file":  "원본/S07_Aoqi_Legend.jfif",
+                           "primary_type":  "T05",
+                           "secondary_types":  [
+                                                   "T02",
+                                                   "T04"
+                                               ],
+                           "layout_tags":  [
+                                               "큰 배후 원호",
+                                               "원형 바닥",
+                                               "크기 대비"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "작은 중앙 인물과 손의 구체, 거대한 날개 달린 짐승형상, 부러진 기둥·원형 암석 바닥, 푸른 번개형 궤적",
+                                            "composition":  "거대 형상이 인물 위를 감싸고 원형 바닥이 아래를 받치며, 빛의 궤적이 둘을 한 흐름으로 연결한다.",
+                                            "foreground":  "원형 바닥 가장자리·솟은 푸른 조각·빠른 곡선 궤적",
+                                            "midground":  "밝은 머리와 손의 구체가 초점인 중앙 인물",
+                                            "background":  "큰 날개·짐승 머리 윤곽·기울어진 기둥과 아치",
+                                            "lighting_palette":  "차가운 청록·청색·회색 바탕에 인물의 작은 보라·노란 장식이 대비.",
+                                            "concept_reading":  "작은 인물과 큰 힘의 연결을 크기와 둘레 구조로 보여 주는 방식이다.",
+                                            "transfer_rule":  "콘셉트에 근거가 있을 때만 큰 배후 형상을 쓰고, 인물과 연결하는 빛·시선·손짓을 한 가지 정한다.",
+                                            "avoid_copying":  "공식 소환수·종족을 추정하지 않고, 거대 형상이 주인공을 대신하지 않게 한다."
+                                        },
+                           "width":  736,
+                           "height":  736,
+                           "bytes":  94433,
+                           "sha256":  "bdce1d69b5452331880e23c15076dd3b71711e91f157d0409647a703bdebc937",
+                           "original_path":  "C:\\Users\\user\\Downloads\\Aoqi Legend.jfif"
+                       },
+                       {
+                           "id":  "S08",
+                           "label":  "다운로드 19 · 유동 프레임",
+                           "original_filename":  "다운로드 (19).jfif",
+                           "file":  "원본/S08_download19.jfif",
+                           "primary_type":  "T04",
+                           "secondary_types":  [
+
+                                               ],
+                           "layout_tags":  [
+                                               "열린 순환",
+                                               "서로 감기는 C곡선",
+                                               "빈 중심"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "밝은 머리의 전신 인물과 긴 장비, 큰 남청·청색 물결, 새나 짐승을 연상시키는 유선형 윤곽, 흰 포말과 얇은 조각",
+                                            "composition":  "두 큰 C곡선이 인물을 감싸 열린 원을 만들며, 밝은 가운데 틈이 얼굴과 몸의 가독성을 지킨다.",
+                                            "foreground":  "짙은 파도 끝·흰 포말·얇은 날개 같은 곡선",
+                                            "midground":  "밝은 의상과 사선 장비의 전신 인물",
+                                            "background":  "넓게 휘는 물결형 덩어리와 흐르는 하늘색 면",
+                                            "lighting_palette":  "남청·청색·흰색의 큰 덩어리, 인물의 금색·피부가 작은 따뜻한 초점.",
+                                            "concept_reading":  "흐름·가벼움·순환을 부드러운 속성 프레임으로 드러낸다.",
+                                            "transfer_rule":  "속성이 유동적이면 결정 대신 연속된 곡선·포말·밝은 틈으로 둘레를 만든다.",
+                                            "avoid_copying":  "모든 물·바람 캐릭터에 같은 생물 형태나 동일한 원형 이펙트를 붙이지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  736,
+                           "bytes":  76775,
+                           "sha256":  "fe818b16adbc087836268ac47486bb4348158b91e0c85cea477f06ada1c4cf56",
+                           "original_path":  "C:\\Users\\user\\Downloads\\다운로드 (19).jfif"
+                       },
+                       {
+                           "id":  "S09",
+                           "label":  "Roccia 파일",
+                           "original_filename":  "Roccia.jfif",
+                           "file":  "원본/S09_Roccia.jfif",
+                           "primary_type":  "T06",
+                           "secondary_types":  [
+                                                   "T05"
+                                               ],
+                           "layout_tags":  [
+                                               "빨간 무대 진입로",
+                                               "둘레 소품군",
+                                               "큰 후방 곡선"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "중앙 인물, 붉은 무대·계단, 모자 쓴 작은 소품형 인물들, 풍선·깃발·우산·사슬, 큰 푸른 유령 같은 형상",
+                                            "composition":  "붉은 바닥이 인물 앞으로 이어지고, 관련 소품이 둘레에 배치된다. 큰 차가운 배후 곡선이 여러 소품을 하나의 장면으로 묶는다.",
+                                            "foreground":  "무대 앞단·작은 공연 소품형 형상과 사선 장식",
+                                            "midground":  "손짓하는 인물과 붉은 무대 중심",
+                                            "background":  "큰 푸른 형상·풍선·깃발·장식 구조와 밝은 무대광",
+                                            "lighting_palette":  "짙은 남청·보라와 푸른 빛을 기본으로 붉은 무대, 풍선·소품의 여러 강조색을 구역별로 묶음.",
+                                            "concept_reading":  "공연·축제·장난기 있는 무대를 소품군으로 설명한다.",
+                                            "transfer_rule":  "직업이나 활동을 보여 주는 관련 소품을 한 장면으로 묶고, 하나의 큰 색면·곡선으로 산만함을 줄인다.",
+                                            "avoid_copying":  "복잡함 자체를 목표로 삼거나 무관한 소품·작은 인물을 무작정 늘리지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  736,
+                           "bytes":  99149,
+                           "sha256":  "2df814de99b4115ae06f099a56537c1e84d671875eb6e68de379627d14fdf126",
+                           "original_path":  "C:\\Users\\user\\Downloads\\Roccia.jfif"
+                       },
+                       {
+                           "id":  "S10",
+                           "label":  "다운로드 18 · 기하 투영",
+                           "original_filename":  "다운로드 (18).jfif",
+                           "file":  "원본/S10_download18.jfif",
+                           "primary_type":  "T07",
+                           "secondary_types":  [
+                                                   "T05"
+                                               ],
+                           "layout_tags":  [
+                                               "사선 교차",
+                                               "사각 반복",
+                                               "곡선과 직선 대비"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "초록 의상의 긴 검은 머리 인물, 청록 사각 발광체·격자와 픽셀 조각, 긴 투영 검 형태, 검은 붓결 같은 생물형 곡선",
+                                            "composition":  "투영 장비의 긴 직선과 사각형들이 정돈된 축을 만들고, 검은 유기적 곡선이 바깥에서 이를 감싸 대비를 만든다.",
+                                            "foreground":  "길게 뻗은 투영 검·해체된 사각 조각·검은 사선 붓결",
+                                            "midground":  "손을 펼친 인물과 의상에 맞춘 청록빛",
+                                            "background":  "반투명한 판·사각 광원·크게 휘는 어두운 형상",
+                                            "lighting_palette":  "청록·비취색·검정과 밝은 흰 틈. 붉은 머리 장식은 작은 대비.",
+                                            "concept_reading":  "질서 있는 투영·분해·유기적인 힘의 결합으로 읽힐 수 있다. 공식 능력은 판정하지 않는다.",
+                                            "transfer_rule":  "사각·격자·직선 같은 정해진 도형 문법을 반복하고, 인물의 손·장비와 발생 방향을 연결한다.",
+                                            "avoid_copying":  "전통풍 의상이라는 이유로 같은 디지털 검·용 형상·격자를 강제로 붙이지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  716,
+                           "bytes":  102083,
+                           "sha256":  "70d705bbebfcc8283c84016a6a358ca65927dc6c7ccd631d3935b1e5ac0699b4",
+                           "original_path":  "C:\\Users\\user\\Downloads\\다운로드 (18).jfif"
+                       },
+                       {
+                           "id":  "S11",
+                           "label":  "Dr Ratio 파일",
+                           "original_filename":  "Dr_ Ratio splash art.jfif",
+                           "file":  "원본/S11_Dr_Ratio.jfif",
+                           "primary_type":  "T03",
+                           "secondary_types":  [
+                                                   "T07",
+                                                   "T02"
+                                               ],
+                           "layout_tags":  [
+                                               "책과 손짓",
+                                               "선형 교차",
+                                               "고전 구조와 우주면"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "책을 든 보라 머리 인물과 가리키는 손, 고전풍 기둥·석상·월계 장식, 남청 우주 같은 면, 푸른 직선과 금색 수식 같은 표식",
+                                            "composition":  "책과 손끝이 장면의 원인을 만들고 직선이 공간을 가른다. 고전 구조와 어두운 우주면을 병치해 인물의 역할을 확장한다.",
+                                            "foreground":  "부서진 구조 끝·돌 같은 밝은 면과 흐르는 황토색 덩어리",
+                                            "midground":  "책과 손짓이 선명한 전신 인물",
+                                            "background":  "기둥·석상·월계·남청 면·선형 표식",
+                                            "lighting_palette":  "흰색·금색·남청에 청록 직선광. 얼굴 뒤의 청색 밝은 틈으로 분리.",
+                                            "concept_reading":  "지식·사유·관측 같은 개념을 책·고전 구조·기하 선으로 시각화한다.",
+                                            "transfer_rule":  "캐릭터의 지식 도구와 사고 방식을 공간 요소로 바꾸고, 손·도구와 배경 선을 원인과 결과로 연결한다.",
+                                            "avoid_copying":  "모든 지식형 인물에 그리스풍 석상·월계·해독 불가능한 수식을 추가하지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  817,
+                           "bytes":  79182,
+                           "sha256":  "239017a5b816b21a43b4b1b7ec2bf0114b9fc13618ed2028895a2320906ac7f6",
+                           "original_path":  "C:\\Users\\user\\Downloads\\Dr_ Ratio splash art.jfif"
+                       },
+                       {
+                           "id":  "S12",
+                           "label":  "Zani 파일",
+                           "original_filename":  "Zani.jfif",
+                           "file":  "원본/S12_Zani.jfif",
+                           "primary_type":  "T08",
+                           "secondary_types":  [
+                                                   "T01"
+                                               ],
+                           "layout_tags":  [
+                                               "작은 전신과 큰 초상",
+                                               "검은 무장 사선",
+                                               "밝은 중심"
+                                           ],
+                           "edge":  "white_vignette",
+                           "observed":  {
+                                            "elements":  "중앙 아래의 흰 머리 전신 인물, 뒤쪽 더 큰 흰 머리·왕관형 초상, 큰 검은 무장형 판, 금빛 곡선 장식과 흰검 파편",
+                                            "composition":  "전신 인물 뒤에 큰 다른 모습의 초상을 겹치고, 검은 무장 사선과 밝은 금빛 중심으로 두 규모를 묶는다.",
+                                            "foreground":  "검고 흰 파편·판·입자와 단단한 장비 모서리",
+                                            "midground":  "흑백 의상의 전신 인물과 장비",
+                                            "background":  "확대된 초상·큰 무장형 덩어리·금빛 원형 구조",
+                                            "lighting_palette":  "흑백과 옅은 금색의 큰 대비, 얼굴·중심 장비 주변의 밝은 빛.",
+                                            "concept_reading":  "인물의 또 다른 모습·권위·상징적 존재감을 확대 초상으로 표현한 사례로 해석한다.",
+                                            "transfer_rule":  "콘셉트상 필요한 경우 작은 실체 인물과 큰 상징 초상을 분리하고, 주인공의 얼굴과 장비가 초점임을 명시한다.",
+                                            "avoid_copying":  "실제 인물을 둘로 늘리거나 왕관·같은 큰 초상을 모든 캐릭터에 적용하지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  736,
+                           "bytes":  86186,
+                           "sha256":  "9c31911792217ae0d20e195afc9da9c4282e2e0c2eb539372023c632e6588fbd",
+                           "original_path":  "C:\\Users\\user\\Downloads\\Zani.jfif"
+                       },
+                       {
+                           "id":  "S13",
+                           "label":  "다운로드 17 · 군상과 궤도",
+                           "original_filename":  "다운로드 (17).jfif",
+                           "file":  "원본/S13_download17.jfif",
+                           "primary_type":  "T05",
+                           "secondary_types":  [
+                                                   "T02"
+                                               ],
+                           "layout_tags":  [
+                                               "기울어진 원형 궤도",
+                                               "안쪽 밝은 틈",
+                                               "둘레 큰 군상"
+                                           ],
+                           "edge":  "dark_vignette",
+                           "observed":  {
+                                            "elements":  "검푸른 의상 인물과 펼친 팔, 둘레의 큰 조각상·인물형 군상, 새·깃 같은 형상, 글자 같은 빛 띠와 기울어진 원형 궤도",
+                                            "composition":  "밝은 안쪽 공간에 인물을 놓고, 큰 군상과 어두운 깃형 구조가 바깥을 감싼다. 원형 궤도가 얼굴과 손짓을 연결하며 깊이를 만든다.",
+                                            "foreground":  "짙은 깃·새 모양 곡선과 뾰족한 덩어리",
+                                            "midground":  "안쪽 밝은 공간에서 팔을 펼친 전신 인물",
+                                            "background":  "큰 군상·돌 같은 구조·따뜻한 밝은 중심과 회전하는 표식 띠",
+                                            "lighting_palette":  "어두운 남청·회색 외곽과 안쪽 금백색 빛, 선택적인 청색 가장자리.",
+                                            "concept_reading":  "지휘·의식·거대한 존재들의 중심이라는 인상을 주는 방식으로 읽힌다.",
+                                            "transfer_rule":  "어두운 외곽·밝은 내부의 대비와 궤도로 주인공을 감싸되, 군상과 문자 띠가 인물을 가리지 않게 한다.",
+                                            "avoid_copying":  "공식 직업·신화 관계를 추정하거나 모든 어두운 인물에 군상·까마귀·문자 고리를 붙이지 않는다."
+                                        },
+                           "width":  736,
+                           "height":  736,
+                           "bytes":  87645,
+                           "sha256":  "0ab7f4087c4bbfd1310353c4108ebbde4a101711c924251aa930715f0d52ab40",
+                           "original_path":  "C:\\Users\\user\\Downloads\\다운로드 (17).jfif"
+                       }
+                   ]
+}
+</script>
+<script>
+'use strict';
+const dataset=JSON.parse(document.getElementById('sp13-data').textContent);
+const references=dataset.references;
+const typeMap=new Map(dataset.taxonomy.map(t=>[t.id,t]));
+const focusLabels={composition:'구도와 시선 흐름',elements:'관찰 요소',foreground:'전경',midground:'중경',background:'후경',lighting_palette:'광원과 색',concept_reading:'제작상 해석',transfer_rule:'새 작업에 적용',avoid_copying:'자동으로 옮기지 않을 것'};
+const gallery=document.getElementById('gallery');
+const filters=document.getElementById('filters');
+const focus=document.getElementById('focus');
+const viewer=document.getElementById('viewer');
+function node(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
+function setFilter(id){
+ let count=0;for(const r of references){const show=id==='all'||r.primary_type===id;r.card.hidden=!show;if(show)count++;}
+ for(const b of filters.children)b.setAttribute('aria-pressed',String(b.dataset.filter===id));
+ document.getElementById('count').textContent=count+' / '+references.length+'장';
+ document.getElementById('type-summary').textContent=id==='all'?'주 유형 하나를 고르고 필요한 보조 요소만 더합니다. 배경 참조의 얼굴·복장·무기를 새 인물에 덮어쓰지 않습니다.':typeMap.get(id).description;
+}
+function showOriginal(r){
+ const img=document.getElementById('viewer-image');img.src=r.file;img.alt=r.id+' '+r.label+' 원본';img.width=r.width;img.height=r.height;
+ document.getElementById('viewer-title').textContent=r.id+' · '+r.label;
+ document.getElementById('viewer-info').textContent='원본 100% · '+r.width+' × '+r.height+' px · '+r.original_filename;
+ viewer.showModal();
+}
+for(const t of [{id:'all',label:'전체'},...dataset.taxonomy]){
+ const count=t.id==='all'?references.length:references.filter(r=>r.primary_type===t.id).length;
+ const b=node('button','filter',(t.id==='all'?'':t.id+' ')+t.label+' · '+count);b.type='button';b.dataset.filter=t.id;b.setAttribute('aria-pressed','false');b.addEventListener('click',()=>setFilter(t.id));filters.append(b);
+}
+for(const r of references){
+ const card=node('article');card.dataset.id=r.id;card.dataset.type=r.primary_type;r.card=card;
+ const picture=node('div','picture');const img=node('img');img.src=r.file;img.alt=r.id+' '+r.label;img.width=r.width;img.height=r.height;img.decoding='async';picture.append(img);
+ const body=node('div','card-body');body.append(node('div','card-id',r.id),node('h3','',r.label),node('p','filename',r.original_filename+' · '+r.width+' × '+r.height+' px'));
+ const tags=node('div');tags.append(node('span','tag',r.primary_type+' '+typeMap.get(r.primary_type).label));for(const typeId of r.secondary_types)tags.append(node('span','tag secondary','보조 '+typeId));body.append(tags);
+ r.note=node('p','note',r.observed[focus.value]);body.append(r.note);
+ const actions=node('div','card-actions');const view=node('button','view-btn','원본 100% 보기');view.type='button';view.addEventListener('click',()=>showOriginal(r));const raw=node('a','','원본 파일 열기');raw.href=r.file;raw.target='_blank';raw.rel='noopener';actions.append(view,raw);body.append(actions);
+ const details=node('details');details.append(node('summary','','전체 관찰과 제작 해석'));const dl=node('dl');for(const [key,label] of Object.entries(focusLabels)){dl.append(node('dt','',label),node('dd','',r.observed[key]));}details.append(dl);body.append(details);
+ card.append(picture,body);gallery.append(card);
+}
+focus.addEventListener('change',()=>{for(const r of references)r.note.textContent=r.observed[focus.value];});
+document.getElementById('close-viewer').addEventListener('click',()=>viewer.close());
+viewer.addEventListener('click',e=>{if(e.target===viewer){const box=viewer.getBoundingClientRect();if(e.clientX<box.left||e.clientX>box.right||e.clientY<box.top||e.clientY>box.bottom)viewer.close();}});
+setFilter('all');
+</script></body></html>

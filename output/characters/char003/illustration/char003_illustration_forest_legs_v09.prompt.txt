@@ -1,0 +1,16 @@
+Tool: built-in image_gen.
+Input: char003_illustration_forest_camera_v08.png (edit target).
+User correction: 발이 바뀌었다고
+Revision: Swap near/far legs' stride roles; near leg bends forward, far leg extends back. Preserve v08 camera and upper body. Slightly lowered knee remains. Static illustration under character specification v1.2; no animation requested.
+
+Use case: precise-object-edit.
+Edit target IMAGE 1: current char003 high-angle forest illustration v08.
+Request: Correct the legs by SWAPPING WHICH ANATOMICAL LEG IS BENT FORWARD AND WHICH IS EXTENDED BACKWARD. This is an actual change to the lower-body running stride, not a horizontal flip or a camera change.
+
+In the input the camera-near leg is the long extended leg stretching diagonally to bottom-left with its boot kicking up dirt, and the far leg is bent with its armored knee to screen-right and boot tucked underneath. REVERSE THESE ROLES:
+- The CAMERA-NEAR leg attached to the visible near hip beneath the brown leather belt pouch must now sweep FORWARD toward screen-right, its knee bent at a modest height slightly below the pelvis, lower leg folded back under that knee. This is the foreground thigh and boot.
+- The CAMERA-FAR leg must now extend BACKWARD diagonally toward lower-left behind the near leg, a long naturally straight pushing-off leg with its boot near the dirt kick-up area.
+Make the upper thighs join the correct left and right hip sockets, with a clear consistent overlapping crotch/thigh construction. Two legs and two natural boots only. Do not just move the boots or armor while leaving the leg skeleton the same. The two actual legs must trade stride roles. Keep the single knee armor on its original anatomical leg, now the rear extended leg. Preserve the leather boot design and red ties.
+Keep the bent knee slightly lowered, below the waist, and retain energetic forward rightward dash.
+LOCK ALL OTHER ELEMENTS as closely as possible: same high oblique above-left camera, same framing and scale, same smiling reddish-brown-haired anime hero, face, head angle, leaning torso, free hand bent by chest, sword arm stretched back toward upper-left, complete sword, red mantle and its flowing shapes, ivory shirt, partial silver armor, belts/pouches, forest floor, light, green slime droplets, and thin white completed-slash arc.
+Only repaint pelvis/legs/boots plus minimal adjacent cloak/shadow edges needed for coherent anatomy. No overall mirroring, no new camera, no text or collage. Square finished anime illustration with full sword and both boots in frame.

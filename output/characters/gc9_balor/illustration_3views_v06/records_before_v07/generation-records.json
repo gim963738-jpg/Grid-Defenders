@@ -1,0 +1,409 @@
+{
+  "character": "발로르",
+  "id": "balor",
+  "tool": "built-in image_gen",
+  "status": "front_revision_completed",
+  "requested_final_views": [
+    "front",
+    "right",
+    "back"
+  ],
+  "additional_preview": null,
+  "actual_native_size": [
+    1254,
+    1254
+  ],
+  "transparent_background_requested": true,
+  "post_generation_resampled": false,
+  "user_concept_review": {
+    "selection": "디자인 수정 필요",
+    "correction": "잘못눌렀다",
+    "interpretation": "직전 선택 정정으로 보고 디자인 통과 처리",
+    "following_changes": [
+      "망토 고정핀 연결 끈 제거",
+      "투구 탈착 얼굴 제안",
+      "부드러운 인상"
+    ]
+  },
+  "calls": [
+    {
+      "id": "concept_front_v01",
+      "stage": "previous_concept",
+      "prompt_file": "output/characters/gc9_balor/concept_front_v01.prompt.txt",
+      "output": "output/characters/gc9_balor/concept_front_v01.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-f1bf34d8-5b6a-4220-93e5-1a35941757f4.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6e96a705957c34aa549df694dc128cf33b8ed81727fdf766292606362954a1e9",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "front_no_cords",
+      "stage": "direction_set",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v01/front_v02.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/concept_front_v01.png"
+      ],
+      "started_at": "2026-11-07T12:29:29.338Z",
+      "finished_at": "2026-11-07T12:30:03.285Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v01/front.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-79a45b72-2a13-4bef-91b9-1d0c6b2ea8eb.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "95bc42fb5619c7ad58d14331e25387e1208e704923ebdf273586030fa12d68ab",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "right",
+      "stage": "direction_set",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v01/right_v02.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/front.png"
+      ],
+      "started_at": "2026-11-07T12:32:01.513Z",
+      "finished_at": "2026-11-07T12:33:20.349Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v01/right.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-67bf562a-847c-46ce-9ca7-d00e30e94055.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "dbb81dd8500111ccb55087603889ffb6570550d5d15976d1f38fee48011d7150",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "back",
+      "stage": "direction_set",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v01/back_v02.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/front.png"
+      ],
+      "started_at": "2026-11-07T12:32:01.513Z",
+      "finished_at": "2026-11-07T12:32:40.558Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v01/back.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-02fddd67-3b05-4b46-a980-41d33d0aefd6.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "249e5b8e108c0604e3e352a1b4bc51dae6eaf2389b9790a879a04cd5400322f3",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "helmet_off",
+      "stage": "face_proposal",
+      "prompt_file": "output/characters/gc9_balor/helmet_off_front_v01.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png"
+      ],
+      "started_at": "2026-11-07T12:32:01.514Z",
+      "finished_at": "2026-11-07T12:33:54.023Z",
+      "output": "output/characters/gc9_balor/helmet_off_front_v01.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-059879bd-c7e8-4b1d-badd-b89fa7701a11.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "e47d0e42cb752ab3d23e6cbc31b80e0296f16d7bc63864b8d879838eb250077e",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "grip_front_v02",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v02/front.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v01/front.png",
+        "output/characters/gc9_balor/inputs/grip_reference_26.jfif"
+      ],
+      "started_at": "2026-11-07T12:51:35.466Z",
+      "finished_at": "2026-11-07T12:52:12.020Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v02/front.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-a3dc06f1-a2e9-45fc-a2b9-c71309012589.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "2547428f07def84f55ddb75c349e1d00a0a31d3a918e1604be78a7bb7c7612ad",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "right_grip_superseded",
+      "status": "superseded_before_workspace_publish",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v02/right.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/right.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v02/front.png"
+      ],
+      "started_at": "2026-11-07T12:54:35.495Z",
+      "finished_at": "2026-11-07T12:55:14.318Z",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-387e8ac9-b37e-4b71-aa71-776ddeae61ce.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "97320a700caf632ab0bfbb03937ba9b6b160b94234475319205e94dfbbc1f0ed"
+    },
+    {
+      "id": "back_grip_superseded",
+      "status": "superseded_before_workspace_publish",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v02/back.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/back.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v02/front.png"
+      ],
+      "started_at": "2026-11-07T12:54:35.495Z",
+      "finished_at": "2026-11-07T12:55:44.296Z",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-7ad2966d-8cfa-4590-bd48-06a9a9712b2e.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "af77aaad8bd21de5e0689ba0244c22b4a6ae3da760e23237e026d93a0d55c1a7"
+    },
+    {
+      "id": "helmet_off_grip_superseded",
+      "status": "superseded_before_workspace_publish",
+      "prompt_file": "output/characters/gc9_balor/helmet_off_front_v02.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/helmet_off_front_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v02/front.png"
+      ],
+      "started_at": "2026-11-07T12:54:35.495Z",
+      "finished_at": "2026-11-07T12:56:18.884Z",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-675b2cdb-f542-41b1-b19d-697904156a38.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "10183ca7b4805921b51742d8432e5612690f33f5905b011b62360c8567c834af"
+    },
+    {
+      "id": "finger_guide_front_v03",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v03/front.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v02/front.png",
+        "output/characters/gc9_balor/inputs/grip_pose_latest.png",
+        "output/characters/gc9_balor/inputs/grip_finger_guide.png"
+      ],
+      "started_at": "2026-11-07T13:00:17.440Z",
+      "finished_at": "2026-11-07T13:00:54.965Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v03/front.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-c6227da9-d164-498d-ae5c-1a1662be888d.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "497c7c0a6b864b42b6345f69ae742af43ef1c24925fa055cfd5393ee6f5446d6",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "unhelmeted_front_v04",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/front.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/helmet_off_front_v01.png",
+        "output/characters/gc9_balor/illustration_3views_v03/front.png",
+        "자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "started_at": "2026-11-07T13:10:25.768Z",
+      "finished_at": "2026-11-07T13:11:03.727Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v04/front.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-714e0cf7-9484-48a3-8adc-cff75fc48e74.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "80178d1f87b60520258d78d045e22d82844903d024ddb4067aa9fd1815420a1a",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "right_unhelmeted_v04",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/right.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v04/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/right.png"
+      ],
+      "started_at": "2026-11-07T13:13:50.608Z",
+      "finished_at": "2026-11-07T13:14:26.971Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v04/right.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-960ecdfe-49cb-43bf-a549-afc6b942dcc0.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b73b8e076237b1e140353cf4927bda3dc8332173e5768e9765d0d37aea1a122e",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "back_unhelmeted_v04",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/back.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v04/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/back.png"
+      ],
+      "started_at": "2026-11-07T13:13:50.609Z",
+      "finished_at": "2026-11-07T13:15:43.359Z",
+      "output": "output/characters/gc9_balor/variants/back_initial_v04.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-f44c7284-0673-4e11-8615-bb93a9279479.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "66b42ccb7e7c643289d7d62bcc3c3ca7e63860dda125a428a52d7c0477ab8c05",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "rear_grip_contact_v04",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/back_contact_fix.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/variants/back_initial_v04.png",
+        "output/characters/gc9_balor/illustration_3views_v04/front.png",
+        "자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "started_at": "2026-11-07T13:19:35.729Z",
+      "finished_at": "2026-11-07T13:20:15.932Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v04/back.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-6093ed4b-e0b1-4e71-8dea-6739edc689e5.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "7f2cee5fb8a417d7c88512948b6e819d3a4328e9b6c37ea8dc82979f3fda5eb1",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "front_shield_background_v05",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/front.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v04/front.png"
+      ],
+      "output": "output/characters/gc9_balor/illustration_3views_v05/front.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-fb2053f2-9f21-48a0-a7b0-2f484274939f.png",
+      "started_at": "2026-11-07T13:47:28.760Z",
+      "finished_at": "2026-11-07T13:48:12.774Z",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "86491a83f687a767a76aebb153b4b8369a03ed42a0ca94515114bcbd9dba9376",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "right_shield_sword_initial_v05",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/right.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v04/right.png",
+        "output/characters/gc9_balor/illustration_3views_v05/front.png"
+      ],
+      "output": "output/characters/gc9_balor/variants/right_geometry_initial_v05.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-5966e693-15cf-471b-b2ca-1e106f5eac91.png",
+      "started_at": "2026-11-07T13:49:58.205Z",
+      "finished_at": "2026-11-07T13:50:42.302Z",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "582c7ed17e3f6c4cd5503e3d4e4127947dc48628db2305ead1fd773d892a6e20",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "back_shield_palm_background_v05",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/back.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v04/back.png",
+        "output/characters/gc9_balor/illustration_3views_v05/front.png"
+      ],
+      "output": "output/characters/gc9_balor/illustration_3views_v05/back.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-4cd17ff4-4c8e-47d4-b64b-add429c4cab7.png",
+      "started_at": "2026-11-07T13:49:58.206Z",
+      "finished_at": "2026-11-07T13:51:20.953Z",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d6f943939fcad8ca3e83ee332c79647ae73634055bf41dd765afdda3bd2dd862",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "right_collinear_sword_v05",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/right_geometry_fix.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/variants/right_geometry_initial_v05.png"
+      ],
+      "reference_paths_at_call": [
+        "output/characters/gc9_balor/illustration_3views_v05/right.png"
+      ],
+      "output": "output/characters/gc9_balor/illustration_3views_v05/right.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-e12ec5b2-12dd-43ec-879b-55e2e3ea522b.png",
+      "started_at": "2026-11-07T13:53:40.558Z",
+      "finished_at": "2026-11-07T13:54:09.424Z",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "75768c85ae46610c2f1178f466aa54645ae01962b8fb2fca44943f6f0f97e7f9",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "front_face_framing_initial_v06",
+      "stage": "revision",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v06/front.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v05/front.png",
+        "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+        "자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+        "output/character-redesign-6x2/images/c04_front.png",
+        "output/character-redesign-6x2/images/c03_front.png"
+      ],
+      "output": "output/characters/gc9_balor/variants/front_v06_initial.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-04c85902-049b-43b4-9199-3410b694afbe.png",
+      "started_at": "2026-11-07T16:10:20.445Z",
+      "finished_at": "2026-11-07T16:11:03.571Z",
+      "review": "위·좌우 여백 부족으로 중간본 보관",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "ac562bcef063aa6672e5cfbaef0196667d6bd9d543fc5d15c595b6779dfa160a",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "front_face_connected_framing_v06",
+      "stage": "front_revision",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v06/front_final.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/variants/front_v06_initial.png",
+        "output/characters/gc9_balor/inputs/framing_guide_v06.png",
+        "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+        "output/character-redesign-6x2/images/c04_front.png"
+      ],
+      "output": "output/characters/gc9_balor/illustration_3views_v06/front.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-ea082fa4-ac68-4d70-a89d-f352d111b8c2.png",
+      "started_at": "2026-11-07T16:19:06.856Z",
+      "finished_at": "2026-11-07T16:19:48.971Z",
+      "review": "연결된 전체 실루엣 여백·GC9 얼굴선 보정 정면 1장",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "edd0ef05e12b4b6b381d74063bf6d368adb78044cb6245a8f41783483cd0ccd4",
+      "copy_matches_generated_original": true
+    }
+  ],
+  "main_variant": "unhelmeted",
+  "hand_grip_preset": "one_hand_grip_v1",
+  "final_outputs": [
+    {
+      "view": "front",
+      "path": "output/characters/gc9_balor/illustration_3views_v06/front.png"
+    }
+  ],
+  "user_final_decision": "장비를 별도 배치하지 않고 인물과 함께 여백 확보. GC9 얼굴을 확인·보정한 정면 1장 요청",
+  "latest_revision": {
+    "version": 6,
+    "scope": "front_only",
+    "main_variant": "unhelmeted",
+    "framing_standard_id": "gc9_spacious_canvas_v1",
+    "framing": "인물·손에 든 검·방패·망토 전체를 연결 상태로 균일 축소. 정사각 원본 위 21.2%·좌우 약 25.1% 여백",
+    "face_audit": "M02·M05·C4 원본과 대조. 기존 v05의 코·입·턱 주변 입체 묘사가 GC9보다 사실적으로 남아 있었음",
+    "face_correction": "28세 남성·갈색 머리·회청색 눈·부드러운 인상 유지. 눈꺼풀·짧은 코·입선과 피부 명암을 간결하게 보정",
+    "face_references": [
+      "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+      "자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+      "output/character-redesign-6x2/images/c04_front.png"
+    ],
+    "preserve": "청은 갑주·사자 부조·원형 핀·용문양 망토·대형 방패·오른손 검/왼손 방패·고정 그립",
+    "previous_three_view_set_version": 5,
+    "user_revision_approved": null
+  },
+  "latest_revision_version": 6,
+  "actual_native_size_scope": "latest_front_only; historical native dimensions remain per call",
+  "native_sizes_by_version": {
+    "v01_to_v05": [
+      1024,
+      1536
+    ],
+    "v06_front": [
+      1254,
+      1254
+    ]
+  },
+  "previous_final_outputs": [
+    {
+      "view": "front",
+      "path": "output/characters/gc9_balor/illustration_3views_v05/front.png"
+    },
+    {
+      "view": "right",
+      "path": "output/characters/gc9_balor/illustration_3views_v05/right.png"
+    },
+    {
+      "view": "back",
+      "path": "output/characters/gc9_balor/illustration_3views_v05/back.png"
+    }
+  ]
+}

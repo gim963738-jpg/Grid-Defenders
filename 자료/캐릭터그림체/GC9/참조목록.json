@@ -1,0 +1,616 @@
+﻿{
+    "style_id":  "GC9",
+    "version":  "1.1",
+    "date":  "2026-11-06",
+    "source":  "사용자 제공 로컬 JFIF 누적 16장 직접 관찰. 초기 9장 + 추가 7장.",
+    "scope":  "2D 판타지 캐릭터 전신 일러스트 화풍 참조. 초기 9장 성별 그룹은 사용자 지정, 추가 7장은 성별 미지정으로 보관. 파일명으로 이름을 확인할 수 없는 2장은 외형으로 식별. 캐릭터 설정과 화풍을 분리한다.",
+    "status":  "분석 및 프롬프트 준비. 추가 학습 및 신규 생성 검증은 미실시.",
+    "originals_have_alpha":  false,
+    "references":  [
+                       {
+                           "id":  "M01",
+                           "name":  "Myst",
+                           "label":  "미스트",
+                           "gender_group":  "남성",
+                           "original_filename":  "Myst.jfif",
+                           "file":  "원본/M01_Myst.jfif",
+                           "width":  601,
+                           "height":  1000,
+                           "roles":  [
+                                         "기본 남성 얼굴",
+                                         "흰 천과 금속 구분",
+                                         "롱코트의 큰 면"
+                                     ],
+                           "observed":  {
+                                            "face":  "가늘고 낮은 눈매, 각이 완만한 턱, 작은 코와 짧은 입, 절제된 표정",
+                                            "hair":  "백색 바탕과 연보라 그림자, 큰 뾰족한 묶음 내부에 제한된 가는 선",
+                                            "body":  "작은 머리, 가는 허리와 긴 다리, 한쪽 무릎을 굽힌 비대칭 자세",
+                                            "silhouette":  "큰 어깨 깃털과 열린 롱코트, 안쪽 짙은 면과 바깥 흰 면의 대비",
+                                            "rendering":  "천의 회보라 다각형 그림자, 금색 장식의 명암 면 분할, 피부의 적은 그림자",
+                                            "palette":  "아이보리·백색 / 짙은 보라 / 금색 / 작은 청록 보석",
+                                            "transfer":  "고요한 성인 남성 인상, 흰 천도 평면으로 보이지 않게 나누는 명암",
+                                            "do_not_lock":  "백발·깃털·금장·백색 코트는 개별 디자인으로만 취급"
+                                        },
+                           "original_path":  "C:\\Users\\user\\Downloads\\Myst.jfif",
+                           "bytes":  67594,
+                           "sha256":  "dd5d84bb0616a07d49733ca72071b49021b7d9200d1d3285d2fff355c544e157"
+                       },
+                       {
+                           "id":  "M02",
+                           "name":  "Harpe",
+                           "label":  "하르페",
+                           "gender_group":  "남성",
+                           "original_filename":  "Harpe_Dimensional Chaser.jfif",
+                           "file":  "원본/M02_Harpe.jfif",
+                           "width":  720,
+                           "height":  927,
+                           "roles":  [
+                                         "부드러운 남성 얼굴",
+                                         "넓은 소매와 겹친 천",
+                                         "끈과 장식의 곡선"
+                                     ],
+                           "observed":  {
+                                            "face":  "미스트보다 열려 있는 눈매, 붉은 홍채, 작은 미소와 부드러운 턱",
+                                            "hair":  "백회색 머리를 큰 가닥으로 분리, 앞머리가 한쪽 눈 주변을 가로지름",
+                                            "body":  "가는 체형, 몸을 비튼 편안한 자세, 손끝까지 가늘게 정리",
+                                            "silhouette":  "흑백의 넓은 소매·긴 겉옷, 크게 휘는 옷자락과 붉은 끈",
+                                            "rendering":  "검정도 회색 명암 면으로 구분, 흰 천은 차가운 회색 그림자, 붉은 선으로 초점 보완",
+                                            "palette":  "백색 / 먹색·회색 / 적색 / 금색과 작은 보라·청록",
+                                            "transfer":  "유연한 남성 인상과 천의 겹침, 손짓·끈·옷자락으로 흐름 연결",
+                                            "do_not_lock":  "동양풍 겹옷·술 장식·붉은 눈을 공통 조건으로 삼지 않음"
+                                        },
+                           "original_path":  "C:\\Users\\user\\Downloads\\Harpe_Dimensional Chaser.jfif",
+                           "bytes":  79649,
+                           "sha256":  "cf92cc0757201ca5f9b05117b2d065ef1a2862d87f8e0bed906e1e2a726d67dc"
+                       },
+                       {
+                           "id":  "M03",
+                           "name":  "Sieghart",
+                           "label":  "지크하트",
+                           "gender_group":  "남성",
+                           "original_filename":  "Sieghart(JC)2-Immortal Slayer.jfif",
+                           "file":  "원본/M03_Sieghart.jfif",
+                           "width":  736,
+                           "height":  688,
+                           "roles":  [
+                                         "강인한 남성 체형",
+                                         "각진 갑옷과 대형 무기",
+                                         "동작과 각진 효과"
+                                     ],
+                           "observed":  {
+                                            "face":  "좁은 눈과 낮은 눈썹, 선명한 턱선, 강한 시선",
+                                            "hair":  "검은 큰 덩어리에 회색 면과 자홍색 포인트, 날카로운 바깥 윤곽",
+                                            "body":  "다른 남성보다 드러난 어깨·상완의 양감, 벌린 다리와 기울어진 몸통",
+                                            "silhouette":  "큰 무기의 대각선, 부풀어 펼쳐진 망토와 갑옷, 주변 파편의 궤도",
+                                            "rendering":  "짙은 남보라 면과 밝은 금속 면의 큰 대비, 청록·보라 에너지를 날카로운 면으로 처리",
+                                            "palette":  "흑색·남보라 / 백색·금색 / 청록·보라·자홍",
+                                            "transfer":  "근육과 무기의 무게감을 같은 선화·셀 채색 안에서 표현하는 방법",
+                                            "do_not_lock":  "전원 근육질·공중 자세·대형 무기·파편 효과로 만들지 않음"
+                                        },
+                           "original_path":  "C:\\Users\\user\\Downloads\\Sieghart(JC)2-Immortal Slayer.jfif",
+                           "bytes":  90751,
+                           "sha256":  "45643ee034521e9fcbe2f8ec44600b4657fc1c871f1b36e62171b20ee7fd7baa"
+                       },
+                       {
+                           "id":  "M04",
+                           "name":  "Lass",
+                           "label":  "라스",
+                           "gender_group":  "남성",
+                           "original_filename":  "Lass_Dimensional Chaser_T _ Grand Chase Wiki _ Fandom.jfif",
+                           "file":  "원본/M04_Lass.jfif",
+                           "width":  736,
+                           "height":  880,
+                           "roles":  [
+                                         "간결한 남성 기본형",
+                                         "매끈한 선화와 셀 명암",
+                                         "경량 장비"
+                                     ],
+                           "observed":  {
+                                            "face":  "청록빛의 비교적 열린 눈, 작은 미소, 뾰족하지만 길지 않은 턱",
+                                            "hair":  "짧은 백은색 머리, 삼각형 끝과 곡선이 섞인 가닥, 회보라 그림자",
+                                            "body":  "길고 날씬한 사지, 한 팔을 가슴 쪽으로 접고 다리를 벌려 선 자세",
+                                            "silhouette":  "상체는 조밀하고 아래로 길게 갈라지는 코트, 푸른 띠와 두 곡도",
+                                            "rendering":  "백색·회색·먹색의 큰 경계가 명확, 파랑 포인트가 낮은 채도의 의상과 분리됨",
+                                            "palette":  "백색·회색 / 먹색 / 선명한 파랑·청록 / 작은 적색",
+                                            "transfer":  "장식이나 발광 없이도 그림체가 읽히는 기준, 얼굴·선·천의 기본 참조",
+                                            "do_not_lock":  "백발·쌍곡도·민소매·문양·파란 띠를 다른 캐릭터에 복사하지 않음"
+                                        },
+                           "original_path":  "C:\\Users\\user\\Downloads\\Lass_Dimensional Chaser_T _ Grand Chase Wiki _ Fandom.jfif",
+                           "bytes":  65820,
+                           "sha256":  "08216e0256ed417cd336da8d7d462b7cac86f6e3a8b957302ee1a379bac944a3"
+                       },
+                       {
+                           "id":  "M05",
+                           "name":  "Ronan",
+                           "label":  "로난",
+                           "gender_group":  "남성",
+                           "original_filename":  "Ronan_Dimensional Chaser.jfif",
+                           "file":  "원본/M05_Ronan.jfif",
+                           "width":  720,
+                           "height":  811,
+                           "roles":  [
+                                         "중장갑 남성",
+                                         "금속 테두리와 푸른 천",
+                                         "절제된 무기 발광"
+                                     ],
+                           "observed":  {
+                                            "face":  "길고 날렵한 눈, 각진 눈썹과 턱, 작은 코·입의 차분한 인상",
+                                            "hair":  "푸른 머리의 큰 덩어리와 긴 묶음, 밝고 어두운 푸른 면을 단계적으로 배치",
+                                            "body":  "넓은 어깨 갑옷과 가는 허리의 대비, 다리의 길이를 유지한 직립 자세",
+                                            "silhouette":  "검의 긴 축, 어깨 장갑과 뒤로 크게 휘는 망토·묶은 머리",
+                                            "rendering":  "금색 엣지의 날카로운 명암, 짙은 청록 천의 넓은 면, 무기 주변 작은 자홍색 광원",
+                                            "palette":  "짙은 청록·남색 / 백색 / 금색 / 청색·자홍색 발광",
+                                            "transfer":  "갑옷 두께와 장식 위계, 천·금속·보석을 서로 다르게 채색하는 방식",
+                                            "do_not_lock":  "파란 장발·성기사형 갑옷·같은 검과 보석을 필수로 취급하지 않음"
+                                        },
+                           "original_path":  "C:\\Users\\user\\Downloads\\Ronan_Dimensional Chaser.jfif",
+                           "bytes":  93301,
+                           "sha256":  "593057396ee445266f072b9c3d72a59386dd4342f30b5cbee0bbdb6257bbbb96"
+                       },
+                       {
+                           "id":  "F01",
+                           "name":  "Edel",
+                           "label":  "에델",
+                           "gender_group":  "여성",
+                           "original_filename":  "Edel_Dimensional Chaser_T.jfif",
+                           "file":  "원본/F01_Edel.jfif",
+                           "width":  735,
+                           "height":  1003,
+                           "roles":  [
+                                         "단정한 여성 얼굴",
+                                         "제복과 긴 부츠",
+                                         "정밀한 천·금장"
+                                     ],
+                           "observed":  {
+                                            "face":  "청록·푸른 계열의 열린 눈, 뚜렷한 윗눈꺼풀, 작은 코와 입, 부드럽게 좁아지는 턱",
+                                            "hair":  "연보라 머리의 묶음과 땋은 부분, 큰 하이라이트 면과 선택적인 내부선",
+                                            "body":  "작은 머리와 긴 다리, 좁은 허리, 제복으로 정리된 몸통, 체중을 옮긴 자세",
+                                            "silhouette":  "어깨 위로 긴 무기를 걸친 대각선, 허리부터 크게 벌어지는 짙은 코트와 리본",
+                                            "rendering":  "남보라 천의 단단한 셀 그림자에 완만한 명도 변화, 가는 금장과 흰 프릴의 재질 구분",
+                                            "palette":  "남보라·짙은 청색 / 백색 / 금색 / 적자색·청록",
+                                            "transfer":  "여성 얼굴·다리 비율과 단정한 제복을 기본 화풍으로 표현하는 기준",
+                                            "do_not_lock":  "노출·하이힐·연보라 머리·총 형태 무기를 여성 공통 조건으로 삼지 않음"
+                                        },
+                           "original_path":  "C:\\Users\\user\\Downloads\\Edel_Dimensional Chaser_T.jfif",
+                           "bytes":  82011,
+                           "sha256":  "1d578c379be8be978277a6c9c8ee94457eaff991759671022c3efb4c69cf077a"
+                       },
+                       {
+                           "id":  "F02",
+                           "name":  "Europa",
+                           "label":  "유로파",
+                           "gender_group":  "여성",
+                           "original_filename":  "Europa-Crimson Spear.jfif",
+                           "file":  "원본/F02_Europa.jfif",
+                           "width":  736,
+                           "height":  1027,
+                           "roles":  [
+                                         "강한 여성 인상",
+                                         "검은 유광 재질과 판금",
+                                         "체인과 긴 머리의 흐름"
+                                     ],
+                           "observed":  {
+                                            "face":  "선명한 연두색 홍채와 붉은 계열 눈가, 가늘게 올라가는 눈매, 작은 미소",
+                                            "hair":  "옅은 하늘색 장발이 큰 곡선으로 펼쳐짐, 회청색 그림자와 넓은 밝은 면",
+                                            "body":  "긴 다리와 가는 허리, 몸통의 완만한 비틀림, 가는 팔과 장갑의 큰 형태 대비",
+                                            "silhouette":  "머리 위부터 발 옆까지 이어지는 체인 곡선, 검붉은 긴 무기와 뾰족한 판금",
+                                            "rendering":  "검정 재질 위 흰 각진 반사광, 은색·검정 판금의 강한 명암, 피부는 상대적으로 부드러움",
+                                            "palette":  "검정 / 진홍 / 은색 / 옅은 청색 / 작은 연두·적색",
+                                            "transfer":  "어두운 재질의 가독성, 날카로운 장비와 부드러운 피부의 대비",
+                                            "do_not_lock":  "노출 의상·뿔 장식·체인·피부 문양·같은 무기를 자동 부여하지 않음"
+                                        },
+                           "original_path":  "C:\\Users\\user\\Downloads\\Europa-Crimson Spear.jfif",
+                           "bytes":  99388,
+                           "sha256":  "a9031ec67e91d97436d54f0e5125e61abb6ed69851e224e01b8f30ffb500d3d8"
+                       },
+                       {
+                           "id":  "F03",
+                           "name":  "Tia",
+                           "label":  "티아",
+                           "gender_group":  "여성",
+                           "original_filename":  "Tia(JC)2-Skadi.jfif",
+                           "file":  "원본/F03_Tia.jfif",
+                           "width":  736,
+                           "height":  676,
+                           "roles":  [
+                                         "차분한 여성 얼굴",
+                                         "얼음과 반투명 재질",
+                                         "날개와 대형 속성 장식"
+                                     ],
+                           "observed":  {
+                                            "face":  "작고 차분한 눈매, 밝은 피부, 은보라색 머리와 정돈된 짧은 앞머리",
+                                            "hair":  "짧은 은빛 머리의 적은 면 분할과 뾰족한 끝, 청색 장식으로 외곽 확장",
+                                            "body":  "전신의 길고 가는 비율, 중앙에 가까운 직립 몸통과 옆으로 펼친 한 팔",
+                                            "silhouette":  "인물 바깥으로 크게 펼친 양 날개와 얼음 결정, 세로 무기와 하단의 큰 얼음 덩어리",
+                                            "rendering":  "기본 셀 경계 위에 반투명 청색 그라데이션과 부드러운 광택, 결정의 날카로운 면과 국소 발광",
+                                            "palette":  "백색·은색 / 하늘색·청록 / 짙은 파랑 / 적은 보라",
+                                            "transfer":  "기본 선화를 유지하며 얼음·날개·반투명 천에만 부드러운 빛을 더하는 방법",
+                                            "do_not_lock":  "날개·용 장식·얼음 받침·넓은 광채를 공통 화풍으로 확장하지 않음"
+                                        },
+                           "original_path":  "C:\\Users\\user\\Downloads\\Tia(JC)2-Skadi.jfif",
+                           "bytes":  76598,
+                           "sha256":  "4705d5767bd6d2dfe7b0ee45999a69f9d304633a9ec5f60c429570e6cd71d1b4"
+                       },
+                       {
+                           "id":  "F04",
+                           "name":  "Lire",
+                           "label":  "리르",
+                           "gender_group":  "여성",
+                           "original_filename":  "Lire_Dimensional Chaser.jfif",
+                           "file":  "원본/F04_Lire.jfif",
+                           "width":  720,
+                           "height":  993,
+                           "roles":  [
+                                         "둥글고 친근한 여성 얼굴",
+                                         "유기적인 의상과 활",
+                                         "따뜻한 밝은 팔레트"
+                                     ],
+                           "observed":  {
+                                            "face":  "다른 여성보다 둥글고 크게 열린 녹색 눈, 둥근 볼과 짧은 턱, 작은 미소와 긴 귀",
+                                            "hair":  "금발의 긴 곡선형 묶음, 따뜻한 그림자와 넓은 옅은 노랑 하이라이트",
+                                            "body":  "비교적 부드러운 외곽, 긴 다리와 가는 허리, 한쪽 다리에 체중을 둔 자세",
+                                            "silhouette":  "가로로 펼친 잎 모양 활, 장발과 녹색 옷자락의 완만한 곡선",
+                                            "rendering":  "선명하지만 상대적으로 부드러운 셀 그림자, 녹색 천·흰 천·금색 장식의 큰 면 구분",
+                                            "palette":  "녹색 / 백색 / 금색·금발 / 짙은 청회색",
+                                            "transfer":  "동일 화풍 안에서 둥근 눈·유기적 장식·따뜻한 색을 유지하는 방법",
+                                            "do_not_lock":  "금발·녹색·엘프 귀·활을 다른 여성의 기본 디자인으로 고정하지 않음"
+                                        },
+                           "original_path":  "C:\\Users\\user\\Downloads\\Lire_Dimensional Chaser.jfif",
+                           "bytes":  93927,
+                           "sha256":  "db978e708c427329fad01b26849bc04370f2928dec0becc1f371107b9e1f5c24"
+                       },
+                       {
+                           "id":  "A01",
+                           "name":  null,
+                           "label":  "적발·금장 갑옷",
+                           "identity_status":  "파일명에 캐릭터 이름 없음. 외형으로 식별.",
+                           "gender_group":  "미지정",
+                           "original_filename":  "다운로드 (8).jfif",
+                           "file":  "원본/A01_RedHair_GoldArmor.jfif",
+                           "roles":  [
+                                         "대형 금장 갑옷",
+                                         "적색·검정의 큰 면 대비",
+                                         "장발·망토·불꽃의 흐름"
+                                     ],
+                           "observed":  {
+                                            "face":  "가늘고 또렷한 눈매, 작은 코와 짧은 입, 앞머리 아래의 집중된 시선",
+                                            "hair":  "짙은 적색 장발을 굵은 가닥과 길고 가는 바깥 곡선으로 나눔. 밝은 주홍 면과 어두운 적색 그림자",
+                                            "body":  "작은 머리와 긴 다리, 넓은 어깨 장비와 조인 허리의 대비, 한 손을 얼굴 옆으로 펼친 직립 자세",
+                                            "silhouette":  "큰 어깨 금장과 뒤쪽 고리형 구조, 세로로 긴 검 형태, 장발·붉은 안감·검은 코트가 양옆으로 확장",
+                                            "rendering":  "금색 판의 뾰족한 엣지와 밝고 어두운 면, 검은 천의 제한된 반사, 붉은 안감의 큰 셀 명암, 주황 불꽃의 얇은 띠",
+                                            "palette":  "적색·주홍 / 검정·짙은 적갈색 / 금색·아이보리 / 황색 불꽃",
+                                            "transfer":  "큰 장식이 있는 갑옷의 면 위계, 따뜻한 고채도 색과 어두운 천의 대비, 세로 축을 유지하며 머리·망토를 펼치는 방식",
+                                            "do_not_lock":  "이름·성별·공식 직업을 추정하지 않음. 적발·같은 대형 검·금장 고리·불꽃은 개별 디자인"
+                                        },
+                           "width":  736,
+                           "height":  686,
+                           "original_path":  "C:\\Users\\user\\Downloads\\다운로드 (8).jfif",
+                           "bytes":  103036,
+                           "sha256":  "187d63954d21a9c50b965e26578669ddc4696441a8376518d4f03db89f6d7fb8"
+                       },
+                       {
+                           "id":  "A02",
+                           "name":  "Lapis",
+                           "label":  "라피스",
+                           "identity_status":  "사용자 제공 파일명 기반",
+                           "gender_group":  "미지정",
+                           "original_filename":  "Lapis.jfif",
+                           "file":  "원본/A02_Lapis.jfif",
+                           "roles":  [
+                                         "밝고 열린 표정",
+                                         "원호·별 형태의 큰 장식",
+                                         "청색 보석과 별무늬 천"
+                                     ],
+                           "observed":  {
+                                            "face":  "크게 열린 분홍 계열 눈, 둥근 볼과 짧은 턱, 벌어진 작은 입의 밝은 웃음",
+                                            "hair":  "연분홍 장발이 굵은 곡선으로 옆과 뒤로 흐름. 큰 밝은 면과 분홍 그림자, 가는 앞머리 선",
+                                            "body":  "가는 팔다리와 좁은 허리, 한쪽 다리를 굽힌 가벼운 자세. 장식 외곽보다 인체 범위가 훨씬 작음",
+                                            "silhouette":  "인물을 감싸는 금색 원호, 별과 삼각형 끝, 넓게 펼친 치맛단과 리본. 얼굴 주변에는 읽을 수 있는 틈을 남김",
+                                            "rendering":  "흰 천·검은 안쪽 면·선명한 파랑을 셀 경계로 구분. 청색 결정은 각진 밝기 변화, 별무늬는 특정 푸른 천 안에 집중",
+                                            "palette":  "백색·아이보리 / 짙은 파랑·청색 / 금색 / 연분홍 머리 / 작은 청록빛",
+                                            "transfer":  "웃는 입과 둥근 눈의 표정 확장, 대형 원호 장식의 가독성, 패턴을 한 재질 안에 제한하는 방법",
+                                            "do_not_lock":  "분홍 머리·별무늬·원호 장비·모자·짧은 의상을 새 인물에 자동 부여하지 않음"
+                                        },
+                           "width":  736,
+                           "height":  808,
+                           "original_path":  "C:\\Users\\user\\Downloads\\Lapis.jfif",
+                           "bytes":  111238,
+                           "sha256":  "95add6c977bff779eff5c826f02abc9a51ecff02cfe9566ccdc9a3b51b89df5a"
+                       },
+                       {
+                           "id":  "A03",
+                           "name":  "Ryan",
+                           "label":  "라이언",
+                           "identity_status":  "사용자 제공 파일명 기반",
+                           "gender_group":  "미지정",
+                           "original_filename":  "Ryan4-World Tree Protector.jfif",
+                           "file":  "원본/A03_Ryan.jfif",
+                           "roles":  [
+                                         "양감 있는 상체",
+                                         "따뜻한 천과 금속",
+                                         "어깨 위 장병기의 대각선"
+                                     ],
+                           "observed":  {
+                                            "face":  "비교적 열린 녹색 눈과 선명한 눈썹, 짧은 코·입의 자신감 있는 작은 미소",
+                                            "hair":  "짧은 주황 머리의 뾰족한 묶음, 밝은 황토빛 면과 적갈색 가닥 아래 그림자",
+                                            "body":  "가슴·복부의 양감을 간결한 그림자로 표현, 긴 다리와 좁은 허리. 한 팔은 긴 무기를 어깨 위로 들고 다른 손은 펼침",
+                                            "silhouette":  "대형 장병기의 긴 사선, 어깨 장갑과 위로 선 장식, 바깥 주황·안쪽 흰색 옷자락이 아래로 갈라짐",
+                                            "rendering":  "금장과 흰 천의 단단한 면, 주황 천의 따뜻한 그림자, 피부의 적고 부드러운 명암. 연두색 궤적은 얇고 반투명하게 배치",
+                                            "palette":  "주황·갈색 / 백색 / 검정 / 금색 / 작은 녹색 보석·연두색 궤적",
+                                            "transfer":  "체형의 힘과 표정의 밝음을 함께 유지하는 방식, 따뜻한 팔레트와 반투명 궤적을 기본 셀 명암 위에 얹는 방법",
+                                            "do_not_lock":  "주황 머리·가슴 노출·같은 장병기·녹색 효과·자연 속성 설정을 다른 인물에 복사하지 않음"
+                                        },
+                           "width":  736,
+                           "height":  740,
+                           "original_path":  "C:\\Users\\user\\Downloads\\Ryan4-World Tree Protector.jfif",
+                           "bytes":  85503,
+                           "sha256":  "81b06bdad77ab30f00d26efffd9d1ed6748140c755471febd7e5a6bb1044eb70"
+                       },
+                       {
+                           "id":  "A04",
+                           "name":  "Bram",
+                           "label":  "브람",
+                           "identity_status":  "사용자 제공 파일명 기반",
+                           "gender_group":  "미지정",
+                           "original_filename":  "Bram4-Sephiroth Saber.jfif",
+                           "file":  "원본/A04_Bram.jfif",
+                           "roles":  [
+                                         "전신 판금의 연결",
+                                         "절제된 금속 반사",
+                                         "넓은 무광 망토"
+                                     ],
+                           "observed":  {
+                                            "face":  "차분하고 비교적 좁은 눈, 작은 코·입과 부드럽게 좁아지는 턱. 원본 해상도에서 얼굴 세부는 작게 보임",
+                                            "hair":  "금발의 짧고 뾰족한 가닥, 옅은 밝은 면과 황갈색 그림자",
+                                            "body":  "어깨부터 발끝까지 이어지는 갑옷. 흉갑·팔꿈치·장갑·무릎·정강이 판의 분할이 보이고 두 발을 벌려 안정적으로 섬",
+                                            "silhouette":  "넓은 짙은 망토가 뒤쪽 큰 면을 만들고, 한쪽으로 뻗은 검과 푸른 띠가 수평·곡선 방향을 더함",
+                                            "rendering":  "아이보리·옅은 금색 금속의 분명한 경계 안에 절제된 완만한 명도 변화. 망토는 더 무광이고 낮은 대비. 푸른 장식과 작은 청록 면을 제한적으로 강조",
+                                            "palette":  "아이보리·은회색·옅은 금색 / 짙은 청회색 / 파랑·청록",
+                                            "transfer":  "갑옷을 가는 금테로만 표현하지 않고 서로 겹치는 판과 관절로 연결하는 방식, 셀 경계를 유지한 낮은 대비의 금속 표현",
+                                            "do_not_lock":  "금발·같은 검·청색 띠·남성형 체형을 모든 전신 갑옷 인물에 적용하지 않음. 작은 얼굴 디테일을 과도하게 추정하지 않음"
+                                        },
+                           "width":  736,
+                           "height":  540,
+                           "original_path":  "C:\\Users\\user\\Downloads\\Bram4-Sephiroth Saber.jfif",
+                           "bytes":  49172,
+                           "sha256":  "9f8e7b048e4c1f6e476b16eb98f5b6fea31f34481ba617d06b1591a0aec84d8a"
+                       },
+                       {
+                           "id":  "A05",
+                           "name":  "Elesis",
+                           "label":  "엘리시스",
+                           "identity_status":  "사용자 제공 Elesis(S)1 파일명 기반",
+                           "gender_group":  "미지정",
+                           "original_filename":  "Elesis(S)1-Phantom Saber.jfif",
+                           "file":  "원본/A05_Elesis_PhantomSaber.jfif",
+                           "roles":  [
+                                         "단호하고 날카로운 인상",
+                                         "검붉은 경량 장갑",
+                                         "흑색 면과 붉은 선의 분리"
+                                     ],
+                           "observed":  {
+                                            "face":  "가늘고 강한 눈매와 낮은 눈썹, 작은 입, 얼굴 주변 적색 가닥과 대비되는 밝은 피부",
+                                            "hair":  "선명한 적색 장발을 큰 다발로 나누고 얇고 긴 바깥 가닥을 일부 추가. 어두운 적색 그림자가 겹침을 만듦",
+                                            "body":  "가는 허리와 긴 다리, 두 발을 넓게 벌린 자세. 어깨·팔·무릎·정강이 장갑 사이의 인체 흐름을 유지",
+                                            "silhouette":  "양옆의 가는 붉은 검 형태, 크게 휘어 오르는 검은 장식·망토, 아래로 갈라지는 옷자락과 장발",
+                                            "rendering":  "검정·차콜·짙은 적색을 서로 다른 넓은 명암 면으로 분리. 붉은 가장자리와 선 무늬에 국소 강조, 금속 엣지에 제한된 밝은 반사",
+                                            "palette":  "흑색·차콜 / 짙은 적색·선명한 적색 / 작은 은회색 / 밝은 피부",
+                                            "transfer":  "금장 없이도 성립하는 강한 셀 명암, 어두운 갑옷·망토·머리를 겹쳐도 읽히게 하는 경계와 색의 위계",
+                                            "do_not_lock":  "적발·쌍검 형태·대형 검은 장식·문양·다리 노출을 새 캐릭터의 필수 설정으로 만들지 않음"
+                                        },
+                           "width":  736,
+                           "height":  812,
+                           "original_path":  "C:\\Users\\user\\Downloads\\Elesis(S)1-Phantom Saber.jfif",
+                           "bytes":  79589,
+                           "sha256":  "34bab0d0198a86958611ad7cfd78aa5fbdfdc2c4ce4083ccc0f5471604420566"
+                       },
+                       {
+                           "id":  "A06",
+                           "name":  null,
+                           "label":  "분홍 장발·흑익",
+                           "identity_status":  "Gallery 파일명으로 이름을 판정할 수 없어 외형으로 식별",
+                           "gender_group":  "미지정",
+                           "original_filename":  "Grand Chase Dimensional Chaser_Gallery.jfif",
+                           "file":  "원본/A06_PinkHair_BlackWings.jfif",
+                           "roles":  [
+                                         "흑백과 자홍색 면 대비",
+                                         "날개·기계식 판의 다층 실루엣",
+                                         "원형 발광 문양"
+                                     ],
+                           "observed":  {
+                                            "face":  "분홍 계열 눈과 절제된 미소, 작은 코·입, 긴 앞머리 안에서 얼굴이 비교적 단순하고 밝게 정리됨",
+                                            "hair":  "옅은 분홍 장발의 큰 곡선과 가는 바깥 가닥. 어두운 날개 앞에서 밝은 머리의 윤곽이 분리됨",
+                                            "body":  "길고 가는 다리와 좁은 허리. 한 손을 앞으로 펴고 몸을 비튼 자세, 피부의 부드러운 명암과 장비의 각진 외곽 대비",
+                                            "silhouette":  "상부의 큰 검은 깃 모양 날개, 양옆 아래의 날카로운 기계식 판·블레이드 구조, 뒤쪽 여러 원형 문양. 인물을 중심으로 단계적으로 확장",
+                                            "rendering":  "흰 몸통·검은 외곽·자홍 안감의 넓은 셀 색면. 날개와 금속 장비는 명암 면으로 분리하고, 원형 문양의 부드러운 분홍 광채는 후방에 배치",
+                                            "palette":  "백색 / 검정·짙은 남보라 / 자홍·분홍 / 작은 회색 금속 면",
+                                            "transfer":  "큰 흑백 덩어리와 한 강조색의 위계, 앞뒤 장식의 층 분리, 기계적인 직선과 날개·머리 곡선의 조합",
+                                            "do_not_lock":  "공식 이름·직업·무기 기능을 추정하지 않음. 날개·기계식 장비·마법진·분홍 머리를 기본 화풍의 필수 요소로 삼지 않음"
+                                        },
+                           "width":  736,
+                           "height":  782,
+                           "original_path":  "C:\\Users\\user\\Downloads\\Grand Chase Dimensional Chaser_Gallery.jfif",
+                           "bytes":  105100,
+                           "sha256":  "f6edef4f8a183010acf49c705d53d02bc755c5b0626d76edce73d31ae79898fa"
+                       },
+                       {
+                           "id":  "A07",
+                           "name":  "Hwarin",
+                           "label":  "Hwarin",
+                           "identity_status":  "사용자 제공 파일명 기반, 한글 공식 이름을 추정하지 않음",
+                           "gender_group":  "미지정",
+                           "original_filename":  "Hwarin.jfif",
+                           "file":  "원본/A07_Hwarin.jfif",
+                           "roles":  [
+                                         "둥근 눈과 짧은 앞머리",
+                                         "흰 겹옷의 옅은 명암",
+                                         "넓은 소매·붉은 안감"
+                                     ],
+                           "observed":  {
+                                            "face":  "크고 둥근 적보라 계열 눈, 작은 코·입과 부드러운 볼, 짧게 정리된 일자 앞머리 아래의 밝은 표정",
+                                            "hair":  "짙은 흑보라 장발과 붉은 안쪽 가닥. 어두운 큰 묶음 위의 절제된 회보라 하이라이트, 곧은 앞머리와 길게 휘는 바깥 가닥",
+                                            "body":  "작은 몸통과 가는 긴 다리, 양옆으로 펼친 팔을 넓은 소매가 감쌈. 큰 외곽 장식과 인체 크기를 구분할 필요가 있음",
+                                            "silhouette":  "인물 뒤의 큰 흰 고리형 장식, 겹쳐 흐르는 넓은 소매와 옷자락, 긴 세로 장식과 한 손에 든 책 형태 물체",
+                                            "rendering":  "백색 천을 옅은 청회색 셀 그림자와 가는 경계선으로 분리. 붉은 안감은 깊은 색면으로 대비, 금장·분홍 보석은 작은 영역에 집중, 피부는 부드럽게 처리",
+                                            "palette":  "백색·옅은 청회색 / 검보라 / 진홍 / 작은 금색·분홍",
+                                            "transfer":  "흰 옷끼리 겹쳐도 구분되는 옅은 그림자, 얼굴의 둥근 눈·짧은 앞머리 조합, 넓은 소매 안팎의 색과 흐름을 정리하는 방식",
+                                            "do_not_lock":  "흑발·일자 앞머리·동양풍 의상·책 형태 장비·같은 고리 장식은 개별 디자인. 흰 옷을 투명 영역으로 오인하지 않음"
+                                        },
+                           "width":  736,
+                           "height":  916,
+                           "original_path":  "C:\\Users\\user\\Downloads\\Hwarin.jfif",
+                           "bytes":  120400,
+                           "sha256":  "4e6067db5acc168cf612d0a5e4cea6663e3d2e8e1d29ada3e34e5dc0a540aa52"
+                       }
+                   ],
+    "reference_presets":  {
+                              "male_neutral":  {
+                                                   "primary":  "M04",
+                                                   "supporting":  [
+                                                                      "M01"
+                                                                  ],
+                                                   "purpose":  "간결한 선·남성 얼굴·기본 천 명암"
+                                               },
+                              "male_soft":  {
+                                                "primary":  "M02",
+                                                "supporting":  [
+                                                                   "M04"
+                                                               ],
+                                                "purpose":  "부드러운 표정·유연한 천"
+                                            },
+                              "male_strong":  {
+                                                  "primary":  "M03",
+                                                  "supporting":  [
+                                                                     "M05",
+                                                                     "M04"
+                                                                 ],
+                                                  "purpose":  "강인한 체형·장비, M04로 과도한 효과 억제"
+                                              },
+                              "female_neutral":  {
+                                                     "primary":  "F01",
+                                                     "supporting":  [
+                                                                        "F04"
+                                                                    ],
+                                                     "purpose":  "단정한 얼굴·의상과 부드러운 인상 범위"
+                                                 },
+                              "female_sharp":  {
+                                                   "primary":  "F02",
+                                                   "supporting":  [
+                                                                      "F01"
+                                                                  ],
+                                                   "purpose":  "강한 인상·어두운 재질"
+                                               },
+                              "female_soft":  {
+                                                  "primary":  "F04",
+                                                  "supporting":  [
+                                                                     "F01"
+                                                                 ],
+                                                  "purpose":  "둥근 얼굴·부드러운 색"
+                                              },
+                              "heavy_armor":  {
+                                                  "primary":  "M05",
+                                                  "supporting":  [
+                                                                     "F01"
+                                                                 ],
+                                                  "purpose":  "판금·천·금속 테두리. 얼굴과 체형은 새 설정을 우선"
+                                              },
+                              "ice_translucent":  {
+                                                      "primary":  "F03",
+                                                      "supporting":  [
+                                                                         "F01",
+                                                                         "M04"
+                                                                     ],
+                                                      "purpose":  "얼음·반투명 재질만 추가. 기본 인물 셀 채색 유지"
+                                                  },
+                              "gold_armor_warm":  {
+                                                      "primary":  "A01",
+                                                      "supporting":  [
+                                                                         "M05",
+                                                                         "M04"
+                                                                     ],
+                                                      "purpose":  "대형 금장 판과 따뜻한 팔레트. 새 인물의 얼굴·복장 설정 우선"
+                                                  },
+                              "expressive_celestial":  {
+                                                           "primary":  "A02",
+                                                           "supporting":  [
+                                                                              "F04",
+                                                                              "F01"
+                                                                          ],
+                                                           "purpose":  "열린 웃음·원호 장식·별무늬 천. 장식이 요청될 때만"
+                                                       },
+                              "warm_strong":  {
+                                                  "primary":  "A03",
+                                                  "supporting":  [
+                                                                     "M03",
+                                                                     "M04"
+                                                                 ],
+                                                  "purpose":  "양감 있는 상체·밝은 표정·주황과 녹색 강조"
+                                              },
+                              "full_plate_soft_metal":  {
+                                                            "primary":  "A04",
+                                                            "supporting":  [
+                                                                               "M05",
+                                                                               "F01"
+                                                                           ],
+                                                            "purpose":  "전신 판금 연결과 절제된 금속 반사. 얼굴·성별·체형은 새 설정 유지"
+                                                        },
+                              "dark_red_armor":  {
+                                                     "primary":  "A05",
+                                                     "supporting":  [
+                                                                        "F02",
+                                                                        "M04"
+                                                                    ],
+                                                     "purpose":  "검붉은 장비·강한 눈매·어두운 면의 가독성"
+                                                 },
+                              "layered_wings_magenta":  {
+                                                            "primary":  "A06",
+                                                            "supporting":  [
+                                                                               "F01",
+                                                                               "A02"
+                                                                           ],
+                                                            "purpose":  "흑백·자홍 면과 날개·판 구조의 층 분리. 큰 장식은 요청 시만 적용"
+                                                        },
+                              "white_layered_robe":  {
+                                                         "primary":  "A07",
+                                                         "supporting":  [
+                                                                            "M02",
+                                                                            "F01"
+                                                                        ],
+                                                         "purpose":  "옅은 청회색으로 흰 겹옷·넓은 소매 구분. 얼굴은 새 설정 우선"
+                                                     }
+                          },
+    "reference_count":  16,
+    "collection_id_note":  "GC9는 초기 묶음의 고정 식별자다. 현재 수량은 reference_count를 따른다.",
+    "batches":  [
+                    {
+                        "id":  "B01",
+                        "date":  "2026-11-06",
+                        "count":  9,
+                        "ids":  [
+                                    "M01",
+                                    "M02",
+                                    "M03",
+                                    "M04",
+                                    "M05",
+                                    "F01",
+                                    "F02",
+                                    "F03",
+                                    "F04"
+                                ]
+                    },
+                    {
+                        "id":  "B02",
+                        "date":  "2026-11-06",
+                        "count":  7,
+                        "ids":  [
+                                    "A01",
+                                    "A02",
+                                    "A03",
+                                    "A04",
+                                    "A05",
+                                    "A06",
+                                    "A07"
+                                ]
+                    }
+                ]
+}

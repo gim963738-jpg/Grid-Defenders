@@ -1,0 +1,36 @@
+{
+  "original_dimensions_and_bytes_preserved": true,
+  "native_rgba": true,
+  "body_equipment_bounds_alpha32": [
+    206,
+    317,
+    809,
+    1432
+  ],
+  "margins_ratio": {
+    "top": 0.20638020833333334,
+    "left": 0.201171875,
+    "right": 0.2099609375,
+    "bottom": 0.06770833333333333
+  },
+  "main_silhouette_within_requested_safe_area": true,
+  "low_alpha_residue": "alpha1 bounds reach canvas; faint soft color spill is present. Inspect on light and gray backgrounds. Original unchanged.",
+  "style_review": {
+    "status": "rejected_by_user",
+    "references": [
+      "c04_front",
+      "c03_front"
+    ],
+    "observations": "원본 구성의 성인 여성형·금발·황록색 눈·긴 귀·흰청록 의상 유지. 가는 선과 큰 셀 면으로 제작. 얼굴·전체 작화 합격은 사용자 판단 대기.",
+    "failure_observations": [
+      "C4 대비 눈·볼·미소의 표현과 전체 얼굴 정리가 달라짐. 개별 눈 모양 차이만을 실패로 보지는 않음.",
+      "머리의 잔선·작은 광택이 늘고 큰 명암 띠 위계가 약함.",
+      "천의 좁고 긴 중간톤 주름이 늘어 넓은 셀 면 표현에서 이탈.",
+      "외곽·겹침과 내부선의 대비가 약해짐.",
+      "낮은 알파 잔여색이 어두운 배경에서 후광으로 보임."
+    ]
+  },
+  "approval_inferred": false,
+  "followup_views_generated": 0,
+  "failure_analysis": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v03/failure-analysis-20261108/report.md"
+}

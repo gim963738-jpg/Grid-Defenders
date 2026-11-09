@@ -1,0 +1,37 @@
+Tool: built-in image_gen (new side-pose reference + existing hero identity).
+Primary pose reference: pose_reference_v06.png (latest user example).
+Identity/rendering reference: char003_illustration_forest_pose_v05.png. Earlier versions preserved.
+Output: char003_illustration_forest_pose_v06.png
+User request: [Image #1] 예시
+Changes: Match latest example's right-facing side charge: forward lean, high bent front knee, opposite leg long down-left, sword arm and blade extended backward to image left, empty arm tucked. Latest reference guides the camera toward a side view, superseding the earlier strong frontal angle where they conflict. Keep the hero's smile, outfit, compact anime proportions, sunlit forest and already-cut green slime droplets. Static illustration only under 캐릭터스프라이트제작규약 v1.2; no game code or animation implementation.
+
+Use case: compositing.
+Asset type: char003 forest slash aftermath, NEW side-facing reference pose v06.
+IMAGE 1 is the USER'S NEW PRIMARY POSE REFERENCE. Use its right-facing SIDE silhouette, body lean, raised front knee, long rear leg and backward sword-arm arrangement faithfully.
+IMAGE 2 is ONLY the existing protagonist's IDENTITY, COSTUME, COLOR AND CLEAN ANIME RENDERING reference. Do not copy image2's frontal face-to-camera angle, raised overhead arm or leg layout. The user is correcting those with image1.
+User request: "[Image #1] 예시" (this new example clarifies the desired pose).
+
+POSE — replicate image1's readable profile arrangement:
+The hero travels toward the RIGHT side of the frame. His head and eyes look right along his movement, torso leans forward to the right. Show a mainly right-facing SIDE / slight three-quarter profile, not a frontal leap toward the viewer.
+His FRONT THIGH rises toward the right almost horizontally, knee sharply flexed at about waist height, lower leg bends DOWN from that raised knee, boot hanging below and slightly behind the knee. Clear lifted front-knee running shape, NOT a straight horizontal kick and not a knee folded up against the face.
+His OTHER LEG extends in a long natural diagonal BACKWARD AND DOWN toward the lower LEFT, toes just leaving/brushing the forest floor, like the long rear leg in image1.
+The SWORD ARM reaches BACK BEHIND THE BODY toward the LEFT at around shoulder/head height. His hand is behind the shoulder, the blade continues from that grip toward the upper LEFT, echoing image1's backward blade. This is the end of a slash he has ALREADY completed while surging rightward, not a high overhead ready-to-strike sword.
+His EMPTY ARM is compactly bent and held near his chest / ribs, not reaching out to the viewer. Natural wrist and fingers.
+Body silhouette immediately reads: face right, forward lean, high bent front knee to right, long rear leg down-left, sword extended backward to left. Stable pelvis and shoulder mechanics, two arms/two legs only.
+Cape streams behind toward the LEFT and upward, following his rightward motion without hiding the sword arm or legs.
+Do not just reuse the previous toward-camera pose with a turned head. REBUILD the complete anatomy and camera to match the new profile example.
+
+CAMERA AND FRAMING:
+Look from a slightly elevated upper-left SIDE position with a clear right-facing silhouette, matching the new reference's overall side composition; the latest reference takes precedence over the earlier strong frontal high-angle view. Subtle top planes are fine, but no head-on extreme foreshortening.
+Compact balanced approximately 6.5-head adult anime/game body proportions underneath the action. Young adult man, not elongated fashion anatomy or chibi.
+Full figure, trailing boot, bent front boot, blade tip and cloak included with generous margins; fit the longer sideward pose naturally into the composition. Portrait/near-square action framing as needed; prioritize the pose over filling all empty space. Do not crop off the backward sword.
+
+CHARACTER:
+Same red-haired male adventurer from image2, short tousled reddish-brown hair, amber eyes, friendly confident smile visible in profile / slight three-quarter face. Same crimson travel mantle/coat, charcoal hood and collar, silver clasps/badge, warm ivory shirt, selected brushed-silver steel pauldrons/forearm guard/small knee plate, leather belts/pouches, dark trousers, tall brown boots/red ties, dark fingerless gloves, one Western straight arming sword.
+Preserve the detailed but clean mature 2D anime rendering, deliberate outlines and cel-shaped shadows. Keep the red/ivory/leather/steel costume and readable smile.
+
+SCENE / AFTERMATH:
+Sunlit lush woodland path with moss, ferns, tree trunks, green canopy and warm dappled sunlight, reprojected for the new side camera.
+The green slime has already been cut. Show a modest curved silver-white sword-energy wake across the lower foreground and several translucent emerald/lime green teardrop gel droplets with tiny green splashes trailing along it. No intact slime, blue halves, face on slime, blood or huge energy explosion. A few kicked-up leaves and dust behind the trailing boot emphasize the rightward burst.
+Image1 is ONLY pose reference: no copied black clothes/black hair, giant blue lightning polygons, manga text, speech bubble, red enemies, screenshot border or night background.
+One polished standalone still illustration. No text, logo, watermark, UI, inset, collage, new monsters or extra figures.

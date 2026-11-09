@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>마지막 일러스트 테스트 2종 8장</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:22px;background:#f4f6f9;color:#202630;font:15px/1.6 'Segoe UI','Malgun Gothic',sans-serif;--art-bg:#edf0f4}main{max-width:1440px;margin:auto}h1{font-size:25px;line-height:1.35;margin:5px 0 10px}h2{font-size:19px;margin:24px 0 10px}p{margin:7px 0}.muted{color:#647084;font-size:13px}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0}select,button{font:inherit;padding:8px 12px;min-height:44px;max-width:100%;color:inherit;background:white;border:1px solid #cbd3de;border-radius:7px}a{color:#285391;text-underline-offset:3px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}figure{margin:0;min-width:0;background:white;border:1px solid #d6dfe8;border-radius:10px;padding:10px}figcaption{font-weight:600;margin-bottom:8px}.preview-bg{background-color:var(--art-bg);border-radius:6px}body[data-bg=checker] .preview-bg{background-image:linear-gradient(45deg,#cbd1d9 25%,transparent 25%),linear-gradient(-45deg,#cbd1d9 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#cbd1d9 75%),linear-gradient(-45deg,transparent 75%,#cbd1d9 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0px}.sprite{display:block;width:100%;height:auto}.download{display:block;font-size:13px;margin-top:8px}.inspect-window{max-width:100%;overflow:auto;border:1px solid #d6dfe8}.crop{position:relative;overflow:hidden;margin:auto}.crop img{position:absolute;max-width:none;display:block}.downloads{display:flex;gap:15px;flex-wrap:wrap;margin:14px 0}footer{margin-top:20px;font-size:13px;color:#647084}@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:460px){body{padding:12px}.grid{gap:8px}figure{padding:7px}figcaption{font-size:13px}h1{font-size:22px}}
+</style></head>
+<body data-bg="light"><main>
+<h1>마지막 일러스트 테스트 · 2종 8장</h1>
+<p>다운로드 (14)는 검보라 쌍단검 남성형, 다운로드 (15)는 분홍 머리·검은 리본 여성형으로 재구성했습니다.</p>
+<p class="muted">각 캐릭터의 정면·정측면·후면·3/4 사선입니다. 8장 모두 실제 1024 × 1536 투명 PNG이며, 이 화면은 JPEG 축소본 없이 원본을 직접 사용합니다.</p>
+<div class="downloads"><a href="illustration_final_test_8_png.zip">선택 PNG 8장 묶음</a><a href="생성기록.json">정확한 생성 프롬프트·참조·해시</a><a href="제작기준.md">제작 기준</a></div>
+<div class="controls"><label for="subject">캐릭터</label><select id="subject"><option value="t14">다운로드 (14) · 남성형</option><option value="t15">다운로드 (15) · 여성형</option></select><label for="background">검수 배경</label><select id="background"><option value="light">밝은 회색</option><option value="white">흰색</option><option value="dark">어두운 차콜</option><option value="checker">투명 격자</option></select><a id="source-link" href="inputs/design14_shadow.jfif">선택 인물 원본</a></div>
+<p id="subject-note" class="muted" role="status"></p>
+<div class="grid" id="gallery"></div>
+<h2>원본 배율 상세 검수</h2><p class="muted">위 나란히 보기는 화면에 맞춰 표시합니다. 아래 100% 검수는 PNG 1픽셀을 CSS 1픽셀로 표시하며, 200%는 픽셀 확대 관찰입니다.</p>
+<div class="controls"><label for="view">방향</label><select id="view"><option value="front">정면</option><option value="side">정측면</option><option value="back">후면</option><option value="threequarter">3/4 사선</option></select><label for="region">영역</label><select id="region"><option value="face">얼굴·머리</option><option value="metal">상체·재질</option><option value="waist">팔·허리</option><option value="hands">손·장비</option><option value="boots">무릎·발</option><option value="full">전체 · 스크롤</option></select><label for="zoom">배율</label><select id="zoom"><option value="1">100% 원본</option><option value="2">200% 확대</option></select></div>
+<div class="inspect-window preview-bg"><div class="crop"><img id="detail" alt="선택 영역의 원본 PNG"></div></div>
+<footer>얼굴선과 완성도는 C4, 금속 면·두께·반사광은 C3의 사용자 평가를 적용했습니다. 여성형 후면의 머리 길이는 정면·측면에 맞춰 한 번 추가 정리했습니다. 최종 화풍과 구성 일관성에 대한 사용자 판단은 별도입니다.</footer>
+</main><script>
+'use strict';
+const subjects={
+t14:{name:'검보라 쌍단검 · 남성형',source:'inputs/design14_shadow.jfif',note:'검은 머리·민소매 각진 갑옷·앞 가슴과 팔의 보라 발광·쌍단검을 유지했습니다. 잘린 하체와 보이지 않는 뒤쪽은 같은 구조로 이어 그렸습니다.',views:{front:'images/t14_01_front.png',side:'images/t14_02_side.png',back:'images/t14_03_back.png',threequarter:'images/t14_04_threequarter.png'}},
+t15:{name:'분홍 머리·검은 리본 · 여성형',source:'inputs/design15_pink.jfif',note:'픽셀·SD 비율을 성인 여성형으로 바꾸고 긴 분홍 웨이브 머리·큰 검은 천 리본·흑백 복장과 낮은 검은 신발을 유지했습니다.',views:{front:'images/t15_01_front.png',side:'images/t15_02_side.png',back:'images/t15_03_back.png',threequarter:'images/t15_04_threequarter.png'}}
+};
+const viewNames={front:'01 정면 · 0°',side:'02 정측면 · 90°',back:'03 후면 · 180°',threequarter:'04 사선 · 약 45°'};
+const areas={face:{x:370,y:55,w:325,h:320},metal:{x:240,y:280,w:540,h:380},waist:{x:230,y:520,w:560,h:350},hands:{x:80,y:650,w:850,h:450},boots:{x:280,y:980,w:500,h:550},full:{x:0,y:0,w:1024,h:1536}};
+const gallery=document.getElementById('gallery');for(const [view,label] of Object.entries(viewNames)){const f=document.createElement('figure');const c=document.createElement('figcaption');c.textContent=label;const bg=document.createElement('div');bg.className='preview-bg';const i=document.createElement('img');i.className='sprite';i.dataset.view=view;i.width=1024;i.height=1536;bg.append(i);const a=document.createElement('a');a.className='download';a.dataset.view=view;a.textContent=label+' 원본 PNG';f.append(c,bg,a);gallery.append(f)}
+function current(){return subjects[document.getElementById('subject').value]}
+function renderDetail(){const v=document.getElementById('view').value,a=areas[document.getElementById('region').value],z=Number(document.getElementById('zoom').value),img=document.getElementById('detail');img.src=current().views[v];img.style.width=(1024*z)+'px';img.style.height=(1536*z)+'px';img.style.left=(-a.x*z)+'px';img.style.top=(-a.y*z)+'px';img.parentElement.style.width=(a.w*z)+'px';img.parentElement.style.height=(a.h*z)+'px';img.parentElement.parentElement.style.height=Math.min(a.h*z,650)+'px'}
+function renderSubject(){const s=current();for(const i of document.querySelectorAll('.sprite')){i.src=s.views[i.dataset.view];i.alt=s.name+' '+viewNames[i.dataset.view]}for(const a of document.querySelectorAll('.download'))a.href=s.views[a.dataset.view];document.getElementById('source-link').href=s.source;document.getElementById('subject-note').textContent=s.note;renderDetail()}
+document.getElementById('subject').addEventListener('change',renderSubject);for(const id of ['view','region','zoom'])document.getElementById(id).addEventListener('change',renderDetail);
+document.getElementById('background').addEventListener('change',e=>{const value=e.target.value;document.body.dataset.bg=value;document.body.style.setProperty('--art-bg',({light:'#edf0f4',white:'#ffffff',dark:'#20242c',checker:'#f6f7f9'})[value])});
+renderSubject();
+</script></body></html>

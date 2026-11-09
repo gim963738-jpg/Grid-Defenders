@@ -1,0 +1,63 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 2,
+  "role": "characters",
+  "status": "completed_for_review",
+  "scope": "실제게임2D전투참고10안 총10개, 비율변경허용",
+  "outputPaths": {
+    "individualPngs": [
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\01_arknights\\character.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\02_azur_lane\\character.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\03_priconne\\character.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\04_another_eden\\character.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\05_reverse1999\\character.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\06_epic_seven\\character.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\07_counterside\\character.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\08_guardian_tales\\character.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\09_dfo\\character.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\10_odin_sphere\\character.png"
+    ],
+    "gallery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\index.html",
+    "comparison": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\comparison-overview.png",
+    "detailedComparisons": [
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\comparison-1.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\comparison-2.png"
+    ],
+    "manifest": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\asset-manifest.json",
+    "sources": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\sources.json",
+    "qa": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\검수.md",
+    "report": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\report.md"
+  },
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\읽기확인-v002.json",
+    "sha256": "2885820e65990623acadb78640cb5ff0340dfb1a81a658477c40211b509470f2",
+    "startPassed": true
+  },
+  "generation": {
+    "mode": "builtin image_gen",
+    "issued": 12,
+    "confirmedReturned": 12,
+    "finalPngCount": 10,
+    "preservedInitialCandidates": 2,
+    "paidFallbackUsed": false
+  },
+  "checks": {
+    "individualPngsViewed": 10,
+    "officialCombatSourcesViewed": 10,
+    "initialPilotViewed": 3,
+    "lightDarkCompositesViewed": true,
+    "labelsHiddenViewed": true,
+    "small57And72Viewed": true,
+    "rawBytesPreserved": true,
+    "gameIntegration": false,
+    "userAestheticApproval": false,
+    "userUiManipulated": false
+  },
+  "remainingIssues": [
+    "가까운 애니SD/장신 셀 계열은 상대적 스타일 거리가 작고57/72px에서 차이가 줄어듦",
+    "안전여백8% 요청 균일 미달 및 alpha1 미세외곽값; 납품프레이밍/알파정제 미실행",
+    "게임별 원작 비율/렌더링의 정확 복제 보증 없음; 정수리/공식등신/엔진 미실측·미확정",
+    "사용자미적선택/실게임·실기기 검증/통합/공통스타일채택 미실행"
+  ],
+  "previousIteration": "preserved; previous13return-unknown not assumed cancelled or mixed"
+}

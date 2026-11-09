@@ -1,0 +1,39 @@
+{
+  "character": "발로르",
+  "version": 5,
+  "status": "visually_reviewed",
+  "reviewed_at": "2026-11-07T13:58:48.891Z",
+  "main_variant": "unhelmeted",
+  "hand_grip_preset": "one_hand_grip_v1",
+  "views": [
+    "front",
+    "right",
+    "back"
+  ],
+  "checks": {
+    "soft_adult_male_face": true,
+    "blue_silver_palette": true,
+    "round_cape_pins_retained": true,
+    "connecting_cords_removed": true,
+    "anatomical_right_sword_left_shield": true,
+    "large_shield_consistent": true,
+    "right_sword_geometry_corrected": true,
+    "rear_visible_surface": "palm",
+    "rear_right_hand_wraps_handle": true,
+    "background_artifact_removal_requested": true,
+    "native_alpha_preserved": true,
+    "background_artifacts_removed_on_white": true,
+    "full_frame_and_native_hand_review": true
+  },
+  "notes": [
+    "방패 크기의 원문 3/2는 문맥상 인물 높이 약 2/3로 해석해 작업 시작 시 알렸다.",
+    "측면 검은 손잡이와 칼날을 곧게 잇도록 국소 보정을 추가했다.",
+    "후면 오른손은 손바닥 가죽면과 손가락 안쪽을 보이며 손등 판금은 카메라 반대쪽으로 돌렸다."
+  ],
+  "file_verification": "output/characters/gc9_balor/file-verification_v05.json",
+  "user_set_approval": null,
+  "bright_background_evidence": "output/reviews/balor-v05/light-native-qa.png",
+  "file_verification_status": "passed",
+  "browser_verification": "output/characters/catalog/browser-verification.json",
+  "browser_verification_status": "passed"
+}

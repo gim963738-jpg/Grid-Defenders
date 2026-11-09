@@ -1,0 +1,20 @@
+Tool: built-in image_gen. Second pass restores tunic hem and fingerless glove after visual review.
+
+Final repair prompt:
+Small costume continuity correction. IMAGE 1 is the target with the now-correct straight sword arm. IMAGE 2 shows the original clothing details to restore.
+Keep IMAGE 1's sword arm perfectly as it is: relaxed extended elbow, lowered hand and forward screen-right sword. Do not change arm, weapon, face, stance, camera or background.
+Restore the ivory tunic's visible short split HEM PANELS under the two brown waist belts as in IMAGE 2, hanging over upper thighs, rather than black trousers immediately under belts. Preserve belts and pouches.
+Restore the EMPTY LEFT HAND at screen-right to a fingerless leather glove: exposed natural skin-colored fingertips from the finger joints onward as in IMAGE 2, not a full black glove. Keep the same relaxed hand position and correct natural fingers.
+Only these two local clothing details, all else exactly like IMAGE 1.
+
+Initial prompt record:
+Edit target: char003_ingame_concept_v02.png.
+User: 검을 쥐고있는팔은 팔을 핀상태였으면 좋겠어
+Change: Extend sword arm naturally down beside body, lower grip to thigh level; blade continues forward to screen-right. Preserve established style, design and stance. Check shoulder/elbow/wrist continuity and blade-hand connection. Static concept under character specification v1.2; no animation or engine implementation.
+
+Precise local pose edit of the supplied hero concept. The user wants the SWORD-HOLDING RIGHT ARM STRAIGHTENED, while keeping the sword pointing forward.
+
+Replace the bent right elbow/forearm across the waist with a naturally EXTENDED ARM hanging down beside the visible right side of his torso. His shoulder stays relaxed, upper arm and forearm make an almost straight anatomical line, with only a tiny soft elbow bend (roughly 170–175 degrees), not hyperextended. The armored right forearm descends toward his right upper thigh. Move the gripping right hand down to upper-thigh level on viewer-left of his pelvis, rather than at the center of his waist. Clear natural shoulder-elbow-wrist chain, proper arm length, fingers wrapped securely around the same handle. Keep the right forearm guard fitted to the straight forearm.
+From the lowered hand, the sword still projects FORWARD toward SCREEN RIGHT and gently downward, tip ahead of the boots and clear of the ground. Adjust its downward pitch moderately as needed for a comfortable conventional grip: neutral wrist aligned with forearm, handle seated across palm, guard beyond the knuckles, single continuous straight blade. Show the blade in front of the thighs with clear overlapping outlines and adequate clearance, never through the flesh. Do not flip the sword back toward left. Keep same blade length, thickness and hilt.
+Only reposition holding arm/hand/sword and minimally reconstruct adjoining cloth. Preserve the entire rest of the image: same right-facing 3/4 relaxed stance, left arm relaxed by side, young auburn-haired face and gentle smile, body size and proportions, red mantle and settled tails, ivory shirt, asymmetric armor, badge, belts/pouches, dark trousers and boots, dark woodland and grassy ground, game anime style, lighting and landscape framing.
+Check anatomy and object continuity: exactly two arms/hands, five naturally gripped fingers where visible, no duplicate sword, no bent blade, no awkward detached shoulder or wrist. Full sword tip and both boots inside comfortable margins. No text or effects.

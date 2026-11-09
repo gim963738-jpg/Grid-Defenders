@@ -1,0 +1,323 @@
+﻿{
+    "task":  "6종 캐릭터 구성 유지·성별별 비율 재구성",
+    "style_id":  "GC9",
+    "style_version":  "1.1",
+    "generation_tool":  "built-in image_gen",
+    "transparent_background":  false,
+    "background":  "opaque dark charcoal",
+    "expected_image_count":  12,
+    "complete_image_count":  12,
+    "composition":  {
+                        "front":  "Image #2 안정된 정면 전신",
+                        "threequarter":  "다운로드 (11)의 사선 3/4 전신"
+                    },
+    "latest_request_override":  "원본의 머리·의상·장비 구성은 유지. 얼굴·나이감·키·개별 신체 비율은 남성형/여성형 기준으로 재구성. 생성된 정면 디자인은 사선에서 유지.",
+    "entries":  [
+                    {
+                        "id":  "c01_front",
+                        "character":  "c01",
+                        "label":  "은발 검·방패",
+                        "body_standard":  "여성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "front",
+                        "output_file":  "images/c01_front.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-9042fff6-1afb-462b-bd04-4966502bc21e.png",
+                        "prompt":  "Use case: stylized-concept. Generate ONE new finished 2D anime fantasy-game female character illustration, full-body FRONT VIEW, portrait 2:3, preferably 1024x1536.\n\nINPUT ROLES in order:\n1 = equipment/hair/palette DESIGN COMPONENTS ONLY. Extract this silver-haired sword-and-shield character\u0027s costume and recognizable components; do NOT preserve this source face, thick comic outlines, anatomy, cropped composition or rendering.\n2 = Edel STYLE reference: clean thin anime contour lines, face simplification, coherent hair locks, readable cel shading.\n3 = Bram MATERIAL reference: connected silver/ivory full plate with restrained faceted highlights. Do NOT import his male body, blond hair, blue costume or sword design.\n4 = FRONT COMPOSITION only: upright straight-on head-to-feet neutral stance. No borrowing her hair, flowers, robe or female facial identity.\n\nCHARACTER COMPONENTS TO KEEP: silver-white long hair with a visible side braid and interwoven braids; gold star and small round hair clips; a dangling gold star earring. White/ivory heavy armor with gold borders and star/cross motifs, dark charcoal flexible underlayers, layered shoulder plates, gauntlets, a dark gold-patterned waist/tabard with parchment prayer strips, a belt with keys and small chains. One gold/ivory straight sword in her right hand, held lowered; one large angular white-and-gold shield on her left arm with the prominent gold winged-bird emblem. Preserve this shield silhouette and emblem, and the gold star chest motif; retain the small mint edge accent very subtly. Finish her lower legs and armored boots coherently because source is cropped. This is one warrior, no other characters.\n\nREBUILD ALL ANATOMY: the shared STANDARD ADULT FEMALE game-anime body, around 7.5 heads tall, small head, long legs, slim but credible armored torso, narrower shoulders and lighter build than a male, normal hands. Newly drawn anime facial geometry like the style reference\u0027s visual language, calm self-possessed expression, small nose and mouth, clear upper eyelids, silver-gray irises. Do not trace the source face or preserve its individual head-to-body proportions. Not a child, not SD/chibi. This request standardizes gender-specific proportions and preserves design components only.\n\nRENDERING: fine clean tapered linework; crisp silhouette and overlaps; broad cel-shaded base and shadow planes, selective soft gradients only within planes; skin softly shaded, hair in large tapered locks, fabric matte, metallic edges sharp but not photorealistic. Reduce tiny engraving to intentional readable ornament without losing the stars, bird shield, cross and parchment-strip motifs. NO thick black comic outlines, noisy etched textures, 3D gloss or painterly realism. Match image 2/3\u0027s drawn style rather than image 1\u0027s style.\n\nFRAMING: true straight-on full body. Shoulders, face, hips, knees face camera; two feet planted, arms down enough for a neutral standing presentation. Sword and shield at either side without concealing the face, waist or both legs. All hair, sword tip, shield edges and both boots fully visible, with margins. No combat pose, no perspective shortening. Use a consistent flat charcoal background #202020 like image 4; no halo, scenic background, text or extra particles. A shared ground line near 95% canvas height. Female anatomy from crown of hair to sole about 82% of the frame (slightly shorter than a tall male in the same set); do not fill frame with an oversized bust. ONE VIEW ONLY, no turnaround sheet, no text, no watermark.",
+                        "references_in_order":  [
+                                                    "inputs/c01_design_silver_shield.png",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F01_Edel.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+                                                    "inputs/pose_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1801783,
+                        "sha256":  "00b1740adc9999511953567c2e2801df0b3def55b1aa4cea83724d18968c7dcb"
+                    },
+                    {
+                        "id":  "c01_threequarter",
+                        "character":  "c01",
+                        "label":  "은발 검·방패",
+                        "body_standard":  "여성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "threequarter",
+                        "output_file":  "images/c01_threequarter.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-eb61b840-5cf4-4551-81e8-0aa719b4e648.png",
+                        "prompt":  "Use case: stylized-concept / consistent alternate-view illustration.\nGenerate ONE full-body THREE-QUARTER view of the SAME adult female character in image 1, portrait 2:3 preferably 1024x1536.\nImage 1 is the GENERATED FRONT DESIGN MASTER, defining this character\u0027s new face, standard adult female body, hairstyle, outfit and equipment. Preserve these exactly.\nImage 2 is the original DESIGN COMPONENTS reference only. It must not reintroduce the original face, age impression, body proportions, action pose or painting style.\nImage 3 is THREE-QUARTER COMPOSITION ONLY: use the calm full-body oblique standing camera angle, about 35-45 degrees off frontal toward the image\u0027s left. Do not copy its person\u0027s blue hair, face, costume, weapon or body.\nImage 4 is drawing STYLE ONLY: fine clean anime linework, clear upper eyelids, small nose/mouth, large coherent hair locks, crisp cel-shadow boundaries, soft restrained skin, matte fabric, selective faceted metal reflections. No 3D look, photographic noise, thick comic outlines or painterly realism.\nBody stays the STANDARD ADULT FEMALE used in image 1, around 7.5 heads, long legs, narrow shoulders, same height, same face and expression. Whole body rotates: shoulder axis, chest, pelvis, knees, boots AND head all turn consistently. Near shoulder wider and far shoulder recedes, side of torso visible. Clearly not a second frontal, not only a head turn, not a pure 90-degree profile, not a back view. Both feet planted; hands and equipment held naturally at the sides with no combat action.\nUse exactly the same charcoal backdrop and similar character scale/ground baseline as image 1. Entire hair/ornament/halo if present, hands, weapon ends, cloth ends and both feet visible with margin. No caption, watermark, UI, extra person or extra view. Do not mirror the character\u0027s left/right equipment. No added weapons/effects/props. Only angle, natural cloth/limb positioning and required occlusion can change.\nSPECIFIC DESIGN LOCK: silver-white long hair and braided side, gold star/round hair pins and star earring; ivory/gold segmented full plate and dark underlayer, star chest motif, central dark-and-gold tabard, parchment prayer strips, waist chains and keys, same armored boots. Exactly ONE lowered gold/ivory sword in her RIGHT hand and ONE large white/gold angular shield on her LEFT forearm with the winged bird emblem. Let the shield tilt plausibly with her left arm in the 3/4 view while keeping its emblem visible and not covering the face or the whole body. Sword tip fully inside frame. Preserve color and engraving complexity from front master, not original\u0027s thick outline. Do not add halo or magical background.",
+                        "references_in_order":  [
+                                                    "images/c01_front.png",
+                                                    "inputs/c01_design_silver_shield.png",
+                                                    "inputs/pose_threequarter.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F01_Edel.jfif"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1989004,
+                        "sha256":  "356db006ee341b21bdb9ba4b034dd1d98c577403ff881e2355740f60bb84c797"
+                    },
+                    {
+                        "id":  "c02_front",
+                        "character":  "c02",
+                        "label":  "흰 단발·별자리 망토",
+                        "body_standard":  "여성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "front",
+                        "output_file":  "images/c02_front.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-c88611d9-f3d3-45bb-8b4b-d139a5115e8f.png",
+                        "prompt":  "Use case: stylized-concept. ONE finished 2D anime fantasy-game character illustration. FRONT full-body view, portrait 2:3, 1024x1536 preferred.\nInput image 1 is DESIGN COMPONENTS ONLY, NOT body, age, face or rendering. Image 2 (Edel) is the drawing/style language, clean facial rendering and cel shading. Image 3 (Lapis) is secondary style for readable stars, bright expression, light cloth and navy patterned fabric. Image 4 is FRONT STANDING COMPOSITION ONLY. Do not borrow any costume/hair from images 2-4.\nTransform image 1\u0027s costume into a STANDARD ADULT FEMALE of about 7.5 heads tall, normal small adult head, long legs, slim adult torso, narrower shoulders than a male, standard normal hands. Discard the original toddler/chibi proportions, baby face, huge head, mitten-scale hands, floating/kicking pose and thick sticker outlines. The subject must clearly read as a young ADULT WOMAN in a game-anime cast, not a child or a chibi.\nKEEP DESIGN: short silver-white layered bob with swept fringes and pointed outward hair locks; one dark navy four-point star hair clip; the small tilted warm bronze/gold halo ring over head with its little cross/star crest. Ivory/white one-piece fantasy outfit with rose-gold/bronze angular collar/shoulder details, bronze star/triangle chest motif, matching broad rose-gold cuffs and gloved hands, ivory-and-bronze ankle boots. Preserve the dark navy scarf and small navy-to-blue cape with pale blue constellation lines and tiny stars, two tapered cape tails. Rebuild these same clothing components to fit adult anatomy; do not import a new dress, long trousers, large weapons or the style reference costumes. Keep the recognizable white, warm rose-gold and navy palette, lavender-blue eyes, adult anime facial design with simplified nose/mouth and bright but modest smile.\nSTYLE: fine clean tapered anime linework with crisp contours; large coherent tapered hair locks; broad clean base and shadow planes, modest smooth transitions only inside planes; soft restrained skin, matte ivory fabric and scarf, sharp selective bronze highlights. Refined clean 2D cel-shaded game illustration like images 2/3; no 3D render, photorealism, heavy comic outline or painterly noise. Stars and constellations stay on the cape, not scattered across the whole background.\nFRONT POSE: shoulders, face, torso, hips and knees directly toward camera, both feet planted naturally, arms hanging slightly away from torso and both hands readable. No running, flight or baby-like knee-up pose. Entire body, halo, cape tips and both boots fully visible with margins, no cropping. Full head-to-toe neutral presentation like image 4, only the composition from that image.\nFlat dark charcoal background #202020, no floor line, scenery, atmosphere, text, logos, watermark, particle cloud or additional character. Shared ground baseline near 95% frame. Adult female crown-to-soles occupies about 82% of frame; allow extra space for her floating halo. One character, one front view, not a multi-view sheet.",
+                        "references_in_order":  [
+                                                    "inputs/c02_design_white_halo.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F01_Edel.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/A02_Lapis.jfif",
+                                                    "inputs/pose_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1466510,
+                        "sha256":  "15cb29a7b487b74eedb529eabacba5a6be291c77bd5f33d5a005a4114d5e73ba"
+                    },
+                    {
+                        "id":  "c02_threequarter",
+                        "character":  "c02",
+                        "label":  "흰 단발·별자리 망토",
+                        "body_standard":  "여성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "threequarter",
+                        "output_file":  "images/c02_threequarter.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-7bbfeb56-33dd-436c-bc84-9cddfc79cec2.png",
+                        "prompt":  "Use case: stylized-concept / consistent alternate-view illustration.\nGenerate ONE full-body THREE-QUARTER view of the SAME adult female character in image 1, portrait 2:3 preferably 1024x1536.\nImage 1 is the GENERATED FRONT DESIGN MASTER, defining this character\u0027s new face, standard adult female body, hairstyle, outfit and equipment. Preserve these exactly.\nImage 2 is the original DESIGN COMPONENTS reference only. It must not reintroduce the original face, age impression, body proportions, action pose or painting style.\nImage 3 is THREE-QUARTER COMPOSITION ONLY: use the calm full-body oblique standing camera angle, about 35-45 degrees off frontal toward the image\u0027s left. Do not copy its person\u0027s blue hair, face, costume, weapon or body.\nImage 4 is drawing STYLE ONLY: fine clean anime linework, clear upper eyelids, small nose/mouth, large coherent hair locks, crisp cel-shadow boundaries, soft restrained skin, matte fabric, selective faceted metal reflections. No 3D look, photographic noise, thick comic outlines or painterly realism.\nBody stays the STANDARD ADULT FEMALE used in image 1, around 7.5 heads, long legs, narrow shoulders, same height, same face and expression. Whole body rotates: shoulder axis, chest, pelvis, knees, boots AND head all turn consistently. Near shoulder wider and far shoulder recedes, side of torso visible. Clearly not a second frontal, not only a head turn, not a pure 90-degree profile, not a back view. Both feet planted; hands and equipment held naturally at the sides with no combat action.\nUse exactly the same charcoal backdrop and similar character scale/ground baseline as image 1. Entire hair/ornament/halo if present, hands, weapon ends, cloth ends and both feet visible with margin. No caption, watermark, UI, extra person or extra view. Do not mirror the character\u0027s left/right equipment. No added weapons/effects/props. Only angle, natural cloth/limb positioning and required occlusion can change.\nSPECIFIC DESIGN LOCK: this is now the adult redesign in image 1, NOT the original chibi. Keep the short white/silver layered bob, navy four-point hair clip, tilted rose-gold halo with cross/star crest above head, navy scarf, ivory one-piece costume with bronze/rose-gold panels and chest motif, angular rose-gold shoulder/cuff/hip armor, white gloves and ivory/bronze ankle boots. Preserve adult body and face in image 1; never return to toddler proportions, oversized head, oversized mittens or floating knee-up stance. Navy-to-blue constellation cape has the same paired tapered tails, with constellation lines and stars visible on naturally exposed fabric. Empty hands at sides. No weapon, no added skirt/trousers, no new ornaments. Halo rotates with the head but remains recognizably the same thin tilted ring. Full halo and both boots in frame.",
+                        "references_in_order":  [
+                                                    "images/c02_front.png",
+                                                    "inputs/c02_design_white_halo.jfif",
+                                                    "inputs/pose_threequarter.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F01_Edel.jfif"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1501345,
+                        "sha256":  "3c4f1a2bc3c10bd138edaf5ba3ed7c91d2e9fe77d807ca94f917bec43435bcb0"
+                    },
+                    {
+                        "id":  "c03_front",
+                        "character":  "c03",
+                        "label":  "갈색 머리·청록 궁수",
+                        "body_standard":  "여성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "front",
+                        "output_file":  "images/c03_front.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-5ec570ee-f1a3-432c-ae8f-e59d5a3f5ff5.png",
+                        "prompt":  "Use case: stylized-concept. Generate ONE polished 2D anime fantasy-game adult female archer illustration, straight-on FRONT full body, portrait 2:3 preferably 1024x1536.\nInput order: 1 = DESIGN COMPONENTS ONLY (brown-haired teal/gold archer); 2 = Edel, PRIMARY DRAWING STYLE/face simplification/cel shading; 3 = Lire, SECONDARY MATERIAL/organic bow readability only; 4 = front pose COMPOSITION ONLY. Ignore source 1\u0027s painted realism, anatomy and individual facial likeness. Never copy the blonde hair/green outfit of source 3 or robe/flower of source 4.\nMaintain the design inventory from source 1: long dark brown flowing hair and a blue/cyan feather hair ornament attached with a small gold fitting, teal green fitted long-sleeve split tunic/dress with its white/cream chest inset, gold leaflike neckline and pointed shoulder armor, dark gloves/bracers, slender gold botanical trim, waist belt details and asymmetric long teal fabric panels, black thigh-high boots with dark green sections and gold leaf-shaped knee/shin plates and pointed toe guards. One large ornate dark bronze-and-gold recurve bow, real taut bowstring, its characteristic long swept angular limbs and small blue tassel; no extra weapons. Keep these components and colors recognizably distinct from the style references.\nREBUILD to the shared STANDARD ADULT FEMALE: about 7.5 heads tall, long legs, normal small head, narrow refined shoulders, slim but credible torso, normal hands. Create a new clean anime face with clear upper eyelids, small simplified nose/mouth, calm attentive expression; do not retain the original realistic face geometry or unusual individual height/body proportions. Preserve appropriate coverage and all costume layers, with no added revealing cuts.\nFine crisp tapered 2D anime lines, larger hair locks with selective interior strands, coherent broad cel-shaded color/shadow planes, soft restrained skin, matte teal fabric, sharp selective gold metal facets. The target is the drawing style of images 2/3, not source 1\u0027s 3D/painterly realism. No photographic material noise, thick comic outlines or plastic skin.\nNeutral straight-on standing composition: face, shoulders, torso, hips and knees face camera, feet planted. Arms generally lowered; right hand loosely holds the bow at her side so its complete silhouette and taut string remain visible, left hand relaxed by the other side. No hand-on-hip contrapposto, drawing an arrow, action pose or dramatic camera angle. Bow, hair ornament, hair ends and both feet fit inside frame, no cropping.\nPlain dark charcoal #202020 backdrop like image 4; no scenery, text, watermark, floor line or magical effects. Shared ground baseline about 95% image height, female crown-to-soles about 82% of canvas so she reads slightly shorter than the male of the set. One character and ONE VIEW only.",
+                        "references_in_order":  [
+                                                    "inputs/c03_design_green_archer.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F01_Edel.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F04_Lire.jfif",
+                                                    "inputs/pose_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1545142,
+                        "sha256":  "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+                    },
+                    {
+                        "id":  "c03_threequarter",
+                        "character":  "c03",
+                        "label":  "갈색 머리·청록 궁수",
+                        "body_standard":  "여성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "threequarter",
+                        "output_file":  "images/c03_threequarter.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-fd5e775f-3882-4636-8cea-4e7b473fda69.png",
+                        "prompt":  "Use case: stylized-concept / consistent alternate-view illustration.\nGenerate ONE full-body THREE-QUARTER view of the SAME adult female character in image 1, portrait 2:3 preferably 1024x1536.\nImage 1 is the GENERATED FRONT DESIGN MASTER, defining this character\u0027s new face, standard adult female body, hairstyle, outfit and equipment. Preserve these exactly.\nImage 2 is the original DESIGN COMPONENTS reference only. It must not reintroduce the original face, age impression, body proportions, action pose or painting style.\nImage 3 is THREE-QUARTER COMPOSITION ONLY: use the calm full-body oblique standing camera angle, about 35-45 degrees off frontal toward the image\u0027s left. Do not copy its person\u0027s blue hair, face, costume, weapon or body.\nImage 4 is drawing STYLE ONLY: fine clean anime linework, clear upper eyelids, small nose/mouth, large coherent hair locks, crisp cel-shadow boundaries, soft restrained skin, matte fabric, selective faceted metal reflections. No 3D look, photographic noise, thick comic outlines or painterly realism.\nBody stays the STANDARD ADULT FEMALE used in image 1, around 7.5 heads, long legs, narrow shoulders, same height, same face and expression. Whole body rotates: shoulder axis, chest, pelvis, knees, boots AND head all turn consistently. Near shoulder wider and far shoulder recedes, side of torso visible. Clearly not a second frontal, not only a head turn, not a pure 90-degree profile, not a back view. Both feet planted; hands and equipment held naturally at the sides with no combat action.\nUse exactly the same charcoal backdrop and similar character scale/ground baseline as image 1. Entire hair/ornament/halo if present, hands, weapon ends, cloth ends and both feet visible with margin. No caption, watermark, UI, extra person or extra view. Do not mirror the character\u0027s left/right equipment. No added weapons/effects/props. Only angle, natural cloth/limb positioning and required occlusion can change.\nSPECIFIC DESIGN LOCK: long dark brown hair, blue/cyan feather hair ornament and gold fitting in the same location, the same calm teal-eyed face, pointed ears if visible in front master, teal fitted long-sleeve split tunic with white chest inset, gold leafy collar and shoulder plates, dark bracers/gloves, bronze waist fittings, long asymmetrical teal/gold panels, black thigh-high boots with green and gold leaflike knee guards/toe caps. ONE ornate long dark bronze-and-gold recurve bow with the same sculpted curved limbs, thin taut string and blue tassel, held by the RIGHT hand down at the side. Show full bow silhouette in the rotated view and keep the string connected to both ends. No nocked arrow and no added quiver. Cloth remains a tunic, not a new robe. Metal and pattern details must match image 1.",
+                        "references_in_order":  [
+                                                    "images/c03_front.png",
+                                                    "inputs/c03_design_green_archer.jfif",
+                                                    "inputs/pose_threequarter.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F01_Edel.jfif"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1695102,
+                        "sha256":  "15448ca81c1c5ecc226993f403151fb70aa8b3d532549d368262e395a0374b95"
+                    },
+                    {
+                        "id":  "c04_front",
+                        "character":  "c04",
+                        "label":  "은발·은빛 갑옷 궁수",
+                        "body_standard":  "여성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "front",
+                        "output_file":  "images/c04_front.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-4e5ddb75-543c-4de5-92bf-499cc8dbe2c5.png",
+                        "prompt":  "Use case: stylized-concept. Produce ONE polished 2D anime fantasy-game ADULT FEMALE archer, straight-on FRONT full-body neutral view, portrait 2:3 preferably 1024x1536.\nInput 1 = SOURCE DESIGN COMPONENTS ONLY: silver-haired blue/silver armored archer. Do not copy source 1\u0027s individual face, anatomy, action pose or rendering. Input 2 = Edel PRIMARY DRAWING STYLE, clean face simplification and cel-shaded form. Input 3 = Bram MATERIAL reference for coherent silver plate construction only, not his male body or costume. Input 4 = FRONT COMPOSITION ONLY; do not copy her blonde hair, floral pin or robe.\nUse the shared STANDARD ADULT FEMALE anatomy: about 7.5 heads tall, small normal adult anime head, long legs, narrower shoulders and lighter torso than a male, regular hands. Her new clean game-anime face has clear blue irises, defined upper eyelids, small nose/mouth, calm focused expression. Keep anatomy and facial rendering in the target standard rather than the source character\u0027s particular age impression or height.\nKEEP INVENTORY FROM IMAGE 1: long pale silver/white hair tied into a high sweeping ponytail with saturated cobalt-blue ribbons/strands. Dark blue/black pointed feather/flower-like hair ornament and small white frilled hair accessory. Cool silver full armor with layered raised shoulder plates, silver forearm guards/gauntlets, a dark charcoal and white fitted torso, white/silver plate panels over the thighs and lower legs, cobalt/navy hip cloth and short layered white ruffled underskirt/trim. Navy-and-white draped back/hip panels with delicate geometric decoration. One dark cool-silver recurve bow with thin taut string and small cyan accents; preserve the source bow\u0027s narrow angular limbs and blue/white palette, not a gold/green bow. Keep the differentiated silver metal, white frill and dark blue cloth. NO extra shield, sword or quiver not present in source.\nRENDERING: match input 2\u0027s fine crisp anime linework and large separated cel-shaded planes; logical metal plate overlaps and selective sharp highlights like input 3, broad matte fabric shadows, soft skin, large tapered hair locks. Avoid painterly realism, 3D metallic phototexture, overly glossy skin, thick sticker outline, excessive microengraving or huge magical glow.\nFRONT: face, shoulder line, torso, hips and knees square to camera. Stable two-foot standing posture like input 4. Arms relaxed and slightly apart, one hand holds the un-drawn bow down at the side so both limbs and string remain readable. No drawn arrow, forward lunging, hair flying in a combat vortex, foreshortening or dynamic camera angle. Ponytail, bow tips and both boots entirely inside frame with breathing room.\nConsistent flat charcoal #202020 background; no scenery, floor line, particles, energy halo, UI, text, watermark, extra figure or multiple views. Shared ground baseline near 95% image height, adult female crown-to-soles about 82% of the canvas. One character, one front view only.",
+                        "references_in_order":  [
+                                                    "inputs/c04_design_silver_archer.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F01_Edel.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+                                                    "inputs/pose_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1643944,
+                        "sha256":  "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+                    },
+                    {
+                        "id":  "c04_threequarter",
+                        "character":  "c04",
+                        "label":  "은발·은빛 갑옷 궁수",
+                        "body_standard":  "여성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "threequarter",
+                        "output_file":  "images/c04_threequarter.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-d3b61d7f-99c7-4e91-857a-499cd62fcb19.png",
+                        "prompt":  "Use case: stylized-concept / consistent alternate-view illustration.\nGenerate ONE full-body THREE-QUARTER view of the SAME adult female character in image 1, portrait 2:3 preferably 1024x1536.\nImage 1 is the GENERATED FRONT DESIGN MASTER, defining this character\u0027s new face, standard adult female body, hairstyle, outfit and equipment. Preserve these exactly.\nImage 2 is the original DESIGN COMPONENTS reference only. It must not reintroduce the original face, age impression, body proportions, action pose or painting style.\nImage 3 is THREE-QUARTER COMPOSITION ONLY: use the calm full-body oblique standing camera angle, about 35-45 degrees off frontal toward the image\u0027s left. Do not copy its person\u0027s blue hair, face, costume, weapon or body.\nImage 4 is drawing STYLE ONLY: fine clean anime linework, clear upper eyelids, small nose/mouth, large coherent hair locks, crisp cel-shadow boundaries, soft restrained skin, matte fabric, selective faceted metal reflections. No 3D look, photographic noise, thick comic outlines or painterly realism.\nBody stays the STANDARD ADULT FEMALE used in image 1, around 7.5 heads, long legs, narrow shoulders, same height, same face and expression. Whole body rotates: shoulder axis, chest, pelvis, knees, boots AND head all turn consistently. Near shoulder wider and far shoulder recedes, side of torso visible. Clearly not a second frontal, not only a head turn, not a pure 90-degree profile, not a back view. Both feet planted; hands and equipment held naturally at the sides with no combat action.\nUse exactly the same charcoal backdrop and similar character scale/ground baseline as image 1. Entire hair/ornament/halo if present, hands, weapon ends, cloth ends and both feet visible with margin. No caption, watermark, UI, extra person or extra view. Do not mirror the character\u0027s left/right equipment. No added weapons/effects/props. Only angle, natural cloth/limb positioning and required occlusion can change.\nSPECIFIC DESIGN LOCK: silver-white high ponytail with the same blue ribbons/strands, dark navy pointed hair ornament and small white frilled hair accessory; cool silver plate cuirass, raised layered pauldrons, forearm guards and gauntlets, dark navy underlayer, blue/white hip panels and characteristic white layered ruffle trim, full silver thigh/knee/shin armor and same pointed armored boots. ONE narrow cool silver/charcoal recurve bow with blue accents and taut string held by the LEFT hand (the hand shown holding it in front master); do not change hands or turn it into the other archer\u0027s gold bow. Preserve her new blue-eyed adult anime face from image 1, not source image 2\u0027s face or action pose. Ponytail drapes naturally in the new angle with all ends inside frame. No drawn arrow, no shield/sword, no action pose.",
+                        "references_in_order":  [
+                                                    "images/c04_front.png",
+                                                    "inputs/c04_design_silver_archer.jfif",
+                                                    "inputs/pose_threequarter.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F01_Edel.jfif"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1783573,
+                        "sha256":  "712d33a525be4f59a66fbabe884a33cc77205d6e00a9334fb31a8d362641761e"
+                    },
+                    {
+                        "id":  "c05_front",
+                        "character":  "c05",
+                        "label":  "은빛 투구·청색 망토 기사",
+                        "body_standard":  "남성형",
+                        "body_standard_basis":  "사용자 지정",
+                        "view":  "front",
+                        "output_file":  "images/c05_front.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-9c1812ff-4668-477d-a3d2-6d9209a9719e.png",
+                        "prompt":  "Use case: stylized-concept.\nCreate ONE finished 2D anime fantasy-game character illustration, one full-body male character, straight-on FRONT VIEW, portrait 2:3 canvas, preferably 1024x1536. This is the male entry in a consistent character redesign set.\n\nINPUT ROLES in attached order:\n1) Design-components source only: retain the silver thorned full-closed helmet, angular engraved silver/steel full plate armor, pale silver/white hair emerging beneath helmet, ragged deep royal/navy-blue cloak/scarf, small antique-gold/bronze leaflike brooches and waist fittings. It is NOT a face/anatomy/painting-style reference.\n2) Bram: drawing/rendering STYLE and connected full plate construction only.\n3) Ronan: clean anime linework, broad male armored shoulders, organized cel shading only. Do not copy his face, blue hair, sword or costume.\n4) Front composition only: neutral straight-on head-to-toe standing pose with both feet fully visible. Do not copy this woman\u0027s design, anatomy or clothing.\n\nNEW STANDARD MALE BODY: tall young-adult male, about 8 heads tall, wider angular shoulder line, straight masculine torso, defined but lean musculature under armor, long legs, normal hands. The source\u0027s cropped body or exaggerated anatomy must not determine proportions. Keep helmet closed: NO invented exposed face or eyes. Empty gauntleted hands at his sides; no weapon is present in the design source, so do not add a sword or shield.\nFinish the unseen lower body logically using the same silver segmented cuisses, knee plates, shin armor and pointed armored boots; extend the blue torn cloak to the lower legs. Simplify engraving into deliberate readable motifs without deleting characteristic spikes, overlapping plates, brooches and ragged blue cloth.\n\nSTYLE: match the clean polished 2D anime illustration language of images 2 and 3. Fine crisp tapered contour lines, clear shape overlaps, broad separated base-color and shadow planes, restrained cool gradients inside metal planes, sharp but selective metallic highlights, matte cloth shadows. No photorealistic metallic microtexture, no sketch hatching, no thick comic-book outlines, no painterly brush noise, no 3D look. A controlled silver/charcoal/deep cobalt palette with small bronze accents. Preserve recognizable source components while rebuilding anatomy in the target male standard.\n\nCOMPOSITION: exactly frontal neutral model-sheet-like full-body standing. Faceplate, torso, hips and both knees oriented to camera, two feet planted, arms slightly separated from torso. Head, tallest helmet spike, both hands, entire boots and all cloak tips fully inside frame with breathing room. Avoid dramatic perspective or combat pose. Camera at torso height, no foreshortening. Use a flat dark charcoal background like image 4, no floor, no scenery, no halos or extra effects.\nUse a shared ground baseline near 95% canvas height. Male figure from helmet crest to feet should occupy about 88% of canvas height and read taller/broader than the adult female standard in the rest of this set.\nNo text, captions, panels, turnarounds, watermark, logos, additional figures or extra weapons. ONE IMAGE, ONE VIEW.",
+                        "references_in_order":  [
+                                                    "inputs/c05_design_blue_knight.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+                                                    "inputs/pose_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1677898,
+                        "sha256":  "e313100fa85b8163e81eaabe1f48e499cc2e3e97383bd74b247278276b7e4345"
+                    },
+                    {
+                        "id":  "c05_threequarter",
+                        "character":  "c05",
+                        "label":  "은빛 투구·청색 망토 기사",
+                        "body_standard":  "남성형",
+                        "body_standard_basis":  "사용자 지정",
+                        "view":  "threequarter",
+                        "output_file":  "images/c05_threequarter.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-4f42056f-8cae-4d79-b192-7779a56f1036.png",
+                        "prompt":  "Use case: stylized-concept / consistent alternate-view illustration.\nGenerate ONE full-body THREE-QUARTER VIEW of exactly the same male armored character in input 1. Portrait 2:3, preferably 1024x1536.\nInput 1 is the GENERATED FRONT DESIGN MASTER: keep this exact helmet, crest, silver hair, overlapping silver plate design, bronze brooches, deep cobalt ragged cloak, waist panels, knee/shin plates and boots. This image now defines the character\u0027s outfit, proportions and rendering.\nInput 2 is the ORIGINAL COMPONENT SOURCE to clarify original silver thorns, pale hair, ripped blue cloth and bronze metal details only.\nInput 3 is the THREE-QUARTER COMPOSITION reference only. Match its calm oblique full-body standing camera angle, around 35-45 degrees off frontal toward the image\u0027s left. Do not copy her gender, face, blue hair, white/gold outfit, polearm, posture gesture or color palette.\nInput 4 is STYLE reference only: retain fine clean anime linework, broad coherent cel shading, cool silver plate planes, matte blue cloth, selective hard highlights, no photorealistic textures.\nKeep STANDARD ADULT MALE build: tall about 8 heads, wider masculine shoulders and straight long torso, long legs, same body size as input 1. Preserve closed helmet and concealed face; do not add exposed eyes/face. Empty gauntleted hands, no new weapons.\nRotate the WHOLE standing figure, including helmet, shoulder axis, chest, pelvis, knees and boots to the same oblique angle. This must visibly differ from frontal: near shoulder/pelvis wider, far shoulder recedes; see one side of the chest and helmet while enough front armor remains readable. Not a pure 90-degree profile and not just a head turn. Both feet stay planted; near arm slightly away from torso, hands naturally lowered so armor is visible. Cloak hangs with small controlled movement; do not mirror or change the asymmetric brooch/cloak side.\nMaintain identical scale, shared ground baseline near 95%, entire tallest helmet spike, cloak ends, both hands and boots in frame. Flat charcoal background to match input 1, no environment/floor line/effects, no text, panels, watermark, multiple people or extra views. Only the viewing angle and naturally required occlusions may change.",
+                        "references_in_order":  [
+                                                    "images/c05_front.png",
+                                                    "inputs/c05_design_blue_knight.jfif",
+                                                    "inputs/pose_threequarter.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1623441,
+                        "sha256":  "59624b93b3d2bffa0899ddfcea15e8f99d586823e315e56007fba81e772b7457"
+                    },
+                    {
+                        "id":  "c06_front",
+                        "character":  "c06",
+                        "label":  "금발·흰 갑옷 기사",
+                        "body_standard":  "남성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "front",
+                        "output_file":  "images/c06_front.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-ba3692ff-f1a4-43f9-84e2-1b76f334c858.png",
+                        "prompt":  "Use case: stylized-concept. ONE finished 2D anime fantasy-game MALE character, straight-on FRONT full body, portrait 2:3 preferably 1024x1536, matching an existing redesign set.\n\nINPUT ROLES: 1 = ORIGINAL DESIGN COMPONENTS ONLY (blond armored man with white fur collar/red-lined cape). Extract hair, colors, costume and accessories; do not copy his individual face, original body ratios, sketchlike low-detail rendering, cropped view or hand-across-chest pose.\n2 = Myst PRIMARY STYLE for male anime face simplification, fine linework, hair grouping and clean cel shading. Do not copy white hair, purple outfit or costume.\n3 = Bram MATERIAL/STYLE for connected pale silver/ivory plate and restrained metal reflection. Do not import his blue accents or sword.\n4 = FRONT COMPOSITION ONLY, neutral head-to-toes standing posture; do not copy this woman\u0027s gender/body/robe/hair.\n\nKEEP DESIGN INVENTORY: short tousled golden-blond hair with a clearly visible saturated RED streak running through the front fringe and a small blond braid hanging forward at his right side. Red irises, but newly designed standard clean adult male anime facial geometry, composed confident expression rather than tracing the original smirk. Pale silver/white full plate cuirass, layered shoulders, segmented forearm guards and gauntlets, delicate gold borders and a few gold chest flourishes, gold-trimmed high neck armor. Deep red glove fabric visible between finger plates. Large white fur collar and white cloak with deep red lining, fine gold trim, red twisted cord and dark cross/clover-shaped clasp on his left shoulder. A broad muted-red hip belt/sash decorated with prominent gold sun medallions and small star motifs, pale armor skirt/tassets and muted-red fabric between them. Preserve the long narrow pale rectangular hanging belt accessory/scabbard silhouette at his right hip. Empty hands; do not add an unsheathed sword, staff or shield. Finish the cropped lower body with matching pale plate thighs, knees, shins and pointed armored boots using the same gold trim and red underlayer.\n\nSTANDARD MALE ANATOMY: tall adult male about 8 heads, broader shoulders and straighter torso than adult female models, lean strong build and long legs, normal hands. New male face using the target rendering language, simplified nose and mouth, clear upper eyelids. Standardize height and proportions rather than preserving source anatomy/personality.\nClean crisp tapered anime contours, coherent broad hair locks, feather/fur grouped into large pointed layers, big separated cel-shadow planes with limited soft gradients inside material planes. Subtle warm gold metal against cool white plate, matte dark red cloth, clean soft skin. No photo-realism, heavy hatching, flat unfinished sketch coloring, noisy microtexture or 3D gloss.\n\nFRONT VIEW: shoulders, face, chest, hips, knees all square to camera, both feet planted, both arms lowered slightly away from torso and hands empty. Do not keep the crossed-up hand pose. Cloak naturally hangs behind and to the sides, fur and the red lining readable. Entire top hair tuft, braid, cloak tips, hands and both armored boots inside frame with margins. Flat dark charcoal #202020 background matching the set; no floor line, environment, glow, particles, text, watermark or extra people. Male crown-to-soles about 88% frame height, shared ground baseline near 95%, taller/broader read than female standard. One character and ONE view only.",
+                        "references_in_order":  [
+                                                    "inputs/c06_design_blond_knight.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/M01_Myst.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+                                                    "inputs/pose_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1712992,
+                        "sha256":  "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+                    },
+                    {
+                        "id":  "c06_threequarter",
+                        "character":  "c06",
+                        "label":  "금발·흰 갑옷 기사",
+                        "body_standard":  "남성형",
+                        "body_standard_basis":  "원본 외형과 대화 기준",
+                        "view":  "threequarter",
+                        "output_file":  "images/c06_threequarter.png",
+                        "status":  "generated",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-0a226e8b-1256-4fc8-a482-b49eea085f66.png",
+                        "prompt":  "Use case: stylized-concept / consistent alternate-view illustration. Generate ONE full-body THREE-QUARTER view of EXACTLY THE SAME adult male knight as input 1. Portrait 2:3 preferably 1024x1536.\nInput 1 = GENERATED FRONT DESIGN MASTER: retain its new standard male face, red eyes, blond hair with red front streaks and one small blond braid, white/silver/gold full plate design, white fur collar, red-lined white cape, chest disc chain, red cord with dark cross/clover shoulder clasp, sun-medallion red belt, red glove fabric, long pale hanging hip accessory and matching full armored boots.\nInput 2 = ORIGINAL DESIGN COMPONENTS only, not face, anatomy or original hand-across-chest action.\nInput 3 = THREE-QUARTER COMPOSITION ONLY: calm oblique full-body standing around 35-45 degrees off frontal toward the image\u0027s left. Do not copy its person\u0027s female anatomy, blue hair, outfit or polearm.\nInput 4 = MYST drawing STYLE only: fine clean anime linework, broad cel shadow planes, simplified nose/mouth, coherent hair locks, white cloth with cool pale shadows and selected gold metal highlights. Do not turn the blond hair white or add a purple outfit.\n\nSTANDARD MALE remains tall about 8 heads, broad masculine shoulder line and straight torso, long legs and normal hands, same face/body size as input 1. Rotate the WHOLE character including face, shoulders, chest, pelvis, knees and feet coherently; near shoulder larger and far shoulder recedes, visible side of torso. Must visibly differ from frontal, not just a head turn and not a pure 90-degree profile or back view.\nBoth arms naturally lowered with empty hands, no sword or shield added. Keep the same side for the shoulder clasp, hanging braid and hip accessory. Cape drapes naturally with the same white exterior and dark red lining; fur remains large coherent pointed tufts, not photographic strands. Preserve sun motifs on belt and exact armor construction of front master with natural oblique occlusions.\nFull hair tuft, fur, cape tips, both hands and armored boots inside frame with margins. Similar scale and ground baseline to front master, male read taller/broader than female models. Same simple dark charcoal backdrop; no scenery, floor line, effects, text, logos, watermark, extra person or multiple panels. No new accessories. Change only view and physically necessary cloth/limb positioning.",
+                        "references_in_order":  [
+                                                    "images/c06_front.png",
+                                                    "inputs/c06_design_blond_knight.jfif",
+                                                    "inputs/pose_threequarter.jfif",
+                                                    "../../자료/캐릭터그림체/GC9/원본/M01_Myst.jfif"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "bytes":  1817648,
+                        "sha256":  "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c"
+                    }
+                ],
+    "input_files":  [
+                        {
+                            "file":  "inputs/c01_design_silver_shield.png",
+                            "source":  "C:/Users/user/Downloads/Gemini_Generated_Image_9njmlt9njmlt9njm (1).png",
+                            "sha256":  "7430599ac672c8c2c3a4c59c30349b56cc3c8ba6cfbe683d2eab474484618bb9"
+                        },
+                        {
+                            "file":  "inputs/c02_design_white_halo.jfif",
+                            "source":  "C:/Users/user/Downloads/다운로드 (10).jfif",
+                            "sha256":  "3209c8ab4919f5483ee24d620e18e356b61ee324f21ecdf19fd3508d1b9de205"
+                        },
+                        {
+                            "file":  "inputs/c03_design_green_archer.jfif",
+                            "source":  "C:/Users/user/Downloads/다운로드 (6).jfif",
+                            "sha256":  "da7ff6022c0ab68312409e18753926ecc680ff26070964d1572b38d339588344"
+                        },
+                        {
+                            "file":  "inputs/c04_design_silver_archer.jfif",
+                            "source":  "C:/Users/user/Downloads/다운로드 (5).jfif",
+                            "sha256":  "0edc405e65602cd2a8819f22ee9de0742ce11215afc6fe6c052df57cb929d546"
+                        },
+                        {
+                            "file":  "inputs/c05_design_blue_knight.jfif",
+                            "source":  "C:/Users/user/Downloads/AI created dnd Character (1).jfif",
+                            "sha256":  "2c52a9a3f640347cf7aa55a59697ce766d57ffa14690828449651f1636d0e934"
+                        },
+                        {
+                            "file":  "inputs/c06_design_blond_knight.jfif",
+                            "source":  "C:/Users/user/Downloads/다운로드 (12).jfif",
+                            "sha256":  "f3aec983bd73d37f0e38bd837aa9694060b52a35c5b3de14d6fd0b439429e7e0"
+                        },
+                        {
+                            "file":  "inputs/pose_threequarter.jfif",
+                            "source":  "C:/Users/user/Downloads/다운로드 (11).jfif",
+                            "sha256":  "fbfc68c89a0e526863c74790501f0e2f9f596ecd746e9eab34a15b967e5c0047"
+                        },
+                        {
+                            "file":  "inputs/pose_front.png",
+                            "source":  "C:/Users/user/AppData/Roaming/orca/agent-session-attachments/9a231920-659f-42b4-8a7c-73fc8163536c/orca-paste-1793957564707-09523ee1-417e-436a-b501-fa7e9e4298a1.png",
+                            "sha256":  "985946d0e6a2ede263b2dce75215bc30655d4a9c5f8778daba03f562de29e3b1"
+                        }
+                    ]
+}

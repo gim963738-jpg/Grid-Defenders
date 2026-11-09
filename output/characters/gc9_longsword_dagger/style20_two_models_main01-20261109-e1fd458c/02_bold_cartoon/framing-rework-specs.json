@@ -1,0 +1,26 @@
+[
+  {
+    "id": "02_bold_cartoon",
+    "name": "굵은 카툰",
+    "model": "a",
+    "file": "02_bold_cartoon/model-a.png",
+    "referenced_image_paths": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/style20_two_models_main01-20261109-e1fd458c/02_bold_cartoon/model-a-candidate-initial.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png"
+    ],
+    "transparent_background": true,
+    "prompt": "Use case: precise-object-edit / framing repair. Image1 is the bold cartoon character edit target; image2 is original pose/proportion authority ONLY. Keep image1's exact very thick elastic black outline, large graphic colored masses, huge white highlights, every design item and pose. Maintain model A compact SD large-head short-limb proportions exactly. The initial take touches canvas edges with thick contour. REDRAW the COMPLETE SAME character and both weapons, proportionally composed smaller INSIDE the canvas so there is at least 8 percent truly transparent margin at TOP and BOTTOM and 5 percent at LEFT and RIGHT around the WHOLE silhouette including the thick outline. All hair tips, BOTH complete boot soles and both blade tips must be fully visible, not cut by image border. Do not change relative head/body sizes, joint angles, camera, costume, palette, weapons or anatomical ownership. It is the same right-facing front3/4 ready guard, right longsword forward up-right, left short dagger near chest. No new elements/background/text/floor. Genuine transparent PNG. Fix framing only while retaining the BOLD cartoon style."
+  },
+  {
+    "id": "02_bold_cartoon",
+    "name": "굵은 카툰",
+    "model": "b",
+    "file": "02_bold_cartoon/model-b.png",
+    "referenced_image_paths": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/style20_two_models_main01-20261109-e1fd458c/02_bold_cartoon/model-b-candidate-initial.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png"
+    ],
+    "transparent_background": true,
+    "prompt": "Use case: precise-object-edit / framing repair. Image1 is the bold cartoon character edit target; image2 is original pose/proportion authority ONLY. Keep image1's exact very thick elastic black outline, large graphic colored masses, huge white highlights, every design item and pose. Maintain model B long illustration-body small-relative-head proportions exactly. The initial take touches canvas edges with thick contour. REDRAW the COMPLETE SAME character and both weapons, proportionally composed smaller INSIDE the canvas so there is at least 8 percent truly transparent margin at TOP and BOTTOM and 5 percent at LEFT and RIGHT around the WHOLE silhouette including the thick outline. All hair tips, BOTH complete boot soles and both blade tips must be fully visible, not cut by image border. Do not change relative head/body sizes, joint angles, camera, costume, palette, weapons or anatomical ownership. It is the same right-facing front3/4 ready guard, right longsword forward up-right, left short dagger near chest. No new elements/background/text/floor. Genuine transparent PNG. Fix framing only while retaining the BOLD cartoon style."
+  }
+]

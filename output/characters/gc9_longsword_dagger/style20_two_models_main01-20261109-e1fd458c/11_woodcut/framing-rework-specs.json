@@ -1,0 +1,26 @@
+[
+  {
+    "id": "11_woodcut",
+    "name": "목판화",
+    "model": "a",
+    "file": "11_woodcut/model-a.png",
+    "referenced_image_paths": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/style20_two_models_main01-20261109-e1fd458c/11_woodcut/model-a-style-rework.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png"
+    ],
+    "transparent_background": true,
+    "prompt": "Use case: precise-object-edit / FRAMING REPAIR ONLY. Image1 is the final coarse BLACK/WHITE woodcut style master; image2 is body proportion and pose authority ONLY, never a color/style reference. Keep image1's pure BLACK and WHITE large chisel-cut shapes. NO blue/yellow/brown/skin color at all. This is a woodblock print, not colored art.\nThe black outer silhouette currently touches the image border. REDRAW the WHOLE SAME character and both weapons proportionally smaller INSIDE a transparent canvas with at least10 PERCENT TRANSPARENT MARGIN ABOVE HAIR and BELOW BOTH COMPLETE BOOT SOLES, and5percent at left/right. Outer black contour must not touch any image border. You MUST show complete hair and complete boot sole outline with transparent air outside every edge. Reduce the whole figure's canvas occupancy uniformly to fit; do not stretch body or change head/body ratio. Preserve compact SD large head and short limbs. Same head/body rotation, knee bends, spread feet, arm angles, right-hand longsword forward up-right and left-hand dagger near chest. Same armor/scarf/short lowered hood/belts/asymmetric boots/crescent shoulder/wing-and-ring sword guard. One character only, no floor/background/labels. Retain coarse angular white GOUGES cutting through large BLACK ink masses, no fine hatch, no dots, no brush bristles. Transparent PNG with generous empty framing."
+  },
+  {
+    "id": "11_woodcut",
+    "name": "목판화",
+    "model": "b",
+    "file": "11_woodcut/model-b.png",
+    "referenced_image_paths": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/style20_two_models_main01-20261109-e1fd458c/11_woodcut/model-b-style-rework.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png"
+    ],
+    "transparent_background": true,
+    "prompt": "Use case: precise-object-edit / FRAMING REPAIR ONLY. Image1 is the final coarse BLACK/WHITE woodcut style master; image2 is body proportion and pose authority ONLY, never a color/style reference. Keep image1's pure BLACK and WHITE large chisel-cut shapes. NO blue/yellow/brown/skin color at all. This is a woodblock print, not colored art.\nThe black outer silhouette currently touches the image border. REDRAW the WHOLE SAME character and both weapons proportionally smaller INSIDE a transparent canvas with at least10 PERCENT TRANSPARENT MARGIN ABOVE HAIR and BELOW BOTH COMPLETE BOOT SOLES, and5percent at left/right. Outer black contour must not touch any image border. You MUST show complete hair and complete boot sole outline with transparent air outside every edge. Reduce the whole figure's canvas occupancy uniformly to fit; do not stretch body or change head/body ratio. Preserve long illustration body and smaller relative head. Same head/body rotation, knee bends, spread feet, arm angles, right-hand longsword forward up-right and left-hand dagger near chest. Same armor/scarf/short lowered hood/belts/asymmetric boots/crescent shoulder/wing-and-ring sword guard. One character only, no floor/background/labels. Retain coarse angular white GOUGES cutting through large BLACK ink masses, no fine hatch, no dots, no brush bristles. Transparent PNG with generous empty framing."
+  }
+]

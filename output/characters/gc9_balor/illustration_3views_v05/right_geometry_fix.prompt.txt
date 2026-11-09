@@ -1,0 +1,13 @@
+Use case: precise-object-edit.
+Asset type: exact local repair of one sword in a finished RIGHT PROFILE character PNG.
+Input image 1 is the target. Keep every part of the character, shield, cape, face, camera and clean transparency unchanged. Repair ONLY the sword geometry and the minimal finger contact needed around its handle.
+
+The defect is a kink between the handle axis and blade axis. Reconstruct the entire sword as ONE RIGID STRAIGHT object:
+- Silver pommel, blue wrapped handle, central red ruby/crossguard and center ridge of the blade must be strictly COLLINEAR in this 2D projection.
+- Use a single straight diagonal axis from upper-left to lower-right, roughly through these points on the 1024x1536 target: pommel center (430,690), grasp center (480,765), ruby/guard center (545,864), blade tip (890,1385). These points describe ONE unbroken straight line. Do NOT draw a guide line or any coordinates.
+- Make the entire metal blade straight and flat, a long clean double-edged taper with two ruler-straight edges and a single sharp point. The median ridge is straight and continues the blue handle's axis with NO angular change at the guard and NO S-curve, crushed base or waviness. The blade's section is narrower in this side view but still a legible physical object.
+- Preserve the same ornate silver crossguard design with the red ruby, in a coherent solid perspective around the straight tang. Preserve the pommel and blue handle material. No piled duplicate hooks or melted/floppy metal around the ruby.
+- The anatomical RIGHT gauntlet remains around the blue handle, fingers and thumb naturally connected to the same wrist. Keep the approved down-forward one-handed stance; do not change which hand holds it.
+- Keep the already enlarged silver/black-wing kite shield on the far left arm EXACTLY at its current large height (upper chest to lower shin), along with its perspective, position and proportions.
+
+Everything else is invariant: same unhelmeted brown-haired soft-faced male, same 90-degree profile facing screen right, same blue/silver plate, dragon cape, same body height/scale/placement. Maintain the GC9 thin linework and crisp faceted silver. Output a single full-body 1024x1536 PNG with actual alpha-transparent empty background. No vignette, smoky glow, dark dots, painted background, checkerboard, labels or extra items. Preserve clean transparent corners.

@@ -1,0 +1,48 @@
+{
+  "assets": [
+    {
+      "file": "model-a-sd-dot.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        254
+      ],
+      "alpha32Bounds": [
+        206,
+        11,
+        1278,
+        1017
+      ],
+      "bodyHeight": 1006,
+      "footX": 550,
+      "footXEstimated": true,
+      "footY": 1016,
+      "sha256": "ea0765a6bb48a346360a842a759ec2f149331bf3751885715df67274ae8ad156"
+    },
+    {
+      "file": "model-b-illustration-body-dot.png",
+      "width": 1217,
+      "height": 1293,
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        77,
+        5,
+        1170,
+        1258
+      ],
+      "bodyHeight": 1253,
+      "footX": 480,
+      "footXEstimated": true,
+      "footY": 1257,
+      "sha256": "c1b1c223fd5eb80fb263bbdcedc24aeba059dd96f248e7c08a0de1378d4d6f29"
+    }
+  ],
+  "measurement": "alpha>=32 bounds: visually hair top and boot sole are vertical extremes, sword does not define height; footX manually estimated +/-35px",
+  "uniformCssDisplayBodyHeight": 500
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "gc9_spacious_canvas_v1",
+  "name": "GC9 전신 여백 기준",
+  "updated_on": "2026-11-08",
+  "request": "GC9 캐릭터 위·왼쪽·오른쪽에 SD 수준의 넉넉한 여백을 확보",
+  "request_status": "user_requested",
+  "numeric_defaults_origin": "assistant_initial_adjustable_defaults",
+  "scope": [
+    "GC9 전신 시안",
+    "GC9 방향 세트"
+  ],
+  "sd_reference_usage": "캔버스 점유율과 여백의 여유만 참고",
+  "preserve_gc9_body_proportions": true,
+  "preserve_identity_and_equipment": true,
+  "scaling": "uniform_whole_subject",
+  "minimum_blank_margins_ratio": {
+    "top": 0.2,
+    "left": 0.15,
+    "right": 0.15,
+    "bottom": 0.06
+  },
+  "safe_area": {
+    "x_min": 0.15,
+    "x_max": 0.85,
+    "y_min": 0.2,
+    "y_max": 0.94,
+    "width_ratio": 0.7,
+    "height_ratio": 0.74
+  },
+  "subject_bounds_include": [
+    "인물 전신",
+    "머리카락",
+    "장식",
+    "무기",
+    "방패",
+    "망토"
+  ],
+  "fit_policy": "손에 들거나 몸에 착용한 무기·방패·망토를 인물과 연결된 한 덩어리로 유지하고 전체만 균일 배율로 안전 영역에 맞춘다. 장비를 별도 배치·이동·개별 축소하지 않는다.",
+  "direction_sets": {
+    "one_scale_per_character": true,
+    "same_head_and_body_scale": true,
+    "same_ground_baseline": true,
+    "fit_widest_view_before_generating_set": true
+  },
+  "generation": {
+    "establish_padding_in_native_generation": true,
+    "preserve_returned_dimensions_and_bytes": true,
+    "post_generation_resample_originals": false,
+    "do_not_draw_guides": true,
+    "background_follows_character_request": true
+  },
+  "review": [
+    "위·좌·우 빈 여백 실측",
+    "무기·망토·발·머리 잘림 없음",
+    "성인형 등신·체격·얼굴 유지",
+    "방향별 인물 크기·기준 높이 일치",
+    "원본 배율에서 얼굴·손·금속 검수"
+  ],
+  "splash_background_scope": "SP13 배경 전체 구성에는 별도 요청 시 적용",
+  "purpose": "장비가 몸의 좌우·머리 위로 돌출해도 캔버스 밖으로 잘리지 않도록 전체에 여백을 확보",
+  "connected_subject_and_equipment": true,
+  "allow_separate_equipment_layout": false,
+  "allow_individual_equipment_rescale": false,
+  "equipment_contacts_and_pose_preserved": true
+}

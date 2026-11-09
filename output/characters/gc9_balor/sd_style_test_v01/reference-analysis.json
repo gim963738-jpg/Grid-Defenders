@@ -1,0 +1,47 @@
+{
+  "id": "balor_sd_style_test_v01",
+  "status": "inactive_rejected_style",
+  "scope": "발로르 SD 새 디자인 시안",
+  "gc9_style_reference_count_unchanged": 16,
+  "observed_common_features": [
+    "약 3~3.5등신의 큰 머리와 짧은 몸통·다리",
+    "약간 높은 RPG 카메라와 앞 사선 입상",
+    "짙은 유채색 외곽과 계단형 픽셀 윤곽",
+    "작은 색 덩어리의 머리·천 주름과 선택적 금속 하이라이트",
+    "복잡한 옷을 큰 실루엣과 대표 색·문양으로 구별"
+  ],
+  "references": [
+    {
+      "file": "inputs/sd_style_reference_01.png",
+      "role": "머리·얼굴 및 의상 부피, 픽셀 명암",
+      "width": 555,
+      "height": 303,
+      "sha256": "0cf8270756627cb67d7216131f67341b6e7fb64f23dcdb04112528aee809a5ce",
+      "original_path": "C:/Users/user/AppData/Roaming/orca/agent-session-attachments/3fd00c11-6eb9-45ea-8492-609d13f9f066/orca-paste-1794060383745-483f13ba-1c23-4d1a-a3df-202b18366893.png",
+      "source_bytes_unchanged": true
+    },
+    {
+      "file": "inputs/sd_style_reference_02.png",
+      "role": "주 비율·카메라·방향에 따른 형태 연결",
+      "width": 458,
+      "height": 508,
+      "sha256": "a184cf5dca2230e3af7b6992694f769e5dc5ee0e0d638ef50a255ec19fce1c9a",
+      "original_path": "C:/Users/user/AppData/Roaming/orca/agent-session-attachments/57aa0499-c8b6-4215-822a-934a6f2aebd7/orca-paste-1794060410651-4abe7d59-9be9-4a20-ac12-b64e427ec266.png",
+      "source_bytes_unchanged": true
+    },
+    {
+      "file": "inputs/sd_style_reference_03.png",
+      "role": "남녀 SD 비율과 직업별 실루엣·색 덩어리",
+      "width": 550,
+      "height": 258,
+      "sha256": "575fa7db747b2beb9a940f08581e9a6bd516379a234322c2c4612b94fe510a6a",
+      "original_path": "C:/Users/user/AppData/Roaming/orca/agent-session-attachments/c9dea837-9033-434b-8f68-a4545618c81a/orca-paste-1794060453730-8ada105c-547e-4d51-ba61-d53e6b5ea45c.png",
+      "source_bytes_unchanged": true
+    }
+  ],
+  "user_decision": {
+    "date": "2026-11-08",
+    "decision": "new_SD_discarded",
+    "future_reference_allowed": false
+  }
+}

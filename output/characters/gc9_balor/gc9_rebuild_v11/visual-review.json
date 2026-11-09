@@ -1,0 +1,37 @@
+{
+  "character": "발로르",
+  "version": 11,
+  "status": "internal_checks_failed_style_unreviewed",
+  "user_style_approval": null,
+  "generated_outputs": 1,
+  "automatic_followup_generation": false,
+  "reference_profile": "c6_male",
+  "previous_balor_images_in_input": 0,
+  "native_dimensions": [
+    1024,
+    1536
+  ],
+  "framing": {
+    "path": "output/characters/gc9_balor/gc9_rebuild_v11/front_v11.png",
+    "width": 1024,
+    "height": 1536,
+    "alpha_threshold": 32,
+    "bounds": [
+      123,
+      145,
+      888,
+      1446
+    ],
+    "outsideSafeArea": 21301,
+    "visiblePixels": 625981,
+    "sha256": "be11e97e87b7966aac57d74448d0a7d8aefad9483cf7594f075e439a6f607e36"
+  },
+  "checks": {
+    "safe_area": false,
+    "shield_height_target": "about 2/3",
+    "shield_height_visual_estimate": "about 1/2 of body; below target",
+    "hand_ownership": "right sword / left shield retained"
+  },
+  "note": "여백과 방패 크기 미충족. 전체 그림체 일치는 사용자 판정 전이며 통과 마스터로 사용하지 않음.",
+  "original_sha256_matches": true
+}

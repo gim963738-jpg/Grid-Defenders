@@ -1,0 +1,38 @@
+Tool: built-in image_gen (new pose reference + existing hero identity).
+Primary pose reference: pose_reference_v05.png (new user-supplied reference).
+Hero identity/rendering reference: char003_illustration_forest_dash_v04.png. Earlier versions preserved.
+Output: char003_illustration_forest_pose_v05.png
+User request: [Image #1] 이런자세
+Changes: Match the new reference silhouette: one knee raised high at image right, opposite leg extended down-left, empty forearm folded across chest and sword arm stretched sideways/back. Preserve the smiling red-cloaked hero, partial armor, compact adult anime proportions, upper-left elevated view, forest and already-cut green slime droplets. New pose reference takes precedence over the previous running stride. One still illustration under 캐릭터스프라이트제작규약 v1.2; no motion-sheet or game-code changes.
+
+Use case: compositing.
+Asset type: char003 full-body forest action illustration v05, new user pose match.
+INPUT PRIORITY:
+IMAGE 1 is the NEW USER-SUPPLIED POSE BLUEPRINT. Its body silhouette and limb arrangement are the primary composition to reproduce.
+IMAGE 2 is ONLY the hero's FACE / COSTUME / COLOR / ANIME RENDERING reference. Do NOT preserve image2's current running leg pose or overhead sword arm. Those are exactly what the user is correcting.
+User says: "[Image #1] 이런자세" ("this kind of pose").
+Create the red-cloaked male protagonist from image2 performing the pose from IMAGE1, in his sunny forest with already-cut green slime droplets.
+
+COPY THE BODY ARRANGEMENT OF IMAGE1 CLOSELY:
+A compact forward-leaning airborne / bursting slash follow-through, torso folded forward over the hips. Head angled down-forward with face visible, free forearm folded ACROSS the front of the chest.
+His SWORD arm reaches OUT TO THE SIDE AND BACK toward the upper RIGHT of the frame, closer to a long near-horizontal/diagonal line at shoulder/head height as in image1. Do not leave that sword arm pointing steeply straight upward over the head as in image2. Maintain one coherent straight sword extending from the hand to the right with its full tip inside frame.
+The EMPTY arm is sharply bent with elbow out toward lower-left, gloved hand held close IN FRONT OF THE CHEST/sternum, not extended toward the camera and not resting down on the thigh or belt. Match image1's compact cross-chest gesture. Natural fingers, no magic glowing hand.
+
+LEGS — the distinctive raised-knee pose is essential:
+ONE THIGH lifts outward/forward toward the RIGHT side of the image, knee raised HIGH near waist/lower-rib level. That knee is deeply BENT; its lower leg and boot fold underneath/back toward the pelvis. Make this raised knee and folded shin clearly readable, like the visible knee on image1's RIGHT. Do not stretch this leg backward horizontally.
+The OTHER leg extends DOWNWARD and slightly LEFT, away from the hips, in a longer naturally straight line with a modestly soft knee, boot pointing down/along the motion. Match the long down-left leg line of image1. Do not leave both legs as an ordinary runner with a horizontal straight trailing leg.
+Think compact torso + prominently lifted bent knee at right + long opposite leg down-left. Exactly two legs and two boots, correct pelvis connections and no impossible dislocations. Both boots visible even though the new reference crops part of its figure.
+The whole body should read as the user image1's energetic compressed slash-through pose, rather than the flatter long sprint in image2.
+
+FRAMING / CAMERA:
+Maintain the previously requested oblique HIGH CAMERA FROM UPPER LEFT, looking down at the hero and forest floor, while respecting the new pose silhouette. Show top planes of his hair/shoulders. Controlled foreshortening and compact ~6.5-head adult anime anatomy.
+Useful approximate normalized landmarks: head around (0.43,0.30), shoulders/chest around (0.47,0.43), hips (0.53,0.59), raised RIGHT-side knee around (0.75,0.53), its boot folded beneath hips near (0.61,0.72), opposite extended boot around (0.32,0.89). These are composition guides, not a diagram or rigid joint map.
+Full figure, sword tip, cloak and both boots in portrait frame with margins. No huge hand foreshortening.
+
+KEEP CHARACTER / SCENE:
+Same handsome friendly young adult man, short tousled reddish-brown hair, amber eyes, confident HAPPY SMILE; crimson travel mantle/coat, charcoal hood/raised collar, small silver clasps and badge, ivory shirt, asymmetrical partial steel shoulder protection, small forearm/knee armor, utility belts/pouches, dark trousers, tall brown boots/red ties and fingerless gloves. Same clear mature anime outlines/cel shadows, compact proportions.
+Red cape sweeps back and upward to support the reference silhouette without hiding the raised knee or free hand.
+Forest path, moss, ferns, trees, dappled gold-green sunlight and a little disturbed dust below, preserving image2's warm adventurous mood.
+The sword cut has ALREADY HAPPENED. A slender silver-white sword-energy wake curves across the lower foreground beside suspended translucent GREEN teardrop slime droplets and small green splashes. No large intact slime, blue gel halves or cartoon slime face.
+Image1 is POSE ONLY: do not copy its black-haired/black-clothed character, all-green lighting, huge glowing energy burst, typography, ink debris or screenshot border.
+One complete polished illustration. No text, logos, watermark, UI, inset, collage or added characters.

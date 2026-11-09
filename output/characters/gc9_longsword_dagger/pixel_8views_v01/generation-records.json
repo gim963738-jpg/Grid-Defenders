@@ -1,0 +1,568 @@
+{
+  "task": "금발 장검·단검 8방향 SD 픽셀 입상",
+  "style_id": "SD_PIXEL",
+  "source_design_style": "GC9",
+  "generation_tool": "built-in image_gen",
+  "requested_count": 8,
+  "selected_count": 8,
+  "status": "complete",
+  "physical_sides": {
+    "longsword": "anatomical_right",
+    "dagger": "anatomical_left",
+    "plate_boot": "anatomical_right",
+    "blue_cloth_boot": "anatomical_left",
+    "crescent_pauldron": "anatomical_right"
+  },
+  "source_design_path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+  "pixel_style_references": [
+    "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png",
+    "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/03_right_090.png"
+  ],
+  "directions": [
+    {
+      "id": "01_front_000",
+      "angle": 0,
+      "label": "정면",
+      "output_file": "images/01_front_000.png"
+    },
+    {
+      "id": "02_front_right_045",
+      "angle": 45,
+      "label": "오른쪽 앞 사선",
+      "output_file": "images/02_front_right_045.png"
+    },
+    {
+      "id": "03_right_090",
+      "angle": 90,
+      "label": "오른쪽 정측면",
+      "output_file": "images/03_right_090.png"
+    },
+    {
+      "id": "04_back_right_135",
+      "angle": 135,
+      "label": "오른쪽 뒤 사선",
+      "output_file": "images/04_back_right_135.png"
+    },
+    {
+      "id": "05_back_180",
+      "angle": 180,
+      "label": "정후면",
+      "output_file": "images/05_back_180.png"
+    },
+    {
+      "id": "06_back_left_225",
+      "angle": 225,
+      "label": "왼쪽 뒤 사선",
+      "output_file": "images/06_back_left_225.png"
+    },
+    {
+      "id": "07_left_270",
+      "angle": 270,
+      "label": "왼쪽 정측면",
+      "output_file": "images/07_left_270.png"
+    },
+    {
+      "id": "08_front_left_315",
+      "angle": 315,
+      "label": "왼쪽 앞 사선",
+      "output_file": "images/08_front_left_315.png"
+    }
+  ],
+  "calls": [
+    {
+      "id": "01_front_000",
+      "view_id": "01_front_000",
+      "angle": 0,
+      "label": "정면",
+      "prompt": "Input image 1 = DESIGN MASTER: exact blond longsword/dagger character, clothing and weapon shapes only. Input image 2 = PIXEL STYLE / SD PROPORTION / SCALE reference only; do not draw the silver-haired mage, copy its hair, eyes, staff, cape or costume.\n\nUse case: stylized-concept.\nAsset type: ONE individual standing 8-direction SD PIXEL ART game sprite on genuine transparent alpha.\n\nDESIGN LOCK: The character is the blond longsword-and-dagger man in the DESIGN reference, not the silver-haired mage in the style reference. Preserve short layered honey-blond hair, warm brown eyes, confident gentle male expression, blue scarf and lowered hood, silver breastplate, layered silver shoulder plates, silver articulated forearm armor and gauntlets, blue waist cloth, layered brown leather belts with brass buckles and a small right-hip pouch, loose brown trousers. ANATOMICAL RIGHT LEG has the complete silver greave and armored boot. ANATOMICAL LEFT LEG has a blue cloth-wrapped boot and only small silver protective plates. The small crescent engraving is on the ANATOMICAL RIGHT shoulder plate. Do not mirror or symmetrize these.\n\nEXACTLY TWO HELD WEAPONS, invariant physical sides:\nANATOMICAL RIGHT HAND = LONGSWORD. Long straight silver beveled blade, dark recessed strip with several short diagonal cyan-blue inlays, swept silver feather-fin fan at the guard, large closed D-shaped knuckle bow around the blue handgrip. Preserve that distinctive loop and feather fan, with a natural gauntleted grip inside it.\nANATOMICAL LEFT HAND = SHORT DAGGER. About one third the longsword length, straight short silver faceted blade with angular clipped point, a small angular feather-fin crossguard, blue grip, no large knuckle loop.\nKeep their real lengths distinct. No extra blades, weapon hilts, staff, scabbard weapons or floating pieces.\n\nPROPORTION / DRAWING CHANGE: Redraw as a compact SD game sprite with the STYLE reference's large head and short body, about FOUR heads tall, broad readable upper body, short limbs and a simple expressive face. Keep this same character's hair, colors and equipment. Deliberate square PIXEL CLUSTERS, stair-stepped contours, limited clean color ramps, warm dark pixel outlines, selective bright pixel highlights on silver plates and large readable cloth folds. Match the established silver-mage pixel sprite's pixel density and SD scale. No tall 7-8-head GC9 proportions, smooth anime painting, vector strokes, 3D rendering, airbrush gradients or random noise.\n\nSTANDING IDLE: Both feet planted with a small natural gap, upright torso, balanced weight, comfortably straight knees, no forward stride. Elbows softly bent, hands near belt height and slightly clear of the hips; both weapons lowered diagonally outward, longsword tip at or just ABOVE the floor line, dagger tip higher. Do not put sword points through the floor. Head, torso, pelvis and toes all rotate together to the specified yaw. No walking, running, crouching or attacks. Short blue scarf/hood rests over the upper shoulders only; backplate, trousers and legs remain exposed. No long cape, royal mantle, gold embroidery, gems or mage accessories from the style reference.\n\nCAMERA / OUTPUT: Fixed orthographic game camera at the style reference's slight elevation; only yaw changes. One figure, one direction, square canvas requested 1254x1254. Match the standing style master's body scale: head crown near 20-22% image height and boot soles near 94%, with enough side padding for both weapons. Keep whole hair, fingers, both blades and boots inside the frame. Consistent soft upper-left pixel lighting. Real transparent PNG outside the silhouette, including gaps in the knuckle guard and between legs. No background, floor, shadow oval, glow aura, checkerboard painted into the image, labels, text, logo or multiple panels.\n\nTHIS FILE ONLY:\nExact FRONT, 0 degrees. Face, chest and toes face the viewer; both eyes balanced. Anatomical RIGHT longsword, full silver greave and crescent shoulder are on screen LEFT. Anatomical LEFT dagger and blue cloth-wrapped boot are on screen RIGHT. No three-quarter head or torso.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-e45b48a0-55da-490c-9db7-d5dbfc8cdaad.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-e45b48a0-55da-490c-9db7-d5dbfc8cdaad.png",
+      "output_file": "images/01_front_000.png",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "prompt_file": "images/01_front_000.prompt.txt",
+      "output_sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+      "alpha": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1057101,
+        "partial_alpha_pixels": 91227,
+        "near_opaque_pixels": 424188,
+        "max_alpha": 255,
+        "visible_pixels": 443677,
+        "visible_bounds": {
+          "x": 145,
+          "y": 17,
+          "width": 849,
+          "height": 1215,
+          "right": 993,
+          "bottom": 1231
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0,
+        "file": "01_front_000.png"
+      },
+      "resampled": false,
+      "references": [
+        {
+          "order": 1,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+          "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+          "role": "original GC9 character design"
+        },
+        {
+          "order": 2,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png",
+          "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f",
+          "role": "silver-mage SD pixel style/proportion only"
+        }
+      ]
+    },
+    {
+      "id": "02_front_right_045",
+      "view_id": "02_front_right_045",
+      "angle": 45,
+      "label": "오른쪽 앞 사선",
+      "prompt": "INPUT ROLES: Image 1 is the original GC9 DESIGN reference only (equipment, colors, asymmetric physical sides). Image 2 is the NEW SD PIXEL FRONT MASTER: use its exact face identity, short body ratio, head size, pixel cluster density, native canvas scale and equipment design. Image 3 is the NEW SD PIXEL BACK MASTER: use its short hood/backplate construction and same physical weapon/boot sides when rear is visible. These three depict the SAME person. Rotate and redraw coherently, never mirror a previous view or copy front facial features onto the back. Match the NEW FRONT MASTER's actual crown/sole levels and keep feet static.\n\nUse case: stylized-concept.\nAsset type: ONE individual standing 8-direction SD PIXEL ART game sprite on genuine transparent alpha.\n\nDESIGN LOCK: The character is the blond longsword-and-dagger man in the DESIGN reference, not the silver-haired mage in the style reference. Preserve short layered honey-blond hair, warm brown eyes, confident gentle male expression, blue scarf and lowered hood, silver breastplate, layered silver shoulder plates, silver articulated forearm armor and gauntlets, blue waist cloth, layered brown leather belts with brass buckles and a small right-hip pouch, loose brown trousers. ANATOMICAL RIGHT LEG has the complete silver greave and armored boot. ANATOMICAL LEFT LEG has a blue cloth-wrapped boot and only small silver protective plates. The small crescent engraving is on the ANATOMICAL RIGHT shoulder plate. Do not mirror or symmetrize these.\n\nEXACTLY TWO HELD WEAPONS, invariant physical sides:\nANATOMICAL RIGHT HAND = LONGSWORD. Long straight silver beveled blade, dark recessed strip with several short diagonal cyan-blue inlays, swept silver feather-fin fan at the guard, large closed D-shaped knuckle bow around the blue handgrip. Preserve that distinctive loop and feather fan, with a natural gauntleted grip inside it.\nANATOMICAL LEFT HAND = SHORT DAGGER. About one third the longsword length, straight short silver faceted blade with angular clipped point, a small angular feather-fin crossguard, blue grip, no large knuckle loop.\nKeep their real lengths distinct. No extra blades, weapon hilts, staff, scabbard weapons or floating pieces.\n\nPROPORTION / DRAWING CHANGE: Redraw as a compact SD game sprite with the STYLE reference's large head and short body, about FOUR heads tall, broad readable upper body, short limbs and a simple expressive face. Keep this same character's hair, colors and equipment. Deliberate square PIXEL CLUSTERS, stair-stepped contours, limited clean color ramps, warm dark pixel outlines, selective bright pixel highlights on silver plates and large readable cloth folds. Match the established silver-mage pixel sprite's pixel density and SD scale. No tall 7-8-head GC9 proportions, smooth anime painting, vector strokes, 3D rendering, airbrush gradients or random noise.\n\nSTANDING IDLE: Both feet planted with a small natural gap, upright torso, balanced weight, comfortably straight knees, no forward stride. Elbows softly bent, hands near belt height and slightly clear of the hips; both weapons lowered diagonally outward, longsword tip at or just ABOVE the floor line, dagger tip higher. Do not put sword points through the floor. Head, torso, pelvis and toes all rotate together to the specified yaw. No walking, running, crouching or attacks. Short blue scarf/hood rests over the upper shoulders only; backplate, trousers and legs remain exposed. No long cape, royal mantle, gold embroidery, gems or mage accessories from the style reference.\n\nCAMERA / OUTPUT: Fixed orthographic game camera at the style reference's slight elevation; only yaw changes. One figure, one direction, square canvas requested 1254x1254. Match the standing style master's body scale: head crown near 2% image height and boot soles near 98%, matching the NEW FRONT MASTER exactly, with enough side padding for both weapons. Keep whole hair, fingers, both blades and boots inside the frame. Consistent soft upper-left pixel lighting. Real transparent PNG outside the silhouette, including gaps in the knuckle guard and between legs. No background, floor, shadow oval, glow aura, checkerboard painted into the image, labels, text, logo or multiple panels.\n\nREQUIRED DIRECTION:\nFRONT-RIGHT THREE-QUARTER, 45 degrees, facing diagonally toward screen RIGHT and toward the viewer. Both eyes and front breastplate visible. Anatomical RIGHT side is nearer: longsword, crescent pauldron and full silver greave on that nearer side. LEFT dagger and blue boot remain on the farther side. Whole body and feet share the same yaw.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-22b9ad5f-45ff-4692-a3d4-46b7952f3bb3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-22b9ad5f-45ff-4692-a3d4-46b7952f3bb3.png",
+      "output_file": "images/02_front_right_045.png",
+      "prompt_file": "images/02_front_right_045.prompt.txt",
+      "output_sha256": "973415cd6ebf92cc6bb2d0c0e97085ef52746948d249e09be643e8ee8d5c8491",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "alpha": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1050694,
+        "partial_alpha_pixels": 78505,
+        "near_opaque_pixels": 443317,
+        "max_alpha": 255,
+        "visible_pixels": 462593,
+        "visible_bounds": {
+          "x": 159,
+          "y": 8,
+          "width": 853,
+          "height": 1231,
+          "right": 1011,
+          "bottom": 1238
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0,
+        "file": "02_front_right_045.png"
+      },
+      "resampled": false,
+      "references": [
+        {
+          "order": 1,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+          "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+          "role": "original GC9 character design"
+        },
+        {
+          "order": 2,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+          "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+          "role": "new SD pixel front master"
+        },
+        {
+          "order": 3,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png",
+          "sha256": "5a46c704e6eb82d6bcb85956ff0a540394e8d447de122806420c97acfeee9548",
+          "role": "new SD pixel back master"
+        }
+      ]
+    },
+    {
+      "id": "03_right_090",
+      "view_id": "03_right_090",
+      "angle": 90,
+      "label": "오른쪽 정측면",
+      "prompt": "Input image 1 = original GC9 DESIGN ONLY (not its tall body or smooth rendering). Input image 2 = ACCEPTED SD PIXEL FRONT MASTER of this SAME blond swordsman: definitive compact proportions, face, pixel density, body scale, clothing, weapon shapes and physical sides. Rotate this exact standing sprite; follow Image 2 for the SD body and image scale.\n\nUse case: stylized-concept.\nAsset type: ONE individual standing 8-direction SD PIXEL ART game sprite on genuine transparent alpha.\n\nDESIGN LOCK: The character is the blond longsword-and-dagger man in the DESIGN reference, not the silver-haired mage in the style reference. Preserve short layered honey-blond hair, warm brown eyes, confident gentle male expression, blue scarf and lowered hood, silver breastplate, layered silver shoulder plates, silver articulated forearm armor and gauntlets, blue waist cloth, layered brown leather belts with brass buckles and a small right-hip pouch, loose brown trousers. ANATOMICAL RIGHT LEG has the complete silver greave and armored boot. ANATOMICAL LEFT LEG has a blue cloth-wrapped boot and only small silver protective plates. The small crescent engraving is on the ANATOMICAL RIGHT shoulder plate. Do not mirror or symmetrize these.\n\nEXACTLY TWO HELD WEAPONS, invariant physical sides:\nANATOMICAL RIGHT HAND = LONGSWORD. Long straight silver beveled blade, dark recessed strip with several short diagonal cyan-blue inlays, swept silver feather-fin fan at the guard, large closed D-shaped knuckle bow around the blue handgrip. Preserve that distinctive loop and feather fan, with a natural gauntleted grip inside it.\nANATOMICAL LEFT HAND = SHORT DAGGER. About one third the longsword length, straight short silver faceted blade with angular clipped point, a small angular feather-fin crossguard, blue grip, no large knuckle loop.\nKeep their real lengths distinct. No extra blades, weapon hilts, staff, scabbard weapons or floating pieces.\n\nPROPORTION / DRAWING CHANGE: Redraw as a compact SD game sprite with the STYLE reference's large head and short body, about FOUR heads tall, broad readable upper body, short limbs and a simple expressive face. Keep this same character's hair, colors and equipment. Deliberate square PIXEL CLUSTERS, stair-stepped contours, limited clean color ramps, warm dark pixel outlines, selective bright pixel highlights on silver plates and large readable cloth folds. Match the established silver-mage pixel sprite's pixel density and SD scale. No tall 7-8-head GC9 proportions, smooth anime painting, vector strokes, 3D rendering, airbrush gradients or random noise.\n\nSTANDING IDLE: Both feet planted with a small natural gap, upright torso, balanced weight, comfortably straight knees, no forward stride. Elbows softly bent, hands near belt height and slightly clear of the hips; both weapons lowered diagonally outward, longsword tip at or just ABOVE the floor line, dagger tip higher. Do not put sword points through the floor. Head, torso, pelvis and toes all rotate together to the specified yaw. No walking, running, crouching or attacks. Short blue scarf/hood rests over the upper shoulders only; backplate, trousers and legs remain exposed. No long cape, royal mantle, gold embroidery, gems or mage accessories from the style reference.\n\nCAMERA / OUTPUT: Fixed orthographic game camera at the style reference's slight elevation; only yaw changes. One figure, one direction, square canvas requested 1254x1254. Match the standing style master's body scale: head crown near 2% image height and boot soles near 98%, matching the NEW FRONT MASTER exactly, with enough side padding for both weapons. Keep whole hair, fingers, both blades and boots inside the frame. Consistent soft upper-left pixel lighting. Real transparent PNG outside the silhouette, including gaps in the knuckle guard and between legs. No background, floor, shadow oval, glow aura, checkerboard painted into the image, labels, text, logo or multiple panels.\n\nTHIS FILE ONLY:\nExact RIGHT-FACING SIDE PROFILE, 90 degrees. Nose and toes point horizontally RIGHT; one eye only, shoulders overlap in depth. The ANATOMICAL RIGHT flank is NEAR the viewer: near arm holds the LONGSWORD, near leg wears the full silver greave, near shoulder has the crescent. The far LEFT arm holds the DAGGER, and its blue cloth boot is farther away. Show a visible portion of the far dagger without moving it to the near hand. Both feet planted, no walking stride.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-0a6ff2ab-9add-4a2d-928c-1c1c0f9e6ad6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-0a6ff2ab-9add-4a2d-928c-1c1c0f9e6ad6.png",
+      "output_file": "images/03_right_090.png",
+      "prompt_file": "images/03_right_090.prompt.txt",
+      "output_sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "alpha": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1224535,
+        "partial_alpha_pixels": 35547,
+        "near_opaque_pixels": 312434,
+        "max_alpha": 255,
+        "visible_pixels": 323943,
+        "visible_bounds": {
+          "x": 382,
+          "y": 10,
+          "width": 490,
+          "height": 1229,
+          "right": 871,
+          "bottom": 1238
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0,
+        "file": "03_right_090.png"
+      },
+      "resampled": false,
+      "references": [
+        {
+          "order": 1,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+          "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+          "role": "original GC9 character design"
+        },
+        {
+          "order": 2,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+          "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+          "role": "new SD pixel front master"
+        }
+      ]
+    },
+    {
+      "id": "04_back_right_135",
+      "view_id": "04_back_right_135",
+      "angle": 135,
+      "label": "오른쪽 뒤 사선",
+      "prompt": "INPUT ROLES: Image 1 is the original GC9 DESIGN reference only (equipment, colors, asymmetric physical sides). Image 2 is the NEW SD PIXEL FRONT MASTER: use its exact face identity, short body ratio, head size, pixel cluster density, native canvas scale and equipment design. Image 3 is the NEW SD PIXEL BACK MASTER: use its short hood/backplate construction and same physical weapon/boot sides when rear is visible. These three depict the SAME person. Rotate and redraw coherently, never mirror a previous view or copy front facial features onto the back. Match the NEW FRONT MASTER's actual crown/sole levels and keep feet static.\n\nUse case: stylized-concept.\nAsset type: ONE individual standing 8-direction SD PIXEL ART game sprite on genuine transparent alpha.\n\nDESIGN LOCK: The character is the blond longsword-and-dagger man in the DESIGN reference, not the silver-haired mage in the style reference. Preserve short layered honey-blond hair, warm brown eyes, confident gentle male expression, blue scarf and lowered hood, silver breastplate, layered silver shoulder plates, silver articulated forearm armor and gauntlets, blue waist cloth, layered brown leather belts with brass buckles and a small right-hip pouch, loose brown trousers. ANATOMICAL RIGHT LEG has the complete silver greave and armored boot. ANATOMICAL LEFT LEG has a blue cloth-wrapped boot and only small silver protective plates. The small crescent engraving is on the ANATOMICAL RIGHT shoulder plate. Do not mirror or symmetrize these.\n\nEXACTLY TWO HELD WEAPONS, invariant physical sides:\nANATOMICAL RIGHT HAND = LONGSWORD. Long straight silver beveled blade, dark recessed strip with several short diagonal cyan-blue inlays, swept silver feather-fin fan at the guard, large closed D-shaped knuckle bow around the blue handgrip. Preserve that distinctive loop and feather fan, with a natural gauntleted grip inside it.\nANATOMICAL LEFT HAND = SHORT DAGGER. About one third the longsword length, straight short silver faceted blade with angular clipped point, a small angular feather-fin crossguard, blue grip, no large knuckle loop.\nKeep their real lengths distinct. No extra blades, weapon hilts, staff, scabbard weapons or floating pieces.\n\nPROPORTION / DRAWING CHANGE: Redraw as a compact SD game sprite with the STYLE reference's large head and short body, about FOUR heads tall, broad readable upper body, short limbs and a simple expressive face. Keep this same character's hair, colors and equipment. Deliberate square PIXEL CLUSTERS, stair-stepped contours, limited clean color ramps, warm dark pixel outlines, selective bright pixel highlights on silver plates and large readable cloth folds. Match the established silver-mage pixel sprite's pixel density and SD scale. No tall 7-8-head GC9 proportions, smooth anime painting, vector strokes, 3D rendering, airbrush gradients or random noise.\n\nSTANDING IDLE: Both feet planted with a small natural gap, upright torso, balanced weight, comfortably straight knees, no forward stride. Elbows softly bent, hands near belt height and slightly clear of the hips; both weapons lowered diagonally outward, longsword tip at or just ABOVE the floor line, dagger tip higher. Do not put sword points through the floor. Head, torso, pelvis and toes all rotate together to the specified yaw. No walking, running, crouching or attacks. Short blue scarf/hood rests over the upper shoulders only; backplate, trousers and legs remain exposed. No long cape, royal mantle, gold embroidery, gems or mage accessories from the style reference.\n\nCAMERA / OUTPUT: Fixed orthographic game camera at the style reference's slight elevation; only yaw changes. One figure, one direction, square canvas requested 1254x1254. Match the standing style master's body scale: head crown near 2% image height and boot soles near 98%, matching the NEW FRONT MASTER exactly, with enough side padding for both weapons. Keep whole hair, fingers, both blades and boots inside the frame. Consistent soft upper-left pixel lighting. Real transparent PNG outside the silhouette, including gaps in the knuckle guard and between legs. No background, floor, shadow oval, glow aura, checkerboard painted into the image, labels, text, logo or multiple panels.\n\nREQUIRED DIRECTION:\nBACK-RIGHT THREE-QUARTER, 135 degrees, facing diagonally AWAY toward screen RIGHT. Back of blond head and silver backplate dominate. Short lowered blue hood covers upper back only, no cape. At most a narrow face profile, no pair of eyes or front breastplate copied onto the back. Near ANATOMICAL RIGHT hand holds longsword toward screen RIGHT; near RIGHT leg has full silver greave. Far LEFT hand holds dagger toward screen LEFT, blue boot on far left leg. All body parts turn away together.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-f32391a9-ec81-4c2f-8f12-c7ab624dc980.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-f32391a9-ec81-4c2f-8f12-c7ab624dc980.png",
+      "output_file": "images/04_back_right_135.png",
+      "prompt_file": "images/04_back_right_135.prompt.txt",
+      "output_sha256": "c759651f4afe5fe2f34d528eac4cca37b8ca37143182a902a53c8a6b4bc6e1f8",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "alpha": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1079138,
+        "partial_alpha_pixels": 84540,
+        "near_opaque_pixels": 408838,
+        "max_alpha": 255,
+        "visible_pixels": 427575,
+        "visible_bounds": {
+          "x": 225,
+          "y": 7,
+          "width": 801,
+          "height": 1223,
+          "right": 1025,
+          "bottom": 1229
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0,
+        "file": "04_back_right_135.png"
+      },
+      "resampled": false,
+      "references": [
+        {
+          "order": 1,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+          "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+          "role": "original GC9 character design"
+        },
+        {
+          "order": 2,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+          "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+          "role": "new SD pixel front master"
+        },
+        {
+          "order": 3,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png",
+          "sha256": "5a46c704e6eb82d6bcb85956ff0a540394e8d447de122806420c97acfeee9548",
+          "role": "new SD pixel back master"
+        }
+      ]
+    },
+    {
+      "id": "05_back_180",
+      "view_id": "05_back_180",
+      "angle": 180,
+      "label": "정후면",
+      "prompt": "Input image 1 = original GC9 DESIGN ONLY (not its tall body or smooth rendering). Input image 2 = ACCEPTED SD PIXEL FRONT MASTER of this SAME blond swordsman: definitive compact proportions, face, pixel density, body scale, clothing, weapon shapes and physical sides. Rotate this exact standing sprite; follow Image 2 for the SD body and image scale.\n\nUse case: stylized-concept.\nAsset type: ONE individual standing 8-direction SD PIXEL ART game sprite on genuine transparent alpha.\n\nDESIGN LOCK: The character is the blond longsword-and-dagger man in the DESIGN reference, not the silver-haired mage in the style reference. Preserve short layered honey-blond hair, warm brown eyes, confident gentle male expression, blue scarf and lowered hood, silver breastplate, layered silver shoulder plates, silver articulated forearm armor and gauntlets, blue waist cloth, layered brown leather belts with brass buckles and a small right-hip pouch, loose brown trousers. ANATOMICAL RIGHT LEG has the complete silver greave and armored boot. ANATOMICAL LEFT LEG has a blue cloth-wrapped boot and only small silver protective plates. The small crescent engraving is on the ANATOMICAL RIGHT shoulder plate. Do not mirror or symmetrize these.\n\nEXACTLY TWO HELD WEAPONS, invariant physical sides:\nANATOMICAL RIGHT HAND = LONGSWORD. Long straight silver beveled blade, dark recessed strip with several short diagonal cyan-blue inlays, swept silver feather-fin fan at the guard, large closed D-shaped knuckle bow around the blue handgrip. Preserve that distinctive loop and feather fan, with a natural gauntleted grip inside it.\nANATOMICAL LEFT HAND = SHORT DAGGER. About one third the longsword length, straight short silver faceted blade with angular clipped point, a small angular feather-fin crossguard, blue grip, no large knuckle loop.\nKeep their real lengths distinct. No extra blades, weapon hilts, staff, scabbard weapons or floating pieces.\n\nPROPORTION / DRAWING CHANGE: Redraw as a compact SD game sprite with the STYLE reference's large head and short body, about FOUR heads tall, broad readable upper body, short limbs and a simple expressive face. Keep this same character's hair, colors and equipment. Deliberate square PIXEL CLUSTERS, stair-stepped contours, limited clean color ramps, warm dark pixel outlines, selective bright pixel highlights on silver plates and large readable cloth folds. Match the established silver-mage pixel sprite's pixel density and SD scale. No tall 7-8-head GC9 proportions, smooth anime painting, vector strokes, 3D rendering, airbrush gradients or random noise.\n\nSTANDING IDLE: Both feet planted with a small natural gap, upright torso, balanced weight, comfortably straight knees, no forward stride. Elbows softly bent, hands near belt height and slightly clear of the hips; both weapons lowered diagonally outward, longsword tip at or just ABOVE the floor line, dagger tip higher. Do not put sword points through the floor. Head, torso, pelvis and toes all rotate together to the specified yaw. No walking, running, crouching or attacks. Short blue scarf/hood rests over the upper shoulders only; backplate, trousers and legs remain exposed. No long cape, royal mantle, gold embroidery, gems or mage accessories from the style reference.\n\nCAMERA / OUTPUT: Fixed orthographic game camera at the style reference's slight elevation; only yaw changes. One figure, one direction, square canvas requested 1254x1254. Match the standing style master's body scale: head crown near 2% image height and boot soles near 98%, matching the NEW FRONT MASTER exactly, with enough side padding for both weapons. Keep whole hair, fingers, both blades and boots inside the frame. Consistent soft upper-left pixel lighting. Real transparent PNG outside the silhouette, including gaps in the knuckle guard and between legs. No background, floor, shadow oval, glow aura, checkerboard painted into the image, labels, text, logo or multiple panels.\n\nTHIS FILE ONLY:\nExact BACK, 180 degrees, facing directly AWAY. No face, eyes or frontal breastplate details. Short blond nape, lowered blue hood/scarf over upper shoulders, coherent silver backplate, brown back belt/pouch and exposed brown trousers. No long cape. Anatomical RIGHT longsword and full silver leg armor are on screen RIGHT. Anatomical LEFT dagger and blue cloth boot are on screen LEFT. Both feet planted.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-54c5e541-d896-494c-bec3-615309ac5ec2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-54c5e541-d896-494c-bec3-615309ac5ec2.png",
+      "output_file": "images/05_back_180.png",
+      "prompt_file": "images/05_back_180.prompt.txt",
+      "output_sha256": "5a46c704e6eb82d6bcb85956ff0a540394e8d447de122806420c97acfeee9548",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "alpha": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1091887,
+        "partial_alpha_pixels": 66203,
+        "near_opaque_pixels": 414426,
+        "max_alpha": 255,
+        "visible_pixels": 432039,
+        "visible_bounds": {
+          "x": 259,
+          "y": 7,
+          "width": 818,
+          "height": 1223,
+          "right": 1076,
+          "bottom": 1229
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0,
+        "file": "05_back_180.png"
+      },
+      "resampled": false,
+      "references": [
+        {
+          "order": 1,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+          "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+          "role": "original GC9 character design"
+        },
+        {
+          "order": 2,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+          "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+          "role": "new SD pixel front master"
+        }
+      ]
+    },
+    {
+      "id": "06_back_left_225",
+      "view_id": "06_back_left_225",
+      "angle": 225,
+      "label": "왼쪽 뒤 사선",
+      "prompt": "INPUT ROLES: Image 1 is the original GC9 DESIGN reference only (equipment, colors, asymmetric physical sides). Image 2 is the NEW SD PIXEL FRONT MASTER: use its exact face identity, short body ratio, head size, pixel cluster density, native canvas scale and equipment design. Image 3 is the NEW SD PIXEL BACK MASTER: use its short hood/backplate construction and same physical weapon/boot sides when rear is visible. These three depict the SAME person. Rotate and redraw coherently, never mirror a previous view or copy front facial features onto the back. Match the NEW FRONT MASTER's actual crown/sole levels and keep feet static.\n\nUse case: stylized-concept.\nAsset type: ONE individual standing 8-direction SD PIXEL ART game sprite on genuine transparent alpha.\n\nDESIGN LOCK: The character is the blond longsword-and-dagger man in the DESIGN reference, not the silver-haired mage in the style reference. Preserve short layered honey-blond hair, warm brown eyes, confident gentle male expression, blue scarf and lowered hood, silver breastplate, layered silver shoulder plates, silver articulated forearm armor and gauntlets, blue waist cloth, layered brown leather belts with brass buckles and a small right-hip pouch, loose brown trousers. ANATOMICAL RIGHT LEG has the complete silver greave and armored boot. ANATOMICAL LEFT LEG has a blue cloth-wrapped boot and only small silver protective plates. The small crescent engraving is on the ANATOMICAL RIGHT shoulder plate. Do not mirror or symmetrize these.\n\nEXACTLY TWO HELD WEAPONS, invariant physical sides:\nANATOMICAL RIGHT HAND = LONGSWORD. Long straight silver beveled blade, dark recessed strip with several short diagonal cyan-blue inlays, swept silver feather-fin fan at the guard, large closed D-shaped knuckle bow around the blue handgrip. Preserve that distinctive loop and feather fan, with a natural gauntleted grip inside it.\nANATOMICAL LEFT HAND = SHORT DAGGER. About one third the longsword length, straight short silver faceted blade with angular clipped point, a small angular feather-fin crossguard, blue grip, no large knuckle loop.\nKeep their real lengths distinct. No extra blades, weapon hilts, staff, scabbard weapons or floating pieces.\n\nPROPORTION / DRAWING CHANGE: Redraw as a compact SD game sprite with the STYLE reference's large head and short body, about FOUR heads tall, broad readable upper body, short limbs and a simple expressive face. Keep this same character's hair, colors and equipment. Deliberate square PIXEL CLUSTERS, stair-stepped contours, limited clean color ramps, warm dark pixel outlines, selective bright pixel highlights on silver plates and large readable cloth folds. Match the established silver-mage pixel sprite's pixel density and SD scale. No tall 7-8-head GC9 proportions, smooth anime painting, vector strokes, 3D rendering, airbrush gradients or random noise.\n\nSTANDING IDLE: Both feet planted with a small natural gap, upright torso, balanced weight, comfortably straight knees, no forward stride. Elbows softly bent, hands near belt height and slightly clear of the hips; both weapons lowered diagonally outward, longsword tip at or just ABOVE the floor line, dagger tip higher. Do not put sword points through the floor. Head, torso, pelvis and toes all rotate together to the specified yaw. No walking, running, crouching or attacks. Short blue scarf/hood rests over the upper shoulders only; backplate, trousers and legs remain exposed. No long cape, royal mantle, gold embroidery, gems or mage accessories from the style reference.\n\nCAMERA / OUTPUT: Fixed orthographic game camera at the style reference's slight elevation; only yaw changes. One figure, one direction, square canvas requested 1254x1254. Match the standing style master's body scale: head crown near 2% image height and boot soles near 98%, matching the NEW FRONT MASTER exactly, with enough side padding for both weapons. Keep whole hair, fingers, both blades and boots inside the frame. Consistent soft upper-left pixel lighting. Real transparent PNG outside the silhouette, including gaps in the knuckle guard and between legs. No background, floor, shadow oval, glow aura, checkerboard painted into the image, labels, text, logo or multiple panels.\n\nREQUIRED DIRECTION:\nBACK-LEFT THREE-QUARTER, 225 degrees, facing diagonally AWAY toward screen LEFT. Back of head, short hood and silver backplate dominate; no pair of eyes, no cape. Near ANATOMICAL LEFT arm holds the SHORT DAGGER and near LEFT leg has the BLUE CLOTH boot. Far RIGHT arm still holds the LONGSWORD, with far RIGHT silver greave; its long blade may emerge beyond the far side of the body. Preserve physical sides, whole body and feet turned away.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-577b40bf-8629-478d-abe6-9c7c67d1a315.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-577b40bf-8629-478d-abe6-9c7c67d1a315.png",
+      "output_file": "images/06_back_left_225.png",
+      "prompt_file": "images/06_back_left_225.prompt.txt",
+      "output_sha256": "64682b72d18a470d52446813e829fb4c36b2a00857a2c30b14c691a7a11d9ae4",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "alpha": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1050015,
+        "partial_alpha_pixels": 94760,
+        "near_opaque_pixels": 427741,
+        "max_alpha": 255,
+        "visible_pixels": 446478,
+        "visible_bounds": {
+          "x": 229,
+          "y": 10,
+          "width": 863,
+          "height": 1226,
+          "right": 1091,
+          "bottom": 1235
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0,
+        "file": "06_back_left_225.png"
+      },
+      "resampled": false,
+      "references": [
+        {
+          "order": 1,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+          "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+          "role": "original GC9 character design"
+        },
+        {
+          "order": 2,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+          "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+          "role": "new SD pixel front master"
+        },
+        {
+          "order": 3,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png",
+          "sha256": "5a46c704e6eb82d6bcb85956ff0a540394e8d447de122806420c97acfeee9548",
+          "role": "new SD pixel back master"
+        }
+      ]
+    },
+    {
+      "id": "07_left_270",
+      "view_id": "07_left_270",
+      "angle": 270,
+      "label": "왼쪽 정측면",
+      "prompt": "INPUT ROLES: Image 1 is the original GC9 DESIGN reference only (equipment, colors, asymmetric physical sides). Image 2 is the NEW SD PIXEL FRONT MASTER: use its exact face identity, short body ratio, head size, pixel cluster density, native canvas scale and equipment design. Image 3 is the NEW SD PIXEL BACK MASTER: use its short hood/backplate construction and same physical weapon/boot sides when rear is visible. These three depict the SAME person. Rotate and redraw coherently, never mirror a previous view or copy front facial features onto the back. Match the NEW FRONT MASTER's actual crown/sole levels and keep feet static.\n\nUse case: stylized-concept.\nAsset type: ONE individual standing 8-direction SD PIXEL ART game sprite on genuine transparent alpha.\n\nDESIGN LOCK: The character is the blond longsword-and-dagger man in the DESIGN reference, not the silver-haired mage in the style reference. Preserve short layered honey-blond hair, warm brown eyes, confident gentle male expression, blue scarf and lowered hood, silver breastplate, layered silver shoulder plates, silver articulated forearm armor and gauntlets, blue waist cloth, layered brown leather belts with brass buckles and a small right-hip pouch, loose brown trousers. ANATOMICAL RIGHT LEG has the complete silver greave and armored boot. ANATOMICAL LEFT LEG has a blue cloth-wrapped boot and only small silver protective plates. The small crescent engraving is on the ANATOMICAL RIGHT shoulder plate. Do not mirror or symmetrize these.\n\nEXACTLY TWO HELD WEAPONS, invariant physical sides:\nANATOMICAL RIGHT HAND = LONGSWORD. Long straight silver beveled blade, dark recessed strip with several short diagonal cyan-blue inlays, swept silver feather-fin fan at the guard, large closed D-shaped knuckle bow around the blue handgrip. Preserve that distinctive loop and feather fan, with a natural gauntleted grip inside it.\nANATOMICAL LEFT HAND = SHORT DAGGER. About one third the longsword length, straight short silver faceted blade with angular clipped point, a small angular feather-fin crossguard, blue grip, no large knuckle loop.\nKeep their real lengths distinct. No extra blades, weapon hilts, staff, scabbard weapons or floating pieces.\n\nPROPORTION / DRAWING CHANGE: Redraw as a compact SD game sprite with the STYLE reference's large head and short body, about FOUR heads tall, broad readable upper body, short limbs and a simple expressive face. Keep this same character's hair, colors and equipment. Deliberate square PIXEL CLUSTERS, stair-stepped contours, limited clean color ramps, warm dark pixel outlines, selective bright pixel highlights on silver plates and large readable cloth folds. Match the established silver-mage pixel sprite's pixel density and SD scale. No tall 7-8-head GC9 proportions, smooth anime painting, vector strokes, 3D rendering, airbrush gradients or random noise.\n\nSTANDING IDLE: Both feet planted with a small natural gap, upright torso, balanced weight, comfortably straight knees, no forward stride. Elbows softly bent, hands near belt height and slightly clear of the hips; both weapons lowered diagonally outward, longsword tip at or just ABOVE the floor line, dagger tip higher. Do not put sword points through the floor. Head, torso, pelvis and toes all rotate together to the specified yaw. No walking, running, crouching or attacks. Short blue scarf/hood rests over the upper shoulders only; backplate, trousers and legs remain exposed. No long cape, royal mantle, gold embroidery, gems or mage accessories from the style reference.\n\nCAMERA / OUTPUT: Fixed orthographic game camera at the style reference's slight elevation; only yaw changes. One figure, one direction, square canvas requested 1254x1254. Match the standing style master's body scale: head crown near 2% image height and boot soles near 98%, matching the NEW FRONT MASTER exactly, with enough side padding for both weapons. Keep whole hair, fingers, both blades and boots inside the frame. Consistent soft upper-left pixel lighting. Real transparent PNG outside the silhouette, including gaps in the knuckle guard and between legs. No background, floor, shadow oval, glow aura, checkerboard painted into the image, labels, text, logo or multiple panels.\n\nREQUIRED DIRECTION:\nExact LEFT-FACING SIDE PROFILE, 270 degrees. Nose and toes point horizontally LEFT, one eye only. The ANATOMICAL LEFT flank is NEAR: near arm holds the SHORT DAGGER, near leg has the BLUE CLOTH-wrapped boot. Far RIGHT arm holds the LONGSWORD, far RIGHT leg has the FULL SILVER GREAVE. The crescent pauldron remains on far RIGHT shoulder, not transferred to near left. This is independently drawn, not a flipped right profile. Keep a readable portion of the far long blade and guard. Both feet planted.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-ee528c9c-cebd-4486-a3f1-ce9980503da0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-ee528c9c-cebd-4486-a3f1-ce9980503da0.png",
+      "output_file": "images/07_left_270.png",
+      "prompt_file": "images/07_left_270.prompt.txt",
+      "output_sha256": "4ac6c35b0edb7589de68971ef1960c9fe5b5a7961437a3cb41d1c8082712067d",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "alpha": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1158349,
+        "partial_alpha_pixels": 65179,
+        "near_opaque_pixels": 348988,
+        "max_alpha": 255,
+        "visible_pixels": 362889,
+        "visible_bounds": {
+          "x": 182,
+          "y": 5,
+          "width": 682,
+          "height": 1226,
+          "right": 863,
+          "bottom": 1230
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0,
+        "file": "07_left_270.png"
+      },
+      "resampled": false,
+      "references": [
+        {
+          "order": 1,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+          "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+          "role": "original GC9 character design"
+        },
+        {
+          "order": 2,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+          "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+          "role": "new SD pixel front master"
+        },
+        {
+          "order": 3,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png",
+          "sha256": "5a46c704e6eb82d6bcb85956ff0a540394e8d447de122806420c97acfeee9548",
+          "role": "new SD pixel back master"
+        }
+      ]
+    },
+    {
+      "id": "08_front_left_315",
+      "view_id": "08_front_left_315",
+      "angle": 315,
+      "label": "왼쪽 앞 사선",
+      "prompt": "INPUT ROLES: Image 1 is the original GC9 DESIGN reference only (equipment, colors, asymmetric physical sides). Image 2 is the NEW SD PIXEL FRONT MASTER: use its exact face identity, short body ratio, head size, pixel cluster density, native canvas scale and equipment design. Image 3 is the NEW SD PIXEL BACK MASTER: use its short hood/backplate construction and same physical weapon/boot sides when rear is visible. These three depict the SAME person. Rotate and redraw coherently, never mirror a previous view or copy front facial features onto the back. Match the NEW FRONT MASTER's actual crown/sole levels and keep feet static.\n\nUse case: stylized-concept.\nAsset type: ONE individual standing 8-direction SD PIXEL ART game sprite on genuine transparent alpha.\n\nDESIGN LOCK: The character is the blond longsword-and-dagger man in the DESIGN reference, not the silver-haired mage in the style reference. Preserve short layered honey-blond hair, warm brown eyes, confident gentle male expression, blue scarf and lowered hood, silver breastplate, layered silver shoulder plates, silver articulated forearm armor and gauntlets, blue waist cloth, layered brown leather belts with brass buckles and a small right-hip pouch, loose brown trousers. ANATOMICAL RIGHT LEG has the complete silver greave and armored boot. ANATOMICAL LEFT LEG has a blue cloth-wrapped boot and only small silver protective plates. The small crescent engraving is on the ANATOMICAL RIGHT shoulder plate. Do not mirror or symmetrize these.\n\nEXACTLY TWO HELD WEAPONS, invariant physical sides:\nANATOMICAL RIGHT HAND = LONGSWORD. Long straight silver beveled blade, dark recessed strip with several short diagonal cyan-blue inlays, swept silver feather-fin fan at the guard, large closed D-shaped knuckle bow around the blue handgrip. Preserve that distinctive loop and feather fan, with a natural gauntleted grip inside it.\nANATOMICAL LEFT HAND = SHORT DAGGER. About one third the longsword length, straight short silver faceted blade with angular clipped point, a small angular feather-fin crossguard, blue grip, no large knuckle loop.\nKeep their real lengths distinct. No extra blades, weapon hilts, staff, scabbard weapons or floating pieces.\n\nPROPORTION / DRAWING CHANGE: Redraw as a compact SD game sprite with the STYLE reference's large head and short body, about FOUR heads tall, broad readable upper body, short limbs and a simple expressive face. Keep this same character's hair, colors and equipment. Deliberate square PIXEL CLUSTERS, stair-stepped contours, limited clean color ramps, warm dark pixel outlines, selective bright pixel highlights on silver plates and large readable cloth folds. Match the established silver-mage pixel sprite's pixel density and SD scale. No tall 7-8-head GC9 proportions, smooth anime painting, vector strokes, 3D rendering, airbrush gradients or random noise.\n\nSTANDING IDLE: Both feet planted with a small natural gap, upright torso, balanced weight, comfortably straight knees, no forward stride. Elbows softly bent, hands near belt height and slightly clear of the hips; both weapons lowered diagonally outward, longsword tip at or just ABOVE the floor line, dagger tip higher. Do not put sword points through the floor. Head, torso, pelvis and toes all rotate together to the specified yaw. No walking, running, crouching or attacks. Short blue scarf/hood rests over the upper shoulders only; backplate, trousers and legs remain exposed. No long cape, royal mantle, gold embroidery, gems or mage accessories from the style reference.\n\nCAMERA / OUTPUT: Fixed orthographic game camera at the style reference's slight elevation; only yaw changes. One figure, one direction, square canvas requested 1254x1254. Match the standing style master's body scale: head crown near 2% image height and boot soles near 98%, matching the NEW FRONT MASTER exactly, with enough side padding for both weapons. Keep whole hair, fingers, both blades and boots inside the frame. Consistent soft upper-left pixel lighting. Real transparent PNG outside the silhouette, including gaps in the knuckle guard and between legs. No background, floor, shadow oval, glow aura, checkerboard painted into the image, labels, text, logo or multiple panels.\n\nREQUIRED DIRECTION:\nFRONT-LEFT THREE-QUARTER, 315 degrees, facing diagonally toward screen LEFT and toward the viewer. Both eyes and front breastplate visible. ANATOMICAL LEFT side is nearer: short DAGGER and BLUE CLOTH boot on near side. RIGHT long sword and fully silver greave on farther side. No hand or leg swaps. Head, torso, pelvis and toes share the same yaw.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-308f0100-e739-45b0-9b2b-314158b3b8d7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-308f0100-e739-45b0-9b2b-314158b3b8d7.png",
+      "output_file": "images/08_front_left_315.png",
+      "prompt_file": "images/08_front_left_315.prompt.txt",
+      "output_sha256": "1ca18ade28d59bda1c38509ae916aa5a137b8c77f4386535d9a5a702ae480784",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "alpha": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1065252,
+        "partial_alpha_pixels": 74419,
+        "near_opaque_pixels": 432845,
+        "max_alpha": 255,
+        "visible_pixels": 451619,
+        "visible_bounds": {
+          "x": 166,
+          "y": 16,
+          "width": 798,
+          "height": 1221,
+          "right": 963,
+          "bottom": 1236
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0,
+        "file": "08_front_left_315.png"
+      },
+      "resampled": false,
+      "references": [
+        {
+          "order": 1,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+          "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+          "role": "original GC9 character design"
+        },
+        {
+          "order": 2,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+          "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+          "role": "new SD pixel front master"
+        },
+        {
+          "order": 3,
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png",
+          "sha256": "5a46c704e6eb82d6bcb85956ff0a540394e8d447de122806420c97acfeee9548",
+          "role": "new SD pixel back master"
+        }
+      ]
+    }
+  ],
+  "reference_design_sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+  "requested_canvas": {
+    "width": 1254,
+    "height": 1254
+  },
+  "actual_canvas": {
+    "width": 1254,
+    "height": 1254
+  },
+  "reference_policy": "GC9 design, new SD front/back and pre-existing silver-mage pixel style have separate roles; no horizontal flips or image resampling were performed.",
+  "review_file": "검수결과.json",
+  "completed_on": "2026-11-07",
+  "user_approved": false,
+  "deliverables": {
+    "comparison": "비교.html",
+    "archive": "longsword-dagger-pixel8-v01.zip",
+    "images": "images/",
+    "prompts": "images/*.prompt.txt",
+    "verification": "검수결과.json"
+  }
+}

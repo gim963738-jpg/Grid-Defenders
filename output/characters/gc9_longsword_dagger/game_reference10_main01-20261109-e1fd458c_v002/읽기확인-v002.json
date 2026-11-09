@@ -1,0 +1,93 @@
+﻿{
+    "task":  "MAIN01-20261109-E1FD458C",
+    "iteration":  2,
+    "role":  "characters",
+    "workSummary":  "実제게임2D전투자료최소10후보를웹조사해프레임/이미지를확보·열람하고비율/실루엣/선/명암/세부생략원리를우리캐릭터의동일포즈/정체성에적용한총10안을내장imagegen개별호출로제작한다. 먼저서로다른2~3안을내부검수하고나머지를진행하며 원본바이트와알파·해시·출처를보존한다. CSS동일표시키/발선으로비교하고밝고어두운전체/라벨숨김/57·72px관찰을검수하되실게임통합과구분한다. 기존미술매체부분작업/13반환미확인은격리보존한다.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md",
+                          "sha256":  "d4027f0c9a32fcec376092a83a44eb28eff07b26563103f13f1bbeb3f580b0e8",
+                          "applies":  "최신 실제게임2D참고10안 예외를 일반SD비율/기존미술매체실험보다 우선한다. 원형정체성/그립과 보존원칙을 유지하고 공통규정/카탈로그/게임/UI를 편집하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md",
+                          "sha256":  "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+                          "applies":  "차수2 필독본문을 새로 읽고 문서별 적용 ACK/start 후 조사/제작한다. 실제게임전투자료와 원형을 역할분리하고 결과/기술검증/사용자합격을 구분한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+                          "applies":  "명시적으로 승인된 새10안 범위만 수행한다. 5종기록·원본바이트·검증한계를 제출하며 기존차수와 미커밋부분을 보존한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+                          "applies":  "main01의 같은열린Task 후속지시와 새차수2 영수증으로 이어서 수행한다. 담당복제/설정변경/무응답추정중복발송을 하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+                          "applies":  "characters가 직접 조사/제작/차별화검수한다. 다른담당/동일파일 편집을 추가하지 않으며 필요없는하위분업을하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "캐릭터 원본/설명/비교판만 작성하고 게임런타임·UI·타팀 파일에 손대지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md",
+                          "sha256":  "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+                          "applies":  "세계관소속과 기존 미통과판정/SD채택을 보존한다. 이번은 단일전투태세의 게임표현탐색이며 승인스타일 재채택이 아니다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "새차수의 현재해시와 적용요약으로 start검증; 반환전 최신ACK를 확인하고 원작업 기록에 차수2를 추가한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+                          "applies":  "characters 팀장/main01 보고경로와 독립테스터 경계를 확인했다; 기존팀원을 복제하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "세계관/캐릭터 분류이며 출신·성별·클래스·능력치를 참고게임 인물로 덮어쓰지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "실제 characters 원본경로/도메인과팀조직을구분하고 스프라이트애니메이션이나 게임통합으로범위를확장하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\game-style10\\사용자진행확인.md",
+                          "sha256":  "3fc1ef8d5a1c8bc5d701b0bfa24e0b04539609cbd9cf3c7ce161f841f9403648",
+                          "applies":  "사용자최종원문 진행과 총10가지, 동일전투태세/시점/구성요소고정·비율변경허용을 확인했다. A/B각10장으로늘리지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\game-style10\\사전확인.md",
+                          "sha256":  "714d8e69fd31b52176d61145ef5fbd1ff45672aca087f0fa6c9363f30ff598f5",
+                          "applies":  "기존13호출반환미확인을 종료로단정하지않고 새출력격리로 충돌을막는다. 이전29기본결과/후보를이어채우거나 재활용하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\game-style10\\조사출발점.json",
+                          "sha256":  "3927f274feaf5c6a06c3ca4dcda748d03dcc5973410275686ff70398c178837b",
+                          "applies":  "사이트존재만검증된출발점이며 실제2D전투검증목록이아니다. 최소10후보의 실제전투를 확보/열람/출처기록하고 자료에따라선정한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+                          "sha256":  "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+                          "applies":  "이번새범위의 실제 진행승인이있어중복확인을하지않는다. 후속새범위/별도수정은 명시적진행을기다리고 조건추가를 승인으로추론하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+                          "sha256":  "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+                          "applies":  "결과물과 최소작업기록 로컬작성만 수행하고 사용자 별도저장요청없는 커밋/푸시/예약백업을하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\style20_two_models_main01-20261109-e1fd458c\\report.md",
+                          "sha256":  "f0d3a9f4c1fedcca684ad3a4d2603d07bcb9bfd0e39ba6f06f03d1508f151cdf",
+                          "applies":  "이전미술매체작업은기본29파일/33고유반환확인·13미확인의부분보존상태다. 새10안의완료나 참고입력으로섞지않으며 미완료이력을유지한다."
+                      }
+                  ]
+}

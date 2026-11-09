@@ -1,0 +1,33 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_split_v02.png. Earlier versions preserved.
+Output: continent_balanced_v03.png
+User request: 그리고 대륙을 분리하고 대륙마다 비슷한 크기로 쪼개봐봐
+Working interpretation: Keep five separate continents and balance their relative mainland areas. The 18-22% area range in the prompt is a visual target, not a measured claim about the result.
+
+Use case: precise-object-edit.
+Asset type: fantasy worldbuilding map, balanced five-continent separation study, version 03.
+Input image 1 is the EDIT TARGET, the current five-continent map. Keep this world's terrain identities, directional arrangement, Korean labels and hand-painted terrain style, but rebalance continental land area.
+
+User request: "그리고 대륙을 분리하고 대륙마다 비슷한 크기로 쪼개봐봐"
+Primary request: redraw the five distinct ocean-separated continents so all FIVE have APPROXIMATELY EQUAL ACTUAL LAND AREA. The central, western, eastern, northern and southern continents must each account for roughly one fifth (18–22%) of the combined mainland area. Judge filled land area, not length, bounding-box dimensions or label size. The current northern and southern continents are too dominant and the central continent too small; reduce and compact north/south, enlarge central/west/east until comparable in land area. This is a geographical redraw of the same five continents, not a political subdivision. Do not add internal region borders.
+
+Critical topology and layout:
+- Exactly FIVE large contiguous mainland landmasses, each entirely surrounded by deep blue sea. No land bridges and no touching coasts.
+- Position NORTH at the top, SOUTH at the bottom, WEST left, EAST right and CENTRAL at the center, preserving the directional relationships of the edit target.
+- North and south should now be compact irregular landmasses rather than elongated bands spanning the entire map. West/east should have comparable filled land area and not be narrow slivers; central must feel equally substantial.
+- Broad organic winding marine channels between all continents, clear and navigable, easily readable at thumbnail scale. Aim for approximately 4–7% of canvas width at major intercontinental gaps, with comfortable ocean margins on all sides.
+- Make the overall composition fill the square well while keeping all coastlines safely within frame. A slightly staggered, natural arrangement is preferable to rigid perfect symmetry. Do not turn continents into circles, equal geometric tiles or identical silhouettes.
+- Minor coastal islets are allowed sparingly; a few small southeast volcanic islands remain secondary. No sixth major landmass.
+
+Preserve local identities:
+NORTH "북대륙": dramatic snowy northern mountains, glacial fjords, small evergreen foothills, crisp icy coast. Compact and substantial, same approximate area as each other continent.
+WEST "서대륙": deep temperate forests, turquoise lakes and rivers, green valleys, rugged rocky coast, mountain-backed eastern side.
+CENTRAL "중앙대륙": fertile green rolling plains, a large coherent meandering river basin, scattered forests, lakes and moderate mountain relief. Enlarge this heartland noticeably to match the other four in filled land area.
+EAST "동대륙": misty emerald highlands, jagged mountain ridges, a small dark-violet inland basin, eastern crescent gulf and a few nearby islands. Broaden its terrain while keeping the distinctive bay.
+SOUTH "남대륙": ochre desert dunes and red mesas toward west, savanna and greener east, a branching turquoise southern/eastern delta. Reduce total footprint while retaining all these features in one contiguous southern mainland.
+
+Text: exactly FIVE working labels, correctly spelled in Korean: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". One per appropriate continent, same modest elegant cream-white type with subtle dark outline as the source. No other text, no title, no legend.
+
+Style invariants: high-detail fantasy strategy-game hand-painted top-down orthographic atlas terrain; sculptural natural mountains, scale-consistent forests, rich navy ocean, turquoise shallows, natural coast erosion and physically sensible rivers that drain to each continent's coast. Match the image's natural palette, richness and crispness. Square high-resolution composition. Clouds restrained and offshore. No cities, buildings, characters, monsters, UI, icons, roads, dotted lines, political boundaries or decorative frame.
+
+The immediate visual impression must be FIVE SEPARATE CONTINENTS OF COMPARABLE LAND AREA, each with a unique organic silhouette and its own existing biome identity.

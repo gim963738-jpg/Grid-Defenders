@@ -1,0 +1,33 @@
+{
+  "user_verdict": "실패 원인분석",
+  "image_sha256": "b2d7ceb428581a0825bebc847113d9b1496171021267f3ae772b13bb451840b8",
+  "executed_prompt_matches_saved_file": true,
+  "new_reference_roles": [
+    "구성 원본",
+    "C4 전체 작화 주 참조",
+    "C3 전체 작화 보조·금속 우선",
+    "Edel 작화 보조"
+  ],
+  "successful_c4_reference_roles": [
+    "구성 원본",
+    "Edel 주 작화",
+    "Bram 판금 재질",
+    "정면 구도"
+  ],
+  "successful_c4_chars": 2969,
+  "current_chars": 6803,
+  "successful_c4_words": 440,
+  "current_words": 981,
+  "prompt_length_is_not_proven_cause": true,
+  "main_alpha32_bounds": [
+    206,
+    317,
+    809,
+    1432
+  ],
+  "outside_main_bounds_nonzero_alpha_pixels": 18397,
+  "outside_main_bounds_max_alpha": 18,
+  "whole_style_pass_inferred": false,
+  "additional_image_calls": 0,
+  "approved_reference_set_changed": false
+}

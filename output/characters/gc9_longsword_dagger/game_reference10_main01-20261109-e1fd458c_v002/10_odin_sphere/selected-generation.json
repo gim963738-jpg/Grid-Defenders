@@ -1,0 +1,46 @@
+{
+  "id": "10_odin_sphere",
+  "status": "returned_selected_for_review",
+  "tool": "builtin image_gen.imagegen",
+  "promptFile": "10_odin_sphere/generation-input.json",
+  "inputs": [
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+      "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "nativeDimensions": [
+        1217,
+        1292
+      ],
+      "role": "OUR POSE/IDENTITY only"
+    },
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\odin_sphere\\official-osl1.jpg",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\odin_sphere\\official-osl1.jpg",
+      "sha256": "7c6d41f05b00f5e445b64b00f4a01bbf2fb3ef57fc195378da5b329c391daaa7",
+      "nativeDimensions": [
+        1920,
+        1080
+      ],
+      "role": "GAME COMBAT RENDERING/PROPORTION only"
+    }
+  ],
+  "settings": {
+    "transparent_background": true,
+    "imageModel": "tool managed; no paid fallback or text-model substitution"
+  },
+  "resultFile": "10_odin_sphere/generation-result.json",
+  "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-44905e9a-8f85-450e-8235-c0ca268c08ad.png",
+  "savedOutput": "10_odin_sphere/character.png",
+  "savedSha256": "4f59c7713b7c98860d878388b03365b322346621fe6eb0f99cc87d216d87ceaa",
+  "rawBytesIdentical": true,
+  "nativeDimensions": [
+    1199,
+    1312
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "userAestheticApproval": false
+}

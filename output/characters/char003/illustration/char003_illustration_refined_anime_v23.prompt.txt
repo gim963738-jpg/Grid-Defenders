@@ -1,0 +1,32 @@
+Edit target: output/characters/char003/illustration/char003_illustration_anime_finish_v22.png
+Priority style reference: output/characters/char003/illustration/rendering_reference_v23.png (user's desired finish, copied unchanged).
+Tool: built-in image_gen; backend model not exposed; no project API call.
+Date: 2026-11-06 KST.
+Scope: one standalone illustration. Newest user request overrides previous strong reflections and excessive warmth. Preserve design/pose/sword; refine colored contours, restrained saturation and highlights, continuous middle values and blue-green forest depth. Originals preserved.
+
+Use case: style-transfer and careful illustration finishing.
+Output: ONE finished full-body portrait fantasy RPG character illustration, 2:3, 1024x1536.
+
+INPUT ROLES ARE CRITICAL:
+Image 1 is the current v22 illustration to EDIT. Its character identity, all costume/gear construction, pose, hand positions, body proportions, weapon geometry, camera and composition must remain intact.
+Image 2 is the USER'S DESIRED FINISHED LOOK and the HIGHEST PRIORITY STYLE/TONE REFERENCE. Match its refined line/color integration, restrained natural highlights, subtle intermediate shading and calm woodland color balance closely. Do not treat image 1's current heavy outlining, orange warmth or bright shiny patches as style requirements. We are deliberately correcting those.
+Both show the same red-haired adventurer, but image 2 controls HOW the drawing is rendered, and image 1 controls the design/geometry being edited.
+
+Make a visible improvement toward image 2's finish:
+1. LINEWORK: reduce the heavy near-black outlines and thick internal separators of image 1. Use delicate confident clean lines, often colored dark brown/burgundy or local shadow tones, integrated with paint. Keep clear fine anatomy/costume contours and the same principal details. Hair and clothing should feel elegant and finely illustrated, not thickly inked or sticker-like. Do not blur lines or erase structure.
+2. COLOR: closely match image 2's composed, comparatively calm palette. Red clothing remains red, with rich crimson/burgundy shadows rather than intense orange-red. Leather remains the original brown, more natural and quieter rather than golden orange. Forest distance has blue-green/teal atmosphere. Keep clear healthy skin, silver steel, ivory cloth and dark trousers. Reduce the yellow/orange cast and overly saturated yellow-green of v22. NO gray wash, muddy desaturation, fog over the whole image, or flat global color filter.
+3. SHADING: maintain organized cel shadows AND rich finely controlled middle values, matched to image 2. Smooth subtle turning of cheek, hair clumps, leather curves and fabric planes without flattening them into hard polygons. Deep local contact shadows in folds/under straps/armor overlaps stay legible. Avoid exaggerated high-contrast blocks or dense noisy micro-texture. Shadows on dark pants keep their readable intermediate values.
+4. MATERIALS: Match the second image's SATIN STEEL with cool/neutral gray modulation and smaller proportionate white edge reflections. Reduce v22's oversized bright white bands on armor and blade without making metal dull or matte. Keep curved steel volume, rivets, overlapping plates and real material difference.
+   Match image 2's natural lightly lustrous leather boots and pouches: soft brown form modeling, SMALL subdued highlights at toe curves, no conspicuous bright orange oval hotspot on either boot, no mirror-like leather, no plastic/wet gloss.
+   Red cape/coat is MATTE cloth with well-shaped folds, subtle middle tones and modest light at selected upper-right-facing edges. Thin existing gold trim remains trim, not a bright glowing outline around every coat panel.
+5. LIGHT: keep upper-right sunlight and the same illumination direction, but match image 2's measured dappled sun and gentler warmth. No excessive golden rim around hair/clothing, no bloom, no added particles or effects.
+6. BACKGROUND: Match image 2's coherent blue-green depth and softly connected distant foliage. Preserve original large trees, path, rocks, grass, flowers and framing. Keep foreground leaves/rocks readable with natural texture-free form and selective sun patches. Reduce overly sharp repetitive yellow leaf spots and harsh ground contrast competing with the face. Not a uniform blur; no new scene objects. Character and forest should belong to the same natural light.
+
+STRICT INVARIANTS FROM IMAGE 1:
+One young adult human male with the same auburn-red hairstyle silhouette, amber eyes, open friendly smile, face shape, proportions and stance. Same red cape and split travel coat, gold trim motifs, charcoal hood and raised collar, ivory rolled sleeves/tunic, brown diagonal chest harness and waist belts, two pouches, silver badge and fastenings, asymmetric original steel pauldrons/forearm protection/ONE visible knee plate, dark loose pants, fingerless gloves and tall laced brown boots with red ties.
+Same raised sword hand on viewer's left, relaxed lowered hand on viewer's right, viewer-left boot forward. Five coherent fingers, identical grip/contact, no pose or design change.
+ONE broad straight sword: round pommel and brown wrapped handle at viewer-left, original vertical guard, and the same length/thickness blade passing naturally behind hood/head to its full upper-right point. Preserve its angle, proportions, exposed lengths and straight collinear edges through the occluded section. No twisting, bending, shortening, broken/duplicated blade, sword through neck, new scabbard or new equipment.
+Keep the original full-body framing and margins with hair, hands, both boots, coat hems and entire sword tip inside frame. No cropping/zooming or new camera.
+Do NOT add ornaments, extra embroidery, particles, UI, text, logo, watermark, comparison panels or a frame. No photo/CGI/3D, no rough brush/grain or pixel art.
+Success means visually approaching the ACTUAL supplied image 2's delicate, calm, richly finished 2D anime RPG illustration — not merely adding shinier highlights to image 1.
+

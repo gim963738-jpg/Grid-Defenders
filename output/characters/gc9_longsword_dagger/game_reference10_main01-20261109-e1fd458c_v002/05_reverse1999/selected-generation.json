@@ -1,0 +1,46 @@
+{
+  "id": "05_reverse1999",
+  "status": "returned_selected_for_review",
+  "tool": "builtin image_gen.imagegen",
+  "promptFile": "05_reverse1999/generation-input.json",
+  "inputs": [
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+      "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "nativeDimensions": [
+        1217,
+        1292
+      ],
+      "role": "OUR POSE/IDENTITY only"
+    },
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\reverse1999\\extra-store-shot-5.jpg",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\reverse1999\\extra-store-shot-5.jpg",
+      "sha256": "3ca10da90e1a472425d22be63ee0077e473a5c937c35ac382a63c968e5ca5bea",
+      "nativeDimensions": [
+        1920,
+        1080
+      ],
+      "role": "GAME COMBAT RENDERING/PROPORTION only"
+    }
+  ],
+  "settings": {
+    "transparent_background": true,
+    "imageModel": "tool managed; no paid fallback or text-model substitution"
+  },
+  "resultFile": "05_reverse1999/generation-result.json",
+  "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-668dc5a1-0c7c-49b6-a3c6-737e15c362b2.png",
+  "savedOutput": "05_reverse1999/character.png",
+  "savedSha256": "88a029c493ff0a3d250b8b5a992e5730cd8065a60833fd93ed874b5a827f1863",
+  "rawBytesIdentical": true,
+  "nativeDimensions": [
+    1182,
+    1330
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "userAestheticApproval": false
+}

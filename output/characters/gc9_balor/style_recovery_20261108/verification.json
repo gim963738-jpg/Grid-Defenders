@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "images_preserved": 247,
+  "all_original_hashes_unchanged": true,
+  "external_image_calls": 0,
+  "plan_valid": true,
+  "generation_ready": false,
+  "rejected_regressions": [
+    {
+      "name": "historical_v10_partial_repair",
+      "detected": [
+        "REJECTED_STYLE_REFERENCE",
+        "WHOLE_STYLE_REFERENCE_REQUIRED",
+        "FULL_STYLE_REBUILD_REQUIRED",
+        "FAILED_FACE_LOCK",
+        "UNAPPROVED_EDIT_TARGET"
+      ]
+    },
+    {
+      "name": "whole_style_demoted_to_metal",
+      "detected": [
+        "WHOLE_STYLE_REFERENCE_REQUIRED"
+      ]
+    },
+    {
+      "name": "changed_reference_asset",
+      "detected": [
+        "REFERENCE_HASH_MISMATCH",
+        "UNVERIFIED_WHOLE_STYLE"
+      ]
+    },
+    {
+      "name": "next_views_before_pass",
+      "detected": [
+        "FOLLOWUP_BEFORE_STYLE_PASS"
+      ]
+    }
+  ],
+  "scope": "workflow/reference repair only; new style reproduction not tested"
+}

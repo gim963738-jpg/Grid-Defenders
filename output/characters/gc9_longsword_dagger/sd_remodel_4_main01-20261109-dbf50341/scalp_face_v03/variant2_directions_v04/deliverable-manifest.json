@@ -1,0 +1,168 @@
+{
+  "iteration": 4,
+  "excluded": [
+    ".qa-browser-profile/**"
+  ],
+  "files": [
+    {
+      "file": "asset-manifest.json",
+      "size": 7711,
+      "sha256": "ec489049dbbd63511a15b03b65f50e355b8f415c0d87d22b464257f026c1c74d"
+    },
+    {
+      "file": "browser-evidence.json",
+      "size": 1748,
+      "sha256": "94dcdb6ba1040589c637aeca0dd24c31410234a45483defc848f9f65693c0a0a"
+    },
+    {
+      "file": "build-assets.py",
+      "size": 8809,
+      "sha256": "ebbec427601bdb51a070529750804ce67dd88cb29720f85488370025a5459aa2"
+    },
+    {
+      "file": "candidates\\right90-first.png",
+      "size": 699517,
+      "sha256": "4e8a802ec41452ffa82b7350fd35fe969769c65e4c7ddd42e765fd3597e1fbb4"
+    },
+    {
+      "file": "candidates\\right90-refinement.png",
+      "size": 752918,
+      "sha256": "b3e2d3cd65dc9467b1036298daf9f2f43aa3bb686c13bac93fefd4ba1dcd4e24"
+    },
+    {
+      "file": "comparison.png",
+      "size": 536703,
+      "sha256": "750dda39dd4fca4ee19d4278c284496e7344629ce4743d8cd0844e0023193eb3"
+    },
+    {
+      "file": "delivery-check.json",
+      "size": 1083,
+      "sha256": "099b75b273a49aebdfe502449c435aa4eb9cff4d3699130bdb6cf5101e6fa013"
+    },
+    {
+      "file": "finalize-v004.py",
+      "size": 18483,
+      "sha256": "33e3898fbe7211024be026967d75deac20404dd0d8216b7eb9bfd45cc316a1ea"
+    },
+    {
+      "file": "generation-records.json",
+      "size": 15316,
+      "sha256": "ddcebb859428c094754ea77b1c6fd02e998d784c95e06d83cf3c47d0d651d767"
+    },
+    {
+      "file": "generation-right90-pixel-spec.json",
+      "size": 2304,
+      "sha256": "1e0b9784347379b3719cd8027c11f8de3eb3805d57639268f5ed204ecfadd054"
+    },
+    {
+      "file": "generation-right90-refinement-spec.json",
+      "size": 2087,
+      "sha256": "7a17951523b8f3e27a41bd4d3c26b0bd0ce3a9d185a4b073476c8f79a12acab1"
+    },
+    {
+      "file": "generation-specs.json",
+      "size": 6892,
+      "sha256": "745cf7ac6032faef5efbc0e330eca76f008646232965053fdff4c4e516bbb7a6"
+    },
+    {
+      "file": "index.html",
+      "size": 6626,
+      "sha256": "181599337860d53d1d4a47e2e98fad4ece8f9d7426dd72384fb499f6058d230a"
+    },
+    {
+      "file": "preservation-check.json",
+      "size": 45800,
+      "sha256": "9a93359f95ff8c490b40155ee1d80c16720e97f7cfbcf4cf0805ca2c3bc48c4c"
+    },
+    {
+      "file": "previous-files-before.json",
+      "size": 34148,
+      "sha256": "1050b84d751696e19dc45a38f55b1b8dcf31a618b416d833d5e9e8700f47a9ba"
+    },
+    {
+      "file": "qa-dark.png",
+      "size": 524571,
+      "sha256": "af878517352a32e2caa81c3af10ba2191b0aa9153b30ac44ba3d910dbd5d8962"
+    },
+    {
+      "file": "qa-expanded.png",
+      "size": 146813,
+      "sha256": "4ca7862ea5179ed49649a3dbee0487666a6319a708bb1d8b9d39475e47726869"
+    },
+    {
+      "file": "qa-narrow.png",
+      "size": 100234,
+      "sha256": "2988d711ff0d4585c6a12acfd4f8555af7c8fcbf366968de21762a6b85966263"
+    },
+    {
+      "file": "qa-small.png",
+      "size": 38136,
+      "sha256": "72e2503a7024ae10c42fc1a5889d04092782117f1fa857633145cdfe0ed44788"
+    },
+    {
+      "file": "report.md",
+      "size": 5229,
+      "sha256": "38e81a0e20d65a5e93ff16bcec32b5b95fb8b62646b462c2a6bf36578d4304dd"
+    },
+    {
+      "file": "variant-2-front.png",
+      "size": 1122782,
+      "sha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53"
+    },
+    {
+      "file": "variant-2-right-045.png",
+      "size": 1015006,
+      "sha256": "b8b5e19b5763082da15a7e7d1913ac43b04f52b66b09157343f8f39f61b94fff"
+    },
+    {
+      "file": "variant-2-right-090.png",
+      "size": 838065,
+      "sha256": "2bc66a3b3f738b809c65c378ab9b30d0d523220ad27bb59bce1ae74e12221072"
+    },
+    {
+      "file": "verify-browser.mjs",
+      "size": 4224,
+      "sha256": "95f332f7497d01d9cacb4d37969bf4b76964a9c325d507b015c48bb7a6840559"
+    },
+    {
+      "file": "verify-delivery.py",
+      "size": 2669,
+      "sha256": "ccc7f2ec09c1d464213a0d59faea23e550ef5829bba390a51e27c7b211072a1d"
+    },
+    {
+      "file": "view-image-evidence.json",
+      "size": 1521,
+      "sha256": "dc6059159716f0d62a959b4bd687b2fca652d87a743e2cd2100867297f191c0c"
+    },
+    {
+      "file": "검수.md",
+      "size": 3452,
+      "sha256": "52e78fbcff3d72973d15d7a09072e5a12046d6fb207be974f7ff98245f584f72"
+    },
+    {
+      "file": "결과.json",
+      "size": 4713,
+      "sha256": "aeedb9c37becfdbb16dbb9c1bf9f121e9c89191c111581d3199a845f22ee7b22"
+    },
+    {
+      "file": "분석.md",
+      "size": 2900,
+      "sha256": "842cb804c9b23810203ea3801ecbf433aabc3aab2a3afe3d7804cf61277e6aef"
+    },
+    {
+      "file": "사전확인.md",
+      "size": 1394,
+      "sha256": "dec095e2bb91112a1268acb574edbb1308da7e0fd4389e26747c7c82a6b5885d"
+    },
+    {
+      "file": "읽기확인-v004.json",
+      "size": 11867,
+      "sha256": "97b892e6addaa516af22b641c2edfedc9ad91be7fa8398727afc98ab207c312c"
+    },
+    {
+      "file": "제작기준.md",
+      "size": 3122,
+      "sha256": "ea2b4b2e05108c89c1bb97f28c273bdf165e2345083f049653bbbf5d8458a9a6"
+    }
+  ]
+}

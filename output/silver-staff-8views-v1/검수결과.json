@@ -1,0 +1,242 @@
+{
+  "task": "은발·날개 지팡이 캐릭터 8방향 입상",
+  "selected_count": 8,
+  "generation_call_count": 11,
+  "discarded_draft_count": 3,
+  "generation_tool": "built-in image_gen",
+  "requested_pose": "standing",
+  "source_style_preserved": "픽셀 표현·큰 머리·짧은 신체 비율·은발·청금 망토·날개 지팡이",
+  "physical_sides": {
+    "staff": "anatomical_left_hand",
+    "case": "anatomical_right_hip"
+  },
+  "file_checks": {
+    "all_1254_square": true,
+    "all_have_real_alpha": true,
+    "no_silhouette_touches_canvas_edge": true,
+    "unique_sha256_count": 8,
+    "software_upscale_applied": false,
+    "min_visible_bottom": 1178,
+    "max_visible_bottom": 1189,
+    "visible_bottom_range_pixels": 11
+  },
+  "visual_checks": {
+    "standing_in_all_eight": true,
+    "source_facing_profile_checked": true,
+    "front_and_back_equipment_sides_checked": true,
+    "opposite_profile_has_different_arm_occlusion": true,
+    "no_extra_characters": true,
+    "white_and_dark_background_review": "passed"
+  },
+  "scope_note": "개별 생성한 8방향 입상이다. 수작업 픽셀 격자·기준점 정규화나 게임 애니메이션 통합은 수행하지 않았다. 바닥 경계 통계는 지팡이 끝을 포함한 알파 16 이상 외곽 기준이다.",
+  "images": [
+    {
+      "file": "01_front_000.png",
+      "stats": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1144917,
+        "partial_alpha_pixels": 46068,
+        "near_opaque_pixels": 381531,
+        "max_alpha": 255,
+        "visible_pixels": 396377,
+        "visible_bounds": {
+          "x": 327,
+          "y": 26,
+          "width": 656,
+          "height": 1153,
+          "right": 982,
+          "bottom": 1178
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0
+      },
+      "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f"
+    },
+    {
+      "file": "02_front_right_045.png",
+      "stats": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1135068,
+        "partial_alpha_pixels": 59697,
+        "near_opaque_pixels": 377751,
+        "max_alpha": 255,
+        "visible_pixels": 392884,
+        "visible_bounds": {
+          "x": 327,
+          "y": 29,
+          "width": 665,
+          "height": 1161,
+          "right": 991,
+          "bottom": 1189
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0
+      },
+      "sha256": "ee55529dedd03621178d114f9dca99559032936dfdc31cfb95998850d81b51af"
+    },
+    {
+      "file": "03_right_090.png",
+      "stats": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1232080,
+        "partial_alpha_pixels": 50392,
+        "near_opaque_pixels": 290044,
+        "max_alpha": 255,
+        "visible_pixels": 304766,
+        "visible_bounds": {
+          "x": 359,
+          "y": 31,
+          "width": 542,
+          "height": 1152,
+          "right": 900,
+          "bottom": 1182
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0
+      },
+      "sha256": "38f5ff8f38d58a3a64042133df7a4dda7bfaa1b2cfd422f1d5fa3f725985056c"
+    },
+    {
+      "file": "04_back_right_135.png",
+      "stats": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1204885,
+        "partial_alpha_pixels": 37406,
+        "near_opaque_pixels": 330225,
+        "max_alpha": 255,
+        "visible_pixels": 342484,
+        "visible_bounds": {
+          "x": 326,
+          "y": 34,
+          "width": 496,
+          "height": 1147,
+          "right": 821,
+          "bottom": 1180
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0
+      },
+      "sha256": "f1de46c5b5ca68347735b7c710494b1d0d25d5cc6a2818bd872355a5a86f0122"
+    },
+    {
+      "file": "05_back_180.png",
+      "stats": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1158952,
+        "partial_alpha_pixels": 42831,
+        "near_opaque_pixels": 370733,
+        "max_alpha": 255,
+        "visible_pixels": 386438,
+        "visible_bounds": {
+          "x": 234,
+          "y": 31,
+          "width": 647,
+          "height": 1148,
+          "right": 880,
+          "bottom": 1178
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0
+      },
+      "sha256": "0c8b41190bfe50e5192eff84ecab4ee32344f539d50adcd30816cb33785cbf64"
+    },
+    {
+      "file": "06_back_left_225.png",
+      "stats": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1192261,
+        "partial_alpha_pixels": 44552,
+        "near_opaque_pixels": 335703,
+        "max_alpha": 255,
+        "visible_pixels": 350659,
+        "visible_bounds": {
+          "x": 272,
+          "y": 31,
+          "width": 583,
+          "height": 1149,
+          "right": 854,
+          "bottom": 1179
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0
+      },
+      "sha256": "d8a42887fc401154245765b6cc296f8453def1147c6ecd3e51e4aeadaa465cdf"
+    },
+    {
+      "file": "07_left_270.png",
+      "stats": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1249569,
+        "partial_alpha_pixels": 50585,
+        "near_opaque_pixels": 272362,
+        "max_alpha": 255,
+        "visible_pixels": 285573,
+        "visible_bounds": {
+          "x": 392,
+          "y": 25,
+          "width": 461,
+          "height": 1156,
+          "right": 852,
+          "bottom": 1180
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0
+      },
+      "sha256": "bec0ce18e4e3fca5b57e413a77edd86a56417a4c332770667b4e659f0e22c2cb"
+    },
+    {
+      "file": "08_front_left_315.png",
+      "stats": {
+        "width": 1254,
+        "height": 1254,
+        "transparent_pixels": 1166991,
+        "partial_alpha_pixels": 44295,
+        "near_opaque_pixels": 361230,
+        "max_alpha": 255,
+        "visible_pixels": 373910,
+        "visible_bounds": {
+          "x": 359,
+          "y": 29,
+          "width": 557,
+          "height": 1157,
+          "right": 915,
+          "bottom": 1185
+        },
+        "red_edge_alpha16": 0,
+        "red_edge_alpha128": 0
+      },
+      "sha256": "521dead8ee7271ef810da56e026afcef416569be051d50aac0bc98493473cb5b"
+    }
+  ],
+  "browser_checks": {
+    "browser": "headless Microsoft Edge",
+    "image_decode_count": 8,
+    "source_decode_count": 1,
+    "background_choices_passed": 3,
+    "native_image_views_passed": 8,
+    "native_display_matches_1254_pixels": true,
+    "floor_guide_toggle": true,
+    "desktop": {
+      "width": 1600,
+      "columns": 4
+    },
+    "mobile": {
+      "width": 390,
+      "columns": 2,
+      "horizontal_overflow": false,
+      "native_view_preserves_pixels": true
+    }
+  },
+  "archive": {
+    "file": "silver-staff-8views-v1.zip",
+    "contains_selected_png_only": true,
+    "png_count": 8
+  }
+}

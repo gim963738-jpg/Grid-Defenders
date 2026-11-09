@@ -1,0 +1,21 @@
+{
+  "id": "ba7bbfdf-bc55-4c9c-a58e-fb4041f53319",
+  "status": "failed",
+  "label": "Sunburst 2.6 · High",
+  "createdAt": "2026-11-05T14:43:26.941Z",
+  "model": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "preset": "sunburst-2.6-high",
+  "prompt": "Create a single simple solid black equilateral triangle centered on a plain white background. No text, no other shapes, no decorations.",
+  "size": "1024x1024",
+  "background": "opaque",
+  "endpoint": "/v1/images/generations",
+  "references": [],
+  "spec": "문서/00_개발규칙/캐릭터스프라이트제작규약.md",
+  "error": {
+    "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+    "code": "credit_balance_exhausted",
+    "status": 429,
+    "requestId": "req_a31cb58272164fb0a7c005995a0b2e26"
+  }
+}

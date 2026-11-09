@@ -1,0 +1,49 @@
+Tool: built-in image_gen (image edit, two passes).
+Edit target: continent_cities_and_blight_v10.png. Earlier versions preserved.
+Supporting reference: references/impact_location_crop_v11.png (user-supplied target-region crop).
+Output: continent_otherworld_impact_v11.png
+User request: [Image #1] 이부분에 운석이 충돌했을때처럼 파인 느낌인데 그로인한 협곡? 구덩이 느낌으로 만들어줘 이계의 행성이 충돌하여 주변을 오염시키다 라는 컨셉으로
+Changes: Rework the northwest source into a deep planetary-impact basin with layered cliffs, radiating canyon scars and embedded alien crust that corrupts its surroundings. This supersedes the earlier enclosed molten-valley origin. Keep the four settlements, eastern clear lake and southeastern dimensional sinkhole. A second local pass restored the marine strait between the northwest and central mainlands after the initial edit accidentally joined them.
+
+PASS 1 — IMPACT BASIN
+Use case: precise-object-edit.
+Asset type: fantasy world map, otherworld planetary-impact corruption origin, version 11.
+INPUTS: Image 1 is the FULL MAP EDIT TARGET, continent_cities_and_blight_v10.png. Image 2 is the user's small crop identifying the existing northwestern black/purple mountain valley to transform. Deliver the entire full square map, not the crop.
+
+User request: "[Image #1] 이부분에 운석이 충돌했을때처럼 파인 느낌인데 그로인한 협곡? 구덩이 느낌으로 만들어줘 이계의 행성이 충돌하여 주변을 오염시키다 라는 컨셉으로"
+
+PRIMARY CHANGE — MAKE THE NORTHWEST SOURCE A DEEPLY EXCAVATED OTHERWORLD IMPACT BASIN:
+At the existing blackened WEST–NORTH source valley, roughly x=12–42%, y=12–32% of the map, reshape the existing two enclosing ridges and lava-like channel into a colossal IMPACT CRATER / gouged canyon complex, as if an otherworldly planet collided here and its alien material is corrupting the land.
+The key first impression must be terrain deeply SCOOPED INWARD AND DOWNWARD, not a normal high mountain pass, volcano or raised mountaintop.
+Create a large irregular oval-to-elongated shattered impact basin centered around the old corrupted valley. Deep steep inward-facing cliff walls, multiple exposed rock strata and stepped collapsed ledges descend to an abyssal lower floor. The outer fractured ridges and ejecta hills can retain the dark existing mountains, but their role is a broken crater rim. The center sits substantially BELOW the surrounding land. Clear lit cliff lips and dark interior occlusion show depth at the overhead map view.
+Break the rim asymmetrically with two or three radiating canyon gashes and shattered ravines extending out through the adjacent foothills. Displaced rock slabs, splintered charcoal ridges, impact ejecta and fractured violet-black ground suggest tremendous geological force. Not a perfectly smooth circular donut, a tidy ring object, artificial quarry, front-facing hole or portal symbol.
+At the deepest part show fused fragments of ALIEN PLANETARY CRUST embedded in the crater floor: unusual dark obsidian/black-violet rock masses with faint cold-violet and blackish-crimson seams. They are fractured material merged into the impact geology, not a hovering intact planet, shiny spherical meteor, giant crystal trophy or enormous creature. A little dark viscous material can seep locally in the bottom fissures, but no raised serpentine black stream, no waterfall staircase and no flow crossing the sea.
+Make contamination clearly ORIGINATE FROM THE IMPACT: irregular purple/crimson-black staining and fine fractures spread outward from the embedded alien material, follow the broken gullies through the crater rim, and transition into the already-established dead trees and sickened soil. Restrained localized violet light in deep fissures, not a neon flood. Keep the existing broader blighted forests around the source and CENTRAL's northwest fringe.
+The crater itself should be roughly 20–26% of full map width, situated within the current large corrupted northwest area; do not let it consume the entire northern snow continent or western city. Integrate it naturally with the mountain ranges; no extra inset or cinematic shot.
+Keep enough unbroken peripheral land and ridge shelves that NORTH and WEST remain joined around the impact scar. Do not replace the whole land connection with an ocean channel or disconnect them.
+
+PRESERVE THE ENTIRE REST OF V10:
+- Four settlements remain exactly recognizable, at their established sites and approximate scales: WEST stone mountain metropolis, CENTRAL red-roof river metropolis, EAST right-bank blue/green-roof metropolis, SOUTH walled desert kingdom.
+- Keep SOUTH and EAST's localized polluted coastal tips facing the existing southeastern dimensional sinkhole. Keep that sinkhole's broken rim, deep hole and falling seawater unchanged. The new northwest impact site is distinct from this second southeast origin.
+- Keep EAST's clear northern turquoise lake healthy, CENTRAL's main rivers and bridges, SOUTH's desert/oasis/delta, v08-naturalized WEST–SOUTH coastlines and open sea passage.
+- Preserve current mainland topology: NORTH+WEST connected, CENTRAL+SOUTH connected, EAST separate, marine gaps intact.
+- Keep all FIVE existing cream-white Korean labels with their exact spelling and current placement: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". Do not add any new site labels or text.
+
+STYLE: same rich high-detail hand-painted fantasy strategy-game overhead orthographic map, sculptural relief at coherent map scale, natural eroded rock, miniature forest/building scale, navy ocean and turquoise shallows, same square composition and margins. No big perspective change, atmospheric mushroom cloud, active falling meteor, stars/space scene, giant planet overhead, UI, arrows, roads, borders, monsters or decorative frame.
+
+Success: the former northwest mountain valley is now unmistakably a deeply gouged otherworld-planet IMPACT CRATER with radiating canyons and embedded alien crust spreading corruption; all established settlements and the rest of the latest map are preserved.
+
+PASS 2 — RESTORE MARINE SEPARATION
+Use case: precise-object-edit.
+Asset type: corrective local coastline pass for the otherworld impact map.
+Image 1 is the EDIT TARGET: the newly generated full world map with the deep northwest alien-impact crater.
+Image 2 is a TOPOLOGY REFERENCE ONLY: the preceding v10 map showing the original open marine strait between NORTH/WEST and CENTRAL. Do not restore the old mountain valley; preserve image 1's new impact crater.
+
+Make ONE precise localized correction: RESTORE A CONTINUOUS OPEN SEA STRAIT between the entire NORTH+WEST combined mainland and CENTRAL+SOUTH combined mainland. The new crater's EASTERN/SOUTHEASTERN ejecta apron has accidentally made a land strip joining the rim to CENTRAL's northwest coast. That unintended connecting land strip must be erased and replaced with open dark-blue sea.
+Specifically, around x=34–57%, y=28–43% of the whole map, re-cut the east/southeast edge of the crater's outer terrain back toward WEST/NORTH and restore CENTRAL's distinct northwest-facing coast. A navy/turquoise marine channel should curve continuously from the northern sea below NORTH down between WEST and CENTRAL, with no terrain bridge, canyon ledge, soil strip or tree-filled spit spanning it. Keep a minimum clear water width around 4–6% of image width at the closest approach. Reference image 2 for the intended channel course.
+The purple-dead-tree pollution on CENTRAL's northwest mainland remains, but the underlying mainland is separated from the crater source by visible WATER. Do not interpret similarly colored polluted land on both shores as one connected landmass.
+The rim and impact fissures terminate naturally at the northwest mainland's own coast. Keep the deep impact basin, layered inward-facing cliffs, dark alien crust embedded below ground level and radial canyon scars from image 1; modestly contract only its EASTERN/SOUTHEASTERN outermost debris if needed for the sea. No black bridge or liquid ribbon over the marine channel.
+
+Preserve ALL OTHER FEATURES OF IMAGE 1: the three principal mainland groups NORTH+WEST, CENTRAL+SOUTH, EAST; four cities and desert kingdom at their current sites; five correctly spelled Korean labels "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙"; the clear eastern lake; southeast dimensional-collapse sinkhole; southern/eastern coastal blight; natural west/south coastal coves and all nonlocal geography.
+Do not enlarge the impact crater or replace it with a volcano. Do not add craters or settlements. Same full square map, top-down hand-painted detailed fantasy terrain relief, original framing and colors.
+Success is a full map retaining the new deep crater while the previously separate northwest and central mainlands are clearly separated by an unbroken navigable sea channel again.

@@ -1,0 +1,56 @@
+{
+  "id": "09_dfo",
+  "status": "returned_selected_for_review",
+  "tool": "builtin image_gen.imagegen",
+  "promptFile": "09_dfo/rework-input-01.json",
+  "inputs": [
+    {
+      "usedPathAtCall": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/game_reference10_main01-20261109-e1fd458c_v002/09_dfo/character.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\09_dfo\\candidates\\initial.png",
+      "sha256": "23611d46910be13158efd2e47d47111bd6328befebd37487fb58f33c7d81ced0",
+      "nativeDimensions": [
+        1030,
+        1527
+      ],
+      "role": "edit target pixel candidate; preserve rendering/body"
+    },
+    {
+      "usedPathAtCall": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+      "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "nativeDimensions": [
+        1217,
+        1292
+      ],
+      "role": "OUR B head-yaw authority only"
+    },
+    {
+      "usedPathAtCall": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/game_reference10_main01-20261109-e1fd458c_v002/references/dfo/us-store-shot-3.jpg",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\dfo\\us-store-shot-3.jpg",
+      "sha256": "07b99bfded87720bd14313edb85b0bd0f6825a105acccd6ded91126a62fbcf26",
+      "nativeDimensions": [
+        1200,
+        675
+      ],
+      "role": "GAME COMBAT rendering/proportions only"
+    }
+  ],
+  "settings": {
+    "transparent_background": true,
+    "imageModel": "tool managed; no paid fallback or text-model substitution"
+  },
+  "resultFile": "09_dfo/generation-result.json",
+  "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-4e89e053-c4a6-4246-be2c-da060914fef8.png",
+  "savedOutput": "09_dfo/character.png",
+  "savedSha256": "73360d5954a723ba70323557db37f2947b23bd8be679622ed051fd37724e4579",
+  "rawBytesIdentical": true,
+  "nativeDimensions": [
+    1030,
+    1527
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "userAestheticApproval": false
+}

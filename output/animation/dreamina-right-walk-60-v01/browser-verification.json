@@ -1,0 +1,29 @@
+{
+    "status":  "passed",
+    "tool":  "headless Microsoft Edge CDP",
+    "native":  {
+                   "frame_count":  60,
+                   "thumbs":  60,
+                   "image_width":  6720,
+                   "image_height":  4320,
+                   "canvas_width":  672,
+                   "canvas_height":  720,
+                   "native_display_width":  672
+               },
+    "playback":  {
+                     "playback_advanced":  true,
+                     "last_frame":  59,
+                     "speed_control":  true
+                 },
+    "mobile":  {
+                   "width":  390,
+                   "scroll_width":  390,
+                   "frames":  60
+               },
+    "screenshots":  {
+                        "contact_light":  "C:\\Users\\user\\AppData\\Roaming\\orca\\chat-scratch\\51663bf6af69a5f5cc678f9af250a83b\\walk60-contact-light.png",
+                        "contact_dark":  "C:\\Users\\user\\AppData\\Roaming\\orca\\chat-scratch\\51663bf6af69a5f5cc678f9af250a83b\\walk60-contact-dark.png",
+                        "native_dark":  "C:\\Users\\user\\AppData\\Roaming\\orca\\chat-scratch\\51663bf6af69a5f5cc678f9af250a83b\\walk60-native-dark.png",
+                        "native_light":  "C:\\Users\\user\\AppData\\Roaming\\orca\\chat-scratch\\51663bf6af69a5f5cc678f9af250a83b\\walk60-native-light.png"
+                    }
+}

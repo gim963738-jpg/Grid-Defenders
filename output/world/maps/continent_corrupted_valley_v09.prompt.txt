@@ -1,0 +1,39 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_natural_coasts_v08.png. Earlier versions preserved.
+Supporting references: references/black_outflow_crop_v09.png and references/tall_source_mountain_crop_v09.png (user-supplied change-location crops).
+Output: continent_corrupted_valley_v09.png
+User request: [Image #1] 이렇게 흘러나온것보다 나무만있으면될것같고 / [Image #2] 한개의 높은산보다 위와 아래 산 사이에 용암처럼 흘러내리는 어두운 물질 느낌이 좋을꺼같아
+Changes: Remove the long black outflow over the marine channel toward Central. Express outer contamination with dead/dark trees and blighted soil. Replace the solitary giant mountain and waterfall stack with upper/lower mountain ridges containing a dark lava-like valley flow. This supersedes the previous single-tall-mountain and ocean-spanning-liquid design. Preserve v08's natural coasts, clear eastern lake, southeast sinkhole and mainland connections.
+
+Use case: precise-object-edit.
+Asset type: fantasy worldbuilding map, corrupted mountain-valley refinement, version 09.
+INPUTS:
+Image 1 is the FULL MAP EDIT TARGET, continent_natural_coasts_v08.png. Deliver this entire full square map with localized changes.
+Image 2 is the user's cropped reference locating the UNWANTED glossy black winding outflow over the sea and toward CENTRAL.
+Image 3 is the user's cropped reference locating the UNWANTED single giant tall mountain and stacked black waterfalls. These crops identify what to CHANGE, not elements to copy.
+
+User request:
+"[Image #1] 이렇게 흘러나온것보다 나무만있으면될것같고
+[Image #2] 한개의 높은산보다 위와 아래 산 사이에 용암처럼 흘러내리는 어두운 물질 느낌이 좋을꺼같아"
+
+Make TWO connected changes to the NORTHWEST corruption source and its outer affected area:
+
+1) REMOVE THE LONG EXTERNAL OUTFLOW, SHOW TREES IN THE OUTER BLIGHT:
+Completely remove the thick, glossy black S-shaped ribbon/waterfall/river that currently exits the northwest mountain and stretches southeast across the marine channel toward CENTRAL. Remove the raised jet-black pipeline-like flow from the sea and CENTRAL's northwestern shore, and remove long tar slick plumes. Restore open navy/teal sea with natural shallow coastal shelves in the marine gap; no black material spanning the sea, no new land bridge.
+On the land around that removed outflow, particularly the northwest source's lower/eastern fringes and CENTRAL's northwest coast, show the corruption primarily as quiet dead/blackened trees and sparse dark conifers rooted in muted violet-gray diseased ground, transitioning toward healthy green forest. In this OUTER affected area there should be trees and blighted soil only, no glossy black rivers, pools or waterfalls. Keep the land's existing footprint. Do not fill the ocean with forest or land just to replace the outflow.
+The source can still have a broad environmental footprint reaching CENTRAL's northwest coastal woodland through similarly blighted vegetation, but no literal connecting liquid ribbon.
+
+2) REBUILD THE SOURCE AS A DARK LAVA-LIKE FLOW BETWEEN TWO MOUNTAIN RANGES:
+Remove the one spectacular disproportionately tall summit and its staircase of black waterfalls from the northwest source at the WEST–NORTH connection.
+Instead build TWO naturally integrated jagged mountain ridgelines, an UPPER/NORTHERN range and LOWER/SOUTHERN range, enclosing a long rugged valley/rift BETWEEN them. The upper range joins the existing northern rocky/snowy range and the lower range joins the existing western range. Multiple comparable peaks, none a singular oversized tower. Match neighboring terrain scale and top-down relief.
+Within that enclosed mountain valley, depict a contained winding CHANNEL OF DARK MOLTEN-LOOKING SUBSTANCE moving like slow lava downhill along the valley floor. Near-black charcoal, inky deep violet and dark burgundy material, irregular crusted edges, subtle subdued violet/red fissures and little reflective hot-looking streaks; clearly ominous and viscous. A few short tributaries can emerge from fissures on the INNER slopes and merge in the trough. Show the fluid moving ALONG THE VALLEY BETWEEN THE MOUNTAINS, not cascading from the summit of one mountain.
+The flow stays confined to this inland source valley, tapering into a dark rift/pool behind lower rocky foothills before reaching any coast. It must NOT spill out across the ocean, touch CENTRAL with liquid, or become a tall black waterfall stack. Avoid clean shiny rope/tube shapes. This is textured, terrain-hugging dark lava-like substance, NOT bright orange ordinary lava and NOT a giant floating portal.
+Natural blackened forests and violet/red stained foothills rim the valley, with green terrain at outer edges. The source remains at the existing NORTH–WEST land connection, roughly x=12–42%, y=10–36%. Keep continuous solid land joining NORTH to WEST.
+
+STRICT PRESERVATION:
+Preserve the latest v08's naturalized WEST southern coast / SOUTH northwest coast, including broader rounded coves, sandy bays, rocky cliffs and shallow shelves. Do not revert them to earlier jagged cutout coastlines.
+Preserve CENTRAL–SOUTH land connection, WEST–NORTH land connection, separation between those combined mainlands and EAST, the broad WEST–SOUTH sea, CENTRAL's healthy interior meandering rivers, SOUTH's desert/savanna/delta, EAST's healthy turquoise mountain lake and crescent bay, and the southeast dimensional-collapse sinkhole. Keep other continents and ocean placement unchanged.
+Preserve all FIVE cream-white Korean labels, correctly spelled and in their existing regions: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". No extra labels or text.
+Maintain full square framing, true overhead orthographic hand-painted detailed fantasy terrain style, sculptural mountains, consistent forest scale, navy oceans and turquoise shallows. No cinematic close-up, crop/inset, arrows, buildings, monsters, icons, roads, border or UI.
+
+Success: the northwest source reads as TWO mountain ridges framing a dark lava-like valley; the overly tall solitary peak and all long shiny outflow into the sea/CENTRAL are gone; the outer pollution zone is expressed by trees and sickened soil; the latest natural coastal refinement and other landmarks remain intact.

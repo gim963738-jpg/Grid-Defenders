@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "comparison": "existing_SD_vs_new_SD",
+  "checked_at": "2026-11-07T14:40:32.685Z",
+  "desktop": {
+    "width": 2396,
+    "images": [
+      {
+        "variant": "existing_sd_front",
+        "title": "기존 SD",
+        "nativeWidth": 1254,
+        "nativeHeight": 1254
+      },
+      {
+        "variant": "new_sd_front",
+        "title": "새 SD",
+        "nativeWidth": 1254,
+        "nativeHeight": 1254
+      }
+    ],
+    "backgroundToggle": true
+  },
+  "mobile": [
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "minTouchHeight": 44,
+      "figures": 2
+    },
+    {
+      "width": 320,
+      "documentWidth": 320,
+      "minTouchHeight": 44,
+      "figures": 2
+    }
+  ],
+  "evidence": "output/reviews/balor-sd-front-comparison-v01/light-qa.png"
+}

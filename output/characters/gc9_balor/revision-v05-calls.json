@@ -1,0 +1,51 @@
+[
+  {
+    "id": "front_shield_background_v05",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/front.prompt.txt",
+    "references": [
+      "output/characters/gc9_balor/illustration_3views_v04/front.png"
+    ],
+    "output": "output/characters/gc9_balor/illustration_3views_v05/front.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-fb2053f2-9f21-48a0-a7b0-2f484274939f.png",
+    "started_at": "2026-11-07T13:47:28.760Z",
+    "finished_at": "2026-11-07T13:48:12.774Z"
+  },
+  {
+    "id": "right_shield_sword_initial_v05",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/right.prompt.txt",
+    "references": [
+      "output/characters/gc9_balor/illustration_3views_v04/right.png",
+      "output/characters/gc9_balor/illustration_3views_v05/front.png"
+    ],
+    "output": "output/characters/gc9_balor/variants/right_geometry_initial_v05.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-5966e693-15cf-471b-b2ca-1e106f5eac91.png",
+    "started_at": "2026-11-07T13:49:58.205Z",
+    "finished_at": "2026-11-07T13:50:42.302Z"
+  },
+  {
+    "id": "back_shield_palm_background_v05",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/back.prompt.txt",
+    "references": [
+      "output/characters/gc9_balor/illustration_3views_v04/back.png",
+      "output/characters/gc9_balor/illustration_3views_v05/front.png"
+    ],
+    "output": "output/characters/gc9_balor/illustration_3views_v05/back.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-4cd17ff4-4c8e-47d4-b64b-add429c4cab7.png",
+    "started_at": "2026-11-07T13:49:58.206Z",
+    "finished_at": "2026-11-07T13:51:20.953Z"
+  },
+  {
+    "id": "right_collinear_sword_v05",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/right_geometry_fix.prompt.txt",
+    "references": [
+      "output/characters/gc9_balor/variants/right_geometry_initial_v05.png"
+    ],
+    "reference_paths_at_call": [
+      "output/characters/gc9_balor/illustration_3views_v05/right.png"
+    ],
+    "output": "output/characters/gc9_balor/illustration_3views_v05/right.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-e12ec5b2-12dd-43ec-879b-55e2e3ea522b.png",
+    "started_at": "2026-11-07T13:53:40.558Z",
+    "finished_at": "2026-11-07T13:54:09.424Z"
+  }
+]

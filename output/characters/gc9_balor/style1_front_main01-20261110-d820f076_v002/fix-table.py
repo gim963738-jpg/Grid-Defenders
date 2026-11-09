@@ -1,0 +1,11 @@
+from pathlib import Path
+R=Path(__file__).parent;p=R/'build-review.py';s=p.read_text(encoding='utf-8')
+s=s.replace('const x1=l+m.x1*s',"if(m.applicable===false)return '';const x1=l+m.x1*s")
+s=s.replace("return '<td>'+((m.x2-m.x1)","if(m.applicable===false)return '<td>해당없음</td>';return '<td>'+((m.x2-m.x1)")
+s=s.replace('팔/방패측 가림 추정','오른상완→중심 거리');p.write_text(s,encoding='utf-8')
+p=R/'finalize-v002.py';s=p.read_text(encoding='utf-8')
+s=s.replace("rows='\\n'.join(f\"|{label}|{ratio(old,k):.1f}%|{ratio(style,k):.1f}%|{ratio(new,k):.1f}%|\" for k,label in labels.items())", "rows='\\n'.join('|'+label+'|'+f'{ratio(old,k):.1f}%|'+(f'{ratio(style,k):.1f}%' if style['widthMeasurements'][k]['applicable'] else '해당없음')+'|'+f'{ratio(new,k):.1f}%|' for k,label in labels.items())")
+s=s.replace('초기2후보','초기3후보').replace('두후보보존','세후보보존').replace('후보2개/','후보3개/').replace('2후보·최종','3후보·최종')
+s=s.replace('마지막 편집은 그 과대를 선택1/반려본의 머리비중에 가깝게 재작화한 것이며,','세번째 편집은 그 과대를 선택1/반려본의 머리비중에 가깝게 재작화했고 마지막에는 큰방패길이를 안쪽겹침으로 복원했으며,')
+p.write_text(s,encoding='utf-8')
+print('table exclusions and candidate history updated')

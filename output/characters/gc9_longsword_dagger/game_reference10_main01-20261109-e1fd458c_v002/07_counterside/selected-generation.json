@@ -1,0 +1,46 @@
+{
+  "id": "07_counterside",
+  "status": "returned_selected_for_review",
+  "tool": "builtin image_gen.imagegen",
+  "promptFile": "07_counterside/generation-input.json",
+  "inputs": [
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+      "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "nativeDimensions": [
+        1217,
+        1292
+      ],
+      "role": "OUR POSE/IDENTITY only"
+    },
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\counterside\\store-shot-2.jpg",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\counterside\\store-shot-2.jpg",
+      "sha256": "599eb375fb8e54864125b386a3a5c293f209939d8a3f4ee757e9a46966eb539d",
+      "nativeDimensions": [
+        1920,
+        1080
+      ],
+      "role": "GAME COMBAT RENDERING/PROPORTION only"
+    }
+  ],
+  "settings": {
+    "transparent_background": true,
+    "imageModel": "tool managed; no paid fallback or text-model substitution"
+  },
+  "resultFile": "07_counterside/generation-result.json",
+  "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-359e6f86-5c9d-45df-98d2-ef7e7488db94.png",
+  "savedOutput": "07_counterside/character.png",
+  "savedSha256": "3b5bd458f6950a1a31c5c9c68a8649e7eee54314fc9e276e9ac8891f3da5cd20",
+  "rawBytesIdentical": true,
+  "nativeDimensions": [
+    1024,
+    1536
+  ],
+  "alpha": [
+    0,
+    254
+  ],
+  "userAestheticApproval": false
+}

@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "standard_id": "sd_silver_staff_standard_v1",
+  "checked_at": "2026-11-07T15:44:48.129Z",
+  "desktop": {
+    "width": 1054,
+    "documentWidth": 1054,
+    "minTouchHeight": 44,
+    "standard": [
+      {
+        "id": "silver_staff",
+        "head": 0.2017543859649123,
+        "foot": 0.9393939393939394
+      },
+      {
+        "id": "blond_warrior",
+        "head": 0.20175437254931305,
+        "foot": 0.9393938888216525
+      },
+      {
+        "id": "balor_existing_sd",
+        "head": 0.20175436554003928,
+        "foot": 0.9393939187429609
+      }
+    ],
+    "originalToggle": true,
+    "backgroundToggle": true,
+    "originalImageCount": 3
+  },
+  "mobile": [
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "minTouchHeight": 44,
+      "standard": [
+        {
+          "id": "silver_staff",
+          "head": 0.20175438596491224,
+          "foot": 0.9393939393939394
+        },
+        {
+          "id": "blond_warrior",
+          "head": 0.20175428726815509,
+          "foot": 0.9393940867630701
+        },
+        {
+          "id": "balor_existing_sd",
+          "head": 0.20175424211100865,
+          "foot": 0.9393938850431225
+        }
+      ],
+      "originalToggle": true,
+      "backgroundToggle": true,
+      "originalImageCount": 3
+    },
+    {
+      "width": 320,
+      "documentWidth": 320,
+      "minTouchHeight": 44,
+      "standard": [
+        {
+          "id": "silver_staff",
+          "head": 0.20175438596491227,
+          "foot": 0.9393939393939394
+        },
+        {
+          "id": "blond_warrior",
+          "head": 0.20175436800648483,
+          "foot": 0.9393940882642678
+        },
+        {
+          "id": "balor_existing_sd",
+          "head": 0.20175432554403494,
+          "foot": 0.939394163286857
+        }
+      ],
+      "originalToggle": true,
+      "backgroundToggle": true,
+      "originalImageCount": 3
+    }
+  ],
+  "evidence": "output/reviews/sd-standard-v1/reference-size-qa.png"
+}

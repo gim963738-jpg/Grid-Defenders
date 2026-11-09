@@ -1,0 +1,20 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 1,
+  "role": "characters",
+  "status": "paused_by_coordinator_scope_correction",
+  "message": "msg_b7e6e571997a",
+  "newGenerationCallsAfterNotice": 0,
+  "newScopeApproved": false,
+  "baselineFilesReturned": 29,
+  "baselineCompleteStylePairs": 14,
+  "baselinePartialStyle": "15_stained_glass/model-a.png",
+  "knownReturnedUniqueGenerationResults": 33,
+  "callsIssuedBeforeInterruption": 46,
+  "unconfirmedReturns": 13,
+  "backendRunningState": "unknown: exec cells 61 and 93 report not found after intentional turn interruption; this does not prove backend jobs finished",
+  "forceCancelOrDeletion": false,
+  "newGameReferenceImagesGenerated": false,
+  "remaining": ["15B and16-20 A/B main results unconfirmed", "11 woodcut framing-only2 returns unconfirmed", "full40 style distinction/label-hidden/small/light-dark final QA not completed"],
+  "preservationNote": "A post-interruption store key was missing and preservation copies initially went into a new undefined folder; checked absolute paths and moved that entire newly created folder under this allowed output as late-arrivals-raw-preservation without deleting any PNG originals"
+}

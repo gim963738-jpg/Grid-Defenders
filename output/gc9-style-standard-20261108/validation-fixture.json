@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "character_id": "balor",
+  "style_profile": "gc9_c3_c6_eight",
+  "mode": "style_rebuild",
+  "scope": "whole_character",
+  "generation_authorized": false,
+  "view": "front",
+  "references": [
+    {
+      "id": "c04_front",
+      "path": "output/character-redesign-6x2/images/c04_front.png",
+      "role": "whole_style",
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+    },
+    {
+      "id": "c03_front",
+      "path": "output/character-redesign-6x2/images/c03_front.png",
+      "role": "whole_style",
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+    },
+    {
+      "id": "c06_front",
+      "path": "output/character-redesign-6x2/images/c06_front.png",
+      "role": "whole_style",
+      "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+    }
+  ],
+  "edit_target": null,
+  "design_brief": "output/characters/gc9_balor/character-brief.json",
+  "preserve_failed_face_geometry": false,
+  "followup_views": [],
+  "notes": [
+    "입력 검사 전용 예시. 실제 생성 조합이나 생성 승인으로 사용하지 않는다.",
+    "C4 전체·얼굴 우선, C3 금속 우선. C5/C6도 같은 전체 기준 집합의 구성원이다.",
+    "전체 8장을 첨부하는 규칙이 아니다. 요청별 실제 이미지 역할과 순서를 다시 정한다."
+  ]
+}

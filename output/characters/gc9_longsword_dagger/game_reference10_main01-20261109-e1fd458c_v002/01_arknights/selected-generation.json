@@ -1,0 +1,46 @@
+{
+  "id": "01_arknights",
+  "status": "returned_selected_for_review",
+  "tool": "builtin image_gen.imagegen",
+  "promptFile": "01_arknights/generation-input.json",
+  "inputs": [
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+      "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "role": "OUR POSE/IDENTITY only"
+    },
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\arknights\\combat-inset-v2.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\arknights\\combat-inset-v2.png",
+      "sha256": "d73a403815accba026a3ef8070586b6f9f87f271eb030cf197ffcc028d83ee27",
+      "nativeDimensions": [
+        1360,
+        680
+      ],
+      "role": "GAME COMBAT RENDERING/PROPORTION only"
+    }
+  ],
+  "settings": {
+    "transparent_background": true,
+    "imageModel": "tool managed; no paid fallback or text-model substitution"
+  },
+  "resultFile": "01_arknights/generation-result.json",
+  "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-afd2df8c-5641-4ada-ae9e-455fa00dfa33.png",
+  "savedOutput": "01_arknights/character.png",
+  "savedSha256": "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+  "rawBytesIdentical": true,
+  "nativeDimensions": [
+    1312,
+    1199
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "userAestheticApproval": false
+}

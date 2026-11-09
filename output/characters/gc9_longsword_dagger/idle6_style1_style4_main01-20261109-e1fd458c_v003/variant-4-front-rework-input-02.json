@@ -1,0 +1,16 @@
+{
+  "file": "variant-4-front.png",
+  "variant": 4,
+  "direction": "front",
+  "tool": "builtin image_gen.imagegen",
+  "referenced_image_paths": [
+    "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/idle6_style1_style4_main01-20261109-e1fd458c_v003/candidates/variant-4-front-initial.png",
+    "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/game_reference10_main01-20261109-e1fd458c_v002/04_another_eden/character.png"
+  ],
+  "inputRoles": [
+    "edit target: initial front idle; keep head/face/hair/rendering/pose/equipment",
+    "unique original variant4 style/proportions identity authority; do not copy combat pose"
+  ],
+  "transparent_background": true,
+  "prompt": "Precise identity-preserving revision of IMAGE 1, our FRONT IDLE warrior. IMAGE2 is the original variant4 style/proportion/identity authority only, not its combat pose. Keep IMAGE1's head, ACTUAL FACE AND SKULL SIZE, hair silhouette/volume, facial impression, warm soft shading and contour, armor/blue scarf/short lowered hood/brown belts/pouches/trousers, two weapons, exact FRONT view and relaxed arms-down standing pose. Change ONLY its too-elongated body into a MODESTLY more compact medium-SD anatomy: reduce the combined torso/thigh/calf length relative to the SAME head by around 12%, redrawing joints and armor/cloth connections naturally. This is a small anatomy adjustment, NOT a giant-headed 2-3-head chibi: aim around 4.1 hair-inclusive heads, not 3.4 and not 4.6 (working comparison target, not official standard). Do NOT inflate hair/head or shrink the head. Preserve relative shoulder/hip widths and clear slim youthful male anatomy. Feet both flat about shoulder width, knees relaxed almost straight, shoulders level. RIGHT hand SCREEN LEFT holds same LONGSWORD DOWN and slightly outward beside left leg, BLUE diagonal blade inlays/wing guard/gold center/RING knuckle guard intact. LEFT hand SCREEN RIGHT holds same SHORT angular dagger DOWN beside thigh. EXACTLY two arms/hands and two weapons; natural wrist and finger wraps on true handles, thumb opposite fingers. Anatomical RIGHT crescent pauldron and silver plated shin SCREEN LEFT; LEFT blue cloth boot with metal guards SCREEN RIGHT. No crossed chest weapons, combat crouch, walking, attack, long cape, extra parts/symbols. Retain original variant4 soft gently modeled silver/cloth, thin warm dark brown outlines, subdued midtones, NOT angular matte variant1 style. ONE complete transparent full-body cutout, all hair/soles/blade tips uncut with comfortable safety margins. No floor shadow, background, text, effects or panels. Repaint the adjusted anatomy; do not mechanically stretch or splice body parts."
+}

@@ -1,0 +1,21 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_balanced_v03.png. Earlier versions preserved.
+Output: continent_northwest_joined_v04.png
+User request: 서대륙가 북대륙을 서대륙과 이어보자
+Working interpretation: Connect the West and North continents by a natural forested and mountainous land isthmus. Their geographic labels remain. This request changes the earlier five-physically-separate-mainlands layout; Central, East and South remain separate.
+
+Use case: precise-object-edit.
+Asset type: fantasy world map, northwest continental land connection study, version 04.
+Input image 1 is the EDIT TARGET: continent_balanced_v03.png, the existing Korean-labelled five-continent fantasy map.
+
+User request: "서대륙가 북대륙을 서대륙과 이어보자"
+Interpretation: physically connect the WEST continent (서대륙) and NORTH continent (북대륙) to each other with natural continuous land.
+
+Primary edit: Fill the short northwest marine gap between the NORTHEASTERN tip/upper-right shoulder of the WEST landmass and the SOUTHWESTERN lower-left shoulder of the NORTH landmass with a substantial organic land isthmus. The two formerly separate landmasses must now unmistakably form ONE continuous combined northwest mainland. The isthmus should be moderately broad, approximately 5–8% of image width at its narrowest, connecting firmly to both shores, not two peninsulas still separated by a tiny water channel. Recut the local coasts into natural bays on either side of this connection. Extend western forested hills northward into northern rocky foothills; let a modest mountain ridge run continuously from the west's eastern mountain range into the north's southwestern mountains, with green valleys and snow appearing only at higher northern elevation. Natural geological terrain only: no built bridge, road, causeway, city or structures.
+
+Preserve the source as closely as possible outside this very localized northwest connection: keep the size, shape, relative positions, textures and biome identities of all five named regions, especially central fertile rivers, eastern misty mountains and purple basin, and southern desert/savanna/delta. CENTRAL, EAST and SOUTH remain fully separate ocean-surrounded continents. The land connection must NOT touch central/east/south. Keep the broad navigable sea channels around the CENTRAL landmass. NORTH and WEST retain their existing names on their respective portions of the now-connected mainland; the labels are geographic regions, do not merge or rename them.
+
+Text invariants: preserve exactly the existing FIVE cream-white Korean labels, same placement and understated style: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". Do not add any new labels or explanations.
+Style invariants: square high-resolution true overhead orthographic detailed fantasy strategy-game terrain painting; rich navy ocean, turquoise shallow coastlines, sculptural mountains, lush scale-consistent forests and natural drainage. Keep original framing, ocean margins and restrained offshore clouds. No political borders, dashed outlines, icons, inset map, UI, frame or title.
+
+Success criterion: it is immediately evident that WEST and NORTH are joined by continuous mountainous/forested land in the northwest, while the other three continents retain their current isolation. Make only this connection change.

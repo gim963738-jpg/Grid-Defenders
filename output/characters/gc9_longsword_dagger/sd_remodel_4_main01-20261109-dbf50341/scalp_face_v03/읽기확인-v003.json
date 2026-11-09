@@ -1,0 +1,123 @@
+﻿{
+    "task":  "MAIN01-20261109-DBF50341",
+    "iteration":  3,
+    "role":  "characters",
+    "workSummary":  "모발을유지한금발전사의실제두상/얼굴을키우는신규정면4안을내장image_gen으로생성한다. 추정scalpCrown~chin과hairTop~sole를분리하고전체높이/발선을등비등록한전신·얼굴·57/72CSSpx비교와밝고어두운검수를수행한다. 개인PNG바이트와이전작업물을보존하며공통규정/게임/UI는수정하지않는다.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md",
+                          "sha256":  "38d9762b3212641b8a936f9477f5f0c2573b5e97c5c86048b9b6715a522e3d36",
+                          "applies":  "최신 두상·얼굴 확대 요청을 이번 정면4안에 한정 우선한다. 기존 SD 픽셀·정체성·인체좌우·원본 보존을 적용하고 세계관·GC9·카탈로그는 변경하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md",
+                          "sha256":  "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+                          "applies":  "차수3 본문을 다시 읽고 새 적용확인과start 후 단일 담당이 직접 생성·검수한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+                          "applies":  "사용자 실행 확인 범위의 실제4안을 제출하고5종 기록을차수3으로 추가한다. 이전 산출물과 사용자 최종 판정 권한을 보존한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+                          "applies":  "main01의차수3영수증과현재상태를 확인하고 공식worker_done으로 결과를 전달한다. 실행중모델/UI는 바꾸지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+                          "applies":  "새 담당을 복제하지 않고 직접 내장image_gen을 사용한다. 호출입력/출력과한계를기록하고 미적합격을분리한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "콘텐츠새폴더와차수3기록만편집하고게임실행/public/스티커/UI는수정하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md",
+                          "sha256":  "dab9250dd0aef972f12d28ab2947b88926234c0f69dc6ecb5bbeac28234ac14e",
+                          "applies":  "실패·미합격시안을승인마스터로쓰지않고원본SD를정체성참조로사용한다. 기존공통규정은제안외수정하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "새23문서별적용/해시로차수3start를통과한다. 이전ACK를재사용하거나송신실패를사용자승인으로돌리지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+                          "applies":  "characters기존팀장으로main01에보고하며조직과담당을변경하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "세계관/캐릭터자료분류와제작공정을구분하고기존소스위치를보존한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "캐릭터노드범위에서정면디자인만제작하며능력치/스킬/세계관설정을추가하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\SD_공통제작기준.md",
+                          "sha256":  "25e4044a0ee11ce0ffb4a95ad3e9287f3617e6b272cbd0fb5f0dabd7e844e964",
+                          "applies":  "SD픽셀과바이트/알파보존·동일표시키/발선검수를적용한다. 은발체형대신이번두상확대요청을따르며공통수치확정은하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터설정\\SD_공통제작기준.json",
+                          "sha256":  "b46e0f915f8f9d5de5663d715e76a8cb6fb079ca94e42fa3fe33134799d69afe",
+                          "applies":  "본체와장비측정분리를적용하고hairTop과scalpCrown을구분한다. 기존정규화프레이밍은참고이며새비율확정으로쓰지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_8views_v01\\제작기준.md",
+                          "sha256":  "ee8349be61209c5e07753e8d9efb421f6c7b5d33946f3c06f2c1ceeef2390c42",
+                          "applies":  "금발/갈색눈/청색목도리·후드/은갑옷/비대칭다리/오른손장검·왼손단검구성과장식을보존한다. 이번엔정면4장만생성한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\제작기준.md",
+                          "sha256":  "04a8f9e627ff0cb8fe7a2e42188ab826b280b172f9815c661c2ee81763a2305d",
+                          "applies":  "원본복장과무기형태를유지하고GC9성인형비율은적용하지않는다. 이름·직업·능력미지정을유지한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\캐릭터제작규약.md",
+                          "sha256":  "e3d0b2e954ea092a2c05750a45f1b7e841eb473ed0414c582ed57368ad362799",
+                          "applies":  "일반1장승인순서보다이번정면4안직접요청을우선한다. 방향/애니메이션/카탈로그등록은제외한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md",
+                          "sha256":  "412cf153ca5f906d132c0d2ed9813553e8ee95c97d5dcee23a63574374f53ae2",
+                          "applies":  "장검그립·손목·엄지와네손가락·무기축·인체소유손을검수하고가이드선을출력하지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자방향추가.md",
+                          "sha256":  "0c6ef7b6c3b5af10d245fef9717fbef30bf629354ae3b45d1ac66cc1f0a6fddb",
+                          "applies":  "차수2방향추가요청은과거이력이다. 이번차수는두상확대정면4안만제작하고15방향을바꾸지않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\검수.md",
+                          "sha256":  "327891441239f549b3d02920e37a037ca569744f337b047fda83ac582c81453a",
+                          "applies":  "1차hair-inclusive3.01~3.18과프레이밍한계를읽었다. 이지표가얼굴가독성을보증하지못하므로이번엔추정정수리~턱·가시면적을별도측정한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\report.md",
+                          "sha256":  "bd426dc091826331613a69e5369cf7780da14a1b12289c97a72d45f43dbea9e9",
+                          "applies":  "1차보고는보존하고원본SD를권위입력으로쓴다. 새4PNG/전신·얼굴·57/72CSSpx비교·검수는별도폴더로제출한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자두상확대-v003.md",
+                          "sha256":  "44eb11f6f33819df911e5f3eaae2b4f81ba27edf5772529d8bf348ed20f111d9",
+                          "applies":  "사용자정정대로모발은유지하고실제두개골/얼굴을키운다. 모발만팽창/눈만확대/대머리완성본은금지한다. 개별얼굴형차이와청년남성정체성을함께유지한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\두상확대-v003-사전확인.md",
+                          "sha256":  "668c371ea0d37b1639b97ec6b2bb6cdbeb37e28cac3fdc45b566cb0237f799ce",
+                          "applies":  "이미확인된실행범위를반복승인받지않고새폴더/차수3기록만수정한다. 정수리추정한계·실제작은표시열람을완료기준으로삼는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\분석.md",
+                          "sha256":  "602f04a69cd66926b22ae4590ff8ccf9c78ac34f1510df433cc1ab6ea6f7f4df",
+                          "applies":  "이전모발끝~턱3.3목표를두상3.3으로복사하지않는다. 과거분석은원본대로보존하고이번측정오류개선은새작품기준에명시한다."
+                      }
+                  ]
+}

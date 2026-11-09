@@ -1,0 +1,47 @@
+{
+  "task": "MAIN01-20261109-DBF50341",
+  "iteration": 4,
+  "role": "characters",
+  "status": "completed_for_developer_compare_integration",
+  "outputPaths": {
+    "variant-2-front.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\variant-2-front.png",
+    "variant-2-right-045.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\variant-2-right-045.png",
+    "variant-2-right-090.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\variant-2-right-090.png",
+    "comparison.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\comparison.png",
+    "index.html": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\index.html",
+    "asset-manifest.json": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\asset-manifest.json",
+    "제작기준.md": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\제작기준.md",
+    "분석.md": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\분석.md",
+    "검수.md": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\검수.md",
+    "generation-records.json": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\generation-records.json"
+  },
+  "masterPath": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant-2-front.png",
+  "masterSha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\읽기확인-v004-877c335b645d4043a372d71f20a422bd.json",
+    "sha256": "97b892e6addaa516af22b641c2edfedc9ad91be7fa8398727afc98ab207c312c"
+  },
+  "checks": {
+    "generationCalls": 4,
+    "newDirections": 2,
+    "actualViewImage": true,
+    "sourceBytesMatch": true,
+    "noResampling": true,
+    "previousSnapshotFilesUnchanged": true,
+    "previousFileCount": 111,
+    "threeDirectionsLightDarkSmallNarrowExpandedInspected": true,
+    "userAestheticApproved": false,
+    "gameIntegratedByCharacters": false,
+    "commonRulesChanged": false,
+    "gitCommitPush": false
+  },
+  "remainingIssues": [
+    "숨은 정수리±40px/턱±10px 추정오차; 정확히 같은 해부학적 등신이나 새 공통비율 확정 아님.",
+    "45도 두상 비중은 추정상 정면보다 조금 작으며,90도 측면 코·턱은 정면보다 성숙하게 읽힐 수 있어 사용자 미적 평가 대상.",
+    "장비 정체성/인체좌우는 유지하나 후드 주름·가드 날개 분할·벨트 금속면 등의 미세 생성차이가 남음.",
+    "90도 먼 왼손/단검은 자연가림이므로 별도 완전한 형태 검수는 불가능하며 보이도록 추가하지 않음.",
+    "세원본의 상단/하단 여백이 넉넉하지 않고 기존 공통 SD 프레이밍에 일치한다고 주장하지 않음.",
+    "밝고어두운배경에서 머리/장비 외곽에 가는 적색·갈색 등 반투명 가장자리 잔여가 보임; 원본바이트를 보존했고 게임용 픽셀 정리 완료로 주장하지 않음.",
+    "57/72CSSpx는 별도 갤러리 관찰; 게임 통합·실기기 검증·사용자 미적 합격은 이번 캐릭터 담당이 수행하지 않음."
+  ]
+}

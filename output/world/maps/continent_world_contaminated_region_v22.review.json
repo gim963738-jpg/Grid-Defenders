@@ -1,0 +1,58 @@
+{
+  "status": "visually_reviewed",
+  "source": "output/world/maps/continent_world_dwarf_kingdom_v21.png",
+  "source_sha256": "2eefb719a3f5d0636027fbfc035031633f363e631161fb92cfadcbf952658e97",
+  "source_unchanged": true,
+  "source_v21_unchanged": true,
+  "previous_maps_unchanged": {
+    "output/world/maps/continent_world_final_v17.png": "0e0b0b31df95bb9e61e7226c0237f2bdab0948053a9dc833c9e4cb6cc483c178",
+    "output/world/maps/continent_world_lore_v18.png": "11cb34f9a6dab23fe89a9dd4cbfb2bc63b13fa755a130df783efd0213f3305e6",
+    "output/world/maps/continent_world_coastal_green_v19.png": "f7589055b41639f16409d50f74384c246ced8db9b3c0eafa0d5d4d56b7961f60",
+    "output/world/maps/continent_world_elven_forest_v20.png": "17084bf2a5c6e16e48bd8ecb6a288fc78213c84b6478651aaee96e369298b29e",
+    "output/world/maps/continent_world_dwarf_kingdom_v21.png": "2eefb719a3f5d0636027fbfc035031633f363e631161fb92cfadcbf952658e97"
+  },
+  "output": {
+    "path": "output/world/maps/continent_world_contaminated_region_v22.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "056894a1e86e4ee2f51efef25151f7db32c367f8c91acff6f6f90fdc947abeb9",
+    "opaque": true
+  },
+  "copy_matches_generated_original": true,
+  "not_resampled": true,
+  "labels_manually_reviewed": [
+    "북대륙",
+    "서대륙",
+    "중앙대륙",
+    "동대륙",
+    "남대륙",
+    "아스테른 제국",
+    "발레시온",
+    "아르케리온",
+    "발트레인 왕국",
+    "사하리드 왕국",
+    "진월국",
+    "스카르가드 요새",
+    "성휘 대교회",
+    "엘프의 숲",
+    "드워프의 지하왕국",
+    "오염지역"
+  ],
+  "caption_exact": "오염지역",
+  "caption_no_internal_space": true,
+  "caption_on_northwestern_crater_lower_lip": true,
+  "existing_labels_do_not_overlap_new_caption": true,
+  "preserved_by_visual_review": [
+    "five continent regions",
+    "all 15 previous geographic captions",
+    "northwestern purple crater and surrounding corrupted terrain",
+    "elven forest and northeastern green connection",
+    "dwarven underground gateway",
+    "southern green coast and river delta",
+    "all existing cities and mountain ranges",
+    "southeastern dimensional rift"
+  ],
+  "preservation_method": "visual comparison; generated edit is not asserted pixel-identical outside lettering",
+  "user_approved": false,
+  "settings": "자료/세계관/세계관설정.json"
+}

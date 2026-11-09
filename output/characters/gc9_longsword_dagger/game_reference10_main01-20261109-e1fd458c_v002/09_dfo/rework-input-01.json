@@ -1,0 +1,18 @@
+{
+  "id": "09_dfo",
+  "title": "던전앤파이터",
+  "tool": "builtin image_gen.imagegen",
+  "imageModel": "tool managed; not text model Sol",
+  "prompt": "Edit image 1 (our generated fine-pixel warrior, actual edit target). Preserve its entire pixel rendering, head/body size, pose, arms, hands, exactly two weapons, armor, blue scarf and short hood, colors, framing and transparent alpha. Image 2 (our original B) is ONLY the exact head/face yaw/pose authority. Image 3 is ONLY the fine-pixel game combat rendering reference. SINGLE TARGETED CORRECTION: turn the HEAD/face a small amount toward the viewer, to the SAME front-right THREE-QUARTER head yaw as image 2, with BOTH brown eyes visible (near eye large, far eye narrow), not a one-eye profile. Keep gaze toward an enemy at screen right, spiky layered golden blond hair, youthful male determined expression. Do not rotate the torso or change head size, legs, foot spread, held sword/dagger angles or hands. Preserve right-hand longsword (blue slant inlays, wing guard, ring knuckle guard), left-hand angular short dagger, anatomical right crescent pauldron and plated shin near side, left blue cloth boot far side. Full transparent cutout, all hair/soles/blades uncut. No background/ground shadow/text/effects. Keep visible stepped fine pixel clusters; no smooth anime repaint.",
+  "referenced_image_paths": [
+    "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/game_reference10_main01-20261109-e1fd458c_v002/09_dfo/character.png",
+    "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+    "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/game_reference10_main01-20261109-e1fd458c_v002/references/dfo/us-store-shot-3.jpg"
+  ],
+  "transparent_background": true,
+  "sourceRoles": [
+    "OUR POSE/IDENTITY only",
+    "GAME COMBAT RENDERING/PROPORTION only"
+  ],
+  "status": "planned"
+}

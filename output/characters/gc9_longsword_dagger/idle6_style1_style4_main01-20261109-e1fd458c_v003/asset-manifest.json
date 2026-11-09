@@ -1,0 +1,598 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 3,
+  "assets": [
+    {
+      "id": "variant-1-front",
+      "variant": 1,
+      "direction": "front",
+      "label": "1번 · 정면 0°",
+      "file": "variant-1-front.png",
+      "width": 1070,
+      "height": 1470,
+      "nativeDimensions": [
+        1070,
+        1470
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "rawSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-33a70ff9-0dd9-467e-a17f-202f8a5059c7.png",
+      "rawBytesIdentical": true,
+      "boundsAlpha32": [
+        92,
+        54,
+        881,
+        1408
+      ],
+      "boundsAlpha1": [
+        41,
+        35,
+        1017,
+        1444
+      ],
+      "hairTop": 54,
+      "sole": 1407,
+      "bodyHeight": 1354,
+      "footX": 555,
+      "footY": 1407,
+      "measurementROI": {
+        "rightPlateFoot": [
+          345,
+          1250,
+          505,
+          1415
+        ],
+        "leftBlueFoot": [
+          600,
+          1250,
+          780,
+          1415
+        ],
+        "bodyExcludingBlades": [
+          270,
+          54,
+          830,
+          1408
+        ],
+        "supportForSole": [
+          345,
+          1250,
+          505,
+          1440
+        ]
+      },
+      "skullCrownEstimate": {
+        "status": "hidden under hair; visual reconstruction from forehead/temple arc",
+        "rangeY": [
+          160,
+          215
+        ],
+        "uncertainty": "broad visual estimate; not directly measured or an official head unit"
+      },
+      "chinEstimate": {
+        "rangeY": [
+          405,
+          425
+        ],
+        "estimated": true
+      },
+      "measurementMethod": "visual native-image hairTop and sole landmarks; support-foot ROIs exclude lowered blade tips; alpha>=32 contour only supports observation, not whole-canvas body height",
+      "estimated": true,
+      "uncertaintyPixels": 10,
+      "measurementReviewed": true,
+      "inputFile": "variant-1-front-input.json",
+      "notes": "Front idle: angular matte cell planes preserved, near-straight relaxed knees and both blades lowered. Visible hair-inclusive height changes when crouch straightens; not a fixed 3.3 standard."
+    },
+    {
+      "id": "variant-1-right-045",
+      "variant": 1,
+      "direction": "right45",
+      "label": "1번 · 오른쪽 앞 45°",
+      "file": "variant-1-right-045.png",
+      "width": 1070,
+      "height": 1470,
+      "nativeDimensions": [
+        1070,
+        1470
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "2c5104cfc09f32f0da25bd18dd14b48fc648263df757d68cc05f7553db2346e1",
+      "rawSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-ce68454d-3109-43d8-b5dc-1566d5984622.png",
+      "rawBytesIdentical": true,
+      "boundsAlpha32": [
+        202,
+        51,
+        818,
+        1420
+      ],
+      "boundsAlpha1": [
+        43,
+        48,
+        1011,
+        1423
+      ],
+      "hairTop": 51,
+      "sole": 1412,
+      "bodyHeight": 1362,
+      "footX": 540,
+      "footY": 1412,
+      "measurementROI": {
+        "rightPlateFoot": [
+          350,
+          1260,
+          515,
+          1415
+        ],
+        "leftBlueFoot": [
+          550,
+          1260,
+          760,
+          1405
+        ],
+        "bladeTipExcluded": [
+          195,
+          1370,
+          245,
+          1425
+        ],
+        "supportForSole": [
+          350,
+          1260,
+          515,
+          1440
+        ]
+      },
+      "skullCrownEstimate": {
+        "status": "hidden under hair; temple/forehead arc projection",
+        "rangeY": [
+          145,
+          210
+        ]
+      },
+      "chinEstimate": {
+        "rangeY": [
+          400,
+          420
+        ],
+        "estimated": true
+      },
+      "measurementMethod": "visual native-image hairTop and sole landmarks; support-foot ROIs exclude lowered blade tips; alpha>=32 contour only supports observation, not whole-canvas body height",
+      "estimated": true,
+      "uncertaintyPixels": 12,
+      "measurementReviewed": true,
+      "inputFile": "variant-1-right-045-input.json",
+      "notes": "Front-right three-quarter: both eyes/front chest visible, arms lowered. Sword tip below soles is excluded from body height; hair/head proportion close to same variant front."
+    },
+    {
+      "id": "variant-1-right-090",
+      "variant": 1,
+      "direction": "right90",
+      "label": "1번 · 오른쪽 정측면 90°",
+      "file": "variant-1-right-090.png",
+      "width": 1070,
+      "height": 1470,
+      "nativeDimensions": [
+        1070,
+        1470
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "14e23789c73a5866f10de9e46b49433179d5ac249e970424758fc56243921f0b",
+      "rawSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2fb8d44a-f608-4e1b-8317-030f942c884e.png",
+      "rawBytesIdentical": true,
+      "boundsAlpha32": [
+        313,
+        50,
+        713,
+        1406
+      ],
+      "boundsAlpha1": [
+        0,
+        0,
+        1056,
+        1430
+      ],
+      "hairTop": 50,
+      "sole": 1405,
+      "bodyHeight": 1356,
+      "footX": 560,
+      "footY": 1405,
+      "measurementROI": {
+        "nearRightPlateFoot": [
+          420,
+          1270,
+          620,
+          1410
+        ],
+        "farLeftBlueFoot": [
+          525,
+          1260,
+          675,
+          1375
+        ],
+        "bladeTipExcluded": [
+          345,
+          1320,
+          410,
+          1400
+        ],
+        "supportForSole": [
+          420,
+          1270,
+          620,
+          1430
+        ]
+      },
+      "skullCrownEstimate": {
+        "status": "hidden under hair; side forehead/ear reconstruction",
+        "rangeY": [
+          135,
+          205
+        ]
+      },
+      "chinEstimate": {
+        "rangeY": [
+          385,
+          410
+        ],
+        "estimated": true
+      },
+      "measurementMethod": "visual native-image hairTop and sole landmarks; support-foot ROIs exclude lowered blade tips; alpha>=32 contour only supports observation, not whole-canvas body height",
+      "estimated": true,
+      "uncertaintyPixels": 12,
+      "measurementReviewed": true,
+      "inputFile": "variant-1-right-090-input.json",
+      "notes": "Full right profile with one eye and overlapping feet. Anatomical right longsword/plate greave remain near, blue boot and left dagger partly naturally occluded."
+    },
+    {
+      "id": "variant-4-front",
+      "variant": 4,
+      "direction": "front",
+      "label": "4번 · 정면 0°",
+      "file": "variant-4-front.png",
+      "width": 1024,
+      "height": 1536,
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "sha256": "bd440c18710583fa03baeff88fa83785ad725e4edc75c5d9efcebaa8d7273e7e",
+      "rawSource": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-0c15fc7e-3178-4bad-96cc-8970d9cfc0f9.png",
+      "rawBytesIdentical": true,
+      "boundsAlpha32": [
+        93,
+        41,
+        822,
+        1427
+      ],
+      "boundsAlpha1": [
+        73,
+        32,
+        1010,
+        1509
+      ],
+      "hairTop": 41,
+      "sole": 1419,
+      "bodyHeight": 1379,
+      "footX": 540,
+      "footY": 1419,
+      "measurementROI": {
+        "rightPlateFoot": [
+          300,
+          1250,
+          460,
+          1435
+        ],
+        "leftBlueFoot": [
+          585,
+          1250,
+          790,
+          1435
+        ],
+        "bodyExcludingBlades": [
+          260,
+          41,
+          805,
+          1420
+        ],
+        "supportForSole": [
+          300,
+          1250,
+          460,
+          1460
+        ]
+      },
+      "skullCrownEstimate": {
+        "status": "hidden under hair; visual reconstruction from forehead and temple arc",
+        "rangeY": [
+          125,
+          185
+        ],
+        "uncertainty": "broad estimate only; not directly measured"
+      },
+      "chinEstimate": {
+        "rangeY": [
+          375,
+          395
+        ],
+        "estimated": true
+      },
+      "measurementMethod": "visual native-image hairTop and sole landmarks; support-foot ROIs exclude lowered blade tips; alpha>=32 contour only supports observation, not whole-canvas body height",
+      "estimated": true,
+      "uncertaintyPixels": 12,
+      "measurementReviewed": true,
+      "inputFile": "variant-4-front-rework-input-03.json",
+      "notes": "Third corrected front selected: near4-head visible standing design, softer modeling than variant1. Lowered blade tip excluded from sole/bodyHeight; exact hidden skull unit unconfirmed."
+    },
+    {
+      "id": "variant-4-right-045",
+      "variant": 4,
+      "direction": "right45",
+      "label": "4번 · 오른쪽 앞 45°",
+      "file": "variant-4-right-045.png",
+      "width": 1024,
+      "height": 1536,
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "sha256": "4f081d32a4e628674d133815205d6b46526f6ed63de12d405b0eca7c7136b982",
+      "rawSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-b273dd41-c568-49cd-ad2c-e92f31c5b8c2.png",
+      "rawBytesIdentical": true,
+      "boundsAlpha32": [
+        187,
+        33,
+        793,
+        1467
+      ],
+      "boundsAlpha1": [
+        0,
+        31,
+        1002,
+        1479
+      ],
+      "hairTop": 33,
+      "sole": 1462,
+      "bodyHeight": 1430,
+      "footX": 530,
+      "footY": 1462,
+      "measurementROI": {
+        "rightPlateFoot": [
+          320,
+          1280,
+          490,
+          1480
+        ],
+        "leftBlueFoot": [
+          535,
+          1280,
+          770,
+          1440
+        ],
+        "supportForSole": [
+          320,
+          1280,
+          490,
+          1480
+        ],
+        "bladeTipExcluded": [
+          180,
+          1400,
+          250,
+          1480
+        ]
+      },
+      "skullCrownEstimate": {
+        "status": "hidden under hair; projected forehead/temple reconstruction",
+        "rangeY": [
+          115,
+          185
+        ]
+      },
+      "chinEstimate": {
+        "rangeY": [
+          370,
+          395
+        ],
+        "estimated": true
+      },
+      "measurementMethod": "visual native-image hairTop and sole landmarks; support-foot ROIs exclude lowered blade tips; alpha>=32 contour only supports observation, not whole-canvas body height",
+      "estimated": true,
+      "uncertaintyPixels": 14,
+      "measurementReviewed": true,
+      "inputFile": "variant-4-right-045-input.json",
+      "notes": "Both eyes and front breastplate visible in right45, warm soft rendering maintained. Plate-foot ROI defines sole; blade bottom is lower and excluded."
+    },
+    {
+      "id": "variant-4-right-090",
+      "variant": 4,
+      "direction": "right90",
+      "label": "4번 · 오른쪽 정측면 90°",
+      "file": "variant-4-right-090.png",
+      "width": 1024,
+      "height": 1536,
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "sha256": "a6368b96be676ebbc31bb93b7cd0ee00136024a56e5d168fce3613cacf69eba6",
+      "rawSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-ae0584cf-9fda-4ac7-ac72-afe46d51d146.png",
+      "rawBytesIdentical": true,
+      "boundsAlpha32": [
+        309,
+        31,
+        667,
+        1456
+      ],
+      "boundsAlpha1": [
+        0,
+        0,
+        972,
+        1459
+      ],
+      "hairTop": 31,
+      "sole": 1444,
+      "bodyHeight": 1414,
+      "footX": 550,
+      "footY": 1444,
+      "measurementROI": {
+        "nearRightPlateFoot": [
+          400,
+          1280,
+          610,
+          1460
+        ],
+        "farLeftBlueFoot": [
+          530,
+          1270,
+          670,
+          1415
+        ],
+        "supportForSole": [
+          400,
+          1280,
+          610,
+          1460
+        ],
+        "bladeTipExcluded": [
+          315,
+          1370,
+          380,
+          1465
+        ]
+      },
+      "skullCrownEstimate": {
+        "status": "hidden under hair; side forehead/ear arc reconstruction",
+        "rangeY": [
+          115,
+          185
+        ]
+      },
+      "chinEstimate": {
+        "rangeY": [
+          365,
+          390
+        ],
+        "estimated": true
+      },
+      "measurementMethod": "visual native-image hairTop and sole landmarks; support-foot ROIs exclude lowered blade tips; alpha>=32 contour only supports observation, not whole-canvas body height",
+      "estimated": true,
+      "uncertaintyPixels": 14,
+      "measurementReviewed": true,
+      "inputFile": "variant-4-right-090-input.json",
+      "notes": "One-eye complete right profile; near crescent/right arm/longsword/plate leg, far blue boot and dagger partially visible. Same idle stance; slight 2D projection differences remain."
+    }
+  ],
+  "sourceMasters": [
+    {
+      "id": "original-1",
+      "label": "1번 · 원형 전투준비",
+      "file": "source-variant-1.png",
+      "sha256": "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha32": [
+        137,
+        42,
+        1232,
+        1165
+      ],
+      "boundsAlpha1": [
+        23,
+        33,
+        1288,
+        1168
+      ],
+      "bodyHeight": 1123,
+      "hairTop": 42,
+      "sole": 1164,
+      "footX": 470,
+      "footY": 1164,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 10,
+      "headObservation": "hair-inclusive head about 400px, crouched body about 2.8 heads; angular matte SD. Skull crown hidden.",
+      "sourceGame": "명일방주",
+      "sourceReference": "references/arknights/combat-inset-v2.png",
+      "generationInput": "01_arknights/generation-input.json",
+      "rawGeneratedBytesUnmodified": true,
+      "variant": 1,
+      "direction": "originalCombat"
+    },
+    {
+      "id": "original-4",
+      "label": "4번 · 원형 전투준비",
+      "file": "source-variant-4.png",
+      "sha256": "ace368fd00617d2532f62eb68bb95faf6b6745fb5b291780d0b9c9c1468a0428",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha32": [
+        297,
+        35,
+        1296,
+        986
+      ],
+      "boundsAlpha1": [
+        39,
+        28,
+        1484,
+        992
+      ],
+      "bodyHeight": 951,
+      "hairTop": 35,
+      "sole": 985,
+      "footX": 625,
+      "footY": 985,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 10,
+      "headObservation": "hair-inclusive head about 300px, crouched body about 3.2 heads. Compact soft-rendered JRPG figure, hidden skull not measured.",
+      "sourceGame": "어나더 에덴",
+      "sourceReference": "references/another_eden/store-shot-0.jpg",
+      "generationInput": "04_another_eden/generation-input.json",
+      "rawGeneratedBytesUnmodified": true,
+      "variant": 4,
+      "direction": "originalCombat"
+    }
+  ],
+  "displayRule": "uniform CSS body height and common sole baseline; original PNG bytes unchanged",
+  "scope": "2 styles x3 idle directions; no game integration or common style adoption"
+}

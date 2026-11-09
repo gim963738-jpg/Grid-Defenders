@@ -1,0 +1,46 @@
+{
+  "id": "03_priconne",
+  "status": "returned_selected_for_review",
+  "tool": "builtin image_gen.imagegen",
+  "promptFile": "03_priconne/rework-input-01.json",
+  "inputs": [
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+      "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "role": "OUR POSE/IDENTITY only"
+    },
+    {
+      "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\priconne\\frame-000.1.png",
+      "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\priconne\\frame-000.1.png",
+      "sha256": "2960f70fc84738f5ec98a133150eb58fd12da7ccb559321c990d54634c9d131d",
+      "nativeDimensions": [
+        576,
+        324
+      ],
+      "role": "GAME COMBAT RENDERING/PROPORTION only"
+    }
+  ],
+  "settings": {
+    "transparent_background": true,
+    "imageModel": "tool managed; no paid fallback or text-model substitution"
+  },
+  "resultFile": "03_priconne/generation-result.json",
+  "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2872d759-8491-4f2b-8928-e987f246df8d.png",
+  "savedOutput": "03_priconne/character.png",
+  "savedSha256": "9a31e7627dcc153133481f24fe49a485f33c141a10b839441b9ed7054603ad44",
+  "rawBytesIdentical": true,
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "alpha": [
+    0,
+    254
+  ],
+  "userAestheticApproval": false
+}

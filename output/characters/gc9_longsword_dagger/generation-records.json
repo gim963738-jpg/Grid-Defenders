@@ -1,0 +1,103 @@
+{
+    "task":  "금발 장검·단검 캐릭터 GC9 메인 시안",
+    "style_id":  "GC9",
+    "style_version":  "1.1",
+    "generation_tool":  "built-in image_gen",
+    "status":  "complete",
+    "requested_image_count":  1,
+    "generated_image_count":  1,
+    "requested_resolution":  "1536x2304",
+    "transparent_background_requested":  true,
+    "subject":  {
+                    "gender_presentation":  "성인 남성형",
+                    "outfit_reference":  "inputs/outfit22.jfif",
+                    "hair_reference":  "inputs/hair23.jfif",
+                    "weapon_reference":  "inputs/weapon-sketch.png",
+                    "weapon_count":  2,
+                    "longsword_hand":  "anatomical_right",
+                    "dagger_hand":  "anatomical_left",
+                    "pose":  "양발을 딛고 선 앞 사선 전신"
+                },
+    "prompt_file":  "images/main_threequarter_v01.prompt.txt",
+    "prompt":  "Use case: stylized-concept.\nAsset type: ONE full-body GC9 2D fantasy game character concept, portrait composition, genuinely transparent PNG.\n\nInput reference roles — follow them separately:\n1. OUTFIT ONLY: silver-steel breastplate and layered shoulder/arm armor, blue scarf and lowered hood, blue waist cloth, brown leather belts with brass buckles and small pouches, brown loose trousers, armored gauntlets, asymmetrical leg protection. Do NOT use this character\u0027s brown hair, face, compact proportions or original sword.\n2. HAIR ONLY: short layered honey-blond hair with a softly voluminous crown, tousled tapered locks and long side-swept fringe across the forehead. Do NOT import the white-and-gold coat, black outfit, huge shoulder sword, face or rendering of this image.\n3. CUSTOM WEAPON SHAPES: user\u0027s rough sketch. Upper design is a LONGSWORD; lower design is a separate DAGGER. Interpret the sketch into coherent manufactured fantasy weapons while keeping the recognizable outlines.\n4. C4 FACE/LINE/FINISH reference ONLY: concise eyelids, nose and mouth, clean restrained skin shading, refined decisive contours and broad readable cel-shaded planes. Do NOT copy the female identity, hairstyle, silver ponytail, dress, bow or body.\n5. C3 METAL QUALITY reference ONLY: sharp metal plane changes, believable thickness, crisp edges, contact shadows and restrained reflections. Do NOT copy her bow, gold costume, green palette, hair or female identity.\n\nSubject:\nOne young ADULT MALE swordsman with the specified blond hairstyle, warm brown eyes, clean handsome masculine face and a calm confident small smile. Standard GC9 adult male proportions, about 7.5–8 heads, moderately broad shoulders, slim athletic waist and long legs. Redesign the face and body in this standard; avoid the outfit source\u0027s younger/compact body.\nWear the outfit in Image 1 faithfully: fitted silver breastplate, layered silver pauldrons, articulated silver vambraces and gauntlets, medium-blue scarf/hood folded around the neck, blue waist wrap, layered brown belts and small utility pouches with modest warm brass fittings, brown trousers. Retain the source\u0027s asymmetry: anatomical RIGHT leg has the more complete silver greave and armored boot, anatomical LEFT leg has a blue cloth-wrapped boot with smaller metal protection. No white coat, long royal cape, crown, helmet or unrelated insignia.\n\nExactly TWO weapons:\nANATOMICAL RIGHT HAND holds one longsword, lowered beside the body toward screen left; left hand holds one shorter dagger, lowered toward screen right. Grip both naturally with clearly attached fingers and thumbs. No additional sword hilts, scabbard weapons or copies of the source weapons.\nLONGSWORD: a long straight, broad, beveled cold-steel blade with an angular slanted point, several short diagonal cyan-blue inlays in a recessed strip along the blade as indicated by the blue strokes in the sketch. A distinctive swept fan of four or five tapered feather-like metal fins rises from the guard toward the grip. A single large closed D-shaped outer knuckle guard surrounds the actual handgrip, following the upper drawing. This is a sword hilt with a knuckle bow, not a gun. Keep the hand and usable grip visible inside the protection. Silver steel and dark blue grip, restrained brass connections that fit the outfit.\nDAGGER: roughly one third the longsword\u0027s overall length, straight short broad faceted blade with the lower sketch\u0027s clipped angular point, plain narrow grip, small angular feather-fin crossguard with its projecting lower quillon. Related design language and materials to the longsword but NO copied large D-loop around the dagger. Both blade lengths and their distinct guard silhouettes must be clearly readable.\n\nPose/framing:\nRelaxed standing pose, both boots planted, full figure at a gentle front three-quarter turn toward screen right; both eyes, both hands and both weapons visible. Arms held slightly clear of the hips so the long blade and dagger can be inspected. Longsword point angled outward and down, dagger down at the other side. No attacking, running, jumping or crossed blades. Entire hair, feet, both weapon points and projecting guard fins fit inside the portrait with comfortable margins. ONE figure and ONE view, no turnaround panels, labels or weapon inset diagrams.\n\nGC9 style/finish:\nFine clean 2D anime linework, firmer silhouette and overlap edges, delicate face lines. Large coherent tapered blond hair locks with selective internal strands. Clean base color and clear main cel-shadow planes, deep contact shadows at armor overlaps, restrained local gradients only where needed. Steel stays SILVER, leather stays brown, cloth stays blue. Use C3\u0027s metal structure without recoloring the armor gold. Distinct matte scarf folds, leather and polished steel, no uniform plastic gloss. Face and hands remain crisp at original size; avoid doll-like lips, glossy airbrushed cheeks, melted filigree, fuzzy edges and disconnected armor.\nSoft consistent upper-left lighting. Blue weapon inlays are small controlled accents, no magic trails, aura or giant glow. Transparent alpha beyond the silhouette. Portrait 2:3, request 1536x2304 if available. No background scenery, floor, cast-shadow ellipse, text, logo, watermark, extra figures, pixel art, SD/chibi body, 3D render or photoreal texture.",
+    "referenced_image_paths":  [
+                                   "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/inputs/outfit22.jfif",
+                                   "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/inputs/hair23.jfif",
+                                   "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/inputs/weapon-sketch.png",
+                                   "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+                                   "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png"
+                               ],
+    "reference_roles":  [
+                            "복장 구성만",
+                            "금발 헤어만",
+                            "장검·단검 형태",
+                            "C4 얼굴선·선화·마감",
+                            "C3 금속 면·두께·반사"
+                        ],
+    "analysis_only_reference":  "자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+    "preflight_failure":  {
+                              "reference_count":  6,
+                              "error":  "referenced_image_paths must contain at most 5 paths",
+                              "generated_images":  0
+                          },
+    "category":  "테스트 마무리 시안",
+    "input_category":  "첨부자료",
+    "tool_attempt_count":  2,
+    "output_file":  "images/main_threequarter_v01.png",
+    "generated_original_path":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-c46ab687-8065-4524-8745-6b53d20e5925.png",
+    "actual_width":  1024,
+    "actual_height":  1536,
+    "software_resampling_applied":  false,
+    "output_sha256":  "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+    "file_verification":  {
+                              "width":  1024,
+                              "height":  1536,
+                              "transparent_pixels":  1071663,
+                              "partial_alpha_pixels":  61286,
+                              "near_opaque_pixels":  439915,
+                              "max_alpha":  254,
+                              "visible_pixels":  455663,
+                              "visible_bounds":  {
+                                                     "x":  24,
+                                                     "y":  8,
+                                                     "width":  850,
+                                                     "height":  1479,
+                                                     "right":  873,
+                                                     "bottom":  1486
+                                                 },
+                              "red_edge_alpha16":  0,
+                              "red_edge_alpha128":  0
+                          },
+    "reference_hashes":  [
+                             {
+                                 "path":  "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/inputs/outfit22.jfif",
+                                 "sha256":  "a3a73d84381f3c07f956cdd71970361aabc1bcf494c548fdb4406741414e8070"
+                             },
+                             {
+                                 "path":  "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/inputs/hair23.jfif",
+                                 "sha256":  "afc0ffebd34c84a961ed17d3f668f60a82813279402948ab228fa8b6c686cf6a"
+                             },
+                             {
+                                 "path":  "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/inputs/weapon-sketch.png",
+                                 "sha256":  "824e2724dd7c01d61eccc6be5bbd57c9777c2f20459bcc8df4c397fcf257cf8a"
+                             },
+                             {
+                                 "path":  "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+                                 "sha256":  "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+                             },
+                             {
+                                 "path":  "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+                                 "sha256":  "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+                             }
+                         ],
+    "visual_review":  {
+                          "outfit_hair_weapon_roles_checked":  true,
+                          "longsword_and_dagger_count":  2,
+                          "hands_and_guards_checked":  true,
+                          "full_frame_not_clipped":  true,
+                          "light_background":  true,
+                          "dark_background":  true,
+                          "native_size_checked":  true,
+                          "user_approved":  null
+                      }
+}

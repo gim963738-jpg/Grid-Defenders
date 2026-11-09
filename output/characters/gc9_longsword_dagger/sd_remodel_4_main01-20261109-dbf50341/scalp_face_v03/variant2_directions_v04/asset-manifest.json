@@ -1,0 +1,255 @@
+{
+  "task": "MAIN01-20261109-DBF50341",
+  "iteration": 4,
+  "role": "characters",
+  "masterSha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+  "variantIdMeaning": "6 = scalp_face_v03 신규2안 in developer compareArt; not legacy variant2",
+  "compareArt": [
+    {
+      "variant": 6,
+      "direction": "front",
+      "file": "variant-2-front.png",
+      "width": 1133,
+      "height": 1388,
+      "bodyHeight": 1331,
+      "footX": 578,
+      "footY": 1355,
+      "label": "신규2안",
+      "sha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant-2-front.png",
+      "sourceSha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+      "sourceBytesMatch": true,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "bounds": [
+        125,
+        25,
+        908,
+        1356
+      ],
+      "hairTop": 25,
+      "scalpCrown": {
+        "y": 160,
+        "estimated": true,
+        "uncertaintyPx": 40,
+        "method": "Plausible cranial oval from forehead/temple and ear, hidden by layered hair; not hair spike/whorl"
+      },
+      "chin": {
+        "y": 487,
+        "estimated": true,
+        "uncertaintyPx": 10
+      },
+      "faceBounds": {
+        "x": 473,
+        "y": 300,
+        "width": 230,
+        "height": 187,
+        "estimated": true,
+        "uncertaintyPx": 15,
+        "meaning": "Projected facial envelope, fringe/eye included; not segmented skin area; widths not comparable across yaw"
+      },
+      "measurement": {
+        "alphaThreshold": 32,
+        "headROI": [
+          280,
+          0,
+          570,
+          500
+        ],
+        "feetROI": [
+          390,
+          1200,
+          390,
+          175
+        ],
+        "headAlphaBounds": [
+          336,
+          25,
+          814,
+          500
+        ],
+        "feetAlphaBounds": [
+          396,
+          1200,
+          761,
+          1356
+        ],
+        "bodyHeightMethod": "hairTop from head ROI through sole from feet ROI inclusive, excludes sword tips",
+        "footXMethod": "Manual estimate of support center between visible sole contacts; cannot infer hidden contact exactly",
+        "footXUncertaintyPx": 30,
+        "footYUncertaintyPx": 3,
+        "bodyHeightUncertaintyPx": 4
+      },
+      "estimatedHeadToBodyRatio": 0.2464312546957175,
+      "hairTopToChinOverBodyHeight": 0.3478587528174305
+    },
+    {
+      "variant": 6,
+      "direction": "right45",
+      "file": "variant-2-right-045.png",
+      "width": 1133,
+      "height": 1388,
+      "bodyHeight": 1326,
+      "footX": 585,
+      "footY": 1344,
+      "label": "신규2안",
+      "sha256": "b8b5e19b5763082da15a7e7d1913ac43b04f52b66b09157343f8f39f61b94fff",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-052767cf-d360-4739-ab0b-dab1a93bce10.png",
+      "sourceSha256": "b8b5e19b5763082da15a7e7d1913ac43b04f52b66b09157343f8f39f61b94fff",
+      "sourceBytesMatch": true,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "bounds": [
+        187,
+        19,
+        862,
+        1352
+      ],
+      "hairTop": 19,
+      "scalpCrown": {
+        "y": 150,
+        "estimated": true,
+        "uncertaintyPx": 40,
+        "method": "Plausible cranial oval from forehead/temple and ear, hidden by layered hair; not hair spike/whorl"
+      },
+      "chin": {
+        "y": 455,
+        "estimated": true,
+        "uncertaintyPx": 10
+      },
+      "faceBounds": {
+        "x": 535,
+        "y": 285,
+        "width": 162,
+        "height": 170,
+        "estimated": true,
+        "uncertaintyPx": 15,
+        "meaning": "Projected facial envelope, fringe/eye included; not segmented skin area; widths not comparable across yaw"
+      },
+      "measurement": {
+        "alphaThreshold": 32,
+        "headROI": [
+          300,
+          0,
+          490,
+          470
+        ],
+        "feetROI": [
+          395,
+          1200,
+          390,
+          170
+        ],
+        "headAlphaBounds": [
+          325,
+          19,
+          759,
+          470
+        ],
+        "feetAlphaBounds": [
+          403,
+          1200,
+          777,
+          1345
+        ],
+        "bodyHeightMethod": "hairTop from head ROI through sole from feet ROI inclusive, excludes sword tips",
+        "footXMethod": "Manual estimate of support center between visible sole contacts; cannot infer hidden contact exactly",
+        "footXUncertaintyPx": 30,
+        "footYUncertaintyPx": 3,
+        "bodyHeightUncertaintyPx": 4
+      },
+      "estimatedHeadToBodyRatio": 0.23076923076923078,
+      "hairTopToChinOverBodyHeight": 0.3295625942684766
+    },
+    {
+      "variant": 6,
+      "direction": "right90",
+      "file": "variant-2-right-090.png",
+      "width": 1077,
+      "height": 1460,
+      "bodyHeight": 1399,
+      "footX": 580,
+      "footY": 1411,
+      "label": "신규2안",
+      "sha256": "2bc66a3b3f738b809c65c378ab9b30d0d523220ad27bb59bce1ae74e12221072",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-1b0413fc-b78d-4b51-b532-26e2ccbe36b3.png",
+      "sourceSha256": "2bc66a3b3f738b809c65c378ab9b30d0d523220ad27bb59bce1ae74e12221072",
+      "sourceBytesMatch": true,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "bounds": [
+        255,
+        13,
+        762,
+        1412
+      ],
+      "hairTop": 13,
+      "scalpCrown": {
+        "y": 140,
+        "estimated": true,
+        "uncertaintyPx": 40,
+        "method": "Plausible cranial oval from forehead/temple and ear, hidden by layered hair; not hair spike/whorl"
+      },
+      "chin": {
+        "y": 480,
+        "estimated": true,
+        "uncertaintyPx": 10
+      },
+      "faceBounds": {
+        "x": 530,
+        "y": 280,
+        "width": 170,
+        "height": 200,
+        "estimated": true,
+        "uncertaintyPx": 15,
+        "meaning": "Projected facial envelope, fringe/eye included; not segmented skin area; widths not comparable across yaw"
+      },
+      "measurement": {
+        "alphaThreshold": 32,
+        "headROI": [
+          230,
+          0,
+          560,
+          500
+        ],
+        "feetROI": [
+          450,
+          1280,
+          280,
+          170
+        ],
+        "headAlphaBounds": [
+          255,
+          13,
+          762,
+          500
+        ],
+        "feetAlphaBounds": [
+          450,
+          1280,
+          694,
+          1412
+        ],
+        "bodyHeightMethod": "hairTop from head ROI through sole from feet ROI inclusive, excludes sword tips",
+        "footXMethod": "Manual estimate of support center between visible sole contacts; cannot infer hidden contact exactly",
+        "footXUncertaintyPx": 30,
+        "footYUncertaintyPx": 3,
+        "bodyHeightUncertaintyPx": 4
+      },
+      "estimatedHeadToBodyRatio": 0.2437455325232309,
+      "hairTopToChinOverBodyHeight": 0.33452466047176554
+    }
+  ],
+  "individualPngResampled": false,
+  "coordinateSystem": "native pixels, top-left, bounds right/bottom exclusive; bodyHeight hairTop through sole inclusive",
+  "uncertaintyNote": "Scalp hidden and estimated; no exact equal head-unit or new common proportion claim"
+}

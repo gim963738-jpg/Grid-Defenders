@@ -1,0 +1,61 @@
+{
+  "page": "69160820-4190-4e3e-9ace-760a38c233aa",
+  "loaded": {
+    "loaded": 8,
+    "native": [
+      1254,
+      1254
+    ],
+    "backgroundControls": true,
+    "width": 3200,
+    "scrollWidth": 3200,
+    "angles": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ]
+  },
+  "lightScreenshot": {
+    "format": "png",
+    "path": "C:\\Users\\user\\AppData\\Local\\Temp\\orca-browser-screenshots\\97424b7f-7ec4-470c-8fc8-43a40d5b89b2-screenshot.png",
+    "expiresAt": "2026-11-07T14:58:24.858Z"
+  },
+  "darkScreenshot": {
+    "format": "png",
+    "path": "C:\\Users\\user\\AppData\\Local\\Temp\\orca-browser-screenshots\\c4e38bbd-52b1-4fe0-a7e9-a046d4897190-screenshot.png",
+    "expiresAt": "2026-11-07T14:58:25.935Z"
+  },
+  "native": {
+    "naturalWidth": 1254,
+    "displayWidth": 1254
+  },
+  "nativeScreenshot": {
+    "format": "png",
+    "path": "C:\\Users\\user\\AppData\\Local\\Temp\\orca-browser-screenshots\\2e73a95e-3e52-4642-93f8-16fe8ac12462-screenshot.png",
+    "expiresAt": "2026-11-07T14:58:27.052Z"
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "cards": 8
+  },
+  "mobileScreenshot": {
+    "format": "png",
+    "path": "C:\\Users\\user\\AppData\\Local\\Temp\\orca-browser-screenshots\\6ebf96e6-4eb7-4625-ad0f-b13ba2347e27-screenshot.png",
+    "expiresAt": "2026-11-07T14:58:28.868Z"
+  },
+  "status": "passed",
+  "render_review": {
+    "status": "reviewed",
+    "tool": "headless Microsoft Edge CDP",
+    "light_screenshot": "C:\\Users\\user\\AppData\\Roaming\\orca\\chat-scratch\\51663bf6af69a5f5cc678f9af250a83b\\blade8-light.png",
+    "dark_screenshot": "C:\\Users\\user\\AppData\\Roaming\\orca\\chat-scratch\\51663bf6af69a5f5cc678f9af250a83b\\blade8-dark.png",
+    "native_screenshot": "C:\\Users\\user\\AppData\\Roaming\\orca\\chat-scratch\\51663bf6af69a5f5cc678f9af250a83b\\blade8-native.png"
+  },
+  "orca_capture_note": "DOM, native-size and mobile checks passed. Orca PNG captures were blank; visual review used a separate hidden headless Edge rendering."
+}

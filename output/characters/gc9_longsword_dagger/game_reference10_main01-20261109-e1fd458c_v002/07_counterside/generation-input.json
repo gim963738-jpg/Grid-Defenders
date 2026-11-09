@@ -1,0 +1,17 @@
+{
+  "id": "07_counterside",
+  "title": "카운터사이드 원작",
+  "tool": "builtin image_gen.imagegen",
+  "imageModel": "tool managed; not text model Sol",
+  "prompt": "Use case: style-transfer / stylized-concept. Deliver ONE isolated full-body 2D game-combat character on real transparent alpha; no text, labels, panels, background, ground shadow, watermark, UI, particles, aura, action trails, or enemies. Input image 1 is OUR pose/identity/equipment authority only, NOT rendering or body proportions. Input image 2 is a REAL GAME COMBAT rendering/proportions reference only. Never copy its character, face, hair, outfit, sex presentation, weapons, symbols, backdrop, or interface. Apply the game sprite body proportions specified below; proportion changes are intentionally allowed.\nIDENTITY: same youthful male warrior, layered spiky GOLDEN BLOND hair, brown eyes, silver plate armor, blue neck scarf and SHORT lowered hood (no long cape), blue waistcloth, brown belt/pouches/trousers. Anatomical RIGHT shoulder (near side / screen-left shoulder in this pose) has crescent pauldron, RIGHT shin screen-left is silver plate; anatomical LEFT boot screen-right is blue wrapped cloth with metal guards.\nPOSE IS LOCKED: front THREE-QUARTER toward SCREEN RIGHT, both knees bent and feet planted widely, left-screen foot back and right-screen foot forward, same forward leaning torso and head yaw as image 1, determined gaze to an enemy at right. Two arms, two hands, TWO weapons only: RIGHT hand in front of waist gripping LONGSWORD extending diagonally up-right, LEFT hand close to upper chest gripping SHORT ANGULAR DAGGER pointing up-right. The longsword retains blue diagonal blade inlays, silver wing-shaped guard and ring knuckle guard. Hands wrap actual grips; do not swap weapons, mirror body, change joint pose, straighten knees, attack or walk.\nFRAMING: include every hair spike, both full soles, all blade tips and guards inside canvas with at least 8% transparent safety margin on all sides. Entire warrior and connected held weapons are a single composition. Do not cut off the soles or sword tip.\nGAME TRANSFER: Use only the two full-body battlefield figures at LEFT of image 2, NOT UI portraits or explosion colors. Clearly tall adult 6.5-head proportions, small head, long slim articulated limbs, narrow waist, fine restrained dark ink and delicate fine armor seams. Subtle layered cel shading with a little soft gradient, not bold chibi ink. Preserve our original armor silhouette at the new proportions; no modern coat, guns or sci-fi accessories. Keep the same bent-knee readiness, do not stand straight.",
+  "referenced_image_paths": [
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\counterside\\store-shot-2.jpg"
+  ],
+  "transparent_background": true,
+  "sourceRoles": [
+    "OUR POSE/IDENTITY only",
+    "GAME COMBAT RENDERING/PROPORTION only"
+  ],
+  "status": "planned"
+}

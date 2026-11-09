@@ -1,0 +1,26 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_draft_v01.png. Original preserved.
+Output: continent_split_v02.png
+User request: 여기서 동대륙과 서대륙 중앙대륙 북대륙 남대륙을 크게 잡고 분리작업해봐
+Working change: One connected continent becomes five major ocean-separated continents; Korean geographic labels are provisional. Countries and borders remain unspecified.
+
+Use case: precise-object-edit.
+Asset type: fantasy game worldbuilding map, five-continent geographical separation study, version 02.
+Input image 1 is the EDIT TARGET: the existing unlabelled fantasy continent terrain map. Evolve this exact world's terrain and painting style; do not replace it with an unrelated generic Earth map.
+
+Primary request (Korean): "여기서 동대륙과 서대륙 중앙대륙 북대륙 남대륙을 크게 잡고 분리작업해봐" — split this single landmass into FIVE large, physically disconnected continents, arranged north/west/center/east/south. These are continents separated by actual ocean, NOT five political regions on connected land.
+
+Critical topology: EXACTLY FIVE dominant continuous landmasses, each fully surrounded by ocean, with broad clearly visible navy-blue sea channels between all five, readable even at thumbnail scale. No land bridges between continents. Keep a compact coherent world-map composition with all five in the same ocean. Each landmass must be substantial and irregular, clearly continent-sized, not tiny satellite islets. Central continent is medium-large, comfortably surrounded by navigable water; the four outer continents surround it asymmetrically. Do not arrange as identical circular islands or a rigid symmetric cross. Target an overall organic world silhouette recalling the original image, with generous ocean margins, no land touching the frame. Make separation seas wide enough to immediately see five continents, approximately 5–9% of image width at the narrowest important channels. Very few minor islands, only near the east/southeast as part of neighboring continental shelves, never a confusing sixth continent.
+
+Preserve the source map's local terrain identity while recutting coasts and slightly spreading landmasses:
+- NORTH continent, upper band: source's jagged snowy northern highlands, glacier fjords, dramatic snow-covered mountains, evergreen southern foothills; a continuous large northern landmass separated from everything below by a broad winding northern sea.
+- WEST continent, middle-left: source's deep temperate western forests, rugged coast, turquoise inland lakes, green river valleys, mountain-backed eastern shore. Large distinct wooded landmass.
+- CENTRAL continent, center: fertile central river basin, meandering rivers with coherent watersheds, rolling grasslands, scattered forest and lakes, a few lower mountains. An isolated but substantial heartland; rivers now empty into its own coasts.
+- EAST continent, middle-right: source's misty emerald eastern highlands and rugged pointed mountains, dark-violet scar contained in one inland basin, and crescent-shaped eastern gulf with nearby small offshore islands. Distinct large continental landmass.
+- SOUTH continent, bottom: merge the source's ochre southwest desert peninsula, savanna and lush southern delta into ONE broad coherent southern continental landmass. Dunes, mesas and reddish canyons toward its west, green savanna east, turquoise branching delta along southern/eastern coast. A few small volcanic islands can remain well offshore southeast, secondary to this continent.
+Do not slice the original image into rectangular cutouts. Paint natural new coastlines, shelf shallows and eroded bays. All rivers remain geographically plausible and end at the ocean; no watercourses suspended over ocean.
+
+Style invariants: preserve the reference's rich high-detail hand-painted strategy-game relief map, true overhead orthographic view, sculptural scale-consistent terrain, crisp navy oceans and turquoise coastal shallows, original restrained natural colors. Square composition, high resolution. Clouds minimal and only offshore, keep geography visible. No cities, buildings, characters, monsters, icons, borders, roads, political coloring, legend, compass or decorative frame.
+
+Labels: use ONLY these five exact readable Korean working labels, one per continent, understated elegant cream-white Korean type with a subtle dark outline, placed over quiet low-detail terrain or directly adjacent open water, never on mountains or covering key geography: "북대륙" on northern continent, "서대륙" on western continent, "중앙대륙" on central continent, "동대륙" on eastern continent, "남대륙" on southern continent. These are working geographical labels, no extra place names or title.
+The first visual impression must be five large separated continents, not one continent crisscrossed by thin rivers.

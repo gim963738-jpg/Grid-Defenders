@@ -1,0 +1,33 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_otherworld_impact_v11.png. Earlier versions preserved.
+Output: continent_desert_wasteland_v12.png
+User request: 남대륙 사막화 조금만 더하고 오염지역에 끝자락에 썩은 나무를 일부지우고 땅의 황페한 회색땅에 균열을 약간씩 주는것도 좋을꺼같아
+Changes: Modestly extend the southern desert into adjacent dry savanna. Thin dead trees selectively at existing corruption fringes to expose ash-gray barren soil with sparse fine cracks. Preserve settlements, rivers, impact basin, eastern lake, southeast sinkhole, mainland connections and sea channels.
+
+Use case: precise-object-edit.
+Asset type: fantasy world map, modest southern desert expansion and varied blight-edge terrain, version 12.
+Input image 1 is the EDIT TARGET: continent_otherworld_impact_v11.png, the latest full square Korean-labelled world map.
+
+User request: "남대륙 사막화 조금만 더하고 오염지역에 끝자락에 썩은 나무를 일부지우고 땅의 황페한 회색땅에 균열을 약간씩 주는것도 좋을꺼같아"
+
+Make TWO SUBTLE terrain refinements:
+
+1. SLIGHTLY MORE DESERTIFICATION IN SOUTH.
+Modestly extend the SOUTH continent's existing western/central ochre desert toward adjacent central/northern savanna margins. Shift a narrow transitional band of green grass into dry straw-colored scrub, dusty sand, low windblown dunes and exposed ochre stone. Roughly a 10–15% relative expansion of the existing desert footprint, NOT conversion of the whole continent. Keep the large desert kingdom/capital, its oasis and palms exactly recognizable. Keep the main river, southern/eastern delta and healthy eastern green agricultural areas alive. Desert should grade naturally through dry savanna rather than a hard border, keeping the same painterly map texture.
+
+2. THIN SOME DEAD TREES AT CORRUPTION OUTER EDGES; REVEAL GRAY CRACKED WASTELAND.
+At the OUTER FRINGES of existing polluted regions, selectively remove about one third of the rotten/dead trees, opening uneven patches of exposed barren ASH-GRAY / charcoal-gray soil. Add a few sparse fine shallow desiccation fractures and irregular hairline cracks in those bare patches. Low-contrast dark cracks, no bright neon light, deep glowing ravines or new craters. Gray should be the visible material, with muted violet at transitions to the existing corruption.
+Apply this selective thinning in:
+- Outer northwest impact-basin blight, where dead forest meets the healthy western/northern foothills;
+- CENTRAL's polluted northwest coastal fringe;
+- SOUTH's southeastern polluted coastal fringe near the dimensional sinkhole;
+- EAST's polluted southern tip near that same sinkhole.
+Vary the coverage organically: keep groups of remaining blackened trees and isolated dead trunks, with bare gray patches between them. Do not remove every tree, gray out healthy forests, enlarge the polluted footprint, or cover the whole world in cracks. This is a restrained texture/vegetation refinement, keeping the already-established blighted territory recognizable.
+
+PRESERVE ALL OTHER V11 FEATURES:
+The huge deeply excavated northwest otherworld impact crater, layered inward cliffs, embedded alien crust and radial canyon geometry; four cities and their exact sites/scales; eastern healthy turquoise lake and river; southeast dimensional-collapse sinkhole; river bridges and cities; natural western/southern bays and coastline; all five continent shapes and the current marine channels.
+NORTH+WEST stay joined, CENTRAL+SOUTH stay joined, EAST stays separate, and the restored sea strait between the northwest and central mainlands stays open.
+Keep exactly the existing five cream-white Korean labels and positions: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". No new text, names, borders, icons, title or UI.
+Maintain the same full square framing and detailed hand-painted overhead orthographic fantasy terrain style, color richness, coherent miniature building/forest scale, navy ocean and turquoise shallows.
+
+Success: a LITTLE more southern desert, plus a natural mix of sparse rotten trees and exposed gray lightly cracked wasteland at existing pollution margins. The rest stays visually faithful to the latest map.

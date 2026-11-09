@@ -1,0 +1,152 @@
+{
+  "character": "발로르",
+  "version": 10,
+  "tool": "built-in image_gen",
+  "style": "GC9 v1.1; user-selected C6 metal treatment",
+  "status": "awaiting_c6_metal_and_threequarter_review",
+  "calls": [
+    {
+      "id": "front_c6_metal_v10",
+      "prompt_file": "output/characters/gc9_balor/gc9_rebuild_v10/front_v10.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v09/front_v09.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_threequarter.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "output": "output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-733e8732-31b3-44f0-8974-44474fed0e86.png",
+      "started_at": "2026-11-07T17:56:01.009Z",
+      "finished_at": "2026-11-07T17:56:37.890Z",
+      "disposition": "approval_candidate",
+      "revision_scope": "c6_metal_and_threequarter",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "355905833f7d08185346ff2ca483107153485b6569b079c0e1b9f10d499c385d",
+      "copy_matches_generated_original": true,
+      "gc9_fixed_block_verbatim": true,
+      "reference_files": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v09/front_v09.png",
+          "sha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_front.png",
+          "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_threequarter.png",
+          "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+          "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a"
+        }
+      ]
+    },
+    {
+      "id": "threequarter_c6_direction_v10",
+      "prompt_file": "output/characters/gc9_balor/gc9_rebuild_v10/threequarter_v10.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_threequarter.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "output": "output/characters/gc9_balor/gc9_rebuild_v10/variants/threequarter_before_framing.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-cb562e72-2733-43a9-a55e-d82b53605201.png",
+      "started_at": "2026-11-07T17:57:15.308Z",
+      "finished_at": "2026-11-07T17:57:52.365Z",
+      "disposition": "framing_revision_needed",
+      "revision_scope": "c6_metal_and_threequarter",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6d357a1f25a3b051de66c0abb4902d1da64292f71c6009d633d09da1e4243dcc",
+      "copy_matches_generated_original": true,
+      "gc9_fixed_block_verbatim": true,
+      "reference_files": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png",
+          "sha256": "355905833f7d08185346ff2ca483107153485b6569b079c0e1b9f10d499c385d"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_threequarter.png",
+          "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_front.png",
+          "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+          "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a"
+        }
+      ]
+    },
+    {
+      "id": "threequarter_framing_v10",
+      "prompt_file": "output/characters/gc9_balor/gc9_rebuild_v10/threequarter_framing_v10.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v10/variants/threequarter_before_framing.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/inputs/framing_guide_portrait_v09.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_threequarter.png"
+      ],
+      "output": "output/characters/gc9_balor/gc9_rebuild_v10/threequarter_v10.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-b2b84823-3d9f-45a2-8fdc-c31b467c4ae0.png",
+      "started_at": "2026-11-07T17:58:31.878Z",
+      "finished_at": "2026-11-07T17:59:03.278Z",
+      "disposition": "approval_candidate",
+      "revision_scope": "c6_metal_and_threequarter",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8b3aa38117088bbc86d609827aabcfa95b536fce05b2f9e1edfb410b0d880e34",
+      "copy_matches_generated_original": true,
+      "gc9_fixed_block_verbatim": true,
+      "reference_files": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v10/variants/threequarter_before_framing.png",
+          "sha256": "6d357a1f25a3b051de66c0abb4902d1da64292f71c6009d633d09da1e4243dcc"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png",
+          "sha256": "355905833f7d08185346ff2ca483107153485b6569b079c0e1b9f10d499c385d"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/inputs/framing_guide_portrait_v09.png",
+          "sha256": "29de566eb43913c986ab3ab0ed9523190192f5fa411824da436ddc4086a9cb4c"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c06_threequarter.png",
+          "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "view": "front",
+      "path": "output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png"
+    },
+    {
+      "view": "front_right",
+      "path": "output/characters/gc9_balor/gc9_rebuild_v10/threequarter_v10.png"
+    }
+  ],
+  "user_approval": null,
+  "transparent_background_requested": true,
+  "post_generation_resampled": false,
+  "gc9_fixed_block_verbatim": true,
+  "gc9_fixed_block_sha256": "f2c853430363f4f67cfe339bc3e53f7fa5dc340473628ef9284a93ec0c9dd394",
+  "comparison_reference": "output/character-redesign-6x2/images/c06_threequarter.png"
+}

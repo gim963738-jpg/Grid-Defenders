@@ -1,0 +1,532 @@
+{
+  "audit_date": "2026-11-08",
+  "scope": "GC9 style compliance from initial Balor generation; no image generation or asset replacement",
+  "verdict": "Correct GC9 source documents and real image references were used, but fixed prompt application, C4 overall finish role and output style validation were incomplete",
+  "original_log": "C:/Users/user/.codex/sessions/2026/11/06/rollout-2026-11-06T18-09-04-01a1b01e-635e-7632-92af-039484dfcd8b.jsonl",
+  "source_proof": [
+    {
+      "line": 5579,
+      "action": "Read production rules plus both GC9 style documents"
+    },
+    {
+      "line": 5582,
+      "action": "Successful command output contains both GC9 documents and mandatory fixed style block",
+      "exit_code": 0
+    },
+    {
+      "line": 5620,
+      "action": "View M05, A04, C3 and store exact paths in valorStyleRefs",
+      "references": [
+        "자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+        "자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+        "output/character-redesign-6x2/images/c03_front.png"
+      ]
+    },
+    {
+      "line": 5642,
+      "action": "Write initial prompt and brief; explicitly omit C4 because helmet hides face"
+    },
+    {
+      "line": 5649,
+      "action": "Call tools.image_gen__imagegen with referenced_image_paths:load(\"valorStyleRefs\")",
+      "call_id": "call_b18e5db2c26840c994d0627f416f3612",
+      "timestamp_utc": "2026-11-07T12:19:03.056Z"
+    },
+    {
+      "line": 5679,
+      "action": "Ask user to review one initial front concept"
+    }
+  ],
+  "rule_evidence": [
+    {
+      "document": "GC9_생성프롬프트.md",
+      "historical_text": "이 블록은 매번 사용한다. 설정 칸에 넣은 특징을 덮어쓰지 않는다."
+    },
+    {
+      "document": "GC9_생성프롬프트.md",
+      "historical_text": "C4 결과를 얼굴·그림 완성도의 우선 참조, C3 결과를 금속 표현의 우선 참조로 사용한다."
+    }
+  ],
+  "calls": [
+    {
+      "id": "concept_front_v01",
+      "prompt_file": "output/characters/gc9_balor/concept_front_v01.prompt.txt",
+      "output": "output/characters/gc9_balor/concept_front_v01.png",
+      "references": [
+        "자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+        "자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+        "output/character-redesign-6x2/images/c03_front.png"
+      ],
+      "reference_source": "Recovered from original tool call and preceding valorStyleRefs assignment",
+      "direct_style_reference": true,
+      "sd_image_reference": false
+    },
+    {
+      "id": "front_no_cords",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v01/front_v02.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v01/front.png",
+      "references": [
+        "output/characters/gc9_balor/concept_front_v01.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "right",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v01/right_v02.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v01/right.png",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "back",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v01/back_v02.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v01/back.png",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "helmet_off",
+      "prompt_file": "output/characters/gc9_balor/helmet_off_front_v01.prompt.txt",
+      "output": "output/characters/gc9_balor/helmet_off_front_v01.png",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": true,
+      "sd_image_reference": false
+    },
+    {
+      "id": "grip_front_v02",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v02/front.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v02/front.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v01/front.png",
+        "output/characters/gc9_balor/inputs/grip_reference_26.jfif"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "right_grip_superseded",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v02/right.prompt.txt",
+      "output": null,
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/right.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v02/front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "back_grip_superseded",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v02/back.prompt.txt",
+      "output": null,
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/back.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v02/front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "helmet_off_grip_superseded",
+      "prompt_file": "output/characters/gc9_balor/helmet_off_front_v02.prompt.txt",
+      "output": null,
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/helmet_off_front_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v02/front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "finger_guide_front_v03",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v03/front.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v03/front.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v02/front.png",
+        "output/characters/gc9_balor/inputs/grip_pose_latest.png",
+        "output/characters/gc9_balor/inputs/grip_finger_guide.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "unhelmeted_front_v04",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/front.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v04/front.png",
+      "references": [
+        "output/characters/gc9_balor/helmet_off_front_v01.png",
+        "output/characters/gc9_balor/illustration_3views_v03/front.png",
+        "자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "right_unhelmeted_v04",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/right.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v04/right.png",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v04/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/right.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "back_unhelmeted_v04",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/back.prompt.txt",
+      "output": "output/characters/gc9_balor/variants/back_initial_v04.png",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v04/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/back.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "rear_grip_contact_v04",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/back_contact_fix.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v04/back.png",
+      "references": [
+        "output/characters/gc9_balor/variants/back_initial_v04.png",
+        "output/characters/gc9_balor/illustration_3views_v04/front.png",
+        "자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "front_shield_background_v05",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/front.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v05/front.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v04/front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "right_shield_sword_initial_v05",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/right.prompt.txt",
+      "output": "output/characters/gc9_balor/variants/right_geometry_initial_v05.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v04/right.png",
+        "output/characters/gc9_balor/illustration_3views_v05/front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "back_shield_palm_background_v05",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/back.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v05/back.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v04/back.png",
+        "output/characters/gc9_balor/illustration_3views_v05/front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "right_collinear_sword_v05",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v05/right_geometry_fix.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v05/right.png",
+      "references": [
+        "output/characters/gc9_balor/variants/right_geometry_initial_v05.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "front_face_framing_initial_v06",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v06/front.prompt.txt",
+      "output": "output/characters/gc9_balor/variants/front_v06_initial.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v05/front.png",
+        "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+        "자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+        "output/character-redesign-6x2/images/c04_front.png",
+        "output/character-redesign-6x2/images/c03_front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": true,
+      "sd_image_reference": false
+    },
+    {
+      "id": "front_face_connected_framing_v06",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v06/front_final.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v06/front.png",
+      "references": [
+        "output/characters/gc9_balor/variants/front_v06_initial.png",
+        "output/characters/gc9_balor/inputs/framing_guide_v06.png",
+        "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+        "output/character-redesign-6x2/images/c04_front.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": true,
+      "sd_image_reference": false
+    },
+    {
+      "id": "right_shield_angle_only_v07",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v07/right.prompt.txt",
+      "output": "output/characters/gc9_balor/variants/right_shield_angle_initial_v07.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v05/right.png",
+        "output/characters/gc9_balor/inputs/shield_grip_angle_user_v07.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "back_shield_angle_only_v07",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v07/back.prompt.txt",
+      "output": "output/characters/gc9_balor/variants/back_shield_angle_initial_v07.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v05/back.png",
+        "output/characters/gc9_balor/inputs/shield_grip_angle_user_v07.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "right_alpha_cleanup_v07",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v07/right_alpha_cleanup.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v07/right.png",
+      "references": [
+        "output/characters/gc9_balor/variants/right_shield_angle_initial_v07.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "back_alpha_cleanup_v07",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v07/back_alpha_cleanup.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v07/back.png",
+      "references": [
+        "output/characters/gc9_balor/variants/back_shield_angle_initial_v07.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "back_horizontal_shape_v08",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v08/back.prompt.txt",
+      "output": "output/characters/gc9_balor/variants/back_horizontal_initial_v08.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v07/back.png",
+        "output/characters/gc9_balor/inputs/shield_silhouette_back_user_v08.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "back_horizontal_framing_v08",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v08/back_framing.prompt.txt",
+      "output": "output/characters/gc9_balor/variants/back_framing_initial_v08.png",
+      "references": [
+        "output/characters/gc9_balor/variants/back_horizontal_initial_v08.png",
+        "output/characters/gc9_balor/inputs/framing_guide_v06.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "right_horizontal_shape_v08",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v08/right.prompt.txt",
+      "output": "output/characters/gc9_balor/variants/right_horizontal_initial_v08.png",
+      "references": [
+        "output/characters/gc9_balor/illustration_3views_v07/right.png",
+        "output/characters/gc9_balor/inputs/shield_silhouette_right_user_v08.png",
+        "output/characters/gc9_balor/variants/back_framing_initial_v08.png",
+        "output/characters/gc9_balor/inputs/framing_guide_v06.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "right_horizontal_framing_v08",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v08/right_framing.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v08/right.png",
+      "references": [
+        "output/characters/gc9_balor/variants/right_horizontal_initial_v08.png",
+        "output/characters/gc9_balor/inputs/framing_guide_v06.png",
+        "output/characters/gc9_balor/variants/back_framing_initial_v08.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    },
+    {
+      "id": "back_horizontal_alignment_v08",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v08/back_alignment.prompt.txt",
+      "output": "output/characters/gc9_balor/illustration_3views_v08/back.png",
+      "references": [
+        "output/characters/gc9_balor/variants/back_framing_initial_v08.png",
+        "output/characters/gc9_balor/illustration_3views_v08/right.png"
+      ],
+      "reference_source": "generation-records.json",
+      "direct_style_reference": false,
+      "sd_image_reference": false
+    }
+  ],
+  "counts": {
+    "illustration_calls": 29,
+    "with_direct_style_refs": 4,
+    "without_direct_style_refs": 25,
+    "with_sd_images": 0
+  },
+  "originals_reverified": {
+    "initial_concept_sha256": "6e96a705957c34aa549df694dc128cf33b8ed81727fdf766292606362954a1e9",
+    "initial_generated_copy_matches": true,
+    "compared_images_unchanged": 8
+  },
+  "measurements": [
+    {
+      "path": "output/characters/gc9_balor/illustration_3views_v05/front.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha32Bounds": [
+        13,
+        39,
+        1011,
+        1467
+      ],
+      "silhouetteHeight": 1429,
+      "sha256": "86491a83f687a767a76aebb153b4b8369a03ed42a0ca94515114bcbd9dba9376"
+    },
+    {
+      "path": "output/characters/gc9_balor/variants/front_v06_initial.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha32Bounds": [
+        43,
+        159,
+        985,
+        1457
+      ],
+      "silhouetteHeight": 1299,
+      "sha256": "ac562bcef063aa6672e5cfbaef0196667d6bd9d543fc5d15c595b6779dfa160a"
+    },
+    {
+      "path": "output/characters/gc9_balor/illustration_3views_v06/front.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha32Bounds": [
+        315,
+        266,
+        937,
+        1142
+      ],
+      "silhouetteHeight": 877,
+      "sha256": "edd0ef05e12b4b6b381d74063bf6d368adb78044cb6245a8f41783483cd0ccd4"
+    },
+    {
+      "path": "output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha32Bounds": [
+        24,
+        8,
+        873,
+        1486
+      ],
+      "silhouetteHeight": 1479,
+      "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb"
+    },
+    {
+      "path": "output/illustration-final-test-2x4-v1/images/t14_04_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha32Bounds": [
+        198,
+        7,
+        855,
+        1513
+      ],
+      "silhouetteHeight": 1507,
+      "sha256": "f2d74c6174b0b422a6f2897be6b1aff458e44cc7f55808cf6265e2a7d3a0d25e"
+    },
+    {
+      "path": "output/red-haired-adventurer-4views-v1/images/04_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha32Bounds": [
+        117,
+        13,
+        768,
+        1513
+      ],
+      "silhouetteHeight": 1501,
+      "sha256": "484ff71790890c8e2d7ae32a288e3c428529d6d6e2be45e7b3f538dfe4f0a201"
+    },
+    {
+      "path": "output/illustration-final-test-2x4-v1/images/t15_04_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha32Bounds": [
+        171,
+        32,
+        772,
+        1497
+      ],
+      "silhouetteHeight": 1466,
+      "sha256": "0f6bce1892ad1cedb336e8294ca1acaa411418896e3f113c3a8f09a1c8ec0d2c"
+    },
+    {
+      "path": "output/character-redesign-6x2/images/c06_threequarter.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha32Bounds": [
+        0,
+        0,
+        1023,
+        1535
+      ],
+      "silhouetteHeight": 1536,
+      "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c"
+    }
+  ],
+  "measurement_caveat": "Alpha bounds are silhouette extents, not anatomical head-count measurements. C6 has nontransparent background and its full alpha bounds must not be used as body height.",
+  "pipeline_status": {
+    "image_generation_resumed": false,
+    "production_assets_changed": false,
+    "gallery_changed": false,
+    "rules_changed": false,
+    "v08_visual_review": "remains incomplete"
+  },
+  "report": "문서/03_작업기록/ART-018_발로르제작/6_GC9규격점검.md"
+}

@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-11-09T19:21:11.755951+09:00",
+  "method": "Actual tools.view_image local inspection, plus separate headless Edge browser screenshots and DOM evidence",
+  "opened": [
+    {
+      "file": "original.png",
+      "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4"
+    },
+    {
+      "file": "variant-1-front.png",
+      "sha256": "b8db43a3ce43703be4d06a752d2b700691681a798ec9486a3e3c339ff472c8f8"
+    },
+    {
+      "file": "variant-2-front.png",
+      "sha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53"
+    },
+    {
+      "file": "variant-3-front.png",
+      "sha256": "b356136aa05fc02d571288403f90f00a007032e0470344103cc949df551fe51d"
+    },
+    {
+      "file": "variant-4-front.png",
+      "sha256": "248ecac2c87a582f4e21c88a0759fb5d8565d4137cc6d06a5a9d3da8112b1e6d"
+    },
+    {
+      "file": "comparison.png",
+      "sha256": "ab55462e17bff9f5434431310ef443c6eccf3b1e6b17499ad9e502257076911e"
+    },
+    {
+      "file": "qa-small.png",
+      "sha256": "eaefe5f6fa098d78ea36dc7b9117ffc312a92d07915ca6422707e292f1a3afc3"
+    },
+    {
+      "file": "qa-dark.png",
+      "sha256": "bb7b6359e026c1a263dd34e99c20955068be55204de5a14296c477f746a1a5cc"
+    },
+    {
+      "file": "qa-narrow.png",
+      "sha256": "d46161bef48c66bcc46cf8b412a26bc019f201bbec2fe05f90ed12fee858250d"
+    },
+    {
+      "file": "qa-expanded.png",
+      "sha256": "a3638e2da4a73ee7fa5d18bbbd7c6c793830c1ca8165e8e59f648b18049467ba"
+    }
+  ],
+  "observations": "All full sprites visible; true face enlargement mild in1/2, strong in3/4; small-scale face features clearer3/4; light/dark show fine colored fringe; final2 sword points outward-down; no claim of user approval"
+}

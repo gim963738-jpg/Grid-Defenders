@@ -1,0 +1,189 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 2,
+  "generatedCount": 10,
+  "expectedCount": 10,
+  "assets": [
+    {
+      "file": "01_arknights/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    },
+    {
+      "file": "02_azur_lane/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    },
+    {
+      "file": "03_priconne/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    },
+    {
+      "file": "04_another_eden/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    },
+    {
+      "file": "05_reverse1999/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    },
+    {
+      "file": "06_epic_seven/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    },
+    {
+      "file": "07_counterside/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    },
+    {
+      "file": "08_guardian_tales/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    },
+    {
+      "file": "09_dfo/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    },
+    {
+      "file": "10_odin_sphere/character.png",
+      "exists": true,
+      "manifestShaMatches": true,
+      "rawToolBytesIdentical": true,
+      "RGBA": true,
+      "nativeDimensionsMatch": true,
+      "alpha32TouchesEdge": false
+    }
+  ],
+  "sources": [
+    {
+      "game": "명일방주",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    },
+    {
+      "game": "벽람항로",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    },
+    {
+      "game": "프린세스 커넥트 Re:Dive",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    },
+    {
+      "game": "어나더 에덴",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    },
+    {
+      "game": "리버스: 1999",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    },
+    {
+      "game": "에픽세븐",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    },
+    {
+      "game": "카운터사이드 원작",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    },
+    {
+      "game": "가디언 테일즈",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    },
+    {
+      "game": "던전앤파이터",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    },
+    {
+      "game": "오딘 스피어 레이브스라시르",
+      "referenceExists": true,
+      "hashMatches": true,
+      "hasPage": true,
+      "hasImageUrl": true
+    }
+  ],
+  "readingAcknowledgementChangedDocuments": [],
+  "requiredFiles": {
+    "index.html": true,
+    "comparison-overview.png": true,
+    "comparison-1.png": true,
+    "comparison-2.png": true,
+    "qa-dark-overview.png": true,
+    "qa-unlabeled.png": true,
+    "qa-small-light.png": true,
+    "qa-small-dark.png": true,
+    "sources.json": true,
+    "분석.md": true,
+    "제작기준.md": true,
+    "검수.md": true,
+    "report.md": true,
+    "결과.json": true,
+    "asset-manifest.json": true
+  },
+  "automaticOnly": "file/hash/native/alpha/reference checks; no automatic score proves stylistic difference or aesthetic approval"
+}

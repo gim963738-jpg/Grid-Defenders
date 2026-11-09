@@ -1,0 +1,286 @@
+{
+  "variant-4-right-045.png": {
+    "hairTop": 33,
+    "sole": 1462,
+    "footX": 530,
+    "uncertaintyPixels": 14,
+    "measurementROI": {
+      "rightPlateFoot": [
+        320,
+        1280,
+        490,
+        1480
+      ],
+      "leftBlueFoot": [
+        535,
+        1280,
+        770,
+        1440
+      ],
+      "supportForSole": [
+        320,
+        1280,
+        490,
+        1480
+      ],
+      "bladeTipExcluded": [
+        180,
+        1400,
+        250,
+        1480
+      ]
+    },
+    "skullCrownEstimate": {
+      "status": "hidden under hair; projected forehead/temple reconstruction",
+      "rangeY": [
+        115,
+        185
+      ]
+    },
+    "chinEstimate": {
+      "rangeY": [
+        370,
+        395
+      ],
+      "estimated": true
+    },
+    "notes": "Both eyes and front breastplate visible in right45, warm soft rendering maintained. Plate-foot ROI defines sole; blade bottom is lower and excluded."
+  },
+  "variant-4-right-090.png": {
+    "hairTop": 31,
+    "sole": 1444,
+    "footX": 550,
+    "uncertaintyPixels": 14,
+    "measurementROI": {
+      "nearRightPlateFoot": [
+        400,
+        1280,
+        610,
+        1460
+      ],
+      "farLeftBlueFoot": [
+        530,
+        1270,
+        670,
+        1415
+      ],
+      "supportForSole": [
+        400,
+        1280,
+        610,
+        1460
+      ],
+      "bladeTipExcluded": [
+        315,
+        1370,
+        380,
+        1465
+      ]
+    },
+    "skullCrownEstimate": {
+      "status": "hidden under hair; side forehead/ear arc reconstruction",
+      "rangeY": [
+        115,
+        185
+      ]
+    },
+    "chinEstimate": {
+      "rangeY": [
+        365,
+        390
+      ],
+      "estimated": true
+    },
+    "notes": "One-eye complete right profile; near crescent/right arm/longsword/plate leg, far blue boot and dagger partially visible. Same idle stance; slight 2D projection differences remain."
+  },
+  "variant-1-right-045.png": {
+    "hairTop": 51,
+    "sole": 1412,
+    "footX": 540,
+    "uncertaintyPixels": 12,
+    "measurementROI": {
+      "rightPlateFoot": [
+        350,
+        1260,
+        515,
+        1415
+      ],
+      "leftBlueFoot": [
+        550,
+        1260,
+        760,
+        1405
+      ],
+      "bladeTipExcluded": [
+        195,
+        1370,
+        245,
+        1425
+      ],
+      "supportForSole": [
+        350,
+        1260,
+        515,
+        1440
+      ]
+    },
+    "skullCrownEstimate": {
+      "status": "hidden under hair; temple/forehead arc projection",
+      "rangeY": [
+        145,
+        210
+      ]
+    },
+    "chinEstimate": {
+      "rangeY": [
+        400,
+        420
+      ],
+      "estimated": true
+    },
+    "notes": "Front-right three-quarter: both eyes/front chest visible, arms lowered. Sword tip below soles is excluded from body height; hair/head proportion close to same variant front."
+  },
+  "variant-1-right-090.png": {
+    "hairTop": 50,
+    "sole": 1405,
+    "footX": 560,
+    "uncertaintyPixels": 12,
+    "measurementROI": {
+      "nearRightPlateFoot": [
+        420,
+        1270,
+        620,
+        1410
+      ],
+      "farLeftBlueFoot": [
+        525,
+        1260,
+        675,
+        1375
+      ],
+      "bladeTipExcluded": [
+        345,
+        1320,
+        410,
+        1400
+      ],
+      "supportForSole": [
+        420,
+        1270,
+        620,
+        1430
+      ]
+    },
+    "skullCrownEstimate": {
+      "status": "hidden under hair; side forehead/ear reconstruction",
+      "rangeY": [
+        135,
+        205
+      ]
+    },
+    "chinEstimate": {
+      "rangeY": [
+        385,
+        410
+      ],
+      "estimated": true
+    },
+    "notes": "Full right profile with one eye and overlapping feet. Anatomical right longsword/plate greave remain near, blue boot and left dagger partly naturally occluded."
+  },
+  "variant-4-front.png": {
+    "hairTop": 41,
+    "sole": 1419,
+    "footX": 540,
+    "uncertaintyPixels": 12,
+    "measurementROI": {
+      "rightPlateFoot": [
+        300,
+        1250,
+        460,
+        1435
+      ],
+      "leftBlueFoot": [
+        585,
+        1250,
+        790,
+        1435
+      ],
+      "bodyExcludingBlades": [
+        260,
+        41,
+        805,
+        1420
+      ],
+      "supportForSole": [
+        300,
+        1250,
+        460,
+        1460
+      ]
+    },
+    "skullCrownEstimate": {
+      "status": "hidden under hair; visual reconstruction from forehead and temple arc",
+      "rangeY": [
+        125,
+        185
+      ],
+      "uncertainty": "broad estimate only; not directly measured"
+    },
+    "chinEstimate": {
+      "rangeY": [
+        375,
+        395
+      ],
+      "estimated": true
+    },
+    "notes": "Third corrected front selected: near4-head visible standing design, softer modeling than variant1. Lowered blade tip excluded from sole/bodyHeight; exact hidden skull unit unconfirmed."
+  },
+  "variant-1-front.png": {
+    "hairTop": 54,
+    "sole": 1407,
+    "footX": 555,
+    "uncertaintyPixels": 10,
+    "measurementROI": {
+      "rightPlateFoot": [
+        345,
+        1250,
+        505,
+        1415
+      ],
+      "leftBlueFoot": [
+        600,
+        1250,
+        780,
+        1415
+      ],
+      "bodyExcludingBlades": [
+        270,
+        54,
+        830,
+        1408
+      ],
+      "supportForSole": [
+        345,
+        1250,
+        505,
+        1440
+      ]
+    },
+    "skullCrownEstimate": {
+      "status": "hidden under hair; visual reconstruction from forehead/temple arc",
+      "rangeY": [
+        160,
+        215
+      ],
+      "uncertainty": "broad visual estimate; not directly measured or an official head unit"
+    },
+    "chinEstimate": {
+      "rangeY": [
+        405,
+        425
+      ],
+      "estimated": true
+    },
+    "notes": "Front idle: angular matte cell planes preserved, near-straight relaxed knees and both blades lowered. Visible hair-inclusive height changes when crouch straightens; not a fixed 3.3 standard."
+  }
+}

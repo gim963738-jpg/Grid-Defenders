@@ -1,0 +1,113 @@
+[
+  {
+    "id": "grip_front_v02",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v02/front.prompt.txt",
+    "references": [
+      "output/characters/gc9_balor/illustration_3views_v01/front.png",
+      "output/characters/gc9_balor/inputs/grip_reference_26.jfif"
+    ],
+    "started_at": "2026-11-07T12:51:35.466Z",
+    "finished_at": "2026-11-07T12:52:12.020Z",
+    "output": "output/characters/gc9_balor/illustration_3views_v02/front.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-a3dc06f1-a2e9-45fc-a2b9-c71309012589.png"
+  },
+  {
+    "id": "right_grip_superseded",
+    "status": "superseded_before_workspace_publish",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v02/right.prompt.txt",
+    "references": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/right.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v02/front.png"
+    ],
+    "started_at": "2026-11-07T12:54:35.495Z",
+    "finished_at": "2026-11-07T12:55:14.318Z",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-387e8ac9-b37e-4b71-aa71-776ddeae61ce.png"
+  },
+  {
+    "id": "back_grip_superseded",
+    "status": "superseded_before_workspace_publish",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v02/back.prompt.txt",
+    "references": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/back.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v02/front.png"
+    ],
+    "started_at": "2026-11-07T12:54:35.495Z",
+    "finished_at": "2026-11-07T12:55:44.296Z",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-7ad2966d-8cfa-4590-bd48-06a9a9712b2e.png"
+  },
+  {
+    "id": "helmet_off_grip_superseded",
+    "status": "superseded_before_workspace_publish",
+    "prompt_file": "output/characters/gc9_balor/helmet_off_front_v02.prompt.txt",
+    "references": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/helmet_off_front_v01.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v02/front.png"
+    ],
+    "started_at": "2026-11-07T12:54:35.495Z",
+    "finished_at": "2026-11-07T12:56:18.884Z",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-675b2cdb-f542-41b1-b19d-697904156a38.png"
+  },
+  {
+    "id": "finger_guide_front_v03",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v03/front.prompt.txt",
+    "references": [
+      "output/characters/gc9_balor/illustration_3views_v02/front.png",
+      "output/characters/gc9_balor/inputs/grip_pose_latest.png",
+      "output/characters/gc9_balor/inputs/grip_finger_guide.png"
+    ],
+    "started_at": "2026-11-07T13:00:17.440Z",
+    "finished_at": "2026-11-07T13:00:54.965Z",
+    "output": "output/characters/gc9_balor/illustration_3views_v03/front.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-c6227da9-d164-498d-ae5c-1a1662be888d.png"
+  },
+  {
+    "id": "unhelmeted_front_v04",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/front.prompt.txt",
+    "references": [
+      "output/characters/gc9_balor/helmet_off_front_v01.png",
+      "output/characters/gc9_balor/illustration_3views_v03/front.png",
+      "자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+    ],
+    "started_at": "2026-11-07T13:10:25.768Z",
+    "finished_at": "2026-11-07T13:11:03.727Z",
+    "output": "output/characters/gc9_balor/illustration_3views_v04/front.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-714e0cf7-9484-48a3-8adc-cff75fc48e74.png"
+  },
+  {
+    "id": "right_unhelmeted_v04",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/right.prompt.txt",
+    "references": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v04/front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/right.png"
+    ],
+    "started_at": "2026-11-07T13:13:50.608Z",
+    "finished_at": "2026-11-07T13:14:26.971Z",
+    "output": "output/characters/gc9_balor/illustration_3views_v04/right.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-960ecdfe-49cb-43bf-a549-afc6b942dcc0.png"
+  },
+  {
+    "id": "back_unhelmeted_v04",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/back.prompt.txt",
+    "references": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v04/front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/back.png"
+    ],
+    "started_at": "2026-11-07T13:13:50.609Z",
+    "finished_at": "2026-11-07T13:15:43.359Z",
+    "output": "output/characters/gc9_balor/variants/back_initial_v04.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-f44c7284-0673-4e11-8615-bb93a9279479.png"
+  },
+  {
+    "id": "rear_grip_contact_v04",
+    "prompt_file": "output/characters/gc9_balor/illustration_3views_v04/back_contact_fix.prompt.txt",
+    "references": [
+      "output/characters/gc9_balor/variants/back_initial_v04.png",
+      "output/characters/gc9_balor/illustration_3views_v04/front.png",
+      "자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+    ],
+    "started_at": "2026-11-07T13:19:35.729Z",
+    "finished_at": "2026-11-07T13:20:15.932Z",
+    "output": "output/characters/gc9_balor/illustration_3views_v04/back.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-6093ed4b-e0b1-4e71-8dea-6739edc689e5.png"
+  }
+]

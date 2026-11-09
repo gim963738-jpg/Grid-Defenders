@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "file": "original.png",
+      "sourceBytesMatch": true,
+      "edgeMaxAlphaTopBottomLeftRight": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "meaning": "No alpha>=32 silhouette reaches canvas edge; extremely faint alpha1..3 may touch border"
+    },
+    {
+      "file": "variant-1-front.png",
+      "sourceBytesMatch": true,
+      "edgeMaxAlphaTopBottomLeftRight": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "meaning": "No alpha>=32 silhouette reaches canvas edge; extremely faint alpha1..3 may touch border"
+    },
+    {
+      "file": "variant-2-front.png",
+      "sourceBytesMatch": true,
+      "edgeMaxAlphaTopBottomLeftRight": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "meaning": "No alpha>=32 silhouette reaches canvas edge; extremely faint alpha1..3 may touch border"
+    },
+    {
+      "file": "variant-3-front.png",
+      "sourceBytesMatch": true,
+      "edgeMaxAlphaTopBottomLeftRight": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "meaning": "No alpha>=32 silhouette reaches canvas edge; extremely faint alpha1..3 may touch border"
+    },
+    {
+      "file": "variant-4-front.png",
+      "sourceBytesMatch": true,
+      "edgeMaxAlphaTopBottomLeftRight": [
+        0,
+        3,
+        1,
+        0
+      ],
+      "meaning": "No alpha>=32 silhouette reaches canvas edge; extremely faint alpha1..3 may touch border"
+    }
+  ],
+  "allRetainedGenerationInputsHashMatched": true,
+  "previous72FilesStillUnchanged": true,
+  "requiredFilesPresent": true,
+  "verificationNote": "PowerShell stdin Unicode filename check initially failed from codepage conversion; file-backed Python verification used here succeeds."
+}

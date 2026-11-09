@@ -1,0 +1,46 @@
+{
+  "status": "visually_reviewed",
+  "source": "output/world/maps/continent_world_final_v17.png",
+  "source_sha256": "0e0b0b31df95bb9e61e7226c0237f2bdab0948053a9dc833c9e4cb6cc483c178",
+  "source_v17_unchanged": true,
+  "output": {
+    "path": "output/world/maps/continent_world_lore_v18.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "11cb34f9a6dab23fe89a9dd4cbfb2bc63b13fa755a130df783efd0213f3305e6",
+    "opaque": true
+  },
+  "copy_matches_generated_original": true,
+  "not_resampled": true,
+  "labels_manually_reviewed": [
+    "북대륙",
+    "서대륙",
+    "중앙대륙",
+    "동대륙",
+    "남대륙",
+    "아스테른 제국",
+    "발레시온",
+    "아르케리온",
+    "발트레인 왕국",
+    "사하리드 왕국",
+    "진월국",
+    "스카르가드 요새",
+    "성휘 대교회"
+  ],
+  "central_city_count": 2,
+  "great_capital_visibly_larger": true,
+  "small_capital_northeast_of_great": true,
+  "cathedral_inside_great_capital": true,
+  "northern_fort_remains_small": true,
+  "geography_reviewed_as_preserved": [
+    "five continents",
+    "coastlines and land links",
+    "north snow mountains and fort",
+    "northwest impact/corruption",
+    "southern desert and delta",
+    "eastern lake and gulf",
+    "southeast dimensional rift"
+  ],
+  "user_approved": false,
+  "settings": "자료/세계관/세계관설정.json"
+}

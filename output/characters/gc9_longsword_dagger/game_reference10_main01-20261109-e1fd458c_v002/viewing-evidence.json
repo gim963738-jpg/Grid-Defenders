@@ -1,0 +1,13 @@
+{
+  "task":"MAIN01-20261109-E1FD458C",
+  "iteration":2,
+  "method":"view_image actual local raster inspection; isolated headless Edge for genuine alpha composites and gallery behavior",
+  "finalIndividualsViewed":["01_arknights/character.png","02_azur_lane/character.png","03_priconne/character.png","04_another_eden/character.png","05_reverse1999/character.png","06_epic_seven/character.png","07_counterside/character.png","08_guardian_tales/character.png","09_dfo/character.png","10_odin_sphere/character.png"],
+  "individualIdentityNote":"Some finals were inspected directly at the tool raw source path before their byte-identical copy; exact source paths and hashes are in selected-generation.json and technical-verification.json.",
+  "referencesViewed":"The ten selected combat references in sources.json were actually viewed, including native extracted 0.1s/22s video frames and the corrected v2 unscaled promotional combat inset crops; not every additional downloaded candidate was viewed.",
+  "compositesViewed":["pilot-light.png","pilot-dark.png","comparison-overview.png","comparison-1.png","comparison-2.png","qa-dark-overview.png","qa-unlabeled.png","qa-small-light.png","qa-small-dark.png","qa-source-cards.png","qa-individual-zoom.png","qa-narrow-gallery.png"],
+  "latestDisplayCheck":{"bodyHeightCSSpxAt2500Width":309.59615384615387,"sameAcrossOverviewAndBothDetailPanels":true,"smallBodyHeightsCSSpx":[57,72],"narrow480WidthBodyHeightCSSpx":132.20227920227921,"narrowAllOpaqueArtWithinStage":true},
+  "userUiTouched":false,
+  "actualGameOrDeviceVerified":false,
+  "independentHumanAestheticApproval":false
+}

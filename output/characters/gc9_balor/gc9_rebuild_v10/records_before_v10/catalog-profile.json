@@ -1,0 +1,59 @@
+{
+  "id": "balor",
+  "name": "발로르",
+  "display_name": "발로르",
+  "features": "짧은 갈색 머리·부드러운 인상·청·은 판금·청색 망토·검과 대형 방패",
+  "origin_id": "west",
+  "affiliation_ids": [
+    "west",
+    "west_royalist"
+  ],
+  "class_id": "knight",
+  "profession": "왕국 제3 기사단장",
+  "weapons": [
+    "양날검",
+    "카이트실드"
+  ],
+  "attack_disciplines": [
+    "제국 검술",
+    "방패술"
+  ],
+  "class_basis": "사용자 설정: 기사·성기사 스타일",
+  "origin_basis": "사용자 지정 서대륙",
+  "affiliation_basis": "서대륙 맥락의 친왕파·왕국 제3 기사단장 사용자 설정",
+  "placement_status": "assigned",
+  "production_state": "awaiting_gc9_rebuild_concept_review",
+  "illustration_concept_approved": false,
+  "sd_concept_approved": true,
+  "illustration_final_views": [
+    "front",
+    "right",
+    "back"
+  ],
+  "sd_requested": true,
+  "face_proposal_approved": true,
+  "main_variant": "unhelmeted",
+  "hand_grip_preset": "one_hand_grip_v1",
+  "grip_revision_approved": true,
+  "illustration_revision": 9,
+  "shield_height_fraction": [
+    2,
+    3
+  ],
+  "rear_right_hand_surface": "palm",
+  "sd_concept_view": "front",
+  "sd_style": "기존 SD 픽셀",
+  "sd_style_selection": "existing_sd",
+  "sd_style_approved": true,
+  "sd_scale_alignment_pending": true,
+  "sd_standard_id": "sd_silver_staff_standard_v1",
+  "illustration_current_views": [],
+  "illustration_previous_complete_set_revision": 5,
+  "gc9_framing_standard_id": "gc9_spacious_canvas_v1",
+  "illustration_latest_revision_approved": null,
+  "illustration_view_revisions": {},
+  "illustration_concept_view": "front",
+  "illustration_concept_revision": 9,
+  "previous_illustration_concept_approved": true,
+  "illustration_style_revision_approved": null
+}

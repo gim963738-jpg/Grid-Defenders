@@ -1,0 +1,80 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 3,
+  "role": "characters",
+  "status": "completed_for_review",
+  "outputPaths": {
+    "individualPngs": [
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-1-front.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-1-right-045.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-1-right-090.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-4-front.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-4-right-045.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-4-right-090.png"
+    ],
+    "gallery": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\index.html",
+    "comparison": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\comparison.png",
+    "detailedComparisons": [
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\comparison-variant-1.png",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\comparison-variant-4.png"
+    ],
+    "manifest": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\asset-manifest.json",
+    "report": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\report.md",
+    "qa": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\검수.md"
+  },
+  "originalMasters": [
+    {
+      "variant": 1,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\01_arknights\\character.png",
+      "copy": "source-variant-1.png",
+      "sha256": "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+      "copyByteIdentical": true,
+      "nativeDimensions": [
+        1312,
+        1199
+      ],
+      "role": "unique chosen style/proportions/identity master; combat pose explicitly replaced"
+    },
+    {
+      "variant": 4,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\04_another_eden\\character.png",
+      "copy": "source-variant-4.png",
+      "sha256": "ace368fd00617d2532f62eb68bb95faf6b6745fb5b291780d0b9c9c1468a0428",
+      "copyByteIdentical": true,
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "role": "unique chosen style/proportions/identity master; combat pose explicitly replaced"
+    }
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\읽기확인-v003.json",
+    "sha256": "2e5470dd063f10aab872a381720b1435f6acfd2e38a803b471bfd115d129037e",
+    "startPassed": true,
+    "documents": 18
+  },
+  "generation": {
+    "mode": "builtin image_gen",
+    "issued": 9,
+    "returned": 9,
+    "finals": 6,
+    "preservedCandidates": 3
+  },
+  "checks": {
+    "individualsActuallyViewed": 6,
+    "lightDarkFullViewed": true,
+    "detailsViewed": true,
+    "small57And72Viewed": true,
+    "rawPNGsPreserved": true,
+    "userUiTouched": false,
+    "gameIntegration": false,
+    "userAestheticApproval": false
+  },
+  "remainingIssues": [
+    "일부좁은여백/alpha1희미한외곽원본보존; 공통납품프레이밍통과주장안함",
+    "손가락·가드/주름·후드옆구조의미세생성차이및가림; 정확3D투영/해부계측아님",
+    "57/72CSSpx에서표정/재질세부소실;실게임·실기기미검증",
+    "최종미적선택·공통기준채택·게임적용은사용자판정이후별도"
+  ]
+}

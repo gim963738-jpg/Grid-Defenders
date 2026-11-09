@@ -1,0 +1,457 @@
+{
+  "task": "은발·날개 지팡이 캐릭터 8방향 입상",
+  "generation_tool": "built-in image_gen",
+  "requested_count": 8,
+  "style": "이번 사용자 견본의 픽셀 그림체와 짧은 신체 비율",
+  "pose": "모든 방향에서 양발을 딛고 서 있는 중립 입상",
+  "source": {
+    "file": "source/reference.png",
+    "width": 855,
+    "height": 919,
+    "has_alpha": false,
+    "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+  },
+  "physical_sides": {
+    "staff_hand": "anatomical_left",
+    "cylindrical_hip_case": "anatomical_right"
+  },
+  "directions": [
+    {
+      "id": "01_front_000",
+      "angle": 0,
+      "label": "정면",
+      "output_file": "images/01_front_000.png"
+    },
+    {
+      "id": "02_front_right_045",
+      "angle": 45,
+      "label": "오른쪽 앞 사선",
+      "output_file": "images/02_front_right_045.png"
+    },
+    {
+      "id": "03_right_090",
+      "angle": 90,
+      "label": "오른쪽 정측면",
+      "output_file": "images/03_right_090.png"
+    },
+    {
+      "id": "04_back_right_135",
+      "angle": 135,
+      "label": "오른쪽 뒤 사선",
+      "output_file": "images/04_back_right_135.png"
+    },
+    {
+      "id": "05_back_180",
+      "angle": 180,
+      "label": "정후면",
+      "output_file": "images/05_back_180.png"
+    },
+    {
+      "id": "06_back_left_225",
+      "angle": 225,
+      "label": "왼쪽 뒤 사선",
+      "output_file": "images/06_back_left_225.png"
+    },
+    {
+      "id": "07_left_270",
+      "angle": 270,
+      "label": "왼쪽 정측면",
+      "output_file": "images/07_left_270.png"
+    },
+    {
+      "id": "08_front_left_315",
+      "angle": 315,
+      "label": "왼쪽 앞 사선",
+      "output_file": "images/08_front_left_315.png"
+    }
+  ],
+  "calls": [
+    {
+      "id": "01_front_000",
+      "angle": 0,
+      "label": "정면",
+      "prompt": "Input image 1: source character design, PIXEL STYLE and compact proportions reference. Preserve this exact design; replace its walking stride with the standing pose specified below.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL RIGHT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL LEFT HIP. These sides are invariant as the character rotates, not screen-side labels. Left hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Right hand grips a nearly vertical staff beside the right foot, staff butt reaches the floor. Left arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square 1024x1024 canvas. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction for THIS FILE ONLY:\nExact FRONT view, yaw 0 degrees: face, chest and toes point directly toward the viewer. Both eyes visible and balanced. Staff in anatomical right hand appears on the LEFT side of the image; scroll case on anatomical left hip appears on the RIGHT. Straight frontal shoulders, not three-quarter.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png"
+      ],
+      "transparent_background": true,
+      "status": "variant",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-6121aed7-7b21-49de-8fa5-f20ed734a0ed.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-6121aed7-7b21-49de-8fa5-f20ed734a0ed.png",
+      "rejection_reason": "지팡이와 허리 원통 장비의 인체 좌우를 원본에 맞춰 수정",
+      "variant_file": "variants/01_front_000_v1.png",
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        }
+      ],
+      "sha256": "a3aff8eb8541781b012452269098c4d2d975c0752821e2e7f3994cf9a85b9089"
+    },
+    {
+      "id": "03_right_090",
+      "angle": 90,
+      "label": "오른쪽 정측면",
+      "prompt": "Input image 1: original character design and pixel-art reference. Input image 2: ACCEPTED STANDING FRONT MASTER, definitive face, proportions, costume, palette, staff and idle pose. Draw this SAME standing person rotated; do not invent a new character. Source walking pose must not return.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL RIGHT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL LEFT HIP. These sides are invariant as the character rotates, not screen-side labels. Left hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Right hand grips a nearly vertical staff beside the right foot, staff butt reaches the floor. Left arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching the 1254x1254 front master. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction for THIS FILE ONLY:\nExact RIGHT-FACING SIDE PROFILE, yaw 90 degrees: nose and toes point horizontally to the RIGHT edge. One eye and profile nose only, shoulders overlapping in depth, no frontal chest. This matches the source facing direction but CHANGE walking pose to both-feet-planted standing. Do not preserve the source's wide stride.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png"
+      ],
+      "transparent_background": true,
+      "status": "variant",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-d4117d0d-62df-4ba0-b354-0d8c4f870bbb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-d4117d0d-62df-4ba0-b354-0d8c4f870bbb.png",
+      "rejection_reason": "지팡이와 허리 원통 장비의 인체 좌우를 원본에 맞춰 수정",
+      "variant_file": "variants/03_right_090_v1.png",
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        },
+        {
+          "input_index": 2,
+          "file": "variants/01_front_000_v1.png",
+          "sha256": "a3aff8eb8541781b012452269098c4d2d975c0752821e2e7f3994cf9a85b9089"
+        }
+      ],
+      "sha256": "2d64fd37ad2a036d36f224d6ffd6fc9bbac393b623b862629aa40fafa0b61fb2"
+    },
+    {
+      "id": "05_back_180",
+      "angle": 180,
+      "label": "정후면",
+      "prompt": "Input image 1: original character design and pixel-art reference. Input image 2: ACCEPTED STANDING FRONT MASTER, definitive face, proportions, costume, palette, staff and idle pose. Draw this SAME standing person rotated; do not invent a new character. Source walking pose must not return.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL RIGHT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL LEFT HIP. These sides are invariant as the character rotates, not screen-side labels. Left hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Right hand grips a nearly vertical staff beside the right foot, staff butt reaches the floor. Left arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching the 1254x1254 front master. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction for THIS FILE ONLY:\nExact BACK view, yaw 180 degrees: head, torso and feet face directly AWAY. NO FACE, NO EYES, NO FRONT CHEST GEM on the back. Show long silver hair falling over the back mantle and the same dark-blue cape with its gold hem borders, minimally extrapolating the hidden rear construction. Anatomical RIGHT-hand staff is on the RIGHT side of the image; LEFT-hip cylindrical case is on the LEFT. Both soles align to the same floor line.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png"
+      ],
+      "transparent_background": true,
+      "status": "variant",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-2ff0ebab-a45f-4c34-9e62-3c24cf40cf1d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-2ff0ebab-a45f-4c34-9e62-3c24cf40cf1d.png",
+      "rejection_reason": "지팡이와 허리 원통 장비의 인체 좌우를 원본에 맞춰 수정",
+      "variant_file": "variants/05_back_180_v1.png",
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        },
+        {
+          "input_index": 2,
+          "file": "variants/01_front_000_v1.png",
+          "sha256": "a3aff8eb8541781b012452269098c4d2d975c0752821e2e7f3994cf9a85b9089"
+        }
+      ],
+      "sha256": "96710a8ed7258d651e81d8d0ce9e143dae2b7c5e2eae5432f000474f1acb7246"
+    },
+    {
+      "id": "01_front_000_v2",
+      "view_id": "01_front_000",
+      "angle": 0,
+      "label": "정면",
+      "prompt": "Use case: precise-object-edit.\nInput image 1: EDIT TARGET, the already-designed standing sprite at the requested yaw. Input image 2: ORIGINAL SOURCE to verify anatomical equipment sides. Keep Image 1's face, hair design, compact proportions, pixel style, clothes, pose, lighting, scale, facing direction and framing. Correct ONLY equipment handedness and the corresponding arm positions: STAFF IN ANATOMICAL LEFT HAND, EMPTY RIGHT ARM LOWERED, CYLINDRICAL CASE ON RIGHT HIP. The first draft reversed these. Do NOT horizontally flip the entire person or change yaw. Render one corrected standing sprite with genuine alpha.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL LEFT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL RIGHT HIP. These sides are invariant as the character rotates, not screen-side labels. Right hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Left hand grips a nearly vertical staff beside the left foot, staff butt reaches the floor. Right arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching Image 1. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction, unchanged from edit target:\nExact FRONT view, yaw 0 degrees: face, chest and toes point directly toward the viewer. Both eyes visible and balanced. Staff in anatomical LEFT hand appears on the RIGHT side of the image; cylindrical case on anatomical RIGHT hip appears on the LEFT. Right arm relaxed downward. Straight frontal shoulders, not three-quarter.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/variants/01_front_000_v1.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "revision_reason": "원본과 같은 왼손 지팡이·오른쪽 허리 장비로 수정",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-193a0e7f-b603-46db-b6c3-934f58beb54f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-193a0e7f-b603-46db-b6c3-934f58beb54f.png",
+      "output_file": "images/01_front_000.png",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f",
+      "has_alpha": true,
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "variants/01_front_000_v1.png",
+          "sha256": "a3aff8eb8541781b012452269098c4d2d975c0752821e2e7f3994cf9a85b9089"
+        },
+        {
+          "input_index": 2,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        }
+      ]
+    },
+    {
+      "id": "03_right_090_v2",
+      "view_id": "03_right_090",
+      "angle": 90,
+      "label": "오른쪽 정측면",
+      "prompt": "Use case: precise-object-edit.\nInput image 1: EDIT TARGET, the already-designed standing sprite at the requested yaw. Input image 2: ORIGINAL SOURCE to verify anatomical equipment sides. Keep Image 1's face, hair design, compact proportions, pixel style, clothes, pose, lighting, scale, facing direction and framing. Correct ONLY equipment handedness and the corresponding arm positions: STAFF IN ANATOMICAL LEFT HAND, EMPTY RIGHT ARM LOWERED, CYLINDRICAL CASE ON RIGHT HIP. The first draft reversed these. Do NOT horizontally flip the entire person or change yaw. Render one corrected standing sprite with genuine alpha.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL LEFT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL RIGHT HIP. These sides are invariant as the character rotates, not screen-side labels. Right hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Left hand grips a nearly vertical staff beside the left foot, staff butt reaches the floor. Right arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching Image 1. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction, unchanged from edit target:\nExact RIGHT-FACING SIDE PROFILE, yaw 90 degrees: nose and toes point horizontally RIGHT. One eye only, shoulders overlap. We see the character's ANATOMICAL RIGHT FLANK, exactly as in the original source: the NEAR/right arm hangs relaxed and empty; the FAR/left arm, partially behind the torso, reaches forward to hold the staff. Cylindrical case is on the visible near/right hip. The far staff-holding hand can appear in front of the chest but the near arm must remain lowered. Both feet planted, no stride.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/variants/03_right_090_v1.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "revision_reason": "원본과 같은 왼손 지팡이·오른쪽 허리 장비로 수정",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-cc3d084f-9dd9-4b34-b323-1be882026ab1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-cc3d084f-9dd9-4b34-b323-1be882026ab1.png",
+      "output_file": "images/03_right_090.png",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "sha256": "38f5ff8f38d58a3a64042133df7a4dda7bfaa1b2cfd422f1d5fa3f725985056c",
+      "has_alpha": true,
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "variants/03_right_090_v1.png",
+          "sha256": "2d64fd37ad2a036d36f224d6ffd6fc9bbac393b623b862629aa40fafa0b61fb2"
+        },
+        {
+          "input_index": 2,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        }
+      ]
+    },
+    {
+      "id": "05_back_180_v2",
+      "view_id": "05_back_180",
+      "angle": 180,
+      "label": "정후면",
+      "prompt": "Use case: precise-object-edit.\nInput image 1: EDIT TARGET, the already-designed standing sprite at the requested yaw. Input image 2: ORIGINAL SOURCE to verify anatomical equipment sides. Keep Image 1's face, hair design, compact proportions, pixel style, clothes, pose, lighting, scale, facing direction and framing. Correct ONLY equipment handedness and the corresponding arm positions: STAFF IN ANATOMICAL LEFT HAND, EMPTY RIGHT ARM LOWERED, CYLINDRICAL CASE ON RIGHT HIP. The first draft reversed these. Do NOT horizontally flip the entire person or change yaw. Render one corrected standing sprite with genuine alpha.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL LEFT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL RIGHT HIP. These sides are invariant as the character rotates, not screen-side labels. Right hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Left hand grips a nearly vertical staff beside the left foot, staff butt reaches the floor. Right arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching Image 1. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction, unchanged from edit target:\nExact BACK view, yaw 180 degrees: head, torso and feet face directly AWAY. NO FACE, NO EYES, NO FRONT CHEST GEM. Long silver hair over back mantle and dark-blue cape with gold hem borders. Anatomical LEFT-hand staff is on the LEFT side of the image; RIGHT-hip cylindrical case on the RIGHT, near the lowered empty right arm. Both soles align to the same floor line.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/variants/05_back_180_v1.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "revision_reason": "원본과 같은 왼손 지팡이·오른쪽 허리 장비로 수정",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-0408fb2b-4fe6-477b-a534-0f75231bc821.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-0408fb2b-4fe6-477b-a534-0f75231bc821.png",
+      "output_file": "images/05_back_180.png",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "sha256": "0c8b41190bfe50e5192eff84ecab4ee32344f539d50adcd30816cb33785cbf64",
+      "has_alpha": true,
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "variants/05_back_180_v1.png",
+          "sha256": "96710a8ed7258d651e81d8d0ce9e143dae2b7c5e2eae5432f000474f1acb7246"
+        },
+        {
+          "input_index": 2,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        }
+      ]
+    },
+    {
+      "id": "02_front_right_045",
+      "view_id": "02_front_right_045",
+      "angle": 45,
+      "label": "오른쪽 앞 사선",
+      "prompt": "Input image 1: original source for pixel style and original design details. Input image 2: FINAL CORRECTED STANDING FRONT MASTER, definitive face, body scale, clothing, palette and equipment sides. Input image 3: FINAL CORRECTED STANDING BACK MASTER, definitive rear hair, mantle, cape hem and reverse construction. Rotate this one SAME character between the front and back masters to the specified yaw; never turn the head alone. STAFF IS IN LEFT HAND, CASE ON RIGHT HIP, exactly as both corrected masters. Preserve the physical object arrangement through the rotation.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL LEFT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL RIGHT HIP. These sides are invariant as the character rotates, not screen-side labels. Right hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Left hand grips a nearly vertical staff beside the left foot, staff butt reaches the floor. Right arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching the 1254x1254 master images. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction for THIS FILE ONLY:\nFRONT-RIGHT THREE-QUARTER view, yaw 45 degrees: faces diagonally toward screen RIGHT and toward the viewer. Front chest and both eyes visible with foreshortening. Head, chest, pelvis and feet share the same 45-degree yaw. LEFT hand holds the staff on its far side, right arm hangs on the nearer side, case on right hip.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-19c7d85e-1bb1-4ab8-bbc1-8665c15b5332.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-19c7d85e-1bb1-4ab8-bbc1-8665c15b5332.png",
+      "output_file": "images/02_front_right_045.png",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "sha256": "ee55529dedd03621178d114f9dca99559032936dfdc31cfb95998850d81b51af",
+      "has_alpha": true,
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        },
+        {
+          "input_index": 2,
+          "file": "images/01_front_000.png",
+          "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f"
+        },
+        {
+          "input_index": 3,
+          "file": "images/05_back_180.png",
+          "sha256": "0c8b41190bfe50e5192eff84ecab4ee32344f539d50adcd30816cb33785cbf64"
+        }
+      ]
+    },
+    {
+      "id": "04_back_right_135",
+      "view_id": "04_back_right_135",
+      "angle": 135,
+      "label": "오른쪽 뒤 사선",
+      "prompt": "Input image 1: original source for pixel style and original design details. Input image 2: FINAL CORRECTED STANDING FRONT MASTER, definitive face, body scale, clothing, palette and equipment sides. Input image 3: FINAL CORRECTED STANDING BACK MASTER, definitive rear hair, mantle, cape hem and reverse construction. Rotate this one SAME character between the front and back masters to the specified yaw; never turn the head alone. STAFF IS IN LEFT HAND, CASE ON RIGHT HIP, exactly as both corrected masters. Preserve the physical object arrangement through the rotation.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL LEFT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL RIGHT HIP. These sides are invariant as the character rotates, not screen-side labels. Right hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Left hand grips a nearly vertical staff beside the left foot, staff butt reaches the floor. Right arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching the 1254x1254 master images. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction for THIS FILE ONLY:\nBACK-RIGHT THREE-QUARTER view, yaw 135 degrees: faces diagonally AWAY toward screen RIGHT. Back of head and cape dominant, narrow right-edge profile at most. No frontal chest, pair of eyes or front brooch on the back. LEFT-hand staff is on the FAR side and may be partly occluded by hair/cape, emerging toward screen LEFT; nearer RIGHT arm hangs empty, cylindrical case at near/right hip. All body parts rotate together.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-28d61880-e359-41b9-bbf9-1856d9b54bc7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-28d61880-e359-41b9-bbf9-1856d9b54bc7.png",
+      "output_file": "images/04_back_right_135.png",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "sha256": "f1de46c5b5ca68347735b7c710494b1d0d25d5cc6a2818bd872355a5a86f0122",
+      "has_alpha": true,
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        },
+        {
+          "input_index": 2,
+          "file": "images/01_front_000.png",
+          "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f"
+        },
+        {
+          "input_index": 3,
+          "file": "images/05_back_180.png",
+          "sha256": "0c8b41190bfe50e5192eff84ecab4ee32344f539d50adcd30816cb33785cbf64"
+        }
+      ]
+    },
+    {
+      "id": "06_back_left_225",
+      "view_id": "06_back_left_225",
+      "angle": 225,
+      "label": "왼쪽 뒤 사선",
+      "prompt": "Input image 1: original source for pixel style and original design details. Input image 2: FINAL CORRECTED STANDING FRONT MASTER, definitive face, body scale, clothing, palette and equipment sides. Input image 3: FINAL CORRECTED STANDING BACK MASTER, definitive rear hair, mantle, cape hem and reverse construction. Rotate this one SAME character between the front and back masters to the specified yaw; never turn the head alone. STAFF IS IN LEFT HAND, CASE ON RIGHT HIP, exactly as both corrected masters. Preserve the physical object arrangement through the rotation.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL LEFT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL RIGHT HIP. These sides are invariant as the character rotates, not screen-side labels. Right hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Left hand grips a nearly vertical staff beside the left foot, staff butt reaches the floor. Right arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching the 1254x1254 master images. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction for THIS FILE ONLY:\nBACK-LEFT THREE-QUARTER view, yaw 225 degrees: faces diagonally AWAY toward screen LEFT. Back of head, rear mantle and cape dominate, narrow left-edge head profile at most, no frontal chest or pair of eyes. Anatomical LEFT hand holding staff is on the NEAR side, and RIGHT-hip case is on the far side and may be occluded. Do not switch arms. Body and feet rotate together.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-c0f87577-4587-4ab8-a51b-914fba4dbdf1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-c0f87577-4587-4ab8-a51b-914fba4dbdf1.png",
+      "output_file": "images/06_back_left_225.png",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "sha256": "d8a42887fc401154245765b6cc296f8453def1147c6ecd3e51e4aeadaa465cdf",
+      "has_alpha": true,
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        },
+        {
+          "input_index": 2,
+          "file": "images/01_front_000.png",
+          "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f"
+        },
+        {
+          "input_index": 3,
+          "file": "images/05_back_180.png",
+          "sha256": "0c8b41190bfe50e5192eff84ecab4ee32344f539d50adcd30816cb33785cbf64"
+        }
+      ]
+    },
+    {
+      "id": "07_left_270",
+      "view_id": "07_left_270",
+      "angle": 270,
+      "label": "왼쪽 정측면",
+      "prompt": "Input image 1: original source for pixel style and original design details. Input image 2: FINAL CORRECTED STANDING FRONT MASTER, definitive face, body scale, clothing, palette and equipment sides. Input image 3: FINAL CORRECTED STANDING BACK MASTER, definitive rear hair, mantle, cape hem and reverse construction. Rotate this one SAME character between the front and back masters to the specified yaw; never turn the head alone. STAFF IS IN LEFT HAND, CASE ON RIGHT HIP, exactly as both corrected masters. Preserve the physical object arrangement through the rotation.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL LEFT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL RIGHT HIP. These sides are invariant as the character rotates, not screen-side labels. Right hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Left hand grips a nearly vertical staff beside the left foot, staff butt reaches the floor. Right arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching the 1254x1254 master images. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction for THIS FILE ONLY:\nExact LEFT-FACING SIDE PROFILE, yaw 270 degrees: nose and toes point horizontally LEFT. One eye only and overlapping shoulders. We see the ANATOMICAL LEFT FLANK, so the NEAR/left arm holds the staff and the FAR/right arm hangs empty. RIGHT-hip case is on the far side, partly or fully occluded by the body/cape. Independently render this side, not a flipped right profile. Both feet planted, no stride.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-3f57d4a1-cc37-4978-960c-46c3e323ec20.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-3f57d4a1-cc37-4978-960c-46c3e323ec20.png",
+      "output_file": "images/07_left_270.png",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "sha256": "bec0ce18e4e3fca5b57e413a77edd86a56417a4c332770667b4e659f0e22c2cb",
+      "has_alpha": true,
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        },
+        {
+          "input_index": 2,
+          "file": "images/01_front_000.png",
+          "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f"
+        },
+        {
+          "input_index": 3,
+          "file": "images/05_back_180.png",
+          "sha256": "0c8b41190bfe50e5192eff84ecab4ee32344f539d50adcd30816cb33785cbf64"
+        }
+      ]
+    },
+    {
+      "id": "08_front_left_315",
+      "view_id": "08_front_left_315",
+      "angle": 315,
+      "label": "왼쪽 앞 사선",
+      "prompt": "Input image 1: original source for pixel style and original design details. Input image 2: FINAL CORRECTED STANDING FRONT MASTER, definitive face, body scale, clothing, palette and equipment sides. Input image 3: FINAL CORRECTED STANDING BACK MASTER, definitive rear hair, mantle, cape hem and reverse construction. Rotate this one SAME character between the front and back masters to the specified yaw; never turn the head alone. STAFF IS IN LEFT HAND, CASE ON RIGHT HIP, exactly as both corrected masters. Preserve the physical object arrangement through the rotation.\n\nUse case: stylized-concept.\nAsset type: one individual eight-direction standing game-character sprite, on a genuinely transparent background.\nSubject/design: reproduce the exact silver-haired staff character in the supplied source. Preserve the source's compact large-head/short-body game-sprite proportions and youthful face, long warm-silver layered wavy hair, small blue eyes, navy/royal-blue shoulder mantle and long cape with restrained gold floral borders, white tunic and white sleeves, dark forearm guards with gold edges, dark loose trousers, dark boots with gold fittings, small blue gemstone at the throat and belt, and a single slim navy staff with gold fittings and its tall asymmetric ivory-gold feathered wing crest and dark-blue curved ornament. Do not redesign clothing, add armor, add elf ears, duplicate weapons, or add unrelated magic effects.\nPhysical sides: staff held in the character's ANATOMICAL LEFT HAND; small navy cylindrical scroll case with gold endcaps on the ANATOMICAL RIGHT HIP. These sides are invariant as the character rotates, not screen-side labels. Right hand relaxed at the side. One staff only. The same asymmetrical staff crest rotates with the character, including a coherent reverse surface; do not simply mirror the design.\nPose: STANDING STILL in a relaxed upright idle pose, both feet planted on the same level floor, feet slightly separated, knees comfortably straight, weight balanced. Left hand grips a nearly vertical staff beside the left foot, staff butt reaches the floor. Right arm lowered naturally. Hair and cape hang with a gentle readable curve, no strong wind. No walking stride, stepping forward, running, lunging, jumping, crouching or attack. Whole head, torso, pelvis and feet rotate together to the specified yaw.\nStyle: match the provided source's detailed hand-drawn PIXEL ART, deliberate square pixel clusters and stepped edges, restrained indexed-looking color ramps, clean warm dark pixel outlines, controlled pixel highlights on metal and readable large cloth folds. Keep the compact proportions in this reference; do not convert to tall GC9/anime illustration, vector art, smooth painted shading, 3D render or photorealism. No blur or random noise.\nFraming/camera: fixed orthographic game-character camera at the reference's elevation; only character yaw changes. One character and one view, centered on a square canvas matching the 1254x1254 master images. Same scale for all directions: staff crest near 6% from top, boot soles and staff butt at about 92% of image height, crown of the head around 25% from top. Entire staff crest, flowing hair, cape and both boots visible with clean padding. No perspective enlargement between directions.\nLighting/output: consistent gentle upper-left studio-style pixel light, matching palette in all views. True transparent alpha outside the silhouette, no black backdrop, no checkerboard painted into pixels, no floor plane, no cast-shadow ellipse, no labels, arrows, text, logo, border, extra panels or extra figures.\n\nRequested direction for THIS FILE ONLY:\nFRONT-LEFT THREE-QUARTER view, yaw 315 degrees: faces diagonally toward screen LEFT and toward the viewer. Front chest and both eyes visible with correct foreshortening. Head, chest, hips and feet share the yaw. LEFT-hand staff stays on the nearer physical left side, RIGHT-hip case on the farther physical right side. Do not mirror front-right image.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/source/reference.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/05_back_180.png"
+      ],
+      "transparent_background": true,
+      "status": "selected",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b as C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-65aad00b-fdd6-42f1-a8ca-eae634a236f8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generated_original_path": "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-65aad00b-fdd6-42f1-a8ca-eae634a236f8.png",
+      "output_file": "images/08_front_left_315.png",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "sha256": "521dead8ee7271ef810da56e026afcef416569be051d50aac0bc98493473cb5b",
+      "has_alpha": true,
+      "reference_snapshots": [
+        {
+          "input_index": 1,
+          "file": "source/reference.png",
+          "sha256": "8202e760e284a55bcba79f2dcc7e3a18578c82a756037c5857c2b2fa47ad780e"
+        },
+        {
+          "input_index": 2,
+          "file": "images/01_front_000.png",
+          "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f"
+        },
+        {
+          "input_index": 3,
+          "file": "images/05_back_180.png",
+          "sha256": "0c8b41190bfe50e5192eff84ecab4ee32344f539d50adcd30816cb33785cbf64"
+        }
+      ]
+    }
+  ],
+  "status": "complete",
+  "generation_call_count": 11,
+  "selected_count": 8,
+  "selected_call_ids": [
+    "01_front_000_v2",
+    "03_right_090_v2",
+    "05_back_180_v2",
+    "02_front_right_045",
+    "04_back_right_135",
+    "06_back_left_225",
+    "07_left_270",
+    "08_front_left_315"
+  ],
+  "variant_count": 3,
+  "archive_file": "silver-staff-8views-v1.zip",
+  "viewer_file": "비교.html",
+  "reference_history_note": "referenced_image_paths는 당시 도구에 전달한 경로다. 초기 측면·후면에서 사용한 정면 V1은 variants의 reference_snapshots로 보존한다. 재현 시 각 입력의 스냅샷과 SHA-256을 확인한다."
+}

@@ -1,0 +1,42 @@
+﻿{
+    "status":  "passed",
+    "resampled":  false,
+    "pngs":  [
+                 {
+                     "file":  "existing_sd_front.png",
+                     "width":  1254,
+                     "height":  1254,
+                     "pixel_format":  "Format32bppArgb",
+                     "empty_corner_alpha_max":  [
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    0
+                                                ],
+                     "sha256":  "8457d9b0caa070bf814ab38a0bb9e288c8f89204364f18e61500b39a878b161a"
+                 },
+                 {
+                     "file":  "new_sd_front.png",
+                     "width":  1254,
+                     "height":  1254,
+                     "pixel_format":  "Format32bppArgb",
+                     "empty_corner_alpha_max":  [
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    0
+                                                ],
+                     "sha256":  "4bec8e4931ca330132e980e6c83d5610ffee709f1432a39fcf97904b76b00d2b"
+                 }
+             ],
+    "zip":  [
+                {
+                    "entry":  "existing_sd_front.png",
+                    "original_bytes_unchanged":  true
+                },
+                {
+                    "entry":  "new_sd_front.png",
+                    "original_bytes_unchanged":  true
+                }
+            ]
+}

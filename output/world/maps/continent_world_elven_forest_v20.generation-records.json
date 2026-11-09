@@ -1,0 +1,50 @@
+{
+  "task": "북동부 녹지 육상 연결 및 엘프의 숲 추가 지도 v20",
+  "tool": "built-in image_gen",
+  "source_path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/world/maps/continent_world_coastal_green_v19.png",
+  "source_version": 19,
+  "target_version": 20,
+  "status": "complete",
+  "calls": [
+    {
+      "id": "continent_world_elven_forest_v20",
+      "prompt": "Use case: precise-object-edit.\nAsset type: version 20 of the supplied existing fantasy WORLD MAP.\n\nINPUT IMAGE ROLES:\nImage 1 is the full square EDIT TARGET: continent_world_coastal_green_v19.png, native 1254x1254.\nImage 2 is ONLY the user's annotated location crop. Its RED outline marks a sea gap to replace with connected GREEN LAND. Its BLUE outline marks the main location of a new ELVEN FOREST. These red and blue pen marks are instructions, NEVER artwork to render.\nDeliver the COMPLETE map composition from image 1, not a cropped detail.\n\nLOCAL TERRAIN CHANGE — GREEN LAND CONNECTION:\nNear the upper-right center of the world, between the northern/central mainland's eastern green coast and the northwestern side of the eastern continent, replace the sea inside the user's RED outline with a substantial natural GREEN LAND CONNECTION.\nOn image 1 the authorized edit area is approximately x=710..1000,y=245..455, i.e. 57%..80% canvas width,20%..36% height. It lies immediately NORTHEAST of the small magic capital caption \"아르케리온\", under the eastern end of the northern snowy coast, and WEST/NORTHWEST of the bright turquoise lake in the eastern continent.\nJoin the GREEN mainland shoulder at the foot of the northern mountains to the existing wooded western slopes of the eastern continent, filling the marked blue-water gap with coherent low green hills and forest floor. The connection must visibly touch BOTH existing land shores, as continuous traversable terrain; no detached island, wooden bridge, thin causeway or faint scattered green dots. The broad red-outlined gap should visibly become fertile land.\nMake the new land's contours organic and integrate its elevations into the existing surrounding green foothills. Leave the lower sea channel south of the connection open, and retain the eastern turquoise lake with its present shape and shore. Do not drain the lake or engulf either city.\n\nADD THE ELVEN FOREST:\nThe user's BLUE outlined area is around the wooded northwestern shoulder of the eastern continent, approximately x=855..970,y=320..440 on image 1, just west of the turquoise lake. Build a beautiful dense old-growth ELVEN FOREST here and let its continuous canopy extend WESTWARD across the newly connected green land. The forest should read as one coherent special woodland joining these land areas.\nUse clusters of tall mature broadleaf trees, lush emerald and slightly blue-green foliage, shadowed trunks and a few restrained pale luminous glints. A small number of magnificent older trees can distinguish the woodland at the existing miniature map scale. The place is a FOREST, not a new city, country, castle or separate continent. Do not add elven palaces, giant characters, new rulers or symbols.\nAdd ONE clean exact Korean geographic caption \"엘프의 숲\" at an uncluttered edge of the new forest, approximately around x=880..960,y=340..385 if suitable. Make it readable in the same ivory-white Korean lettering with dark outline as existing landmark captions, smaller than continent headings. It must not overlap \"아르케리온\", \"북대륙\", \"동대륙\" or the turquoise lake. The caption must be spelled exactly 엘프의 숲.\n\nLOCK THE REST OF IMAGE 1:\nKeep all existing cities in place, including the smaller northeastern magic city 아르케리온, the large imperial city 발레시온 and its church district, the western fortified city, southern white-domed desert city and eastern East-Asian palace city.\nPreserve the southern coastal green belt and open river delta introduced in v19; do not undo that edit. Preserve the southern desert interior, all river channels, the northern snow mountains and tiny fort, the huge northwestern purple impact crater/corruption, the eastern turquoise lake and lower crescent gulf, the southeast dimensional rift separated by ocean, and the rest of the five-continent composition.\nThe ONLY coastline change is the user-marked upper-central/eastern sea-to-green-land connection. Match the existing crisp hand-painted miniature strategy-map rendering, colors, material detail, scale and lighting. No global redesign or blur.\n\nKEEP THESE 13 EXISTING LABELS VERBATIM AND IN THEIR CURRENT POSITIONS:\n북대륙 / 서대륙 / 중앙대륙 / 동대륙 / 남대륙\n아스테른 제국 / 발레시온 / 아르케리온\n발트레인 왕국 / 사하리드 왕국 / 진월국\n스카르가드 요새 / 성휘 대교회\nAdd only the 14th label \"엘프의 숲\". No duplicate captions, altered spellings, English text, annotation strokes, grid, borders, UI, watermark or inset.\n\nOutput one complete opaque SQUARE map at the source framing, preferably native 1254x1254 or highest available native square size. No crop, zoom, padding or transparency.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/world/maps/continent_world_coastal_green_v19.png",
+        "C:/Users/user/AppData/Roaming/orca/agent-session-attachments/e49db381-80c3-4707-a252-13769b041931/orca-paste-1794025712597-c098499e-929d-4f98-8799-44a1112625b2.png"
+      ],
+      "transparent_background": false,
+      "status": "selected",
+      "generated_original_path": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-e8fe833a-6781-4224-861c-aa11835beab7.png",
+      "output_file": "output/world/maps/continent_world_elven_forest_v20.png",
+      "output_sha256": "17084bf2a5c6e16e48bd8ecb6a288fc78213c84b6478651aaee96e369298b29e",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "resampled": false
+    }
+  ],
+  "user_request": "붉은 표시 구간 녹지 연결·파란 표시 주변 엘프의 숲 추가",
+  "user_approved": false,
+  "created_on": "2026-11-07",
+  "completed_on": "2026-11-07",
+  "source_sha256": "f7589055b41639f16409d50f74384c246ced8db9b3c0eafa0d5d4d56b7961f60",
+  "generated_count": 1,
+  "selected_count": 1,
+  "output": {
+    "path": "output/world/maps/continent_world_elven_forest_v20.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "17084bf2a5c6e16e48bd8ecb6a288fc78213c84b6478651aaee96e369298b29e",
+    "opaque": true
+  },
+  "saved_user_markup": {
+    "path": "output/world/maps/references/v20_northeast_green_elf_user_markup.png",
+    "sha256": "61c7802fe7aa11abad5ef59e530a27b099313606f56dabed3bde73a2a976b485"
+  },
+  "review_file": "output/world/maps/continent_world_elven_forest_v20.review.json",
+  "existing_maps_unchanged": {
+    "output/world/maps/continent_world_final_v17.png": "0e0b0b31df95bb9e61e7226c0237f2bdab0948053a9dc833c9e4cb6cc483c178",
+    "output/world/maps/continent_world_lore_v18.png": "11cb34f9a6dab23fe89a9dd4cbfb2bc63b13fa755a130df783efd0213f3305e6",
+    "output/world/maps/continent_world_coastal_green_v19.png": "f7589055b41639f16409d50f74384c246ced8db9b3c0eafa0d5d4d56b7961f60"
+  }
+}

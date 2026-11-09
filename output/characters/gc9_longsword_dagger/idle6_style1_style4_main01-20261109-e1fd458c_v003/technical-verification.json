@@ -1,0 +1,107 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 3,
+  "assets": [
+    {
+      "file": "variant-1-front.png",
+      "nativeDimensionsMatch": true,
+      "RGBA": true,
+      "manifestShaMatches": true,
+      "toolRawByteIdentical": true,
+      "measured": true,
+      "edgeAlpha32Contact": false,
+      "bodyWithinImage": true,
+      "loweredBladeExcludedFromBodyHeight": true
+    },
+    {
+      "file": "variant-1-right-045.png",
+      "nativeDimensionsMatch": true,
+      "RGBA": true,
+      "manifestShaMatches": true,
+      "toolRawByteIdentical": true,
+      "measured": true,
+      "edgeAlpha32Contact": false,
+      "bodyWithinImage": true,
+      "loweredBladeExcludedFromBodyHeight": true
+    },
+    {
+      "file": "variant-1-right-090.png",
+      "nativeDimensionsMatch": true,
+      "RGBA": true,
+      "manifestShaMatches": true,
+      "toolRawByteIdentical": true,
+      "measured": true,
+      "edgeAlpha32Contact": false,
+      "bodyWithinImage": true,
+      "loweredBladeExcludedFromBodyHeight": true
+    },
+    {
+      "file": "variant-4-front.png",
+      "nativeDimensionsMatch": true,
+      "RGBA": true,
+      "manifestShaMatches": true,
+      "toolRawByteIdentical": true,
+      "measured": true,
+      "edgeAlpha32Contact": false,
+      "bodyWithinImage": true,
+      "loweredBladeExcludedFromBodyHeight": true
+    },
+    {
+      "file": "variant-4-right-045.png",
+      "nativeDimensionsMatch": true,
+      "RGBA": true,
+      "manifestShaMatches": true,
+      "toolRawByteIdentical": true,
+      "measured": true,
+      "edgeAlpha32Contact": false,
+      "bodyWithinImage": true,
+      "loweredBladeExcludedFromBodyHeight": true
+    },
+    {
+      "file": "variant-4-right-090.png",
+      "nativeDimensionsMatch": true,
+      "RGBA": true,
+      "manifestShaMatches": true,
+      "toolRawByteIdentical": true,
+      "measured": true,
+      "edgeAlpha32Contact": false,
+      "bodyWithinImage": true,
+      "loweredBladeExcludedFromBodyHeight": true
+    }
+  ],
+  "sources": [
+    {
+      "variant": 1,
+      "sourceHashUnchanged": true,
+      "sourceCopyByteIdentical": true
+    },
+    {
+      "variant": 4,
+      "sourceHashUnchanged": true,
+      "sourceCopyByteIdentical": true
+    }
+  ],
+  "ackChanges": [],
+  "requiredFiles": {
+    "variant-1-front.png": true,
+    "variant-1-right-045.png": true,
+    "variant-1-right-090.png": true,
+    "variant-4-front.png": true,
+    "variant-4-right-045.png": true,
+    "variant-4-right-090.png": true,
+    "index.html": true,
+    "comparison.png": true,
+    "comparison-variant-1.png": true,
+    "comparison-variant-4.png": true,
+    "original-comparison.png": true,
+    "qa-small-light.png": true,
+    "qa-small-dark.png": true,
+    "분석.md": true,
+    "제작기준.md": true,
+    "검수.md": true,
+    "report.md": true,
+    "결과.json": true,
+    "asset-manifest.json": true
+  },
+  "scope": "file/byte/dimension/alpha/metadata checks only; visual identity and user approval are separate"
+}

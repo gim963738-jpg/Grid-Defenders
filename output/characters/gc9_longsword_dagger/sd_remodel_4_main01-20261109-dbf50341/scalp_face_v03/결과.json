@@ -1,0 +1,51 @@
+{
+  "task": "MAIN01-20261109-DBF50341",
+  "iteration": 3,
+  "role": "characters",
+  "status": "completed_for_user_selection",
+  "timestamp": "2026-11-09T19:21:11.755951+09:00",
+  "outputPaths": {
+    "original.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\original.png",
+    "variant-1-front.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant-1-front.png",
+    "variant-2-front.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant-2-front.png",
+    "variant-3-front.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant-3-front.png",
+    "variant-4-front.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant-4-front.png",
+    "comparison.png": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\comparison.png",
+    "index.html": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\index.html",
+    "asset-manifest.json": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\asset-manifest.json",
+    "분석.md": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\분석.md",
+    "제작기준.md": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\제작기준.md",
+    "검수.md": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\검수.md",
+    "generation-records.json": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\generation-records.json"
+  },
+  "originalPath": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\original.png",
+  "originalSha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\읽기확인-v003-860c1b3369e945bea266e7486d430038.json",
+    "sha256": "e5036cf05e2a8a4d860f3595b9750114cbf8cea72ed6ad19b9f2c5d3d8fc9001",
+    "startPassed": true,
+    "newIterationAck": true
+  },
+  "checks": {
+    "generationCalls": 10,
+    "finalCount": 4,
+    "actualViewImageInspected": true,
+    "pngSourceBytesMatch": true,
+    "noResampling": true,
+    "previousSnapshotFilesUnchanged": true,
+    "lightDarkSmallNarrowExpandedInspected": true,
+    "userApproved": false,
+    "gameIntegrated": false,
+    "commonRulesChanged": false,
+    "gitCommitPushPerformed": false
+  },
+  "remainingIssues": [
+    "1/2의 얼굴 폭 차이와3/4의 두상 차이는 작고 균등한4단계는 아니다; 얼굴/몸 비중과 턱·눈썹의 선택용 차이로 제출한다.",
+    "2안 장검은 원본처럼 바깥 아래로 향한다; 오른손·그립·날 연결은 보이나 몸 앞 반대발 방향의 선호 그립 축은 완전히 재현되지 않았다.",
+    "모발 아래 정수리는 추정이며 정확한 해부학적 등신/사용자 확정 비율이 아니다.",
+    "3/4의 큰 두상은 더 어린 인상을 줄 수 있어 사용자 선택이 필요하다; 청년 인상 유지의 미적 합격을 대신 판정하지 않는다.",
+    "전체 실루엣은 잘리지 않았지만3/4는 상하 여백이 작고 공통 SD 프레이밍 목표는 미달이다.",
+    "알파 가장자리의 가는 적색/갈색/청색 반투명 픽셀 잔여가 보인다; 출력 바이트 보존으로 제거하지 않았으며 게임용 최종 정리 완료가 아니다.",
+    "57/72CSSpx는 비교 페이지 관찰이며 실제 게임·실기기 검증 및 통합은 하지 않았다."
+  ]
+}

@@ -1,0 +1,65 @@
+=== back_horizontal_shape_v08 ===
+Use case: precise-object-edit.
+Create ONE corrected BACK-view full-body Balor illustration by editing image 1.
+
+Image 1: existing character to preserve. His brown hair, blue/silver armor, blue dragon cape, standing pose, arms, hands, fingers and sword grip are locked.
+Image 2: USER'S NEW SHIELD PLACEMENT GUIDE. YELLOW describes the desired shield silhouette, position and broad angle. BLUE scribbling means the shield's REVERSE/INNER surface is visible. The rough yellow line is not the literal final shape. Remove all colored marks and interface/background from the output.
+
+ESSENTIAL CHANGE: replace the old downward-pointing vertical shield with the SAME large silver kite shield turned almost HORIZONTAL, extending far toward SCREEN LEFT from behind the LEFT forearm. Its one pointed end must now point LEFT, at roughly elbow level. Its broad, softly rounded shoulder/head end is on SCREEN RIGHT beside/behind the gripping arm and partly occluded by the body/cape. The long axis is predominantly left-to-right. The upper arc runs smoothly from the left point up toward the elbow/upper forearm, and the lower arc sweeps back toward the wrist/hip area exactly in the overall envelope of the yellow guide. No remaining vertical shield crest above the yellow region or long downward tip below it.
+
+Preserve the original shield identity and scale: substantial silver bevel, gently convex outer shell/concave inner bowl, elegant curved kite edges and recognizable single pointed tip. Make the outline clean and smoothly rounded like a professionally drawn curved metal shield, not the user's jagged pencil polygon, not a flat triangle, not a rectangular slab, not a new weapon. Its physical long dimension remains about two-thirds of the standing knight's height; perspective and occlusion affect apparent dimensions.
+
+We see the INSIDE of this shield, as the BLUE marked area specifies: restrained matte gray/silver concave metal, continuous silver rim, brown leather handgrip and forearm support cuff. Keep the existing left hand, wrist and forearm pose/locations and existing grip-and-cuff arrangement. The hand still grasps its original grip and the cuff supports the same forearm; preserve these anchor contacts while reorienting/remodeling the shield shell around them. Do not move the arm or open the hand. No black wings or cross emblem on the reverse face. ONE connected shield only, extending behind the arm and disappearing naturally behind the cape at its broad end.
+
+Exact rear camera, not three-quarter. Keep the right sword hand's dark navy palm toward the camera, its sword axis and all non-shield character details. Same polished GC9 2D linework and silver faceted metal.
+Use a SQUARE canvas, native 1254x1254 preferred, to accommodate the horizontal shield. Uniformly fit the ENTIRE connected character and equipment inside x=15%-85%, y=20%-94%. Preserve adult body proportions and the equipment-to-body scale; do not independently shrink the shield or change the pose. Keep generous empty top/left/right margins and all feet and shield points fully in frame.
+Actual transparent alpha outside clean solid character/equipment contours, including ALL corners and margins. Remove all dark halos, smoky vignette, black corner blobs and ground shadows. No opaque backdrop, yellow outline, blue strokes, red/yellow dots, letters, UI, additional objects or additional views.
+
+
+=== back_horizontal_framing_v08 ===
+Use case: precise-object-edit.
+Image 1 is the selected BACK-view shield remodel. Its horizontal LEFT-pointing shield with smooth curved silver edges and visible plain inner surface is CORRECT. Preserve that exact shield, leather grip/cuff, hand contacts, pose, cape, head and armor. Do not redesign anything.
+
+Image 2 is an EMPTY SQUARE FRAMING GUIDE. Use only the rectangle's placement, then REMOVE ALL its lines, colors and writing.
+Return one SQUARE 1254x1254 image. Uniformly make the COMPLETE connected knight and equipment SMALLER to fit entirely inside the guide: x=15%-85%, y=20%-94%. Head top about y=265 and boot soles about y=1145; preserve adult anatomy and the same relative shield size. The horizontal shield, sword, cape and figure must scale together; no moving or shrinking equipment separately. The whole outer silhouette must have at least 20% transparent space above, 15% left/right, 6% below. Do not fill the canvas with the knight.
+
+Keep the horizontal shield's point extending toward viewer LEFT at elbow level and its broad rounded end behind his left forearm/cape. Same exact rear view, arms/hands/sword pose and blue/silver design.
+Outside the knight/equipment is actual alpha=0 transparency, including all corners and all generous margins. Remove any isolated edge speckles, halo, gray/black background remnants. Do not draw the guide, text, backdrop, cast shadow or additional object. One complete character only.
+
+
+=== right_horizontal_shape_v08 ===
+Use case: precise-object-edit.
+Create ONE corrected RIGHT-PROFILE full-body Balor, facing SCREEN RIGHT.
+Image 1 = exact character/pose edit target. Image 2 = user's authoritative SHIELD silhouette and visible-side guide. Image 3 = same knight's newly corrected BACK view, reference for the same horizontal shield construction, silver inner finish and character framing. Image 4 = EMPTY SQUARE LAYOUT GUIDE ONLY, remove its rectangle/writing in final.
+
+PRIMARY SHIELD REMODEL:
+The YELLOW line in image 2 describes the overall position, spread and angle of ONE shield. BLUE scribbles designate its REVERSE/INNER face. The shield now lies almost HORIZONTALLY, long pointed tip toward SCREEN LEFT (behind the knight), broad rounded head toward SCREEN RIGHT (in front of his torso/upper hip). Its long axis spans LEFT TO RIGHT behind his body at elbow/waist height. Follow that large horizontal envelope, not the old vertical shield.
+There is ONE CONTINUOUS SHIELD on his far anatomical LEFT arm. The body, cape and near right arm naturally occlude its middle. Its pointed LEFT portion emerges behind the cape at elbow height, and its broad rounded RIGHT portion emerges in front of the torso down to upper hip. BOTH visible patches show the SAME plain concave silver/gray INNER SURFACE. They are not two separate shields or wings. The right visible patch REPLACES the old decorated front-facing upright panel: remove that entire old panel and all visible black-wing/cross artwork from this profile.
+Maintain original large shield scale and identity like image 3: silver bevel with credible thickness, smooth rounded kite shoulders/curving edges, softly curved concave inner surface and one refined pointed end. Refine the yellow sketch into beautiful smooth professional curves; do not copy its rough corners or polygon lines. The broad right end is rounded and convex in outline, not a straight rectangular plate. Perspective and occlusion must be coherent across the two exposed portions.
+
+PRESERVE the existing grip and forearm support arrangement and the same character pose. His left hand/forearm keep their original contact and are hidden where the body occludes them. Keep the near RIGHT arm, fingers, blue sword hilt, ruby guard and straight diagonal sword exactly as image 1. Keep face, brown hair, blue/silver lion armor, cape pins, blue dragon cape, legs and stance. Do not alter body/arm/hand pose or invent a visible extra hand. True profile camera, no turning the character.
+
+FRAMING: square native 1254x1254. Match image 3's body/head scale and foot baseline: hair top approximately y=275, soles y=1135. Entire connected character + sword + horizontal shield + cape must fit x=15%-85%, y=20%-94%, as image 4's rectangle shows. Uniform whole-unit fit only, no separate equipment shrinking. Keep all shield ends and sword point well inside frame with generous blank margins.
+Same GC9 clean 2D drawing and silver material quality. Actual alpha=0 transparent background outside all solid contours, including every corner and outer margin; no gray/black halo, backdrop or corner noise. No yellow/blue annotation, red marks, UI, lettering, guide rectangle, extra objects, extra view or second shield.
+
+
+=== right_horizontal_framing_v08 ===
+Use case: precise-object-edit.
+Image 1 is the selected RIGHT PROFILE shield remodel. Preserve the character's exact face, pose, hands, sword, cape and this ONE HORIZONTAL SHIELD: left pointed end behind the cape; smooth round broad end in front of the torso; both exposed portions show the INNER plain silver face and belong to the same occluded shield. Keep its existing grip/cuff arrangement. Do not redesign anything.
+
+Image 2 is an EMPTY SQUARE FRAMING GUIDE only; remove every guide line, label and color in the finished image.
+Image 3 is the corrected BACK view for body/head size and ground baseline only.
+
+The only correction is SMALLER WHOLE-UNIT FRAMING. Image 1 currently fills too much of the square. Uniformly scale the connected knight WITH ALL equipment down to about 75% of its current depicted size. On the 1254x1254 native square, hair top must be near y=275 and boot soles near y=1135, matching image 3. The whole character/equipment silhouette must fit within x15%-85%, y20%-94% of the canvas. Preserve the broad top/left/right EMPTY TRANSPARENT margins. The upper fifth of the image is completely empty. Do not enlarge him again to fill the page.
+Adult proportions remain identical. Shield physical size relative to body is unchanged; reduce the entire unit together. Do not separately shrink, relocate or rotate either weapon, hand or limb.
+Actual alpha=0 transparency in all empty areas and corners. Clean contour antialiasing only; remove isolated colored/black edge flecks, gray halo and backdrop. Do not draw a rectangle, text, checkerboard, shadow, labels or extra object. One exact right-profile full body facing screen right.
+
+
+=== back_horizontal_alignment_v08 ===
+Use case: precise-object-edit.
+Image 1 is the completed BACK-view artwork. Preserve its exact horizontal left-pointing shield, smooth silver curves, plain inner face, grip/cuff contacts, hand/arm pose, cape, hair, armor and sword hand. Image 2 is the completed RIGHT view, used ONLY to match full-body height and ground baseline, not its pose or shield perspective.
+
+Correct ONLY image 1's WHOLE CONNECTED SUBJECT framing on the same native 1254x1254 square. Match image 2: hair top about y=300, boot soles at y=1176. The current image 1 hair starts near y=275 and soles end near y=1134; it needs a small downward placement adjustment and about 2% uniform enlargement of the entire figure AND shield together. Both views should stand on the same baseline and have the same head-to-sole height. Keep the shield/body relative scale and ALL anatomical/equipment relationships unchanged.
+Maintain at least 15% blank space on either side, 20% above, 6% below. Do not independently move, rotate or resize the shield, sword, hand or limb. Keep the exact rear camera and one complete character.
+Actual alpha=0 transparent empty areas and corners, clean antialiased edges; no black/gray halos or specks, no ground shadow, background, text, marks or additional objects.
+

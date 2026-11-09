@@ -1,0 +1,872 @@
+{
+  "isolatedHeadless": true,
+  "userUiTouched": false,
+  "cases": [
+    {
+      "file": "comparison.png",
+      "dark": false,
+      "mode": "full",
+      "images": [
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "registration": [
+        {
+          "index": "0",
+          "bodyHeight": 560,
+          "baseline": 612
+        },
+        {
+          "index": "1",
+          "bodyHeight": 560,
+          "baseline": 612
+        },
+        {
+          "index": "2",
+          "bodyHeight": 560,
+          "baseline": 612
+        }
+      ]
+    },
+    {
+      "file": "qa-dark.png",
+      "dark": true,
+      "mode": "full",
+      "images": [
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "registration": [
+        {
+          "index": "0",
+          "bodyHeight": 560,
+          "baseline": 612
+        },
+        {
+          "index": "1",
+          "bodyHeight": 560,
+          "baseline": 612
+        },
+        {
+          "index": "2",
+          "bodyHeight": 560,
+          "baseline": 612
+        }
+      ]
+    },
+    {
+      "file": "identity-detail-comparison.png",
+      "dark": false,
+      "mode": "detail",
+      "images": [
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "registration": []
+    },
+    {
+      "file": "qa-detail-dark.png",
+      "dark": true,
+      "mode": "detail",
+      "images": [
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "registration": []
+    },
+    {
+      "file": "qa-small-light.png",
+      "dark": false,
+      "mode": "small",
+      "images": [
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "registration": [
+        {
+          "index": "0",
+          "bodyHeight": 57,
+          "baseline": 118
+        },
+        {
+          "index": "1",
+          "bodyHeight": 57,
+          "baseline": 118
+        },
+        {
+          "index": "2",
+          "bodyHeight": 57.00000000000001,
+          "baseline": 118
+        },
+        {
+          "index": "0",
+          "bodyHeight": 72,
+          "baseline": 118
+        },
+        {
+          "index": "1",
+          "bodyHeight": 72,
+          "baseline": 118
+        },
+        {
+          "index": "2",
+          "bodyHeight": 72,
+          "baseline": 118
+        }
+      ]
+    },
+    {
+      "file": "qa-small-dark.png",
+      "dark": true,
+      "mode": "small",
+      "images": [
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": "references/identity.png",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "file": "references/style-front.png",
+          "width": 1070,
+          "height": 1470
+        },
+        {
+          "file": "front.png",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "file": null,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "registration": [
+        {
+          "index": "0",
+          "bodyHeight": 57,
+          "baseline": 118
+        },
+        {
+          "index": "1",
+          "bodyHeight": 57,
+          "baseline": 118
+        },
+        {
+          "index": "2",
+          "bodyHeight": 57.00000000000001,
+          "baseline": 118
+        },
+        {
+          "index": "0",
+          "bodyHeight": 72,
+          "baseline": 118
+        },
+        {
+          "index": "1",
+          "bodyHeight": 72,
+          "baseline": 118
+        },
+        {
+          "index": "2",
+          "bodyHeight": 72,
+          "baseline": 118
+        }
+      ]
+    }
+  ],
+  "zoomCheck": {
+    "open": true,
+    "nativeWidth": 1254
+  }
+}

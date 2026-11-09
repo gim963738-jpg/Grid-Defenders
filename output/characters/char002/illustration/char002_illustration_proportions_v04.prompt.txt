@@ -1,0 +1,35 @@
+Tool: built-in image_gen (character proportion remodel).
+Edit target: char002_illustration_anime_v03.png. Earlier versions preserved.
+Proportion reference: proportions_reference_v04.png (user-supplied four-character lineup; proportions only).
+Output: char002_illustration_proportions_v04.png
+User request: 캐릭터 기럭지 비율을 저 이미지 기준으로 맞춰서 리모델링해볼래?
+Scope: Remodel the current char002 swordswoman toward the supplied compact adult anime/game body proportions, approximately 6.5 heads as a draft interpretation. Rebalance torso, waist, arms and legs, and refit the long robe. Preserve identity, costume motifs, the calmer hair from v03, sword gesture and current anime rendering. Illustration only; no animation or game-code changes. This requested body-proportion variation is recorded under 캐릭터스프라이트제작규약 v1.2 and is not a global sprite scale change.
+
+Use case: identity-preserve.
+Asset type: char002 swordswoman full-body proportion remodel, anime illustration v04.
+INPUT ROLES:
+Image 1 is the CHARACTER DESIGN TO REMODEL: char002_illustration_anime_v03.png. Preserve this exact female character's identity, costume and cleaned-up hair.
+Image 2 is the USER'S BODY-PROPORTION REFERENCE: a small lineup of four compact anime/game characters. Use it ONLY for head-to-body ratio, torso/leg balance and grounded limb scale. Do not copy any of those characters' clothes, hairstyles, weapons, colors, pixel resolution or lineup layout.
+
+User request: "캐릭터 기럭지 비율을 저 이미지 기준으로 맞춰서 리모델링해볼래?"
+This requires a VISIBLE ANATOMICAL REMODEL, not merely fitting the same elongated figure into a different canvas and not uniform image scaling.
+
+PROPORTION REMODEL — primary priority:
+Rebuild the swordswoman with the balanced compact ADULT ANIME GAME CHARACTER proportions of image 2, approximately 6.3–6.7 heads tall (around 6.5, crown to boot sole, excluding hair ornament).
+The current image has an excessively long hanging lower robe and a visually high tiny waist, producing an elongated fashion silhouette. Correct this: give the torso natural enough length, place the waist/belt at a believable anatomical waist, and shorten the overlong pelvis-to-ground / lower-robe region. Make head size a little larger relative to total body height, legs shorter and more balanced, shoulders/pelvis convincing and wrists/hands/boots naturally scaled.
+Guiding landmarks in head-height units: crown=0, chin=1, shoulders about1.2, natural waist around2.4–2.6, crotch around3.3–3.5, knees around4.8–5.0, soles about6.5. These guide an actual body under the robe; do not draw a measurement grid or anatomy overlay.
+Adult young woman, composed and elegant, not a child/chibi, not a tiny head perched over a very long robe. Avoid 8–10-head fashion proportions and unnaturally low knees. Keep a stable grounded stance.
+Reconstruct the costume panels to fit this newly proportioned body: lower sash in relation to torso, shortened long skirt/robe panels following the revised natural legs, boots below the hem, sleeves connected to correctly placed shoulders/elbows/wrists. Preserve the DESIGN motifs while changing their construction lengths proportionately. Do not just squash the whole image vertically or crop the bottom of the costume.
+Her crown-to-sole silhouette should look appreciably more compact and game-character-like than image 1, like the people in image 2, while remaining refined.
+
+LOCK CHARACTER IDENTITY:
+Same delicate adult anime face, wine-red eyes, pale warm skin and quiet stern expression; same head angle and gaze.
+Same dark burgundy long hair with bangs, swept crown, antique gold floral ornament/red jewel/red tassels and gold earrings. Preserve the user's approved calmer hair from v03: lengths hang near the body behind the back, no wide wind-blown side loops. Adjust its hanging length naturally to the remodeled body, still long to hips/thighs.
+Same charcoal/black layered East Asian robes, wide warm ivory sleeve/outer panels, antique gold floral scrollwork, cream crossing collar, dark fitted torso, gold chain sash, red knots/tassels and dark boots. Keep them recognizable but fitted to new proportions.
+Same partially drawn katana and pose: right hand on black diamond-wrapped hilt near chest on viewer LEFT, left hand holds dark scabbard at waist on viewer RIGHT, a SHORT exposed blade between guard and scabbard. Adapt arm lengths and sword placement to the rebuilt torso while maintaining this gesture and correct hand anatomy. No extra weapon.
+
+STYLE AND COMPOSITION:
+Same clean mature 2D anime rendering as image1: deliberate dark outlines, clear cel-shadow shapes, controlled burgundy highlights, distinct ivory/charcoal/gold materials and detailed elegant embroidery. Image2 supplies proportions only, NOT low-resolution pixel art.
+Preserve the existing muted ink-gray mountain background, distant pavilions/red banners, one shadowy black dragon behind the upper left with red eye and rocky foreground; secondary background can reflow naturally behind the compact figure.
+Single full-body character with generous clear margin above hair and below both boots; no cut-off sword, sleeves or hem. Portrait framing. Do not stretch the figure vertically to fill the canvas; allow breathing room.
+No text, rulers, labels, head-count circles, before/after panels, lineup, inset, UI, watermark or collage. Output only the remodeled full illustration.

@@ -1,0 +1,357 @@
+{
+  "schema_version": 2,
+  "id": "sd_blond_scapl_variant2_standard_v2",
+  "name": "SD · 신규2안 두상·얼굴·픽셀 기준",
+  "adopted_on": "2026-11-09",
+  "status": "user_confirmed",
+  "selected_style": "existing_pixel_SD",
+  "applies_to": "앞으로 제작하는 SD 캐릭터와 방향 세트",
+  "scope_excludes": "GC9 일러스트의 성인형 비율",
+  "reference": {
+    "character": "금발 전사 · scalp_face_v03 신규2안(ID6)",
+    "role": "STYLE_PROPORTION_ONLY_for_other_characters",
+    "front_path": "자료/캐릭터제작/SD공통기준/승인참조/20261109_신규2안/variant-2-front.png",
+    "front_right_path": "자료/캐릭터제작/SD공통기준/승인참조/20261109_신규2안/variant-2-right-045.png",
+    "right_path": "자료/캐릭터제작/SD공통기준/승인참조/20261109_신규2안/variant-2-right-090.png",
+    "sha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+    "native_dimensions": {
+      "front": {
+        "width": 1133,
+        "height": 1388
+      },
+      "right45": {
+        "width": 1133,
+        "height": 1388
+      },
+      "right90": {
+        "width": 1077,
+        "height": 1460
+      }
+    },
+    "views": [
+      {
+        "direction": "front",
+        "path": "자료/캐릭터제작/SD공통기준/승인참조/20261109_신규2안/variant-2-front.png",
+        "sha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+        "native_dimensions": {
+          "width": 1133,
+          "height": 1388
+        },
+        "bodyHeight": 1331,
+        "footX": 578,
+        "footY": 1355,
+        "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\variant-2-front.png",
+        "shared_approved_source": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인참조\\20261109_신규2안\\variant-2-front.png",
+        "hairTop": 25,
+        "scalpCrown": {
+          "y": 160,
+          "estimated": true,
+          "uncertaintyPx": 40,
+          "method": "Plausible cranial oval from forehead/temple and ear, hidden by layered hair; not hair spike/whorl"
+        },
+        "chin": {
+          "y": 487,
+          "estimated": true,
+          "uncertaintyPx": 10
+        },
+        "faceBounds": {
+          "x": 473,
+          "y": 300,
+          "width": 230,
+          "height": 187,
+          "estimated": true,
+          "uncertaintyPx": 15,
+          "meaning": "Projected facial envelope, fringe/eye included; not segmented skin area; widths not comparable across yaw"
+        },
+        "measurement": {
+          "alphaThreshold": 32,
+          "headROI": [
+            280,
+            0,
+            570,
+            500
+          ],
+          "feetROI": [
+            390,
+            1200,
+            390,
+            175
+          ],
+          "headAlphaBounds": [
+            336,
+            25,
+            814,
+            500
+          ],
+          "feetAlphaBounds": [
+            396,
+            1200,
+            761,
+            1356
+          ],
+          "bodyHeightMethod": "hairTop from head ROI through sole from feet ROI inclusive, excludes sword tips",
+          "footXMethod": "Manual estimate of support center between visible sole contacts; cannot infer hidden contact exactly",
+          "footXUncertaintyPx": 30,
+          "footYUncertaintyPx": 3,
+          "bodyHeightUncertaintyPx": 4
+        }
+      },
+      {
+        "direction": "right45",
+        "path": "자료/캐릭터제작/SD공통기준/승인참조/20261109_신규2안/variant-2-right-045.png",
+        "sha256": "b8b5e19b5763082da15a7e7d1913ac43b04f52b66b09157343f8f39f61b94fff",
+        "native_dimensions": {
+          "width": 1133,
+          "height": 1388
+        },
+        "bodyHeight": 1326,
+        "footX": 585,
+        "footY": 1344,
+        "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\variant-2-right-045.png",
+        "shared_approved_source": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인참조\\20261109_신규2안\\variant-2-right-045.png",
+        "hairTop": 19,
+        "scalpCrown": {
+          "y": 150,
+          "estimated": true,
+          "uncertaintyPx": 40,
+          "method": "Plausible cranial oval from forehead/temple and ear, hidden by layered hair; not hair spike/whorl"
+        },
+        "chin": {
+          "y": 455,
+          "estimated": true,
+          "uncertaintyPx": 10
+        },
+        "faceBounds": {
+          "x": 535,
+          "y": 285,
+          "width": 162,
+          "height": 170,
+          "estimated": true,
+          "uncertaintyPx": 15,
+          "meaning": "Projected facial envelope, fringe/eye included; not segmented skin area; widths not comparable across yaw"
+        },
+        "measurement": {
+          "alphaThreshold": 32,
+          "headROI": [
+            300,
+            0,
+            490,
+            470
+          ],
+          "feetROI": [
+            395,
+            1200,
+            390,
+            170
+          ],
+          "headAlphaBounds": [
+            325,
+            19,
+            759,
+            470
+          ],
+          "feetAlphaBounds": [
+            403,
+            1200,
+            777,
+            1345
+          ],
+          "bodyHeightMethod": "hairTop from head ROI through sole from feet ROI inclusive, excludes sword tips",
+          "footXMethod": "Manual estimate of support center between visible sole contacts; cannot infer hidden contact exactly",
+          "footXUncertaintyPx": 30,
+          "footYUncertaintyPx": 3,
+          "bodyHeightUncertaintyPx": 4
+        }
+      },
+      {
+        "direction": "right90",
+        "path": "자료/캐릭터제작/SD공통기준/승인참조/20261109_신규2안/variant-2-right-090.png",
+        "sha256": "2bc66a3b3f738b809c65c378ab9b30d0d523220ad27bb59bce1ae74e12221072",
+        "native_dimensions": {
+          "width": 1077,
+          "height": 1460
+        },
+        "bodyHeight": 1399,
+        "footX": 580,
+        "footY": 1411,
+        "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\variant2_directions_v04\\variant-2-right-090.png",
+        "shared_approved_source": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인참조\\20261109_신규2안\\variant-2-right-090.png",
+        "hairTop": 13,
+        "scalpCrown": {
+          "y": 140,
+          "estimated": true,
+          "uncertaintyPx": 40,
+          "method": "Plausible cranial oval from forehead/temple and ear, hidden by layered hair; not hair spike/whorl"
+        },
+        "chin": {
+          "y": 480,
+          "estimated": true,
+          "uncertaintyPx": 10
+        },
+        "faceBounds": {
+          "x": 530,
+          "y": 280,
+          "width": 170,
+          "height": 200,
+          "estimated": true,
+          "uncertaintyPx": 15,
+          "meaning": "Projected facial envelope, fringe/eye included; not segmented skin area; widths not comparable across yaw"
+        },
+        "measurement": {
+          "alphaThreshold": 32,
+          "headROI": [
+            230,
+            0,
+            560,
+            500
+          ],
+          "feetROI": [
+            450,
+            1280,
+            280,
+            170
+          ],
+          "headAlphaBounds": [
+            255,
+            13,
+            762,
+            500
+          ],
+          "feetAlphaBounds": [
+            450,
+            1280,
+            694,
+            1412
+          ],
+          "bodyHeightMethod": "hairTop from head ROI through sole from feet ROI inclusive, excludes sword tips",
+          "footXMethod": "Manual estimate of support center between visible sole contacts; cannot infer hidden contact exactly",
+          "footXUncertaintyPx": 30,
+          "footYUncertaintyPx": 3,
+          "bodyHeightUncertaintyPx": 4
+        }
+      }
+    ],
+    "native_framing_is_delivery_template": false,
+    "unavailable_directions": "No approved back reference; use approved style views without fabricating a back asset"
+  },
+  "body_framing": {
+    "head_top_y": 253,
+    "foot_baseline_y": 1178,
+    "body_height_px": 926,
+    "head_top_ratio": 0.20175438596491227,
+    "foot_baseline_ratio": 0.9393939393939394,
+    "body_height_ratio": 0.7384370015948963,
+    "center_x_ratio": 0.5,
+    "measurement_alpha_threshold": 32,
+    "scope": "technical delivery/display template independent of adopted native reference framing",
+    "id": "sd_technical_framing_1254_v1"
+  },
+  "proportions": {
+    "source": "approved new variant2 front/right45/right90 at equal displayed body height",
+    "match": [
+      "actual estimated skull/face prominence",
+      "head/torso/limb balance",
+      "small-display face legibility",
+      "pixel clusters/material blocks",
+      "camera consistency across views"
+    ],
+    "fixed_anatomical_head_units": null,
+    "hidden_scalp_estimated": true,
+    "hair_top_is_not_scalp_crown": true,
+    "copy_reference_identity": false,
+    "preserve": [
+      "face/jaw/cheeks/features/expression",
+      "hair",
+      "gender/age",
+      "species/build/explicit height",
+      "palette/clothing/equipment/anatomical sides"
+    ],
+    "class_based_size_changes": false,
+    "explicit_height_or_species_exception": "명시한 종족 체격·개별 키 차이는 별도 적용하며 직업 차이로 확대하지 않는다"
+  },
+  "equipment": {
+    "measure_separately": true,
+    "excluded_from_body_height": [
+      "지팡이",
+      "검끝",
+      "방패끝",
+      "망토 끝",
+      "깃털·머리 장식"
+    ],
+    "rule": "장비 길이로 인물 본체의 크기를 바꾸지 않는다"
+  },
+  "generation": {
+    "attach_actual_standard_reference": true,
+    "attach_character_identity_separately": true,
+    "match_framing_at_generation": true,
+    "native_dimensions_and_bytes_preserved": true,
+    "scale_original_files_automatically": false,
+    "keep_same_body_scale_and_ground_anchor_across_views": true,
+    "match_head_and_foot_to_height_guide": true,
+    "framing_canvas": {
+      "width": 1254,
+      "height": 1254
+    },
+    "framing_standard_id": "sd_technical_framing_1254_v1",
+    "style_reference_role": "STYLE_PROPORTION; target identity separate",
+    "attach_direction_appropriate_approved_view": true,
+    "avoid_copying_native_reference_margins": true
+  },
+  "verification": {
+    "body_height_ratio_tolerance": 0.01,
+    "foot_baseline_ratio_tolerance": 0.005,
+    "review_head_and_body_proportions_visually": true,
+    "review_on_light_and_dark": true,
+    "review_height_guide_before_save": true,
+    "review_face_legibility_small_display": true,
+    "small_gallery_observation_css_px": [
+      57,
+      72
+    ],
+    "small_gallery_is_actual_game_validation": false,
+    "reference_defects_are_allowed": false,
+    "separate_style_acceptance_from_framing_pass": true,
+    "review_actual_skull_not_only_hair_or_eyes": true
+  },
+  "in_game": {
+    "reference_relative_size": "Existing common body display height/foot baseline; actual metadata measured per asset; no new absolute pixel height adopted",
+    "target_body_height_px": null,
+    "ground_anchor": "발바닥 기준선",
+    "separate_equipment_bounds": true
+  },
+  "measurements": "자료/캐릭터설정/SD_공통제작기준_실측.json",
+  "viewer": "output/characters/sd-standard/index.html",
+  "height_guide": {
+    "meaning": "body_height_only",
+    "axis": "vertical",
+    "top": "일반 모발을 포함한 머리끝",
+    "bottom": "발바닥",
+    "match_both_red_lines": true,
+    "uniform_width_required": false,
+    "preserve_character_build": true,
+    "reference_path": "자료/캐릭터제작/SD공통기준/원본/키_사용자표시.png",
+    "sha256": "9b1d3b58acb70fb1289cb0cf954f2d246e67e04ba320fa06d1d38d081846075f",
+    "source_kind": "cropped_UI_annotation",
+    "use_screenshot_pixels_as_canvas_coordinates": false,
+    "canonical_body_framing_unchanged": true,
+    "render_red_lines_in_character": false,
+    "user_confirmation": "키기준인거알지?"
+  },
+  "approval": {
+    "shared_policy": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인기준.md",
+    "shared_manifest": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인참조\\20261109_신규2안\\승인.json",
+    "shared_manifest_sha256": "39dd7a9765eacb8a4254bb46f1868531ca651258e5f421b511fa1535f2e45303",
+    "user_quote": "신규2안으로 채택 앞으로 SD캐릭터는 저렇게뽑으면되겠다",
+    "selected_variant": 6,
+    "source_task": "MAIN01-20261109-DBF50341",
+    "source_iteration": 4
+  },
+  "history": [
+    {
+      "id": "sd_silver_staff_standard_v1",
+      "path": "자료/캐릭터설정/이력/SD_공통제작기준_은발_v1.json",
+      "superseded_scope": "style/head-body proportions only; technical framing retained",
+      "native_reference_paths_preserved": true
+    }
+  ]
+}

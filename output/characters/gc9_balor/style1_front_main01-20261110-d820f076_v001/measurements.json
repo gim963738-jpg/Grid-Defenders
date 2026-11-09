@@ -1,0 +1,175 @@
+[
+  {
+    "file": "references/identity.png",
+    "label": "승인 발로르 · 디자인 원본",
+    "source": "approved Balor v02",
+    "hairTop": 302,
+    "sole": 1431,
+    "bodyHeight": 1129,
+    "footX": 512,
+    "footY": 1431,
+    "footROIs": [
+      [
+        342,
+        1350,
+        433,
+        1435
+      ],
+      [
+        580,
+        1340,
+        678,
+        1435
+      ]
+    ],
+    "measurementErrorPx": 8,
+    "scalpCrown": {
+      "estimateY": 337,
+      "errorPx": 15,
+      "method": "hair silhouette and visible forehead inferred; not directly measurable"
+    },
+    "chin": 458,
+    "detailROIs": {
+      "face": [
+        430,
+        300,
+        590,
+        465
+      ],
+      "grip": [
+        190,
+        770,
+        315,
+        925
+      ],
+      "guard": [
+        248,
+        873,
+        404,
+        995
+      ],
+      "lion": [
+        450,
+        510,
+        565,
+        650
+      ],
+      "shield": [
+        552,
+        545,
+        832,
+        1282
+      ],
+      "cape": [
+        130,
+        840,
+        886,
+        1385
+      ],
+      "pins": [
+        405,
+        500,
+        620,
+        555
+      ]
+    }
+  },
+  {
+    "file": "references/style-front.png",
+    "label": "선택 1번 · 화풍/SD비율 참조",
+    "source": "style only; character identity excluded",
+    "hairTop": 54,
+    "sole": 1407,
+    "bodyHeight": 1353,
+    "footX": 555,
+    "footY": 1407,
+    "measurementErrorPx": 10,
+    "scalpCrown": {
+      "estimateY": 170,
+      "errorPx": 30,
+      "method": "inferred under large layered hair"
+    },
+    "chin": 420,
+    "detailROIs": {}
+  },
+  {
+    "file": "front.png",
+    "label": "신규 발로르 · 1번 SD 정면",
+    "source": "builtin imagegen call3 native output",
+    "hairTop": 180,
+    "sole": 1064,
+    "bodyHeight": 884,
+    "footX": 623,
+    "footY": 1064,
+    "footROIs": [
+      [
+        470,
+        995,
+        565,
+        1065
+      ],
+      [
+        674,
+        995,
+        776,
+        1065
+      ]
+    ],
+    "measurementErrorPx": 6,
+    "scalpCrown": {
+      "estimateY": 249,
+      "errorPx": 20,
+      "method": "inferred dome beneath layered brown hair from temples and forehead; not direct measurement"
+    },
+    "chin": 428,
+    "detailROIs": {
+      "face": [
+        475,
+        180,
+        760,
+        434
+      ],
+      "grip": [
+        330,
+        620,
+        475,
+        765
+      ],
+      "guard": [
+        390,
+        719,
+        560,
+        820
+      ],
+      "lion": [
+        552,
+        470,
+        690,
+        595
+      ],
+      "shield": [
+        640,
+        440,
+        944,
+        1048
+      ],
+      "cape": [
+        292,
+        800,
+        963,
+        1055
+      ],
+      "pins": [
+        520,
+        447,
+        730,
+        505
+      ]
+    },
+    "shieldTop": 448,
+    "shieldBottom": 1042,
+    "shieldHeight": 594,
+    "shieldBodyRatioEstimate": 0.6719457013574661,
+    "shieldMeasurementErrorPx": 8
+  }
+]

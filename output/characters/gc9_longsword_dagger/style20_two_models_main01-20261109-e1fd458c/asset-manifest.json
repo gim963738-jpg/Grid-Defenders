@@ -1,0 +1,858 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 1,
+  "assets": [
+    {
+      "file": "01_anime_cel/model-a.png",
+      "id": "01_anime_cel",
+      "label": "정돈된 애니 셀",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        199,
+        12,
+        1300,
+        1012
+      ],
+      "bodyHeight": 1000,
+      "footY": 1011,
+      "footX": 749.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "6d9ec6b7d779fadaadea9c1a574af62eac4ce4fcf4338ab93f11cf9750dd81f1",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-e2719bfb-7633-41ee-84eb-04afdb8ee6fa.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "01_anime_cel/model-b.png",
+      "id": "01_anime_cel",
+      "label": "정돈된 애니 셀",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        91,
+        8,
+        1174,
+        1251
+      ],
+      "bodyHeight": 1243,
+      "footY": 1250,
+      "footX": 632.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "24bd5f4532b5fbda3ad127869ea09a67f0dd1e3576a1c332573f092b41285b98",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-005345a4-4211-481f-903e-c202ec68a0b0.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "02_bold_cartoon/model-a.png",
+      "id": "02_bold_cartoon",
+      "label": "굵은 카툰",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        314,
+        56,
+        1223,
+        957
+      ],
+      "bodyHeight": 901,
+      "footY": 956,
+      "footX": 768.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "5960938e97c6b149e50d0f2629c0ae6159315bf76ebcb9cc84e10e3b195d6f95",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-7b05c9eb-5def-4b23-8602-1184a6a3dee0.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "02_bold_cartoon/model-b.png",
+      "id": "02_bold_cartoon",
+      "label": "굵은 카툰",
+      "model": "b",
+      "width": 1216,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        183,
+        91,
+        1072,
+        1163
+      ],
+      "bodyHeight": 1072,
+      "footY": 1162,
+      "footX": 627.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "b5f439ee1a645e3410a507dd96d6e578128cc02f432d237196561c7da4919db5",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-72a06297-18c8-4648-8578-a8268aaf289d.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "03_flat_vector/model-a.png",
+      "id": "03_flat_vector",
+      "label": "무테 플랫",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        200,
+        12,
+        1302,
+        1010
+      ],
+      "bodyHeight": 998,
+      "footY": 1009,
+      "footX": 751.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "bd9c6b0fd1656ad06c65abb5bcccaca0fc59fb16a4a562e8e06cd0d191def194",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-c9d31f94-b98f-4a85-b750-431f5197479a.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "03_flat_vector/model-b.png",
+      "id": "03_flat_vector",
+      "label": "무테 플랫",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        91,
+        6,
+        1164,
+        1250
+      ],
+      "bodyHeight": 1244,
+      "footY": 1249,
+      "footX": 627.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "5f2d094ab99f39ca77088c9ad57fdff373c52e37fe6aa6cafa4f285fa5faee50",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-1879be9f-cc7b-452e-8421-32af82f31d9a.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "04_faceted/model-a.png",
+      "id": "04_faceted",
+      "label": "각진 기하 면분할",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        195,
+        10,
+        1310,
+        1012
+      ],
+      "bodyHeight": 1002,
+      "footY": 1011,
+      "footX": 752.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "0783d4ea341ea991bd898ae22943df4883bd1a5740a2a442f4ad08f18f546a5d",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-55e1126c-d2da-4fef-9eab-a479fa192867.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "04_faceted/model-b.png",
+      "id": "04_faceted",
+      "label": "각진 기하 면분할",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        91,
+        10,
+        1186,
+        1253
+      ],
+      "bodyHeight": 1243,
+      "footY": 1252,
+      "footX": 638.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "10f30fba13e3fb4d502526aa2a981a332bd2f2cb8a1ba8c29f022b2f76ef9594",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-82d7b67e-a3e0-4f8e-b965-15e193fa8b99.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "05_painted_fantasy/model-a.png",
+      "id": "05_painted_fantasy",
+      "label": "손그림 판타지",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        194,
+        12,
+        1312,
+        1012
+      ],
+      "bodyHeight": 1000,
+      "footY": 1011,
+      "footX": 753.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "29ad59daa37c226eda864a5993ba50333ad6b3cc6ccec49bf650cadd1c987cdf",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-b3bc1df2-e895-4360-a65a-b230bff69053.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "05_painted_fantasy/model-b.png",
+      "id": "05_painted_fantasy",
+      "label": "손그림 판타지",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        91,
+        5,
+        1177,
+        1251
+      ],
+      "bodyHeight": 1246,
+      "footY": 1250,
+      "footX": 634.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "6ff049a79c4e89fe37aa6aefaf61d1e919a81fa7822dc92455eeb5f347a33015",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2cac2123-4d9a-433e-a91e-d7ba19ccaae2.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "06_watercolor/model-a.png",
+      "id": "06_watercolor",
+      "label": "투명 수채",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        196,
+        8,
+        1304,
+        1016
+      ],
+      "bodyHeight": 1008,
+      "footY": 1015,
+      "footX": 750.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "4c27e5e354260fe5bcf390b3ac0dc325bb528e6c0c0cba8353663e777f683a53",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-f9d0c8a6-adb3-4b88-bc52-88dc4691b2cc.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "06_watercolor/model-b.png",
+      "id": "06_watercolor",
+      "label": "투명 수채",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        93,
+        8,
+        1184,
+        1252
+      ],
+      "bodyHeight": 1244,
+      "footY": 1251,
+      "footX": 638.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "9253e3dbce79d33957d93073a84264f11166af2aebff88b364371f9c12f555bf",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-77fdbaf2-078c-4f6e-97ac-d5c096754e57.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "07_impasto/model-a.png",
+      "id": "07_impasto",
+      "label": "두꺼운 유화",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        188,
+        4,
+        1303,
+        1018
+      ],
+      "bodyHeight": 1014,
+      "footY": 1017,
+      "footX": 745.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "9e74e6497f852d3e3eff2821f2a73d7fb5d663bc979e026d1afb178b2f8ca606",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-8f8efae3-f94e-4ad3-a0f3-b005ead86485.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "07_impasto/model-b.png",
+      "id": "07_impasto",
+      "label": "두꺼운 유화",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        76,
+        6,
+        1199,
+        1276
+      ],
+      "bodyHeight": 1270,
+      "footY": 1275,
+      "footX": 637.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "a8115d29e1980c810ccfe44eb7527d3babc02ea29a2db3009ea4e931d4038210",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-5a8ee5b4-7331-4ef3-8306-3c24289dd6e8.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "08_brush_ink/model-a.png",
+      "id": "08_brush_ink",
+      "label": "먹선 붓그림",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        180,
+        5,
+        1314,
+        1018
+      ],
+      "bodyHeight": 1013,
+      "footY": 1017,
+      "footX": 747.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "3a95496fe458aef87fdb6bc711bb1932ed2b5533efd8d7921542eab4987f2d0c",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-961d495c-5868-483f-8d07-b7d23fe74889.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "08_brush_ink/model-b.png",
+      "id": "08_brush_ink",
+      "label": "먹선 붓그림",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        76,
+        6,
+        1189,
+        1268
+      ],
+      "bodyHeight": 1262,
+      "footY": 1267,
+      "footX": 632.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "7fe0eb54b41af6327bd5d7a358ba88e69378b781cf62fb028410b6a312ee6f64",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-ff2909e6-316e-4f6b-bffd-296c8a3743ff.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "09_manga/model-a.png",
+      "id": "09_manga",
+      "label": "흑백 만화",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        198,
+        11,
+        1309,
+        1014
+      ],
+      "bodyHeight": 1003,
+      "footY": 1013,
+      "footX": 753.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "dd9db472347b2c91f4586911c1b4afd89a94e3dea2c92eb4a2a2b00d56789ae7",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-625e4cc7-f457-405b-8cac-3bd48c60fec4.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "09_manga/model-b.png",
+      "id": "09_manga",
+      "label": "흑백 만화",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        92,
+        9,
+        1178,
+        1252
+      ],
+      "bodyHeight": 1243,
+      "footY": 1251,
+      "footX": 635.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "240e8da44564e40f6a8541d4befcffafcf74f47e04a46b664f548b2728852daa",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-d61e5e55-f2fb-4fcc-8965-e0f25e5fb1bf.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "10_engraving/model-a.png",
+      "id": "10_engraving",
+      "label": "동판화 선각",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        197,
+        8,
+        1308,
+        1013
+      ],
+      "bodyHeight": 1005,
+      "footY": 1012,
+      "footX": 752.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "c99caef2b8c30e52d60b8af5da956a693a2dcd3332d1ce15132f5f78910942a5",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-cb695f48-e8b5-45e9-b293-eb7902832693.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "10_engraving/model-b.png",
+      "id": "10_engraving",
+      "label": "동판화 선각",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        90,
+        8,
+        1178,
+        1251
+      ],
+      "bodyHeight": 1243,
+      "footY": 1250,
+      "footX": 634.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "6274424abbf1fcda41a0bd9083f33c295f73c3b9581007b5d88364dfddd491c7",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-b4ede679-bd7f-4136-9930-4b436bd76bbb.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "11_woodcut/model-a.png",
+      "id": "11_woodcut",
+      "label": "목판화",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        193,
+        5,
+        1319,
+        1016
+      ],
+      "bodyHeight": 1011,
+      "footY": 1015,
+      "footX": 756.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "69798aa3485c7e21c7fe5737d25ea3c10e8281324ef8ec20df96ea0b4774298b",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-8cb55ec2-9d0a-48a5-aebf-b8de5e06fe12.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "11_woodcut/model-b.png",
+      "id": "11_woodcut",
+      "label": "목판화",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        88,
+        3,
+        1174,
+        1278
+      ],
+      "bodyHeight": 1275,
+      "footY": 1277,
+      "footX": 631.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "ba0eec0394df0d25f6e31db9d05f7f5f2478d1d0a4272357fb2148bffdee1034",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-9a50dc81-1d74-4072-bd44-f019dd69c376.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "12_pop_art/model-a.png",
+      "id": "12_pop_art",
+      "label": "팝아트 만화",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        192,
+        7,
+        1307,
+        1017
+      ],
+      "bodyHeight": 1010,
+      "footY": 1016,
+      "footX": 749.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "1413e0ed2e26b70cdb35efa8d39e15f1d394fd3c9b4de78540d42a2040f7a28b",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-140b9dbf-0edf-484d-b064-4731c7ebd459.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "12_pop_art/model-b.png",
+      "id": "12_pop_art",
+      "label": "팝아트 만화",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        88,
+        5,
+        1173,
+        1257
+      ],
+      "bodyHeight": 1252,
+      "footY": 1256,
+      "footX": 630.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "10520678eac22afef8cae32d8846e0572fa49ca7730fbe4b12400129ec78b970",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-a7a93b14-06b4-4c33-9608-309c24262215.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "13_neon_line/model-a.png",
+      "id": "13_neon_line",
+      "label": "네온 라인",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        192,
+        11,
+        1304,
+        1013
+      ],
+      "bodyHeight": 1002,
+      "footY": 1012,
+      "footX": 748.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "df198f9bf659ef68a9cfcbdbf9bb1ebcba7fc8d5ec830a3a7904f6b8ca11ad9d",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-ce922345-592f-4d8c-a8ef-b110adc96d31.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "13_neon_line/model-b.png",
+      "id": "13_neon_line",
+      "label": "네온 라인",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        92,
+        8,
+        1185,
+        1252
+      ],
+      "bodyHeight": 1244,
+      "footY": 1251,
+      "footX": 638.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "4713094a15bbeea8ab6b435e28ef56eb1dd4c7433dc811b9a82c6c1f087a6846",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-7add36d1-1e76-4f5b-92fb-a277789d0f82.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "14_paper_cut/model-a.png",
+      "id": "14_paper_cut",
+      "label": "종이 오려붙임",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        200,
+        7,
+        1310,
+        1016
+      ],
+      "bodyHeight": 1009,
+      "footY": 1015,
+      "footX": 755.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "37499e4b4236a75e8b52bf1ca7d0d94669a35ce259358c6b498daad1a873bfa8",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2302f013-a7fa-40dc-88be-f2ce014dc19d.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "14_paper_cut/model-b.png",
+      "id": "14_paper_cut",
+      "label": "종이 오려붙임",
+      "model": "b",
+      "width": 1217,
+      "height": 1293,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        85,
+        7,
+        1184,
+        1257
+      ],
+      "bodyHeight": 1250,
+      "footY": 1256,
+      "footX": 634.5,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "c19e50a2e242021c2182ee3521857e63756e17acaf6debdb4a32150fb8322c39",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+      "inputSha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-6111af50-f22c-4545-b329-c911900f3e4a.png",
+      "nativeBytesEqual": true
+    },
+    {
+      "file": "15_stained_glass/model-a.png",
+      "id": "15_stained_glass",
+      "label": "스테인드글라스",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bounds": [
+        195,
+        8,
+        1305,
+        1017
+      ],
+      "bodyHeight": 1009,
+      "footY": 1016,
+      "footX": 750.0,
+      "footXIsSupportCenter": false,
+      "measurement": "alpha>=32 silhouette; hair/sole vertical extremes reviewed visually; approximate painted-edge uncertainty 2-10px; footX is silhouette horizontal center for gallery only, not game support anchor",
+      "sha256": "a5e0c091b7ff20a57a8cf8c395bff256a6f7e1989624e450a497200a63f3f89c",
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/sd-pose-original.png",
+      "inputSha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "generatedSource": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-c90e420f-c010-4283-bf8c-66aa98f8c49f.png",
+      "nativeBytesEqual": true
+    }
+  ],
+  "references": [
+    {
+      "file": "original-model-a.png",
+      "id": "original",
+      "label": "원형",
+      "model": "a",
+      "width": 1536,
+      "height": 1024,
+      "bounds": [
+        197,
+        12,
+        1306,
+        1012
+      ],
+      "bodyHeight": 1000,
+      "footY": 1011,
+      "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png"
+    },
+    {
+      "file": "original-model-b.png",
+      "id": "original",
+      "label": "원형",
+      "model": "b",
+      "width": 1217,
+      "height": 1292,
+      "bounds": [
+        92,
+        9,
+        1177,
+        1247
+      ],
+      "bodyHeight": 1238,
+      "footY": 1246,
+      "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png"
+    }
+  ],
+  "originalBytesPreserved": true,
+  "gameIntegration": false
+}

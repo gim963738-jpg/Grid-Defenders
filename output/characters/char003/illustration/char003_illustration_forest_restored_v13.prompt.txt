@@ -1,0 +1,34 @@
+Tool: built-in image_gen.
+Design/style master: char003_illustration_forest_slime_v02.png.
+Pose/composition master: char003_illustration_forest_closeup_v12.png.
+User: 주인공 · 숲속 슬라임 토벌 v02 원래 그림체 여러차레 리모뎅일하면서 그림체 바뀐서같은데 옷이랑 그림체랑 복구작업 진행해줘
+Restoration: Return to v02 outfit, ivory tunic, cropped red coat, simple asymmetrical armor, badge, restrained straps, youthful face and anime cel rendering. Preserve latest low camera, close framing, leg arrangement and elevated slash trajectory with green droplets. Static illustration under character specification v1.2; no game implementation.
+
+Use case: style-transfer / identity-preserve.
+Asset: char003 illustration v13, restore ORIGINAL v02 clothing and anime art direction while retaining latest scene composition.
+
+INPUT PRIORITY:
+IMAGE 1 (v02) is the AUTHORITATIVE HERO DESIGN, OUTFIT, FACE, PROPORTION AND ART STYLE master. Reproduce its visual language and garment construction faithfully.
+IMAGE 2 (v12) is ONLY the ACTION POSE, LOW CAMERA, CLOSE FRAMING, SWORD POSITION AND SWORD-TRAIL layout to retain. Its ornate costume and rendering are incorrect accumulated drift and must be replaced.
+
+Redraw the hero and scene of IMAGE 2 as if the artist of IMAGE 1 made it, wearing EXACTLY IMAGE 1's outfit. This is a full restoration of style and clothing, not a color filter.
+
+CLOTHING restoration, highest priority:
+Restore the loose short crimson traveling mantle/coat from image1, with broad open front panels, raised red collar and charcoal inner hood, thin restrained gold hem trim, modest split tails. Natural wind movement follows the pose but NO giant royal cape or sprawling patterned blanket.
+Restore the clearly visible IVORY ROLLED-SLEEVE TUNIC covering the belly and lower torso, with its natural simple folds and hem below the waist. Restore the compact dark brown chest layer beneath the open coat.
+REMOVE the large crisscross lace-up brown/red corset, dense chest straps, rows of tiny gold studs, embroidered brocade all over the cloth, and extra ornate decoration introduced in image2.
+Restore the large smooth brushed-silver articulated THREE-PLATE pauldron on the sword-arm shoulder (viewer-left), with simple rivets; a SMALL compact single shoulder guard on the other side. No engraved ornate rectangular armor.
+Restore the small silver shield-shaped appointment badge hanging at the chest, the simple silver clasps across the mantle, the original few leather straps, and TWO simple functional brown waist belts with original utility pouches.
+Restore the ivory rolled sleeves and the original single substantial smooth silver forearm guard on the sword arm; the other arm has the original simple leather wrist cuff and fingerless glove, not matching metal vambraces.
+Restore original loose dark trousers, simple angular silver knee plate on the forward leg, tall brown lace-up boots with buckles and red cloth ties. Follow image1 precisely; simplify invented metal engraving, garment texture and excess strap detail.
+
+STYLE restoration:
+Match image1's clean, confident dark anime contours and distinctive youthful face: warm reddish auburn hair in grouped angular locks, amber-brown eyes with the original eyelid shapes, friendly open smiling mouth, clean warm skin and the original balanced compact adult proportions.
+Clear designed cel-shadow masses, restrained tonal transitions, simple strong material highlights. Restore image1's flatter illustrated cloth surfaces and broad readable folds. Remove image2's hyper-detailed leather microtexture, overly glossy realistic 3D modeling, bright orange hair drift and ornate surfaces.
+The forest should also use image1's hand-painted anime foliage, trunks, sun shafts and clean green/gold palette, rather than image2's photographic bokeh. Background remains quieter than the hero.
+
+KEEP THE LATEST ACTION AND CAMERA:
+Use image2's close full-body landscape framing, LOW frontal three-quarter view, natural forward-running follow-through, torso lean, friendly smile, sword arm stretched back to screen-left, empty hand bent near chest, forward knee modestly bent and opposite leg folded behind. DO NOT swap the two legs, stand upright in image1's original pose, or return to a distant/top-down view.
+Keep one sharp straight Western sword in the same backward position, but restore the simple practical steel blade/hilt design seen in image1; retain crisp sharpened edge and pointed tip.
+Preserve ONE thin bright silver-white / pale-blue slash trail in image2's broad shallow U-curve: from below sword tip on left, across foreground at knee/lower-thigh height, rising at right. Preserve scattered GREEN gel droplets along it. Cut already completed. Do not bring back image1's intact blue slime, its original low sword angle, or ground-level arc.
+Keep the hero large and readable, but give the entire hair, sword tip, coat and both boots a small safe margin inside the canvas. Single finished landscape scene, no text, labels, collage or additional figures.

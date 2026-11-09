@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "id": "gc9_verified_whole_style_v1",
+  "updated_on": "2026-11-08",
+  "style_id": "GC9",
+  "style_version": "1.1",
+  "scope": "GC9 whole-character drawing style; not a trained model",
+  "provenance": "output/characters/gc9_balor/style_recovery_20261108/evidence.json",
+  "profiles": {
+    "c4_general": {
+      "name": "C4 전체 작화",
+      "primary": [
+        {
+          "id": "C4_front",
+          "path": "output/character-redesign-6x2/images/c04_front.png",
+          "role": "whole_style",
+          "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+        },
+        {
+          "id": "C4_threequarter",
+          "path": "output/character-redesign-6x2/images/c04_threequarter.png",
+          "role": "whole_style",
+          "sha256": "712d33a525be4f59a66fbabe884a33cc77205d6e00a9334fb31a8d362641761e"
+        }
+      ],
+      "feedback": "2026-11-06 19:15 KST: C4 우선, C2~C6 긍정 평가",
+      "material_supplement": "C3는 필요할 때만 재질 보조이며 전체 작화 기준을 대체하지 않음"
+    },
+    "c6_male": {
+      "name": "C6 남성형 전체 작화",
+      "primary": [
+        {
+          "id": "C6_front",
+          "path": "output/character-redesign-6x2/images/c06_front.png",
+          "role": "whole_style",
+          "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+        },
+        {
+          "id": "C6_threequarter",
+          "path": "output/character-redesign-6x2/images/c06_threequarter.png",
+          "role": "whole_style",
+          "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c"
+        }
+      ],
+      "historical_primary": {
+        "id": "M01_Myst",
+        "path": "자료/캐릭터그림체/GC9/원본/M01_Myst.jfif",
+        "role": "historical_whole_style",
+        "sha256": "dd5d84bb0616a07d49733ca72071b49021b7d9200d1d3285d2fff355c544e157"
+      },
+      "historical_material": {
+        "id": "A04_Bram",
+        "path": "자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+        "role": "material_only",
+        "sha256": "9f8e7b048e4c1f6e476b16eb98f5b6fea31f34481ba617d06b1591a0aec84d8a"
+      },
+      "recipe_record": "output/character-redesign-6x2/생성기록.json",
+      "recipe_entries": [
+        "c06_front",
+        "c06_threequarter"
+      ],
+      "feedback": "C2~C6 긍정 평가 및 발로르의 C6 비교 지정. C6는 카메라/금속만의 참조가 아님"
+    }
+  },
+  "default_profile": "c4_general",
+  "character_profiles": {
+    "balor": "c6_male"
+  },
+  "rejected_style_prefixes": [],
+  "exempt_subpaths": [
+    "/sd_style_test_",
+    "/inputs/"
+  ],
+  "approved_edit_targets": [],
+  "rules": {
+    "whole_style_reference_required": true,
+    "reference_hashes_required": true,
+    "identity_semantics_preserved": true,
+    "failed_face_geometry_must_not_be_locked": true,
+    "rejected_target_must_not_be_style_or_edit_master": true,
+    "full_style_failure_requires_whole_character_rebuild": true,
+    "do_not_infer_style_pass_from_native_file_tests": true,
+    "no_unrequested_redesign": true,
+    "no_next_view_after_style_failure": true,
+    "automatic_style_approval": false
+  },
+  "review_axes": [
+    "전체 인상",
+    "얼굴 선과 생략 방식",
+    "머리카락 묶음",
+    "선화 위계",
+    "인체를 그리는 방식",
+    "명암 면",
+    "재질"
+  ],
+  "production_state": {
+    "character": "balor",
+    "generation": "single_concept_completed",
+    "style": "rejected_by_user",
+    "new_generation_performed_during_repair": false,
+    "authorization_source": "이제 재대로된 GC9일러스트 만들수있어?",
+    "authorization_interpretation": "이전 발로르 작업을 새 전체 작화 기준으로 정면 시안1장 재개",
+    "max_new_image_calls": 1,
+    "followup_generation_allowed": false,
+    "successful_image_calls": 1,
+    "automatic_retry_allowed": false,
+    "latest_candidate_style": "unverified"
+  },
+  "rejected_style_paths": [
+    "output/characters/gc9_balor/concept_front_v01.png",
+    "output/characters/gc9_balor/gc9_rebuild_v09/front_v09.png",
+    "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_before_shield.png",
+    "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_initial.png",
+    "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_style_master.png",
+    "output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png",
+    "output/characters/gc9_balor/gc9_rebuild_v10/threequarter_v10.png",
+    "output/characters/gc9_balor/gc9_rebuild_v10/variants/threequarter_before_framing.png",
+    "output/characters/gc9_balor/illustration_3views_v01/front.png",
+    "output/characters/gc9_balor/illustration_3views_v02/front.png",
+    "output/characters/gc9_balor/illustration_3views_v03/front.png",
+    "output/characters/gc9_balor/illustration_3views_v04/front.png",
+    "output/characters/gc9_balor/illustration_3views_v05/front.png",
+    "output/characters/gc9_balor/illustration_3views_v06/front.png",
+    "output/characters/gc9_balor/variants/front_v06_initial.png",
+    "output/characters/gc9_balor/illustration_3views_v01/right.png",
+    "output/characters/gc9_balor/illustration_3views_v04/right.png",
+    "output/characters/gc9_balor/illustration_3views_v05/right.png",
+    "output/characters/gc9_balor/illustration_3views_v07/right.png",
+    "output/characters/gc9_balor/illustration_3views_v08/right.png",
+    "output/characters/gc9_balor/variants/right_geometry_initial_v05.png",
+    "output/characters/gc9_balor/variants/right_horizontal_initial_v08.png",
+    "output/characters/gc9_balor/variants/right_shield_angle_initial_v07.png",
+    "output/characters/gc9_balor/illustration_3views_v01/back.png",
+    "output/characters/gc9_balor/illustration_3views_v04/back.png",
+    "output/characters/gc9_balor/illustration_3views_v05/back.png",
+    "output/characters/gc9_balor/illustration_3views_v07/back.png",
+    "output/characters/gc9_balor/illustration_3views_v08/back.png",
+    "output/characters/gc9_balor/variants/back_framing_initial_v08.png",
+    "output/characters/gc9_balor/variants/back_horizontal_initial_v08.png",
+    "output/characters/gc9_balor/variants/back_initial_v04.png",
+    "output/characters/gc9_balor/variants/back_shield_angle_initial_v07.png",
+    "output/characters/gc9_balor/helmet_off_front_v01.png"
+  ],
+  "max_reference_images": 5
+}

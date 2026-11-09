@@ -1,0 +1,49 @@
+{
+  "assets": [
+    {
+      "file": "sd-pose-original.png",
+      "width": 1536,
+      "height": 1024,
+      "alpha": [
+        0,
+        254
+      ],
+      "bounds": [
+        197,
+        12,
+        1306,
+        1012
+      ],
+      "bodyHeight": 1000,
+      "hairTop": 12,
+      "footY": 1011,
+      "footX": 560,
+      "footXEstimated": true,
+      "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8"
+    },
+    {
+      "file": "combat-ready-illustration-proportions.png",
+      "width": 1217,
+      "height": 1292,
+      "alpha": [
+        0,
+        255
+      ],
+      "bounds": [
+        92,
+        9,
+        1177,
+        1247
+      ],
+      "bodyHeight": 1238,
+      "hairTop": 9,
+      "footY": 1246,
+      "footX": 480,
+      "footXEstimated": true,
+      "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d"
+    }
+  ],
+  "measurement": "alpha>=32, visually verified top is hair and bottom is boot, not blade; support-center X manual estimate +/-35px; pose rather than standing anatomy",
+  "displayOnlyUniformRegistration": true,
+  "individualPngResampled": false
+}

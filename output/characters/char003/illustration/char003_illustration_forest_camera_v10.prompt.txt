@@ -1,0 +1,20 @@
+Tool: built-in image_gen.
+Inputs: camera_reference_v10.png (primary camera and pose); char003_illustration_forest_legs_v09.png (hero identity/style/scene).
+User: 이구도로 한번 뽑아봐
+Change: New low front three-quarter view and mannequin limb projection override prior high-angle composition. Static illustration under character specification v1.2, no sprite animation or game implementation.
+
+Use case: compositing.
+Asset: char003 finished anime forest action illustration v10.
+IMAGE 1 is the PRIMARY CAMERA, BODY PROJECTION AND POSE reference. Match the actual gray mannequin at LEFT-CENTER, NOT the shadow silhouette at right.
+IMAGE 2 supplies the exact hero's identity, outfit, art style, forest setting and completed-slime-slash story only. Its high-angle side-on camera must be replaced.
+
+Re-stage this hero in the exact view of the mannequin in IMAGE 1: a pulled-back LOW front three-quarter camera close to ground level, looking gently upward, whole body airborne, torso seen mostly from the front at a slight diagonal. Horizon/forest ground plane near the bottom fifth of the composition. The body is nearly upright in projection with a subtle diagonal lean, not stretched horizontally across the scene. Normal lens, natural foreshortening. Full figure occupies around 70 percent of canvas height with space around sword and boots.
+
+Carefully match the mannequin's visible limb arrangement:
+Head near upper center-left; chest faces the camera obliquely. Hero's RIGHT sword arm stretches out toward screen LEFT at approximately shoulder height, continuing into one straight sword pointing left. His LEFT empty arm bends inward across the upper abdomen/chest, elbow toward screen RIGHT, fingers relaxed. Friendly confident smile.
+His RIGHT leg (viewer-left side of pelvis) comes down toward lower center-left, almost straight with a soft knee bend; boot points downward and is the lowest body part. His LEFT leg (viewer-right hip) is bent BACK behind him, knee lower than the pelvis, calf folding behind toward viewer-left and the raised boot tucked behind the other leg around knee/calf height. The bent knee is NOT a high waist-level sideways running knee. Match the mannequin leg overlap and depth: one long downward leg, one visibly folded rear leg. Both feet airborne above the ground, anatomically connected hips/knees/ankles, exactly two arms and two legs.
+This newest mannequin reference governs how the pose projects on screen. Do not reuse the wide split-stride silhouette or top-down forest-floor view from image2. Do not render the shadow silhouette as a second character.
+
+Lock image2 hero: young adult male with short reddish-brown tousled hair, amber eyes, cheerful smile; crimson mantle/coat with subtle weave pattern, charcoal hood/collar, ivory sleeves, partial steel shoulder and forearm armor, single knee guard, layered brown belts and leather pouch, black trousers, tall brown lace-up boots with red ties, fingerless gloves. Same refined 2D anime linework and cel-shaded material detail, compact adult proportions.
+Maintain a bright sunlit green forest with ground low in frame and tree trunks/foliage behind, warm dappled lighting, cape flowing naturally behind. He has ALREADY cut the slime: a few translucent emerald green teardrop gel droplets and a thin silver-white residual sword arc around lower foreground, not an intact slime. Fit the entire blade, hair, cloak and boots with safe margins.
+Only ONE fully illustrated hero. No gray mannequin, editor grid, joint handles, colored markers, shadow duplicate, text, UI, borders or collage. A landscape 4:3 composition echoing image1's framing is suitable.

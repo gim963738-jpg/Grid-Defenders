@@ -1,0 +1,14 @@
+Tool: built-in image_gen.
+Style/face master: char003_illustration_sword_shoulder_v14.png.
+Composition/design target: char003_illustration_centered_v18.png.
+User: V18하고 V14하고 비교했을때 그림체는 V14가 더 마음에드는데 이부분 수정해줘 그림체가 너무 차이난다
+Change: Restore v14 linework, facial rendering and cel shading while retaining v18 centered composition, cape, thicker sword and hood correction, without slime. v19 cape removal is not used for this requested v18 branch. Static illustration under character specification v1.2.
+
+Use case: style-transfer.
+Restore the art style of this hero, using IMAGE 1 (v14) as the authoritative ARTIST/RENDERING/FACE reference and IMAGE 2 (v18) as the final composition/design target.
+
+The user strongly prefers v14 and says v18 has drifted too far. Match v14's actual illustrated look faithfully: its dark confident fine outlines, crisp angular cel-shadow shapes, rich deeper crimson and auburn palette, clean warm skin, expressive original eye/eyelid shapes and youthful smiling face, broad controlled hair highlights and grouped locks, clearly drawn cloth folds, matte readable leather, simple steel highlights. Preserve its deliberate hand-painted anime forest. Reduce the softer smoothed/washed-out gradients and changed face/hair rendering of v18. This must visibly return to v14's drawn anime character, not merely adjust saturation.
+
+Preserve IMAGE 2's CENTERED full-body portrait arrangement, exact shoulder-rest stance, long crimson mantle and split coat tails, proportions and costume construction. Keep the thicker practical sword handle/guard/blade from v18, continuous straight blade behind the head, and charcoal hood fold covering the awkward blade root on shoulder. Keep the scene free of slime. Do not restore v14's left-offset framing, thin sword or blue slime.
+Same ivory rolled-sleeve tunic, asymmetrical steel pauldrons, sword-arm forearm guard, shield-shaped silver badge, simple double belts/pouches, loose dark trousers, single knee guard, brown lace-up boots/red ties. No new ornament, cape removal, new pose or equipment.
+Compose a single centered full portrait with full sword, head, cape and boots inside comfortable margins. Same forest and warm sunlit mood, rendered in v14 style. No text, watermark or panels.

@@ -1,0 +1,20 @@
+Use case: style-transfer
+Asset type: GC9 polished 2D fantasy RPG character three-view model sheet, actual transparent RGBA background.
+
+INPUT ROLES:
+Image 1 is the ONLY character/design/composition edit target: red ponytail female warrior, eye-and-face-balance v02. Redraw this SAME three-view sheet in the GC9 rendering language.
+Image 2 (C4 silver archer) is PRIMARY STYLE AND FACE RENDERING reference only: fine decisive anime contours, concise eyelids/nose/mouth, clean skin, broad cel-shaded planes and coherent tapered hair locks.
+Image 3 (C3 teal archer) is METAL RENDERING reference only: readable gold planes, thickness, edge highlights and contact shadows. Do NOT import either reference's face identity, hair, costume, armor, weapons, ears, colors or background.
+
+COMPOSITION AND IDENTITY:
+Keep the target's left-to-right FRONT, RIGHT-FACING SIDE, BACK three full-body views, equal figure scale, same relaxed standing pose, arms naturally lowered and empty hands. Preserve the target's head/body ratio, slender adult build, serious expression, red eyes, facial individuality and already balanced eye size. Give the same character consistent facial construction in front and profile. Preserve her burgundy-red high ponytail, forelocks, crown-like small gold hair ornament, flowing long rear hair, scarf/cape silhouette, dark sleeveless high-collar fitted outfit, upper-arm double straps, fingerless long gloves, chest/waist belts, two hip pouches, asymmetric thigh straps, knee pads, tall lace-up leather boots, gold buckles and original embroidered border motifs. Keep garment lengths and asymmetry on the same anatomical side across views. No weapon or added armor. All three views fully visible with clear gaps and modest outer safety margins, no cropping of ponytail or boots. Do not change the side view to a three-quarter view.
+
+RENDERING TO CHANGE:
+Translate ALL three views into image 2's crisp anime drawing grammar, not merely sharpen the original. Clean fine lines, strong silhouette and overlap contours, delicate sparse facial lines. Upper eyelids clear, short simplified nose and mouth, clean jaw, restrained skin shadows without sculpted realistic lips or glossy cheeks. Organize red hair into large coherent tapered locks with readable shadow shapes and selective thin internal strands, no soft muddy strand shading.
+Separate base color, broad main cel shadows and deep contact shadows. Use controlled local midtone gradients within light planes, retaining hard major shadow boundaries. Broad matte cape folds; dark clothes retain legible construction and folds without noisy microtexture. Match C4's clear drawing and finish.
+Use C3's disciplined gold reflections ONLY on existing buckles, hair ornament, clasp/chain and metal trim: distinct light/dark faces, restrained sharp highlights and thickness, no inflated gold edges. Embroidered cloth borders remain flat embroidery, not thick metal armor. Leather gloves/boots/pouches have localized controlled sheen, distinct from matte cloth and metal. Preserve target burgundy/charcoal/brown/gold palette; avoid overall gray haze or blanket contrast boost.
+Consistent gentle upper-front lighting for all three views, sufficient tonal separation of hair, cape and dark outfit.
+
+OUTPUT:
+ONE polished landscape three-view sheet approximately 2:1 with a genuinely transparent background (no black rectangle, checkerboard, floor or cast shadow). Preserve all original design elements while making drawing/face/shading clearly consistent with the STYLE references. No text, view labels, logo, watermark, UI, effects, weapons or additional characters.
+Avoid photorealism, 3D rendering, painterly texture, blurry airbrush shading, chibi proportions, plastic gloss, extra fingers, floating straps/chains, broken equipment connections.

@@ -1,0 +1,175 @@
+{
+  "checkedDate": "2026-11-09",
+  "sources": [
+    {
+      "id": "01_arknights",
+      "sourcePage": {
+        "url": "https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights&hl=en",
+        "status": 200,
+        "finalUrl": "https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights&hl=en",
+        "contentType": "text/html; charset=utf-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://play-lh.googleusercontent.com/dIRo98UsCs97OACxqBZTC1a3BlyY_aut0d023r1ciWxt4QqiUG94zjxR5WBLTqO6rk21osLGmvCeq1QrqHKOWg=s0",
+        "status": 200,
+        "finalUrl": "https://play-lh.googleusercontent.com/dIRo98UsCs97OACxqBZTC1a3BlyY_aut0d023r1ciWxt4QqiUG94zjxR5WBLTqO6rk21osLGmvCeq1QrqHKOWg=s0",
+        "contentType": "image/jpeg",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    },
+    {
+      "id": "02_azur_lane",
+      "sourcePage": {
+        "url": "https://play.google.com/store/apps/details?id=com.YoStarEN.AzurLane&hl=en&gl=US",
+        "status": 200,
+        "finalUrl": "https://play.google.com/store/apps/details?id=com.YoStarEN.AzurLane&hl=en&gl=US",
+        "contentType": "text/html; charset=utf-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://play-lh.googleusercontent.com/zShGFLbgy1LaMbNI1lBFeAKKFWLG-W5t4h-UaWNv6q0iKGdfozdm62HkMI5uKi6SAyj18aoeCPS8kQIWiZhnGA=s0",
+        "status": 200,
+        "finalUrl": "https://play-lh.googleusercontent.com/zShGFLbgy1LaMbNI1lBFeAKKFWLG-W5t4h-UaWNv6q0iKGdfozdm62HkMI5uKi6SAyj18aoeCPS8kQIWiZhnGA=s0",
+        "contentType": "image/png",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    },
+    {
+      "id": "03_priconne",
+      "sourcePage": {
+        "url": "https://priconne-redive.jp/about/",
+        "status": 200,
+        "finalUrl": "https://priconne-redive.jp/about/",
+        "contentType": "text/html; charset=utf-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://priconne-redive.jp/_app/immutable/assets/sytem_battle_mov.D60HnmKq.mp4",
+        "status": 200,
+        "finalUrl": "https://priconne-redive.jp/_app/immutable/assets/sytem_battle_mov.D60HnmKq.mp4",
+        "contentType": "video/mp4",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    },
+    {
+      "id": "04_another_eden",
+      "sourcePage": {
+        "url": "https://store.steampowered.com/app/1252600/ANOTHER_EDEN/",
+        "status": 200,
+        "finalUrl": "https://store.steampowered.com/app/1252600/ANOTHER_EDEN/",
+        "contentType": "text/html; charset=UTF-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1252600/ss_f999e7f4ed886c3f158ec1ff67b138387d90a2cc.1920x1080.jpg?t=1787297277",
+        "status": 200,
+        "finalUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1252600/ss_f999e7f4ed886c3f158ec1ff67b138387d90a2cc.1920x1080.jpg?t=1787297277",
+        "contentType": "image/jpeg",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    },
+    {
+      "id": "05_reverse1999",
+      "sourcePage": {
+        "url": "https://store.steampowered.com/app/3092660/Reverse_1999/",
+        "status": 200,
+        "finalUrl": "https://store.steampowered.com/app/3092660/Reverse_1999/",
+        "contentType": "text/html; charset=UTF-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3092660/ss_b49b4ca8cdea823e11be5ced047104c7805e1257.1920x1080.jpg?t=1793884285",
+        "status": 200,
+        "finalUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3092660/ss_b49b4ca8cdea823e11be5ced047104c7805e1257.1920x1080.jpg?t=1793884285",
+        "contentType": "image/jpeg",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    },
+    {
+      "id": "06_epic_seven",
+      "sourcePage": {
+        "url": "https://store.steampowered.com/app/5019180/Epic_Seven/",
+        "status": 200,
+        "finalUrl": "https://store.steampowered.com/app/5019180/Epic_Seven/",
+        "contentType": "text/html; charset=UTF-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5019180/5a0706801756b9841f84fac9d0428bbf4a11e69c/ss_5a0706801756b9841f84fac9d0428bbf4a11e69c.1920x1080.jpg?t=1793256460",
+        "status": 200,
+        "finalUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5019180/5a0706801756b9841f84fac9d0428bbf4a11e69c/ss_5a0706801756b9841f84fac9d0428bbf4a11e69c.1920x1080.jpg?t=1793256460",
+        "contentType": "image/jpeg",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    },
+    {
+      "id": "07_counterside",
+      "sourcePage": {
+        "url": "https://store.steampowered.com/app/1976440/CounterSide/",
+        "status": 200,
+        "finalUrl": "https://store.steampowered.com/app/1976440/CounterSide/",
+        "contentType": "text/html; charset=UTF-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1976440/ss_5c75a6dadd4fe7b72a5390ae3df195673357e256.1920x1080.jpg?t=1781707526",
+        "status": 200,
+        "finalUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1976440/ss_5c75a6dadd4fe7b72a5390ae3df195673357e256.1920x1080.jpg?t=1781707526",
+        "contentType": "image/jpeg",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    },
+    {
+      "id": "08_guardian_tales",
+      "sourcePage": {
+        "url": "https://guardiantales.com/",
+        "status": 200,
+        "finalUrl": "https://guardiantales.com/",
+        "contentType": "text/html; charset=utf-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://guardiantales.com/images/WebsiteBackground.mp4",
+        "status": 200,
+        "finalUrl": "https://guardiantales.com/images/WebsiteBackground.mp4",
+        "contentType": "video/mp4",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    },
+    {
+      "id": "09_dfo",
+      "sourcePage": {
+        "url": "https://store.steampowered.com/app/495910/Dungeon_Fighter_Online/",
+        "status": 200,
+        "finalUrl": "https://store.steampowered.com/app/495910/Dungeon_Fighter_Online/",
+        "contentType": "text/html; charset=UTF-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/495910/5f90726c9da7b526f95caa75d2ef57d0e2038439/ss_5f90726c9da7b526f95caa75d2ef57d0e2038439.1920x1080.jpg?t=1785840765",
+        "status": 200,
+        "finalUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/495910/5f90726c9da7b526f95caa75d2ef57d0e2038439/ss_5f90726c9da7b526f95caa75d2ef57d0e2038439.1920x1080.jpg?t=1785840765",
+        "contentType": "image/jpeg",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    },
+    {
+      "id": "10_odin_sphere",
+      "sourcePage": {
+        "url": "https://atlus.com/atlus-titles/odinsphere/?ItemID=49",
+        "status": 200,
+        "finalUrl": "https://atlus.com/atlus-titles/odinsphere/?ItemID=49",
+        "contentType": "text/html; charset=utf-8",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      },
+      "sourceImageUrl": {
+        "url": "https://atlus.com/wp-content/uploads/2015/09/osl1.jpg",
+        "status": 200,
+        "finalUrl": "https://atlus.com/wp-content/uploads/2015/09/osl1.jpg",
+        "contentType": "image/jpeg",
+        "method": "GET headers then close; actual images/frames separately downloaded and viewed"
+      }
+    }
+  ]
+}

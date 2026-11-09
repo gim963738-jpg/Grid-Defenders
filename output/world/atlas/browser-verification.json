@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-11-07T06:55:27.367Z",
+  "page": "b0bfa6f3-f34c-4e56-9983-7a4c6929f391",
+  "method": "Orca embedded browser DOM and user interactions",
+  "desktop": {
+    "mapSize": [
+      1536,
+      1024
+    ],
+    "mapVersion": 24,
+    "mapFile": "continent_world_east_minor_impact_v24.png",
+    "navigation": 7,
+    "pins": 10,
+    "legend": 10,
+    "regions": [
+      {
+        "id": "central",
+        "title": "아스테른 제국"
+      },
+      {
+        "id": "west",
+        "title": "발트레인 왕국"
+      },
+      {
+        "id": "south",
+        "title": "사하리드 왕국"
+      },
+      {
+        "id": "east",
+        "title": "진월국"
+      },
+      {
+        "id": "north",
+        "title": "스카르가드 요새"
+      }
+    ],
+    "westFactions": [
+      "친왕파",
+      "반왕파"
+    ],
+    "eastSects": {
+      "sword": 4,
+      "saber": 2,
+      "total": 6
+    },
+    "minorImpacts": {
+      "total": 4,
+      "east": 1
+    },
+    "centralTableRows": [
+      2,
+      2,
+      1,
+      4,
+      4
+    ],
+    "magicTower": {
+      "independent": true,
+      "kingdomFamilies": 4,
+      "ordinNeutral": true
+    },
+    "churchForce": [
+      "성직자",
+      "성기사"
+    ],
+    "landmarks": [
+      "엘프의 숲",
+      "드워프의 지하왕국",
+      "오염지역"
+    ],
+    "markerNavigation": true,
+    "pinToggle": true,
+    "width": 719,
+    "documentWidth": 705
+  },
+  "bookmark": {
+    "hash": "#arkerion",
+    "restored": true
+  },
+  "mobile": [
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "minButtonHeight": 44,
+      "tableCount": 5,
+      "selection": true
+    },
+    {
+      "width": 320,
+      "documentWidth": 320,
+      "minButtonHeight": 44,
+      "tableCount": 5,
+      "selection": true
+    }
+  ],
+  "status": "passed"
+}

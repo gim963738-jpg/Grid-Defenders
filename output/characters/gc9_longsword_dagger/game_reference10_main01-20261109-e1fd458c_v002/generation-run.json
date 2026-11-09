@@ -1,0 +1,491 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 2,
+  "issuedBuiltinCalls": 12,
+  "confirmedReturnedCalls": 12,
+  "selectedFinals": 10,
+  "preservedInitialCandidates": 2,
+  "selected": [
+    {
+      "id": "01_arknights",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "01_arknights/generation-input.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+          "nativeDimensions": [
+            1536,
+            1024
+          ],
+          "role": "OUR POSE/IDENTITY only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\arknights\\combat-inset-v2.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\arknights\\combat-inset-v2.png",
+          "sha256": "d73a403815accba026a3ef8070586b6f9f87f271eb030cf197ffcc028d83ee27",
+          "nativeDimensions": [
+            1360,
+            680
+          ],
+          "role": "GAME COMBAT RENDERING/PROPORTION only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "01_arknights/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-afd2df8c-5641-4ada-ae9e-455fa00dfa33.png",
+      "savedOutput": "01_arknights/character.png",
+      "savedSha256": "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1312,
+        1199
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "userAestheticApproval": false
+    },
+    {
+      "id": "02_azur_lane",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "02_azur_lane/generation-input.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+          "nativeDimensions": [
+            1536,
+            1024
+          ],
+          "role": "OUR POSE/IDENTITY only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\azur_lane\\combat-inset-v2.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\azur_lane\\combat-inset-v2.png",
+          "sha256": "026b2c179fbfdbf491831807948a156550c4d3467ed90fc2f4a8b4e1c3f65fdd",
+          "nativeDimensions": [
+            860,
+            540
+          ],
+          "role": "GAME COMBAT RENDERING/PROPORTION only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "02_azur_lane/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-74ad0155-1c82-4f33-846a-046a387da9ea.png",
+      "savedOutput": "02_azur_lane/character.png",
+      "savedSha256": "f9512cff31b11f94a22dad1fd2aed7c300797d79d5eb5a04180cb30d331b1ae2",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "userAestheticApproval": false
+    },
+    {
+      "id": "03_priconne",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "03_priconne/rework-input-01.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+          "nativeDimensions": [
+            1536,
+            1024
+          ],
+          "role": "OUR POSE/IDENTITY only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\priconne\\frame-000.1.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\priconne\\frame-000.1.png",
+          "sha256": "2960f70fc84738f5ec98a133150eb58fd12da7ccb559321c990d54634c9d131d",
+          "nativeDimensions": [
+            576,
+            324
+          ],
+          "role": "GAME COMBAT RENDERING/PROPORTION only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "03_priconne/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2872d759-8491-4f2b-8928-e987f246df8d.png",
+      "savedOutput": "03_priconne/character.png",
+      "savedSha256": "9a31e7627dcc153133481f24fe49a485f33c141a10b839441b9ed7054603ad44",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "userAestheticApproval": false
+    },
+    {
+      "id": "04_another_eden",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "04_another_eden/generation-input.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+          "nativeDimensions": [
+            1536,
+            1024
+          ],
+          "role": "OUR POSE/IDENTITY only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\another_eden\\store-shot-0.jpg",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\another_eden\\store-shot-0.jpg",
+          "sha256": "7e2c87dface33f3a1b68a3defa8d6abdbedbc06ba7b1e4f465c5b71af8075a16",
+          "nativeDimensions": [
+            1920,
+            1080
+          ],
+          "role": "GAME COMBAT RENDERING/PROPORTION only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "04_another_eden/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-92b3dbeb-fcb4-4517-94a6-6b480532702b.png",
+      "savedOutput": "04_another_eden/character.png",
+      "savedSha256": "ace368fd00617d2532f62eb68bb95faf6b6745fb5b291780d0b9c9c1468a0428",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "userAestheticApproval": false
+    },
+    {
+      "id": "05_reverse1999",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "05_reverse1999/generation-input.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+          "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+          "nativeDimensions": [
+            1217,
+            1292
+          ],
+          "role": "OUR POSE/IDENTITY only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\reverse1999\\extra-store-shot-5.jpg",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\reverse1999\\extra-store-shot-5.jpg",
+          "sha256": "3ca10da90e1a472425d22be63ee0077e473a5c937c35ac382a63c968e5ca5bea",
+          "nativeDimensions": [
+            1920,
+            1080
+          ],
+          "role": "GAME COMBAT RENDERING/PROPORTION only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "05_reverse1999/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-668dc5a1-0c7c-49b6-a3c6-737e15c362b2.png",
+      "savedOutput": "05_reverse1999/character.png",
+      "savedSha256": "88a029c493ff0a3d250b8b5a992e5730cd8065a60833fd93ed874b5a827f1863",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1182,
+        1330
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "userAestheticApproval": false
+    },
+    {
+      "id": "06_epic_seven",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "06_epic_seven/generation-input.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+          "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+          "nativeDimensions": [
+            1217,
+            1292
+          ],
+          "role": "OUR POSE/IDENTITY only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\epic_seven\\store-shot-1.jpg",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\epic_seven\\store-shot-1.jpg",
+          "sha256": "28e04384f6367d5875eb93607aa366db1a39bf053b66ad7a73f8f7ca3a1242cf",
+          "nativeDimensions": [
+            1920,
+            1080
+          ],
+          "role": "GAME COMBAT RENDERING/PROPORTION only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "06_epic_seven/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-5b3c8c95-82b2-478e-b83a-23c0cbaab41c.png",
+      "savedOutput": "06_epic_seven/character.png",
+      "savedSha256": "8aafd36222a81c15e06c228ceadf9bfd74a7e9265b939baf7edc542c75ce3e46",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1131,
+        1391
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "userAestheticApproval": false
+    },
+    {
+      "id": "07_counterside",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "07_counterside/generation-input.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+          "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+          "nativeDimensions": [
+            1217,
+            1292
+          ],
+          "role": "OUR POSE/IDENTITY only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\counterside\\store-shot-2.jpg",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\counterside\\store-shot-2.jpg",
+          "sha256": "599eb375fb8e54864125b386a3a5c293f209939d8a3f4ee757e9a46966eb539d",
+          "nativeDimensions": [
+            1920,
+            1080
+          ],
+          "role": "GAME COMBAT RENDERING/PROPORTION only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "07_counterside/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-359e6f86-5c9d-45df-98d2-ef7e7488db94.png",
+      "savedOutput": "07_counterside/character.png",
+      "savedSha256": "3b5bd458f6950a1a31c5c9c68a8649e7eee54314fc9e276e9ac8891f3da5cd20",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "userAestheticApproval": false
+    },
+    {
+      "id": "08_guardian_tales",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "08_guardian_tales/generation-input.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+          "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8",
+          "nativeDimensions": [
+            1536,
+            1024
+          ],
+          "role": "OUR POSE/IDENTITY only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\guardian_tales\\frame-022.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\guardian_tales\\frame-022.png",
+          "sha256": "08161543aa2918d9414080e5a2d7ac8b5caffca38c63d3eea9c51be2fbb00fcf",
+          "nativeDimensions": [
+            960,
+            540
+          ],
+          "role": "GAME COMBAT RENDERING/PROPORTION only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\guardian_tales\\frame-003.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\guardian_tales\\frame-003.png",
+          "sha256": "b47d7e2b58370867770ab2e6ed7b81a156490362a662925da621ea6e2324c987",
+          "nativeDimensions": [
+            960,
+            540
+          ],
+          "role": "auxiliary in-game pixel sprite visibility only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "08_guardian_tales/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-7b944332-88ec-42a8-bd14-206141ca3ccf.png",
+      "savedOutput": "08_guardian_tales/character.png",
+      "savedSha256": "ac66fc0e3f67b2d534a6db635210d87defd55080db948608ce5f031bc387e29b",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1312,
+        1199
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "userAestheticApproval": false
+    },
+    {
+      "id": "09_dfo",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "09_dfo/rework-input-01.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/game_reference10_main01-20261109-e1fd458c_v002/09_dfo/character.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\09_dfo\\candidates\\initial.png",
+          "sha256": "23611d46910be13158efd2e47d47111bd6328befebd37487fb58f33c7d81ced0",
+          "nativeDimensions": [
+            1030,
+            1527
+          ],
+          "role": "edit target pixel candidate; preserve rendering/body"
+        },
+        {
+          "usedPathAtCall": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/combat_ready_right045_illustration_proportions_v02/combat-ready-illustration-proportions.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+          "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+          "nativeDimensions": [
+            1217,
+            1292
+          ],
+          "role": "OUR B head-yaw authority only"
+        },
+        {
+          "usedPathAtCall": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/game_reference10_main01-20261109-e1fd458c_v002/references/dfo/us-store-shot-3.jpg",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\dfo\\us-store-shot-3.jpg",
+          "sha256": "07b99bfded87720bd14313edb85b0bd0f6825a105acccd6ded91126a62fbcf26",
+          "nativeDimensions": [
+            1200,
+            675
+          ],
+          "role": "GAME COMBAT rendering/proportions only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "09_dfo/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-4e89e053-c4a6-4246-be2c-da060914fef8.png",
+      "savedOutput": "09_dfo/character.png",
+      "savedSha256": "73360d5954a723ba70323557db37f2947b23bd8be679622ed051fd37724e4579",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1030,
+        1527
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "userAestheticApproval": false
+    },
+    {
+      "id": "10_odin_sphere",
+      "status": "returned_selected_for_review",
+      "tool": "builtin image_gen.imagegen",
+      "promptFile": "10_odin_sphere/generation-input.json",
+      "inputs": [
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+          "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d",
+          "nativeDimensions": [
+            1217,
+            1292
+          ],
+          "role": "OUR POSE/IDENTITY only"
+        },
+        {
+          "usedPathAtCall": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\odin_sphere\\official-osl1.jpg",
+          "preservedInput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\references\\odin_sphere\\official-osl1.jpg",
+          "sha256": "7c6d41f05b00f5e445b64b00f4a01bbf2fb3ef57fc195378da5b329c391daaa7",
+          "nativeDimensions": [
+            1920,
+            1080
+          ],
+          "role": "GAME COMBAT RENDERING/PROPORTION only"
+        }
+      ],
+      "settings": {
+        "transparent_background": true,
+        "imageModel": "tool managed; no paid fallback or text-model substitution"
+      },
+      "resultFile": "10_odin_sphere/generation-result.json",
+      "rawOutput": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-44905e9a-8f85-450e-8235-c0ca268c08ad.png",
+      "savedOutput": "10_odin_sphere/character.png",
+      "savedSha256": "4f59c7713b7c98860d878388b03365b322346621fe6eb0f99cc87d216d87ceaa",
+      "rawBytesIdentical": true,
+      "nativeDimensions": [
+        1199,
+        1312
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "userAestheticApproval": false
+    }
+  ],
+  "oldIterationCalls": "excluded; previous pending jobs not assumed stopped or reused"
+}

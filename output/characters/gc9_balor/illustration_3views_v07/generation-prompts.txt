@@ -1,0 +1,41 @@
+=== right.prompt.txt ===
+Use case: precise-object-edit.
+Make a strict local edit of image 1: ONLY change the shield's carrying ANGLE. Preserve every other visible part of this exact Balor illustration.
+
+Image 1 is the edit target. Image 2 is the user's anatomical guide: RED marks = REVERSE-SIDE hand grip and forearm cuff; BLUE diagonal = forearm; YELLOW circle = gripping hand. The hand is at the upper end of the diagonal forearm and the arm cuff supports the forearm farther toward the elbow. The guide marks are explanatory only; never copy any red, blue or yellow mark into the final art.
+Use these axes to orient the SHIELD around the existing left-hand contact. Turn/tilt the entire rigid shield so its reverse grip and cuff meet the current hand and forearm naturally, instead of leaving a vertical board that appears independently pasted on. Rotate the whole silver kite shape, rim, bevel, engraving and black wing/cross design together; do not rotate just its emblem. Retain the identical physical shield size and design. Keep it anatomically LEFT, sword RIGHT. Project the same physical shield adjustment into the specified camera; do not paste the guide's front-view diagonal directly into every view.
+
+LOCK ALL NON-SHIELD PARTS: do not move or redraw the arms, hands, fingers, wrists, shoulders, stance, feet, body, head, face, hair, armor, cape, sword or sword grip. This user explicitly requests SHIELD ANGLE ONLY, not a changed holding pose. The existing palm-facing right-hand sword grip must stay exactly as the target. Do not add a new pose, rework the face, reveal a hand on the shield's decorated front, or enlarge/shrink any equipment. Existing left forearm and grip are the fixed anchor; adapt only the shield orientation and the shield-mounted attachment perspective. Retain natural occlusion without inventing extra hands.
+
+Same GC9 polished 2D linework, restrained face shading and blue/silver metal surfaces as image 1. Same native 1024 x 1536 portrait framing, body/head scale and placement. Complete equipment contours inside the canvas. Actual transparent alpha beyond character/equipment; no background or halo, colored guides, text, inset or additional view.
+CAMERA: true RIGHT orthographic profile, knight facing SCREEN RIGHT, exactly as image 1. Shield stays on far anatomical LEFT arm beyond the torso, with correct narrow/foreshortened surface. Adjust its tilt in depth and silhouette coherently with the angled grip guide; do not keep the former straight vertical panel. Do not turn the man toward camera or show a front-facing shield just to display the emblem. The near right arm, sword and profile face must remain unchanged.
+
+
+=== back.prompt.txt ===
+Use case: precise-object-edit.
+Make a strict local edit of image 1: ONLY change the shield's carrying ANGLE. Preserve every other visible part of this exact Balor illustration.
+
+Image 1 is the edit target. Image 2 is the user's anatomical guide: RED marks = REVERSE-SIDE hand grip and forearm cuff; BLUE diagonal = forearm; YELLOW circle = gripping hand. The hand is at the upper end of the diagonal forearm and the arm cuff supports the forearm farther toward the elbow. The guide marks are explanatory only; never copy any red, blue or yellow mark into the final art.
+Use these axes to orient the SHIELD around the existing left-hand contact. Turn/tilt the entire rigid shield so its reverse grip and cuff meet the current hand and forearm naturally, instead of leaving a vertical board that appears independently pasted on. Rotate the whole silver kite shape, rim, bevel, engraving and black wing/cross design together; do not rotate just its emblem. Retain the identical physical shield size and design. Keep it anatomically LEFT, sword RIGHT. Project the same physical shield adjustment into the specified camera; do not paste the guide's front-view diagonal directly into every view.
+
+LOCK ALL NON-SHIELD PARTS: do not move or redraw the arms, hands, fingers, wrists, shoulders, stance, feet, body, head, face, hair, armor, cape, sword or sword grip. This user explicitly requests SHIELD ANGLE ONLY, not a changed holding pose. The existing palm-facing right-hand sword grip must stay exactly as the target. Do not add a new pose, rework the face, reveal a hand on the shield's decorated front, or enlarge/shrink any equipment. Existing left forearm and grip are the fixed anchor; adapt only the shield orientation and the shield-mounted attachment perspective. Retain natural occlusion without inventing extra hands.
+
+Same GC9 polished 2D linework, restrained face shading and blue/silver metal surfaces as image 1. Same native 1024 x 1536 portrait framing, body/head scale and placement. Complete equipment contours inside the canvas. Actual transparent alpha beyond character/equipment; no background or halo, colored guides, text, inset or additional view.
+CAMERA: exact BACK view, same as image 1. Shield remains on VIEWER LEFT and only its plain inner metal face, existing reverse fittings and rim are visible. Re-angle its plane and long axis relative to the fixed left forearm/hand to agree with the guide. The shield-mounted cuff and grip rotate rigidly with the shield and stay in real contact with the existing forearm and glove. Do not move the left hand or bend/raise the elbow to solve the correction. Keep the right sword hand's dark navy palm facing camera. Preserve exact blue cape, dragon designs and occlusion.
+
+
+=== right_alpha_cleanup.prompt.txt ===
+Use case: background-extraction.
+The supplied image is the APPROVED SHIELD-ANGLE EDIT TARGET, not a style reference. Do not repaint or move the knight or equipment. Keep the exact face, hair, body, arms, hands, fingers, sword grip, sword, armor, cape AND CURRENT SHIELD ANGLE unchanged.
+ONLY remove background remnants. The output had opaque BLACK BLOCKY CORNER AREAS and a gray/smoky halo outside the subject when placed on a WHITE background. These corner blobs and halos are defects, not part of the character. Remove all of them completely.
+Produce the same single RIGHT PROFILE facing screen right full-body knight on genuinely transparent alpha. EVERY pixel outside the clean solid character/equipment contours must have alpha=0, including all four corners, all outer margins, gaps outside the cape, and empty space around the shield and sword. Do not paint black, white, checkerboard or a shadow into the background. Keep natural antialiased cutout edges only immediately along character contours. The silver shield and gray armor are solid subject material and must not be erased.
+Maintain exact 1024x1536 canvas, same placement, same body/head scale. No change to shield orientation or pose, no other edits, no new marks or decoration.
+
+
+=== back_alpha_cleanup.prompt.txt ===
+Use case: background-extraction.
+The supplied image is the APPROVED SHIELD-ANGLE EDIT TARGET, not a style reference. Do not repaint or move the knight or equipment. Keep the exact face, hair, body, arms, hands, fingers, sword grip, sword, armor, cape AND CURRENT SHIELD ANGLE unchanged.
+ONLY remove background remnants. The output had opaque BLACK BLOCKY CORNER AREAS and a gray/smoky halo outside the subject when placed on a WHITE background. These corner blobs and halos are defects, not part of the character. Remove all of them completely.
+Produce the same single BACK VIEW full-body knight on genuinely transparent alpha. EVERY pixel outside the clean solid character/equipment contours must have alpha=0, including all four corners, all outer margins, gaps outside the cape, and empty space around the shield and sword. Do not paint black, white, checkerboard or a shadow into the background. Keep natural antialiased cutout edges only immediately along character contours. The silver shield and gray armor are solid subject material and must not be erased.
+Maintain exact 1024x1536 canvas, same placement, same body/head scale. No change to shield orientation or pose, no other edits, no new marks or decoration.
+

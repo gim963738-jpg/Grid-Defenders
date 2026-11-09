@@ -1,0 +1,67 @@
+{
+  "character": "발로르",
+  "profile_id": "balor",
+  "stage": "sd_concept",
+  "status": "discarded_by_user",
+  "art_source": "host_image",
+  "tool": "built-in image_gen",
+  "style": "사용자 SD 참조 3종 · 픽셀풍 시안",
+  "concept_view": "front_right",
+  "camera_elevation_degrees": [
+    20,
+    25
+  ],
+  "requested_concept_count": 1,
+  "post_generation_resampled": false,
+  "model": null,
+  "estimateUsd": null,
+  "validation_retry": {
+    "rejected_reference_count": 6,
+    "maximum_reference_paths": 5,
+    "resolution": "중복된 전체 그립 참고를 제외하고 발로르 원본·SD 견본 3장·손가락 표시 가이드 사용"
+  },
+  "calls": [
+    {
+      "id": "sd_style_concept_initial",
+      "prompt_file": "output/characters/gc9_balor/sd_style_test_v01/concept.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v05/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/sd_style_test_v01/inputs/sd_style_reference_02.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/sd_style_test_v01/inputs/sd_style_reference_03.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/sd_style_test_v01/inputs/sd_style_reference_01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "output": "output/characters/gc9_balor/sd_style_test_v01/variants/concept_shield_initial_v01.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-3e68dbc7-7f56-4c80-89d3-3c7d518be128.png",
+      "started_at": "2026-11-07T14:13:59.760Z",
+      "finished_at": "2026-11-07T14:14:46.990Z",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "34a5955f41e7d33b3c4e0d2156508e5d5750aab6e6a96c03cd2531c3615e68fc",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "sd_style_concept_large_shield",
+      "prompt_file": "output/characters/gc9_balor/sd_style_test_v01/shield_fix.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/sd_style_test_v01/variants/concept_shield_initial_v01.png"
+      ],
+      "output": "output/characters/gc9_balor/sd_style_test_v01/concept_front_right_v01.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-07376088-883d-4497-ab22-7a3df34b07a7.png",
+      "started_at": "2026-11-07T14:16:35.217Z",
+      "finished_at": "2026-11-07T14:17:12.900Z",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "b24d769875ce2ec6be8e1b7dd84f8e1656c48cda51bea7131fde387a83bb74a2",
+      "copy_matches_generated_original": true
+    }
+  ],
+  "final_output": "output/characters/gc9_balor/sd_style_test_v01/concept_front_right_v01.png",
+  "user_approval": false,
+  "followup_views_generated": 0,
+  "user_decision": {
+    "date": "2026-11-08",
+    "decision": "new_SD_discarded",
+    "future_reference_allowed": false
+  }
+}
