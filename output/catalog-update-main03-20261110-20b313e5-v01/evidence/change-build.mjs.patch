@@ -1,0 +1,84 @@
+--- before/tools/character-catalog/build.mjs
++++ after/tools/character-catalog/build.mjs
+@@ -9,11 +9,15 @@
+ const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8').replace(/^\uFEFF/,''));
+ const sdStandard=read('자료/캐릭터설정/SD_공통제작기준.json');
+ const stylePolicy=read('자료/캐릭터그림체/GC9/작화고정기준.json');
++// Explicitly reviewed external assets; never scan or copy another workspace's images.
++const supplementPath='output/characters/catalog/approved-splash-assets.json';
++const supplement=fs.existsSync(path.join(root,supplementPath))?read(supplementPath):{assets:[],profiles:[],source_groups:[]};
+ if(!process.argv.includes('--skip-scan')){
+  const scan=path.join(root,'tools/character-catalog/scan-images.ps1').replaceAll("'","''");
+  process.stdout.write(execFileSync('powershell.exe',['-NoProfile','-Command',`& ([scriptblock]::Create([IO.File]::ReadAllText('${scan}',[Text.Encoding]::UTF8)))`],{cwd:root,encoding:'utf8',maxBuffer:1024*1024}));
+ }
+-const metadata=read('output/characters/catalog/image-metadata.json');
++const metadata=[...new Map([...read('output/characters/catalog/image-metadata.json'),...supplement.assets.map(a=>a.metadata)].map(a=>[a.path,a])).values()];
++const supplementalByPath=new Map(supplement.assets.map(a=>[a.metadata.path,a.classification]));
+ const legacy=read('output/characters/catalog/legacy-items.json');
+ const oldByPath=new Map(legacy.map(([type,title,description,url])=>[path.posix.normalize(`${galleryFolder}/${url}`),{type,title,description}]));
+ const sourceGroups=[
+@@ -38,9 +42,10 @@
+  ['handGripReferences','한손 무기 그립 기준','사용자 확정 기준','그립 참조',18],
+  ['sdHeightGuide','SD 키 기준 표시','사용자 확정 기준','SD 키 안내',19],
+  ['windElfGC9','금발 바람 엘프 · GC9 재제작','이번 브랜치','GC9',20]
+-].map(([id,label,origin,style,order])=>({id,label,origin,style,order}));
++,...supplement.source_groups].map(([id,label,origin,style,order])=>({id,label,origin,style,order}));
+ const sourceGroupMap=new Map(sourceGroups.map(c=>[c.id,c]));
+ const gc9Groups=new Set(['gc9six','adventurer4','test2x4','ponytail4','longswordDagger','centralLightArchmage','balor','windElfGC9']);
++for(const [id,,,style] of supplement.source_groups)if(style==='GC9')gc9Groups.add(id);
+ const blondWarriorGroups=new Set(['longswordDagger','longswordDaggerPixel','videoWalk60']);
+ const collections=[
+  ['newCharacters','신규 캐릭터','신규 제작','일러스트·SD',-1],
+@@ -62,6 +67,7 @@
+  c01:'C1 은발 검·방패',c02:'C2 흰 단발·별자리 망토',c03:'C3 청록·금속 활',c04:'C4 은발 포니테일·은빛 활',c05:'C5 청색 망토·투구 기사',c06:'C6 금발·흰 판금',
+  char001:'캐릭터 char001',char002:'검객 char002',char003:'주인공 char003',silver_archer:'은발 궁수',teal_elf_archer:'청록 엘프 궁수',blonde_wind_elf:'금발 바람 엘프',red_ponytail:'붉은 포니테일 전사',healer:'금발 힐러',burgundy:'버건디 머리 여검사',blonde_mage:'금발 마법사',silver_mage:'은발 보랏빛 마법사',blue_warrior:'청발 갑옷 전사',lion_knight:'청사자 갑옷 기사',original8:'원본 화풍 8종',gc9refs:'GC9 그림체 참조',sp13refs:'스플래시 배경 참조'
+ };
++for(const profile of supplement.profiles)charNames[profile.id]=profile.display_name;
+ const direction=p=>{
+  if(/threequarter/.test(p))return 'front_right';
+  if(/open_arms/.test(p))return 'open_arms';
+@@ -78,7 +84,9 @@
+  const p=m.path,stem=path.posix.basename(p,path.posix.extname(p));
+  const old=oldByPath.get(p);
+  let x={...m,title:old?.title||stem,description:old?.description||'',role:'created',status:'current',view:direction(p),version:Number(stem.match(/_v(\d+)/)?.[1]||1),legacy_type:old?.type||null,review_note:'',links:[]};
+- if(p.startsWith('output/characters/')){
++ if(supplementalByPath.has(p)){
++  Object.assign(x,structuredClone(supplementalByPath.get(p)));
++ } else if(p.startsWith('output/characters/')){
+   if(p.startsWith('output/characters/gc9_balor/')){
+    const brief=read('output/characters/gc9_balor/character-brief.json');
+    const sd=p.includes('/sd_style_test_'),sdFolder=sd?p.split('/inputs/')[0].split('/variants/')[0].replace(/\/[^/]+\.png$/,''):null;
+@@ -298,7 +306,7 @@
+  if(x.role==='created'&&blondWarriorGroups.has(x.source_group)){
+   x.collection='blondWarrior';x.search_tags=['금발전사','금발 전사'];
+   x.display_order=x.source_group==='longswordDaggerPixel'?x.angle/45:x.source_group==='longswordDagger'?8:9;
+- } else if(x.source_group==='balor')x.collection=x.role==='created'?'newCharacters':'attachments';
++ } else if(x.source_group==='balor'||x.source_group==='splashApproved')x.collection=x.role==='created'?'newCharacters':'attachments';
+  else if(!['staff8','gc9refs','sp13refs'].includes(x.source_group))x.collection=x.role==='reference'?'attachments':x.gc9_applied?'gc9Final':'testProcess';
+  x.url=path.posix.relative(galleryFolder,p);x.links=x.links.map(l=>({...l,url:path.posix.relative(galleryFolder,l.path)}));
+  return x;
+@@ -313,6 +321,14 @@
+  const primary=list[0];return {...primary,id:'img_'+primary.sha256.slice(0,16),links:[...new Map(list.flatMap(r=>r.links).map(l=>[l.path,l])).values()],collections:[...new Set(list.map(r=>r.collection))],characters:[...new Set(list.map(r=>r.character))],aliases:list.map(r=>({path:r.path,url:r.url,collection:r.collection,source_group:r.source_group,character:r.character,role:r.role,status:r.status,title:r.title})),duplicate_count:list.length-1};
+ }).sort((a,b)=>collectionMap.get(a.collection).order-collectionMap.get(b.collection).order||a.character.localeCompare(b.character)||rank[a.status]-rank[b.status]||(a.display_order||0)-(b.display_order||0)||a.path.localeCompare(b.path));
+ const registry=read('자료/캐릭터설정/캐릭터목록.json');
++for(const extra of supplement.profiles){
++ if(registry.profiles.some(p=>p.id===extra.id))throw Error('Duplicate supplemental profile '+extra.id);
++ registry.profiles.push(extra);
++}
++for(const [id,patch] of Object.entries(supplement.profile_updates||{})){
++ const profile=registry.profiles.find(p=>p.id===id);if(!profile)throw Error('Missing supplemental update profile '+id);
++ Object.assign(profile,patch);
++}
+ const production=read('자료/캐릭터설정/제작순서.json');
+ if(production.sd.standard_id!==sdStandard.id)throw Error('SD production/standard ID mismatch');
+ if(sdStandard.reference.native_framing_is_delivery_template!==false||!sdStandard.generation.framing_canvas)throw Error('Separate native SD references from delivery framing');
+@@ -346,6 +362,9 @@
+ };
+ for(const [p] of oldByPath)if(!rows.some(r=>r.path===p))throw Error('Legacy gallery image lost: '+p);
+ for(const a of assets){if(!fs.existsSync(path.join(root,a.path)))throw Error('Missing image '+a.path);for(const l of a.links)if(!fs.existsSync(path.join(root,l.path)))throw Error('Missing linked document '+l.path);}
++fs.writeFileSync(path.join(out,'image-metadata.json'),JSON.stringify(metadata,null,2)+'\n');
++catalog.organized_on=supplement.updated_on||catalog.organized_on;
++catalog.approval_supplement={task:supplement.task||null,source:supplementPath,note:'사용자 일단합격은 기술검수·공통스타일마스터 승인과 구분한다.'};
+ fs.writeFileSync(path.join(out,'catalog.json'),JSON.stringify(catalog,null,2)+'\n');
+ const template=fs.readFileSync(path.join(root,'tools/character-catalog/gallery.template.html'),'utf8');
+ if(!template.includes('__CATALOG_DATA__'))throw Error('Template placeholder missing');

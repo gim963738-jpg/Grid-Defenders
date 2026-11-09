@@ -1,0 +1,60 @@
+{
+  "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-gc9-retry-20261109-v01\\front.png",
+  "bytes": 1619428,
+  "sha256": "6675a0243f67018af29eaeea1af43f7ccf6e0d9ab96ef3d8f3be830d6afd96d9",
+  "width": 1024,
+  "height": 1536,
+  "mode": "RGBA",
+  "source_copy_matches": true,
+  "alpha": {
+    "zero": 1056394,
+    "partial": 516470,
+    "opaque": 0,
+    "extrema": [
+      0,
+      254
+    ]
+  },
+  "bounds_by_alpha": {
+    "1": [
+      0,
+      115,
+      980,
+      1455
+    ],
+    "32": [
+      138,
+      301,
+      875,
+      1431
+    ],
+    "128": [
+      138,
+      302,
+      875,
+      1430
+    ],
+    "254": [
+      145,
+      320,
+      861,
+      1423
+    ]
+  },
+  "margins_alpha32": {
+    "top": 0.19596354166666666,
+    "left": 0.134765625,
+    "right": 0.1455078125,
+    "bottom": 0.068359375
+  },
+  "safe_area_pass": false,
+  "outer_edge_alpha_max": 1,
+  "manual_shield_estimate": {
+    "crown_y": 302,
+    "sole_y": 1431,
+    "shield_top_y": 542,
+    "shield_bottom_y": 1271,
+    "ratio": 0.645704162976085,
+    "basis": "visible image coordinates; manual approximate; target ~0.667"
+  }
+}

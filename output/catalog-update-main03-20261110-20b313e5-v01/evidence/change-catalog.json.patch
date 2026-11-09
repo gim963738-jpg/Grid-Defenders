@@ -1,0 +1,1048 @@
+--- before/output/characters/catalog/catalog.json
++++ after/output/characters/catalog/catalog.json
+@@ -1,9 +1,9 @@
+ {
+   "schema_version": 3,
+   "title": "캐릭터 제작 모음",
+-  "organized_on": "2026-11-07",
+-  "source_image_paths": 250,
+-  "unique_images": 243,
++  "organized_on": "2026-11-10",
++  "source_image_paths": 257,
++  "unique_images": 250,
+   "duplicate_paths": 7,
+   "legacy_items": 83,
+   "continents": [
+@@ -648,8 +648,8 @@
+       "origin_basis": "사용자 지정 서대륙",
+       "affiliation_basis": "서대륙 맥락의 친왕파·왕국 제3 기사단장 사용자 설정",
+       "placement_status": "assigned",
+-      "production_state": "gc9_style_rejected_generation_stopped",
+-      "illustration_concept_approved": false,
++      "production_state": "illustration_v02_provisionally_accepted_sd_reviews_separate",
++      "illustration_concept_approved": true,
+       "sd_concept_approved": true,
+       "illustration_final_views": [
+         "front",
+@@ -661,7 +661,7 @@
+       "main_variant": "unhelmeted",
+       "hand_grip_preset": "one_hand_grip_v1",
+       "grip_revision_approved": true,
+-      "illustration_revision": 10,
++      "illustration_revision": 2,
+       "shield_height_fraction": [
+         2,
+         3
+@@ -673,18 +673,64 @@
+       "sd_style_approved": true,
+       "sd_scale_alignment_pending": true,
+       "sd_standard_id": "sd_silver_staff_standard_v1",
+-      "illustration_current_views": [],
++      "illustration_current_views": [
++        "front"
++      ],
+       "illustration_previous_complete_set_revision": 5,
+       "gc9_framing_standard_id": "gc9_spacious_canvas_v1",
+-      "illustration_latest_revision_approved": false,
+-      "illustration_view_revisions": {},
+-      "illustration_concept_view": "front_right",
++      "illustration_latest_revision_approved": true,
++      "illustration_view_revisions": {
++        "front": "splash_retry_v02"
++      },
++      "illustration_concept_view": "front",
+       "illustration_concept_revision": 10,
+       "previous_illustration_concept_approved": true,
+       "illustration_style_revision_approved": false,
+       "illustration_comparison_views": [],
+-      "illustration_style_status": "rejected_by_user",
+-      "style_profile": "c6_male"
++      "illustration_style_status": "provisionally_accepted_by_user",
++      "style_profile": "c6_male",
++      "approval_quote": "수정후 버전으로 선택 했고 일단 합격처리",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-21F94B82/사용자합격-v002.md",
++      "historical_illustration_style_status": "rejected_by_user",
++      "sd_latest_review_note": "발로르 SD3종 불합격·대기; 신규SD마스터 별도미검토; 기존SD선택이력과 구분"
++    },
++    {
++      "id": "splash_n01",
++      "name": "N01",
++      "display_name": "N01 · 신규 남성",
++      "features": "검은 머리·보라 눈·검은 겹옷의 신규 남성",
++      "origin_id": "unassigned",
++      "affiliation_ids": [],
++      "class_id": "unassigned",
++      "profession": null,
++      "weapons": [],
++      "attack_disciplines": [],
++      "placement_status": "unassigned",
++      "class_basis": "사용자 미지정; 외형으로 직업추정하지 않음",
++      "production_state": "illustration_provisionally_accepted",
++      "illustration_concept_approved": true,
++      "approval_quote": "신규남녀 일단 합격",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++      "style_master_approved": false
++    },
++    {
++      "id": "splash_n02",
++      "name": "N02",
++      "display_name": "N02 · 신규 여성",
++      "features": "옅은 분홍 머리·붉은 눈·분홍 드레스·소품을 지닌 신규 여성",
++      "origin_id": "unassigned",
++      "affiliation_ids": [],
++      "class_id": "unassigned",
++      "profession": null,
++      "weapons": [],
++      "attack_disciplines": [],
++      "placement_status": "unassigned",
++      "class_basis": "사용자 미지정; 외형으로 직업추정하지 않음",
++      "production_state": "illustration_provisionally_accepted",
++      "illustration_concept_approved": true,
++      "approval_quote": "신규남녀 일단 합격",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++      "style_master_approved": false
+     }
+   ],
+   "production": {
+@@ -1321,6 +1367,13 @@
+       "origin": "이번 브랜치",
+       "style": "GC9",
+       "order": 20
++    },
++    {
++      "id": "splashApproved",
++      "label": "신규 남녀 · 합격 일러스트3방향",
++      "origin": "splash 원본 연결",
++      "style": "GC9",
++      "order": 21
+     }
+   ],
+   "category_rules": {
+@@ -1347,7 +1400,8 @@
+       "longswordDagger",
+       "centralLightArchmage",
+       "balor",
+-      "windElfGC9"
++      "windElfGC9",
++      "splashApproved"
+     ]
+   },
+   "view_labels": {
+@@ -1490,15 +1544,23 @@
+     {
+       "id": "sp13refs",
+       "label": "스플래시 배경 참조"
++    },
++    {
++      "id": "splash_n01",
++      "label": "N01 · 신규 남성"
++    },
++    {
++      "id": "splash_n02",
++      "label": "N02 · 신규 여성"
+     }
+   ],
+   "counts": {
+-    "current": 87,
++    "current": 94,
+     "history": 77,
+     "reference": 79
+   },
+   "collection_counts": {
+-    "newCharacters": 38,
++    "newCharacters": 45,
+     "staff8": 12,
+     "blondWarrior": 10,
+     "gc9Final": 35,
+@@ -1508,6 +1570,140 @@
+     "sp13refs": 13
+   },
+   "assets": [
++    {
++      "path": "../스플래시-아트/output/balor-gc9-retry-20261109-v02/front.png",
++      "sha256": "061f23cc26b1f023918288446f9ac025de99bcf32550fb9be3e9850850f496fe",
++      "width": 1024,
++      "height": 1536,
++      "transparentBackground": true,
++      "alphaChannel": true,
++      "bytes": 1645282,
++      "title": "발로르 · 선택 일러스트 v02 · 정면 · 일단 합격",
++      "description": "사용자 선택·일단 합격된 GC9 일러스트; 원본파일·제작출처 보존",
++      "role": "created",
++      "status": "current",
++      "view": "front",
++      "version": 2,
++      "legacy_type": null,
++      "review_note": "수정후 버전 선택 · 일단 합격 · 여백/저알파 기술미달 잔여 · 어깨 갑주 노출/측면 사자 전신",
++      "links": [
++        {
++          "label": "사용자 일단합격 근거",
++          "path": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-21F94B82/사용자합격-v002.md",
++          "url": "../../../../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-21F94B82/사용자합격-v002.md"
++        },
++        {
++          "label": "제작 비교·검수",
++          "path": "../스플래시-아트/output/balor-gc9-retry-20261109-v02/index.html",
++          "url": "../../../../스플래시-아트/output/balor-gc9-retry-20261109-v02/index.html"
++        },
++        {
++          "label": "제작 기준",
++          "path": "../스플래시-아트/output/balor-gc9-retry-20261109-v02/제작기준.md",
++          "url": "../../../../스플래시-아트/output/balor-gc9-retry-20261109-v02/제작기준.md"
++        },
++        {
++          "label": "검수 결과",
++          "path": "../스플래시-아트/output/balor-gc9-retry-20261109-v02/검수결과.md",
++          "url": "../../../../스플래시-아트/output/balor-gc9-retry-20261109-v02/검수결과.md"
++        },
++        {
++          "label": "생성 기록",
++          "path": "../스플래시-아트/output/balor-gc9-retry-20261109-v02/generation-record.json",
++          "url": "../../../../스플래시-아트/output/balor-gc9-retry-20261109-v02/generation-record.json"
++        }
++      ],
++      "collection": "newCharacters",
++      "character": "balor",
++      "angle": 0,
++      "display_order": 0,
++      "artifact_stage": "concept",
++      "series": "balor:accepted_illustration:front",
++      "approval_state": "provisionally_accepted_by_user",
++      "approval_quote": "수정후 버전으로 선택 했고 일단 합격처리",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-21F94B82/사용자합격-v002.md",
++      "style_validation_status": "provisionally_accepted_by_user",
++      "decision_status": "selected_illustration",
++      "future_reference_allowed": false,
++      "common_style_master_approved": false,
++      "gc9_applied": true,
++      "helmet_state": "off",
++      "search_tags": [
++        "일러스트",
++        "일단 합격",
++        "선택본",
++        "BALOR",
++        "정면"
++      ],
++      "technical_review_status": "safe_area_and_low_alpha_residue",
++      "source_filename": "front.png",
++      "source_task": "MAIN03-20261109-21F94B82",
++      "source_iteration": 2,
++      "character_label": "발로르",
++      "view_label": "정면",
++      "origin": "신규 제작",
++      "style": "GC9",
++      "source_group": "balor",
++      "source_group_label": "발로르 · 왕국 제3 기사단장",
++      "url": "../../../../스플래시-아트/output/balor-gc9-retry-20261109-v02/front.png",
++      "id": "img_061f23cc26b1f023",
++      "collections": [
++        "newCharacters"
++      ],
++      "characters": [
++        "balor"
++      ],
++      "aliases": [
++        {
++          "path": "../스플래시-아트/output/balor-gc9-retry-20261109-v02/front.png",
++          "url": "../../../../스플래시-아트/output/balor-gc9-retry-20261109-v02/front.png",
++          "collection": "newCharacters",
++          "source_group": "balor",
++          "character": "balor",
++          "role": "created",
++          "status": "current",
++          "title": "발로르 · 선택 일러스트 v02 · 정면 · 일단 합격"
++        }
++      ],
++      "duplicate_count": 0,
++      "profile_id": "balor",
++      "origin_id": "west",
++      "class_id": "knight",
++      "profile_tags": [
++        {
++          "kind": "affiliation",
++          "label": "발트레인 왕국"
++        },
++        {
++          "kind": "affiliation",
++          "label": "발트레인 왕국 친왕파"
++        },
++        {
++          "kind": "class",
++          "label": "기사"
++        },
++        {
++          "kind": "profession",
++          "label": "왕국 제3 기사단장"
++        },
++        {
++          "kind": "weapon",
++          "label": "양날검"
++        },
++        {
++          "kind": "weapon",
++          "label": "카이트실드"
++        },
++        {
++          "kind": "discipline",
++          "label": "제국 검술"
++        },
++        {
++          "kind": "discipline",
++          "label": "방패술"
++        }
++      ]
++    },
+     {
+       "path": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/existing_sd_front.png",
+       "sha256": "8457d9b0caa070bf814ab38a0bb9e288c8f89204364f18e61500b39a878b161a",
+@@ -6666,6 +6862,738 @@
+         {
+           "kind": "discipline",
+           "label": "방패술"
++        }
++      ]
++    },
++    {
++      "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_front.png",
++      "sha256": "af62a75158f82e592a5576cdc72f04e863ac7795bc8b78c731d2488927721dfa",
++      "width": 1024,
++      "height": 1536,
++      "transparentBackground": false,
++      "alphaChannel": false,
++      "bytes": 1210998,
++      "title": "N01 · 신규 남성 · 정면 · 일단 합격",
++      "description": "사용자 선택·일단 합격된 GC9 일러스트; 원본파일·제작출처 보존",
++      "role": "created",
++      "status": "current",
++      "view": "front",
++      "version": 1,
++      "legacy_type": null,
++      "review_note": "신규남녀 일단 합격 · 이름·출신·소속·직업 미지정 · 원본 3방향 일러스트",
++      "links": [
++        {
++          "label": "사용자 일단합격 근거",
++          "path": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++          "url": "../../../../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md"
++        },
++        {
++          "label": "제작 비교·검수",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/index.html",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/index.html"
++        },
++        {
++          "label": "제작 기준",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md"
++        },
++        {
++          "label": "검수 결과",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md"
++        },
++        {
++          "label": "생성 기록",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json"
++        }
++      ],
++      "collection": "newCharacters",
++      "character": "splash_n01",
++      "angle": 0,
++      "display_order": 0,
++      "artifact_stage": "direction_set",
++      "series": "splash_n01:accepted_illustration:front",
++      "approval_state": "provisionally_accepted_by_user",
++      "approval_quote": "신규남녀 일단 합격",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++      "style_validation_status": "provisionally_accepted_by_user",
++      "decision_status": "selected_illustration",
++      "future_reference_allowed": false,
++      "common_style_master_approved": false,
++      "gc9_applied": true,
++      "helmet_state": null,
++      "search_tags": [
++        "일러스트",
++        "일단 합격",
++        "선택본",
++        "N01",
++        "정면"
++      ],
++      "technical_review_status": "production_checks_completed",
++      "source_filename": "n01_front.png",
++      "source_task": "MAIN03-20261109-5F7D5052",
++      "source_iteration": 1,
++      "character_label": "N01 · 신규 남성",
++      "view_label": "정면",
++      "origin": "splash 원본 연결",
++      "style": "GC9",
++      "source_group": "splashApproved",
++      "source_group_label": "신규 남녀 · 합격 일러스트3방향",
++      "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_front.png",
++      "id": "img_af62a75158f82e59",
++      "collections": [
++        "newCharacters"
++      ],
++      "characters": [
++        "splash_n01"
++      ],
++      "aliases": [
++        {
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_front.png",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_front.png",
++          "collection": "newCharacters",
++          "source_group": "splashApproved",
++          "character": "splash_n01",
++          "role": "created",
++          "status": "current",
++          "title": "N01 · 신규 남성 · 정면 · 일단 합격"
++        }
++      ],
++      "duplicate_count": 0,
++      "profile_id": "splash_n01",
++      "origin_id": "unassigned",
++      "class_id": "unassigned",
++      "profile_tags": [
++        {
++          "kind": "affiliation",
++          "label": "소속 미지정"
++        },
++        {
++          "kind": "class",
++          "label": "클래스 미지정"
++        },
++        {
++          "kind": "profession",
++          "label": "직업 미지정"
++        },
++        {
++          "kind": "weapon",
++          "label": "무기 미지정"
++        },
++        {
++          "kind": "discipline",
++          "label": "공격 계열 미지정"
++        }
++      ]
++    },
++    {
++      "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_right_threequarter.png",
++      "sha256": "1d01eb2fae94f47d3fa4a8bd22f9bfc037abe0074d5a56dfb81cd94fa2b71a44",
++      "width": 1024,
++      "height": 1536,
++      "transparentBackground": false,
++      "alphaChannel": false,
++      "bytes": 1584473,
++      "title": "N01 · 신규 남성 · 화면 오른쪽 3/4 약45° · 일단 합격",
++      "description": "사용자 선택·일단 합격된 GC9 일러스트; 원본파일·제작출처 보존",
++      "role": "created",
++      "status": "current",
++      "view": "front_right",
++      "version": 1,
++      "legacy_type": null,
++      "review_note": "신규남녀 일단 합격 · 이름·출신·소속·직업 미지정 · 원본 3방향 일러스트",
++      "links": [
++        {
++          "label": "사용자 일단합격 근거",
++          "path": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++          "url": "../../../../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md"
++        },
++        {
++          "label": "제작 비교·검수",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/index.html",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/index.html"
++        },
++        {
++          "label": "제작 기준",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md"
++        },
++        {
++          "label": "검수 결과",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md"
++        },
++        {
++          "label": "생성 기록",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json"
++        }
++      ],
++      "collection": "newCharacters",
++      "character": "splash_n01",
++      "angle": 45,
++      "display_order": 1,
++      "artifact_stage": "direction_set",
++      "series": "splash_n01:accepted_illustration:front_right",
++      "approval_state": "provisionally_accepted_by_user",
++      "approval_quote": "신규남녀 일단 합격",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++      "style_validation_status": "provisionally_accepted_by_user",
++      "decision_status": "selected_illustration",
++      "future_reference_allowed": false,
++      "common_style_master_approved": false,
++      "gc9_applied": true,
++      "helmet_state": null,
++      "search_tags": [
++        "일러스트",
++        "일단 합격",
++        "선택본",
++        "N01",
++        "화면 오른쪽 3/4 약45°"
++      ],
++      "technical_review_status": "production_checks_completed",
++      "source_filename": "n01_right_threequarter.png",
++      "source_task": "MAIN03-20261109-5F7D5052",
++      "source_iteration": 1,
++      "character_label": "N01 · 신규 남성",
++      "view_label": "오른쪽 앞 사선",
++      "origin": "splash 원본 연결",
++      "style": "GC9",
++      "source_group": "splashApproved",
++      "source_group_label": "신규 남녀 · 합격 일러스트3방향",
++      "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_right_threequarter.png",
++      "id": "img_1d01eb2fae94f47d",
++      "collections": [
++        "newCharacters"
++      ],
++      "characters": [
++        "splash_n01"
++      ],
++      "aliases": [
++        {
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_right_threequarter.png",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_right_threequarter.png",
++          "collection": "newCharacters",
++          "source_group": "splashApproved",
++          "character": "splash_n01",
++          "role": "created",
++          "status": "current",
++          "title": "N01 · 신규 남성 · 화면 오른쪽 3/4 약45° · 일단 합격"
++        }
++      ],
++      "duplicate_count": 0,
++      "profile_id": "splash_n01",
++      "origin_id": "unassigned",
++      "class_id": "unassigned",
++      "profile_tags": [
++        {
++          "kind": "affiliation",
++          "label": "소속 미지정"
++        },
++        {
++          "kind": "class",
++          "label": "클래스 미지정"
++        },
++        {
++          "kind": "profession",
++          "label": "직업 미지정"
++        },
++        {
++          "kind": "weapon",
++          "label": "무기 미지정"
++        },
++        {
++          "kind": "discipline",
++          "label": "공격 계열 미지정"
++        }
++      ]
++    },
++    {
++      "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_right_profile.png",
++      "sha256": "25865261cd3bcd9b2dcb2748bbee10f2ad145d96b7a011d92ee2a04666bc18e0",
++      "width": 1024,
++      "height": 1536,
++      "transparentBackground": false,
++      "alphaChannel": false,
++      "bytes": 1441623,
++      "title": "N01 · 신규 남성 · 화면 오른쪽 정측면90° · 일단 합격",
++      "description": "사용자 선택·일단 합격된 GC9 일러스트; 원본파일·제작출처 보존",
++      "role": "created",
++      "status": "current",
++      "view": "right",
++      "version": 1,
++      "legacy_type": null,
++      "review_note": "신규남녀 일단 합격 · 이름·출신·소속·직업 미지정 · 원본 3방향 일러스트",
++      "links": [
++        {
++          "label": "사용자 일단합격 근거",
++          "path": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++          "url": "../../../../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md"
++        },
++        {
++          "label": "제작 비교·검수",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/index.html",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/index.html"
++        },
++        {
++          "label": "제작 기준",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md"
++        },
++        {
++          "label": "검수 결과",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md"
++        },
++        {
++          "label": "생성 기록",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json"
++        }
++      ],
++      "collection": "newCharacters",
++      "character": "splash_n01",
++      "angle": 90,
++      "display_order": 2,
++      "artifact_stage": "direction_set",
++      "series": "splash_n01:accepted_illustration:right",
++      "approval_state": "provisionally_accepted_by_user",
++      "approval_quote": "신규남녀 일단 합격",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++      "style_validation_status": "provisionally_accepted_by_user",
++      "decision_status": "selected_illustration",
++      "future_reference_allowed": false,
++      "common_style_master_approved": false,
++      "gc9_applied": true,
++      "helmet_state": null,
++      "search_tags": [
++        "일러스트",
++        "일단 합격",
++        "선택본",
++        "N01",
++        "화면 오른쪽 정측면90°"
++      ],
++      "technical_review_status": "production_checks_completed",
++      "source_filename": "n01_right_profile.png",
++      "source_task": "MAIN03-20261109-5F7D5052",
++      "source_iteration": 1,
++      "character_label": "N01 · 신규 남성",
++      "view_label": "오른쪽 정측면",
++      "origin": "splash 원본 연결",
++      "style": "GC9",
++      "source_group": "splashApproved",
++      "source_group_label": "신규 남녀 · 합격 일러스트3방향",
++      "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_right_profile.png",
++      "id": "img_25865261cd3bcd9b",
++      "collections": [
++        "newCharacters"
++      ],
++      "characters": [
++        "splash_n01"
++      ],
++      "aliases": [
++        {
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_right_profile.png",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n01_right_profile.png",
++          "collection": "newCharacters",
++          "source_group": "splashApproved",
++          "character": "splash_n01",
++          "role": "created",
++          "status": "current",
++          "title": "N01 · 신규 남성 · 화면 오른쪽 정측면90° · 일단 합격"
++        }
++      ],
++      "duplicate_count": 0,
++      "profile_id": "splash_n01",
++      "origin_id": "unassigned",
++      "class_id": "unassigned",
++      "profile_tags": [
++        {
++          "kind": "affiliation",
++          "label": "소속 미지정"
++        },
++        {
++          "kind": "class",
++          "label": "클래스 미지정"
++        },
++        {
++          "kind": "profession",
++          "label": "직업 미지정"
++        },
++        {
++          "kind": "weapon",
++          "label": "무기 미지정"
++        },
++        {
++          "kind": "discipline",
++          "label": "공격 계열 미지정"
++        }
++      ]
++    },
++    {
++      "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_front.png",
++      "sha256": "8cea0d2809b6316820a2e932f445ba8d4089ac72003d2237deeb14e1d7fbd059",
++      "width": 1024,
++      "height": 1536,
++      "transparentBackground": false,
++      "alphaChannel": false,
++      "bytes": 1168173,
++      "title": "N02 · 신규 여성 · 정면 · 일단 합격",
++      "description": "사용자 선택·일단 합격된 GC9 일러스트; 원본파일·제작출처 보존",
++      "role": "created",
++      "status": "current",
++      "view": "front",
++      "version": 1,
++      "legacy_type": null,
++      "review_note": "신규남녀 일단 합격 · 이름·출신·소속·직업 미지정 · 원본 3방향 일러스트",
++      "links": [
++        {
++          "label": "사용자 일단합격 근거",
++          "path": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++          "url": "../../../../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md"
++        },
++        {
++          "label": "제작 비교·검수",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/index.html",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/index.html"
++        },
++        {
++          "label": "제작 기준",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md"
++        },
++        {
++          "label": "검수 결과",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md"
++        },
++        {
++          "label": "생성 기록",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json"
++        }
++      ],
++      "collection": "newCharacters",
++      "character": "splash_n02",
++      "angle": 0,
++      "display_order": 0,
++      "artifact_stage": "direction_set",
++      "series": "splash_n02:accepted_illustration:front",
++      "approval_state": "provisionally_accepted_by_user",
++      "approval_quote": "신규남녀 일단 합격",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++      "style_validation_status": "provisionally_accepted_by_user",
++      "decision_status": "selected_illustration",
++      "future_reference_allowed": false,
++      "common_style_master_approved": false,
++      "gc9_applied": true,
++      "helmet_state": null,
++      "search_tags": [
++        "일러스트",
++        "일단 합격",
++        "선택본",
++        "N02",
++        "정면"
++      ],
++      "technical_review_status": "production_checks_completed",
++      "source_filename": "n02_front.png",
++      "source_task": "MAIN03-20261109-5F7D5052",
++      "source_iteration": 1,
++      "character_label": "N02 · 신규 여성",
++      "view_label": "정면",
++      "origin": "splash 원본 연결",
++      "style": "GC9",
++      "source_group": "splashApproved",
++      "source_group_label": "신규 남녀 · 합격 일러스트3방향",
++      "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_front.png",
++      "id": "img_8cea0d2809b63168",
++      "collections": [
++        "newCharacters"
++      ],
++      "characters": [
++        "splash_n02"
++      ],
++      "aliases": [
++        {
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_front.png",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_front.png",
++          "collection": "newCharacters",
++          "source_group": "splashApproved",
++          "character": "splash_n02",
++          "role": "created",
++          "status": "current",
++          "title": "N02 · 신규 여성 · 정면 · 일단 합격"
++        }
++      ],
++      "duplicate_count": 0,
++      "profile_id": "splash_n02",
++      "origin_id": "unassigned",
++      "class_id": "unassigned",
++      "profile_tags": [
++        {
++          "kind": "affiliation",
++          "label": "소속 미지정"
++        },
++        {
++          "kind": "class",
++          "label": "클래스 미지정"
++        },
++        {
++          "kind": "profession",
++          "label": "직업 미지정"
++        },
++        {
++          "kind": "weapon",
++          "label": "무기 미지정"
++        },
++        {
++          "kind": "discipline",
++          "label": "공격 계열 미지정"
++        }
++      ]
++    },
++    {
++      "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_right_threequarter.png",
++      "sha256": "b8c1a232d669583c7c8da0421595a2b227429b5713a19f98d10507cae9c90924",
++      "width": 1024,
++      "height": 1536,
++      "transparentBackground": false,
++      "alphaChannel": false,
++      "bytes": 1448661,
++      "title": "N02 · 신규 여성 · 화면 오른쪽 3/4 약45° · 일단 합격",
++      "description": "사용자 선택·일단 합격된 GC9 일러스트; 원본파일·제작출처 보존",
++      "role": "created",
++      "status": "current",
++      "view": "front_right",
++      "version": 1,
++      "legacy_type": null,
++      "review_note": "신규남녀 일단 합격 · 이름·출신·소속·직업 미지정 · 원본 3방향 일러스트",
++      "links": [
++        {
++          "label": "사용자 일단합격 근거",
++          "path": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++          "url": "../../../../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md"
++        },
++        {
++          "label": "제작 비교·검수",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/index.html",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/index.html"
++        },
++        {
++          "label": "제작 기준",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md"
++        },
++        {
++          "label": "검수 결과",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md"
++        },
++        {
++          "label": "생성 기록",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json"
++        }
++      ],
++      "collection": "newCharacters",
++      "character": "splash_n02",
++      "angle": 45,
++      "display_order": 1,
++      "artifact_stage": "direction_set",
++      "series": "splash_n02:accepted_illustration:front_right",
++      "approval_state": "provisionally_accepted_by_user",
++      "approval_quote": "신규남녀 일단 합격",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++      "style_validation_status": "provisionally_accepted_by_user",
++      "decision_status": "selected_illustration",
++      "future_reference_allowed": false,
++      "common_style_master_approved": false,
++      "gc9_applied": true,
++      "helmet_state": null,
++      "search_tags": [
++        "일러스트",
++        "일단 합격",
++        "선택본",
++        "N02",
++        "화면 오른쪽 3/4 약45°"
++      ],
++      "technical_review_status": "production_checks_completed",
++      "source_filename": "n02_right_threequarter.png",
++      "source_task": "MAIN03-20261109-5F7D5052",
++      "source_iteration": 1,
++      "character_label": "N02 · 신규 여성",
++      "view_label": "오른쪽 앞 사선",
++      "origin": "splash 원본 연결",
++      "style": "GC9",
++      "source_group": "splashApproved",
++      "source_group_label": "신규 남녀 · 합격 일러스트3방향",
++      "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_right_threequarter.png",
++      "id": "img_b8c1a232d669583c",
++      "collections": [
++        "newCharacters"
++      ],
++      "characters": [
++        "splash_n02"
++      ],
++      "aliases": [
++        {
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_right_threequarter.png",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_right_threequarter.png",
++          "collection": "newCharacters",
++          "source_group": "splashApproved",
++          "character": "splash_n02",
++          "role": "created",
++          "status": "current",
++          "title": "N02 · 신규 여성 · 화면 오른쪽 3/4 약45° · 일단 합격"
++        }
++      ],
++      "duplicate_count": 0,
++      "profile_id": "splash_n02",
++      "origin_id": "unassigned",
++      "class_id": "unassigned",
++      "profile_tags": [
++        {
++          "kind": "affiliation",
++          "label": "소속 미지정"
++        },
++        {
++          "kind": "class",
++          "label": "클래스 미지정"
++        },
++        {
++          "kind": "profession",
++          "label": "직업 미지정"
++        },
++        {
++          "kind": "weapon",
++          "label": "무기 미지정"
++        },
++        {
++          "kind": "discipline",
++          "label": "공격 계열 미지정"
++        }
++      ]
++    },
++    {
++      "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_right_profile.png",
++      "sha256": "dd6cfa7ca3583f4aa81f1c264e80771a730705c71cba1242322b38725e44b566",
++      "width": 1024,
++      "height": 1536,
++      "transparentBackground": false,
++      "alphaChannel": false,
++      "bytes": 1502984,
++      "title": "N02 · 신규 여성 · 화면 오른쪽 정측면90° · 일단 합격",
++      "description": "사용자 선택·일단 합격된 GC9 일러스트; 원본파일·제작출처 보존",
++      "role": "created",
++      "status": "current",
++      "view": "right",
++      "version": 1,
++      "legacy_type": null,
++      "review_note": "신규남녀 일단 합격 · 이름·출신·소속·직업 미지정 · 원본 3방향 일러스트",
++      "links": [
++        {
++          "label": "사용자 일단합격 근거",
++          "path": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++          "url": "../../../../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md"
++        },
++        {
++          "label": "제작 비교·검수",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/index.html",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/index.html"
++        },
++        {
++          "label": "제작 기준",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/제작기준.md"
++        },
++        {
++          "label": "검수 결과",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/검수결과.md"
++        },
++        {
++          "label": "생성 기록",
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/generation-record.json"
++        }
++      ],
++      "collection": "newCharacters",
++      "character": "splash_n02",
++      "angle": 90,
++      "display_order": 2,
++      "artifact_stage": "direction_set",
++      "series": "splash_n02:accepted_illustration:right",
++      "approval_state": "provisionally_accepted_by_user",
++      "approval_quote": "신규남녀 일단 합격",
++      "approval_source": "../../../../Desktop/Grid Defenders/작업관리/작업/MAIN03-20261109-5F7D5052/담당창전달_사용자합격.md",
++      "style_validation_status": "provisionally_accepted_by_user",
++      "decision_status": "selected_illustration",
++      "future_reference_allowed": false,
++      "common_style_master_approved": false,
++      "gc9_applied": true,
++      "helmet_state": null,
++      "search_tags": [
++        "일러스트",
++        "일단 합격",
++        "선택본",
++        "N02",
++        "화면 오른쪽 정측면90°"
++      ],
++      "technical_review_status": "production_checks_completed",
++      "source_filename": "n02_right_profile.png",
++      "source_task": "MAIN03-20261109-5F7D5052",
++      "source_iteration": 1,
++      "character_label": "N02 · 신규 여성",
++      "view_label": "오른쪽 정측면",
++      "origin": "splash 원본 연결",
++      "style": "GC9",
++      "source_group": "splashApproved",
++      "source_group_label": "신규 남녀 · 합격 일러스트3방향",
++      "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_right_profile.png",
++      "id": "img_dd6cfa7ca3583f4a",
++      "collections": [
++        "newCharacters"
++      ],
++      "characters": [
++        "splash_n02"
++      ],
++      "aliases": [
++        {
++          "path": "../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_right_profile.png",
++          "url": "../../../../스플래시-아트/output/gc9-new-two-six-views-v01/images/n02_right_profile.png",
++          "collection": "newCharacters",
++          "source_group": "splashApproved",
++          "character": "splash_n02",
++          "role": "created",
++          "status": "current",
++          "title": "N02 · 신규 여성 · 화면 오른쪽 정측면90° · 일단 합격"
++        }
++      ],
++      "duplicate_count": 0,
++      "profile_id": "splash_n02",
++      "origin_id": "unassigned",
++      "class_id": "unassigned",
++      "profile_tags": [
++        {
++          "kind": "affiliation",
++          "label": "소속 미지정"
++        },
++        {
++          "kind": "class",
++          "label": "클래스 미지정"
++        },
++        {
++          "kind": "profession",
++          "label": "직업 미지정"
++        },
++        {
++          "kind": "weapon",
++          "label": "무기 미지정"
++        },
++        {
++          "kind": "discipline",
++          "label": "공격 계열 미지정"
+         }
+       ]
+     },
+@@ -21667,5 +22595,10 @@
+     "원본 파일·프롬프트·인계 스냅샷의 크기와 바이트를 보존한다.",
+     "기존 금발 전사 보관 묶음은 SD 픽셀 8방향·GC9 일러스트·걷기 순서를 유지한다.",
+     "기존 8방향·걷기 자료는 새 4방향/3방향 제작 규칙과 구분한다."
+-  ]
++  ],
++  "approval_supplement": {
++    "task": "MAIN03-20261110-20B313E5",
++    "source": "output/characters/catalog/approved-splash-assets.json",
++    "note": "사용자 일단합격은 기술검수·공통스타일마스터 승인과 구분한다."
++  }
+ }

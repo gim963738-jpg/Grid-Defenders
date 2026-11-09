@@ -1,0 +1,211 @@
+{
+  "task": "MAIN03-20261109-21F94B82",
+  "iteration": 1,
+  "actual_png_count": 1,
+  "output": {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-gc9-retry-20261109-v01\\front.png",
+    "bytes": 1619428,
+    "sha256": "6675a0243f67018af29eaeea1af43f7ccf6e0d9ab96ef3d8f3be830d6afd96d9",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "source_copy_matches": true,
+    "alpha": {
+      "zero": 1056394,
+      "partial": 516470,
+      "opaque": 0,
+      "extrema": [
+        0,
+        254
+      ]
+    },
+    "bounds_by_alpha": {
+      "1": [
+        0,
+        115,
+        980,
+        1455
+      ],
+      "32": [
+        138,
+        301,
+        875,
+        1431
+      ],
+      "128": [
+        138,
+        302,
+        875,
+        1430
+      ],
+      "254": [
+        145,
+        320,
+        861,
+        1423
+      ]
+    },
+    "margins_alpha32": {
+      "top": 0.19596354166666666,
+      "left": 0.134765625,
+      "right": 0.1455078125,
+      "bottom": 0.068359375
+    },
+    "safe_area_pass": false,
+    "outer_edge_alpha_max": 1,
+    "manual_shield_estimate": {
+      "crown_y": 302,
+      "sole_y": 1431,
+      "shield_top_y": 542,
+      "shield_bottom_y": 1271,
+      "ratio": 0.645704162976085,
+      "basis": "visible image coordinates; manual approximate; target ~0.667"
+    }
+  },
+  "generation_inputs": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_front.png",
+      "bytes": 1643944,
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "C4 front primary whole drawing/face",
+      "local": "references\\input1_c04_front.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_front.png",
+      "bytes": 1545142,
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "C3 front secondary whole drawing/metal planes",
+      "local": "references\\input2_c03_front.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터제작\\한손무기그립\\원본\\그립자세_참조.png",
+      "bytes": 199279,
+      "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+      "width": 335,
+      "height": 484,
+      "mode": "RGB",
+      "role": "grip pose anatomy only",
+      "local": "references\\input3_그립자세_참조.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터제작\\한손무기그립\\원본\\손가락연결_사용자표시.png",
+      "bytes": 83496,
+      "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a",
+      "width": 329,
+      "height": 298,
+      "mode": "RGB",
+      "role": "finger connection anatomy only",
+      "local": "references\\input4_손가락연결_사용자표시.png"
+    }
+  ],
+  "observed_comparison_sources": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_front.png",
+      "bytes": 1545142,
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "8-image whole-style benchmark observed",
+      "local": "references\\c03_front.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_threequarter.png",
+      "bytes": 1695102,
+      "sha256": "15448ca81c1c5ecc226993f403151fb70aa8b3d532549d368262e395a0374b95",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "8-image whole-style benchmark observed",
+      "local": "references\\c03_threequarter.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_front.png",
+      "bytes": 1643944,
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "8-image whole-style benchmark observed",
+      "local": "references\\c04_front.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_threequarter.png",
+      "bytes": 1783573,
+      "sha256": "712d33a525be4f59a66fbabe884a33cc77205d6e00a9334fb31a8d362641761e",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "8-image whole-style benchmark observed",
+      "local": "references\\c04_threequarter.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c05_front.png",
+      "bytes": 1677898,
+      "sha256": "e313100fa85b8163e81eaabe1f48e499cc2e3e97383bd74b247278276b7e4345",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "8-image whole-style benchmark observed",
+      "local": "references\\c05_front.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c05_threequarter.png",
+      "bytes": 1623441,
+      "sha256": "59624b93b3d2bffa0899ddfcea15e8f99d586823e315e56007fba81e772b7457",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "8-image whole-style benchmark observed",
+      "local": "references\\c05_threequarter.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c06_front.png",
+      "bytes": 1712992,
+      "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "8-image whole-style benchmark observed",
+      "local": "references\\c06_front.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c06_threequarter.png",
+      "bytes": 1817648,
+      "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "role": "8-image whole-style benchmark observed",
+      "local": "references\\c06_threequarter.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\illustration_3views_v06\\front.png",
+      "bytes": 893762,
+      "sha256": "edd0ef05e12b4b6b381d74063bf6d368adb78044cb6245a8f41783483cd0ccd4",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "role": "design observation and comparison ONLY; not generation input/style master",
+      "local": "references\\old_v06.png"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\gc9_rebuild_v11\\front_v11.png",
+      "bytes": 1807126,
+      "sha256": "be11e97e87b7966aac57d74448d0a7d8aefad9483cf7594f075e439a6f607e36",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "role": "design observation and comparison ONLY; not generation input/style master",
+      "local": "references\\failed_v11.png"
+    }
+  ],
+  "user_aesthetic_approval": null,
+  "postprocessing": false
+}
