@@ -1,0 +1,21 @@
+{
+  "status": "awaiting-account-video-access",
+  "route": "local:grok-acp",
+  "requestedAction": "right-facing run",
+  "requestedSeconds": 6,
+  "requestedResolution": "720p",
+  "errorCode": "RATE_LIMIT",
+  "reportedRequestsPerMinute": {
+    "actual": 0,
+    "limit": 0
+  },
+  "attempts": 2,
+  "videosGenerated": 0,
+  "runtimeFramesGenerated": 0,
+  "master": "master/master.png",
+  "plan": "run-set/set_plan.json",
+  "prompt": "run-set/actions/run/takes/t01/prompt.txt",
+  "reason": "take 2: local:grok-acp: RATE_LIMIT: image_to_video reported a failure: ...m's rate limit is - Requests per Minute (actual/limit): 0/0. Your rate limit tier is determined based on your historical API spend. To learn how to increase your rate limit tier, please visit [url] (stop reason end_turn) (run b4254ce5225844fc81b908d9769e2361) (the next run tries again)",
+  "actionNeeded": "Check the current xAI team video-model access and limits in xAI Console before another generation request.",
+  "checkedAt": "2026-11-07T08:54:44.142968+00:00"
+}

@@ -1,0 +1,149 @@
+{
+  "task": "MAIN03-20261109-5133411E",
+  "iteration": 1,
+  "role": "sprites",
+  "main": "main03",
+  "status": "candidates_created_technical_QC_NOT_PASS_user_pending",
+  "styleStandard": "SD-STD-002 new2 ID6",
+  "assets": [
+    {
+      "file": "front.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "a772de7e7a20f57dcf194b573064d112b7f0277dfe673b400fffaf28589fc768",
+      "bytes": 1305768,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentPixels": 929751,
+      "semiTransparentPixels": 642163,
+      "opaquePixels": 602,
+      "saturatedFringeCandidatePixels": 1537,
+      "bboxAlpha1": [
+        0,
+        19,
+        1178,
+        1222
+      ],
+      "bboxAlpha16": [
+        188,
+        62,
+        1066,
+        1207
+      ],
+      "edgeTouchPixels": 21,
+      "angle": 0,
+      "pose": "neutral_standing",
+      "bodyTopY": 62,
+      "bodyHeight": 1145,
+      "footX": 618,
+      "footY": 1206,
+      "measurementMethod": "Manual visible hair top to grounded boot sole; equipment excluded. FootX support midpoint (profile visible boot), footY sole contact. Approximate visual landmarks, not anatomical scalp measurement.",
+      "baselineDeltaFromFront": 0,
+      "bodyHeightDeltaFromFront": 0,
+      "damageCollider": null,
+      "displayBounds": [
+        188,
+        62,
+        1066,
+        1207
+      ],
+      "rawSourceUnmodified": true
+    },
+    {
+      "file": "idle_right_045.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "95957f590d461928eebaab6bdc861834fe2a8a974506dc4375ad1dce062a89ae",
+      "bytes": 1185713,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentPixels": 959758,
+      "semiTransparentPixels": 612067,
+      "opaquePixels": 691,
+      "saturatedFringeCandidatePixels": 1422,
+      "bboxAlpha1": [
+        0,
+        23,
+        1206,
+        1232
+      ],
+      "bboxAlpha16": [
+        179,
+        57,
+        1026,
+        1211
+      ],
+      "edgeTouchPixels": 32,
+      "angle": 45,
+      "pose": "idle_ready",
+      "bodyTopY": 57,
+      "bodyHeight": 1154,
+      "footX": 630,
+      "footY": 1210,
+      "measurementMethod": "Manual visible hair top to grounded boot sole; equipment excluded. FootX support midpoint (profile visible boot), footY sole contact. Approximate visual landmarks, not anatomical scalp measurement.",
+      "baselineDeltaFromFront": 4,
+      "bodyHeightDeltaFromFront": 9,
+      "damageCollider": null,
+      "displayBounds": [
+        179,
+        57,
+        1026,
+        1211
+      ],
+      "rawSourceUnmodified": true
+    },
+    {
+      "file": "right_090.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "dba988f6d89a316431550921755e697104eb65e60944c9aa29e4244f86d2cf8d",
+      "bytes": 710641,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentPixels": 1237940,
+      "semiTransparentPixels": 334194,
+      "opaquePixels": 382,
+      "saturatedFringeCandidatePixels": 1461,
+      "bboxAlpha1": [
+        0,
+        19,
+        1240,
+        1254
+      ],
+      "bboxAlpha16": [
+        345,
+        31,
+        907,
+        1199
+      ],
+      "edgeTouchPixels": 70,
+      "angle": 90,
+      "pose": "neutral_ready_profile",
+      "bodyTopY": 31,
+      "bodyHeight": 1168,
+      "footX": 632,
+      "footY": 1198,
+      "measurementMethod": "Manual visible hair top to grounded boot sole; equipment excluded. FootX support midpoint (profile visible boot), footY sole contact. Approximate visual landmarks, not anatomical scalp measurement.",
+      "baselineDeltaFromFront": -8,
+      "bodyHeightDeltaFromFront": 23,
+      "damageCollider": null,
+      "displayBounds": [
+        345,
+        31,
+        907,
+        1199
+      ],
+      "rawSourceUnmodified": true
+    }
+  ],
+  "baselineSpreadPx": 12,
+  "bodyHeightSpreadPx": 23,
+  "footRegistration": "Explicit metadata; preview only aligns soles and body display height, no raw rewriting",
+  "alphaPolicy": "Native generated alpha preserved; no cleanup or quantization applied",
+  "collision": "No collider or damage range defined; body height, alpha extent, display extent and anchor are separate",
+  "gameIntegration": false,
+  "userAcceptance": false
+}

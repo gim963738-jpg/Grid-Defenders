@@ -1,0 +1,66 @@
+{
+  "controls": {
+    "loaded": true,
+    "defaultLoop": true,
+    "nextWrap": true,
+    "previousWrap": true,
+    "allFrames": true,
+    "durations": true,
+    "oneShotStops": true,
+    "loopRestarts": true,
+    "pause": true,
+    "seamStarts": true,
+    "runSeamWrap": true,
+    "speed": true,
+    "background": true,
+    "reference": true,
+    "sheetCount": 30,
+    "sheetSelect": true
+  },
+  "zoom": {
+    "plus": true,
+    "minus": true,
+    "upper": true,
+    "lower": true,
+    "feet": true,
+    "frameStable": true,
+    "persists": true,
+    "reset": true,
+    "drag": true,
+    "wheel": true,
+    "pinch": true
+  },
+  "mobile": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "allControls48": true
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "allControls48": true
+    }
+  ],
+  "apng": {
+    "walk": {
+      "frameCount": 30,
+      "cycleMs": 1000,
+      "loops": "Infinity"
+    },
+    "run": {
+      "frameCount": 30,
+      "cycleMs": 750,
+      "loops": "Infinity"
+    }
+  },
+  "native": {
+    "cell": 256,
+    "quality": 0.7,
+    "bytes": 488201,
+    "displayMatte": "#f0f2f6",
+    "sourcePngAlphaUnchanged": true,
+    "loaded": true,
+    "file": "mage-walk-run-right-v01.html"
+  }
+}

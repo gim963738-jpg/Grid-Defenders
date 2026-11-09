@@ -1,0 +1,38 @@
+{
+  "imageReady": true,
+  "seamBefore": "15 / 20 · 앞 23",
+  "seamAfter": "16 / 20 · 새 09",
+  "seamOrderCorrect": true,
+  "seamButtonWorks": true,
+  "previousWraps": true,
+  "nextWraps": true,
+  "sliderSelects": true,
+  "frameBeforeEnd": 19,
+  "frameAtEnd": 19,
+  "stopsAfterLastFrame": true,
+  "loopStartsFromEnd": true,
+  "loopWraps": true,
+  "loopKeepsAdvancing": true,
+  "loopCanPause": true,
+  "loopCanResume": true,
+  "loopOffStopsAtEnd": true,
+  "lightWorks": true,
+  "darkWorks": true,
+  "canvas": {
+    "w": 256,
+    "h": 256
+  },
+  "mobile390": {
+    "noHorizontalOverflow": true,
+    "controlMinHeight": 48
+  },
+  "webpPreviewBytes": 133572,
+  "apng": {
+    "frameCount": 20,
+    "animated": true,
+    "repetitionCount": "0",
+    "decodedFrames": 20,
+    "durationMs": 1333,
+    "allFrames256": true
+  }
+}

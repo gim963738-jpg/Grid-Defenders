@@ -1,0 +1,28 @@
+Use case: stylized-concept, production game sprite animation.
+Create an actual transparent sprite sheet for the SAME silver-haired blue/gold wing-staff mage RUNNING to screen RIGHT, thirty distinct consecutive frames of ONE COMPLETE TWO-STEP RUN LOOP. SIX COLUMNS and FIVE ROWS of equal square cells, exact6:5 canvas ratio, preferably1800x1500. Every cell contains one whole character and entire staff with margin. No labels, grid, ground, cast shadow or effects.
+
+INPUT ROLES:
+mage-right-master.png = exact character identity in right profile.
+mage-front-reference.png = costume/handedness reference.
+run-pose-guide.png = EXACT chronological movement/geometry reference; blue strokes are NEAR right leg/arm, magenta strokes FAR left leg/arm. Follow corresponding cell's limb poses and hip/foot locations. These colors/strokes/numbers/circles are explanatory and MUST NOT appear.
+walk-generated-v01.png = same character's existing sprite treatment, face, hair, cape, staff, size and rendering. Keep that same character and pixel quality. Change the action into an actual run following the run guide, not the walk poses.
+
+Identity: long wavy silvery ivory hair with small forelock, one blue eye in strict right profile, blue-gold shoulder mantle and long split navy/royal-blue robe with gold hem motifs, white tunic front, dark trousers and charcoal-gold boots, blue gems at collar/belt, cylindrical blue-gold case on NEAR right hip. Single long dark staff with exact gold wing curling navy head and blue teardrop gem. Staff in FAR anatomical LEFT hand only; NEAR right arm free, bent90degrees and pumping opposite near leg. Preserve all costume identities, two legs, two arms, one staff, no hat/beard/warrior armor.
+
+Animate a light athletic run IN PLACE, upper body modest forward lean10degrees, natural knees, readable flight phases. Hair ends and split robe trail backwards slightly more than walking; no rubbery roots, no elongating hair, no drastic cape expansion. Face focused and stable; wings of staff do not flap. Staff is carried forward, slightly tilted, ferrule well CLEAR of the ground throughout; hand stays attached and staff does not teleport, bend or become a cane.
+
+PHASES:
+Follow guide in row-major order. NEAR brighter right boot is supporting and traveling backwards in01-10; FAR darker left leg curls behind then its knee passes under/forward. BOTH feet clear the ground11-15 as the FAR leg reaches forward. FAR boot lands at16 and supports through25; NEAR boot folds back, knee passes under/forward. BOTH feet clear26-30 as NEAR leg reaches forward back to01. A complete left-right cycle, not the same leg leading twice.
+01 NEAR forward landing / FAR folded behind.
+04 NEAR load under body / FAR heel raised.
+08 NEAR push rear / FAR knee under forward.
+12 both airborne, NEAR rear and folding / FAR extending forward.
+16 FAR forward landing / NEAR folded behind.
+19 FAR load under body / NEAR heel raised.
+23 FAR push rear / NEAR knee under forward.
+27 both airborne, FAR rear and folding / NEAR extending forward.
+30 approaches01 continuously, not a copy of01 or a return to standing.
+NEAR brighter decorated boot stays on the near side regardless of lead, FAR darker boot stays behind. Show the near leg overlapping far when they cross; never switch near/far shin drawings. Grounded foot moves BACK across the cell smoothly through stance; recovery foot moves FORWARD smoothly. Don't snap a trailing foot directly into an extended forward contact. Keep at least two passing poses.
+
+Fixed camera, uniform drawing/anatomical scale, head/hips consistently registered; intentional5pixel bob permitted. Do NOT align each lowest pixel to a baseline because flight must remain airborne. Logical229px cell: contact ground~214px, hips~158px, head center~134,69px; refer guide. Allow boot toe lift/heel lift, but avoid free dangling leg/extra shoes. Entire staff and hair remain within each cell.
+Style: high quality SD fantasy pixel RPG sprite, crisp dark pixel outlines, clustered shaded hair and cloth, same polish as walk reference, no blur, photographic smoothness, motion trails, blended duplicate limbs, text, numbers, floor, checkerboard or background paint. Genuine transparent alpha outside artwork. Uniform6x5 grid with thirty coherent separate complete sprites.

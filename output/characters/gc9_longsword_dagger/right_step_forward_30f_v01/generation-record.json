@@ -1,0 +1,38 @@
+﻿{
+    "tool":  "built-in image_gen",
+    "prompt":  "generation-prompt.txt",
+    "generatedOriginal":  "C:/Users/user/.codex/generated_images/01a1b167-a132-72f3-ad13-c0517696a81b/exec-fe310d75-798d-4a88-80e4-f48d761a6258.png",
+    "localOriginal":  "right-step-forward-30f-generated-v01.png",
+    "transparent":  true,
+    "inputRoles":  [
+                       {
+                           "file":  "references/walk-right-23.png",
+                           "role":  "latest selected connection appearance"
+                       },
+                       {
+                           "file":  "references/walk-right-22.png",
+                           "role":  "raised folded right knee context"
+                       },
+                       {
+                           "file":  "references/03_right_090.png",
+                           "role":  "original design and anatomical equipment sides"
+                       }
+                   ],
+    "frameCount":  30,
+    "sheet":  {
+                  "w":  1536,
+                  "rows":  5,
+                  "columns":  6,
+                  "h":  1280
+              },
+    "cell":  {
+                 "h":  256,
+                 "w":  256
+             },
+    "resampled":  false,
+    "playback":  {
+                     "loop":  false,
+                     "durationMs":  2000,
+                     "fps":  15
+                 }
+}

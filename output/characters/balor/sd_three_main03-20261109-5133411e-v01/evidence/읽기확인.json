@@ -1,0 +1,98 @@
+﻿{
+    "iteration":  1,
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\AGENTS.md",
+                          "sha256":  "c768485e0b8b83bbe0f5aa06549a95609ac136babd139918874c3bb1530c44d6",
+                          "applies":  "승인된 정지3장만 신규폴더 제작, 밝고 어두운 전체프레임 검수, 기존 변경 보존"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\작업진행방법.md",
+                          "sha256":  "6cfe384d656136b57294d569d88f9028e080f5d42d0cf93c8f1142ea92f87c5d",
+                          "applies":  "이번 차수 본문 재열람과 해시 적용요약 및 start 통과 후 착수"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+                          "applies":  "사용자 실제 확인된 범위만 수행하고 결과/기술검수/사용자합격 구분"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+                          "applies":  "main03 소유 작업번호와 차수 유지, 공식 Orca 회신, 모델 변경 없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+                          "applies":  "직접 수행하고 외주 원본바이트 보존, 최종 미적 합격은 사용자"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "sprites 산출물만 편집, 게임 공통 코드와 타 담당 파일 보존"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\규정.md",
+                          "sha256":  "054180df089a2d1694430be7dc09e3718b31553e9dfa2904584717bedf5ccc41",
+                          "applies":  "본체/장비외곽/여백/발선/판정 분리, SD-STD-002 적용"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "read-pack 18개 문서 본문 열람 후 현재 해시 evidence로 start"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+                          "applies":  "sprites는 characters 전문 담당, 하위 담당 추가 없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "도메인 분류와 실제 조직 구분, 색인 지정 원본 열람"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "캐릭터 스프라이트 노드와 영상작업 구분, 이번 영상 없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인기준.md",
+                          "sha256":  "ae864343dd9d44022119501022b85dc7442ab79171d6a947c37f6c06bae2c27a",
+                          "applies":  "신규2안 실제 두상/비중/표현만 참조, 고정등신수치 미확정"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인참조\\20261109_신규2안\\승인.json",
+                          "sha256":  "39dd7a9765eacb8a4254bb46f1868531ca651258e5f421b511fa1535f2e45303",
+                          "applies":  "승인3참조 PNG 실제열람/해시대조, 원본해상도 바이트 보존"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-21F94B82\\사용자합격-v002.md",
+                          "sha256":  "79340ce4458c744731506a5cdb2d9b357ec6f57f2dd749e5a2a5c344747b4061",
+                          "applies":  "발로르 v02 선택해시와 일단합격 유지, 원본 회귀금지"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-gc9-retry-20261109-v02\\제작기준.md",
+                          "sha256":  "50c279a00859ff78657c51ce3c1e6da7b3fb94dcd2dd13b625b484b1f6ceeefa",
+                          "applies":  "겹견갑 노출과 측면사자전신, 청은갑옷/망토/핀2개 유지"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md",
+                          "sha256":  "412cf153ca5f906d132c0d2ed9813553e8ee95c97d5dcee23a63574374f53ae2",
+                          "applies":  "그립 원본2장 첨부, 오른손검 왼손방패 소유와 손목/손가락/축 연결"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+                          "sha256":  "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+                          "applies":  "제작필수 기록만 로컬 작성, 커밋푸시/자동백업 없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\사용자확인-v001.md",
+                          "sha256":  "d53e3ae63c3b88067968041508d44eb9436984f12405102c9034204e9641c44a",
+                          "applies":  "실제 사용자확인된 정면0/대기45/오른쪽90 정지PNG3장 제작"
+                      }
+                  ],
+    "task":  "MAIN03-20261109-5133411E",
+    "workSummary":  "발로르v02 identity와 신규2안 SD style/proportion을 참조첨부한 내장 imagegen으로 정지3장을 개별생성, 알파/방향/그립/비중/밝고어두운/작은표시 검수, 생성바이트 보존",
+    "role":  "sprites"
+}

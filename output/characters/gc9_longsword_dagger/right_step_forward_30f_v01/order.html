@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>오른발 앞으로 내딛기 · 프레임 순서</title>
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1536px; background: #f1f3f7; color: #172235; font-family: 'Segoe UI', 'Malgun Gothic', sans-serif; }
+header { height: 64px; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; background: #172235; color: #fff; }
+h1 { margin: 0; font-size: 24px; } header span { font-size: 20px; }
+main { position: relative; width: 1536px; height: 1280px; }
+img { position: absolute; inset: 0; width: 1536px; height: 1280px; }
+.grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(6, 256px); grid-template-rows: repeat(5, 256px); }
+.cell { border: 1px solid #cbd3df; padding: 14px; }
+.number { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 40px; border-radius: 8px; background: #172235; color: #fff; font-weight: 700; font-size: 24px; }
+</style>
+<header><h1>오른발 앞으로 내딛기 · 새 30프레임 순서</h1><span>왼쪽 → 오른쪽 · 위 → 아래 · 새 01 → 30 · 오른발 앞 착지</span></header>
+<main><img src="right-step-forward-30f.png" alt="오른발 앞으로 내딛기 30프레임"><div class="grid" id="grid"></div></main>
+<script>
+document.getElementById('grid').innerHTML = Array.from({length:30}, (_, i) => `<div class="cell"><span class="number">${String(i+1).padStart(2,'0')}</span></div>`).join('');
+</script>
+</html>
+
+

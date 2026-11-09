@@ -1,0 +1,59 @@
+[
+  {
+    "file": "front.png",
+    "source": "C:/Users/user/.codex/generated_images/01a1c021-bd77-7573-8c00-622e8cd10dec/exec-1c4178f6-cb45-44b6-a520-7e53888e1d14.png",
+    "prompt": "prompts/front.txt",
+    "refs": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트/output/balor-gc9-retry-20261109-v02/front.png",
+      "C:/Users/user/Desktop/Grid Defenders/작업관리/기준/characters/SD_승인참조/20261109_신규2안/variant-2-front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+    ],
+    "purpose": "front0 SD master"
+  },
+  {
+    "file": "idle_right_045.png",
+    "source": "C:/Users/user/.codex/generated_images/01a1c021-bd77-7573-8c00-622e8cd10dec/exec-e3c2aae7-93ac-41ac-852b-26b4e537d9b0.png",
+    "prompt": "prompts/idle_right_045.txt",
+    "refs": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/스프라이트-시트작업/output/characters/balor/sd_three_main03-20261109-5133411e-v01/front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트/output/balor-gc9-retry-20261109-v02/front.png",
+      "C:/Users/user/Desktop/Grid Defenders/작업관리/기준/characters/SD_승인참조/20261109_신규2안/variant-2-right-045.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+    ],
+    "purpose": "right45 static idle ready"
+  },
+  {
+    "file": "right_090_candidate.png",
+    "source": "C:/Users/user/.codex/generated_images/01a1c021-bd77-7573-8c00-622e8cd10dec/exec-d1a1ec7e-82f5-4a00-8489-afe6035800d7.png",
+    "prompt": "prompts/right_090.txt",
+    "refs": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/스프라이트-시트작업/output/characters/balor/sd_three_main03-20261109-5133411e-v01/front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트/output/balor-gc9-retry-20261109-v02/front.png",
+      "C:/Users/user/Desktop/Grid Defenders/작업관리/기준/characters/SD_승인참조/20261109_신규2안/variant-2-right-090.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+    ],
+    "purpose": "right90 initial; rejected broad torso"
+  },
+  {
+    "file": "right_090.png",
+    "source": "C:/Users/user/.codex/generated_images/01a1c021-bd77-7573-8c00-622e8cd10dec/exec-5df2ee02-2a23-4aba-a9bc-eeaf83d23f61.png",
+    "prompt": "prompts/right_090_edit.txt",
+    "refs": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/스프라이트-시트작업/output/characters/balor/sd_three_main03-20261109-5133411e-v01/right_090_candidate.png",
+      "C:/Users/user/Desktop/Grid Defenders/작업관리/기준/characters/SD_승인참조/20261109_신규2안/variant-2-right-090.png"
+    ],
+    "purpose": "right90 orientation correction"
+  },
+  {
+    "file": "front_alpha_cleanup_candidate.png",
+    "source": "C:/Users/user/.codex/generated_images/01a1c021-bd77-7573-8c00-622e8cd10dec/exec-1c42b188-e62b-4bf4-9a9e-ada4de59c9e3.png",
+    "prompt": "prompts/front_alpha_cleanup.txt",
+    "refs": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/스프라이트-시트작업/output/characters/balor/sd_three_main03-20261109-5133411e-v01/front.png"
+    ],
+    "purpose": "alpha cleanup trial; not adopted: smoother style drift"
+  }
+]

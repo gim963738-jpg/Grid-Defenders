@@ -1,0 +1,58 @@
+﻿{
+    "action":  "right-facing run",
+    "art_source":  "host_image",
+    "route":  "built-in image_gen",
+    "generatedAt":  "2026-11-07T09:17:50.4334771Z",
+    "model":  "not disclosed by built-in tool",
+    "estimateUsd":  null,
+    "grokUsed":  false,
+    "externalApiKeyUsed":  false,
+    "videoGenerated":  false,
+    "pipeline":  "reference images -\u003e generated sprite sheet -\u003e ownership-aware slicing -\u003e fixed canvas PNG/APNG/JSON -\u003e browser review",
+    "generatedSource":  "run-right-30f-generated-v01.png",
+    "generatedSourceSha256":  "8677da2afd59a571509168e7aee56f5f260c1ba3b03a8e433ef660048ec39fe8",
+    "requestedSize":  {
+                          "h":  2560,
+                          "w":  3072
+                      },
+    "actualSize":  {
+                       "h":  1145,
+                       "w":  1374
+                   },
+    "sourceGrid":  {
+                       "cell":  229,
+                       "rows":  5,
+                       "columns":  6
+                   },
+    "outputGrid":  {
+                       "cell":  256,
+                       "rows":  5,
+                       "w":  1536,
+                       "columns":  6,
+                       "h":  1280
+                   },
+    "prompt":  "generation-prompt.txt",
+    "references":  [
+                       {
+                           "sha256":  "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+                           "file":  "references/03_right_090.png",
+                           "role":  "approved identity and right profile"
+                       },
+                       {
+                           "sha256":  "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+                           "file":  "references/01_front_000.png",
+                           "role":  "asymmetric equipment reference"
+                       }
+                   ],
+    "frameCount":  30,
+    "fps":  30,
+    "durationMs":  1000,
+    "loop":  true,
+    "resampled":  false,
+    "alphaPreserved":  true,
+    "ownershipAdjustment":  "Frame 21/22 boundary shifted 8px right; three visible blade-tip pixels recovered into frame 21 without shifting either character.",
+    "limitations":  [
+                        "Image-generated pose and detail variation remains; not a video-derived clip.",
+                        "No strict low-resolution palette conversion or in-game integration has been performed."
+                    ]
+}

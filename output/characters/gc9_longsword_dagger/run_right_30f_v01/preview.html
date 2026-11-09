@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>금발 전사 · 오른쪽 달리기 30프레임</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px; font-family: system-ui, sans-serif; color: var(--foreground, #e7edf7); background: var(--background, #131923); }
+  main { max-width: 1000px; margin: auto; }
+  h1 { font-size: 23px; margin: 0 0 8px; }
+  p { line-height: 1.6; color: var(--muted-foreground, #afbdd0); margin: 8px 0 18px; }
+  .layout { display: flex; flex-wrap: wrap; gap: 20px; align-items: start; }
+  .viewer { width: min(100%, 512px); flex-shrink: 0; }
+  .stage { width: 100%; aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; border-radius: 12px; position: relative; touch-action: none; user-select: none; }
+  .stage[data-zoomed="true"] { cursor: grab; }
+  .stage[data-dragging="true"] { cursor: grabbing; }
+  .checker { background-color: #eff2f6; background-image: linear-gradient(45deg,#dce2ea 25%,transparent 25%),linear-gradient(-45deg,#dce2ea 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#dce2ea 75%),linear-gradient(-45deg,transparent 75%,#dce2ea 75%); background-size: 24px 24px; background-position: 0 0,0 12px,12px -12px,-12px 0; }
+  .light { background: #f1f3f7; } .dark { background: #212733; }
+  canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; transform-origin: center; pointer-events: none; }
+  .zoom-controls { display: grid; gap: 8px; margin-top: 12px; }
+  .zoom-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .zoom-row button { min-width: 48px; }
+  .zoom-row output { font-size: 18px; min-width: 62px; text-align: center; }
+  button:disabled { opacity: .45; cursor: default; }
+  .hint { font-size: 13px; margin: 0; }
+  .controls { flex: 1; min-width: 220px; display: grid; gap: 12px; }
+  .buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+  button, select, a { font: inherit; color: var(--foreground, #e7edf7); background: var(--secondary, #253147); border: 1px solid var(--border, #475773); border-radius: 8px; padding: 10px 14px; min-height: 48px; cursor: pointer; }
+  button[aria-pressed="true"] { color: #131923; background: #a4cafb; border-color: #a4cafb; }
+  button:hover, a:hover { background: var(--accent, #3c506f); color: var(--accent-foreground, #fff); }
+  a { display: inline-flex; align-items: center; text-decoration: none; }
+  input { width: 100%; min-height: 48px; accent-color: #a4cafb; }
+  output { font-size: 23px; font-variant-numeric: tabular-nums; }
+  label { display: grid; gap: 5px; }
+  details { margin-top: 24px; }
+  summary { cursor: pointer; padding: 12px 0; min-height: 48px; }
+  .atlas { width: 100%; display: block; image-rendering: pixelated; }
+  .sheet-wrap { position: relative; }
+  .sheet-viewport { overflow: auto; max-height: 720px; border-radius: 8px; }
+  .sheet-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .sheet-toolbar label { display: flex; align-items: center; gap: 10px; }
+  .order-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(5, 1fr); pointer-events: none; }
+  .order-cell { border: 1px solid #8191a855; padding: 4px; }
+  .order-number { display: inline-block; background: #172235; color: #fff; padding: 3px 6px; border-radius: 4px; font-weight: 700; font-size: 14px; }
+  .error { color: #ffb3aa; }
+  @media(max-width: 600px) { body { padding: 16px; } .stage { width: 100%; } h1 { font-size: 20px; } .order-number { font-size: 11px; padding: 2px 4px; } }
+</style>
+<main>
+  <h1>금발 전사 · 오른쪽 달리기</h1>
+  <p>30프레임 · 기본 30fps / 1초 반복 · 6열 × 5행 · 프레임당 256 × 256px</p>
+  <div class="layout">
+    <div class="viewer">
+      <div class="stage checker" id="stage" aria-label="캐릭터 확대 화면. 휠 또는 두 손가락으로 확대하고 드래그로 이동"><canvas id="sprite" width="256" height="256" aria-label="장검과 단검을 든 금발 전사의 오른쪽 달리기"></canvas></div>
+      <div class="zoom-controls">
+        <div class="zoom-row"><button id="zoom-out" type="button" aria-label="축소" disabled>−</button><output id="zoom-value" aria-live="polite">100%</output><button id="zoom-in" type="button" aria-label="확대">＋</button><button id="zoom-feet" type="button">발 확대</button><button id="zoom-reset" type="button">전체 보기</button></div>
+        <label>화면 확대<input id="zoom" type="range" min="1" max="4" step="0.01" value="1" aria-label="화면 확대 배율"></label>
+        <p class="hint">100–400% · 휠 / 두 손가락으로 확대 · 드래그로 이동</p>
+      </div>
+    </div>
+    <div class="controls">
+      <output id="counter">01 / 30</output>
+      <div class="buttons"><button id="play" type="button">일시 정지</button><button id="previous" type="button" aria-label="이전 프레임">이전</button><button id="next" type="button" aria-label="다음 프레임">다음</button></div>
+      <button id="loop" type="button" aria-pressed="true">무한 재생: 켜짐</button>
+      <button id="seam" type="button">연결 확인 · 27→30→01</button>
+      <label>프레임<input id="frame" type="range" min="0" max="29" value="0" step="1"></label>
+      <label>재생 속도<select id="fps"><option value="45">45fps · 빠르게</option><option value="30" selected>30fps · 기본</option><option value="15">15fps · 천천히</option><option value="5">5fps · 동작 확인</option></select></label>
+      <div class="buttons" aria-label="배경 선택"><button type="button" data-background="checker" aria-pressed="true">투명 격자</button><button type="button" data-background="light" aria-pressed="false">밝게</button><button type="button" data-background="dark" aria-pressed="false">어둡게</button></div>
+      <div class="buttons downloads"><a href="run-right-30f.png" download>PNG 시트</a><a href="run-right-animated.png" download>움직이는 PNG</a><a href="run-right-30f.json" download>프레임 JSON</a></div>
+      <p id="status">이미지 불러오는 중…</p>
+    </div>
+  </div>
+  <details><summary>전체 시트와 순서 보기 · 01→30→01 반복</summary><div class="sheet-toolbar"><label>시트 확대<select id="sheet-zoom"><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option><option value="3">300%</option><option value="4">400%</option></select></label><span class="hint">확대 후 가로·세로 스크롤</span></div><div class="sheet-viewport"><div class="checker sheet-wrap" id="sheet-wrap"><img class="atlas" src="run-right-30f.png" alt="왼쪽에서 오른쪽, 위에서 아래로 이어지는 달리기 30프레임"><div class="order-grid" id="order-grid"></div></div></div></details>
+</main>
+<script>
+  const CELL = 256, COUNT = 30, COLUMNS = 6;
+  document.getElementById('order-grid').innerHTML = Array.from({length:COUNT}, (_, i) => `<div class="order-cell"><span class="order-number">${String(i+1).padStart(2,'0')}</span></div>`).join('');
+  const image = new Image();
+  const canvas = document.getElementById('sprite'), context = canvas.getContext('2d');
+  const slider = document.getElementById('frame'), counter = document.getElementById('counter'), playButton = document.getElementById('play'), loopButton = document.getElementById('loop');
+  let current = 0, fps = 30, playing = true, looping = true, ready = false, startTime = null, startFrame = 0;
+  const stage = document.getElementById('stage'), zoomSlider = document.getElementById('zoom');
+  let zoom = 1, panX = 0, panY = 0, gesture = null;
+  const pointers = new Map();
+  const clamp = (value,min,max) => Math.max(min,Math.min(max,value));
+  function updateView() {
+    const limit = (zoom-1)/2;
+    panX = clamp(panX,-limit,limit); panY = clamp(panY,-limit,limit);
+    canvas.style.transform = `translate(${panX*stage.clientWidth}px,${panY*stage.clientHeight}px) scale(${zoom})`;
+    zoomSlider.value = String(zoom); document.getElementById('zoom-value').value = `${Math.round(zoom*100)}%`;
+    document.getElementById('zoom-out').disabled = zoom<=1;
+    document.getElementById('zoom-in').disabled = zoom>=4;
+    stage.dataset.zoomed = String(zoom>1);
+    stage.dataset.dragging = String(pointers.size>0 && zoom>1);
+  }
+  function setZoom(value,anchor={x:0,y:0}) {
+    const next = clamp(Number(value),1,4), ratio = next/zoom;
+    panX = anchor.x-(anchor.x-panX)*ratio; panY = anchor.y-(anchor.y-panY)*ratio;
+    zoom = next; updateView();
+  }
+  function resetView() { zoom=1;panX=0;panY=0;gesture=null;updateView(); }
+  function focusFeet() { zoom=2;panX=.07;panY=-.5;gesture=null;updateView(); }
+  function pointAt(clientX,clientY) {
+    const rect=stage.getBoundingClientRect();
+    return {x:(clientX-rect.left)/rect.width-.5,y:(clientY-rect.top)/rect.height-.5};
+  }
+  function beginGesture() {
+    const points=[...pointers.values()];
+    if(points.length>=2) {
+      const a=points[0],b=points[1],mid=pointAt((a.x+b.x)/2,(a.y+b.y)/2);
+      gesture={type:'pinch',distance:Math.max(1,Math.hypot(a.x-b.x,a.y-b.y)),zoom,worldX:(mid.x-panX)/zoom,worldY:(mid.y-panY)/zoom};
+    } else if(points.length===1) {
+      const p=pointAt(points[0].x,points[0].y);gesture={type:'pan',x:p.x,y:p.y,panX,panY};
+    } else gesture=null;
+    updateView();
+  }
+  stage.addEventListener('pointerdown',event=>{
+    if(event.pointerType==='mouse' && event.button!==0)return;
+    pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});stage.setPointerCapture(event.pointerId);beginGesture();
+  });
+  stage.addEventListener('pointermove',event=>{
+    if(!pointers.has(event.pointerId))return;
+    pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    const points=[...pointers.values()];
+    if(gesture?.type==='pinch' && points.length>=2) {
+      const a=points[0],b=points[1],mid=pointAt((a.x+b.x)/2,(a.y+b.y)/2);
+      zoom=clamp(gesture.zoom*Math.hypot(a.x-b.x,a.y-b.y)/gesture.distance,1,4);
+      panX=mid.x-gesture.worldX*zoom;panY=mid.y-gesture.worldY*zoom;updateView();
+    } else if(gesture?.type==='pan' && points.length===1) {
+      const p=pointAt(points[0].x,points[0].y);panX=gesture.panX+p.x-gesture.x;panY=gesture.panY+p.y-gesture.y;updateView();
+    }
+  });
+  function releasePointer(event) {
+    if(!pointers.delete(event.pointerId))return;
+    if(stage.hasPointerCapture(event.pointerId))stage.releasePointerCapture(event.pointerId);
+    beginGesture();
+  }
+  stage.addEventListener('pointerup',releasePointer);stage.addEventListener('pointercancel',releasePointer);stage.addEventListener('lostpointercapture',releasePointer);
+  stage.addEventListener('wheel',event=>{
+    if(!event.deltaY)return;event.preventDefault();setZoom(zoom+(event.deltaY<0?.25:-.25),pointAt(event.clientX,event.clientY));
+  },{passive:false});
+  document.getElementById('zoom-in').onclick=()=>setZoom(zoom+.25);
+  document.getElementById('zoom-out').onclick=()=>setZoom(zoom-.25);
+  zoomSlider.oninput=()=>setZoom(zoomSlider.value);
+  document.getElementById('zoom-reset').onclick=resetView;
+  document.getElementById('zoom-feet').onclick=focusFeet;
+  document.getElementById('sheet-zoom').onchange=event=>{document.getElementById('sheet-wrap').style.width=`${Number(event.target.value)*100}%`;};
+  new ResizeObserver(updateView).observe(stage);
+  function render() {
+    if (!ready) return;
+    context.clearRect(0, 0, 256, 256); context.imageSmoothingEnabled = false;
+    context.drawImage(image, current % COLUMNS * CELL, Math.floor(current / COLUMNS) * CELL, CELL, CELL, 0, 0, 256, 256);
+    slider.value = String(current); counter.value = `${String(current+1).padStart(2,'0')} / 30`; canvas.dataset.frame = String(current);
+  }
+  function setPlaying(value) {
+    if (value && !looping && current === COUNT-1) { current = 0; render(); }
+    playing = value; startFrame = current; startTime = null; playButton.textContent = playing ? '일시 정지' : '재생';
+  }
+  function selectFrame(value) { current = (Number(value)+COUNT)%COUNT; setPlaying(false); render(); }
+  function setLooping(value) {
+    looping = value; loopButton.setAttribute('aria-pressed', String(looping)); loopButton.textContent = looping ? '무한 재생: 켜짐' : '무한 재생: 꺼짐'; startFrame = current; startTime = null;
+  }
+  function tick(timestamp) {
+    if (ready && playing) {
+      if (startTime === null) { startTime = timestamp; startFrame = current; }
+      const phase = startFrame + Math.floor((timestamp-startTime)*fps/1000 + 1e-8);
+      const next = looping ? phase%COUNT : Math.min(COUNT-1,phase);
+      if (!looping && phase >= COUNT) setPlaying(false);
+      if (next !== current) { current = next; render(); }
+    }
+  }
+  function animate(timestamp) { tick(timestamp); requestAnimationFrame(animate); }
+  playButton.onclick = () => setPlaying(!playing);
+  loopButton.onclick = () => { setLooping(!looping); if (looping && !playing) setPlaying(true); };
+  document.getElementById('seam').onclick = () => { selectFrame(26); setLooping(true); setPlaying(true); };
+  slider.oninput = () => selectFrame(slider.value);
+  document.getElementById('previous').onclick = () => selectFrame(current-1);
+  document.getElementById('next').onclick = () => selectFrame(current+1);
+  document.getElementById('fps').onchange = event => { fps = Number(event.target.value); startFrame = current; startTime = null; };
+  document.querySelectorAll('[data-background]').forEach(button => button.onclick = () => {
+    document.getElementById('stage').className = `stage ${button.dataset.background}`;
+    document.querySelectorAll('[data-background]').forEach(item => item.setAttribute('aria-pressed', String(item===button)));
+  });
+  image.onload = () => { ready = true; render(); document.getElementById('status').textContent = '30 다음은 01로 연결됩니다. 슬라이더로 한 장씩 확인할 수 있습니다.'; document.documentElement.dataset.ready = 'true'; };
+  image.onerror = () => { document.getElementById('status').textContent = '시트를 불러오지 못했습니다. PNG와 미리보기를 같은 폴더에 두세요.'; document.getElementById('status').className = 'error'; };
+  image.src = 'run-right-30f.png'; requestAnimationFrame(animate);
+  window.spritePreview = { selectFrame, setPlaying, setLooping, tick, render, setZoom, resetView, focusFeet, get current() { return current; }, get playing() { return playing; }, get looping() { return looping; }, get view() { return {zoom,panX,panY,pointers:pointers.size}; } };
+</script>
+</html>

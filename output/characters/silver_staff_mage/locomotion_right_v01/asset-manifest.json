@@ -1,0 +1,21 @@
+{
+  "actions": {
+    "walk": {
+      "frameCount": 30,
+      "cycleMs": 1000,
+      "uniqueFrameFileHashes": 30,
+      "atlas": "walk/walk-right-30f.png",
+      "animation": "walk/walk-right-animated.png"
+    },
+    "run": {
+      "frameCount": 30,
+      "cycleMs": 750,
+      "uniqueFrameFileHashes": 30,
+      "atlas": "run/run-right-30f.png",
+      "animation": "run/run-right-animated.png"
+    }
+  },
+  "status": "reviewable pilot; not a validated reusable skeleton",
+  "character": "silver_staff_mage",
+  "direction": "right"
+}

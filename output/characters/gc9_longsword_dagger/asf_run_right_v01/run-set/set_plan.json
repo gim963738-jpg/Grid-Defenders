@@ -1,0 +1,317 @@
+{
+  "schema": "video2dsprite.sprite_set_plan.v1",
+  "tool": {
+    "name": "sprite_set",
+    "version": "0.5.0"
+  },
+  "createdAt": "2026-11-07T08:51:51.229Z",
+  "name": "blond-warrior-run-right",
+  "class": "hero",
+  "key": "magenta",
+  "keyRgb": [
+    255,
+    0,
+    255
+  ],
+  "style": "the accepted detailed SD fantasy sprite rendering with golden hair, shaded silver armor, royal-blue cloth, warm outlines and the same compact proportions",
+  "pronoun": "his",
+  "views": [
+    "side"
+  ],
+  "masters": {
+    "side": {
+      "json": {
+        "path": "master/side/master.json",
+        "sha256": "a7a3561d8bbd2608e20f5ae3452fa0f513b45bef266dde34ffb93148311bc620",
+        "bytes": 4267
+      },
+      "png": {
+        "path": "master/side/master.png",
+        "sha256": "a58e3cd46f020e01b98303ee2e8cb78e9f8a06149cea5b3a0cce285fc498fdda",
+        "bytes": 296372
+      },
+      "sourceName": "master.json",
+      "name": "blond-warrior-run-right",
+      "identityRecap": "golden-blond SD male warrior with brown eyes, blue scarf and lowered short hood, silver plate armor, brown belts and trousers, near right crescent shoulder, near right silver greave and armored boot, far left blue wrapped boot, long cyan-inlaid silver longsword with feather-fin guard and D-shaped knuckle bow held in the near right hand, and short silver dagger held in the far left hand",
+      "facing": "right",
+      "finish": "pixel",
+      "class": "hero",
+      "key": "magenta",
+      "size": [
+        1024,
+        1024
+      ],
+      "subjectBox": [
+        355,
+        138,
+        669,
+        926
+      ],
+      "anchor": [
+        475.5,
+        926.0
+      ],
+      "area": 131015,
+      "framing": {
+        "canvas": [
+          1024,
+          1024
+        ],
+        "subject_height_px": 788,
+        "top_margin_px": 138,
+        "lead_px": 0,
+        "preset": "hero",
+        "subject_bbox": [
+          355,
+          138,
+          669,
+          926
+        ],
+        "anchor": [
+          476.0,
+          926.0
+        ],
+        "opaque_area_px": 131077,
+        "width_limited": false
+      }
+    }
+  },
+  "generation": {
+    "duration": 6.0,
+    "resolution": "720p",
+    "maxTakes": 2,
+    "jobs": 1,
+    "pinLastFrame": "auto",
+    "timeoutSeconds": 1200.0
+  },
+  "finish": {
+    "mode": "pixel",
+    "targetHeight": 208,
+    "scaleRefAction": "run",
+    "palette": null,
+    "colors": 64,
+    "outline": null,
+    "canvas": [
+      256,
+      256
+    ],
+    "canvasAnchor": [
+      128,
+      234
+    ],
+    "colourLock": true
+  },
+  "matteProfile": null,
+  "package": {
+    "formats": [
+      "png",
+      "webm"
+    ],
+    "tiers": null,
+    "fps": 30,
+    "frameMs": null
+  },
+  "library": {
+    "name": "motion-prompts.md",
+    "sha256": "d849193e23a04bf5a5b16305b64ada380ee1bd98cdf04b57e24771a1d098c177"
+  },
+  "clauses": {
+    "never-turn": "The character keeps facing {facing} the whole time: never turns around, never shows {pos} back and never faces the camera.",
+    "camera-locked": "Locked camera and constant character size: no zoom, no push-in, no pull-out, no pan; the character is exactly the same size in every frame, before and after the action.",
+    "constant-size": "The character keeps exactly the same size and proportions as the still in every frame; arms, legs and the weapon never grow longer.",
+    "feet-planted": "Both feet stay planted on the same ground line and the body stays centered in the frame; no stepping away, no sliding, no drifting.",
+    "feet-ground-line": "Every step lands on the same ground line and the body stays centered in the frame; the character never drifts forward, backward, up or down.",
+    "inside-frame": "The whole body, the weapon and every moving part stay fully inside the frame with a clear margin on every side; nothing is cut off by the frame edge.",
+    "flat-background": "The background stays solid flat pure {key} for the whole shot: no floor, no ground, no shadow, no gradient, no glow, no haze, no light.",
+    "no-extras": "Nothing else appears in the frame: no dust, no dirt, no smoke, no puffs, no pebbles, no particles, no orbs, no sparks, no flashes, no projectiles, no arrows, no motion trails, no effects of any kind.",
+    "identity-lock": "CHARACTER LOCK for the whole clip: the face, hair, colours, costume, proportions and every design detail stay exactly as in the still; nothing new grows or appears on the character (no horns, no crests, no extra straps or weapons).",
+    "face-visible": "The whole face is visible in every frame: no hand, weapon, sleeve, hair or effect ever passes in front of the face.",
+    "keep-colours": "The colours stay exactly as in the still in every frame: no tint, no colour shift, no darkening and no glow on the character.",
+    "same-start-end": "The clip starts AND ends in exactly the same pose as the still and holds that pose still at the end.",
+    "starts-from-still": "The first frame is exactly the supplied image: the same pose, position and size; the motion starts from there.",
+    "single-action": "Only one {action}: no repeats, no second strike, no spinning, no jumping, no leaving the frame.",
+    "weapon-shape": "The weapon stays one single weapon of the same length and shape the whole time: never bending, never doubling, no second blade, no ghost blades.",
+    "no-text": "No text, letters, glyphs, writing or logos anywhere.",
+    "no-flares": "No cross flares, no starbursts, no four-point sparkles, no lens flares.",
+    "visible-motion": "The motion is clearly visible at game size: a full, readable {action} with real movement of the body, not a still image.",
+    "in-place": "The character stays in the same spot and never travels across the frame; the game moves the sprite.",
+    "fluid-motion": "One continuous, fluid motion at natural speed: no pauses, no frozen poses, no hovering, no slow motion.",
+    "steady-cycle": "A steady, evenly timed cycle: every step looks the same, the legs clearly alternate and the pose at the end of each cycle matches its start.",
+    "no-blur": "No motion-blur smears, no afterimages, no colour fringing on the weapon."
+  },
+  "gatefix": {
+    "area": [
+      "constant-size",
+      "camera-locked"
+    ],
+    "feet": [
+      "feet-planted",
+      "in-place"
+    ],
+    "identity": [
+      "identity-lock",
+      "face-visible"
+    ],
+    "zoom": [
+      "camera-locked"
+    ],
+    "turn": [
+      "never-turn"
+    ],
+    "edge": [
+      "inside-frame"
+    ],
+    "background": [
+      "flat-background"
+    ],
+    "extra": [
+      "no-extras"
+    ],
+    "motion": [
+      "visible-motion",
+      "single-action"
+    ],
+    "end-pose": [
+      "same-start-end"
+    ],
+    "colour": [
+      "keep-colours"
+    ],
+    "timing": [
+      "fluid-motion"
+    ],
+    "loop": [
+      "steady-cycle",
+      "in-place"
+    ],
+    "registration": [
+      "starts-from-still",
+      "camera-locked"
+    ],
+    "keying": [
+      "flat-background",
+      "inside-frame"
+    ]
+  },
+  "actions": [
+    {
+      "id": "run",
+      "action": "run",
+      "view": "side",
+      "kind": "loop",
+      "loopKind": "gait",
+      "gaitState": "run",
+      "prepareAction": "run",
+      "retimeKind": "run",
+      "placement": {
+        "preset": "square",
+        "canvas": [
+          1024,
+          1024
+        ],
+        "scale": 1.0,
+        "root": [
+          475.5,
+          926.0
+        ],
+        "anchor": [
+          475.5,
+          926.0
+        ],
+        "subjectBox": [
+          355.0,
+          138.0,
+          669.0,
+          926.0
+        ],
+        "margin": 20,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "headroom": 0.1348
+      },
+      "pinLastFrame": false,
+      "lock": "none",
+      "airborne": false,
+      "hitTick": false,
+      "returnsToRest": true,
+      "motion": "runs in place like a looping game run cycle: a fast, determined sprint with the upper body leaning forward, knees pumping, feet pounding with a brief flight phase, arms pumping opposite to the legs, hair and clothing streaming back. The character stays in the same spot and never moves across the frame; the feet land on the same ground line. The near silver RIGHT thigh and the far blue LEFT thigh alternately drive forward, each knee folds, the airborne shin swings forward past the support foot, heel/forefoot lands, then that same foot pushes backward and toes off. Include both distinct left-leading and right-leading phases and a short airborne phase between contacts. Keep the right silver armored leg and left blue wrapped leg on their own physical sides. While running, carry both weapons in their same hands with a restrained natural arm counter-swing; the long sword stays long and rigid, not used to attack.",
+      "negatives": "Constant character size. No dust, no speed lines, no motion trails, no effects. Exactly two held weapons. Keep the long sword cyan inlays, feather guard and closed knuckle bow visible. No extra blades, no weapon swaps, no sheathing, no weapon morphing, no turns and no face redesign.",
+      "gates": {
+        "area": {
+          "min": 0.72,
+          "max": 1.32,
+          "maxBadShare": 0.1
+        },
+        "feet": {
+          "max": 0.1,
+          "badFrames": 3,
+          "mode": "median"
+        },
+        "identity": {
+          "start": 0.8,
+          "min": 0.5,
+          "badFrames": 2,
+          "severe": 0.3,
+          "severeShare": 0.5,
+          "scales": [
+            0.9,
+            1.0,
+            1.1
+          ]
+        },
+        "colour": {
+          "foreign": 0.02,
+          "badShare": 0.15,
+          "drift": 0.03,
+          "driftShare": 0.4
+        },
+        "timing": {
+          "maxSeconds": 2.0,
+          "maxHoldSeconds": 0.5
+        },
+        "zoom": {
+          "max": 0.08
+        },
+        "turn": {
+          "enabled": true,
+          "margin": 0.08,
+          "run": 3
+        },
+        "edge": {
+          "px": 2
+        },
+        "background": {
+          "tolerance": 48.0,
+          "maxImpure": 0.004,
+          "badFrames": 2
+        },
+        "extra": {
+          "max": 0.015,
+          "badFrames": 2
+        },
+        "motion": {
+          "min": 0.06
+        },
+        "endPose": {
+          "enabled": false,
+          "min": 0.8
+        },
+        "window": {
+          "loopSeconds": 1.0
+        }
+      },
+      "prompt": "The same golden-blond SD male warrior with brown eyes, blue scarf and lowered short hood, silver plate armor, brown belts and trousers, near right crescent shoulder, near right silver greave and armored boot, far left blue wrapped boot, long cyan-inlaid silver longsword with feather-fin guard and D-shaped knuckle bow held in the near right hand, and short silver dagger held in the far left hand, facing RIGHT the entire time and never turning around, runs in place like a looping game run cycle: a fast, determined sprint with the upper body leaning forward, knees pumping, feet pounding with a brief flight phase, arms pumping opposite to the legs, hair and clothing streaming back. The character stays in the same spot and never moves across the frame; the feet land on the same ground line. The clip starts AND ends in exactly the same pose as the still. Constant character size. No dust, no speed lines, no motion trails, no effects. camera locked, no zoom, no pan; solid flat pure magenta background only for the whole shot; keep the exact the accepted detailed SD fantasy sprite rendering with golden hair, shaded silver armor, royal-blue cloth, warm outlines and the same compact proportions look, palette, proportions and costume of the still; single continuous action.\n",
+      "lint": []
+    }
+  ],
+  "estimate": {
+    "clips": 1,
+    "maxClips": 2,
+    "maxVideoSeconds": 12.0,
+    "note": "route_media.py prints and ledgers the real price of every clip"
+  }
+}

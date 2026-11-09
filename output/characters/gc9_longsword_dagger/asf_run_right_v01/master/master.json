@@ -1,0 +1,170 @@
+{
+  "schema": "generate2dsprite.master.v1",
+  "tool": {
+    "name": "master_still",
+    "version": "0.5.0"
+  },
+  "created": "2026-11-07T08:51:49.724Z",
+  "name": "blond-warrior-run-right",
+  "subject": "a golden-blond male SD fantasy warrior, full body",
+  "identity_recap": "golden-blond SD male warrior with brown eyes, blue scarf and lowered short hood, silver plate armor, brown belts and trousers, near right crescent shoulder, near right silver greave and armored boot, far left blue wrapped boot, long cyan-inlaid silver longsword with feather-fin guard and D-shaped knuckle bow held in the near right hand, and short silver dagger held in the far left hand",
+  "facing": "right",
+  "view": "exact right-facing orthographic side profile",
+  "finish": "pixel",
+  "class": "hero",
+  "framing": {
+    "canvas": [
+      1024,
+      1024
+    ],
+    "subject_height_px": 788,
+    "top_margin_px": 138,
+    "lead_px": 0,
+    "preset": "hero",
+    "subject_bbox": [
+      355,
+      138,
+      669,
+      926
+    ],
+    "anchor": [
+      476.0,
+      926.0
+    ],
+    "opaque_area_px": 131077,
+    "width_limited": false
+  },
+  "key": "#FF00FF",
+  "files": {
+    "master": {
+      "path": "master.png",
+      "sha256": "a58e3cd46f020e01b98303ee2e8cb78e9f8a06149cea5b3a0cce285fc498fdda",
+      "bytes": 296372,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "cutout": {
+      "path": "master_rgba.png",
+      "sha256": "1c4452ca630fa65fdb5dd83cc735c5abb0b2a744cccc7ac4aa72b0f67e08c633",
+      "bytes": 354456,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "source": {
+      "path": "source.png",
+      "sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+      "bytes": 729650,
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "spec": {
+      "path": "spec.json",
+      "sha256": "8123603f8909c3ef4568892982d3e0227b054b8e1f4df1cba86677d499f6a67d",
+      "bytes": 2132
+    },
+    "prompt": null
+  },
+  "references": [],
+  "transform": {
+    "mapping": "master = scale * source + offset (continuous pixel coordinates: pixel i spans [i, i + 1))",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_subject_bbox": [
+      382,
+      10,
+      872,
+      1239
+    ],
+    "crop_box": [
+      376,
+      4,
+      878,
+      1245
+    ],
+    "crop_margin_px": 6,
+    "scale": 0.6411716842961758,
+    "offset": [
+      109.98535394629778,
+      131.58828315703823
+    ],
+    "canvas": [
+      1024,
+      1024
+    ],
+    "resampler": "lanczos",
+    "premultiplied": true,
+    "alpha_floor_px": 7387,
+    "subject_parts": 1,
+    "ignored_parts": 6,
+    "ignored_px": 6,
+    "source_touches": [],
+    "key_rgb": [
+      255,
+      0,
+      255
+    ]
+  },
+  "route": "host-image_gen-existing",
+  "provenance": {
+    "command": "external",
+    "run": null,
+    "take": null,
+    "source_name": "03_right_090.png",
+    "source_sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+    "media": null,
+    "media_cli_source": null,
+    "edit": null
+  },
+  "matte": {
+    "requested": "soft",
+    "key_estimate": {
+      "key": [
+        255.0,
+        0.0,
+        255.0
+      ],
+      "source": "native_alpha",
+      "valid": false,
+      "ring_share": 0.0,
+      "coverage": 0.0,
+      "distance_from_declared": 0.0
+    },
+    "quality": "native_alpha",
+    "qa": {
+      "key": [
+        255.0,
+        0.0,
+        255.0
+      ],
+      "opaque_key_px": 0,
+      "outer_ring_spill_fraction": 0.025622919398769293,
+      "semitransparent_fraction": 0.9986493515450556,
+      "enclosed_key_pockets": 3,
+      "key_hued_px": 0,
+      "visible_px": 347981,
+      "outer_ring_px": 9913,
+      "thresholds": {
+        "key_tolerance": 48.0,
+        "spill_threshold": 20.0,
+        "min_pocket_area": 16,
+        "opaque_alpha": 128,
+        "spill_hue_balance": 0.5
+      },
+      "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+    },
+    "key_choice": {
+      "status": "ok",
+      "overlap_share": 0.0,
+      "rule": "reject a key when more than 0.5% of subject pixels have key dominance >= 40; first acceptable candidate wins"
+    }
+  },
+  "warnings": []
+}

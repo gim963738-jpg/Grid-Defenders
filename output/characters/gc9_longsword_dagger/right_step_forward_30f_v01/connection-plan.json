@@ -1,0 +1,33 @@
+﻿{
+    "previousAsset":  "../walk_right_30f_v01",
+    "previousSelectedFrames":  [
+                                   1,
+                                   2,
+                                   3,
+                                   4,
+                                   5,
+                                   9,
+                                   10,
+                                   11,
+                                   13,
+                                   14,
+                                   15,
+                                   16,
+                                   21,
+                                   22,
+                                   23
+                               ],
+    "newAsset":  "right-step-forward-30f.png",
+    "newNumbersAreSeparate":  true,
+    "newFrameCount":  30,
+    "action":  "Left blue leg supports; near silver right knee moves forward, right shin extends past the left toe toward screen-right, then right heel and forefoot land ahead",
+    "endpoint":  "Right silver boot forward; left blue boot behind",
+    "priorLoweringCandidate":  "../right_foot_lower_30f_v01",
+    "newSelectionStatus":  "Awaiting user frame selection",
+    "autoConcatenated":  false,
+    "playback":  {
+                     "loop":  false,
+                     "durationMs":  2000,
+                     "fps":  15
+                 }
+}

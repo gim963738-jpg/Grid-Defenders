@@ -1,0 +1,105 @@
+{
+  "schema": "video2dsprite.sprite_set_report.v1",
+  "tool": {
+    "name": "sprite_set",
+    "version": "0.5.0"
+  },
+  "createdAt": "2026-11-07T08:54:44.641Z",
+  "name": "blond-warrior-run-right",
+  "class": "hero",
+  "status": "incomplete",
+  "plan": {
+    "path": "set_plan.json",
+    "sha256": "57315741385e8b533d8c18b73b423375f98e0a3c30bf9ab81de408c342be5889"
+  },
+  "finish": {
+    "mode": "pixel",
+    "targetHeight": 208,
+    "scaleRefAction": "run",
+    "palette": null,
+    "colors": 64,
+    "outline": null,
+    "canvas": [
+      256,
+      256
+    ],
+    "canvasAnchor": [
+      128,
+      234
+    ],
+    "colourLock": true
+  },
+  "package": {
+    "formats": [
+      "png",
+      "webm"
+    ],
+    "tiers": null,
+    "fps": 30,
+    "frameMs": null
+  },
+  "accepted": [],
+  "needsReview": [
+    "run"
+  ],
+  "review": null,
+  "actions": [
+    {
+      "id": "run",
+      "action": "run",
+      "view": "side",
+      "kind": "loop",
+      "status": "error",
+      "message": "take 2: local:grok-acp: RATE_LIMIT: image_to_video reported a failure: ...m's rate limit is - Requests per Minute (actual/limit): 0/0. Your rate limit tier is determined based on your historical API spend. To learn how to increase your rate limit tier, please visit [url] (stop reason end_turn) (run b4254ce5225844fc81b908d9769e2361) (the next run tries again)",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "pinLastFrame": false,
+      "route": null,
+      "chosen": null,
+      "accepted": null,
+      "fixes": [],
+      "takes": [
+        {
+          "take": 1,
+          "round": 1,
+          "status": "error",
+          "route": null,
+          "pinnedLastFrame": null,
+          "prompt": {
+            "path": "actions/run/takes/t01/prompt.txt",
+            "sha256": "40699717463cd399fba2a533ed32129e3cd327871c860bc4242eaea611dad7d6"
+          },
+          "fixes": [],
+          "clip": null,
+          "failures": [],
+          "reasons": [],
+          "message": "local:grok-acp: RATE_LIMIT: image_to_video reported a failure: ...m's rate limit is - Requests per Minute (actual/limit): 0/0. Your rate limit tier is determined based on your historical API spend. To learn how to increase your rate limit tier, please visit [url] (stop reason end_turn) (run 7031edbb863f42dca24683cfd93dc549)",
+          "qc": null
+        },
+        {
+          "take": 2,
+          "round": 1,
+          "status": "error",
+          "route": null,
+          "pinnedLastFrame": null,
+          "prompt": {
+            "path": "actions/run/takes/t02/prompt.txt",
+            "sha256": "40699717463cd399fba2a533ed32129e3cd327871c860bc4242eaea611dad7d6"
+          },
+          "fixes": [],
+          "clip": null,
+          "failures": [],
+          "reasons": [],
+          "message": "local:grok-acp: RATE_LIMIT: image_to_video reported a failure: ...m's rate limit is - Requests per Minute (actual/limit): 0/0. Your rate limit tier is determined based on your historical API spend. To learn how to increase your rate limit tier, please visit [url] (stop reason end_turn) (run b4254ce5225844fc81b908d9769e2361)",
+          "qc": null
+        }
+      ],
+      "loop": null,
+      "timing": null,
+      "finish": null,
+      "outputs": null
+    }
+  ]
+}

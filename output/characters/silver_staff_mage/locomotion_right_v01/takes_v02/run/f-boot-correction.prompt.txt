@@ -1,0 +1,13 @@
+EDIT the supplied d.png sprite sheet. Preserve the exact 4x2 grid and all eight existing sprites, character identity, face, hair, robe, arms, staff, original pixel rendering and camera registration.
+This is a SURGICAL lower-leg correction only. Do not generate a different animation, do not reorder poses, do not redraw first five sprites, do not add labels/grid/background. Keep transparent alpha.
+
+Target: d.png bottom row cells2,3,4 ONLY (overall cells6,7,8). Their forward NEAR right boot sinks too low near the end of the running loop. In these three cells, BEND THE FORWARD KNEE very slightly and raise the front ankle/boot while leaving pelvis, upper body, head, hair, hands and entire staff exactly where they are. Keep leg lengths anatomically consistent by a small knee bend instead of shrinking boots. All other cells unchanged.
+
+Source has1774x887 pixels, each cell443.5px:
+Cell6 current lowest front boot local y~421: raise to~406.
+Cell7 current lowest front boot local y~424: raise to~411.
+Cell8 current lowest front boot local y~428: raise to~415.
+Common ground would be local y~417. The last three front heels therefore approach from above: about11px,6px,2px above ground. NEVER extend below ground. Front boot x positions and heel/toe angle remain otherwise consistent with the existing poses.
+Keep the rear FAR leg folded behind exactly as before. Two legs only, no ghosting/duplicate feet.
+The second input run-right-01.png is the following contact frame for continuity only. Final cell8 of the corrected d.png must approach that front heel contact with no upward pop or sudden foot-position change. Do not paste this smaller reference into the atlas or alter the first five cells.
+Preserve gold embroidery, dark trousers, boots, ALL upper-body pixels and gold wing staff. No trimming staff, no removing ferrule, no altered face or hair shape. Output the corrected d.png as4x2 equal cells on true transparent background, same2:1 canvas ratio.

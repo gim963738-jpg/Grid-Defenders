@@ -1,0 +1,41 @@
+{
+  "task": "MAIN03-20261109-5133411E",
+  "iteration": 1,
+  "checks": [
+    {
+      "file": "front.png",
+      "shaMatches": true
+    },
+    {
+      "file": "idle_right_045.png",
+      "shaMatches": true
+    },
+    {
+      "file": "right_090.png",
+      "shaMatches": true
+    },
+    {
+      "file": "front.png",
+      "sourceBytesMatch": true
+    },
+    {
+      "file": "idle_right_045.png",
+      "sourceBytesMatch": true
+    },
+    {
+      "file": "right_090_candidate.png",
+      "sourceBytesMatch": true
+    },
+    {
+      "file": "right_090.png",
+      "sourceBytesMatch": true
+    },
+    {
+      "file": "front_alpha_cleanup_candidate.png",
+      "sourceBytesMatch": true
+    }
+  ],
+  "filesExist": true,
+  "technicalAcceptance": false,
+  "userAcceptance": false
+}
