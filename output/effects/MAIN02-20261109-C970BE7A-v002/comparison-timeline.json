@@ -1,0 +1,182 @@
+{
+  "iteration1": {
+    "status": "user requested revision; not approved style",
+    "duration": 2.5,
+    "hits": [
+      {
+        "number": 1,
+        "start": 0.16,
+        "emphasis": 0.26,
+        "fadeStart": 0.28,
+        "end": 0.4,
+        "angle": 25,
+        "offset": -8,
+        "length": 0.82,
+        "firstVisibleFrame": 11,
+        "emphasisSampleFrame": 17,
+        "lastVisibleFrame": 24
+      },
+      {
+        "number": 2,
+        "start": 0.43,
+        "emphasis": 0.53,
+        "fadeStart": 0.55,
+        "end": 0.67,
+        "angle": 28,
+        "offset": 5,
+        "length": 0.79,
+        "firstVisibleFrame": 27,
+        "emphasisSampleFrame": 33,
+        "lastVisibleFrame": 41
+      },
+      {
+        "number": 3,
+        "start": 0.69,
+        "emphasis": 0.79,
+        "fadeStart": 0.81,
+        "end": 0.93,
+        "angle": 23,
+        "offset": -5,
+        "length": 0.84,
+        "firstVisibleFrame": 43,
+        "emphasisSampleFrame": 49,
+        "lastVisibleFrame": 56
+      },
+      {
+        "number": 4,
+        "start": 0.96,
+        "emphasis": 1.06,
+        "fadeStart": 1.08,
+        "end": 1.2,
+        "angle": 27,
+        "offset": 9,
+        "length": 0.8,
+        "firstVisibleFrame": 59,
+        "emphasisSampleFrame": 65,
+        "lastVisibleFrame": 72
+      },
+      {
+        "number": 5,
+        "start": 1.23,
+        "emphasis": 1.33,
+        "fadeStart": 1.35,
+        "end": 1.47,
+        "angle": 24,
+        "offset": -2,
+        "length": 0.83,
+        "firstVisibleFrame": 75,
+        "emphasisSampleFrame": 81,
+        "lastVisibleFrame": 89
+      },
+      {
+        "number": 6,
+        "start": 1.55,
+        "emphasis": 1.65,
+        "fadeStart": 1.67,
+        "end": 1.85,
+        "angle": 26,
+        "offset": 0,
+        "length": 0.86,
+        "firstVisibleFrame": 95,
+        "emphasisSampleFrame": 100,
+        "lastVisibleFrame": 111
+      }
+    ]
+  },
+  "iteration2": {
+    "status": "submitted; user style decision pending",
+    "duration": 2,
+    "hits": [
+      {
+        "number": 1,
+        "start": 0.12,
+        "emphasis": 0.185,
+        "fadeStart": 0.197,
+        "end": 0.3,
+        "angle": 27,
+        "length": 760,
+        "curvature": 18,
+        "coreWidth": 2.6,
+        "sweep": 0.065,
+        "firstVisibleFrame": 9,
+        "lastVisibleFrame": 18,
+        "emphasisSampleFrame": 13
+      },
+      {
+        "number": 2,
+        "start": 0.32,
+        "emphasis": 0.395,
+        "fadeStart": 0.407,
+        "end": 0.5,
+        "angle": -34,
+        "length": 700,
+        "curvature": -28,
+        "coreWidth": 3.5,
+        "sweep": 0.075,
+        "firstVisibleFrame": 21,
+        "lastVisibleFrame": 30,
+        "emphasisSampleFrame": 25
+      },
+      {
+        "number": 3,
+        "start": 0.52,
+        "emphasis": 0.575,
+        "fadeStart": 0.587,
+        "end": 0.7,
+        "angle": 151,
+        "length": 745,
+        "curvature": 12,
+        "coreWidth": 2.1,
+        "sweep": 0.055,
+        "firstVisibleFrame": 33,
+        "lastVisibleFrame": 42,
+        "emphasisSampleFrame": 36
+      },
+      {
+        "number": 4,
+        "start": 0.73,
+        "emphasis": 0.81,
+        "fadeStart": 0.822,
+        "end": 0.92,
+        "angle": 218,
+        "length": 675,
+        "curvature": -34,
+        "coreWidth": 3.8,
+        "sweep": 0.08,
+        "firstVisibleFrame": 45,
+        "lastVisibleFrame": 56,
+        "emphasisSampleFrame": 50
+      },
+      {
+        "number": 5,
+        "start": 0.94,
+        "emphasis": 1.005,
+        "fadeStart": 1.017,
+        "end": 1.14,
+        "angle": 68,
+        "length": 460,
+        "curvature": 22,
+        "coreWidth": 2.8,
+        "sweep": 0.065,
+        "firstVisibleFrame": 58,
+        "lastVisibleFrame": 69,
+        "emphasisSampleFrame": 62
+      },
+      {
+        "number": 6,
+        "start": 1.22,
+        "emphasis": 1.31,
+        "fadeStart": 1.322,
+        "end": 1.47,
+        "angle": -16,
+        "length": 815,
+        "curvature": -16,
+        "coreWidth": 4.2,
+        "sweep": 0.09,
+        "firstVisibleFrame": 75,
+        "lastVisibleFrame": 89,
+        "emphasisSampleFrame": 80
+      }
+    ]
+  }
+}

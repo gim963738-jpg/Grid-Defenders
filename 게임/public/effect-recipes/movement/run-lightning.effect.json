@@ -1,0 +1,247 @@
+{
+  "format": "gd.effect@1",
+  "name": "번개 질주",
+  "settings": {
+    "size": 192,
+    "frames": 28,
+    "fps": 40,
+    "pixelSize": 1,
+    "loop": false
+  },
+  "palette": [
+    "#3B66B4",
+    "#76B8FF",
+    "#ECF7FF"
+  ],
+  "placement": {
+    "pivotX": 0.68,
+    "pivotY": 0.68,
+    "displaySize": 164,
+    "impactFrame": 5
+  },
+  "layers": [
+    {
+      "id": "run-lightning-1",
+      "name": "번개 뒤의 옅은 속도 잔광",
+      "type": "wind",
+      "blend": "normal",
+      "enabled": true,
+      "color": 0,
+      "x": 0.78,
+      "y": 0.62,
+      "start": 0,
+      "end": 0.96,
+      "radius": 0.44,
+      "thickness": 0.006,
+      "rotation": 180,
+      "spread": 30,
+      "amount": 3,
+      "speed": 1,
+      "opacity": 0.6,
+      "seed": 195
+    }
+  ],
+  "drawing": {
+    "version": 1,
+    "enabled": true,
+    "showBase": true,
+    "prompt": "오른쪽으로 질주할 때 뒤에 남는 세 갈래 지그재그 번개. 짧은 점멸 후 꼬리부터 사라집니다. 캐릭터 이동과 피해는 포함하지 않습니다.",
+    "strokes": [
+      {
+        "id": "run-lightning-bolt-0",
+        "role": "effect",
+        "points": [
+          [
+            0.77,
+            0.61
+          ],
+          [
+            0.64,
+            0.57
+          ],
+          [
+            0.67,
+            0.62
+          ],
+          [
+            0.51,
+            0.59
+          ],
+          [
+            0.56,
+            0.65
+          ],
+          [
+            0.37,
+            0.61
+          ],
+          [
+            0.42,
+            0.66
+          ],
+          [
+            0.18,
+            0.64
+          ]
+        ],
+        "step": 1,
+        "duration": 0.14,
+        "delay": 0.02,
+        "linger": 0.12,
+        "color": "#76B8FF",
+        "width": 0.006,
+        "style": "trail",
+        "followActor": false,
+        "fold": false,
+        "note": "짧게 켜진 뒤 꼬리부터 소멸하는 이동 번개",
+        "purpose": "appearance",
+        "meaning": "점멸 번개 1",
+        "guideColor": "#70BAFF",
+        "fadeAlong": {
+          "from": [
+            0.15,
+            0.65
+          ],
+          "to": [
+            0.78,
+            0.65
+          ],
+          "start": 0.35,
+          "end": 1,
+          "softness": 0.25
+        },
+        "tool": "pen"
+      },
+      {
+        "id": "run-lightning-bolt-1",
+        "role": "effect",
+        "points": [
+          [
+            0.74,
+            0.68
+          ],
+          [
+            0.61,
+            0.72
+          ],
+          [
+            0.65,
+            0.67
+          ],
+          [
+            0.5,
+            0.7
+          ],
+          [
+            0.53,
+            0.64
+          ],
+          [
+            0.32,
+            0.7
+          ],
+          [
+            0.37,
+            0.64
+          ],
+          [
+            0.15,
+            0.68
+          ]
+        ],
+        "step": 1,
+        "duration": 0.14,
+        "delay": 0.15,
+        "linger": 0.12,
+        "color": "#76B8FF",
+        "width": 0.007,
+        "style": "trail",
+        "followActor": false,
+        "fold": false,
+        "note": "짧게 켜진 뒤 꼬리부터 소멸하는 이동 번개",
+        "purpose": "appearance",
+        "meaning": "점멸 번개 2",
+        "guideColor": "#70BAFF",
+        "fadeAlong": {
+          "from": [
+            0.15,
+            0.65
+          ],
+          "to": [
+            0.78,
+            0.65
+          ],
+          "start": 0.35,
+          "end": 1,
+          "softness": 0.25
+        },
+        "tool": "pen"
+      },
+      {
+        "id": "run-lightning-bolt-2",
+        "role": "effect",
+        "points": [
+          [
+            0.75,
+            0.6
+          ],
+          [
+            0.61,
+            0.51
+          ],
+          [
+            0.64,
+            0.58
+          ],
+          [
+            0.48,
+            0.53
+          ],
+          [
+            0.53,
+            0.59
+          ],
+          [
+            0.3,
+            0.55
+          ],
+          [
+            0.36,
+            0.6
+          ],
+          [
+            0.21,
+            0.57
+          ]
+        ],
+        "step": 1,
+        "duration": 0.14,
+        "delay": 0.28,
+        "linger": 0.12,
+        "color": "#76B8FF",
+        "width": 0.008,
+        "style": "trail",
+        "followActor": false,
+        "fold": false,
+        "note": "짧게 켜진 뒤 꼬리부터 소멸하는 이동 번개",
+        "purpose": "appearance",
+        "meaning": "점멸 번개 3",
+        "guideColor": "#70BAFF",
+        "fadeAlong": {
+          "from": [
+            0.15,
+            0.65
+          ],
+          "to": [
+            0.78,
+            0.65
+          ],
+          "start": 0.35,
+          "end": 1,
+          "softness": 0.25
+        },
+        "tool": "pen"
+      }
+    ]
+  }
+}

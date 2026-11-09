@@ -1,0 +1,107 @@
+﻿{
+    "task":  "WEB-163",
+    "date":  "2026-11-07",
+    "page":  "http://127.0.0.1:5182/effect-gallery.html",
+    "checks":  {
+                   "galleryModel":  17,
+                   "galleryUI":  15,
+                   "effectWorkshop":  98,
+                   "skillVisual":  13,
+                   "total":  143
+               },
+    "build":  "npm.cmd run build passed (TypeScript and Vite)",
+    "animation":  {
+                      "elapsed":  4081.7999997138977,
+                      "hidden":  false,
+                      "width":  754,
+                      "frameCounts":  [
+                                          19,
+                                          27,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16
+                                      ],
+                      "allAnimated":  true,
+                      "renderTimes":  [
+                                          {
+                                              "id":  "horizontal",
+                                              "ms":  0.5999999046325684
+                                          },
+                                          {
+                                              "id":  "emerald",
+                                              "ms":  0.40000009536743164
+                                          },
+                                          {
+                                              "id":  "slash",
+                                              "ms":  0.40000009536743164
+                                          },
+                                          {
+                                              "id":  "explosion",
+                                              "ms":  0.40000009536743164
+                                          },
+                                          {
+                                              "id":  "flame",
+                                              "ms":  0.19999980926513672
+                                          },
+                                          {
+                                              "id":  "ice",
+                                              "ms":  0.3000001907348633
+                                          },
+                                          {
+                                              "id":  "rune",
+                                              "ms":  0.2999997138977051
+                                          },
+                                          {
+                                              "id":  "heal",
+                                              "ms":  0.20000028610229492
+                                          }
+                                      ]
+                  },
+    "navigation":  {
+                       "savedSelected":  true,
+                       "savedCountUnchanged":  true,
+                       "recipesUnchanged":  true,
+                       "consumedQuery":  true,
+                       "presetAddedOnce":  true,
+                       "presetName":  "수평 일섬",
+                       "consumedPresetQuery":  true,
+                       "newId":  "25a55a42-1343-4e47-be1e-37211af2d703",
+                       "reloadDoesNotDuplicate":  true,
+                       "workshopChecks":  98
+                   },
+    "copy":  {
+                 "copyMatches":  true,
+                 "deniedSelectsRequest":  true,
+                 "references":  "참고: 수평 일섬 · 에메랄드 매듭"
+             },
+    "mobile320":  {
+                      "width":  320,
+                      "scroll":  320,
+                      "dpr":  3,
+                      "columns":  "144px 144px",
+                      "minimumControlHeight":  48,
+                      "smallControls":  [
+
+                                        ],
+                      "buttonFont":  "14px"
+                  },
+    "userStorage":  {
+                        "unchanged":  true,
+                        "count":  13,
+                        "activeId":  "07d2a0e4-ad46-4618-bbe1-4b44b94a03f2",
+                        "url":  "http://127.0.0.1:5182/effect-gallery.html",
+                        "cards":  8,
+                        "ready":  true,
+                        "playing":  true
+                    },
+    "screenshots":  [
+                        "desktop-final.png",
+                        "desktop.png",
+                        "mobile-390.png",
+                        "concept-guide.png"
+                    ],
+    "scope":  "Local gallery and concept request guide; no external generation API or deployment; no changes to authored effects."
+}

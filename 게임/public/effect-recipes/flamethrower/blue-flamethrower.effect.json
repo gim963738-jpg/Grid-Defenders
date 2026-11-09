@@ -1,0 +1,64 @@
+{
+  "format": "gd.effect@1",
+  "name": "청염 화염방사",
+  "settings": {
+    "size": 256,
+    "frames": 64,
+    "fps": 26.666666666666668,
+    "pixelSize": 1,
+    "loop": false
+  },
+  "palette": [
+    "#196DFF",
+    "#FF821C",
+    "#FFFBE7"
+  ],
+  "placement": {
+    "pivotX": 0.84,
+    "pivotY": 0.52,
+    "displaySize": 220,
+    "impactFrame": 6
+  },
+  "layers": [
+    {
+      "id": "blue-jet-ignition",
+      "name": "점화 순간의 푸른 불꽃",
+      "type": "flame",
+      "blend": "normal",
+      "enabled": true,
+      "color": 0,
+      "x": 0.84,
+      "y": 0.52,
+      "start": 0,
+      "end": 0.12,
+      "radius": 0.055,
+      "thickness": 0.012,
+      "rotation": 0,
+      "spread": 40,
+      "amount": 5,
+      "speed": 1.4,
+      "opacity": 0.65,
+      "seed": 165
+    },
+    {
+      "id": "blue-jet-stream",
+      "name": "주황 분사·백열 중심·청염 외곽",
+      "type": "jet",
+      "blend": "normal",
+      "enabled": true,
+      "color": 0,
+      "x": 0.84,
+      "y": 0.52,
+      "start": 0.015,
+      "end": 1,
+      "radius": 0.42,
+      "thickness": 0.075,
+      "rotation": 180,
+      "spread": 65,
+      "amount": 56,
+      "speed": 1,
+      "opacity": 1,
+      "seed": 25031
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+﻿{
+    "date":  "2026-11-07",
+    "name":  "청염 화염방사",
+    "durationSeconds":  2.4,
+    "frames":  64,
+    "checks":  {
+                   "flamethrower":  14,
+                   "workshop":  197,
+                   "gallery":  28,
+                   "galleryUi":  15,
+                   "total":  254
+               },
+    "visibleFrames":  59,
+    "framesTouchingEdge":  0,
+    "brightAllFramesReviewed":  true,
+    "battleScenesReviewed":  6,
+    "playback":  {
+                     "name":  "청염 화염방사",
+                     "controls":  true,
+                     "playback":  [
+                                      {
+                                          "speed":  "0.25",
+                                          "moves":  true,
+                                          "paused":  true
+                                      },
+                                      {
+                                          "speed":  "1",
+                                          "moves":  true,
+                                          "paused":  true
+                                      },
+                                      {
+                                          "speed":  "5",
+                                          "moves":  true,
+                                          "paused":  true
+                                      }
+                                  ],
+                     "download":  true,
+                     "zipBytes":  1542420,
+                     "queryConsumed":  true
+                 },
+    "mobile320":  {
+                      "width":  320,
+                      "scroll":  320,
+                      "dpr":  3,
+                      "battleWidth":  274,
+                      "canvasWidth":  1170
+                  },
+    "mobile390":  {
+                      "width":  390,
+                      "scroll":  390
+                  },
+    "application":  {
+                        "before":  13,
+                        "after":  14,
+                        "previousEntriesPreserved":  true,
+                        "id":  "87c133c8-cafe-4f3d-973f-2a0c50709351",
+                        "name":  "청염 화염방사",
+                        "frames":  64,
+                        "fps":  26.666666666666668,
+                        "save":  "자동 저장됨",
+                        "queryConsumed":  true
+                    },
+    "buildPassed":  true,
+    "productionZipMatches":  true,
+    "gitDiffCheckPassed":  true,
+    "finalPreview":  "workshop-final.png",
+    "playingSpeed":  1
+}

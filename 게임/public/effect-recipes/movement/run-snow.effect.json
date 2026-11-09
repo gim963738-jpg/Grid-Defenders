@@ -1,0 +1,84 @@
+{
+  "format": "gd.effect@1",
+  "name": "눈가루 발걸음",
+  "settings": {
+    "size": 192,
+    "frames": 36,
+    "fps": 40,
+    "pixelSize": 1,
+    "loop": true
+  },
+  "palette": [
+    "#75A9C9",
+    "#CEE7F4",
+    "#F5FBFF"
+  ],
+  "placement": {
+    "pivotX": 0.68,
+    "pivotY": 0.68,
+    "displaySize": 132,
+    "impactFrame": 5
+  },
+  "layers": [
+    {
+      "id": "run-snow-1",
+      "name": "넓게 날리는 고운 눈가루",
+      "type": "dust",
+      "blend": "normal",
+      "enabled": true,
+      "color": 1,
+      "x": 0.68,
+      "y": 0.65,
+      "start": 0,
+      "end": 0.96,
+      "radius": 0.26,
+      "thickness": 0.017,
+      "rotation": 180,
+      "spread": 70,
+      "amount": 24,
+      "speed": 1,
+      "opacity": 0.8,
+      "seed": 195
+    },
+    {
+      "id": "run-snow-2",
+      "name": "하얀 발끝 가루",
+      "type": "dust",
+      "blend": "normal",
+      "enabled": true,
+      "color": 2,
+      "x": 0.7,
+      "y": 0.7,
+      "start": 0.22,
+      "end": 0.82,
+      "radius": 0.12,
+      "thickness": 0.025,
+      "rotation": 180,
+      "spread": 60,
+      "amount": 8,
+      "speed": 1,
+      "opacity": 0.85,
+      "seed": 226
+    },
+    {
+      "id": "run-snow-3",
+      "name": "흩어지는 작은 얼음 결정",
+      "type": "particles",
+      "blend": "normal",
+      "enabled": true,
+      "color": 1,
+      "x": 0.68,
+      "y": 0.65,
+      "start": 0.04,
+      "end": 0.88,
+      "radius": 0.075,
+      "thickness": 0.025,
+      "rotation": 180,
+      "spread": 110,
+      "amount": 26,
+      "speed": 0.8,
+      "opacity": 0.8,
+      "seed": 257
+    }
+  ]
+}

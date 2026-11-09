@@ -1,0 +1,78 @@
+{
+    "date":  "2026-11-07",
+    "total":  315,
+    "core":  [
+                 {
+                     "name":  "workshop",
+                     "passed":  80
+                 },
+                 {
+                     "name":  "drawing",
+                     "passed":  34
+                 },
+                 {
+                     "name":  "paint",
+                     "passed":  27
+                 },
+                 {
+                     "name":  "nodes",
+                     "passed":  36
+                 },
+                 {
+                     "name":  "branch",
+                     "passed":  12
+                 },
+                 {
+                     "name":  "visual",
+                     "passed":  13
+                 },
+                 {
+                     "name":  "playback",
+                     "passed":  15
+                 }
+             ],
+    "ui":  {
+               "branch":  17,
+               "workshop":  32,
+               "paint":  23,
+               "nodes":  26
+           },
+    "native":  {
+                   "count":  2,
+                   "branches":  [
+                                    {
+                                        "start":  [
+                                                      0.5,
+                                                      0.5
+                                                  ],
+                                        "end":  [
+                                                    0.27,
+                                                    0.73
+                                                ],
+                                        "step":  1,
+                                        "delay":  0,
+                                        "target":  "effect"
+                                    },
+                                    {
+                                        "start":  [
+                                                      0.5,
+                                                      0.5
+                                                  ],
+                                        "end":  [
+                                                    0.73,
+                                                    0.27
+                                                ],
+                                        "step":  1,
+                                        "delay":  0,
+                                        "target":  "effect"
+                                    }
+                                ],
+                   "sameOrigin":  true
+               },
+    "visual":  "33 bright frames and actual battlefield top/center",
+    "mobile":  "320/390 no overflow, 320 DPR3 268px canvas / 804px pixels, branch 244x48px",
+    "build":  "passed",
+    "diffCheck":  "passed",
+    "testOrigin":  "localhost:5182",
+    "userTestDataWrites":  false
+}

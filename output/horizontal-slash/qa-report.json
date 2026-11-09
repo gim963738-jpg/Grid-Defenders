@@ -1,0 +1,110 @@
+﻿{
+    "format":  "gd.effect-qa@1",
+    "name":  "수평 일섬",
+    "request":  "뻗는 선과 움직이는 점을 제거하고, 진한 검상이 시작점부터 천천히 연해져 소멸",
+    "automatic":  {
+                      "passed":  196,
+                      "fade":  13,
+                      "branch":  12,
+                      "emerald":  12,
+                      "paint":  27,
+                      "drawing":  34,
+                      "common":  98
+                  },
+    "inPlaceUI":  {
+                      "applied":  true,
+                      "unchanged":  true,
+                      "undo":  true,
+                      "redo":  true
+                  },
+    "playback":  [
+                     {
+                         "speed":  "0.25",
+                         "actual":  2,
+                         "expected":  2,
+                         "advances":  true,
+                         "paused":  true
+                     },
+                     {
+                         "speed":  "1",
+                         "actual":  10,
+                         "expected":  10,
+                         "advances":  true,
+                         "paused":  true
+                     },
+                     {
+                         "speed":  "5",
+                         "actual":  51,
+                         "expected":  51,
+                         "advances":  true,
+                         "paused":  true
+                     }
+                 ],
+    "mobile":  {
+                   "width":  320,
+                   "scroll":  320,
+                   "dpr":  3,
+                   "canvas":  {
+                                  "cssWidth":  274,
+                                  "cssHeight":  302.09375,
+                                  "width":  780,
+                                  "height":  860
+                              },
+                   "button":  {
+                                  "width":  296,
+                                  "height":  48,
+                                  "font":  "14px"
+                              },
+                   "frame":  "27 / 52"
+               },
+    "frames":  {
+                   "visible":  47,
+                   "touchesEdge":  0,
+                   "firstTransparent":  true,
+                   "lastTransparent":  true,
+                   "frames":  52,
+                   "duration":  1.3,
+                   "cell":  304
+               },
+    "storageRepair":  {
+                          "healthy":  true,
+                          "repaired":  1,
+                          "count":  11,
+                          "active":  "수평 일섬"
+                      },
+    "userApplication":  {
+                            "countBefore":  11,
+                            "countAfter":  11,
+                            "sameId":  true,
+                            "otherWorksPreserved":  true,
+                            "stylePreserved":  true,
+                            "name":  "수평 일섬",
+                            "frames":  52,
+                            "fps":  40,
+                            "strokes":  [
+                                            {
+                                                "id":  "horizontal-scar",
+                                                "purpose":  "appearance",
+                                                "style":  "field",
+                                                "fadeAlong":  true
+                                            },
+                                            {
+                                                "id":  "horizontal-core",
+                                                "purpose":  "appearance",
+                                                "style":  "trail",
+                                                "fadeAlong":  true
+                                            }
+                                        ],
+                            "status":  "자동 저장됨",
+                            "playing":  true
+                        },
+    "build":  "npm.cmd run build passed (tsc and Vite)",
+    "visuals":  [
+                    "52 frames on bright green/gray",
+                    "full scar at battle top frame6",
+                    "partial fade at battle center frame27",
+                    "320/390px overflow and DPR3 audit"
+                ],
+    "combat":  "visual-only workshop; damage and actual skill assignment unchanged",
+    "limitation":  "No physical mobile device test; final appearance awaits user feedback"
+}

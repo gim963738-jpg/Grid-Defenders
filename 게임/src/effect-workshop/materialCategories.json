@@ -1,0 +1,54 @@
+{
+  "categories": ["참격·검로", "타격", "폭발·충격파", "불꽃", "물", "얼음", "전기", "레이저·빔", "투사체", "마법진·장판", "보호막·오라", "회복·강화", "상태이상", "이동·잔상", "먼지·연기", "빛·입자", "문양·기호", "소환·특수", "배경·참고"],
+  "rules": [
+    ["symbols/|symbol |symbol[0-9]|rank |place |gameover|complete|failure|success|warning|thumbs|question|alert|text|crown|lightbulb|문양|기호", "문양·기호"],
+    ["poison|death|status|chemical|독|중독|상태이상", "상태이상"],
+    ["heal|absorb|attack[ _]?up|defense[ _]?up|magic[ _]?up|haste|heart|생명의|회복|치유|강화", "회복·강화"],
+    ["laser|beam|레이저|연결|매듭", "레이저·빔"],
+    ["fire[ _]?ball|energy[ _]?ball|lightening[ _]?ball|arrow|muzzle|투사체|화살|탄환", "투사체"],
+    ["shield|aura|보호막|오라", "보호막·오라"],
+    ["explosion|explode|kaboom|bomb|shockwave|폭발|충격파", "폭발·충격파"],
+    ["slash|sword|slice|scratch|참격|검로|검상|일섬", "참격·검로"],
+    ["teleport|warp|portal|hyperspeed|trace|이동|잔상|돌진|질주|스텝|발자국|바람", "이동·잔상"],
+    ["rune|ring|flat effect|magic[ _]?circle|eld en|마법진|장판|고리|테두리", "마법진·장판"],
+    ["ice|frost|snow|얼음|서리|눈발", "얼음"],
+    ["lightning|electric|thunder|lightening|전기|번개", "전기"],
+    ["smoke|puff|dust|fog|fart|scorch|dirt|연기|먼지|안개|모래", "먼지·연기"],
+    ["fire|flame|magma|burn|불꽃|불씨|화염|솟는 불", "불꽃"],
+    ["water|bubble|rain|splash|물|물결|물보라", "물"],
+    ["hit|impact|blood|splatter|타격|피격|혈흔", "타격"],
+    ["spark|star|flare|light|flash|particle|charge|anima|constellation|빛|입자|섬광|파편", "빛·입자"],
+    ["circle|symbol|coin|music|window|wheel|문양", "문양·기호"],
+    ["grass|ground|풀잎|지형|배경", "배경·참고"]
+  ],
+  "packRules": [
+    ["slash", "참격·검로"], ["hitting|blood|hit-animation", "타격"],
+    ["lasers", "레이저·빔"], ["explosion", "폭발·충격파"],
+    ["particle", "빛·입자"], ["flame|fire-fx", "불꽃"],
+    ["lightning", "전기"], ["smoke|fog", "먼지·연기"],
+    ["teleporter", "이동·잔상"], ["water-effects", "물"], ["grass", "배경·참고"]
+  ],
+  "overrides": [
+    ["craftpix-free-pixel-magic-sprite-effects-pack", "^1 Magic/2\\.png$|^1 Magic/8\\.png$", "마법진·장판"],
+    ["craftpix-free-pixel-magic-sprite-effects-pack", "^1 Magic/3( 2)?\\.png$", "레이저·빔"],
+    ["craftpix-free-pixel-magic-sprite-effects-pack", "^1 Magic/(4( [12])?|5)\\.png$", "폭발·충격파"],
+    ["craftpix-free-pixel-magic-sprite-effects-pack", "^1 Magic/6( 2)?\\.png$", "불꽃"],
+    ["craftpix-free-pixel-magic-sprite-effects-pack", "^1 Magic/9\\.png$", "빛·입자"],
+    ["craftpix-free-pixel-magic-sprite-effects-pack", "^1 Magic/10\\.png$", "상태이상"],
+    ["oga-5x-special-effects-2d", "^(green|magic) effect", "빛·입자"],
+    ["oga-2d-spell-effects", "^fx1 blue topEffect$", "빛·입자"],
+    ["codemanu", "PowerChords", "전기"],
+    ["codemanu", "TheVortex", "마법진·장판"]
+  ],
+  "aliases": {
+    "참격·검로": "참격 검격 베기 칼 sword slash", "타격": "충돌 피격 혈흔 hit impact blood",
+    "폭발·충격파": "폭발 파열 충격파 explosion burst", "불꽃": "불 화염 불씨 fire flame",
+    "물": "물 물방울 파도 water splash", "얼음": "얼음 서리 냉기 ice snow", "전기": "전기 번개 감전 lightning",
+    "레이저·빔": "레이저 빔 연결선 laser beam", "투사체": "탄환 화살 발사체 missile bullet",
+    "마법진·장판": "마법진 장판 원형 ring rune", "보호막·오라": "보호막 방어 오라 aura shield",
+    "회복·강화": "힐 회복 버프 강화 heal buff", "상태이상": "독 디버프 상태이상 poison debuff",
+    "이동·잔상": "대시 이동 달리기 속도 잔상 teleport trail", "먼지·연기": "먼지 연기 안개 smoke dust fog",
+    "빛·입자": "빛 반짝임 스파크 파티클 입자 particle light", "문양·기호": "문양 기호 심볼 문자 icon symbol",
+    "소환·특수": "마법 소환 특수 에너지 magic summon", "배경·참고": "배경 지형 참고 풀 terrain reference"
+  }
+}

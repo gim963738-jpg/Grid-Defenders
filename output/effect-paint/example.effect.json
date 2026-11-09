@@ -1,0 +1,357 @@
+{
+    "drawing":  {
+                    "enabled":  true,
+                    "prompt":  "노란 직선은 이동 방향, 빨간 곡선은 구현됐을 때의 모습. 곡선 모양을 녹색으로 구현해 방향선을 따라 이동한다. 파란선은 지면 기준 참고다.",
+                    "showBase":  false,
+                    "strokes":  [
+                                    {
+                                        "anchors":  [
+                                                        [
+                                                            0.24,
+                                                            0.6
+                                                        ],
+                                                        [
+                                                            0.7,
+                                                            0.4
+                                                        ]
+                                                    ],
+                                        "color":  "#9be8b3",
+                                        "delay":  0,
+                                        "directionTarget":  "effect",
+                                        "duration":  1.2,
+                                        "fold":  false,
+                                        "followActor":  false,
+                                        "guideColor":  "#f4ce55",
+                                        "id":  "7c201d6f-c1bc-43e7-b7c2-3e04ec26ab34",
+                                        "linger":  0.2,
+                                        "meaning":  "검기의 이동 방향",
+                                        "note":  "",
+                                        "points":  [
+                                                       [
+                                                           0.24,
+                                                           0.6
+                                                       ],
+                                                       [
+                                                           0.7,
+                                                           0.4
+                                                       ]
+                                                   ],
+                                        "purpose":  "direction",
+                                        "role":  "move",
+                                        "step":  1,
+                                        "style":  "trail",
+                                        "tool":  "line",
+                                        "width":  0.015
+                                    },
+                                    {
+                                        "anchors":  [
+                                                        [
+                                                            0.35,
+                                                            0.5
+                                                        ],
+                                                        [
+                                                            0.5,
+                                                            0.25
+                                                        ],
+                                                        [
+                                                            0.65,
+                                                            0.5
+                                                        ]
+                                                    ],
+                                        "color":  "#65ed9a",
+                                        "delay":  0,
+                                        "directionId":  "7c201d6f-c1bc-43e7-b7c2-3e04ec26ab34",
+                                        "duration":  1.2,
+                                        "fold":  false,
+                                        "followActor":  false,
+                                        "guideColor":  "#ff777b",
+                                        "id":  "5b0dd332-b1f1-40ed-b9f7-eec8ccbd19f5",
+                                        "linger":  0.2,
+                                        "meaning":  "완성됐을 때 보이는 검기 모양",
+                                        "note":  "",
+                                        "points":  [
+                                                       [
+                                                           0.35,
+                                                           0.5
+                                                       ],
+                                                       [
+                                                           0.35937499999999994,
+                                                           0.48486328125
+                                                       ],
+                                                       [
+                                                           0.36875,
+                                                           0.470703125
+                                                       ],
+                                                       [
+                                                           0.378125,
+                                                           0.45751953125
+                                                       ],
+                                                       [
+                                                           0.38749999999999996,
+                                                           0.4453125
+                                                       ],
+                                                       [
+                                                           0.396875,
+                                                           0.43408203125
+                                                       ],
+                                                       [
+                                                           0.40625,
+                                                           0.423828125
+                                                       ],
+                                                       [
+                                                           0.415625,
+                                                           0.41455078125
+                                                       ],
+                                                       [
+                                                           0.42500000000000004,
+                                                           0.40625
+                                                       ],
+                                                       [
+                                                           0.43437499999999996,
+                                                           0.39892578125
+                                                       ],
+                                                       [
+                                                           0.44375,
+                                                           0.392578125
+                                                       ],
+                                                       [
+                                                           0.453125,
+                                                           0.38720703125
+                                                       ],
+                                                       [
+                                                           0.4625,
+                                                           0.3828125
+                                                       ],
+                                                       [
+                                                           0.47187500000000004,
+                                                           0.37939453125
+                                                       ],
+                                                       [
+                                                           0.48124999999999996,
+                                                           0.376953125
+                                                       ],
+                                                       [
+                                                           0.490625,
+                                                           0.37548828125
+                                                       ],
+                                                       [
+                                                           0.5,
+                                                           0.375
+                                                       ],
+                                                       [
+                                                           0.509375,
+                                                           0.37548828125
+                                                       ],
+                                                       [
+                                                           0.51875,
+                                                           0.376953125
+                                                       ],
+                                                       [
+                                                           0.528125,
+                                                           0.37939453125
+                                                       ],
+                                                       [
+                                                           0.5375,
+                                                           0.3828125
+                                                       ],
+                                                       [
+                                                           0.546875,
+                                                           0.38720703125
+                                                       ],
+                                                       [
+                                                           0.55625,
+                                                           0.392578125
+                                                       ],
+                                                       [
+                                                           0.565625,
+                                                           0.39892578125
+                                                       ],
+                                                       [
+                                                           0.5750000000000001,
+                                                           0.40625
+                                                       ],
+                                                       [
+                                                           0.584375,
+                                                           0.41455078125
+                                                       ],
+                                                       [
+                                                           0.59375,
+                                                           0.423828125
+                                                       ],
+                                                       [
+                                                           0.603125,
+                                                           0.43408203125
+                                                       ],
+                                                       [
+                                                           0.6125,
+                                                           0.4453125
+                                                       ],
+                                                       [
+                                                           0.621875,
+                                                           0.45751953125
+                                                       ],
+                                                       [
+                                                           0.63125,
+                                                           0.470703125
+                                                       ],
+                                                       [
+                                                           0.640625,
+                                                           0.48486328125
+                                                       ],
+                                                       [
+                                                           0.65,
+                                                           0.5
+                                                       ]
+                                                   ],
+                                        "purpose":  "appearance",
+                                        "role":  "effect",
+                                        "step":  1,
+                                        "style":  "trail",
+                                        "tool":  "curve",
+                                        "width":  0.015
+                                    },
+                                    {
+                                        "anchors":  [
+                                                        [
+                                                            0.22,
+                                                            0.68
+                                                        ],
+                                                        [
+                                                            0.75,
+                                                            0.68
+                                                        ]
+                                                    ],
+                                        "behavior":  "reference",
+                                        "color":  "#9be8b3",
+                                        "delay":  0,
+                                        "duration":  0.6,
+                                        "fold":  false,
+                                        "followActor":  false,
+                                        "guideColor":  "#70baff",
+                                        "id":  "c1b1e8de-ecf1-49b3-9c06-8861a2ba3255",
+                                        "linger":  0.2,
+                                        "meaning":  "지면 높이 참고",
+                                        "note":  "이 선은 위치를 설명하는 참고선이며 화면에 표시하지 않는다.",
+                                        "points":  [
+                                                       [
+                                                           0.22,
+                                                           0.68
+                                                       ],
+                                                       [
+                                                           0.75,
+                                                           0.68
+                                                       ]
+                                                   ],
+                                        "purpose":  "custom",
+                                        "role":  "effect",
+                                        "step":  1,
+                                        "style":  "trail",
+                                        "tool":  "line",
+                                        "width":  0.015
+                                    }
+                                ],
+                    "version":  1
+                },
+    "format":  "gd.effect@1",
+    "layers":  [
+                   {
+                       "amount":  16,
+                       "blend":  "add",
+                       "color":  0,
+                       "enabled":  true,
+                       "end":  0.72,
+                       "id":  "27a03df2-ce00-4c79-a7ef-f024ede7c899",
+                       "name":  "참격",
+                       "opacity":  1,
+                       "radius":  0.31,
+                       "rotation":  -35,
+                       "seed":  173,
+                       "speed":  0.8,
+                       "spread":  220,
+                       "start":  0,
+                       "thickness":  0.06,
+                       "type":  "slash",
+                       "x":  0.5,
+                       "y":  0.5
+                   },
+                   {
+                       "amount":  16,
+                       "blend":  "add",
+                       "color":  1,
+                       "enabled":  true,
+                       "end":  0.5,
+                       "id":  "71dbdc68-c1d8-42fd-88a0-8e3ed7700f38",
+                       "name":  "충격파",
+                       "opacity":  0.5,
+                       "radius":  0.22,
+                       "rotation":  -30,
+                       "seed":  173,
+                       "speed":  0.8,
+                       "spread":  180,
+                       "start":  0.08,
+                       "thickness":  0.012,
+                       "type":  "ring",
+                       "x":  0.5,
+                       "y":  0.5
+                   },
+                   {
+                       "amount":  24,
+                       "blend":  "add",
+                       "color":  0,
+                       "enabled":  true,
+                       "end":  1,
+                       "id":  "ee3101cb-cbb0-496a-8e45-a75e0434c5ee",
+                       "name":  "파티클",
+                       "opacity":  1,
+                       "radius":  0.18,
+                       "rotation":  -30,
+                       "seed":  173,
+                       "speed":  1,
+                       "spread":  170,
+                       "start":  0.1,
+                       "thickness":  0.035,
+                       "type":  "particles",
+                       "x":  0.5,
+                       "y":  0.5
+                   },
+                   {
+                       "amount":  4,
+                       "blend":  "add",
+                       "color":  2,
+                       "enabled":  true,
+                       "end":  0.35,
+                       "id":  "92e77474-3f00-4b8b-9988-19ac3078ef16",
+                       "name":  "섬광",
+                       "opacity":  1,
+                       "radius":  0.15,
+                       "rotation":  -30,
+                       "seed":  173,
+                       "speed":  0.8,
+                       "spread":  180,
+                       "start":  0.08,
+                       "thickness":  0.025,
+                       "type":  "burst",
+                       "x":  0.5,
+                       "y":  0.5
+                   }
+               ],
+    "name":  "방향과 완성 모양 설계 예제",
+    "palette":  [
+                    "#ff8a35",
+                    "#ffd477",
+                    "#fff7dd"
+                ],
+    "placement":  {
+                      "displaySize":  110,
+                      "impactFrame":  5,
+                      "pivotX":  0.5,
+                      "pivotY":  0.5
+                  },
+    "settings":  {
+                     "fps":  30,
+                     "frames":  42,
+                     "loop":  false,
+                     "pixelSize":  1,
+                     "size":  128
+                 }
+}

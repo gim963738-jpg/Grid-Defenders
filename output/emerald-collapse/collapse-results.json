@@ -1,0 +1,11 @@
+﻿{
+  "id": "f46ea8d3-98b0-4bb3-a219-3e0eb68e5cdd",
+  "ok": true,
+  "result": {
+    "result": "{\"core\":12,\"ui\":4,\"checks\":[\"the rotating figure keeps four straight connected sides\",\"every frame from32 through57 remains an equal-sided square about the same center\",\"the square shrinks on every frame without expanding again\",\"the square is almost fully collapsed before frame58\",\"the figure visibly rotates while shrinking\",\"four soft delayed square afterimages start with the collapse\",\"whole-square afterimages are present in actual PNG pixels\",\"afterimages do not alter the opening before frame32\",\"applying the motion revision preserves user colors, controls and playback settings\",\"applying or reapplying preserves the opening and exact frame58 joining pose\",\"afterimage settings survive editable JSON round-trip\",\"imported afterimage allocation is bounded\",\"the motion button applies square afterimages while retaining user glow\",\"applying the revision edits the current work without duplicating the library entry\",\"undo restores the complete saved work before the motion revision\",\"redo restores the square-collapse revision\"]}",
+    "origin": "http://localhost:5182/effect-workshop.html"
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

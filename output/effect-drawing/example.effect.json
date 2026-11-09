@@ -1,0 +1,204 @@
+{
+    "drawing":  {
+                    "enabled":  true,
+                    "prompt":  "노란선을 따라 돌진하면서 빨간 검로로 베고, 파란선 끝에서 녹색 폭발.",
+                    "showBase":  false,
+                    "strokes":  [
+                                    {
+                                        "color":  "#9be8b3",
+                                        "delay":  0,
+                                        "duration":  0.85,
+                                        "fold":  false,
+                                        "followActor":  false,
+                                        "id":  "9dce4131-e23c-4d80-bd80-e18135a39eae",
+                                        "linger":  0.2,
+                                        "note":  "노란선을 따라 돌진",
+                                        "points":  [
+                                                       [
+                                                           0.22,
+                                                           0.62
+                                                       ],
+                                                       [
+                                                           0.38,
+                                                           0.57
+                                                       ],
+                                                       [
+                                                           0.58,
+                                                           0.48
+                                                       ],
+                                                       [
+                                                           0.72,
+                                                           0.4
+                                                       ]
+                                                   ],
+                                        "role":  "move",
+                                        "step":  1,
+                                        "style":  "trail",
+                                        "width":  0.015
+                                    },
+                                    {
+                                        "color":  "#b5f8d0",
+                                        "delay":  0,
+                                        "duration":  0.85,
+                                        "fold":  false,
+                                        "followActor":  false,
+                                        "id":  "25adb4b4-38a9-4532-9285-11cdb29da7ca",
+                                        "linger":  0.2,
+                                        "note":  "돌진과 동시에 녹색 검격",
+                                        "points":  [
+                                                       [
+                                                           0.3,
+                                                           0.32
+                                                       ],
+                                                       [
+                                                           0.42,
+                                                           0.28
+                                                       ],
+                                                       [
+                                                           0.57,
+                                                           0.32
+                                                       ],
+                                                       [
+                                                           0.7,
+                                                           0.46
+                                                       ],
+                                                       [
+                                                           0.69,
+                                                           0.62
+                                                       ]
+                                                   ],
+                                        "role":  "slash",
+                                        "step":  1,
+                                        "style":  "trail",
+                                        "width":  0.025
+                                    },
+                                    {
+                                        "color":  "#65ed9a",
+                                        "delay":  0,
+                                        "duration":  0.6,
+                                        "fold":  false,
+                                        "followActor":  false,
+                                        "id":  "95e7504a-1e4d-4a0d-a0f1-d0cbed468a5a",
+                                        "linger":  0.2,
+                                        "note":  "파란선 끝점에서 녹색 폭발",
+                                        "points":  [
+                                                       [
+                                                           0.63,
+                                                           0.43
+                                                       ],
+                                                       [
+                                                           0.71,
+                                                           0.46
+                                                       ]
+                                                   ],
+                                        "role":  "effect",
+                                        "step":  2,
+                                        "style":  "burst",
+                                        "width":  0.025
+                                    }
+                                ],
+                    "version":  1
+                },
+    "format":  "gd.effect@1",
+    "layers":  [
+                   {
+                       "amount":  16,
+                       "blend":  "add",
+                       "color":  0,
+                       "enabled":  true,
+                       "end":  0.72,
+                       "id":  "2e3b6c7d-6edc-4d56-aebc-ba527ef0be2a",
+                       "name":  "참격",
+                       "opacity":  1,
+                       "radius":  0.31,
+                       "rotation":  -35,
+                       "seed":  173,
+                       "speed":  0.8,
+                       "spread":  220,
+                       "start":  0,
+                       "thickness":  0.06,
+                       "type":  "slash",
+                       "x":  0.5,
+                       "y":  0.5
+                   },
+                   {
+                       "amount":  16,
+                       "blend":  "add",
+                       "color":  1,
+                       "enabled":  true,
+                       "end":  0.5,
+                       "id":  "0b8ed890-77ac-431f-97d3-ab90f458c32d",
+                       "name":  "충격파",
+                       "opacity":  0.5,
+                       "radius":  0.22,
+                       "rotation":  -30,
+                       "seed":  173,
+                       "speed":  0.8,
+                       "spread":  180,
+                       "start":  0.08,
+                       "thickness":  0.012,
+                       "type":  "ring",
+                       "x":  0.5,
+                       "y":  0.5
+                   },
+                   {
+                       "amount":  24,
+                       "blend":  "add",
+                       "color":  0,
+                       "enabled":  true,
+                       "end":  1,
+                       "id":  "bc588f6a-359f-4011-8925-9b37a2ed0b7b",
+                       "name":  "파티클",
+                       "opacity":  1,
+                       "radius":  0.18,
+                       "rotation":  -30,
+                       "seed":  173,
+                       "speed":  1,
+                       "spread":  170,
+                       "start":  0.1,
+                       "thickness":  0.035,
+                       "type":  "particles",
+                       "x":  0.5,
+                       "y":  0.5
+                   },
+                   {
+                       "amount":  4,
+                       "blend":  "add",
+                       "color":  2,
+                       "enabled":  true,
+                       "end":  0.35,
+                       "id":  "c413c344-29cc-4883-8a10-829ee181495e",
+                       "name":  "섬광",
+                       "opacity":  1,
+                       "radius":  0.15,
+                       "rotation":  -30,
+                       "seed":  173,
+                       "speed":  0.8,
+                       "spread":  180,
+                       "start":  0.08,
+                       "thickness":  0.025,
+                       "type":  "burst",
+                       "x":  0.5,
+                       "y":  0.5
+                   }
+               ],
+    "name":  "그리기 예제 · 돌진과 녹색 검격",
+    "palette":  [
+                    "#ff8a35",
+                    "#ffd477",
+                    "#fff7dd"
+                ],
+    "placement":  {
+                      "displaySize":  110,
+                      "impactFrame":  5,
+                      "pivotX":  0.5,
+                      "pivotY":  0.5
+                  },
+    "settings":  {
+                     "fps":  30.30303,
+                     "frames":  50,
+                     "loop":  false,
+                     "pixelSize":  1,
+                     "size":  128
+                 }
+}

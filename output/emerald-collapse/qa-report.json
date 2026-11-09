@@ -1,0 +1,50 @@
+{
+    "date":  "2026-11-07",
+    "total":  133,
+    "tests":  {
+                  "collapse":  12,
+                  "ui":  4,
+                  "sequence":  28,
+                  "workshop":  89
+              },
+    "motion":  "32-57 rigid rotating square, monotonically shrinking, 4 whole-square echoes, joins frame58",
+    "edgeFrames":  0,
+    "visibleFrames":  62,
+    "applied":  {
+                    "name":  "에메랄드 매듭",
+                    "idPreserved":  true,
+                    "countBefore":  9,
+                    "countAfter":  9,
+                    "stylingPreserved":  true,
+                    "afterimages":  [
+                                        4,
+                                        4,
+                                        4,
+                                        4
+                                    ],
+                    "saved":  "자동 저장됨"
+                },
+    "mobile":  {
+                   "width":  320,
+                   "scroll":  320,
+                   "dpr":  3,
+                   "battleCss":  {
+                                     "x":  23,
+                                     "y":  255,
+                                     "width":  274,
+                                     "height":  302.09375,
+                                     "top":  255,
+                                     "right":  297,
+                                     "bottom":  557.09375,
+                                     "left":  23
+                                 },
+                   "pixels":  [
+                                  780,
+                                  860
+                              ],
+                   "frame":  "43 / 64"
+               },
+    "build":  "passed",
+    "diffCheck":  "passed",
+    "originalBackup":  "before.effect.json"
+}

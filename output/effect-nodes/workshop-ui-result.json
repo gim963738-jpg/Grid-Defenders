@@ -1,0 +1,11 @@
+﻿{
+  "id": "ea8e7d3f-e19b-4c6c-93d8-b2a52f0f7e88",
+  "ok": true,
+  "result": {
+    "result": "{\"passed\":32,\"checks\":[\"the complete workshop mounts with canvas and export controls\",\"a preset becomes a distinct editable, autosaved work\",\"renaming updates the document and persistent work together\",\"undo restores the previous complete recipe\",\"redo restores the edited recipe\",\"adding a layer changes the saved recipe\",\"deleting a layer preserves the remaining composition\",\"layer visibility is persisted\",\"color editing updates the saved palette\",\"frame-count editing rebuilds timeline and scrub limits\",\"0.25x playback advances at the selected speed (actual 3, expected 3)\",\"0.25x pause freezes the exact frame\",\"1x playback advances at the selected speed (actual 14, expected 14)\",\"1x pause freezes the exact frame\",\"5x playback advances at the selected speed (actual 63, expected 63)\",\"5x pause freezes the exact frame\",\"frame stepping moves exactly one logical frame\",\"all frames can be inspected together on a bright background\",\"AI handoff contains the actual current work and supported format\",\"AI request text updates the complete handoff\",\"invalid imports show a useful error and preserve the current work\",\"valid JSON imports as a new, autosaved editable work\",\"clipped artwork blocks PNG export while editable JSON remains available\",\"fixing bounds re-enables PNG export\",\"PNG encoding finishes before export validation\",\"PNG export produces a decodable sprite sheet with the selected layout\",\"metadata export includes every frame, transparent source, padded pivot and completion timing\",\"editable export is the actual saved composition with a portable filename\",\"duplicate creates an independent named work\",\"cancelling deletion preserves the work\",\"confirmed deletion removes only the selected work\",\"unsafe layer identifiers fail validation inside the actual import flow\"]}",
+    "origin": "http://localhost:5182/effect-workshop.html#nodes"
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

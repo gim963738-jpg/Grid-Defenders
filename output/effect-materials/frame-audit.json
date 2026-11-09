@@ -1,0 +1,32 @@
+{
+  "packs": 34,
+  "materials": 632,
+  "frames": 14561,
+  "exactSourceFrames": 14335,
+  "darkMatteFrames": 226,
+  "allSourceRectsInBounds": true,
+  "allTransparentGutters": true,
+  "uniqueIds": true,
+  "originalEdgeContactMaterials": 359,
+  "pending": [
+    {
+      "packId": "oga-lasers-and-beams",
+      "source": "originals/oga-lasers-and-beams/beams.png",
+      "reason": "크기가 서로 다른 낱개 빔 모음 · 개별 영역 확인 필요",
+      "name": "Lasers and beams"
+    },
+    {
+      "packId": "oga-grass-blades-alpha-card-texture-side-view",
+      "source": "originals/oga-grass-blades-alpha-card-texture-side-view/vegetation_grass_card_03.png",
+      "reason": "이펙트가 아닌 배경·지형 소재 · 원본 보관",
+      "name": "grass blades alpha card texture (side view)"
+    },
+    {
+      "packId": "oga-grass-ground",
+      "source": "originals/oga-grass-ground/ground.png",
+      "reason": "이펙트가 아닌 배경·지형 소재 · 원본 보관",
+      "name": "Grass Ground"
+    }
+  ],
+  "manualVisualReview": "Representative packs only; all-frame bright contact sheets are available per material."
+}

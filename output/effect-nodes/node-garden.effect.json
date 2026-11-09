@@ -1,0 +1,145 @@
+{
+    "format":  "gd.effect@1",
+    "name":  "노드 연결 검증 · 생명의 빛",
+    "settings":  {
+                     "size":  128,
+                     "frames":  24,
+                     "fps":  30,
+                     "pixelSize":  1,
+                     "loop":  false
+                 },
+    "palette":  [
+                    "#27aa87",
+                    "#86efb3",
+                    "#f1ffcb"
+                ],
+    "placement":  {
+                      "pivotX":  0.5,
+                      "pivotY":  0.5,
+                      "displaySize":  110,
+                      "impactFrame":  10
+                  },
+    "layers":  [
+                   {
+                       "id":  "dcc16e42-8140-438c-bd4f-8395c4aa60df",
+                       "name":  "마법진",
+                       "type":  "rune",
+                       "enabled":  true,
+                       "blend":  "add",
+                       "color":  1,
+                       "x":  0.5,
+                       "y":  0.5,
+                       "start":  0,
+                       "end":  1,
+                       "radius":  0.18,
+                       "thickness":  0.012,
+                       "rotation":  0,
+                       "spread":  180,
+                       "amount":  4,
+                       "speed":  0.8,
+                       "opacity":  1,
+                       "seed":  173
+                   }
+               ],
+    "graph":  {
+                  "version":  1,
+                  "enabled":  true,
+                  "nodes":  [
+                                {
+                                    "id":  "fe68577c-4d5b-4f0a-aa4a-9f206565b239",
+                                    "type":  "layer",
+                                    "x":  40,
+                                    "y":  40,
+                                    "sourceId":  "dcc16e42-8140-438c-bd4f-8395c4aa60df",
+                                    "params":  {
+                                                   "color":  "#8cebb0",
+                                                   "amount":  1,
+                                                   "scale":  1,
+                                                   "rotation":  0,
+                                                   "x":  0,
+                                                   "y":  0,
+                                                   "blur":  4,
+                                                   "mode":  "normal",
+                                                   "start":  0,
+                                                   "end":  1
+                                               }
+                                },
+                                {
+                                    "id":  "02627c6d-c982-49f7-9cf0-6232bde845f3",
+                                    "type":  "output",
+                                    "x":  940,
+                                    "y":  40,
+                                    "params":  {
+                                                   "color":  "#8cebb0",
+                                                   "amount":  1,
+                                                   "scale":  1,
+                                                   "rotation":  0,
+                                                   "x":  0,
+                                                   "y":  0,
+                                                   "blur":  4,
+                                                   "mode":  "normal",
+                                                   "start":  0,
+                                                   "end":  1
+                                               }
+                                },
+                                {
+                                    "id":  "f621553d-6f11-4f8d-ba34-6ac9b34bf06b",
+                                    "type":  "tint",
+                                    "x":  340,
+                                    "y":  40,
+                                    "params":  {
+                                                   "color":  "#66e39a",
+                                                   "amount":  0.7,
+                                                   "scale":  1,
+                                                   "rotation":  0,
+                                                   "x":  0,
+                                                   "y":  0,
+                                                   "blur":  4,
+                                                   "mode":  "normal",
+                                                   "start":  0,
+                                                   "end":  1
+                                               }
+                                },
+                                {
+                                    "id":  "1d43c4ae-b38b-469b-83e7-b706b8ff7bea",
+                                    "type":  "glow",
+                                    "x":  640,
+                                    "y":  40,
+                                    "params":  {
+                                                   "color":  "#8cebb0",
+                                                   "amount":  0.6,
+                                                   "scale":  1,
+                                                   "rotation":  0,
+                                                   "x":  0,
+                                                   "y":  0,
+                                                   "blur":  2.5,
+                                                   "mode":  "normal",
+                                                   "start":  0,
+                                                   "end":  1
+                                               }
+                                }
+                            ],
+                  "links":  [
+                                {
+                                    "from":  "fe68577c-4d5b-4f0a-aa4a-9f206565b239",
+                                    "to":  "f621553d-6f11-4f8d-ba34-6ac9b34bf06b",
+                                    "port":  "image"
+                                },
+                                {
+                                    "from":  "f621553d-6f11-4f8d-ba34-6ac9b34bf06b",
+                                    "to":  "1d43c4ae-b38b-469b-83e7-b706b8ff7bea",
+                                    "port":  "image"
+                                },
+                                {
+                                    "from":  "1d43c4ae-b38b-469b-83e7-b706b8ff7bea",
+                                    "to":  "02627c6d-c982-49f7-9cf0-6232bde845f3",
+                                    "port":  "image"
+                                }
+                            ],
+                  "view":  {
+                               "x":  36,
+                               "y":  36,
+                               "zoom":  1
+                           }
+              }
+}
