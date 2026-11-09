@@ -1,0 +1,20 @@
+{
+  "width": 1024,
+  "height": 1024,
+  "fps": 60,
+  "frames": 240,
+  "duration_seconds": 4.0,
+  "unique_png_hashes": 240,
+  "all_frame_borders_fully_transparent": true,
+  "alpha_union_bbox": [
+    198,
+    36,
+    834,
+    927
+  ],
+  "minimum_canvas_padding": 36,
+  "alpha_cleanup": "Only <=2/255 alpha interpolation dust is zeroed; no silhouette cropping",
+  "max_ik_arm_stretch": 1.0,
+  "source_right_sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+  "rig_atlas_sha256": "f58f0bbd2cf056906f5f0ebbd44dd7f4786c00e1ca6e79899acb4053aadea076"
+}

@@ -1,0 +1,128 @@
+{
+    "checked_at":  "2026-11-06T17:00:51.560Z",
+    "url":  "http://127.0.0.1:8731/output/animation/sword-overhead-right-v01/preview.html",
+    "duration":  4,
+    "width":  1024,
+    "height":  1024,
+    "alpha":  true,
+    "seeks":  [
+                  {
+                      "logical_frame":  1,
+                      "time":  0.000833,
+                      "corners_alpha":  [
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                      "opaque_pixels":  23260,
+                      "transparent_pixels":  950336
+                  },
+                  {
+                      "logical_frame":  54,
+                      "time":  0.884166,
+                      "corners_alpha":  [
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                      "opaque_pixels":  17758,
+                      "transparent_pixels":  947506
+                  },
+                  {
+                      "logical_frame":  103,
+                      "time":  1.700833,
+                      "corners_alpha":  [
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                      "opaque_pixels":  20947,
+                      "transparent_pixels":  951890
+                  },
+                  {
+                      "logical_frame":  132,
+                      "time":  2.184166,
+                      "corners_alpha":  [
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                      "opaque_pixels":  21853,
+                      "transparent_pixels":  953612
+                  },
+                  {
+                      "logical_frame":  146,
+                      "time":  2.4175,
+                      "corners_alpha":  [
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                      "opaque_pixels":  21593,
+                      "transparent_pixels":  954516
+                  },
+                  {
+                      "logical_frame":  162,
+                      "time":  2.684166,
+                      "corners_alpha":  [
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                      "opaque_pixels":  16808,
+                      "transparent_pixels":  945267
+                  },
+                  {
+                      "logical_frame":  240,
+                      "time":  3.984166,
+                      "corners_alpha":  [
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                      "opaque_pixels":  18193,
+                      "transparent_pixels":  946747
+                  }
+              ],
+    "speeds":  [
+                   {
+                       "rate":  0.25,
+                       "elapsed_seconds":  0.4551999998092651,
+                       "video_time":  0.111998,
+                       "total_decoded_frames":  361
+                   },
+                   {
+                       "rate":  1,
+                       "elapsed_seconds":  0.4627999997138977,
+                       "video_time":  0.451914,
+                       "total_decoded_frames":  393
+                   },
+                   {
+                       "rate":  5,
+                       "elapsed_seconds":  0.4549000000953674,
+                       "video_time":  2.275785,
+                       "total_decoded_frames":  537
+                   }
+               ],
+    "preview_widths":  [
+                           {
+                               "name":  "small",
+                               "width":  320
+                           },
+                           {
+                               "name":  "mobile",
+                               "width":  390
+                           }
+                       ],
+    "background_image":  "url(\"http://127.0.0.1:8731/%EA%B2%8C%EC%9E%84/public/assets/battlefields/forest-clearing-v1.png\")",
+    "ready_state":  4,
+    "video_error":  null,
+    "game_runtime_integrated":  false
+}

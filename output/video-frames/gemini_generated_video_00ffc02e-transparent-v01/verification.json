@@ -1,0 +1,21 @@
+{
+  "png_count": 240,
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "duration_seconds": 10,
+  "source_video_unchanged": true,
+  "all_png_borders_fully_transparent": true,
+  "minimum_png_padding_px": 17,
+  "minimum_foreground_pixels": 92668,
+  "maximum_foreground_pixels": 123322,
+  "decoded_webm_frames": 240,
+  "webm_borders_alpha_max": 0,
+  "mean_webm_alpha_error_8bit": 0.0322353199146412,
+  "source_foreground_rgb_check": "Every retained pixel byte-identical, checked in frames.json",
+  "visual_audits": [
+    "all-240-frames-light.jpg",
+    "contact-sheet-light.jpg"
+  ],
+  "game_runtime_integrated": false
+}

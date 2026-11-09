@@ -1,0 +1,21 @@
+{
+  "188": [
+    {
+      "reason": "Background foreground-rock touches and partly occludes the armored boot. Measured curved rock/visible-boot boundary; no hidden boot pixels are regenerated.",
+      "polygon": [[373,703],[388,693],[408,681],[430,672],[448,667],[462,666],[475,670],[489,675],[502,680],[516,684],[531,684],[535,681],[539,682],[554,685],[566,691],[575,704],[590,720],[373,720]],
+      "strokes": [
+        {"points": [[375,701],[388,692],[408,680],[430,672],[448,667],[451,667]], "width": 6},
+        {"points": [[534,685],[540,683],[554,686],[565,691],[576,706]], "width": 6}
+      ]
+    }
+  ],
+  "189": [
+    {
+      "reason": "Adjacent source frame: the same foreground rock partly occludes the visible armored boot. Exclude the rock along its curved contact boundary, preserving the visible toe above it.",
+      "polygon": [[338,708],[350,700],[369,688],[386,679],[401,670],[413,666],[430,664],[447,667],[466,672],[478,677],[484,690],[473,706],[440,720],[338,720]],
+      "strokes": [
+        {"points": [[338,708],[350,699],[369,687],[386,678],[401,669],[409,666]], "width": 6}
+      ]
+    }
+  ]
+}

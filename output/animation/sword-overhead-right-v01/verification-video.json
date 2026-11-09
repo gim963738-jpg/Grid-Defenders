@@ -1,0 +1,60 @@
+{
+  "source_copy_byte_identical": true,
+  "source_worktree": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2",
+  "source_branch": "gim963738-jpg/캐릭터디자인2",
+  "frame_verification": {
+    "width": 1024,
+    "height": 1024,
+    "fps": 60,
+    "frames": 240,
+    "duration_seconds": 4.0,
+    "unique_png_hashes": 240,
+    "all_frame_borders_fully_transparent": true,
+    "alpha_union_bbox": [
+      198,
+      36,
+      834,
+      927
+    ],
+    "minimum_canvas_padding": 36,
+    "alpha_cleanup": "Only <=2/255 alpha interpolation dust is zeroed; no silhouette cropping",
+    "max_ik_arm_stretch": 1.0,
+    "source_right_sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+    "rig_atlas_sha256": "f58f0bbd2cf056906f5f0ebbd44dd7f4786c00e1ca6e79899acb4053aadea076"
+  },
+  "videos": [
+    {
+      "file": "sword-overhead-right-4s-60fps-alpha.mov",
+      "bytes": 92072090,
+      "sha256": "92447e2b61542a22c656268cd69fe00449f6b2d18d58c4c6104d5c7f59bab902",
+      "decoded_frames": 240,
+      "fps": 60,
+      "duration_us": 4000000,
+      "decoded_rgba": true,
+      "all_frame_borders_alpha_zero": true,
+      "minimum_fully_transparent_pixels_per_frame": 946959,
+      "minimum_frame_max_alpha": 255,
+      "mean_alpha_absolute_error_vs_png": 0.07106688022613525,
+      "decoder_override": null,
+      "ffmpeg_metadata": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\영상제작\\output\\animation\\sword-overhead-right-v01\\sword-overhead-right-4s-60fps-alpha.mov':\n  Metadata:\n    major_brand     : qt  \n    minor_version   : 512\n    compatible_brands: qt  \n    encoder         : Lavf63.1.102\n    comment         : 4 second 60fps transparent articulated animation; not generative video\n  Duration: 00:00:04.00, start: 0.000000, bitrate: 184144 kb/s\n  Stream #0:0[0x1]: Video: prores (4444) (ap4h / 0x68347061), yuva444p12le(tv, progressive), 1024x1024, 184139 kb/s, 60 fps, 60 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : FFMP\n      encoder         : Lavc63.1.102 prores_ks\nAt least one output file must be specified\n"
+    },
+    {
+      "file": "sword-overhead-right-4s-60fps-alpha.webm",
+      "bytes": 4136127,
+      "sha256": "463a5a83f82d3daf6b09c8e44f62bffefeceb223af35b3b933428de05f648a20",
+      "decoded_frames": 240,
+      "fps": 60,
+      "duration_us": 4000000,
+      "decoded_rgba": true,
+      "all_frame_borders_alpha_zero": true,
+      "minimum_fully_transparent_pixels_per_frame": 943610,
+      "minimum_frame_max_alpha": 255,
+      "mean_alpha_absolute_error_vs_png": 0.09885127544403076,
+      "decoder_override": "libvpx-vp9",
+      "ffmpeg_metadata": "Input #0, matroska,webm, from 'C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\영상제작\\output\\animation\\sword-overhead-right-v01\\sword-overhead-right-4s-60fps-alpha.webm':\n  Metadata:\n    ENCODER         : Lavf63.1.102\n  Duration: 00:00:04.00, start: 0.000000, bitrate: 8272 kb/s\n  Stream #0:0: Video: vp9 (Profile 0), yuv420p(tv, progressive), 1024x1024, SAR 1:1 DAR 1:1, 60 fps, 60 tbr, 1k tbn\n    Metadata:\n      ENCODER         : Lavc63.1.102 libvpx-vp9\n      ALPHA_MODE      : 1\n      DURATION        : 00:00:04.000000000\nAt least one output file must be specified\n"
+    }
+  ],
+  "game_runtime_integration_tested": false,
+  "battlefield_image_composite_created": true,
+  "user_final_visual_approval": "not yet received"
+}

@@ -1,0 +1,6304 @@
+{
+  "version": 1,
+  "method": "imagegen reference-derived rig + deterministic 2D animation",
+  "generative_video_model_used": false,
+  "width": 1024,
+  "height": 1024,
+  "fps": 60,
+  "frame_count": 240,
+  "duration_seconds": 4.0,
+  "frame_indexing": "PNG names zero-based; logical_frame one-based",
+  "frame_pattern": "frames/strike_%04d.png",
+  "background": "transparent",
+  "facing": "screen right, 90 degree profile",
+  "source_regions": {
+    "body": [
+      150,
+      0,
+      520,
+      1056
+    ],
+    "near_upper": [
+      700,
+      80,
+      870,
+      334
+    ],
+    "near_forearm": [
+      709,
+      375,
+      841,
+      624
+    ],
+    "far_upper": [
+      709,
+      650,
+      833,
+      836
+    ],
+    "far_forearm": [
+      709,
+      802,
+      833,
+      1022
+    ],
+    "sword": [
+      1080,
+      200,
+      1296,
+      871
+    ]
+  },
+  "body_origin": [
+    300.0,
+    285.0
+  ],
+  "body_scale": 0.6,
+  "planted_feet": true,
+  "damage_model": null,
+  "motion_contact_frame": 162,
+  "motion_contact_seconds": 2.6833333333,
+  "contact_is_visual_only": true,
+  "frames": [
+    {
+      "index": 0,
+      "logical_frame": 1,
+      "time": 0.0,
+      "alpha_bbox": [
+        305,
+        290,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        464.0,
+        645.0
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": 0.0,
+      "body_crouch": 0.0,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 1,
+      "logical_frame": 2,
+      "time": 0.016666666666666666,
+      "alpha_bbox": [
+        305,
+        290,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0000000000001
+      ],
+      "second_hand": [
+        464.00155451191404,
+        645.0782377753939
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": 0.0017272354600168897,
+      "body_crouch": 0.0782377753938432,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 2,
+      "logical_frame": 3,
+      "time": 0.03333333333333333,
+      "alpha_bbox": [
+        305,
+        291,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        682.9999999999999
+      ],
+      "second_hand": [
+        463.976769589574,
+        645.185033091724
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.025811567139949074,
+      "body_crouch": 0.1850330917239682,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 3,
+      "logical_frame": 4,
+      "time": 0.05,
+      "alpha_bbox": [
+        305,
+        291,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.9302976501347,
+        645.3145152720239
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.07744705540587592,
+      "body_crouch": 0.3145152720238422,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 4,
+      "logical_frame": 5,
+      "time": 0.06666666666666667,
+      "alpha_bbox": [
+        305,
+        291,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        682.9999999999999
+      ],
+      "second_hand": [
+        463.86679134218423,
+        645.460827651792
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.14800961979531377,
+      "body_crouch": 0.4608276517919956,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 5,
+      "logical_frame": 6,
+      "time": 0.08333333333333333,
+      "alpha_bbox": [
+        305,
+        291,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.79090366068885,
+        645.618134398163
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.23232926590126352,
+      "body_crouch": 0.6181343981630112,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 6,
+      "logical_frame": 7,
+      "time": 0.1,
+      "alpha_bbox": [
+        304,
+        291,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.7072880610131,
+        645.7806271068408
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.325235487763202,
+      "body_crouch": 0.7806271068407904,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 7,
+      "logical_frame": 8,
+      "time": 0.11666666666666667,
+      "alpha_bbox": [
+        304,
+        291,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.62059857171096,
+        645.9425311064161
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.421557142543366,
+      "body_crouch": 0.9425311064161606,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 8,
+      "logical_frame": 9,
+      "time": 0.13333333333333333,
+      "alpha_bbox": [
+        304,
+        291,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.53548990578753,
+        646.0981114028126
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.5161223269027683,
+      "body_crouch": 1.098111402812608,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 9,
+      "logical_frame": 10,
+      "time": 0.15,
+      "alpha_bbox": [
+        304,
+        292,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.4566175701338,
+        646.2416782004431
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.6037582554068754,
+      "body_crouch": 1.2416782004431137,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 10,
+      "logical_frame": 11,
+      "time": 0.16666666666666666,
+      "alpha_bbox": [
+        304,
+        292,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.38863797284307,
+        646.3675919411769
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.6792911412854695,
+      "body_crouch": 1.3675919411768565,
+      "grip_join": 0.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 11,
+      "logical_frame": 12,
+      "time": 0.18333333333333332,
+      "alpha_bbox": [
+        304,
+        292,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.3343126977893,
+        646.4716529942167
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.7375460798649235,
+      "body_crouch": 1.4702678073586686,
+      "grip_join": 7.862573543046887e-05,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 12,
+      "logical_frame": 13,
+      "time": 0.2,
+      "alpha_bbox": [
+        304,
+        292,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.236998171044,
+        646.5929853998815
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.7733469349839943,
+      "body_crouch": 1.5441796408417745,
+      "grip_join": 0.00278197542102868,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 13,
+      "logical_frame": 14,
+      "time": 0.21666666666666667,
+      "alpha_bbox": [
+        304,
+        292,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.0,
+        683.0
+      ],
+      "second_hand": [
+        463.0754729803277,
+        646.7446773736345
+      ],
+      "angle_degrees": 142.0,
+      "body_lean": -0.7815162286962725,
+      "body_crouch": 1.5838632362244756,
+      "grip_join": 0.009187343009828224,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 14,
+      "logical_frame": 15,
+      "time": 0.23333333333333334,
+      "alpha_bbox": [
+        304,
+        292,
+        647,
+        927
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.03140475255566,
+        682.8574707384013
+      ],
+      "second_hand": [
+        462.84433009368195,
+        646.9318971533761
+      ],
+      "angle_degrees": 141.8937069913501,
+      "body_lean": -0.7731710422791103,
+      "body_crouch": 1.600214980883063,
+      "grip_join": 0.019092432441544873,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 15,
+      "logical_frame": 16,
+      "time": 0.25,
+      "alpha_bbox": [
+        304,
+        292,
+        649,
+        925
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.1562734785875,
+        682.2907588279489
+      ],
+      "second_hand": [
+        462.52071213095934,
+        647.1694319907555
+      ],
+      "angle_degrees": 141.47107438016528,
+      "body_lean": -0.7791414472575393,
+      "body_crouch": 1.6239123321424647,
+      "grip_join": 0.0322949476558944,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 16,
+      "logical_frame": 17,
+      "time": 0.26666666666666666,
+      "alpha_bbox": [
+        304,
+        292,
+        652,
+        921
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.37157824546864,
+        681.3136064244114
+      ],
+      "second_hand": [
+        462.1093962352858,
+        647.4362534952159
+      ],
+      "angle_degrees": 140.74235055379836,
+      "body_lean": -0.7996786924903478,
+      "body_crouch": 1.6551233366256826,
+      "grip_join": 0.0485925925925926,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 17,
+      "logical_frame": 18,
+      "time": 0.2833333333333333,
+      "alpha_bbox": [
+        304,
+        292,
+        657,
+        917
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        454.67229482870744,
+        679.9488157774047
+      ],
+      "second_hand": [
+        461.61631901029125,
+        647.7061157061976
+      ],
+      "angle_degrees": 139.72454057975943,
+      "body_lean": -0.8340434120260176,
+      "body_crouch": 1.6930954430663823,
+      "grip_join": 0.06778307119135521,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 18,
+      "logical_frame": 19,
+      "time": 0.3,
+      "alpha_bbox": [
+        304,
+        292,
+        662,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        455.0533990038122,
+        678.2191891365444
+      ],
+      "second_hand": [
+        461.0478460939057,
+        647.9498740608452
+      ],
+      "angle_degrees": 138.43464952555863,
+      "body_lean": -0.8814944058925591,
+      "body_crouch": 1.7371441550492297,
+      "grip_join": 0.08966408739189802,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 19,
+      "logical_frame": 20,
+      "time": 0.31666666666666665,
+      "alpha_bbox": [
+        304,
+        292,
+        669,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        455.5098665462914,
+        676.1475287514468
+      ],
+      "second_hand": [
+        460.4109427637589,
+        648.1367995137774
+      ],
+      "angle_degrees": 136.88968245870603,
+      "body_lean": -0.9412885553411077,
+      "body_crouch": 1.7866520872810616,
+      "grip_join": 0.11403334513393683,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 20,
+      "logical_frame": 21,
+      "time": 0.3333333333333333,
+      "alpha_bbox": [
+        304,
+        292,
+        676,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        456.0366732316533,
+        673.7566368717272
+      ],
+      "second_hand": [
+        459.7133480333819,
+        648.2357760520201
+      ],
+      "angle_degrees": 135.1066444467118,
+      "body_lean": -1.0126807432104483,
+      "body_crouch": 1.8410673059018194,
+      "grip_join": 0.14068854835718736,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 21,
+      "logical_frame": 22,
+      "time": 0.35,
+      "alpha_bbox": [
+        303,
+        292,
+        684,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        456.6287948354064,
+        671.0693157470016
+      ],
+      "second_hand": [
+        458.9637388209484,
+        648.2163632611185
+      ],
+      "angle_degrees": 133.102540557086,
+      "body_lean": -1.0949237796250042,
+      "body_crouch": 1.8999009705412733,
+      "grip_join": 0.16942740100136544,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 22,
+      "logical_frame": 23,
+      "time": 0.36666666666666664,
+      "alpha_bbox": [
+        303,
+        292,
+        693,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        457.28120713305896,
+        668.1083676268861
+      ],
+      "second_hand": [
+        458.1718704207732,
+        648.0497118901119
+      ],
+      "angle_degrees": 130.89437585733882,
+      "body_lean": -1.18726833322459,
+      "body_crouch": 1.9627243032767354,
+      "grip_join": 0.2000476070061869,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 23,
+      "logical_frame": 24,
+      "time": 0.38333333333333336,
+      "alpha_bbox": [
+        303,
+        292,
+        701,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        457.98888590011944,
+        664.8965947609964
+      ],
+      "second_hand": [
+        457.3486791979572,
+        647.709326790852
+      ],
+      "angle_degrees": 128.49915541498035,
+      "body_lean": -1.288962868109469,
+      "body_crouch": 2.029164916827773,
+      "grip_join": 0.23234687031136744,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 24,
+      "logical_frame": 25,
+      "time": 0.4,
+      "alpha_bbox": [
+        303,
+        292,
+        710,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        458.7468069120962,
+        661.4567993989482
+      ],
+      "second_hand": [
+        456.50633360935655,
+        647.171677970453
+      ],
+      "angle_degrees": 125.93388429752068,
+      "body_lean": -1.399253586668995,
+      "body_crouch": 2.098902541159761,
+      "grip_join": 0.26612289485662266,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 25,
+      "logical_frame": 26,
+      "time": 0.4166666666666667,
+      "alpha_bbox": [
+        303,
+        293,
+        719,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        459.5499459444975,
+        657.8117837903574
+      ],
+      "second_hand": [
+        455.6582206581503,
+        646.4166665614795
+      ],
+      "angle_degrees": 123.21556757246992,
+      "body_lean": -1.5173843784464272,
+      "body_crouch": 2.1716641940860724,
+      "grip_join": 0.30117338458166865,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 26,
+      "logical_frame": 27,
+      "time": 0.43333333333333335,
+      "alpha_bbox": [
+        303,
+        293,
+        728,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        460.3932787728319,
+        653.98435018484
+      ],
+      "second_hand": [
+        454.81885691170044,
+        645.4279580172534
+      ],
+      "angle_degrees": 120.36121030733827,
+      "body_lean": -1.6425967751763797,
+      "body_crouch": 2.247218847390269,
+      "grip_join": 0.33729604342622094,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 27,
+      "logical_frame": 28,
+      "time": 0.45,
+      "alpha_bbox": [
+        303,
+        293,
+        736,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        461.27178117260763,
+        649.9973008320115
+      ],
+      "second_hand": [
+        454.0037163140155,
+        644.193199494714
+      ],
+      "angle_degrees": 117.38781756963573,
+      "body_lean": -1.7741299121149157,
+      "body_crouch": 2.3253716453715905,
+      "grip_join": 0.37428857532999543,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 28,
+      "logical_frame": 29,
+      "time": 0.4666666666666667,
+      "alpha_bbox": [
+        302,
+        293,
+        744,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        462.18042891933305,
+        645.8734379814882
+      ],
+      "second_hand": [
+        453.2289711315784,
+        642.704141914488
+      ],
+      "angle_degrees": 114.31239442687254,
+      "body_lean": -1.911220495765482,
+      "body_crouch": 2.4059577374919274,
+      "grip_join": 0.4119486842327079,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 29,
+      "logical_frame": 30,
+      "time": 0.48333333333333334,
+      "alpha_bbox": [
+        302,
+        293,
+        752,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        463.1141977885168,
+        641.6355638828857
+      ],
+      "second_hand": [
+        452.51114728717516,
+        640.956689340883
+      ],
+      "angle_degrees": 111.15194594655875,
+      "body_lean": -2.0531027780868216,
+      "body_crouch": 2.4888357909193135,
+      "grip_join": 0.45007407407407407,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 30,
+      "logical_frame": 31,
+      "time": 0.5,
+      "alpha_bbox": [
+        302,
+        293,
+        759,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        464.06806355566687,
+        637.3064807858196
+      ],
+      "second_hand": [
+        451.86670075835696,
+        638.9508989215419
+      ],
+      "angle_degrees": 107.92347719620446,
+      "body_lean": -2.1990085372517036,
+      "body_crouch": 2.5738812521779533,
+      "grip_join": 0.4884624487938097,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 31,
+      "logical_frame": 32,
+      "time": 0.5166666666666667,
+      "alpha_bbox": [
+        302,
+        293,
+        765,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        465.0370019962919,
+        632.9089909399062
+      ],
+      "second_hand": [
+        451.3115272661713,
+        636.6909535772929
+      ],
+      "angle_degrees": 104.64399324331983,
+      "body_lean": -2.3481670650078117,
+      "body_crouch": 2.6609794297913725,
+      "grip_join": 0.5269115123316308,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 32,
+      "logical_frame": 33,
+      "time": 0.5333333333333333,
+      "alpha_bbox": [
+        301,
+        293,
+        770,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        466.01598888590013,
+        628.465896594761
+      ],
+      "second_hand": [
+        450.8604227352828,
+        634.1851269590754
+      ],
+      "angle_degrees": 101.33049915541498,
+      "body_lean": -2.4998051606745326,
+      "body_crouch": 2.750018471715007,
+      "grip_join": 0.5652189686272526,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 33,
+      "logical_frame": 34,
+      "time": 0.55,
+      "alpha_bbox": [
+        301,
+        293,
+        774,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        467.0,
+        624.0
+      ],
+      "second_hand": [
+        450.52651654690555,
+        631.4457560340904
+      ],
+      "angle_degrees": 98.0,
+      "body_lean": -2.6531471317916706,
+      "body_crouch": 2.840882312476936,
+      "grip_join": 0.6031825216203915,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 34,
+      "logical_frame": 35,
+      "time": 0.5666666666666667,
+      "alpha_bbox": [
+        301,
+        293,
+        777,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        467.98401111409987,
+        619.534103405239
+      ],
+      "second_hand": [
+        450.32070304962406,
+        628.4892312900877
+      ],
+      "angle_degrees": 94.66950084458502,
+      "body_lean": -2.8074148014183367,
+      "body_crouch": 2.933443665268632,
+      "grip_join": 0.6405998752507628,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 35,
+      "logical_frame": 36,
+      "time": 0.5833333333333334,
+      "alpha_bbox": [
+        301,
+        293,
+        779,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        468.9629980037081,
+        615.0910090600938
+      ],
+      "second_hand": [
+        450.2510988374356,
+        625.3360083215757
+      ],
+      "angle_degrees": 91.35600675668015,
+      "body_lean": -2.9618275220625563,
+      "body_crouch": 3.0275571337480778,
+      "grip_join": 0.6772687334580826,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 36,
+      "logical_frame": 37,
+      "time": 0.6,
+      "alpha_bbox": [
+        301,
+        293,
+        778,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        469.93193644433313,
+        610.6935192141804
+      ],
+      "second_hand": [
+        450.32255375660753,
+        622.010637928633
+      ],
+      "angle_degrees": 88.07652280379554,
+      "body_lean": -3.115602196204401,
+      "body_crouch": 3.123052517040449,
+      "grip_join": 0.7129868001820664,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 37,
+      "logical_frame": 38,
+      "time": 0.6166666666666667,
+      "alpha_bbox": [
+        301,
+        294,
+        779,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        470.8858022114833,
+        606.3644361171143
+      ],
+      "second_hand": [
+        450.53624240172206,
+        618.5418053037015
+      ],
+      "angle_degrees": 84.84805405344125,
+      "body_lean": -3.267953303357891,
+      "body_crouch": 3.2197283793605056,
+      "grip_join": 0.7475517793624303,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 38,
+      "logical_frame": 39,
+      "time": 0.6333333333333333,
+      "alpha_bbox": [
+        300,
+        294,
+        778,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        471.81957108066683,
+        602.1265620185118
+      ],
+      "second_hand": [
+        450.8893600841409,
+        614.962362891193
+      ],
+      "angle_degrees": 81.68760557312746,
+      "body_lean": -3.418092933599412,
+      "body_crouch": 3.3173459528577363,
+      "grip_join": 0.7807613749388898,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 39,
+      "logical_frame": 40,
+      "time": 0.65,
+      "alpha_bbox": [
+        300,
+        294,
+        776,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        472.7282188273924,
+        598.0026991679885
+      ],
+      "second_hand": [
+        451.37494311356926,
+        611.3093365259508
+      ],
+      "angle_degrees": 78.61218243036424,
+      "body_lean": -3.56523082747321,
+      "body_crouch": 3.4156234387304445,
+      "grip_join": 0.8124132908511605,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 40,
+      "logical_frame": 41,
+      "time": 0.6666666666666666,
+      "alpha_bbox": [
+        300,
+        294,
+        773,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        473.6067212271681,
+        594.01564981516
+      ],
+      "second_hand": [
+        451.9818280492475,
+        607.6238808594434
+      ],
+      "angle_degrees": 75.63878969266176,
+      "body_lean": -3.70857442216741,
+      "body_crouch": 3.514230767406042,
+      "grip_join": 0.8423052310389587,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 41,
+      "logical_frame": 42,
+      "time": 0.6833333333333333,
+      "alpha_bbox": [
+        300,
+        294,
+        770,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        474.4500540555025,
+        590.1882162096426
+      ],
+      "second_hand": [
+        452.69475875751965,
+        603.9511581307636
+      ],
+      "angle_degrees": 72.78443242753006,
+      "body_lean": -3.847328903837374,
+      "body_crouch": 3.612784873687465,
+      "grip_join": 0.8702348994420002,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 42,
+      "logical_frame": 43,
+      "time": 0.7,
+      "alpha_bbox": [
+        299,
+        294,
+        766,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.2531930879038,
+        586.5432006010518
+      ],
+      "second_hand": [
+        453.49464410583914,
+        600.3401141729207
+      ],
+      "angle_degrees": 70.06611570247934,
+      "body_lean": -3.9806972659367035,
+      "body_crouch": 3.710845537271721,
+      "grip_join": 0.8960000000000001,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 43,
+      "logical_frame": 44,
+      "time": 0.7166666666666667,
+      "alpha_bbox": [
+        299,
+        294,
+        762,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        476.01111409988056,
+        583.1034052390037
+      ],
+      "second_hand": [
+        454.35896337760175,
+        596.8431271748224
+      ],
+      "angle_degrees": 67.50084458501966,
+      "body_lean": -4.107880373400261,
+      "body_crouch": 3.807911833015126,
+      "grip_join": 0.9193982366526745,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 44,
+      "logical_frame": 45,
+      "time": 0.7333333333333333,
+      "alpha_bbox": [
+        299,
+        294,
+        758,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        476.718792866941,
+        579.8916323731139
+      ],
+      "second_hand": [
+        455.2623114111591,
+        593.5155080365499
+      ],
+      "angle_degrees": 65.10562414266118,
+      "body_lean": -4.2280770325078665,
+      "body_crouch": 3.9034192288147573,
+      "grip_join": 0.9402273133397393,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 45,
+      "logical_frame": 46,
+      "time": 0.75,
+      "alpha_bbox": [
+        299,
+        294,
+        753,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        477.3712051645936,
+        576.9306842529983
+      ],
+      "second_hand": [
+        456.17707137002765,
+        590.414835950349
+      ],
+      "angle_degrees": 62.897459442914005,
+      "body_lean": -4.340484066242259,
+      "body_crouch": 3.9967373620667637,
+      "grip_join": 0.9582849340009104,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 46,
+      "logical_frame": 47,
+      "time": 0.7666666666666667,
+      "alpha_bbox": [
+        299,
+        294,
+        749,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        477.9633267683467,
+        574.2433631282728
+      ],
+      "second_hand": [
+        457.0742001440849,
+        587.6001188299618
+      ],
+      "angle_degrees": 60.893355553288195,
+      "body_lean": -4.44429639494016,
+      "body_crouch": 4.087168518422879,
+      "grip_join": 0.9733688025759032,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 47,
+      "logical_frame": 48,
+      "time": 0.7833333333333333,
+      "alpha_bbox": [
+        299,
+        295,
+        744,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        478.4901334537086,
+        571.8524712485532
+      ],
+      "second_hand": [
+        457.9241097296033,
+        585.130775074636
+      ],
+      "angle_degrees": 59.11031754129397,
+      "body_lean": -4.5387071220212345,
+      "body_crouch": 4.1739468290742,
+      "grip_join": 0.9852766230044336,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 48,
+      "logical_frame": 49,
+      "time": 0.8,
+      "alpha_bbox": [
+        299,
+        295,
+        740,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        478.9466009961878,
+        569.7808108634555
+      ],
+      "second_hand": [
+        458.69762745462054,
+        583.0654405618224
+      ],
+      "angle_degrees": 57.565350474441374,
+      "body_lean": -4.62290762456612,
+      "body_crouch": 4.256238195125834,
+      "grip_join": 0.9938060992262175,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 49,
+      "logical_frame": 50,
+      "time": 0.8166666666666667,
+      "alpha_bbox": [
+        298,
+        295,
+        737,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        479.32770517129256,
+        568.0511842225953
+      ],
+      "second_hand": [
+        459.3670183668544,
+        581.4606124040195
+      ],
+      "angle_degrees": 56.275459420240566,
+      "body_lean": -4.6960876485018,
+      "body_crouch": 4.333140939869187,
+      "grip_join": 0.9987549351809707,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 50,
+      "logical_frame": 51,
+      "time": 0.8333333333333334,
+      "alpha_bbox": [
+        298,
+        295,
+        734,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        479.62842175453136,
+        566.6863935755886
+      ],
+      "second_hand": [
+        459.90706904029906,
+        580.3636830410069
+      ],
+      "angle_degrees": 55.257649446201626,
+      "body_lean": -4.757435408140287,
+      "body_crouch": 4.403687181993305,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 51,
+      "logical_frame": 52,
+      "time": 0.85,
+      "alpha_bbox": [
+        298,
+        295,
+        732,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        479.84372652141246,
+        565.7092411720512
+      ],
+      "second_hand": [
+        460.297920579368,
+        579.6362462368862
+      ],
+      "angle_degrees": 54.52892561983471,
+      "body_lean": -4.806137689804947,
+      "body_crouch": 4.466844915085427,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 52,
+      "logical_frame": 53,
+      "time": 0.8666666666666667,
+      "alpha_bbox": [
+        298,
+        295,
+        731,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        479.96859524744434,
+        565.1425292615987
+      ],
+      "second_hand": [
+        460.526050311026,
+        579.213330461081
+      ],
+      "angle_degrees": 54.106293008649914,
+      "body_lean": -4.841379959267924,
+      "body_crouch": 4.521520771236079,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 53,
+      "logical_frame": 54,
+      "time": 0.8833333333333333,
+      "alpha_bbox": [
+        298,
+        295,
+        731,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        479.99619317232236,
+        564.9883323203646
+      ],
+      "second_hand": [
+        460.58066176480366,
+        579.0963846368134
+      ],
+      "angle_degrees": 53.99644036892481,
+      "body_lean": -4.863098548421648,
+      "body_crouch": 4.566277289245267,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 54,
+      "logical_frame": 55,
+      "time": 0.9,
+      "alpha_bbox": [
+        298,
+        295,
+        730,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        479.8648162388822,
+        564.5856705503403
+      ],
+      "second_hand": [
+        460.47957803789285,
+        578.7353185986453
+      ],
+      "angle_degrees": 53.87359440518855,
+      "body_lean": -4.895262985810995,
+      "body_crouch": 4.590941997511049,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 55,
+      "logical_frame": 56,
+      "time": 0.9166666666666666,
+      "alpha_bbox": [
+        298,
+        295,
+        729,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        479.55189086592435,
+        563.6265746020539
+      ],
+      "second_hand": [
+        460.2391664050678,
+        577.8750367611443
+      ],
+      "angle_degrees": 53.580988861643526,
+      "body_lean": -4.948969067833918,
+      "body_crouch": 4.591452632702297,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 56,
+      "logical_frame": 57,
+      "time": 0.9333333333333333,
+      "alpha_bbox": [
+        298,
+        295,
+        727,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        479.06517553377,
+        562.1348237138925
+      ],
+      "second_hand": [
+        459.8662371760864,
+        576.5362391282837
+      ],
+      "angle_degrees": 53.12587842118754,
+      "body_lean": -5.023264240677826,
+      "body_crouch": 4.5684925947290065,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 57,
+      "logical_frame": 58,
+      "time": 0.95,
+      "alpha_bbox": [
+        298,
+        295,
+        724,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        478.4124287227406,
+        560.1341971242437
+      ],
+      "second_hand": [
+        459.3679922641012,
+        574.7393140348626
+      ],
+      "angle_degrees": 52.51551776671843,
+      "body_lean": -5.117195213984174,
+      "body_crouch": 4.522706733924319,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 58,
+      "logical_frame": 59,
+      "time": 0.9666666666666667,
+      "alpha_bbox": [
+        298,
+        295,
+        721,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        477.6014089131572,
+        557.6484740714947
+      ],
+      "second_hand": [
+        458.7519455388824,
+        572.5043729167977
+      ],
+      "angle_degrees": 51.75716158113396,
+      "body_lean": -5.229808084829901,
+      "body_crouch": 4.454707370765306,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 59,
+      "logical_frame": 60,
+      "time": 0.9833333333333333,
+      "alpha_bbox": [
+        298,
+        295,
+        717,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        476.63987458534115,
+        554.7014337940326
+      ],
+      "second_hand": [
+        458.02584417983815,
+        569.8512810560683
+      ],
+      "angle_degrees": 50.85806454733197,
+      "body_lean": -5.360148463343735,
+      "body_crouch": 4.365080662631371,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 60,
+      "logical_frame": 61,
+      "time": 1.0,
+      "alpha_bbox": [
+        297,
+        295,
+        713,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.5355842196137,
+        551.3168555302448
+      ],
+      "second_hand": [
+        457.197591986862,
+        566.799686048969
+      ],
+      "angle_degrees": 49.82548134821027,
+      "body_lean": -5.507261599622064,
+      "body_crouch": 4.2543932496778805,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 61,
+      "logical_frame": 62,
+      "time": 1.0166666666666666,
+      "alpha_bbox": [
+        297,
+        294,
+        707,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        474.2962962962963,
+        547.5185185185185
+      ],
+      "second_hand": [
+        456.27517550474033,
+        563.3690454944947
+      ],
+      "angle_degrees": 48.666666666666664,
+      "body_lean": -5.670192511605702,
+      "body_crouch": 4.123199108925027,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 62,
+      "logical_frame": 63,
+      "time": 1.0333333333333334,
+      "alpha_bbox": [
+        297,
+        294,
+        701,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        472.92976929571,
+        543.330201997241
+      ],
+      "second_hand": [
+        455.2665937469211,
+        559.5786551400071
+      ],
+      "angle_degrees": 47.38887518559896,
+      "body_lean": -5.847986113576228,
+      "body_crouch": 3.9720465434405448,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 63,
+      "logical_frame": 64,
+      "time": 1.05,
+      "alpha_bbox": [
+        297,
+        294,
+        695,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        471.4437616981761,
+        538.7756852047996
+      ],
+      "second_hand": [
+        454.1797922548784,
+        555.4476784587835
+      ],
+      "angle_degrees": 45.999361587904986,
+      "body_lean": -6.039687344928975,
+      "body_crouch": 3.801485232053752,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 64,
+      "logical_frame": 65,
+      "time": 1.0666666666666667,
+      "alpha_bbox": [
+        296,
+        294,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        469.84603198401607,
+        533.8787473795817
+      ],
+      "second_hand": [
+        453.02260218954393,
+        550.9951783729421
+      ],
+      "angle_degrees": 44.50538055648255,
+      "body_lean": -6.244341298879016,
+      "body_crouch": 3.6120732643925706,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 65,
+      "logical_frame": 66,
+      "time": 1.0833333333333333,
+      "alpha_bbox": [
+        296,
+        294,
+        680,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        468.1443386335509,
+        528.6631677599743
+      ],
+      "second_hand": [
+        451.80268511237966,
+        546.2401515795603
+      ],
+      "angle_degrees": 42.91418677422944,
+      "body_lean": -6.460993350756601,
+      "body_crouch": 3.404384086191802,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 66,
+      "logical_frame": 67,
+      "time": 1.1,
+      "alpha_bbox": [
+        296,
+        290,
+        671,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        466.3464401271021,
+        523.1527255843647
+      ],
+      "second_hand": [
+        450.5274840683547,
+        541.201565691458
+      ],
+      "angle_degrees": 41.233034924043466,
+      "body_lean": -6.688689285549688,
+      "body_crouch": 3.1790132807781486,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 67,
+      "logical_frame": 68,
+      "time": 1.1166666666666667,
+      "alpha_bbox": [
+        295,
+        278,
+        662,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        464.4600949449907,
+        517.3712000911403
+      ],
+      "second_hand": [
+        449.2041815257563,
+        535.8983991710019
+      ],
+      "angle_degrees": 39.469179688822464,
+      "body_lean": -6.926475424353145,
+      "body_crouch": 2.936585114385227,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 68,
+      "logical_frame": 69,
+      "time": 1.1333333333333333,
+      "alpha_bbox": [
+        295,
+        267,
+        653,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        462.4930615675381,
+        511.34237051868837
+      ],
+      "second_hand": [
+        447.83966465456695,
+        530.3496838193873
+      ],
+      "angle_degrees": 37.62987575146424,
+      "body_lean": -7.1733987493871805,
+      "body_crouch": 2.677758775471269,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 69,
+      "logical_frame": 70,
+      "time": 1.15,
+      "alpha_bbox": [
+        295,
+        254,
+        643,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        460.45309847506564,
+        505.09001610539605
+      ],
+      "second_hand": [
+        446.44049833383895,
+        524.5745493890571
+      ],
+      "angle_degrees": 35.72237779486659,
+      "body_lean": -7.428507027251316,
+      "body_crouch": 2.4032342414767793,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 70,
+      "logical_frame": 71,
+      "time": 1.1666666666666667,
+      "alpha_bbox": [
+        294,
+        241,
+        632,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        458.3479641478945,
+        498.6379160896506
+      ],
+      "second_hand": [
+        445.0129061685488,
+        518.5922697170546
+      ],
+      "angle_degrees": 33.75394050192731,
+      "body_lean": -7.690848930084976,
+      "body_crouch": 2.1137577104339096,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 71,
+      "logical_frame": 72,
+      "time": 1.1833333333333333,
+      "alpha_bbox": [
+        294,
+        229,
+        621,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        456.18541706634596,
+        492.00984970983956
+      ],
+      "second_hand": [
+        443.562759668725,
+        512.4223096356369
+      ],
+      "angle_degrees": 31.731818555544265,
+      "body_lean": -7.9594741543113,
+      "body_crouch": 1.810126539481629,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 72,
+      "logical_frame": 73,
+      "time": 1.2,
+      "alpha_bbox": [
+        294,
+        216,
+        609,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        453.9732157107412,
+        485.22959620434983
+      ],
+      "second_hand": [
+        442.095575600541,
+        506.0843718064167
+      ],
+      "angle_degrees": 29.66326663861523,
+      "body_lean": -8.233433536647347,
+      "body_crouch": 1.4931936376011912,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 73,
+      "logical_frame": 74,
+      "time": 1.2166666666666666,
+      "alpha_bbox": [
+        293,
+        204,
+        598,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        451.71911856140173,
+        478.32093481156903
+      ],
+      "second_hand": [
+        440.61652136404257,
+        499.59844254798384
+      ],
+      "angle_degrees": 27.555539434038014,
+      "body_lean": -8.511779167070978,
+      "body_crouch": 1.1638712657090438,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 74,
+      "logical_frame": 75,
+      "time": 1.2333333333333334,
+      "alpha_bbox": [
+        293,
+        193,
+        586,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        449.4308840986486,
+        471.3076447698841
+      ],
+      "second_hand": [
+        439.1304280897108,
+        492.9848356858662
+      ],
+      "angle_degrees": 25.41589162471041,
+      "body_lean": -8.793564498442992,
+      "body_crouch": 0.8231342035666399,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 75,
+      "logical_frame": 76,
+      "time": 1.25,
+      "alpha_bbox": [
+        292,
+        181,
+        573,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        447.11627080280323,
+        464.2135053176826
+      ],
+      "second_hand": [
+        437.64181098134225,
+        486.26423344832534
+      ],
+      "angle_degrees": 23.251577893530275,
+      "body_lean": -9.077844452491924,
+      "body_crouch": 0.4720222497217511,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 76,
+      "logical_frame": 77,
+      "time": 1.2666666666666666,
+      "alpha_bbox": [
+        292,
+        169,
+        560,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        444.7830371541868,
+        457.0622956933516
+      ],
+      "second_hand": [
+        436.1548962713817,
+        479.45772346123465
+      ],
+      "angle_degrees": 21.06985292339539,
+      "body_lean": -9.363675521878669,
+      "body_crouch": 0.1116420278111202,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 77,
+      "logical_frame": 78,
+      "time": 1.2833333333333334,
+      "alpha_bbox": [
+        292,
+        158,
+        548,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        442.43894163312046,
+        449.8777951352783
+      ],
+      "second_hand": [
+        434.67365400266016,
+        472.5868309584087
+      ],
+      "angle_degrees": 18.87797139720355,
+      "body_lean": -9.650115868068509,
+      "body_crouch": -0.2568319200456054,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 78,
+      "logical_frame": 79,
+      "time": 1.3,
+      "alpha_bbox": [
+        291,
+        147,
+        535,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        440.0917427199257,
+        442.6837828818502
+      ],
+      "second_hand": [
+        433.20183571310645,
+        465.67354541732203
+      ],
+      "angle_degrees": 16.683187997852603,
+      "body_lean": -9.936225414749341,
+      "body_crouch": -0.6321567644253179,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 79,
+      "logical_frame": 80,
+      "time": 1.3166666666666667,
+      "alpha_bbox": [
+        291,
+        136,
+        523,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        437.7491988949237,
+        435.5040381714545
+      ],
+      "second_hand": [
+        431.7430159826356,
+        458.7403409501699
+      ],
+      "angle_degrees": 14.49275740824036,
+      "body_lean": -10.221065936546829,
+      "body_crouch": -1.0130217482890096,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 80,
+      "logical_frame": 81,
+      "time": 1.3333333333333333,
+      "alpha_bbox": [
+        290,
+        127,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        435.41906863843576,
+        428.3623402424784
+      ],
+      "second_hand": [
+        430.30063670861443,
+        451.8101899217088
+      ],
+      "angle_degrees": 12.3139343112646,
+      "body_lean": -10.503701142799642,
+      "body_crouch": -1.398049271340112,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 81,
+      "logical_frame": 82,
+      "time": 1.35,
+      "alpha_bbox": [
+        290,
+        117,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        433.10911043078306,
+        421.2824683333091
+      ],
+      "second_hand": [
+        428.8780529117049,
+        444.9065694224564
+      ],
+      "angle_degrees": 10.153973389823113,
+      "body_lean": -10.783196756171266,
+      "body_crouch": -1.785796687485429,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 82,
+      "logical_frame": 83,
+      "time": 1.3666666666666667,
+      "alpha_bbox": [
+        290,
+        110,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        430.82708275228697,
+        414.28820168233403
+      ],
+      "second_hand": [
+        427.4785788400902,
+        438.0534603922661
+      ],
+      "angle_degrees": 8.020129326813777,
+      "body_lean": -11.058620585888503,
+      "body_crouch": -2.174758796222816,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 83,
+      "logical_frame": 84,
+      "time": 1.3833333333333333,
+      "alpha_bbox": [
+        289,
+        100,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        428.5807440832687,
+        407.4033195279405
+      ],
+      "second_hand": [
+        426.10553313850835,
+        431.27533935825517
+      ],
+      "angle_degrees": 5.919656805134384,
+      "body_lean": -11.32904259541132,
+      "body_crouch": -2.5633710013768605,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 84,
+      "logical_frame": 85,
+      "time": 1.4,
+      "alpha_bbox": [
+        289,
+        94,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        426.37785290404963,
+        400.6516011085156
+      ],
+      "second_hand": [
+        424.76228187936823,
+        424.5971629157526
+      ],
+      "angle_degrees": 3.8598105076827185,
+      "body_lean": -11.593534964353294,
+      "body_crouch": -2.950013103484175,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 85,
+      "logical_frame": 86,
+      "time": 1.4166666666666667,
+      "alpha_bbox": [
+        289,
+        85,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        424.2261676949508,
+        394.0568256624465
+      ],
+      "second_hand": [
+        423.4522783155292,
+        418.0443452346828
+      ],
+      "angle_degrees": 1.8478451173565738,
+      "body_lean": -11.851172144487528,
+      "body_crouch": -3.3330136853701453,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 86,
+      "logical_frame": 87,
+      "time": 1.4333333333333333,
+      "alpha_bbox": [
+        288,
+        79,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        422.1334469362937,
+        387.6427724281209
+      ],
+      "second_hand": [
+        422.1790983060045,
+        411.6427290104242
+      ],
+      "angle_degrees": -0.10898468294617736,
+      "body_lean": -12.101030909688472,
+      "body_crouch": -3.7106550441305557,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 87,
+      "logical_frame": 88,
+      "time": 1.45,
+      "alpha_bbox": [
+        288,
+        73,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        420.10744910839946,
+        381.43322064392567
+      ],
+      "second_hand": [
+        420.9464704838758,
+        405.41855039215915
+      ],
+      "angle_degrees": -2.003424210327765,
+      "body_lean": -12.342190399676447,
+      "body_crouch": -4.081178616902365,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 88,
+      "logical_frame": 89,
+      "time": 1.4666666666666666,
+      "alpha_bbox": [
+        288,
+        69,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        418.15593269158944,
+        375.45194954824825
+      ],
+      "second_hand": [
+        419.75830037631283,
+        399.3983985084376
+      ],
+      "angle_degrees": -3.8282187818903655,
+      "body_lean": -12.573732157448035,
+      "body_crouch": -4.44279084253991,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 89,
+      "logical_frame": 90,
+      "time": 1.4833333333333334,
+      "alpha_bbox": [
+        287,
+        63,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        416.2866561661849,
+        369.72273837947574
+      ],
+      "second_hand": [
+        418.61868784547545,
+        393.60917026552323
+      ],
+      "angle_degrees": -5.576113714736202,
+      "body_lean": -12.794740160292521,
+      "body_crouch": -4.793669396662633,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 90,
+      "logical_frame": 91,
+      "time": 1.5,
+      "alpha_bbox": [
+        287,
+        58,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        414.50737801250705,
+        364.2693663759957
+      ],
+      "second_hand": [
+        417.5319373917483,
+        388.078021116687
+      ],
+      "angle_degrees": -7.239854325967416,
+      "body_lean": -13.004300844311535,
+      "body_crouch": -5.131969733556999,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 91,
+      "logical_frame": 92,
+      "time": 1.5166666666666666,
+      "alpha_bbox": [
+        287,
+        54,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        412.82585671087725,
+        359.1156127761952
+      ],
+      "second_hand": [
+        416.50256104273893,
+        382.83231248876206
+      ],
+      "angle_degrees": -8.812185932686207,
+      "body_lean": -13.201503122376526,
+      "body_crouch": -5.4558318651418665,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 92,
+      "logical_frame": 93,
+      "time": 1.5333333333333334,
+      "alpha_bbox": [
+        286,
+        51,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        411.2498507416167,
+        354.2852568184615
+      ],
+      "second_hand": [
+        415.5352737386596,
+        377.8995565060749
+      ],
+      "angle_degrees": -10.285853851994798,
+      "body_lean": -13.385438395476088,
+      "body_crouch": -5.763387304677334,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 93,
+      "logical_frame": 94,
+      "time": 1.55,
+      "alpha_bbox": [
+        286,
+        49,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        409.78711858504664,
+        349.80207774118196
+      ],
+      "second_hand": [
+        414.6349813136205,
+        373.3073585726229
+      ],
+      "angle_degrees": -11.653603400995339,
+      "body_lean": -13.555200557422873,
+      "body_crouch": -6.052766101139629,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 94,
+      "logical_frame": 95,
+      "time": 1.5666666666666667,
+      "alpha_bbox": [
+        286,
+        45,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        408.4454187214884,
+        345.68985478274374
+      ],
+      "second_hand": [
+        413.806761360371,
+        369.08335826359286
+      ],
+      "angle_degrees": -12.908179896790047,
+      "body_lean": -13.709885992907527,
+      "body_crouch": -6.322103889217447,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 95,
+      "logical_frame": 96,
+      "time": 1.5833333333333333,
+      "alpha_bbox": [
+        286,
+        43,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        407.23250963126327,
+        341.9723671815342
+      ],
+      "second_hand": [
+        413.0558374516149,
+        365.25516884062836
+      ],
+      "angle_degrees": -14.042328656481088,
+      "body_lean": -13.848593568904862,
+      "body_crouch": -6.569548879718296,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 96,
+      "logical_frame": 97,
+      "time": 1.6,
+      "alpha_bbox": [
+        286,
+        41,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        406.15614979469245,
+        338.67339417594053
+      ],
+      "second_hand": [
+        412.3875473739199,
+        361.85031554633827
+      ],
+      "angle_degrees": -15.048794997170676,
+      "body_lean": -13.970424619455168,
+      "body_crouch": -6.793268715809315,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 97,
+      "logical_frame": 98,
+      "time": 1.6166666666666667,
+      "alpha_bbox": [
+        285,
+        39,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        405.2240976920973,
+        335.8167150043501
+      ],
+      "second_hand": [
+        411.8073062115446,
+        358.8961726580619
+      ],
+      "angle_degrees": -15.920324235960987,
+      "body_lean": -14.074482923861282,
+      "body_crouch": -6.991457121948211,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 98,
+      "logical_frame": 99,
+      "time": 1.6333333333333333,
+      "alpha_bbox": [
+        285,
+        38,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        404.444111803799,
+        333.4261089051501
+      ],
+      "second_hand": [
+        411.3205652996962,
+        356.41989909552024
+      ],
+      "angle_degrees": -16.649661689954204,
+      "body_lean": -14.15987467835966,
+      "body_crouch": -7.162340274571727,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 99,
+      "logical_frame": 100,
+      "time": 1.65,
+      "alpha_bbox": [
+        285,
+        37,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        403.82395061011886,
+        331.5253551167279
+      ],
+      "second_hand": [
+        410.93276825370765,
+        354.44837218931673
+      ],
+      "angle_degrees": -17.229552676252514,
+      "body_lean": -14.225708461340947,
+      "body_crouch": -7.304182826577276,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 100,
+      "logical_frame": 101,
+      "time": 1.6666666666666667,
+      "alpha_bbox": [
+        285,
+        36,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        403.37137259137813,
+        330.1382328774705
+      ],
+      "second_hand": [
+        410.6493054774886,
+        353.0081190360256
+      ],
+      "angle_degrees": -17.65274251195814,
+      "body_lean": -14.271095192213025,
+      "body_crouch": -7.415293521326959,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 101,
+      "logical_frame": 102,
+      "time": 1.6833333333333333,
+      "alpha_bbox": [
+        285,
+        36,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        403.0941362278981,
+        329.2885214257655
+      ],
+      "second_hand": [
+        410.4754687675674,
+        352.1252447007632
+      ],
+      "angle_degrees": -17.91197651417323,
+      "body_lean": -14.295148084016121,
+      "body_crouch": -7.494030336282112,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 102,
+      "logical_frame": 103,
+      "time": 1.7,
+      "alpha_bbox": [
+        285,
+        36,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        403.0,
+        329.0
+      ],
+      "second_hand": [
+        410.41640786499875,
+        351.8253563910837
+      ],
+      "angle_degrees": -18.0,
+      "body_lean": -14.296982589916672,
+      "body_crouch": -7.538805101394772,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 103,
+      "logical_frame": 104,
+      "time": 1.7166666666666666,
+      "alpha_bbox": [
+        285,
+        36,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        402.94903703703704,
+        328.9872592592593
+      ],
+      "second_hand": [
+        410.3908184427667,
+        351.80435568955335
+      ],
+      "angle_degrees": -18.063703703703705,
+      "body_lean": -14.325243780127176,
+      "body_crouch": -7.563161161895524,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 104,
+      "logical_frame": 105,
+      "time": 1.7333333333333334,
+      "alpha_bbox": [
+        285,
+        36,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        402.8056296296296,
+        328.95140740740743
+      ],
+      "second_hand": [
+        410.3187615316129,
+        351.7451093670146
+      ],
+      "angle_degrees": -18.242962962962967,
+      "body_lean": -14.422072285994046,
+      "body_crouch": -7.581509261484472,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 105,
+      "logical_frame": 106,
+      "time": 1.75,
+      "alpha_bbox": [
+        285,
+        37,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        402.58399999999995,
+        328.89599999999996
+      ],
+      "second_hand": [
+        410.20725594728526,
+        351.653108093125
+      ],
+      "angle_degrees": -18.52,
+      "body_lean": -14.576830069744354,
+      "body_crouch": -7.593653657499311,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 106,
+      "logical_frame": 107,
+      "time": 1.7666666666666666,
+      "alpha_bbox": [
+        284,
+        37,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        402.2983703703703,
+        328.8245925925926
+      ],
+      "second_hand": [
+        410.0632876685333,
+        351.533755046384
+      ],
+      "angle_degrees": -18.877037037037038,
+      "body_lean": -14.778881061585727,
+      "body_crouch": -7.599464790123967,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 107,
+      "logical_frame": 108,
+      "time": 1.7833333333333334,
+      "alpha_bbox": [
+        284,
+        38,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        401.96296296296293,
+        328.74074074074076
+      ],
+      "second_hand": [
+        409.89384415514496,
+        351.39247629269113
+      ],
+      "angle_degrees": -19.296296296296298,
+      "body_lean": -15.017591078047854,
+      "body_crouch": -7.598880664568983,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 108,
+      "logical_frame": 109,
+      "time": 1.8,
+      "alpha_bbox": [
+        284,
+        38,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        401.592,
+        328.648
+      ],
+      "second_hand": [
+        409.7059434974111,
+        351.2348085598834
+      ],
+      "angle_degrees": -19.76,
+      "body_lean": -15.282327735289664,
+      "body_crouch": -7.5919075124492865,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 109,
+      "logical_frame": 110,
+      "time": 1.8166666666666667,
+      "alpha_bbox": [
+        283,
+        39,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        401.1997037037037,
+        328.5499259259259
+      ],
+      "second_hand": [
+        409.5066586247484,
+        351.066464290864
+      ],
+      "angle_degrees": -20.25037037037037,
+      "body_lean": -15.562460357603628,
+      "body_crouch": -7.578619725303571,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 110,
+      "logical_frame": 111,
+      "time": 1.8333333333333333,
+      "alpha_bbox": [
+        283,
+        40,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        400.8002962962963,
+        328.4500740740741
+      ],
+      "second_hand": [
+        409.303136130834,
+        350.893374070915
+      ],
+      "angle_degrees": -20.74962962962963,
+      "body_lean": -15.847359881361225,
+      "body_crouch": -7.559159060964546,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 111,
+      "logical_frame": 112,
+      "time": 1.85,
+      "alpha_bbox": [
+        283,
+        41,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        400.408,
+        328.352
+      ],
+      "second_hand": [
+        409.10260880090914,
+        350.721706698997
+      ],
+      "angle_degrees": -21.240000000000002,
+      "body_lean": -16.126398754656066,
+      "body_crouch": -7.5337331312466915,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 112,
+      "logical_frame": 113,
+      "time": 1.8666666666666667,
+      "alpha_bbox": [
+        282,
+        42,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        400.03703703703707,
+        328.25925925925924
+      ],
+      "second_hand": [
+        408.91240065285103,
+        350.557867302971
+      ],
+      "angle_degrees": -21.703703703703702,
+      "body_lean": -16.38895083291242,
+      "body_crouch": -7.502613187085314,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 113,
+      "logical_frame": 114,
+      "time": 1.8833333333333333,
+      "alpha_bbox": [
+        280,
+        43,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        399.7016296296296,
+        328.1754074074074
+      ],
+      "second_hand": [
+        408.73992322369054,
+        350.40847397294345
+      ],
+      "angle_degrees": -22.122962962962962,
+      "body_lean": -16.624391270737856,
+      "body_crouch": -7.4661312247556335,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 114,
+      "logical_frame": 115,
+      "time": 1.9,
+      "alpha_bbox": [
+        278,
+        43,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        399.416,
+        328.104
+      ],
+      "second_hand": [
+        408.59266194230116,
+        350.2803133905688
+      ],
+      "angle_degrees": -22.48,
+      "body_lean": -16.822096410308436,
+      "body_crouch": -7.424676444043598,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 115,
+      "logical_frame": 116,
+      "time": 1.9166666666666667,
+      "alpha_bbox": [
+        277,
+        44,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        399.19437037037034,
+        328.04859259259257
+      ],
+      "second_hand": [
+        408.47815172118516,
+        350.18027585054347
+      ],
+      "angle_degrees": -22.75703703703704,
+      "body_lean": -16.971443666584594,
+      "body_crouch": -7.378691096153614,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 116,
+      "logical_frame": 117,
+      "time": 1.9333333333333333,
+      "alpha_bbox": [
+        276,
+        44,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        399.05096296296296,
+        328.01274074074075
+      ],
+      "second_hand": [
+        408.40394137057655,
+        350.1152698925531
+      ],
+      "angle_degrees": -22.936296296296295,
+      "body_lean": -17.061811409663818,
+      "body_crouch": -7.32866576564892,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 117,
+      "logical_frame": 118,
+      "time": 1.95,
+      "alpha_bbox": [
+        275,
+        44,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        399.0,
+        328.0
+      ],
+      "second_hand": [
+        408.37754708374257,
+        350.09211648285856
+      ],
+      "angle_degrees": -23.0,
+      "body_lean": -17.08257884458428,
+      "body_crouch": -7.275134136758128,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 118,
+      "logical_frame": 119,
+      "time": 1.9666666666666666,
+      "alpha_bbox": [
+        274,
+        45,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        398.85008021089226,
+        328.10494385237547
+      ],
+      "second_hand": [
+        408.3142639895956,
+        350.1600844187588
+      ],
+      "angle_degrees": -23.224879683661634,
+      "body_lean": -17.154855540142517,
+      "body_crouch": -7.11372344750707,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 119,
+      "logical_frame": 120,
+      "time": 1.9833333333333334,
+      "alpha_bbox": [
+        271,
+        46,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        398.4307614098853,
+        328.39846701308034
+      ],
+      "second_hand": [
+        408.13648567400446,
+        350.34838538442943
+      ],
+      "angle_degrees": -23.8538578851721,
+      "body_lean": -17.388598424646023,
+      "body_crouch": -6.761400645963367,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 120,
+      "logical_frame": 121,
+      "time": 2.0,
+      "alpha_bbox": [
+        265,
+        49,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        397.7877044464535,
+        328.8486068874825
+      ],
+      "second_hand": [
+        407.8615669603123,
+        350.6320247563999
+      ],
+      "angle_degrees": -24.81844333031972,
+      "body_lean": -17.75645862311401,
+      "body_crouch": -6.250755617786451,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 121,
+      "logical_frame": 122,
+      "time": 2.0166666666666666,
+      "alpha_bbox": [
+        259,
+        52,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        396.96657017007146,
+        329.42340088094994
+      ],
+      "second_hand": [
+        407.50635245421466,
+        350.9852419294982
+      ],
+      "angle_degrees": -26.050144744892826,
+      "body_lean": -18.231087595729278,
+      "body_crouch": -5.614396443525137,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 122,
+      "logical_frame": 123,
+      "time": 2.033333333333333,
+      "alpha_bbox": [
+        251,
+        57,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        396.0130194302135,
+        330.09088639885056
+      ],
+      "second_hand": [
+        407.08772944584337,
+        351.3829224233764
+      ],
+      "angle_degrees": -27.480470854679766,
+      "body_lean": -18.785137009813788,
+      "body_crouch": -4.884942512393204,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 123,
+      "logical_frame": 124,
+      "time": 2.05,
+      "alpha_bbox": [
+        243,
+        61,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        394.97271307635407,
+        330.81910084655215
+      ],
+      "second_hand": [
+        406.62313624179427,
+        351.8016564598747
+      ],
+      "angle_degrees": -29.040930385468872,
+      "body_lean": -19.391258611251452,
+      "body_crouch": -4.095017515400936,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 124,
+      "logical_frame": 125,
+      "time": 2.066666666666667,
+      "alpha_bbox": [
+        234,
+        66,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        393.8913119579677,
+        331.5760816294227
+      ],
+      "second_hand": [
+        406.1310245457287,
+        352.2204376564099
+      ],
+      "angle_degrees": -30.663032063048515,
+      "body_lean": -20.02210409570121,
+      "body_crouch": -3.277242392593907,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 125,
+      "logical_frame": 126,
+      "time": 2.0833333333333335,
+      "alpha_bbox": [
+        226,
+        71,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        392.81447692452866,
+        332.32986615282994
+      ],
+      "second_hand": [
+        405.63124378596194,
+        352.62100922609386
+      ],
+      "angle_degrees": -32.27828461320695,
+      "body_lean": -20.65032497994412,
+      "body_crouch": -2.4642283096398994,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 126,
+      "logical_frame": 127,
+      "time": 2.1,
+      "alpha_bbox": [
+        218,
+        77,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        391.7878688255116,
+        333.04849182214184
+      ],
+      "second_hand": [
+        405.14529688857857,
+        352.98787785932944
+      ],
+      "angle_degrees": -33.81819676173255,
+      "body_lean": -21.248572473707984,
+      "body_crouch": -1.6885697386914331,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 127,
+      "logical_frame": 128,
+      "time": 2.1166666666666667,
+      "alpha_bbox": [
+        211,
+        82,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        390.85714851039086,
+        333.6999960427264
+      ],
+      "second_hand": [
+        404.69641055001154,
+        353.30802567853414
+      ],
+      "angle_degrees": -35.214277234413665,
+      "body_lean": -21.78949735231131,
+      "body_crouch": -0.9828377173395823,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 128,
+      "logical_frame": 129,
+      "time": 2.1333333333333333,
+      "alpha_bbox": [
+        205,
+        86,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        390.06797682864095,
+        334.25241621995133
+      ],
+      "second_hand": [
+        404.30936751094544,
+        353.57035584699156
+      ],
+      "angle_degrees": -36.39803475703861,
+      "body_lean": -22.24574983046669,
+      "body_crouch": -0.3795733575741659,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 129,
+      "logical_frame": 130,
+      "time": 2.15,
+      "alpha_bbox": [
+        201,
+        89,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        389.46601462973615,
+        334.6737897591847
+      ],
+      "second_hand": [
+        404.0100621290476,
+        353.76490503141986
+      ],
+      "angle_degrees": -37.30097805539573,
+      "body_lean": -22.589979437580396,
+      "body_crouch": 0.08871832600136631,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 130,
+      "logical_frame": 131,
+      "time": 2.1666666666666665,
+      "alpha_bbox": [
+        198,
+        91,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        389.0969227631511,
+        334.93215406579424
+      ],
+      "second_hand": [
+        403.82476208583125,
+        353.88184400746127
+      ],
+      "angle_degrees": -37.85461585527336,
+      "body_lean": -22.794834894880882,
+      "body_crouch": 0.38957420285801353,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 131,
+      "logical_frame": 132,
+      "time": 2.183333333333333,
+      "alpha_bbox": [
+        198,
+        91,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        389.06879227970063,
+        335.0128531601629
+      ],
+      "second_hand": [
+        403.82890158187934,
+        353.9374185022715
+      ],
+      "angle_degrees": -37.95225121042282,
+      "body_lean": -22.81752769753598,
+      "body_crouch": 0.5014496693118066,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 132,
+      "logical_frame": 133,
+      "time": 2.2,
+      "alpha_bbox": [
+        202,
+        89,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        390.3203133572373,
+        335.2532707392482
+      ],
+      "second_hand": [
+        404.79124178915197,
+        354.3998691399669
+      ],
+      "angle_degrees": -37.081853612272624,
+      "body_lean": -22.45078921952941,
+      "body_crouch": 0.6507691399454992,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 133,
+      "logical_frame": 134,
+      "time": 2.216666666666667,
+      "alpha_bbox": [
+        212,
+        84,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        392.5772473887715,
+        335.7187164347181
+      ],
+      "second_hand": [
+        406.51545155407086,
+        355.2565378241779
+      ],
+      "angle_degrees": -35.50390967295662,
+      "body_lean": -21.799227496320952,
+      "body_crouch": 0.889562875900456,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 134,
+      "logical_frame": 135,
+      "time": 2.2333333333333334,
+      "alpha_bbox": [
+        224,
+        79,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        395.6075825594491,
+        336.4094767526617
+      ],
+      "second_hand": [
+        408.807958495181,
+        356.45318088027614
+      ],
+      "angle_degrees": -33.368087590850806,
+      "body_lean": -20.923233425318383,
+      "body_crouch": 1.197429292799751,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 135,
+      "logical_frame": 136,
+      "time": 2.25,
+      "alpha_bbox": [
+        239,
+        72,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        399.290340844176,
+        337.35336108358985
+      ],
+      "second_hand": [
+        411.5596543924308,
+        357.9801384628755
+      ],
+      "angle_degrees": -30.7452207346466,
+      "body_lean": -19.85140828231106,
+      "body_crouch": 1.5646259450918605,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 136,
+      "logical_frame": 137,
+      "time": 2.2666666666666666,
+      "alpha_bbox": [
+        258,
+        65,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        403.5399122463344,
+        338.5898707344821
+      ],
+      "second_hand": [
+        414.6888028669452,
+        359.84315843143986
+      ],
+      "angle_degrees": -27.680268665975092,
+      "body_lean": -18.601918867285722,
+      "body_crouch": 1.9849534755916025,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 137,
+      "logical_frame": 138,
+      "time": 2.283333333333333,
+      "alpha_bbox": [
+        279,
+        59,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        408.2875522924097,
+        340.16582606057557
+      ],
+      "second_hand": [
+        418.12776762393514,
+        362.0557817989779
+      ],
+      "angle_degrees": -24.20539841887586,
+      "body_lean": -17.187772112621584,
+      "body_crouch": 2.4539990475684745,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 138,
+      "logical_frame": 139,
+      "time": 2.3,
+      "alpha_bbox": [
+        283,
+        53,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        413.4740137231698,
+        342.1333974268735
+      ],
+      "second_hand": [
+        421.8182450303049,
+        364.6361484563149
+      ],
+      "angle_degrees": -20.345253214551896,
+      "body_lean": -15.618939467822578,
+      "body_crouch": 2.96842913695233,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 139,
+      "logical_frame": 140,
+      "time": 2.316666666666667,
+      "alpha_bbox": [
+        286,
+        48,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        419.045924448992,
+        344.5490077695067
+      ],
+      "second_hand": [
+        425.70935416942456,
+        367.6054321315117
+      ],
+      "angle_degrees": -16.119576159230874,
+      "body_lean": -13.903414749682911,
+      "body_crouch": 3.525637111612679,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 140,
+      "logical_frame": 141,
+      "time": 2.3333333333333335,
+      "alpha_bbox": [
+        288,
+        45,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        424.95376890132206,
+        347.472638387404
+      ],
+      "second_hand": [
+        429.75694341621414,
+        370.9870916997711
+      ],
+      "angle_degrees": -11.544694011623953,
+      "body_lean": -12.047812347847149,
+      "body_crouch": 4.123543298720204,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 141,
+      "logical_frame": 142,
+      "time": 2.35,
+      "alpha_bbox": [
+        291,
+        45,
+        514,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        431.150663613881,
+        350.9673511567308
+      ],
+      "second_hand": [
+        433.9234819633382,
+        374.8066355084246
+      ],
+      "angle_degrees": -6.634431946452143,
+      "body_lean": -10.057735998285207,
+      "body_crouch": 4.76047080811219,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 142,
+      "logical_frame": 143,
+      "time": 2.3666666666666667,
+      "alpha_bbox": [
+        294,
+        48,
+        513,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        437.59156766337753,
+        355.098939348951
+      ],
+      "second_hand": [
+        438.17823898838844,
+        379.0917677932259
+      ],
+      "angle_degrees": -1.4007141410147597,
+      "body_lean": -7.938020877715639,
+      "body_crouch": 5.435062873788224,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 143,
+      "logical_frame": 144,
+      "time": 2.3833333333333333,
+      "alpha_bbox": [
+        297,
+        52,
+        515,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        444.23274937364783,
+        359.9356607755365
+      ],
+      "second_hand": [
+        442.49758274696114,
+        383.8728535261001
+      ],
+      "angle_degrees": 4.1460224876499865,
+      "body_lean": -5.692900360938257,
+      "body_crouch": 6.146224620255993,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 144,
+      "logical_frame": 145,
+      "time": 2.4,
+      "alpha_bbox": [
+        300,
+        62,
+        516,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        451.0314128134331,
+        365.5480267189985
+      ],
+      "second_hand": [
+        446.8652870710419,
+        389.1836649862124
+      ],
+      "angle_degrees": 9.996532215996185,
+      "body_lean": -3.3261253360332352,
+      "body_crouch": 6.8930799834639656,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 145,
+      "logical_frame": 146,
+      "time": 2.4166666666666665,
+      "alpha_bbox": [
+        304,
+        75,
+        550,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        457.9454285035898,
+        372.00863039838805
+      ],
+      "second_hand": [
+        451.27275761968065,
+        395.0623820079424
+      ],
+      "angle_degrees": 16.14254200773422,
+      "body_lean": -0.8410522509346312,
+      "body_crouch": 7.674938430257751,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 146,
+      "logical_frame": 147,
+      "time": 2.433333333333333,
+      "alpha_bbox": [
+        307,
+        94,
+        588,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        464.93313460957023,
+        379.3920044833436
+      ],
+      "second_hand": [
+        455.7191021160303,
+        401.5528168603299
+      ],
+      "angle_degrees": 22.576586069572073,
+      "body_lean": 1.7592902300097644,
+      "body_crouch": 8.491268225271737,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 147,
+      "logical_frame": 148,
+      "time": 2.45,
+      "alpha_bbox": [
+        311,
+        119,
+        626,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        471.95318727346427,
+        387.7745005958744
+      ],
+      "second_hand": [
+        460.21097550125177,
+        408.7058278996197
+      ],
+      "angle_degrees": 29.291877852142786,
+      "body_lean": 4.472149662252566,
+      "body_crouch": 9.341674194189252,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 148,
+      "logical_frame": 149,
+      "time": 2.466666666666667,
+      "alpha_bbox": [
+        315,
+        148,
+        664,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        478.9644460887446,
+        397.23418587353734
+      ],
+      "second_hand": [
+        464.7621364226481,
+        416.58087551668564
+      ],
+      "angle_degrees": 36.28220917859585,
+      "body_lean": 7.29500918961374,
+      "body_crouch": 10.225878650296323,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 149,
+      "logical_frame": 150,
+      "time": 2.4833333333333334,
+      "alpha_bbox": [
+        319,
+        183,
+        700,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        485.9258852603679,
+        407.85075305229867
+      ],
+      "second_hand": [
+        469.3926580630116,
+        425.24766077869066
+      ],
+      "angle_degrees": 43.541869474013126,
+      "body_lean": 10.225555011683834,
+      "body_crouch": 11.143704598701856,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 150,
+      "logical_frame": 151,
+      "time": 2.5,
+      "alpha_bbox": [
+        323,
+        224,
+        734,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        492.79652389341976,
+        419.70544145675774
+      ],
+      "second_hand": [
+        474.1277455061491,
+        434.7877726269375
+      ],
+      "angle_degrees": 51.06558018304381,
+      "body_lean": 13.261649969077546,
+      "body_crouch": 12.095060621292221,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 151,
+      "logical_frame": 152,
+      "time": 2.5166666666666666,
+      "alpha_bbox": [
+        328,
+        271,
+        765,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        499.53537076166583,
+        432.88096692781994
+      ],
+      "second_hand": [
+        478.9961246419584,
+        445.2962546342761
+      ],
+      "angle_degrees": 58.84844086211839,
+      "body_lean": 16.40131182966799,
+      "body_crouch": 13.07992703736927,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 152,
+      "logical_frame": 153,
+      "time": 2.533333333333333,
+      "alpha_bbox": [
+        329,
+        304,
+        791,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        506.1013801949979,
+        447.46145917340976
+      ],
+      "second_hand": [
+        484.02798471502734,
+        456.88298834784933
+      ],
+      "angle_degrees": 66.88588438235757,
+      "body_lean": 19.642695241915366,
+      "body_crouch": 14.098343065706986,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 153,
+      "logical_frame": 154,
+      "time": 2.55,
+      "alpha_bbox": [
+        329,
+        306,
+        812,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        512.4534166133229,
+        463.5324053581093
+      ],
+      "second_hand": [
+        489.2524783561791,
+        469.6737784935083
+      ],
+      "angle_degrees": 75.1736393388474,
+      "body_lean": 22.98407658737094,
+      "body_crouch": 15.15039480479252,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 154,
+      "logical_frame": 155,
+      "time": 2.566666666666667,
+      "alpha_bbox": [
+        329,
+        307,
+        825,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        518.5502258598727,
+        481.1805989918842
+      ],
+      "second_hand": [
+        494.69480929207725,
+        483.81101728123434
+      ],
+      "angle_degrees": 83.70769822927335,
+      "body_lean": 26.423841152891335,
+      "body_crouch": 16.23620391243391,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 155,
+      "logical_frame": 156,
+      "time": 2.5833333333333335,
+      "alpha_bbox": [
+        329,
+        308,
+        834,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        524.3504119350118,
+        500.49409336191997
+      ],
+      "second_hand": [
+        500.3729684825672,
+        499.4538023041772
+      ],
+      "angle_degrees": 92.48429030202524,
+      "body_lean": 29.960472179050473,
+      "body_crouch": 17.355916912040296,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 156,
+      "logical_frame": 157,
+      "time": 2.6,
+      "alpha_bbox": [
+        329,
+        309,
+        834,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        529.8124180578005,
+        521.5621588921872
+      ],
+      "second_hand": [
+        506.29421330686404,
+        516.7773866621822
+      ],
+      "angle_degrees": 101.49985822104622,
+      "body_lean": 33.59254144091659,
+      "body_crouch": 18.509695086110977,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 157,
+      "logical_frame": 158,
+      "time": 2.6166666666666667,
+      "alpha_bbox": [
+        329,
+        310,
+        825,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        534.8945112234363,
+        544.4752439243657
+      ],
+      "second_hand": [
+        512.4514202211085,
+        535.9718524679389
+      ],
+      "angle_degrees": 110.7510378785636,
+      "body_lean": 37.31870109151811,
+      "body_crouch": 19.697704941391233,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 158,
+      "logical_frame": 159,
+      "time": 2.6333333333333333,
+      "alpha_bbox": [
+        329,
+        311,
+        808,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        539.554769604905,
+        569.3249384994098
+      ],
+      "second_hand": [
+        518.8194771265605,
+        557.2399210878581
+      ],
+      "angle_degrees": 120.23464082546836,
+      "body_lean": 41.13767655423884,
+      "body_crouch": 20.920109247200607,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 159,
+      "logical_frame": 160,
+      "time": 2.65,
+      "alpha_bbox": [
+        329,
+        313,
+        782,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        543.7510722835895,
+        596.2039407870877
+      ],
+      "second_hand": [
+        525.3519150876351,
+        580.7938462228561
+      ],
+      "angle_degrees": 129.94763889488993,
+      "body_lean": 45.048260293053225,
+      "body_crouch": 22.177058660295803,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 160,
+      "logical_frame": 161,
+      "time": 2.6666666666666665,
+      "alpha_bbox": [
+        329,
+        314,
+        749,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        547.4410908979919,
+        625.2060258654824
+      ],
+      "second_hand": [
+        531.9780071267169,
+        606.8513795795271
+      ],
+      "angle_degrees": 139.88715067614055,
+      "body_lean": 49.04930632244501,
+      "body_crouch": 23.46868395748957,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 161,
+      "logical_frame": 162,
+      "time": 2.683333333333333,
+      "alpha_bbox": [
+        329,
+        315,
+        717,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        549.9931841563787,
+        649.9931841563786
+      ],
+      "second_hand": [
+        537.2727007156733,
+        629.6415429194969
+      ],
+      "angle_degrees": 147.99318415637862,
+      "body_lean": 52.308395335942194,
+      "body_crouch": 24.512677687401776,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 162,
+      "logical_frame": 163,
+      "time": 2.7,
+      "alpha_bbox": [
+        329,
+        315,
+        717,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        549.7777777777777,
+        649.7777777777778
+      ],
+      "second_hand": [
+        536.9808713905371,
+        629.4741035557016
+      ],
+      "angle_degrees": 147.77777777777777,
+      "body_lean": 52.15627859347477,
+      "body_crouch": 24.262770322768212,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 163,
+      "logical_frame": 164,
+      "time": 2.716666666666667,
+      "alpha_bbox": [
+        329,
+        314,
+        719,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        549.3308899176955,
+        649.3308899176955
+      ],
+      "second_hand": [
+        536.3760125345611,
+        629.1276438421769
+      ],
+      "angle_degrees": 147.33088991769546,
+      "body_lean": 51.849028393839845,
+      "body_crouch": 23.786875720341023,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 164,
+      "logical_frame": 165,
+      "time": 2.7333333333333334,
+      "alpha_bbox": [
+        329,
+        314,
+        721,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        548.7489711934156,
+        648.7489711934156
+      ],
+      "second_hand": [
+        535.5895732933083,
+        628.6783397408019
+      ],
+      "angle_degrees": 146.74897119341563,
+      "body_lean": 51.450970035484666,
+      "body_crouch": 23.18175394945087,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 165,
+      "logical_frame": 166,
+      "time": 2.75,
+      "alpha_bbox": [
+        329,
+        313,
+        723,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        548.1284722222222,
+        648.1284722222222
+      ],
+      "second_hand": [
+        534.7524903313381,
+        628.2015279392986
+      ],
+      "angle_degrees": 146.12847222222223,
+      "body_lean": 51.02643091879679,
+      "body_crouch": 22.544103163977816,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 166,
+      "logical_frame": 167,
+      "time": 2.7666666666666666,
+      "alpha_bbox": [
+        329,
+        312,
+        725,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        547.5658436213992,
+        647.5658436213993
+      ],
+      "second_hand": [
+        533.9948327283118,
+        627.7712063845186
+      ],
+      "angle_degrees": 145.56584362139918,
+      "body_lean": 50.63974047407488,
+      "body_crouch": 21.97055696156157,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 167,
+      "logical_frame": 168,
+      "time": 2.783333333333333,
+      "alpha_bbox": [
+        329,
+        312,
+        726,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        547.1575360082304,
+        647.1575360082304
+      ],
+      "second_hand": [
+        533.4458081399148,
+        627.4601118399474
+      ],
+      "angle_degrees": 145.15753600823047,
+      "body_lean": 50.35523008408185,
+      "body_crouch": 21.557682431515875,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 168,
+      "logical_frame": 169,
+      "time": 2.8,
+      "alpha_bbox": [
+        329,
+        312,
+        727,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        547.0,
+        647.0
+      ],
+      "second_hand": [
+        533.2341655275749,
+        627.3403509370642
+      ],
+      "angle_degrees": 145.0,
+      "body_lean": 50.2372330013873,
+      "body_crouch": 21.40197891227227,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 169,
+      "logical_frame": 170,
+      "time": 2.816666666666667,
+      "alpha_bbox": [
+        329,
+        312,
+        727,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        546.7057350363136,
+        647.114436374767
+      ],
+      "second_hand": [
+        532.9062641382675,
+        627.478382725065
+      ],
+      "angle_degrees": 144.9019116787712,
+      "body_lean": 49.929361821038675,
+      "body_crouch": 21.263058775774244,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 170,
+      "logical_frame": 171,
+      "time": 2.8333333333333335,
+      "alpha_bbox": [
+        329,
+        311,
+        727,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        545.885549711996,
+        647.4333973342237
+      ],
+      "second_hand": [
+        531.9925399932846,
+        627.8634131503826
+      ],
+      "angle_degrees": 144.62851657066534,
+      "body_lean": 49.09497345356484,
+      "body_crouch": 20.86747070372014,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 171,
+      "logical_frame": 172,
+      "time": 2.85,
+      "alpha_bbox": [
+        329,
+        311,
+        728,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        544.63335837716,
+        647.9203606311045
+      ],
+      "second_hand": [
+        530.5981521403553,
+        628.4521047798384
+      ],
+      "angle_degrees": 144.21111945905335,
+      "body_lean": 47.828020154879695,
+      "body_crouch": 20.26201713213904,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 172,
+      "logical_frame": 173,
+      "time": 2.8666666666666667,
+      "alpha_bbox": [
+        329,
+        310,
+        729,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        543.0430753819184,
+        648.5388040181429
+      ],
+      "second_hand": [
+        528.82835421011,
+        629.2012317297779
+      ],
+      "angle_degrees": 143.68102512730613,
+      "body_lean": 46.22245567257306,
+      "body_crouch": 19.493435020430873,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 173,
+      "logical_frame": 174,
+      "time": 2.8833333333333333,
+      "alpha_bbox": [
+        329,
+        309,
+        729,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        541.2086150763837,
+        649.252205248073
+      ],
+      "second_hand": [
+        526.7883279353385,
+        630.0674373638944
+      ],
+      "angle_degrees": 143.06953835879455,
+      "body_lean": 44.372235140764616,
+      "body_crouch": 18.60839820068874,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 174,
+      "logical_frame": 175,
+      "time": 2.9,
+      "alpha_bbox": [
+        329,
+        308,
+        730,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        539.2238918106686,
+        650.0240420736288
+      ],
+      "second_hand": [
+        524.5830510381737,
+        631.0070554176297
+      ],
+      "angle_degrees": 142.40796393688956,
+      "body_lean": 42.3713149712575,
+      "body_crouch": 17.653520400480904,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 175,
+      "logical_frame": 176,
+      "time": 2.9166666666666665,
+      "alpha_bbox": [
+        329,
+        307,
+        731,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        537.1828199348861,
+        650.8177922475443
+      ],
+      "second_hand": [
+        522.3171999299228,
+        631.9759945130382
+      ],
+      "angle_degrees": 141.727606644962,
+      "body_lean": 40.313652741281906,
+      "body_crouch": 16.675358906844764,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 176,
+      "logical_frame": 177,
+      "time": 2.933333333333333,
+      "alpha_bbox": [
+        329,
+        306,
+        732,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        535.1793137991485,
+        651.5969335225534
+      ],
+      "second_hand": [
+        520.0950899775852,
+        632.9296843491754
+      ],
+      "angle_degrees": 141.05977126638288,
+      "body_lean": 38.29320707812848,
+      "body_crouch": 15.720418832404151,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 177,
+      "logical_frame": 178,
+      "time": 2.95,
+      "alpha_bbox": [
+        329,
+        305,
+        732,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        533.3072877535687,
+        652.32494365139
+      ],
+      "second_hand": [
+        518.0206574185773,
+        633.8230806911008
+      ],
+      "angle_degrees": 140.4357625845229,
+      "body_lean": 36.4039375409789,
+      "body_crouch": 14.835157938097877,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 178,
+      "logical_frame": 179,
+      "time": 2.966666666666667,
+      "alpha_bbox": [
+        329,
+        304,
+        733,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        531.6606561482595,
+        652.965300386788
+      ],
+      "second_hand": [
+        516.197487390676,
+        634.6107256988664
+      ],
+      "angle_degrees": 139.88688538275315,
+      "body_lean": 34.73980450025004,
+      "body_crouch": 14.065991961069455,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 179,
+      "logical_frame": 180,
+      "time": 2.9833333333333334,
+      "alpha_bbox": [
+        329,
+        304,
+        734,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        530.3333333333334,
+        653.4814814814815
+      ],
+      "second_hand": [
+        514.728892053001,
+        635.2468602260603
+      ],
+      "angle_degrees": 139.44444444444446,
+      "body_lean": 33.39476901477213,
+      "body_crouch": 13.459300390878125,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 180,
+      "logical_frame": 181,
+      "time": 3.0,
+      "alpha_bbox": [
+        329,
+        303,
+        734,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        529.4192336589031,
+        653.8369646882044
+      ],
+      "second_hand": [
+        513.7180414783269,
+        635.6855855640548
+      ],
+      "angle_degrees": 139.1397445529677,
+      "body_lean": 32.46279270713055,
+      "body_crouch": 13.061432632409568,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 181,
+      "logical_frame": 182,
+      "time": 3.0166666666666666,
+      "alpha_bbox": [
+        329,
+        303,
+        734,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        529.0122714750813,
+        653.9952277596906
+      ],
+      "second_hand": [
+        513.2681479547942,
+        635.8810737750866
+      ],
+      "angle_degrees": 139.0040904916938,
+      "body_lean": 32.037837637502506,
+      "body_crouch": 12.918714489738168,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 182,
+      "logical_frame": 183,
+      "time": 3.033333333333333,
+      "alpha_bbox": [
+        329,
+        303,
+        734,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        528.9156997006847,
+        653.9984388833459
+      ],
+      "second_hand": [
+        513.1692959904008,
+        635.8862670038403
+      ],
+      "angle_degrees": 138.99687776669202,
+      "body_lean": 31.957549311417505,
+      "body_crouch": 12.955540935931067,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 183,
+      "logical_frame": 184,
+      "time": 3.05,
+      "alpha_bbox": [
+        329,
+        303,
+        734,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        528.5815326581657,
+        653.9922506047809
+      ],
+      "second_hand": [
+        512.831216874753,
+        635.8834805548084
+      ],
+      "angle_degrees": 138.9845012095617,
+      "body_lean": 31.741443249413404,
+      "body_crouch": 12.94325162531735,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 184,
+      "logical_frame": 185,
+      "time": 3.066666666666667,
+      "alpha_bbox": [
+        329,
+        303,
+        733,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        528.0075033826726,
+        653.9816204330124
+      ],
+      "second_hand": [
+        512.2504691892794,
+        635.8786959889277
+      ],
+      "angle_degrees": 138.9632408660249,
+      "body_lean": 31.38322483094735,
+      "body_crouch": 12.877272931202421,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 185,
+      "logical_frame": 186,
+      "time": 3.0833333333333335,
+      "alpha_bbox": [
+        329,
+        303,
+        732,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        527.2089876583706,
+        653.9668331047847
+      ],
+      "second_hand": [
+        511.4426112851353,
+        635.8720444611589
+      ],
+      "angle_degrees": 138.93366620956928,
+      "body_lean": 30.892053812373486,
+      "body_crouch": 12.760364705913508,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 186,
+      "logical_frame": 187,
+      "time": 3.1,
+      "alpha_bbox": [
+        329,
+        303,
+        731,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        526.2013612694248,
+        653.9481733568413
+      ],
+      "second_hand": [
+        510.4232022356871,
+        635.8636579498395
+      ],
+      "angle_degrees": 138.8963467136824,
+      "body_lean": 30.277089746128127,
+      "body_crouch": 12.59529793576722,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 187,
+      "logical_frame": 188,
+      "time": 3.1166666666666667,
+      "alpha_bbox": [
+        329,
+        303,
+        731,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        525.0,
+        653.9259259259259
+      ],
+      "second_hand": [
+        509.2078016191796,
+        635.8536690026522
+      ],
+      "angle_degrees": 138.85185185185185,
+      "body_lean": 29.547491852687337,
+      "body_crouch": 12.384861631227304,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 188,
+      "logical_frame": 189,
+      "time": 3.1333333333333333,
+      "alpha_bbox": [
+        329,
+        302,
+        729,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        523.6202796342614,
+        653.9003755487827
+      ],
+      "second_hand": [
+        507.8119693168069,
+        635.8422105006096
+      ],
+      "angle_degrees": 138.80075109756524,
+      "body_lean": 28.712418893410398,
+      "body_crouch": 12.131869524775759,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 189,
+      "logical_frame": 190,
+      "time": 3.15,
+      "alpha_bbox": [
+        329,
+        302,
+        728,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        522.0775759563737,
+        653.871806962155
+      ],
+      "second_hand": [
+        506.25126532594845,
+        635.8294154402618
+      ],
+      "angle_degrees": 138.74361392431015,
+      "body_lean": 27.781029044608594,
+      "body_crouch": 11.839166505042515,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 190,
+      "logical_frame": 191,
+      "time": 3.1666666666666665,
+      "alpha_bbox": [
+        329,
+        302,
+        726,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        520.3872647505023,
+        653.8405049027872
+      ],
+      "second_hand": [
+        504.54124958839174,
+        635.8154167342882
+      ],
+      "angle_degrees": 138.68100980557415,
+      "body_lean": 26.762479773175425,
+      "body_crouch": 11.509634718552633,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 191,
+      "logical_frame": 192,
+      "time": 3.183333333333333,
+      "alpha_bbox": [
+        329,
+        301,
+        725,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        518.5647218008119,
+        653.8067541074224
+      ],
+      "second_hand": [
+        502.6974818334242,
+        635.8003470305696
+      ],
+      "angle_degrees": 138.6135082148449,
+      "body_lean": 25.665927714110108,
+      "body_crouch": 11.146199273995828,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 192,
+      "logical_frame": 193,
+      "time": 3.2,
+      "alpha_bbox": [
+        329,
+        301,
+        724,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        516.6253228914675,
+        653.7708393128049
+      ],
+      "second_hand": [
+        500.7355214357286,
+        635.7843385498105
+      ],
+      "angle_degrees": 138.5416786256099,
+      "body_lean": 24.500528550261315,
+      "body_crouch": 10.751833488163612,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 193,
+      "logical_frame": 194,
+      "time": 3.216666666666667,
+      "alpha_bbox": [
+        329,
+        301,
+        722,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        514.5844438066341,
+        653.7330452556783
+      ],
+      "second_hand": [
+        498.670927288065,
+        635.767522941723
+      ],
+      "angle_degrees": 138.4660905113568,
+      "body_lean": 23.275436894612135,
+      "body_crouch": 10.329563617588912,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 194,
+      "logical_frame": 195,
+      "time": 3.2333333333333334,
+      "alpha_bbox": [
+        329,
+        300,
+        720,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        512.4574603304768,
+        653.6936566727866
+      ],
+      "second_hand": [
+        496.5192576887657,
+        635.7500311597596
+      ],
+      "angle_degrees": 138.3873133455732,
+      "body_lean": 21.999806175420105,
+      "body_crouch": 9.88247302540968,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 195,
+      "logical_frame": 196,
+      "time": 3.25,
+      "alpha_bbox": [
+        329,
+        300,
+        718,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        510.2597482471606,
+        653.6529583008733
+      ],
+      "second_hand": [
+        494.29607024410643,
+        635.7319933543419
+      ],
+      "angle_degrees": 138.30591660174667,
+      "body_lean": 20.68278852451937,
+      "body_crouch": 9.413705739003285,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 196,
+      "logical_frame": 197,
+      "time": 3.2666666666666666,
+      "alpha_bbox": [
+        329,
+        299,
+        716,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        508.0066833408504,
+        653.6112348766824
+      ],
+      "second_hand": [
+        492.0169217856509,
+        635.7135387845071
+      ],
+      "angle_degrees": 138.2224697533648,
+      "body_lean": 19.333534669082646,
+      "body_crouch": 8.92646936043781,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 197,
+      "logical_frame": 198,
+      "time": 3.283333333333333,
+      "alpha_bbox": [
+        329,
+        299,
+        714,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        505.7136413957112,
+        653.5687711369576
+      ],
+      "second_hand": [
+        489.6973683026929,
+        635.6947957478658
+      ],
+      "angle_degrees": 138.13754227391524,
+      "body_lean": 17.961193827132075,
+      "body_crouch": 8.424037298690756,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 198,
+      "logical_frame": 199,
+      "time": 3.3,
+      "alpha_bbox": [
+        328,
+        298,
+        712,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        503.395998195908,
+        653.5258518184428
+      ],
+      "second_hand": [
+        487.35296488994186,
+        635.6758915287486
+      ],
+      "angle_degrees": 138.05170363688546,
+      "body_lean": 16.574913607077747,
+      "body_crouch": 7.909750299821214,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 199,
+      "logical_frame": 200,
+      "time": 3.316666666666667,
+      "alpha_bbox": [
+        326,
+        298,
+        710,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        501.0691295256058,
+        653.4827616578816
+      ],
+      "second_hand": [
+        484.9992657106148,
+        635.6569523643981
+      ],
+      "angle_degrees": 137.9655233157632,
+      "body_lean": 15.18383991155201,
+      "body_crouch": 7.387017258771172,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 200,
+      "logical_frame": 201,
+      "time": 3.3333333333333335,
+      "alpha_bbox": [
+        324,
+        297,
+        708,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        498.7484111689696,
+        653.4397853920179
+      ],
+      "second_hand": [
+        482.6518239751111,
+        635.6381034290541
+      ],
+      "angle_degrees": 137.8795707840359,
+      "body_lean": 13.797116845796456,
+      "body_crouch": 6.859315304135568,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 201,
+      "logical_frame": 202,
+      "time": 3.35,
+      "alpha_bbox": [
+        322,
+        297,
+        706,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        496.4492189101644,
+        653.3972077575957
+      ],
+      "second_hand": [
+        480.3261919354508,
+        635.6194688357682
+      ],
+      "angle_degrees": 137.79441551519128,
+      "body_lean": 12.42388663084543,
+      "body_crouch": 6.330189154996454,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 202,
+      "logical_frame": 203,
+      "time": 3.3666666666666667,
+      "alpha_bbox": [
+        320,
+        296,
+        704,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        494.18692853335517,
+        653.3553134913584
+      ],
+      "second_hand": [
+        478.03792089566264,
+        635.6011716557824
+      ],
+      "angle_degrees": 137.71062698271686,
+      "body_lean": 11.073289521738694,
+      "body_crouch": 5.803249756683102,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 203,
+      "logical_frame": 204,
+      "time": 3.3833333333333333,
+      "alpha_bbox": [
+        319,
+        296,
+        702,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        491.9769158227069,
+        653.3143873300502
+      ],
+      "second_hand": [
+        475.80256123830094,
+        635.5833339553095
+      ],
+      "angle_degrees": 137.62877466010025,
+      "body_lean": 9.754463730980731,
+      "body_crouch": 5.282172210011865,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 204,
+      "logical_frame": 205,
+      "time": 3.4,
+      "alpha_bbox": [
+        317,
+        295,
+        701,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        489.8345565623847,
+        653.2747140104145
+      ],
+      "second_hand": [
+        473.6356624672667,
+        635.5660768495501
+      ],
+      "angle_degrees": 137.54942802082905,
+      "body_lean": 8.476545357451391,
+      "body_crouch": 4.770693016097376,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 205,
+      "logical_frame": 206,
+      "time": 3.4166666666666665,
+      "alpha_bbox": [
+        315,
+        295,
+        698,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        487.7752265365534,
+        653.2365782691954
+      ],
+      "second_hand": [
+        471.55277326709285,
+        635.5495205738023
+      ],
+      "angle_degrees": 137.47315653839087,
+      "body_lean": 7.248668320957444,
+      "body_crouch": 4.272606666128175,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 206,
+      "logical_frame": 207,
+      "time": 3.433333333333333,
+      "alpha_bbox": [
+        313,
+        294,
+        697,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        485.814301529378,
+        653.2002648431367
+      ],
+      "second_hand": [
+        469.5694415788374,
+        635.5337845715228
+      ],
+      "angle_degrees": 137.40052968627325,
+      "body_lean": 6.079964302599773,
+      "body_crouch": 3.7917616124879925,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 207,
+      "logical_frame": 208,
+      "time": 3.45,
+      "alpha_bbox": [
+        312,
+        294,
+        696,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        483.96715732502355,
+        653.1660584689819
+      ],
+      "second_hand": [
+        467.70121469270686,
+        635.5189875992261
+      ],
+      "angle_degrees": 137.33211693796383,
+      "body_lean": 4.979562691115314,
+      "body_crouch": 3.3320556642038888,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 208,
+      "logical_frame": 209,
+      "time": 3.466666666666667,
+      "alpha_bbox": [
+        310,
+        293,
+        694,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        482.2491697076551,
+        653.1342438834752
+      ],
+      "second_hand": [
+        465.9636393575034,
+        635.505247848128
+      ],
+      "angle_degrees": 137.2684877669502,
+      "body_lean": 3.9565905353370723,
+      "body_crouch": 2.8974308558439574,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 209,
+      "logical_frame": 210,
+      "time": 3.4833333333333334,
+      "alpha_bbox": [
+        309,
+        293,
+        692,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        480.6757144614375,
+        653.10510582336
+      ],
+      "second_hand": [
+        464.3722619069612,
+        635.4926830824666
+      ],
+      "angle_degrees": 137.21021164671993,
+      "body_lean": 3.0201725028987747,
+      "body_crouch": 2.4918678446044815,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 210,
+      "logical_frame": 211,
+      "time": 3.5,
+      "alpha_bbox": [
+        308,
+        292,
+        691,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        479.2621673705359,
+        653.0789290253804
+      ],
+      "second_hand": [
+        462.94262840299996,
+        635.4814107944742
+      ],
+      "angle_degrees": 137.15785805076058,
+      "body_lean": 2.179430845294828,
+      "body_crouch": 2.1193798953601717,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 211,
+      "logical_frame": 212,
+      "time": 3.5166666666666666,
+      "alpha_bbox": [
+        307,
+        292,
+        691,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        478.02390421911514,
+        653.0559982262799
+      ],
+      "second_hand": [
+        461.6902847958815,
+        635.4715483760014
+      ],
+      "angle_degrees": 137.11199645255982,
+      "body_lean": 1.4434853693884457,
+      "body_crouch": 1.7840065178465174,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 212,
+      "logical_frame": 213,
+      "time": 3.533333333333333,
+      "alpha_bbox": [
+        306,
+        292,
+        690,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        476.9763007913404,
+        653.0365981628025
+      ],
+      "second_hand": [
+        460.6307771012151,
+        635.4632133068463
+      ],
+      "angle_degrees": 137.0731963256052,
+      "body_lean": 0.8214534154442008,
+      "body_crouch": 1.4898068238546438,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 213,
+      "logical_frame": 214,
+      "time": 3.55,
+      "alpha_bbox": [
+        306,
+        292,
+        689,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        476.13473287137646,
+        653.0210135716922
+      ],
+      "second_hand": [
+        459.7796515937014,
+        635.4565233598858
+      ],
+      "angle_degrees": 137.04202714338433,
+      "body_lean": 0.3224498417435114,
+      "body_crouch": 1.2408526753059184,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 214,
+      "logical_frame": 215,
+      "time": 3.566666666666667,
+      "alpha_bbox": [
+        305,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.5145762433884,
+        653.0095291896924
+      ],
+      "second_hand": [
+        459.1524550174575,
+        635.4515968231539
+      ],
+      "angle_degrees": 137.01905837938477,
+      "body_lean": -0.044412984175813464,
+      "body_crouch": 1.0412216963046181,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 215,
+      "logical_frame": 216,
+      "time": 3.5833333333333335,
+      "alpha_bbox": [
+        305,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.13120669154125,
+        653.0024297535471
+      ],
+      "second_hand": [
+        458.76473481269943,
+        635.4485527390788
+      ],
+      "angle_degrees": 137.00485950709412,
+      "body_lean": -0.2700251876325444,
+      "body_crouch": 0.8949902237180537,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 216,
+      "logical_frame": 217,
+      "time": 3.6,
+      "alpha_bbox": [
+        304,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.34527938226208366,
+      "body_crouch": 0.8062262714892006,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 217,
+      "logical_frame": 218,
+      "time": 3.6166666666666667,
+      "alpha_bbox": [
+        304,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0000000000001
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.44751116114
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.3418599642751783,
+      "body_crouch": 0.7436229367934006,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 218,
+      "logical_frame": 219,
+      "time": 3.6333333333333333,
+      "alpha_bbox": [
+        304,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.33752817309374955,
+      "body_crouch": 0.674152072745702,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 219,
+      "logical_frame": 220,
+      "time": 3.65,
+      "alpha_bbox": [
+        304,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        652.9999999999999
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611398
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.33229556962159185,
+      "body_crouch": 0.5992669817544534,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 220,
+      "logical_frame": 221,
+      "time": 3.6666666666666665,
+      "alpha_bbox": [
+        305,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        474.99999999999994,
+        653.0
+      ],
+      "second_hand": [
+        458.6320393585,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.32617611889598475,
+      "body_crouch": 0.5203861201200801,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 221,
+      "logical_frame": 222,
+      "time": 3.683333333333333,
+      "alpha_bbox": [
+        305,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.00000000000006,
+        653.0
+      ],
+      "second_hand": [
+        458.6320393585001,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.31918615281709456,
+      "body_crouch": 0.43888722620587645,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 222,
+      "logical_frame": 223,
+      "time": 3.7,
+      "alpha_bbox": [
+        305,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.31134432656057004,
+      "body_crouch": 0.35610188299913437,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 223,
+      "logical_frame": 224,
+      "time": 3.716666666666667,
+      "alpha_bbox": [
+        305,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        474.99999999999994,
+        653.0
+      ],
+      "second_hand": [
+        458.6320393585,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.30267156878966645,
+      "body_crouch": 0.27331057307076967,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 224,
+      "logical_frame": 225,
+      "time": 3.7333333333333334,
+      "alpha_bbox": [
+        305,
+        291,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.2931910257997662,
+      "body_crouch": 0.1917382786884605,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 225,
+      "logical_frame": 226,
+      "time": 3.75,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.28292799974437566,
+      "body_crouch": 0.11255067402258812,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 226,
+      "logical_frame": 227,
+      "time": 3.7666666666666666,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.27190988110745284,
+      "body_crouch": 0.03685095006753636,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 227,
+      "logical_frame": 228,
+      "time": 3.783333333333333,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.2601660756022991,
+      "body_crouch": -0.034322693848980346,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 228,
+      "logical_frame": 229,
+      "time": 3.8,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.24772792569209864,
+      "body_crouch": -0.09999886520730927,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 229,
+      "logical_frame": 230,
+      "time": 3.816666666666667,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.23462862694156605,
+      "body_crouch": -0.15927408072351612,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 230,
+      "logical_frame": 231,
+      "time": 3.8333333333333335,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.22090313942294165,
+      "body_crouch": -0.2113131443023023,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 231,
+      "logical_frame": 232,
+      "time": 3.85,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.206588094412779,
+      "body_crouch": -0.25534879648309716,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 232,
+      "logical_frame": 233,
+      "time": 3.8666666666666667,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.1917216966285366,
+      "body_crouch": -0.29068063911909225,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 233,
+      "logical_frame": 234,
+      "time": 3.8833333333333333,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.17634362226589317,
+      "body_crouch": -0.3166733467610783,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 234,
+      "logical_frame": 235,
+      "time": 3.9,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.16049491310890776,
+      "body_crouch": -0.3327541838275295,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 235,
+      "logical_frame": 236,
+      "time": 3.9166666666666665,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.1442178669956238,
+      "body_crouch": -0.3384098540484502,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 236,
+      "logical_frame": 237,
+      "time": 3.933333333333333,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.12755592493145732,
+      "body_crouch": -0.3331827157940173,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 237,
+      "logical_frame": 238,
+      "time": 3.95,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.11055355515164157,
+      "body_crouch": -0.3166664036639443,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 238,
+      "logical_frame": 239,
+      "time": 3.966666666666667,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.0932561344421468,
+      "body_crouch": -0.28850090304766457,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    },
+    {
+      "index": 239,
+      "logical_frame": 240,
+      "time": 3.9833333333333334,
+      "alpha_bbox": [
+        305,
+        290,
+        688,
+        916
+      ],
+      "border_alpha_max": 0,
+      "hand": [
+        475.0,
+        653.0
+      ],
+      "second_hand": [
+        458.63203935850004,
+        635.4475111611399
+      ],
+      "angle_degrees": 137.0,
+      "body_lean": -0.07570982703581253,
+      "body_crouch": -0.24836713020132323,
+      "grip_join": 1.0,
+      "near_arm_stretch": 1.0,
+      "far_arm_stretch": 1.0
+    }
+  ]
+}

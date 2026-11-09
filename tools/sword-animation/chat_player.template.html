@@ -1,0 +1,23 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>검 내려치기 · 프레임 재생</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:14px;font:14px/1.5 system-ui,sans-serif;background:var(--background,#fff);color:var(--foreground,#252c36)}.title{font-size:17px;font-weight:650}.meta,.note{font-size:12px;color:var(--muted-foreground,#6c7482)}.stage{max-width:400px;margin:12px auto;overflow:hidden;border:1px solid var(--border,#d1d6dd);border-radius:12px;background-color:#eee;background-image:conic-gradient(#ddd 25%,transparent 0 50%,#ddd 0 75%,transparent 0);background-size:28px 28px}canvas{width:100%;display:block}.tools{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}button,select{font:inherit;min-height:40px;padding:7px 11px;border:1px solid var(--border,#ccd2db);border-radius:8px;background:var(--secondary,#f0f2f6);color:var(--foreground,#252c36)}button:hover{background:var(--accent,#e3edff);color:var(--accent-foreground,#1c4180)}button:focus-visible,select:focus-visible{outline:2px solid var(--foreground,#252c36);outline-offset:2px}input{display:block;width:min(100%,400px);margin:12px auto;accent-color:var(--foreground,#335b9e)}output{font-variant-numeric:tabular-nums;font-size:12px}.note{text-align:center;margin-top:10px}
+</style>
+<div class="title">양손 검 들어 올려 내려치기</div><div class="meta">4초 · 60fps · 240프레임 · 오른쪽 방향</div>
+<div class="stage" id="stage"><canvas id="canvas" width="480" height="480" role="img" aria-label="양손 검 내려치기 동작"></canvas></div>
+<div class="tools"><button id="play" disabled>불러오는 중</button><button id="restart" disabled>처음부터</button><select id="speed" aria-label="재생 속도"><option value="1">1×</option><option value="0.25">0.25×</option><option value="5">5×</option></select><select id="bg" aria-label="배경"><option value="checker">투명 격자</option><option value="#eeeeed">밝은 회색</option><option value="#d9f6d7">밝은 초록</option><option value="#292d36">어두운 회색</option></select></div>
+<input id="scrub" type="range" min="0" max="239" step="1" value="0" aria-label="프레임 이동">
+<div class="tools"><button id="prev" aria-label="이전 프레임">◀</button><output id="status">001 / 240 · 0.00초</output><button id="next" aria-label="다음 프레임">▶</button></div>
+<div class="note">실제 출력 프레임을 재생하는 축소 미리보기입니다. 원본 영상은 1024 × 1024입니다.</div>
+<script>
+(()=>{
+const canvas=document.getElementById('canvas'),ctx=canvas.getContext('2d'),button=document.getElementById('play'),restart=document.getElementById('restart'),scrub=document.getElementById('scrub'),status=document.getElementById('status'),stage=document.getElementById('stage');
+const image=new Image(),cell=__CELL__;let ready=false,playing=true,time=0,last=0,speed=1,frame=-1;
+function draw(force=false){if(!ready)return;const n=Math.min(239,Math.floor(time*60));if(force||n!==frame){ctx.clearRect(0,0,480,480);ctx.drawImage(image,n%16*cell,Math.floor(n/16)*cell,cell,cell,0,0,480,480);frame=n;scrub.value=n;status.value=String(n+1).padStart(3,'0')+' / 240 · '+(n/60).toFixed(2)+'초'}button.textContent=playing?'일시정지':'재생';window.playerState={ready,playing,frame,time,fps:60,frames:240,usesVideoElement:false}}
+function tick(now){if(last&&ready&&playing)time=(time+Math.min((now-last)/1000,.25)*speed)%4;last=now;draw();requestAnimationFrame(tick)}
+function seek(n){playing=false;time=Math.max(0,Math.min(239,n))/60;draw(true)}
+button.onclick=()=>{playing=!playing;draw(true)};restart.onclick=()=>{time=0;playing=true;draw(true)};document.getElementById('speed').onchange=e=>speed=+e.target.value;scrub.oninput=e=>seek(+e.target.value);document.getElementById('prev').onclick=()=>seek(frame-1);document.getElementById('next').onclick=()=>seek(frame+1);
+document.getElementById('bg').onchange=e=>{stage.style.backgroundImage=e.target.value==='checker'?'':'none';stage.style.backgroundColor=e.target.value==='checker'?'#eee':e.target.value};
+image.onload=()=>{ready=true;button.disabled=restart.disabled=false;draw(true)};image.onerror=()=>{button.textContent='이미지 불러오기 실패';status.value='미리보기 데이터를 읽지 못했습니다'};
+image.src='data:image/webp;base64,__ATLAS__';requestAnimationFrame(tick);
+})();
+</script></html>

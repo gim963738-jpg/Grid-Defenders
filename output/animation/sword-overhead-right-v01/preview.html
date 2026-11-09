@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>금발 전사 · 양손 검 내려치기</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f3ef;color:#292b31;font:15px/1.55 system-ui,sans-serif}main{max-width:900px;margin:24px auto;padding:0 20px}h1{font-size:24px;margin-bottom:4px}p{margin:6px 0 16px}.meta{color:#65686f}.stage{width:min(100%,640px);margin:18px auto;border:1px solid #c9cbd0;border-radius:14px;overflow:hidden;background-color:#e8e8e8;background-image:conic-gradient(#d7d7d7 25%,transparent 0 50%,#d7d7d7 0 75%,transparent 0);background-size:32px 32px}.stage video{width:100%;display:block}.stage.light{background:#f1f1ef}.stage.green{background:#d9f6d7}.stage.dark{background:#292d36}.stage.battle{background:#b4caa6 url('../../../게임/public/assets/battlefields/forest-clearing-v1.png') center/cover}.toolbar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:12px 0}button,select,a.link{font:inherit;border:1px solid #c8cbd1;background:white;color:#303640;border-radius:8px;padding:9px 12px;min-height:42px}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #447bc7;outline-offset:2px}input{width:min(100%,640px);display:block;margin:12px auto}output{font-variant-numeric:tabular-nums}a{color:#225ca1}.links{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.note{font-size:13px;color:#606772}figure{margin:24px 0}figure img{width:100%;display:block;border-radius:12px}figcaption{margin:6px 0;font-size:13px}.mobile{max-width:390px}.small{max-width:320px}
+</style>
+<main>
+<h1>금발 전사 · 양손 검 내려치기</h1>
+<p class="meta">오른쪽 정측면 · 4.000초 · 60fps · 총 240프레임 · 1024 × 1024 · 실제 알파 투명</p>
+<div id="stage" class="stage"><video id="video" src="sword-overhead-right-4s-60fps-alpha.webm" playsinline muted loop controls preload="auto"></video></div>
+<div class="toolbar">
+<button id="play">재생 / 일시정지</button><button id="restart">처음부터</button>
+<label>속도 <select id="speed"><option value="0.25">0.25×</option><option value="1" selected>1×</option><option value="5">5×</option></select></label>
+<label>배경 <select id="bg"><option value="">투명 격자</option><option value="light">밝은 회색</option><option value="green">밝은 초록</option><option value="dark">어두운 회색</option><option value="battle">전장 배경</option></select></label>
+<label>보기 <select id="size"><option value="">640px</option><option value="mobile">390px</option><option value="small">320px</option></select></label>
+</div>
+<input id="scrub" aria-label="프레임 이동" type="range" min="0" max="239" step="1" value="0">
+<div class="toolbar"><button id="prev">이전 프레임</button><output id="status">001 / 240 · 0.000초</output><button id="next">다음 프레임</button></div>
+<p class="note">배경 선택은 미리보기에만 적용됩니다. MOV·WebM 원본에는 배경이 없습니다. 전장은 프로젝트의 실제 전장 이미지에 합성한 확인용 화면입니다. 게임 실행 코드에는 아직 연결하지 않았습니다.</p>
+<div class="links"><a class="link" href="sword-overhead-right-4s-60fps-alpha.mov" download>편집용 MOV · ProRes 4444</a><a class="link" href="sword-overhead-right-4s-60fps-alpha.webm" download>투명 WebM</a><a class="link" href="preview-checkerboard.mp4" download>MP4 미리보기 · 격자 포함</a><a class="link" href="sword-overhead-right-complete.zip" download>영상·PNG 240장 전체 묶음</a></div>
+<p class="note">제작 방식: 캐릭터디자인2 작업 폴더의 오른쪽 금발 전사 원본 → 내장 image_gen으로 동작 파츠 제작 → 팔 관절·손잡이·검 회전과 몸통 움직임을 계산한 2D 애니메이션. 영상 생성 모델을 사용한 결과는 아닙니다. 고정된 발과 한 개의 검을 유지합니다.</p>
+<figure><img src="motion-contact-sheet.jpg" alt="두 손 모으기, 검 올리기, 내려치기, 마무리 주요 자세"><figcaption>주요 자세 · 밝은 초록/회색 배경 전체 프레임 확인</figcaption></figure>
+<figure><img src="all-240-frames-light-audit.jpg" alt="240프레임 전체 확인표"><figcaption>240프레임 전체 확인표</figcaption></figure>
+<script>
+const video=document.getElementById('video'),stage=document.getElementById('stage'),scrub=document.getElementById('scrub'),status=document.getElementById('status');
+// Blob playback also supports frame seeking on simple servers without HTTP Range.
+window.videoReady=(async()=>{if(location.protocol==='http:'||location.protocol==='https:'){const response=await fetch(video.src);if(!response.ok)throw Error('영상 불러오기 실패');video.src=URL.createObjectURL(await response.blob());video.load()}if(video.readyState<2)await new Promise((resolve,reject)=>{video.addEventListener('loadeddata',resolve,{once:true});video.addEventListener('error',reject,{once:true})});return true})();
+function seek(n){video.pause();n=Math.max(0,Math.min(239,n));video.currentTime=(n+.05)/60;scrub.value=n;update()}
+function update(){const n=Math.min(239,Math.max(0,Math.floor(video.currentTime*60)));scrub.value=n;status.value=`${String(n+1).padStart(3,'0')} / 240 · ${video.currentTime.toFixed(3)}초`}
+document.getElementById('play').onclick=()=>video.paused?video.play():video.pause();document.getElementById('restart').onclick=()=>{video.currentTime=0;video.play()};document.getElementById('speed').onchange=e=>video.playbackRate=+e.target.value;
+function styleStage(){stage.className='stage '+document.getElementById('bg').value+' '+document.getElementById('size').value}
+document.getElementById('bg').onchange=styleStage;document.getElementById('size').onchange=styleStage;scrub.oninput=e=>seek(+e.target.value);document.getElementById('prev').onclick=()=>seek(+scrub.value-1);document.getElementById('next').onclick=()=>seek(+scrub.value+1);video.addEventListener('timeupdate',update);video.addEventListener('seeked',update);
+</script>
+</main></html>
