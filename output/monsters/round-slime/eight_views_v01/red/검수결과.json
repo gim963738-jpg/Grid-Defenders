@@ -1,0 +1,225 @@
+{
+    "method":  "System.Drawing read-only Bitmap.LockBits alpha inspection and SHA-256. PNG files not edited.",
+    "count":  8,
+    "images":  [
+                   {
+                       "file":  "images/01_front_000.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "png_color_type":  6,
+                       "mode":  "RGBA",
+                       "sha256":  "004f04b6d1e6d93b04a884b38bb4502610cbe77a09bc0aca464bb92b29548169",
+                       "fully_transparent_pixels":  986605,
+                       "alpha_min_max":  [
+                                             0,
+                                             255
+                                         ],
+                       "bbox_alpha_ge_16":  [
+                                                109,
+                                                316,
+                                                1145,
+                                                1118
+                                            ],
+                       "bbox_alpha_ge_128":  [
+                                                 110,
+                                                 317,
+                                                 1144,
+                                                 1117
+                                             ],
+                       "clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/02_front_right_045.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "png_color_type":  6,
+                       "mode":  "RGBA",
+                       "sha256":  "d564cd12c7ca22baa5022432d3328b7860623689edba9c0adb83689c2b1dde5c",
+                       "fully_transparent_pixels":  977207,
+                       "alpha_min_max":  [
+                                             0,
+                                             255
+                                         ],
+                       "bbox_alpha_ge_16":  [
+                                                102,
+                                                313,
+                                                1152,
+                                                1123
+                                            ],
+                       "bbox_alpha_ge_128":  [
+                                                 103,
+                                                 314,
+                                                 1151,
+                                                 1122
+                                             ],
+                       "clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/03_right_090.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "png_color_type":  6,
+                       "mode":  "RGBA",
+                       "sha256":  "4513d7ec51bfc85977ebfb9c30c836c25073c094532f4f85002da4b53aefd2eb",
+                       "fully_transparent_pixels":  993466,
+                       "alpha_min_max":  [
+                                             0,
+                                             255
+                                         ],
+                       "bbox_alpha_ge_16":  [
+                                                110,
+                                                313,
+                                                1144,
+                                                1120
+                                            ],
+                       "bbox_alpha_ge_128":  [
+                                                 111,
+                                                 314,
+                                                 1143,
+                                                 1119
+                                             ],
+                       "clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/04_back_right_135.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "png_color_type":  6,
+                       "mode":  "RGBA",
+                       "sha256":  "794c12ef6332f2fa93770c4d23c26aac3f3736441b61a51055caf3abc14b6681",
+                       "fully_transparent_pixels":  987218,
+                       "alpha_min_max":  [
+                                             0,
+                                             255
+                                         ],
+                       "bbox_alpha_ge_16":  [
+                                                113,
+                                                311,
+                                                1144,
+                                                1123
+                                            ],
+                       "bbox_alpha_ge_128":  [
+                                                 114,
+                                                 312,
+                                                 1143,
+                                                 1122
+                                             ],
+                       "clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/05_back_180.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "png_color_type":  6,
+                       "mode":  "RGBA",
+                       "sha256":  "104c40943e9277b2ccf0f2fdfa2f19d9cb1b08d14a30e991dbc2e1835e5d81bc",
+                       "fully_transparent_pixels":  982709,
+                       "alpha_min_max":  [
+                                             0,
+                                             255
+                                         ],
+                       "bbox_alpha_ge_16":  [
+                                                106,
+                                                312,
+                                                1149,
+                                                1121
+                                            ],
+                       "bbox_alpha_ge_128":  [
+                                                 106,
+                                                 313,
+                                                 1149,
+                                                 1120
+                                             ],
+                       "clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/06_back_left_225.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "png_color_type":  6,
+                       "mode":  "RGBA",
+                       "sha256":  "ac382d247db8fc6b5f9b7d9d1085eb97c443f794a0f2b0f9924273621d8f144d",
+                       "fully_transparent_pixels":  983187,
+                       "alpha_min_max":  [
+                                             0,
+                                             255
+                                         ],
+                       "bbox_alpha_ge_16":  [
+                                                107,
+                                                314,
+                                                1147,
+                                                1121
+                                            ],
+                       "bbox_alpha_ge_128":  [
+                                                 108,
+                                                 314,
+                                                 1146,
+                                                 1120
+                                             ],
+                       "clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/07_left_270.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "png_color_type":  6,
+                       "mode":  "RGBA",
+                       "sha256":  "2452c9e31bda50b67c75c5ab3d8a822644e04ad98b759cc7530059bcaddc8373",
+                       "fully_transparent_pixels":  996297,
+                       "alpha_min_max":  [
+                                             0,
+                                             255
+                                         ],
+                       "bbox_alpha_ge_16":  [
+                                                104,
+                                                320,
+                                                1150,
+                                                1123
+                                            ],
+                       "bbox_alpha_ge_128":  [
+                                                 105,
+                                                 321,
+                                                 1149,
+                                                 1123
+                                             ],
+                       "clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/08_front_left_315.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "png_color_type":  6,
+                       "mode":  "RGBA",
+                       "sha256":  "0fd675fb6a62e36317b2b9867c45a9bbf6c036337d123c0b7af0664e83ad13a6",
+                       "fully_transparent_pixels":  923365,
+                       "alpha_min_max":  [
+                                             0,
+                                             255
+                                         ],
+                       "bbox_alpha_ge_16":  [
+                                                106,
+                                                312,
+                                                1150,
+                                                1123
+                                            ],
+                       "bbox_alpha_ge_128":  [
+                                                 107,
+                                                 313,
+                                                 1149,
+                                                 1122
+                                             ],
+                       "clipped_alpha_ge_16":  false
+                   }
+               ],
+    "all_1254_square":  true,
+    "all_rgba":  true,
+    "all_actual_transparent_pixels":  true,
+    "any_main_shape_clipped_alpha_ge_16":  false,
+    "bottom_y_alpha_ge_128_min_max":  [
+                                          1116,
+                                          1122
+                                      ],
+    "bottom_spread_px":  6,
+    "browser_review":  false,
+    "actual_battlefield_checked":  false
+}

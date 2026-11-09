@@ -1,0 +1,318 @@
+{
+    "inspection_date":  "2026-11-07",
+    "method":  "Pillow read-only image inspection and SHA-256; no image pixels were modified.",
+    "images":  [
+                   {
+                       "file":  "images/01_front_000.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "sha256":  "3735b3a3b735cdeca4a45d7cf2cc3fabea9cea6d023dac5cbcec41b00638564e",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1076494,
+                       "partial_alpha_pixels_1_to_254":  494077,
+                       "opaque_pixels_alpha_255":  1945,
+                       "visible_bbox_alpha_ge_16":  [
+                                                        195,
+                                                        325,
+                                                        1057,
+                                                        1144
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         196,
+                                                         326,
+                                                         1056,
+                                                         1143
+                                                     ],
+                       "visible_bottom_y_alpha_ge_16":  1143,
+                       "visible_bottom_y_alpha_ge_128":  1142,
+                       "red_eye_pixels":  10345,
+                       "red_eye_rule":  "r\u003e160 and r\u003eg*1.5 and r\u003eb*1.5 and alpha\u003e=128",
+                       "subject_clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/02_front_right_045.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "sha256":  "fcd8094f0213cbda940f744412905fee09e40e014559f3383a7ae41d3db93561",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1076352,
+                       "partial_alpha_pixels_1_to_254":  494917,
+                       "opaque_pixels_alpha_255":  1247,
+                       "visible_bbox_alpha_ge_16":  [
+                                                        204,
+                                                        319,
+                                                        1049,
+                                                        1148
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         205,
+                                                         320,
+                                                         1049,
+                                                         1148
+                                                     ],
+                       "visible_bottom_y_alpha_ge_16":  1147,
+                       "visible_bottom_y_alpha_ge_128":  1147,
+                       "red_eye_pixels":  8279,
+                       "red_eye_rule":  "r\u003e160 and r\u003eg*1.5 and r\u003eb*1.5 and alpha\u003e=128",
+                       "subject_clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/03_right_090.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "sha256":  "505a3071ee75a934f6e798c0d43f3daf4211787e178b06ae41496f322daf89b2",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1064048,
+                       "partial_alpha_pixels_1_to_254":  507264,
+                       "opaque_pixels_alpha_255":  1204,
+                       "visible_bbox_alpha_ge_16":  [
+                                                        198,
+                                                        286,
+                                                        1061,
+                                                        1144
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         198,
+                                                         286,
+                                                         1060,
+                                                         1144
+                                                     ],
+                       "visible_bottom_y_alpha_ge_16":  1143,
+                       "visible_bottom_y_alpha_ge_128":  1143,
+                       "red_eye_pixels":  5334,
+                       "red_eye_rule":  "r\u003e160 and r\u003eg*1.5 and r\u003eb*1.5 and alpha\u003e=128",
+                       "subject_clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/04_back_right_135.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "sha256":  "61c5895d70abad32ec0b188ea5b17657847d7983842abbd5bf315d4efaf1f59d",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1072497,
+                       "partial_alpha_pixels_1_to_254":  499154,
+                       "opaque_pixels_alpha_255":  865,
+                       "visible_bbox_alpha_ge_16":  [
+                                                        204,
+                                                        305,
+                                                        1050,
+                                                        1146
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         204,
+                                                         306,
+                                                         1050,
+                                                         1145
+                                                     ],
+                       "visible_bottom_y_alpha_ge_16":  1145,
+                       "visible_bottom_y_alpha_ge_128":  1144,
+                       "red_eye_pixels":  0,
+                       "red_eye_rule":  "r\u003e160 and r\u003eg*1.5 and r\u003eb*1.5 and alpha\u003e=128",
+                       "subject_clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/05_back_180.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "sha256":  "3c8a8d84ac98a3e32abed4a37f562de171fe172dbe2a5f0f235b7a6c431ed7e8",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1068326,
+                       "partial_alpha_pixels_1_to_254":  503137,
+                       "opaque_pixels_alpha_255":  1053,
+                       "visible_bbox_alpha_ge_16":  [
+                                                        199,
+                                                        323,
+                                                        1054,
+                                                        1144
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         199,
+                                                         324,
+                                                         1053,
+                                                         1144
+                                                     ],
+                       "visible_bottom_y_alpha_ge_16":  1143,
+                       "visible_bottom_y_alpha_ge_128":  1143,
+                       "red_eye_pixels":  0,
+                       "red_eye_rule":  "r\u003e160 and r\u003eg*1.5 and r\u003eb*1.5 and alpha\u003e=128",
+                       "subject_clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/06_back_left_225.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "sha256":  "b04384f1f7e53321715540679c6fe3e9975bd8dffc3602d5519126f88329c8f9",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1130418,
+                       "partial_alpha_pixels_1_to_254":  441588,
+                       "opaque_pixels_alpha_255":  510,
+                       "visible_bbox_alpha_ge_16":  [
+                                                        216,
+                                                        313,
+                                                        1051,
+                                                        1144
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         216,
+                                                         314,
+                                                         1050,
+                                                         1143
+                                                     ],
+                       "visible_bottom_y_alpha_ge_16":  1143,
+                       "visible_bottom_y_alpha_ge_128":  1142,
+                       "red_eye_pixels":  0,
+                       "red_eye_rule":  "r\u003e160 and r\u003eg*1.5 and r\u003eb*1.5 and alpha\u003e=128",
+                       "subject_clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/07_left_270.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "sha256":  "fa3fd9fc05bc9c5962f372bd57fa8fef60b3404e79e43638788ebb24235f19a6",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1116553,
+                       "partial_alpha_pixels_1_to_254":  454727,
+                       "opaque_pixels_alpha_255":  1236,
+                       "visible_bbox_alpha_ge_16":  [
+                                                        194,
+                                                        314,
+                                                        1060,
+                                                        1135
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         195,
+                                                         315,
+                                                         1059,
+                                                         1134
+                                                     ],
+                       "visible_bottom_y_alpha_ge_16":  1134,
+                       "visible_bottom_y_alpha_ge_128":  1133,
+                       "red_eye_pixels":  6387,
+                       "red_eye_rule":  "r\u003e160 and r\u003eg*1.5 and r\u003eb*1.5 and alpha\u003e=128",
+                       "subject_clipped_alpha_ge_16":  false
+                   },
+                   {
+                       "file":  "images/08_front_left_315.png",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "sha256":  "a540bed209c35fb811b9c667594e99c3ff41d1d211f1189b08b4057165a9fbb0",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  1122696,
+                       "partial_alpha_pixels_1_to_254":  448560,
+                       "opaque_pixels_alpha_255":  1260,
+                       "visible_bbox_alpha_ge_16":  [
+                                                        204,
+                                                        298,
+                                                        1048,
+                                                        1143
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         204,
+                                                         298,
+                                                         1048,
+                                                         1142
+                                                     ],
+                       "visible_bottom_y_alpha_ge_16":  1142,
+                       "visible_bottom_y_alpha_ge_128":  1141,
+                       "red_eye_pixels":  8307,
+                       "red_eye_rule":  "r\u003e160 and r\u003eg*1.5 and r\u003eb*1.5 and alpha\u003e=128",
+                       "subject_clipped_alpha_ge_16":  false
+                   }
+               ],
+    "cardinal_copy_checks":  [
+                                 {
+                                     "eight_view_file":  "images/01_front_000.png",
+                                     "v02_file":  "../four_views_v02_red_eyes/images/01_front_000.png",
+                                     "identical_bytes":  true
+                                 },
+                                 {
+                                     "eight_view_file":  "images/03_right_090.png",
+                                     "v02_file":  "../four_views_v02_red_eyes/images/03_right_090.png",
+                                     "identical_bytes":  true
+                                 },
+                                 {
+                                     "eight_view_file":  "images/05_back_180.png",
+                                     "v02_file":  "../four_views_v02_red_eyes/images/02_back_180.png",
+                                     "identical_bytes":  true
+                                 },
+                                 {
+                                     "eight_view_file":  "images/07_left_270.png",
+                                     "v02_file":  "../four_views_v02_red_eyes/images/04_left_270.png",
+                                     "identical_bytes":  true
+                                 }
+                             ],
+    "diagonal_mirror_checks":  [
+                                   {
+                                       "file_a":  "images/02_front_right_045.png",
+                                       "file_b":  "images/08_front_left_315.png",
+                                       "a_equals_horizontal_mirror_of_b":  false
+                                   },
+                                   {
+                                       "file_a":  "images/04_back_right_135.png",
+                                       "file_b":  "images/06_back_left_225.png",
+                                       "a_equals_horizontal_mirror_of_b":  false
+                                   }
+                               ],
+    "visible_bottom_y_alpha_ge_16":  {
+                                         "min":  1134,
+                                         "max":  1147,
+                                         "spread_pixels":  13
+                                     },
+    "visible_bottom_y_alpha_ge_128":  {
+                                          "min":  1133,
+                                          "max":  1147,
+                                          "spread_pixels":  14
+                                      },
+    "baseline_note":  "Bottom of thresholded visible silhouette, not a normalized gameplay foot anchor.",
+    "browser_validated_by_this_agent":  false,
+    "actual_battlefield_checked":  false,
+    "scope_note":  "Parent agent handles visual review. This report covers PNG metadata, alpha, red pixel detection, copy equality and mirror equality only.",
+    "browser_review_by_parent":  {
+                                     "tool":  "Orca embedded browser",
+                                     "all_eight_images_loaded":  true,
+                                     "light_full_frame_checked":  true,
+                                     "dark_full_frame_checked":  true,
+                                     "actual_battlefield_checked":  false,
+                                     "notes":  "8 stationary direction design PNGs. No game animation or foot-anchor normalization."
+                                 }
+}

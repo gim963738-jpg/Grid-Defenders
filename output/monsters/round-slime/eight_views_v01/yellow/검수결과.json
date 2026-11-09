@@ -1,0 +1,298 @@
+{
+    "variant":  "yellow",
+    "method":  "Read-only System.Drawing pixel/alpha inspection and SHA-256. Final PNG pixels not modified.",
+    "images":  [
+                   {
+                       "file":  "images/01_front_000.png",
+                       "sha256":  "2a3239a674ee3810b77f60807df8fd3b1989b7523dabff87d9aaa5bc53eeef3e",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  976288,
+                       "partial_alpha_pixels_1_to_254":  594574,
+                       "opaque_pixels_alpha_255":  1654,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       0,
+                                                       67,
+                                                       1232,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        108,
+                                                        315,
+                                                        1146,
+                                                        1118
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         109,
+                                                         316,
+                                                         1145,
+                                                         1117
+                                                     ],
+                       "meaningful_content_clips_at_alpha_ge_16":  false,
+                       "tiny_alpha_touches_canvas":  true
+                   },
+                   {
+                       "file":  "images/02_front_right_045.png",
+                       "sha256":  "5344c49555da9bd652ccccdc91be4e6c98e2d9ee63727613642ef192a01f2449",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  980597,
+                       "partial_alpha_pixels_1_to_254":  590326,
+                       "opaque_pixels_alpha_255":  1593,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       40,
+                                                       113,
+                                                       1240,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        102,
+                                                        314,
+                                                        1150,
+                                                        1121
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         103,
+                                                         315,
+                                                         1149,
+                                                         1120
+                                                     ],
+                       "meaningful_content_clips_at_alpha_ge_16":  false,
+                       "tiny_alpha_touches_canvas":  true
+                   },
+                   {
+                       "file":  "images/03_right_090.png",
+                       "sha256":  "2ec3e50cece0b82553c606b9898033158fc57ba53dbdd921e8050bb3b7ee06f6",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  988590,
+                       "partial_alpha_pixels_1_to_254":  582715,
+                       "opaque_pixels_alpha_255":  1211,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       0,
+                                                       51,
+                                                       1236,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        110,
+                                                        314,
+                                                        1141,
+                                                        1120
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         111,
+                                                         315,
+                                                         1140,
+                                                         1119
+                                                     ],
+                       "meaningful_content_clips_at_alpha_ge_16":  false,
+                       "tiny_alpha_touches_canvas":  true
+                   },
+                   {
+                       "file":  "images/04_back_right_135.png",
+                       "sha256":  "3bfa3d3d4e714ae5a09f13f4730926a4a4075db4b19a1164a3ca23fa01280487",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  987847,
+                       "partial_alpha_pixels_1_to_254":  583136,
+                       "opaque_pixels_alpha_255":  1533,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       35,
+                                                       136,
+                                                       1228,
+                                                       1230
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        113,
+                                                        311,
+                                                        1143,
+                                                        1120
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         113,
+                                                         312,
+                                                         1142,
+                                                         1119
+                                                     ],
+                       "meaningful_content_clips_at_alpha_ge_16":  false,
+                       "tiny_alpha_touches_canvas":  false
+                   },
+                   {
+                       "file":  "images/05_back_180.png",
+                       "sha256":  "a7768ed4985e7c4ea818400e693adcc4fb050006e0d45cc9e9c0ae0a866a283d",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  981022,
+                       "partial_alpha_pixels_1_to_254":  590005,
+                       "opaque_pixels_alpha_255":  1489,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       0,
+                                                       47,
+                                                       1234,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        106,
+                                                        314,
+                                                        1149,
+                                                        1118
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         107,
+                                                         314,
+                                                         1148,
+                                                         1117
+                                                     ],
+                       "meaningful_content_clips_at_alpha_ge_16":  false,
+                       "tiny_alpha_touches_canvas":  true
+                   },
+                   {
+                       "file":  "images/06_back_left_225.png",
+                       "sha256":  "3afab0be09ff06b31f3f47e45a80fc7d875a3b68c3243b3a656e8020f3815b8a",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  989391,
+                       "partial_alpha_pixels_1_to_254":  581765,
+                       "opaque_pixels_alpha_255":  1360,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       0,
+                                                       119,
+                                                       1218,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        108,
+                                                        314,
+                                                        1146,
+                                                        1120
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         109,
+                                                         315,
+                                                         1145,
+                                                         1119
+                                                     ],
+                       "meaningful_content_clips_at_alpha_ge_16":  false,
+                       "tiny_alpha_touches_canvas":  true
+                   },
+                   {
+                       "file":  "images/07_left_270.png",
+                       "sha256":  "a47ec38a49158660c921a8d3ed0adca586e9b1607288e40b4d890c072287661f",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  996367,
+                       "partial_alpha_pixels_1_to_254":  574591,
+                       "opaque_pixels_alpha_255":  1558,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       0,
+                                                       47,
+                                                       1216,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        104,
+                                                        323,
+                                                        1151,
+                                                        1121
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         105,
+                                                         324,
+                                                         1151,
+                                                         1120
+                                                     ],
+                       "meaningful_content_clips_at_alpha_ge_16":  false,
+                       "tiny_alpha_touches_canvas":  true
+                   },
+                   {
+                       "file":  "images/08_front_left_315.png",
+                       "sha256":  "8d55d314fcf6142f20f1daf725b7dc7395a9ec92747e03ef8f860e18afc49f74",
+                       "width":  1254,
+                       "height":  1254,
+                       "mode":  "RGBA",
+                       "format":  "PNG",
+                       "alpha_extrema":  [
+                                             0,
+                                             255
+                                         ],
+                       "transparent_pixels_alpha_0":  986690,
+                       "partial_alpha_pixels_1_to_254":  583825,
+                       "opaque_pixels_alpha_255":  2001,
+                       "visible_bbox_alpha_gt_0":  [
+                                                       25,
+                                                       29,
+                                                       1155,
+                                                       1254
+                                                   ],
+                       "visible_bbox_alpha_ge_16":  [
+                                                        108,
+                                                        313,
+                                                        1149,
+                                                        1122
+                                                    ],
+                       "visible_bbox_alpha_ge_128":  [
+                                                         108,
+                                                         314,
+                                                         1148,
+                                                         1122
+                                                     ],
+                       "meaningful_content_clips_at_alpha_ge_16":  false,
+                       "tiny_alpha_touches_canvas":  true
+                   }
+               ],
+    "summary":  {
+                    "image_count":  8,
+                    "all_1254_square":  true,
+                    "all_actual_transparency":  true,
+                    "no_meaningful_content_clipping_alpha_ge_16":  true,
+                    "visible_bottom_y_alpha_ge_128_min":  1116,
+                    "visible_bottom_y_alpha_ge_128_max":  1121,
+                    "visible_bottom_spread_pixels_alpha_ge_128":  5
+                },
+    "browser_review_performed":  false,
+    "actual_battlefield_review_performed":  false,
+    "notes":  "8 stationary directional design PNGs. Pixel foot-anchor normalization and game animation integration not performed. Root reviews color galleries separately."
+}

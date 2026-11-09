@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>노랑 슬라임 · 하단 물결 30프레임</title>
+  <link rel="stylesheet" href="source/mobile-ui.css">
+  <style>
+    *{box-sizing:border-box}html{color-scheme:light}body{margin:0;background:#f4f5f0;color:#243329;font:var(--app-body,14px)/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+    main{max-width:1100px;margin:auto;padding:24px max(var(--app-gutter,12px),env(safe-area-inset-right)) 48px}h1{font-size:24px;line-height:1.35;margin:0 0 8px}h2{font-size:18px;margin:0 0 12px}p{margin:0 0 12px}.eyebrow{font-size:12px;letter-spacing:.1em;font-weight:700;color:#6a7c59}.muted{font-size:var(--app-caption,12px);color:#657364}
+    .layout{display:grid;grid-template-columns:minmax(280px,512px) minmax(260px,1fr);gap:20px;align-items:start;margin-top:20px}.preview-stage,.sheet-stage{background:#eeefeb;border:1px solid #ccd6c8;border-radius:12px;overflow:hidden}.preview-stage{aspect-ratio:1;display:grid;place-items:center;position:relative}.preview-stage canvas{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}.status{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:#eeefeb;color:#657364}.status[hidden]{display:none}
+    .controls{padding:20px;background:#fff;border:1px solid #d9e1d4;border-radius:12px}.row{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:16px}.row:last-child{margin-bottom:0}.row strong{min-width:48px}.row-title{display:block;font-weight:650;margin-bottom:8px}button,.action{min-width:var(--app-touch,48px);min-height:var(--app-touch,48px);font:inherit;border:1px solid #cbd4c6;background:#fff;color:inherit;border-radius:8px;padding:10px 14px;cursor:pointer;touch-action:manipulation}button[aria-pressed=true],#play-toggle{background:#496b35;border-color:#496b35;color:white}button:disabled{opacity:.5;cursor:wait}.action{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#41622e}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #ca9638;outline-offset:3px}input[type=range]{width:100%;min-height:48px;accent-color:#587a3b;cursor:pointer}output{font-variant-numeric:tabular-nums;font-weight:650}.frame-info{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.speed-buttons,.background-buttons{display:flex;flex-wrap:wrap;gap:8px}.links{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 12px}a{color:#41622e}
+    body[data-background=dark] .preview-stage,body[data-background=dark] .sheet-stage{background:#1c252a}body[data-background=green] .preview-stage,body[data-background=green] .sheet-stage{background:#83df77}body[data-background=checker] .preview-stage,body[data-background=checker] .sheet-stage{background-color:#fff;background-image:linear-gradient(45deg,#dce3d8 25%,transparent 25%),linear-gradient(-45deg,#dce3d8 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#dce3d8 75%),linear-gradient(-45deg,transparent 75%,#dce3d8 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+    details{margin-top:28px;border-top:1px solid #d3dccd;padding-top:8px}summary{min-height:48px;padding:12px 0;cursor:pointer;font-weight:650}.sheet-stage{margin-top:12px}.sheet-stage img{display:block;width:100%;height:auto;object-fit:contain;image-rendering:pixelated}.sheet-note{margin-top:12px}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:20px}.metrics div{border:1px solid #dce2d7;border-radius:8px;padding:10px;background:#f7f8f4}.metrics span{display:block;font-size:12px;color:#677560}.metrics b{font-size:16px}
+    @media(max-width:720px){main{padding-top:16px}h1{font-size:var(--app-title,20px)}.layout{grid-template-columns:1fr;gap:12px}.preview-stage{width:100%;max-width:512px;margin:auto}.controls{padding:16px}.background-buttons button{flex:1 1 calc(50% - 8px)}}
+  </style>
+</head>
+<body data-background="light">
+<main>
+  <p class="eyebrow">GRID DEFENDERS / MONSTER ANIMATION</p>
+  <h1>노랑 슬라임 · 하단 물결 30프레임</h1>
+  <p>오른쪽을 바라보는 자세에서 상체와 눈을 고정하고, 아래쪽 젤리 치마만 물결치도록 만든 반복 시안입니다.</p>
+  <p class="muted">기본 재생은 30fps · 1초 반복입니다. 게임 내 애니메이션 통합은 별도 작업입니다.</p>
+  <div class="layout">
+    <div class="preview-stage" aria-label="물결 애니메이션 전체 프레임 미리보기">
+      <canvas id="preview" width="256" height="256" aria-label="노랑 슬라임 오른쪽 방향 물결 애니메이션"></canvas>
+      <div class="status" id="status" role="status">스프라이트 시트 불러오는 중…</div>
+    </div>
+    <section class="controls" aria-label="애니메이션 재생 설정">
+      <div class="metrics"><div><span>프레임</span><b>30장</b></div><div><span>셀 크기</span><b>256 × 256</b></div><div><span>반복 길이</span><b id="duration">1.00초</b></div></div>
+      <div class="row"><button type="button" id="previous" aria-label="이전 프레임">◀ 이전</button><button type="button" id="play-toggle" aria-label="재생 일시정지">일시정지</button><button type="button" id="next" aria-label="다음 프레임">다음 ▶</button></div>
+      <div class="frame-info"><label for="frame-slider">프레임 직접 선택</label><output id="frame-count" for="frame-slider">1 / 30</output></div>
+      <input id="frame-slider" type="range" min="1" max="30" step="1" value="1" aria-label="프레임 1부터 30까지 선택">
+      <p class="muted">슬라이더나 이전·다음을 누르면 선택한 프레임에서 멈춥니다.</p>
+      <div class="row-title">재생 속도</div><div class="speed-buttons row" role="group" aria-label="재생 속도"><button type="button" data-speed="0.25" aria-pressed="false">0.25×</button><button type="button" data-speed="0.5" aria-pressed="false">0.5×</button><button type="button" data-speed="1" aria-pressed="true">1×</button><button type="button" data-speed="2" aria-pressed="false">2×</button></div>
+      <div class="row-title">검수 배경</div><div class="background-buttons row" role="group" aria-label="검수 배경"><button type="button" data-bg="light" aria-pressed="true">밝은 회색</button><button type="button" data-bg="dark" aria-pressed="false">어둡게</button><button type="button" data-bg="checker" aria-pressed="false">투명 격자</button><button type="button" data-bg="green" aria-pressed="false">밝은 초록</button></div>
+      <p class="muted" id="playback-info" aria-live="polite">30fps · 1× · 1초 반복</p>
+    </section>
+  </div>
+  <div class="links"><a class="action" href="ripple-30f-sheet.png" target="_blank" rel="noopener">스프라이트 시트 PNG ↗</a><a class="action" href="frames.json" target="_blank" rel="noopener">프레임 좌표 JSON ↗</a></div>
+  <details id="all-frames"><summary>30프레임 전체 시트 보기</summary><p class="muted">6열 × 5행, 왼쪽에서 오른쪽으로 읽고 다음 행으로 이어집니다. 아래 이미지에는 여백을 포함한 전체 셀이 표시됩니다.</p><div class="sheet-stage"><img src="ripple-30f-sheet.png" alt="노랑 슬라임 하단 물결 30프레임 전체 스프라이트 시트" loading="lazy"></div><p class="muted sheet-note">재생 중에도 기준 위치와 셀 크기는 고정합니다. 가장자리 물결의 변화와 투명 여백을 함께 확인할 수 있습니다.</p></details>
+</main>
+<script>
+(() => {
+  'use strict';
+  const FRAME_COUNT = 30, COLUMNS = 6, CELL = 256, FPS = 30;
+  const canvas = document.getElementById('preview');
+  const context = canvas.getContext('2d');
+  context.imageSmoothingEnabled = false;
+  const sheet = new Image();
+  const status = document.getElementById('status');
+  const slider = document.getElementById('frame-slider');
+  const count = document.getElementById('frame-count');
+  const play = document.getElementById('play-toggle');
+  let loaded = false, playing = true, frame = 0, speed = 1, accumulator = 0, lastTime = performance.now();
+
+  function render() {
+    context.clearRect(0, 0, CELL, CELL);
+    if (loaded) context.drawImage(sheet, (frame % COLUMNS) * CELL, Math.floor(frame / COLUMNS) * CELL, CELL, CELL, 0, 0, CELL, CELL);
+    slider.value = String(frame + 1);
+    count.value = `${frame + 1} / ${FRAME_COUNT}`;
+    count.textContent = count.value;
+  }
+  function updatePlaybackLabel() {
+    play.textContent = playing ? '일시정지' : '재생';
+    play.setAttribute('aria-label', playing ? '재생 일시정지' : '애니메이션 재생');
+    const duration = FRAME_COUNT / (FPS * speed);
+    document.getElementById('duration').textContent = `${duration.toFixed(2)}초`;
+    document.getElementById('playback-info').textContent = `${FPS * speed}fps · ${speed}× · ${duration.toFixed(2)}초 반복${playing ? '' : ' · 일시정지'}`;
+  }
+  function pauseAt(index) {
+    playing = false;
+    frame = (index + FRAME_COUNT) % FRAME_COUNT;
+    accumulator = 0;
+    lastTime = performance.now();
+    updatePlaybackLabel();
+    render();
+  }
+  play.addEventListener('click', () => {
+    playing = !playing;
+    accumulator = 0;
+    lastTime = performance.now();
+    updatePlaybackLabel();
+  });
+  document.getElementById('previous').addEventListener('click', () => pauseAt(frame - 1));
+  document.getElementById('next').addEventListener('click', () => pauseAt(frame + 1));
+  slider.addEventListener('input', () => pauseAt(Number(slider.value) - 1));
+  document.querySelectorAll('button[data-speed]').forEach(button => button.addEventListener('click', () => {
+    speed = Number(button.dataset.speed);
+    accumulator = 0;
+    lastTime = performance.now();
+    document.querySelectorAll('button[data-speed]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    updatePlaybackLabel();
+  }));
+  document.querySelectorAll('button[data-bg]').forEach(button => button.addEventListener('click', () => {
+    document.body.dataset.background = button.dataset.bg;
+    document.querySelectorAll('button[data-bg]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  }));
+  sheet.onload = () => {
+    if (sheet.naturalWidth !== COLUMNS * CELL || sheet.naturalHeight !== 5 * CELL) {
+      status.textContent = `시트 크기를 확인해 주세요: ${sheet.naturalWidth} × ${sheet.naturalHeight}px (기준 1536 × 1280px)`;
+      playing = false;
+      updatePlaybackLabel();
+      return;
+    }
+    loaded = true;
+    status.hidden = true;
+    frame = 0;
+    accumulator = 0;
+    lastTime = performance.now();
+    render();
+  };
+  sheet.onerror = () => {
+    status.textContent = 'ripple-30f-sheet.png 파일을 확인해 주세요.';
+    playing = false;
+    updatePlaybackLabel();
+  };
+  sheet.src = 'ripple-30f-sheet.png';
+  document.addEventListener('visibilitychange', () => { lastTime = performance.now(); accumulator = 0; });
+  function tick(now) {
+    const elapsed = Math.max(0, now - lastTime);
+    lastTime = now;
+    if (loaded && playing && !document.hidden) {
+      const interval = 1000 / (FPS * speed);
+      accumulator += elapsed;
+      const steps = Math.floor(accumulator / interval);
+      if (steps > 0) {
+        frame = (frame + steps) % FRAME_COUNT;
+        accumulator -= steps * interval;
+        render();
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  updatePlaybackLabel();
+  render();
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

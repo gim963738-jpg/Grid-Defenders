@@ -1,0 +1,42 @@
+{
+  "request": "눈을 붉게 수정",
+  "version": "v02_red_eyes",
+  "parent": "../four_views_v01",
+  "operation": "Eye color change to scarlet red in front, right and left views; back copied from v01.",
+  "requested_canvas": [
+    1254,
+    1254
+  ],
+  "transparent_background": true,
+  "records": [
+    {
+      "direction": "front",
+      "file": "images/01_front_000.png",
+      "prompt": "prompts/01_front_000.prompt.txt",
+      "input": "source/01_front_000-before.png",
+      "tool": "built-in image_gen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf as C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf\\exec-689d53b7-0051-47d8-87e2-b776175946ea.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "direction": "right",
+      "file": "images/03_right_090.png",
+      "prompt": "prompts/03_right_090.prompt.txt",
+      "input": "source/03_right_090-before.png",
+      "tool": "built-in image_gen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf as C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf\\exec-bd5a92a8-d9c8-4991-865b-441896e8fc71.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "direction": "left",
+      "file": "images/04_left_270.png",
+      "prompt": "prompts/04_left_270.prompt.txt",
+      "input": "source/04_left_270-before.png",
+      "tool": "built-in image_gen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf as C:\\Users\\user\\.codex\\generated_images\\01a1b14d-ba31-76d0-be78-9975649bb9cf\\exec-0eac673c-4eba-4cbc-8833-da000ea4b2cb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "copied_back": {
+    "file": "images/02_back_180.png",
+    "source": "../four_views_v01/images/02_back_180.png",
+    "operation": "byte-identical copy"
+  }
+}

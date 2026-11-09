@@ -1,0 +1,106 @@
+{
+  "inspection_date": "2026-11-06",
+  "method": "Pillow read-only inspection; no image pixels were modified.",
+  "images": [
+    {
+      "file": "images/01_front_000.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "sha256": "3735b3a3b735cdeca4a45d7cf2cc3fabea9cea6d023dac5cbcec41b00638564e",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 1076494,
+      "partial_alpha_pixels_1_to_254": 494077,
+      "opaque_pixels_alpha_255": 1945,
+      "visible_bbox_alpha_ge_16": [
+        195,
+        325,
+        1057,
+        1144
+      ],
+      "red_eye_pixels": 10345,
+      "red_eye_rule": "r>160 and r>g*1.5 and r>b*1.5 and alpha>=128",
+      "visible_subject_inside_canvas_alpha_ge_16": true
+    },
+    {
+      "file": "images/02_back_180.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "sha256": "3c8a8d84ac98a3e32abed4a37f562de171fe172dbe2a5f0f235b7a6c431ed7e8",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 1068326,
+      "partial_alpha_pixels_1_to_254": 503137,
+      "opaque_pixels_alpha_255": 1053,
+      "visible_bbox_alpha_ge_16": [
+        199,
+        323,
+        1054,
+        1144
+      ],
+      "red_eye_pixels": 0,
+      "red_eye_rule": "r>160 and r>g*1.5 and r>b*1.5 and alpha>=128",
+      "visible_subject_inside_canvas_alpha_ge_16": true
+    },
+    {
+      "file": "images/03_right_090.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "sha256": "505a3071ee75a934f6e798c0d43f3daf4211787e178b06ae41496f322daf89b2",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 1064048,
+      "partial_alpha_pixels_1_to_254": 507264,
+      "opaque_pixels_alpha_255": 1204,
+      "visible_bbox_alpha_ge_16": [
+        198,
+        286,
+        1061,
+        1144
+      ],
+      "red_eye_pixels": 5334,
+      "red_eye_rule": "r>160 and r>g*1.5 and r>b*1.5 and alpha>=128",
+      "visible_subject_inside_canvas_alpha_ge_16": true
+    },
+    {
+      "file": "images/04_left_270.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "PNG",
+      "sha256": "fa3fd9fc05bc9c5962f372bd57fa8fef60b3404e79e43638788ebb24235f19a6",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels_alpha_0": 1116553,
+      "partial_alpha_pixels_1_to_254": 454727,
+      "opaque_pixels_alpha_255": 1236,
+      "visible_bbox_alpha_ge_16": [
+        194,
+        314,
+        1060,
+        1135
+      ],
+      "red_eye_pixels": 6387,
+      "red_eye_rule": "r>160 and r>g*1.5 and r>b*1.5 and alpha>=128",
+      "visible_subject_inside_canvas_alpha_ge_16": true
+    }
+  ],
+  "back_identical_to_v01": true,
+  "browser_validated_by_this_agent": false,
+  "battlefield_validated": false,
+  "scope_note": "This report covers PNG files only. Parent agent handles visual review."
+}

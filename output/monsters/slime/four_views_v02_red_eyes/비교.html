@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>붉은 눈 슬라임 · SD 픽셀 4방향 v02</title>
+  <link rel="stylesheet" href="source/mobile-ui.css">
+  <style>
+    *{box-sizing:border-box}html{color-scheme:light}body{margin:0;background:#f4f5f0;color:#25352b;font:14px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+    main{max-width:1400px;margin:auto;padding:24px max(var(--app-gutter,12px),env(safe-area-inset-right)) 48px}h1{font-size:22px;line-height:1.3;margin:0 0 8px}p{margin:0 0 16px}.muted{color:#65716a;font-size:12px}.eyebrow{color:#5c7846;letter-spacing:.12em;font-weight:700;font-size:12px;margin-bottom:8px}
+    .toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:24px 0 16px}.toolbar>span{margin-right:4px;font-weight:650}button,.action{min-height:var(--app-touch,48px);min-width:var(--app-touch,48px);font:inherit;border:1px solid #cbd3c7;background:#fff;color:inherit;border-radius:8px;padding:10px 14px;cursor:pointer;touch-action:manipulation}button[aria-pressed="true"]{background:#365b35;color:white;border-color:#365b35}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #d49d25;outline-offset:3px}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card{min-width:0;background:white;border:1px solid #dbe1d5;border-radius:12px;overflow:hidden}.card header{padding:12px 14px;display:flex;align-items:baseline;gap:8px}.card h2{font-size:16px;margin:0}.card header span{font-size:12px;color:#6a756b}.stage{aspect-ratio:1;display:grid;place-items:center;overflow:hidden;background:#f7f6ee}.stage img{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}.card footer{padding:8px 12px 12px}.dimensions{font-size:12px;color:#67756a;min-height:20px;margin-bottom:8px}.actions{display:flex;flex-wrap:wrap;gap:8px}.action{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:8px 12px;font-size:12px}.card button{padding:8px 12px;font-size:12px}
+    body[data-background="light"] .stage{background:#f7f6ee}body[data-background="dark"] .stage{background:#1d252a}body[data-background="checker"] .stage{background-color:#fff;background-image:linear-gradient(45deg,#e0e5df 25%,transparent 25%),linear-gradient(-45deg,#e0e5df 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e0e5df 75%),linear-gradient(-45deg,transparent 75%,#e0e5df 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+    body[data-background="grass"] .stage{background-color:#6f824b;background-image:linear-gradient(26deg,transparent 48%,#7e9255 49%,#7e9255 53%,transparent 54%),linear-gradient(114deg,transparent 46%,#5f7541 47%,#5f7541 51%,transparent 52%);background-size:19px 23px,31px 29px}.note{margin-top:16px}.references{margin-top:32px;border-top:1px solid #d7ddcf;padding-top:16px}.references summary{cursor:pointer;min-height:48px;padding:12px 0;font-weight:650}.ref-grid{display:grid;grid-template-columns:repeat(2,minmax(0,240px));gap:12px}.ref-grid figure{margin:0}.ref-grid img{width:100%;aspect-ratio:1;object-fit:contain;background:#fff;border:1px solid #dbe1d5;border-radius:8px}.ref-grid figcaption{font-size:12px;padding-top:4px}.ref-grid a{color:#365b35}
+    dialog{width:calc(100vw - 24px);height:calc(100dvh - 24px);max-width:none;max-height:none;border:1px solid #aab5a3;border-radius:12px;padding:0;background:#f4f5f0;color:inherit}dialog::backdrop{background:#15201cbb}.modal-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 16px;border-bottom:1px solid #d7ddcf}.modal-bar h2{font-size:16px;margin:0}.original-scroll{height:calc(100% - 80px);overflow:auto}.original-scroll .stage{display:block;aspect-ratio:auto;width:max-content;min-width:100%;min-height:100%}.original-scroll img{max-width:none;width:auto;height:auto;object-fit:initial;image-rendering:pixelated}
+    @media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){main{padding-top:16px}.grid{grid-template-columns:1fr}.toolbar{margin-top:16px}.toolbar>span{flex-basis:100%}.ref-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+</head>
+<body data-background="light">
+  <main>
+    <div class="eyebrow">GRID DEFENDERS / MONSTER DESIGN</div>
+    <h1>붉은 눈 슬라임 · SD 픽셀 4방향 v02</h1>
+    <p>눈을 붉게 수정한 슬라임의 정면·후면·양쪽 정측면을 비교합니다.</p>
+    <p class="muted">정면과 양쪽 측면에 붉은 눈을 적용한 대기 자세 디자인 PNG입니다. 후면은 기존 선택본을 사용합니다. 게임 애니메이션 통합은 별도 작업입니다.</p>
+    <div class="toolbar" role="group" aria-label="이미지 검수 배경">
+      <span>검수 배경</span>
+      <button type="button" data-bg="light" aria-pressed="true">밝게</button>
+      <button type="button" data-bg="dark" aria-pressed="false">어둡게</button>
+      <button type="button" data-bg="checker" aria-pressed="false">투명 격자</button>
+      <button type="button" data-bg="grass" aria-pressed="false">풀밭 예시</button>
+    </div>
+    <section class="grid" aria-label="슬라임 네 방향">
+      <article class="card">
+        <header><h2>앞</h2><span>정면 · 0°</span></header>
+        <div class="stage"><img src="images/01_front_000.png" alt="슬라임 정면" data-name="앞 · 정면 0°"></div>
+        <footer><div class="dimensions" aria-live="polite">이미지 불러오는 중</div><div class="actions"><button type="button" data-open="0">원본 100%</button><a class="action" href="images/01_front_000.png" target="_blank" rel="noopener">PNG 열기 ↗</a></div></footer>
+      </article>
+      <article class="card">
+        <header><h2>뒤</h2><span>정후면 · 180°</span></header>
+        <div class="stage"><img src="images/02_back_180.png" alt="슬라임 후면" data-name="뒤 · 정후면 180°"></div>
+        <footer><div class="dimensions" aria-live="polite">이미지 불러오는 중</div><div class="actions"><button type="button" data-open="1">원본 100%</button><a class="action" href="images/02_back_180.png" target="_blank" rel="noopener">PNG 열기 ↗</a></div></footer>
+      </article>
+      <article class="card">
+        <header><h2>오른쪽</h2><span>정측면 · 90°</span></header>
+        <div class="stage"><img src="images/03_right_090.png" alt="화면 오른쪽을 향하는 슬라임 정측면" data-name="오른쪽 · 정측면 90°"></div>
+        <footer><div class="dimensions" aria-live="polite">이미지 불러오는 중</div><div class="actions"><button type="button" data-open="2">원본 100%</button><a class="action" href="images/03_right_090.png" target="_blank" rel="noopener">PNG 열기 ↗</a></div></footer>
+      </article>
+      <article class="card">
+        <header><h2>왼쪽</h2><span>정측면 · 270°</span></header>
+        <div class="stage"><img src="images/04_left_270.png" alt="화면 왼쪽을 향하는 슬라임 정측면" data-name="왼쪽 · 정측면 270°"></div>
+        <footer><div class="dimensions" aria-live="polite">이미지 불러오는 중</div><div class="actions"><button type="button" data-open="3">원본 100%</button><a class="action" href="images/04_left_270.png" target="_blank" rel="noopener">PNG 열기 ↗</a></div></footer>
+      </article>
+    </section>
+    <p class="muted note">전체 캔버스를 같은 크기로 표시합니다. 원본 100%에서는 한 이미지 픽셀을 한 CSS 픽셀로 표시하며 스크롤해 살펴볼 수 있습니다. 풀밭은 대비 확인을 위한 예시 배경입니다.</p>
+    <details class="references">
+      <summary>디자인 원본과 픽셀 스타일 참조</summary>
+      <div class="ref-grid">
+        <figure><a href="source/slime-reference.jfif" target="_blank" rel="noopener"><img src="source/slime-reference.jfif" alt="사용자가 제공한 초록 슬라임 디자인 원본" loading="lazy"></a><figcaption>슬라임 디자인 원본</figcaption></figure>
+        <figure><a href="source/pixel-style-front.png" target="_blank" rel="noopener"><img src="source/pixel-style-front.png" alt="캐릭터디자인2의 SD 픽셀 스타일 정면 참조" loading="lazy"></a><figcaption>SD 픽셀 스타일 참조</figcaption></figure>
+      </div>
+    </details>
+  </main>
+  <dialog id="original-dialog" aria-labelledby="original-title">
+    <div class="modal-bar"><div><h2 id="original-title">원본 100%</h2><div class="muted" id="original-size"></div></div><button type="button" id="close-original">닫기</button></div>
+    <div class="original-scroll"><div class="stage"><img id="original-image" alt=""></div></div>
+  </dialog>
+  <script>
+    const sprites = [...document.querySelectorAll('.card .stage img')];
+    const dialog = document.getElementById('original-dialog');
+    const original = document.getElementById('original-image');
+    document.querySelectorAll('[data-bg]').forEach(button => button.addEventListener('click', () => {
+      document.body.dataset.background = button.dataset.bg;
+      document.querySelectorAll('[data-bg]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    }));
+    sprites.forEach(sprite => {
+      const info = sprite.closest('.card').querySelector('.dimensions');
+      const loaded = () => { info.textContent = `${sprite.naturalWidth} × ${sprite.naturalHeight} px`; };
+      sprite.addEventListener('load', loaded);
+      sprite.addEventListener('error', () => { info.textContent = 'PNG 파일을 확인해 주세요'; });
+      if (sprite.complete && sprite.naturalWidth) loaded();
+    });
+    document.querySelectorAll('[data-open]').forEach(button => button.addEventListener('click', () => {
+      const sprite = sprites[Number(button.dataset.open)];
+      original.src = sprite.src;
+      original.alt = sprite.alt;
+      original.style.width = sprite.naturalWidth ? `${sprite.naturalWidth}px` : 'auto';
+      original.style.height = sprite.naturalHeight ? `${sprite.naturalHeight}px` : 'auto';
+      document.getElementById('original-title').textContent = `${sprite.dataset.name} · 원본 100%`;
+      document.getElementById('original-size').textContent = sprite.naturalWidth ? `${sprite.naturalWidth} × ${sprite.naturalHeight} px` : '';
+      dialog.showModal();
+      dialog.querySelector('.original-scroll').scrollTo(0, 0);
+    }));
+    document.getElementById('close-original').addEventListener('click', () => dialog.close());
+  </script>
+</body>
+</html>

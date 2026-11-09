@@ -1,0 +1,79 @@
+{
+  "request_date": "2026-11-07",
+  "source": "source/design-reference.jfif",
+  "source_original": "C:/Users/user/Downloads/다운로드 (25).jfif",
+  "asset_type": "stationary SD pixel direction design PNGs",
+  "colors": [
+    {
+      "id": "yellow",
+      "label": "노랑",
+      "path": "yellow/images"
+    },
+    {
+      "id": "blue",
+      "label": "파랑",
+      "path": "blue/images"
+    },
+    {
+      "id": "red",
+      "label": "빨강",
+      "path": "red/images"
+    }
+  ],
+  "directions": [
+    {
+      "file": "01_front_000.png",
+      "yaw": 0,
+      "label": "앞"
+    },
+    {
+      "file": "02_front_right_045.png",
+      "yaw": 45,
+      "label": "오른쪽 앞"
+    },
+    {
+      "file": "03_right_090.png",
+      "yaw": 90,
+      "label": "오른쪽"
+    },
+    {
+      "file": "04_back_right_135.png",
+      "yaw": 135,
+      "label": "오른쪽 뒤"
+    },
+    {
+      "file": "05_back_180.png",
+      "yaw": 180,
+      "label": "뒤"
+    },
+    {
+      "file": "06_back_left_225.png",
+      "yaw": 225,
+      "label": "왼쪽 뒤"
+    },
+    {
+      "file": "07_left_270.png",
+      "yaw": 270,
+      "label": "왼쪽"
+    },
+    {
+      "file": "08_front_left_315.png",
+      "yaw": 315,
+      "label": "왼쪽 앞"
+    }
+  ],
+  "expected_image_count": 24,
+  "requested_canvas": [
+    1254,
+    1254
+  ],
+  "tool": "built-in image_gen",
+  "style_reference": "source/pixel-style.png",
+  "viewer": "비교.html",
+  "prompt_records": [
+    "yellow/generation-records.json",
+    "blue/generation-records.json",
+    "red/generation-records.json"
+  ],
+  "integration_status": "Game animation integration and pixel foot-anchor normalization are separate work."
+}
