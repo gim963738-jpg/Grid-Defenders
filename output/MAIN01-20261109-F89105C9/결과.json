@@ -1,0 +1,24 @@
+{
+  "task": "MAIN01-20261109-F89105C9",
+  "iteration": 1,
+  "role": "gameplay",
+  "main": "main01",
+  "implementation": "completed",
+  "frontAssets": "5 byte-identical PNGs verified",
+  "browserChecks": 31,
+  "browserResult": "PASS",
+  "modelAssertions": 1539,
+  "modelSuites": 59,
+  "build": "PASS",
+  "integrated": false,
+  "userAccepted": false,
+  "directionStatus": "15 PNGs and measured metadata connected, byte hashes and alpha bounds verified, actual right45/right90 placement and fixed-pivot swaps PASS",
+  "report": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\검증.md",
+  "integrationPatch": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\통합.patch",
+  "remaining": [
+    "main01 narrow integration",
+    "independent QA/user aesthetic acceptance",
+    "portrait/real APK verification outside performed scope"
+  ],
+  "directionAssets": 15
+}
