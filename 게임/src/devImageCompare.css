@@ -1,0 +1,22 @@
+#dev-image-compare{min-width:48px;min-height:48px}
+#dev-image-compare-panel{position:fixed;z-index:10000;right:12px;top:60px;width:min(280px,calc(100vw - 24px));max-height:calc(100dvh - 72px);overflow:auto;box-sizing:border-box;padding:12px;background:#142725f5;color:#f4eedc;border:1px solid #b9a66b;border-radius:8px;font:14px/1.4 sans-serif;overscroll-behavior:contain}
+#dev-image-compare-panel[hidden],#dev-image-compare-layer[hidden]{display:none!important}
+#dev-image-compare-panel header,#dev-image-compare-panel .compare-size,#dev-image-compare-panel .compare-actions{display:flex;align-items:center;gap:8px;justify-content:space-between}
+#dev-image-compare-panel button{min-width:48px;min-height:48px;font:inherit;color:inherit;background:#33443b;border:1px solid #9c8e65;border-radius:5px;padding:6px;cursor:pointer}
+#dev-image-compare-panel button[aria-pressed=true]{outline:2px solid #ffdc55;background:#5a5a31}
+#dev-image-compare-panel .compare-cards{display:flex;overflow-x:auto;gap:8px;margin:8px 0;padding:3px}
+#dev-image-compare-panel .compare-cards button{flex:0 0 64px;touch-action:pan-x}
+#dev-image-compare-panel .compare-cards img{display:block;width:52px;height:64px;object-fit:contain;background:#e8e2cf;border-radius:3px;pointer-events:none}
+#dev-image-compare-panel .compare-help{font-size:12px;line-height:18px}
+#dev-image-compare-panel input[type=range]{width:100%;min-height:48px;accent-color:#ffdc55}
+#dev-image-compare-panel input[type=number]{box-sizing:border-box;width:90px;min-height:48px;font:inherit}
+#dev-image-compare-panel select{min-height:48px;max-width:100%;font:inherit}
+#dev-image-compare-panel .compare-actions{margin-top:8px}
+#dev-image-compare-layer{position:fixed;z-index:60;overflow:hidden;pointer-events:none;line-height:normal}
+#dev-image-compare-layer[data-placing=true]{pointer-events:auto;touch-action:none;cursor:crosshair}
+#dev-image-compare-layer .compare-actor{position:absolute;width:48px;height:48px;min-width:48px;min-height:48px;padding:0;margin:0;transform:translate(-50%,-100%);border:0;background:transparent;pointer-events:none;touch-action:none;overflow:visible;color:white}
+#dev-image-compare-layer[data-editing=true] .compare-actor{pointer-events:auto;cursor:grab}
+#dev-image-compare-layer .compare-actor img{position:absolute;max-width:none;pointer-events:none;transform:translate(24px,48px)}
+#dev-image-compare-layer .compare-actor span{position:absolute;left:50%;top:100%;transform:translate(-50%,2px);font:12px/16px sans-serif;background:#152725dc;padding:0 3px;white-space:nowrap;pointer-events:none}
+#dev-image-compare-layer .compare-actor[data-selected=true]{outline:2px solid #ffdc55;border-radius:5px}
+#dev-image-compare-layer .compare-actor[data-selected=true] img{filter:drop-shadow(0 0 2px #ffdc55)}

@@ -1,0 +1,81 @@
+{
+  "id": "b9502ea4-df8a-4e3e-9a58-296786e2eb0c",
+  "ok": true,
+  "result": {
+    "worktree": {
+      "id": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-능력치",
+      "identity": {
+        "key": "wt2:local:ee26a1eb-566e-4a65-8aea-75e1582318ed",
+        "executionHostId": "local",
+        "instanceId": "ee26a1eb-566e-4a65-8aea-75e1582318ed"
+      },
+      "instanceId": "ee26a1eb-566e-4a65-8aea-75e1582318ed",
+      "repoId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "projectId": "github:gim963738-jpg/grid-defenders",
+      "hostId": "local",
+      "projectHostSetupId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "creatorProvenance": {
+        "kind": "host"
+      },
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-능력치",
+      "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+      "branch": "refs/heads/domain/character-stats",
+      "isBare": false,
+      "isMainWorktree": false,
+      "displayName": "캐릭터 능력치 · 전문 작업",
+      "displayNameMode": "fixed",
+      "comment": "OPS-003 · specialist · 담당 characters · 기존 작업/원본 보존",
+      "linkedIssue": null,
+      "linkedPR": null,
+      "linkedLinearIssue": null,
+      "linkedLinearIssueWorkspaceId": null,
+      "linkedLinearIssueOrganizationUrlKey": null,
+      "linkedGitLabMR": null,
+      "linkedGitLabIssue": null,
+      "linkedBitbucketPR": null,
+      "linkedAzureDevOpsPR": null,
+      "linkedGiteaPR": null,
+      "linkedWorkItem": null,
+      "linkedTaskSourceContext": null,
+      "isArchived": false,
+      "isUnread": false,
+      "isPinned": false,
+      "sortOrder": 1794128212490,
+      "lastActivityAt": 1794128212490,
+      "createdAt": 1794128212490,
+      "cliProvenance": {
+        "kind": "created-by-cli",
+        "createdAt": 1794128209474
+      },
+      "pendingFirstAgentMessageRename": false,
+      "firstAgentMessageRenameError": null,
+      "baseRef": "main",
+      "workspaceStatus": "in-progress",
+      "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+      "childWorktreeIds": [],
+      "lineage": {
+        "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-능력치",
+        "worktreeInstanceId": "ee26a1eb-566e-4a65-8aea-75e1582318ed",
+        "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+        "parentWorktreeInstanceId": "f3d6b223-778c-4193-812b-aab45e635045",
+        "origin": "manual",
+        "capture": {
+          "source": "manual-action",
+          "confidence": "explicit"
+        },
+        "createdAt": 1794209934609
+      },
+      "git": {
+        "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-능력치",
+        "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+        "branch": "refs/heads/domain/character-stats",
+        "isBare": false,
+        "isMainWorktree": false
+      },
+      "linkedItems": []
+    }
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

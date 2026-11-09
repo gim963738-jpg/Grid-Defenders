@@ -6,12 +6,12 @@ import { createServer } from 'vite';
 // DOM, canvas and image assertions stay in a real browser; do not fake those APIs.
 const root = fileURLToPath(new URL('../', import.meta.url));
 const models = [
-  'assassin-combat', 'battle-save', 'blade-skill', 'boss-battle',
+  'assassin-combat', 'battle-formation', 'battle-save', 'blade-skill', 'boss-battle', 'boss-formation',
   'boss-dps-history', 'boss-roster-ice', 'boss-skills', 'boss-test-balance',
   'boss-wave-auto', 'camp-progress', 'combat-playback', 'damage-meter',
   'defense-field-layout', 'dev-gear', 'dev-placement', 'dps-window',
   'fire-ground', 'fire-skill', 'game-run', 'hero-critical', 'ice-attack',
-  'landscape-inventory', 'peak-dps', 'sword-attack', 'training',
+  'landscape-field', 'landscape-inventory', 'peak-dps', 'sword-attack', 'training',
   'wave-ranged-skill', 'wave-warning',
 ];
 const browserOnly = [

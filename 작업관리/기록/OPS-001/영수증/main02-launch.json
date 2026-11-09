@@ -1,0 +1,28 @@
+{
+  "id": "389d82d8-6576-4eec-aa84-de83990da208",
+  "ok": true,
+  "result": {
+    "outcome": {
+      "kind": "structured",
+      "sessionId": "codex_91448bc1_344c_4041_aff3_8c64af02d810",
+      "handle": "structured-agent-session-codex_91448bc1_344c_4041_aff3_8c64af02d810",
+      "tabId": "structured-agent-session-codex_91448bc1_344c_4041_aff3_8c64af02d810"
+    },
+    "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/메인02",
+    "receipt": {
+      "mode": "structured",
+      "preferred": "structured",
+      "reason": "requested",
+      "detail": "Started a structured chat session, as requested."
+    },
+    "prompt": {
+      "delivery": "submit",
+      "outcome": "journaled",
+      "messageId": "1794125601728-828b351be13c481eb2643886ee4dbc79"
+    },
+    "operationId": "1794125601567-a387dd8c7a4f4e51a81093762a359120"
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

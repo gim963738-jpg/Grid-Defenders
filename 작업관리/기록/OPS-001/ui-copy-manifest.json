@@ -1,0 +1,468 @@
+{
+  "sourceBackup": "C:\\Users\\user\\orca\\backups\\Grid Defenders\\workflow-20261108-165427",
+  "destination": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면",
+  "files": [
+    {
+      "path": "task.md",
+      "sha256": "bdc04aac99b0fafd560590102714b1e57100fa69920fcd4605f5e7a40d3a052f",
+      "bytes": 7318
+    },
+    {
+      "path": "게임/README.md",
+      "sha256": "fc083f690cc3b3451b8e2b7ac671ed94d2e3c0850cfb27529da996cdb3901cae",
+      "bytes": 7671
+    },
+    {
+      "path": "게임/scripts/check-tests.mjs",
+      "sha256": "bc1ee7c1d53c81713426be92ff5846a35d0f9830e1bb00a90b4112377ba0c232",
+      "bytes": 4762
+    },
+    {
+      "path": "게임/src/battleFormation.ts",
+      "sha256": "803ac4f1033d5540c100bc79356ef8b9d05c000c3ca9be5c75b58249a823b6ac",
+      "bytes": 4301
+    },
+    {
+      "path": "게임/src/battleSave.ts",
+      "sha256": "a70c688f51d8f519cac28c3e32dac766263a369aa9f34027bc42270ff057e01a",
+      "bytes": 17447
+    },
+    {
+      "path": "게임/src/blondArt.ts",
+      "sha256": "b78a9058661f3c040203aca1d194269f41a1894e804041bbff7ba27a997a699b",
+      "bytes": 3490
+    },
+    {
+      "path": "게임/src/bossBattle.ts",
+      "sha256": "f011098410ab6a9a191b8e74c7600569069a095b76939ce0bdcc2be797a4ada9",
+      "bytes": 19784
+    },
+    {
+      "path": "게임/src/bossBattleView.ts",
+      "sha256": "f6f7125be135e64d06f83581f7c63911989ed443c058483493d2bb9788512903",
+      "bytes": 18081
+    },
+    {
+      "path": "게임/src/bossField.ts",
+      "sha256": "96d7d5ec7fcce96390cc276103f8b725d6f6d3f0b07643ae0d55f472af124264",
+      "bytes": 265
+    },
+    {
+      "path": "게임/src/defense.ts",
+      "sha256": "5fce5c07de0f628091c040ed41ffea13eb7f329b06609bf2ab84ee1de5c91192",
+      "bytes": 46313
+    },
+    {
+      "path": "게임/src/defenseConfig.ts",
+      "sha256": "9029f5e5f81b0f49dc6414c9082fbc7c5b6e3d094d1769bec76c24f316b0a2bb",
+      "bytes": 7830
+    },
+    {
+      "path": "게임/src/defenseView.ts",
+      "sha256": "64bb40656de19d068cf5eec4dde143ac9356184d48298e65f864b0933880fc59",
+      "bytes": 21724
+    },
+    {
+      "path": "게임/src/devRangeDummy.css",
+      "sha256": "8b7981c0a9677236f9f8fd4a265f780c559ddeae98baf90376b24e8b58aedf36",
+      "bytes": 1564
+    },
+    {
+      "path": "게임/src/devRangeDummy.ts",
+      "sha256": "b6dac177a04a9a072fa18182234f8875416da0c6bfca89055ff10bdd616f4d3e",
+      "bytes": 6567
+    },
+    {
+      "path": "게임/src/formation-panel.css",
+      "sha256": "09c11047ccb09da7e176d6d01a00089f7fc694b8adc7a20fb5b80d73ddee7ea7",
+      "bytes": 4267
+    },
+    {
+      "path": "게임/src/formation-panel.ts",
+      "sha256": "dee72f534e73f24817571277d701d391fb8b533412e422524446489d33578ca8",
+      "bytes": 6694
+    },
+    {
+      "path": "게임/src/landscape-entry.ts",
+      "sha256": "62f313ca1a473200c991716adc08b3de5bb1fd3e23e16efa1a3fe0c440da03a2",
+      "bytes": 47789
+    },
+    {
+      "path": "게임/src/landscape-game.css",
+      "sha256": "29460f8af0584dbc03043a6c9e39fa07426265ee14d9a1d706dfc34f36bc29ac",
+      "bytes": 27439
+    },
+    {
+      "path": "게임/src/landscapeField.ts",
+      "sha256": "92f80322fabd1af6f6ce321ca310e9c39f9cdb44f4cb0bc66b2553e991f8b05f",
+      "bytes": 2623
+    },
+    {
+      "path": "게임/src/main.ts",
+      "sha256": "14c3ad4b816f1c927ce34968954ef15cb00dcdb68b8d370601a77fffc1b984b8",
+      "bytes": 92790
+    },
+    {
+      "path": "게임/src/rangedArt.ts",
+      "sha256": "aa152828a5e58682c482836454b5a2c94ee357cba32001961e9aca5a4f74709d",
+      "bytes": 1104
+    },
+    {
+      "path": "게임/tests/battle-formation.check.ts",
+      "sha256": "bcf5a650cec92526fbd4d70b2c5ce628ba9196928ee49888ed1fb2f97c3f5df6",
+      "bytes": 7517
+    },
+    {
+      "path": "게임/tests/battle-save.check.ts",
+      "sha256": "1295419c0a8cc06f91616c8885e7df6cc85f8c55b13ab4eabe3977eb7c89342b",
+      "bytes": 18815
+    },
+    {
+      "path": "게임/tests/blond-warrior.check.ts",
+      "sha256": "ce502bfc495752976e4bcd9296a2af1d92f815527fe0ee440f03ce61366259ca",
+      "bytes": 11009
+    },
+    {
+      "path": "게임/tests/boss-battle.check.ts",
+      "sha256": "f1fc5847ca2bf6081f3b866dd55bd53b923575904bdf6873062993e9df80552b",
+      "bytes": 2621
+    },
+    {
+      "path": "게임/tests/boss-formation.check.ts",
+      "sha256": "359fbe0eaf53ec619fd185fb8fc5033a51694d776fa33139325ad66d7f9c3d6d",
+      "bytes": 4420
+    },
+    {
+      "path": "게임/tests/boss-roster-ice.check.ts",
+      "sha256": "0cc17eb55425b39d17ad598d858beda81860fae3c832a2f2ebdc97e48c0d9d54",
+      "bytes": 3381
+    },
+    {
+      "path": "게임/tests/landscape-field.check.ts",
+      "sha256": "97d8b6acd85938c792b4df3863f1f5e3bca621513643159779b29edf24acfeb5",
+      "bytes": 3012
+    },
+    {
+      "path": "문서/00_개발규칙/모바일UI규격.md",
+      "sha256": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+      "bytes": 25180
+    },
+    {
+      "path": "문서/02_세부기획/01_전투/클래스별진형배치.md",
+      "sha256": "703c59f273eae157551acda167c3c1f19c8b17912b7b9b560aff11bfcd841909",
+      "bytes": 3412
+    },
+    {
+      "path": "문서/02_세부기획/02_영웅/임시영웅.md",
+      "sha256": "2579d58f6636e90065726b6e056989614c3a908bff885f9a5310d6cfd7c02a64",
+      "bytes": 8404
+    },
+    {
+      "path": "문서/03_작업기록/DOC-018_발로르스킬모드표시/1_대화기록.md",
+      "sha256": "484d1fca7ba966b96244f533b697cf4f4cadfa897af22f558f7cb79e63851956",
+      "bytes": 512
+    },
+    {
+      "path": "문서/03_작업기록/DOC-018_발로르스킬모드표시/2_사전확인.md",
+      "sha256": "f2a3d22a4d5abecb8b2ebff13b9788b4e367d92c047e9de8eed3629b97bf0f49",
+      "bytes": 552
+    },
+    {
+      "path": "문서/03_작업기록/DOC-018_발로르스킬모드표시/3_작업일지.md",
+      "sha256": "a80e5f5d958b1d8c08a5f7e4af3c98b100055f356d032bebf7e5b1acbb51f546",
+      "bytes": 970
+    },
+    {
+      "path": "문서/03_작업기록/DOC-018_발로르스킬모드표시/4_정의문서.md",
+      "sha256": "2b7100b01e5e8415b76703d71172a8a3f750b1c28779c6dd4beeeef5d819293b",
+      "bytes": 796
+    },
+    {
+      "path": "문서/03_작업기록/DOC-018_발로르스킬모드표시/5_버전관리.md",
+      "sha256": "5a81ba52b565bf1534353846157cc97b9d1c0d7d69069f50eb34f059b007afb8",
+      "bytes": 308
+    },
+    {
+      "path": "문서/03_작업기록/DOC-019_클래스별진형배치기획/1_대화기록.md",
+      "sha256": "8f011a6caab968e35a75bb00e2a47e099a26750fe8ce578332e33827ca416961",
+      "bytes": 537
+    },
+    {
+      "path": "문서/03_작업기록/DOC-019_클래스별진형배치기획/2_사전확인.md",
+      "sha256": "60bb1aae79b047637613def2a9d53e65c1faf866a2db262ef693e6b063587baa",
+      "bytes": 590
+    },
+    {
+      "path": "문서/03_작업기록/DOC-019_클래스별진형배치기획/3_작업일지.md",
+      "sha256": "e2cc1ddf1b0ce652f87975679df838a3d0b2617f1cb1385f3a8c6be54f467893",
+      "bytes": 1040
+    },
+    {
+      "path": "문서/03_작업기록/DOC-019_클래스별진형배치기획/4_정의문서.md",
+      "sha256": "957d356003946af0e55b88ed0e0461dd00bcbbdf3c34bab89155f03e6674aab2",
+      "bytes": 774
+    },
+    {
+      "path": "문서/03_작업기록/DOC-019_클래스별진형배치기획/5_버전관리.md",
+      "sha256": "3021006e4c4ceab8b9d8aec8e6a064d16fccc9268bd04b2904b52ec77e1b741e",
+      "bytes": 336
+    },
+    {
+      "path": "문서/03_작업기록/WEB-180_7x4진형과자동배치/1_대화기록.md",
+      "sha256": "430c2f09c22f6ed344924f8fd124371df6ce4a4e03da6f03b28dbb49d5228262",
+      "bytes": 924
+    },
+    {
+      "path": "문서/03_작업기록/WEB-180_7x4진형과자동배치/2_사전확인.md",
+      "sha256": "950e259f8cf3638ec7d3a691a4b4130b3f7d96cf7f059e1a8312c56b38151b39",
+      "bytes": 1174
+    },
+    {
+      "path": "문서/03_작업기록/WEB-180_7x4진형과자동배치/3_작업일지.md",
+      "sha256": "7a6d3af82f6610fd1f279964d0a2f89f6ffb5f101f485cfb66ec5ffb22d736a0",
+      "bytes": 2617
+    },
+    {
+      "path": "문서/03_작업기록/WEB-180_7x4진형과자동배치/4_정의문서.md",
+      "sha256": "180d2ffa71b2dd3ca98cbf3583abe7ee9542f30f6f542e89f57ee1f22a4e17de",
+      "bytes": 2049
+    },
+    {
+      "path": "문서/03_작업기록/WEB-180_7x4진형과자동배치/5_버전관리.md",
+      "sha256": "a0b038932ee5d85e9f90a35b451c4dbad7e49d29428d7b0695adc02a72dd557a",
+      "bytes": 783
+    },
+    {
+      "path": "문서/03_작업기록/WEB-180_7x4진형과자동배치/검증/formation-800x360.png",
+      "sha256": "773e5bc62a7613c2b5ddbfd1bf09eec2d596c52876a35ce28e181c85257de81a",
+      "bytes": 253035
+    },
+    {
+      "path": "문서/03_작업기록/WEB-180_7x4진형과자동배치/검증/formation-browser-check.js",
+      "sha256": "6df3dfe885d10da2e53c91f9bf2cdccccdcb4c7a1a662bdf6ac455e12f379b1b",
+      "bytes": 7671
+    },
+    {
+      "path": "문서/03_작업기록/WEB-180_7x4진형과자동배치/검증/formation-browser-result.json",
+      "sha256": "c9c84c99dd0f2ffc37b3cef3ffabdf4d9fcae728e85da9ac1b46dc2590ab5c3a",
+      "bytes": 4141
+    },
+    {
+      "path": "문서/03_작업기록/WEB-181_진형우측패널배치/1_대화기록.md",
+      "sha256": "98420aaff83416f8e9615811395ab9bfd4c675f4694f1a3b529bed29c378a8b4",
+      "bytes": 444
+    },
+    {
+      "path": "문서/03_작업기록/WEB-181_진형우측패널배치/2_사전확인.md",
+      "sha256": "f80619ac117706f83d3dd5ac9e80878a031cf90d9a22ba9ebfda5a7160eb7966",
+      "bytes": 717
+    },
+    {
+      "path": "문서/03_작업기록/WEB-181_진형우측패널배치/3_작업일지.md",
+      "sha256": "173f35700c95af1792d163a149c5170750e96d1866414c8356dfe376d548e7c4",
+      "bytes": 1414
+    },
+    {
+      "path": "문서/03_작업기록/WEB-181_진형우측패널배치/4_정의문서.md",
+      "sha256": "0e6527ad4b5419e254c224a37a7d4550053db989445887ec737cb66f59831b8d",
+      "bytes": 996
+    },
+    {
+      "path": "문서/03_작업기록/WEB-181_진형우측패널배치/5_버전관리.md",
+      "sha256": "4e8ed1c98249c0d111413585d566329874644c2fcb79b47ca8c42c39fd537f19",
+      "bytes": 446
+    },
+    {
+      "path": "문서/03_작업기록/WEB-181_진형우측패널배치/검증/formation-right-800x360.png",
+      "sha256": "934d34369193009cd802a9e34d19ec8bad8e0ed5028b828386b203c3a45a9733",
+      "bytes": 416827
+    },
+    {
+      "path": "문서/03_작업기록/WEB-181_진형우측패널배치/검증/formation-right-check.js",
+      "sha256": "3d640c8365a453a9a948d31e374ce56d48ca35dc70f374b066f5a50dcc868779",
+      "bytes": 5439
+    },
+    {
+      "path": "문서/03_작업기록/WEB-181_진형우측패널배치/검증/formation-right-result.json",
+      "sha256": "2a2d0e272f0f17f865839b411c3589ee21d7b1d36b9be89e6f12507a47785da6",
+      "bytes": 2274
+    },
+    {
+      "path": "문서/03_작업기록/WEB-182_진형6행과하단조작/1_대화기록.md",
+      "sha256": "382de2646a4782fa14146b80222c2f413067c30135a4fcdba4b599bde8ce55f6",
+      "bytes": 346
+    },
+    {
+      "path": "문서/03_작업기록/WEB-182_진형6행과하단조작/2_사전확인.md",
+      "sha256": "408fb77ba1cd2eabd7f29094950621dd89f216ed5225541fd896b98338cab599",
+      "bytes": 528
+    },
+    {
+      "path": "문서/03_작업기록/WEB-182_진형6행과하단조작/3_작업일지.md",
+      "sha256": "6f58b4fa14c66ce23f87e0e071e7b277bda4b56d157879563c3b82db3d15505d",
+      "bytes": 1768
+    },
+    {
+      "path": "문서/03_작업기록/WEB-182_진형6행과하단조작/4_정의문서.md",
+      "sha256": "2e34c45106123c01fbbeb6c1ccc5a829761fc87bf4ec642d75deac7092b266c0",
+      "bytes": 973
+    },
+    {
+      "path": "문서/03_작업기록/WEB-182_진형6행과하단조작/5_버전관리.md",
+      "sha256": "184e392058a7bba0b2f5729a2d0707a3d72ab965b335f1c30d46d1007d10b574",
+      "bytes": 426
+    },
+    {
+      "path": "문서/03_작업기록/WEB-182_진형6행과하단조작/검증/formation-six-800x360.png",
+      "sha256": "29ce3da2be67660fc84ffcb8968421226414ab360c09eb14fb4a12757ec987dc",
+      "bytes": 430341
+    },
+    {
+      "path": "문서/03_작업기록/WEB-182_진형6행과하단조작/검증/formation-six-check.js",
+      "sha256": "4bd0602a165fab6b2603ef2665a891ff48ec491c28ee13e462206f027a42ec9c",
+      "bytes": 7679
+    },
+    {
+      "path": "문서/03_작업기록/WEB-182_진형6행과하단조작/검증/formation-six-result.json",
+      "sha256": "7cfab657f2e11ed9ae0cd647e47aefcf5a3cfd42beeab0a45addae6d100915b5",
+      "bytes": 3004
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/1_대화기록.md",
+      "sha256": "04c7011ff78294e0d144e97ec201e9a593a9c1d9225b8cb538bc648d3da92b6c",
+      "bytes": 547
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/2_사전확인.md",
+      "sha256": "f7bd0c35a947118bc57e17273196579d1bd0b7ba6b89923548853166d1c5416a",
+      "bytes": 548
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/3_작업일지.md",
+      "sha256": "45d51afb9feb245a4ed423b2a60b02beff822d307033d6e41f22264445920c93",
+      "bytes": 2214
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/4_정의문서.md",
+      "sha256": "6647eccb4c867a5875fa334669814af25f09f5993264c96470599bdef9b0d4aa",
+      "bytes": 1033
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/5_버전관리.md",
+      "sha256": "547122aa3aae2ca2ca58f7fed2b4377eb11bab9a37291e09d62b3fd637b2a582",
+      "bytes": 391
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/검증/boss-range-and-size.png",
+      "sha256": "20b897832faf18c9bcee4771aafd77a134af6f1681384d17ceec5346d6abd098",
+      "bytes": 256073
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/검증/hero-size-result.json",
+      "sha256": "606ea4956c09650ae9fe44ae60cdee0f60f67510b9c4d60552c6ba46441d7999",
+      "bytes": 366
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/검증/range-dummy-check.js",
+      "sha256": "061faf158ae53bbeae9e1dfa8314451d04153d63774d6843a23c106d52e4a7c2",
+      "bytes": 6039
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/검증/range-dummy-result.json",
+      "sha256": "da4ea2ab2e164d368486098008dbd02ba671a27724f38b954a338e31287bb77d",
+      "bytes": 2812
+    },
+    {
+      "path": "문서/03_작업기록/WEB-183_거리허수아비와영웅키맞춤/검증/wave-range-and-size.png",
+      "sha256": "d798a28c591195b8977867a652c0f986b01853163269f8525a14d47a2fc08095",
+      "bytes": 422881
+    },
+    {
+      "path": "문서/03_작업기록/WEB-184_격자기준세로길폭/1_대화기록.md",
+      "sha256": "27b67fece4076ca92ba2779e2f4696a0636ef00f133de35c86583bad5f4c5d4f",
+      "bytes": 468
+    },
+    {
+      "path": "문서/03_작업기록/WEB-184_격자기준세로길폭/2_사전확인.md",
+      "sha256": "883f4471733467426b0c108b308c7b96342bacb4243eaa2f1a31e2c68367ece7",
+      "bytes": 1176
+    },
+    {
+      "path": "문서/03_작업기록/WEB-184_격자기준세로길폭/3_작업일지.md",
+      "sha256": "de217633f417f099151e0000c8e1e8d1bff5b4cc192db52ad46ebc5b00363838",
+      "bytes": 2360
+    },
+    {
+      "path": "문서/03_작업기록/WEB-184_격자기준세로길폭/4_정의문서.md",
+      "sha256": "9135a8abfef55010f8ef099876a24d63bf581fbc3650babd0b6fb64620a570f2",
+      "bytes": 1158
+    },
+    {
+      "path": "문서/03_작업기록/WEB-184_격자기준세로길폭/5_버전관리.md",
+      "sha256": "746e1333ef590f337ebd346c1d2779dfc1bc3deea37a56ec54ed607013bb927a",
+      "bytes": 568
+    },
+    {
+      "path": "문서/03_작업기록/WEB-184_격자기준세로길폭/검증/field-result.json",
+      "sha256": "d863a9997414c13bf81b0fb49a89cb2f416b36ba456a823f4a75a2b807ff94cb",
+      "bytes": 1682
+    },
+    {
+      "path": "문서/03_작업기록/WEB-184_격자기준세로길폭/검증/field-road.png",
+      "sha256": "8e94e98a93a4e2ced4444f159f33d4d631753507b60ab28c0653dad5eec6f4a5",
+      "bytes": 390987
+    },
+    {
+      "path": "문서/03_작업기록/WEB-185_직사각형길목/1_대화기록.md",
+      "sha256": "2ddad10474cea0f1dcc4b46f74c98e8175105e1bb44a78a43893a641cf2bd2ba",
+      "bytes": 417
+    },
+    {
+      "path": "문서/03_작업기록/WEB-185_직사각형길목/2_사전확인.md",
+      "sha256": "73d4cb6a8dab19d0e48eda5c476df79237fb81175a9702730c1b664f343398a1",
+      "bytes": 1102
+    },
+    {
+      "path": "문서/03_작업기록/WEB-185_직사각형길목/3_작업일지.md",
+      "sha256": "efa22c875dc12d0193353d073ce9f49693d4df57fbbec8403a955f86b173e6c0",
+      "bytes": 2568
+    },
+    {
+      "path": "문서/03_작업기록/WEB-185_직사각형길목/4_정의문서.md",
+      "sha256": "3db1c39c698c0534e27077c88b11ebe640caae25a7818146fcbafe6f1c75d088",
+      "bytes": 1040
+    },
+    {
+      "path": "문서/03_작업기록/WEB-185_직사각형길목/5_버전관리.md",
+      "sha256": "fe3b98f253df59d7cfd67d664bf10c4bfd6a26ec7e29272f51517e3930ed6e8a",
+      "bytes": 542
+    },
+    {
+      "path": "문서/03_작업기록/WEB-185_직사각형길목/검증/rectangle-check.js",
+      "sha256": "2771ceefaa2efbab8c9fe276f6db0f1f2b9eec6b30e63f2fda344c96035efadc",
+      "bytes": 6963
+    },
+    {
+      "path": "문서/03_작업기록/WEB-185_직사각형길목/검증/rectangle-result.json",
+      "sha256": "238b1fa55627ea61d8d2df78bfe4ab64af7cb4254f182d442c5f0eaa0839013f",
+      "bytes": 1782
+    },
+    {
+      "path": "문서/03_작업기록/WEB-185_직사각형길목/검증/rectangle-road.png",
+      "sha256": "99ff2b29979bdb732bd0cef79c8461642ff37b727224fc53e48bf21eb8755403",
+      "bytes": 386975
+    },
+    {
+      "path": "문서/05_프로젝트정의/정의목록.md",
+      "sha256": "7a868f1c4eef1a3de39e7647771d8d330c5c2390e366688e94fd2084e19617c9",
+      "bytes": 16218
+    },
+    {
+      "path": "문서/05_프로젝트정의/현재구현현황.md",
+      "sha256": "69212029050ea0eea219c36e6635e921e5577ff25e8ece341cc9cfe62fffcfe0",
+      "bytes": 22543
+    }
+  ],
+  "copied": 92,
+  "unchangedRoot": true
+}

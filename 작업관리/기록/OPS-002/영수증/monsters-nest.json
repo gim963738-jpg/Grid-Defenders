@@ -1,0 +1,81 @@
+{
+  "id": "6616d60d-9e78-4e1d-ad54-018698715a08",
+  "ok": true,
+  "result": {
+    "worktree": {
+      "id": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+      "identity": {
+        "key": "wt2:local:0ae85254-7aa0-4ae2-80d6-e4e51a9b6dbd",
+        "executionHostId": "local",
+        "instanceId": "0ae85254-7aa0-4ae2-80d6-e4e51a9b6dbd"
+      },
+      "instanceId": "0ae85254-7aa0-4ae2-80d6-e4e51a9b6dbd",
+      "repoId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "projectId": "github:gim963738-jpg/grid-defenders",
+      "hostId": "local",
+      "projectHostSetupId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "creatorProvenance": {
+        "kind": "host"
+      },
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+      "head": "116c14d8a786fd97d6d5b83ff31ddb79c32fd6c2",
+      "branch": "refs/heads/gim963738-jpg/몬스터-디자인",
+      "isBare": false,
+      "isMainWorktree": false,
+      "displayName": "몬스터",
+      "displayNameMode": "fixed",
+      "comment": "세계관 도메인 계층 · 규정 A 연결 · 제작 진행 · 슬라임 3종 게임 반영 · 신규 몬스터 방향·동작 검수 대기",
+      "linkedIssue": null,
+      "linkedPR": null,
+      "linkedLinearIssue": null,
+      "linkedLinearIssueWorkspaceId": null,
+      "linkedLinearIssueOrganizationUrlKey": null,
+      "linkedGitLabMR": null,
+      "linkedGitLabIssue": null,
+      "linkedBitbucketPR": null,
+      "linkedAzureDevOpsPR": null,
+      "linkedGiteaPR": null,
+      "linkedWorkItem": null,
+      "linkedItems": [],
+      "linkedTaskSourceContext": null,
+      "isArchived": false,
+      "isUnread": false,
+      "isPinned": false,
+      "sortOrder": 1793975875040,
+      "manualOrder": 1793975873372,
+      "lastActivityAt": 1793978379230,
+      "createdAt": 1793975875039,
+      "createdWithAgent": "codex",
+      "pendingFirstAgentMessageRename": false,
+      "firstAgentMessageRenameError": null,
+      "baseRef": "main",
+      "workspaceStatus": "in-progress",
+      "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/세계관",
+      "childWorktreeIds": [
+        "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-스프라이트"
+      ],
+      "lineage": {
+        "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+        "worktreeInstanceId": "0ae85254-7aa0-4ae2-80d6-e4e51a9b6dbd",
+        "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/세계관",
+        "parentWorktreeInstanceId": "659c8a4a-e346-4ba9-8d45-d4cd2710a8df",
+        "origin": "manual",
+        "capture": {
+          "source": "manual-action",
+          "confidence": "explicit"
+        },
+        "createdAt": 1794128381089
+      },
+      "git": {
+        "path": "C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+        "head": "116c14d8a786fd97d6d5b83ff31ddb79c32fd6c2",
+        "branch": "refs/heads/gim963738-jpg/몬스터-디자인",
+        "isBare": false,
+        "isMainWorktree": false
+      }
+    }
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

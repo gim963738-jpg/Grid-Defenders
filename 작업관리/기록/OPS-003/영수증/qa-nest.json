@@ -1,0 +1,81 @@
+{
+  "id": "22636e3d-65ba-44ad-bcc3-fd0d8eed357d",
+  "ok": true,
+  "result": {
+    "worktree": {
+      "id": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/테스터",
+      "identity": {
+        "key": "wt2:local:392d5b3a-8c2a-4daf-a7e2-e3a7c9604a15",
+        "executionHostId": "local",
+        "instanceId": "392d5b3a-8c2a-4daf-a7e2-e3a7c9604a15"
+      },
+      "instanceId": "392d5b3a-8c2a-4daf-a7e2-e3a7c9604a15",
+      "repoId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "projectId": "github:gim963738-jpg/grid-defenders",
+      "hostId": "local",
+      "projectHostSetupId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "creatorProvenance": {
+        "kind": "host"
+      },
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/테스터",
+      "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+      "branch": "refs/heads/team/qa",
+      "isBare": false,
+      "isMainWorktree": false,
+      "displayName": "독립 테스터 AI",
+      "displayNameMode": "fixed",
+      "comment": "OPS-003 · tester · 담당 qa · 기존 작업/원본 보존",
+      "linkedIssue": null,
+      "linkedPR": null,
+      "linkedLinearIssue": null,
+      "linkedLinearIssueWorkspaceId": null,
+      "linkedLinearIssueOrganizationUrlKey": null,
+      "linkedGitLabMR": null,
+      "linkedGitLabIssue": null,
+      "linkedBitbucketPR": null,
+      "linkedAzureDevOpsPR": null,
+      "linkedGiteaPR": null,
+      "linkedWorkItem": null,
+      "linkedTaskSourceContext": null,
+      "isArchived": false,
+      "isUnread": false,
+      "isPinned": false,
+      "sortOrder": 1794209914330,
+      "lastActivityAt": 1794209914330,
+      "createdAt": 1794209914330,
+      "cliProvenance": {
+        "kind": "created-by-cli",
+        "createdAt": 1794209911406
+      },
+      "pendingFirstAgentMessageRename": false,
+      "firstAgentMessageRenameError": null,
+      "baseRef": "main",
+      "workspaceStatus": "in-progress",
+      "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
+      "childWorktreeIds": [],
+      "lineage": {
+        "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/테스터",
+        "worktreeInstanceId": "392d5b3a-8c2a-4daf-a7e2-e3a7c9604a15",
+        "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
+        "parentWorktreeInstanceId": "0524c1dc-147b-4e74-9f67-554ba3d20cbc",
+        "origin": "manual",
+        "capture": {
+          "source": "manual-action",
+          "confidence": "explicit"
+        },
+        "createdAt": 1794209936612
+      },
+      "git": {
+        "path": "C:/Users/user/orca/workspaces/Grid Defenders/테스터",
+        "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+        "branch": "refs/heads/team/qa",
+        "isBare": false,
+        "isMainWorktree": false
+      },
+      "linkedItems": []
+    }
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

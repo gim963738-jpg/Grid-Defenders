@@ -1,0 +1,14 @@
+{
+  "workflowProcedureTests": {
+    "command": "python -m unittest discover -s 작업관리/도구 -p test_workflow.py -v",
+    "passed": 12,
+    "failed": 0,
+    "actualProductionTasksCreated": 0
+  },
+  "uiBuild": {
+    "workingDirectory": "C:/Users/user/orca/workspaces/Grid Defenders/UI-전투화면/게임",
+    "command": "npm.cmd run build",
+    "exitCode": 0
+  },
+  "scope": "Preparation, connections, preserved originals, approval gates and UI copy build; not a full combat/mobile-device revalidation."
+}

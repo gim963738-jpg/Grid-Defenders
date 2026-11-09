@@ -1,0 +1,78 @@
+{
+  "task": "MAIN02-20261109-9009B97A",
+  "iteration": 1,
+  "role": "ui",
+  "workSummary": "신규output에만 9개 독립배경과 통일 전투UI를 제작; 이전결과/게임코드 보존;PNG9/연락판4/갤러리/자체검증",
+  "documents": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\AGENTS.md",
+      "sha256": "a4fee6387b17ffa27ec90c9ccdab1c7ebfb93722945f729b24e60b93f0593ba7",
+      "applies": "원본/전16장 보존,새 output만 생성,공통모바일규격 적용"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\작업진행방법.md",
+      "sha256": "3eebec5fd956a74fcfa287271e4d44de645339a1c0822c652ab7885169e3d2fd",
+      "applies": "이번 하달 본문과 사용자 선호 재독 후 신규작업 start"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "sha256": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "applies": "바로 진행 확인 범위인 3테마9장만 제작,확정시안으로 승격안함"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "sha256": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "applies": "main02 소유 작업으로 회신,기존게임과 병행편집 금지"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "sha256": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "applies": "직접제작,하위담당 없음,외부모델 임의전환 금지"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "sha256": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "applies": "UI 독립소스만 output에 생성,런타임 책임파일 읽기전용"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\규정.md",
+      "sha256": "f1a0a3140e7639c13b4f4ea3eedf0383bb6a8d1bb1a73db6bc68584d62a20de1",
+      "applies": "800×360 및 부분선호 조합,사용자 최종합격과 구분"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "sha256": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "applies": "현재차수14문서 path/sha256/applies 확인후 start"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "sha256": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "applies": "ui 팀장과 main02 역할/qa 독립검사 경계"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "sha256": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "applies": "자료분류와 실제조직 구분,아트원본 이동안함"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "sha256": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "applies": "ui 자료역할 유지,캐릭터/몬스터 설정확정 안함"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인작업\\main02\\three-themes-nine-20261109\\사용자요청.md",
+      "sha256": "273e7878bc6dc56984ab74035f0397c458e2285a1f929af463721651d367f398",
+      "applies": "05/06/09 필드 그림체와05/09 버튼 승계,전쟁/햇빛숲/마계 각3개 고유배경"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\문서\\00_개발규칙\\모바일UI규격.md",
+      "sha256": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+      "applies": "여백12,간격8,본문14/보조12/제목20,터치48 유지"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-063FC22B\\결과보고.md",
+      "sha256": "74d203a7e59ae9531cb82219680926307cca16399c8770a34860a88ccd92b710",
+      "applies": "전16장 게임미반영 및 합성상태 한계 유지,SVG 이웃프레임 노출 예방"
+    }
+  ]
+}

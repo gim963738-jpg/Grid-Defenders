@@ -1,0 +1,85 @@
+{
+  "at": "2026-11-09T18:25:49.400941+09:00",
+  "policy": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+  "changed": [
+    {
+      "role": "main01",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\AGENTS.md",
+      "backup": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\report-format\\변경전\\main01\\AGENTS.md",
+      "sha256": "6445ff907cdb26fb3dda5cba684c822bc627cada275590d7a10c3e70558a23bb"
+    },
+    {
+      "role": "main01",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main01\\작업진행방법.md",
+      "backup": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\report-format\\변경전\\main01\\작업진행방법.md",
+      "sha256": "152b86c9d3368466514de5a685a5d4ab7809c277ee00ee8617ce0eb04dfe2e42"
+    },
+    {
+      "role": "main01",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업연결.json",
+      "backup": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\report-format\\변경전\\main01\\작업연결.json",
+      "sha256": "659e235d593d9ffdab6e507496113e70fbe786209d2971f9fbafe21763117c40"
+    },
+    {
+      "role": "main02",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인02\\AGENTS.md",
+      "backup": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\report-format\\변경전\\main02\\AGENTS.md",
+      "sha256": "010e048bc98ebdebf302bb2aa6704d02ce366959b9af2e876a2620637110ffc1"
+    },
+    {
+      "role": "main02",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main02\\작업진행방법.md",
+      "backup": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\report-format\\변경전\\main02\\작업진행방법.md",
+      "sha256": "2f1771e72af7a4614467d2b4246b37cd64f01daca7f40af55845531c1b23c20e"
+    },
+    {
+      "role": "main02",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인02\\작업연결.json",
+      "backup": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\report-format\\변경전\\main02\\작업연결.json",
+      "sha256": "1235171cf14cf938abdbab603202e7fd871ee8575122805bcaab81a488669a57"
+    },
+    {
+      "role": "main03",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\AGENTS.md",
+      "backup": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\report-format\\변경전\\main03\\AGENTS.md",
+      "sha256": "1c1829ca1f9609f982901a8196876cabaa1e961d4f5b143e31bf614feec8190b"
+    },
+    {
+      "role": "main03",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main03\\작업진행방법.md",
+      "backup": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\report-format\\변경전\\main03\\작업진행방법.md",
+      "sha256": "208abe205902b9f30dcd40f33ba6f64bf6a5b749eab2824bd36a96adff7c0ef5"
+    },
+    {
+      "role": "main03",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\작업연결.json",
+      "backup": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\report-format\\변경전\\main03\\작업연결.json",
+      "sha256": "ad3f26132257fad3c3abbae3255ce7f9c3fbf74e9334707fa5e135679becb9c3"
+    }
+  ],
+  "sent": {
+    "main02": {
+      "run": "run_2939978c8e65",
+      "sourceReceipt": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-063FC22B\\송신영수증-v001.json",
+      "receipt": {
+        "ok": true,
+        "result": {
+          "messageId": "msg_721c98f0320c"
+        }
+      },
+      "returncode": 0
+    },
+    "main03": {
+      "run": "run_b29b47372e51",
+      "sourceReceipt": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-9D2018F2\\실제발송영수증-v002.json",
+      "receipt": {
+        "ok": true,
+        "result": {
+          "messageId": "msg_746f4b9fbfb6"
+        }
+      },
+      "returncode": 0
+    }
+  },
+  "claimedReadAcknowledgement": false
+}

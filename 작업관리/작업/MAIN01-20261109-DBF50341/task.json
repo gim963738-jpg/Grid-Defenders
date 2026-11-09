@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "id": "MAIN01-20261109-DBF50341",
+  "main": "main01",
+  "branch": "characters",
+  "title": "금발 전사 SD 비율·개성 리모델링 4안",
+  "request": "현이미지의 캐릭터 비율을 참고해서 우리가 디자인한 SD캐릭터의 캐릭터 신체부위를 조절하고, 이미지2의 각 캐릭터들이 성별 인상·콘셉트·특징·개성을 어떤 요소로 표현했는지 분석해서 기존 금발 전사를 리모델링한 시안 4개를 만든다. 기존 SD 1개와 신규 4개를 비교하는 사진을 이미지3의 오른쪽 화면에 띄운다.",
+  "iteration": 3,
+  "status": "awaiting_user",
+  "createdAt": "2026-11-09T17:23:35.185475+09:00",
+  "approval": {
+    "userQuote": "참고해서 4안 새로 뽑아와줘",
+    "source": {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자두상확대-v003.md",
+      "sha256": "44eb11f6f33819df911e5f3eaae2b4f81ba27edf5772529d8bf348ed20f111d9"
+    },
+    "recordedBy": "main01",
+    "recordedAt": "2026-11-09T18:57:00.924404+09:00",
+    "iteration": 3,
+    "hashes": {
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\요청확인.md": "44eb11f6f33819df911e5f3eaae2b4f81ba27edf5772529d8bf348ed20f111d9",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\전문프롬프트.md": "aff1972adc5254369aed92b329b20305cd44de2aa85f7df826699003ff567b13",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\2_사전확인.md": "668c371ea0d37b1639b97ec6b2bb6cdbeb37e28cac3fdc45b566cb0237f799ce",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md": "dab9250dd0aef972f12d28ab2947b88926234c0f69dc6ecb5bbeac28234ac14e",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md": "38d9762b3212641b8a936f9477f5f0c2573b5e97c5c86048b9b6715a522e3d36",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\SD_공통제작기준.md": "25e4044a0ee11ce0ffb4a95ad3e9287f3617e6b272cbd0fb5f0dabd7e844e964",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터설정\\SD_공통제작기준.json": "b46e0f915f8f9d5de5663d715e76a8cb6fb079ca94e42fa3fe33134799d69afe",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_8views_v01\\제작기준.md": "ee8349be61209c5e07753e8d9efb421f6c7b5d33946f3c06f2c1ceeef2390c42",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\제작기준.md": "04a8f9e627ff0cb8fe7a2e42188ab826b280b172f9815c661c2ee81763a2305d",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\캐릭터제작규약.md": "e3d0b2e954ea092a2c05750a45f1b7e841eb473ed0414c582ed57368ad362799",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md": "412cf153ca5f906d132c0d2ed9813553e8ee95c97d5dcee23a63574374f53ae2",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자방향추가.md": "0c6ef7b6c3b5af10d245fef9717fbef30bf629354ae3b45d1ac66cc1f0a6fddb",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\검수.md": "327891441239f549b3d02920e37a037ca569744f337b047fda83ac582c81453a",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\report.md": "bd426dc091826331613a69e5369cf7780da14a1b12289c97a72d45f43dbea9e9",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자두상확대-v003.md": "44eb11f6f33819df911e5f3eaae2b4f81ba27edf5772529d8bf348ed20f111d9",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\두상확대-v003-사전확인.md": "668c371ea0d37b1639b97ec6b2bb6cdbeb37e28cac3fdc45b566cb0237f799ce",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\분석.md": "602f04a69cd66926b22ae4590ff8ccf9c78ac34f1510df433cc1ab6ea6f7f4df"
+    }
+  },
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-09T17:24:06.554915+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\실제발송영수증.json",
+        "sha256": "892093e0cf47cfd2a7028aaddee8376a06cab5b1d1608758043b7c3ab48efc4a"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-09T17:25:44.463457+09:00",
+      "iteration": 1,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\읽기확인-v001-8792716014fa4f71bbe8a76a9efbfcd8.json",
+        "sha256": "6280f1ebdce0d18f49b21858580d2e9231a4e38b8a27b91372da20c298a57568"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-09T17:46:28.716396+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\report.md",
+        "sha256": "bd426dc091826331613a69e5369cf7780da14a1b12289c97a72d45f43dbea9e9"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-09T17:55:57.662030+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자방향추가.md",
+        "sha256": "0c6ef7b6c3b5af10d245fef9717fbef30bf629354ae3b45d1ac66cc1f0a6fddb"
+      },
+      "userQuote": "추가로 3/4 우측면, 90도 우측면 보고있는것도추가해서 만들어주고"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-09T17:56:33.570835+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\방향추가실제영수증-v002.json",
+        "sha256": "60d0a4b9b48618dd01607c2efd6b29d73e404b673448936a1a4e06dfe45aac7b"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-09T17:58:04.726489+09:00",
+      "iteration": 2,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\읽기확인-v002-f9afc2925c25491bbf040463ce6a4931.json",
+        "sha256": "16bda2251518b03d8c0aa6cd2958609d3c641212af2bff142bbcda0d9dfd07b2"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-09T18:16:45.680638+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\directions_v02\\report.md",
+        "sha256": "e84dea923002836d3baf89a5dc5f4f68b42f69ebab74d182eb0dfb9abe7fbd42"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-09T18:57:00.880395+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자두상확대-v003.md",
+        "sha256": "44eb11f6f33819df911e5f3eaae2b4f81ba27edf5772529d8bf348ed20f111d9"
+      },
+      "userQuote": "참고해서 4안 새로 뽑아와줘"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-09T18:57:27.798394+09:00",
+      "iteration": 3,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\두상확대-v003-실제발송영수증.json",
+        "sha256": "1d38a578b5038c6dda362fc4eb992984bc749c956218cf1f2702c7e47ab511e5"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-09T18:59:21.653051+09:00",
+      "iteration": 3,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\읽기확인-v003-860c1b3369e945bea266e7486d430038.json",
+        "sha256": "e5036cf05e2a8a4d860f3595b9750114cbf8cea72ed6ad19b9f2c5d3d8fc9001"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-09T19:23:50.341387+09:00",
+      "iteration": 3,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\scalp_face_v03\\report.md",
+        "sha256": "bdc77f393878c4318098daef74fdb3013a88152154987b6f3f8f7d1f17c34fd5"
+      },
+      "userQuote": ""
+    }
+  ],
+  "readingPolicyVersion": "OPS-004",
+  "additionalReadings": [
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\SD_공통제작기준.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터설정\\SD_공통제작기준.json",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_8views_v01\\제작기준.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\제작기준.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\캐릭터제작규약.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자방향추가.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\검수.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\report.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자두상확대-v003.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\두상확대-v003-사전확인.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\분석.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\읽기확인-v003-860c1b3369e945bea266e7486d430038.json",
+    "sha256": "e5036cf05e2a8a4d860f3595b9750114cbf8cea72ed6ad19b9f2c5d3d8fc9001"
+  },
+  "updatedAt": "2026-11-09T19:23:50.349390+09:00"
+}

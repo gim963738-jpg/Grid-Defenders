@@ -1,0 +1,66 @@
+﻿{
+    "request":  "클릭하다가 빠져나갔나보다 제자리 배치",
+    "role":  "character_skills",
+    "scope":  "Orca worktree parent metadata",
+    "beforeParent":  null,
+    "expectedParent":  "characters",
+    "workSummary":  "조직.json과 index.json의 characters 하위 관계를 Orca CLI로 복구하고 다시 조회해 확인. 콘텐츠 제작/전문 위임 작업이 아니므로 작업대장 start 대상 없음.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터-스킬\\AGENTS.md",
+                          "sha256":  "d396ac07b4b12b49122b79826d8d839843f3e9768960e6822fc03caf65f34e42",
+                          "applies":  "기존 원본 보존. 이번 범위는 Orca 부모 배치만 복구."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\character_skills\\작업진행방법.md",
+                          "sha256":  "d8024752fd910a03c320bc2c64a3188c67d769f91639ca1c1a95eb99ed937111",
+                          "applies":  "역할 character_skills와 공유 원본 확인. 제작 작업은 해당 없음."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+                          "applies":  "이미 확인된 복구 요청 범위로 수행하고 기존 데이터 보존."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+                          "applies":  "신규 제작 지시나 위임 없이 직접 배치 복구."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+                          "applies":  "최신 조직의 characters 하위로 복구."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "게임과 콘텐츠 파일 편집 대상 없음."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\character_skills\\규정.md",
+                          "sha256":  "fba1d3eed0562750570ed7147006699c1fd79d997563fe4c6ec4fe5bb2db4580",
+                          "applies":  "스킬 기획과 구현은 변경하지 않음."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "하달된 제작 작업이 아닌 직접 운영 복구. 사전 읽기 기록 보존."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+                          "applies":  "character_skills.parent=characters가 복구 기준."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "자료 분류와 실제 조직 구분."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "도메인 원본 위치 유지."
+                      }
+                  ],
+    "at":  "2026-11-09T19:04:58.1927159+09:00"
+}

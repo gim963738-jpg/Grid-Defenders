@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-09T18:30:52.169652+09:00",
+  "policy": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+  "version": "1.1",
+  "sent": {
+    "main02": {
+      "run": "run_2939978c8e65",
+      "receipt": {
+        "ok": true,
+        "result": {
+          "messageId": "msg_97dfc37c63da"
+        }
+      },
+      "returncode": 0
+    },
+    "main03": {
+      "run": "run_b29b47372e51",
+      "receipt": {
+        "ok": true,
+        "result": {
+          "messageId": "msg_76ecc0862403"
+        }
+      },
+      "returncode": 0
+    }
+  },
+  "v1ReadAcknowledgements": {
+    "main02": {
+      "messageId": "msg_2b9b66e85982",
+      "readAndApplied": true
+    },
+    "main03": {
+      "messageId": "msg_a1a87eca99cd",
+      "readAndApplied": true
+    }
+  },
+  "crossChatButtonPersistenceTested": false,
+  "previousMessagesRetrofitted": false,
+  "visual": "report-buttons-fec1a86f.html"
+}

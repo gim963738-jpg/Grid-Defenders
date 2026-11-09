@@ -3,7 +3,8 @@ import {skillFramePlacement} from './skillVisual';
 import {heroFrame,assassinArt} from './heroArt';
 import {soldierFrame,positionSoldier} from './soldierArt';
 import {slimeFrame} from './slimeArt';
-import {blondFrame,blondPlacement} from './blondArt';
+import {blondFrame,blondPlacement,BLOND_WAVE_BODY_HEIGHT} from './blondArt';
+import {rangedPlacement} from './rangedArt';
 import {ASSASSIN,assassinFrame,assassinBasicTrail} from './assassinCombat';
 import type {UnitKind} from './defenseConfig';
 import {BLADE_SKILL,bladeFrame,bladePlacement,BLADE_ALPHA_MATRIX} from './bladeSkill';
@@ -132,7 +133,11 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
           if(sprite.parent!==visual.root)visual.root.addChildAt(sprite,1);
           if(u.kind==='blond'){
             const art=blondFrame(u.facing??0);
-            if(art){const v=blondPlacement(art,p.x,p.y+12,57);sprite.texture=art.texture;sprite.anchor.set(v.anchorX,v.anchorY);sprite.width=v.width;sprite.height=v.height;}
+            if(art){const v=blondPlacement(art,p.x,p.y+12,BLOND_WAVE_BODY_HEIGHT);sprite.texture=art.texture;sprite.anchor.set(v.anchorX,v.anchorY);sprite.width=v.width;sprite.height=v.height;}
+            continue;
+          }
+          if(u.kind==='ranged'){
+            const v=rangedPlacement(p.x,p.y+12);sprite.anchor.set(v.anchorX,v.anchorY);sprite.width=v.width;sprite.height=v.height;
             continue;
           }
           const action=game.assassinActions.find(a=>a.sourceId===u.id&&!a.cancelled&&(a.kind==='basic'||a.kind==='wave'&&assassinFrame(a)<=9));

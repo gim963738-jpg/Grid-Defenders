@@ -1,0 +1,178 @@
+{
+  "at": "2026-11-09T18:22:20.012366+09:00",
+  "status": "same_origin_links_verified",
+  "httpChecks": [
+    {
+      "url": "http://localhost:5173/dev-previews/index.html",
+      "status": 200,
+      "bytes": 915,
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "http://localhost:5173/dev-previews/blond/index.html",
+      "status": 200,
+      "bytes": 990,
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "http://localhost:5173/dev-previews/blond/comparison.png",
+      "status": 200,
+      "bytes": 1583151,
+      "contentType": "image/png"
+    },
+    {
+      "url": "http://localhost:5173/dev-previews/monsters/index.html",
+      "status": 200,
+      "bytes": 4153,
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "http://localhost:5173/dev-previews/monsters/comparison-light.png",
+      "status": 200,
+      "bytes": 928432,
+      "contentType": "image/png"
+    },
+    {
+      "url": "http://localhost:5173/battle-landscape.html?battle=normal&from=camp",
+      "status": 200,
+      "bytes": 18729,
+      "contentType": "text/html"
+    }
+  ],
+  "copiedFiles": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\comparison-light.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\comparison-light.png",
+      "sha256": "547d6a3c409031a32daee9a4f7da4c68293c344eb73c9798388d2f36e06b46c3"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\comparison-dark.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\comparison-dark.png",
+      "sha256": "9ee10014b722da14ec920228f09fc6abba4a19961064727d5c547c1013cdaba3"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\manifest.json",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\manifest.json",
+      "sha256": "b93f916ee4e73f71f239eef31dd2c1a33422329923bdef35c8bda13e449cf795"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\검수.md",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\검수.md",
+      "sha256": "a59166fe26e9afce027e6da3aa7f2899529b0bd6560f0ae31797dcd40806aec8"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\green-warrior\\front_000.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\green-warrior\\front_000.png",
+      "sha256": "6634efb3d7c52b6f5a8a6688ca7ab3b121dd782e99e7bf2a26b170f2099b3408"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\green-warrior\\left_270.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\green-warrior\\left_270.png",
+      "sha256": "fb720a064f027cefc298740788e3faac4787b62867a1f8a90b9bbe3a8eb7567e"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\green-warrior\\right_090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\green-warrior\\right_090.png",
+      "sha256": "28c563890852cc1bb1c83a09f32c32eb1e98988d69da47fa38fcc26e204c6dfa"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\blue-golem\\front_000.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\blue-golem\\front_000.png",
+      "sha256": "7df07108446495cc956389eb59347901984237962fde4cc586af1969191c3fb4"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\blue-golem\\left_270.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\blue-golem\\left_270.png",
+      "sha256": "65ae6ec587b3cbe311c55c8bedf14c40abf9aa82e57380d7df8a1372510b424d"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\blue-golem\\right_090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\blue-golem\\right_090.png",
+      "sha256": "078742601eb830797f529db5e0177dc6c24f19625591f6dd2422b8a31bba3210"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\undead-warrior\\front_000.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\undead-warrior\\front_000.png",
+      "sha256": "5e635d98082ad1bbeb0236a5e1adbd192eb0407f11d6c023267605cfcdc66d53"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\undead-warrior\\left_270.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\undead-warrior\\left_270.png",
+      "sha256": "609e974a148f3561cb04247de256be1737ad3a8a90c3488c82478e4738fc9ded"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\public\\dev-previews\\monsters\\undead-warrior\\right_090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\undead-warrior\\right_090.png",
+      "sha256": "da9ba574c509b8027c8b5657b5009120d4099d2c0ec905a143b214242be8b32f"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\comparison-light.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\comparison-light.png",
+      "sha256": "547d6a3c409031a32daee9a4f7da4c68293c344eb73c9798388d2f36e06b46c3"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\comparison-dark.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\comparison-dark.png",
+      "sha256": "9ee10014b722da14ec920228f09fc6abba4a19961064727d5c547c1013cdaba3"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\manifest.json",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\manifest.json",
+      "sha256": "b93f916ee4e73f71f239eef31dd2c1a33422329923bdef35c8bda13e449cf795"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\검수.md",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\검수.md",
+      "sha256": "a59166fe26e9afce027e6da3aa7f2899529b0bd6560f0ae31797dcd40806aec8"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\green-warrior\\front_000.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\green-warrior\\front_000.png",
+      "sha256": "6634efb3d7c52b6f5a8a6688ca7ab3b121dd782e99e7bf2a26b170f2099b3408"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\green-warrior\\left_270.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\green-warrior\\left_270.png",
+      "sha256": "fb720a064f027cefc298740788e3faac4787b62867a1f8a90b9bbe3a8eb7567e"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\green-warrior\\right_090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\green-warrior\\right_090.png",
+      "sha256": "28c563890852cc1bb1c83a09f32c32eb1e98988d69da47fa38fcc26e204c6dfa"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\blue-golem\\front_000.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\blue-golem\\front_000.png",
+      "sha256": "7df07108446495cc956389eb59347901984237962fde4cc586af1969191c3fb4"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\blue-golem\\left_270.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\blue-golem\\left_270.png",
+      "sha256": "65ae6ec587b3cbe311c55c8bedf14c40abf9aa82e57380d7df8a1372510b424d"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\blue-golem\\right_090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\blue-golem\\right_090.png",
+      "sha256": "078742601eb830797f529db5e0177dc6c24f19625591f6dd2422b8a31bba3210"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\undead-warrior\\front_000.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\undead-warrior\\front_000.png",
+      "sha256": "5e635d98082ad1bbeb0236a5e1adbd192eb0407f11d6c023267605cfcdc66d53"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\undead-warrior\\left_270.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\undead-warrior\\left_270.png",
+      "sha256": "609e974a148f3561cb04247de256be1737ad3a8a90c3488c82478e4738fc9ded"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\monsters\\undead-warrior\\right_090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\three_types_three_views_main01-20261109-7ae73f23\\undead-warrior\\right_090.png",
+      "sha256": "da9ba574c509b8027c8b5657b5009120d4099d2c0ec905a143b214242be8b32f"
+    }
+  ],
+  "monsterFilesByteVerified": 13,
+  "uiNavigated": false,
+  "runtimeCodeChanged": false,
+  "reason": "Avoid cross-workspace absolute local file links; serve review documents from the existing localhost:5173 game origin."
+}

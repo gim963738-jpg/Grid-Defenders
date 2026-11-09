@@ -1,0 +1,81 @@
+{
+  "id": "c592d54e-a945-4409-91c0-b8577a21ef92",
+  "ok": true,
+  "result": {
+    "worktree": {
+      "id": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-스프라이트",
+      "identity": {
+        "key": "wt2:local:221f06dd-4706-4f74-bd16-ce351658770d",
+        "executionHostId": "local",
+        "instanceId": "221f06dd-4706-4f74-bd16-ce351658770d"
+      },
+      "instanceId": "221f06dd-4706-4f74-bd16-ce351658770d",
+      "repoId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "projectId": "github:gim963738-jpg/grid-defenders",
+      "hostId": "local",
+      "projectHostSetupId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "creatorProvenance": {
+        "kind": "host"
+      },
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/몬스터-스프라이트",
+      "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+      "branch": "refs/heads/domain/monster-sprites",
+      "isBare": false,
+      "isMainWorktree": false,
+      "displayName": "몬스터 스프라이트 · 전문 작업",
+      "displayNameMode": "fixed",
+      "comment": "OPS-003 · specialist · 담당 monsters · 기존 작업/원본 보존",
+      "linkedIssue": null,
+      "linkedPR": null,
+      "linkedLinearIssue": null,
+      "linkedLinearIssueWorkspaceId": null,
+      "linkedLinearIssueOrganizationUrlKey": null,
+      "linkedGitLabMR": null,
+      "linkedGitLabIssue": null,
+      "linkedBitbucketPR": null,
+      "linkedAzureDevOpsPR": null,
+      "linkedGiteaPR": null,
+      "linkedWorkItem": null,
+      "linkedTaskSourceContext": null,
+      "isArchived": false,
+      "isUnread": false,
+      "isPinned": false,
+      "sortOrder": 1794128208182,
+      "lastActivityAt": 1794128208182,
+      "createdAt": 1794128208182,
+      "cliProvenance": {
+        "kind": "created-by-cli",
+        "createdAt": 1794128205159
+      },
+      "pendingFirstAgentMessageRename": false,
+      "firstAgentMessageRenameError": null,
+      "baseRef": "main",
+      "workspaceStatus": "in-progress",
+      "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+      "childWorktreeIds": [],
+      "lineage": {
+        "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-스프라이트",
+        "worktreeInstanceId": "221f06dd-4706-4f74-bd16-ce351658770d",
+        "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+        "parentWorktreeInstanceId": "0ae85254-7aa0-4ae2-80d6-e4e51a9b6dbd",
+        "origin": "manual",
+        "capture": {
+          "source": "manual-action",
+          "confidence": "explicit"
+        },
+        "createdAt": 1794209933925
+      },
+      "git": {
+        "path": "C:/Users/user/orca/workspaces/Grid Defenders/몬스터-스프라이트",
+        "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+        "branch": "refs/heads/domain/monster-sprites",
+        "isBare": false,
+        "isMainWorktree": false
+      },
+      "linkedItems": []
+    }
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

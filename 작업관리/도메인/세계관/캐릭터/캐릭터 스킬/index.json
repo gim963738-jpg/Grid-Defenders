@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "role": "character_skills",
+  "name": "캐릭터 스킬",
+  "parent": "characters",
+  "domainPath": [
+    "세계관",
+    "캐릭터",
+    "캐릭터 스킬"
+  ],
+  "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-스킬",
+  "workspace": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-스킬",
+  "gitBranch": "domain/character-skills",
+  "rules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\character_skills\\규정.md",
+  "sources": [
+    {
+      "label": "기존 영웅 스킬 기획",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\02_세부기획\\02_영웅\\임시영웅.md",
+      "authority": "planning_not_full_implementation",
+      "sha256AtIndex": "2579d58f6636e90065726b6e056989614c3a908bff885f9a5310d6cfd7c02a64"
+    },
+    {
+      "label": "현재 보스 전투 구현",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\bossBattle.ts",
+      "authority": "runtime_prototype",
+      "sha256AtIndex": "f011098410ab6a9a191b8e74c7600569069a095b76939ce0bdcc2be797a4ada9"
+    },
+    {
+      "label": "스킬 구현 규약",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+      "authority": "existing_effect_and_hit_rules",
+      "sha256AtIndex": "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3"
+    }
+  ],
+  "sourcePolicy": "Existing source locations remain authoritative until an approved task explicitly updates ownership; do not treat old files in a fresh checkout as latest.",
+  "sharedTool": false,
+  "newProductionStarted": false,
+  "indexedAt": "2026-11-08T18:06:00.719850+09:00"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "7fdfc5c4-9974-462c-a9ae-555ddc877a85",
+  "ok": true,
+  "result": {
+    "url": "file:///C:/Users/user/orca/workspaces/Grid%20Defenders/%EC%BA%90%EB%A6%AD%ED%84%B0%EB%94%94%EC%9E%90%EC%9D%B82/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/index.html",
+    "title": "금발 전사 · SD 리모델링 4안",
+    "effects": {
+      "settled": true,
+      "page": {
+        "lines": [
+          "- main",
+          "  - heading \"금발 전사 · SD 리모델링 4안\" [level=1, ref=e42]",
+          "  - paragraph",
+          "    - StaticText \"기존 원본 + 신규 4안 · 같은 본체 높이와 발선 · 클릭하면 원본 확대\"",
+          "  - button \"밝게 / 어둡게\" [ref=e43]",
+          "  - link \"비교 PNG\" [ref=e44]",
+          "  - link \"분석\" [ref=e45]",
+          "  - link \"검수\" [ref=e46]",
+          "  - article",
+          "    - sectionheader",
+          "      - StaticText \"기존\"",
+          "      - StaticText \"기존 SD 원본\"",
+          "    - button \"기존 SD 원본 원본 크게 보기\" [ref=e47]",
+          "      - image \"기존 SD 원본\"",
+          "  - article",
+          "    - sectionheader",
+          "      - StaticText \"1\"",
+          "      - StaticText \"원형 계승\"",
+          "    - button \"원형 계승 원본 크게 보기\" [ref=e48]",
+          "      - image \"원형 계승\"",
+          "  - article",
+          "    - sectionheader",
+          "      - StaticText \"2\"",
+          "      - StaticText \"민첩한 쌍수 전사\"",
+          "    - button \"민첩한 쌍수 전사 원본 크게 보기\" [ref=e49]",
+          "      - image \"민첩한 쌍수 전사\"",
+          "  - article",
+          "    - sectionheader",
+          "      - StaticText \"3\"",
+          "      - StaticText \"단단한 전위 전사\"",
+          "    - button \"단단한 전위 전사 원본 크게 보기\" [ref=e50]",
+          "      - image \"단단한 전위 전사\"",
+          "  - article",
+          "    - sectionheader",
+          "      - StaticText \"4\"",
+          "      - StaticText \"개성 강조 모험 전사\"",
+          "    - button \"개성 강조 모험 전사 원본 크게 보기\" [ref=e51]",
+          "      - image \"개성 강조 모험 전사\"",
+          "  - paragraph",
+          "    - StaticText \"등비 배율은 비교 화면에만 적용했습니다. 개별 PNG는 생성 원본 바이트를 보존합니다. 장비 외곽과 머리끝~발바닥 본체 높이는 구분합니다. 사용자 선택·합격 대기.\""
+        ],
+        "removedLines": 0,
+        "full": true,
+        "truncated": false
+      }
+    }
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

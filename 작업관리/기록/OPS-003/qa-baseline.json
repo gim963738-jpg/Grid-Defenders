@@ -1,0 +1,720 @@
+{
+  "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임",
+  "destination": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\게임",
+  "at": "2026-11-09T16:38:44.410547+09:00",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "ea51f78e69c37ba5b07274b23829325147e58ae7f0b4ddb332200f761dd6ffb1"
+    },
+    {
+      "path": "battle-landscape-preview.html",
+      "sha256": "069a85cb122168b3e60779aad118f319ddfa46a7f5b6239125b5d347806426b0"
+    },
+    {
+      "path": "battle-landscape.html",
+      "sha256": "ace5d46be33e4caa7ecdd9b10f4bd4d301f735239d03ee8da6414acbbcf68369"
+    },
+    {
+      "path": "index.html",
+      "sha256": "73f095d03f4725b266b50427d199c264662b82ce951cdd483b5734cd980a6a1b"
+    },
+    {
+      "path": "lobby-preview.html",
+      "sha256": "f0b1e8df68eb5af8d656874e15ed339a5ce28978e8ebd714a543ecae5b480f4d"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "a27ae27e9e8721e313633fcf8a38f5a3818d5a0f2aff7dd7e33503ac670a7698"
+    },
+    {
+      "path": "package.json",
+      "sha256": "68d0d0cc36e4ce498d7e95944be0685ee5d4613be24cf2661602e7c97fe572db"
+    },
+    {
+      "path": "README.md",
+      "sha256": "fc083f690cc3b3451b8e2b7ac671ed94d2e3c0850cfb27529da996cdb3901cae"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "7ef1778519d62a68eb1ec09effb9d410831ba6bd49e6a330a1fb562870fec90a"
+    },
+    {
+      "path": "tsconfig.tests.json",
+      "sha256": "7324a0e1cd0368dc8222d32ce82431041c754098324214f7dc902627974baa63"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "b3510f1259a3009d2e052482fa2db6b23594d8a84d814414703a5da3562b556e"
+    },
+    {
+      "path": "public/assets/battlefields/forest-clearing-v1.png",
+      "sha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823"
+    },
+    {
+      "path": "public/assets/effects/assassin-sheet.png",
+      "sha256": "68fc6888708dd6d8cc0ff75063ace10a4692f600574b64702707d85e8a53f0e0"
+    },
+    {
+      "path": "public/assets/effects/blade-skill-sheet.png",
+      "sha256": "2ed253f1dce75e08e04b9fb22157399e8ee5932fd726b378157f2476fa4a5e83"
+    },
+    {
+      "path": "public/assets/effects/fire-skill-sheet.png",
+      "sha256": "a9e8a83bccbc029b9c2e2388c660929c67d2f77cebff574b8fb355ae99a25b0b"
+    },
+    {
+      "path": "public/assets/effects/sword-basic-sheet.png",
+      "sha256": "f18b2250639dfca07be252663864945491b363e65351efa641cd15f3f6c0a6c1"
+    },
+    {
+      "path": "public/assets/heroes/hero-roster-sheet.png",
+      "sha256": "cf16a2f4da17f0df10e9f7e2212f746f6ff3385a360d822c713252da563ab04a"
+    },
+    {
+      "path": "public/assets/heroes/melee-idle.png",
+      "sha256": "2eb96b95ea1c78ed1b368941e477659838e96cfa4f24b6b0aaf121ecee77633f"
+    },
+    {
+      "path": "public/assets/heroes/melee-motion-sheet.png",
+      "sha256": "e7f963a96044009c62a0fb04ec3a310c2c917ea5e400948ea4d8b66be16dc688"
+    },
+    {
+      "path": "public/assets/heroes/melee-reference.png",
+      "sha256": "9910870a36b7e3e99921329e36b79b7f3533a96305b77c34a1acc8133702961f"
+    },
+    {
+      "path": "public/assets/heroes/ranged-idle.png",
+      "sha256": "e868661679b4e069face6a2ed9ef72e27f88d1e4795ba9ede3c7630d0ff13793"
+    },
+    {
+      "path": "public/assets/heroes/ranged-reference.png",
+      "sha256": "29b520cbfa90df63ee9f1a9b7598999c79b7cbda818b7b79b9535345ba58583a"
+    },
+    {
+      "path": "public/assets/heroes/blond-warrior-v1/frames.json",
+      "sha256": "65fa20a21df2aba4ce49b86d0c0e41fe34357bfb9f6f36ac7f45c26b0f3e26ca"
+    },
+    {
+      "path": "public/assets/heroes/blond-warrior-v1/idle-8.png",
+      "sha256": "c28fcdc901423602d5cf8f14e1ccc9f0dfc3361a7e007f550204695525282f1c"
+    },
+    {
+      "path": "public/assets/heroes/blond-warrior-v1/portrait.png",
+      "sha256": "7ba2c885ab04ec8a611b92ab83c6ef8ddb456b731406479989c1eb6c8bcb28e1"
+    },
+    {
+      "path": "public/assets/heroes/blond-warrior-v1/skill-preview.png",
+      "sha256": "3e4719aec6c7b62694e236fda920c87d0a610898b8987f4007aaa6dbbe14e095"
+    },
+    {
+      "path": "public/assets/heroes/blond-warrior-v1/sources.json",
+      "sha256": "984511f1f4685c5ebb9c5987beafe95a7cd9f11f67d04409ddff838298436440"
+    },
+    {
+      "path": "public/assets/heroes/blond-warrior-v1/walk-right-60.png",
+      "sha256": "05d1d16c37eee5e86ead39b2fbef55d3702fde838ff97d3eb62017ab301e64e3"
+    },
+    {
+      "path": "public/assets/items/gale-sword.png",
+      "sha256": "90a1dfe5559daf779d6c9528189f703b20afaecd22c9c48c1d1c8f72211670f0"
+    },
+    {
+      "path": "public/assets/items/tier1-equipment-atlas.png",
+      "sha256": "bdd6eb1971ee4c1d844488d336cdcabed26e5a38d9ef3dd337778ba9df1a2599"
+    },
+    {
+      "path": "public/assets/lobby/camp-concept.png",
+      "sha256": "7fc9b23e9d467e715199f38387b4f3bb7a2eff4ad2c5a6f2879fb8ba46e3f560"
+    },
+    {
+      "path": "public/assets/lobby/camp-scene-clean.png",
+      "sha256": "5350a50b8e064ac160f6ec5686eb1c3eb2a096e49354b0646fa0a4905c73ff6d"
+    },
+    {
+      "path": "public/assets/lobby/hero-concept.png",
+      "sha256": "c99ea54f84f01399f13bc69e9fe62452930d2adad496202405d557f60cc60f8a"
+    },
+    {
+      "path": "public/assets/lobby/mission-gilt-frame.svg",
+      "sha256": "44e3d43e426c4d8121234fb940fb566df805e58c8be29c961188b4e4a568ab0b"
+    },
+    {
+      "path": "public/assets/lobby/mission-parchment.png",
+      "sha256": "efb9adf7697d044e6a4e0ceca158af853bcfeec53d699fcc4bead50ea642b9c1"
+    },
+    {
+      "path": "public/assets/lobby/snow-crystal.svg",
+      "sha256": "b33fe9df7b374e19423889e5fb20fbd60c280ec2e5252b424c1d885b073f0bfd"
+    },
+    {
+      "path": "public/assets/lobby/growth-scrolls/scroll-high.png",
+      "sha256": "817d8c62ba0876653a57494cdb5b28612e4b0eddccbdad06dc2e8bd9755e6a77"
+    },
+    {
+      "path": "public/assets/lobby/growth-scrolls/scroll-low.png",
+      "sha256": "34552d3870a17b31ec8372261b1763b5af9a3b077b77fd1257ff7e768c114bdb"
+    },
+    {
+      "path": "public/assets/lobby/growth-scrolls/scroll-mid.png",
+      "sha256": "2e60a8026c0532b56505841a597fe9b1a57b2b9f5a60292c2f6a7cff91f36b5f"
+    },
+    {
+      "path": "public/assets/monsters/slimes-v1/idle-blue.png",
+      "sha256": "4a900001f4b9685cbe925ed0d347834741544c4a2d1e82aebb6edb6960ae5cf3"
+    },
+    {
+      "path": "public/assets/monsters/slimes-v1/idle-red.png",
+      "sha256": "90e834e03a6b308b17dd9752be1de040e2b97556e819348b7de3a9d8736229f5"
+    },
+    {
+      "path": "public/assets/monsters/slimes-v1/idle-yellow.png",
+      "sha256": "a64f57990221d24c86003a9b7ce6f2317646b3da3d22f6d382180fcd5fd27c20"
+    },
+    {
+      "path": "public/assets/monsters/slimes-v1/sources.json",
+      "sha256": "d2b48f40c22d793dc3ea8f657dc1df7e2339216f00e6963f07b5e8f8e4aedcd5"
+    },
+    {
+      "path": "public/assets/monsters/slimes-v1/yellow-right-ripple.frames.json",
+      "sha256": "387870f7f184e1f52e65ce2df63cd2e471b606a26781c1e314e4d6c051421608"
+    },
+    {
+      "path": "public/assets/monsters/slimes-v1/yellow-right-ripple.png",
+      "sha256": "57f1e826c2966b745f138ff4b5c05849e26a42849351fa13872208fc818e1388"
+    },
+    {
+      "path": "public/assets/shop/merchant-cutout.png",
+      "sha256": "62f3b3c709cefb3f93b4869e1e36a1c27b41bd78a5afdf605097f788a2dc0d47"
+    },
+    {
+      "path": "public/assets/shop/merchant-silver-cutout.png",
+      "sha256": "49a7ac00e515b9225a50a603a5e12f62df4a560597f5cf73e2e48124a0987f38"
+    },
+    {
+      "path": "public/assets/soldiers/archer-idle-v1.png",
+      "sha256": "015db9ac4f2e4a29e3870fbe8e0e637d9ed614d7394125f5a67b188dfc2a6806"
+    },
+    {
+      "path": "public/assets/soldiers/guard-idle-v1.png",
+      "sha256": "578d198e897f04e8fefb7cb93021ddbb82a97a387b7fb8c7247e408fa355c864"
+    },
+    {
+      "path": "scripts/check-tests.mjs",
+      "sha256": "bc1ee7c1d53c81713426be92ff5846a35d0f9830e1bb00a90b4112377ba0c232"
+    },
+    {
+      "path": "scripts/pack-blond-art.ps1",
+      "sha256": "ace03f558c1f8be0bee30e2474415d612292b6c36f5b31f6268353989324434c"
+    },
+    {
+      "path": "scripts/pack-slime-art.ps1",
+      "sha256": "2dbe2da4235185e36b4ad2a1e96bc5951598de30f314586f7e71ae67e351d73a"
+    },
+    {
+      "path": "src/armorBreak.ts",
+      "sha256": "fc5d20ccb9b8626058455f998974b074c58789297c6127611c19f1baa73725b9"
+    },
+    {
+      "path": "src/assassinCombat.ts",
+      "sha256": "3a105d59e693c347acc907394f1871ad5937aa55bb2516c7a6da199289236528"
+    },
+    {
+      "path": "src/assassinVisual.ts",
+      "sha256": "ba89ca661e80cfaf371b36ace54f9c9f10f379d3b25011d6d69335a0c67d6734"
+    },
+    {
+      "path": "src/barracks-preview.css",
+      "sha256": "102eec114816a305fad77fcaa3e4fef69214c1ac558dc631f82ae3e35c060a85"
+    },
+    {
+      "path": "src/barracks-preview.ts",
+      "sha256": "31eb2a86e551e08d503e4924dd8deb485bce6a454692d409f6dcfc36fbc38336"
+    },
+    {
+      "path": "src/battle-continuation.css",
+      "sha256": "355eecaaa0e65bad60ff260e808cfccccc68a5424fee149c17dea0c5d58797c1"
+    },
+    {
+      "path": "src/battle-landscape-preview.css",
+      "sha256": "84964b284f8484c0bc916a269848f8381af996f3379f88c09c8666ff2404cfe4"
+    },
+    {
+      "path": "src/battle-landscape-preview.ts",
+      "sha256": "d86af41c797e14ca0e3648f0e8b950aa2f97f27d52007796a42703eabf988807"
+    },
+    {
+      "path": "src/battle-preview-entry.ts",
+      "sha256": "1ef1feb80b85353521fa4e22e4be9f96fd350d4ce837d2a2f1c0d40618924e84"
+    },
+    {
+      "path": "src/battleContinuation.ts",
+      "sha256": "837d170587256866d489460ba172fb9b732e3568a42445b5d20068deb84c4f31"
+    },
+    {
+      "path": "src/battleFormation.ts",
+      "sha256": "803ac4f1033d5540c100bc79356ef8b9d05c000c3ca9be5c75b58249a823b6ac"
+    },
+    {
+      "path": "src/battleSave.ts",
+      "sha256": "a70c688f51d8f519cac28c3e32dac766263a369aa9f34027bc42270ff057e01a"
+    },
+    {
+      "path": "src/bladeSkill.ts",
+      "sha256": "8a35d62c17d213ca4d3558546b86833e8619e28ed12718954356c109949d0b70"
+    },
+    {
+      "path": "src/blondArt.ts",
+      "sha256": "b78a9058661f3c040203aca1d194269f41a1894e804041bbff7ba27a997a699b"
+    },
+    {
+      "path": "src/blondMotion.ts",
+      "sha256": "a0d03080dd0c4718ad8a5a6cd73a369cef7a6901fe5a9a706b92ef265db91efe"
+    },
+    {
+      "path": "src/bossBattle.ts",
+      "sha256": "f011098410ab6a9a191b8e74c7600569069a095b76939ce0bdcc2be797a4ada9"
+    },
+    {
+      "path": "src/bossBattleView.ts",
+      "sha256": "f6f7125be135e64d06f83581f7c63911989ed443c058483493d2bb9788512903"
+    },
+    {
+      "path": "src/bossDamageHistory.ts",
+      "sha256": "946a0f1efc71a79c267199157a60c22dfb3e56b7f1f8d6eefc69837e62b52049"
+    },
+    {
+      "path": "src/bossField.ts",
+      "sha256": "96d7d5ec7fcce96390cc276103f8b725d6f6d3f0b07643ae0d55f472af124264"
+    },
+    {
+      "path": "src/bossSkillIcons.ts",
+      "sha256": "959dbe9bae7c42c0c9fb3ea321ed14f18263252bd3a5215db86a0167e86b9479"
+    },
+    {
+      "path": "src/bossTestBalance.ts",
+      "sha256": "fb0b5df0cd4182dd35bbb964ec84895e274ba4cc3d5eae04f5acad2609cd4569"
+    },
+    {
+      "path": "src/campProgress.ts",
+      "sha256": "fc0f1175eff5a421673e49b7a5f1c6af79d13cdaae4e019e057ea5ad3a7e477a"
+    },
+    {
+      "path": "src/catalog-panel.css",
+      "sha256": "f4b943f0cbe714999eea49b58cf0b3a11f82d415d6f749d5b2de9f02c1382297"
+    },
+    {
+      "path": "src/catalog-panel.ts",
+      "sha256": "6e16deba6bb494c365f42b50f4f6bd01a7a5bbf19b13c7bfbddabc4af8dfc40c"
+    },
+    {
+      "path": "src/combatPlayback.ts",
+      "sha256": "32f63ff5e827b5aefdee9150d2f84d205a01089c72f2aaed107b211345486ffa"
+    },
+    {
+      "path": "src/critical.ts",
+      "sha256": "8bfefc4994cfc88e059e22d8b3ef025dec3ab921fe42e65104b7a664caf886a8"
+    },
+    {
+      "path": "src/damageMeter.ts",
+      "sha256": "90d24685d5025f1a350653baba2423bdebb2e7979c5d4fd389ccfee2b5a41829"
+    },
+    {
+      "path": "src/defense.ts",
+      "sha256": "5fce5c07de0f628091c040ed41ffea13eb7f329b06609bf2ab84ee1de5c91192"
+    },
+    {
+      "path": "src/defenseConfig.ts",
+      "sha256": "9029f5e5f81b0f49dc6414c9082fbc7c5b6e3d094d1769bec76c24f316b0a2bb"
+    },
+    {
+      "path": "src/defenseFieldLayout.ts",
+      "sha256": "235be5f24022dc0d94aa5461c187a0090cb61d9a350a2e5b08b7a85b0c81d840"
+    },
+    {
+      "path": "src/defenseView.ts",
+      "sha256": "64bb40656de19d068cf5eec4dde143ac9356184d48298e65f864b0933880fc59"
+    },
+    {
+      "path": "src/devRangeDummy.css",
+      "sha256": "8b7981c0a9677236f9f8fd4a265f780c559ddeae98baf90376b24e8b58aedf36"
+    },
+    {
+      "path": "src/devRangeDummy.ts",
+      "sha256": "b6dac177a04a9a072fa18182234f8875416da0c6bfca89055ff10bdd616f4d3e"
+    },
+    {
+      "path": "src/fireSkill.ts",
+      "sha256": "2d0bd2776f30cf4bcfdfdf51b2b8c670735a2fa4a00e0b1f51dc48150992cbf6"
+    },
+    {
+      "path": "src/formation-panel.css",
+      "sha256": "09c11047ccb09da7e176d6d01a00089f7fc694b8adc7a20fb5b80d73ddee7ea7"
+    },
+    {
+      "path": "src/formation-panel.ts",
+      "sha256": "dee72f534e73f24817571277d701d391fb8b533412e422524446489d33578ca8"
+    },
+    {
+      "path": "src/game-entry.ts",
+      "sha256": "373ede150bed942ca9e1579cb64040b3d4f90302cd55141c7c746ccb69e491ae"
+    },
+    {
+      "path": "src/gameRun.ts",
+      "sha256": "f526390eb274ec957dc29458b71d1d0489fbe58364b6c0438c575924d57fa6d7"
+    },
+    {
+      "path": "src/hero-detail-panels.css",
+      "sha256": "1d4d7a44edd7bb5440743f1451cff24686b72691d0b0fd9eed29c6b9dd8a4860"
+    },
+    {
+      "path": "src/hero-detail-panels.ts",
+      "sha256": "60fd73d76bffe0294462b33a1bd528d0a330f437b3ac1215745d4320892532a8"
+    },
+    {
+      "path": "src/hero-growth-panel.css",
+      "sha256": "4ea6bf6f2cd83a31426db7ef98f588ad54c20a76e455052c3e16c353fe670b02"
+    },
+    {
+      "path": "src/hero-growth-panel.ts",
+      "sha256": "963328a3394e7b48097320f5436e175477c5dcff73ecf418bd6d4cbe20153281"
+    },
+    {
+      "path": "src/hero-preview.css",
+      "sha256": "d04fbc94ac99c8e31c9858a125b824add8a7e66af55b7cef1b6cc323ca71208b"
+    },
+    {
+      "path": "src/hero-preview.ts",
+      "sha256": "1d4b091c70a0c2eea32bdabef546a4310a815b0d1df832642725606f6813c4e8"
+    },
+    {
+      "path": "src/hero-stat-sample.ts",
+      "sha256": "de2be862e11cd30533aad97864746d5106eb568ddffc14dfe372b2996fbae558"
+    },
+    {
+      "path": "src/heroArt.ts",
+      "sha256": "91e397232b2f194ace3cd4f92bab107981de84f6bdc209f87860e3736cd009aa"
+    },
+    {
+      "path": "src/iceEffects.ts",
+      "sha256": "74d5e97fe1128426a6066ec06c98f5b353a3ccd8fad7cc4dac060851d80c06ef"
+    },
+    {
+      "path": "src/itemArt.ts",
+      "sha256": "86347291f5f02daf01b8bce2b389a50697878e1ff0bb02bf504e547a784f6dfe"
+    },
+    {
+      "path": "src/landscape-entry.ts",
+      "sha256": "62f313ca1a473200c991716adc08b3de5bb1fd3e23e16efa1a3fe0c440da03a2"
+    },
+    {
+      "path": "src/landscape-game.css",
+      "sha256": "29460f8af0584dbc03043a6c9e39fa07426265ee14d9a1d706dfc34f36bc29ac"
+    },
+    {
+      "path": "src/landscape-inventory.ts",
+      "sha256": "939221d911fd125daaa3d70dd56d9486995877dbe8444f03ea1ed4e5480a75b9"
+    },
+    {
+      "path": "src/landscapeField.ts",
+      "sha256": "92f80322fabd1af6f6ce321ca310e9c39f9cdb44f4cb0bc66b2553e991f8b05f"
+    },
+    {
+      "path": "src/lobby-preview.css",
+      "sha256": "c982c5187d697e6da622800f11de164387078394464507ab59893ced627451b2"
+    },
+    {
+      "path": "src/lobby-preview.ts",
+      "sha256": "5b0de5662a60a42b4aad6dfb31c8441d3c3dfe2a81ed130f1c6746a54fcd5aea"
+    },
+    {
+      "path": "src/mail-panel.css",
+      "sha256": "0d0db729fd2fe23c3fa6b186b2a36032de1bc8a8b5019ec76b058ad4abce26dd"
+    },
+    {
+      "path": "src/mail-panel.ts",
+      "sha256": "d8cafec8aa0fe7c8746464b07db03365c41e4c8e53772f8a48b3bde9e4f21762"
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "14c3ad4b816f1c927ce34968954ef15cb00dcdb68b8d370601a77fffc1b984b8"
+    },
+    {
+      "path": "src/mission-panel.css",
+      "sha256": "75b33af63243349d08ad3b766d3f152d778227354c458efc93f7956eb1cc4da4"
+    },
+    {
+      "path": "src/mission-panel.ts",
+      "sha256": "f4a9ca7351e4ca977287c28294b2262af93088d62da88102280582e30a3ac18d"
+    },
+    {
+      "path": "src/mobile-ui.css",
+      "sha256": "efc870079f7dc36e0baa9f4fb305059b183c3ea3db705e68311ec8dca705cf73"
+    },
+    {
+      "path": "src/navigation-icons.ts",
+      "sha256": "69e51e08b0e46fb44a674c17350a4a3fe085a00f4675ab53646b67ebd1a44ceb"
+    },
+    {
+      "path": "src/preview-deployment.ts",
+      "sha256": "452330789317613d99f6a840e7b5ef8ddb908349825c0c7791d4b6ff670c01d5"
+    },
+    {
+      "path": "src/rangedArt.ts",
+      "sha256": "aa152828a5e58682c482836454b5a2c94ee357cba32001961e9aca5a4f74709d"
+    },
+    {
+      "path": "src/renderQuality.ts",
+      "sha256": "1be3996cd6df95516e432947f29fc27d5c84078b6194e2655ef0c1985ff0d40b"
+    },
+    {
+      "path": "src/sceneTransition.ts",
+      "sha256": "b1567f42e5624b2ef8ef533faaffbac41753d41ad2a5934edfc6fd5e872a2f5b"
+    },
+    {
+      "path": "src/screen-bottom-guide.css",
+      "sha256": "ede689e5ad1f30e50e8ee61da59cf228cbb65ea08f2c8cc88153983133d3b31e"
+    },
+    {
+      "path": "src/screen-bottom-guide.ts",
+      "sha256": "7e0eef819c83ece4cdac51ca895bead774e4c16c826f4c65c45fc54164e8e710"
+    },
+    {
+      "path": "src/skillVisual.ts",
+      "sha256": "b6163fc1c5e8b28101a9acd0729e183001d9daa20d2458e2a7583d01e55ef33d"
+    },
+    {
+      "path": "src/slimeArt.ts",
+      "sha256": "a813959d1e66a4920e00d63e64668a00a51a714a042dfebdee06fc8f6d3757e2"
+    },
+    {
+      "path": "src/soldierArt.ts",
+      "sha256": "b054be9f9b182410d11c22841fa7c08f1eaba8e41851249e87f3615effa14332"
+    },
+    {
+      "path": "src/specialty-screen.css",
+      "sha256": "1b454726ea66b3242dbcd850bf4082ef20dbe09e52b82aac85db6215f670cd0e"
+    },
+    {
+      "path": "src/specialty-screen.ts",
+      "sha256": "3201785a0616f58bc8036494703e96d743e47e4095d7eb14213f1f37626b9f80"
+    },
+    {
+      "path": "src/specialty-tree.ts",
+      "sha256": "de0d96d5bdc63ef93b92eb5a78ecddfc0ca734d97e2efefd412e986b016b3a42"
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "0914e69d588910338df04edc2b3b4d6cfbf27d2b6915d3a419018516ca74a2b3"
+    },
+    {
+      "path": "src/swordAttack.ts",
+      "sha256": "1ce30cf0e022be94606f5b303ebb7135efcca29c85f0765a41f0c928e5a30c09"
+    },
+    {
+      "path": "src/training-screen.css",
+      "sha256": "071192c62332264aaf5e7f94abbf907c0f73af355c8109714418e05f1bd70c38"
+    },
+    {
+      "path": "src/training-screen.ts",
+      "sha256": "efcde4110ea65fd4630b1d74426e0aa0bca459fc364b2c19993610d96601bcd3"
+    },
+    {
+      "path": "src/training.ts",
+      "sha256": "21d376445d70d3e4f6ed428d2944492d2790d140290dc73eb298d57306db8ff9"
+    },
+    {
+      "path": "src/waveWarning.ts",
+      "sha256": "697b42103b1de8d3b741c8dd37640698085f760fdab4cfa565772bef296affe8"
+    },
+    {
+      "path": "tests/actor-depth.check.ts",
+      "sha256": "0e95663410c8d6c3d9fd200fb396bc128756137ba1c3ad58c5695acf437607f0"
+    },
+    {
+      "path": "tests/assassin-combat.check.ts",
+      "sha256": "8593c1431eba05a6d4593d68c66399c5d9e422e279cdd91b407e8e180e58512e"
+    },
+    {
+      "path": "tests/assassin-visual.check.ts",
+      "sha256": "631552ea7e23d100b1747fefa67609daa1a9ad676521f98adeb6652390bdc6c1"
+    },
+    {
+      "path": "tests/battle-continuation.check.ts",
+      "sha256": "e37e9a6a6830e2353704a65b5f2397370c5f298190e780c37c7db3a1300e1fdc"
+    },
+    {
+      "path": "tests/battle-formation.check.ts",
+      "sha256": "bcf5a650cec92526fbd4d70b2c5ce628ba9196928ee49888ed1fb2f97c3f5df6"
+    },
+    {
+      "path": "tests/battle-save.check.ts",
+      "sha256": "1295419c0a8cc06f91616c8885e7df6cc85f8c55b13ab4eabe3977eb7c89342b"
+    },
+    {
+      "path": "tests/blade-skill.check.ts",
+      "sha256": "910c1f8b6bc90b6b8e301a7c8bd3ca0c47a5db7ff33e927cb1e2c6f77a967cc9"
+    },
+    {
+      "path": "tests/blade-visual.check.ts",
+      "sha256": "927363a5ac871eb9dd563351b7a3900fe55818a59324a2098f0c53ff921d869d"
+    },
+    {
+      "path": "tests/blond-warrior.check.ts",
+      "sha256": "ce502bfc495752976e4bcd9296a2af1d92f815527fe0ee440f03ce61366259ca"
+    },
+    {
+      "path": "tests/boss-battle.check.ts",
+      "sha256": "f1fc5847ca2bf6081f3b866dd55bd53b923575904bdf6873062993e9df80552b"
+    },
+    {
+      "path": "tests/boss-dps-history.check.ts",
+      "sha256": "6777487a5eab8de0ebba42f1936801d88f891f31d8ddffccf66e9b5ed99d22b2"
+    },
+    {
+      "path": "tests/boss-fixture.ts",
+      "sha256": "6d5af449cc4310cca87b448bd807d17618e1fa4b338c49343c4fe87439e4e96c"
+    },
+    {
+      "path": "tests/boss-formation.check.ts",
+      "sha256": "359fbe0eaf53ec619fd185fb8fc5033a51694d776fa33139325ad66d7f9c3d6d"
+    },
+    {
+      "path": "tests/boss-hero-cards.check.ts",
+      "sha256": "3f8ef2dfa5918c513085f462519955e06dc9af3e7f6f5366ba53521e23cc2dcf"
+    },
+    {
+      "path": "tests/boss-roster-ice.check.ts",
+      "sha256": "0cc17eb55425b39d17ad598d858beda81860fae3c832a2f2ebdc97e48c0d9d54"
+    },
+    {
+      "path": "tests/boss-skills.check.ts",
+      "sha256": "4319f7ede6a5d4b77ebfb8ad9e578c9bc67dbbc78be9d42c325016c388c6ffd3"
+    },
+    {
+      "path": "tests/boss-test-balance.check.ts",
+      "sha256": "8df1663ad6e9e4bb20bf2210c618607954328ce2f9b979d7b79166f15dc7d6dc"
+    },
+    {
+      "path": "tests/boss-wave-auto.check.ts",
+      "sha256": "dc94ebf998c573f829424508707aaf41e92131b0e8015ac199a5799aff253fe4"
+    },
+    {
+      "path": "tests/browser-check.html",
+      "sha256": "cd05846142a17085a2f6eb1f5d9178db684395a1d45041b494399576f208ed89"
+    },
+    {
+      "path": "tests/camp-progress.check.ts",
+      "sha256": "c207440be6c7572c1827f5763bfbbd5905c30f9d23315d2ef8fbe91fccf4828e"
+    },
+    {
+      "path": "tests/combat-playback.check.ts",
+      "sha256": "2e66fb7c4db4ddd967c4ab66f6408259221b8cae70911f5aa3c83e16bfc1dae2"
+    },
+    {
+      "path": "tests/damage-meter.check.ts",
+      "sha256": "1612eb60c1830129d7834953734c3d932f4bb6603028018dc21e6f2e01aa5c63"
+    },
+    {
+      "path": "tests/damage-visibility.check.ts",
+      "sha256": "e052b662770a99e3bc7ce53c30d2f0654f18105df4028f2a932788d0904568bf"
+    },
+    {
+      "path": "tests/defense-field-layout.check.ts",
+      "sha256": "a8393ffa5b77d7382306a384628301e13d2468ee3c31e0fd9c6584501a66b281"
+    },
+    {
+      "path": "tests/dev-gear.check.ts",
+      "sha256": "717f258a5cba23a71e92035cc97fdd3b7ec16c42ecd6b6fb56f22ed3439387b8"
+    },
+    {
+      "path": "tests/dev-placement.check.ts",
+      "sha256": "ab98e281af52ef3f3bf9db245e06a8e4ad382001d8dda155e7cd5aa236814e8d"
+    },
+    {
+      "path": "tests/dps-window.check.ts",
+      "sha256": "ba964444323f33a2ef9eabc88887738a5c475e6c0f23d484f7a482c513368b4a"
+    },
+    {
+      "path": "tests/fire-ground.check.ts",
+      "sha256": "557bb4fe3a558b34f857636a47fefb23d4e28dbcb1e08a81ab8b4cd9fb5da1ea"
+    },
+    {
+      "path": "tests/fire-skill.check.ts",
+      "sha256": "72b15f2d1c2d76c67872dc28c24ff9e905ef359b9ad0fc8ba343d75eeac00172"
+    },
+    {
+      "path": "tests/fire-visual.check.ts",
+      "sha256": "95ad2526355d5a1b11ec507a71a6204773281b45a4332a2e636aa6228777bf41"
+    },
+    {
+      "path": "tests/gale-art.check.ts",
+      "sha256": "553a3eaaedaa136b24bac234d4a2aff4896e827dd5f5ce4c92dab90517f15042"
+    },
+    {
+      "path": "tests/game-run.check.ts",
+      "sha256": "ea38a57c74b8befbbbdc9a24cd7be01b7531e52709a37b08005d89214a53a60e"
+    },
+    {
+      "path": "tests/hero-art.check.ts",
+      "sha256": "61062b64d6565245f55536f1b96b95dd89a180f70b9e29a13c5f8d28f5aa105c"
+    },
+    {
+      "path": "tests/hero-critical.check.ts",
+      "sha256": "2775d081caa71aab6284b5d8eb6d7e1635b18b198579a4979674257a5c7d56d7"
+    },
+    {
+      "path": "tests/ice-attack.check.ts",
+      "sha256": "d268543b96523dc48a12d76996b1a5a6fcefd47f34949ecc41e23bfe6396803d"
+    },
+    {
+      "path": "tests/landscape-field.check.ts",
+      "sha256": "97d8b6acd85938c792b4df3863f1f5e3bca621513643159779b29edf24acfeb5"
+    },
+    {
+      "path": "tests/landscape-inventory.check.ts",
+      "sha256": "28b5c0edaca5a41c495501001d0ab5e2c30ae274fb63e7f1a9fbff5fe5c28b54"
+    },
+    {
+      "path": "tests/peak-dps.check.ts",
+      "sha256": "14b949cb83eb4fd90df95943238b66b8fe6764310932e02aa752e1153691a627"
+    },
+    {
+      "path": "tests/render-quality.check.ts",
+      "sha256": "d46eb98c9faeaa7879bc47b83c6ac355349ed88ce91404e437f5f3a36ffd9838"
+    },
+    {
+      "path": "tests/shop-equip.check.ts",
+      "sha256": "9cbc98d0994588c64aa8ffd259d2ebc038ec36c66545d65119bb9fb393bbd894"
+    },
+    {
+      "path": "tests/skill-visual.check.ts",
+      "sha256": "243a2d2da8cf340af6bc495458754ea80f84bd2739e4a692e789a1f628f25bef"
+    },
+    {
+      "path": "tests/slime-art.check.ts",
+      "sha256": "e4417c44d8ab89afeaf0a19691a9188274393919689d82845e523479eece6e96"
+    },
+    {
+      "path": "tests/sword-attack.check.ts",
+      "sha256": "6aa3c1b1da1a5eb038dae7b1e33993c1982b251587c9425ded2ef4c2a9499cf1"
+    },
+    {
+      "path": "tests/sword-visual.check.ts",
+      "sha256": "0810cb21c1107c56e34a665574ab8593c701c32adb7ca201d7cbdef1283cef50"
+    },
+    {
+      "path": "tests/training.check.ts",
+      "sha256": "91b411a5c096aef76e668c80f717e0bbc626a8f382802fd0d71cb6c990f0ac29"
+    },
+    {
+      "path": "tests/wave-ranged-skill.check.ts",
+      "sha256": "e701ccf05377821582961b9bbb93cf91be6fd3b9196604211046cdba466af56a"
+    },
+    {
+      "path": "tests/wave-warning.check.ts",
+      "sha256": "5dd8b27d79457b52a5e2aa99eab8e2d14c0aed8b4a8e175ac92f5ba473a4d13d"
+    }
+  ],
+  "purpose": "Current uncommitted prototype snapshot, not a new feature or a merge"
+}

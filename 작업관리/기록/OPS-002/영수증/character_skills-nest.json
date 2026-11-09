@@ -1,0 +1,81 @@
+{
+  "id": "a36ed286-026c-46b0-b05f-9fc08cca44a2",
+  "ok": true,
+  "result": {
+    "worktree": {
+      "id": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-스킬",
+      "identity": {
+        "key": "wt2:local:cf2d7f43-4f01-4030-953b-4dc58134ea96",
+        "executionHostId": "local",
+        "instanceId": "cf2d7f43-4f01-4030-953b-4dc58134ea96"
+      },
+      "instanceId": "cf2d7f43-4f01-4030-953b-4dc58134ea96",
+      "repoId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "projectId": "github:gim963738-jpg/grid-defenders",
+      "hostId": "local",
+      "projectHostSetupId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "creatorProvenance": {
+        "kind": "host"
+      },
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-스킬",
+      "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+      "branch": "refs/heads/domain/character-skills",
+      "isBare": false,
+      "isMainWorktree": false,
+      "displayName": "캐릭터 스킬",
+      "displayNameMode": "fixed",
+      "comment": "세계관 도메인 계층 · 원본 연결·확인된 요청으로 작업",
+      "linkedIssue": null,
+      "linkedPR": null,
+      "linkedLinearIssue": null,
+      "linkedLinearIssueWorkspaceId": null,
+      "linkedLinearIssueOrganizationUrlKey": null,
+      "linkedGitLabMR": null,
+      "linkedGitLabIssue": null,
+      "linkedBitbucketPR": null,
+      "linkedAzureDevOpsPR": null,
+      "linkedGiteaPR": null,
+      "linkedWorkItem": null,
+      "linkedTaskSourceContext": null,
+      "isArchived": false,
+      "isUnread": false,
+      "isPinned": false,
+      "sortOrder": 1794128216831,
+      "lastActivityAt": 1794128216831,
+      "createdAt": 1794128216831,
+      "cliProvenance": {
+        "kind": "created-by-cli",
+        "createdAt": 1794128213793
+      },
+      "pendingFirstAgentMessageRename": false,
+      "firstAgentMessageRenameError": null,
+      "baseRef": "main",
+      "workspaceStatus": "in-progress",
+      "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+      "childWorktreeIds": [],
+      "lineage": {
+        "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-스킬",
+        "worktreeInstanceId": "cf2d7f43-4f01-4030-953b-4dc58134ea96",
+        "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+        "parentWorktreeInstanceId": "f3d6b223-778c-4193-812b-aab45e635045",
+        "origin": "manual",
+        "capture": {
+          "source": "manual-action",
+          "confidence": "explicit"
+        },
+        "createdAt": 1794128385317
+      },
+      "git": {
+        "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터-스킬",
+        "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+        "branch": "refs/heads/domain/character-skills",
+        "isBare": false,
+        "isMainWorktree": false
+      },
+      "linkedItems": []
+    }
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

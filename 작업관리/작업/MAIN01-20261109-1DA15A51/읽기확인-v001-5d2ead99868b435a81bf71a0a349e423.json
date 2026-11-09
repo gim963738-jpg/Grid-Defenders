@@ -1,0 +1,83 @@
+﻿{
+    "task":  "MAIN01-20261109-1DA15A51",
+    "iteration":  1,
+    "role":  "qa",
+    "workSummary":  "실제 root5173에 새 headless 독립프로필로 접속하여 15이미지와 배치/크기/방향/취소/입력복구/저장불변/전환/리사이즈를 검사한다. 제품 수정 없이 증거와 미검증을 보고한다.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\AGENTS.md",
+                          "sha256":  "db85907459edfe3491f1ae2e9f07355e24bf0ca7c57ba69acdc3342ad1d7461b",
+                          "applies":  "전투연출 제작 없이 실제전장 전체프레임과 모바일 공통 터치크기를 검사한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\작업진행방법.md",
+                          "sha256":  "7cca62cd4801a5fe43692cbbc943894ec2641bdca157cdc4d655495287dd1fa8",
+                          "applies":  "현재 대상 해시와 제작 기대결과를 읽고 독립 브라우저에서 재현하며 제품 원본을 수정하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+                          "applies":  "사용자 확인 범위 내 QA만 수행하고 5종 기록과 미검증을 명시한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+                          "applies":  "main01 소유 작업에 증거를 반환하고 기존 root 서버와 진행 중인 변경을 보존한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+                          "applies":  "qa 독립성 유지, 제작팀 수정 의뢰, 미적 합격과 실기기 검증 분리."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "테스터 검사 코드와 허용 출력만 편집하며 src/assets는 수정하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\규정.md",
+                          "sha256":  "afeeb75712ebaf5123392ec531b991b51fb932f2499e61b7af7c89bf7bb38458",
+                          "applies":  "브라우저/자산/모바일 재현 가능한 기술 검증을 수행하고 사용자 합격을 대신하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "read-pack 본문과 적용 요약을 기록하고 start 통과 후 검사한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+                          "applies":  "qa는 제작팀 외부 독립 테스터이며 main01에 반환한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "도메인은 자료 분류로 사용하며 실제 원본 Desktop 게임을 검사한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "qa 외부 역할을 유지하고 캐릭터 제작과 UI 기능 검증을 혼동하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자확인.md",
+                          "sha256":  "f8dd71ecda5a65ef51a14bea8b2d77ba224bf6da6c26722928a2f74b099dab53",
+                          "applies":  "이미지대조 버튼 하나, 직접 배치 및 배치후 크기조절을 핵심 기대결과로 검사한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\통합사전확인.json",
+                          "sha256":  "ad3aa97b7f70c8adb61f6d1271523d173c0b60e1abd5e1c2eb47c4372f11438c",
+                          "applies":  "3모듈 main.ts 좁은 패치 15PNG 범위와 해시를 확인한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\통합결과.json",
+                          "sha256":  "e0fc1264d8e808076d76424c6bfbdc15edebb1b4c68ef5ed2825552c61657b88",
+                          "applies":  "root/UI 양쪽 해시를 실제 파일과 대조하고 통합본을 검사한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\검증.md",
+                          "sha256":  "95e6a6b65f72098087017734fb55345f8e207c7f907873176c57c47259397c05",
+                          "applies":  "제작자31검사는 방법 참고로만 사용하고 독립 프로필에서 실제 재현한다."
+                      }
+                  ]
+}

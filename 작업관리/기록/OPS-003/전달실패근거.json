@@ -1,0 +1,17 @@
+{
+  "events": [
+    {
+      "command": "orchestration send",
+      "target": "main02 existing structured chat",
+      "error": "terminal_not_found",
+      "requestId": "bb0708dd-d42c-455b-a11d-add2911f385c"
+    },
+    {
+      "command": "terminal send",
+      "target": "same preserved structured chat",
+      "error": "terminal_handle_stale",
+      "requestId": "4767823d-3859-47fd-ad61-339eedcad474"
+    }
+  ],
+  "interpretation": "No success receipt; do not claim notification delivered. Existing chats preserved; latest rules and per-role notices installed."
+}

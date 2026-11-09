@@ -1,0 +1,119 @@
+{
+  "id": "54588bea-8c2a-4b5a-b54a-6da2c4078ea7",
+  "ok": true,
+  "result": {
+    "worktree": {
+      "id": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/게임개발",
+      "identity": {
+        "key": "wt2:local:9164e94b-1195-4564-84f7-ae477bdf15b5",
+        "executionHostId": "local",
+        "instanceId": "9164e94b-1195-4564-84f7-ae477bdf15b5"
+      },
+      "instanceId": "9164e94b-1195-4564-84f7-ae477bdf15b5",
+      "repoId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "projectId": "github:gim963738-jpg/grid-defenders",
+      "hostId": "local",
+      "projectHostSetupId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+      "creatorProvenance": {
+        "kind": "host"
+      },
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/게임개발",
+      "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+      "branch": "refs/heads/team/gameplay",
+      "isBare": false,
+      "isMainWorktree": false,
+      "displayName": "게임개발",
+      "displayNameMode": "fixed",
+      "comment": "",
+      "linkedIssue": null,
+      "linkedPR": null,
+      "linkedLinearIssue": null,
+      "linkedLinearIssueWorkspaceId": null,
+      "linkedLinearIssueOrganizationUrlKey": null,
+      "linkedGitLabMR": null,
+      "linkedGitLabIssue": null,
+      "linkedBitbucketPR": null,
+      "linkedAzureDevOpsPR": null,
+      "linkedGiteaPR": null,
+      "linkedWorkItem": null,
+      "linkedTaskSourceContext": null,
+      "isArchived": false,
+      "isUnread": false,
+      "isPinned": false,
+      "sortOrder": 1794209910153,
+      "lastActivityAt": 1794209910152,
+      "createdAt": 1794209910152,
+      "cliProvenance": {
+        "kind": "created-by-cli",
+        "createdAt": 1794209907358
+      },
+      "baseRef": "main",
+      "workspaceStatus": "in-progress",
+      "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
+      "childWorktreeIds": [],
+      "lineage": {
+        "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/게임개발",
+        "worktreeInstanceId": "9164e94b-1195-4564-84f7-ae477bdf15b5",
+        "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
+        "parentWorktreeInstanceId": "0524c1dc-147b-4e74-9f67-554ba3d20cbc",
+        "origin": "cli",
+        "capture": {
+          "source": "explicit-cli-flag",
+          "confidence": "explicit"
+        },
+        "createdAt": 1794209910153
+      },
+      "workspaceLineage": {
+        "childWorkspaceKey": "worktree:de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/게임개발",
+        "childInstanceId": "9164e94b-1195-4564-84f7-ae477bdf15b5",
+        "parentWorkspaceKey": "worktree:de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
+        "parentInstanceId": "0524c1dc-147b-4e74-9f67-554ba3d20cbc",
+        "origin": "cli",
+        "capture": {
+          "source": "explicit-cli-flag",
+          "confidence": "explicit"
+        },
+        "createdAt": 1794209910153
+      },
+      "git": {
+        "path": "C:/Users/user/orca/workspaces/Grid Defenders/게임개발",
+        "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+        "branch": "refs/heads/team/gameplay",
+        "isBare": false,
+        "isMainWorktree": false
+      }
+    },
+    "lineage": {
+      "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/게임개발",
+      "worktreeInstanceId": "9164e94b-1195-4564-84f7-ae477bdf15b5",
+      "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
+      "parentWorktreeInstanceId": "0524c1dc-147b-4e74-9f67-554ba3d20cbc",
+      "origin": "cli",
+      "capture": {
+        "source": "explicit-cli-flag",
+        "confidence": "explicit"
+      },
+      "createdAt": 1794209910153
+    },
+    "workspaceLineage": {
+      "childWorkspaceKey": "worktree:de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/게임개발",
+      "childInstanceId": "9164e94b-1195-4564-84f7-ae477bdf15b5",
+      "parentWorkspaceKey": "worktree:de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
+      "parentInstanceId": "0524c1dc-147b-4e74-9f67-554ba3d20cbc",
+      "origin": "cli",
+      "capture": {
+        "source": "explicit-cli-flag",
+        "confidence": "explicit"
+      },
+      "createdAt": 1794209910153
+    },
+    "warnings": [],
+    "catalogVersion": {
+      "epoch": "c52d572b-eccf-4748-84fb-c16295ac59f6",
+      "sequence": 317
+    }
+  },
+  "_meta": {
+    "runtimeId": "b8afa303-27d7-4d9b-804c-dda6b0f6ec7f"
+  }
+}

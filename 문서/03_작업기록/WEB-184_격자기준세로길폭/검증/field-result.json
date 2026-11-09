@@ -1,0 +1,47 @@
+{
+  "alphas": {
+    "leftCenter": 1,
+    "leftGridEdge": 0.011764705882352941,
+    "outer": 0.09803921568627451,
+    "rightCenter": 1,
+    "rightGridEdge": 0.011764705882352941,
+    "topLeftTile": 0.0392156862745098
+  },
+  "basisDate": "2026-11-08",
+  "browserClock": "2026-11-07T16:04:28.422Z",
+  "checks": [
+    "actual landscape combat loaded",
+    "original twenty placement slots retained",
+    "grid dimensions and origin unchanged",
+    "vertical nominal road width is one 58px tile",
+    "actual monsters are centered on both vertical roads",
+    "three road strips reuse one original field texture",
+    "grass boundary uses soft masks without rectangular cuts",
+    "original field asset loads successfully",
+    "soil texture remains solid at both monster centerlines",
+    "road fades away before covering placement tiles",
+    "outer road edge blends into existing full field",
+    "edge alpha changes gradually rather than cutting sharply",
+    "soldier can still deploy into first tile",
+    "boss scene still opens after terrain change",
+    "boss fullscreen field retains 800 by 360 dimensions",
+    "returning from boss retains the road and placement grid",
+    "actual monster movement follows the updated trail"
+  ],
+  "grid": {
+    "height": 168,
+    "left": 160,
+    "top": 84,
+    "width": 290
+  },
+  "origin": "http://127.0.0.1:5197",
+  "road": {
+    "left": 131,
+    "right": 479,
+    "width": 58
+  },
+  "scene": "defense",
+  "status": "PASS",
+  "inspectedAt": "2026-11-08T01:06:06+09:00",
+  "testConditions": "Isolated 127.0.0.1:5197 origin, 800 x 360 iframe, original storage backed up. Scrollbars and test-only developer notice hidden for screenshot."
+}

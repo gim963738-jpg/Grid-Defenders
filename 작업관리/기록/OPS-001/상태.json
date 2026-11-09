@@ -1,0 +1,26 @@
+{
+  "status": "ready",
+  "completedAt": "2026-11-08T17:17:47.750486+09:00",
+  "mainWorkspaces": 3,
+  "workerWorkspaces": 8,
+  "newStructuredChats": 3,
+  "existingMainChat": 1,
+  "allMainAndUiAcknowledgements": true,
+  "actualProductionDispatches": 0,
+  "uiSnapshotFiles": 92,
+  "publicRuntimeResources": 38,
+  "workflowTests": {
+    "passed": 12,
+    "failed": 0,
+    "scope": "temporary fixtures only"
+  },
+  "uiBuild": "PASS",
+  "chatLaunches": "journaled_and_acknowledged",
+  "guiFourWayLayout": "not_changed",
+  "backup": "baseline.json",
+  "commitPush": "not_performed",
+  "uiDesignReferenceFiles": 7,
+  "preservationAndConnectionChecks": "PASS",
+  "newDocumentLinksVerified": 58,
+  "commandFallback": "cmd.exe successfully ran final validation after Windows PowerShell startup error 0x800705af"
+}

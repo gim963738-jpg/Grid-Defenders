@@ -1,0 +1,19 @@
+[
+  "C:/Users/user/AppData/Local/Programs/orca/resources/bin/orca.exe",
+  "orchestration",
+  "worker-start",
+  "--spec-file",
+  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\발송지시-v001.md",
+  "--worktree",
+  "id:de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/테스터",
+  "--agent",
+  "codex",
+  "--model",
+  "gpt-6.1-sol",
+  "--effort",
+  "medium",
+  "--keep-open",
+  "--task-title",
+  "이미지 대조 실제게임 독립QA",
+  "--json"
+]

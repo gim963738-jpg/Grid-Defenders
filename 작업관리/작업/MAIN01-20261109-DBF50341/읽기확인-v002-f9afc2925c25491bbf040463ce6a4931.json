@@ -1,0 +1,108 @@
+﻿{
+    "task":  "MAIN01-20261109-DBF50341",
+    "iteration":  2,
+    "role":  "characters",
+    "workSummary":  "1차 각안 정면의 같은 인물/디자인을 화면 오른쪽45도 앞사선과90도 정측면으로 회전한 신규8장을 내장image_gen으로 제작한다. 기존7장은 바이트 복사해15파일 비교와 본체/발선 근거 manifest를 작성하고 방향·좌우·일관성·밝고어두운 배경을 검수한다. 1차파일과 게임/규정/카탈로그/UI는 수정하지 않는다.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md",
+                          "sha256":  "38d9762b3212641b8a936f9477f5f0c2573b5e97c5c86048b9b6715a522e3d36",
+                          "applies":  "최신 방향 추가 지시를 우선해 정면4안을 동일 인물 구성 입력으로 쓰고 오른쪽45도/90도를 구분한다. 기존 미합격·소속보류 판정과 원본을 보존하며 카탈로그는 수정하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md",
+                          "sha256":  "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+                          "applies":  "차수2 본문 재열람과 적용 확인을 새로 기록하고 start 후 직접8장을 생성·실제 검수한다. 하위 담당은 사용하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+                          "applies":  "이번 사용자 직접 추가 요청 근거를 따르며 기존1차 산출물과 이전 기록을 보존하고 차수2 결과/검증/미적 판정을 구분한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+                          "applies":  "main01의 이번 차수 영수증과 상태를 확인했다. 실행 중 모델/UI를 바꾸지 않고 공식 worker_done으로 회신한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+                          "applies":  "캐릭터 팀장이 단일 편집자로 직접 제작하며 외부 유료 API 없이 내장 도구 호출과 결과/입력을 기록한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "콘텐츠와 메타데이터만 directions_v02에 작성하며 게임 public 복사와 실행 코드 수정은 게임개발 담당에 맡긴다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md",
+                          "sha256":  "dab9250dd0aef972f12d28ab2947b88926234c0f69dc6ecb5bbeac28234ac14e",
+                          "applies":  "SD와GC9를 혼용하지 않고 정면 시안의 미적 합격을 주장하지 않는다. 규정 보완은 제안으로만 기록한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "read-pack과 새로운20문서별 적용/해시 확인 후 차수2 start를 통과하고 반환 근거를 연결한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+                          "applies":  "characters 팀장 역할을 이어받으며 새 담당 AI를 복제하지 않고 main01에 보고한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "세계관/캐릭터 자료 분류와 실제 조직을 구분하고 기존 소스 경로를 유지한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "characters 노드에서 디자인/방향 원본을 제작하고 타 도메인/게임 실행 업무를 침범하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\SD_공통제작기준.md",
+                          "sha256":  "25e4044a0ee11ce0ffb4a95ad3e9287f3617e6b272cbd0fb5f0dabd7e844e964",
+                          "applies":  "바이트/알파 보존·본체/장비 분리측정·발선·밝고 어두운 배경 검수를 적용한다. 이번엔 은발 비율로 다시 만들지 않고 안별 정면 높이와 비중을 따른다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터설정\\SD_공통제작기준.json",
+                          "sha256":  "b46e0f915f8f9d5de5663d715e76a8cb6fb079ca94e42fa3fe33134799d69afe",
+                          "applies":  "공통 기준의 본체 측정 방법을 사용하되1254표준 좌표를 강제해 정면을 변경하지 않는다. 생성 프레이밍 한계는 명시한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_8views_v01\\제작기준.md",
+                          "sha256":  "ee8349be61209c5e07753e8d9efb421f6c7b5d33946f3c06f2c1ceeef2390c42",
+                          "applies":  "금발/갈색눈/청색목도리·후드/은갑옷/비대칭 다리/장검·단검과 고정 장식을 유지한다. 기존45도·90도는 원형 비교용으로 복사한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\제작기준.md",
+                          "sha256":  "04a8f9e627ff0cb8fe7a2e42188ab826b280b172f9815c661c2ee81763a2305d",
+                          "applies":  "기존 머리·복장·장검 청색사선/날개가드/고리보호대와 짧은 각진 단검을 보존하며 성인형 일러스트 비율은 적용하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\캐릭터제작규약.md",
+                          "sha256":  "e3d0b2e954ea092a2c05750a45f1b7e841eb473ed0414c582ed57368ad362799",
+                          "applies":  "일반 제작 승인 순서보다 이번 직접 요청의8장 추가방향을 우선한다. 소속·이름·수치나 카탈로그 변경은 없다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md",
+                          "sha256":  "412cf153ca5f906d132c0d2ed9813553e8ee95c97d5dcee23a63574374f53ae2",
+                          "applies":  "손목/그립/무기축/인체좌우를 물리적으로 회전하고90도 먼쪽 가림을 허용한다. 동일 화면 대각선을 고정하거나 손을 추가하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자방향추가.md",
+                          "sha256":  "0c6ef7b6c3b5af10d245fef9717fbef30bf629354ae3b45d1ac66cc1f0a6fddb",
+                          "applies":  "사용자 추가 요청의45도 앞사선과90도 오른쪽지향 완전측면을 각각4장 만들고 정면·1차 원본을 보존한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\검수.md",
+                          "sha256":  "327891441239f549b3d02920e37a037ca569744f337b047fda83ac582c81453a",
+                          "applies":  "1차의3.01~3.18머리단위와 프레이밍 미달을 인지하고 이번엔 안별 정면과 일관성을 우선한다. 작은 장갑의 손가락 판독 한계를 기록한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\report.md",
+                          "sha256":  "bd426dc091826331613a69e5369cf7780da14a1b12289c97a72d45f43dbea9e9",
+                          "applies":  "1차8회 생성과4최종 PNG/경로·바이트 보존 기록을 확인했다. 기존 보고는 보존하고 새15파일/비교/manifest/검수/결과를 별도 제출한다."
+                      }
+                  ]
+}

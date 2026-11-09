@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "name": "actual browser pointer clicks activate both relocated buttons",
+      "passed": true
+    },
+    {
+      "name": "editor opens and pauses combat",
+      "passed": true
+    },
+    {
+      "name": "board has all forty-two cells",
+      "passed": true
+    },
+    {
+      "name": "board is seven columns by six rows",
+      "passed": true
+    },
+    {
+      "name": "front middle and rear each have two rows and fourteen cells",
+      "passed": true
+    },
+    {
+      "name": "visible formation title is removed",
+      "passed": true
+    },
+    {
+      "name": "six-row right panel stays clear of battlefield and upper controls",
+      "passed": true
+    },
+    {
+      "name": "all six rows fit inside panel without clipping",
+      "passed": true
+    },
+    {
+      "name": "done then automatic arrangement share the bottom shop card line",
+      "passed": true
+    },
+    {
+      "name": "moved controls receive real pointer input outside panel rectangle",
+      "passed": true
+    },
+    {
+      "name": "bottom controls stay visible and clear of right board",
+      "passed": true
+    },
+    {
+      "name": "battlefield remains undimmed",
+      "passed": true
+    },
+    {
+      "name": "automatic placement uses expanded rank bands",
+      "passed": true
+    },
+    {
+      "name": "front unit can move into the added front row",
+      "passed": true
+    },
+    {
+      "name": "rear unit can move within the expanded rear band",
+      "passed": true
+    },
+    {
+      "name": "hero remains movable in the second middle row",
+      "passed": true
+    },
+    {
+      "name": "front-row expansion does not bypass existing hero placement validation",
+      "passed": true
+    },
+    {
+      "name": "editing preserves wave slots and currency",
+      "passed": true
+    },
+    {
+      "name": "six-row layout and manual positions are saved",
+      "passed": true
+    },
+    {
+      "name": "board and detached controls follow centered battlefield on wider viewport",
+      "passed": true
+    },
+    {
+      "name": "controls return to correct shop line after resize",
+      "passed": true
+    },
+    {
+      "name": "done closes editor while preserving earlier manual pause",
+      "passed": true
+    },
+    {
+      "name": "done restores menu focus",
+      "passed": true
+    },
+    {
+      "name": "done restores earlier running state",
+      "passed": true
+    },
+    {
+      "name": "background suspend closes editor and keeps battle paused",
+      "passed": true
+    },
+    {
+      "name": "actual developer transition enters boss battle",
+      "passed": true
+    },
+    {
+      "name": "actual boss units use six-row formation positions and rank membership",
+      "passed": true
+    },
+    {
+      "name": "boss grid matches rotated six by seven formation and same-sized cells",
+      "passed": true
+    },
+    {
+      "name": "no failed runtime asset requests",
+      "passed": true
+    }
+  ],
+  "date": "2026-11-07",
+  "failed": null,
+  "result": "PASS"
+}

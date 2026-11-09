@@ -1,0 +1,73 @@
+{
+  "workspaceKind": "git",
+  "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+  "repoId": "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+  "hostId": "local",
+  "terminalPlatform": "win32",
+  "repo": "Grid Defenders",
+  "path": "C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+  "branch": "refs/heads/gim963738-jpg/몬스터-디자인",
+  "isArchived": false,
+  "isMainWorktree": false,
+  "hasHostSidebarActivity": true,
+  "defaultBranch": false,
+  "worktreeInstanceId": "0ae85254-7aa0-4ae2-80d6-e4e51a9b6dbd",
+  "lineageWorktreeInstanceId": "0ae85254-7aa0-4ae2-80d6-e4e51a9b6dbd",
+  "parentWorktreeInstanceId": "659c8a4a-e346-4ba9-8d45-d4cd2710a8df",
+  "parentWorktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/세계관",
+  "childWorktreeIds": [
+    "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-스프라이트"
+  ],
+  "displayName": "몬스터 팀장 AI",
+  "workspaceStatus": "in-progress",
+  "sortOrder": 1793975875040,
+  "manualOrder": 1793975873372,
+  "lastActivityAt": 1793978379230,
+  "createdAt": 1793975875039,
+  "creatorProvenance": {
+    "kind": "host"
+  },
+  "linkedIssue": null,
+  "linkedPR": null,
+  "linkedLinearIssue": null,
+  "linkedGitLabMR": null,
+  "linkedGitLabIssue": null,
+  "linkedItems": [],
+  "comment": "OPS-003 · team-lead · 담당 monsters · 기존 작업/원본 보존",
+  "isPinned": false,
+  "isActive": false,
+  "unread": false,
+  "liveTerminalCount": 0,
+  "hasAttachedPty": false,
+  "unverifiableTerminalCount": 0,
+  "lastOutputAt": null,
+  "preview": "",
+  "status": "inactive",
+  "agents": [
+    {
+      "paneKey": "structured-agent-session-codex_14ccc270_9553_4dc4_adcb_2b04ecde6344:26666c6c-8aea-475e-ac7a-4bbdac63141c",
+      "parentPaneKey": null,
+      "state": "done",
+      "agentType": "codex",
+      "prompt": "정면과 후면은 따로뽑아야하고?",
+      "taskTitle": null,
+      "displayName": null,
+      "conversationName": "4방향 SD 몬스터 스프라이트 디자인",
+      "lastAssistantMessage": "네. **정면과 후면은 각각 따로 제작해야 합니다.** 얼굴·가슴과 뒤통수·등처럼 보이는 부분이 달라서 반전으로 만들 수 없어요. 사람 캐릭터가 비대칭 디자인이면, 8방향 모두 장비의 실제 좌우를 유지하며 각각 제작하는 게 맞습니다.",
+      "toolName": null,
+      "toolInput": null,
+      "interrupted": false,
+      "mainAgent": {
+        "state": "done",
+        "outcome": "success",
+        "stateStartedAt": 1793993425570
+      },
+      "stateStartedAt": 1793993425570,
+      "updatedAt": 1793993425570,
+      "children": [],
+      "subagentObservation": "unverifiable"
+    }
+  ],
+  "sidebarStatus": "inactive",
+  "terminalVerdict": "none"
+}
