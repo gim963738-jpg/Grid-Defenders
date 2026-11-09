@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>현재 달리기 · 발 연결 검토</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:24px;background:#eff2f6;color:#172235;font-family:system-ui,sans-serif}h1{font-size:25px;margin:0 0 8px}p{line-height:1.6;margin:8px 0 18px}section{margin-top:22px}h2{font-size:20px;margin:0 0 10px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}figure{margin:0;background:#fff;border:1px solid #cbd3df;border-radius:10px;overflow:hidden}figcaption{padding:10px 16px;font-size:20px;font-weight:700;background:#172235;color:white}canvas{display:block;width:100%;height:auto;image-rendering:pixelated}.note{font-size:14px;color:#526078}
+</style>
+<h1>현재 달리기 · 발 연결 검토</h1>
+<p>같은 좌표와 배율로 하체를 확대했습니다. 수정 결과가 아닌 현재 원본 프레임 비교입니다.</p>
+<section><h2>15 → 16 · 파란 발이 앞으로 넘어오는 중간 자세 부족</h2><div class="pair"><figure><figcaption>15번</figcaption><canvas data-frame="15" width="512" height="304"></canvas></figure><figure><figcaption>16번</figcaption><canvas data-frame="16" width="512" height="304"></canvas></figure></div></section>
+<section><h2>30 → 01 · 뒤쪽 발의 벌어짐과 높이가 급하게 바뀜</h2><div class="pair"><figure><figcaption>30번</figcaption><canvas data-frame="30" width="512" height="304"></canvas></figure><figure><figcaption>01번</figcaption><canvas data-frame="1" width="512" height="304"></canvas></figure></div></section>
+<p class="note">점선은 기존 시트의 명목상 바닥 기준 y=234입니다. 공중 구간의 발을 이 선에 강제로 맞추면 안 됩니다.</p>
+<script>
+const atlas=new Image();atlas.onload=()=>{for(const c of document.querySelectorAll('canvas')){const i=Number(c.dataset.frame)-1,ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.drawImage(atlas,(i%6)*256,Math.floor(i/6)*256+104,256,152,0,0,512,304);ctx.strokeStyle='#7185a5';ctx.lineWidth=1;ctx.setLineDash([8,6]);ctx.beginPath();ctx.moveTo(0,(234-104)*2);ctx.lineTo(512,(234-104)*2);ctx.stroke();}document.documentElement.dataset.ready='true';};atlas.src='run-right-30f.png';
+</script>
+</html>

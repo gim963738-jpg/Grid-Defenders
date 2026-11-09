@@ -1,0 +1,20 @@
+Create an EIGHT-FRAME sprite sequence, 4 equal square columns x2 rows, transparent alpha background. Canvas exactly2:1 aspect ratio. Eight individual complete sprites, same sizes, same fixed cell origins. NO text, labels, grid, shadows or motion effects.
+
+The silver-haired wing-staff mage is defined by mage-right-master.png. The small run-right-01.png is the pixel rendering/SD body style to match, but do not copy its leg pose to all frames. The diagram run-a-pose-guide.png gives the EXACT EIGHT poses you must draw, cell by cell. Blue skeleton is NEAR right limbs; magenta skeleton is FAR left limbs. Diagram has geometry only: do NOT paint cyan/magenta lines or numbers. Match foot positions and which leg is in front.
+
+THIS IS ONLY THE FIRST QUARTER OF A LONGER RUN, NOT A FULL LOOP. Do not complete a stride in these eight cells. The NEAR leg stays on the ground for ALL EIGHT frames, moving gradually from FRONT to BACK. The FAR leg remains airborne for all eight, heel tucked behind then knee moving forward. Do not land the far foot yet. Never duplicate the first pose at the end.
+
+1 near gold boot at forward heel contact, far dark boot folded behind.
+2 near boot settling onto sole slightly further back, far heel rises slightly.
+3 near boot planted closer to body, knees absorb weight.
+4 near boot planted directly beneath pelvis, far heel curls behind.
+5 near planted ankle just behind pelvis, far knee starts passing.
+6 near planted ankle further behind, far knee now forward but far ankle still tucked.
+7 near leg extends behind, far knee high forward, far shin folded under.
+8 near gold boot toe planted BEHIND pelvis, far knee high forward with far foot airborne in FRONT of pelvis. End at this pose. Do not extend the far leg into contact yet.
+
+Follow the drawing positions in the guide tightly. Both thighs attach to same pelvis; near shin always overlaps far shin at crossings. NEAR/right boot is visibly embroidered gold with lit charcoal panels; FAR/left boot is same design but shadowed and partly occluded. Exactly TWO feet. Feet and staff never merge.
+
+Identity/style: same youthful SD mage, silvery ivory wavy long hair, blue eye right side profile, blue-gold shoulder cape and split blue long robe, white tunic, charcoal pants/boots, blue gems, cylindrical blue/gold scrollcase at visible near right hip. Gold wing/navy curl/blue gem staff carried in FAR LEFT hand only, and near right arm EMPTY, bent at elbow pumping opposite the near leg. Staff stays slightly tilted forward, rigid with golden ferrule above ground. Hair and robe trail left modestly with follow-through; stable face/head/hair roots/costume. Strict right profile for all cells. Crisp shaded pixel sprite finish, same polish as rendering reference. No blur/smooth vector/3D.
+
+Fixed positions per logical229px cell: ground214, hip about117,158 with slight body bob from guide; head center134,69; staff from174,15 to141,195. Reserve margin on all sides and especially above staff. In every cell draw at identical anatomical scale and fixed root, not independent bounding-box centering. Genuine transparent background, 4x2 equal cell grid.

@@ -1,0 +1,309 @@
+{
+  "action": "walk",
+  "cycleMs": 1000,
+  "loop": true,
+  "frames": [
+    {
+      "frame": 1,
+      "file": "frames/walk-right-01.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 2,
+      "file": "frames/walk-right-02.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 3,
+      "file": "frames/walk-right-03.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 4,
+      "file": "frames/walk-right-04.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 5,
+      "file": "frames/walk-right-05.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 6,
+      "file": "frames/walk-right-06.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 7,
+      "file": "frames/walk-right-07.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 8,
+      "file": "frames/walk-right-08.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 9,
+      "file": "frames/walk-right-09.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 10,
+      "file": "frames/walk-right-10.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 11,
+      "file": "frames/walk-right-11.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 12,
+      "file": "frames/walk-right-12.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 13,
+      "file": "frames/walk-right-13.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 14,
+      "file": "frames/walk-right-14.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 15,
+      "file": "frames/walk-right-15.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 16,
+      "file": "frames/walk-right-16.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 17,
+      "file": "frames/walk-right-17.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 18,
+      "file": "frames/walk-right-18.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 19,
+      "file": "frames/walk-right-19.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 20,
+      "file": "frames/walk-right-20.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 21,
+      "file": "frames/walk-right-21.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 22,
+      "file": "frames/walk-right-22.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 23,
+      "file": "frames/walk-right-23.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 24,
+      "file": "frames/walk-right-24.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 25,
+      "file": "frames/walk-right-25.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 26,
+      "file": "frames/walk-right-26.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 27,
+      "file": "frames/walk-right-27.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 28,
+      "file": "frames/walk-right-28.png",
+      "durationMs": 33
+    },
+    {
+      "frame": 29,
+      "file": "frames/walk-right-29.png",
+      "durationMs": 34
+    },
+    {
+      "frame": 30,
+      "file": "frames/walk-right-30.png",
+      "durationMs": 33
+    }
+  ],
+  "sourceMap": [
+    {
+      "frame": 1,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 1
+    },
+    {
+      "frame": 2,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 2
+    },
+    {
+      "frame": 3,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 3
+    },
+    {
+      "frame": 4,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 4
+    },
+    {
+      "frame": 5,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 5
+    },
+    {
+      "frame": 6,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 6
+    },
+    {
+      "frame": 7,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 7
+    },
+    {
+      "frame": 8,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 8
+    },
+    {
+      "frame": 9,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 9
+    },
+    {
+      "frame": 10,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 10
+    },
+    {
+      "frame": 11,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 11
+    },
+    {
+      "frame": 12,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 12
+    },
+    {
+      "frame": 13,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 13
+    },
+    {
+      "frame": 14,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 14
+    },
+    {
+      "frame": 15,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 15
+    },
+    {
+      "frame": 16,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 16
+    },
+    {
+      "frame": 17,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 17
+    },
+    {
+      "frame": 18,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 18
+    },
+    {
+      "frame": 19,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 19
+    },
+    {
+      "frame": 20,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 20
+    },
+    {
+      "frame": 21,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 21
+    },
+    {
+      "frame": 22,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 22
+    },
+    {
+      "frame": 23,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 23
+    },
+    {
+      "frame": 24,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 24
+    },
+    {
+      "frame": 25,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 25
+    },
+    {
+      "frame": 26,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 26
+    },
+    {
+      "frame": 27,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 27
+    },
+    {
+      "frame": 28,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 28
+    },
+    {
+      "frame": 29,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 29
+    },
+    {
+      "frame": 30,
+      "source": "walk-generated-v01.png",
+      "sourceCell": 30
+    }
+  ]
+}

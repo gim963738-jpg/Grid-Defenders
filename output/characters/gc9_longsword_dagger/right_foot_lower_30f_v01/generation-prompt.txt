@@ -1,0 +1,31 @@
+Use case: identity-preserve.
+Asset type: follow-up SD pixel game sprite sheet, THIRTY chronological in-between poses of ONLY A RIGHT FOOT LOWERING, facing screen RIGHT.
+
+INPUT ROLES:
+Image 1 = previous sprite FRAME 23, the latest connection anchor. Match its exact character, facing, pixel density, drawing scale, body location, head, torso, arms and weapons.
+Image 2 = previous FRAME 22, motion-history context showing the near silver right knee folded and silver boot raised while the far blue left boot supports weight.
+Image 3 = previous FRAME 21, additional context for that folded near right leg. This is NOT an instruction to repeat a whole walking cycle.
+Image 4 = original finished right profile, DESIGN ONLY for distinguishing legs and weapons. Do NOT copy its large canvas scale.
+The user's preceding selected sequence is old frames 1,2,3,4,5,9,10,11,13,14,15,16,21,22,23. This NEW sheet continues after the ending folded-right-leg pose. The user will choose the exact connection.
+
+CRITICAL ACTION, ONE CONTINUOUS NON-LOOPING SEGMENT:
+The FAR anatomical LEFT leg has the BLUE wrapped boot. This left boot is PLANTED on the same ground spot for all thirty frames. It supports the body throughout. It must not lift, slide, switch sides or take another step.
+The NEAR anatomical RIGHT leg has the SILVER plated greave and armored boot. It starts with knee bent and boot raised behind/under the body, continuing the motion in frames21-23. This SILVER right lower leg slowly UNFOLDS: the boot travels downward and gently forward to screen-right, ankle relaxes, knee gradually opens, then heel makes soft ground contact slightly ahead of the planted blue foot.
+This is SLOW lowering, not lifting again, not running, not kicking, not marching, not a complete gait cycle. No second step. No switching supporting foot. Never lift the left blue boot. Do not reset the pose at row boundaries. Every successive cell must show a SMALL but real advance in this one descent.
+Frames01-06: begin just after the folded raised-silver-right-foot pose; silver right heel still above the ground, knee clearly bent. Lower it by tiny increments.
+07-12: right shin rotates downward a few degrees each frame, silver heel descends steadily, blue left sole remains flat at exactly the same position.
+13-18: gradually extend the right knee; silver boot lowers from mid height toward the floor, subtly advancing in front of the blue supporting foot.
+19-24: right silver heel approaches just above the floor, knee nearly extended but soft; show fine substeps so it doesn't snap down.
+25-28: the right silver heel gently touches, toe lowers.
+29-30: silver right sole settles flat beside/slightly ahead of the blue left foot, both feet grounded, small natural weight settling ONLY.
+First and last frames are DIFFERENT. Do NOT make a seamless loop. Do NOT alternate legs.
+
+CHARACTER LOCK:
+Same honey-blond layered hair, one visible brown eye in exact right-facing profile, same SD head/body proportions, same blue scarf and short lowered hood, silver plate chest/arms/pauldrons, near right shoulder crescent, brown belts/pouch/trousers and blue waist cloth. Head, body and hands remain almost fixed in position, scale and colors. No camera motion, no horizontal body drift. Use the input anchor's pose, not a redesigned character.
+Near right hand holds the LONGSWORD with cyan diagonal inlays, feather fan guard and closed D knuckle bow, lowered diagonally down toward screen-right; far left hand holds SHORT DAGGER forward/down at waist. Same sword and dagger shapes in every cell. No sheathing, attacks, flourishes, extra swords, changing blade length or swapping hands. Do NOT confuse the long sword covering the silver right shin with the leg. Clearly draw the silver boot behind/under the sword where necessary. Keep the full sword inside each cell and clear of the ground.
+
+LAYOUT / ALIGNMENT:
+Requested exact canvas 1374px wide x1145px high, a regular 6 COLUMNS by 5 ROWS grid of 229px square cells. Exactly30 sprites, one per cell, no gutters. Read row-major left-to-right, top-to-bottom. Match input anchors' drawn figure size: in each 229px cell, hair crown around y10, ground y221, hip axis around x115. The provided 256px anchor images have 13px padding around a 229px original cell; compare the art after subtracting this padding. Keep this same body size and registration. Blue left foot position constant in all 30 cells. Every pixel of hair, both weapons and boots inside the cell with clear padding.
+
+STYLE: preserve exact compact detailed SD PIXEL ART and crisp square clusters of the anchor images, same warm outlines, blonde hair highlight ramps, silver armor and blue cloth. No smooth vector look, painted blur, motion blur or extra effects.
+BACKGROUND: genuine transparent alpha outside all30 sprites, including spaces between legs and in sword guard. No floor, shadow oval, backdrop, checkerboard texture, grid, text, numbers, border, labels, watermark or logo. Number labels will be added separately without touching the sprites.

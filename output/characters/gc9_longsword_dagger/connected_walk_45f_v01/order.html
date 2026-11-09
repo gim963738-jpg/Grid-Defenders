@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>앞 구간 + 오른발 내딛기 연결 · 프레임 순서</title>
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 2304px; background: #f1f3f7; color: #172235; font-family: 'Segoe UI', 'Malgun Gothic', sans-serif; }
+header { height: 64px; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; background: #172235; color: #fff; }
+h1 { margin: 0; font-size: 24px; } header span { font-size: 20px; }
+main { position: relative; width: 2304px; height: 1280px; }
+img { position: absolute; inset: 0; width: 2304px; height: 1280px; }
+.grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(9, 256px); grid-template-rows: repeat(5, 256px); }
+.cell { border: 1px solid #cbd3df; padding: 14px; }
+.cell:nth-child(16) { border: 3px solid #d07918; }
+.number { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 40px; border-radius: 8px; background: #172235; color: #fff; font-weight: 700; font-size: 24px; }
+</style>
+<header><h1>앞 구간 + 오른발 내딛기 연결 · 45프레임 순서</h1><span>왼쪽 → 오른쪽 · 위 → 아래 · 앞 15장 → 새 30장 · 15 → 16 연결</span></header>
+<main><img src="connected-walk-45f.png" alt="앞 구간 + 오른발 내딛기 연결 45프레임"><div class="grid" id="grid"></div></main>
+<script>
+const sourceLabels = ["앞 01","앞 02","앞 03","앞 04","앞 05","앞 09","앞 10","앞 11","앞 13","앞 14","앞 15","앞 16","앞 21","앞 22","앞 23","새 01","새 02","새 03","새 04","새 05","새 06","새 07","새 08","새 09","새 10","새 11","새 12","새 13","새 14","새 15","새 16","새 17","새 18","새 19","새 20","새 21","새 22","새 23","새 24","새 25","새 26","새 27","새 28","새 29","새 30"];
+document.getElementById('grid').innerHTML = Array.from({length:45}, (_, i) => `<div class="cell"><span class="number">${String(i+1).padStart(2,'0')}</span><span style="margin-left:8px;font-size:19px;font-weight:700">${sourceLabels[i]}</span></div>`).join('');
+</script>
+</html>
+
+
+
+

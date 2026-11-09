@@ -1,0 +1,69 @@
+{
+  "imageReady": true,
+  "defaultInfinite": true,
+  "previousWraps": true,
+  "nextWraps": true,
+  "everyFrameSelectable": true,
+  "loopWraps": true,
+  "multipleLoops": true,
+  "pauseWorks": true,
+  "resumeWorks": true,
+  "loopOffStops": true,
+  "loopOnRestarts": true,
+  "seamStarts": true,
+  "seamReachesFirst": true,
+  "speedWorks": true,
+  "lightWorks": true,
+  "darkWorks": true,
+  "numberedCells": 30,
+  "zoom": {
+    "plus": true,
+    "minus": true,
+    "sliderWorks": true,
+    "upperLimit": true,
+    "lowerLimit": true,
+    "feet": true,
+    "frameUnchanged": true,
+    "canvasResolutionUnchanged": true,
+    "persistsAcrossFrames": true,
+    "reset": true,
+    "stage": {
+      "x": 50,
+      "y": 106.59375,
+      "width": 512,
+      "height": 512
+    },
+    "mouseDrag": true,
+    "wheel": true,
+    "touchPinch": true,
+    "touchDrag": true,
+    "sheetScrollable": true
+  },
+  "mobile390": {
+    "noHorizontalOverflow": true,
+    "controlMinHeight": 48
+  },
+  "mobile320": {
+    "noHorizontalOverflow": true,
+    "controlMinHeight": 48
+  },
+  "apng": {
+    "frameCount": 30,
+    "animated": true,
+    "repetitionCount": "Infinity",
+    "decodedFrames": 30,
+    "durationMs": 1000,
+    "allFrames256": true
+  },
+  "inline": {
+    "file": "blond-run-right-30f-zoom-v02.html",
+    "bytes": 481498,
+    "atlasWidth": 1152,
+    "atlasHeight": 960,
+    "cellSize": 192,
+    "webpQuality": 0.7,
+    "ready": true,
+    "zoomWorks": true
+  },
+  "sourceSheetSha256": "9b5adf0640ce0bccf3b0da5abd4faaac4c90869dc95e84f04b5b848a86632948"
+}

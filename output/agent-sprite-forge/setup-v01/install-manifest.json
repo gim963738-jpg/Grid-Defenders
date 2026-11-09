@@ -1,0 +1,45 @@
+{
+  "repository": "https://github.com/0x0funky/agent-sprite-forge",
+  "commit": "6b3da5c444363378e20f3fce130ebecc22f343dd",
+  "skills": [
+    {
+      "name": "generate2dsprite",
+      "path": "C:\\Users\\user\\.codex\\skills\\generate2dsprite",
+      "skillSha256": "a09624e3c111c87f1a0735e0c0196871f633b68249416eb23f8343dc649747e6"
+    },
+    {
+      "name": "video2dsprite",
+      "path": "C:\\Users\\user\\.codex\\skills\\video2dsprite",
+      "skillSha256": "5fbe79b419cb8054e94deccf8bb9d21663df5d96a6ea40aee8f1a9fe8781bac8"
+    },
+    {
+      "name": "generate2dmedia",
+      "path": "C:\\Users\\user\\.codex\\skills\\generate2dmedia",
+      "skillSha256": "a2ac3232ea7dd583504c6e6996ebcbf2cf60a0a8fd893974a29d2df981b1fad4"
+    }
+  ],
+  "pythonEnvironment": "C:\\Users\\user\\.local\\share\\agent-sprite-forge\\venv",
+  "packages": {
+    "numpy": "2.4.6",
+    "Pillow": "13.0.0",
+    "scipy": "1.17.1"
+  },
+  "ffmpeg": "9.0.1",
+  "grok": "1.0.77",
+  "wrapper": "tools/forge.py",
+  "generationPerformed": false,
+  "videoAuthStatus": "Grok device login completed successfully",
+  "mediaVerification": "generation not executed; local alpha encoding/decoding verified",
+  "videoRoute": "local:grok-acp",
+  "routePreference": "Grok account login, confirmed by user",
+  "videoAuthObservedAt": "2026-11-07T08:39:49.810245+00:00",
+  "validation": {
+    "ffmpegVersion": "9.0.1",
+    "vp9AlphaRoundTrip": true,
+    "h264Encode": true,
+    "grokVersion": "1.0.77",
+    "loginSucceeded": true,
+    "videoRouteResolved": true,
+    "generationRequestExecuted": false
+  }
+}

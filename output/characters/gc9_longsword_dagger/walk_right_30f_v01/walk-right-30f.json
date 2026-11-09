@@ -1,0 +1,826 @@
+﻿{
+    "frames":  {
+                   "walk-right-01.png":  {
+                                             "frame":  {
+                                                           "y":  0,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  0
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-02.png":  {
+                                             "frame":  {
+                                                           "y":  0,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  256
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-03.png":  {
+                                             "frame":  {
+                                                           "y":  0,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  512
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-04.png":  {
+                                             "frame":  {
+                                                           "y":  0,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  768
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-05.png":  {
+                                             "frame":  {
+                                                           "y":  0,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1024
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-06.png":  {
+                                             "frame":  {
+                                                           "y":  0,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1280
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-07.png":  {
+                                             "frame":  {
+                                                           "y":  256,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  0
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-08.png":  {
+                                             "frame":  {
+                                                           "y":  256,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  256
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-09.png":  {
+                                             "frame":  {
+                                                           "y":  256,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  512
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-10.png":  {
+                                             "frame":  {
+                                                           "y":  256,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  768
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-11.png":  {
+                                             "frame":  {
+                                                           "y":  256,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1024
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-12.png":  {
+                                             "frame":  {
+                                                           "y":  256,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1280
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-13.png":  {
+                                             "frame":  {
+                                                           "y":  512,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  0
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-14.png":  {
+                                             "frame":  {
+                                                           "y":  512,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  256
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-15.png":  {
+                                             "frame":  {
+                                                           "y":  512,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  512
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-16.png":  {
+                                             "frame":  {
+                                                           "y":  512,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  768
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-17.png":  {
+                                             "frame":  {
+                                                           "y":  512,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1024
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-18.png":  {
+                                             "frame":  {
+                                                           "y":  512,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1280
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-19.png":  {
+                                             "frame":  {
+                                                           "y":  768,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  0
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-20.png":  {
+                                             "frame":  {
+                                                           "y":  768,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  256
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-21.png":  {
+                                             "frame":  {
+                                                           "y":  768,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  512
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-22.png":  {
+                                             "frame":  {
+                                                           "y":  768,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  768
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-23.png":  {
+                                             "frame":  {
+                                                           "y":  768,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1024
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-24.png":  {
+                                             "frame":  {
+                                                           "y":  768,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1280
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-25.png":  {
+                                             "frame":  {
+                                                           "y":  1024,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  0
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-26.png":  {
+                                             "frame":  {
+                                                           "y":  1024,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  256
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-27.png":  {
+                                             "frame":  {
+                                                           "y":  1024,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  512
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-28.png":  {
+                                             "frame":  {
+                                                           "y":  1024,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  768
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-29.png":  {
+                                             "frame":  {
+                                                           "y":  1024,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1024
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         },
+                   "walk-right-30.png":  {
+                                             "frame":  {
+                                                           "y":  1024,
+                                                           "w":  256,
+                                                           "h":  256,
+                                                           "x":  1280
+                                                       },
+                                             "rotated":  false,
+                                             "trimmed":  false,
+                                             "spriteSourceSize":  {
+                                                                      "y":  0,
+                                                                      "w":  256,
+                                                                      "h":  256,
+                                                                      "x":  0
+                                                                  },
+                                             "sourceSize":  {
+                                                                "h":  256,
+                                                                "w":  256
+                                                            },
+                                             "pivot":  {
+                                                           "y":  0.9140625,
+                                                           "x":  0.5
+                                                       },
+                                             "duration":  33.333333333333336
+                                         }
+               },
+    "animations":  {
+                       "walk-right":  [
+                                          "walk-right-01.png",
+                                          "walk-right-02.png",
+                                          "walk-right-03.png",
+                                          "walk-right-04.png",
+                                          "walk-right-05.png",
+                                          "walk-right-06.png",
+                                          "walk-right-07.png",
+                                          "walk-right-08.png",
+                                          "walk-right-09.png",
+                                          "walk-right-10.png",
+                                          "walk-right-11.png",
+                                          "walk-right-12.png",
+                                          "walk-right-13.png",
+                                          "walk-right-14.png",
+                                          "walk-right-15.png",
+                                          "walk-right-16.png",
+                                          "walk-right-17.png",
+                                          "walk-right-18.png",
+                                          "walk-right-19.png",
+                                          "walk-right-20.png",
+                                          "walk-right-21.png",
+                                          "walk-right-22.png",
+                                          "walk-right-23.png",
+                                          "walk-right-24.png",
+                                          "walk-right-25.png",
+                                          "walk-right-26.png",
+                                          "walk-right-27.png",
+                                          "walk-right-28.png",
+                                          "walk-right-29.png",
+                                          "walk-right-30.png"
+                                      ]
+                   },
+    "meta":  {
+                 "image":  "walk-right-30f.png",
+                 "format":  "RGBA8888",
+                 "size":  {
+                              "h":  1280,
+                              "w":  1536
+                          },
+                 "scale":  "1",
+                 "columns":  6,
+                 "rows":  5,
+                 "frameCount":  30,
+                 "fps":  30,
+                 "durationMs":  1000,
+                 "loop":  true,
+                 "direction":  "right",
+                 "directionDegrees":  90,
+                 "frameOrder":  "row-major",
+                 "cellSize":  {
+                                  "h":  256,
+                                  "w":  256
+                              },
+                 "originPixels":  {
+                                      "y":  234,
+                                      "x":  128
+                                  },
+                 "originNote":  "Fixed visual ground anchor; independent of collision / damage bounds. Frame cells are never individually trimmed.",
+                 "source":  "walk-right-30f-generated-v01.png",
+                 "sourceCellSize":  229,
+                 "padding":  {
+                                 "left":  13,
+                                 "right":  14,
+                                 "bottom":  14,
+                                 "top":  13
+                             },
+                 "resampled":  false,
+                 "tool":  "built-in image_gen",
+                 "prompt":  "generation-prompt.txt"
+             }
+}

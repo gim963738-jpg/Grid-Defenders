@@ -1,0 +1,37 @@
+Use case: identity-preserve / stylized-concept.
+Asset type: game sprite atlas of exactly THIRTY consecutive animation frames.
+Primary request: animate the exact blond SD warrior in the references RUNNING TO THE RIGHT in place. Make a completed full two-step running loop, not a walk and not an idle pose sheet.
+
+Input image 1 is the APPROVED RIGHT PROFILE CHARACTER MASTER, identity and rendering reference. Input image 2 is the FRONT DESIGN reference ONLY, to clarify asymmetrical equipment. Copy the exact character design from these images. Do not redesign the face, armor, clothing or weapons.
+
+OUTPUT: a genuinely transparent PNG, requested 3072 x 2560, EXACTLY SIX COLUMNS by FIVE ROWS, thirty identical square cells, no gutters or labels. Order is row-major: 01-06,07-12,13-18,19-24,25-30. One whole character per cell. Keep all heads, hair, weapons and boots completely inside their own cells with generous clear padding. No overlap between cells. Same body scale, same horizontal hip origin at 50% cell width, same ground line at 91% of cell height. Full standing height approximately 82% of the cell. Maintain the vertical bob of the run; never pin the soles to the ground during flight. Fixed orthographic right side view, exact profile, one visible eye, every nose and toe pointing RIGHT. No camera movement or turning.
+
+CHARACTER IDENTITY LOCK:
+Young male SD fantasy warrior, big head and compact body matching the reference. Golden-blond tousled layered hair, one warm brown eye, small confident focused face. Royal blue scarf and short lowered hood at the back, silver plate breastplate and articulated silver pauldrons/arms/gauntlets, near right shoulder crescent engraving. Brown trousers, layered brown leather belts and brass buckles, near-side leather pouch, blue waist cloth.
+Anatomical RIGHT = NEAR camera leg: full SILVER armored greave and silver plate boot.
+Anatomical LEFT = FAR camera leg: BLUE cloth-wrapped shin and darker blue boot with small silver plates.
+This asymmetry MUST remain attached to each anatomical leg throughout all 30 frames. Both legs alternate which one is forward. Never mirror the image, swap equipment or make two identical silver legs.
+
+WEAPONS: Exactly TWO throughout.
+NEAR right hand holds the LONGSWORD: long straight silver blade, diagonal bright CYAN inlays along a dark channel, swept feather-fin silver guard, large CLOSED D-shaped knuckle bow around blue grip.
+FAR left hand holds the SHORT DAGGER: roughly one-third the sword length, short silver blade, small feather guard and blue grip.
+Use a restrained armed running grip: elbows flexed, hands close to waist, longsword angled forward and down with its point clear of the floor, dagger visible on the far side. Small coherent counter-swing only. Guards and blades stay attached to the correct hands. No attack, slash, new weapon, sword sheath, blade bending or changing weapon lengths. Keep both leg silhouettes readable.
+
+MOTION: A real RUN, torso leaning forward about 10 degrees, stable head orientation, energetic alternating knees, bent recovering legs, brief airborne phases with BOTH feet above the floor. The body is in place at the same cell origin. During ground contact the supporting foot travels toward screen LEFT as the body would run right. The other knee folds and swings toward screen RIGHT, then the foot extends forward and lowers into contact. Show the near SILVER and far BLUE leg trading roles in the second half. Every pose advances a small continuous amount from the preceding one; all 30 are distinct phases of ONE two-step cycle. No abrupt pose reset at row boundaries.
+Phase sequence:
+01: near SILVER right foot reaches front-right and contacts; far BLUE left leg is back-left with bent knee.
+02-04: silver leg takes the weight and compresses, body dips slightly, blue rear heel lifts and folds.
+05-07: silver support foot passes beneath and behind the hip; blue knee swings forward, shin still folded.
+08-10: silver toes push off behind, blue thigh travels forward and shin starts extending; brief flight, both feet up.
+11-13: blue foot reaches ahead and descends; silver rear heel stays folded up; body at the upper part of bob then descends.
+14-15: blue foot nears front-right landing, silver leg begins forward recovery from behind.
+16: far BLUE left foot contacts front-right; silver right leg back-left, clearly reversing which leg leads.
+17-19: blue support compresses; silver rear heel lifts/folds; slight low body bob.
+20-22: blue foot supports beneath then behind hip; SILVER knee swings forward with shin folded.
+23-25: blue toe-off behind; SILVER knee extends its foot forward; brief flight, both feet up.
+26-28: SILVER foot extends ahead and lowers; blue heel folds behind; slight high body bob then descending.
+29-30: SILVER foot approaches the initial forward landing. Frame30 and frame01 must be adjacent phases of the same loop, not duplicate frames.
+Small secondary hair, scarf and waist-cloth motion only; stable head and torso sizes, armor plates rigid.
+
+STYLE: preserve the reference's detailed polished SD sprite rendering, stepped dark contours, readable warm blond highlights, silver armor facets, saturated blue cloth. Clean sharp color clusters, same lighting and palette on every frame. No blur or photorealistic treatment.
+BACKGROUND: real transparent alpha including gaps between limbs and inside weapon guards; no opaque backdrop, checkerboard, floor line, cast shadow, dust, speed streaks, text, numbers, grid borders, logo or watermark. ONLY the thirty sprites in the exact 6x5 layout.

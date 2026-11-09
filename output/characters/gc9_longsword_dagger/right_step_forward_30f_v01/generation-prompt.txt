@@ -1,0 +1,39 @@
+Use case: identity-preserve.
+Asset type: 30-frame SD pixel game sprite sheet of ONE RIGHT LEG FORWARD STEP, continuing an existing walk.
+Input image 1 is old walk frame23: match this exact character, body registration, style and equipment. Input image 2 is old frame22: raised/folded right-knee motion history. Input image 3 is the original right side-view character: DESIGN ONLY, not its canvas scale.
+User's existing prefix is old frames1,2,3,4,5,9,10,11,13,14,15,16,21,22,23. Generate the NEXT ACTION: the raised RIGHT KNEE goes FORWARD, the shin unfolds and the RIGHT FOOT reaches FORWARD to take a real step, heel first. The character faces screen RIGHT, so FORWARD means increasing horizontal x, to the RIGHT of the planted supporting foot.
+
+MOST IMPORTANT VISIBLE RESULT:
+End with a clearly SPLIT walking stance: SILVER RIGHT BOOT WELL AHEAD TO SCREEN-RIGHT, BLUE LEFT BOOT BACK TO SCREEN-LEFT. The final right toe must be much farther RIGHT than the blue left toe, by at least one boot length. There must be obvious horizontal distance between their ground contacts. Do not merely lower the silver boot vertically under the pelvis or next to the blue boot. The sole must land in FRONT of the supporting foot, not behind it. Preserve a long enough stride that forward stepping is unmistakable.
+
+ANATOMICAL SIDES LOCKED:
+Near RIGHT leg = SILVER plated greave and silver armored boot; this is the moving swing leg.
+Far LEFT leg = BLUE wrapped boot with small protective plates; this is the planted supporting leg.
+Keep the blue LEFT foot planted in the same position while the silver RIGHT thigh swings forward, knee leads forward, right lower leg opens, and silver heel advances to the RIGHT and settles. Do not swap leg materials or mirror the figure.
+The sword is a separate diagonal object, NOT a shin or leg. Draw the actual right knee, greave and boot visibly underneath/in front of the lowered sword as needed so the forward extension is readable.
+
+THIRTY TRUE IN-BETWEENS, ONE NON-LOOPING STEP:
+Every cell advances slightly along the same smooth arc. No full walking cycle, no return step, no ending reset. No stationary-pose filler rows.
+01-06: start at the ending raised/folded right knee context; right knee leads gently forward toward screen-right while lower leg is still folded. Right boot is airborne. Torso stays upright.
+07-12: right thigh and knee advance forward past the hip; unfold the right shin below the knee; silver boot travels RIGHTWARD and slightly downward across the front of the left supporting shin.
+13-18: right shin continues extending forward. Silver boot passes beyond the BLUE LEFT TOE to screen-right. Heel leads, toe angled slightly up. Foot still airborne.
+19-24: silver right heel reaches clearly forward, now a whole boot-length ahead of the blue supporting foot; lower the heel toward the ground IN FRONT, keeping the forward reach. Knee slightly flexed, not a straight stiff kick.
+25-27: silver RIGHT HEEL contacts ground well to screen-right of the blue boot; right toe remains lifted briefly.
+28-30: gently roll down the right forefoot, ending with right boot planted FORWARD and left blue boot behind. A small forward weight shift is appropriate; no second leg lift.
+
+REGISTRATION TARGETS (229px cell):
+Hair crown near y10, ground contact y221. Hip axis around x115.
+Planted BLUE LEFT boot roughly heel x118 to toe x153 throughout.
+Initial folded SILVER RIGHT boot around x95..132, y170..195, airborne.
+Mid-swing silver right heel moves rightward through x140..170, keeping above ground.
+FINAL silver RIGHT heel around x175 and toe around x209, sole y221. Thus right silver boot is clearly IN FRONT of the blue boot, separated by roughly 25+ pixels, a natural clear stride. This is approximate anatomical guidance, not a drawn chart.
+Keep knees, hips and ankles connected correctly. The knee bends naturally as the leg swings. No foot sliding on the ground before contact, no sideways knee bending, no kicking high or crossing arms.
+
+DESIGN AND STYLE:
+Exactly the same golden-blond layered hair, one warm brown eye in RIGHT side profile, same compact SD head and body, blue scarf and short lowered hood, silver chest/arms/shoulder plates, crescent on near right shoulder, brown belts/pouch/trousers and blue waist cloth. Preserve the master's crisp detailed square pixel clusters, warm outline colors, clean blue cloth and silver shading. Do not change head scale or lighting between frames. Match anchor rendering, not smooth anime painting.
+Near right hand holds long silver LONGSWORD with cyan diagonal inlays, feather-fin guard and closed D knuckle bow, pointing down-right; far left hand holds short DAGGER near waist pointing right/down. Keep both weapons, exact shapes and lengths, quiet controlled arm counter-motion only. No extra swords or sheathing. The right silver foot may extend beyond the sword's tip toward screen-right at landing. Do not shorten the stride to fit the leg behind the blade.
+Fixed right-facing orthographic camera, no turning, no camera motion. Small natural body weight shift only.
+
+OUTPUT:
+Exactly 30 sprites in a regular grid of 6 COLUMNS x 5 ROWS, one sprite per cell, chronological row-major. Requested canvas1374x1145px; each cell229x229px, no gutters or outer borders. The input 256px frames contain a 229px cell padded by13px; preserve the art scale after subtracting that padding. Same scale and origin in every cell. All hair, feet and weapon tips fully inside cells with clear padding.
+Genuine transparent alpha outside characters and inside all gaps. No floor, cast shadow, backdrop, checkerboard, grid, text, numbers, arrows, labels, logo or watermark. Numbers will be added as a separate review overlay.

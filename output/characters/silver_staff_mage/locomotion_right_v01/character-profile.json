@@ -1,0 +1,27 @@
+{
+  "status": "pilot, pending user assessment of overall result",
+  "characterId": "silver_staff_mage",
+  "identitySource": "sibling worktree: 캐릭터디자인2/output/silver-staff-8views-v1",
+  "master": "references/mage-right-master.png",
+  "designReference": "references/mage-front-reference.png",
+  "styleReference": "references/warrior-style-reference.png",
+  "view": "strict right side profile",
+  "identity": {
+    "hair": "long wavy silvery ivory",
+    "eye": "blue",
+    "robe": "blue and gold split robe, white front tunic, charcoal trousers and gold charcoal boots",
+    "weapon": "one gold wing and navy curl staff with blue gem",
+    "staffHand": "far anatomical left",
+    "freeArm": "near anatomical right",
+    "hipAccessory": "cylindrical blue and gold case on near right hip"
+  },
+  "motionPlan": "guides/motion-contract.json",
+  "output": {"cell": [256,256], "framesPerAction":30, "order":"row-major 01..30 then 01", "pivot":[128,228]},
+  "walk": {"cycleMs":1000, "source":"walk-generated-v01.png"},
+  "run": {"cycleMs":750, "sourceMap":"run-source-map.json"},
+  "secondaryMotion": "hair and cloth are baked into generated frames, not parameterized",
+  "windRuntimeImplemented": false,
+  "hurtExpressionsImplemented": false,
+  "reusableSkeletonImplemented": false,
+  "gameIntegrated": false
+}
