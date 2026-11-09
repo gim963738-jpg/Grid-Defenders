@@ -1,0 +1,25 @@
+Use case: precise-object-edit.
+Asset: v19 of an existing fantasy strategy world map. Make ONE localized terrain edit.
+
+INPUT ROLES:
+Image 1 is the FULL SQUARE MAP EDIT TARGET, continent_world_lore_v18.png, native 1254x1254.
+Image 2 is ONLY the user's tiny location crop of the bottom southern coastline around the caption "사하리드 왕국". It identifies the area to edit; it is NOT an alternative canvas or style reference.
+Return the complete square world map from image 1, not the crop.
+
+REQUESTED CHANGE — CONNECT THE SOUTHERN GREENERY:
+The user wants the green land to connect more naturally along the southern edge of the southern continent, beneath and around the white-domed city of 사하리드 왕국 and eastward toward its green river delta. In image 1 this is the lower-central coast, approximately x=300..810, y=1050..1170, or 24%..65% of canvas width and 84%..93% of height.
+Create a clearly visible, CONTINUOUS ribbon of fertile green coastal lowland that joins the existing green patches around the southern city's shoreline to the lush riverbanks and delta on its right. Widen and merge the disconnected grassy land margins and small green shore fragments; gently fill only the shallow local sea indentations needed to make that green land continuous. The coastal green belt should feel like irrigated oasis farmland and lush estuary grassland, with a few tiny palms/trees consistent with the existing miniature terrain. A viewer should immediately see a connected green terrain corridor rather than scattered isolated green flecks separated by blue water.
+Use an irregular, natural coastline and sensible tapering land contours. Keep the river flowing from the central continent through the southern desert into its delta; its main channels and mouths remain visibly blue and open. Keep the southern royal city, its domes, minarets and buildings exactly in place, seamlessly resting in its existing terrain. Keep the warm sand dunes and arid southern interior as the dominant biome; this is a modest fertile coastal belt, not a new green continent or a forest covering the desert.
+
+LOCK EVERYTHING OUTSIDE THIS LOCAL SOUTHERN COAST EDIT:
+Preserve the full map framing, scale, style, lighting, cities, five continents, northern snowy mountains and tiny fort, western fortress and forests, central large capital and smaller northeastern magic capital, eastern lake/gulf and city, immense northwest purple impact/crater/corruption, southeast purple dimensional rift and the ocean separation around it. Do not connect the southern green coast to the dimensional rift or to another continent. Do not add new cities, new symbols, new roads, labels, UI, borders or inset panels.
+Maintain the same crisp hand-painted miniature strategy-game map rendering, saturated colors, fine terrain detail, consistent light direction and soft shallow-water teal along the coast. Match the original quality and avoid introducing blurry patches.
+
+PRESERVE EVERY EXISTING KOREAN LABEL VERBATIM, SAME LOCATION AND LEGIBILITY:
+북대륙 / 서대륙 / 중앙대륙 / 동대륙 / 남대륙
+아스테른 제국 / 발레시온 / 아르케리온
+발트레인 왕국 / 사하리드 왕국 / 진월국
+스카르가드 요새 / 성휘 대교회
+Especially retain "사하리드 왕국" above the edited coastal greenery, with its existing ivory-white type and dark edge. No invented text or altered spellings.
+
+Output: one complete opaque square map, native source size 1254x1254 if available, otherwise highest native square resolution. Preserve the original composition; no zoom, crop, padding, transparency or global redesign.

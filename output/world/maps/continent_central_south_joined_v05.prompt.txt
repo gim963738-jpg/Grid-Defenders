@@ -1,0 +1,35 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_northwest_joined_v04.png. Earlier versions preserved.
+Output: continent_central_south_joined_v05.png
+User request: 남대륙과 중앙대륙잇고 서대륙과 남대륙에 간격을 좀더 벌리자
+Change: Join Central and South by a natural land isthmus; retreat South's western/northwestern coast to widen the sea passage from West. Preserve the North-West connection. The five named regions now occupy three major disconnected mainlands: North+West, Central+South, East.
+
+Use case: precise-object-edit.
+Asset type: fantasy worldbuilding terrain map, version 05.
+Input image 1 is the EDIT TARGET: continent_northwest_joined_v04.png, the current labelled fantasy map with NORTH already physically connected to WEST.
+
+User request: "남대륙과 중앙대륙잇고 서대륙과 남대륙에 간격을 좀더 벌리자"
+Make exactly TWO related geographic edits:
+1. JOIN the CENTRAL region ("중앙대륙") and SOUTH region ("남대륙") into one continuous mainland with a natural land isthmus.
+2. WIDEN the ocean separation between WEST ("서대륙") and SOUTH ("남대륙").
+
+CENTRAL-SOUTH LAND CONNECTION:
+Fill the short sea gap between the CENTRAL continent's southern/southwestern lower shore and the SOUTH continent's northern central shoulder. A broad unmistakably solid natural land neck must connect them, approximately 6–10% of canvas width at its narrowest, joining the central southern river plains to the southern northern grassland/mountain foothills. Prefer the central bottom-center to south top-center connection, approximately near x=50% and y=65–70% of the canvas. Keep rivers flowing naturally through valleys, down to real marine coasts; no river or water channel may cut completely across the connecting neck. Recut local coastline into natural bays on its east and west sides. Continuous green grasslands, modest hills and rocky foothills; no artificial bridge, road, causeway or buildings. CENTRAL and SOUTH should now clearly be one joined mainland, still with their original regional labels.
+
+WIDER WEST-SOUTH SEA:
+The southwest marine passage between WEST's southern/southeastern tip and SOUTH's northwestern/western desert coast is currently cramped. Open a noticeably BROADER navy-blue ocean channel here, approximately double the previous visible gap, with at least about 10–12% of image width at the former closest point. Set SOUTH's northwestern and western desert coastline back eastward and slightly southward, making its west/northwest shore more compact, while preserving the recognizable desert/mesa landscape and its southern green delta. Locally retreat the WEST continent's extreme southeastern coastal protrusion if needed, only modestly. Keep both landmasses substantial. This should read as a wide marine passage around the west side of the newly joined CENTRAL-SOUTH mainland, not a thin river. Do not move SOUTH toward WEST. Do not connect SOUTH to WEST.
+Keep SOUTH entirely inside the frame, with healthy ocean margins. Preserve southern desert identity, savanna and branching turquoise delta, adjusting them locally to fit the recut shore.
+
+CRITICAL TOPOLOGY:
+- Preserve the existing NORTH-WEST natural forested/mountainous land connection exactly; do not reopen that strait.
+- Add the new CENTRAL-SOUTH connection.
+- WEST/NORTH must remain fully separated by sea from CENTRAL/SOUTH.
+- EAST remains fully ocean-separated from both combined mainlands.
+- Thus the five named geographic regions now belong to THREE principal disconnected mainlands: NORTH+WEST, CENTRAL+SOUTH, and EAST. No extra land bridges between these groups.
+
+Preserve all other geography as closely as possible: north snowy mountains and fjords, western forests/lakes/eastern ridge, central fertile river basin, east misty green mountain relief and purple basin/crescent gulf, southern desert/savanna/delta and small volcanic offshore islands. Maintain the relative directional arrangement and approximate existing scales. Do not redesign the world.
+
+Text invariants: preserve exactly the five existing cream-white Korean labels and their correct locations: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". No added text, title, arrows, borders or legend.
+Style invariants: same high-detail hand-painted fantasy strategy-game overhead orthographic terrain style, crisp navy ocean and turquoise shallows, sculptural natural mountains, forest textures, plausible watersheds, square composition and restrained offshore clouds. No cities, buildings, icons, political coloring, UI or decorative frame.
+
+Success: a visibly solid CENTRAL-to-SOUTH land connection and a clearly wider WEST-to-SOUTH ocean gap, with the previous NORTH-to-WEST connection intact.

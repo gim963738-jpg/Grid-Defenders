@@ -1,0 +1,11 @@
+Tool: built-in image_gen; transparent_background=true.
+Edit target: char003_ingame_transparent_v04.png.
+User: 검은색 외각선틀이 있는걸로 만들어볼래?
+Change: Black contour around character and sword silhouette, transparent background preserved. Static game-look concept; inspect silhouette, blade tip and alpha.
+
+Use case: precise-object-edit.
+Add a clean BLACK OUTER SILHOUETTE OUTLINE to this exact transparent-background anime game character and his complete sword.
+The user means a black contour following the hero's silhouette, not a rectangular frame.
+Use a continuous crisp near-black contour, approximately 3–4 pixels wide at this image's 1448-pixel canvas width, around the outside of hair tufts, face silhouette, pauldrons, cloak tips, sleeves, hands, sword hilt/guard/blade/tip and boot soles. Consistent visual weight with slightly finer tapered treatment on hair and sword tip. Also clearly separate internal negative-space holes between legs/arms/cloak with the same restrained edge contour. Avoid a thick sticker border that swallows fine details.
+Preserve the existing interior illustration exactly: character face and expression, pose and straight lowered sword arm, forward-pointing sword, colors, fabric/metal shading, all costume details and original silhouette. Do not change proportions, equipment, framing or placement. No global darkening or extra inner scribble lines.
+Output on genuinely TRANSPARENT alpha background, same landscape dimensions and margins. Solid black outline immediately hugs the character edge, outside it is fully transparent. No white halo, shadow, ground, rectangle, checkerboard baked in, lettering or new elements.

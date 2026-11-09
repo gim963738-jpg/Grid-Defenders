@@ -1,0 +1,29 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_northern_outpost_v16.png. Earlier versions preserved.
+Output: continent_world_final_v17.png
+User request: 잘옴겼고 요새가 빠지면서 산의 형태가 좀 무너진거같은데 이거 자연스럽게 디테일링 수정해주고 세계관 수정은 이정도로 마무리하자
+Scope: Final northern terrain polish. Restore coherent mountain ridges, slopes, rock facets and snow detailing around the former stronghold site. Preserve the user-approved tiny stronghold's current position and size, all labels and the rest of the map. World-map editing closes after this correction per the user's request.
+
+Use case: precise-object-edit.
+Asset type: FINAL terrain polish of existing fantasy world map, version 17.
+Input image 1 is the FULL MAP EDIT TARGET: continent_northern_outpost_v16.png.
+User request: "잘옴겼고 요새가 빠지면서 산의 형태가 좀 무너진거같은데 이거 자연스럽게 디테일링 수정해주고 세계관 수정은 이정도로 마무리하자"
+The user approves the new tiny fortress position and scale. This is ONLY a final repair/detailing pass for the snowy mountain forms affected by removal of the old larger stronghold. Output the complete square map.
+
+LOCAL NORTHERN TERRAIN REPAIR:
+Focus on the NORTH snowy interior around the former stronghold site, approximately x=700–880,y=80–210 in this 1254x1254 map, immediately above and to the right of the "북대륙" label and to the left of the present tiny fort. Some current mountain contours and snow-covered slopes there look smeared, flattened or melted after editing. Restore geographically coherent mountain anatomy and crisp detail that matches neighboring intact peaks:
+- Clearly shaped rocky ridgelines with a few irregular secondary peaks and natural saddles, branching ridges, triangular faces, believable rocky outcrops, narrow gullies and modest foothills. Continue existing high northern peaks into lower spurs and a sheltered snowy valley, with continuous slope direction.
+- Crisp blue-gray shaded rock facets, snow on upper ridges and ledges, soft snow accumulation in hollows, varied small wind-sculpted snowdrifts. Distinguish solid mountain forms from translucent falling/blowing snow.
+- Avoid liquid-looking rippled/melted terrain, shapeless smooth white blobs, cut-off ridges, pasted rectangular patches, uniform repeated cone mountains or huge new mountains.
+- Keep a natural snowy basin and passage toward the small approved stronghold at roughly x=931,y=150. A few restrained scattered conifers can follow the existing terrain, without adding new landmarks.
+- Retain fine falling snow and light drifting snow; the repaired underlying terrain should remain readable.
+This is polishing the existing mountains at their existing scale, NOT replacing the entire north with a wall of new oversized peaks. Blend seamlessly into the undisturbed northern landscape.
+
+LOCK THE APPROVED FORT:
+Keep EXACTLY the single tiny northern barbarian stronghold already in image 1, at its exact current location, size, architecture and snowy atmosphere, around x=931,y=150. Do not enlarge, move, duplicate, redesign or remove it. Do not reintroduce a fortress in its old site.
+
+ALL OTHER CONTENT MUST STAY UNCHANGED:
+Keep the northern expanded coastline and overall land shape unchanged. Preserve all other mountains, forests, coasts, rivers, ocean, purple northwest extraterrestrial impact crater and alien crust, corrupted land connection, southern desert and delta, eastern lake and crescent gulf, and southeast dimensional rift.
+Preserve all four large capitals exactly as in image 1, including their positions, architecture and scale.
+Preserve exact Korean labels "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙", "아르켈리온", "동나라", their readability and positions. Add no names, text or new landmarks.
+Same full square framing, same bright detailed painted miniature fantasy strategy-game map style and lighting. No unrelated world redesign, new buildings, UI, annotations, frame or inset. Deliver a finished coherent map.

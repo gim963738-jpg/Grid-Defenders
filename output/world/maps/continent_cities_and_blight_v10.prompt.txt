@@ -1,0 +1,51 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_corrupted_valley_v09.png. Earlier versions preserved.
+Output: continent_cities_and_blight_v10.png
+User request: 두개의 산도 거뭇하게 그려주고 남대륙과 동대륙쪽에 균열 근처 끝자락은 오염구역으로 만들고 / 서대륙 산맥쪽에 거대한도시 / 중앙대륙 강쪽에 거대한도시 / 동대륙 강 오른쪽에 거대한 도시 / 남대륙 사막에 왕국 이런식으로 적당한 크기로 조절해서 만들어봐
+Changes: Darken both mountain ranges enclosing the corrupted northwest valley. Add coastal pollution on the southern/eastern mainland tips facing the southeast dimensional rift. Add West's mountain metropolis, Central's river metropolis, East's city on the right bank of its lake-fed river, and South's desert kingdom capital. City/site names remain unspecified; preserve the existing geographic labels and land connections.
+
+Use case: precise-object-edit.
+Asset type: fantasy worldbuilding map, darkened source ranges, southeastern coastal blight, and four major settlements, version 10.
+Input image 1 is the FULL MAP EDIT TARGET: continent_corrupted_valley_v09.png. Evolve the existing world; deliver the whole square map.
+
+User request:
+"두개의 산도 거뭇하게 그려주고 남대륙과 동대륙쪽에 균열 근처 끝자락은 오염구역으로 만들고
+서대륙 산맥쪽에 거대한도시
+중앙대륙 강쪽에 거대한도시
+동대륙 강 오른쪽에 거대한 도시
+남대륙 사막에 왕국 이런식으로 적당한 크기로 조절해서 만들어봐"
+
+CHANGES:
+
+1. DARKEN BOTH NORTHWEST SOURCE MOUNTAIN RANGES.
+The two mountain ridgelines above and below the dark lava-like valley at the WEST–NORTH connection currently have pale rock faces. Make BOTH these enclosing ranges distinctly soot-darkened: charcoal/blackened slate rock, dark violet shadows, sparse subdued burgundy-red fissures. Preserve readable ridge relief, multiple comparable peaks and their existing orientation. Keep the contained dark molten-looking valley substance BETWEEN them. No singular enormous tower mountain, no black waterfall spilling across the sea. Keep the neighboring distant northern snow crown white, and the healthy western mountain range further south naturally gray; only the two source-enclosing ranges become blighted dark mountains.
+
+2. ADD SOUTHEASTERN MAINLAND COASTAL BLIGHT NEAR THE EXISTING DIMENSIONAL SINKHOLE.
+The sinkhole lies in the sea southeast/right of SOUTH and below EAST. Keep its current shattered rim, violet fractures, abyss and inward-falling seawater.
+On the SOUTH mainland's EASTERN/SOUTHEASTERN coastal tip nearest the sinkhole, add a localized advancing corruption zone: violet-gray poisoned earth, blackened/dead trees, small dark coastal fissures and sickly dark vegetation. Retain the healthy bulk of the southern delta, showing contamination at the seaward outer eastern fringe rather than replacing the entire delta.
+On EAST mainland's SOUTHERN/SOUTHWESTERN-to-SOUTHERN tip nearest that same sinkhole, add a second modest coastal blighted area with the same environmental language. The affected distal coast is at the BOTTOM of EAST, not near its clean northern lake.
+Make these two coastal fringes clearly visible at map scale, approximately 6–10% of image width each, with organic landward fading into green terrain. Restrained purple/black sea staining directly around the damaged coast is acceptable. No giant flowing black ribbons bridging the ocean, no new land connection or extra portals. The three existing mainland groups remain physically separate.
+
+3. ADD FOUR DISTINCT, LARGE BUT MAP-SCALE FANTASY SETTLEMENTS.
+These are detailed MINIATURE URBAN DISTRICTS integrated into the terrain, shown from the same overhead map view. Each settlement must read as a sprawling major city or capital with densely packed tiny buildings, several streets/plazas, smaller perimeter districts and one modest architectural focal point. Do NOT paste giant isolated castle icons, city logos, UI pins or huge front-facing buildings. Aim each city's main footprint at approximately 7–10% of full canvas width (roughly 90–125px on a 1254px map), with a little surrounding suburb/farmland detail. Large relative to forest trees, restrained relative to continents. Match building scale across all four, adjusting footprint to terrain.
+
+A. WEST MOUNTAIN METROPOLIS ("서대륙"):
+Place a large stone mountain city along the HEALTHY gray mountain range in WEST, in the middle/southern half of its eastern ridge, safely below the corrupted source and southeast of the WEST label, roughly x=20–25%, y=49–59%. Terraced gray-stone urban neighborhoods follow the mountain foot and a broad mountain-pass valley, fortifications conform to slopes, tightly packed slate/brown roofs, tiny plazas and a modest central citadel. Do not place it in the black corruption or directly cover the Korean label. Integrate its lower suburbs with the existing forested valley.
+
+B. CENTRAL RIVER METROPOLIS ("중앙대륙"):
+Place a major green-heartland river city on both banks of the CENTRAL continent's large meandering river, south of the CENTRAL label and above the CENTRAL–SOUTH connection, roughly x=49–57%, y=52–60%. Densely clustered pale stone buildings, warm muted red/brown roofs, two or three appropriately small bridges, riverside quays, urban blocks and modest farmland at outer edges. The river remains clearly continuous through the city, not covered by a huge palace. Avoid the already blighted northwest coast.
+
+C. EASTERN RIVERSIDE METROPOLIS ("동대륙"):
+Place a large city on the RIGHT/EAST BANK of the EAST continent's river flowing down from its clear northern turquoise lake toward the eastern/southeastern coast. If the small river outlet is subtle, clarify a narrow natural blue river along the existing eastern valley first, without moving the lake or bay. Site the city to the RIGHT of that river, roughly x=85–91%, y=40–48%, south/southeast of the lake and northeast of the EAST label, within the continent's land footprint. Dense elegant pale-stone buildings with dark muted blue/green tile roofs, winding streets, modest river terraces and gardens. Match the overall established fantasy setting; no modern towers or arbitrary radically different culture. Do not build over the clean lake, on sea, in the crescent gulf, or over the EAST label.
+
+D. SOUTHERN DESERT KINGDOM ("남대륙"):
+Place a kingdom capital in SOUTH's western/central ochre desert, on a broad flat oasis/mesa-foot site west of the SOUTH label and away from the coast and corrupted southeastern fringe, roughly x=35–43%, y=77–83%. A sizeable sand-colored walled desert city with many small flat-roofed stone/adobe buildings, a modest palace/citadel, winding streets and a small oasis/palm cluster. The palace is one part of the capital, not an enormous solitary icon. Fit the urban footprint naturally among dunes and mesas, do not erase the desert's regional character. Keep any small palms as part of the urban oasis, not a green continent-sized jungle.
+
+Settlement placement is approximate; choose the nearest clear terrain fitting these instructions while preserving labels, river geography and existing landmarks. Cities should be visible and rich enough to support future worldbuilding, but not overwhelm the map. Do not add names for them yet, roads spanning continents, national borders, characters, monsters or banners.
+
+PRESERVE:
+The v09 naturalized southwestern coastline, open WEST–SOUTH passage, NORTH–WEST and CENTRAL–SOUTH land connections, CENTRAL rivers, eastern clear blue lake and crescent gulf, southern desert/savanna/delta, and dimensional sinkhole. Preserve the outer northwest contamination as dead trees and sickened ground, without reintroducing the removed sea-spanning liquid.
+Keep exactly the existing FIVE cream-white Korean region labels, correctly spelled, in their current approximate locations: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". No additional labels or text.
+Maintain full square composition, original ocean margins, high-detail hand-painted fantasy strategy-game overhead orthographic terrain relief, coherent miniature architecture at map scale, rich navy seas and turquoise shallows. No close-up, inset, collage, decorative frame, modern structures or game UI.
+
+Success: both source ridges are dark; the SOUTH/EAST tips near the dimensional rift show new localized pollution; four clearly legible appropriately scaled sprawling settlements appear at the specified west mountain, central river, east/right-of-river and southern desert sites.

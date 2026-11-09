@@ -1,0 +1,882 @@
+[
+  {
+    "path": "자료/캐릭터그림체/GC9/작화고정기준.json",
+    "value": {
+      "schema_version": 2,
+      "id": "gc9_whole_style_eight_v2",
+      "updated_on": "2026-11-08",
+      "style_id": "GC9",
+      "style_version": "1.1",
+      "scope": "GC9 whole-character drawing style; not a trained model",
+      "provenance": "output/gc9-style-standard-20261108/report.md",
+      "profiles": {
+        "gc9_c3_c6_eight": {
+          "name": "C3·C4·C5·C6 정면·사선 8장 전체 작화",
+          "primary": [
+            {
+              "id": "c03_front",
+              "path": "output/character-redesign-6x2/images/c03_front.png",
+              "role": "whole_style",
+              "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+            },
+            {
+              "id": "c03_threequarter",
+              "path": "output/character-redesign-6x2/images/c03_threequarter.png",
+              "role": "whole_style",
+              "sha256": "15448ca81c1c5ecc226993f403151fb70aa8b3d532549d368262e395a0374b95"
+            },
+            {
+              "id": "c04_front",
+              "path": "output/character-redesign-6x2/images/c04_front.png",
+              "role": "whole_style",
+              "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+            },
+            {
+              "id": "c04_threequarter",
+              "path": "output/character-redesign-6x2/images/c04_threequarter.png",
+              "role": "whole_style",
+              "sha256": "712d33a525be4f59a66fbabe884a33cc77205d6e00a9334fb31a8d362641761e"
+            },
+            {
+              "id": "c05_front",
+              "path": "output/character-redesign-6x2/images/c05_front.png",
+              "role": "whole_style",
+              "sha256": "e313100fa85b8163e81eaabe1f48e499cc2e3e97383bd74b247278276b7e4345"
+            },
+            {
+              "id": "c05_threequarter",
+              "path": "output/character-redesign-6x2/images/c05_threequarter.png",
+              "role": "whole_style",
+              "sha256": "59624b93b3d2bffa0899ddfcea15e8f99d586823e315e56007fba81e772b7457"
+            },
+            {
+              "id": "c06_front",
+              "path": "output/character-redesign-6x2/images/c06_front.png",
+              "role": "whole_style",
+              "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+            },
+            {
+              "id": "c06_threequarter",
+              "path": "output/character-redesign-6x2/images/c06_threequarter.png",
+              "role": "whole_style",
+              "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c"
+            }
+          ],
+          "overall_and_face_priority": "C4",
+          "metal_priority": "C3",
+          "selection": {
+            "overall_and_face_priority": "C4",
+            "metal_priority": "C3",
+            "whole_style_members": [
+              "C3",
+              "C4",
+              "C5",
+              "C6"
+            ],
+            "c6_exclusive_override": false,
+            "per_call_whole_style_images": "대상에 맞는 1~2장을 우선 선택. 전체 8장은 공통 비교 기준이며 한 번에 모두 첨부하지 않는다.",
+            "max_total_reference_images": 5,
+            "source_character_identity_must_not_transfer": true
+          },
+          "recipe_record": "output/character-redesign-6x2/생성기록.json",
+          "recipe_entries": [
+            "c03_front",
+            "c03_threequarter",
+            "c04_front",
+            "c04_threequarter",
+            "c05_front",
+            "c05_threequarter",
+            "c06_front",
+            "c06_threequarter"
+          ]
+        }
+      },
+      "default_profile": "gc9_c3_c6_eight",
+      "character_profiles": {},
+      "rejected_style_prefixes": [],
+      "exempt_subpaths": [
+        "/sd_style_test_",
+        "/inputs/"
+      ],
+      "approved_edit_targets": [],
+      "rules": {
+        "whole_style_reference_required": true,
+        "reference_hashes_required": true,
+        "identity_semantics_preserved": true,
+        "failed_face_geometry_must_not_be_locked": true,
+        "rejected_target_must_not_be_style_or_edit_master": true,
+        "full_style_failure_requires_whole_character_rebuild": true,
+        "do_not_infer_style_pass_from_native_file_tests": true,
+        "no_unrequested_redesign": true,
+        "no_next_view_after_style_failure": true,
+        "automatic_style_approval": false,
+        "reference_roles_must_match_executed_order": true,
+        "complete_benchmark_set_is_review_basis": true,
+        "do_not_infer_failure_from_reference_names": true
+      },
+      "review_axes": [
+        "전체 인상",
+        "얼굴 선과 생략 방식",
+        "머리카락 묶음",
+        "선화 위계",
+        "인체를 그리는 방식",
+        "명암 면",
+        "재질"
+      ],
+      "production_state": {
+        "character": "balor",
+        "generation": "stopped_for_style_audit",
+        "style": "rejected_by_user",
+        "new_generation_performed_during_repair": false,
+        "authorization_source": "이제 재대로된 GC9일러스트 만들수있어?",
+        "authorization_interpretation": "이전 발로르 작업을 새 전체 작화 기준으로 정면 시안1장 재개",
+        "max_new_image_calls": 1,
+        "followup_generation_allowed": false,
+        "successful_image_calls": 1,
+        "automatic_retry_allowed": false,
+        "latest_candidate_style": "unverified",
+        "generation_permitted": false,
+        "current_task": "C3~C6 8장 기준·실행 프롬프트 검증; 생성 요청 아님",
+        "image_calls_in_current_audit": 0
+      },
+      "rejected_style_paths": [
+        "output/characters/gc9_balor/concept_front_v01.png",
+        "output/characters/gc9_balor/gc9_rebuild_v09/front_v09.png",
+        "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_before_shield.png",
+        "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_initial.png",
+        "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_style_master.png",
+        "output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png",
+        "output/characters/gc9_balor/gc9_rebuild_v10/threequarter_v10.png",
+        "output/characters/gc9_balor/gc9_rebuild_v10/variants/threequarter_before_framing.png",
+        "output/characters/gc9_balor/illustration_3views_v01/front.png",
+        "output/characters/gc9_balor/illustration_3views_v02/front.png",
+        "output/characters/gc9_balor/illustration_3views_v03/front.png",
+        "output/characters/gc9_balor/illustration_3views_v04/front.png",
+        "output/characters/gc9_balor/illustration_3views_v05/front.png",
+        "output/characters/gc9_balor/illustration_3views_v06/front.png",
+        "output/characters/gc9_balor/variants/front_v06_initial.png",
+        "output/characters/gc9_balor/illustration_3views_v01/right.png",
+        "output/characters/gc9_balor/illustration_3views_v04/right.png",
+        "output/characters/gc9_balor/illustration_3views_v05/right.png",
+        "output/characters/gc9_balor/illustration_3views_v07/right.png",
+        "output/characters/gc9_balor/illustration_3views_v08/right.png",
+        "output/characters/gc9_balor/variants/right_geometry_initial_v05.png",
+        "output/characters/gc9_balor/variants/right_horizontal_initial_v08.png",
+        "output/characters/gc9_balor/variants/right_shield_angle_initial_v07.png",
+        "output/characters/gc9_balor/illustration_3views_v01/back.png",
+        "output/characters/gc9_balor/illustration_3views_v04/back.png",
+        "output/characters/gc9_balor/illustration_3views_v05/back.png",
+        "output/characters/gc9_balor/illustration_3views_v07/back.png",
+        "output/characters/gc9_balor/illustration_3views_v08/back.png",
+        "output/characters/gc9_balor/variants/back_framing_initial_v08.png",
+        "output/characters/gc9_balor/variants/back_horizontal_initial_v08.png",
+        "output/characters/gc9_balor/variants/back_initial_v04.png",
+        "output/characters/gc9_balor/variants/back_shield_angle_initial_v07.png",
+        "output/characters/gc9_balor/helmet_off_front_v01.png",
+        "output/characters/style_tests/blonde_wind_elf/gc9_concept_v03/front_v03.png"
+      ],
+      "max_reference_images": 5,
+      "benchmark_manifest": "자료/캐릭터그림체/GC9/완성작화기준8장.json",
+      "superseded_profiles": {
+        "c4_general": "전체 기준을 C3~C6 8장으로 확장; C4 우선순위 유지",
+        "c6_male": "C6 단독 전역/발로르 고정 해제; C6는 8장 중 남성형 사례"
+      },
+      "production_states": {
+        "blonde_wind_elf": {
+          "character": "blonde_wind_elf",
+          "generation": "single_concept_completed",
+          "generation_permitted": false,
+          "style": "unverified",
+          "authorization_source": "금발 바람 엘프 다시시도",
+          "max_new_image_calls": 1,
+          "successful_image_calls": 1,
+          "automatic_retry_allowed": false,
+          "followup_generation_allowed": false,
+          "latest_candidate": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/front_v04.png",
+          "failure_report": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v03/failure-analysis-20261108/report.md",
+          "previous_successful_image_calls": 1,
+          "current_attempt": "v04",
+          "total_successful_image_calls": 2,
+          "internal_conditions_pass": false
+        }
+      }
+    }
+  },
+  {
+    "path": "자료/캐릭터설정/캐릭터목록.json",
+    "value": {
+      "schema_version": 1,
+      "updated_on": "2026-11-08",
+      "classes": [
+        {
+          "id": "warrior",
+          "label": "전사"
+        },
+        {
+          "id": "swordsman",
+          "label": "검사"
+        },
+        {
+          "id": "knight",
+          "label": "기사"
+        },
+        {
+          "id": "archer",
+          "label": "궁수"
+        },
+        {
+          "id": "mage",
+          "label": "마법사"
+        },
+        {
+          "id": "healer",
+          "label": "치유사"
+        },
+        {
+          "id": "assassin",
+          "label": "암살자"
+        },
+        {
+          "id": "martial",
+          "label": "무투가"
+        },
+        {
+          "id": "shaman",
+          "label": "주술사"
+        },
+        {
+          "id": "unassigned",
+          "label": "클래스 미지정"
+        }
+      ],
+      "profiles": [
+        {
+          "id": "staff",
+          "name": null,
+          "display_name": "은발·날개 지팡이",
+          "features": "은발·푸른 망토·날개 장식 지팡이",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "unassigned",
+          "profession": null,
+          "weapons": [
+            "지팡이"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "미지정",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "longsword_dagger",
+          "name": null,
+          "display_name": "금발 전사 · 장검·단검",
+          "features": "금발·청색 목도리·은빛 판금·장검과 단검",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "warrior",
+          "profession": null,
+          "weapons": [
+            "장검",
+            "단검"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "adventurer",
+          "name": null,
+          "display_name": "붉은 머리 모험가",
+          "features": "붉은 머리·붉은 망토·은빛 견갑",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "unassigned",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "미지정",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "c01",
+          "name": null,
+          "display_name": "C1 은발 검·방패",
+          "features": "은발·땋은 머리·흰 금장 갑옷",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "unassigned",
+          "profession": null,
+          "weapons": [
+            "검",
+            "방패"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "미지정",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "c02",
+          "name": null,
+          "display_name": "C2 흰 단발·별자리 망토",
+          "features": "흰 단발·별자리 무늬 망토",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "unassigned",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "미지정",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "c03",
+          "name": null,
+          "display_name": "C3 청록·금속 활",
+          "features": "청록색 머리·금속 활",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "archer",
+          "profession": null,
+          "weapons": [
+            "활"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "c04",
+          "name": null,
+          "display_name": "C4 은발 포니테일·은빛 활",
+          "features": "은발 포니테일·은빛 활",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "archer",
+          "profession": null,
+          "weapons": [
+            "활"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "c05",
+          "name": null,
+          "display_name": "C5 청색 망토·투구 기사",
+          "features": "청색 망토·은빛 투구·남성형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "knight",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "c06",
+          "name": null,
+          "display_name": "C6 금발·흰 판금",
+          "features": "금발·흰 판금·남성형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "unassigned",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "미지정",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "central_light_archmage",
+          "name": null,
+          "display_name": "아르케리온 수석 빛 마법사",
+          "features": "장발·안경·흰 로브·지적인 인상",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "mage",
+          "profession": "수석 빛 마법사",
+          "weapons": [
+            "지팡이",
+            "마도서"
+          ],
+          "attack_disciplines": [
+            "빛 마법"
+          ],
+          "class_basis": "사용자 설정",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "placement_status": "deferred"
+        },
+        {
+          "id": "red_ponytail",
+          "name": null,
+          "display_name": "붉은 포니테일 전사",
+          "features": "붉은 포니테일·전사 외형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "warrior",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "t14",
+          "name": null,
+          "display_name": "검보라 쌍단검",
+          "features": "검보라 장비·쌍단검·남성형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "unassigned",
+          "profession": null,
+          "weapons": [
+            "쌍단검"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "미지정",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "t15",
+          "name": null,
+          "display_name": "분홍 머리·검은 리본",
+          "features": "분홍 머리·검은 리본·여성형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "unassigned",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "미지정",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "blonde_wind_elf",
+          "name": null,
+          "display_name": "금발 바람 엘프",
+          "features": "금발 장발·흰색과 청록 의상·엘프 외형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "unassigned",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "미지정",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "illustration_concept_internal_conditions_failed",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "latest_illustration_concept": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/front_v04.png",
+          "illustration_style_status": "awaiting_user_review"
+        },
+        {
+          "id": "burgundy",
+          "name": null,
+          "display_name": "버건디 머리 여검사",
+          "features": "버건디색 머리·검사 외형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "swordsman",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "char001",
+          "name": null,
+          "display_name": "금발 장발 마법사 · char001",
+          "features": "금발 장발·흰 금장 로브·번개 장치 배경",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "mage",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "char002",
+          "name": null,
+          "display_name": "붉은 장발 검객 · char002",
+          "features": "붉은 장발·검은 금장 겹옷·곡검",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "swordsman",
+          "profession": null,
+          "weapons": [
+            "곡검"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "char003",
+          "name": null,
+          "display_name": "붉은 머리 주인공 · char003",
+          "features": "붉은 머리·붉은 망토·은빛 견갑·장검",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "swordsman",
+          "profession": null,
+          "weapons": [
+            "장검"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "healer",
+          "name": null,
+          "display_name": "금발 힐러",
+          "features": "금발·치유사 외형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "healer",
+          "profession": null,
+          "weapons": [],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "silver_archer",
+          "name": null,
+          "display_name": "은발 궁수",
+          "features": "은발·궁수 외형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "archer",
+          "profession": null,
+          "weapons": [
+            "활"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "teal_elf_archer",
+          "name": null,
+          "display_name": "청록 엘프 궁수",
+          "features": "청록색 머리·엘프 궁수 외형",
+          "origin_id": "unassigned",
+          "affiliation_ids": [],
+          "class_id": "archer",
+          "profession": null,
+          "weapons": [
+            "활"
+          ],
+          "attack_disciplines": [],
+          "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+          "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+          "production_state": "existing_material",
+          "illustration_concept_approved": null,
+          "sd_concept_approved": null,
+          "placement_status": "deferred",
+          "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+        },
+        {
+          "id": "balor",
+          "name": "발로르",
+          "display_name": "발로르",
+          "features": "짧은 갈색 머리·부드러운 인상·청·은 판금·청색 망토·검과 대형 방패",
+          "origin_id": "west",
+          "affiliation_ids": [
+            "west",
+            "west_royalist"
+          ],
+          "class_id": "knight",
+          "profession": "왕국 제3 기사단장",
+          "weapons": [
+            "양날검",
+            "카이트실드"
+          ],
+          "attack_disciplines": [
+            "제국 검술",
+            "방패술"
+          ],
+          "class_basis": "사용자 설정: 기사·성기사 스타일",
+          "origin_basis": "사용자 지정 서대륙",
+          "affiliation_basis": "서대륙 맥락의 친왕파·왕국 제3 기사단장 사용자 설정",
+          "placement_status": "assigned",
+          "production_state": "gc9_style_rejected_generation_stopped",
+          "illustration_concept_approved": false,
+          "sd_concept_approved": true,
+          "illustration_final_views": [
+            "front",
+            "right",
+            "back"
+          ],
+          "sd_requested": true,
+          "face_proposal_approved": true,
+          "main_variant": "unhelmeted",
+          "hand_grip_preset": "one_hand_grip_v1",
+          "grip_revision_approved": true,
+          "illustration_revision": 10,
+          "shield_height_fraction": [
+            2,
+            3
+          ],
+          "rear_right_hand_surface": "palm",
+          "sd_concept_view": "front",
+          "sd_style": "기존 SD 픽셀",
+          "sd_style_selection": "existing_sd",
+          "sd_style_approved": true,
+          "sd_scale_alignment_pending": true,
+          "sd_standard_id": "sd_silver_staff_standard_v1",
+          "illustration_current_views": [],
+          "illustration_previous_complete_set_revision": 5,
+          "gc9_framing_standard_id": "gc9_spacious_canvas_v1",
+          "illustration_latest_revision_approved": false,
+          "illustration_view_revisions": {},
+          "illustration_concept_view": "front_right",
+          "illustration_concept_revision": 10,
+          "previous_illustration_concept_approved": true,
+          "illustration_style_revision_approved": false,
+          "illustration_comparison_views": [],
+          "illustration_style_status": "rejected_by_user",
+          "style_profile": "c6_male"
+        }
+      ],
+      "notes": [
+        "사용자 최신 지시: 첨부자료와 모든 이전 작업물은 출신·소속 미지정으로 보관한다. 기존 수석 빛 마법사도 포함하며 신규 캐릭터부터 배치한다.",
+        "출신·소속·공격 학파는 확인된 설정만 기록한다.",
+        "카탈로그 클래스 분류와 정식 직업명은 별도 필드다.",
+        "기존 자료의 최근 버전 표시는 시안 승인이나 새 제작 순서 완료를 뜻하지 않는다."
+      ],
+      "placement_policy": {
+        "effective_on": "2026-11-07",
+        "existing_materials": "deferred",
+        "includes_existing_archmage": true,
+        "assign_new_characters_only": true
+      }
+    }
+  },
+  {
+    "path": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/visual-review.json",
+    "value": {
+      "original_dimensions_and_bytes_preserved": true,
+      "internal_conditions_pass": false,
+      "main_alpha32_bounds": [
+        158,
+        120,
+        852,
+        1448
+      ],
+      "actual_margins": {
+        "left": 0.154296875,
+        "right": 0.16796875,
+        "top": 0.078125,
+        "bottom": 0.057291666666666664
+      },
+      "required_initial_margins": {
+        "top": 0.2,
+        "left": 0.15,
+        "right": 0.15,
+        "bottom": 0.06
+      },
+      "style_review": {
+        "status": "awaiting_user_review",
+        "primary": "F01_Edel",
+        "whole_style_benchmark": "c04_front",
+        "observations": [
+          "머리의 넓은 밝고 어두운 면이 v03보다 뚜렷하고 천의 분할도 각진 큰 면으로 정리됨.",
+          "얼굴·전체 작화의 C4 일치 여부는 사용자 판정 대기이며 화풍 합격으로 기록하지 않음.",
+          "뾰족 귀·금발·황록색 눈·흰청록 복장·빈손을 유지함."
+        ]
+      },
+      "limitations": [
+        "상단7.81%·하단5.73% 여백으로 초기기본값20%·6% 미충족.",
+        "낮은 알파 잔여색이 주변에 존재함. 어두운 배경에서도 확인 필요.",
+        "원본을 임의로 축소·재저장하지 않았고 자동 재생성하지 않음."
+      ],
+      "followup_views_generated": 0
+    }
+  },
+  {
+    "path": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/character-brief.json",
+    "value": {
+      "character_id": "blonde_wind_elf",
+      "display_name": "금발 바람 엘프",
+      "features": "옅은 금발 장발·황록색 눈·긴 귀·흰색과 청록 겹옷",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "unassigned",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "placement_status": "deferred",
+      "species": "엘프",
+      "presentation": "성인 여성형",
+      "existing_design_source": "output/characters/style_tests/blonde_wind_elf/references/source_elf.jfif",
+      "style_status": "awaiting_user_review",
+      "illustration_concept_approved": false,
+      "concept_count": 1,
+      "workflow": "illustration_concept_only",
+      "future_reference_allowed": false,
+      "failure_report": null,
+      "attempt": "v04",
+      "internal_conditions_pass": false
+    }
+  },
+  {
+    "path": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/generation-records.json",
+    "value": {
+      "generation_tool": "built-in image_gen",
+      "image_engine_model": "not_exposed_by_tool",
+      "successful_image_calls": 1,
+      "automatic_retry_performed": false,
+      "concept_count": 1,
+      "calls": [
+        {
+          "output": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/front_v04.png",
+          "generated_source": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-5989fa07-cea2-4094-9a7d-8bbb44411421.png",
+          "prompt_file": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/front_v04.prompt.txt",
+          "prompt_sha256": "e0a3e4a501f02b00dbc6312f9ec1e762fef59235b13b85d06e4d043a8fbee2ad",
+          "executed_request": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/executed-request.json",
+          "references": [
+            {
+              "id": "source_elf",
+              "path": "output/characters/style_tests/blonde_wind_elf/references/source_elf.jfif",
+              "role": "design_components_only",
+              "sha256": "08515a698ee5263ad2e27ecf468d285faefe000c24da29f335b040fc96bffdac"
+            },
+            {
+              "id": "F01_Edel",
+              "path": "자료/캐릭터그림체/GC9/원본/F01_Edel.jfif",
+              "role": "primary_drawing_style",
+              "sha256": "1d578c379be8be978277a6c9c8ee94457eaff991759671022c3efb4c69cf077a"
+            },
+            {
+              "id": "A04_Bram",
+              "path": "자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+              "role": "material_only",
+              "sha256": "9f8e7b048e4c1f6e476b16eb98f5b6fea31f34481ba617d06b1591a0aec84d8a"
+            },
+            {
+              "id": "pose_front",
+              "path": "output/character-redesign-6x2/inputs/pose_front.png",
+              "role": "composition_only",
+              "sha256": "985946d0e6a2ede263b2dce75215bc30655d4a9c5f8778daba03f562de29e3b1"
+            },
+            {
+              "id": "c04_front",
+              "path": "output/character-redesign-6x2/images/c04_front.png",
+              "role": "whole_style",
+              "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+            }
+          ],
+          "transparent_background": true,
+          "width": 1024,
+          "height": 1536,
+          "bytes": 1721999,
+          "sha256": "ddf858292b0a82e33ade7bd4b71c30b5c34f0a531bb5ba1d0218b3b8133e3d50",
+          "status": "internal_framing_failed_style_awaiting_user_review"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,47 @@
+Tool: built-in image_gen (pose/camera/aftermath remodel).
+Identity and rendering reference: char003_illustration_forest_slime_v02.png. Earlier versions preserved.
+Pose reference: pose_reference_v03.png (user screenshot; pose only, no UI or costume copying).
+Output: char003_illustration_forest_slime_v03.png
+User request: [Image #1] 저 사진 자세인데 이미 벤거지 그리고 슬라임 연출은 검기에 베인 녹색 물방울 구도는 저사진기준 왼쪽 위에서 보는듯한 느낌으로 다시
+Changes: Rebuild the action to the supplied raised-sword / forward-reaching-hand pose as an already-completed slash, with a high oblique camera from upper left. Replace the blue slime halves with green teardrop-shaped slime droplets/fragments and a lingering sword-energy wake. Preserve the smiling red-cloaked hero, compact adult anime proportions and sunlit woodland. Static illustration only; this image does not implement combat, VFX timing, damage or sprite animation.
+
+Use case: identity-preserve.
+Asset type: char003 protagonist forest action illustration v03, corrected pose / camera / slime aftermath.
+INPUT ROLES:
+Image 1 is the exact HERO IDENTITY, COSTUME, APPROVED COMPACT ANIME PROPORTIONS and FOREST RENDERING reference: char003_illustration_forest_slime_v02.png. Keep this hero and art direction, but REBUILD his pose and the camera.
+Image 2 is the user's POSE AND ACTION-COMPOSITION reference ONLY. It shows a man leaning/twisting forward, sword arm extended high behind him toward upper right, free hand reaching forward toward lower left, a strongly diagonal upper-body action silhouette. Use those anatomy/action relationships. Do NOT copy the blue hair, face mask, white clothes, purple background or screenshot UI. In addition, the user specifically wants the new camera to look down from the UPPER LEFT.
+
+Exact user correction:
+"[Image #1] 저 사진 자세인데 이미 벤거지 그리고 슬라임 연출은 검기에 베인 녹색 물방울 구도는 저사진기준 왼쪽 위에서 보는듯한 느낌으로 다시"
+
+CRITICAL — POSE AND TIMING:
+This is AFTER a completed slash, NOT a poised wind-up, NOT the previous upright low sword-at-slime pose.
+Reconstruct the hero's pose to match image2's sweeping follow-through:
+- Torso leans diagonally forward and twists, head slightly lowered but his smiling face clearly readable.
+- RIGHT sword arm stretches upward and back, following through to the upper-right side above/behind the head; the sword continues outward from the naturally gripped hilt, ending up-right within the frame. This is where the sword ended after a rising diagonal cut already swept through the slime.
+- LEFT empty gloved hand extends forward toward the lower-left foreground for balance, fingers naturally open, with tasteful foreshortening.
+- Shoulders twist coherently, knees flex and weight is shifted over a planted forward boot, rear leg trails naturally. No floating body or dislocated shoulder. Convey the physical follow-through and energy of the reference.
+- A thin bright white/silver curved sword-energy wake lingers separately in the lower foreground along the already completed low-left to high-right slash path. It has ALREADY CUT the target. Do not put the sword tip touching an intact slime now. No huge opaque magical ring, violet aura or spell vortex.
+
+CAMERA / COMPOSITION — user's explicit change:
+A DYNAMIC HIGH THREE-QUARTER VIEW looking diagonally DOWN from the hero's UPPER LEFT, approximately 35–45 degrees downward, rather than the old frontal eye-level full-body view.
+See the top planes of his tousled hair, shoulder armor and extended hand, plus the forest floor below. Strong clear diagonal composition: forward free hand and green droplets nearer the lower-left foreground; upper body/head central; raised sword hand and blade toward upper right; hips and boots receding in depth behind/below the torso.
+Use believable perspective and controlled foreshortening. Preserve the compact 6.5-head adult game anatomy underneath the pose; perspective may shorten the visible limbs naturally. Not an extremely long-legged figure and not chibi.
+Fit the whole head, both hands, sword tip, cloak tails and both boots in the portrait frame with breathing room, but let this high-angle action composition dominate over the previous straight-standing reference layout. Do not simply tilt the old image.
+
+SLIME AFTERMATH — GREEN WATERDROPS, not blue slime halves:
+The slime has ALREADY been hit by the passing sword-energy wave. Depict its aftermath as a graceful cluster/spray of translucent emerald/lime-GREEN TEARDROP-SHAPED GEL DROPLETS and a few small gel fragments, suspended along the cut wake in the lower foreground. Clear waterdrop silhouettes, green light refraction, bright white highlights, a few ripples/small green splashes on the dirt below. Vary droplet sizes and spacing to read as the fresh remains of ONE sliced green slime rather than rain.
+No large intact slime, no two big blue jelly halves, no cartoon surprised eyes/mouth, no emoji marks. The green droplets and slim silver energy wake tell the completed-cut story.
+Keep face and body unobstructed by the droplets. This is playful fantasy slime gel, no blood or flesh.
+
+HERO IDENTITY / COSTUME:
+Same friendly young adult MALE Western-continent hero from image1, short tousled warm reddish-brown hair, amber-brown eyes, WARM CONFIDENT HAPPY SMILE with slightly parted lips. Keep him recognizable.
+Same red short traveling mantle/coat, charcoal raised inner collar/lowered hood, silver fasteners and appointment badge, ivory rolled-sleeve shirt, dark chest underlayer, leather double utility belts/pouches, dark loose trousers, tall brown lace-up boots/red ties, dark fingerless gloves.
+Same asymmetrical compact silver steel pauldrons (larger layered pauldron on his anatomical RIGHT / viewer-left in the front reference, smaller opposite plate), right forearm guard and matching small knee protection. Adapt costume naturally to the new pose, do not swap him into image2's outfit.
+One plain Western straight arming sword, correct hand-hilt-guard-blade connection, no duplicated sword or extra arms.
+Red cape has a limited natural follow-through sweep that helps the diagonal silhouette, not a huge fabric cyclone.
+
+SCENE / STYLE:
+Keep lush green woodland, tall trees, moss, ferns, forest path and warm golden dappled sunshine from image1, now reprojected for the requested elevated oblique camera; more forest floor visible. Crisp hero against quieter hand-painted anime forest.
+Same clear high-quality 2D anime linework and cel-painted shadows, controlled highlights, readable red/ivory/dark leather/steel materials. Same compact grounded adult anatomy, not photorealistic or 3D.
+One complete standalone illustration. No text, watermark, screenshot corners, red Save button, upload icon, border, collage, speedline-only backdrop or UI.

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>캐릭터 제작 모음</title>
+<style>
+:root{color-scheme:light;--page:#f4f1eb;--paper:#fffdf8;--ink:#293137;--muted:#6d7472;--line:#dcdcd1;--accent:#315d68;--tint:#e9f0ed;--stage:#faf9f5}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:var(--page);color:var(--ink);font:14px/1.7 "Segoe UI","Malgun Gothic",sans-serif}
+button,input,select{font:inherit;min-height:44px}button{cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:8px;padding:8px 12px}button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:white}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #b57c3e;outline-offset:3px}a{color:var(--accent);text-underline-offset:3px}h1,h2,h3,p{margin:0}h1{font-size:clamp(27px,3.2vw,37px);line-height:1.35;letter-spacing:-.8px;margin:5px 0 10px}h2{font-size:17px;line-height:1.5}h3{font-size:15px}.muted{color:var(--muted)}
+header{border-bottom:1px solid var(--line)}.hero{max-width:1800px;margin:auto;padding:27px 28px 25px;display:grid;grid-template-columns:minmax(0,1fr) minmax(400px,1fr);gap:35px;align-items:center}.eyebrow{color:var(--accent);font-size:10px;letter-spacing:1.5px;font-weight:700}.intro{color:var(--muted);font-size:13px}.stats{display:flex;gap:7px 19px;flex-wrap:wrap;margin:17px 0 12px}.stats strong{font-size:21px;color:var(--accent);margin-right:5px}.stats span{font-size:11px;color:var(--muted)}.links{display:flex;gap:7px 16px;flex-wrap:wrap;font-size:12px}.global-classes{border:1px solid #cddbd6;background:#eef3ef;border-radius:13px;padding:18px 19px}.global-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:4px}.global-heading h2{font-size:18px}.global-classes p{font-size:12px;color:var(--muted);margin-bottom:12px}.chips{display:flex;gap:7px;flex-wrap:wrap}.chips button{font-size:12px;display:inline-flex;gap:8px;align-items:center}.chips .number{font-size:11px;opacity:.7;font-variant-numeric:tabular-nums}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;max-width:1800px;margin:auto;padding:25px 28px 44px}aside{position:sticky;top:18px;align-self:start}.side-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.side-title small{font-size:11px;color:var(--muted)}#continent-list{display:flex;gap:6px;flex-direction:column}.continent-button{width:100%;display:flex;align-items:center;justify-content:space-between;text-align:left;min-height:48px;padding:10px 12px;font-size:13px}.continent-button .number{font-size:12px;opacity:.7}.side-note{font-size:11px;color:var(--muted);margin:12px 0 19px}.reference-menu{border-top:1px solid var(--line);padding-top:15px}.reference-menu h3{color:var(--muted);font-size:12px;margin-bottom:8px}.reference-menu button{display:flex;justify-content:space-between;gap:8px;width:100%;font-size:11px;margin-top:6px;text-align:left;background:transparent}.world-link{display:block;margin-top:17px;font-size:12px}main{min-width:0}.mobile-continent{display:none}
+.class-panel{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:17px 18px;margin-bottom:14px}.class-heading{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px}.class-heading small{font-size:12px;color:var(--muted)}.selection-strip{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:16px 0 12px}.selection-strip strong{font-size:21px;letter-spacing:-.5px}.selection-strip span{color:var(--muted);font-size:12px}
+.workflow{margin-bottom:13px;border:1px solid var(--line);border-radius:9px;background:#efeee5;padding:0 13px}.workflow summary{display:flex;align-items:center;min-height:44px;cursor:pointer;font-size:12px;gap:8px}.workflow summary::before{content:"＋";color:var(--accent)}.workflow[open] summary::before{content:"－"}.flow{padding:3px 0 13px;display:flex;gap:7px;flex-wrap:wrap;align-items:center;font-size:12px}.flow b{padding:5px 8px;border:1px solid #d5d7ca;border-radius:5px;background:var(--paper);font-weight:500}.flow .gate{color:var(--accent);font-weight:700}.flow a{margin-left:6px}
+.toolbar{padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:var(--paper);display:flex;gap:12px;flex-wrap:wrap;align-items:end}#filter-panel>summary{display:flex;align-items:center;min-height:44px;cursor:pointer;font-size:12px;color:var(--accent)}#filter-panel{margin:0}#filter-panel[open]{flex-basis:100%}#filter-panel[open]>.filters{margin-top:9px}.filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px 13px}label{display:flex;flex-direction:column;gap:4px;font-size:11px;color:var(--muted);min-width:0}input,select{min-width:0;width:100%;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);padding:8px 9px}.search-label{flex:1;min-width:180px}.result-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0 12px}.result-heading{font-size:14px;font-weight:600}.result-info{color:var(--muted);font-size:11px}.backgrounds{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:11px;color:var(--muted)}.backgrounds button{font-size:11px;padding:5px 9px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:17px}.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}.stage{width:100%;height:300px;background:var(--stage);padding:10px;border:0;border-radius:0;display:block;cursor:zoom-in}.stage img{width:100%;height:100%;object-fit:contain;display:block}.pixel{image-rendering:pixelated}.card-body{padding:14px}.character-origin{font-size:10px;color:var(--accent);margin-bottom:5px}.card h2{font-size:15px;line-height:1.5;margin-bottom:7px}.features{font-size:12px;line-height:1.75;color:var(--muted);margin-bottom:9px}.taxonomy-tags{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0 10px}.tag{font-size:10px;line-height:1.7;padding:3px 6px;border-radius:5px;background:var(--tint);color:var(--accent);overflow-wrap:anywhere}.tag.missing{background:#f0eee8;color:#8b8980}.tag.class{background:#e4edef;font-weight:600}.badges{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}.badge{font-size:10px;padding:2px 6px;background:#f0eee5;color:#6a746d;border-radius:5px}.badge.history{color:#8b6938;background:#f6efe4}.badge.reference{color:#736388;background:#efebf4}.meta{font-size:10px;color:var(--muted)}.review-note{font-size:11px;color:#846740;margin-top:8px}.actions{display:flex;gap:8px 13px;flex-wrap:wrap;align-items:center;font-size:12px;margin-top:12px}.actions button{font-size:11px;padding:5px 9px}.empty{padding:42px 22px;background:var(--paper);border:1px dashed var(--line);border-radius:11px;text-align:center;color:var(--muted);font-size:13px}.empty strong{display:block;color:var(--ink);margin-bottom:7px}.more{display:flex;justify-content:center;margin:24px 0}.more button{min-width:180px;font-size:12px}.footer-note{border-top:1px solid var(--line);margin-top:22px;padding-top:16px;color:var(--muted);font-size:11px}
+dialog{padding:0;border:0;border-radius:12px;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);width:max-content;background:var(--paper);color:var(--ink)}dialog::backdrop{background:#10252bdc}.viewer-bar{padding:11px 15px;display:flex;justify-content:space-between;gap:18px;align-items:center;max-width:1150px}.viewer-bar strong{font-size:14px}.viewer-buttons{display:flex;gap:7px;flex-shrink:0}.viewer-buttons button{font-size:12px}.viewer-canvas{max-width:calc(100vw - 24px);max-height:calc(100dvh - 335px);overflow:auto;background:var(--stage)}#large{display:block;max-width:none;width:auto;height:auto}#large.fit{max-width:calc(100vw - 50px);max-height:calc(100dvh - 355px);object-fit:contain}.viewer-meta{padding:11px 15px;font-size:11px;max-width:1100px;max-height:150px;overflow:auto}.viewer-meta p{margin:3px 0;overflow-wrap:anywhere}.viewer-meta details{margin-top:7px}.viewer-meta summary{cursor:pointer}#alias-list{list-style:none;padding:0;margin:4px 0}.related-assets{display:flex;gap:6px;overflow:auto;max-width:calc(100vw - 24px);padding:8px 13px;background:#efeee7}.related-assets button{display:flex;gap:6px;align-items:center;flex:0 0 auto;font-size:10px;text-align:left;max-width:205px}.related-assets img{width:28px;height:40px;object-fit:contain}.related-assets button[aria-pressed=true]{border-color:var(--accent);background:#dce9e5;color:var(--accent)}
+@media(min-width:1600px){.stage{height:335px}}
+@media(max-width:1150px){.hero{grid-template-columns:1fr 1fr;gap:20px}.layout{grid-template-columns:185px minmax(0,1fr);gap:18px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.stage{height:280px}.global-classes{padding:15px}.hero{padding:22px}.layout{padding:22px}}
+@media(max-width:800px){.hero{display:block;padding:21px 16px}.global-classes{margin-top:19px}.global-heading h2{font-size:16px}.layout{display:block;padding:17px 13px 32px}aside{display:none}.mobile-continent{display:flex;margin-bottom:13px;font-size:12px}.class-panel{padding:14px}.selection-strip strong{font-size:19px}.chips{gap:6px}.chips button{font-size:11px;padding:7px 9px}.grid{gap:12px}.toolbar{padding:11px}#filter-panel>summary{display:flex;align-items:center;min-height:44px;cursor:pointer;color:var(--accent);font-size:12px}#filter-panel[open]>.filters{margin-top:10px}.card-body{padding:12px}.stage{height:270px}.viewer-bar strong{max-width:50vw}.viewer-buttons button{padding:5px 8px;font-size:11px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.stage{height:310px}.card h2{font-size:16px}.features{font-size:13px}.tag{font-size:11px}.global-heading{align-items:center}.global-heading small{font-size:10px}.global-classes p{font-size:11px}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.selection-strip{gap:5px}.selection-strip span{font-size:11px}.backgrounds{width:100%}.links{gap:7px 13px}.viewer-bar{align-items:flex-start;gap:8px}.viewer-bar strong{font-size:12px}.viewer-buttons{gap:5px}.related-assets button{max-width:175px}.class-heading small{font-size:11px}}
+</style></head>
+<body>
+<header><div class="hero"><div><div class="eyebrow">GRID DEFENDERS / CHARACTER LIBRARY</div><h1>캐릭터 제작 모음</h1><p class="intro">대륙을 고르고 클래스를 선택해 캐릭터와 제작 이미지를 찾아봅니다.</p><div class="stats" id="totals"></div><nav class="links"><a id="studioLink" href="http://127.0.0.1:8788/">이미지 제작 도구</a><a href="../../world/atlas/index.html">세계관 지도</a><a href="../../../문서/02_세부기획/02_영웅/캐릭터제작규약.md">제작 순서</a><a href="../catalog/정리기준.md">정리 기준</a><a href="../sd-standard/index.html">SD 공통 기준</a></nav></div>
+<section class="global-classes" aria-label="대륙 전체 클래스 목록"><div class="global-heading"><h2>전체 클래스</h2><small>모든 대륙에서 보기</small></div><p>클래스를 누르면 출신 대륙과 관계없이 해당 캐릭터를 모아 봅니다.</p><div class="chips" id="global-class-list"></div></section></div></header>
+<div class="layout"><aside><div class="side-title"><h2>출신 대륙</h2><small>캐릭터 수</small></div><nav id="continent-list" aria-label="출신 대륙 선택"></nav><p class="side-note">기존 인물의 미정 출신은 보관하고, 새 캐릭터부터 출신을 지정합니다.</p><div class="reference-menu"><h3>참고자료</h3><button type="button" data-reference="attachments">첨부자료 <span></span></button><button type="button" data-reference="gc9refs">GC9 그림체 참조 <span></span></button><button type="button" data-reference="sp13refs">SP13 스플래시 참조 <span></span></button></div><a class="world-link" href="../../world/atlas/index.html">대륙·국가 설정 보기 ↗</a></aside>
+<main>
+<label class="mobile-continent">출신 대륙<select id="continent"></select></label>
+<section class="class-panel" aria-label="선택 대륙 클래스"><div class="class-heading"><h2 id="class-heading">클래스</h2><small id="class-context"></small></div><nav class="chips" id="class-tabs" aria-label="클래스 선택"></nav></section>
+<div class="selection-strip"><strong id="selection-name"></strong><span id="selection-stats" aria-live="polite"></span></div>
+<details class="workflow"><summary>제작 순서 · 일러스트 4장 → SD 3장</summary><div class="flow"><b>일러스트 시안 1장</b><span>→</span><span class="gate">사용자 승인</span><span>→</span><b>4방향 제작</b><span>→</span><b>SD 시안 1장</b><span>→</span><span class="gate">사용자 승인</span><span>→</span><b>3방향 제작</b><a href="../../../문서/02_세부기획/02_영웅/캐릭터제작규약.md">방향·저장 기준</a></div></details>
+<div class="toolbar"><label class="search-label">이름·특징·태그 검색<input id="query" type="search" placeholder="예: 장검, 빛 마법, 아르케리온, C4" autocomplete="off"></label><details id="filter-panel"><summary>방향·보관 자료 필터</summary><div class="filters">
+<label>표시 단위<select id="display"><option value="characters">캐릭터별 묶음</option><option value="images">이미지별 보기</option></select></label>
+<label>제작 상태<select id="scope"><option value="current">최근 정리본</option><option value="history">이전 버전·초안</option><option value="reference">원본·그림체 참조</option><option value="all">전체 이미지</option></select></label>
+<label>캐릭터<select id="character"></select></label><label>방향·구도<select id="view"></select></label><label>제작 묶음<select id="collection"></select></label>
+<label>정렬<select id="sort"><option value="origin">대륙·클래스 순</option><option value="collection">기존 제작 묶음 순</option><option value="character">캐릭터 이름 순</option><option value="version">버전 높은 순</option></select></label>
+</div></details></div>
+<div class="result-bar"><div><div class="result-heading" id="result-heading"></div><div class="result-info" id="result-count"></div></div><div class="backgrounds"><button type="button" id="reset">필터 초기화</button><span>표시 배경</span><button type="button" data-background="#faf9f5" aria-pressed="true">밝게</button><button type="button" data-background="#161e27" aria-pressed="false">어둡게</button></div></div>
+<div class="grid" id="gallery"></div><div class="empty" id="empty" hidden></div><div class="more"><button id="more" type="button">더 보기</button></div>
+<p class="footer-note">시안 승인은 사용자 확인 후 기록합니다. 기존 자료와 새 제작 순서를 구분해 보관하며, 원본 저장과 100% 보기는 이미지의 실제 크기를 유지합니다. 같은 이미지의 보관 경로와 생성 기록은 상세 보기에서 확인할 수 있습니다.</p>
+</main></div>
+<dialog id="viewer" aria-labelledby="viewer-title"><div class="viewer-bar"><strong id="viewer-title"></strong><div class="viewer-buttons"><button type="button" id="fit" aria-pressed="false">화면에 맞춤</button><button type="button" id="close">닫기</button></div></div><div class="viewer-canvas"><img id="large" alt=""></div><nav id="related-assets" class="related-assets" aria-label="같은 캐릭터의 제작 이미지"></nav><div class="viewer-meta"><p id="viewer-character"></p><div id="viewer-tags" class="taxonomy-tags"></div><p id="viewer-info"></p><p id="viewer-path" class="muted"></p><div class="links" id="viewer-links"></div><details id="aliases"><summary id="alias-summary"></summary><ul id="alias-list"></ul></details></div></dialog>
+<script id="catalog-data" type="application/json">__CATALOG_DATA__</script>
+<script>
+'use strict';
+const catalog=JSON.parse(document.getElementById('catalog-data').textContent);
+const assets=catalog.assets,collections=new Map(catalog.collections.map(c=>[c.id,c]));
+const profiles=new Map(catalog.profiles.map(p=>[p.id,p])),continents=new Map(catalog.continents.map(c=>[c.id,c])),classes=new Map(catalog.classes.map(c=>[c.id,c]));
+const defaults={origin:'all',classId:'all',scope:'current',collection:'all',character:'all',view:'all',query:'',sort:'origin',display:'characters',limit:24};
+const state={...defaults},byId=id=>document.getElementById(id),grid=byId('gallery'),viewer=byId('viewer');
+const node=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
+const scopeNames={current:'최근 정리본',history:'이전 버전·초안',reference:'원본·그림체 참조',all:'전체 이미지'};
+const latestCreated=assets.filter(a=>a.role==='created'&&a.status==='current');
+const characterCount=list=>new Set(list.filter(a=>a.role==='created').map(a=>a.character)).size;
+const originLabel=id=>id==='all'?'전체 대륙':continents.get(id)?.label||'출신 미지정';
+const classLabel=id=>id==='all'?'전체 클래스':classes.get(id)?.label||'클래스 미지정';
+const scopeCount=id=>id==='all'?assets.length:assets.filter(a=>a.status===id).length;
+const classCount=(id,origin='all')=>characterCount(latestCreated.filter(a=>(id==='all'||a.class_id===id)&&(origin==='all'||a.origin_id===origin)));
+const originCount=id=>characterCount(latestCreated.filter(a=>id==='all'||a.origin_id===id));
+if(location.protocol==='http:'||location.protocol==='https:')byId('studioLink').href=location.origin+'/';
+const compact=matchMedia('(max-width:800px)');byId('filter-panel').open=false;compact.addEventListener('change',e=>{if(e.matches)byId('filter-panel').open=false;});
+function option(select,value,label){const n=node('option','',label);n.value=value;select.append(n);}
+option(byId('continent'),'all','전체 대륙');
+for(const c of [{id:'all',label:'전체 대륙'},...catalog.continents]){
+ const b=node('button','continent-button');b.type='button';b.dataset.continent=c.id;b.append(node('span','',c.label),node('span','number',originCount(c.id)));b.addEventListener('click',()=>setContinent(c.id));byId('continent-list').append(b);
+ if(c.id!=='all')option(byId('continent'),c.id,c.label);
+}
+for(const c of [{id:'all',label:'전체 클래스'},...catalog.classes]){
+ for(const global of [false,true]){
+  const b=node('button');b.type='button';b.dataset[global?'globalClass':'class']=c.id;b.append(node('span','',c.label),node('span','number'));b.addEventListener('click',()=>setClass(c.id,global));byId(global?'global-class-list':'class-tabs').append(b);
+ }
+}
+option(byId('collection'),'all','전체 제작 묶음');
+for(const c of catalog.collections)option(byId('collection'),c.id,c.label+' ('+catalog.collection_counts[c.id]+')');
+option(byId('character'),'all','전체 캐릭터');
+for(const c of catalog.characters)if(assets.some(a=>a.characters.includes(c.id)))option(byId('character'),c.id,profiles.get(c.id)?.display_name||c.label);
+option(byId('view'),'all','전체 구도');for(const [id,label] of Object.entries(catalog.view_labels))if(assets.some(a=>a.view===id))option(byId('view'),id,label);
+for(const b of document.querySelectorAll('[data-reference]')){b.querySelector('span').textContent=catalog.collection_counts[b.dataset.reference];b.addEventListener('click',()=>setCollection(b.dataset.reference));}
+for(const [count,label] of [[characterCount(latestCreated),'캐릭터'],[catalog.counts.current,'최근 이미지'],[catalog.counts.history,'이전 버전'],[catalog.counts.reference,'참조']]){const n=node('div');n.append(node('strong','',count),node('span','',label));byId('totals').append(n);}
+for(const a of assets){
+ const p=profiles.get(a.profile_id);a.search=[a.title,a.description,a.character_label,a.path,a.review_note,a.style,a.source_group_label,p?.display_name,p?.features,originLabel(a.origin_id),...(a.profile_tags||[]).map(t=>t.label),...(a.search_tags||[]),...a.aliases.map(x=>x.title+' '+x.path)].join(' ').toLocaleLowerCase();a.searchCompact=a.search.replace(/[\s·#]/g,'');
+}
+let filtered=[],records=[],activeRelated=[];
+function syncControls(){byId('continent').value=state.origin;for(const id of ['collection','character','view','sort','scope','display'])byId(id).value=state[id];byId('query').value=state.query;}
+function saveBookmark(){
+ const p=new URLSearchParams();
+ for(const [key,value] of Object.entries(state))if(key!=='limit'&&value!==defaults[key])p.set(key,String(value));
+ const hash=p.toString()?'#'+p.toString():'';
+ if(location.hash!==hash)history.replaceState(null,'',location.href.split('#')[0]+hash);
+ try{localStorage.setItem('gd-character-library-v3',JSON.stringify(state));}catch{}
+}
+function clearDetails(){Object.assign(state,{collection:'all',character:'all',view:'all',query:'',limit:24});}
+function setContinent(id){if(id!=='all'&&!continents.has(id))return;clearDetails();Object.assign(state,{origin:id,classId:'all',scope:'current',display:'characters',sort:'origin'});render();}
+function setClass(id,global=false){if(id!=='all'&&!classes.has(id))return;clearDetails();Object.assign(state,{classId:id,scope:'current',display:'characters',sort:'origin'});if(global)state.origin='all';render();}
+function setCollection(id){
+ if(id!=='all'&&!collections.has(id))return;clearDetails();Object.assign(state,{origin:'all',classId:'all',collection:id,display:'images',sort:'collection',scope:['attachments','gc9refs','sp13refs'].includes(id)?'reference':'current'});render();
+}
+function matching(){
+ const terms=state.query.trim().toLocaleLowerCase().replaceAll('#','').split(/\s+/).filter(Boolean);
+ const result=assets.filter(a=>(state.scope==='all'||a.status===state.scope)&&(state.origin==='all'||a.origin_id===state.origin)&&(state.classId==='all'||a.class_id===state.classId)&&(state.collection==='all'||a.collections.includes(state.collection))&&(state.character==='all'||a.characters.includes(state.character))&&(state.view==='all'||a.view===state.view)&&terms.every(t=>a.search.includes(t)||a.searchCompact.includes(t)));
+ const originOrder=id=>catalog.continents.findIndex(c=>c.id===id),classOrder=id=>catalog.classes.findIndex(c=>c.id===id);
+ result.sort((a,b)=>state.sort==='version'?b.version-a.version:state.sort==='character'?(profiles.get(a.profile_id)?.display_name||a.character_label).localeCompare(profiles.get(b.profile_id)?.display_name||b.character_label,'ko'):state.sort==='origin'?(originOrder(a.origin_id)-originOrder(b.origin_id)||classOrder(a.class_id)-classOrder(b.class_id)||(profiles.get(a.profile_id)?.display_name||a.character_label).localeCompare(profiles.get(b.profile_id)?.display_name||b.character_label,'ko')):0);
+ return result;
+}
+function representative(list){
+ const score=a=>(a.style.includes('픽셀')?20:0)+(a.source_group==='videoWalk60'?100:0)+({front_right:0,front:1,illustration:2,right:3,back:4,sheet:8}[a.view]??6);
+ return [...list].sort((a,b)=>score(a)-score(b))[0];
+}
+function displayRecords(list){
+ if(state.display==='images')return list.map(a=>({asset:a,related:a.role==='created'?list.filter(x=>x.character===a.character&&x.role==='created'):[a]}));
+ const groups=new Map();
+ for(const a of list){const key=a.role==='created'?a.character:a.id;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(a);}
+ return [...groups.values()].map(group=>({asset:representative(group),related:group}));
+}
+function tags(target,a){
+ target.replaceChildren();for(const t of a.profile_tags||[]){const tag=node('span','tag '+t.kind+(t.label.includes('미지정')?' missing':''),'#'+t.label);tag.title=({affiliation:'소속 국가·세력',class:'클래스',profession:'직업',weapon:'무기 종류',discipline:'배운 공격 계열'})[t.kind];target.append(tag);}
+}
+function openAsset(a,related=null){
+ if(related)activeRelated=related;else if(!viewer.open)activeRelated=a.role==='created'?assets.filter(x=>x.character===a.character&&x.role==='created'&&x.status===a.status):[a];
+ const img=byId('large');img.className=a.style.includes('픽셀')?'pixel':'';img.src=a.url;img.alt=a.title;img.width=a.width;img.height=a.height;
+ const p=profiles.get(a.profile_id);
+ byId('fit').setAttribute('aria-pressed','false');byId('viewer-title').textContent=a.title;byId('viewer-character').textContent=p?p.display_name+' · '+p.features:a.character_label;tags(byId('viewer-tags'),a);
+ byId('viewer-info').textContent=a.width+' × '+a.height+' px · '+(a.transparentBackground?'실제 알파 투명':'배경 포함')+' · 원본 100%';byId('viewer-path').textContent=a.path;
+ const links=byId('viewer-links');links.replaceChildren();const download=node('a','','원본 파일 저장');download.href=a.url;download.download=a.path.split('/').at(-1);links.append(download);
+ for(const l of a.links){const link=node('a','',l.label);link.href=l.url;link.target='_blank';link.rel='noopener';links.append(link);}
+ byId('alias-list').replaceChildren();for(const alias of a.aliases){const li=node('li'),link=node('a','',alias.path);link.href=alias.url;link.target='_blank';link.rel='noopener';li.append(link);byId('alias-list').append(li);}byId('alias-summary').textContent='보관 경로 '+a.aliases.length+'개';byId('aliases').open=false;
+ const relatedNav=byId('related-assets');relatedNav.replaceChildren();relatedNav.hidden=activeRelated.length<2;
+ for(const item of activeRelated){const b=node('button');b.type='button';b.dataset.asset=item.id;b.setAttribute('aria-pressed',String(item.id===a.id));const thumb=node('img',item.style.includes('픽셀')?'pixel':'');thumb.src=item.url;thumb.alt='';thumb.loading='lazy';b.append(thumb,node('span','',item.style+' · '+item.view_label+' · v'+item.version));b.addEventListener('click',()=>openAsset(item));relatedNav.append(b);}
+ if(!viewer.open)viewer.showModal();
+}
+function render(){
+ filtered=matching();records=displayRecords(filtered);syncControls();saveBookmark();grid.replaceChildren();
+ for(const record of records.slice(0,state.limit)){
+  const a=record.asset,p=profiles.get(a.profile_id),grouped=state.display==='characters'&&a.role==='created';
+  const card=node('article','card');Object.assign(card.dataset,{id:a.id,character:a.character,collection:a.collection,status:a.status,origin:a.origin_id||'unassigned',class:a.class_id||'unassigned'});
+  const title=grouped&&p?p.display_name:a.title;
+  const stage=node('button','stage');stage.type='button';stage.setAttribute('aria-label',title+' 원본 보기');
+  const img=node('img',a.style.includes('픽셀')?'pixel':'');img.src=a.url;img.alt=title;img.loading='lazy';img.decoding='async';img.width=a.width;img.height=a.height;stage.append(img);stage.addEventListener('click',()=>openAsset(a,record.related));
+  const body=node('div','card-body');body.append(node('div','character-origin',p?originLabel(p.origin_id):a.source_group_label),node('h2','',title));
+  if(p)body.append(node('p','features',p.features));else if(a.description)body.append(node('p','features',a.description));
+  if(p){const tagList=node('div','taxonomy-tags');tags(tagList,a);body.append(tagList);}
+  const badges=node('div','badges');badges.append(node('span','badge '+a.status,scopeNames[a.status]),node('span','badge',grouped?'제작 이미지 '+record.related.length+'장':a.view_label));if(!grouped)badges.append(node('span','badge','v'+a.version));body.append(badges,node('div','meta',a.width+' × '+a.height+' · '+(a.transparentBackground?'투명 배경':'배경 포함')));
+  if(a.decision_status==='discarded')badges.append(node('span','badge history','폐기'));
+  if(a.decision_status==='selected')badges.append(node('span','badge','기존 SD 채택'));
+  if(a.decision_status==='inactive_rejected_style')badges.append(node('span','badge reference','활성 참조 제외'));
+  if(a.review_note)body.append(node('p','review-note',a.review_note));
+  const actions=node('div','actions'),open=node('button','',grouped&&record.related.length>1?'묶음 '+record.related.length+'장 보기':'원본 100%');open.type='button';open.addEventListener('click',()=>openAsset(a,record.related));const save=node('a','','원본 저장');save.href=a.url;save.download=a.path.split('/').at(-1);actions.append(open,save);if(a.duplicate_count)actions.append(node('span','meta','경로 '+a.aliases.length+'개'));body.append(actions);card.append(stage,body);grid.append(card);
+ }
+ const referenceMode=state.scope==='reference',originName=originLabel(state.origin),className=classLabel(state.classId);
+ byId('selection-name').textContent=state.collection!=='all'?collections.get(state.collection).label:originName+' · '+className;
+ byId('selection-stats').textContent=referenceMode?'참조 '+filtered.length+'장':characterCount(filtered)+'캐릭터 · '+filtered.length+'이미지';
+ byId('class-context').textContent=referenceMode?'원본·그림체 참고자료':state.origin==='all'?'모든 대륙의 캐릭터':originName+' 출신에서 보기';byId('class-heading').textContent=referenceMode?'참고자료':'클래스';byId('class-tabs').hidden=referenceMode;
+ byId('result-heading').textContent=state.display==='characters'?'캐릭터별 묶음':'제작 이미지';
+ byId('result-count').textContent=records.length+'개 중 '+Math.min(records.length,state.limit)+'개 표시 · '+scopeNames[state.scope];
+ byId('empty').hidden=filtered.length>0;byId('empty').replaceChildren(node('strong','',originName+' · '+className),node('p','','등록된 이미지가 없습니다. 이 대륙과 클래스로 새 캐릭터를 분류할 수 있습니다.'));
+ byId('more').hidden=records.length<=state.limit;byId('more').textContent='더 보기 · 남은 '+Math.max(0,records.length-state.limit)+'개';
+ for(const b of document.querySelectorAll('[data-continent]'))b.setAttribute('aria-pressed',String(b.dataset.continent===state.origin));
+ for(const b of document.querySelectorAll('[data-class]'))if(b.tagName==='BUTTON'){b.setAttribute('aria-pressed',String(b.dataset.class===state.classId));b.querySelector('.number').textContent=classCount(b.dataset.class,state.origin);}
+ for(const b of document.querySelectorAll('[data-global-class]')){b.setAttribute('aria-pressed',String(state.origin==='all'&&state.classId===b.dataset.globalClass&&state.collection==='all'&&!referenceMode));b.querySelector('.number').textContent=classCount(b.dataset.globalClass);}
+ for(const b of document.querySelectorAll('[data-reference]'))b.setAttribute('aria-pressed',String(b.dataset.reference===state.collection));
+}
+function reset(){Object.assign(state,defaults);render();}
+byId('continent').addEventListener('change',e=>setContinent(e.target.value));
+byId('query').addEventListener('input',e=>{state.query=e.target.value;state.limit=24;render();});
+for(const id of ['character','view','sort','display'])byId(id).addEventListener('change',e=>{state[id]=e.target.value;state.limit=24;render();});
+byId('scope').addEventListener('change',e=>{state.scope=e.target.value;state.limit=24;if(['reference','all'].includes(state.scope))state.display='images';if(state.scope==='reference'){state.origin='all';state.classId='all';}render();});
+byId('collection').addEventListener('change',e=>setCollection(e.target.value));
+byId('more').addEventListener('click',()=>{state.limit+=24;render();});byId('reset').addEventListener('click',reset);
+for(const b of document.querySelectorAll('[data-background]'))b.addEventListener('click',()=>{document.documentElement.style.setProperty('--stage',b.dataset.background);for(const other of document.querySelectorAll('[data-background]'))other.setAttribute('aria-pressed',String(other===b));});
+byId('fit').addEventListener('click',e=>{const fit=byId('large').classList.toggle('fit');e.currentTarget.setAttribute('aria-pressed',String(fit));});byId('close').addEventListener('click',()=>viewer.close());
+viewer.addEventListener('click',e=>{if(e.target===viewer){const r=viewer.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)viewer.close();}});
+function restore(){
+ Object.assign(state,defaults);const hash=location.hash.slice(1);
+ if(collections.has(hash)){Object.assign(state,{collection:hash,display:'images',sort:'collection',scope:['attachments','gc9refs','sp13refs'].includes(hash)?'reference':'current'});}
+ else{
+  let saved=null;if(!hash)try{saved=JSON.parse(localStorage.getItem('gd-character-library-v3'));}catch{}
+  const data=hash?Object.fromEntries(new URLSearchParams(hash)):saved||{};
+  if(data.origin==='all'||continents.has(data.origin))state.origin=data.origin;
+  if(data.classId==='all'||classes.has(data.classId))state.classId=data.classId;
+  if(data.scope in scopeNames)state.scope=data.scope;
+  if(data.collection==='all'||collections.has(data.collection))state.collection=data.collection;
+  if(data.character==='all'||catalog.characters.some(c=>c.id===data.character))state.character=data.character;
+  if(data.view==='all'||data.view in catalog.view_labels)state.view=data.view;
+  if(['origin','collection','character','version'].includes(data.sort))state.sort=data.sort;
+  if(['characters','images'].includes(data.display))state.display=data.display;
+  if(typeof data.query==='string')state.query=data.query;
+ }
+ render();
+}
+Object.defineProperty(window,'characterCreationContext',{get:()=>({origin_id:state.origin,class_id:state.classId,production_policy_id:catalog.production.id})});
+addEventListener('hashchange',restore);restore();
+</script>
+</body></html>

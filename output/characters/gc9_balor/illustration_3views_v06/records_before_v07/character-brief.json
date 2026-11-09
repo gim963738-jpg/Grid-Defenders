@@ -1,0 +1,317 @@
+{
+  "id": "balor",
+  "name": "발로르",
+  "style": "GC9 v1.1",
+  "status": "illustration_front_revision_ready_for_review",
+  "origin_id": "west",
+  "country_name": "발트레인 왕국",
+  "affiliation_ids": [
+    "west",
+    "west_royalist"
+  ],
+  "political_alignment": "친왕파",
+  "profession": "왕국 제3 기사단장",
+  "class_id": "knight",
+  "species": "인간",
+  "gender": "남성형",
+  "age": 28,
+  "height_cm": 183,
+  "build": "다부지고 단단한 체격",
+  "personality": "주변 사람을 잘 챙기며 병사들 사이에서 우상과 모범이 되는 지휘관",
+  "family_id": null,
+  "faith_membership": null,
+  "element": "무",
+  "attack_disciplines": [
+    "제국 검술",
+    "방패술"
+  ],
+  "appearance": {
+    "face": "부드러운 눈매와 은은한 미소의 28세 성인 남성",
+    "hair": "단정한 짧은 짙은 갈색 머리",
+    "eyes": "회청색",
+    "palette": [
+      "청색",
+      "은색",
+      "흰색"
+    ],
+    "helmet": "푸른빛 폐쇄형 투구·날개 장식·좁은 시야 틈",
+    "armor": "사자 부조와 정돈된 장식이 있는 청빛 판금·은색 테두리",
+    "waist_cloth": "파란 천",
+    "cape": "긴 청색 망토·갈라진 끝·용 문양과 점무늬",
+    "helmet_worn": false,
+    "shield": "은색 바탕·검은 날개와 십자가 문양의 대형 카이트실드, 인물 키의 약 2/3 높이"
+  },
+  "weapons": [
+    {
+      "type": "양날검",
+      "hand": "anatomical_right",
+      "appearance": "붉은 보석이 박힌 화려한 은색 장식 검"
+    },
+    {
+      "type": "대형 카이트실드",
+      "hand": "anatomical_left",
+      "appearance": "은색 바탕·검은 날개와 십자가 문양의 대형 카이트실드, 인물 키의 약 2/3 높이"
+    }
+  ],
+  "decisions": [
+    "색상은 뒤에 기재된 상세 설정과 반드시 유지할 요소를 우선해 청색·은색과 청색 망토로 확정",
+    "정치적 입장 칸의 기사단장은 직책으로 정리하고 친왕파를 정치적 입장으로 기록",
+    "제국 검술은 사용자 원문대로 유지",
+    "성기사 스타일을 대교회 소속이나 빛 속성으로 해석하지 않음",
+    "최신 사용자 선택에 따라 투구를 벗은 부드러운 성인 남성 얼굴을 주 제작본에 적용"
+  ],
+  "requested_output": {
+    "concept_count": 1,
+    "concept_view": "front",
+    "concept_requires_user_approval": true,
+    "final_views": [
+      "front",
+      "right",
+      "back"
+    ],
+    "final_count": 3,
+    "concept_included_in_final": false,
+    "sd_requested": true,
+    "note": "사용자 최신 요청 앞·뒤·옆 3방향을 해당 캐릭터의 최종 방향 수로 적용",
+    "helmet_off_preview_count": 0,
+    "main_variant": "unhelmeted"
+  },
+  "references": [
+    {
+      "id": "M05",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+      "role": "GC9 남성 판금·천 선화와 형태만"
+    },
+    {
+      "id": "A04",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+      "role": "전신 판금·관절 연결과 절제된 은빛 반사만"
+    },
+    {
+      "id": "C3",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+      "role": "사용자가 선호한 금속의 면·두께·모서리 표현만"
+    }
+  ],
+  "concept_approval": {
+    "status": "approved",
+    "source": "수정 필요 선택 직후 사용자가 잘못눌렀다 라고 정정",
+    "interpretation": "직전 이지선다 선택을 정정한 것으로 보고 디자인 통과로 진행",
+    "approved_master": "output/characters/gc9_balor/concept_front_v01.png",
+    "recorded_at": "2026-11-07T12:26:41.181Z"
+  },
+  "latest_revision": {
+    "version": 6,
+    "scope": "front_only",
+    "main_variant": "unhelmeted",
+    "framing_standard_id": "gc9_spacious_canvas_v1",
+    "framing": "인물·손에 든 검·방패·망토 전체를 연결 상태로 균일 축소. 정사각 원본 위 21.2%·좌우 약 25.1% 여백",
+    "face_audit": "M02·M05·C4 원본과 대조. 기존 v05의 코·입·턱 주변 입체 묘사가 GC9보다 사실적으로 남아 있었음",
+    "face_correction": "28세 남성·갈색 머리·회청색 눈·부드러운 인상 유지. 눈꺼풀·짧은 코·입선과 피부 명암을 간결하게 보정",
+    "face_references": [
+      "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+      "자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+      "output/character-redesign-6x2/images/c04_front.png"
+    ],
+    "preserve": "청은 갑주·사자 부조·원형 핀·용문양 망토·대형 방패·오른손 검/왼손 방패·고정 그립",
+    "previous_three_view_set_version": 5,
+    "user_revision_approved": null
+  },
+  "artifacts": {
+    "illustration_views": [
+      {
+        "view": "front",
+        "path": "output/characters/gc9_balor/illustration_3views_v06/front.png"
+      }
+    ],
+    "previous_direction_set": "output/characters/gc9_balor/balor_illustration_3views_v05.zip",
+    "earlier_direction_set": "output/characters/gc9_balor/balor_illustration_3views_v01.zip",
+    "previous_face_proposal": "output/characters/gc9_balor/helmet_off_front_v01.png",
+    "previous_concept": "output/characters/gc9_balor/concept_front_v01.png",
+    "sd_concept": {
+      "view": "front",
+      "path": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/existing_sd_front.png"
+    },
+    "sd_concept_record": "output/characters/gc9_balor/sd_style_test_v01/generation-records.json",
+    "sd_front_comparison": [
+      {
+        "style_variant": "existing_sd",
+        "view": "front",
+        "path": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/existing_sd_front.png"
+      },
+      {
+        "style_variant": "new_sd",
+        "view": "front",
+        "path": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/new_sd_front.png"
+      }
+    ],
+    "sd_front_comparison_viewer": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/comparison.html",
+    "sd_front_comparison_zip": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/balor-sd-front-comparison-v01.zip",
+    "illustration_revision_viewer": "output/characters/gc9_balor/illustration_3views_v06/review.html"
+  },
+  "face_proposal_approved": true,
+  "final_set_user_approved": null,
+  "user_original_one_line_concept": "화려한 금빛 갑옷과 붉은 망토를 두르고 검과 방패로 무장한 신성한 분위기의 기사",
+  "effective_required_palette": "사용자 후반 필수 유지 요소인 청색·은색 갑옷·청색 망토 우선",
+  "latest_grip_revision": {
+    "references": [
+      "output/characters/gc9_balor/inputs/grip_pose_latest.png",
+      "output/characters/gc9_balor/inputs/grip_finger_guide.png"
+    ],
+    "description": "최신 빨간 선의 팔·손목·다섯 손가락 연결을 따르고 파란 축은 화면 왼쪽 위에서 오른쪽 아래로 연결. 검날은 몸 앞을 지나 반대쪽 발 앞 아래로 향함",
+    "supersedes": "다운로드26을 따른 바깥쪽 아래 검 각도"
+  },
+  "latest_review_candidate": "output/characters/gc9_balor/illustration_3views_v06/front.png",
+  "latest_review_version": 6,
+  "grip_revision_approved": true,
+  "current_grip_axis": "화면 왼쪽 위의 폼멜 → 손잡이를 감싼 오른손 → 오른쪽 아래의 가드와 검날",
+  "grip_decision": "앞으로 검/몽둥이/도 등 한손으로 쥐는 무기는 이 스타일 고정",
+  "main_variant": "unhelmeted",
+  "face_selection_source": "투구벗음 버전으로 정리해서 진행",
+  "hand_grip_preset": "one_hand_grip_v1",
+  "cape_face_revision_history": {
+    "remove": "망토 고정핀에서 갑주로 연결된 은색 끈·체인만 제거",
+    "preserve": "원형 고정핀과 기존 갑주·망토 유지",
+    "extra_preview": "투구 탈착 정면 시안 1장",
+    "proposed_face": {
+      "status": "proposal_only",
+      "hair": "짧은 짙은 갈색",
+      "eyes": "회청색",
+      "age": 28,
+      "expression": "부드러운 눈매와 은은한 미소, 다정하고 편안한 인상",
+      "requested_impression": "부드러운 인상"
+    }
+  },
+  "revision_history": [
+    {
+      "version": 4,
+      "artifacts": {
+        "illustration_views": [
+          {
+            "view": "front",
+            "path": "output/characters/gc9_balor/illustration_3views_v04/front.png"
+          },
+          {
+            "view": "right",
+            "path": "output/characters/gc9_balor/illustration_3views_v04/right.png"
+          },
+          {
+            "view": "back",
+            "path": "output/characters/gc9_balor/illustration_3views_v04/back.png"
+          }
+        ],
+        "zip": "output/characters/gc9_balor/balor_illustration_3views_v04.zip",
+        "previous_direction_set": "output/characters/gc9_balor/balor_illustration_3views_v01.zip",
+        "previous_face_proposal": "output/characters/gc9_balor/helmet_off_front_v01.png",
+        "previous_concept": "output/characters/gc9_balor/concept_front_v01.png"
+      },
+      "latest_revision": {
+        "main_variant": "unhelmeted",
+        "face_status": "selected_by_user",
+        "face": "짧은 짙은 갈색 머리·회청색 눈·부드러운 눈매와 옅은 미소",
+        "cape": "원형 핀 유지·갑주 연결 끈 제거",
+        "grip_preset": "one_hand_grip_v1",
+        "source_user_decision": "앞으로 검/몽둥이/도 등 손으로 한손으로 쥐는 무기는 이스타일 고정으로 결정이다 투구벗음 버전으로 정리해서 진행해"
+      }
+    },
+    {
+      "version": 5,
+      "artifacts": {
+        "illustration_views": [
+          {
+            "view": "front",
+            "path": "output/characters/gc9_balor/illustration_3views_v05/front.png"
+          },
+          {
+            "view": "right",
+            "path": "output/characters/gc9_balor/illustration_3views_v05/right.png"
+          },
+          {
+            "view": "back",
+            "path": "output/characters/gc9_balor/illustration_3views_v05/back.png"
+          }
+        ],
+        "zip": "output/characters/gc9_balor/balor_illustration_3views_v05.zip"
+      },
+      "latest_revision": {
+        "version": 5,
+        "main_variant": "unhelmeted",
+        "shield": "세 방향 모두 인물 높이 약 2/3의 대형 방패",
+        "right_sword": "손잡이·가드·칼날 축과 곧은 양날 형태 보정",
+        "back_right_hand": "손등 판금 대신 손바닥 가죽면·손가락 안쪽이 보이게 회전",
+        "background": "검은 도트와 반투명 배경 잔여물 제거",
+        "preserve": "기존 부드러운 얼굴·체형·청은 갑주·용문양 망토·오른손 검·왼손 방패",
+        "review_references": [
+          "output/characters/gc9_balor/inputs/review_v05_back_hand.png",
+          "output/characters/gc9_balor/inputs/review_v05_background.png"
+        ]
+      }
+    }
+  ],
+  "shield_scale": {
+    "user_original": "몸의 3/2를 가릴수있을만큼",
+    "interpretation": "문맥에 따라 인물 전신 높이의 약 2/3를 가리는 크기로 적용",
+    "target_height_fraction": [
+      2,
+      3
+    ],
+    "landmarks": "어깨·윗가슴 부근부터 아래 정강이까지",
+    "consistent_across_views": true
+  },
+  "sd_output": {
+    "status": "existing_style_selected_scale_alignment_pending",
+    "style": "기존 SD 픽셀",
+    "concept_count": 1,
+    "concept_view": "front",
+    "concept_path": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/existing_sd_front.png",
+    "approved": true,
+    "final_views_after_approval": [
+      "front",
+      "right",
+      "back"
+    ],
+    "final_count_after_approval": 3,
+    "preserve_native_dimensions": true,
+    "game_ready_frames_exported": false,
+    "front_comparison": {
+      "type": "existing_SD_vs_new_SD",
+      "status": "selection_completed",
+      "views": [
+        {
+          "style_variant": "existing_sd",
+          "view": "front",
+          "path": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/existing_sd_front.png"
+        },
+        {
+          "style_variant": "new_sd",
+          "view": "front",
+          "path": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/new_sd_front.png"
+        }
+      ],
+      "user_selection": "existing_sd"
+    },
+    "selected_style": "existing_sd",
+    "style_approved": true,
+    "approved_design_path": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/existing_sd_front.png",
+    "standard_id": "sd_silver_staff_standard_v1",
+    "standard_source": "자료/캐릭터설정/SD_공통제작기준.json",
+    "scale_alignment_pending": true,
+    "rejected_artifacts": [
+      "output/characters/gc9_balor/sd_style_test_v01/concept_front_right_v01.png",
+      "output/characters/gc9_balor/sd_style_test_v01/variants/concept_shield_initial_v01.png",
+      "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/new_sd_front.png"
+    ],
+    "inactive_style_references": [
+      "output/characters/gc9_balor/sd_style_test_v01/inputs/sd_style_reference_01.png",
+      "output/characters/gc9_balor/sd_style_test_v01/inputs/sd_style_reference_02.png",
+      "output/characters/gc9_balor/sd_style_test_v01/inputs/sd_style_reference_03.png"
+    ],
+    "user_decision": {
+      "date": "2026-11-08",
+      "selected": "existing_sd",
+      "rejected": "new_sd",
+      "size_reference": "silver_staff",
+      "instruction": "기존 SD 채택·새 SD 폐기·향후 SD 체형 비율과 인물 크기는 은발·날개 지팡이 기준"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-11-07T16:27:08.424Z",
+  "status": "passed",
+  "source_paths_before": 223,
+  "source_paths_now": 226,
+  "all_previous_image_hashes_unchanged": true,
+  "final_generated_original_matches": true,
+  "final_native_size": [
+    1254,
+    1254
+  ],
+  "full_subject_framing": {
+    "width": 1254,
+    "bounds": [
+      315,
+      266,
+      937,
+      1142
+    ],
+    "margins": {
+      "left": 0.2511961722488038,
+      "right": 0.25199362041467305,
+      "bottom": 0.08851674641148326,
+      "top": 0.21212121212121213
+    },
+    "height": 1254,
+    "outside_safe_area_pixels": 0,
+    "path": "output/characters/gc9_balor/illustration_3views_v06/front.png",
+    "alpha_threshold": 32,
+    "sha256": "edd0ef05e12b4b6b381d74063bf6d368adb78044cb6245a8f41783483cd0ccd4"
+  },
+  "scope": "v06 front only; previous v05 three views archived; existing SD selection preserved",
+  "catalog_file_checks": "tools/character-catalog/verify-files.mjs",
+  "catalog_browser_checks": "output/characters/catalog/browser-verification.json"
+}

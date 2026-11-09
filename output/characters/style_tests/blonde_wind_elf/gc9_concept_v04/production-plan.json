@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "character_id": "blonde_wind_elf",
+  "style_profile": "gc9_c3_c6_eight",
+  "mode": "style_rebuild",
+  "scope": "whole_character",
+  "generation_authorized": true,
+  "view": "front",
+  "references": [
+    {
+      "id": "source_elf",
+      "path": "output/characters/style_tests/blonde_wind_elf/references/source_elf.jfif",
+      "role": "design_components_only",
+      "sha256": "08515a698ee5263ad2e27ecf468d285faefe000c24da29f335b040fc96bffdac"
+    },
+    {
+      "id": "F01_Edel",
+      "path": "자료/캐릭터그림체/GC9/원본/F01_Edel.jfif",
+      "role": "primary_drawing_style",
+      "sha256": "1d578c379be8be978277a6c9c8ee94457eaff991759671022c3efb4c69cf077a"
+    },
+    {
+      "id": "A04_Bram",
+      "path": "자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+      "role": "material_only",
+      "sha256": "9f8e7b048e4c1f6e476b16eb98f5b6fea31f34481ba617d06b1591a0aec84d8a"
+    },
+    {
+      "id": "pose_front",
+      "path": "output/character-redesign-6x2/inputs/pose_front.png",
+      "role": "composition_only",
+      "sha256": "985946d0e6a2ede263b2dce75215bc30655d4a9c5f8778daba03f562de29e3b1"
+    },
+    {
+      "id": "c04_front",
+      "path": "output/character-redesign-6x2/images/c04_front.png",
+      "role": "whole_style",
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+    }
+  ],
+  "edit_target": null,
+  "preserve_failed_face_geometry": false,
+  "followup_views": [],
+  "output_folder": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04",
+  "prompt_file": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/front_v04.prompt.txt",
+  "authorization": "금발 바람 엘프 다시시도",
+  "recipe_basis": {
+    "record": "output/character-redesign-6x2/생성기록.json",
+    "entry": "c04_front",
+    "description": "성공 C4 구조를 따른 변형. 구성 원본 교체, C4 일관성 참조 추가, 최신 여백·투명 배경 적용. 원 호출의 동일 재실행이나 성공 보장으로 주장하지 않음."
+  }
+}

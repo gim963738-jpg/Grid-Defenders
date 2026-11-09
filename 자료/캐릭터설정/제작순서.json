@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-08",
+  "id": "concept-approval-turnaround-v1",
+  "preserve_original_image_dimensions": true,
+  "preserve_original_image_bytes": true,
+  "required_profile_fields": [
+    "display_name",
+    "features",
+    "origin_id",
+    "affiliation_ids",
+    "class_id",
+    "profession",
+    "weapons",
+    "attack_disciplines"
+  ],
+  "approval_actor": "user",
+  "approval_requires_explicit_pass": true,
+  "illustration": {
+    "concept_count": 1,
+    "default_concept_view": "front_right",
+    "approval_before_remaining_views": true,
+    "final_views": [
+      "front",
+      "right",
+      "front_right",
+      "back"
+    ],
+    "final_count": 4,
+    "approved_concept_included_when_matching_final_view": false,
+    "framing_standard_id": "gc9_spacious_canvas_v1",
+    "framing_standard_source": "자료/캐릭터설정/GC9_프레이밍기준.json"
+  },
+  "sd": {
+    "starts_after": "illustration_completed",
+    "concept_count": 1,
+    "default_concept_view": "front",
+    "approval_before_remaining_views": true,
+    "final_views": [
+      "front",
+      "right",
+      "back"
+    ],
+    "final_count": 3,
+    "approved_concept_included_when_matching_final_view": false,
+    "standard_id": "sd_silver_staff_standard_v1",
+    "standard_source": "자료/캐릭터설정/SD_공통제작기준.json",
+    "style": "기존 SD 픽셀",
+    "actual_reference_required": true,
+    "measure_body_separately_from_equipment": true
+  },
+  "view_angles": {
+    "front": 0,
+    "right": 90,
+    "front_right": 45,
+    "back": 180
+  },
+  "notes": [
+    "일러스트 시안 1장 승인 후 최종 4방향 세트를 제작한다.",
+    "일러스트 4방향 완성 후 SD 시안 1장을 승인받고 최종 3방향 세트를 제작한다.",
+    "승인용 시안은 최종 방향 세트와 구분해 보관한다.",
+    "기존 픽셀 8방향과 걷기 시트 등 과거 작업물은 보존한다."
+  ],
+  "one_hand_grip_preset": {
+    "id": "one_hand_grip_v1",
+    "source": "자료/캐릭터설정/한손무기그립.json",
+    "applies_when": "한손 검·도·몽둥이 등 손잡이 근접무기"
+  }
+}

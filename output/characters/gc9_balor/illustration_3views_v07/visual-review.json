@@ -1,0 +1,71 @@
+{
+  "character": "발로르",
+  "version": 7,
+  "status": "visually_reviewed",
+  "scope": "shield_angle_only",
+  "views": [
+    "right",
+    "back"
+  ],
+  "source_views": 5,
+  "front_retained_version": 6,
+  "unchanged_targets": [
+    "팔",
+    "손",
+    "자세",
+    "검",
+    "얼굴",
+    "갑주",
+    "망토"
+  ],
+  "native_dimensions": [
+    1024,
+    1536
+  ],
+  "post_generation_resampled": false,
+  "user_revision_approval": null,
+  "generated_originals_verified": true,
+  "reviewed_at": "2026-11-07T16:53:48.866Z",
+  "checks": {
+    "shield_angle_adjusted_in_right_and_back": true,
+    "existing_pose_and_hand_positions_visually_preserved": true,
+    "right_sword_grip_and_left_shield_retained": true,
+    "front_v06_unchanged": true,
+    "bright_background_checked": true,
+    "black_background_remnants_removed": true,
+    "native_dimensions_and_bytes_preserved": true
+  },
+  "alpha_checks": [
+    {
+      "view": "right",
+      "empty_margin_alpha": [
+        0,
+        0
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "view": "back",
+      "empty_margin_alpha": [
+        0,
+        0
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "bright_background_evidence": "output/reviews/balor-v07/light-angle-qa.png",
+  "file_verification": "output/characters/gc9_balor/file-verification_v07.json",
+  "catalog_browser_verification": "output/characters/catalog/browser-verification.json",
+  "comparison_browser_verification": "output/reviews/balor-v07/review-browser-verification.json",
+  "verification_status": "passed"
+}

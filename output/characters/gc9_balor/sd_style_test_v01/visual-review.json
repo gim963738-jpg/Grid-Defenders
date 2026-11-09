@@ -1,0 +1,33 @@
+{
+  "status": "discarded_by_user",
+  "stage": "sd_concept",
+  "user_approval": false,
+  "route": "built-in image_gen",
+  "native_size": [
+    1254,
+    1254
+  ],
+  "checks": {
+    "same_balor_identity": true,
+    "large_head_short_limbs": true,
+    "pixel_style_color_clusters": true,
+    "right_front_elevated_camera": true,
+    "blue_silver_lion_armor": true,
+    "split_blue_dragon_cape": true,
+    "large_wing_cross_shield": true,
+    "right_hand_sword_left_arm_shield": true,
+    "approved_lowered_sword_grip": true,
+    "standing_both_feet": true,
+    "clean_background_on_white": true,
+    "native_bytes_preserved": true
+  },
+  "evidence": "output/reviews/balor-sd-v01/light-qa.png",
+  "catalog_browser_checks": "passed",
+  "game_ready_pixel_grid_verified": false,
+  "followup_views_generated": 0,
+  "user_decision": {
+    "date": "2026-11-08",
+    "decision": "new_SD_discarded",
+    "future_reference_allowed": false
+  }
+}

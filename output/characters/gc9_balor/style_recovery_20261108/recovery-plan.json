@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "character_id": "balor",
+  "style_profile": "c6_male",
+  "mode": "style_rebuild",
+  "scope": "whole_character",
+  "generation_authorized": false,
+  "view": "front",
+  "references": [
+    {
+      "id": "C6_front",
+      "path": "output/character-redesign-6x2/images/c06_front.png",
+      "role": "whole_style",
+      "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+    },
+    {
+      "id": "C6_threequarter",
+      "path": "output/character-redesign-6x2/images/c06_threequarter.png",
+      "role": "whole_style",
+      "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c"
+    }
+  ],
+  "edit_target": null,
+  "design_brief": "output/characters/gc9_balor/character-brief.json",
+  "preserve_failed_face_geometry": false,
+  "followup_views": [],
+  "notes": [
+    "준비·검증용 계획이며 이미지 도구를 호출하지 않는다.",
+    "나이·부드러운 인상·짧은 갈색 머리·회청색 눈·다부진 체격·청은 갑주·검/방패·고정 그립 유지. 실패본의 얼굴 묘사·렌더링은 고정하지 않는다.",
+    "v09~v10의 전신 사자·갑주 색 비중·망토 무늬 변경은 승인된 디자인으로 승격하지 않는다.",
+    "앞서 선택한 SD와 세계관 설정은 별개로 유지한다."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "character_id": "blonde_wind_elf",
+  "display_name": "금발 바람 엘프",
+  "features": "옅은 금발 장발·황록색 눈·긴 귀·흰색과 청록 겹옷",
+  "origin_id": "unassigned",
+  "affiliation_ids": [],
+  "class_id": "unassigned",
+  "profession": null,
+  "weapons": [],
+  "attack_disciplines": [],
+  "placement_status": "deferred",
+  "species": "엘프",
+  "presentation": "성인 여성형",
+  "existing_design_source": "output/characters/style_tests/blonde_wind_elf/references/source_elf.jfif",
+  "style_status": "improved_below_acceptance",
+  "illustration_concept_approved": false,
+  "concept_count": 1,
+  "workflow": "illustration_concept_only",
+  "future_reference_allowed": false,
+  "failure_report": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/failure-analysis-20261108/report.md",
+  "attempt": "v04",
+  "internal_conditions_pass": false,
+  "user_feedback": {
+    "verbatim": "정정 머리카락 얼굴 미세조정 필요",
+    "improved_vs_previous": true,
+    "overall_approved": false,
+    "improved_axes_specified_by_user": true,
+    "interpretation": "최신 정정: 얼굴·머리카락도 미세 조정 필요. 금속 거의 합격선, 옷 최우선 보완은 유지. 전체 시안 승인 아님.",
+    "previous_verbatim": "얼굴 합격선\n머리카락 표현 합격선\n금속 거의 합격선\n옷이 제일 거슬림",
+    "component_assessments": {
+      "face": {
+        "verdict": "minor_revision_needed",
+        "instruction": "기본 인상은 유지하며 미세 조정"
+      },
+      "hair": {
+        "verdict": "minor_revision_needed",
+        "instruction": "헤어스타일·색·큰 구성은 유지하며 표현 미세 조정"
+      },
+      "metal": {
+        "verdict": "near_acceptance",
+        "instruction": "현재 표현을 보존하고 필요 부분만 미세 조정"
+      },
+      "clothing": {
+        "verdict": "priority_revision",
+        "instruction": "옷의 표현을 최우선으로 보완; 의상 구성·색 변경으로 자동 해석하지 않음"
+      }
+    }
+  },
+  "component_assessments": {
+    "face": {
+      "verdict": "minor_revision_needed",
+      "instruction": "기본 인상은 유지하며 미세 조정"
+    },
+    "hair": {
+      "verdict": "minor_revision_needed",
+      "instruction": "헤어스타일·색·큰 구성은 유지하며 표현 미세 조정"
+    },
+    "metal": {
+      "verdict": "near_acceptance",
+      "instruction": "현재 표현을 보존하고 필요 부분만 미세 조정"
+    },
+    "clothing": {
+      "verdict": "priority_revision",
+      "instruction": "옷의 표현을 최우선으로 보완; 의상 구성·색 변경으로 자동 해석하지 않음"
+    }
+  },
+  "next_revision_scope": {
+    "preserve": [
+      "얼굴의 기본 인상",
+      "헤어스타일·색·큰 구성",
+      "의상 구성·색·장비"
+    ],
+    "primary_revision": "옷의 천 표현",
+    "secondary_revision": [
+      "얼굴 미세 조정",
+      "머리카락 표현 미세 조정",
+      "금속 미세 조정"
+    ],
+    "assistant_visual_hypotheses": [
+      "옷의 각진 명암 조각을 정리하고 주름의 힘 방향·겹침·무광 재질을 검토"
+    ],
+    "hypotheses_are_user_verdict": false,
+    "full_character_regeneration_requested": false,
+    "new_image_generation_requested": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "style_id": "GC9",
+  "style_reference_version": "1.1",
+  "purpose": "새 캐릭터 설정을 기록하는 입력 양식. 생성 API 요청 형식이 아니다.",
+  "status": "미작성",
+  "identity_reference": null,
+  "style_reference_preset": "제작 대상에 맞게 참조목록.json에서 선택",
+  "image_roles_in_attachment_order": [],
+  "subject": {
+    "name_or_role": "",
+    "gender_presentation": "",
+    "age_appearance": "",
+    "species": "",
+    "body_type_and_height": "",
+    "skin_tone": "",
+    "face_and_expression": "",
+    "hair": "",
+    "outfit_structure_and_coverage": "",
+    "materials": [],
+    "equipment_count_and_placement": "",
+    "identity_features_to_preserve": []
+  },
+  "palette": {
+    "main": "",
+    "secondary": "",
+    "accent": ""
+  },
+  "composition": {
+    "framing": "",
+    "pose": "",
+    "view_angle": "",
+    "visible_equipment_and_margins": "무기·망토·장식까지 포함해 안전 영역 안에 배치하고 위·좌·우에 넉넉한 여백",
+    "framing_standard_id": "gc9_spacious_canvas_v1",
+    "framing_standard_source": "자료/캐릭터설정/GC9_프레이밍기준.json",
+    "preserve_body_proportions": true,
+    "scale_uniformly": true,
+    "minimum_blank_margins_ratio": {
+      "top": 0.2,
+      "left": 0.15,
+      "right": 0.15,
+      "bottom": 0.06
+    },
+    "safe_area": {
+      "x_min": 0.15,
+      "x_max": 0.85,
+      "y_min": 0.2,
+      "y_max": 0.94,
+      "width_ratio": 0.7,
+      "height_ratio": 0.74
+    }
+  },
+  "background": "",
+  "requires_actual_alpha": null,
+  "lighting_and_mood": "",
+  "rendering_profile": "",
+  "effects": "설정에서 요청하지 않으면 없음",
+  "output_purpose_and_format": "",
+  "additional_constraints": [],
+  "final_prompt": "",
+  "generated_output_path": null,
+  "review_result": "신규 생성 전"
+}

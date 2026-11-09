@@ -1,0 +1,25 @@
+Tool: built-in image_gen. Two passes; second pass corrects rigid sword alignment.
+Sole edit/design reference: char003_illustration_forest_slime_v02.png (original, not later remodels).
+User: 주인공 · 숲속 슬라임 토벌 v02 여기서 검을쥐고 어깨에 걸친 느낌으로 일러스트 뽑아줄래?
+Change: Relaxed sword gripped and resting across right armored shoulder, original grounded stance, smile, forest, outfit and anime style preserved. Blue defeated slime retained; active slash trail removed to fit resting pose. Static illustration under character specification v1.2.
+
+Final repair pass prompt:
+Precise local repair of the SWORD ONLY in this illustration. The current sword is broken/bent: its grip points toward the shoulder, but its blade erroneously doubles back toward upper-left. Correct this to ONE perfectly straight rigid sword resting over the right shoulder.
+Keep the raised hand and existing grip at viewer-left in the same location. From the round pommel at image-left, continue the grip's longitudinal centerline through the hand, then the crossguard, then the blade in one STRAIGHT LINE toward screen UPPER-RIGHT. The blade starts at the guard around the right pauldron, rests on the armored shoulder, passes BEHIND the hero's neck/head (naturally occluded there), and emerges to the RIGHT of his head with the pointed tip toward upper-right. Preserve continuous alignment of all visible segments. No blade pointing to upper-left. Remove the entire erroneous upper-left blade and restore forest there.
+A simple slim steel longsword of original v02 length, same small guard, no oversized greatsword. Ensure right-side visible blade has enough length to read as resting backward over the shoulder, but the tip is inside the canvas with comfortable margin.
+Do NOT change anything else: exact original face, hairstyle, smile, clothing, armor, raised sword hand/arm, left arm, body stance, legs, original clean anime style, forest background and defeated blue slime. Keep all non-sword content unchanged.
+
+Initial generation prompt:
+Use case: identity-preserve.
+Edit the supplied ORIGINAL v02 anime illustration directly into a relaxed sword-on-shoulder victory pose. This input is the sole authoritative reference for face, body proportions, clothing, drawing style, colors and forest. Preserve it faithfully.
+
+MAIN CHANGE: the hero raises his RIGHT sword hand (on viewer LEFT) and bends that elbow comfortably, gripping the same sword hilt beside his right collarbone/shoulder. The sword's blade rests casually across the top of his armored RIGHT shoulder and extends diagonally upward and backward away from him. Clearly show a plausible hand-to-hilt-to-crossguard-to-blade connection and gentle contact of the blade's flat with the top of the metal pauldron. The grip is in front of the shoulder and the long blade recedes behind the shoulder, with its tip fully inside the frame. A relaxed, familiar anime adventurer pose after a victory; not raising the weapon to attack, not holding a second sword, and not laying the blade across the face or throat. Slight torso adjustment is allowed for natural balance, keep both feet planted in the original relaxed stance. His left hand stays loosely relaxed by his side. Keep the original cheerful open smile.
+
+STRICT STYLE/OUTFIT LOCK:
+Same youthful male face and lively amber-brown eyes, short tousled auburn hair with grouped locks, same compact adult proportions. Same clean dark anime outlines, designed cel shadows and original hand-painted forest quality; do not drift into ornate realistic rendering.
+Exact original crimson short traveling coat/mantle with simple gold edge trim and split tails, charcoal hood, raised red collar and silver clasps. Visible ivory rolled-sleeve tunic and hem, compact dark brown chest layer, original restrained leather straps, silver shield-shaped chest badge, two brown belts with utility pouches.
+Same asymmetrical smooth silver 3-plate pauldron on right sword shoulder and small opposite pauldron, silver sword-arm forearm guard, fingerless gloves, loose dark trousers, one simple knee plate, tall brown lace-up boots and red ties. No added corset, engraved armor, full fabric brocade or royal cape.
+Same practical straight Western steel sword, simple crossguard, grip and pointed blade.
+
+Keep the original bright green sunlit forest clearing and warm dappled light. Retain the small already-split BLUE slime low at viewer right as in v02, now settled after the cut with only a few nearby gel droplets. Remove the active sweeping sword-motion arc, since he has finished and is resting the weapon on his shoulder.
+Portrait full-body composition, face readable, entire sword blade, hair, coat and both boot soles with comfortable safe margins; reframe slightly only as needed to fit the raised sword. Single polished illustration, no text, captions, labels or extra figures.

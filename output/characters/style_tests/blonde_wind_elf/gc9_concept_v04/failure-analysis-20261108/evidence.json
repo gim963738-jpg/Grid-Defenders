@@ -1,0 +1,60 @@
+{
+  "user_verdict": "정정 머리카락 얼굴 미세조정 필요",
+  "native_sha256": "ddf858292b0a82e33ade7bd4b71c30b5c34f0a531bb5ba1d0218b3b8133e3d50",
+  "v03": {
+    "words": 981,
+    "references": 4,
+    "silhouette_height_alpha32": 1115
+  },
+  "v04": {
+    "words": 526,
+    "references": 5,
+    "silhouette_height_alpha32": 1328,
+    "margins": {
+      "left": 0.154296875,
+      "right": 0.16796875,
+      "top": 0.078125,
+      "bottom": 0.057291666666666664
+    }
+  },
+  "silhouette_height_change_ratio": 0.19103139013452908,
+  "controlled_one_variable_experiment": false,
+  "additional_image_calls": 0,
+  "benchmark_eight_changed": false,
+  "model_internal_cause_known": false,
+  "previous_user_verdict": "불합격 실패 원인분석",
+  "latest_feedback": {
+    "verbatim": "정정 머리카락 얼굴 미세조정 필요",
+    "improved_vs_previous": true,
+    "overall_approved": false,
+    "improved_axes_specified_by_user": true,
+    "interpretation": "최신 정정: 얼굴·머리카락도 미세 조정 필요. 금속 거의 합격선, 옷 최우선 보완은 유지. 전체 시안 승인 아님.",
+    "previous_verbatim": "얼굴 합격선\n머리카락 표현 합격선\n금속 거의 합격선\n옷이 제일 거슬림",
+    "component_assessments": {
+      "face": {
+        "verdict": "minor_revision_needed",
+        "instruction": "기본 인상은 유지하며 미세 조정"
+      },
+      "hair": {
+        "verdict": "minor_revision_needed",
+        "instruction": "헤어스타일·색·큰 구성은 유지하며 표현 미세 조정"
+      },
+      "metal": {
+        "verdict": "near_acceptance",
+        "instruction": "현재 표현을 보존하고 필요 부분만 미세 조정"
+      },
+      "clothing": {
+        "verdict": "priority_revision",
+        "instruction": "옷의 표현을 최우선으로 보완; 의상 구성·색 변경으로 자동 해석하지 않음"
+      }
+    }
+  },
+  "feedback_history": [
+    {
+      "verbatim": "개선되긴했으나 합격선까지는 아니야"
+    },
+    {
+      "verbatim": "얼굴 합격선\n머리카락 표현 합격선\n금속 거의 합격선\n옷이 제일 거슬림"
+    }
+  ]
+}

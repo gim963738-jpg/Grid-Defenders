@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>붉은 머리 모험가 4방향 리모델링</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:22px;background:#f4f6f9;color:#202630;font:15px/1.6 'Segoe UI','Malgun Gothic',sans-serif;--art-bg:#edf0f4}main{max-width:1440px;margin:auto}h1{font-size:25px;line-height:1.35;margin:5px 0 10px}h2{font-size:19px;margin:24px 0 10px}p{margin:7px 0}.muted{color:#647084;font-size:13px}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0}select,button{font:inherit;padding:8px 12px;min-height:44px;color:inherit;background:white;border:1px solid #cbd3de;border-radius:7px}a{color:#285391;text-underline-offset:3px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}figure{margin:0;min-width:0;background:white;border:1px solid #d6dfe8;border-radius:10px;padding:10px}figcaption{font-weight:600;margin-bottom:8px}.preview-bg{background-color:var(--art-bg);border-radius:6px}body[data-bg=checker] .preview-bg{background-image:linear-gradient(45deg,#cbd1d9 25%,transparent 25%),linear-gradient(-45deg,#cbd1d9 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#cbd1d9 75%),linear-gradient(-45deg,transparent 75%,#cbd1d9 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0px}.sprite{display:block;width:100%;height:auto}.download{display:block;font-size:13px;margin-top:8px}.inspect-window{max-width:100%;overflow:auto;border:1px solid #d6dfe8}.crop{position:relative;overflow:hidden;margin:auto}.crop img{position:absolute;max-width:none;display:block}.downloads{display:flex;gap:15px;flex-wrap:wrap;margin:14px 0}footer{margin-top:20px;font-size:13px;color:#647084}@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:460px){body{padding:12px}.grid{gap:8px}figure{padding:7px}figcaption{font-size:13px}h1{font-size:22px}}
+</style></head>
+<body data-bg="light"><main>
+<h1>붉은 머리 모험가 · 리모델링 4방향</h1>
+<p>같은 남성형 캐릭터의 정면·정측면·후면·3/4 사선입니다. 붉은 머리와 의상, 비대칭 은색 방어구, 가죽 장비 구성을 유지했습니다.</p>
+<p class="muted">각 파일은 1024 × 1536 투명 PNG입니다. 이 화면은 원본 PNG를 직접 읽습니다. 위의 나란히 보기는 화면에 맞춰 표시하며, 아래 검수 창은 100% 원본 배율을 지원합니다.</p>
+<div class="downloads"><a href="adventurer_4views_png.zip">PNG 4장 묶음</a><a href="생성기록.json">정확한 프롬프트·참조 기록</a><a href="제작기준.md">제작 기준</a></div>
+<div class="controls"><label for="background">검수 배경</label><select id="background"><option value="light">밝은 회색</option><option value="white">흰색</option><option value="dark">어두운 차콜</option><option value="checker">투명 격자</option></select></div>
+<div class="grid">
+<figure><figcaption>01 정면 · 0°</figcaption><div class="preview-bg"><img class="sprite" src="images/01_front.png" width="1024" height="1536" alt="리모델링 정면 전신"></div><a class="download" href="images/01_front.png">정면 원본 PNG</a></figure>
+<figure><figcaption>02 정측면 · 90°</figcaption><div class="preview-bg"><img class="sprite" src="images/02_side.png" width="1024" height="1536" alt="리모델링 정측면 전신"></div><a class="download" href="images/02_side.png">정측면 원본 PNG</a></figure>
+<figure><figcaption>03 후면 · 180°</figcaption><div class="preview-bg"><img class="sprite" src="images/03_back.png" width="1024" height="1536" alt="리모델링 후면 전신"></div><a class="download" href="images/03_back.png">후면 원본 PNG</a></figure>
+<figure><figcaption>04 사선 · 약 45°</figcaption><div class="preview-bg"><img class="sprite" src="images/04_threequarter.png" width="1024" height="1536" alt="리모델링 3/4 사선 전신"></div><a class="download" href="images/04_threequarter.png">사선 원본 PNG</a></figure>
+</div>
+<h2>원본 배율 상세 검수</h2><p class="muted">100%는 이미지 1픽셀을 CSS 1픽셀로 표시합니다. 200%는 픽셀을 확대하는 관찰용 보기입니다.</p>
+<div class="controls"><label for="view">방향</label><select id="view"><option value="front">정면</option><option value="side">정측면</option><option value="back">후면</option><option value="threequarter">3/4 사선</option></select><label for="region">영역</label><select id="region"><option value="face">얼굴·머리</option><option value="metal">어깨·금속</option><option value="waist">팔·허리</option><option value="boots">무릎·부츠</option><option value="full">전체 · 스크롤</option></select><label for="zoom">배율</label><select id="zoom"><option value="1">100% 원본</option><option value="2">200% 확대</option></select></div>
+<div class="inspect-window preview-bg"><div class="crop"><img id="detail" alt="선택 영역의 원본 PNG"></div></div>
+<footer>얼굴선과 완성도는 C4, 금속의 면·두께·반사광은 C3를 기준으로 남성형에 적용했습니다. 방향별 미세 문양·옷 주름까지 정확한 3D 회전 결과와 동일한 것은 아닙니다. 원본 크기와 투명도·파일 무결성은 생성 기록에서 확인할 수 있습니다.</footer>
+</main><script>
+'use strict';
+const views={front:'images/01_front.png',side:'images/02_side.png',back:'images/03_back.png',threequarter:'images/04_threequarter.png'};
+const areas={face:{x:370,y:60,w:325,h:285},metal:{x:290,y:280,w:440,h:290},waist:{x:230,y:520,w:560,h:350},boots:{x:280,y:980,w:470,h:550},full:{x:0,y:0,w:1024,h:1536}};
+function render(){const v=document.getElementById('view').value,a=areas[document.getElementById('region').value],z=Number(document.getElementById('zoom').value),img=document.getElementById('detail');img.src=views[v];img.style.width=(1024*z)+'px';img.style.height=(1536*z)+'px';img.style.left=(-a.x*z)+'px';img.style.top=(-a.y*z)+'px';img.parentElement.style.width=(a.w*z)+'px';img.parentElement.style.height=(a.h*z)+'px';img.parentElement.parentElement.style.height=Math.min(a.h*z,650)+'px'}
+for(const id of ['view','region','zoom'])document.getElementById(id).addEventListener('change',render);
+document.getElementById('background').addEventListener('change',e=>{const value=e.target.value;document.body.dataset.bg=value;document.body.style.setProperty('--art-bg',({light:'#edf0f4',white:'#ffffff',dark:'#20242c',checker:'#f6f7f9'})[value])});
+render();
+</script></body></html>

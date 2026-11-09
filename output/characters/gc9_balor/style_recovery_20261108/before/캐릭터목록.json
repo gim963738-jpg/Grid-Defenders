@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-08",
+  "classes": [
+    {
+      "id": "warrior",
+      "label": "전사"
+    },
+    {
+      "id": "swordsman",
+      "label": "검사"
+    },
+    {
+      "id": "knight",
+      "label": "기사"
+    },
+    {
+      "id": "archer",
+      "label": "궁수"
+    },
+    {
+      "id": "mage",
+      "label": "마법사"
+    },
+    {
+      "id": "healer",
+      "label": "치유사"
+    },
+    {
+      "id": "assassin",
+      "label": "암살자"
+    },
+    {
+      "id": "martial",
+      "label": "무투가"
+    },
+    {
+      "id": "shaman",
+      "label": "주술사"
+    },
+    {
+      "id": "unassigned",
+      "label": "클래스 미지정"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "staff",
+      "name": null,
+      "display_name": "은발·날개 지팡이",
+      "features": "은발·푸른 망토·날개 장식 지팡이",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "unassigned",
+      "profession": null,
+      "weapons": [
+        "지팡이"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "미지정",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "longsword_dagger",
+      "name": null,
+      "display_name": "금발 전사 · 장검·단검",
+      "features": "금발·청색 목도리·은빛 판금·장검과 단검",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "warrior",
+      "profession": null,
+      "weapons": [
+        "장검",
+        "단검"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "adventurer",
+      "name": null,
+      "display_name": "붉은 머리 모험가",
+      "features": "붉은 머리·붉은 망토·은빛 견갑",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "unassigned",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "미지정",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "c01",
+      "name": null,
+      "display_name": "C1 은발 검·방패",
+      "features": "은발·땋은 머리·흰 금장 갑옷",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "unassigned",
+      "profession": null,
+      "weapons": [
+        "검",
+        "방패"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "미지정",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "c02",
+      "name": null,
+      "display_name": "C2 흰 단발·별자리 망토",
+      "features": "흰 단발·별자리 무늬 망토",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "unassigned",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "미지정",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "c03",
+      "name": null,
+      "display_name": "C3 청록·금속 활",
+      "features": "청록색 머리·금속 활",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "archer",
+      "profession": null,
+      "weapons": [
+        "활"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "c04",
+      "name": null,
+      "display_name": "C4 은발 포니테일·은빛 활",
+      "features": "은발 포니테일·은빛 활",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "archer",
+      "profession": null,
+      "weapons": [
+        "활"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "c05",
+      "name": null,
+      "display_name": "C5 청색 망토·투구 기사",
+      "features": "청색 망토·은빛 투구·남성형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "knight",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "c06",
+      "name": null,
+      "display_name": "C6 금발·흰 판금",
+      "features": "금발·흰 판금·남성형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "unassigned",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "미지정",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "central_light_archmage",
+      "name": null,
+      "display_name": "아르케리온 수석 빛 마법사",
+      "features": "장발·안경·흰 로브·지적인 인상",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "mage",
+      "profession": "수석 빛 마법사",
+      "weapons": [
+        "지팡이",
+        "마도서"
+      ],
+      "attack_disciplines": [
+        "빛 마법"
+      ],
+      "class_basis": "사용자 설정",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "placement_status": "deferred"
+    },
+    {
+      "id": "red_ponytail",
+      "name": null,
+      "display_name": "붉은 포니테일 전사",
+      "features": "붉은 포니테일·전사 외형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "warrior",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "t14",
+      "name": null,
+      "display_name": "검보라 쌍단검",
+      "features": "검보라 장비·쌍단검·남성형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "unassigned",
+      "profession": null,
+      "weapons": [
+        "쌍단검"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "미지정",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "t15",
+      "name": null,
+      "display_name": "분홍 머리·검은 리본",
+      "features": "분홍 머리·검은 리본·여성형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "unassigned",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "미지정",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "blonde_wind_elf",
+      "name": null,
+      "display_name": "금발 바람 엘프",
+      "features": "금발 장발·흰색과 청록 의상·엘프 외형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "unassigned",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "미지정",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "burgundy",
+      "name": null,
+      "display_name": "버건디 머리 여검사",
+      "features": "버건디색 머리·검사 외형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "swordsman",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "char001",
+      "name": null,
+      "display_name": "금발 장발 마법사 · char001",
+      "features": "금발 장발·흰 금장 로브·번개 장치 배경",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "mage",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "char002",
+      "name": null,
+      "display_name": "붉은 장발 검객 · char002",
+      "features": "붉은 장발·검은 금장 겹옷·곡검",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "swordsman",
+      "profession": null,
+      "weapons": [
+        "곡검"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "char003",
+      "name": null,
+      "display_name": "붉은 머리 주인공 · char003",
+      "features": "붉은 머리·붉은 망토·은빛 견갑·장검",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "swordsman",
+      "profession": null,
+      "weapons": [
+        "장검"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "healer",
+      "name": null,
+      "display_name": "금발 힐러",
+      "features": "금발·치유사 외형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "healer",
+      "profession": null,
+      "weapons": [],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "silver_archer",
+      "name": null,
+      "display_name": "은발 궁수",
+      "features": "은발·궁수 외형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "archer",
+      "profession": null,
+      "weapons": [
+        "활"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "teal_elf_archer",
+      "name": null,
+      "display_name": "청록 엘프 궁수",
+      "features": "청록색 머리·엘프 궁수 외형",
+      "origin_id": "unassigned",
+      "affiliation_ids": [],
+      "class_id": "archer",
+      "profession": null,
+      "weapons": [
+        "활"
+      ],
+      "attack_disciplines": [],
+      "class_basis": "기존 명칭·문서·외형에 따른 카탈로그 분류",
+      "origin_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류",
+      "production_state": "existing_material",
+      "illustration_concept_approved": null,
+      "sd_concept_approved": null,
+      "placement_status": "deferred",
+      "affiliation_basis": "사용자 최신 요청: 수석 빛 마법사를 포함한 모든 이전 작업물의 세계관 배치를 보류"
+    },
+    {
+      "id": "balor",
+      "name": "발로르",
+      "display_name": "발로르",
+      "features": "짧은 갈색 머리·부드러운 인상·청·은 판금·청색 망토·검과 대형 방패",
+      "origin_id": "west",
+      "affiliation_ids": [
+        "west",
+        "west_royalist"
+      ],
+      "class_id": "knight",
+      "profession": "왕국 제3 기사단장",
+      "weapons": [
+        "양날검",
+        "카이트실드"
+      ],
+      "attack_disciplines": [
+        "제국 검술",
+        "방패술"
+      ],
+      "class_basis": "사용자 설정: 기사·성기사 스타일",
+      "origin_basis": "사용자 지정 서대륙",
+      "affiliation_basis": "서대륙 맥락의 친왕파·왕국 제3 기사단장 사용자 설정",
+      "placement_status": "assigned",
+      "production_state": "awaiting_c6_metal_and_threequarter_review",
+      "illustration_concept_approved": false,
+      "sd_concept_approved": true,
+      "illustration_final_views": [
+        "front",
+        "right",
+        "back"
+      ],
+      "sd_requested": true,
+      "face_proposal_approved": true,
+      "main_variant": "unhelmeted",
+      "hand_grip_preset": "one_hand_grip_v1",
+      "grip_revision_approved": true,
+      "illustration_revision": 10,
+      "shield_height_fraction": [
+        2,
+        3
+      ],
+      "rear_right_hand_surface": "palm",
+      "sd_concept_view": "front",
+      "sd_style": "기존 SD 픽셀",
+      "sd_style_selection": "existing_sd",
+      "sd_style_approved": true,
+      "sd_scale_alignment_pending": true,
+      "sd_standard_id": "sd_silver_staff_standard_v1",
+      "illustration_current_views": [],
+      "illustration_previous_complete_set_revision": 5,
+      "gc9_framing_standard_id": "gc9_spacious_canvas_v1",
+      "illustration_latest_revision_approved": null,
+      "illustration_view_revisions": {},
+      "illustration_concept_view": "front_right",
+      "illustration_concept_revision": 10,
+      "previous_illustration_concept_approved": true,
+      "illustration_style_revision_approved": null,
+      "illustration_comparison_views": [
+        "front",
+        "front_right"
+      ]
+    }
+  ],
+  "notes": [
+    "사용자 최신 지시: 첨부자료와 모든 이전 작업물은 출신·소속 미지정으로 보관한다. 기존 수석 빛 마법사도 포함하며 신규 캐릭터부터 배치한다.",
+    "출신·소속·공격 학파는 확인된 설정만 기록한다.",
+    "카탈로그 클래스 분류와 정식 직업명은 별도 필드다.",
+    "기존 자료의 최근 버전 표시는 시안 승인이나 새 제작 순서 완료를 뜻하지 않는다."
+  ],
+  "placement_policy": {
+    "effective_on": "2026-11-07",
+    "existing_materials": "deferred",
+    "includes_existing_archmage": true,
+    "assign_new_characters_only": true
+  }
+}

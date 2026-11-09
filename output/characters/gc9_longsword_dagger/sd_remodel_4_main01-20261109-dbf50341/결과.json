@@ -1,0 +1,92 @@
+{
+  "task": "MAIN01-20261109-DBF50341",
+  "iteration": 1,
+  "role": "characters",
+  "status": "produced_and_reviewed_awaiting_user_evaluation",
+  "outputPaths": {
+    "variant1": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\variant-1-final.png",
+    "variant2": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\variant-2-final.png",
+    "variant3": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\variant-3-final.png",
+    "variant4": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\variant-4-final.png",
+    "comparison": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\comparison.png",
+    "html": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\index.html",
+    "analysis": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\분석.md",
+    "qa": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\검수.md",
+    "browserEvidence": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\browser-evidence.json",
+    "generationRecords": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\generation-records.json",
+    "imageMetadata": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\image-metadata.json"
+  },
+  "originalPath": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_8views_v01\\images\\01_front_000.png",
+  "originalSha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-DBF50341\\읽기확인-v001-8792716014fa4f71bbe8a76a9efbfcd8.json",
+    "sha256": "6280f1ebdce0d18f49b21858580d2e9231a4e38b8a27b91372da20c298a57568"
+  },
+  "checks": {
+    "finalCount": 4,
+    "viewImageOpenedFinals": true,
+    "viewImageOpenedComparisonAndLightDarkNarrowExpanded": true,
+    "nativeDimensionsAll": [
+      1254,
+      1254
+    ],
+    "allGeneratedBytesMatchSource": true,
+    "originalBytesUnchanged": true,
+    "actualAlpha": true,
+    "identityAndAnatomicalSidesReviewed": true,
+    "weaponsGraspAndClippingReviewed": true,
+    "bodyDisplayHeightCssPx": 680,
+    "footBaselineCssPx": 760,
+    "displayScaleUniform": true,
+    "sourceImagesResampled": false,
+    "headInclusiveUnits": [
+      3.02,
+      3.01,
+      3.18,
+      3.17
+    ],
+    "commonFramingPassed": false,
+    "browser": {
+      "url": "file:///C:/Users/user/orca/workspaces/Grid%20Defenders/%EC%BA%90%EB%A6%AD%ED%84%B0%EB%94%94%EC%9E%90%EC%9D%B82/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/index.html",
+      "isolatedHeadless": true,
+      "appUiTouched": false,
+      "wide": {
+        "width": 2500,
+        "columns": 5,
+        "loaded": true,
+        "board": {
+          "x": 12,
+          "y": 83,
+          "width": 2476,
+          "height": 725.1609497070312,
+          "top": 83,
+          "right": 2488,
+          "bottom": 808.1609497070312,
+          "left": 12
+        }
+      },
+      "narrow": {
+        "width": 420,
+        "documentWidth": 420,
+        "boardRight": 408,
+        "viewportRight": 408,
+        "labels": "기존1234"
+      },
+      "expansion": {
+        "dialogOpen": true,
+        "source": "variant-3-final.png",
+        "caption": "3 · 단단한 전위 전사"
+      }
+    },
+    "userApproved": false,
+    "gameIntegrated": false,
+    "committed": false,
+    "pushed": false
+  },
+  "remainingIssues": [
+    "사용자 시안 선택과 미적 합격 대기",
+    "총괄이 지정 오른쪽 영역에 최종 비교자료를 한 번 표시",
+    "실제 등신 약3.01~3.18로 목표3.3과 차이; 생성 상단 여백/본체 점유는 공통 규격 미달이며 표시에서만 등비 등록",
+    "1/2/4안 차이는3안보다 미세해 확대 비교 권장"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "character": "발로르",
+  "version": 11,
+  "tool": "built-in image_gen",
+  "status": "internal_checks_failed_style_unreviewed",
+  "successful_image_calls": 1,
+  "generated_outputs": 1,
+  "input_validation_events": [
+    {
+      "message": "referenced_image_paths must contain at most 5 paths; no image returned",
+      "returned_image": false
+    }
+  ],
+  "calls": [
+    {
+      "id": "whole_style_front_v11",
+      "prompt_file": "output/characters/gc9_balor/gc9_rebuild_v11/front_v11.prompt.txt",
+      "references": [
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c06_front.png",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터그림체\\GC9\\원본\\M01_Myst.jfif",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터그림체\\GC9\\원본\\A04_Bram.jfif",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터제작\\한손무기그립\\원본\\그립자세_참조.png",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터제작\\한손무기그립\\원본\\손가락연결_사용자표시.png"
+      ],
+      "output": "output/characters/gc9_balor/gc9_rebuild_v11/front_v11.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-ea448efa-5ac6-462a-b1a9-391e8afe83f9.png",
+      "started_at": "2026-11-07T19:07:52.048Z",
+      "finished_at": "2026-11-07T19:08:18.808Z",
+      "actual_generated_outputs": 1,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "be11e97e87b7966aac57d74448d0a7d8aefad9483cf7594f075e439a6f607e36",
+      "copy_matches_generated_original": true,
+      "revision_scope": "whole_style_rebuild_c6",
+      "style_reference_roles": [
+        {
+          "id": "C6_front",
+          "path": "output/character-redesign-6x2/images/c06_front.png",
+          "role": "whole_style",
+          "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+        },
+        {
+          "id": "M01_Myst",
+          "path": "자료/캐릭터그림체/GC9/원본/M01_Myst.jfif",
+          "role": "historical_whole_style",
+          "sha256": "dd5d84bb0616a07d49733ca72071b49021b7d9200d1d3285d2fff355c544e157"
+        },
+        {
+          "id": "A04_Bram",
+          "path": "자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+          "role": "material_only",
+          "sha256": "9f8e7b048e4c1f6e476b16eb98f5b6fea31f34481ba617d06b1591a0aec84d8a"
+        },
+        {
+          "id": "grip_pose",
+          "path": "자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "role": "pose_only",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9"
+        },
+        {
+          "id": "grip_fingers",
+          "path": "자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+          "role": "pose_only",
+          "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "output/character-redesign-6x2/images/c06_front.png",
+          "role": "whole_style",
+          "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+        },
+        {
+          "path": "자료/캐릭터그림체/GC9/원본/M01_Myst.jfif",
+          "role": "historical_whole_style",
+          "sha256": "dd5d84bb0616a07d49733ca72071b49021b7d9200d1d3285d2fff355c544e157"
+        },
+        {
+          "path": "자료/캐릭터그림체/GC9/원본/A04_Bram.jfif",
+          "role": "material_only",
+          "sha256": "9f8e7b048e4c1f6e476b16eb98f5b6fea31f34481ba617d06b1591a0aec84d8a"
+        },
+        {
+          "path": "자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "role": "pose_only",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9"
+        },
+        {
+          "path": "자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+          "role": "pose_only",
+          "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a"
+        }
+      ]
+    }
+  ],
+  "user_style_approval": null,
+  "approved_style_master": false,
+  "preserve_returned_dimensions_and_bytes": true,
+  "post_generation_resampled": false
+}

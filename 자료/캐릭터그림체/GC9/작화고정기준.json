@@ -1,0 +1,288 @@
+{
+  "schema_version": 2,
+  "id": "gc9_whole_style_eight_v2",
+  "updated_on": "2026-11-08",
+  "style_id": "GC9",
+  "style_version": "1.1",
+  "scope": "GC9 whole-character drawing style; not a trained model",
+  "provenance": "output/gc9-style-standard-20261108/report.md",
+  "profiles": {
+    "gc9_c3_c6_eight": {
+      "name": "C3·C4·C5·C6 정면·사선 8장 전체 작화",
+      "primary": [
+        {
+          "id": "c03_front",
+          "path": "output/character-redesign-6x2/images/c03_front.png",
+          "role": "whole_style",
+          "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+        },
+        {
+          "id": "c03_threequarter",
+          "path": "output/character-redesign-6x2/images/c03_threequarter.png",
+          "role": "whole_style",
+          "sha256": "15448ca81c1c5ecc226993f403151fb70aa8b3d532549d368262e395a0374b95"
+        },
+        {
+          "id": "c04_front",
+          "path": "output/character-redesign-6x2/images/c04_front.png",
+          "role": "whole_style",
+          "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+        },
+        {
+          "id": "c04_threequarter",
+          "path": "output/character-redesign-6x2/images/c04_threequarter.png",
+          "role": "whole_style",
+          "sha256": "712d33a525be4f59a66fbabe884a33cc77205d6e00a9334fb31a8d362641761e"
+        },
+        {
+          "id": "c05_front",
+          "path": "output/character-redesign-6x2/images/c05_front.png",
+          "role": "whole_style",
+          "sha256": "e313100fa85b8163e81eaabe1f48e499cc2e3e97383bd74b247278276b7e4345"
+        },
+        {
+          "id": "c05_threequarter",
+          "path": "output/character-redesign-6x2/images/c05_threequarter.png",
+          "role": "whole_style",
+          "sha256": "59624b93b3d2bffa0899ddfcea15e8f99d586823e315e56007fba81e772b7457"
+        },
+        {
+          "id": "c06_front",
+          "path": "output/character-redesign-6x2/images/c06_front.png",
+          "role": "whole_style",
+          "sha256": "3cfa46be14dcd4e9bfe0634405da6c01ae9c45b6aeae6db7e57ab3331c882fe1"
+        },
+        {
+          "id": "c06_threequarter",
+          "path": "output/character-redesign-6x2/images/c06_threequarter.png",
+          "role": "whole_style",
+          "sha256": "49c34b0a3e192c713e1eda6d33d2c235cbcc6fd81169aa1e5878340920ac6d8c"
+        }
+      ],
+      "overall_and_face_priority": "C4",
+      "metal_priority": "C3",
+      "selection": {
+        "overall_and_face_priority": "C4",
+        "metal_priority": "C3",
+        "whole_style_members": [
+          "C3",
+          "C4",
+          "C5",
+          "C6"
+        ],
+        "c6_exclusive_override": false,
+        "per_call_whole_style_images": "대상에 맞는 1~2장을 우선 선택. 전체 8장은 공통 비교 기준이며 한 번에 모두 첨부하지 않는다.",
+        "max_total_reference_images": 5,
+        "source_character_identity_must_not_transfer": true
+      },
+      "recipe_record": "output/character-redesign-6x2/생성기록.json",
+      "recipe_entries": [
+        "c03_front",
+        "c03_threequarter",
+        "c04_front",
+        "c04_threequarter",
+        "c05_front",
+        "c05_threequarter",
+        "c06_front",
+        "c06_threequarter"
+      ]
+    }
+  },
+  "default_profile": "gc9_c3_c6_eight",
+  "character_profiles": {},
+  "rejected_style_prefixes": [],
+  "exempt_subpaths": [
+    "/sd_style_test_",
+    "/inputs/"
+  ],
+  "approved_edit_targets": [],
+  "rules": {
+    "whole_style_reference_required": true,
+    "reference_hashes_required": true,
+    "identity_semantics_preserved": true,
+    "failed_face_geometry_must_not_be_locked": true,
+    "rejected_target_must_not_be_style_or_edit_master": true,
+    "full_style_failure_requires_whole_character_rebuild": true,
+    "do_not_infer_style_pass_from_native_file_tests": true,
+    "no_unrequested_redesign": true,
+    "no_next_view_after_style_failure": true,
+    "automatic_style_approval": false,
+    "reference_roles_must_match_executed_order": true,
+    "complete_benchmark_set_is_review_basis": true,
+    "do_not_infer_failure_from_reference_names": true
+  },
+  "review_axes": [
+    "전체 인상",
+    "얼굴 선과 생략 방식",
+    "머리카락 묶음",
+    "선화 위계",
+    "인체를 그리는 방식",
+    "명암 면",
+    "재질"
+  ],
+  "production_state": {
+    "character": "balor",
+    "generation": "stopped_for_style_audit",
+    "style": "rejected_by_user",
+    "new_generation_performed_during_repair": false,
+    "authorization_source": "이제 재대로된 GC9일러스트 만들수있어?",
+    "authorization_interpretation": "이전 발로르 작업을 새 전체 작화 기준으로 정면 시안1장 재개",
+    "max_new_image_calls": 1,
+    "followup_generation_allowed": false,
+    "successful_image_calls": 1,
+    "automatic_retry_allowed": false,
+    "latest_candidate_style": "unverified",
+    "generation_permitted": false,
+    "current_task": "C3~C6 8장 기준·실행 프롬프트 검증; 생성 요청 아님",
+    "image_calls_in_current_audit": 0
+  },
+  "rejected_style_paths": [
+    "output/characters/gc9_balor/concept_front_v01.png",
+    "output/characters/gc9_balor/gc9_rebuild_v09/front_v09.png",
+    "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_before_shield.png",
+    "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_initial.png",
+    "output/characters/gc9_balor/gc9_rebuild_v09/variants/front_style_master.png",
+    "output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png",
+    "output/characters/gc9_balor/gc9_rebuild_v10/threequarter_v10.png",
+    "output/characters/gc9_balor/gc9_rebuild_v10/variants/threequarter_before_framing.png",
+    "output/characters/gc9_balor/illustration_3views_v01/front.png",
+    "output/characters/gc9_balor/illustration_3views_v02/front.png",
+    "output/characters/gc9_balor/illustration_3views_v03/front.png",
+    "output/characters/gc9_balor/illustration_3views_v04/front.png",
+    "output/characters/gc9_balor/illustration_3views_v05/front.png",
+    "output/characters/gc9_balor/illustration_3views_v06/front.png",
+    "output/characters/gc9_balor/variants/front_v06_initial.png",
+    "output/characters/gc9_balor/illustration_3views_v01/right.png",
+    "output/characters/gc9_balor/illustration_3views_v04/right.png",
+    "output/characters/gc9_balor/illustration_3views_v05/right.png",
+    "output/characters/gc9_balor/illustration_3views_v07/right.png",
+    "output/characters/gc9_balor/illustration_3views_v08/right.png",
+    "output/characters/gc9_balor/variants/right_geometry_initial_v05.png",
+    "output/characters/gc9_balor/variants/right_horizontal_initial_v08.png",
+    "output/characters/gc9_balor/variants/right_shield_angle_initial_v07.png",
+    "output/characters/gc9_balor/illustration_3views_v01/back.png",
+    "output/characters/gc9_balor/illustration_3views_v04/back.png",
+    "output/characters/gc9_balor/illustration_3views_v05/back.png",
+    "output/characters/gc9_balor/illustration_3views_v07/back.png",
+    "output/characters/gc9_balor/illustration_3views_v08/back.png",
+    "output/characters/gc9_balor/variants/back_framing_initial_v08.png",
+    "output/characters/gc9_balor/variants/back_horizontal_initial_v08.png",
+    "output/characters/gc9_balor/variants/back_initial_v04.png",
+    "output/characters/gc9_balor/variants/back_shield_angle_initial_v07.png",
+    "output/characters/gc9_balor/helmet_off_front_v01.png",
+    "output/characters/style_tests/blonde_wind_elf/gc9_concept_v03/front_v03.png",
+    "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/front_v04.png"
+  ],
+  "max_reference_images": 5,
+  "benchmark_manifest": "자료/캐릭터그림체/GC9/완성작화기준8장.json",
+  "superseded_profiles": {
+    "c4_general": "전체 기준을 C3~C6 8장으로 확장; C4 우선순위 유지",
+    "c6_male": "C6 단독 전역/발로르 고정 해제; C6는 8장 중 남성형 사례"
+  },
+  "production_states": {
+    "blonde_wind_elf": {
+      "character": "blonde_wind_elf",
+      "generation": "stopped_after_style_failure",
+      "generation_permitted": false,
+      "style": "improved_below_acceptance",
+      "authorization_source": "금발 바람 엘프 다시시도",
+      "max_new_image_calls": 1,
+      "successful_image_calls": 1,
+      "automatic_retry_allowed": false,
+      "followup_generation_allowed": false,
+      "latest_candidate": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/front_v04.png",
+      "failure_report": "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/failure-analysis-20261108/report.md",
+      "previous_successful_image_calls": 1,
+      "current_attempt": "v04",
+      "total_successful_image_calls": 2,
+      "internal_conditions_pass": false,
+      "user_feedback": {
+        "verbatim": "정정 머리카락 얼굴 미세조정 필요",
+        "improved_vs_previous": true,
+        "overall_approved": false,
+        "improved_axes_specified_by_user": true,
+        "interpretation": "최신 정정: 얼굴·머리카락도 미세 조정 필요. 금속 거의 합격선, 옷 최우선 보완은 유지. 전체 시안 승인 아님.",
+        "previous_verbatim": "얼굴 합격선\n머리카락 표현 합격선\n금속 거의 합격선\n옷이 제일 거슬림",
+        "component_assessments": {
+          "face": {
+            "verdict": "minor_revision_needed",
+            "instruction": "기본 인상은 유지하며 미세 조정"
+          },
+          "hair": {
+            "verdict": "minor_revision_needed",
+            "instruction": "헤어스타일·색·큰 구성은 유지하며 표현 미세 조정"
+          },
+          "metal": {
+            "verdict": "near_acceptance",
+            "instruction": "현재 표현을 보존하고 필요 부분만 미세 조정"
+          },
+          "clothing": {
+            "verdict": "priority_revision",
+            "instruction": "옷의 표현을 최우선으로 보완; 의상 구성·색 변경으로 자동 해석하지 않음"
+          }
+        }
+      },
+      "next_revision_scope": {
+        "preserve": [
+          "얼굴의 기본 인상",
+          "헤어스타일·색·큰 구성",
+          "의상 구성·색·장비"
+        ],
+        "primary_revision": "옷의 천 표현",
+        "secondary_revision": [
+          "얼굴 미세 조정",
+          "머리카락 표현 미세 조정",
+          "금속 미세 조정"
+        ],
+        "assistant_visual_hypotheses": [
+          "옷의 각진 명암 조각을 정리하고 주름의 힘 방향·겹침·무광 재질을 검토"
+        ],
+        "hypotheses_are_user_verdict": false,
+        "full_character_regeneration_requested": false,
+        "new_image_generation_requested": false
+      }
+    }
+  },
+  "partial_component_reviews": {
+    "output/characters/style_tests/blonde_wind_elf/gc9_concept_v04/front_v04.png": {
+      "components": {
+        "face": {
+          "verdict": "minor_revision_needed",
+          "instruction": "기본 인상은 유지하며 미세 조정"
+        },
+        "hair": {
+          "verdict": "minor_revision_needed",
+          "instruction": "헤어스타일·색·큰 구성은 유지하며 표현 미세 조정"
+        },
+        "metal": {
+          "verdict": "near_acceptance",
+          "instruction": "현재 표현을 보존하고 필요 부분만 미세 조정"
+        },
+        "clothing": {
+          "verdict": "priority_revision",
+          "instruction": "옷의 표현을 최우선으로 보완; 의상 구성·색 변경으로 자동 해석하지 않음"
+        }
+      },
+      "scope": {
+        "preserve": [
+          "얼굴의 기본 인상",
+          "헤어스타일·색·큰 구성",
+          "의상 구성·색·장비"
+        ],
+        "primary_revision": "옷의 천 표현",
+        "secondary_revision": [
+          "얼굴 미세 조정",
+          "머리카락 표현 미세 조정",
+          "금속 미세 조정"
+        ],
+        "assistant_visual_hypotheses": [
+          "옷의 각진 명암 조각을 정리하고 주름의 힘 방향·겹침·무광 재질을 검토"
+        ],
+        "hypotheses_are_user_verdict": false,
+        "full_character_regeneration_requested": false,
+        "new_image_generation_requested": false
+      },
+      "whole_style_master_approved": false
+    }
+  }
+}

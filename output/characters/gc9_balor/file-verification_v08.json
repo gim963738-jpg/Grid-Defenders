@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-07T17:15:20.254Z",
+  "previous_source_paths_verified": 232,
+  "previous_image_hashes_unchanged": true,
+  "generated_originals_verified": 5,
+  "outputs": [
+    {
+      "path": "output/characters/gc9_balor/illustration_3views_v08/right.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "90ecf4149e1062e1784de986bae9d225de7ef4cb53fbc576951eca6609f392e1",
+      "copy_matches_generated_original": true
+    },
+    {
+      "path": "output/characters/gc9_balor/illustration_3views_v08/back.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "7a33bffb0f1c93412ffb0bc47bab4cb225af57018659821a6ecc28db3ff427b1",
+      "copy_matches_generated_original": true
+    }
+  ],
+  "whole_subject_bounds": [
+    {
+      "view": "right",
+      "width": 1254,
+      "height": 1254,
+      "minX": 339,
+      "minY": 298,
+      "maxX": 887,
+      "maxY": 1177,
+      "corners": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "view": "back",
+      "width": 1254,
+      "height": 1254,
+      "minX": 224,
+      "minY": 298,
+      "maxX": 948,
+      "maxY": 1166,
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "alpha_threshold": 32,
+  "head_top_difference_px": 0,
+  "foot_baseline_difference_px": 11,
+  "front_v06_unchanged": true,
+  "post_generation_resampled": false
+}

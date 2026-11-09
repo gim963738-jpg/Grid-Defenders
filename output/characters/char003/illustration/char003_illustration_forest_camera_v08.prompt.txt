@@ -1,0 +1,32 @@
+Tool: built-in image_gen (camera-view reprojection using reference).
+Primary camera reference: camera_reference_v08.png (user-supplied gray mannequin view; camera/framing only).
+Hero/pose reference: char003_illustration_forest_legs_v07.png. Earlier versions preserved.
+Output: char003_illustration_forest_camera_v08.png
+User request: [Image #1] 이미지처럼 일러스트 카메라구도를 찍어서 보여줘
+Changes: Move the illustration camera to a high oblique front/left view similar to the supplied mannequin, pull back for a spacious whole-figure view, and show the forest ground plane around the hero. Preserve approved v07 body pose, slightly lowered knee, costume, smile and completed slash/green-droplet story; only reproject them under the new camera. No grid/mannequin/editor visuals. Static illustration under 캐릭터스프라이트제작규약 v1.2; no animation or game implementation.
+
+Use case: compositing.
+Asset type: char003 forest action illustration v08, CAMERA-ANGLE CHANGE.
+IMAGE 1 is the user's CAMERA / FRAMING reference: a gray mannequin viewed from above at a steep oblique angle, camera pulled back enough to see the whole figure and lots of ground around it.
+IMAGE 2 is the exact HERO / POSE / COSTUME / FOREST scene to reproject: char003_illustration_forest_legs_v07.png.
+
+User request: "[Image #1] 이미지처럼 일러스트 카메라구도를 찍어서 보여줘"
+They want this existing illustration photographed from the CAMERA VIEW OF IMAGE1. This is primarily a camera relocation, not another costume or limb-pose redesign.
+
+CAMERA — highest priority:
+Re-stage the whole scene as if the camera is HIGH ABOVE and diagonally in front/left of the moving hero, pointed DOWN about 55–65 degrees at him and the forest floor, matching the mannequin reference's camera elevation and viewing azimuth. It must clearly look down onto the TOP OF HIS HEAD, shoulders, forearms, upper thighs and boots.
+Rotate the observer around from image2's side-on view into the reference's HIGH FRONT THREE-QUARTER angle. The hero should be seen from above, not at eye level in strict profile. Do not merely tilt/rotate the old flat illustration.
+Pull the camera BACK. The whole hero INCLUDING sword, cape and both boots should occupy about 60–70% of the frame's height, with generous forest-floor breathing room around him, like image1's spacious full-figure view. The figure is centered slightly right if useful; moderate/normal lens, controlled perspective, no huge fisheye head or enormous foreground hand.
+The composition is dominated by the ground plane receding obliquely away around him. No visible horizon and no eye-level tree-wall background. Show dappled forest path, moss, leaf litter, roots, ferns and soft shadows under him. Large trees/branches can frame the periphery but must not cover the pose.
+Use image1's elevated oblique subject presentation and camera distance, but do NOT draw a gray mannequin, 3D editor, grid lines, gray studio or measuring marks. Deliver finished 2D anime forest illustration. A slightly wide near-square composition similar to the reference is suitable.
+
+PRESERVE THE CURRENT ACTION IN 3D:
+Keep the v07 running/charging follow-through pose: one front knee bent and slightly lowered as approved, opposite leg stretched backward/down in a long natural line, sword arm extended behind at shoulder level with blade pointing away behind him, empty arm bent near chest/ribs, torso leaning forward. Only their SCREEN PROJECTION changes with the camera. Do not reset the lifted knee to the older higher position, change it to a standing pose, swap legs, or make a new overhead sword swing.
+Both legs, both arms, hand-hilt-blade connection and body anatomy remain coherent under the new perspective, with natural foreshortening. Keep compact approximately 6.5-head adult game anatomy.
+The slash has already happened. Thin silver-white residual sword-energy arc and scattered translucent GREEN teardrop slime-gel droplets/small splashes remain on/above the ground near his passage; reproject their ground plane with the camera. No intact slime or blue jelly monster.
+
+LOCK THE HERO:
+Same friendly young adult male, short tousled reddish-brown hair, amber-brown eyes and confident cheerful smile, now naturally viewed from above. Keep his face readable within that viewpoint; do not swivel his head into a separate portrait angle.
+Same crimson mantle/coat, charcoal hood and raised collar, silver clasps/badge, warm ivory shirt, selected partial steel shoulder/forearm/knee armor, leather double belts/pouches, dark trousers, brown tall boots/red ties, fingerless gloves and one plain Western straight sword.
+Same crisp mature 2D anime outlines, clear cel shadows, readable fabric/leather/metal and clean highlighted hair. Preserve bright green/gold forest light and red costume palette.
+Fit hair, coat, both boots and full sword tip inside ample margins. Single full scene, one character, no UI, caption, text, watermark, diagram, side-by-side views or collage.

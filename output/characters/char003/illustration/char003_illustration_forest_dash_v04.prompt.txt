@@ -1,0 +1,50 @@
+Tool: built-in image_gen (pose edit, then targeted leg-role refinement).
+Edit target: char003_illustration_forest_slime_v03.png. Earlier versions preserved.
+Output: char003_illustration_forest_dash_v04.png
+User request: 상체는 칼을 안든 손을 몸쪽으로 살짝 접고 / 뒤에있는발을 돌진하듯이 굽히고 / 앞에있는발은 뒤로 펼치며 / 전체적인 구도는 돌진하는 모습
+Changes: Rebuild the pose as a forward charging bound: bend the empty arm toward the torso, tuck the previously rear leg into a running drive, and sweep the previously front leg back into an extended trailing line. Maintain the already-completed slash, raised sword arm, smiling hero, upper-left elevated camera, forest and green slime droplets. Static illustration under 캐릭터스프라이트제작규약 v1.2; no gameplay or frame-sheet changes.
+
+Use case: precise-object-edit.
+Asset type: char003 forest action illustration, charging follow-through pose v04.
+Image 1 is the EDIT TARGET: char003_illustration_forest_slime_v03.png. Preserve this exact hero, face, costume, anime rendering, forest setting, elevated camera and green slime aftermath, but REBUILD his arm and leg pose to the user's instructions.
+
+Exact user correction:
+"상체는 칼을 안든 손을 몸쪽으로 살짝 접고
+뒤에있는발을 돌진하듯이 굽히고
+앞에있는발은 뒤로 펼치며
+전체적인 구도는 돌진하는 모습"
+
+MAIN PRIORITY — A TRUE FORWARD CHARGE:
+Replace the broad planted crouch in image1 with a decisive low FORWARD DASH / sprinting bound. His whole chest, shoulders and hips commit to forward movement diagonally toward the LOWER LEFT / toward the viewer, with the red cloak and trailing leg stretched backward toward the UPPER RIGHT. Low forward body lean and a continuous diagonal line of action show he is surging through the attack, not standing in place. Anatomically convincing compact adult anime anatomy and natural joint mechanics.
+
+ARM CORRECTION:
+The EMPTY hand that is currently reaching very far toward the lower-left camera must be pulled inward. Bend its elbow naturally about 80–100 degrees and bring that gloved hand close to the lower chest / ribs and side of the torso, as a compact sprinting balance gesture. Elbow stays slightly out to the side, wrist relaxed, hand naturally semi-curled. No giant outstretched foreground palm, no hand covering the smile.
+Keep the SWORD arm lifted behind/above the torso toward upper right in a sweeping FOLLOW-THROUGH, sword naturally continuing outward from the grip. This slash is ALREADY COMPLETED, not a new wind-up. Single sword, correct blade/guard/hilt connection.
+
+LEG CORRECTION — change which leg is tucked versus stretched:
+Use image1's limbs as the mapping:
+- The leg/boot that is currently FARTHER BACK on the RIGHT SIDE of the image is drawn into a compact sharply BENT runner's leg, knee driven forward underneath the pelvis/torso in the direction of the charge, lower leg folded naturally. It provides the tucked, driving shape of a running stride.
+- The leg that is currently CLOSEST to the camera at the BOTTOM of image1, with the visible small steel knee plate, must instead sweep BACK BEHIND the hips and EXTEND in a long natural trailing line. Stretch this trailing leg rearward in the direction opposite the head/torso's forward surge. Keep a slight natural knee softness, pointed boot follow-through, no locked hyperextension.
+A clearly contrasting silhouette: ONE leg tucked/bent, ONE leg extended backward. Neither boot should remain in image1's wide stationary planted stance. Rebuild pelvis, knee and ankle positions together. Two coherent legs and two boots, no duplicated knees/feet.
+Depict the decisive instant of a fast running bound very close to the forest floor, with subtle kicked-up dust/leaves behind the boots to ground the movement. Not floating upright or awkwardly balancing on a knee.
+
+KEEP:
+Same warm confident smile, short reddish-brown hair, amber-brown eyes, crimson mantle/coat, charcoal hood/collar, silver clasps/badge, ivory shirt, asymmetrical partial steel pauldrons, selected forearm/knee guards, leather belts/pouches, dark trousers, tall brown boots/red ties and fingerless gloves.
+Same high oblique view from UPPER LEFT looking down about 35–45 degrees, showing the top of hair/shoulders and ground. Maintain compact roughly 6.5-head adult game proportions with correct foreshortening, clean anime line art and cel shading.
+Same sunlight-filled green forest path, trees/moss/ferns; recompose foreground ground naturally around the new movement.
+Keep already-cut slime as translucent emerald/lime green TEARDROP gel droplets and a few little splashes near a thin silver-white residual sword-energy arc along the path he has just cut through. Slime pieces trail slightly behind/to the side of the forward-moving hero; do not obscure his pose or imply a new hit. No intact slime, blue gel halves, face on slime or giant magical ring.
+
+Composition must emphasize SPEED AND FORWARD CHARGE, with the compact tucked free arm and contrasting runner's legs immediately readable. Red cloak trails opposite his direction of travel, moderate motion in small background leaves, face/body stay crisp.
+Entire hero, both hands, both boots and sword tip inside the full portrait with safety margins. One complete still illustration. No text, labels, motion-sheet panels, watermark, UI, extra people or new equipment.
+
+Refinement pass: The first result kept the armored knee forward. A second local pass corrected the leg-role marking, preserving the charge and moving the single knee plate to the extended trailing leg.
+Input: exec-e0f7a327-d897-4f27-a70b-4547d042b2e9.png (built-in intermediate).
+Final selected source: exec-4e48a114-95c2-4f5e-b348-65c53520783f.png.
+
+Make a single targeted leg-identity correction to this exact finished charging illustration. Preserve the new tucked empty arm, forward lean, smiling face, raised sword, red cape, compact anime anatomy, camera, forest and green droplets exactly.
+
+The user's requested leg swap must be respected:
+The leg that wore the small STEEL KNEE PLATE in the earlier front-facing pose must be the LONG EXTENDED TRAILING leg behind the hips. The OTHER leg, with no knee armor, is the BENT forward-driving leg tucked under the torso.
+In this input the knee plate is still wrongly on the bent forward knee. Correct the leg roles so the single armored knee belongs to the extended rearward leg reaching toward the upper-right of the image, and the tucked knee nearer the lower-left foreground is unarmored black cloth.
+Reconstruct the pelvis-to-thigh connections, clothing and armor perspective naturally, making the charge a coherent running bound. Only one small steel knee plate in the whole image. The tucked leg remains strongly bent, while the other leg stretches backward away from his head/charge direction. Keep two legs, no duplicated limbs or knees. Show both boots completely, with natural dust near the floor.
+Do not change the torso/arms/face, sword, costume colors or overall charge direction. Full standalone portrait illustration, no text or UI.

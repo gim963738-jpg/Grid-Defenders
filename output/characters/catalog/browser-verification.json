@@ -1,0 +1,130 @@
+{
+  "checked_at": "2026-11-07T18:59:45.266Z",
+  "page": "a18a07b6-061d-486d-867a-f87b1418c927",
+  "method": "Orca browser DOM",
+  "externalImageApiCalls": 0,
+  "desktop": {
+    "default": {
+      "characters": 22,
+      "images": 86
+    },
+    "centralMage": {
+      "characters": 0,
+      "images": 0
+    },
+    "unassignedMages": {
+      "characters": 2,
+      "tags": [
+        "#소속 미지정",
+        "#마법사",
+        "#직업 미지정",
+        "#무기 미지정",
+        "#공격 계열 미지정",
+        "#소속 미지정",
+        "#마법사",
+        "#수석 빛 마법사",
+        "#지팡이",
+        "#마도서",
+        "#빛 마법"
+      ]
+    },
+    "emptyOriginContext": {
+      "origin_id": "west",
+      "class_id": "swordsman",
+      "production_policy_id": "concept-approval-turnaround-v1"
+    },
+    "balor": {
+      "characters": 1,
+      "images": 1,
+      "views": [],
+      "illustrationVersion": 10,
+      "illustrationApproval": "rejected_style",
+      "rejectedIllustrations": 33,
+      "selectedSD": "existing_sd",
+      "discardedSD": 3,
+      "sizeStandard": "sd_silver_staff_standard_v1",
+      "helmet": "off",
+      "gripPreset": "one_hand_grip_v1"
+    },
+    "globalArcher": {
+      "characters": 4,
+      "images": 8
+    },
+    "scopes": {
+      "current": 86,
+      "history": 75,
+      "reference": 79,
+      "all": 240
+    },
+    "archiveCollections": [
+      {
+        "id": "newCharacters",
+        "count": 37
+      },
+      {
+        "id": "staff8",
+        "count": 12
+      },
+      {
+        "id": "blondWarrior",
+        "count": 10
+      },
+      {
+        "id": "gc9Final",
+        "count": 33
+      },
+      {
+        "id": "testProcess",
+        "count": 70
+      },
+      {
+        "id": "attachments",
+        "count": 49
+      },
+      {
+        "id": "gc9refs",
+        "count": 16
+      },
+      {
+        "id": "sp13refs",
+        "count": 13
+      }
+    ],
+    "blondWarrior": {
+      "images": 10,
+      "pixelViews": 8
+    },
+    "native": {
+      "naturalWidth": 1254,
+      "displayWidth": 1254,
+      "related": 8
+    },
+    "width": 1652,
+    "documentWidth": 1622
+  },
+  "bookmark": {
+    "hash": "#origin=unassigned&classId=mage",
+    "origin": "unassigned",
+    "classId": "mage",
+    "restored": true
+  },
+  "mobile": [
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "minButtonHeight": 44,
+      "nativeWidth": 1254,
+      "originPicker": true,
+      "globalClass": true
+    },
+    {
+      "width": 320,
+      "documentWidth": 320,
+      "minButtonHeight": 44,
+      "nativeWidth": 1254,
+      "originPicker": true,
+      "globalClass": true
+    }
+  ],
+  "status": "passed"
+}

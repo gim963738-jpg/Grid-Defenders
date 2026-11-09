@@ -1,0 +1,620 @@
+{
+  "schemaVersion": 3,
+  "task": "MAIN01-20261109-DBF50341",
+  "iteration": 3,
+  "coordinateSystem": "native pixels, top-left origin; hairTop~sole is display height; hidden scalpCrown~chin is estimated anatomical head unit; the two are distinct",
+  "allRatiosAreEstimatesNotUserConfirmed": true,
+  "sourceImagesResampled": false,
+  "assets": [
+    {
+      "variant": 0,
+      "label": "기존",
+      "file": "original.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\original.png",
+      "sourceSha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+      "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+      "sourceBytesMatch": true,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        145,
+        17,
+        993,
+        1232
+      ],
+      "hairTop": 17,
+      "scalpCrown": {
+        "y": 140,
+        "estimated": true,
+        "uncertaintyPx": 35,
+        "method": "Forehead/temple continuation, ear level and plausible cranial oval under hair; not directly measurable, not hair whorl/spike top"
+      },
+      "chin": {
+        "y": 366,
+        "estimated": true,
+        "uncertaintyPx": 8
+      },
+      "sole": 1231,
+      "bodyHeight": 1215,
+      "bodyBounds": {
+        "x": 330,
+        "y": 17,
+        "width": 586,
+        "height": 1215,
+        "xEstimated": true
+      },
+      "footAnchor": {
+        "x": 635,
+        "y": 1231,
+        "xEstimated": true
+      },
+      "faceBounds": {
+        "x": 550,
+        "y": 235,
+        "width": 195,
+        "height": 131,
+        "estimated": true,
+        "uncertaintyPx": 12,
+        "meaning": "visible facial envelope rectangle; includes fringe occlusion and facial features, not exact segmented skin mask"
+      },
+      "faceEnvelopeAreaProxy": 25545,
+      "scalpCrownToChin": 227,
+      "scalpCrownToSole": 1092,
+      "scalpHeadUnits": 4.81057268722467,
+      "hairInclusiveHeadUnits": 3.4714285714285715,
+      "headToDisplayHeight": 0.1868312757201646,
+      "faceWidthToDisplayHeight": 0.16049382716049382,
+      "faceHeightToDisplayHeight": 0.10781893004115227,
+      "faceEnvelopeAreaToDisplayHeightSquared": 0.017304272722654068,
+      "measurement": {
+        "alphaThreshold": 32,
+        "headROI": [
+          250,
+          0,
+          815,
+          752
+        ],
+        "feetROI": [
+          376,
+          1078,
+          539,
+          175
+        ],
+        "headAlphaBounds": [
+          335,
+          17,
+          914,
+          752
+        ],
+        "feetAlphaBounds": [
+          447,
+          1078,
+          829,
+          1232
+        ],
+        "bodyYAlphaMeasured": true,
+        "soleUncertaintyPx": 3,
+        "bodyXUncertaintyPx": 20,
+        "footXUncertaintyPx": 20
+      },
+      "designPurpose": "기존",
+      "userApproved": false,
+      "displaySizes": {
+        "57": {
+          "faceWidth": 9.148148148148149,
+          "faceHeight": 6.145679012345679,
+          "scalpHeadHeight": 10.649382716049383
+        },
+        "72": {
+          "faceWidth": 11.555555555555555,
+          "faceHeight": 7.762962962962963,
+          "scalpHeadHeight": 13.451851851851853
+        },
+        "500": {
+          "faceWidth": 80.24691358024691,
+          "faceHeight": 53.90946502057613,
+          "scalpHeadHeight": 93.4156378600823
+        }
+      },
+      "relativeToOriginalAtEqualHairTopToSoleHeight": {
+        "scalpHeadLinearRatio": 1.0,
+        "faceWidthRatio": 1.0,
+        "faceHeightRatio": 1.0,
+        "faceEnvelopeAreaProxyRatio": 1.0
+      }
+    },
+    {
+      "variant": 1,
+      "label": "1 · 절제 확대",
+      "file": "variant-1-front.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2dc42e53-9880-4a8b-9f67-91a5e7b811ad.png",
+      "sourceSha256": "b8db43a3ce43703be4d06a752d2b700691681a798ec9486a3e3c339ff472c8f8",
+      "sha256": "b8db43a3ce43703be4d06a752d2b700691681a798ec9486a3e3c339ff472c8f8",
+      "sourceBytesMatch": true,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        290,
+        18,
+        963,
+        1226
+      ],
+      "hairTop": 18,
+      "scalpCrown": {
+        "y": 135,
+        "estimated": true,
+        "uncertaintyPx": 35,
+        "method": "Forehead/temple continuation, ear level and plausible cranial oval under hair; not directly measurable, not hair whorl/spike top"
+      },
+      "chin": {
+        "y": 386,
+        "estimated": true,
+        "uncertaintyPx": 8
+      },
+      "sole": 1225,
+      "bodyHeight": 1208,
+      "bodyBounds": {
+        "x": 330,
+        "y": 18,
+        "width": 582,
+        "height": 1208,
+        "xEstimated": true
+      },
+      "footAnchor": {
+        "x": 630,
+        "y": 1225,
+        "xEstimated": true
+      },
+      "faceBounds": {
+        "x": 535,
+        "y": 230,
+        "width": 206,
+        "height": 156,
+        "estimated": true,
+        "uncertaintyPx": 12,
+        "meaning": "visible facial envelope rectangle; includes fringe occlusion and facial features, not exact segmented skin mask"
+      },
+      "faceEnvelopeAreaProxy": 32136,
+      "scalpCrownToChin": 252,
+      "scalpCrownToSole": 1091,
+      "scalpHeadUnits": 4.329365079365079,
+      "hairInclusiveHeadUnits": 3.2737127371273713,
+      "headToDisplayHeight": 0.20860927152317882,
+      "faceWidthToDisplayHeight": 0.17052980132450332,
+      "faceHeightToDisplayHeight": 0.1291390728476821,
+      "faceEnvelopeAreaToDisplayHeightSquared": 0.022022060435945793,
+      "measurement": {
+        "alphaThreshold": 32,
+        "headROI": [
+          250,
+          0,
+          815,
+          752
+        ],
+        "feetROI": [
+          376,
+          1078,
+          539,
+          175
+        ],
+        "headAlphaBounds": [
+          306,
+          18,
+          908,
+          752
+        ],
+        "feetAlphaBounds": [
+          433,
+          1078,
+          831,
+          1226
+        ],
+        "bodyYAlphaMeasured": true,
+        "soleUncertaintyPx": 3,
+        "bodyXUncertaintyPx": 20,
+        "footXUncertaintyPx": 20
+      },
+      "designPurpose": "1 · 절제 확대",
+      "userApproved": false,
+      "displaySizes": {
+        "57": {
+          "faceWidth": 9.72019867549669,
+          "faceHeight": 7.360927152317881,
+          "scalpHeadHeight": 11.890728476821192
+        },
+        "72": {
+          "faceWidth": 12.278145695364238,
+          "faceHeight": 9.298013245033113,
+          "scalpHeadHeight": 15.019867549668874
+        },
+        "500": {
+          "faceWidth": 85.26490066225166,
+          "faceHeight": 64.56953642384106,
+          "scalpHeadHeight": 104.30463576158941
+        }
+      },
+      "relativeToOriginalAtEqualHairTopToSoleHeight": {
+        "scalpHeadLinearRatio": 1.1165650436152523,
+        "faceWidthRatio": 1.0625318390219054,
+        "faceHeightRatio": 1.197740255801021,
+        "faceEnvelopeAreaProxyRatio": 1.2726371566668262
+      }
+    },
+    {
+      "variant": 2,
+      "label": "2 · 얼굴·몸 균형",
+      "file": "variant-2-front.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-f8f932c4-494d-46cc-bcb2-dc9bfc654d4b.png",
+      "sourceSha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+      "sha256": "3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53",
+      "sourceBytesMatch": true,
+      "width": 1133,
+      "height": 1388,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        125,
+        25,
+        908,
+        1356
+      ],
+      "hairTop": 25,
+      "scalpCrown": {
+        "y": 160,
+        "estimated": true,
+        "uncertaintyPx": 40,
+        "method": "Forehead/temple continuation, ear level and plausible cranial oval under hair; not directly measurable, not hair whorl/spike top"
+      },
+      "chin": {
+        "y": 487,
+        "estimated": true,
+        "uncertaintyPx": 8
+      },
+      "sole": 1355,
+      "bodyHeight": 1331,
+      "bodyBounds": {
+        "x": 295,
+        "y": 25,
+        "width": 548,
+        "height": 1331,
+        "xEstimated": true
+      },
+      "footAnchor": {
+        "x": 578,
+        "y": 1355,
+        "xEstimated": true
+      },
+      "faceBounds": {
+        "x": 473,
+        "y": 300,
+        "width": 230,
+        "height": 187,
+        "estimated": true,
+        "uncertaintyPx": 12,
+        "meaning": "visible facial envelope rectangle; includes fringe occlusion and facial features, not exact segmented skin mask"
+      },
+      "faceEnvelopeAreaProxy": 43010,
+      "scalpCrownToChin": 328,
+      "scalpCrownToSole": 1196,
+      "scalpHeadUnits": 3.6463414634146343,
+      "hairInclusiveHeadUnits": 2.874730021598272,
+      "headToDisplayHeight": 0.2464312546957175,
+      "faceWidthToDisplayHeight": 0.1728024042073629,
+      "faceHeightToDisplayHeight": 0.14049586776859505,
+      "faceEnvelopeAreaToDisplayHeightSquared": 0.024278023731612967,
+      "measurement": {
+        "alphaThreshold": 32,
+        "headROI": [
+          226,
+          0,
+          736,
+          832
+        ],
+        "feetROI": [
+          339,
+          1193,
+          487,
+          194
+        ],
+        "headAlphaBounds": [
+          294,
+          25,
+          838,
+          832
+        ],
+        "feetAlphaBounds": [
+          396,
+          1193,
+          761,
+          1356
+        ],
+        "bodyYAlphaMeasured": true,
+        "soleUncertaintyPx": 3,
+        "bodyXUncertaintyPx": 20,
+        "footXUncertaintyPx": 20
+      },
+      "designPurpose": "2 · 얼굴·몸 균형",
+      "userApproved": false,
+      "displaySizes": {
+        "57": {
+          "faceWidth": 9.849737039819685,
+          "faceHeight": 8.008264462809917,
+          "scalpHeadHeight": 14.046581517655898
+        },
+        "72": {
+          "faceWidth": 12.441773102930128,
+          "faceHeight": 10.115702479338843,
+          "scalpHeadHeight": 17.74305033809166
+        },
+        "500": {
+          "faceWidth": 86.40120210368144,
+          "faceHeight": 70.24793388429752,
+          "scalpHeadHeight": 123.21562734785876
+        }
+      },
+      "relativeToOriginalAtEqualHairTopToSoleHeight": {
+        "scalpHeadLinearRatio": 1.3190042927546113,
+        "faceWidthRatio": 1.0766919031381843,
+        "faceHeightRatio": 1.3030723613652135,
+        "faceEnvelopeAreaProxyRatio": 1.4030074606850793
+      }
+    },
+    {
+      "variant": 3,
+      "label": "3 · 큰 두상 SD",
+      "file": "variant-3-front.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-97d02753-9938-4617-853b-a2064d4a61d0.png",
+      "sourceSha256": "b356136aa05fc02d571288403f90f00a007032e0470344103cc949df551fe51d",
+      "sha256": "b356136aa05fc02d571288403f90f00a007032e0470344103cc949df551fe51d",
+      "sourceBytesMatch": true,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        274,
+        13,
+        982,
+        1244
+      ],
+      "hairTop": 13,
+      "scalpCrown": {
+        "y": 210,
+        "estimated": true,
+        "uncertaintyPx": 50,
+        "method": "Forehead/temple continuation, ear level and plausible cranial oval under hair; not directly measurable, not hair whorl/spike top"
+      },
+      "chin": {
+        "y": 663,
+        "estimated": true,
+        "uncertaintyPx": 8
+      },
+      "sole": 1243,
+      "bodyHeight": 1231,
+      "bodyBounds": {
+        "x": 274,
+        "y": 13,
+        "width": 708,
+        "height": 1231,
+        "xEstimated": true
+      },
+      "footAnchor": {
+        "x": 615,
+        "y": 1243,
+        "xEstimated": true
+      },
+      "faceBounds": {
+        "x": 467,
+        "y": 405,
+        "width": 337,
+        "height": 258,
+        "estimated": true,
+        "uncertaintyPx": 12,
+        "meaning": "visible facial envelope rectangle; includes fringe occlusion and facial features, not exact segmented skin mask"
+      },
+      "faceEnvelopeAreaProxy": 86946,
+      "scalpCrownToChin": 454,
+      "scalpCrownToSole": 1034,
+      "scalpHeadUnits": 2.2775330396475773,
+      "hairInclusiveHeadUnits": 1.890937019969278,
+      "headToDisplayHeight": 0.3688058489033306,
+      "faceWidthToDisplayHeight": 0.2737611697806661,
+      "faceHeightToDisplayHeight": 0.20958570268074736,
+      "faceEnvelopeAreaToDisplayHeightSquared": 0.05737642713518429,
+      "measurement": {
+        "alphaThreshold": 32,
+        "headROI": [
+          250,
+          0,
+          815,
+          752
+        ],
+        "feetROI": [
+          376,
+          1078,
+          539,
+          175
+        ],
+        "headAlphaBounds": [
+          274,
+          13,
+          982,
+          752
+        ],
+        "feetAlphaBounds": [
+          404,
+          1078,
+          915,
+          1244
+        ],
+        "bodyYAlphaMeasured": true,
+        "soleUncertaintyPx": 3,
+        "bodyXUncertaintyPx": 20,
+        "footXUncertaintyPx": 20
+      },
+      "designPurpose": "3 · 큰 두상 SD",
+      "userApproved": false,
+      "displaySizes": {
+        "57": {
+          "faceWidth": 15.604386677497969,
+          "faceHeight": 11.946385052802599,
+          "scalpHeadHeight": 21.021933387489845
+        },
+        "72": {
+          "faceWidth": 19.710804224207962,
+          "faceHeight": 15.09017059301381,
+          "scalpHeadHeight": 26.554021121039806
+        },
+        "500": {
+          "faceWidth": 136.88058489033307,
+          "faceHeight": 104.79285134037367,
+          "scalpHeadHeight": 184.4029244516653
+        }
+      },
+      "relativeToOriginalAtEqualHairTopToSoleHeight": {
+        "scalpHeadLinearRatio": 1.9740048740861087,
+        "faceWidthRatio": 1.705742673248766,
+        "faceHeightRatio": 1.9438673950924277,
+        "faceEnvelopeAreaProxyRatio": 3.3157375669460727
+      }
+    },
+    {
+      "variant": 4,
+      "label": "4 · 얼굴 우선",
+      "file": "variant-4-front.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-69eef8d8-a18e-4dd6-9fee-c421124869e2.png",
+      "sourceSha256": "248ecac2c87a582f4e21c88a0759fb5d8565d4137cc6d06a5a9d3da8112b1e6d",
+      "sha256": "248ecac2c87a582f4e21c88a0759fb5d8565d4137cc6d06a5a9d3da8112b1e6d",
+      "sourceBytesMatch": true,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        270,
+        11,
+        986,
+        1245
+      ],
+      "hairTop": 11,
+      "scalpCrown": {
+        "y": 220,
+        "estimated": true,
+        "uncertaintyPx": 55,
+        "method": "Forehead/temple continuation, ear level and plausible cranial oval under hair; not directly measurable, not hair whorl/spike top"
+      },
+      "chin": {
+        "y": 686,
+        "estimated": true,
+        "uncertaintyPx": 8
+      },
+      "sole": 1244,
+      "bodyHeight": 1234,
+      "bodyBounds": {
+        "x": 270,
+        "y": 11,
+        "width": 716,
+        "height": 1234,
+        "xEstimated": true
+      },
+      "footAnchor": {
+        "x": 626,
+        "y": 1244,
+        "xEstimated": true
+      },
+      "faceBounds": {
+        "x": 476,
+        "y": 415,
+        "width": 344,
+        "height": 271,
+        "estimated": true,
+        "uncertaintyPx": 12,
+        "meaning": "visible facial envelope rectangle; includes fringe occlusion and facial features, not exact segmented skin mask"
+      },
+      "faceEnvelopeAreaProxy": 93224,
+      "scalpCrownToChin": 467,
+      "scalpCrownToSole": 1025,
+      "scalpHeadUnits": 2.194860813704497,
+      "hairInclusiveHeadUnits": 1.8254437869822486,
+      "headToDisplayHeight": 0.37844408427876824,
+      "faceWidthToDisplayHeight": 0.2787682333873582,
+      "faceHeightToDisplayHeight": 0.21961102106969205,
+      "faceEnvelopeAreaToDisplayHeightSquared": 0.06122057637599195,
+      "measurement": {
+        "alphaThreshold": 32,
+        "headROI": [
+          250,
+          0,
+          815,
+          752
+        ],
+        "feetROI": [
+          376,
+          1078,
+          539,
+          175
+        ],
+        "headAlphaBounds": [
+          270,
+          11,
+          986,
+          752
+        ],
+        "feetAlphaBounds": [
+          433,
+          1078,
+          912,
+          1245
+        ],
+        "bodyYAlphaMeasured": true,
+        "soleUncertaintyPx": 3,
+        "bodyXUncertaintyPx": 20,
+        "footXUncertaintyPx": 20
+      },
+      "designPurpose": "4 · 얼굴 우선",
+      "userApproved": false,
+      "displaySizes": {
+        "57": {
+          "faceWidth": 15.889789303079416,
+          "faceHeight": 12.517828200972447,
+          "scalpHeadHeight": 21.57131280388979
+        },
+        "72": {
+          "faceWidth": 20.07131280388979,
+          "faceHeight": 15.811993517017829,
+          "scalpHeadHeight": 27.24797406807131
+        },
+        "500": {
+          "faceWidth": 139.3841166936791,
+          "faceHeight": 109.80551053484604,
+          "scalpHeadHeight": 189.22204213938411
+        }
+      },
+      "relativeToOriginalAtEqualHairTopToSoleHeight": {
+        "scalpHeadLinearRatio": 2.0255927858973717,
+        "faceWidthRatio": 1.7369405311058472,
+        "faceHeightRatio": 2.0368503099211894,
+        "faceEnvelopeAreaProxyRatio": 3.5378878590976206
+      }
+    }
+  ]
+}

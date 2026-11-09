@@ -1,0 +1,18 @@
+Use case: precise-object-edit / identity-preserve.
+EDIT IMAGE 1 ONLY. Output a single complete full-body image at the same framing and scale as image 1 with its actual transparent background preserved.
+Image 1 is the brown-haired adult female elf archer in teal and gold, the sole edit target.
+Image 2 (blonde wind elf) and image 3 (silver-haired armored archer) are FACIAL DRAWING STYLE references only. Do not copy their identities or other features.
+
+REQUEST: Change ONLY THE FACIAL DEPICTION of image 1 to the cleaner 2D anime face language of images 2 and 3. This is a controlled facial rendering test; everything outside the face must remain as unchanged as possible. Do NOT globally restyle the outfit, armor, hair, body, hands, boots or colors.
+
+FACE EDIT REGION: between the existing hairline, existing cheek outlines and chin, including eyebrows, eyes, nose, mouth and facial skin shading. Preserve the original head size and placement, overall face outline, adult age impression, calm composed neutral expression, forward gaze, original pale gray-green eye color and skin tone. Retain her individual facial identity and mature elegance.
+Make the eyes read in the same refined anime language as the reference faces: cleaner upper eyelid curves, carefully grouped lashes, clear irises and restrained highlights, gently more open/readable eyes without huge doll eyes. Keep overall eye spacing and brow attitude.
+Simplify the currently modeled nose into a small clean anime nose indication with a subtle short shadow; remove the strongly rendered bridge/nostril planes.
+Replace the heavily filled, modeled realistic lips with a fine concise mouth line and a small restrained soft lip tint like the reference characters. Keep a neutral closed mouth, do not introduce a smile, open mouth, teeth, glossy lipstick or pout.
+Use smooth matte facial base color, organized small shadows under bangs and around nose/chin with restrained soft cheek middle tones, gentle natural blush. Reduce realistic nasolabial/lip-volume shading and dark contouring. No skin pores, shiny highlights, photographic sculpting, 3D face or global pale wash. Keep enough shape and the same light direction. Fine colored face lines, not heavy black outlines.
+Her head must still look like the SAME adult dark-haired elf, not a younger copy of the blonde or silver-haired reference.
+
+LOCK EVERYTHING ELSE TO IMAGE 1:
+Same long dark-brown hair with exact same silhouette/part/waves and shading; pointed ears; blue/cyan feather on HER LEFT (screen-right) with same gold mount; neck and collar ornaments; gold sculpted leaf shoulder and forearm armor; teal sleeves, asymmetrical white-and-gold chest panels, deep neckline and existing skin coverage; gold garment patterns and pendants; waist, hips, exposed thighs, dark boots, gold knee guards and toe caps; hands and pose; body proportions; width and height, palette, shadows, material highlights. No additional weapon, accessories or jewels, no armor simplification, no new fabric folds. Don't enlarge the head or shorten the legs. Preserve full figure and all extremities with original margins.
+True transparent alpha, no added background, glow, floor shadow, text, labels, panels, UI or watermark.
+Before finishing compare non-face regions against image 1 and preserve them, and verify facial symmetry, ear/hair connections, head position and consistent illumination.

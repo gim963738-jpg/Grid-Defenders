@@ -1,0 +1,35 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_corruption_origins_v06.png. Earlier versions preserved.
+Output: continent_black_mountain_v07.png
+User request: 근원지는 좀더 뭔가 거대한 산에서 검은 액체가 흘러내리고 있는듯하게 점위는 조금더 넓게 중앙대륙까지 영향을 줄정도로
+Changes: Enlarge the North-West corruption origin into a giant mountain exuding black liquid. Expand the blighted landscape and polluted marine currents to visibly affect Central's northwest/northern coast. Preserve the clear eastern lake, southeast dimensional sinkhole and previous continent connections.
+
+Use case: precise-object-edit.
+Asset type: fantasy worldbuilding map, enlarged black-mountain corruption source and spread to Central, version 07.
+Input image 1 is the EDIT TARGET: continent_corruption_origins_v06.png, the latest square Korean-labelled overhead fantasy map.
+
+User request: "근원지는 좀더 뭔가 거대한 산에서 검은 액체가 흘러내리고 있는듯하게 점위는 조금더 넓게 중앙대륙까지 영향을 줄정도로"
+Interpretation: the NORTHWEST source between WEST and NORTH should become a monumental mountain exuding BLACK LIQUID, and its environmental pollution footprint should become considerably wider, reaching and visibly affecting the CENTRAL region.
+
+PRIMARY SOURCE REWORK:
+Replace the current purple/crimson blighted pass at the NORTH–WEST land connection with a HUGE DOMINANT CORRUPTED MOUNTAIN MASSIF at that same location, roughly x=22–35%, y=20–30% of the whole map. It rises taller and broader than its neighboring local foothills, an ancient jagged charcoal/obsidian mountain with ominous cracked flanks and a dark upper vent/fissure. It should read unmistakably as a giant geographic mountain, sculpturally embedded in the existing range, not a building, floating tower, painted symbol or gigantic monster.
+Show unmistakable THICK GLOSSY BLACK LIQUID seeping from high fissures/upper vent and flowing DOWN multiple mountain gullies and slopes. Several wide irregular inky rivulets converge into dark rivers and tar-like pools below. Use highlights and tiny slate-violet reflections to make the BLACK LIQUID distinguishable against matte ash-gray mountain rock. This is black viscous pollutant, NOT normal orange lava. Restrained blackish-crimson cracks and violet diseased soil at the margins are secondary accents; BLACK ooze and the enormous mountain are the main visual statement.
+The mountain's terrain footprint should occupy about 12–17% of image width, with enough clear mountain silhouette and downhill flow detail to remain legible at map scale. Keep the source within the northwest land connection and preserve solid continuous land between WEST and NORTH.
+
+EXPAND THE CONTAMINATION REACH:
+Increase the affected region well beyond the previous small purple patch. Organic dark-violet/blackened earth and dead-forest zones spread out around the mountain, across the northern end of WEST and southwestern foothills of NORTH. Black liquid follows downhill valleys toward the southeast shore of the northwest land bridge.
+Trace a coherent visible source-to-impact path: mountain fissures -> black downhill rivers -> polluted coastal estuary -> black-violet slicks/current streaks across the existing marine channel -> CENTRAL continent's NORTHWEST/NORTHERN shoreline. The pollutant reaches CENTRAL and stains its northwest coastal valleys/forest fringe, with a visibly darkened river inlet or shallow basin on that fringe. Give this central impact a clear dark polluted coastal strip and localized sickly violet/gray ground, so the user can see that CENTRAL is affected. Retain healthy green terrain further inland and across most of CENTRAL.
+The spread is visibly substantial, about 25–35% of map width from source through affected reaches, but not an all-world blanket. Contamination should grade from almost-black near source to muted violet/gray/inky coastal streaks at its leading edge. Allow islands of green forest at outer boundaries. Keep outlines irregular and geographically plausible, following slopes, valleys and currents, not a round purple radius, arrow or painted rectangular overlay.
+IMPORTANT: the sea between WEST/NORTH and CENTRAL must remain visibly SEA. Floating inky surface slicks and stained turquoise shallows do NOT become a new land bridge. Keep navy/teal water visible around and between slicks. Do not join CENTRAL to WEST or NORTH. Keep the Korean CENTRAL label unobscured and central fertile rivers legible away from the impacted northwest fringe.
+
+PRESERVE THE OTHER V06 EDITS:
+- EAST's northern mountain basin remains a beautiful pure turquoise/azure freshwater LAKE, entirely healthy, no purple stain or corruption added to it.
+- Keep the dimensional-collapse SINKHOLE at the southeast volcanic-island site right of SOUTH and below EAST: shattered basalt rim, dark indigo depth, subtle violet spatial fractures, seawater cascading inward. Do not convert that second source to a mountain.
+- Preserve SOUTH's desert, savanna and delta; CENTRAL–SOUTH natural land connection; NORTH–WEST land connection; widened WEST–SOUTH marine passage; EAST's isolated coastline and crescent bay. Do not redesign unrelated coastlines, move landmasses, or add additional sources.
+
+TEXT AND STYLE INVARIANTS:
+Preserve exactly the existing FIVE cream-white Korean labels with correct spellings and approximate positions: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". No new names, labels, title, explanation, border, arrows, compass or UI.
+Keep the same square overhead orthographic hand-painted fantasy strategy-game relief map style: sculptural mountainous relief, scale-consistent forest detail, crisp coasts, navy ocean with turquoise shallows and restrained offshore clouds. Local mountain relief may rise noticeably but do not switch the whole map to an oblique cinematic landscape.
+No characters, monsters, fortresses, roads, architecture, decorative portal icons, neon flood or black fog hiding the geography.
+
+Success: the northwest origin is visibly a giant mountain STREAMING BLACK LIQUID downhill, with a much broader contamination zone and a clearly readable pollution path visibly REACHING CENTRAL's northwest coast; healthy eastern lake and southeast sinkhole remain intact.

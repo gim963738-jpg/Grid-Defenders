@@ -1,0 +1,58 @@
+{
+  "status": "visually_reviewed",
+  "source": "output/world/maps/continent_world_coastal_green_v19.png",
+  "source_sha256": "f7589055b41639f16409d50f74384c246ced8db9b3c0eafa0d5d4d56b7961f60",
+  "source_unchanged": true,
+  "source_v19_unchanged": true,
+  "previous_maps_unchanged": {
+    "output/world/maps/continent_world_final_v17.png": "0e0b0b31df95bb9e61e7226c0237f2bdab0948053a9dc833c9e4cb6cc483c178",
+    "output/world/maps/continent_world_lore_v18.png": "11cb34f9a6dab23fe89a9dd4cbfb2bc63b13fa755a130df783efd0213f3305e6",
+    "output/world/maps/continent_world_coastal_green_v19.png": "f7589055b41639f16409d50f74384c246ced8db9b3c0eafa0d5d4d56b7961f60"
+  },
+  "output": {
+    "path": "output/world/maps/continent_world_elven_forest_v20.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "17084bf2a5c6e16e48bd8ecb6a288fc78213c84b6478651aaee96e369298b29e",
+    "opaque": true
+  },
+  "copy_matches_generated_original": true,
+  "not_resampled": true,
+  "labels_manually_reviewed": [
+    "북대륙",
+    "서대륙",
+    "중앙대륙",
+    "동대륙",
+    "남대륙",
+    "아스테른 제국",
+    "발레시온",
+    "아르케리온",
+    "발트레인 왕국",
+    "사하리드 왕국",
+    "진월국",
+    "스카르가드 요새",
+    "성휘 대교회",
+    "엘프의 숲"
+  ],
+  "requested_area": "사용자가 붉게 표시한 북동부 해협 연결·파랗게 표시한 숲",
+  "continuous_green_land_touches_both_original_shores": true,
+  "forest_label_exact": "엘프의 숲",
+  "forest_west_of_eastern_lake": true,
+  "annotation_strokes_absent": true,
+  "small_magic_capital_and_eastern_lake_retained": true,
+  "southern_green_belt_and_delta_retained": true,
+  "lower_channel_and_southeast_rift_separation_retained": true,
+  "preserved_by_visual_review": [
+    "five continent regions",
+    "two central capitals and cathedral district",
+    "13 pre-existing Korean labels",
+    "northern snow mountains and small fort",
+    "northwest impact/corruption",
+    "eastern turquoise lake and crescent gulf",
+    "southern desert and v19 coastal greenery",
+    "southeast dimensional rift"
+  ],
+  "preservation_method": "visual comparison; generated edit is not asserted pixel-identical outside the edit",
+  "user_approved": false,
+  "settings": "자료/세계관/세계관설정.json"
+}

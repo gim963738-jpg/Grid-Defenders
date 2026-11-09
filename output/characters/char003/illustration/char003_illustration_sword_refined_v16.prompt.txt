@@ -1,0 +1,18 @@
+Tool: built-in image_gen.
+Edit target: char003_illustration_sword_shoulder_clean_v15.png.
+User: 검을 손잡이부터 날을 좀더 두껍게하고 검신이 캐릭터 뒤로 가면서 비틀리니 이부분 자연스럽게 수정해줘
+Changes: Sturdier handle/guard/blade; straight rigid blade centerline and consistent bevels across hidden shoulder/neck segment. Preserve hero and slime-free scene. Static illustration under character specification v1.2.
+
+Use case: precise-object-edit.
+Edit ONLY THE SWORD and minimal gripping-finger contact in the supplied anime illustration. Preserve all other pixels/visual content as closely as possible.
+
+User asks to make the weapon sturdier from handle through blade and fix the unnatural twisting as it disappears behind the character.
+
+Make the same practical Western straight sword about 25–30% thicker/sturdier throughout: a fuller dark leather grip and round pommel, a slightly more substantial simple crossguard, and a visibly broader steel blade with a readable central ridge and cutting bevels. Maintain current overall sword length and simple design. This is a solid one-handed sword, not a huge greatsword. The grip must still fit his hand naturally.
+
+CRITICAL RIGID GEOMETRY:
+Construct the entire weapon first as ONE straight rigid object in a single consistent 3D orientation, then occlude it correctly behind the shoulder, hood and head. Its longitudinal centerline runs from the pommel at viewer-left through the middle of the grip, through the center of the guard, through the short exposed blade above the right pauldron, and continues along exactly that same straight line into the exposed blade to the right of the head and its tip.
+Both cutting-edge contours and the center ridge must extrapolate smoothly across the hidden section. Consistent blade width, plane orientation, taper, lighting and bevel on BOTH visible segments. No twist, bend, kink, sideways offset, perspective-plane reversal or mismatched broad/edge-on surfaces behind the neck.
+Blade rests comfortably on the armored right shoulder, behind the hood/neck, away from the face. Adjust the visible tip/guard position slightly if necessary to achieve continuous alignment, but leave the hero's pose and expression fixed. Natural hand wrapping around the fuller grip, no extra fingers, one sword only. Keep entire tip and pommel in frame.
+
+LOCK original v02-derived clean anime style, young auburn-haired smiling hero, face, all clothes and armor, red cloak/ivory shirt, shoulder-rest stance, both feet, forest lighting and composition. Preserve slime-free forest floor. No extra ornamentation or object. Same portrait aspect ratio, no labels or diagrams.

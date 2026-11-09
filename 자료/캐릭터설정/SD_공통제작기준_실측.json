@@ -1,0 +1,84 @@
+{
+  "measured_on": "2026-11-08",
+  "method": "Actual PNG alpha >=32 in manually inspected head and boot ROIs; held equipment excluded",
+  "measurements": [
+    {
+      "id": "silver_staff",
+      "path": "output/silver-staff-8views-v1/images/01_front_000.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha_threshold": 32,
+      "head_roi": [
+        350,
+        150,
+        350,
+        350
+      ],
+      "feet_roi": [
+        450,
+        1020,
+        340,
+        190
+      ],
+      "head_top_y": 253,
+      "foot_baseline_y": 1178,
+      "body_height_px": 926,
+      "head_top_ratio": 0.20175438596491227,
+      "foot_baseline_ratio": 0.9393939393939394,
+      "body_height_ratio": 0.7384370015948963,
+      "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f"
+    },
+    {
+      "id": "blond_warrior",
+      "path": "output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha_threshold": 32,
+      "head_roi": [
+        350,
+        0,
+        500,
+        350
+      ],
+      "feet_roi": [
+        430,
+        1050,
+        400,
+        204
+      ],
+      "head_top_y": 17,
+      "foot_baseline_y": 1231,
+      "body_height_px": 1215,
+      "head_top_ratio": 0.013556618819776715,
+      "foot_baseline_ratio": 0.981658692185008,
+      "body_height_ratio": 0.9688995215311005,
+      "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4"
+    },
+    {
+      "id": "balor_existing_sd",
+      "path": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/existing_sd_front.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha_threshold": 32,
+      "head_roi": [
+        350,
+        0,
+        500,
+        350
+      ],
+      "feet_roi": [
+        400,
+        1050,
+        430,
+        204
+      ],
+      "head_top_y": 10,
+      "foot_baseline_y": 1239,
+      "body_height_px": 1230,
+      "head_top_ratio": 0.007974481658692184,
+      "foot_baseline_ratio": 0.9880382775119617,
+      "body_height_ratio": 0.9808612440191388,
+      "sha256": "8457d9b0caa070bf814ab38a0bb9e288c8f89204364f18e61500b39a878b161a"
+    }
+  ]
+}

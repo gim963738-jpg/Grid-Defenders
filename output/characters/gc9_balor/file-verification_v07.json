@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-07T16:51:57.624Z",
+  "previous_source_paths_verified": 226,
+  "previous_image_hashes_unchanged": true,
+  "outputs": [
+    {
+      "path": "output/characters/gc9_balor/illustration_3views_v07/right.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d86152515e6ec6373e1254b1c0feaf8de811a5058192e16aedfd5abca4f5adb8",
+      "copy_matches_generated_original": true
+    },
+    {
+      "path": "output/characters/gc9_balor/illustration_3views_v07/back.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "85547e25c56d715bfb37280108dbd757a7fd946d8f74201e1d94c1d2be17740e",
+      "copy_matches_generated_original": true
+    }
+  ],
+  "front_v06_unchanged": true,
+  "preserve_native_dimensions_and_bytes": true,
+  "post_generation_resampled": false,
+  "alpha_checks": [
+    {
+      "view": "right",
+      "empty_margin_alpha": [
+        0,
+        0
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "view": "back",
+      "empty_margin_alpha": [
+        0,
+        0
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "light_background_review": "passed",
+  "catalog_file_verification": "passed",
+  "catalog_browser_verification": "passed"
+}

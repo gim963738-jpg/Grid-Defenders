@@ -1,0 +1,49 @@
+{
+  "character": "발로르",
+  "version": 8,
+  "status": "visual_review_pending",
+  "scope": "shield_silhouette_and_reverse_surface",
+  "views": [
+    "right",
+    "back"
+  ],
+  "native_dimensions": [
+    1254,
+    1254
+  ],
+  "front_retained_version": 6,
+  "framing_measurements": [
+    {
+      "view": "right",
+      "width": 1254,
+      "height": 1254,
+      "minX": 339,
+      "minY": 298,
+      "maxX": 887,
+      "maxY": 1177,
+      "corners": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "view": "back",
+      "width": 1254,
+      "height": 1254,
+      "minX": 224,
+      "minY": 298,
+      "maxX": 948,
+      "maxY": 1166,
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "user_revision_approval": null,
+  "file_verification": "output/characters/gc9_balor/file-verification_v08.json"
+}

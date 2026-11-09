@@ -1,0 +1,22 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_capital_identities_v14.png. Earlier versions preserved.
+Output: continent_northern_stronghold_v15.png
+User request: 북대륙에는 야만인 요새 나라보다는 규모가 작게 만들어주고 북대륙 땅을 위로 오른쪽으로 좀더 넓히고 눈이 오는 효과로 요새를 살짝 가려도될것같아
+Changes: Expand northern land north/east, add a compact barbarian stronghold smaller than the national capitals, and partly veil it with localized falling/blowing snow. Preserve the other regions, capitals and captions.
+
+Use case: precise-object-edit.
+Asset type: high-detail fantasy world map, version 15.
+Input image 1 is the full-map EDIT TARGET, continent_capital_identities_v14.png. Edit this existing map, preserving its style, composition and all other regions. Output the complete square map.
+
+User request (Korean): "북대륙에는 야만인 요새 나라보다는 규모가 작게 만들어주고 북대륙 땅을 위로 오른쪽으로 좀더 넓히고 눈이 오는 효과로 요새를 살짝 가려도될것같아"
+
+Make ONLY these coordinated changes to the NORTH continent:
+1. EXPAND THE NORTHERN LAND NORTHWARD AND EASTWARD. The existing snow-covered north continent is across the top center of the map, above the "북대륙" label. Increase its land area noticeably, about 25–35%, pushing the upper coast farther up into the current ocean margin and the northeastern coast farther right into the current top-right ocean. Make a broader continuous snowy plateau/valley with natural rugged coasts, fjords and snowy mountain ridges, not just a larger mountain icon. Keep the land within the square frame with a slim ocean margin; do not crop the northern coastline. A possible upper-right reach is around 80–83% image width and 3–15% image height. Preserve a clear sea channel separating it from the East continent below-right. Preserve the current NORTH-to-WEST/CENTRAL mainland connection.
+2. ADD ONE SMALL BARBARIAN STRONGHOLD in a snow-covered basin in the expanded northern interior, above/right of the existing "북대륙" label (roughly 59–65% image width, 10–15% image height). This is a compact rugged tribal fortress, much smaller than any existing nation's large capital. Its footprint should be only about one-third the width of the western capital and around one-fifth its built-up area, approximately 7–9% of the whole image width. Show a squat dark stone/rough timber great hall, a few steep snow-covered timber roofs, a pointed log palisade reinforced with stone, a couple of watchtowers and a small gate. Weathered and hardy northern barbarian architecture, no grand palace, dense sprawling city or nation-sized settlement. Ground it naturally within the snowy valley at the same overhead miniature perspective.
+3. LOCALIZED FALLING SNOW AND BLOWING SNOW across this northern basin. Fine white snowflakes, diagonal wind-driven snow streaks and thin translucent drifting snow veils partly obscure about 15–25% of the stronghold. The wall, gate and main hall silhouette remain discernible through the snowfall. Give the expanded northern terrain an icy snowy atmosphere. Do not turn it into a completely opaque white cloud. Keep snow localized to NORTH so the nearby corrupted impact crater and other continents stay legible.
+
+INVARIANTS:
+Keep the four large existing capitals in WEST, CENTRAL, SOUTH and EAST unchanged in appearance, size and location: western martial stone fortress-city, central luminous magical empire, southern white domes with gold finials, and eastern East Asian palace city. Keep exact city captions "아르켈리온" and "동나라".
+Keep all FIVE region labels readable with exact Korean text "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙"; preserve current label style/locations wherever possible. Do not add a name/caption for the new stronghold or any other new text.
+Preserve the giant northwest purple extraterrestrial impact crater and its embedded alien crust, cracked blighted mainland connection, central river and southern delta, southern desert, eastern turquoise lake and crescent gulf, polluted southern/eastern tips, and southeast dimensional-collapse sinkhole. All coastline changes are limited to the northern expansion. EAST remains separate.
+Keep the same richly painted, crisp, vibrant fantasy strategy map, miniature terrain/buildings, blue ocean and turquoise shallows. No photo, inset, UI, border, legend, roads across continents, armies or new settlements outside the requested northern stronghold. Full square framing at the original image proportions.

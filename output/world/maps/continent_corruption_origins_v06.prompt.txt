@@ -1,0 +1,36 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_central_south_joined_v05.png. Earlier versions preserved.
+Output: continent_corruption_origins_v06.png
+User request: 서와 북사이에 동과 남사이에 적의 근원지 오염의 원인을 만들거고 동대륙 위는 보라색구간에는 맑은 호수를 만들꺼고 / 근원지의 형태는 서와 북사이에는 보라색 검붉은색등 적절하게 배분해서 오염된 구역느낌 / 남대륙 오른쪽 화산쪽에 차원이 무너진 싱크롤같은 이미지를 만들어보자
+Changes: (1) Purple, blackish-crimson polluted enemy-origin region at the North-West land connection. (2) Replace the eastern northern purple basin with a clear freshwater lake. (3) Replace the southeastern volcanic island region, right of South and below East, with a dimensional-collapse sinkhole. Existing continent connections and labels retained; no new site names established.
+
+Use case: precise-object-edit.
+Asset type: fantasy worldbuilding map, enemy corruption source locations and clean eastern lake, version 06.
+Input image 1 is the EDIT TARGET: continent_central_south_joined_v05.png, the latest detailed Korean-labelled overhead world map.
+
+User request:
+"서와 북사이에 동과 남사이에 적의 근원지 오염의 원인을 만들거고 동대륙 위는 보라색구간에는 맑은 호수를 만들꺼고
+근원지의 형태는 서와 북사이에는 보라색 검붉은색등 적절하게 배분해서 오염된 구역느낌
+남대륙 오른쪽 화산쪽에 차원이 무너진 싱크롤같은 이미지를 만들어보자"
+
+Make THREE localized terrain edits to establish TWO enemy/corruption origins, and restore the old eastern purple basin as a clean lake. This is a MAP TERRAIN edit, not a scene illustration or new world layout.
+
+EDIT 1 — CORRUPTED ORIGIN IN THE NORTHWEST LAND CONNECTION:
+At the natural land connection BETWEEN WEST ("서대륙") and NORTH ("북대륙"), replace part of the forested mountain-pass terrain with a substantial ominous corrupted region. Locate it across the northwest joining foothills, approximately x=23–38%, y=19–30% of the whole square map, not on the middle of WEST or the northern snow crown. It must read as the source of hostile corruption, poisoning the connecting landscape.
+Organically distribute dark violet, dusky purple and blackish crimson across sickened soil, dead/blackened forest patches, corrupted gullies and cracked mountain foothills. Combine violet stained earth and subdued burgundy-red fissures with charcoal rocky cores. An irregular blighted basin/pass with traces of contamination spreading into adjacent valleys is appropriate, not a neat circular colored stamp. Keep some normal green forest at the fringes to show transition from healthy to polluted terrain. Make it visually meaningful at full-map scale, roughly 12–16% of image width, but localized so it does not swallow either entire continent. Preserve continuous land between NORTH and WEST: do not replace the isthmus with water, a hole severing the connection or a free-floating purple island.
+No giant monster, fortress, buildings, glyph, icon, text or bright magenta cartoon glow. The environmental terrain itself expresses the enemy origin.
+
+EDIT 2 — PURE CLEAR LAKE IN THE EASTERN NORTHERN BASIN:
+The existing small dark-violet scar in the northern/upper mountain basin of EAST ("동대륙"), approximately x=76–83%, y=28–35%, must be REMOVED ENTIRELY and replaced by a beautiful CLEAR NATURAL FRESHWATER LAKE. Preserve surrounding rocky mountain walls and emerald vegetation; fill the old purple depression with clean luminous turquoise/azure water, subtle depth gradients, pale rocky shoreline and a modest plausible mountain-fed stream/outflow. This lake is healthy and serene, NOT a portal, NOT contaminated, NOT purple. No remaining red/violet stain around this basin. Maintain its original local scale and top-down terrain integration.
+
+EDIT 3 — DIMENSIONAL-COLLAPSE SINKHOLE AT THE SOUTHEAST VOLCANIC ISLANDS:
+The second corruption/enemy origin belongs in the marine area BETWEEN EAST and SOUTH, specifically AT THE EXISTING SMALL VOLCANIC ISLAND GROUP TO THE RIGHT / SOUTHEAST OF SOUTH ("남대륙"), below EAST. Replace/enlarge the current small volcano/caldera at approximately x=80–84%, y=84–88% into a dramatic but map-scale DIMENSIONAL COLLAPSE SINKHOLE.
+Depict a large irregular ruptured volcanic island rim and fractured ocean-floor/rock shelves collapsing inward into a deep funnel-shaped abyss. Viewed directly overhead, concentric broken land strata recede into impossible depth; jagged dark basalt, shattered island fragments, a few subtly displaced/suspended stone slabs and thin violet spatial fractures communicate reality breaking down. Deep nearly black indigo center, restrained violet/mauve edge illumination and small dark-crimson ember details. Let surrounding teal seawater visibly stream/cascade down broken edges toward the depth, blending into the navy sea. It should look like a TORN DIMENSIONAL SINKHOLE consuming a volcanic region, not an intact ordinary volcano and not a smooth decorative portal ring or outer-space black-hole astronomy photograph.
+Approximate full feature diameter 12–16% of map width; keep within the southeast ocean, safely inside frame, with some remaining volcanic islets at the ragged perimeter. It must be geographically separate from the northwest corruption zone, and not touch SOUTH's delta/mainland or EAST's coast. Keep enough ocean to clearly see its location right of SOUTH and below EAST. Make it legible as the second origin without overpowering the whole map. Do not create additional enemy sources elsewhere.
+
+STRICT INVARIANTS:
+Preserve the world layout and all unrelated coastlines/biomes as closely as possible. NORTH remains joined to WEST through continuous land, CENTRAL remains joined to SOUTH, the widened WEST–SOUTH sea passage remains, EAST remains its own separate landmass. Keep the central fertile meandering river basin, southern desert/grassland/delta, western forests, northern snow ranges and eastern crescent gulf unchanged outside the named sites.
+Keep exactly the FIVE existing Korean continent labels with the same spellings, approximate positions, cream-white coloring and understated style: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". Do not add labels for the new sites, a title, arrows, routes, borders or explanatory text.
+Maintain square high-resolution composition, true overhead orthographic hand-painted fantasy strategy-game terrain, rich sculptural mountain relief, scale-consistent forest texture, navy oceans/turquoise shallows and restrained offshore clouds. All new sites must be embedded terrain of the same painterly map style, not pasted game icons or cinematic perspective shots.
+
+Success: the northwest land neck visibly contains a purple/crimson polluted origin; the eastern old purple basin is visibly a pure blue lake; the southeast volcanic islands become a broken dimensional-collapse sinkhole. The rest is recognizably the same latest map.

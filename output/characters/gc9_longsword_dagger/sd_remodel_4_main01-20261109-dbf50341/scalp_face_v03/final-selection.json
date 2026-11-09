@@ -1,0 +1,30 @@
+﻿[
+    {
+        "variant":  1,
+        "source":  "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2dc42e53-9880-4a8b-9f67-91a5e7b811ad.png",
+        "sourcePrompt":  "generation-specs.json: id2",
+        "design":  "절제된 확대",
+        "note":  "initial option2 selected as final restrained option1 because actual enlargement was moderate"
+    },
+    {
+        "variant":  2,
+        "source":  "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-f8f932c4-494d-46cc-bcb2-dc9bfc654d4b.png",
+        "sourcePrompt":  "generation-balanced-face-spec.json",
+        "design":  "얼굴·몸 균형",
+        "note":  "middle-proportion redraw with face width/height refinement"
+    },
+    {
+        "variant":  3,
+        "source":  "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-97d02753-9938-4617-853b-a2064d4a61d0.png",
+        "sourcePrompt":  "generation-refined-specs.json: id2",
+        "design":  "큰 두상 SD",
+        "note":  "refined option2 selected as final3; differs in cheek/jaw width and torso compression"
+    },
+    {
+        "variant":  4,
+        "source":  "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-69eef8d8-a18e-4dd6-9fee-c421124869e2.png",
+        "sourcePrompt":  "generation-refined-specs.json: id4",
+        "design":  "작은 화면 얼굴 우선",
+        "note":  "refined option4 selected as final4"
+    }
+]

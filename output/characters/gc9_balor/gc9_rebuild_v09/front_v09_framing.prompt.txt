@@ -1,0 +1,41 @@
+Use case: stylized-concept
+Asset type: polished 2D fantasy game character illustration
+Style/medium:
+Use the supplied STYLE references for their drawing and rendering language.
+Clean, fine anime linework with firmer silhouette and overlap contours and delicate facial and interior lines.
+Expressive upper eyelids, simplified noses and mouths, clean jaw contours and restrained skin shading.
+Keep the new subject's distinct eye shape, cheeks, jaw, age and expression.
+Hair built from large coherent locks, tapered tips and selective fine strand lines.
+Readable garment and equipment construction, broad folded planes and subordinate ornament.
+Clearly separated cel-shaded base colors, main shadows and deep overlap shadows,
+with controlled soft gradients only where useful. Soft restrained skin; broad matte fabric shadows;
+sharp faceted metal reflections; compact saturated gem highlights, only on materials actually present.
+Match the selected reference's contrast: retain readable boundaries while allowing pale shadows
+on layered white cloth and restrained gradual reflections inside low-contrast metal plates.
+Use the NEW subject's palette, body type and identity. Maintain clear anatomy, weight balance,
+readable face and hands, and an elegant, organized full-body silhouette.
+Constraints:
+Transfer drawing style only. Do not substitute the reference characters' identities, facial designs,
+hairstyles, hair colors, outfits, insignia, accessories or weapons for the new subject's design.
+Preserve requested age, gender presentation, physique, skin tone, species and identifying features.
+Add wings, gold trim, long coats, revealing clothing, horns, elf ears, oversized weapons or magic
+only when explicitly included in the new subject brief.
+Natural hands, joints and equipment attachments. No unintended cropping of the head, hands,
+feet or important equipment.
+Preserve the adult GC9 anatomy, head/body ratio and physique. Uniformly reduce only the
+complete subject's canvas occupancy, including hair, ornaments, sword, shield and cape.
+Keep the whole silhouette inside x=15%-85%, y=20%-94% of the native canvas.
+Leave at least 20% empty space above, 15% on each side and 6% below.
+For broad equipment use a smaller uniform scale; do not squeeze, stretch or crop it.
+Keep equipment held or worn with the same contacts, pose and body-relative size. Never detach, separately position or individually shrink equipment to achieve padding.
+Use the same body/head scale and ground baseline across one character's direction set.
+Establish this framing during generation and preserve the actual returned image dimensions.
+No guide lines, text, logos, watermark, frame, UI or additional characters.
+
+Use case: precise-object-edit. FINAL COMPOSITION PASS, ONE FRONT FULL BODY.
+Image 1 is the newly rebuilt Balor, the EDIT TARGET. Its fresh adult face, dark brown hair, GC9 drawing style, long adult proportions, blue and silver armor, silver lion, blue split dragon cape, large black-wing/cross silver shield and ruby silver sword are now the master. Preserve every design component and its rendering. The only change is UNIFORMLY SMALLER WHOLE-FIGURE PLACEMENT.
+Image 2 is a blank portrait layout guide ONLY. Inside its cyan rectangle place the entire connected character AND equipment; the cyan rectangle is x=180 to844, y=350 to1430 on a 1024x1536 native PORTRAIT canvas. Delete ALL lines, text and the white background from the output. Keep portrait 2:3, not square.
+Image 3 is M04 actual GC9 clean male drawing language, image 4 is C4 entire finish/facial-line benchmark, image 5 is C3 deliberate metal planes. Preserve the style of image 1 consistent with these, do not simplify or rerender the face into a mascot. Do not copy their identities or costumes.
+Image 1 currently has hair near y235 and feet near y1425. Uniformly reduce the ENTIRE connected figure and weapons to about 88% of its current depicted size, placing hair near y370 and soles near y1420. Entire cape/shield/sword must fit x180..844. Top is genuinely empty and transparent, about a quarter of the full image. Do not fill this space by enlarging the subject again. Neither the head nor legs nor equipment may be independently scaled: retain precisely the current adult ratios and hand/weapon contacts.
+Keep the anatomical right sword (viewer left) and left shield (viewer right). Same grip: pommel upper-left, wrapping right hand, ruby guard lower-right, straight blade diagonally down-right across front of legs. Same standing front view, same arms, expression, colors and outfit.
+Actual alpha=0 in every empty area and corner. No colored glow/gray halos, dots, floor shadow, backdrop, checkerboard, annotations, panels or extra objects. One clean native portrait PNG. No 3/4, side or back image.

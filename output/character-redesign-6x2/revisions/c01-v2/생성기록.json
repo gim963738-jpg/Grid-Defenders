@@ -1,0 +1,69 @@
+﻿{
+    "revision":  "c01-v2",
+    "generation_tool":  "built-in image_gen",
+    "scope":  "C1 정면과 사선만 수정. 기존 12장 보존.",
+    "feedback":  {
+                     "overall_best":  "C4",
+                     "face_best":  "C4",
+                     "metal_best":  "C3",
+                     "other_positive_cases":  [
+                                                  "C2",
+                                                  "C3",
+                                                  "C4",
+                                                  "C5",
+                                                  "C6"
+                                              ],
+                     "c1_issue":  "AI 느낌과 아쉬운 금속 표현. 가까이에서 보는 품질 개선."
+                 },
+    "background":  "opaque_charcoal",
+    "user_review_status":  "수정본 사용자 확인 전",
+    "outputs":  [
+                    {
+                        "id":  "c1-1",
+                        "view":  "front",
+                        "file":  "c1-1_v2.png",
+                        "source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-0650071d-39c8-46df-9bad-388d4af7e14d.png",
+                        "requested_dimensions":  [
+                                                     2048,
+                                                     3072
+                                                 ],
+                        "prompt":  "Use case: style-transfer / precise character illustration refinement.\nCreate ONE finished FRONT-VIEW full-body C1 revision, portrait 2:3, request native 2048x3072 output with genuinely redrawn clean details for close inspection. Do not simply upscale or sharpen the source.\nINPUT ROLES:\n1 = C1 FRONT, the EDIT TARGET / composition and component master.\n2 = C4 FRONT, the user\u0027s BEST FACE/DRAWING QUALITY reference, not a costume donor.\n3 = C3 FRONT, the user\u0027s BEST METAL RENDERING reference, not a costume or palette donor.\nMake a targeted refinement of image 1, not a different character design. Preserve the full-body front pose, female body size/proportions, long silver hair with the large side braid, gold star and round pins, star earring, white/ivory-and-gold full armor, dark underlayers, chest star, waist belt, keys/chains/parchment strips, long dark gold-patterned tabard, same leg armor/boots, one lowered sword in her RIGHT hand and same large bird-emblem shield on her LEFT arm. No new gear, no removed characteristic components, no blue ribbons/ponytail, no bow or green costume.\n\nUSER FEEDBACK TO APPLY:\nThe original C1 still feels generically AI-rendered, especially the face and overly soft decorative armor. C4 has the best intentional anime face; C3 has the clearest convincing metal, also when inspected closely.\nFACE: use image 2\u0027s disciplined facial drawing language: deliberate tapered upper eyelid, simple lower eyelid, clearly constructed gray iris with restrained highlights, precise brows, small clean nose and a small simple mouth. Matte soft skin with clean limited tones. Remove glossy pink lips, doll-like airbrushing and diffuse waxy cheek shine. Keep C1\u0027s silver/gray eye palette, silver hairstyle and a calm composed expression; borrow line quality and shape clarity from C4, NOT its exact face/hair design.\nMETAL: use image 3\u0027s intentional broad gold planes, dark warm occlusion at plate overlaps, sharp light-facing bevels and controlled high/low reflection bands. Gold trim must have consistent width and visible thickness, distinct front and side planes, not puffy continuous rounded tubes or all-over smooth bevel gradients. White plate remains ivory/white painted metal with cool restrained reflected shadow planes and sharply defined layered seams. Do not turn all white armor gold or gray. Highlights must follow one coherent upper-left light and surface orientation; avoid glowing white outlines around every edge. Separate soft cloth, matte skin, polished gold and painted plate visibly.\nSTRUCTURAL CLEANUP: preserve the ornament layout but redraw it as a small number of confident clean shapes: coherent gold relief on breastplate, orderly paired shield feathers and central bird silhouette, closed chain links and sensible belt/key attachments, consistent cross/star shapes. No melted filigree, floating chain fragments, fused hands, ambiguous engraving scribbles, tangled line noise, or fake highly detailed texture. Parchment strips remain, using controlled small graphic calligraphic marks rather than noisy pseudo-text. No extra linework merely to simulate detail.\nHAIR/HANDS: grouped coherent locks with selective tapered strand lines; braid segments must have clear over/under construction. Gauntlet fingers, grip and sword guard connect naturally. Keep the blade straight and the shield bevel/planes readable.\n\nDRAWING STYLE stays polished hand-drawn 2D anime game art like references 2/3: fine crisp outlines, firm cel-shadow edges, limited soft transitions inside material planes. Not photorealistic, not 3D chrome, no painterly noise, no heavy comic outline or uniform glossy plastic.\nC1\u0027s large composition and equipment placement should remain recognizable and nearly unchanged. Neutral direct-front head, shoulder, hips and knees; entire hair, sword tip, shield and both feet comfortably inside frame. Same dark charcoal background, no environment, particles, halo, text, watermark, panels or extra person. ONE view only. Prioritize deliberate readable construction over adding more ornament.",
+                        "references_in_order":  [
+                                                    "../../images/c01_front.png",
+                                                    "../../images/c04_front.png",
+                                                    "../../images/c03_front.png"
+                                                ],
+                        "actual_dimensions":  [
+                                                  1024,
+                                                  1536
+                                              ],
+                        "requested_dimensions_returned":  false,
+                        "sha256":  "a879229903bcaa59e2b18b3c96dd9e8f18ffe011604c71bda92475259dc3fbee",
+                        "bytes":  1809313
+                    },
+                    {
+                        "id":  "c1-2",
+                        "view":  "threequarter",
+                        "file":  "c1-2_v2.png",
+                        "source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-a1c3c2f0-1df4-453c-bd3e-6b9db79bcf14.png",
+                        "requested_dimensions":  [
+                                                     1024,
+                                                     1536
+                                                 ],
+                        "prompt":  "Use case: style-transfer / consistent alternate-view refinement.\nProduce ONE C1 THREE-QUARTER full-body revised illustration, portrait 2:3, 1024x1536 PNG.\nINPUT ROLES:\n1 = C1 V2 FRONT: the NEW approved-direction construction/style master for this generation. Keep this version\u0027s cleaner face and better metal plane rendering, and all design inventory.\n2 = C1 OLD THREE-QUARTER: EDIT TARGET FOR COMPOSITION AND VIEW ANGLE ONLY. Retain this full-body camera angle and equipment arrangement, but replace the old soft generic face/metal rendering.\n3 = C4 THREE-QUARTER: user\u0027s BEST FACE QUALITY reference: deliberate eyelids, small clean nose/mouth, restrained skin and hand-drawn anime line quality. Not a costume donor, do not literally copy its face.\n4 = C3 THREE-QUARTER: user\u0027s BEST GOLD METAL reference: clearly constructed bright and dark planes, sharp controlled highlights and solid edge thickness. Not a palette/costume donor.\n\nKeep C1\u0027s female proportions and height, long silver hair and over-under constructed side braid, star/round hairpins and star earring, gray eyes, ivory/white-and-gold plate armor, large gold chest star, dark undersuit, waist belt with chains and keys, parchment strips with controlled graphic marks, central dark gold-patterned tabard, leg armor and boots, ONE lowered gold/ivory sword in her RIGHT hand and ONE angular white/gold bird-emblem shield on LEFT forearm. No removed important components, no new gear, no bow, blue ribbons or green outfit.\nREVISED FACE: same new face as input 1 in 3/4, fine controlled upper eyelid, restrained gray iris highlights, quiet composed expression, simple small mouth, no glossy pink lips, plastic doll skin or blurry airbrushed cheek volumes.\nREVISED METAL: same faceted gold of input 1 interpreted in this oblique view using input 4\u0027s planes. Consistent gold trim width/thickness, clean front/side facets, warm dark overlap recesses, sharp light-facing bevels, controlled reflection bands with one upper-left light. White armor is ivory painted metal, not all gold; coherent cool pale planes and crisp plate seams. No inflated gold tubes, universal smooth bevels, fuzzy white rim outlines, chrome photorealism or uniform plastic gloss.\nClose inspection should show intentional connected structures: ordered shield feathers and central bird relief, clean shield rim thickness, closed chain links with logical anchors, natural segmented gauntlet and five-finger grip, straight sword blade, leg plates joined correctly. Simplify redundant tiny line noise but keep the arrangement of distinctive motifs. Fine tapered anime outlines, broad cel shadow planes, selective soft transitions only within appropriate material planes. Matte cloth, restrained skin, metallic gold and white plate must read differently.\nMatch input 2\u0027s calm standing 3/4 camera angle: whole face/shoulders/chest/hips/knees and boots turn coherently about 35-45 degrees toward image left. Same side for braid, shield and sword. Both feet planted, no combat stance, no head-only turn, no exact side profile or back view. All hair, sword tip, shield edges and both boots inside frame with margins. Match input 1/2\u0027s simple dark charcoal backdrop. No added halo, effects, text, watermark, UI, extra character or multi-view panels. Targeted redraw of C1, consistent with the V2 front.",
+                        "references_in_order":  [
+                                                    "c1-1_v2.png",
+                                                    "../../images/c01_threequarter.png",
+                                                    "../../images/c04_threequarter.png",
+                                                    "../../images/c03_threequarter.png"
+                                                ],
+                        "actual_dimensions":  [
+                                                  1024,
+                                                  1536
+                                              ],
+                        "requested_dimensions_returned":  true,
+                        "sha256":  "a489f27c180e920e88aabeb1653b7b705199088d01308b43febecfe91f5b32bf",
+                        "bytes":  1975586
+                    }
+                ]
+}

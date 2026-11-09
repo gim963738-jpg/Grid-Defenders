@@ -1,0 +1,344 @@
+﻿{
+    "task":  "마지막 일러스트 테스트: 원본 14·15 남녀 2종 × 4방향",
+    "generation_tool":  "built-in image_gen",
+    "style_id":  "GC9",
+    "style_version":  "1.1",
+    "expected_selected_count":  8,
+    "generation_call_count":  9,
+    "transparent_background_requested":  true,
+    "subject_inputs":  [
+                           {
+                               "id":  "t14",
+                               "label":  "검보라 쌍단검",
+                               "body_standard":  "남성형",
+                               "source_file":  "inputs/design14_shadow.jfif",
+                               "original_path":  "C:/Users/user/Downloads/다운로드 (14).jfif",
+                               "source_width":  720,
+                               "source_height":  1280,
+                               "sha256":  "aedf4f6dc27efa0b43e17983f8621c0013c9d409543ff6568319a5ee7587595d"
+                           },
+                           {
+                               "id":  "t15",
+                               "label":  "분홍 머리·검은 리본",
+                               "body_standard":  "여성형",
+                               "source_file":  "inputs/design15_pink.jfif",
+                               "original_path":  "C:/Users/user/Downloads/다운로드 (15).jfif",
+                               "source_width":  736,
+                               "source_height":  736,
+                               "sha256":  "7df4b9a6ab31a78e2c1ee96787f84a6037ed00db1b113fdc638662f9d63db2f9"
+                           }
+                       ],
+    "interpretation_notes":  [
+                                 "다운로드14의 잘린 하체와 보이지 않는 후면을 같은 검은 갑옷 구조로 이어 제작",
+                                 "다운로드15의 픽셀·SD 비율을 성인 여성형으로 변환, 작은 흰 하의 블록은 검은 테두리 흰 짧은 하의로 해석",
+                                 "여성형 후면의 낮은 머리 가닥을 정면·측면 길이에 맞춰 1회 수정"
+                             ],
+    "user_review_status":  "최종 선택본에 대한 사용자 판단 별도",
+    "outputs":  [
+                    {
+                        "id":  "t14_front",
+                        "character":  "t14",
+                        "label":  "검보라 쌍단검",
+                        "body_standard":  "남성형",
+                        "view":  "front",
+                        "degrees":  0,
+                        "file":  "images/t14_01_front.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-45d6a50d-753e-41ac-971e-1cafb3c580cb.png",
+                        "prompt":  "Use case: style-transfer / character remodeling. ONE single full-body FRONT VIEW of an adult MALE shadow-armored twin-dagger character, portrait 1024x1536, true TRANSPARENT RGBA background. This is the design master for a four-view turnaround.\nINPUT ROLES: 1=original DESIGN COMPONENTS and palette only, not cropped pose, webtoon painting style, facial likeness or body ratios; 2=C4 user-preferred anime facial construction and clean linework only, translated to a MALE face, no female body/costume/blue hair/bow; 3=C3 user-preferred METAL rendering quality only, transferred to BLACKENED STEEL with restrained violet reflection, no green/gold palette or bow; 4=Lass male anatomy and fine clean cel-shaded drawing language only, not his white hair, outfit or weapons.\nRebuild with the established STANDARD ADULT MALE: tall about 8 heads, small head, broad lean shoulders, straight strong torso, long legs and normal hands. New clean masculine anime face with simplified nose/mouth and clear upper eyelids, focused composed expression. Keep the source\u0027s tousled BLACK hair with long fringe and violet irises, but do not copy its face/head-to-body ratio or bury all facial geometry in black.\nKEEP SOURCE INVENTORY: fitted dark high-neck sleeveless/jagged black shadow plate armor and charcoal underlayers, exposed skin at portions of the upper arms/shoulders, black gloves, angular black forearm armor with violet luminous markings, violet cracks/seams across the dark torso and waist, and the prominent bright violet crossed/star-like fissure on the FRONT CHEST, with the diagonal/vertical streak continuing down the front. A few narrow torn shadowlike extensions near shoulders/waist may remain as small attached silhouette accents. These are NOT giant solid wings, extra arms, dragons or a background fog cloud.\nExactly TWO short curved/hooked DAGGERS, one per hand, with dark grips, pale silver/lilac blade edges and small crimson/red inset accents consistent with the visible source blades. Relaxed lowered grips, blades angled down/outward enough that their full shapes fit and do not fuse with legs. Do not replace them with long swords. Keep local violet edge light on blades/markings but no huge electricity cloud.\nThe lower legs are cropped in the source: extend conservatively with fitted charcoal trousers, angular black shin armor and dark armored boots using the same black/violet construction; no new robes, capes, belts of unrelated gear or extra weapons. Preserve the large dark silhouette, not every uncontrolled background effect.\nRENDER CLEAN 2D GAME ANIME: fine deliberate tapered linework, readable sharp plate overlaps, broad separated cel-shadow planes, selective cool gray/violet reflections and narrow metal highlights. Black armor must contain distinct charcoal/slate planes and visible thickness, not a single flat black blob or uniform glossy plastic. Chest and arm light stays localized, allowing the structure and hands to remain clear on both light and dark backgrounds. Skin matte/soft, hair in large coherent locks, deliberate details instead of scratchy microtexture. No photorealism, 3D render, heavy comic outlines, glow over the entire body, fuzzy face or melted gauntlets.\nFRONT ONLY: face, shoulders, chest, pelvis, knees and toes square to camera, stable natural two-foot stance, arms slightly apart and lowered. Entire hair, both dagger tips, shadow tips, fingers and both boots inside frame with margin. Shared 1024x1536 canvas, hair top about y=40 and soles near y=1495. Whole male figure reads taller/broader than a female standard in the same set. No panel sheet, labels, text, watermark, extra person, background, painted checkerboard, ground shadow or aura backdrop. Preserve actual transparency.",
+                        "references_in_order":  [
+                                                    "inputs/design14_shadow.jfif",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png",
+                                                    "../../자료/캐릭터그림체/GC9/원본/M04_Lass.jfif"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  116,
+                                            "MinY":  13,
+                                            "MaxX":  895,
+                                            "MaxY":  1522,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1087593,
+                                            "Partial":  485271,
+                                            "Opaque":  0,
+                                            "NearOpaque":  389524
+                                        },
+                        "bytes":  1665889,
+                        "sha256":  "42e1f007042d96f9eb097088411edab78797a5a0baa02526727f5b9ffec881ae"
+                    },
+                    {
+                        "id":  "t14_side",
+                        "character":  "t14",
+                        "label":  "검보라 쌍단검",
+                        "body_standard":  "남성형",
+                        "view":  "side",
+                        "degrees":  90,
+                        "file":  "images/t14_02_side.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-90dd0ee3-9851-4695-90b6-0119d66f9e29.png",
+                        "prompt":  "Use case: consistent 2D character turnaround / alternate-view remodeling.\nProduce ONE single full-body view, portrait 1024x1536, TRUE TRANSPARENT RGBA background. No painted backdrop, checkerboard, floor, text, watermark, labels, panels or additional character.\nINPUT 1 is the NEW FRONT DESIGN MASTER: exact new face, adult body proportions, head size, outfit, hair, colors and gear. Keep this same person, not a different version.\nINPUT 2 is ORIGINAL COMPONENT SOURCE ONLY: clarify inventory, but do not restore the original cropped/chibi body, source face identity, pixel art or source painting style.\nINPUT 3 is C4 preferred face/linework quality only, not a costume/hair/anatomy donor.\nINPUT 4 is C3 material rendering quality only; keep the subject\u0027s palette and do not add gold/green armor or weapons.\nUse the master\u0027s fine controlled anime contours, deliberate simplified eyelids/nose/mouth, large coherent hair locks, broad cel-shaded planes, matte soft skin, readable material boundaries and intentional small details. No 3D realism, heavy comic outline, doll-skin gloss, random noisy linework or melted structures.\nMaintain the same adult gender-specific anatomy and height, head size, shoulder/hip/knee level, camera height/distance and overall framing as input 1. Use the identical canvas and sole baseline near y=1500. Arms naturally lowered, feet planted, no action, wind vortex, foreshortening or dramatic perspective. Entire head accessories/hair, garments, gear and feet inside frame with margins. Preserve actual transparency.\n\nSUBJECT LOCK: adult MALE, tall about 8 heads, lean broad shoulders and straight torso. Tousled black hair, violet eyes where face is visible, focused composed expression. Black/charcoal high-neck jagged fitted sleeveless armor with exposed upper arms, dark gloves, angular forearm/waist/shin plates and armored boots. Preserve the prominent FRONT chest violet star/cross fissure, narrow front seams and violet forearm markings, plus a few small attached shadowlike silhouette wisps. Do not turn shadow accents into giant wings or extra limbs. Black metal needs distinct charcoal/slate planes, controlled violet reflections and narrow highlights, not flat black or glossy plastic. EXACTLY TWO short curved daggers, one per hand, matching master\u0027s hooked dark metal/pale lilac-silver edges and small red insets. Lowered natural grip, tips visible inside frame, no extra blades/long swords or huge fog/electricity cloud. Glow remains local to cracks/weapon edges, not a background. Never add large back insignia not present in source.\nVIEW: exact 90-DEGREE PROFILE facing IMAGE RIGHT. Nose, shoulder axis, chest, pelvis, knees and toes all face right. One eye visible, clean nose/chin silhouette; no three-quarter face, frontal chest or head-only turn. Near/far shoulders and legs align in profile, with physically plausible overlap. Follow the master design into a coherent side construction. A far hand or far item may be naturally occluded; do not add ghost limbs or distort stance to show everything.\nNear hand carries one short curved dagger; the other remains on far hand and may be partly hidden. Chest light is on the front surface and should wrap/foreshorten at the chest edge, not become a broad side emblem. Preserve bare upper arm, layered forearm plates and thin violet seams. No cape or huge wings.\nOnly ONE strict side-view image.",
+                        "references_in_order":  [
+                                                    "images/t14_01_front.png",
+                                                    "inputs/design14_shadow.jfif",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  343,
+                                            "MinY":  15,
+                                            "MaxX":  616,
+                                            "MaxY":  1499,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1334176,
+                                            "Partial":  238688,
+                                            "Opaque":  0,
+                                            "NearOpaque":  215393
+                                        },
+                        "bytes":  1243559,
+                        "sha256":  "b7d999d941ae58cba4cb65572ecc34185855830d0269b968cf05d630f5a1eb3a"
+                    },
+                    {
+                        "id":  "t14_back",
+                        "character":  "t14",
+                        "label":  "검보라 쌍단검",
+                        "body_standard":  "남성형",
+                        "view":  "back",
+                        "degrees":  180,
+                        "file":  "images/t14_03_back.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-02ebe18a-0f4d-4c87-9088-29dd0e032ae1.png",
+                        "prompt":  "Use case: consistent 2D character turnaround / alternate-view remodeling.\nProduce ONE single full-body view, portrait 1024x1536, TRUE TRANSPARENT RGBA background. No painted backdrop, checkerboard, floor, text, watermark, labels, panels or additional character.\nINPUT 1 is the NEW FRONT DESIGN MASTER: exact new face, adult body proportions, head size, outfit, hair, colors and gear. Keep this same person, not a different version.\nINPUT 2 is ORIGINAL COMPONENT SOURCE ONLY: clarify inventory, but do not restore the original cropped/chibi body, source face identity, pixel art or source painting style.\nINPUT 3 is C4 preferred face/linework quality only, not a costume/hair/anatomy donor.\nINPUT 4 is C3 material rendering quality only; keep the subject\u0027s palette and do not add gold/green armor or weapons.\nUse the master\u0027s fine controlled anime contours, deliberate simplified eyelids/nose/mouth, large coherent hair locks, broad cel-shaded planes, matte soft skin, readable material boundaries and intentional small details. No 3D realism, heavy comic outline, doll-skin gloss, random noisy linework or melted structures.\nMaintain the same adult gender-specific anatomy and height, head size, shoulder/hip/knee level, camera height/distance and overall framing as input 1. Use the identical canvas and sole baseline near y=1500. Arms naturally lowered, feet planted, no action, wind vortex, foreshortening or dramatic perspective. Entire head accessories/hair, garments, gear and feet inside frame with margins. Preserve actual transparency.\n\nSUBJECT LOCK: adult MALE, tall about 8 heads, lean broad shoulders and straight torso. Tousled black hair, violet eyes where face is visible, focused composed expression. Black/charcoal high-neck jagged fitted sleeveless armor with exposed upper arms, dark gloves, angular forearm/waist/shin plates and armored boots. Preserve the prominent FRONT chest violet star/cross fissure, narrow front seams and violet forearm markings, plus a few small attached shadowlike silhouette wisps. Do not turn shadow accents into giant wings or extra limbs. Black metal needs distinct charcoal/slate planes, controlled violet reflections and narrow highlights, not flat black or glossy plastic. EXACTLY TWO short curved daggers, one per hand, matching master\u0027s hooked dark metal/pale lilac-silver edges and small red insets. Lowered natural grip, tips visible inside frame, no extra blades/long swords or huge fog/electricity cloud. Glow remains local to cracks/weapon edges, not a background. Never add large back insignia not present in source.\nVIEW: exact 180-DEGREE STRAIGHT REAR. Head, shoulders, chest/pelvis and feet face away from camera. No visible face/eyes, front chest mark or front button details pasted onto the back. Show matching rear hair arrangement, coherent rear clothing/armor and back of shoes, not shoe front laces or toe design on the heels.\nContinue the black armor\u0027s angular plate construction and narrow existing violet seam accents conservatively on the back. Do NOT clone the FRONT bright cross/star fissure onto the back or invent a giant back symbol, wings, cape or scabbards. Keep sleeveless exposed upper arms, violet forearm marks and two lowered daggers with natural rear-view hand grips. Hair and boots must match front.\nOnly ONE full-body rear-view image.",
+                        "references_in_order":  [
+                                                    "images/t14_01_front.png",
+                                                    "inputs/design14_shadow.jfif",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  142,
+                                            "MinY":  10,
+                                            "MaxX":  877,
+                                            "MaxY":  1517,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1127635,
+                                            "Partial":  445229,
+                                            "Opaque":  0,
+                                            "NearOpaque":  388161
+                                        },
+                        "bytes":  1571363,
+                        "sha256":  "a34c48123b6209446c656301036ab98862c53a78368d4106db884cf24a36ba95"
+                    },
+                    {
+                        "id":  "t14_threequarter",
+                        "character":  "t14",
+                        "label":  "검보라 쌍단검",
+                        "body_standard":  "남성형",
+                        "view":  "threequarter",
+                        "degrees":  45,
+                        "file":  "images/t14_04_threequarter.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-7282a612-9014-4c29-9f22-d2d87a0388d7.png",
+                        "prompt":  "Use case: consistent 2D character turnaround / fourth-view generation.\nONE single full-body FRONT THREE-QUARTER view, approximately 45 degrees toward IMAGE RIGHT, portrait 1024x1536, TRUE TRANSPARENT RGBA background.\nINPUT 1=NEW FRONT MASTER, authoritative new adult face/body, hair, colors, costume and gear.\nINPUT 2=NEW STRICT SIDE MASTER, body/equipment depth and profile.\nINPUT 3=NEW BACK MASTER, rear construction and hair length; same individual, not a new costume.\nINPUT 4=C4 face/linework quality ONLY; do not import female anatomy when subject is male, silver hair/blue ribbons/costume/bow.\nINPUT 5=C3 material quality ONLY; keep subject palette, no new green/gold armor or weapon.\nPreserve the same character and all components of masters 1-3. Rotate whole face, shoulder axis, chest, hips, knees and feet together about 45 degrees: near shoulder larger, far shoulder recedes, both eyes visible with far eye foreshortened, enough front plus side of torso. Clearly distinguish this from exact profile and straight front; not a head-only turn on frontal shoulders. Same standing pose, arms lowered, feet planted, no combat action or dramatic perspective.\nSame canvas, camera height/distance, head size, adult proportions and sole baseline near y=1500 as the front/side/back masters. Entire hair/accessories, hands, cloth, feet and all equipment tips inside frame with margins. Preserve anatomical left/right and natural occlusions; never add ghost limbs to show hidden items.\nRefined hand-drawn 2D game anime, fine crisp tapered contours, intentional facial simplification, large coherent hair locks, firm readable cel-shadow boundaries, material-specific limited soft transitions, matte skin/cloth and deliberate metal planes if present. No pixel/SD anatomy, photorealism, 3D rendering, skin gloss, thick comic outline, tiny texture noise or melted details.\nNo text, label, watermark, panels, extra figure, scenery, floor shadow, painted checkerboard, background or generalized aura. One 45-degree view only.\n\nSUBJECT LOCK: adult MALE, tall about 8 heads, lean broad shoulders and straight torso. Tousled black hair, violet eyes where face is visible, focused composed expression. Black/charcoal high-neck jagged fitted sleeveless armor with exposed upper arms, dark gloves, angular forearm/waist/shin plates and armored boots. Preserve the prominent FRONT chest violet star/cross fissure, narrow front seams and violet forearm markings, plus a few small attached shadowlike silhouette wisps. Do not turn shadow accents into giant wings or extra limbs. Black metal needs distinct charcoal/slate planes, controlled violet reflections and narrow highlights, not flat black or glossy plastic. EXACTLY TWO short curved daggers, one per hand, matching master\u0027s hooked dark metal/pale lilac-silver edges and small red insets. Lowered natural grip, tips visible inside frame, no extra blades/long swords or huge fog/electricity cloud. Glow remains local to cracks/weapon edges, not a background. Never add large back insignia not present in source.\nKeep the chest FRONT violet cross/fissure and forearm cracks visible with the right 3/4 foreshortening, not as an overbright cloud hiding the black plate structure. Both short daggers stay in their respective hands with matching curved silhouettes, pale lilac/silver edges and small red accents. Bare upper arms remain between jagged shoulder and forearm plates; no extra capes/wings, no added armor across these exposed areas. Match the exact new male face from master 1.",
+                        "references_in_order":  [
+                                                    "images/t14_01_front.png",
+                                                    "images/t14_02_side.png",
+                                                    "images/t14_03_back.png",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  207,
+                                            "MinY":  9,
+                                            "MaxX":  852,
+                                            "MaxY":  1511,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1145054,
+                                            "Partial":  427810,
+                                            "Opaque":  0,
+                                            "NearOpaque":  381502
+                                        },
+                        "bytes":  1677547,
+                        "sha256":  "f2d74c6174b0b422a6f2897be6b1aff458e44cc7f55808cf6265e2a7d3a0d25e"
+                    },
+                    {
+                        "id":  "t15_front",
+                        "character":  "t15",
+                        "label":  "분홍 머리·검은 리본",
+                        "body_standard":  "여성형",
+                        "view":  "front",
+                        "degrees":  0,
+                        "file":  "images/t15_01_front.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-405ee733-4c55-478b-8627-c2f7a915978a.png",
+                        "prompt":  "Use case: style-transfer / SD-pixel character to polished adult-anime redesign. ONE single full-body FRONT VIEW of a new ADULT FEMALE character preserving the design inventory of input 1. Portrait 1024x1536, actual TRANSPARENT RGBA background. This is the master for a four-direction turnaround.\nINPUT ROLES: 1=PIXEL/SD DESIGN COMPONENTS ONLY. Extract the pink hair, large black cloth bow and black/white costume; do not preserve pixel rendering, huge head, baby face, toddler anatomy or tiny chibi body. 2=C4 user-preferred FACE and overall clean anime drawing quality, use its precise eyelids/simple nose-mouth/matte skin; NOT its silver ponytail, blue ribbons, armor or bow weapon. 3=C3 material quality only for any tiny metal fitting already required, NOT an excuse to add gold armor, gems or weapons. 4=Edel drawing language, clothing folds and cel shading only; NOT her lavender hair, uniform, gun, long boots or accessories.\nREBUILD IN STANDARD ADULT FEMALE PROPORTIONS about 7.5 heads, small normal adult anime head, long legs, refined narrow shoulders, slim credible torso and natural hands. Clearly an adult woman, not a child or SD. Gentle calm expression with gray/dark-gray eyes, deliberate upper eyelids, modest highlights and small simplified nose/mouth. Do not copy the source character\u0027s individual baby face.\nKEEP SOURCE COMPONENTS: very long pastel PINK wavy hair with the source\u0027s soft side-parted/sweeping fringe, thick flowing locks reaching toward the knees after adult reconstruction. A LARGE BLACK CLOTH BOW on the top/back of the head with two pointed ribbon loops and folded tails. This is fabric ribbon, NOT animal/cat ears or horns.\nClothing: compact black long-sleeved upper outfit/jacket with white pointed collar, a small white cross motif at upper chest, small light fastener details, white cuffs at wrists, black/white waist detailing, a short neat white bottom/shorts with dark waistband/trim consistent with the source\u0027s white lower clothing block, pale uncovered legs, and simple low BLACK shoes with subtle light sole edge. Preserve the neat black/white color blocks and coverage. Hands are bare, no gauntlets, no new jewelry or rosary, no added cape, corset, armor, high heels, stockings, staff, sword, shield or bag. Do not import the costume of any style reference. Normal adult fit without extra revealing cuts.\nSTYLE: refined hand-drawn 2D fantasy-game anime like C4/Edel. Fine crisp tapered contours, large coherent hair locks with a few intentional interior strands, clear base/shadow planes with limited softness, matte black fabric with visible charcoal folds rather than flat void, clean white collar/cuffs/bottom, soft restrained skin. Pink hair has structured shadow/highlight planes, not candy-plastic gloss or hundreds of random strands. No pixel grid, thick sticker outline, toddler proportions, doll-like glossy lips/cheeks, 3D/painterly realism or costume clutter.\nFRONT: shoulders, face, chest, pelvis, knees and feet square to camera. Stable two-foot neutral stance, arms lowered slightly away from torso and hands relaxed, not source SD hands-on-hips/kicking. Whole hair/ribbon/garment and both shoes inside frame with margins. Same canvas/ground baseline as male counterpart: soles around y=1495; female crown around y=150 and bow may extend above it, reading somewhat shorter/narrower than male. One character, ONE front view, no labels, text, multi-view sheet, watermark, extra figure, background/checkerboard painting, floor shadow or effects.",
+                        "references_in_order":  [
+                                                    "inputs/design15_pink.jfif",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png",
+                                                    "../../자료/캐릭터그림체/GC9/원본/F01_Edel.jfif"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  175,
+                                            "MinY":  66,
+                                            "MaxX":  831,
+                                            "MaxY":  1487,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1087961,
+                                            "Partial":  484903,
+                                            "Opaque":  0,
+                                            "NearOpaque":  426756
+                                        },
+                        "bytes":  1563191,
+                        "sha256":  "5bdb5780c0f290f89e288e2230100dd28c7b362e2eb1991aa068b7f2f928ff56"
+                    },
+                    {
+                        "id":  "t15_side",
+                        "character":  "t15",
+                        "label":  "분홍 머리·검은 리본",
+                        "body_standard":  "여성형",
+                        "view":  "side",
+                        "degrees":  90,
+                        "file":  "images/t15_02_side.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-5de9eead-3f9d-41e5-8fd5-eb6b2f0436c5.png",
+                        "prompt":  "Use case: consistent 2D character turnaround / alternate-view remodeling.\nProduce ONE single full-body view, portrait 1024x1536, TRUE TRANSPARENT RGBA background. No painted backdrop, checkerboard, floor, text, watermark, labels, panels or additional character.\nINPUT 1 is the NEW FRONT DESIGN MASTER: exact new face, adult body proportions, head size, outfit, hair, colors and gear. Keep this same person, not a different version.\nINPUT 2 is ORIGINAL COMPONENT SOURCE ONLY: clarify inventory, but do not restore the original cropped/chibi body, source face identity, pixel art or source painting style.\nINPUT 3 is C4 preferred face/linework quality only, not a costume/hair/anatomy donor.\nINPUT 4 is C3 material rendering quality only; keep the subject\u0027s palette and do not add gold/green armor or weapons.\nUse the master\u0027s fine controlled anime contours, deliberate simplified eyelids/nose/mouth, large coherent hair locks, broad cel-shaded planes, matte soft skin, readable material boundaries and intentional small details. No 3D realism, heavy comic outline, doll-skin gloss, random noisy linework or melted structures.\nMaintain the same adult gender-specific anatomy and height, head size, shoulder/hip/knee level, camera height/distance and overall framing as input 1. Use the identical canvas and sole baseline near y=1500. Arms naturally lowered, feet planted, no action, wind vortex, foreshortening or dramatic perspective. Entire head accessories/hair, garments, gear and feet inside frame with margins. Preserve actual transparency.\n\nSUBJECT LOCK: clearly ADULT FEMALE, around 7.5 heads, small adult head and long legs, slim narrow shoulders and natural hands. Same gray eyes, gentle calm new anime face; not source baby face, SD or pixel proportions. Very long pastel-pink wavy hair toward knees, same black cloth bow with two pointed loops and hanging ribbon tails on top/back of head. Ribbon is cloth, NOT cat ears, horns or a hat. Same black long-sleeved neat upper outfit with white pointed collar, small WHITE CROSS on FRONT upper chest, small light button details, white cuffs and waist strip, short white shorts with dark waistband/trim, pale bare legs and simple low black shoes with light sole edge. Hands bare, no added weapon, armor, jewelry, cape, rosary, staff, bag, stockings or high heels. Keep original coverage and adult fit without extra revealing cuts. Matte cloth and skin, coherent pink hair shadow planes with limited shine.\nVIEW: exact 90-DEGREE PROFILE facing IMAGE RIGHT. Nose, shoulder axis, chest, pelvis, knees and toes all face right. One eye visible, clean nose/chin silhouette; no three-quarter face, frontal chest or head-only turn. Near/far shoulders and legs align in profile, with physically plausible overlap. Follow the master design into a coherent side construction. A far hand or far item may be naturally occluded; do not add ghost limbs or distort stance to show everything.\nKeep the profile face clear of hair, cloth bow tied behind the crown, same long wavy pink hair flowing down the back. Side shows jacket/collar/cuff/short bottom and plain low shoe profile. Front cross is foreshortened or occluded on the front chest, not moved to the sleeve. Do not create animal ears from the bow.\nOnly ONE strict side-view image.",
+                        "references_in_order":  [
+                                                    "images/t15_01_front.png",
+                                                    "inputs/design15_pink.jfif",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  229,
+                                            "MinY":  26,
+                                            "MaxX":  638,
+                                            "MaxY":  1484,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1251875,
+                                            "Partial":  320989,
+                                            "Opaque":  0,
+                                            "NearOpaque":  293273
+                                        },
+                        "bytes":  1278309,
+                        "sha256":  "cbc5f7725fd8462de6991e9680aa3c4f66f2d569b6499537d6bf9e0713b6670d"
+                    },
+                    {
+                        "id":  "t15_back",
+                        "character":  "t15",
+                        "label":  "분홍 머리·검은 리본",
+                        "body_standard":  "여성형",
+                        "view":  "back",
+                        "degrees":  180,
+                        "file":  "images/t15_03_back.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-b68e3369-38b8-46d3-913c-219c00f6ac34.png",
+                        "prompt":  "Use case: precise-object-edit / turnaround consistency correction.\nEdit image 1, the rear-view pink-haired adult female. Change ONLY the length/flow of the LOWER PINK HAIR so it matches the longer hair visible in image 2 FRONT and image 3 SIDE.\nKeep exact 1024x1536 canvas, body size, pose, rear camera, black cloth bow, upper hair arrangement, black jacket, white cuffs, short white bottom, hands, pale legs, black low shoes and transparency unchanged.\nThe first rear rendition\u0027s lowest waves stop too high. Extend a few coherent existing lower wavy locks down to the same knee/upper-knee level as the front and side masters, approximately y=1000 on the 1536-high image, without adding width, inventing a braid or changing the whole hairstyle. Preserve the same pink color/shadow planes, finely drawn contours and large lock structure. Hair should still naturally conceal the rear outfit; do not shorten it for visibility. Keep the large black ribbon and its tails unchanged, no extra ribbons or animal ears.\nThis is a small consistency correction, not a redesign. Do not change face visibility (none), shoulder width, body height, legs, shorts coverage, shoe height, hand position, upper hair volume or lighting. No new items, cross on the back, floor, background, aura, text or panels.\nOutput ONE full-body BACK view, true transparent RGBA PNG, not a before/after sheet.",
+                        "references_in_order":  [
+                                                    "variants/t15_03_back_v1.png",
+                                                    "images/t15_01_front.png",
+                                                    "images/t15_02_side.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  218,
+                                            "MinY":  51,
+                                            "MaxX":  804,
+                                            "MaxY":  1487,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1103717,
+                                            "Partial":  469147,
+                                            "Opaque":  0,
+                                            "NearOpaque":  411650
+                                        },
+                        "bytes":  1491343,
+                        "sha256":  "8a83f1e0a92607cede97dcea97f4a29507280babda72bbbacf19ffd63dd94532"
+                    },
+                    {
+                        "id":  "t15_threequarter",
+                        "character":  "t15",
+                        "label":  "분홍 머리·검은 리본",
+                        "body_standard":  "여성형",
+                        "view":  "threequarter",
+                        "degrees":  45,
+                        "file":  "images/t15_04_threequarter.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-b360bdff-2951-4830-8e49-ac6de8fa4f9d.png",
+                        "prompt":  "Use case: consistent 2D character turnaround / fourth-view generation.\nONE single full-body FRONT THREE-QUARTER view, approximately 45 degrees toward IMAGE RIGHT, portrait 1024x1536, TRUE TRANSPARENT RGBA background.\nINPUT 1=NEW FRONT MASTER, authoritative new adult face/body, hair, colors, costume and gear.\nINPUT 2=NEW STRICT SIDE MASTER, body/equipment depth and profile.\nINPUT 3=NEW BACK MASTER, rear construction and hair length; same individual, not a new costume.\nINPUT 4=C4 face/linework quality ONLY; do not import female anatomy when subject is male, silver hair/blue ribbons/costume/bow.\nINPUT 5=C3 material quality ONLY; keep subject palette, no new green/gold armor or weapon.\nPreserve the same character and all components of masters 1-3. Rotate whole face, shoulder axis, chest, hips, knees and feet together about 45 degrees: near shoulder larger, far shoulder recedes, both eyes visible with far eye foreshortened, enough front plus side of torso. Clearly distinguish this from exact profile and straight front; not a head-only turn on frontal shoulders. Same standing pose, arms lowered, feet planted, no combat action or dramatic perspective.\nSame canvas, camera height/distance, head size, adult proportions and sole baseline near y=1500 as the front/side/back masters. Entire hair/accessories, hands, cloth, feet and all equipment tips inside frame with margins. Preserve anatomical left/right and natural occlusions; never add ghost limbs to show hidden items.\nRefined hand-drawn 2D game anime, fine crisp tapered contours, intentional facial simplification, large coherent hair locks, firm readable cel-shadow boundaries, material-specific limited soft transitions, matte skin/cloth and deliberate metal planes if present. No pixel/SD anatomy, photorealism, 3D rendering, skin gloss, thick comic outline, tiny texture noise or melted details.\nNo text, label, watermark, panels, extra figure, scenery, floor shadow, painted checkerboard, background or generalized aura. One 45-degree view only.\n\nSUBJECT LOCK: clearly ADULT FEMALE, around 7.5 heads, small adult head and long legs, slim narrow shoulders and natural hands. Same gray eyes, gentle calm new anime face; not source baby face, SD or pixel proportions. Very long pastel-pink wavy hair toward knees, same black cloth bow with two pointed loops and hanging ribbon tails on top/back of head. Ribbon is cloth, NOT cat ears, horns or a hat. Same black long-sleeved neat upper outfit with white pointed collar, small WHITE CROSS on FRONT upper chest, small light button details, white cuffs and waist strip, short white shorts with dark waistband/trim, pale bare legs and simple low black shoes with light sole edge. Hands bare, no added weapon, armor, jewelry, cape, rosary, staff, bag, stockings or high heels. Keep original coverage and adult fit without extra revealing cuts. Matte cloth and skin, coherent pink hair shadow planes with limited shine.\nPreserve the very long pink waves consistently with all masters, including the corrected rear\u0027s lower curls toward the knees; do not shorten it. Black bow remains the same large cloth loops/knot/tails, not ears. Keep the same white collar/cuffs/waist/bottom, black jacket/trim and simple low black shoes. Cross stays on the FRONT chest and is foreshortened correctly; no weapons, new accessories or revealing costume changes. Match the exact new adult female face from master 1.",
+                        "references_in_order":  [
+                                                    "images/t15_01_front.png",
+                                                    "images/t15_02_side.png",
+                                                    "images/t15_03_back.png",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  172,
+                                            "MinY":  33,
+                                            "MaxX":  770,
+                                            "MaxY":  1496,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1078317,
+                                            "Partial":  494547,
+                                            "Opaque":  0,
+                                            "NearOpaque":  424862
+                                        },
+                        "bytes":  1565944,
+                        "sha256":  "0f6bce1892ad1cedb336e8294ca1acaa411418896e3f113c3a8f09a1c8ec0d2c"
+                    }
+                ],
+    "superseded_attempts":  [
+                                {
+                                    "id":  "t15_back_v1",
+                                    "file":  "variants/t15_03_back_v1.png",
+                                    "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-5a62c531-3cfd-462f-b42f-2bb0132dc3a4.png",
+                                    "prompt":  "Use case: consistent 2D character turnaround / alternate-view remodeling.\nProduce ONE single full-body view, portrait 1024x1536, TRUE TRANSPARENT RGBA background. No painted backdrop, checkerboard, floor, text, watermark, labels, panels or additional character.\nINPUT 1 is the NEW FRONT DESIGN MASTER: exact new face, adult body proportions, head size, outfit, hair, colors and gear. Keep this same person, not a different version.\nINPUT 2 is ORIGINAL COMPONENT SOURCE ONLY: clarify inventory, but do not restore the original cropped/chibi body, source face identity, pixel art or source painting style.\nINPUT 3 is C4 preferred face/linework quality only, not a costume/hair/anatomy donor.\nINPUT 4 is C3 material rendering quality only; keep the subject\u0027s palette and do not add gold/green armor or weapons.\nUse the master\u0027s fine controlled anime contours, deliberate simplified eyelids/nose/mouth, large coherent hair locks, broad cel-shaded planes, matte soft skin, readable material boundaries and intentional small details. No 3D realism, heavy comic outline, doll-skin gloss, random noisy linework or melted structures.\nMaintain the same adult gender-specific anatomy and height, head size, shoulder/hip/knee level, camera height/distance and overall framing as input 1. Use the identical canvas and sole baseline near y=1500. Arms naturally lowered, feet planted, no action, wind vortex, foreshortening or dramatic perspective. Entire head accessories/hair, garments, gear and feet inside frame with margins. Preserve actual transparency.\n\nSUBJECT LOCK: clearly ADULT FEMALE, around 7.5 heads, small adult head and long legs, slim narrow shoulders and natural hands. Same gray eyes, gentle calm new anime face; not source baby face, SD or pixel proportions. Very long pastel-pink wavy hair toward knees, same black cloth bow with two pointed loops and hanging ribbon tails on top/back of head. Ribbon is cloth, NOT cat ears, horns or a hat. Same black long-sleeved neat upper outfit with white pointed collar, small WHITE CROSS on FRONT upper chest, small light button details, white cuffs and waist strip, short white shorts with dark waistband/trim, pale bare legs and simple low black shoes with light sole edge. Hands bare, no added weapon, armor, jewelry, cape, rosary, staff, bag, stockings or high heels. Keep original coverage and adult fit without extra revealing cuts. Matte cloth and skin, coherent pink hair shadow planes with limited shine.\nVIEW: exact 180-DEGREE STRAIGHT REAR. Head, shoulders, chest/pelvis and feet face away from camera. No visible face/eyes, front chest mark or front button details pasted onto the back. Show matching rear hair arrangement, coherent rear clothing/armor and back of shoes, not shoe front laces or toe design on the heels.\nVery long pink waves and the large black fabric bow are seen from behind, same knot/loops/tails and length as front. Hair may naturally cover much of the plain black jacket and shorts; do not cut hair to expose clothing. Visible collar/cuffs/white shorts edge and black low shoe heels must match front. The WHITE CROSS is FRONT-ONLY, not a new giant back symbol. No cape, backpack, extra ribbons or weapon.\nOnly ONE full-body rear-view image.",
+                                    "references_in_order":  [
+                                                                "images/t15_01_front.png",
+                                                                "inputs/design15_pink.jfif",
+                                                                "../character-redesign-6x2/images/c04_front.png",
+                                                                "../character-redesign-6x2/images/c03_front.png"
+                                                            ],
+                                    "reason":  "정면·측면보다 후면 머리 끝이 짧아 길이만 추가 수정",
+                                    "width":  1024,
+                                    "height":  1536,
+                                    "alpha_stats":  {
+                                                        "Width":  1024,
+                                                        "Height":  1536,
+                                                        "MinX":  217,
+                                                        "MinY":  55,
+                                                        "MaxX":  805,
+                                                        "MaxY":  1487,
+                                                        "MaxAlpha":  254,
+                                                        "Transparent":  1115541,
+                                                        "Partial":  457323,
+                                                        "Opaque":  0,
+                                                        "NearOpaque":  391598
+                                                    },
+                                    "bytes":  1448337,
+                                    "sha256":  "05d4fe1b30571a011854d6aaa0ef93986a14f817d38cbc8f080117e7dd73451e"
+                                }
+                            ]
+}

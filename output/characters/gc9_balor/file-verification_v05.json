@@ -1,0 +1,149 @@
+﻿{
+    "status":  "passed",
+    "revision":  5,
+    "pngs":  [
+                 {
+                     "view":  "front",
+                     "width":  1024,
+                     "height":  1536,
+                     "pixel_format":  "Format32bppArgb",
+                     "sha256":  "86491a83f687a767a76aebb153b4b8369a03ed42a0ca94515114bcbd9dba9376",
+                     "empty_corner_regions":  [
+                                                  {
+                                                      "x":  0,
+                                                      "y":  0,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  0,
+                                                      "nonzero_pixels":  0
+                                                  },
+                                                  {
+                                                      "x":  896,
+                                                      "y":  0,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  0,
+                                                      "nonzero_pixels":  0
+                                                  },
+                                                  {
+                                                      "x":  0,
+                                                      "y":  1472,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  0,
+                                                      "nonzero_pixels":  0
+                                                  },
+                                                  {
+                                                      "x":  896,
+                                                      "y":  1472,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  0,
+                                                      "nonzero_pixels":  0
+                                                  }
+                                              ]
+                 },
+                 {
+                     "view":  "right",
+                     "width":  1024,
+                     "height":  1536,
+                     "pixel_format":  "Format32bppArgb",
+                     "sha256":  "75768c85ae46610c2f1178f466aa54645ae01962b8fb2fca44943f6f0f97e7f9",
+                     "empty_corner_regions":  [
+                                                  {
+                                                      "x":  0,
+                                                      "y":  0,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  1,
+                                                      "nonzero_pixels":  12
+                                                  },
+                                                  {
+                                                      "x":  896,
+                                                      "y":  0,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  1,
+                                                      "nonzero_pixels":  1
+                                                  },
+                                                  {
+                                                      "x":  0,
+                                                      "y":  1472,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  0,
+                                                      "nonzero_pixels":  0
+                                                  },
+                                                  {
+                                                      "x":  896,
+                                                      "y":  1472,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  0,
+                                                      "nonzero_pixels":  0
+                                                  }
+                                              ]
+                 },
+                 {
+                     "view":  "back",
+                     "width":  1024,
+                     "height":  1536,
+                     "pixel_format":  "Format32bppArgb",
+                     "sha256":  "d6f943939fcad8ca3e83ee332c79647ae73634055bf41dd765afdda3bd2dd862",
+                     "empty_corner_regions":  [
+                                                  {
+                                                      "x":  0,
+                                                      "y":  0,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  0,
+                                                      "nonzero_pixels":  0
+                                                  },
+                                                  {
+                                                      "x":  896,
+                                                      "y":  0,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  0,
+                                                      "nonzero_pixels":  0
+                                                  },
+                                                  {
+                                                      "x":  0,
+                                                      "y":  1472,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  1,
+                                                      "nonzero_pixels":  2
+                                                  },
+                                                  {
+                                                      "x":  896,
+                                                      "y":  1472,
+                                                      "width":  128,
+                                                      "height":  64,
+                                                      "max_alpha":  0,
+                                                      "nonzero_pixels":  0
+                                                  }
+                                              ]
+                 }
+             ],
+    "zip_entries":  [
+                        {
+                            "entry":  "front.png",
+                            "bytes":  2239896,
+                            "original_bytes_unchanged":  true
+                        },
+                        {
+                            "entry":  "right.png",
+                            "bytes":  1819342,
+                            "original_bytes_unchanged":  true
+                        },
+                        {
+                            "entry":  "back.png",
+                            "bytes":  2033541,
+                            "original_bytes_unchanged":  true
+                        }
+                    ],
+    "resampled":  false,
+    "bright_background_review":  "output/reviews/balor-v05/light-native-qa.png",
+    "visible_corner_artifacts":  false
+}

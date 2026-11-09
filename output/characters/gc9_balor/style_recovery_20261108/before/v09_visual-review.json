@@ -1,0 +1,63 @@
+{
+  "character": "발로르",
+  "version": 9,
+  "status": "ready_for_user_style_review",
+  "scope": "front_only_gc9_rebuild",
+  "user_revision_approval": null,
+  "native_dimensions": [
+    1024,
+    1536
+  ],
+  "framing_measurements": {
+    "path": "output/characters/gc9_balor/gc9_rebuild_v09/front_v09.png",
+    "width": 1024,
+    "height": 1536,
+    "alpha_threshold": 32,
+    "bounds": [
+      185,
+      375,
+      823,
+      1386
+    ],
+    "outsideSafeArea": 0,
+    "visiblePixels": 421721,
+    "sha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3"
+  },
+  "margins_percent": {
+    "top": 24.4140625,
+    "left": 18.06640625,
+    "right": 19.53125,
+    "bottom": 9.700520833333334
+  },
+  "style_observations": [
+    "이전 발로르보다 가는 얼굴선과 성인형 비율을 적용",
+    "갑주 판·관절·반사면 경계가 읽힘",
+    "C6보다 은색 면의 부드러운 광택이 강하게 남아 있어 화풍 완전 일치로 확정하지 않음"
+  ],
+  "shield_height_visual_estimate": "머리끝~발바닥 높이 약 2/3",
+  "grip_observation": "검의 폼멜→손잡이→가드→날 축과 인체 오른손 소유 유지; 눈에 띄는 추가 손가락·끊어진 무기 없음",
+  "design_review_notes": [
+    "사자 머리 부조가 전신 사자 문양으로 재구성됨",
+    "청색 판금 비중이 줄고 은색 판금 비중이 늘었으며 갑주 배열·망토 무늬가 달라짐"
+  ],
+  "comparison_reference": "output/character-redesign-6x2/images/c06_front.png",
+  "original_byte_verification": true,
+  "review_url": "output/characters/gc9_balor/gc9_rebuild_v09/review.html",
+  "visual_qa": {
+    "bright_background": "no obvious dark dots or backdrop residue observed",
+    "dark_background": "silhouette and transparency viewed",
+    "native_detail": "face, breastplate, sword hand and shield viewed at 1:1 CSS display",
+    "note": "시각 검수는 화풍·디자인의 사용자 승인을 대신하지 않음"
+  },
+  "catalog_verification": {
+    "build": "passed",
+    "file_hash_and_catalog_consistency": "passed",
+    "browser_desktop_and_bookmark": "passed",
+    "mobile_widths": [
+      390,
+      320
+    ],
+    "current_balor_assets": 2,
+    "approval": "v09 front pending; existing SD selection retained"
+  }
+}

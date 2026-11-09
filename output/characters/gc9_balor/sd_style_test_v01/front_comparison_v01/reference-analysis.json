@@ -1,0 +1,16 @@
+{
+  "comparison_type": "existing_SD_vs_new_SD",
+  "request": "사용자 정정대로 기존 SD와 새 SD를 모두 정면으로 비교",
+  "identity_reference": "output/characters/gc9_balor/illustration_3views_v05/front.png",
+  "identity_reference_role": "발로르의 얼굴·색·장비 구성만 사용, GC9 일러스트를 비교 패널에 배치하지 않음",
+  "existing_SD_style_references": [
+    "output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+    "output/silver-staff-8views-v1/images/01_front_000.png"
+  ],
+  "new_SD_style_references": [
+    "output/characters/gc9_balor/sd_style_test_v01/concept_front_right_v01.png",
+    "output/characters/gc9_balor/sd_style_test_v01/inputs/sd_style_reference_02.png"
+  ],
+  "common_pose": "정면 0도·양발 입상·오른손 검·왼손 대형 방패",
+  "user_style_selection": null
+}

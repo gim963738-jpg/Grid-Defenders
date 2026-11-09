@@ -1,0 +1,554 @@
+{
+    "source":  {
+                   "file":  "dreamina-2026-11-07-6614-이캐릭터가 오른쪽으로 걸어가는 영상 만들어줘 스프라이트 시트로 만들어줄수....mp4",
+                   "path":  "C:/Users/user/Downloads/dreamina-2026-11-07-6614-이캐릭터가 오른쪽으로 걸어가는 영상 만들어줘 스프라이트 시트로 만들어줄수....mp4",
+                   "sha256":  "890f4adc52c4935d00faa6bd330deee1a2aebb713f308b05fe470309d6743613",
+                   "width":  1280,
+                   "height":  720,
+                   "decodedFrames":  97,
+                   "durationSeconds":  4.016667
+               },
+    "source_probe":  {
+                         "streams":  [
+                                         {
+                                             "index":  0,
+                                             "codec_name":  "aac",
+                                             "codec_long_name":  "AAC (Advanced Audio Coding)",
+                                             "profile":  "LC",
+                                             "codec_type":  "audio",
+                                             "codec_tag_string":  "mp4a",
+                                             "codec_tag":  "0x6134706d",
+                                             "mime_codec_string":  "mp4a.40.2",
+                                             "sample_fmt":  "fltp",
+                                             "sample_rate":  "44100",
+                                             "channels":  2,
+                                             "channel_layout":  "stereo",
+                                             "bits_per_sample":  0,
+                                             "initial_padding":  2048,
+                                             "id":  "0x1",
+                                             "r_frame_rate":  "0/0",
+                                             "avg_frame_rate":  "0/0",
+                                             "time_base":  "1/44100",
+                                             "start_pts":  0,
+                                             "start_time":  "0.000000",
+                                             "duration_ts":  180634,
+                                             "duration":  "4.096009",
+                                             "bit_rate":  "130146",
+                                             "nb_frames":  "179",
+                                             "nb_read_frames":  "177",
+                                             "extradata_size":  2,
+                                             "disposition":  {
+                                                                 "default":  1,
+                                                                 "dub":  0,
+                                                                 "original":  0,
+                                                                 "comment":  0,
+                                                                 "lyrics":  0,
+                                                                 "karaoke":  0,
+                                                                 "forced":  0,
+                                                                 "hearing_impaired":  0,
+                                                                 "visual_impaired":  0,
+                                                                 "clean_effects":  0,
+                                                                 "attached_pic":  0,
+                                                                 "timed_thumbnails":  0,
+                                                                 "non_diegetic":  0,
+                                                                 "captions":  0,
+                                                                 "descriptions":  0,
+                                                                 "metadata":  0,
+                                                                 "dependent":  0,
+                                                                 "still_image":  0,
+                                                                 "multilayer":  0
+                                                             },
+                                             "tags":  {
+                                                          "language":  "und",
+                                                          "handler_name":  "SoundHandler"
+                                                      }
+                                         },
+                                         {
+                                             "index":  1,
+                                             "codec_name":  "h264",
+                                             "codec_long_name":  "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+                                             "profile":  "High",
+                                             "codec_type":  "video",
+                                             "codec_tag_string":  "avc1",
+                                             "codec_tag":  "0x31637661",
+                                             "mime_codec_string":  "avc1.640032",
+                                             "width":  1280,
+                                             "height":  720,
+                                             "coded_width":  1280,
+                                             "coded_height":  720,
+                                             "has_b_frames":  2,
+                                             "sample_aspect_ratio":  "1:1",
+                                             "display_aspect_ratio":  "16:9",
+                                             "pix_fmt":  "yuv420p",
+                                             "level":  50,
+                                             "chroma_location":  "left",
+                                             "field_order":  "progressive",
+                                             "refs":  4,
+                                             "is_avc":  "true",
+                                             "nal_length_size":  "4",
+                                             "id":  "0x2",
+                                             "r_frame_rate":  "60/1",
+                                             "avg_frame_rate":  "5820/241",
+                                             "time_base":  "1/15360",
+                                             "start_pts":  0,
+                                             "start_time":  "0.000000",
+                                             "duration_ts":  61696,
+                                             "duration":  "4.016667",
+                                             "bit_rate":  "12871478",
+                                             "bits_per_raw_sample":  "8",
+                                             "nb_frames":  "97",
+                                             "nb_read_frames":  "97",
+                                             "extradata_size":  46,
+                                             "disposition":  {
+                                                                 "default":  1,
+                                                                 "dub":  0,
+                                                                 "original":  0,
+                                                                 "comment":  0,
+                                                                 "lyrics":  0,
+                                                                 "karaoke":  0,
+                                                                 "forced":  0,
+                                                                 "hearing_impaired":  0,
+                                                                 "visual_impaired":  0,
+                                                                 "clean_effects":  0,
+                                                                 "attached_pic":  0,
+                                                                 "timed_thumbnails":  0,
+                                                                 "non_diegetic":  0,
+                                                                 "captions":  0,
+                                                                 "descriptions":  0,
+                                                                 "metadata":  0,
+                                                                 "dependent":  0,
+                                                                 "still_image":  0,
+                                                                 "multilayer":  0
+                                                             },
+                                             "tags":  {
+                                                          "language":  "und",
+                                                          "handler_name":  "VideoHandler"
+                                                      }
+                                         }
+                                     ],
+                         "format":  {
+                                        "filename":  "C:/Users/user/Downloads/dreamina-2026-11-07-6614-이캐릭터가 오른쪽으로 걸어가는 영상 만들어줘 스프라이트 시트로 만들어줄수....mp4",
+                                        "nb_streams":  2,
+                                        "nb_programs":  0,
+                                        "nb_stream_groups":  0,
+                                        "format_name":  "mov,mp4,m4a,3gp,3g2,mj2",
+                                        "format_long_name":  "QuickTime / MOV",
+                                        "start_time":  "0.000000",
+                                        "duration":  "4.096009",
+                                        "size":  "6579657",
+                                        "bit_rate":  "12850864",
+                                        "probe_score":  100,
+                                        "tags":  {
+                                                     "major_brand":  "isom",
+                                                     "minor_version":  "512",
+                                                     "compatible_brands":  "isomiso2avc1mp41",
+                                                     "LvMetaInfo":  "{\"data\":{\"os\":\"\",\"product\":\"dreamina\",\"exportType\":\"generation\",\"videoId\":\"0\"},\"trace_info\":{\"originItemId\":\"7705085778891656449\"}}",
+                                                     "UserComment":  "{\"aigc_label_type\":0,\"source_info\":\"dreamina\"}",
+                                                     "comment":  "vid:v14762g50003dbmvedfog65u7ods9hj0",
+                                                     "encoder":  "Lavf58.76.100"
+                                                 }
+                                    }
+                     },
+    "selected_frames":  [
+                            {
+                                "index":  0,
+                                "source_index":  0,
+                                "source_pts":  0,
+                                "sample_target":  0
+                            },
+                            {
+                                "index":  1,
+                                "source_index":  2,
+                                "source_pts":  0.083333,
+                                "sample_target":  0.06779661016949153
+                            },
+                            {
+                                "index":  2,
+                                "source_index":  3,
+                                "source_pts":  0.133333,
+                                "sample_target":  0.13559322033898305
+                            },
+                            {
+                                "index":  3,
+                                "source_index":  5,
+                                "source_pts":  0.216667,
+                                "sample_target":  0.2033898305084746
+                            },
+                            {
+                                "index":  4,
+                                "source_index":  6,
+                                "source_pts":  0.25,
+                                "sample_target":  0.2711864406779661
+                            },
+                            {
+                                "index":  5,
+                                "source_index":  8,
+                                "source_pts":  0.333333,
+                                "sample_target":  0.3389830508474576
+                            },
+                            {
+                                "index":  6,
+                                "source_index":  10,
+                                "source_pts":  0.416667,
+                                "sample_target":  0.4067796610169492
+                            },
+                            {
+                                "index":  7,
+                                "source_index":  11,
+                                "source_pts":  0.466667,
+                                "sample_target":  0.4745762711864407
+                            },
+                            {
+                                "index":  8,
+                                "source_index":  13,
+                                "source_pts":  0.55,
+                                "sample_target":  0.5423728813559322
+                            },
+                            {
+                                "index":  9,
+                                "source_index":  15,
+                                "source_pts":  0.633333,
+                                "sample_target":  0.6101694915254238
+                            },
+                            {
+                                "index":  10,
+                                "source_index":  16,
+                                "source_pts":  0.666667,
+                                "sample_target":  0.6779661016949152
+                            },
+                            {
+                                "index":  11,
+                                "source_index":  18,
+                                "source_pts":  0.75,
+                                "sample_target":  0.7457627118644068
+                            },
+                            {
+                                "index":  12,
+                                "source_index":  19,
+                                "source_pts":  0.8,
+                                "sample_target":  0.8135593220338984
+                            },
+                            {
+                                "index":  13,
+                                "source_index":  21,
+                                "source_pts":  0.883333,
+                                "sample_target":  0.8813559322033898
+                            },
+                            {
+                                "index":  14,
+                                "source_index":  23,
+                                "source_pts":  0.966667,
+                                "sample_target":  0.9491525423728814
+                            },
+                            {
+                                "index":  15,
+                                "source_index":  24,
+                                "source_pts":  1,
+                                "sample_target":  1.0169491525423728
+                            },
+                            {
+                                "index":  16,
+                                "source_index":  26,
+                                "source_pts":  1.083333,
+                                "sample_target":  1.0847457627118644
+                            },
+                            {
+                                "index":  17,
+                                "source_index":  28,
+                                "source_pts":  1.166667,
+                                "sample_target":  1.152542372881356
+                            },
+                            {
+                                "index":  18,
+                                "source_index":  29,
+                                "source_pts":  1.216667,
+                                "sample_target":  1.2203389830508475
+                            },
+                            {
+                                "index":  19,
+                                "source_index":  31,
+                                "source_pts":  1.3,
+                                "sample_target":  1.2881355932203389
+                            },
+                            {
+                                "index":  20,
+                                "source_index":  32,
+                                "source_pts":  1.333333,
+                                "sample_target":  1.3559322033898304
+                            },
+                            {
+                                "index":  21,
+                                "source_index":  34,
+                                "source_pts":  1.416667,
+                                "sample_target":  1.423728813559322
+                            },
+                            {
+                                "index":  22,
+                                "source_index":  36,
+                                "source_pts":  1.5,
+                                "sample_target":  1.4915254237288136
+                            },
+                            {
+                                "index":  23,
+                                "source_index":  37,
+                                "source_pts":  1.55,
+                                "sample_target":  1.5593220338983051
+                            },
+                            {
+                                "index":  24,
+                                "source_index":  39,
+                                "source_pts":  1.633333,
+                                "sample_target":  1.6271186440677967
+                            },
+                            {
+                                "index":  25,
+                                "source_index":  41,
+                                "source_pts":  1.716667,
+                                "sample_target":  1.694915254237288
+                            },
+                            {
+                                "index":  26,
+                                "source_index":  42,
+                                "source_pts":  1.75,
+                                "sample_target":  1.7627118644067796
+                            },
+                            {
+                                "index":  27,
+                                "source_index":  44,
+                                "source_pts":  1.833333,
+                                "sample_target":  1.8305084745762712
+                            },
+                            {
+                                "index":  28,
+                                "source_index":  45,
+                                "source_pts":  1.883333,
+                                "sample_target":  1.8983050847457628
+                            },
+                            {
+                                "index":  29,
+                                "source_index":  47,
+                                "source_pts":  1.966667,
+                                "sample_target":  1.9661016949152543
+                            },
+                            {
+                                "index":  30,
+                                "source_index":  49,
+                                "source_pts":  2.05,
+                                "sample_target":  2.0338983050847457
+                            },
+                            {
+                                "index":  31,
+                                "source_index":  50,
+                                "source_pts":  2.083333,
+                                "sample_target":  2.1016949152542375
+                            },
+                            {
+                                "index":  32,
+                                "source_index":  52,
+                                "source_pts":  2.166667,
+                                "sample_target":  2.169491525423729
+                            },
+                            {
+                                "index":  33,
+                                "source_index":  54,
+                                "source_pts":  2.25,
+                                "sample_target":  2.23728813559322
+                            },
+                            {
+                                "index":  34,
+                                "source_index":  55,
+                                "source_pts":  2.3,
+                                "sample_target":  2.305084745762712
+                            },
+                            {
+                                "index":  35,
+                                "source_index":  57,
+                                "source_pts":  2.383333,
+                                "sample_target":  2.3728813559322033
+                            },
+                            {
+                                "index":  36,
+                                "source_index":  58,
+                                "source_pts":  2.416667,
+                                "sample_target":  2.440677966101695
+                            },
+                            {
+                                "index":  37,
+                                "source_index":  60,
+                                "source_pts":  2.5,
+                                "sample_target":  2.5084745762711864
+                            },
+                            {
+                                "index":  38,
+                                "source_index":  62,
+                                "source_pts":  2.583333,
+                                "sample_target":  2.5762711864406778
+                            },
+                            {
+                                "index":  39,
+                                "source_index":  63,
+                                "source_pts":  2.633333,
+                                "sample_target":  2.6440677966101696
+                            },
+                            {
+                                "index":  40,
+                                "source_index":  65,
+                                "source_pts":  2.716667,
+                                "sample_target":  2.711864406779661
+                            },
+                            {
+                                "index":  41,
+                                "source_index":  67,
+                                "source_pts":  2.8,
+                                "sample_target":  2.7796610169491527
+                            },
+                            {
+                                "index":  42,
+                                "source_index":  68,
+                                "source_pts":  2.833333,
+                                "sample_target":  2.847457627118644
+                            },
+                            {
+                                "index":  43,
+                                "source_index":  70,
+                                "source_pts":  2.916667,
+                                "sample_target":  2.9152542372881354
+                            },
+                            {
+                                "index":  44,
+                                "source_index":  71,
+                                "source_pts":  2.966667,
+                                "sample_target":  2.983050847457627
+                            },
+                            {
+                                "index":  45,
+                                "source_index":  73,
+                                "source_pts":  3.05,
+                                "sample_target":  3.0508474576271185
+                            },
+                            {
+                                "index":  46,
+                                "source_index":  75,
+                                "source_pts":  3.133333,
+                                "sample_target":  3.1186440677966103
+                            },
+                            {
+                                "index":  47,
+                                "source_index":  76,
+                                "source_pts":  3.166667,
+                                "sample_target":  3.1864406779661016
+                            },
+                            {
+                                "index":  48,
+                                "source_index":  78,
+                                "source_pts":  3.25,
+                                "sample_target":  3.2542372881355934
+                            },
+                            {
+                                "index":  49,
+                                "source_index":  80,
+                                "source_pts":  3.333333,
+                                "sample_target":  3.3220338983050848
+                            },
+                            {
+                                "index":  50,
+                                "source_index":  81,
+                                "source_pts":  3.383333,
+                                "sample_target":  3.389830508474576
+                            },
+                            {
+                                "index":  51,
+                                "source_index":  83,
+                                "source_pts":  3.466667,
+                                "sample_target":  3.457627118644068
+                            },
+                            {
+                                "index":  52,
+                                "source_index":  85,
+                                "source_pts":  3.55,
+                                "sample_target":  3.5254237288135593
+                            },
+                            {
+                                "index":  53,
+                                "source_index":  86,
+                                "source_pts":  3.583333,
+                                "sample_target":  3.593220338983051
+                            },
+                            {
+                                "index":  54,
+                                "source_index":  88,
+                                "source_pts":  3.666667,
+                                "sample_target":  3.6610169491525424
+                            },
+                            {
+                                "index":  55,
+                                "source_index":  89,
+                                "source_pts":  3.716667,
+                                "sample_target":  3.7288135593220337
+                            },
+                            {
+                                "index":  56,
+                                "source_index":  91,
+                                "source_pts":  3.8,
+                                "sample_target":  3.7966101694915255
+                            },
+                            {
+                                "index":  57,
+                                "source_index":  93,
+                                "source_pts":  3.883333,
+                                "sample_target":  3.864406779661017
+                            },
+                            {
+                                "index":  58,
+                                "source_index":  94,
+                                "source_pts":  3.916667,
+                                "sample_target":  3.9322033898305087
+                            },
+                            {
+                                "index":  59,
+                                "source_index":  96,
+                                "source_pts":  4,
+                                "sample_target":  4
+                            }
+                        ],
+    "extraction":  {
+                       "tool":  "FFmpeg 9.0.2",
+                       "native_decoder":  true,
+                       "new_frames_generated":  false,
+                       "interpolation":  false,
+                       "resampled":  false,
+                       "alpha_method":  "palette-specific sky/grass separation, largest character component, enclosed foreground-island restoration",
+                       "common_canvas":  true
+                   },
+    "tool_download":  {
+                          "provider":  "Gyan Windows build linked from FFmpeg.org",
+                          "index":  "https://ffmpeg.org/download.html",
+                          "url":  "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip",
+                          "archive_sha256_verified":  true
+                      },
+    "output":  {
+                   "sheet":  "walk_right_60_10x6.png",
+                   "atlas":  "walk_right_60.json",
+                   "preview":  "미리보기.html",
+                   "frames":  60,
+                   "frameSize":  {
+                                     "w":  672,
+                                     "h":  720
+                                 },
+                   "sheetSize":  {
+                                     "w":  6720,
+                                     "h":  4320
+                                 }
+               },
+    "review_status":  "file and visual verification passed",
+    "source_preserved":  true,
+    "completed_on":  "2026-11-07",
+    "visual_review":  {
+                          "all_60_frames":  true,
+                          "light_background":  true,
+                          "dark_background":  true,
+                          "native_100_percent":  true,
+                          "playback":  true,
+                          "loop_boundary":  "source start and end poses differ; no motion synthesis applied"
+                      }
+}

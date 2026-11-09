@@ -1,0 +1,28 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_northern_stronghold_v15.png. Earlier versions preserved.
+Location reference: user attachment orca-paste-1793872952199-43725d4f-6743-4039-b20f-f6325ca2dde8.png (red mark northeast of the previous stronghold).
+Output: continent_northern_outpost_v16.png
+User request: 약간 지금 요새 크기의 4/1정도면 충분할것같아 다시 수정해줘 [Image #1] 저위치
+Changes: Reduce the northern stronghold to about one-quarter of its visible footprint (half width and height), move it to the marked snowy basin northeast of its former site, restore the former site to snow, and retain light snowfall over the new outpost.
+
+Use case: precise-object-edit.
+Asset type: existing fantasy world map, version 16.
+Inputs: Image 1 is the FULL MAP EDIT TARGET (continent_northern_stronghold_v15.png). Image 2 is the user's CROPPED LOCATION ANNOTATION. Image 2 only indicates the new stronghold position using a red mark; never include the red/yellow mark, crop boundary or annotation in the final image.
+Output the complete square world map from image 1, not a crop.
+
+User correction: "약간 지금 요새 크기의 4/1정도면 충분할것같아 다시 수정해줘 [Image #1] 저위치"
+They want the northern barbarian stronghold about ONE QUARTER of its current visible footprint, moved to the red-marked position northeast/up-right of its current position.
+
+LOCAL EDIT ONLY:
+- REMOVE the current large northern stronghold (currently around x=805, y=173 in the 1254x1254 full map). Restore its old site seamlessly to the surrounding empty snowy basin with blowing snow, with no walls, gates, ruin or duplicate fortress left behind.
+- Put ONE much smaller barbarian stronghold at the center of the RED MARK from the crop reference. The target center on the full map is approximately x=927,y=128 (74% width,10.2% height), northeast/up-right of the old fort and below the northern ridge. It sits on solid snowy land in that basin, not on the sea or a mountain summit. The annotated red area is a location pointer, not a requested building shape.
+- Reduce the fortress's visual footprint to roughly ONE QUARTER of the original area: approximately HALF the current width and HALF the current height. Target around 70–80 pixels wide and 40–50 pixels high in this 1254px square composition. Make it a genuinely tiny remote outpost, substantially smaller than v15's fortress and far smaller than the other four capitals.
+- Keep the hardy northern barbarian materials and silhouette: a tiny dark rough timber/stone hall with a snow-laden steep roof, a small pointed-log palisade and a few understated watchtowers. No sprawling town, enlarged architecture or additional settlements.
+- Preserve the localized falling snow and translucent wind-blown snow veil, lightly obscuring part of this tiny new stronghold while leaving its silhouette discernible. It should blend naturally into the snowy landscape.
+
+STRICT INVARIANTS:
+Everything outside the old and new northern stronghold sites should remain as close to image 1 as possible. Preserve the newly expanded northern coastline, land area, snow-covered mountains and forest. Preserve the remaining continent coastlines, ocean, rivers and terrain.
+Keep WEST martial capital, CENTRAL magical capital, SOUTH white-domed capital and EAST East Asian palace capital exactly in their existing positions, sizes, styles and colors.
+Keep exact labels "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙", "아르켈리온", "동나라". No new label for the fort.
+Keep the northwest alien impact crater, purple blight, mainland connection, turquoise eastern lake, southern desert and river delta, and southeast dimensional rift unchanged.
+Same vivid high-detail hand-painted fantasy strategy map, same square framing and miniature perspective. No red/yellow marker or editing marks. No new labels, UI, border or inset.

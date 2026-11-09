@@ -1,0 +1,41 @@
+Use case: stylized-concept
+Asset type: polished 2D fantasy game character illustration
+Style/medium:
+Use the supplied STYLE references for their drawing and rendering language.
+Clean, fine anime linework with firmer silhouette and overlap contours and delicate facial and interior lines.
+Expressive upper eyelids, simplified noses and mouths, clean jaw contours and restrained skin shading.
+Keep the new subject's distinct eye shape, cheeks, jaw, age and expression.
+Hair built from large coherent locks, tapered tips and selective fine strand lines.
+Readable garment and equipment construction, broad folded planes and subordinate ornament.
+Clearly separated cel-shaded base colors, main shadows and deep overlap shadows,
+with controlled soft gradients only where useful. Soft restrained skin; broad matte fabric shadows;
+sharp faceted metal reflections; compact saturated gem highlights, only on materials actually present.
+Match the selected reference's contrast: retain readable boundaries while allowing pale shadows
+on layered white cloth and restrained gradual reflections inside low-contrast metal plates.
+Use the NEW subject's palette, body type and identity. Maintain clear anatomy, weight balance,
+readable face and hands, and an elegant, organized full-body silhouette.
+Constraints:
+Transfer drawing style only. Do not substitute the reference characters' identities, facial designs,
+hairstyles, hair colors, outfits, insignia, accessories or weapons for the new subject's design.
+Preserve requested age, gender presentation, physique, skin tone, species and identifying features.
+Add wings, gold trim, long coats, revealing clothing, horns, elf ears, oversized weapons or magic
+only when explicitly included in the new subject brief.
+Natural hands, joints and equipment attachments. No unintended cropping of the head, hands,
+feet or important equipment.
+Preserve the adult GC9 anatomy, head/body ratio and physique. Uniformly reduce only the
+complete subject's canvas occupancy, including hair, ornaments, sword, shield and cape.
+Keep the whole silhouette inside x=15%-85%, y=20%-94% of the native canvas.
+Leave at least 20% empty space above, 15% on each side and 6% below.
+For broad equipment use a smaller uniform scale; do not squeeze, stretch or crop it.
+Keep equipment held or worn with the same contacts, pose and body-relative size. Never detach, separately position or individually shrink equipment to achieve padding.
+Use the same body/head scale and ground baseline across one character's direction set.
+Establish this framing during generation and preserve the actual returned image dimensions.
+No guide lines, text, logos, watermark, frame, UI or additional characters.
+
+Use case: precise-object-edit. ONE LOCAL CORRECTION ONLY: increase the carried shield to the previously specified protective size.
+Image 1 is the APPROVAL CANDIDATE edit target. Keep EXACTLY its new adult face, brown hair, gray-blue eyes, subtle expression, whole-body proportions, head size, thin linework, silver/blue plate design, lion, blue cape, pose, sword, fingers and framing. Do not generate a new character or recompose the image.
+Images 2=M04 actual GC9 drawing, 3=C4 overall finish/face-line, 4=C3 metal planes reinforce its existing drawn style. Image 5 is the finger/weapon-axis guide; current right sword hand/rigid sword stays the same.
+The only issue in image 1 is that the left-arm shield is too short, about 55-57% of the head-to-sole height. Enlarge ONLY that same held kite shield proportionally to about 67% of the standing figure height. Body is about1012px from hair y375 to soles y1386 on this1024x1536 canvas. Shield should be about675px tall, its top near shoulder level y540 and its pointed tip near lower-shin level y1215, with width scaled proportionally. These are approximate placement anchors, not text to draw.
+Retain the same smooth silver kite contour, silver engraving, BLACK spread wings around the black central cross. Keep it securely held on ANATOMICAL LEFT forearm (viewer right) with the existing grip/contact; a larger shield naturally covers more of the left torso and leg. Do not lengthen the forearm, add fingers, shift hands or detach the shield. Do not resize any other part of the character to imitate a larger shield. Keep outer shield edge inside x85% of canvas, with gentle existing perspective.
+FRAMING AND STYLE LOCK: 1024x1536 portrait with SAME entire figure placement and height, hair near y375, soles near y1386. Above the head is empty transparent area. Do not enlarge the knight, move him upward, crop, replace the cape, change armor components, change face or shorten legs. Keep C4's delicate lines and C3's discrete silver reflections, avoid noisy 3D metallic rendering.
+Genuine transparent alpha background, no opaque or translucent glow/gray backdrop/black dots; clean antialiasing only at character edges. One full-body FRONT standing figure, no labels, extra views or inset.

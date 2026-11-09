@@ -1,0 +1,71 @@
+{
+  "character": "발로르",
+  "version": 6,
+  "status": "visually_reviewed",
+  "reviewed_at": "2026-11-07T16:27:08.425Z",
+  "views": [
+    "front"
+  ],
+  "main_variant": "unhelmeted",
+  "hand_grip_preset": "one_hand_grip_v1",
+  "face_audit": {
+    "previous_references_were_used": true,
+    "observed_deviation": "v05 코·입·턱 주변 입체 묘사가 GC9 남성 원본과 C4보다 사실적으로 남아 있었음",
+    "correction": "눈꺼풀·짧은 코·입선과 피부 명암을 간결하게 보정. 부드러운 성인 남성 정체성 유지",
+    "references": [
+      "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+      "자료/캐릭터그림체/GC9/원본/M05_Ronan.jfif",
+      "output/character-redesign-6x2/images/c04_front.png"
+    ],
+    "matching_method": "원본과 얼굴선 직접 비교. 정량 화풍 일치도 보장으로 해석하지 않음"
+  },
+  "checks": {
+    "adult_male_face_identity_retained": true,
+    "blue_silver_armor_and_lion_retained": true,
+    "right_sword_left_large_shield": true,
+    "cape_round_pins_without_cords": true,
+    "hand_grip_connected": true,
+    "connected_equipment_not_separately_placed": true,
+    "equipment_body_relative_scale_retained": true,
+    "entire_subject_within_safe_area": true,
+    "native_face_and_hand_review": true,
+    "bright_background_alpha_review": true,
+    "native_dimensions_and_bytes_preserved": true
+  },
+  "framing": {
+    "width": 1254,
+    "bounds": [
+      315,
+      266,
+      937,
+      1142
+    ],
+    "margins": {
+      "left": 0.2511961722488038,
+      "right": 0.25199362041467305,
+      "bottom": 0.08851674641148326,
+      "top": 0.21212121212121213
+    },
+    "height": 1254,
+    "outside_safe_area_pixels": 0,
+    "path": "output/characters/gc9_balor/illustration_3views_v06/front.png",
+    "alpha_threshold": 32,
+    "sha256": "edd0ef05e12b4b6b381d74063bf6d368adb78044cb6245a8f41783483cd0ccd4"
+  },
+  "bright_background_evidence": "output/reviews/balor-v06/light-native-qa.png",
+  "native_face_hand_evidence": "output/reviews/balor-v06/native-face-hand-qa.png",
+  "file_verification": "output/characters/gc9_balor/file-verification_v06.json",
+  "file_verification_status": "passed",
+  "browser_verification": "output/characters/catalog/browser-verification.json",
+  "browser_verification_status": "passed",
+  "user_revision_approval": null,
+  "previous_complete_set": {
+    "version": 5,
+    "views": [
+      "front",
+      "right",
+      "back"
+    ],
+    "preserved": true
+  }
+}

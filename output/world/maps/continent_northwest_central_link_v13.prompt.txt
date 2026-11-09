@@ -1,0 +1,27 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_desert_wasteland_v12.png. Earlier versions preserved.
+Supporting reference: references/land_link_location_v13.png (user-supplied target-strait crop).
+Output: continent_northwest_central_link_v13.png
+User request: [Image #1] 저 구간에 땅을 이어주자
+Changes: Replace the highlighted northern sea gap with continuous gray/blighted terrain linking the West-North impact-source territory to Central's northwestern fringe. This explicitly supersedes the earlier open-strait requirement. North, West, Central and South now share one mainland; East remains separate. Keep the larger western gulf open south of the new connection and preserve existing landmarks, settlements and terrain refinements.
+
+Use case: precise-object-edit.
+Asset type: fantasy worldbuilding map, polluted northwestern land connection, version 13.
+Image 1 is the FULL MAP EDIT TARGET, continent_desert_wasteland_v12.png.
+Image 2 is the user's cropped LOCATION REFERENCE for the narrow marine gap to fill. Use it only to locate the intended gap; retain all latest v12 developments.
+
+User request: "[Image #1] 저 구간에 땅을 이어주자"
+
+ONE LOCAL GEOGRAPHIC CHANGE:
+Fill the narrow UPPER sea strait between the northwest impact-source mainland (the joined WEST/NORTH land) and CENTRAL's northwestern polluted shore with NATURAL CONTINUOUS LAND.
+Locate the gap between the impact basin's southeastern/lower-right outer terrain and CENTRAL's upper-left/northern blighted peninsula, approximately x=34–48%, y=27–37% of the full map. Make a solid, reasonably broad irregular land isthmus firmly attached to BOTH shores, about 5–8% of canvas width at its narrowest. It must be visibly traversable terrain, not two peninsulas with a residual slit of sea between them, and not a built bridge.
+Extend existing polluted ash-gray terrain, modest rocky ridges, scattered dead trees, muted violet staining and a few thin dark cracks across this new land neck. Blend its elevation naturally with the impact rim foothills on one side and CENTRAL's blighted coastal plateau on the other. No new giant mountains, lava ribbons, craters, structures or glowing fissure canyon. The land itself is the connection.
+Re-cut the two sides into natural coastline curves and turquoise shallows. Keep most of the broad sea between WEST and CENTRAL/SOUTH OPEN BELOW this northern isthmus as a deep natural gulf that opens southwest, with only its northern end closed by the new connection. Do not fill the entire western gulf or join the western/southern tips.
+This intentionally supersedes the earlier requirement to keep that northern sea strait open. NORTH+WEST and CENTRAL+SOUTH should now form ONE continuous large mainland through this single specified isthmus. EAST remains a separate ocean-surrounded landmass.
+
+PRESERVE EVERY OTHER LATEST V12 FEATURE:
+The huge deep northwest alien-impact crater with layered cliffs and embedded otherworldly crust; all four cities and desert kingdom at their existing locations/scales; the slightly expanded SOUTH desert; the exposed gray cracked wasteland and selectively thinned dead trees at pollution margins; the eastern healthy turquoise lake and river; the southeast dimensional-collapse sinkhole and nearby corrupted southern/eastern coastal tips; naturalized southwestern beaches/coves; northern snow ranges and all other coastlines and rivers.
+Preserve exactly the five cream-white Korean geographic labels in their current locations: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". No new text, arrows, title, borders or UI.
+Same full square world-map framing, high-detail overhead orthographic hand-painted fantasy terrain style, coherent miniature trees/cities, navy ocean and turquoise shallows. No crop, inset or before/after layout.
+
+Success: the precise narrow strait highlighted by the user's crop is replaced by a clear gray/blighted natural LAND CONNECTION between the northwest source territory and CENTRAL, while the large western gulf further south and all other latest landmarks remain.

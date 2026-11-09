@@ -1,0 +1,66 @@
+﻿[
+  {
+    "id": "gc9_rebuild_initial_v09",
+    "prompt_file": "front_v09.prompt.txt",
+    "references": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v06/front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+    ],
+    "output": "variants/front_initial.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-3e9360a2-b55d-4d45-b7d3-2bd82c7a4f6a.png",
+    "started_at": "2026-11-07T17:34:49.003Z",
+    "finished_at": "2026-11-07T17:35:25.520Z",
+    "disposition": "superseded_style_and_framing"
+  },
+  {
+    "id": "gc9_rebuild_style_v09",
+    "prompt_file": "front_v09_final.prompt.txt",
+    "references": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/images/main_threequarter_v01.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+    ],
+    "output": "variants/front_style_master.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-4d3ffc5e-c6d9-43a5-a6a7-2e54dbaa8d22.png",
+    "started_at": "2026-11-07T17:36:27.606Z",
+    "finished_at": "2026-11-07T17:37:05.087Z",
+    "disposition": "style_master_before_framing"
+  },
+  {
+    "id": "gc9_rebuild_framing_v09",
+    "prompt_file": "front_v09_framing.prompt.txt",
+    "references": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v09/variants/front_style_master.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/inputs/framing_guide_portrait_v09.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png"
+    ],
+    "output": "variants/front_before_shield.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-9e47c2a4-dceb-4105-9a14-49635b180e6f.png",
+    "started_at": "2026-11-07T17:38:08.962Z",
+    "finished_at": "2026-11-07T17:38:41.251Z",
+    "disposition": "shield_scale_revision_needed"
+  },
+  {
+    "id": "gc9_rebuild_shield_scale_v09",
+    "prompt_file": "front_v09_shield.prompt.txt",
+    "references": [
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/gc9_rebuild_v09/variants/front_before_shield.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M04_Lass.jfif",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c03_front.png",
+      "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+    ],
+    "output": "front_v09.png",
+    "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-497ed4b0-1ae8-4f50-9c2e-b7b4ffef4c35.png",
+    "started_at": "2026-11-07T17:40:46.733Z",
+    "finished_at": "2026-11-07T17:41:20.701Z",
+    "disposition": "approval_candidate"
+  }
+]

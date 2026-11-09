@@ -1,0 +1,107 @@
+{
+  "character": "발로르",
+  "id": "balor",
+  "tool": "built-in image_gen",
+  "status": "complete",
+  "requested_final_views": [
+    "front",
+    "right",
+    "back"
+  ],
+  "additional_preview": "helmet_off_front",
+  "actual_native_size": [
+    1024,
+    1536
+  ],
+  "transparent_background_requested": true,
+  "post_generation_resampled": false,
+  "user_concept_review": {
+    "selection": "디자인 수정 필요",
+    "correction": "잘못눌렀다",
+    "interpretation": "직전 선택 정정으로 보고 디자인 통과 처리",
+    "following_changes": [
+      "망토 고정핀 연결 끈 제거",
+      "투구 탈착 얼굴 제안",
+      "부드러운 인상"
+    ]
+  },
+  "calls": [
+    {
+      "id": "concept_front_v01",
+      "stage": "previous_concept",
+      "prompt_file": "output/characters/gc9_balor/concept_front_v01.prompt.txt",
+      "output": "output/characters/gc9_balor/concept_front_v01.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-f1bf34d8-5b6a-4220-93e5-1a35941757f4.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6e96a705957c34aa549df694dc128cf33b8ed81727fdf766292606362954a1e9",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "front_no_cords",
+      "stage": "direction_set",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v01/front_v02.prompt.txt",
+      "references": [
+        "output/characters/gc9_balor/concept_front_v01.png"
+      ],
+      "started_at": "2026-11-07T12:29:29.338Z",
+      "finished_at": "2026-11-07T12:30:03.285Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v01/front.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-79a45b72-2a13-4bef-91b9-1d0c6b2ea8eb.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "95bc42fb5619c7ad58d14331e25387e1208e704923ebdf273586030fa12d68ab",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "right",
+      "stage": "direction_set",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v01/right_v02.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/front.png"
+      ],
+      "started_at": "2026-11-07T12:32:01.513Z",
+      "finished_at": "2026-11-07T12:33:20.349Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v01/right.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-67bf562a-847c-46ce-9ca7-d00e30e94055.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "dbb81dd8500111ccb55087603889ffb6570550d5d15976d1f38fee48011d7150",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "back",
+      "stage": "direction_set",
+      "prompt_file": "output/characters/gc9_balor/illustration_3views_v01/back_v02.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/front.png"
+      ],
+      "started_at": "2026-11-07T12:32:01.513Z",
+      "finished_at": "2026-11-07T12:32:40.558Z",
+      "output": "output/characters/gc9_balor/illustration_3views_v01/back.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-02fddd67-3b05-4b46-a980-41d33d0aefd6.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "249e5b8e108c0604e3e352a1b4bc51dae6eaf2389b9790a879a04cd5400322f3",
+      "copy_matches_generated_original": true
+    },
+    {
+      "id": "helmet_off",
+      "stage": "face_proposal",
+      "prompt_file": "output/characters/gc9_balor/helmet_off_front_v01.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v01/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/character-redesign-6x2/images/c04_front.png"
+      ],
+      "started_at": "2026-11-07T12:32:01.514Z",
+      "finished_at": "2026-11-07T12:33:54.023Z",
+      "output": "output/characters/gc9_balor/helmet_off_front_v01.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-059879bd-c7e8-4b1d-badd-b89fa7701a11.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "e47d0e42cb752ab3d23e6cbc31b80e0296f16d7bc63864b8d879838eb250077e",
+      "copy_matches_generated_original": true
+    }
+  ]
+}

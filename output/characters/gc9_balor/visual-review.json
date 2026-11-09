@@ -1,0 +1,70 @@
+{
+  "character": "발로르",
+  "version": 10,
+  "status": "rejected_by_user",
+  "scope": "c6_metal_and_threequarter",
+  "user_revision_approval": false,
+  "measurements": [
+    {
+      "path": "output/characters/gc9_balor/gc9_rebuild_v10/front_v10.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha_threshold": 32,
+      "bounds": [
+        183,
+        373,
+        825,
+        1386
+      ],
+      "outsideSafeArea": 0,
+      "visiblePixels": 427719,
+      "sha256": "355905833f7d08185346ff2ca483107153485b6569b079c0e1b9f10d499c385d"
+    },
+    {
+      "path": "output/characters/gc9_balor/gc9_rebuild_v10/threequarter_v10.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha_threshold": 32,
+      "bounds": [
+        197,
+        377,
+        831,
+        1436
+      ],
+      "outsideSafeArea": 0,
+      "visiblePixels": 432702,
+      "sha256": "8b3aa38117088bbc86d609827aabcfa95b536fce05b2f9e1edfb410b0d880e34"
+    }
+  ],
+  "native_bytes_verified": true,
+  "style_observations": [
+    "v09보다 팔갑·정강이·방패의 좁은 반사 띠가 줄고 넓은 명암 면으로 바뀜",
+    "사선에도 같은 재질 처리가 이어짐",
+    "견갑·무릎·방패 테두리의 작은 반사면과 짙은 경계는 C6보다 조밀하게 남아 있음"
+  ],
+  "orientation_check": "C6와 같은 화면 왼쪽 3/4, 인체 왼쪽 귀·어깨가 가까운 쪽",
+  "face_check": "눈·코·턱 연결의 뚜렷한 왜곡 없음; 먼 눈은 원근에 따라 좁음",
+  "equipment_check": "오른손 검·왼손 방패 유지; 가려진 방패 뒷면 연결 구조는 검증 불가",
+  "framing_alignment": "정면 본체1014px·사선1060px, 발선1386/1436. 모두 안전 여백 충족; 비교 화면에서만 인물 높이를 맞춘 확인용 시안이다. 최종 방향 세트 정렬 완료로 표기하지 않는다.",
+  "comparison_url": "output/characters/gc9_balor/gc9_rebuild_v10/review.html",
+  "visual_qa": {
+    "bright_background": "whole frame and enlarged face/shoulder inspected; no obvious black residue",
+    "dark_background": "native canvas inspected",
+    "comparison_html": "threequarter C6 asset confirmed; face zoom, original canvas and before/after modes available",
+    "user_approval": null
+  },
+  "catalog_verification": {
+    "build": "passed",
+    "file_hash_and_catalog_consistency": "passed",
+    "desktop_and_bookmark": "passed",
+    "mobile_widths": [
+      390,
+      320
+    ],
+    "current_balor_assets": 3
+  },
+  "previous_status": "ready_for_user_comparison",
+  "rejection_scope": "whole_character_drawing_style",
+  "previous_style_observations_are_not_acceptance": true,
+  "recovery_report": "output/characters/gc9_balor/style_recovery_20261108/report.md"
+}

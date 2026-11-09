@@ -1,0 +1,51 @@
+{
+  "task": "남부 사막왕국 동쪽 산맥에 드워프의 지하왕국 추가 지도 v21",
+  "tool": "built-in image_gen",
+  "source_path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/world/maps/continent_world_elven_forest_v20.png",
+  "source_version": 20,
+  "target_version": 21,
+  "status": "complete",
+  "calls": [
+    {
+      "id": "continent_world_dwarf_kingdom_v21",
+      "prompt": "Use case: precise-object-edit.\nAsset: v21 of the supplied existing fantasy strategy WORLD MAP.\n\nINPUT ROLES:\nImage 1 is the FULL square MAP EDIT TARGET, continent_world_elven_forest_v20.png, native 1254x1254.\nImage 2 is ONLY the user's tiny location crop: the rocky MOUNTAIN RANGE immediately to the RIGHT/EAST of the SOUTHERN DESERT KINGDOM. It identifies the mountain cluster to edit. Return the full world map from image 1, not the crop.\n\nREQUEST — ADD A DWARVEN UNDERGROUND KINGDOM INSIDE THIS MOUNTAIN RANGE:\nThe location is in the lower-right interior of the southern continent, east of the orange desert and east/northeast of the white-domed city captioned \"사하리드 왕국\". In image 1 it is the compact diagonal rocky mountain cluster around x=710..840,y=845..955 (about 57%..67% width,67%..76% height), just above/right of the large \"남대륙\" caption and west of the purple corrupted coastal strip. This is NOT the huge northern snowy range, the eastern continent's mountains, or the purple dimensional rift.\nIntegrate a DWARVEN UNDERGROUND KINGDOM entrance into the existing mountain rock. Keep its peaks and ridge recognizable. Show a monumental, deeply recessed geometric stone gateway carved directly into a rock face, heavy squared pillars, bronze/iron door details and warm amber forge light coming from the deep entrance. A glimpse of illuminated subterranean halls through the entrance and a few small recessed openings in the adjacent stone should make it clear that the kingdom extends INSIDE and BELOW the mountains.\nThe visible gate and facade must be a compact landmark at the map's established miniature scale, roughly comparable to the smaller magic city or slightly smaller. It should belong to the mountains, not appear as another large surface capital covering the desert. The surrounding rock, foothills and green valley should meet the carved structure naturally. Match the map's soft directional light, crisp hand-painted miniature detail and terrain perspective.\nDo not add a giant mountain cutaway, inset, diagram panel, new open-air city, lava river, volcano, separate continent, characters, flags or invented heraldry.\n\nCAPTION:\nAdd exactly ONE new caption \"드워프의 지하왕국\" near the mountain entrance, using the existing ivory-white Korean label style with a restrained dark edge. Position it in clear nearby foothill/background space, for example just below/right of the gate around x=815..925,y=935..970 if appropriate, avoiding overlap with \"남대륙\", \"사하리드 왕국\", the main river or the entrance itself. A short unobtrusive leader can identify the entrance if necessary. Keep the exact spelling 드워프의 지하왕국; no invented personal kingdom name, duplicate labels or pseudo-writing.\n\nKEEP ALL 14 EXISTING LABELS VERBATIM:\n북대륙 / 서대륙 / 중앙대륙 / 동대륙 / 남대륙\n아스테른 제국 / 발레시온 / 아르케리온\n발트레인 왕국 / 사하리드 왕국 / 진월국\n스카르가드 요새 / 성휘 대교회 / 엘프의 숲\nThe dwarf caption is the 15th label.\n\nPRESERVE THE REST:\nKeep the v20 connected green land and complete Elven Forest northeast of 아르케리온 and west of the eastern turquoise lake, including the exact \"엘프의 숲\" caption. Keep the v19 continuous southern coastal greenery, southern desert, royal city, winding river and open delta.\nKeep all other cities, two central capitals and cathedral district, the five continent regions, coastlines, northern snow mountains and tiny fort, northwestern purple impact crater/corruption, eastern turquoise lake and crescent gulf, southeastern dimensional rift and its ocean separation. Make no other geographic or political edits.\nPreserve the original full-map composition, sharpness, color balance and painted strategy-map style. No crop, zoom, padding, transparency, frame, watermark, UI or extra labels.\n\nOutput one complete OPAQUE square map at native source size 1254x1254 if available, otherwise highest native square resolution.",
+      "referenced_image_paths": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/world/maps/continent_world_elven_forest_v20.png",
+        "C:/Users/user/AppData/Roaming/orca/agent-session-attachments/34b6a472-df21-4fa6-827d-59934250147b/orca-paste-1794025808145-d2526bc6-0819-4b28-b306-ee5c8cd94f7b.png"
+      ],
+      "transparent_background": false,
+      "status": "selected",
+      "generated_original_path": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-ca57dd6e-6c38-46c1-8af9-ce596e5c0e6a.png",
+      "output_file": "output/world/maps/continent_world_dwarf_kingdom_v21.png",
+      "output_sha256": "2eefb719a3f5d0636027fbfc035031633f363e631161fb92cfadcbf952658e97",
+      "actual_width": 1254,
+      "actual_height": 1254,
+      "resampled": false
+    }
+  ],
+  "user_request": "사막왕국 오른쪽 산맥에 드워프의 지하왕국 추가",
+  "user_approved": false,
+  "created_on": "2026-11-07",
+  "completed_on": "2026-11-07",
+  "source_sha256": "17084bf2a5c6e16e48bd8ecb6a288fc78213c84b6478651aaee96e369298b29e",
+  "generated_count": 1,
+  "selected_count": 1,
+  "output": {
+    "path": "output/world/maps/continent_world_dwarf_kingdom_v21.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "2eefb719a3f5d0636027fbfc035031633f363e631161fb92cfadcbf952658e97",
+    "opaque": true
+  },
+  "saved_user_crop": {
+    "path": "output/world/maps/references/v21_south_east_mountains_user_crop.png",
+    "sha256": "eccab26fcb8903183ac0ddd9800f498810a965ec0d278c83db1937bee20f7996"
+  },
+  "review_file": "output/world/maps/continent_world_dwarf_kingdom_v21.review.json",
+  "existing_maps_unchanged": {
+    "output/world/maps/continent_world_final_v17.png": "0e0b0b31df95bb9e61e7226c0237f2bdab0948053a9dc833c9e4cb6cc483c178",
+    "output/world/maps/continent_world_lore_v18.png": "11cb34f9a6dab23fe89a9dd4cbfb2bc63b13fa755a130df783efd0213f3305e6",
+    "output/world/maps/continent_world_coastal_green_v19.png": "f7589055b41639f16409d50f74384c246ced8db9b3c0eafa0d5d4d56b7961f60",
+    "output/world/maps/continent_world_elven_forest_v20.png": "17084bf2a5c6e16e48bd8ecb6a288fc78213c84b6478651aaee96e369298b29e"
+  }
+}

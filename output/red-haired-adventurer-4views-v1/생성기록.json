@@ -1,0 +1,148 @@
+﻿{
+    "task":  "붉은 머리 모험가 남성형 리모델링·4방향 전신",
+    "generation_tool":  "built-in image_gen",
+    "style_id":  "GC9",
+    "style_version":  "1.1",
+    "quality_priorities":  {
+                               "face":  "C4 얼굴선과 완성도를 남성형으로 적용",
+                               "metal":  "C3의 면·두께·반사광을 은색으로 적용"
+                           },
+    "expected_count":  4,
+    "source":  {
+                   "file":  "inputs/source-threeviews.png",
+                   "original_path":  "C:/Users/user/Downloads/붉은 머리 모험가 삼면도-2 (1).png",
+                   "width":  1774,
+                   "height":  887,
+                   "has_alpha":  true,
+                   "sha256":  "698e7a2afe533ed04323ce26f1ff1aa9c9ae6d16178525e1dd78ff9960db6cee"
+               },
+    "transparent_background_requested":  true,
+    "review_status":  "실제 PNG 확인 후 사용자 최종 화풍·모델 일관성 판단 별도",
+    "outputs":  [
+                    {
+                        "view":  "front",
+                        "label":  "정면",
+                        "degrees":  0,
+                        "file":  "images/01_front.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-48f560f3-a592-4770-b15d-0e4d701e6adb.png",
+                        "prompt":  "Use case: style-transfer / character remodeling.\nCreate ONE remodeled red-haired MALE adventurer in a single full-body FRONT VIEW. Portrait 2:3, 1024x1536. Truly transparent RGBA background, clean alpha edges. No black rectangle, no painted checkerboard, no floor or shadow backdrop. This is the master design for a four-direction turnaround.\n\nINPUT IMAGES / ROLES:\n1 = original three-view sheet, DESIGN COMPONENTS and garment construction only. Extract the SAME red-haired adventurer from its front/side/back. Draw only ONE FRONT view now, NOT the three-view sheet.\n2 = C4, the user\u0027s preferred FACE/LINEWORK QUALITY reference only. Apply disciplined anime eyelids, simple clean nose/mouth, matte skin, clear facial construction, but use a MALE face. Do not copy this woman\u0027s face, silver hair, ponytail, blue ribbons, armor costume or bow.\n3 = C3, preferred METAL QUALITY reference only: deliberate bright/dark planes, edge thickness, occlusion and restrained highlights. Adapt it to cool SILVER STEEL, not gold. Do not import a green/gold costume or bow.\n4 = Lass, male proportions and underlying clean 2D anime drawing language only. Do not copy white hair, his face, twin blades or clothes.\n\nREMODEL BODY/FACE: young ADULT MALE, about 8 heads tall, small adult head, broad but lean masculine shoulders, straight torso, long legs, normal hands and feet. Use the established male standard rather than tracing the source\u0027s shorter/younger head-to-body ratio or original facial identity. Short tousled crimson-red layered hair with recognizable upswept tufts/ahoge, warm red-brown eyes, fine eyebrows, clean masculine jaw, small nose and mouth, friendly confident small smile. No baby face, chibi head, doll-skin gloss, thick outlined sticker look or 3D realism.\nKeep all identifying COLORS AND COSTUME COMPONENTS of input 1:\n- crimson-red raised-collar long coat and matching draped cape, original angular split front panels, subtle pale double-line hem piping and silver fasteners; rear cape length about knee to upper-calf, not a floor-length royal cloak.\n- charcoal/dark brown soft hood lying DOWN on the upper back/shoulders, red inner collar; do not raise the hood or cover hair.\n- cream/off-white button-front shirt, rolled cream sleeves and dark charcoal high-neck inner shirt.\n- silver layered plate pauldrons on BOTH shoulders, plainly constructed with clear overlapping plates and a few rivets; no ornate new gold decoration.\n- long SILVER forearm vambrace on his anatomical RIGHT forearm (viewer LEFT in this frontal view), with straps/fasteners. Anatomical LEFT forearm remains rolled sleeve/exposed forearm and short dark fingerless glove, not a matching long metal vambrace.\n- matching dark brown fingerless gloves, brown belt with rectangular silver buckle, TWO brown flap leather utility pouches, one on each hip, with logical belt attachment.\n- loose charcoal trousers with large clean folds, one shield-shaped silver knee plate on the anatomical RIGHT knee (viewer LEFT in front), not on both knees.\n- tall brown leather front-laced boots with small buckles and red cloth ties at the boot tops. Same knee/boot relation and components as the source, translated to taller male anatomy.\nEMPTY HANDS. No sword, bow, staff, shield, backpack or extra jewelry.\n\nSTYLE/FINISH: polished drawn 2D game anime, fine crisp tapered outlines with deliberate line hierarchy. Large coherent tapered hair locks, clean base-color/shadow planes, firm readable cel-shadow boundaries, soft transitions only where materially useful. Silver steel has cool gray shadow planes, selective bright reflection bands, sharp light-facing bevels, visible plate thickness and dark gaps at overlaps. Leather is matte warm brown, cloth is matte red/cream/charcoal, skin softly restrained. Do not make every surface glossy; avoid inflated rounded metal bevels, fuzzy linework, melted rivets, random filigree, pseudo-text and tiny detail noise. Details must remain intentional when viewed at native size.\n\nCOMPOSITION/ALIGNMENT: true FRONT orthographic-like neutral full-body standing. Face, shoulders, chest, hips and knees square to camera. Feet parallel and planted with a natural modest gap, arms lowered slightly away from body, hands relaxed. Consistent torso-height camera, no dramatic perspective. Entire tallest hair tuft, cape corners, fingers and both boot soles inside frame with clear margin. Put soles near y=1455 on the 1536-high canvas and hair top around y=80; figure approximately 1375 px tall. Keep a stable shared scale/ground baseline for future side/back/45-degree views.\nOne character, ONE FRONT VIEW only. No labels, captions, watermark, scenery, effects, halo or multiple panels. Preserve source transparency.",
+                        "references_in_order":  [
+                                                    "inputs/source-threeviews.png",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png",
+                                                    "../../자료/캐릭터그림체/GC9/원본/M04_Lass.jfif"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  165,
+                                            "MinY":  22,
+                                            "MaxX":  858,
+                                            "MaxY":  1503,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  977919,
+                                            "Partial":  594945,
+                                            "Opaque":  0,
+                                            "NearOpaque":  562161
+                                        },
+                        "bytes":  1787223,
+                        "sha256":  "4d09a760fe7dd794b32bfd0173c87b5d76b4d104b8caad86439394c601ea3674"
+                    },
+                    {
+                        "view":  "side",
+                        "label":  "정측면",
+                        "degrees":  90,
+                        "file":  "images/02_side.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-7975fc72-0198-43d8-9fc4-741f94e49763.png",
+                        "prompt":  "Use case: consistent character turnaround / style-transfer.\nCreate ONE isolated full-body view of the remodeled red-haired male adventurer from input 1. 1024x1536 portrait 2:3 with TRUE TRANSPARENT RGBA background, preserving transparency. No painted black, checkerboard, floor, glow or scenery.\nINPUT 1 is the NEW FRONT MASTER: authoritative face, adult male body proportions, hair design, exact colors, costume, plate construction, pouches, boot construction and drawing style. Keep this same individual. Do not redesign or copy the shorter/younger proportions of the old source.\nINPUT 2 is the ORIGINAL THREE-VIEW SOURCE: use only its garment front/side/back construction to clarify hidden parts. Draw exactly ONE character and ONE view, not a multi-view sheet.\nINPUT 3 is the drawing quality reference C4: fine controlled anime linework, disciplined eyelid/nose/mouth construction and restrained soft skin. NOT a female anatomy/costume donor.\nINPUT 4 is C3 metal quality: clear metal planes, plate overlap thickness, rivets and controlled highlights. Use COOL SILVER STEEL matching input 1, never its gold/green palette.\n\nLOCK ALL INVENTORY: short tousled crimson hair with a swept-up top tuft, warm red-brown eyes, a clean adult MALE jaw and small confident friendly smile when visible; tall about 8-head masculine proportions with long legs and lean broad shoulders. Red raised-collar long coat with angular front panels and pale double hem piping; red draped knee-to-upper-calf cape; charcoal hood resting DOWN on upper back, not on the head; cream button shirt and rolled sleeves over a charcoal high-neck layer; layered riveted SILVER pauldrons on both shoulders, a long SILVER vambrace ONLY on his anatomical RIGHT forearm, no matching long plate on left forearm; short dark brown fingerless gloves; brown belt with rectangular silver buckle and TWO attached flap utility pouches (one each hip); loose charcoal trousers; one shield-shaped SILVER knee plate ONLY on the front of anatomical RIGHT knee; tall brown FRONT-LACED boots with buckles and red cloth ties at their tops. Preserve source asymmetry; do not move armor left/right to make the picture prettier. Hands empty, no sword/bow/shield/staff/backpack or new ornament.\nMatch input 1\u0027s refined 2D anime rendering: deliberate tapered contours, coherent hair locks and cloth folds, broad separated cel shadow planes, readable silver reflection bands and plate thickness, matte red/cream/dark cloth and brown leather, soft skin. No 3D realism, painterly texture, skin gloss, inflated rounded metal, fuzzy rivets, line noise or meaningless microdetail.\nSHARED SCALE: same camera height and distance, same head size, shoulder/hip/knee heights and overall adult male height as input 1. Use the same 1024x1536 canvas. Aim for the hair tuft near y=22-35 and soles near y=1500, matching the actual front master. Entire hair, cloak corners, fingers and soles inside frame with margins. Stable natural standing posture, arms lowered and slightly separated as needed for readable silhouette; no action, perspective shortening or wind-blown cape. No text, captions, watermark, panel borders, effects or additional figures.\n\nVIEW REQUIREMENT: STRICT 90-DEGREE RIGHT-FACING PROFILE, whole character looking toward IMAGE RIGHT. Nose, chest, pelvis, knees and toes all face exactly right. Only one eye visible; face is a clean side outline. No three-quarter face, no frontal chest, no head-only turn. Near shoulder and far shoulder align in profile; the legs mostly overlap while both boots remain physically plausible. Use the source sheet\u0027s side silhouette but the new master\u0027s taller adult proportions and finer drawing.\nShow the armored anatomical RIGHT arm and RIGHT knee as the near side, consistent with the front master (where those plates are at viewer left). The near long silver forearm plate and knee plate must remain visible rather than replaced by bare skin or mirrored to the wrong limbs. Rear cape hangs behind the body toward image left; show its true thickness, folded-down dark hood, red outer cloth and hem piping. Belt pouch projects logically from the hip, the far pouch may be occluded, not a third pouch. Front boot lacing follows the front-facing boot surface and can be foreshortened. One single TRUE SIDE image only.",
+                        "references_in_order":  [
+                                                    "images/01_front.png",
+                                                    "inputs/source-threeviews.png",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  220,
+                                            "MinY":  16,
+                                            "MaxX":  664,
+                                            "MaxY":  1518,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1183670,
+                                            "Partial":  389194,
+                                            "Opaque":  0,
+                                            "NearOpaque":  364287
+                                        },
+                        "bytes":  1451690,
+                        "sha256":  "7746f44577884eb828b4db140fa6bb4f12e477b751e2b288b8ccc5e5a9a9954a"
+                    },
+                    {
+                        "view":  "back",
+                        "label":  "후면",
+                        "degrees":  180,
+                        "file":  "images/03_back.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-3aede089-2fb8-4423-b908-d9ac369c80b9.png",
+                        "prompt":  "Use case: consistent character turnaround / style-transfer.\nCreate ONE isolated full-body view of the remodeled red-haired male adventurer from input 1. 1024x1536 portrait 2:3 with TRUE TRANSPARENT RGBA background, preserving transparency. No painted black, checkerboard, floor, glow or scenery.\nINPUT 1 is the NEW FRONT MASTER: authoritative face, adult male body proportions, hair design, exact colors, costume, plate construction, pouches, boot construction and drawing style. Keep this same individual. Do not redesign or copy the shorter/younger proportions of the old source.\nINPUT 2 is the ORIGINAL THREE-VIEW SOURCE: use only its garment front/side/back construction to clarify hidden parts. Draw exactly ONE character and ONE view, not a multi-view sheet.\nINPUT 3 is the drawing quality reference C4: fine controlled anime linework, disciplined eyelid/nose/mouth construction and restrained soft skin. NOT a female anatomy/costume donor.\nINPUT 4 is C3 metal quality: clear metal planes, plate overlap thickness, rivets and controlled highlights. Use COOL SILVER STEEL matching input 1, never its gold/green palette.\n\nLOCK ALL INVENTORY: short tousled crimson hair with a swept-up top tuft, warm red-brown eyes, a clean adult MALE jaw and small confident friendly smile when visible; tall about 8-head masculine proportions with long legs and lean broad shoulders. Red raised-collar long coat with angular front panels and pale double hem piping; red draped knee-to-upper-calf cape; charcoal hood resting DOWN on upper back, not on the head; cream button shirt and rolled sleeves over a charcoal high-neck layer; layered riveted SILVER pauldrons on both shoulders, a long SILVER vambrace ONLY on his anatomical RIGHT forearm, no matching long plate on left forearm; short dark brown fingerless gloves; brown belt with rectangular silver buckle and TWO attached flap utility pouches (one each hip); loose charcoal trousers; one shield-shaped SILVER knee plate ONLY on the front of anatomical RIGHT knee; tall brown FRONT-LACED boots with buckles and red cloth ties at their tops. Preserve source asymmetry; do not move armor left/right to make the picture prettier. Hands empty, no sword/bow/shield/staff/backpack or new ornament.\nMatch input 1\u0027s refined 2D anime rendering: deliberate tapered contours, coherent hair locks and cloth folds, broad separated cel shadow planes, readable silver reflection bands and plate thickness, matte red/cream/dark cloth and brown leather, soft skin. No 3D realism, painterly texture, skin gloss, inflated rounded metal, fuzzy rivets, line noise or meaningless microdetail.\nSHARED SCALE: same camera height and distance, same head size, shoulder/hip/knee heights and overall adult male height as input 1. Use the same 1024x1536 canvas. Aim for the hair tuft near y=22-35 and soles near y=1500, matching the actual front master. Entire hair, cloak corners, fingers and soles inside frame with margins. Stable natural standing posture, arms lowered and slightly separated as needed for readable silhouette; no action, perspective shortening or wind-blown cape. No text, captions, watermark, panel borders, effects or additional figures.\n\nVIEW REQUIREMENT: STRICT STRAIGHT REAR / 180-DEGREE BACK VIEW. Head, shoulders, torso, pelvis and both boots face directly away from camera. Show back hair arrangement and dark hood resting down on the upper back. No face, eyes, front chest clasp, front button shirt or front belt buckle should be visible through the body or cape. Do not merely turn the head.\nUse the original source rear view to preserve the broad red cape, its draped central/diagonal hem shape and pale double piping. Reconstruct its shoulders and folds to match the new front master, no new embroidery, backpack, back shield or emblem. Both rear shoulder plate constructions are visible above/outside cape where appropriate. The anatomical RIGHT forearm vambrace must be on the image RIGHT from this rear camera, while anatomical LEFT forearm stays bare/rolled sleeve with short glove on image LEFT. The right FRONT knee plate is naturally hidden on the far front side of the leg; do NOT move that plate onto the back of the knee merely to show it. Boot fronts/laces must not be drawn on the heels: show coherent back leather heel panels, soles, upper straps and red ties, with side portions only if physically visible. Pouches can be partially concealed by cape, not added on the cape exterior. Same two feet and relaxed lowered arms, no extra hands behind cloth. One single BACK image only.",
+                        "references_in_order":  [
+                                                    "images/01_front.png",
+                                                    "inputs/source-threeviews.png",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  188,
+                                            "MinY":  14,
+                                            "MaxX":  835,
+                                            "MaxY":  1521,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  976814,
+                                            "Partial":  596050,
+                                            "Opaque":  0,
+                                            "NearOpaque":  564417
+                                        },
+                        "bytes":  1623929,
+                        "sha256":  "8886a1a6bc726f3d7c0c141b97cee234cf3b1cc0e30af6de5135abd658b2f240"
+                    },
+                    {
+                        "view":  "threequarter",
+                        "label":  "3/4 사선",
+                        "degrees":  45,
+                        "file":  "images/04_threequarter.png",
+                        "generated_source":  "C:\\Users\\user\\.codex\\generated_images\\01a1b01e-635e-7632-92af-039484dfcd8b\\exec-8398d1a2-9a2e-4b03-8587-2e55f6fa7f9c.png",
+                        "prompt":  "Use case: consistent character turnaround / style-transfer.\nGenerate ONE FOURTH VIEW of the same remodeled red-haired adult MALE adventurer: a full-body FRONT THREE-QUARTER (45-degree) oblique standing pose facing IMAGE RIGHT. Portrait 1024x1536 with truly transparent RGBA background. No black rectangle, checkerboard, floor, glow, aura or environment.\n\nINPUT ROLES:\n1 = remodeled FRONT MASTER. Exact new male face, red hair, proportions, colors, outfit and details.\n2 = remodeled STRICT SIDE MASTER facing right. Clarifies the body depth, silver right forearm/right knee, pouch and cloak profile.\n3 = remodeled BACK MASTER. Clarifies folded-down charcoal hood, red cape, shoulder plates and rear boot/cape construction.\n4 = C4 face/drawing QUALITY only, not female anatomy/face/hair/clothing.\n5 = C3 METAL QUALITY only, interpreted as cool SILVER STEEL, not gold or green.\n\nThis is the SAME person and same costume from views 1-3, not a fourth variation. Keep male age impression, face geometry, head size, short tousled crimson hair/top tuft and red-brown eyes. Friendly restrained confident smile, fine deliberate eyelids/nose/mouth, soft matte skin, no doll gloss.\nKeep the red raised-collar long coat, angular split red front panels, red knee-to-upper-calf cape and pale hem piping, DOWN charcoal hood, cream button shirt/rolled sleeves over dark high-neck underlayer, layered SILVER pauldrons on both shoulders. Silver long forearm plate ONLY on anatomical RIGHT arm; the LEFT arm has exposed forearm/rolled sleeve and short dark fingerless glove only. Brown belt, rectangular silver buckle and exactly TWO brown flap pouches at the hips, no third bag. Loose charcoal trousers, silver knee plate only on the FRONT of the RIGHT knee, tall brown laced leather boots with buckles and red upper ties. NO added weapons, shield, staff, backpack, embroidery or ornaments.\nPreserve asymmetry in world/anatomical coordinates; the silver right forearm and knee should remain on the same physical limbs, not mirrored. Show their natural foreshortening and overlaps using front and side masters. Do not move the forearm plate to the left just to reveal it. Hands remain naturally empty and lowered.\nVIEW IS ~45 DEGREES toward the right: nose, shoulder axis, chest, pelvis, knees and toes all rotate coherently. Both eyes remain visible with the far eye narrower; enough front shirt/clasp/belt is visible while the side depth is evident. Near shoulder larger and far shoulder recedes. This must be clearly between straight front and exact profile. Not a pure side or back and not just the head turned on frontal shoulders. Both feet planted, arms relaxed, same stable neutral pose and no action/dynamic perspective.\nSame camera height/distance and adult male ~8-head proportions, same hair/sole height as the three masters on identical 1024x1536 canvas (hair tuft approximately y=22-35, boot soles near y=1500). Entire hair, cape tips, fingers and boots inside frame; no cropping and no size change to fill width.\nKeep the masters\u0027 fine crisp tapered 2D anime lines, large coherent hair locks and cloth folds, clear cel-shaded color planes, layered silver metal with visible plate thickness and controlled edge/reflection bands, matte leather/cloth, and clean facial drawing. No photorealism, 3D rendering, fuzzy melted detail, thick comic outline or photographic fur/noise. Do not introduce new gold metal from C3 or the female archer\u0027s ponytail/bow from C4.\nOne character, one 45-degree full-body view ONLY. No captions, symbols, layout panels, watermark, extra figure, soft outer shadow or colored glow. Preserve actual transparent background.",
+                        "references_in_order":  [
+                                                    "images/01_front.png",
+                                                    "images/02_side.png",
+                                                    "images/03_back.png",
+                                                    "../character-redesign-6x2/images/c04_front.png",
+                                                    "../character-redesign-6x2/images/c03_front.png"
+                                                ],
+                        "width":  1024,
+                        "height":  1536,
+                        "alpha_stats":  {
+                                            "Width":  1024,
+                                            "Height":  1536,
+                                            "MinX":  119,
+                                            "MinY":  15,
+                                            "MaxX":  767,
+                                            "MaxY":  1512,
+                                            "MaxAlpha":  254,
+                                            "Transparent":  1015824,
+                                            "Partial":  557040,
+                                            "Opaque":  0,
+                                            "NearOpaque":  534102
+                                        },
+                        "bytes":  1736224,
+                        "sha256":  "484ff71790890c8e2d7ae32a288e3c428529d6d6e2be45e7b3f538dfe4f0a201"
+                    }
+                ]
+}

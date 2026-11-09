@@ -1,0 +1,25 @@
+{
+  "status": "visually_reviewed",
+  "comparison": "existing_SD_vs_new_SD",
+  "view": "front",
+  "user_selection": "existing_sd",
+  "checks": {
+    "both_are_SD": true,
+    "both_are_front": true,
+    "same_balor_identity_and_equipment": true,
+    "anatomical_right_sword_left_shield": true,
+    "lowered_grip_preserved": true,
+    "clean_on_bright_background": true,
+    "full_head_boots_and_equipment_inside_canvas": true,
+    "native_images_and_zip_unchanged": true
+  },
+  "native_size": [
+    1254,
+    1254
+  ],
+  "evidence": "output/reviews/balor-sd-front-comparison-v01/light-qa.png",
+  "file_verification": "file-verification.json",
+  "browser_verification": "browser-verification.json",
+  "selection_date": "2026-11-08",
+  "new_sd_discarded": true
+}

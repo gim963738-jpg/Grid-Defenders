@@ -1,0 +1,34 @@
+Tool: built-in image_gen (image edit).
+Edit target: continent_black_mountain_v07.png. Earlier versions preserved.
+Supporting reference: references/west_south_coast_v08.png (user-supplied crop identifying the problem area).
+Output: continent_natural_coasts_v08.png
+User request: 서와 남사이 너무 부자연스러워서 자연스럽게 처리해줘
+Changes: Naturalize West's southern coast and South's facing northwestern/western coast using broad eroded headlands, coves, rocky cliffs, sandy bays and gradual shallow-water shelves. Maintain open sea separation and existing world landmarks.
+
+Use case: precise-object-edit.
+Asset type: fantasy world map, natural southwestern marine passage/coastline refinement, version 08.
+Input image 1 is the FULL MAP EDIT TARGET: continent_black_mountain_v07.png.
+Input image 2 is the user's CROPPED PROBLEM-AREA REFERENCE, identifying the unnatural-looking sea gap between the southern tip of WEST ("서대륙") and the northwestern/western coast of SOUTH ("남대륙"). Image 2 is for locating the local problem only; do not enlarge it into the final output or paste its edges. Deliver the entire square world map from image 1.
+
+User request: "서와 남사이 너무 부자연스러워서 자연스럽게 처리해줘"
+Primary request: locally redraw the facing WEST–SOUTH coastlines and the water between them so this southwestern sea passage feels like an organically formed natural gulf/open sea, rather than a deliberately carved gap with jagged cutout edges.
+
+EDIT AREA: southwest portion of the full map, approximately x=5–43%, y=54–92%: WEST's southern/southeastern coast and tapered southern tip, SOUTH's northwestern/western desert-facing coast, and the sea connecting those shores. Focus especially on the shore facing the broad dark-blue gap shown in input image 2.
+
+Naturalize both the LARGE coastline shape and the SMALL edge detail:
+- Rework the overly pointy serrated/zigzag shore into a few asymmetrical broad natural headlands, eroded rocky capes and gently curving sheltered coves. Reduce repetitive needle-like spurs, identical tiny inlets and excessively bright continuous white outlines only in this edited region. The shoreline remains irregular, not geometrically smooth or mirrored.
+- Let WEST's lower wooded hills and coastal valleys descend naturally to small beaches, rocky headlands and a modest sheltered southern bay, instead of ending as a thin triangular sawtooth cutout.
+- Let SOUTH's northwestern desert and mesa terrain descend through believable reddish coastal cliffs, sandy low coves, a broad asymmetric cape and a small dry river-mouth embayment. Its western coastline should feel eroded by the sea, not trimmed by a straight diagonal tool.
+- Locally extend or recede coastal shoulders moderately to vary the open-water shape; do not simply uniformly push the two shores farther apart. Keep a generous open ocean passage between WEST and SOUTH, approximately comparable overall spacing to the current map, with a natural widening toward the southwest outer sea. No perfectly parallel facing coasts, straight corridor, equal-radius arcs or obvious geometric negative space.
+- Add subtly varying underwater continental shelves, muted shallow teal ribbons hugging the coves and rocky shoals transitioning gradually into rich navy water. No continuous thick neon turquoise/white stroke; shelf shapes should be irregular and understated, disappearing at steep cliffs.
+- At most two or three tiny natural coastal rocks/islets close to one shore, if useful for the eroded coastline; do not fill the sea with a new island chain or create another continent.
+- Maintain the map's top-down painterly terrain style and local biome identities. The sea should remain predominantly open and deep blue; do not fill it with cloud, fog or corruption to disguise the problem.
+
+STRICT PRESERVATION OUTSIDE THIS LOCAL REFINEMENT:
+Keep the ENTIRE map's current arrangement and most coastlines unchanged. WEST remains connected to NORTH, CENTRAL remains connected to SOUTH, WEST stays separated by sea from SOUTH/CENTRAL, EAST remains isolated.
+Preserve the giant northwest black mountain and its black liquid/purple contamination reaching CENTRAL; do not shrink, move or remove them.
+Preserve EAST's clear blue lake and crescent bay, southeast dimensional-collapse sinkhole, CENTRAL's rivers, SOUTH's fertile delta and desert interior, and NORTH's snow mountains. Do not modify the eastern half or northern crown.
+Preserve exactly the five existing Korean labels with their spellings and approximate placements: "북대륙", "서대륙", "중앙대륙", "동대륙", "남대륙". No new labels, arrows, title, UI or explanatory markings.
+Deliver ONE full square map, same framing and overhead orthographic detailed fantasy terrain painting as image 1, no crop, inset, before/after layout or added border.
+
+Success: the WEST–SOUTH sea gap shown in image 2 looks like believable naturally eroded coast and ocean, while the latest world's landmarks and other regions remain recognizable and intact.

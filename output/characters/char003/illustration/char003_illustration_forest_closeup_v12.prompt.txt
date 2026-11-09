@@ -1,0 +1,17 @@
+Tool: built-in image_gen.
+Inputs: slash_reference_v12.png (user trajectory markup), char003_illustration_forest_natural_v11.png (clean edit target).
+User: 검의 궤적은 파란선 검은 좀더 날을 세우고 클로징 당겨서 주인공이 좀더 잘보이게 수정
+Changes: Relocate single slash trail to blue guide at knee height, clarify cutting edge, tighten camera framing. Preserve v11 pose and leg identities. Static illustration under character specification v1.2; no game effect implementation.
+
+Use case: precise-object-edit.
+Edit the existing fantasy anime illustration.
+IMAGE 1: user markup showing the EXACT NEW SWORD-TRAIL PATH in a blue hand-drawn curve. Blue is a placement guide, not a literal marker to leave in the finished art.
+IMAGE 2: clean v11 illustration, the edit target and exact character/pose/style reference.
+
+Make these three changes:
+1. Replace the old LOW white arc near the ground entirely with ONE polished sword-energy trail along the BLUE GUIDE in image1. Its path begins just below the sword TIP at far left around upper shoulder height, curves downward around the flowing cape, sweeps across the foreground at the hero's KNEE / lower-thigh height, and then rises toward the RIGHT at roughly elbow height. It is a broad shallow U-shaped elliptical slash passing IN FRONT of the lower body, not underneath his boots. Follow this guide relative to the body even after reframing. Render it as an elegant razor-thin bright white core with a subtle icy-blue glow and delicate tapered transparent streak, slightly brighter on the curved leading edge. No opaque drawn blue line. Remove the previous ground-level slash so there are not two competing arcs. Bring the few emerald green slime droplets up along the new trail, already sliced and scattering, with tiny transparent gel fragments. Avoid obscuring the face or torso.
+2. Refine the sword into a visibly sharp steel blade. Slightly roll the blade in the gripping hand so the cutting bevel is clearly presented, with a crisp narrow luminous cutting edge, angular steel bevels, acute pointed tip and a convincing thin cross-section. Retain the same straight Western sword, hilt, full length and backward screen-left arm position. Do not change to a katana, oversized broad sword, or upward raised arm.
+3. MOVE THE CAMERA CLOSER and tighten framing so the protagonist's FACE, upper body and costume are substantially more prominent. Reduce empty forest space especially on the right and above; recenter the hero. Increase character visual size around 15–20 percent through a closer camera/tighter composition, use a wider landscape framing if needed to keep the whole sword within view. Preserve the full head, sword tip, cloak and both boots with a small comfortable margin. Low front three-quarter camera angle remains unchanged. Keep the hero's face tack-sharp and richly readable; slightly soften background forest detail to separate him.
+
+LOCK the natural running pose in image2: same forward lean, same shoulder/pelvis relationship, SAME anatomical leg identities and bends, same relaxed empty hand near chest, smile and gaze. Do not swap the legs, re-pose the body, or return to a high-angle view.
+Same young red-brown-haired male hero, crimson mantle, charcoal hood, ivory sleeves, silver partial armor and single knee plate, brown belts/pouch, dark trousers, laceup boots/red ties. Same refined 2D anime rendering, warm forest sunlight and green woodland. No new character, intact slime, lettering, watermark, annotations, split panels or motion blur on the hero.

@@ -1,0 +1,94 @@
+{
+  "status": "reviewed",
+  "output": {
+    "path": "images/main_threequarter_v01.png",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "f43a06d1e6cef50c9ca5fb2416095118f48a8176280a8afb3a95e8a8a46d2910",
+    "alpha": {
+      "width": 1024,
+      "height": 1536,
+      "transparent_pixels": 689572,
+      "partial_alpha_pixels": 101323,
+      "near_opaque_pixels": 781969,
+      "max_alpha": 254,
+      "visible_pixels": 813110,
+      "visible_bounds": {
+        "x": 96,
+        "y": 7,
+        "width": 873,
+        "height": 1523,
+        "right": 968,
+        "bottom": 1529
+      },
+      "red_edge_alpha16": 0,
+      "red_edge_alpha128": 0
+    }
+  },
+  "copy_matches_generated_original": true,
+  "prompt_matches_saved_file": true,
+  "source_references": [
+    {
+      "id": "M02",
+      "path": "자료/캐릭터그림체/GC9/원본/M02_Harpe.jfif",
+      "sha256": "cf92cc0757201ca5f9b05117b2d065ef1a2862d87f8e0bed906e1e2a726d67dc"
+    },
+    {
+      "id": "A07",
+      "path": "자료/캐릭터그림체/GC9/원본/A07_Hwarin.jfif",
+      "sha256": "4e6067db5acc168cf612d0a5e4cea6663e3d2e8e1d29ada3e34e5dc0a540aa52"
+    },
+    {
+      "id": "C4",
+      "path": "output/character-redesign-6x2/images/c04_front.png",
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631"
+    },
+    {
+      "id": "C3",
+      "path": "output/character-redesign-6x2/images/c03_front.png",
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b"
+    },
+    {
+      "id": "WORLD_V17",
+      "path": "output/world/maps/continent_world_final_v17.png",
+      "sha256": "0e0b0b31df95bb9e61e7226c0237f2bdab0948053a9dc833c9e4cb6cc483c178"
+    }
+  ],
+  "checks": {
+    "actual_alpha": true,
+    "near_opaque_white_cloth": true,
+    "no_visible_clipping": true,
+    "not_resampled": true,
+    "human_adult_male": true,
+    "long_dark_brown_hair": true,
+    "clear_spectacles_and_eyes": true,
+    "white_layered_robe": true,
+    "wise_intellectual_expression": true,
+    "staff_and_local_light_magic": true,
+    "readable_hands_and_staff_grip": true,
+    "light_background": true,
+    "mid_gray_background": true,
+    "dark_background": true,
+    "native_100_percent": true
+  },
+  "user_approved": false,
+  "completed_on": "2026-11-07",
+  "render_verification": "browser-verification.json",
+  "catalog": {
+    "character": "central_light_archmage",
+    "category": "gc9Final",
+    "count": 1,
+    "native": [
+      1024,
+      1536
+    ],
+    "categories": 7,
+    "source_paths": 193,
+    "unique_images": 188
+  },
+  "previous_images": {
+    "count": 192,
+    "all_hashes_unchanged": true
+  },
+  "references_unchanged": true
+}

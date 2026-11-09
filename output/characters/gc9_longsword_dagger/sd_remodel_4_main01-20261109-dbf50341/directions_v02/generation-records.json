@@ -1,0 +1,1563 @@
+{
+  "task": "MAIN01-20261109-DBF50341",
+  "iteration": 2,
+  "tool": "built-in image_gen.imagegen",
+  "calls": 9,
+  "newFinalDirections": 8,
+  "model": "tool-managed image model; no override; separate from text model",
+  "paidExternalApiCalls": 0,
+  "invocations": [
+    {
+      "id": "variant-1-right-045",
+      "prompt": "Use case: identity-preserve / stylized-concept. Produce ONE game character sprite on genuine clean transparent alpha, no floor shadow, no text, no grid. Rotate this EXACT blond young male SD dual-sword warrior from image1 into the requested view; redraw as needed, DO NOT mirror or distort the front.\nINPUT1 = the sole authoritative design, face/expression, head/body proportions, body size/framing and pixel style master for THIS variant. INPUT2 = camera/yaw and physical anatomy orientation ONLY (the historical old warrior view); DO NOT inherit input2's body proportions, face, scale or costume deviations. INPUT3 = grasp anatomy reference ONLY; no armor/design/style transfer.\nRIGHT-FACING FRONT THREE-QUARTER VIEW, about45 degrees yaw. The nose, chest, pelvis, both knees and toes turn toward SCREEN RIGHT as one physical body. Clearly show FRONT chest and near anatomical RIGHT side together, both eyes visible with the far eye narrower. This is an anterior three-quarter, NOT rear view, NOT full profile.\nBoth feet PLANTED in an idle standing stance, no step, no attack, no dynamic lean. Same camera elevation as input1. Variant1 faithful inheritance: medium compact silver shoulder layers, soft gentle brown eyes and small closed smile; broad original-style blue scarf, short triangular blue waist cloth. Keep EXACT front1 proportions (about3.02 hair-inclusive heads) and armor widths.\nKeep golden-blond spiky layered hair, brown eyes, youthful MALE appearance, silver chest/shoulder/arm armor and gauntlets, cobalt scarf and SHORT lowered hood, brown leather double belts/pouch and trousers, blue waist cloth. Preserve every distinctive outfit shape visible in input1, with physically plausible rotated volume; never add a long cape, helmet, new emblem or new weapon.\nANATOMICAL OWNERSHIP remains fixed: RIGHT HAND holds the single LONGSWORD with blue diagonal blade accents, silver wing guard and ring knuckle guard. LEFT HAND holds the single short angular DAGGER. RIGHT pauldron has the crescent, RIGHT leg has plated silver shin/boot, LEFT leg blue cloth boot with metal protectors. Facing screen right, the anatomical RIGHT side is the NEAR side to viewer, showing the crescent and plated shin; the left blue boot and dagger are FAR side. Allow realistic occlusion in profile; DO NOT add an extra arm/hand to expose a hidden weapon and DO NOT swap sides. Exactly two physical weapons, each naturally attached to its own hand grip. Maintain the front idle sword grip rotated in space, continuous forearm/wrist/palm, curled fingers and opposing thumb, straight connected handle/guard/blade. Do not copy a fixed screen diagonal from the front to the rotated view.\nEstablished crisp high-resolution SD PIXEL ART as input1: deliberate small pixel clusters, dark colored contours, broad cel-shadow groups, readable bright silver facets, blue cloth and warm brown leather. No smooth3D, painterly style or realistic adult proportions.\nREGISTER TO INPUT1 at generation: square canvas, same original body height and head size. On1254x1254 master hair-top y=125, boot sole baseline y=1180, body height=1056px; if tool returns another resolution use exactly these normalized positions. Preserve same visible head/body ratio and chin/waist/knee levels under rotation. Keep all hair, both soles, guard and blade tips inside with margins; don't stretch limbs to fill canvas. Keep whole body from hair to feet matching image1, not enlarged or shrunk to fit equipment. Preserve clean actual alpha; no labels/watermark/guides.",
+      "transparent_background": true,
+      "inputs": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/variant-1-final.png",
+          "sha256": "a16150f514590ec5bbc1a3e3f2dad99e9cef1a862cb770204dc04112dbde3d6a",
+          "role": "own_front_identity_style_proportions"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/../pixel_8views_v01/images/02_front_right_045.png",
+          "sha256": "973415cd6ebf92cc6bb2d0c0e97085ef52746948d249e09be643e8ee8d5c8491",
+          "role": "historical_corresponding_view_camera_only"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+          "role": "grip_anatomy_only"
+        }
+      ]
+    },
+    {
+      "id": "variant-1-right-090",
+      "prompt": "Use case: identity-preserve / stylized-concept. Produce ONE game character sprite on genuine clean transparent alpha, no floor shadow, no text, no grid. Rotate this EXACT blond young male SD dual-sword warrior from image1 into the requested view; redraw as needed, DO NOT mirror or distort the front.\nINPUT1 = the sole authoritative design, face/expression, head/body proportions, body size/framing and pixel style master for THIS variant. INPUT2 = camera/yaw and physical anatomy orientation ONLY (the historical old warrior view); DO NOT inherit input2's body proportions, face, scale or costume deviations. INPUT3 = grasp anatomy reference ONLY; no armor/design/style transfer.\nEXACT RIGHT-FACING90 DEGREE SIDE PROFILE. Nose projects toward SCREEN RIGHT; exactly ONE eye visible. Head, chest, pelvis, knees and toes all in a TRUE SIDE silhouette, shoulders overlap in depth, chest is seen edge-on with only side armor planes. NOT three-quarter, no second eye, no frontal chest or forward-facing feet.\nBoth feet PLANTED in an idle standing stance, no step, no attack, no dynamic lean. Same camera elevation as input1. Variant1 faithful inheritance: medium compact silver shoulder layers, soft gentle brown eyes and small closed smile; broad original-style blue scarf, short triangular blue waist cloth. Keep EXACT front1 proportions (about3.02 hair-inclusive heads) and armor widths.\nKeep golden-blond spiky layered hair, brown eyes, youthful MALE appearance, silver chest/shoulder/arm armor and gauntlets, cobalt scarf and SHORT lowered hood, brown leather double belts/pouch and trousers, blue waist cloth. Preserve every distinctive outfit shape visible in input1, with physically plausible rotated volume; never add a long cape, helmet, new emblem or new weapon.\nANATOMICAL OWNERSHIP remains fixed: RIGHT HAND holds the single LONGSWORD with blue diagonal blade accents, silver wing guard and ring knuckle guard. LEFT HAND holds the single short angular DAGGER. RIGHT pauldron has the crescent, RIGHT leg has plated silver shin/boot, LEFT leg blue cloth boot with metal protectors. Facing screen right, the anatomical RIGHT side is the NEAR side to viewer, showing the crescent and plated shin; the left blue boot and dagger are FAR side. Allow realistic occlusion in profile; DO NOT add an extra arm/hand to expose a hidden weapon and DO NOT swap sides. Exactly two physical weapons, each naturally attached to its own hand grip. Maintain the front idle sword grip rotated in space, continuous forearm/wrist/palm, curled fingers and opposing thumb, straight connected handle/guard/blade. Do not copy a fixed screen diagonal from the front to the rotated view.\nEstablished crisp high-resolution SD PIXEL ART as input1: deliberate small pixel clusters, dark colored contours, broad cel-shadow groups, readable bright silver facets, blue cloth and warm brown leather. No smooth3D, painterly style or realistic adult proportions.\nREGISTER TO INPUT1 at generation: square canvas, same original body height and head size. On1254x1254 master hair-top y=125, boot sole baseline y=1180, body height=1056px; if tool returns another resolution use exactly these normalized positions. Preserve same visible head/body ratio and chin/waist/knee levels under rotation. Keep all hair, both soles, guard and blade tips inside with margins; don't stretch limbs to fill canvas. Keep whole body from hair to feet matching image1, not enlarged or shrunk to fit equipment. Preserve clean actual alpha; no labels/watermark/guides.",
+      "transparent_background": true,
+      "inputs": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/variant-1-final.png",
+          "sha256": "a16150f514590ec5bbc1a3e3f2dad99e9cef1a862cb770204dc04112dbde3d6a",
+          "role": "own_front_identity_style_proportions"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/../pixel_8views_v01/images/03_right_090.png",
+          "sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+          "role": "historical_corresponding_view_camera_only"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+          "role": "grip_anatomy_only"
+        }
+      ]
+    },
+    {
+      "id": "variant-2-right-045",
+      "prompt": "Use case: identity-preserve / stylized-concept. Produce ONE game character sprite on genuine clean transparent alpha, no floor shadow, no text, no grid. Rotate this EXACT blond young male SD dual-sword warrior from image1 into the requested view; redraw as needed, DO NOT mirror or distort the front.\nINPUT1 = the sole authoritative design, face/expression, head/body proportions, body size/framing and pixel style master for THIS variant. INPUT2 = camera/yaw and physical anatomy orientation ONLY (the historical old warrior view); DO NOT inherit input2's body proportions, face, scale or costume deviations. INPUT3 = grasp anatomy reference ONLY; no armor/design/style transfer.\nRIGHT-FACING FRONT THREE-QUARTER VIEW, about45 degrees yaw. The nose, chest, pelvis, both knees and toes turn toward SCREEN RIGHT as one physical body. Clearly show FRONT chest and near anatomical RIGHT side together, both eyes visible with the far eye narrower. This is an anterior three-quarter, NOT rear view, NOT full profile.\nBoth feet PLANTED in an idle standing stance, no step, no attack, no dynamic lean. Same camera elevation as input1. Variant2 agile dual-weapon warrior: distinctly narrow low-profile pauldrons, tapered narrow waist and slimmer trouser legs, long vertically hanging blue waist cloth, swept-back rhythmic blond spikes, attentive eyes with subtle smile. Keep EXACT front2 proportions (about3.01 hair-inclusive heads), do NOT borrow variant1's broader waist or variant3's heavy build.\nKeep golden-blond spiky layered hair, brown eyes, youthful MALE appearance, silver chest/shoulder/arm armor and gauntlets, cobalt scarf and SHORT lowered hood, brown leather double belts/pouch and trousers, blue waist cloth. Preserve every distinctive outfit shape visible in input1, with physically plausible rotated volume; never add a long cape, helmet, new emblem or new weapon.\nANATOMICAL OWNERSHIP remains fixed: RIGHT HAND holds the single LONGSWORD with blue diagonal blade accents, silver wing guard and ring knuckle guard. LEFT HAND holds the single short angular DAGGER. RIGHT pauldron has the crescent, RIGHT leg has plated silver shin/boot, LEFT leg blue cloth boot with metal protectors. Facing screen right, the anatomical RIGHT side is the NEAR side to viewer, showing the crescent and plated shin; the left blue boot and dagger are FAR side. Allow realistic occlusion in profile; DO NOT add an extra arm/hand to expose a hidden weapon and DO NOT swap sides. Exactly two physical weapons, each naturally attached to its own hand grip. Maintain the front idle sword grip rotated in space, continuous forearm/wrist/palm, curled fingers and opposing thumb, straight connected handle/guard/blade. Do not copy a fixed screen diagonal from the front to the rotated view.\nEstablished crisp high-resolution SD PIXEL ART as input1: deliberate small pixel clusters, dark colored contours, broad cel-shadow groups, readable bright silver facets, blue cloth and warm brown leather. No smooth3D, painterly style or realistic adult proportions.\nREGISTER TO INPUT1 at generation: square canvas, same original body height and head size. On1254x1254 master hair-top y=110, boot sole baseline y=1169, body height=1060px; if tool returns another resolution use exactly these normalized positions. Preserve same visible head/body ratio and chin/waist/knee levels under rotation. Keep all hair, both soles, guard and blade tips inside with margins; don't stretch limbs to fill canvas. Keep whole body from hair to feet matching image1, not enlarged or shrunk to fit equipment. Preserve clean actual alpha; no labels/watermark/guides.",
+      "transparent_background": true,
+      "inputs": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/variant-2-final.png",
+          "sha256": "d2d5ee208e491a1a5270c0c08a3f17cd777715560addfdc2584f01229f0db948",
+          "role": "own_front_identity_style_proportions"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/../pixel_8views_v01/images/02_front_right_045.png",
+          "sha256": "973415cd6ebf92cc6bb2d0c0e97085ef52746948d249e09be643e8ee8d5c8491",
+          "role": "historical_corresponding_view_camera_only"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+          "role": "grip_anatomy_only"
+        }
+      ]
+    },
+    {
+      "id": "variant-2-right-090",
+      "prompt": "Use case: identity-preserve / stylized-concept. Produce ONE game character sprite on genuine clean transparent alpha, no floor shadow, no text, no grid. Rotate this EXACT blond young male SD dual-sword warrior from image1 into the requested view; redraw as needed, DO NOT mirror or distort the front.\nINPUT1 = the sole authoritative design, face/expression, head/body proportions, body size/framing and pixel style master for THIS variant. INPUT2 = camera/yaw and physical anatomy orientation ONLY (the historical old warrior view); DO NOT inherit input2's body proportions, face, scale or costume deviations. INPUT3 = grasp anatomy reference ONLY; no armor/design/style transfer.\nEXACT RIGHT-FACING90 DEGREE SIDE PROFILE. Nose projects toward SCREEN RIGHT; exactly ONE eye visible. Head, chest, pelvis, knees and toes all in a TRUE SIDE silhouette, shoulders overlap in depth, chest is seen edge-on with only side armor planes. NOT three-quarter, no second eye, no frontal chest or forward-facing feet.\nBoth feet PLANTED in an idle standing stance, no step, no attack, no dynamic lean. Same camera elevation as input1. Variant2 agile dual-weapon warrior: distinctly narrow low-profile pauldrons, tapered narrow waist and slimmer trouser legs, long vertically hanging blue waist cloth, swept-back rhythmic blond spikes, attentive eyes with subtle smile. Keep EXACT front2 proportions (about3.01 hair-inclusive heads), do NOT borrow variant1's broader waist or variant3's heavy build.\nKeep golden-blond spiky layered hair, brown eyes, youthful MALE appearance, silver chest/shoulder/arm armor and gauntlets, cobalt scarf and SHORT lowered hood, brown leather double belts/pouch and trousers, blue waist cloth. Preserve every distinctive outfit shape visible in input1, with physically plausible rotated volume; never add a long cape, helmet, new emblem or new weapon.\nANATOMICAL OWNERSHIP remains fixed: RIGHT HAND holds the single LONGSWORD with blue diagonal blade accents, silver wing guard and ring knuckle guard. LEFT HAND holds the single short angular DAGGER. RIGHT pauldron has the crescent, RIGHT leg has plated silver shin/boot, LEFT leg blue cloth boot with metal protectors. Facing screen right, the anatomical RIGHT side is the NEAR side to viewer, showing the crescent and plated shin; the left blue boot and dagger are FAR side. Allow realistic occlusion in profile; DO NOT add an extra arm/hand to expose a hidden weapon and DO NOT swap sides. Exactly two physical weapons, each naturally attached to its own hand grip. Maintain the front idle sword grip rotated in space, continuous forearm/wrist/palm, curled fingers and opposing thumb, straight connected handle/guard/blade. Do not copy a fixed screen diagonal from the front to the rotated view.\nEstablished crisp high-resolution SD PIXEL ART as input1: deliberate small pixel clusters, dark colored contours, broad cel-shadow groups, readable bright silver facets, blue cloth and warm brown leather. No smooth3D, painterly style or realistic adult proportions.\nREGISTER TO INPUT1 at generation: square canvas, same original body height and head size. On1254x1254 master hair-top y=110, boot sole baseline y=1169, body height=1060px; if tool returns another resolution use exactly these normalized positions. Preserve same visible head/body ratio and chin/waist/knee levels under rotation. Keep all hair, both soles, guard and blade tips inside with margins; don't stretch limbs to fill canvas. Keep whole body from hair to feet matching image1, not enlarged or shrunk to fit equipment. Preserve clean actual alpha; no labels/watermark/guides.",
+      "transparent_background": true,
+      "inputs": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/variant-2-final.png",
+          "sha256": "d2d5ee208e491a1a5270c0c08a3f17cd777715560addfdc2584f01229f0db948",
+          "role": "own_front_identity_style_proportions"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/../pixel_8views_v01/images/03_right_090.png",
+          "sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+          "role": "historical_corresponding_view_camera_only"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+          "role": "grip_anatomy_only"
+        }
+      ]
+    },
+    {
+      "id": "variant-3-right-045",
+      "prompt": "Use case: identity-preserve / stylized-concept. Produce ONE game character sprite on genuine clean transparent alpha, no floor shadow, no text, no grid. Rotate this EXACT blond young male SD dual-sword warrior from image1 into the requested view; redraw as needed, DO NOT mirror or distort the front.\nINPUT1 = the sole authoritative design, face/expression, head/body proportions, body size/framing and pixel style master for THIS variant. INPUT2 = camera/yaw and physical anatomy orientation ONLY (the historical old warrior view); DO NOT inherit input2's body proportions, face, scale or costume deviations. INPUT3 = grasp anatomy reference ONLY; no armor/design/style transfer.\nRIGHT-FACING FRONT THREE-QUARTER VIEW, about45 degrees yaw. The nose, chest, pelvis, both knees and toes turn toward SCREEN RIGHT as one physical body. Clearly show FRONT chest and near anatomical RIGHT side together, both eyes visible with the far eye narrower. This is an anterior three-quarter, NOT rear view, NOT full profile.\nBoth feet PLANTED in an idle standing stance, no step, no attack, no dynamic lean. Same camera elevation as input1. Variant3 solid front-line warrior: wide strong silver chest and shoulder layers, substantial forearms, broad sturdy torso and grounded stance, straighter strong brows and calm firm closed mouth. Keep EXACT front3 proportions (about3.18 hair-inclusive heads), do not narrow into variant2, and do not enlarge whole sprite just because armor is broad.\nKeep golden-blond spiky layered hair, brown eyes, youthful MALE appearance, silver chest/shoulder/arm armor and gauntlets, cobalt scarf and SHORT lowered hood, brown leather double belts/pouch and trousers, blue waist cloth. Preserve every distinctive outfit shape visible in input1, with physically plausible rotated volume; never add a long cape, helmet, new emblem or new weapon.\nANATOMICAL OWNERSHIP remains fixed: RIGHT HAND holds the single LONGSWORD with blue diagonal blade accents, silver wing guard and ring knuckle guard. LEFT HAND holds the single short angular DAGGER. RIGHT pauldron has the crescent, RIGHT leg has plated silver shin/boot, LEFT leg blue cloth boot with metal protectors. Facing screen right, the anatomical RIGHT side is the NEAR side to viewer, showing the crescent and plated shin; the left blue boot and dagger are FAR side. Allow realistic occlusion in profile; DO NOT add an extra arm/hand to expose a hidden weapon and DO NOT swap sides. Exactly two physical weapons, each naturally attached to its own hand grip. Maintain the front idle sword grip rotated in space, continuous forearm/wrist/palm, curled fingers and opposing thumb, straight connected handle/guard/blade. Do not copy a fixed screen diagonal from the front to the rotated view.\nEstablished crisp high-resolution SD PIXEL ART as input1: deliberate small pixel clusters, dark colored contours, broad cel-shadow groups, readable bright silver facets, blue cloth and warm brown leather. No smooth3D, painterly style or realistic adult proportions.\nREGISTER TO INPUT1 at generation: square canvas, same original body height and head size. On1254x1254 master hair-top y=92, boot sole baseline y=1195, body height=1104px; if tool returns another resolution use exactly these normalized positions. Preserve same visible head/body ratio and chin/waist/knee levels under rotation. Keep all hair, both soles, guard and blade tips inside with margins; don't stretch limbs to fill canvas. Keep whole body from hair to feet matching image1, not enlarged or shrunk to fit equipment. Preserve clean actual alpha; no labels/watermark/guides.",
+      "transparent_background": true,
+      "inputs": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/variant-3-final.png",
+          "sha256": "a099888f5afc36cc111052edaa929284e8e293836bb9d028a9debe4edce26314",
+          "role": "own_front_identity_style_proportions"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/../pixel_8views_v01/images/02_front_right_045.png",
+          "sha256": "973415cd6ebf92cc6bb2d0c0e97085ef52746948d249e09be643e8ee8d5c8491",
+          "role": "historical_corresponding_view_camera_only"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+          "role": "grip_anatomy_only"
+        }
+      ]
+    },
+    {
+      "id": "variant-3-right-090",
+      "prompt": "Use case: identity-preserve / stylized-concept. Produce ONE game character sprite on genuine clean transparent alpha, no floor shadow, no text, no grid. Rotate this EXACT blond young male SD dual-sword warrior from image1 into the requested view; redraw as needed, DO NOT mirror or distort the front.\nINPUT1 = the sole authoritative design, face/expression, head/body proportions, body size/framing and pixel style master for THIS variant. INPUT2 = camera/yaw and physical anatomy orientation ONLY (the historical old warrior view); DO NOT inherit input2's body proportions, face, scale or costume deviations. INPUT3 = grasp anatomy reference ONLY; no armor/design/style transfer.\nEXACT RIGHT-FACING90 DEGREE SIDE PROFILE. Nose projects toward SCREEN RIGHT; exactly ONE eye visible. Head, chest, pelvis, knees and toes all in a TRUE SIDE silhouette, shoulders overlap in depth, chest is seen edge-on with only side armor planes. NOT three-quarter, no second eye, no frontal chest or forward-facing feet.\nBoth feet PLANTED in an idle standing stance, no step, no attack, no dynamic lean. Same camera elevation as input1. Variant3 solid front-line warrior: wide strong silver chest and shoulder layers, substantial forearms, broad sturdy torso and grounded stance, straighter strong brows and calm firm closed mouth. Keep EXACT front3 proportions (about3.18 hair-inclusive heads), do not narrow into variant2, and do not enlarge whole sprite just because armor is broad.\nKeep golden-blond spiky layered hair, brown eyes, youthful MALE appearance, silver chest/shoulder/arm armor and gauntlets, cobalt scarf and SHORT lowered hood, brown leather double belts/pouch and trousers, blue waist cloth. Preserve every distinctive outfit shape visible in input1, with physically plausible rotated volume; never add a long cape, helmet, new emblem or new weapon.\nANATOMICAL OWNERSHIP remains fixed: RIGHT HAND holds the single LONGSWORD with blue diagonal blade accents, silver wing guard and ring knuckle guard. LEFT HAND holds the single short angular DAGGER. RIGHT pauldron has the crescent, RIGHT leg has plated silver shin/boot, LEFT leg blue cloth boot with metal protectors. Facing screen right, the anatomical RIGHT side is the NEAR side to viewer, showing the crescent and plated shin; the left blue boot and dagger are FAR side. Allow realistic occlusion in profile; DO NOT add an extra arm/hand to expose a hidden weapon and DO NOT swap sides. Exactly two physical weapons, each naturally attached to its own hand grip. Maintain the front idle sword grip rotated in space, continuous forearm/wrist/palm, curled fingers and opposing thumb, straight connected handle/guard/blade. Do not copy a fixed screen diagonal from the front to the rotated view.\nEstablished crisp high-resolution SD PIXEL ART as input1: deliberate small pixel clusters, dark colored contours, broad cel-shadow groups, readable bright silver facets, blue cloth and warm brown leather. No smooth3D, painterly style or realistic adult proportions.\nREGISTER TO INPUT1 at generation: square canvas, same original body height and head size. On1254x1254 master hair-top y=92, boot sole baseline y=1195, body height=1104px; if tool returns another resolution use exactly these normalized positions. Preserve same visible head/body ratio and chin/waist/knee levels under rotation. Keep all hair, both soles, guard and blade tips inside with margins; don't stretch limbs to fill canvas. Keep whole body from hair to feet matching image1, not enlarged or shrunk to fit equipment. Preserve clean actual alpha; no labels/watermark/guides.",
+      "transparent_background": true,
+      "inputs": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/variant-3-final.png",
+          "sha256": "a099888f5afc36cc111052edaa929284e8e293836bb9d028a9debe4edce26314",
+          "role": "own_front_identity_style_proportions"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/../pixel_8views_v01/images/03_right_090.png",
+          "sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+          "role": "historical_corresponding_view_camera_only"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+          "role": "grip_anatomy_only"
+        }
+      ]
+    },
+    {
+      "id": "variant-4-right-045",
+      "prompt": "Use case: identity-preserve / stylized-concept. Produce ONE game character sprite on genuine clean transparent alpha, no floor shadow, no text, no grid. Rotate this EXACT blond young male SD dual-sword warrior from image1 into the requested view; redraw as needed, DO NOT mirror or distort the front.\nINPUT1 = the sole authoritative design, face/expression, head/body proportions, body size/framing and pixel style master for THIS variant. INPUT2 = camera/yaw and physical anatomy orientation ONLY (the historical old warrior view); DO NOT inherit input2's body proportions, face, scale or costume deviations. INPUT3 = grasp anatomy reference ONLY; no armor/design/style transfer.\nRIGHT-FACING FRONT THREE-QUARTER VIEW, about45 degrees yaw. The nose, chest, pelvis, both knees and toes turn toward SCREEN RIGHT as one physical body. Clearly show FRONT chest and near anatomical RIGHT side together, both eyes visible with the far eye narrower. This is an anterior three-quarter, NOT rear view, NOT full profile.\nBoth feet PLANTED in an idle standing stance, no step, no attack, no dynamic lean. Same camera elevation as input1. Variant4 expressive adventuring warrior: asymmetric blond spike groups and swept fringe, one brow subtly lifted and lively confident small smile, asymmetric pointed blue waist cloth and moderate compact shoulder width. Keep EXACT front4 proportions (about3.17 hair-inclusive heads) and distinctive face/hair/waist cloth, no new accessories.\nKeep golden-blond spiky layered hair, brown eyes, youthful MALE appearance, silver chest/shoulder/arm armor and gauntlets, cobalt scarf and SHORT lowered hood, brown leather double belts/pouch and trousers, blue waist cloth. Preserve every distinctive outfit shape visible in input1, with physically plausible rotated volume; never add a long cape, helmet, new emblem or new weapon.\nANATOMICAL OWNERSHIP remains fixed: RIGHT HAND holds the single LONGSWORD with blue diagonal blade accents, silver wing guard and ring knuckle guard. LEFT HAND holds the single short angular DAGGER. RIGHT pauldron has the crescent, RIGHT leg has plated silver shin/boot, LEFT leg blue cloth boot with metal protectors. Facing screen right, the anatomical RIGHT side is the NEAR side to viewer, showing the crescent and plated shin; the left blue boot and dagger are FAR side. Allow realistic occlusion in profile; DO NOT add an extra arm/hand to expose a hidden weapon and DO NOT swap sides. Exactly two physical weapons, each naturally attached to its own hand grip. Maintain the front idle sword grip rotated in space, continuous forearm/wrist/palm, curled fingers and opposing thumb, straight connected handle/guard/blade. Do not copy a fixed screen diagonal from the front to the rotated view.\nEstablished crisp high-resolution SD PIXEL ART as input1: deliberate small pixel clusters, dark colored contours, broad cel-shadow groups, readable bright silver facets, blue cloth and warm brown leather. No smooth3D, painterly style or realistic adult proportions.\nREGISTER TO INPUT1 at generation: square canvas, same original body height and head size. On1254x1254 master hair-top y=126, boot sole baseline y=1186, body height=1061px; if tool returns another resolution use exactly these normalized positions. Preserve same visible head/body ratio and chin/waist/knee levels under rotation. Keep all hair, both soles, guard and blade tips inside with margins; don't stretch limbs to fill canvas. Keep whole body from hair to feet matching image1, not enlarged or shrunk to fit equipment. Preserve clean actual alpha; no labels/watermark/guides.",
+      "transparent_background": true,
+      "inputs": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/variant-4-final.png",
+          "sha256": "ee851c6c6bbd1daf1dbc7b5033267e1bd81e5e7c54a9c5e3a7133c92318dc9aa",
+          "role": "own_front_identity_style_proportions"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/../pixel_8views_v01/images/02_front_right_045.png",
+          "sha256": "973415cd6ebf92cc6bb2d0c0e97085ef52746948d249e09be643e8ee8d5c8491",
+          "role": "historical_corresponding_view_camera_only"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+          "role": "grip_anatomy_only"
+        }
+      ]
+    },
+    {
+      "id": "variant-4-right-090",
+      "prompt": "Use case: identity-preserve / stylized-concept. Produce ONE game character sprite on genuine clean transparent alpha, no floor shadow, no text, no grid. Rotate this EXACT blond young male SD dual-sword warrior from image1 into the requested view; redraw as needed, DO NOT mirror or distort the front.\nINPUT1 = the sole authoritative design, face/expression, head/body proportions, body size/framing and pixel style master for THIS variant. INPUT2 = camera/yaw and physical anatomy orientation ONLY (the historical old warrior view); DO NOT inherit input2's body proportions, face, scale or costume deviations. INPUT3 = grasp anatomy reference ONLY; no armor/design/style transfer.\nEXACT RIGHT-FACING90 DEGREE SIDE PROFILE. Nose projects toward SCREEN RIGHT; exactly ONE eye visible. Head, chest, pelvis, knees and toes all in a TRUE SIDE silhouette, shoulders overlap in depth, chest is seen edge-on with only side armor planes. NOT three-quarter, no second eye, no frontal chest or forward-facing feet.\nBoth feet PLANTED in an idle standing stance, no step, no attack, no dynamic lean. Same camera elevation as input1. Variant4 expressive adventuring warrior: asymmetric blond spike groups and swept fringe, one brow subtly lifted and lively confident small smile, asymmetric pointed blue waist cloth and moderate compact shoulder width. Keep EXACT front4 proportions (about3.17 hair-inclusive heads) and distinctive face/hair/waist cloth, no new accessories.\nKeep golden-blond spiky layered hair, brown eyes, youthful MALE appearance, silver chest/shoulder/arm armor and gauntlets, cobalt scarf and SHORT lowered hood, brown leather double belts/pouch and trousers, blue waist cloth. Preserve every distinctive outfit shape visible in input1, with physically plausible rotated volume; never add a long cape, helmet, new emblem or new weapon.\nANATOMICAL OWNERSHIP remains fixed: RIGHT HAND holds the single LONGSWORD with blue diagonal blade accents, silver wing guard and ring knuckle guard. LEFT HAND holds the single short angular DAGGER. RIGHT pauldron has the crescent, RIGHT leg has plated silver shin/boot, LEFT leg blue cloth boot with metal protectors. Facing screen right, the anatomical RIGHT side is the NEAR side to viewer, showing the crescent and plated shin; the left blue boot and dagger are FAR side. Allow realistic occlusion in profile; DO NOT add an extra arm/hand to expose a hidden weapon and DO NOT swap sides. Exactly two physical weapons, each naturally attached to its own hand grip. Maintain the front idle sword grip rotated in space, continuous forearm/wrist/palm, curled fingers and opposing thumb, straight connected handle/guard/blade. Do not copy a fixed screen diagonal from the front to the rotated view.\nEstablished crisp high-resolution SD PIXEL ART as input1: deliberate small pixel clusters, dark colored contours, broad cel-shadow groups, readable bright silver facets, blue cloth and warm brown leather. No smooth3D, painterly style or realistic adult proportions.\nREGISTER TO INPUT1 at generation: square canvas, same original body height and head size. On1254x1254 master hair-top y=126, boot sole baseline y=1186, body height=1061px; if tool returns another resolution use exactly these normalized positions. Preserve same visible head/body ratio and chin/waist/knee levels under rotation. Keep all hair, both soles, guard and blade tips inside with margins; don't stretch limbs to fill canvas. Keep whole body from hair to feet matching image1, not enlarged or shrunk to fit equipment. Preserve clean actual alpha; no labels/watermark/guides.",
+      "transparent_background": true,
+      "inputs": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/variant-4-final.png",
+          "sha256": "ee851c6c6bbd1daf1dbc7b5033267e1bd81e5e7c54a9c5e3a7133c92318dc9aa",
+          "role": "own_front_identity_style_proportions"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/../pixel_8views_v01/images/03_right_090.png",
+          "sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+          "role": "historical_corresponding_view_camera_only"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+          "role": "grip_anatomy_only"
+        }
+      ]
+    },
+    {
+      "id": "variant-2-right-090",
+      "prompt": "Use case: identity-preserve / stylized-concept. Produce ONE game character sprite on genuine clean transparent alpha, no floor shadow, no text, no grid. Rotate this EXACT blond young male SD dual-sword warrior from image1 into the requested view; redraw as needed, DO NOT mirror or distort the front.\nINPUT1 = the sole authoritative design, face/expression, head/body proportions, body size/framing and pixel style master for THIS variant. INPUT2 = camera/yaw and physical anatomy orientation ONLY (the historical old warrior view); DO NOT inherit input2's body proportions, face, scale or costume deviations. INPUT3 = grasp anatomy reference ONLY; no armor/design/style transfer.\nEXACT RIGHT-FACING90 DEGREE SIDE PROFILE. Nose projects toward SCREEN RIGHT; exactly ONE eye visible. Head, chest, pelvis, knees and toes all in a TRUE SIDE silhouette, shoulders overlap in depth, chest is seen edge-on with only side armor planes. NOT three-quarter, no second eye, no frontal chest or forward-facing feet.\nBoth feet PLANTED in an idle standing stance, no step, no attack, no dynamic lean. Same camera elevation as input1. Variant2 agile dual-weapon warrior: distinctly narrow low-profile pauldrons, tapered narrow waist and slimmer trouser legs, long vertically hanging blue waist cloth, swept-back rhythmic blond spikes, attentive eyes with subtle smile. Keep EXACT front2 proportions (about3.01 hair-inclusive heads), do NOT borrow variant1's broader waist or variant3's heavy build.\nKeep golden-blond spiky layered hair, brown eyes, youthful MALE appearance, silver chest/shoulder/arm armor and gauntlets, cobalt scarf and SHORT lowered hood, brown leather double belts/pouch and trousers, blue waist cloth. Preserve every distinctive outfit shape visible in input1, with physically plausible rotated volume; never add a long cape, helmet, new emblem or new weapon.\nANATOMICAL OWNERSHIP remains fixed: RIGHT HAND holds the single LONGSWORD with blue diagonal blade accents, silver wing guard and ring knuckle guard. LEFT HAND holds the single short angular DAGGER. RIGHT pauldron has the crescent, RIGHT leg has plated silver shin/boot, LEFT leg blue cloth boot with metal protectors. Facing screen right, the anatomical RIGHT side is the NEAR side to viewer, showing the crescent and plated shin; the left blue boot and dagger are FAR side. Allow realistic occlusion in profile; DO NOT add an extra arm/hand to expose a hidden weapon and DO NOT swap sides. Exactly two physical weapons, each naturally attached to its own hand grip. Maintain the front idle sword grip rotated in space, continuous forearm/wrist/palm, curled fingers and opposing thumb, straight connected handle/guard/blade. Do not copy a fixed screen diagonal from the front to the rotated view.\nEstablished crisp high-resolution SD PIXEL ART as input1: deliberate small pixel clusters, dark colored contours, broad cel-shadow groups, readable bright silver facets, blue cloth and warm brown leather. No smooth3D, painterly style or realistic adult proportions.\nREGISTER TO INPUT1 at generation: square canvas, same original body height and head size. On1254x1254 master hair-top y=110, boot sole baseline y=1169, body height=1060px; if tool returns another resolution use exactly these normalized positions. Preserve same visible head/body ratio and chin/waist/knee levels under rotation. Keep all hair, both soles, guard and blade tips inside with margins; don't stretch limbs to fill canvas. Keep whole body from hair to feet matching image1, not enlarged or shrunk to fit equipment. Preserve clean actual alpha; no labels/watermark/guides.\nTARGETED CORRECTION — retain the complete true side profile and slim variant2 identity, but preserve the LARGE HEAD from input1. The previous profile made the head too small. Hair top should be y110 and CHIN y461 on1254 canvas: hair-to-chin about351px (33% of body height), NOT310px. Shoulder y491, belt about660, crotch864, soles1172. Body height1065px. Match FRONT2's vertical head/face mass and torso lengths, only yaw changes. Do not stretch the existing output; draw the same character naturally with that large head. No changes to equipment or style.",
+      "transparent_background": true,
+      "inputs": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/variant-2-final.png",
+          "sha256": "d2d5ee208e491a1a5270c0c08a3f17cd777715560addfdc2584f01229f0db948",
+          "role": "own_front_identity_style_proportions"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/sd_remodel_4_main01-20261109-dbf50341/../pixel_8views_v01/images/03_right_090.png",
+          "sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+          "role": "historical_corresponding_view_camera_only"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+          "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+          "role": "grip_anatomy_only"
+        }
+      ]
+    }
+  ],
+  "initialReturns": [
+    {
+      "id": "variant-1-right-045",
+      "variant": 1,
+      "angle": 45,
+      "promptRecord": "generation-specs.json",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-0bfb0ce7-8c26-4afb-9ac0-24f0938cbed8.png",
+      "file": "variant-1-right-045.png",
+      "tool": "built-in image_gen.imagegen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9 as C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-0bfb0ce7-8c26-4afb-9ac0-24f0938cbed8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "variant-1-right-090",
+      "variant": 1,
+      "angle": 90,
+      "promptRecord": "generation-specs.json",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-412075f9-1ea8-49ed-8ee4-cc1e5599502d.png",
+      "file": "variant-1-right-090.png",
+      "tool": "built-in image_gen.imagegen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9 as C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-412075f9-1ea8-49ed-8ee4-cc1e5599502d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "variant-2-right-045",
+      "variant": 2,
+      "angle": 45,
+      "promptRecord": "generation-specs.json",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-eb093a83-e289-4e7d-bade-d624359acfe4.png",
+      "file": "variant-2-right-045.png",
+      "tool": "built-in image_gen.imagegen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9 as C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-eb093a83-e289-4e7d-bade-d624359acfe4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "variant-2-right-090",
+      "variant": 2,
+      "angle": 90,
+      "promptRecord": "generation-specs.json",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-7a3e2205-1398-45ad-8867-4242707b1739.png",
+      "file": "variant-2-right-090.png",
+      "tool": "built-in image_gen.imagegen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9 as C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-7a3e2205-1398-45ad-8867-4242707b1739.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "variant-3-right-045",
+      "variant": 3,
+      "angle": 45,
+      "promptRecord": "generation-specs.json",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-cc1e2e60-5a51-4920-8c0c-10d54d4a7672.png",
+      "file": "variant-3-right-045.png",
+      "tool": "built-in image_gen.imagegen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9 as C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-cc1e2e60-5a51-4920-8c0c-10d54d4a7672.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "variant-3-right-090",
+      "variant": 3,
+      "angle": 90,
+      "promptRecord": "generation-specs.json",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-7c1ef535-a03e-4438-ae15-caa03d61645b.png",
+      "file": "variant-3-right-090.png",
+      "tool": "built-in image_gen.imagegen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9 as C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-7c1ef535-a03e-4438-ae15-caa03d61645b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "variant-4-right-045",
+      "variant": 4,
+      "angle": 45,
+      "promptRecord": "generation-specs.json",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-85698802-b3c3-48cb-b84d-a644b896dfcf.png",
+      "file": "variant-4-right-045.png",
+      "tool": "built-in image_gen.imagegen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9 as C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-85698802-b3c3-48cb-b84d-a644b896dfcf.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "variant-4-right-090",
+      "variant": 4,
+      "angle": 90,
+      "promptRecord": "generation-specs.json",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-e10f1002-b359-4a26-9892-6544f2b31626.png",
+      "file": "variant-4-right-090.png",
+      "tool": "built-in image_gen.imagegen",
+      "output_hint": "Generated images are saved to C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9 as C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-e10f1002-b359-4a26-9892-6544f2b31626.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "refinement": {
+    "file": "variant-2-right-090.png",
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-08bc6cd9-ec10-4e53-88a4-cd75138580b2.png",
+    "previousCandidate": "candidates/variant-2-right-090-first.png",
+    "reason": "profile head too small versus own front; increased hair-to-chin proportion",
+    "promptRecord": "variant-2-profile-refinement-spec.json",
+    "tool": "built-in image_gen.imagegen"
+  },
+  "finalOutputs": [
+    {
+      "variant": 0,
+      "direction": "front",
+      "file": "original-front.png",
+      "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1215,
+      "footX": 635,
+      "footY": 1231,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\original.png",
+      "sourceSha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+      "sourceBytesMatch": true,
+      "bytes": 992975,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        145,
+        17,
+        993,
+        1232
+      ],
+      "bodyBounds": {
+        "x": 330,
+        "y": 17,
+        "width": 586,
+        "height": 1215
+      },
+      "footAnchor": {
+        "x": 635,
+        "y": 1231,
+        "normalizedX": 0.5063795853269537,
+        "normalizedY": 0.981658692185008
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          417,
+          17,
+          835,
+          510
+        ],
+        "feetAlphaBounds": [
+          447,
+          1100,
+          829,
+          1232
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 366,
+        "hairInclusiveHeadUnits": 3.471
+      },
+      "viewAngle": 0,
+      "facing": "front",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.0,
+        "footYDeltaPx": 0,
+        "hairTopDeltaPx": 0,
+        "hairInclusiveHeadUnitsDelta": 0.0
+      }
+    },
+    {
+      "variant": 0,
+      "direction": "right45",
+      "file": "original-right-045.png",
+      "sha256": "973415cd6ebf92cc6bb2d0c0e97085ef52746948d249e09be643e8ee8d5c8491",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1231,
+      "footX": 638,
+      "footY": 1238,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_8views_v01\\images\\02_front_right_045.png",
+      "sourceSha256": "973415cd6ebf92cc6bb2d0c0e97085ef52746948d249e09be643e8ee8d5c8491",
+      "sourceBytesMatch": true,
+      "bytes": 1006432,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        159,
+        8,
+        1011,
+        1239
+      ],
+      "bodyBounds": {
+        "x": 340,
+        "y": 8,
+        "width": 574,
+        "height": 1231
+      },
+      "footAnchor": {
+        "x": 638,
+        "y": 1238,
+        "normalizedX": 0.5087719298245614,
+        "normalizedY": 0.9872408293460925
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          415,
+          8,
+          829,
+          510
+        ],
+        "feetAlphaBounds": [
+          449,
+          1100,
+          838,
+          1239
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 380,
+        "hairInclusiveHeadUnits": 3.3
+      },
+      "viewAngle": 45,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.01317,
+        "footYDeltaPx": 7,
+        "hairTopDeltaPx": -9,
+        "hairInclusiveHeadUnitsDelta": -0.171
+      }
+    },
+    {
+      "variant": 0,
+      "direction": "right90",
+      "file": "original-right-090.png",
+      "sha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1229,
+      "footX": 580,
+      "footY": 1238,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_8views_v01\\images\\03_right_090.png",
+      "sourceSha256": "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+      "sourceBytesMatch": true,
+      "bytes": 729650,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        382,
+        10,
+        872,
+        1239
+      ],
+      "bodyBounds": {
+        "x": 382,
+        "y": 10,
+        "width": 363,
+        "height": 1229
+      },
+      "footAnchor": {
+        "x": 580,
+        "y": 1238,
+        "normalizedX": 0.4625199362041467,
+        "normalizedY": 0.9872408293460925
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          310,
+          145
+        ],
+        "headAlphaBounds": [
+          382,
+          10,
+          759,
+          510
+        ],
+        "feetAlphaBounds": [
+          433,
+          1100,
+          730,
+          1239
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": true,
+        "chinYEstimated": 365,
+        "hairInclusiveHeadUnits": 3.452
+      },
+      "viewAngle": 90,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.01152,
+        "footYDeltaPx": 7,
+        "hairTopDeltaPx": -7,
+        "hairInclusiveHeadUnitsDelta": -0.019
+      }
+    },
+    {
+      "variant": 1,
+      "direction": "front",
+      "file": "variant-1-front.png",
+      "sha256": "a16150f514590ec5bbc1a3e3f2dad99e9cef1a862cb770204dc04112dbde3d6a",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1057,
+      "footX": 620,
+      "footY": 1181,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\variant-1-final.png",
+      "sourceSha256": "a16150f514590ec5bbc1a3e3f2dad99e9cef1a862cb770204dc04112dbde3d6a",
+      "sourceBytesMatch": true,
+      "bytes": 737567,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        362,
+        125,
+        858,
+        1182
+      ],
+      "bodyBounds": {
+        "x": 390,
+        "y": 125,
+        "width": 443,
+        "height": 1057
+      },
+      "footAnchor": {
+        "x": 620,
+        "y": 1181,
+        "normalizedX": 0.4944178628389155,
+        "normalizedY": 0.9417862838915471
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          426,
+          125,
+          814,
+          510
+        ],
+        "feetAlphaBounds": [
+          462,
+          1100,
+          780,
+          1182
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 474,
+        "hairInclusiveHeadUnits": 3.02
+      },
+      "viewAngle": 0,
+      "facing": "front",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.0,
+        "footYDeltaPx": 0,
+        "hairTopDeltaPx": 0,
+        "hairInclusiveHeadUnitsDelta": 0.0
+      }
+    },
+    {
+      "variant": 1,
+      "direction": "right45",
+      "file": "variant-1-right-045.png",
+      "sha256": "33ee63acea74b3e3f37966a9dd020afcab63417b56cc976d079c999d7d98dd6b",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1050,
+      "footX": 623,
+      "footY": 1172,
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-0bfb0ce7-8c26-4afb-9ac0-24f0938cbed8.png",
+      "sourceSha256": "33ee63acea74b3e3f37966a9dd020afcab63417b56cc976d079c999d7d98dd6b",
+      "sourceBytesMatch": true,
+      "bytes": 691253,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        397,
+        123,
+        844,
+        1173
+      ],
+      "bodyBounds": {
+        "x": 420,
+        "y": 123,
+        "width": 385,
+        "height": 1050
+      },
+      "footAnchor": {
+        "x": 623,
+        "y": 1172,
+        "normalizedX": 0.49681020733652315,
+        "normalizedY": 0.9346092503987241
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          420,
+          123,
+          777,
+          510
+        ],
+        "feetAlphaBounds": [
+          459,
+          1100,
+          785,
+          1173
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 464,
+        "hairInclusiveHeadUnits": 3.07
+      },
+      "viewAngle": 45,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 0.99338,
+        "footYDeltaPx": -9,
+        "hairTopDeltaPx": -2,
+        "hairInclusiveHeadUnitsDelta": 0.05
+      }
+    },
+    {
+      "variant": 1,
+      "direction": "right90",
+      "file": "variant-1-right-090.png",
+      "sha256": "aaabd1b3a0eed3a3566038cec719dc736c4af723166c77346acfd376568cf499",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1086,
+      "footX": 619,
+      "footY": 1183,
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-412075f9-1ea8-49ed-8ee4-cc1e5599502d.png",
+      "sourceSha256": "aaabd1b3a0eed3a3566038cec719dc736c4af723166c77346acfd376568cf499",
+      "sourceBytesMatch": true,
+      "bytes": 588850,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        421,
+        98,
+        828,
+        1184
+      ],
+      "bodyBounds": {
+        "x": 422,
+        "y": 98,
+        "width": 358,
+        "height": 1086
+      },
+      "footAnchor": {
+        "x": 619,
+        "y": 1183,
+        "normalizedX": 0.49362041467304624,
+        "normalizedY": 0.9433811802232854
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          310,
+          145
+        ],
+        "headAlphaBounds": [
+          421,
+          98,
+          785,
+          510
+        ],
+        "feetAlphaBounds": [
+          502,
+          1100,
+          707,
+          1184
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": true,
+        "chinYEstimated": 429,
+        "hairInclusiveHeadUnits": 3.271
+      },
+      "viewAngle": 90,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.02744,
+        "footYDeltaPx": 2,
+        "hairTopDeltaPx": -27,
+        "hairInclusiveHeadUnitsDelta": 0.251
+      }
+    },
+    {
+      "variant": 2,
+      "direction": "front",
+      "file": "variant-2-front.png",
+      "sha256": "d2d5ee208e491a1a5270c0c08a3f17cd777715560addfdc2584f01229f0db948",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1065,
+      "footX": 634,
+      "footY": 1172,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\variant-2-final.png",
+      "sourceSha256": "d2d5ee208e491a1a5270c0c08a3f17cd777715560addfdc2584f01229f0db948",
+      "sourceBytesMatch": true,
+      "bytes": 748581,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        373,
+        108,
+        895,
+        1173
+      ],
+      "bodyBounds": {
+        "x": 410,
+        "y": 108,
+        "width": 430,
+        "height": 1065
+      },
+      "footAnchor": {
+        "x": 634,
+        "y": 1172,
+        "normalizedX": 0.5055821371610846,
+        "normalizedY": 0.9346092503987241
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          438,
+          108,
+          841,
+          510
+        ],
+        "feetAlphaBounds": [
+          476,
+          1100,
+          794,
+          1173
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 461,
+        "hairInclusiveHeadUnits": 3.008
+      },
+      "viewAngle": 0,
+      "facing": "front",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.0,
+        "footYDeltaPx": 0,
+        "hairTopDeltaPx": 0,
+        "hairInclusiveHeadUnitsDelta": 0.0
+      }
+    },
+    {
+      "variant": 2,
+      "direction": "right45",
+      "file": "variant-2-right-045.png",
+      "sha256": "5b99c078eac6d363b610e099cf6b5f10f4854932701ff758cc24d94edf477813",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1073,
+      "footX": 636,
+      "footY": 1176,
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-eb093a83-e289-4e7d-bade-d624359acfe4.png",
+      "sourceSha256": "5b99c078eac6d363b610e099cf6b5f10f4854932701ff758cc24d94edf477813",
+      "sourceBytesMatch": true,
+      "bytes": 733300,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        384,
+        104,
+        876,
+        1177
+      ],
+      "bodyBounds": {
+        "x": 419,
+        "y": 104,
+        "width": 405,
+        "height": 1073
+      },
+      "footAnchor": {
+        "x": 636,
+        "y": 1176,
+        "normalizedX": 0.507177033492823,
+        "normalizedY": 0.937799043062201
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          418,
+          104,
+          795,
+          510
+        ],
+        "feetAlphaBounds": [
+          473,
+          1100,
+          802,
+          1177
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 448,
+        "hairInclusiveHeadUnits": 3.11
+      },
+      "viewAngle": 45,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.00751,
+        "footYDeltaPx": 4,
+        "hairTopDeltaPx": -4,
+        "hairInclusiveHeadUnitsDelta": 0.102
+      }
+    },
+    {
+      "variant": 2,
+      "direction": "right90",
+      "file": "variant-2-right-090.png",
+      "sha256": "b0ce6aca07d820e4d78fc093a25956dcdadf3c9aa1e13ffdbee126a061b77b2a",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1074,
+      "footX": 630,
+      "footY": 1175,
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-08bc6cd9-ec10-4e53-88a4-cd75138580b2.png",
+      "sourceSha256": "b0ce6aca07d820e4d78fc093a25956dcdadf3c9aa1e13ffdbee126a061b77b2a",
+      "sourceBytesMatch": true,
+      "bytes": 596553,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        412,
+        102,
+        814,
+        1176
+      ],
+      "bodyBounds": {
+        "x": 414,
+        "y": 102,
+        "width": 370,
+        "height": 1074
+      },
+      "footAnchor": {
+        "x": 630,
+        "y": 1175,
+        "normalizedX": 0.5023923444976076,
+        "normalizedY": 0.9370015948963317
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          310,
+          145
+        ],
+        "headAlphaBounds": [
+          412,
+          102,
+          792,
+          510
+        ],
+        "feetAlphaBounds": [
+          532,
+          1100,
+          719,
+          1176
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": true,
+        "chinYEstimated": 442,
+        "hairInclusiveHeadUnits": 3.15
+      },
+      "viewAngle": 90,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.00845,
+        "footYDeltaPx": 3,
+        "hairTopDeltaPx": -6,
+        "hairInclusiveHeadUnitsDelta": 0.142
+      }
+    },
+    {
+      "variant": 3,
+      "direction": "front",
+      "file": "variant-3-front.png",
+      "sha256": "a099888f5afc36cc111052edaa929284e8e293836bb9d028a9debe4edce26314",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1106,
+      "footX": 628,
+      "footY": 1196,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\variant-3-final.png",
+      "sourceSha256": "a099888f5afc36cc111052edaa929284e8e293836bb9d028a9debe4edce26314",
+      "sourceBytesMatch": true,
+      "bytes": 890825,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        327,
+        91,
+        936,
+        1197
+      ],
+      "bodyBounds": {
+        "x": 344,
+        "y": 91,
+        "width": 550,
+        "height": 1106
+      },
+      "footAnchor": {
+        "x": 628,
+        "y": 1196,
+        "normalizedX": 0.5007974481658692,
+        "normalizedY": 0.9537480063795853
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          401,
+          91,
+          857,
+          510
+        ],
+        "feetAlphaBounds": [
+          432,
+          1100,
+          820,
+          1197
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 438,
+        "hairInclusiveHeadUnits": 3.178
+      },
+      "viewAngle": 0,
+      "facing": "front",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.0,
+        "footYDeltaPx": 0,
+        "hairTopDeltaPx": 0,
+        "hairInclusiveHeadUnitsDelta": 0.0
+      }
+    },
+    {
+      "variant": 3,
+      "direction": "right45",
+      "file": "variant-3-right-045.png",
+      "sha256": "e111d3c8965be203a79430617aa69097e7caa7a861fee9afaf35dc504626d110",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1121,
+      "footX": 636,
+      "footY": 1191,
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-cc1e2e60-5a51-4920-8c0c-10d54d4a7672.png",
+      "sourceSha256": "e111d3c8965be203a79430617aa69097e7caa7a861fee9afaf35dc504626d110",
+      "sourceBytesMatch": true,
+      "bytes": 844215,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        357,
+        71,
+        910,
+        1192
+      ],
+      "bodyBounds": {
+        "x": 385,
+        "y": 71,
+        "width": 475,
+        "height": 1121
+      },
+      "footAnchor": {
+        "x": 636,
+        "y": 1191,
+        "normalizedX": 0.507177033492823,
+        "normalizedY": 0.9497607655502392
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          425,
+          71,
+          805,
+          510
+        ],
+        "feetAlphaBounds": [
+          439,
+          1100,
+          830,
+          1192
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 407,
+        "hairInclusiveHeadUnits": 3.326
+      },
+      "viewAngle": 45,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.01356,
+        "footYDeltaPx": -5,
+        "hairTopDeltaPx": -20,
+        "hairInclusiveHeadUnitsDelta": 0.148
+      }
+    },
+    {
+      "variant": 3,
+      "direction": "right90",
+      "file": "variant-3-right-090.png",
+      "sha256": "0e42452d690cdbd4e760356bce7fd70fcd436177cd35eaaebc557a65dee8c9d8",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1109,
+      "footX": 625,
+      "footY": 1195,
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-7c1ef535-a03e-4438-ae15-caa03d61645b.png",
+      "sourceSha256": "0e42452d690cdbd4e760356bce7fd70fcd436177cd35eaaebc557a65dee8c9d8",
+      "sourceBytesMatch": true,
+      "bytes": 648147,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        414,
+        87,
+        838,
+        1196
+      ],
+      "bodyBounds": {
+        "x": 420,
+        "y": 87,
+        "width": 346,
+        "height": 1109
+      },
+      "footAnchor": {
+        "x": 625,
+        "y": 1195,
+        "normalizedX": 0.4984051036682616,
+        "normalizedY": 0.9529505582137161
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          310,
+          145
+        ],
+        "headAlphaBounds": [
+          414,
+          87,
+          766,
+          510
+        ],
+        "feetAlphaBounds": [
+          499,
+          1100,
+          717,
+          1196
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": true,
+        "chinYEstimated": 414,
+        "hairInclusiveHeadUnits": 3.381
+      },
+      "viewAngle": 90,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.00271,
+        "footYDeltaPx": -1,
+        "hairTopDeltaPx": -4,
+        "hairInclusiveHeadUnitsDelta": 0.203
+      }
+    },
+    {
+      "variant": 4,
+      "direction": "front",
+      "file": "variant-4-front.png",
+      "sha256": "ee851c6c6bbd1daf1dbc7b5033267e1bd81e5e7c54a9c5e3a7133c92318dc9aa",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1062,
+      "footX": 620,
+      "footY": 1187,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\sd_remodel_4_main01-20261109-dbf50341\\variant-4-final.png",
+      "sourceSha256": "ee851c6c6bbd1daf1dbc7b5033267e1bd81e5e7c54a9c5e3a7133c92318dc9aa",
+      "sourceBytesMatch": true,
+      "bytes": 739545,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        355,
+        126,
+        879,
+        1188
+      ],
+      "bodyBounds": {
+        "x": 390,
+        "y": 126,
+        "width": 445,
+        "height": 1062
+      },
+      "footAnchor": {
+        "x": 620,
+        "y": 1187,
+        "normalizedX": 0.4944178628389155,
+        "normalizedY": 0.9465709728867624
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          443,
+          126,
+          802,
+          510
+        ],
+        "feetAlphaBounds": [
+          460,
+          1100,
+          776,
+          1188
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 460,
+        "hairInclusiveHeadUnits": 3.17
+      },
+      "viewAngle": 0,
+      "facing": "front",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 1.0,
+        "footYDeltaPx": 0,
+        "hairTopDeltaPx": 0,
+        "hairInclusiveHeadUnitsDelta": 0.0
+      }
+    },
+    {
+      "variant": 4,
+      "direction": "right45",
+      "file": "variant-4-right-045.png",
+      "sha256": "549b82e5963bbf66167b9ff1a60f0cdefc60beb7c7468327436681179acc01d5",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1056,
+      "footX": 628,
+      "footY": 1180,
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-85698802-b3c3-48cb-b84d-a644b896dfcf.png",
+      "sourceSha256": "549b82e5963bbf66167b9ff1a60f0cdefc60beb7c7468327436681179acc01d5",
+      "sourceBytesMatch": true,
+      "bytes": 689967,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        396,
+        125,
+        858,
+        1181
+      ],
+      "bodyBounds": {
+        "x": 425,
+        "y": 125,
+        "width": 383,
+        "height": 1056
+      },
+      "footAnchor": {
+        "x": 628,
+        "y": 1180,
+        "normalizedX": 0.5007974481658692,
+        "normalizedY": 0.9409888357256778
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          420,
+          145
+        ],
+        "headAlphaBounds": [
+          445,
+          125,
+          781,
+          510
+        ],
+        "feetAlphaBounds": [
+          476,
+          1100,
+          791,
+          1181
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": false,
+        "chinYEstimated": 450,
+        "hairInclusiveHeadUnits": 3.239
+      },
+      "viewAngle": 45,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 0.99435,
+        "footYDeltaPx": -7,
+        "hairTopDeltaPx": -1,
+        "hairInclusiveHeadUnitsDelta": 0.069
+      }
+    },
+    {
+      "variant": 4,
+      "direction": "right90",
+      "file": "variant-4-right-090.png",
+      "sha256": "deeebb413c196d77845d30dbb183282723d9e1d9ce81b7edda9b0dbb889dd9e8",
+      "width": 1254,
+      "height": 1254,
+      "bodyHeight": 1040,
+      "footX": 621,
+      "footY": 1162,
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-e10f1002-b359-4a26-9892-6544f2b31626.png",
+      "sourceSha256": "deeebb413c196d77845d30dbb183282723d9e1d9ce81b7edda9b0dbb889dd9e8",
+      "sourceBytesMatch": true,
+      "bytes": 541941,
+      "mode": "RGBA",
+      "alphaMinMax": [
+        0,
+        255
+      ],
+      "alpha32Bounds": [
+        412,
+        123,
+        809,
+        1163
+      ],
+      "bodyBounds": {
+        "x": 414,
+        "y": 123,
+        "width": 338,
+        "height": 1040
+      },
+      "footAnchor": {
+        "x": 621,
+        "y": 1162,
+        "normalizedX": 0.49521531100478466,
+        "normalizedY": 0.9266347687400319
+      },
+      "measurement": {
+        "method": "Visual anatomical ROI selection; alpha>=32 hair-top and sole y measurement; manual body-only horizontal silhouette extents and support-center footX estimate; held swords excluded",
+        "headROI": [
+          300,
+          0,
+          600,
+          510
+        ],
+        "feetROI": [
+          420,
+          1100,
+          310,
+          145
+        ],
+        "headAlphaBounds": [
+          412,
+          123,
+          749,
+          510
+        ],
+        "feetAlphaBounds": [
+          513,
+          1100,
+          702,
+          1163
+        ],
+        "bodyXEstimated": true,
+        "footXEstimated": true,
+        "footYAlphaMeasured": true,
+        "bodyYAlphaMeasured": true,
+        "estimated": true,
+        "footYUncertaintyPx": 3,
+        "footXUncertaintyPx": 20,
+        "bodyXUncertaintyPx": 20,
+        "occludedFarFoot": true,
+        "chinYEstimated": 437,
+        "hairInclusiveHeadUnits": 3.302
+      },
+      "viewAngle": 90,
+      "facing": "screen-right",
+      "relativeToOwnFront": {
+        "bodyHeightRatio": 0.97928,
+        "footYDeltaPx": -25,
+        "hairTopDeltaPx": -3,
+        "hairInclusiveHeadUnitsDelta": 0.132
+      }
+    }
+  ],
+  "allNativeBytesPreserved": true,
+  "sourceImagesResampled": false
+}

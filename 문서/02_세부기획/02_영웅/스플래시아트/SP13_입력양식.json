@@ -1,0 +1,56 @@
+{
+  "ruleset_id": "SP13",
+  "ruleset_version": "1.0",
+  "purpose": "스플래시 기획을 작성하는 양식. 생성 API 요청 스키마가 아니다.",
+  "status": "미작성",
+  "work_mode": "통합 스플래시",
+  "concept_one_sentence": "",
+  "character": {
+    "design_master_image": "",
+    "name_or_id": "",
+    "confirmed_role_personality_activity_ability": "",
+    "face_and_body_standard": "기존 확정 디자인 유지. 새 캐릭터는 GC9와 최신 사용자 체형 지시 적용.",
+    "hair_skin_eyes": "",
+    "outfit_and_materials": "",
+    "equipment_count_and_sides": "",
+    "base_palette_to_preserve": [],
+    "pose_gaze_and_action": "",
+    "design_invariants": []
+  },
+  "scene": {
+    "primary_type_id": "",
+    "secondary_type_id_or_null": null,
+    "main_symbol": "",
+    "secondary_motif_families": [],
+    "setting_or_thematic_space": "",
+    "cause_and_effect_between_character_and_scene": "",
+    "actual_additional_characters": [],
+    "allowed_symbolic_creatures_statues_portraits": []
+  },
+  "layers": {"foreground": [], "midground": ["주인공과 주요 행동"], "background": []},
+  "composition": {
+    "main_visual_flow": "",
+    "subject_position_and_scale": "",
+    "camera_and_perspective": "",
+    "ground_contact_or_levitation": "",
+    "face_hand_equipment_readability": "",
+    "intentional_foreground_cropping": ""
+  },
+  "lighting": {"key_direction_and_color": "", "secondary_or_rim_light": "", "environmental_reflection_on_character": ""},
+  "palette": {"background_base": [], "accent_and_usage_area": []},
+  "references_in_attachment_order": [],
+  "output": {
+    "aspect_ratio": "1:1",
+    "aspect_ratio_note": "제공된 원본은 정사각형에 가까운 비율이 중심. 작업 용도에 따라 변경.",
+    "boundary_mode": "밝은 여백 비네트",
+    "requires_actual_alpha": false,
+    "requested_resolution": "",
+    "actual_resolution_after_generation": null,
+    "framing_and_margins": ""
+  },
+  "style": {"character_rules": "GC9 v1.1과 최신 사용자 지정", "face_quality": "C4", "metal_quality": "C3", "background_rules": "SP13 v1.0"},
+  "background_only_if_selected": {"reserved_character_position": "", "reserved_face_and_equipment_area": "", "no_visible_placeholder": true},
+  "final_prompt": "",
+  "generated_output_path": null,
+  "review_result": "미생성"
+}

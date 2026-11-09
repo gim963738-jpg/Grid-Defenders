@@ -1,0 +1,94 @@
+{
+  "profile_id": "balor",
+  "art_source": "host_image",
+  "tool": "built-in image_gen",
+  "comparison": "existing_SD_vs_new_SD",
+  "status": "existing_style_selected",
+  "user_selection": "existing_sd",
+  "requested_views": [
+    "front",
+    "front"
+  ],
+  "resampled": false,
+  "calls": [
+    {
+      "id": "existing_sd_front",
+      "view": "front",
+      "style_variant": "existing_sd",
+      "prompt_file": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/existing_sd_front.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v05/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "output": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/existing_sd_front.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-581a889a-0865-49b4-874d-9885d1ac70ad.png",
+      "started_at": "2026-11-07T14:31:34.903Z",
+      "finished_at": "2026-11-07T14:32:17.374Z",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "8457d9b0caa070bf814ab38a0bb9e288c8f89204364f18e61500b39a878b161a",
+      "copy_matches_generated_original": true,
+      "reference_hashes": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v05/front.png",
+          "sha256": "86491a83f687a767a76aebb153b4b8369a03ed42a0ca94515114bcbd9dba9376"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+          "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/silver-staff-8views-v1/images/01_front_000.png",
+          "sha256": "4834921b9706cf69e25128f886c4413f22db219beae7959cef72ab988b5aad3f"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+          "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a"
+        }
+      ],
+      "user_decision": "selected_design"
+    },
+    {
+      "id": "new_sd_front",
+      "view": "front",
+      "style_variant": "new_sd",
+      "prompt_file": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/new_sd_front.prompt.txt",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/sd_style_test_v01/concept_front_right_v01.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v05/front.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/sd_style_test_v01/inputs/sd_style_reference_02.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png"
+      ],
+      "output": "output/characters/gc9_balor/sd_style_test_v01/front_comparison_v01/new_sd_front.png",
+      "generated_original": "C:/Users/user/.codex/generated_images/01a1b01e-635e-7632-92af-039484dfcd8b/exec-e8752184-fb9c-4ac0-884f-9f59582738b3.png",
+      "started_at": "2026-11-07T14:31:34.903Z",
+      "finished_at": "2026-11-07T14:32:59.454Z",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "4bec8e4931ca330132e980e6c83d5610ffee709f1432a39fcf97904b76b00d2b",
+      "copy_matches_generated_original": true,
+      "reference_hashes": [
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/sd_style_test_v01/concept_front_right_v01.png",
+          "sha256": "b24d769875ce2ec6be8e1b7dd84f8e1656c48cda51bea7131fde387a83bb74a2"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/illustration_3views_v05/front.png",
+          "sha256": "86491a83f687a767a76aebb153b4b8369a03ed42a0ca94515114bcbd9dba9376"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_balor/sd_style_test_v01/inputs/sd_style_reference_02.png",
+          "sha256": "a184cf5dca2230e3af7b6992694f769e5dc5ee0e0d638ef50a255ec19fce1c9a"
+        },
+        {
+          "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+          "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a"
+        }
+      ],
+      "user_decision": "discarded"
+    }
+  ],
+  "user_decision_date": "2026-11-08"
+}
