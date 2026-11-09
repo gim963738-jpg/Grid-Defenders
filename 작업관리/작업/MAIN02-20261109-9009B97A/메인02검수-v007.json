@@ -1,0 +1,48 @@
+{
+    "recordedAt":  "2026-11-09T23:52:26.9461106+09:00",
+    "userAccepted":  false,
+    "observations":  [
+                         "도감은장비다음상단탭,아이템정보/점유모양/조합법확인",
+                         "평상시적정보없음,중보스직전정비에서만탭노출확인",
+                         "창고아래조합접근및열림의재료/결과/모루확인",
+                         "배치왼쪽후열/가운데중열/오른쪽전열의낮은색+라벨확인",
+                         "기존3열과동일셀유지"
+                     ],
+    "phase":  "post_delivery_review",
+    "imagesViewed":  [
+                         "01-normal-equipment.png",
+                         "02-item-codex.png",
+                         "03-combination.png",
+                         "04-deployment-ranks.png",
+                         "05-pre-midboss.png",
+                         "06-enemy-info.png"
+                     ],
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+                          "sha256":  "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49",
+                          "applies":  "메인보고형식v1.2: 상태목록·완료표시,제작/합격/게임반영구분,반환완료후다음행동을실제상태대로안내"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main02\\작업진행방법.md",
+                          "sha256":  "c6d6af0ae2259e43c725ba2ba5e64a716d6afe2edc6f03f5c59d2f1a2d26b121",
+                          "applies":  "main02작업방법: 반환보고와실제이미지를대조하고누락/한계기록. 이기록은현재반환검토이며과거착수증거로소급하지않음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v007\\결과보고.md",
+                          "sha256":  "0ee2f2b1b0ea9190f4ff3e9bf47c729df79902d82430c308a758ddaa47a490e1",
+                          "applies":  "제작자의6장경로/조건부적정보/실제레시피/전중후열방향/샘플수치와미정조건을실제PNG와대조"
+                      }
+                  ],
+    "iteration":  7,
+    "notRetrospectiveStart":  true,
+    "role":  "main02",
+    "task":  "MAIN02-20261109-9009B97A",
+    "limitations":  [
+                        "적표시는기존네임드표본이며신규중보스정체확정아님",
+                        "일부도감아트는기존원본부재로점유도형표시",
+                        "실제게임조합/전투/배치기능검증아닌이미지시안검토",
+                        "독립테스터검증이나사용자최종합격아님"
+                    ],
+    "gameIntegrated":  false
+}

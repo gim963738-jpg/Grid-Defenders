@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-09T19:49:55.781404+09:00",
+  "scope": [
+    "게임/public/assets/dev-image-compare/scalp_face_v03/asset-manifest.json",
+    "게임/public/assets/dev-image-compare/scalp_face_v03/variant-1-front.png",
+    "게임/public/assets/dev-image-compare/scalp_face_v03/variant-2-front.png",
+    "게임/public/assets/dev-image-compare/scalp_face_v03/variant-3-front.png",
+    "게임/public/assets/dev-image-compare/scalp_face_v03/variant-4-front.png",
+    "게임/src/devImageCompare.css",
+    "게임/src/devImageCompare.ts",
+    "게임/src/devImageCompareArt.ts"
+  ],
+  "authorization": "사용자 최신 직접 요청: 이미지 대조 추가해봐",
+  "input": "root/UI source hashes match reviewed patch",
+  "coordination": "main02 msg_b357ae2380e9 explicitly excludes these modules and assets from its image-only output work",
+  "recovery": "Previous main commit aa5554ae0470695e239f5d88dbc2f211bb7cfe6c contains identical baseline; in-memory old bytes retained while applying",
+  "notNewSaveRequest": true
+}

@@ -1,0 +1,398 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 2,
+  "assets": [
+    {
+      "id": "01_arknights",
+      "label": "명일방주",
+      "file": "01_arknights/character.png",
+      "sha256": "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha32": [
+        137,
+        42,
+        1232,
+        1165
+      ],
+      "boundsAlpha1": [
+        23,
+        33,
+        1288,
+        1168
+      ],
+      "bodyHeight": 1123,
+      "hairTop": 42,
+      "sole": 1164,
+      "footX": 470,
+      "footY": 1164,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 10,
+      "headObservation": "hair-inclusive head about 400px, crouched body about 2.8 heads; angular matte SD. Skull crown hidden.",
+      "sourceGame": "명일방주",
+      "sourceReference": "references/arknights/combat-inset-v2.png",
+      "generationInput": "01_arknights/generation-input.json",
+      "rawGeneratedBytesUnmodified": true
+    },
+    {
+      "id": "02_azur_lane",
+      "label": "벽람항로",
+      "file": "02_azur_lane/character.png",
+      "sha256": "f9512cff31b11f94a22dad1fd2aed7c300797d79d5eb5a04180cb30d331b1ae2",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha32": [
+        338,
+        41,
+        1265,
+        995
+      ],
+      "boundsAlpha1": [
+        73,
+        35,
+        1498,
+        998
+      ],
+      "bodyHeight": 954,
+      "hairTop": 41,
+      "sole": 994,
+      "footX": 620,
+      "footY": 994,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 8,
+      "headObservation": "hairTop~chin about 480px; bent pose full body about 2 hair-inclusive heads. Skull crown hidden, not measured.",
+      "sourceGame": "벽람항로",
+      "sourceReference": "references/azur_lane/combat-inset-v2.png",
+      "generationInput": "02_azur_lane/generation-input.json",
+      "rawGeneratedBytesUnmodified": true
+    },
+    {
+      "id": "03_priconne",
+      "label": "프린세스 커넥트 Re:Dive",
+      "file": "03_priconne/character.png",
+      "sha256": "9a31e7627dcc153133481f24fe49a485f33c141a10b839441b9ed7054603ad44",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha32": [
+        276,
+        45,
+        1287,
+        992
+      ],
+      "boundsAlpha1": [
+        41,
+        22,
+        1523,
+        1000
+      ],
+      "bodyHeight": 947,
+      "hairTop": 45,
+      "sole": 991,
+      "footX": 585,
+      "footY": 991,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 10,
+      "headObservation": "revised head hairTop~chin about 410px; crouched body about 2.3 heads. Larger face/skull and shorter limbs than initial 3.2-head candidate; rounded bright SD. Hidden skull not measured.",
+      "sourceGame": "프린세스 커넥트 Re:Dive",
+      "sourceReference": "references/priconne/frame-000.1.png",
+      "generationInput": "03_priconne/rework-input-01.json",
+      "rawGeneratedBytesUnmodified": true
+    },
+    {
+      "id": "04_another_eden",
+      "label": "어나더 에덴",
+      "file": "04_another_eden/character.png",
+      "sha256": "ace368fd00617d2532f62eb68bb95faf6b6745fb5b291780d0b9c9c1468a0428",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha32": [
+        297,
+        35,
+        1296,
+        986
+      ],
+      "boundsAlpha1": [
+        39,
+        28,
+        1484,
+        992
+      ],
+      "bodyHeight": 951,
+      "hairTop": 35,
+      "sole": 985,
+      "footX": 625,
+      "footY": 985,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 10,
+      "headObservation": "hair-inclusive head about 300px, crouched body about 3.2 heads. Compact soft-rendered JRPG figure, hidden skull not measured.",
+      "sourceGame": "어나더 에덴",
+      "sourceReference": "references/another_eden/store-shot-0.jpg",
+      "generationInput": "04_another_eden/generation-input.json",
+      "rawGeneratedBytesUnmodified": true
+    },
+    {
+      "id": "05_reverse1999",
+      "label": "리버스: 1999",
+      "file": "05_reverse1999/character.png",
+      "sha256": "88a029c493ff0a3d250b8b5a992e5730cd8065a60833fd93ed874b5a827f1863",
+      "width": 1182,
+      "height": 1330,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha32": [
+        128,
+        61,
+        1122,
+        1282
+      ],
+      "boundsAlpha1": [
+        78,
+        3,
+        1160,
+        1306
+      ],
+      "bodyHeight": 1221,
+      "hairTop": 61,
+      "sole": 1281,
+      "footX": 480,
+      "footY": 1281,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 10,
+      "headObservation": "hair-inclusive head about 265px, body roughly 4.6 heads. Larger than adult head but slim long lower body. Hidden scalp not measured.",
+      "sourceGame": "리버스: 1999",
+      "sourceReference": "references/reverse1999/extra-store-shot-5.jpg",
+      "generationInput": "05_reverse1999/generation-input.json",
+      "rawGeneratedBytesUnmodified": true
+    },
+    {
+      "id": "06_epic_seven",
+      "label": "에픽세븐",
+      "file": "06_epic_seven/character.png",
+      "sha256": "8aafd36222a81c15e06c228ceadf9bfd74a7e9265b939baf7edc542c75ce3e46",
+      "width": 1131,
+      "height": 1391,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha32": [
+        45,
+        37,
+        1103,
+        1353
+      ],
+      "boundsAlpha1": [
+        25,
+        22,
+        1117,
+        1370
+      ],
+      "bodyHeight": 1316,
+      "hairTop": 37,
+      "sole": 1352,
+      "footX": 425,
+      "footY": 1352,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 10,
+      "headObservation": "hair-inclusive head about 235px, body about 5.6 heads. Fine anime cel adult-leaning proportions, hidden scalp not measured.",
+      "sourceGame": "에픽세븐",
+      "sourceReference": "references/epic_seven/store-shot-1.jpg",
+      "generationInput": "06_epic_seven/generation-input.json",
+      "rawGeneratedBytesUnmodified": true
+    },
+    {
+      "id": "07_counterside",
+      "label": "카운터사이드 원작",
+      "file": "07_counterside/character.png",
+      "sha256": "3b5bd458f6950a1a31c5c9c68a8649e7eee54314fc9e276e9ac8891f3da5cd20",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha32": [
+        54,
+        136,
+        989,
+        1408
+      ],
+      "boundsAlpha1": [
+        0,
+        40,
+        992,
+        1448
+      ],
+      "bodyHeight": 1272,
+      "hairTop": 136,
+      "sole": 1407,
+      "footX": 440,
+      "footY": 1407,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 10,
+      "headObservation": "hair-inclusive head about 205px, body roughly 6.2 heads, slightly less tall than provisional 6.5. Long slim figure, hidden scalp not measured.",
+      "sourceGame": "카운터사이드 원작",
+      "sourceReference": "references/counterside/store-shot-2.jpg",
+      "generationInput": "07_counterside/generation-input.json",
+      "rawGeneratedBytesUnmodified": true
+    },
+    {
+      "id": "08_guardian_tales",
+      "label": "가디언 테일즈",
+      "file": "08_guardian_tales/character.png",
+      "sha256": "ac66fc0e3f67b2d534a6db635210d87defd55080db948608ce5f031bc387e29b",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha32": [
+        139,
+        84,
+        1208,
+        1147
+      ],
+      "boundsAlpha1": [
+        0,
+        25,
+        1298,
+        1199
+      ],
+      "bodyHeight": 1063,
+      "hairTop": 84,
+      "sole": 1146,
+      "footX": 475,
+      "footY": 1146,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 16,
+      "headObservation": "hairTop~chin about 440px; bent pose body about 2.4 hair-inclusive heads, less compressed than planned 2. Pixel-cluster simplification clear. Skull crown hidden.",
+      "sourceGame": "가디언 테일즈",
+      "sourceReference": "references/guardian_tales/frame-022.png",
+      "generationInput": "08_guardian_tales/generation-input.json",
+      "rawGeneratedBytesUnmodified": true
+    },
+    {
+      "id": "09_dfo",
+      "label": "던전앤파이터",
+      "file": "09_dfo/character.png",
+      "sha256": "73360d5954a723ba70323557db37f2947b23bd8be679622ed051fd37724e4579",
+      "width": 1030,
+      "height": 1527,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha32": [
+        57,
+        71,
+        1013,
+        1433
+      ],
+      "boundsAlpha1": [
+        0,
+        15,
+        1015,
+        1503
+      ],
+      "bodyHeight": 1362,
+      "hairTop": 71,
+      "sole": 1432,
+      "footX": 430,
+      "footY": 1432,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 12,
+      "headObservation": "Fine pixel adult-leaning figure about 5.7 hair-inclusive heads in crouch; initial more profile-oriented head preserved and selected rework exposes both eyes at front-right3/4. Hidden scalp not measured.",
+      "sourceGame": "던전앤파이터",
+      "sourceReference": "references/dfo/us-store-shot-3.jpg",
+      "generationInput": "09_dfo/rework-input-01.json",
+      "rawGeneratedBytesUnmodified": true
+    },
+    {
+      "id": "10_odin_sphere",
+      "label": "오딘 스피어 레이브스라시르",
+      "file": "10_odin_sphere/character.png",
+      "sha256": "4f59c7713b7c98860d878388b03365b322346621fe6eb0f99cc87d216d87ceaa",
+      "width": 1199,
+      "height": 1312,
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha32": [
+        65,
+        33,
+        1166,
+        1275
+      ],
+      "boundsAlpha1": [
+        21,
+        0,
+        1169,
+        1312
+      ],
+      "bodyHeight": 1242,
+      "hairTop": 33,
+      "sole": 1274,
+      "footX": 465,
+      "footY": 1274,
+      "measurementMethod": "alpha>=32 support plus manual hair/sole/body review; blades excluded from body height; coordinates native pixels",
+      "measurementEstimated": true,
+      "uncertaintyPixels": 8,
+      "headObservation": "hairTop~chin roughly 225px; bent pose full body about 5.5 hair-inclusive heads, longer than the provisional 4.8-head design. Painted material visible; exact source proportion not guaranteed.",
+      "sourceGame": "오딘 스피어 레이브스라시르",
+      "sourceReference": "references/odin_sphere/official-osl1.jpg",
+      "generationInput": "10_odin_sphere/generation-input.json",
+      "rawGeneratedBytesUnmodified": true
+    }
+  ],
+  "displayRule": "CSS uniform body height / sole baseline; original PNG bytes never resampled/reencoded",
+  "technicalScope": "rendering/proportion exploration, not native sprite delivery or game integration"
+}

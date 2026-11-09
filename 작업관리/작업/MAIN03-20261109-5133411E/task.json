@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "MAIN03-20261109-5133411E",
+  "main": "main03",
+  "branch": "sprites",
+  "title": "발로르 SD 정면·대기사선·오른쪽3종",
+  "request": "사용자 원문: 저거 그럼 대기모션이라고 정리하고 아마 총괄쪽에서 SD 기준 잡아서 정립하라 했을꺼거든 그기준에 따라서 발로르 정면 대기 오른쪽 이렇게 3개 만들어줘\n맥락: 사용자가 보여준 망치여성 그림을 main03가 화면오른쪽3/4 사선 약30~45도로 분석. 사용자는 이를 대기모션으로 이름붙이라고 요청.\n이해확인 제시: 정면0도/대기용 화면오른쪽3/4사선 약45도/화면오른쪽정측면90도 정지이미지3장. 아직 애니메이션프레임수·시간·루프 요청은 없음. 대기는 자세명이며 각도와 구분 기록.\n최신기준: SD-STD-002 신규2안 ID6. 실제 두상/몸비율·얼굴가독성·픽셀표현 참조. 개별발로르 디자인은 승인v02 유지(투구벗음, 갈색머리, 청회눈, 청은갑옷, 노출견갑, 측면사자전신문장, 오른손검/왼손방패, 청색망토/원형핀). 원본일러스트를 단순축소해 SD대체하지 않음.\n캐릭터원본·신규2안은 읽기전용. sprites 전용 신규폴더에 생성원본3PNG/밝고어두운 비교페이지/ZIP/실제프롬프트와해시/검수 제출 예정. 추가애니메이션/전투통합/커밋푸시 제외. 방향별 동일체형·장비실제좌우·발선·화면크기 일관. 정면/대기/오른쪽 이름과0/45/90각도 메타데이터 분리.\n상태: 정면/대기/오른쪽이라는3종의 해석에 사용자확인 대기. 제작지시 아직발송하지않음.",
+  "iteration": 1,
+  "status": "awaiting_user",
+  "createdAt": "2026-11-09T20:44:20.636040+09:00",
+  "approval": {
+    "userQuote": "그렇게 해서 지시전달하면된다",
+    "source": {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\사용자확인-v001.md",
+      "sha256": "d53e3ae63c3b88067968041508d44eb9436984f12405102c9034204e9641c44a"
+    },
+    "recordedBy": "main03",
+    "recordedAt": "2026-11-09T20:46:26.337344+09:00",
+    "iteration": 1,
+    "hashes": {
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\요청확인.md": "3f9483a992b102d4eec3b7aa6e7e0587d91c8ade3715e37eef2f42c130e794bc",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\전문프롬프트.md": "734eb2efbd2d94a70b4c07e8513e1acfd5218fa7da9dcac31bfbf2a37b85bef2",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\2_사전확인.md": "6bfeabca2e6198b074773c26324f73603b0c4dd5a9da7575001747d808d03069",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\규정.md": "054180df089a2d1694430be7dc09e3718b31553e9dfa2904584717bedf5ccc41",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\AGENTS.md": "c768485e0b8b83bbe0f5aa06549a95609ac136babd139918874c3bb1530c44d6",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\작업진행방법.md": "6cfe384d656136b57294d569d88f9028e080f5d42d0cf93c8f1142ea92f87c5d",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인기준.md": "ae864343dd9d44022119501022b85dc7442ab79171d6a947c37f6c06bae2c27a",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인참조\\20261109_신규2안\\승인.json": "39dd7a9765eacb8a4254bb46f1868531ca651258e5f421b511fa1535f2e45303",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-21F94B82\\사용자합격-v002.md": "79340ce4458c744731506a5cdb2d9b357ec6f57f2dd749e5a2a5c344747b4061",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-gc9-retry-20261109-v02\\제작기준.md": "50c279a00859ff78657c51ce3c1e6da7b3fb94dcd2dd13b625b484b1f6ceeefa",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md": "412cf153ca5f906d132c0d2ed9813553e8ee95c97d5dcee23a63574374f53ae2",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\사용자확인-v001.md": "d53e3ae63c3b88067968041508d44eb9436984f12405102c9034204e9641c44a"
+    }
+  },
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-09T20:46:49.141554+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\실제발송영수증.json",
+        "sha256": "72f6ad763d71c90c210cfd48ce6b19a8d604ec92cfa27450d94d804f7fa7ba2f"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-09T20:48:13.008273+09:00",
+      "iteration": 1,
+      "role": "sprites",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\읽기확인-v001-88bf2d10572847a6a038623243f86398.json",
+        "sha256": "e32648b4799e6a492a426cb46be6c5e81cb8478905024f73c1d63f45d0d1b7d6"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-09T21:01:26.655312+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\balor\\sd_three_main03-20261109-5133411e-v01\\보고.md",
+        "sha256": "c38cb257fc41e1c6c9b3a2b5f34b2f233dae271733fd05adbc972e67dab4302d"
+      },
+      "userQuote": ""
+    }
+  ],
+  "readingPolicyVersion": "OPS-004",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인참조\\20261109_신규2안\\승인.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-21F94B82\\사용자합격-v002.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-gc9-retry-20261109-v02\\제작기준.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\사용자확인-v001.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-5133411E\\읽기확인-v001-88bf2d10572847a6a038623243f86398.json",
+    "sha256": "e32648b4799e6a492a426cb46be6c5e81cb8478905024f73c1d63f45d0d1b7d6"
+  },
+  "updatedAt": "2026-11-09T21:01:26.663435+09:00"
+}

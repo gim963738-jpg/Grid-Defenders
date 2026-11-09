@@ -1,0 +1,79 @@
+{
+  "status": "delivered_for_user_review",
+  "gallery": "http://localhost:5173/dev-previews/balor-style1/index.html",
+  "overview": "http://localhost:5173/dev-previews/balor-style1/comparison.png",
+  "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v001",
+  "files": [
+    {
+      "path": "asset-manifest.json",
+      "sha256": "39afeff6435a78e731e9a381295e50cd0128fa19b2c26a4fa44da0dc9c2e0aa7",
+      "bytes": 8343
+    },
+    {
+      "path": "comparison.png",
+      "sha256": "e1d92f60c8d8db067a4627494490238de158b267d38e434c3af4cae1c7b72905",
+      "bytes": 731328
+    },
+    {
+      "path": "front.png",
+      "sha256": "e1c9b2a85b6c2b4198d84d37ef809d65e18bb7611b3173d09685a92a146fc9ae",
+      "bytes": 853700
+    },
+    {
+      "path": "identity-detail-comparison.png",
+      "sha256": "29f34b722cd2f1c91103533ad887dcfbaf25c28ce33b1446e4528e09353be8c3",
+      "bytes": 1389660
+    },
+    {
+      "path": "index.html",
+      "sha256": "b94cd4aed17115ef7a45912f497ae2b0e78bdf137cc0685c7fc48a31595a9fa2",
+      "bytes": 9020
+    },
+    {
+      "path": "references/grip-anatomy.png",
+      "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+      "bytes": 199279
+    },
+    {
+      "path": "references/identity.png",
+      "sha256": "061f23cc26b1f023918288446f9ac025de99bcf32550fb9be3e9850850f496fe",
+      "bytes": 1645282
+    },
+    {
+      "path": "references/style-combat.png",
+      "sha256": "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+      "bytes": 892991
+    },
+    {
+      "path": "references/style-front.png",
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "bytes": 943540
+    },
+    {
+      "path": "report.md",
+      "sha256": "311e6687f26b0eaa13661f31bb82538fab69f4fde8e60dbde8a366bc4728ff76",
+      "bytes": 3860
+    },
+    {
+      "path": "검수.md",
+      "sha256": "a95a6867467a2cbae2d6d3b71f5e103d098cb6c6456aebbf9580cb70b6244a57",
+      "bytes": 5439
+    },
+    {
+      "path": "제작기준.md",
+      "sha256": "2b437992f688e247dae03c3b15ffecccab964ef898f9571ec9d91c79d43c7b16",
+      "bytes": 1701
+    }
+  ],
+  "httpByteChecks": 4,
+  "mainReviewed": [
+    "comparison.png",
+    "report.md",
+    "검수.md"
+  ],
+  "mainObservation": "Main viewed full comparison and equipment detail comparison. Core identity retained; guard curves and pin internals differ. User aesthetic approval pending; game not changed.",
+  "userScreenChanged": false,
+  "gameRuntimeChanged": false,
+  "committed": false,
+  "pushed": false
+}

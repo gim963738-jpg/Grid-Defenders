@@ -1,0 +1,21 @@
+{
+  "task": "MAIN01-20261109-F89105C9",
+  "iteration": 3,
+  "status": "actual_game_integrated_and_verified",
+  "integrationEvidence": "신규2방향-v003-통합결과.json",
+  "runtimeEvidence": "신규2방향-v003-실행검증결과.json",
+  "actualRootBrowserChecks": 48,
+  "actualRootBrowserResult": "PASS",
+  "runtimeExceptions": 0,
+  "independentQAClaimedForThisIteration": false,
+  "rootBuild": "PASS: tsc --noEmit + Vite 801 modules",
+  "mainVisualReview": "Opened actual-root defense-three-directions.png after execution; wave and boss direction/scale checks are in runtime evidence.",
+  "runtimeCatalogAssets": 21,
+  "new2Directions": ["front", "right45", "right90"],
+  "otherNewVariantsRemainFrontOnly": true,
+  "actualCombatUnitArtReplaced": false,
+  "userBrowserOrPanelsOperated": false,
+  "committed": false,
+  "pushed": false,
+  "remaining": ["User visual assessment", "Real-device APK and full portrait battle verification outside scope"]
+}

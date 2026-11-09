@@ -1,0 +1,198 @@
+{
+  "checks": [
+    {
+      "name": "latest integrated root initializes",
+      "passed": true
+    },
+    {
+      "name": "twenty-one assets and nine cards with exact support sets",
+      "passed": true
+    },
+    {
+      "name": "all twenty-one original-size PNG references load",
+      "passed": true
+    },
+    {
+      "name": "runtime manifest references existing front without a duplicate",
+      "passed": true
+    },
+    {
+      "name": "defense 50% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 50% right45 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 50% right90 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 50% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 100% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 100% right45 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 100% right90 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 100% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 200% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 200% right45 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 200% right90 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense 200% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "defense new side view moves without resetting direction or scale",
+      "passed": true
+    },
+    {
+      "name": "defense new1 rejects missing sides without switching variant",
+      "passed": true
+    },
+    {
+      "name": "defense legacy card restores three supported directions",
+      "passed": true
+    },
+    {
+      "name": "defense mixed actor reselect restores new2 group right90 and200%",
+      "passed": true
+    },
+    {
+      "name": "new2 front right45 right90 support separate click and card-drag placements",
+      "passed": true
+    },
+    {
+      "name": "new3 retains front-only guard and selected identity",
+      "passed": true
+    },
+    {
+      "name": "new4 retains front-only guard and selected identity",
+      "passed": true
+    },
+    {
+      "name": "new group support help matches actual mixed catalog",
+      "passed": true
+    },
+    {
+      "name": "direction previews leave gold actual roster and saved battle unchanged except normal timestamp",
+      "passed": true
+    },
+    {
+      "name": "delete selected side-test actor only",
+      "passed": true
+    },
+    {
+      "name": "closing retains drawings and releases field input",
+      "passed": true
+    },
+    {
+      "name": "actual unit summon works after closing direction tool",
+      "passed": true
+    },
+    {
+      "name": "boss transition clears preview and panel",
+      "passed": true
+    },
+    {
+      "name": "boss 50% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 50% right45 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 50% right90 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 50% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 100% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 100% right45 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 100% right90 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 100% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 200% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 200% right45 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 200% right90 exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss 200% front exact image fixed sole uniform ratio and selection isolation",
+      "passed": true
+    },
+    {
+      "name": "boss new side view moves without resetting direction or scale",
+      "passed": true
+    },
+    {
+      "name": "boss new1 rejects missing sides without switching variant",
+      "passed": true
+    },
+    {
+      "name": "boss legacy card restores three supported directions",
+      "passed": true
+    },
+    {
+      "name": "boss mixed actor reselect restores new2 group right90 and200%",
+      "passed": true
+    },
+    {
+      "name": "320px new2 side card stays reachable without shrinking touch target",
+      "passed": true
+    },
+    {
+      "name": "320px new2 side direction options remain enabled",
+      "passed": true
+    },
+    {
+      "name": "wave return clears boss direction previews",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "result": "PASS"
+}

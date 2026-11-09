@@ -1,0 +1,11 @@
+{
+  "policy": "작업관리/진행승인규칙.md",
+  "acknowledgements": {
+    "main02": {"messageId": "msg_a5e4ec0c45fc", "readFullPolicy": true, "appliedDefaultWaitUntilExplicitProceed": true},
+    "main03": {"messageId": "msg_df08aa1d54a9", "readFullPolicy": true, "appliedDefaultWaitUntilExplicitProceed": true, "forwardedTo": ["sprites", "splash"]},
+    "characters": {"messageId": "msg_1ef58bc3dd1b", "readFullPolicy": true, "appliedDefaultWaitUntilExplicitProceed": true, "current40ContinuesOnUserProceed": true}
+  },
+  "evidenceSource": "orca orchestration check --run run_47ce1a81d7b1",
+  "committed": false,
+  "pushed": false
+}

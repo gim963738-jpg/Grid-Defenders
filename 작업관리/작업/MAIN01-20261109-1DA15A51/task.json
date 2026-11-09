@@ -5,22 +5,22 @@
   "branch": "qa",
   "title": "이미지 대조 실제 게임 통합 독립 검증",
   "request": "사용자가 직접 요청·구체화한 개발자 이미지 대조/전장배치/배치후크기조절/45·90방향의 실제 게임 통합을 독립 기술 검증한다. 원 제작 작업 MAIN01-20261109-F89105C9.",
-  "iteration": 1,
+  "iteration": 2,
   "status": "awaiting_user",
   "createdAt": "2026-11-09T18:17:52.172802+09:00",
   "approval": {
-    "userQuote": "전장에 직접 병사나 영웅처럼 배치할수있게 해주고 배치가 되어도 캐릭터 크기조정할수있게 기능도 추가해서만들어줘",
+    "userQuote": "이미지 대조 추가해봐",
     "source": {
-      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자확인.md",
-      "sha256": "f8dd71ecda5a65ef51a14bea8b2d77ba224bf6da6c26722928a2f74b099dab53"
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자신규4안추가-v002.md",
+      "sha256": "be55dfe6d20e3fa31becaa8897d78a41e6810441cec707fc7f651d2728fb07dd"
     },
     "recordedBy": "main01",
-    "recordedAt": "2026-11-09T18:17:52.216813+09:00",
-    "iteration": 1,
+    "recordedAt": "2026-11-09T19:50:58.178816+09:00",
+    "iteration": 2,
     "hashes": {
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\요청확인.md": "726f3c746306a68562104fc39e84ae3f4e1aa5c733afbdf54543ce687e90d48e",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\전문프롬프트.md": "5f9904fdbbfa47c592411619d45dea31d6ec9656c31f8be19aa8666037eeabc4",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\2_사전확인.md": "af28209702e29713cd1fe31eebbcd33996822e6e2fc2bd8b4b0784460dc6031c",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\요청확인.md": "be55dfe6d20e3fa31becaa8897d78a41e6810441cec707fc7f651d2728fb07dd",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\전문프롬프트.md": "98c70238bc5d28254307529692f0c1cc2021daf77b318790396277ac99c6bde2",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\2_사전확인.md": "8f717d9d37ec4fa28ece7baf0e2a1a07e671bf62b1683046860115981abba149",
       "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
       "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\규정.md": "afeeb75712ebaf5123392ec531b991b51fb932f2499e61b7af7c89bf7bb38458",
       "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\AGENTS.md": "db85907459edfe3491f1ae2e9f07355e24bf0ca7c57ba69acdc3342ad1d7461b",
@@ -32,10 +32,11 @@
       "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
       "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
       "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자확인.md": "f8dd71ecda5a65ef51a14bea8b2d77ba224bf6da6c26722928a2f74b099dab53",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\통합사전확인.json": "ad3aa97b7f70c8adb61f6d1271523d173c0b60e1abd5e1c2eb47c4372f11438c",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\통합결과.json": "e0fc1264d8e808076d76424c6bfbdc15edebb1b4c68ef5ed2825552c61657b88",
-      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\검증.md": "95e6a6b65f72098087017734fb55345f8e207c7f907873176c57c47259397c05"
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자신규4안추가-v002.md": "be55dfe6d20e3fa31becaa8897d78a41e6810441cec707fc7f651d2728fb07dd",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\신규4안-v002-통합사전확인.json": "85e04f69f6bc6985717454871045093f3a5500c0030be32bd32459ff99f22933",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\신규4안-v002-통합결과.json": "99f1c70899f5075aefa2daadf13686ad0c6a0bb23a8dfe9c7aed17fd9fea33ea",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\검증.md": "86dc6da462d7e5eb22c4ec590ee8ac8b818c005127cde71475e1efc470d54d89"
     }
   },
   "history": [
@@ -68,18 +69,59 @@
         "sha256": "b3111f30fa1b43dd9c4cb206ccede20338fe9c989b760ef982c32a8c2b377bff"
       },
       "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-09T19:50:58.141807+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자신규4안추가-v002.md",
+        "sha256": "be55dfe6d20e3fa31becaa8897d78a41e6810441cec707fc7f651d2728fb07dd"
+      },
+      "userQuote": "이미지 대조 추가해봐"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-09T19:51:01.084574+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\신규4안-v002-QA실제발송영수증.json",
+        "sha256": "e70d4b3fbb299a6349e5c0cc4eb6fcc66b144636510ede620808886697cadb13"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-09T19:51:47.797804+09:00",
+      "iteration": 2,
+      "role": "qa",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\읽기확인-v002-262528782aab491bb36848572c3b5469.json",
+        "sha256": "d7bf203d7b973cc4838d2eb0e037204bc8a9ed2efc25074a313cbe0a2dd5a218"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-09T19:57:02.812444+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\MAIN01-20261109-1DA15A51\\v002-scalp\\report.md",
+        "sha256": "c61c19229e76fe2c22eaf53d12623194b00a9acfa14390bad7344ff92ac22604"
+      },
+      "userQuote": ""
     }
   ],
   "readingPolicyVersion": "OPS-004",
   "additionalReadings": [
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자확인.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\통합사전확인.json",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\통합결과.json",
-    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\검증.md"
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자신규4안추가-v002.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\신규4안-v002-통합사전확인.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\신규4안-v002-통합결과.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp\\검증.md"
   ],
   "readingAcknowledgement": {
-    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\읽기확인-v001-5d2ead99868b435a81bf71a0a349e423.json",
-    "sha256": "ef7d0c72c2c859e911e6d0a63e0083f9eebcba07847a784f2c6abb818593e429"
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\읽기확인-v002-262528782aab491bb36848572c3b5469.json",
+    "sha256": "d7bf203d7b973cc4838d2eb0e037204bc8a9ed2efc25074a313cbe0a2dd5a218"
   },
-  "updatedAt": "2026-11-09T18:31:01.285783+09:00"
+  "updatedAt": "2026-11-09T19:57:02.814444+09:00"
 }

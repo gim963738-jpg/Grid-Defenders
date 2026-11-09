@@ -1,0 +1,68 @@
+{
+  "role": "main01",
+  "iteration": 2,
+  "at": "2026-11-10T00:44:04.630859+09:00",
+  "scope": "수정하달 전 필독 및 승인·충돌·보존 확인",
+  "documents": [
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\AGENTS.md",
+      "sha256": "5a2ad5222a81a6f6c88698429a9f419276ffd9bc157520444e97ccd174ff3032",
+      "applies": "승인된 제작만 해당 분야에 위임하고 화면/게임을 임의 편집하지 않음. 정지 원화이므로 전투효과/모바일 구현은 제외. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main01\\작업진행방법.md",
+      "sha256": "16e3521eab2fb09494279459c8f7fef7593c1a7eef1a9ec359403d78030a12eb",
+      "applies": "메인 자체 필독·사전확인 근거를 남기고 담당의 이번 작업 ACK/start를 별도 확인. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "sha256": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "applies": "사용자 정정과 진행 원문·원본/예비 구분을 전문지시에 연결, 실질5종 기록 제출. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "sha256": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "applies": "같은 캐릭터 담당의 공식 Dispatch를 재사용하고 영수증 기록, 중복 편집 금지. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "sha256": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "applies": "캐릭터 팀장이 결과/검수를 취합, 필요한 하위 업무에도 필독 전달, 사용자 최종 합격 유지. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "sha256": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "applies": "새 캐릭터 output만 허용, 게임/UI/타팀 원본은 읽기전용. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "sha256": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "applies": "new/set-readings/confirm/prepare/실제 sent/새 read-pack/start/returned를 구분. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "sha256": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "applies": "characters 팀장에게 외형 작업 위임, 기존 전문 부서를 임의 재편하지 않음. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "sha256": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "applies": "세계관/캐릭터 자료 분류와 제작 담당 조직을 구분. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "sha256": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "applies": "세계관/캐릭터 소속으로 분류하고 원본 경로 유지. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+      "sha256": "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49",
+      "applies": "상태 목록과 마지막 실제 다음 행동, 송신과 수신·착수 구분. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "sha256": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+      "applies": "이번 사용자 실제 진행을 해당 범위로만 기록, 과거 반려 작업 재개 승인으로 확대하지 않음. 이번 차수2의 좌우폭 수정·반려본 보존에 적용."
+    }
+  ]
+}

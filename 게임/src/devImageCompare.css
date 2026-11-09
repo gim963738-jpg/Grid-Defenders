@@ -20,3 +20,7 @@
 #dev-image-compare-layer .compare-actor span{position:absolute;left:50%;top:100%;transform:translate(-50%,2px);font:12px/16px sans-serif;background:#152725dc;padding:0 3px;white-space:nowrap;pointer-events:none}
 #dev-image-compare-layer .compare-actor[data-selected=true]{outline:2px solid #ffdc55;border-radius:5px}
 #dev-image-compare-layer .compare-actor[data-selected=true] img{filter:drop-shadow(0 0 2px #ffdc55)}
+
+#dev-image-compare-panel .compare-groups{display:flex;gap:8px;margin:8px 0}
+#dev-image-compare-panel .compare-groups button{flex:1}
+#dev-image-compare-panel .compare-cards button[hidden]{display:none}

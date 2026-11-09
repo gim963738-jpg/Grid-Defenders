@@ -1,0 +1,70 @@
+{
+    "iteration":  9,
+    "phase":  "pre_dispatch_planning",
+    "workSummary":  "이번차수본문재독/최신실제진행과정지정비정보표현연구를적용. 옛TFT전장비율안폐기,스킬1/4아이콘및단일설명창·정보조회/집기분리·6전체화면. ui제작자ACK/start를대신하지않는main02현재사전검토.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인02\\AGENTS.md",
+                          "sha256":  "edf116902f8cc59beda541db688a4b83fe76e871b895635cece9dd35f33edc2e",
+                          "applies":  "main02기획·전문지시,UI편집은전문공간,공통규격유지,현차수필독/원본보존"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main02\\작업진행방법.md",
+                          "sha256":  "c6d6af0ae2259e43c725ba2ba5e64a716d6afe2edc6f03f5c59d2f1a2d26b121",
+                          "applies":  "본문재독·최신정정및실제진행승인기록,현재사전기록과전문지시후발송/ACK/start연결"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+                          "applies":  "실제확인된차수8범위만,원본보존/수정차수분리/제작합격통합구분"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+                          "applies":  "종료확인된기존UIworker에공식send,영수증기록후턴종료,폴링중복편집없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+                          "applies":  "UI팀장담당경계/확인된전문범위직접수행,별도AI신설없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "게임src·공통CSS·타메인파일은읽기전용,독립UI출력만"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "revise/set-readings/confirm/prepare/sent후담당read-pack/start,예전ACK재사용금지"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+                          "applies":  "main02담당/수신ui팀장/qa독립역할보존"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "자료분류와조직구분,기존원본위치이동없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "기존ui외부분야역할,몬스터새원본제작하지않음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+                          "sha256":  "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49",
+                          "applies":  "v1.2상태목록과실제단계·다음행동마지막안내,하달/착수/합격구분"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+                          "sha256":  "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+                          "applies":  "이번실제그렇게진행으로차수8승인,과거예외와분리"
+                      }
+                  ],
+    "recordedAt":  "2026-11-10T00:49:08.2422016+09:00",
+    "role":  "main02",
+    "task":  "MAIN02-20261109-9009B97A"
+}

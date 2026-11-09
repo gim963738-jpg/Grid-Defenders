@@ -1,0 +1,321 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "iteration": 2,
+  "scope": "10 actual-game-based variants TOTAL; not 20media/40assets; proportions may change",
+  "games": [
+    {
+      "id": "01_arknights",
+      "game": "명일방주",
+      "gameKey": "arknights",
+      "sourcePage": "https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights&hl=en",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": null,
+      "reference": "references/arknights/combat-inset-v2.png",
+      "referenceSha256": "d73a403815accba026a3ef8070586b6f9f87f271eb030cf197ffcc028d83ee27",
+      "nativeDimensions": [
+        1360,
+        680
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "공식 스토어 홍보물 오른쪽 인셋의 배치 타일·적 카운터·전투 중 오퍼레이터. 왼쪽 큰 일러스트는 제외.",
+      "proportionsSilhouette": "큰 머리와 작은 몸통, 짧지만 분리되는 장화. 화면상 머리 포함 약 2.5~3두신으로 보이나 가림과 원근이 있어 추정.",
+      "line": "가늘고 어두운 색 외곽과 비교적 각진 헤어/옷 덩어리.",
+      "shadingMaterial": "광택을 적게 쓴 매트한 어두운 색면, 작은 밝은 면으로 재질 구분.",
+      "smallSizeSimplification": "눈과 헤어 외곽, 의상의 큰 명도 구획으로 식별. 작은 장식은 뭉침.",
+      "transferIntoOurCharacter": "짧고 각진 SD, 매트한 청/은 면과 절제한 하이라이트. 우리 갑옷과 쌍수 자세 유지.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://play-lh.googleusercontent.com/dIRo98UsCs97OACxqBZTC1a3BlyY_aut0d023r1ciWxt4QqiUG94zjxR5WBLTqO6rk21osLGmvCeq1QrqHKOWg=s0",
+      "originalFullSource": "references/arknights/play-shot13.png",
+      "sourceDerivation": {
+        "method": "ffmpeg crop only; no scaling or perspective correction",
+        "roiXYWH": [
+          1160,
+          145,
+          1360,
+          680
+        ],
+        "initialCropPreserved": "combat-inset.png",
+        "limitation": "홍보 인셋의 작고 가려진 전투 몸체; 정확한 계측 불가. 벽람 패널 기울기는 보정하지 않음."
+      }
+    },
+    {
+      "id": "02_azur_lane",
+      "game": "벽람항로",
+      "gameKey": "azur_lane",
+      "sourcePage": "https://play.google.com/store/apps/details?id=com.YoStarEN.AzurLane&hl=en&gl=US",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": null,
+      "reference": "references/azur_lane/combat-inset-v2.png",
+      "referenceSha256": "026b2c179fbfdbf491831807948a156550c4d3467ed90fc2f4a8b4e1c3f65fdd",
+      "nativeDimensions": [
+        860,
+        540
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "공식 스토어 홍보물 아래쪽 전투 인셋: 해상 적·체력바·조작 UI와 3명의 작은 전투 캐릭터. 위 성인 일러스트/중간 편성창 제외.",
+      "proportionsSilhouette": "머리가 몸 전체의 거의 절반인 극단 SD, 짧은 손발과 넓은 얼굴. 기울어진 홍보 패널이므로 정확한 등신 실측 불가.",
+      "line": "또렷한 얇은 갈색/짙은 외곽과 둥근 작은 실루엣.",
+      "shadingMaterial": "밝고 선명한 셀 면, 머리/눈의 작은 광택, 제한된 어두운 부분.",
+      "smallSizeSimplification": "매우 큰 눈과 큰 머리색, 짧은 신체를 한 덩어리로 읽음.",
+      "transferIntoOurCharacter": "머리 큰 약2두신과 매우 짧은 팔다리, 밝은 금/청/은의 선명한 면. 자세/장비는 원형 유지.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://play-lh.googleusercontent.com/zShGFLbgy1LaMbNI1lBFeAKKFWLG-W5t4h-UaWNv6q0iKGdfozdm62HkMI5uKi6SAyj18aoeCPS8kQIWiZhnGA=s0",
+      "originalFullSource": "references/azur_lane/play-shot13.png",
+      "sourceDerivation": {
+        "method": "ffmpeg crop only; no scaling or perspective correction",
+        "roiXYWH": [
+          325,
+          1360,
+          860,
+          540
+        ],
+        "initialCropPreserved": "combat-inset.png",
+        "limitation": "홍보 인셋의 작고 가려진 전투 몸체; 정확한 계측 불가. 벽람 패널 기울기는 보정하지 않음."
+      },
+      "linkAccessNote": "국가 미지정 GooglePlay URL은 재검증 시404, gl=US의 동일 공식 앱 페이지는200. 원본미디어200."
+    },
+    {
+      "id": "03_priconne",
+      "game": "프린세스 커넥트 Re:Dive",
+      "gameKey": "priconne",
+      "sourcePage": "https://priconne-redive.jp/about/",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": 0.1,
+      "reference": "references/priconne/frame-000.1.png",
+      "referenceSha256": "2960f70fc84738f5ec98a133150eb58fd12da7ccb559321c990d54634c9d131d",
+      "nativeDimensions": [
+        576,
+        324
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "공식 소개 페이지 전투 영상 0.1초. Wave2/3·HP·적 골렘과 파티 전투 스프라이트. 필살기 컷인 프레임은 제외.",
+      "proportionsSilhouette": "짧은 몸통에 둥근 큰 얼굴, 벽람보다 다리와 갑옷 분리가 더 읽히는 SD. 약2.5~3두신의 시각적 범위.",
+      "line": "가는 갈색 테두리, 부드럽고 둥근 헤어/갑옷 윤곽.",
+      "shadingMaterial": "밝은 파스텔에 가까운 밝은 면과 단순한 셀 그림자, 깨끗한 흰 하이라이트.",
+      "smallSizeSimplification": "둥근 볼·큰 눈·헤어색과 무기의 큰 실루엣을 우선.",
+      "transferIntoOurCharacter": "벽람의 극단SD보다 긴 종아리와 분리된 몸통, 밝은 둥근 애니 SD.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://priconne-redive.jp/_app/immutable/assets/sytem_battle_mov.D60HnmKq.mp4",
+      "sourceDerivation": {
+        "method": "ffmpeg -ss 0.1, one native-size frame, no scaling",
+        "originalFullSource": "references/priconne/battle-video.mp4"
+      }
+    },
+    {
+      "id": "04_another_eden",
+      "game": "어나더 에덴",
+      "gameKey": "another_eden",
+      "sourcePage": "https://store.steampowered.com/app/1252600/ANOTHER_EDEN/",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": null,
+      "reference": "references/another_eden/store-shot-0.jpg",
+      "referenceSha256": "7e2c87dface33f3a1b68a3defa8d6abdbedbc06ba7b1e4f465c5b71af8075a16",
+      "nativeDimensions": [
+        1920,
+        1080
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "공식 Steam 전투 화면. 오른쪽 파티·왼쪽 적·Attack와 상태 UI. 스탠딩 일러스트가 아닌 전투 몸체.",
+      "proportionsSilhouette": "큰 머리, 짧고 안정된 허리, 가늘고 짧은 다리. 약3두신 전후로 보이나 자세와 헤어를 포함한 추정.",
+      "line": "가늘고 갈색을 띠는 외곽, 둥글면서 끝이 정리된 형태.",
+      "shadingMaterial": "채도 낮은 중간색과 부드러운 작은 음영 면, 과한 번쩍임 없음.",
+      "smallSizeSimplification": "헤어 덩어리·부츠·무기 외곽이 먼저 읽히고 의상 주름은 축약.",
+      "transferIntoOurCharacter": "짧은 JRPG 전투 비율과 차분한 색 외곽/절제된 재질을 사용.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1252600/ss_f999e7f4ed886c3f158ec1ff67b138387d90a2cc.1920x1080.jpg?t=1787297277"
+    },
+    {
+      "id": "05_reverse1999",
+      "game": "리버스: 1999",
+      "gameKey": "reverse1999",
+      "sourcePage": "https://store.steampowered.com/app/3092660/Reverse_1999/",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": null,
+      "reference": "references/reverse1999/extra-store-shot-5.jpg",
+      "referenceSha256": "3ca10da90e1a472425d22be63ee0077e473a5c937c35ac382a63c968e5ca5bea",
+      "nativeDimensions": [
+        1920,
+        1080
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "공식 Steam Wave/Round·카드 손패·적/아군이 함께 있는 전투 화면. 의상창·로비는 제외.",
+      "proportionsSilhouette": "상대적으로 큰 머리와 가늘고 늘씬한 하체가 공존하는 중간 비율. 약4두신 계열의 시각적 추정.",
+      "line": "약하고 가는 갈색 경계, 큰 윤곽 위주로 내부선 절제.",
+      "shadingMaterial": "저채도 크림/회색 계열과 매트한 넓은 면, 재질의 강한 번쩍임보다 명도 구획.",
+      "smallSizeSimplification": "얼굴과 긴 다리 실루엣, 의상 덩어리를 분리하며 미세 금속선 축약.",
+      "transferIntoOurCharacter": "약4두신의 가는 하체, 저채도 매트 면/약한 경계. 종이·수채 효과를 임의 추가하지 않음.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3092660/ss_b49b4ca8cdea823e11be5ced047104c7805e1257.1920x1080.jpg?t=1793884285"
+    },
+    {
+      "id": "06_epic_seven",
+      "game": "에픽세븐",
+      "gameKey": "epic_seven",
+      "sourcePage": "https://store.steampowered.com/app/5019180/Epic_Seven/",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": null,
+      "reference": "references/epic_seven/store-shot-1.jpg",
+      "referenceSha256": "28e04384f6367d5875eb93607aa366db1a39bf053b66ad7a73f8f7ca3a1242cf",
+      "nativeDimensions": [
+        1920,
+        1080
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "공식 Steam 전투 화면. 보스 HP·스킬 버튼·전투 중 파티의 전신. 하단 큰 캐릭터 컷인은 분석에서 제외.",
+      "proportionsSilhouette": "성인형에 가까운 긴 팔다리와 작은 허리, 머리는 일반 성인보다 약간 강조. 약5~6두신 관찰 범위.",
+      "line": "선명한 가는 애니메이션 펜선과 예리한 머리/갑옷 끝.",
+      "shadingMaterial": "또렷한 셀 그림자와 밝은 금속 하이라이트, 매끈한 색면.",
+      "smallSizeSimplification": "긴 다리와 무기 방향을 남기고 소품은 묶음으로 읽힘. 작은 표시에서 얼굴 세부는 줄어듦.",
+      "transferIntoOurCharacter": "중장신 애니 비율과 명확한 셀 면/가는 선. 우리 SD원형의 옷과 장비는 유지.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5019180/5a0706801756b9841f84fac9d0428bbf4a11e69c/ss_5a0706801756b9841f84fac9d0428bbf4a11e69c.1920x1080.jpg?t=1793256460"
+    },
+    {
+      "id": "07_counterside",
+      "game": "카운터사이드 원작",
+      "gameKey": "counterside",
+      "sourcePage": "https://store.steampowered.com/app/1976440/CounterSide/",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": null,
+      "reference": "references/counterside/store-shot-2.jpg",
+      "referenceSha256": "599eb375fb8e54864125b386a3a5c293f209939d8a3f4ee757e9a46966eb539d",
+      "nativeDimensions": [
+        1920,
+        1080
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "공식 Steam 원작의 라인 전투 HP/타이머/UI. 왼쪽 실제 전투 인물의 전신만 관찰, 카드/컷인/이펙트 제외. 현 서비스 여부는 이 자료로 확정하지 않음.",
+      "proportionsSilhouette": "작은 머리와 길고 가는 팔다리, 성인형 장신 실루엣. 약6~7두신 범위 추정이며 의상/가림 영향 큼.",
+      "line": "매우 가는 어두운 윤곽과 정밀한 작은 내부선.",
+      "shadingMaterial": "얇은 셀 그림자와 부드러운 보조 그라데이션, 낮은 면적의 금속광.",
+      "smallSizeSimplification": "긴 팔/다리 비례와 좁은 몸통이 우선. 얼굴은 작은 화면에서 매우 작음.",
+      "transferIntoOurCharacter": "10안 중 가장 긴 성인형 신체와 가는 세부선. 원작의 미래 무기·코트는 복제하지 않음.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1976440/ss_5c75a6dadd4fe7b72a5390ae3df195673357e256.1920x1080.jpg?t=1781707526"
+    },
+    {
+      "id": "08_guardian_tales",
+      "game": "가디언 테일즈",
+      "gameKey": "guardian_tales",
+      "sourcePage": "https://guardiantales.com/",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": 22,
+      "reference": "references/guardian_tales/frame-022.png",
+      "referenceSha256": "08161543aa2918d9414080e5a2d7ac8b5caffca38c63d3eea9c51be2fbb00fcf",
+      "nativeDimensions": [
+        960,
+        540
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "공식 홈페이지 배경 영상 22초의 전투: 피해 수치·무기 휘두름·적. 3초 프레임의 비전투 스프라이트는 보조 외형 관찰만.",
+      "proportionsSilhouette": "큰 각진 머리와 매우 짧은 팔다리, 거의2두신의 압축된 도트 실루엣.",
+      "line": "큰 계단형 픽셀 윤곽과 어두운 경계 클러스터.",
+      "shadingMaterial": "몇 단계로 묶인 밝음/중간/어둠 픽셀 덩어리. 부드러운 HD선이나 미세 광택선 없음.",
+      "smallSizeSimplification": "눈은 소수 픽셀, 주름/손가락을 큰 덩어리로 축약. 무기 방향과 머리색 우선.",
+      "transferIntoOurCharacter": "거친 픽셀 클러스터와 극단적으로 짧은 다리. 원본을 축소한 파일이 아니라 신규 생성 표현.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://guardiantales.com/images/WebsiteBackground.mp4",
+      "sourceDerivation": {
+        "method": "ffmpeg -ss 22, one native-size frame, no scaling",
+        "originalFullSource": "references/guardian_tales/official-background.mp4"
+      }
+    },
+    {
+      "id": "09_dfo",
+      "game": "던전앤파이터",
+      "gameKey": "dfo",
+      "sourcePage": "https://store.steampowered.com/app/495910/Dungeon_Fighter_Online/",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": null,
+      "reference": "references/dfo/us-store-shot-3.jpg",
+      "referenceSha256": "07b99bfded87720bd14313edb85b0bd0f6825a105acccd6ded91126a62fbcf26",
+      "nativeDimensions": [
+        1200,
+        675
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "공식 Steam 보스 HP와 실제 전투 화면. 왼쪽 전신 적 스프라이트와 전투장 캐릭터의 픽셀 표현을 관찰; 컷인/대사창 제외.",
+      "proportionsSilhouette": "작은 머리와 긴 다리의 성인형 픽셀 비율. 약6두신 전후. 적/아군마다 체격이 달라 단일 게임 규격으로 단정하지 않음.",
+      "line": "세밀한 계단형 외곽과 촘촘한 내부 픽셀선.",
+      "shadingMaterial": "좁은 색상 램프와 날카로운 금속 밝은 픽셀, 천의 어두운 색 덩어리.",
+      "smallSizeSimplification": "얼굴은 적은 픽셀이나 몸의 관절/근육과 부츠/갑옷 조각은 세밀하게 분리.",
+      "transferIntoOurCharacter": "가디언의 거친SD도트와 대비되는 긴 약6두신/세밀한 도트. 네이티브 게임 납품 규격 주장은 하지 않음.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/495910/5f90726c9da7b526f95caa75d2ef57d0e2038439/ss_5f90726c9da7b526f95caa75d2ef57d0e2038439.1920x1080.jpg?t=1785840765"
+    },
+    {
+      "id": "10_odin_sphere",
+      "game": "오딘 스피어 레이브스라시르",
+      "gameKey": "odin_sphere",
+      "sourcePage": "https://atlus.com/atlus-titles/odinsphere/?ItemID=49",
+      "retrieved": "2026-11-09",
+      "captureDate": "unknown",
+      "timestampSeconds": null,
+      "reference": "references/odin_sphere/official-osl1.jpg",
+      "referenceSha256": "7c6d41f05b00f5e445b64b00f4a01bbf2fb3ef57fc195378da5b329c391daaa7",
+      "nativeDimensions": [
+        1920,
+        1080
+      ],
+      "viewedWith": "view_image",
+      "screenType": "actual combat screenshot/video frame; promotional inset isolated where noted",
+      "combatEvidence": "Atlus 공식 전투 이미지 osl1: HP/POW/PP·공격 중 주인공·적·피해 수치. 요리/탐색 화면은 주 참조에서 제외.",
+      "proportionsSilhouette": "큰 머리를 약간 남기되 가는 허리와 길어진 부츠/다리의 동화풍 중장신. 자세가 굽어 정확한 등신 실측 불가, 약4~5두신 계열 추정.",
+      "line": "검은 펜선보다 어두운 색 경계와 부드러운 외곽.",
+      "shadingMaterial": "회화적으로 쌓인 작은 음영과 풍부한 금속/천의 색 변화, 부드러운 밝은 면.",
+      "smallSizeSimplification": "실루엣을 크게 유지하고 재질은 중간 크기 면으로 묶음. 축소하면 미세 붓결은 사라짐.",
+      "transferIntoOurCharacter": "약4.8두신 중장신과 색 경계 기반의 회화 재질을 우리 전사에 적용. 설경/이펙트/원작 복장은 제외.",
+      "unknowns": [
+        "엔진/Spine/프레임 제작 방식은 정적 자료로 확정하지 않음",
+        "숨은 두개골 정수리와 원작의 정확한 등신은 미실측"
+      ],
+      "sourceImageUrl": "https://atlus.com/wp-content/uploads/2015/09/osl1.jpg"
+    }
+  ],
+  "researchRule": "공식 전투 이미지/공식 영상 실제 프레임. 인셋 원본 보존. 3D캐릭터·컷인·로비 제외. 배경의 3D 여부와 캐릭터2D 표현 구분. 엔진과 애니메이션 방식 미확정. 수치는 관찰 추정으로 사용자 확정값 아님."
+}

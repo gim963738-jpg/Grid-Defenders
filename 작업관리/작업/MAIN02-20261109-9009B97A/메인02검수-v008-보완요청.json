@@ -1,0 +1,29 @@
+{
+    "recordedAt":  "2026-11-10T00:23:10.6611667+09:00",
+    "userAccepted":  false,
+    "phase":  "post_delivery_review",
+    "imagesViewed":  [
+                         "01-codex-large.png",
+                         "02-equipment-idle.png",
+                         "03-item-held.png",
+                         "04-dropped-adjacent.png",
+                         "05-combined-inline.png",
+                         "06-deployment-5x5.png",
+                         "07-enemy-list.png"
+                     ],
+    "iteration":  8,
+    "role":  "main02",
+    "needsCorrection":  [
+                            "06은적진입표시가↑방향으로그려져오른쪽→왼쪽진입요구와불일치. 좁은세로표시대신전장오른쪽가장자리에작고읽기쉬운←적진입표시로수정필요"
+                        ],
+    "task":  "MAIN02-20261109-9009B97A",
+    "next":  "같은승인차수8내검수수정후재확인",
+    "gameIntegrated":  false,
+    "passed":  [
+                   "도감큰이미지뒤L블록/옵션중앙",
+                   "02/04/05파란선없음·03집기중에만선",
+                   "전용조합창없음/재료인접→결과·모루소비연속",
+                   "오른쪽후보5칸/5x5/3색",
+                   "좌몬스터목록/우측정보"
+               ]
+}

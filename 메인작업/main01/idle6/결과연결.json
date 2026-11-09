@@ -1,0 +1,89 @@
+{
+  "status": "delivered_for_user_review",
+  "gallery": "http://localhost:5173/dev-previews/idle6-style1-style4/index.html",
+  "overview": "http://localhost:5173/dev-previews/idle6-style1-style4/comparison.png",
+  "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003",
+  "files": [
+    {
+      "path": "asset-manifest.json",
+      "sha256": "3849b5893b88de9ee242eb1dc4ce5165e9b0b8b67201404620d66a407cbab941",
+      "bytes": 16581
+    },
+    {
+      "path": "comparison-variant-1.png",
+      "sha256": "3be8521e1ca0f90da43876ddb745404108a49ac46d08b8df8fbba20d96af760d",
+      "bytes": 253084
+    },
+    {
+      "path": "comparison-variant-4.png",
+      "sha256": "94e2beee2161b3ea4f56d8fe2d61e8a99df36bc7c48cd587e4cd30d9b27981c7",
+      "bytes": 263044
+    },
+    {
+      "path": "comparison.png",
+      "sha256": "44458fa9c6f3526fad53c1258863f1b4762c803b07aa74da87013309cbe2b2fe",
+      "bytes": 497641
+    },
+    {
+      "path": "index.html",
+      "sha256": "16a2fe0178a7b95fc4d2592553da5889779e6353c0cc2f31752bd5d894a14afc",
+      "bytes": 18492
+    },
+    {
+      "path": "original-comparison.png",
+      "sha256": "eeeb3ce45f9086272e00d9358f24fa7db450112e05cc4e4b71d659ca4948dd03",
+      "bytes": 447425
+    },
+    {
+      "path": "report.md",
+      "sha256": "dbab76f2cd5c41783f0d18e1e7c685e2b86c564958800d59bcaa282c3bb73ef2",
+      "bytes": 4690
+    },
+    {
+      "path": "variant-1-front.png",
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "bytes": 943540
+    },
+    {
+      "path": "variant-1-right-045.png",
+      "sha256": "2c5104cfc09f32f0da25bd18dd14b48fc648263df757d68cc05f7553db2346e1",
+      "bytes": 925069
+    },
+    {
+      "path": "variant-1-right-090.png",
+      "sha256": "14e23789c73a5866f10de9e46b49433179d5ac249e970424758fc56243921f0b",
+      "bytes": 682935
+    },
+    {
+      "path": "variant-4-front.png",
+      "sha256": "bd440c18710583fa03baeff88fa83785ad725e4edc75c5d9efcebaa8d7273e7e",
+      "bytes": 1819959
+    },
+    {
+      "path": "variant-4-right-045.png",
+      "sha256": "4f081d32a4e628674d133815205d6b46526f6ed63de12d405b0eca7c7136b982",
+      "bytes": 1825472
+    },
+    {
+      "path": "variant-4-right-090.png",
+      "sha256": "a6368b96be676ebbc31bb93b7cd0ee00136024a56e5d168fce3613cacf69eba6",
+      "bytes": 1587652
+    },
+    {
+      "path": "검수.md",
+      "sha256": "202bcb9cb4a9c2d3b40c33f2f9c865aa905a105ab4b5043d9882c7e6377fffd1",
+      "bytes": 5998
+    }
+  ],
+  "httpByteChecks": 8,
+  "mainReviewed": [
+    "comparison.png",
+    "report.md",
+    "검수.md"
+  ],
+  "mainObservation": "Viewed six-image comparison: both styles use standing idle, lowered weapons and front/right45/right90. Minor generated detail inconsistencies remain. Final user choice pending.",
+  "userScreenChanged": false,
+  "gameRuntimeChanged": false,
+  "committed": false,
+  "pushed": false
+}

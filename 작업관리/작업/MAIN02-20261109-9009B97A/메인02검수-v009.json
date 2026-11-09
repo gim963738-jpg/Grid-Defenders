@@ -1,0 +1,48 @@
+{
+    "recordedAt":  "2026-11-10T01:04:26.0047607+09:00",
+    "userAccepted":  false,
+    "observations":  [
+                         "6개전체화면직접열람:선택목록/현재유닛/핵심수치/아이콘의정렬과전투시작분리확인",
+                         "01병사배정1슬롯/02영웅4슬롯확인",
+                         "03단일설명카드에서스킬효과·조건열람/선택아이콘가림없음",
+                         "04전체10수치와우측4아이콘동시확인",
+                         "05아이템정보·06명시비교대상/옵션차이·점유구분,조회중파란선없음",
+                         "설명카드는전장을임시가리지만정지정비에서선택유닛/아이콘맥락유지"
+                     ],
+    "phase":  "post_delivery_visual_review",
+    "imagesViewed":  [
+                         "01-soldier-summary.png",
+                         "02-hero-summary.png",
+                         "03-skill-description.png",
+                         "04-full-stats-skills.png",
+                         "05-item-information.png",
+                         "06-item-comparison.png"
+                     ],
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+                          "sha256":  "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49",
+                          "applies":  "v1.2보고:제작/자체검증/사용자합격/게임반영구분·실제다음행동안내"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main02\\작업진행방법.md",
+                          "sha256":  "c6d6af0ae2259e43c725ba2ba5e64a716d6afe2edc6f03f5c59d2f1a2d26b121",
+                          "applies":  "반환보고와필수6PNG실제대조후누락과미정조건기록·과거착수소급아님"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v009\\결과보고.md",
+                          "sha256":  "3ee32dca7556ec081b8285aeb65d8a8a80c8b53decee40b0ae7a25534a7256a2",
+                          "applies":  "병사1/영웅4·단일설명카드·전체수치·아이템조회비교와원본스킬/표본차이를이미지로검토"
+                      }
+                  ],
+    "iteration":  9,
+    "role":  "main02",
+    "next":  "전체화면갤러리제시후사용자평가대기",
+    "task":  "MAIN02-20261109-9009B97A",
+    "limitations":  [
+                        "실제스킬표본은화염기둥1개. 병사1및영웅추가3은내용미정UI표본",
+                        "상호작용45항목은제작자의독립목업검증보고이며실게임또는독립테스터검증아님",
+                        "크기·미감·기본핵심4수치선정은사용자최종평가대상"
+                    ],
+    "gameIntegrated":  false
+}

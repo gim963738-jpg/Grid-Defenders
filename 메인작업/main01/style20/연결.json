@@ -1,0 +1,56 @@
+{
+  "task": "MAIN01-20261109-E1FD458C",
+  "folder": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-E1FD458C",
+  "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\style20_two_models_main01-20261109-e1fd458c",
+  "inputs": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\sd-pose-original.png",
+      "sha256": "6ec7c22e0063a3696d70837a702f9ab5192ffc7002c9f59a17c772d25dec00e8"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\combat-ready-illustration-proportions.png",
+      "sha256": "3ca9d1bdcbe9c9b9b8d8ec2314be57cecf4f94757d99d020a6070ccd695a380d"
+    }
+  ],
+  "plan": {
+    "task": "MAIN01-20261109-E1FD458C",
+    "main": "main01",
+    "iteration": 1,
+    "selector": "id:de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+    "prompt": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-E1FD458C\\발송지시-v001.md",
+    "promptSha256": "2e58f7cc14fe31618fe2d2ceacae3440bdadff9285024167dc6f2c1cb7a6c2ff",
+    "sourcePromptSha256": "f48c037e2e18e9f32bbdae7ad69f5aca2a79fd265a86d6f38e5642c36b094a70",
+    "status": "prepared_not_sent",
+    "approval": {
+      "userQuote": "이때 AI가 진짜 별 차이도 안나는 비교하기도 힘든 비슷한 모델 뽑을수도있는데 그렇게 뽑지말라하고 누가봐도 20가지 다 다르다는 느낌이 들정도로 차별화되야함",
+      "source": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\style20\\사용자확인.md",
+        "sha256": "6f864c25c62f0b17452cb8ed5136832ae763d8b8911eb70abda9c8ce0492567f"
+      },
+      "recordedBy": "main01",
+      "recordedAt": "2026-11-09T21:42:11.364891+09:00",
+      "iteration": 1,
+      "hashes": {
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-E1FD458C\\요청확인.md": "6f864c25c62f0b17452cb8ed5136832ae763d8b8911eb70abda9c8ce0492567f",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-E1FD458C\\전문프롬프트.md": "f48c037e2e18e9f32bbdae7ad69f5aca2a79fd265a86d6f38e5642c36b094a70",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-E1FD458C\\2_사전확인.md": "7054cd610ecd6a9323c3a45661a2aee3909578b76f8c9b8b43297951d74350f7",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md": "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md": "d4027f0c9a32fcec376092a83a44eb28eff07b26563103f13f1bbeb3f580b0e8",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\style20\\사용자확인.md": "6f864c25c62f0b17452cb8ed5136832ae763d8b8911eb70abda9c8ce0492567f",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\style20\\스타일계획.json": "2c742236105b920093a9cc29e5e0923c6def52ea92750222a61110731b0796d7",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\combat_ready_right045_illustration_proportions_v02\\report.md": "5a2c4faa6c07cf48ccb63b5606b4081f05af5ba9426268f09572aeea788c0692"
+      }
+    },
+    "instruction": "Use the official Orca skill; record the actual receipt. Do not duplicate an active editor."
+  }
+}

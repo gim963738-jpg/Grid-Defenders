@@ -1,0 +1,94 @@
+{
+  "status": "delivered_for_user_review",
+  "gallery": "http://localhost:5173/dev-previews/balor-style1-v002/index.html",
+  "overview": "http://localhost:5173/dev-previews/balor-style1-v002/comparison.png",
+  "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v002",
+  "files": [
+    {
+      "path": "asset-manifest.json",
+      "sha256": "bcaf97c697cab364e2772ec68fce7c62e6c18cb357674562d48c77926cdf0dd7",
+      "bytes": 16344
+    },
+    {
+      "path": "comparison.png",
+      "sha256": "9e70b25f2fa8d6c945d94ce671d6e60978cc60a62d87f2aba42374b6bb482b80",
+      "bytes": 745668
+    },
+    {
+      "path": "front.png",
+      "sha256": "de8ba54051d81cdce795e144a08740c429353f9c5bea57f48453940aa7f4997e",
+      "bytes": 860260
+    },
+    {
+      "path": "identity-comparison.png",
+      "sha256": "fbad2ae3cf2036f31e28b7705a51cb7e07d62ab23de5f5d9f56e5923e149fd19",
+      "bytes": 675381
+    },
+    {
+      "path": "identity-detail-comparison.png",
+      "sha256": "e442bf29f68fc28136e284d03058fdb204de291c2198154f8b1706ec29ee4373",
+      "bytes": 1335650
+    },
+    {
+      "path": "index.html",
+      "sha256": "4c518e05556c9ae052ddfebdff7e476eafd21fcd5288004a8684148a7b4398df",
+      "bytes": 16892
+    },
+    {
+      "path": "references/grip-anatomy.png",
+      "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+      "bytes": 199279
+    },
+    {
+      "path": "references/identity.png",
+      "sha256": "061f23cc26b1f023918288446f9ac025de99bcf32550fb9be3e9850850f496fe",
+      "bytes": 1645282
+    },
+    {
+      "path": "references/rejected-v001.png",
+      "sha256": "e1c9b2a85b6c2b4198d84d37ef809d65e18bb7611b3173d09685a92a146fc9ae",
+      "bytes": 853700
+    },
+    {
+      "path": "references/style-combat.png",
+      "sha256": "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+      "bytes": 892991
+    },
+    {
+      "path": "references/style-front.png",
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "bytes": 943540
+    },
+    {
+      "path": "report.md",
+      "sha256": "362d852998e9ba584880f7cd1c86a26a87a0e7e16975d12d06b95b188cd9d2d3",
+      "bytes": 4713
+    },
+    {
+      "path": "silhouette-comparison.png",
+      "sha256": "ec988b533c93d7a263b10028d699d8989d75e34de16f5a51254cb050f9ead49f",
+      "bytes": 775140
+    },
+    {
+      "path": "검수.md",
+      "sha256": "5b203ce81d84f843ef831c4ab33e19acf9190d5687eb017af0df1800ce92ff1c",
+      "bytes": 4300
+    },
+    {
+      "path": "제작기준.md",
+      "sha256": "4598428085d58a9f6b0f67d78faf5a5730fe95dd8c6dbc0a6117cb73a765612d",
+      "bytes": 1453
+    }
+  ],
+  "httpByteChecks": 4,
+  "mainReviewed": [
+    "comparison.png",
+    "report.md",
+    "검수.md"
+  ],
+  "mainObservation": "Main reviewed revision2 comparison and equipment details. Narrower shoulder/torso silhouette and closer equipment/cape placement observed. Minor ornament differences remain. Rejected v1 preserved; no rig or animation started; user aesthetic approval pending.",
+  "userScreenChanged": false,
+  "gameRuntimeChanged": false,
+  "committed": false,
+  "pushed": false
+}

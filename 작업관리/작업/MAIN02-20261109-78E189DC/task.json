@@ -6,7 +6,7 @@
   "title": "오른쪽향 2D캐릭터·두꺼운 흰색검격 3연격",
   "request": "사용자: 이펙트 이번엔 마음에들고 이번엔 저 검격이 조금 두꺼운 버전도 한번 보고싶네\n추가 참조: C:/Users/user/AppData/Roaming/orca/agent-session-attachments/d03c769c-6a86-4bf3-b60d-c829d3ec3a65/orca-paste-1794216432494-04e8c9d3-ca4f-47a6-a2a0-e66691777849.png\n사용자: 이번엔 2D캐릭터가 오른쪽을 보고 내려치기 올려치기 사선으로 내려치는 3연격으로 디자인해줘\n메인 이해문: 캐릭터 동작과 두꺼운 흰색 검격을 함께 보여주는 연출. 1위→아래 내려치기 2아래→위 올려치기 3위→오른쪽아래 사선내려치기. 캐릭터는 오른쪽을 향하고 검격은 첨부처럼 넓고휘어진면/날카로운끝. 기존6연격 보존 별도제작.\n사용자 확인 원문: 진행\n범위: 연출 디자인과 실제 재생 미리보기. 기존6연격은 사용자호평. 25%증가라는 AI제안은 확정되지 않았고 최신 넓은 참격 형태/3연격이 우선. 영웅 정체성·피해·게임통합 미정.",
   "iteration": 3,
-  "status": "delivery_receipt_recorded",
+  "status": "awaiting_user",
   "createdAt": "2026-11-09T18:29:36.437953+09:00",
   "approval": {
     "userQuote": "이펙트 만들어와",
@@ -128,6 +128,26 @@
         "sha256": "2556e7d4b252883ce5fdaf3bfdb80781d2021719c372851e93dfefe1b57f239d"
       },
       "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-09T19:30:36.918517+09:00",
+      "iteration": 3,
+      "role": "effects",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\읽기확인-v003-05ce7cd2e52a4db1947c041fafb0be33.json",
+        "sha256": "8176bf100fb871adfe85408a76bb0d77ebbab650ca19c3c94ef3bd7b2ea1458c"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-09T19:41:21.083023+09:00",
+      "iteration": 3,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\effects\\MAIN02-20261109-78E189DC-v003\\결과보고.md",
+        "sha256": "5e7031cbacba4eaea05c06b598b03a7f2ca510f1f7a1ecee395d2dbbdcffb7ef"
+      },
+      "userQuote": ""
     }
   ],
   "readingPolicyVersion": "OPS-004",
@@ -137,6 +157,9 @@
     "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\effects\\MAIN02-20261109-C970BE7A-v002\\결과보고.md",
     "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md"
   ],
-  "readingAcknowledgement": null,
-  "updatedAt": "2026-11-09T19:28:59.961176+09:00"
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\읽기확인-v003-05ce7cd2e52a4db1947c041fafb0be33.json",
+    "sha256": "8176bf100fb871adfe85408a76bb0d77ebbab650ca19c3c94ef3bd7b2ea1458c"
+  },
+  "updatedAt": "2026-11-09T19:41:21.092025+09:00"
 }

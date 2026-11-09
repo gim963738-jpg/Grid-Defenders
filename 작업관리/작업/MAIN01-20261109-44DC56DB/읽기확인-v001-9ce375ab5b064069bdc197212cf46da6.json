@@ -1,0 +1,83 @@
+{
+  "task": "MAIN01-20261109-44DC56DB",
+  "iteration": 1,
+  "role": "characters",
+  "workSummary": "SD-STD-002 신규2안채택을 자기SD문서/프롬프트/JSON/실측/제작순서/AGENTS와카탈로그/SD뷰어검증에반영.이전은발기준/실측/기존미커밋보존,기술프레이밍별도유지,승인3PNG바이트사본,게임/그림생성/사용자UI/Git커밋푸시제외.수정후필독AGENTS재열람/start갱신. AGENTS의SD조항 갱신본문 전체를다시읽었고 신규2안마스터/은발이력·native/technical분리와원본보존범위를재확인하여반환전start갱신.",
+  "documents": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md",
+      "sha256": "d4027f0c9a32fcec376092a83a44eb28eff07b26563103f13f1bbeb3f580b0e8",
+      "applies": "SD-STD-002로갱신된AGENTS전체재열람:신규2안3PNG STYLE/PROPORTION·인물고유성유지,은발두상이력보존,별도1254기술템플릿/유색알파결함비승격,다른지침과기존미커밋유지. 변경된필독해시로같은작업start재확인."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md",
+      "sha256": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+      "applies": "새작업 본문재열람/적용ACK/start후 수정. 필독문서수정후다시읽어새start하며과거ACK재사용안함."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "sha256": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "applies": "사용자 채택근거에따라 허용된기준/소비처/기록만변경. 기존미커밋/원본보존과5종기록·전후해시·검증제출."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "sha256": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "applies": "main01담당 기존팀장으로진행. 텍스트Sol/medium기본,새이미지생성·모델UI조작없음.공유상태와파일소비확인."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "sha256": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "applies": "본인직접수행,불필요하위담당없음. 채택기준과기술검증구분,게임소스미편집."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "sha256": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "applies": "캐릭터자료/SD기준·카탈로그소비만수정,게임런타임/public/실제유닛은타팀경계로제외."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md",
+      "sha256": "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+      "applies": "SD-STD-002 최신채택을실제자기문서/구조화기준에연결하고은발두상기준이력보존.미확정소속/개별작품합격상태안바꿈."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "sha256": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "applies": "read-pack15문서·live작업/역할연결과추가기존소비처본문읽음.이작업차수1확인start후수정;AGENTS갱신후ACK재갱신."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "sha256": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "applies": "characters팀장/main01보고 조직유지. 새로운그림/외부계정/상설AI추가없음."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "sha256": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "applies": "세계관/캐릭터 소속,자료와조직구분.기존자료이동/소속확정안함."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "sha256": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "applies": "기준정리업무는characters 범위.몬스터신체/동작/능력치기준으로확대안함."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자신규2채택.md",
+      "sha256": "36e720ba45f4466220f64933ef4071483be720677c739781c471422d36dd25b2",
+      "applies": "사용자 신규2안(ID6)채택을향후SD기준으로적용.이전다른안전체합격/자동재생성/게임교체/Git저장요청아님."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인기준.md",
+      "sha256": "ae864343dd9d44022119501022b85dc7442ab79171d6a947c37f6c06bae2c27a",
+      "applies": "신규2안은STYLE/PROPORTION마스터,개별얼굴형/헤어/성별/종족체격/장비는복제안함.숨은정수리추정과별도기술프레이밍분리,유색알파/좁은여백을허용결함으로승격안함."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인참조\\20261109_신규2안\\승인.json",
+      "sha256": "39dd7a9765eacb8a4254bb46f1868531ca651258e5f421b511fa1535f2e45303",
+      "applies": "승인id sd_blond_scapl_variant2_standard_v2 및3PNG SHA/실제1133x1388,1133x1388,1077x1460를그대로연결.자기자료사본은바이트일치,reference.native와generation.framing_canvas구분."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+      "sha256": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+      "applies": "커밋/푸시/예약백업금지.제작파일과최소기록만작성,수동저장전변경상태/프로필·캐시제외기록."
+    }
+  ]
+}

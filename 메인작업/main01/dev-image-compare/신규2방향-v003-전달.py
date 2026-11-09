@@ -1,0 +1,48 @@
+from pathlib import Path
+import importlib.util,json,subprocess,hashlib
+ROOT=Path('C:/Users/user/Desktop/Grid Defenders');S=ROOT/'작업관리';HERE=Path(__file__).resolve().parent
+receipt=HERE/'신규2방향-v003-실제발송영수증.json'
+if receipt.exists():raise SystemExit('Already attempted; inspect receipt before recovery.')
+spec=importlib.util.spec_from_file_location('board',S/'도구/작업대장.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);b=m.Board(S)
+task=b.load('MAIN01-20261109-F89105C9','main01')
+if task['status']!='awaiting_user' or task['iteration']!=2:raise SystemExit('Unexpected state; no duplicate revision.')
+if 'gameplay' in b.leases():raise SystemExit('Gameplay leased; coordinate.')
+artlink=json.loads((ROOT/'메인작업/main01/sd-remodel-4/신규2방향-v004-연결.json').read_text(encoding='utf-8'));art=Path(artlink['output'])
+assets=json.loads((art/'asset-manifest.json').read_text(encoding='utf-8'))['compareArt']
+for row in assets:assert hashlib.sha256((art/row['file']).read_bytes()).hexdigest()==row['sha256']
+for name in ['devImageCompare.ts','devImageCompareArt.ts']:
+ assert (ROOT/'게임/src'/name).read_bytes()==(Path('C:/Users/user/orca/workspaces/Grid Defenders/UI-전투화면/게임/src')/name).read_bytes()
+proof=ROOT/'메인작업/main01/sd-remodel-4/사용자신규2방향-v004.md'
+folder=b.folder(task['id']);b.record(task['id'],'main01','revise',proof,'신규 2안 기준으로 45도 90도 만들어볼래? 적용까지');task=b.load(task['id'],'main01')
+out=Path('C:/Users/user/orca/workspaces/Grid Defenders/게임개발/output')/task['id']/'v003-new2-directions'
+prompt=f'''# 신규2안 오른쪽45/90 실제 이미지 대조 적용 — {task['id']} / 차수3
+
+main01→기존게임개발담당. 사용자원문 “신규 2안 기준으로 45도 90도 만들어볼래? 적용까지”, 근거 {proof}. 캐릭터차수4가새PNG2장을완성했고main01이세방향비교/검수/manifest와각3파일SHA를검토했다. 이제실제개발자이미지대조의신규2안(ID6)에두방향을연결한다. 실제전투캐릭터교체/다른신규방향생성은범위밖이다. 같은사용자확인을재요구하지않는다.
+
+매차수필독을read-pack본문으로다시읽고차수3/gameplay의적용요약ACK→start후작업. 자기방법/공통분야/이번지시/원본메타와저장운영규정을읽는다. 새차수에과거ACK재사용금지. Sol medium기본,커밋·푸시·예약백업금지. 메인이송신직후영수증연결.
+
+실제최신기준 {ROOT/'게임'}. 자기제품공간/직전qa-game을최신본으로가정하지말라. root/UI는read-only. 허용수정은새 {out}아래격리사본/패치/전달자산/검수·기록이다. 직전output/다른팀/사용자환경보존. 실제통합은main01이UI작업공간→root의좁은범위만적용한다. main02의UI이미지작업은이모듈과자산을수정하지않는다는경계회신이있다.
+
+원본폴더 {art}. asset-manifest.json compareArt는variant6 front/right45/right90. 신규2안정면SHA3cb5cafa69bf23ae43b95676a9c43f410827a5b42c25481fcdd5f472a9b88e53는기존게임정면과같다. 이번에추가할PNG는variant-2-right-045.png/variant-2-right-090.png2개. 원본바이트그대로복사한다. width/height/bodyHeight/footX/footY는제작자manifest수치를사용하고원본픽셀을늘리거나정규화하지않는다. 45도1133×1388,90도1077×1460이라정사각형가정금지. 손/발·무기잘림·알파한계는작품검수그대로다.
+
+기존15+신규4정면19자산을유지하고신규2안두방향을더해**카탈로그21개**로한다. 후보카드는9개유지. 기존5종의3방향과신규2안의3방향,신규1/3/4정면전용이정확히구분되어야한다. 기존지원안내의‘신규4안정면만’을갱신해대상별지원방향과일치시킨다. 선택대상/배치카드/묶음전환에따른동적방향비활성화가맞아야하고다른신규를신규2안으로묵시교체하지않는다.
+신규2안정면→45→90→정면교체에서선택대상만그림이바뀌고월드발위치·50~200%스케일·종횡비유지. 웨이브/보스둘다. 혼합배치후다시선택해도정확한방향/크기/묶음복원. 다른신규1/3/4는45/90비활성과강제change방어를유지. 기존15방향/입력복구/삭제·닫기·전환·재화/실제유닛저장분리유지.
+
+최종허용통합파일은게임/src/devImageCompareArt.ts, devImageCompare.ts(지원안내등필요한부분)와게임/public/assets/dev-image-compare/scalp_face_v03/variant2_directions_v04/의새PNG2개및manifest뿐이다. CSS/main.ts/실제유닛/전투/일반저장/기존19PNG를변경하지않는다. 새런타임manifest는앞면참조를기존 ../variant-2-front.png로연결해중복앞면PNG를복사하지않아도파일참조가유효하게하라; 제작자원본manifest경로/SHA와측정근거를남기고원본은보존한다.
+
+격리최신root사본/새headless프로필로21이미지로딩·신규2안3방향×50/100/200발점/실제이동·클릭/드래그·선택격리·다른신규방향방어·기존세트복귀·입력/재화분리·전환/보스·작은패널을검사하라. 방금통합19자산기능은독립QA77PASS였으므로전체suite를중복반복하기보다이번차이와관련회귀를의미있게검사하고범위를보고한다. tsc/build를수행한다. 사용자현재브라우저/창/프로필/localStorage/기존서버조작금지.
+
+새output에base-hashes.json/변경manifest.json/통합.patch(현재root기준src만)/files하위전달5파일/결과.json/검증보고와실제스크린샷을제출한다. 원작업차수3기록과직전77검증범위를구분. root/UI어떤제품파일도직접수정하지않고worker_done으로main01에회신한다. sourceSHA와발등록오차/실행범위·못한검증을명시한다.
+'''
+(folder/'요청확인.md').write_text(proof.read_text(encoding='utf-8'),encoding='utf-8');(folder/'전문프롬프트.md').write_text(prompt,encoding='utf-8')
+(folder/'2_사전확인.md').write_text('차수3통합지시전작성. 사용자선택신규2안마스터의새45/90원본/비교/검수/메타를main01이실제검토. ID6의두방향과지원안내만확장,기존19원본/정면/다른신규방향제약/전투와저장로직보존. 실제작업은자기새output패치,UI/root는후속좁은통합.직전19자산독립QA77PASS이며이번변경과관련회귀검증을수행. 사용자저장요청없으므로커밋푸시제외.\n',encoding='utf-8')
+reads=[str(proof),str(S/'저장운영규정.md'),str(art/'asset-manifest.json'),str(art/'report.md'),str(art/'검수.md'),str(HERE/'신규4안-v002-통합결과.json')]
+b.set_readings(task['id'],'main01',reads);b.confirm(task['id'],'main01','신규 2안 기준으로 45도 90도 만들어볼래? 적용까지',proof);plan=b.prepare(task['id'],'main01')
+(HERE/'신규2방향-v003-연결.json').write_text(json.dumps({'task':task['id'],'iteration':3,'folder':str(folder),'output':str(out),'art':str(art),'plan':plan},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+exe='C:/Users/user/AppData/Local/Programs/orca/resources/bin/orca.exe'
+p=subprocess.run([exe,'orchestration','send','--to','dispatch:ctx_2744c6767257','--subject','신규2안45/90 원본도착·이미지대조21자산연결 / 차수3','--type','dispatch','--body',Path(plan['prompt']).read_text(encoding='utf-8'),'--json'],capture_output=True,encoding='utf-8')
+try:r=json.loads(p.stdout[p.stdout.index('{'):])
+except (ValueError,json.JSONDecodeError):r={'ok':False,'stdout':p.stdout,'stderr':p.stderr}
+receipt.write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print(json.dumps(r,ensure_ascii=False,indent=2),flush=True)
+if p.returncode or not r.get('ok'):raise SystemExit('Inspect failure; no duplicate retry.')
+b.record(task['id'],'main01','sent',receipt)

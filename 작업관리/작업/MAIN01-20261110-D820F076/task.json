@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "id": "MAIN01-20261110-D820F076",
+  "main": "main01",
+  "branch": "characters",
+  "title": "1번 그림체 발로르 정면 마스터·장비 디테일 보존",
+  "request": "# 실제 요청·정정·진행 승인\n사용자: “우선 느낌을 보는게 우선순위였기때문에 그림체 느낌은 1번이 우리게임 결에 맞는것같고 우선 원본 모델 4번모델은 보관해놔 예비 모델로 보관해놓고 그림체 이미지 변경하면서 칼손잡이가 바뀌는 그런 디테일한부분에서 실수가 일어났거든 이거 피드백해주고 1번 그림체로 발로르 작업개시”.\n사용자 추가 정정: “원본모델 이야기 빠졌다”.\n메인 이해 확인: 기존 원본 모델 별도 보존,4번 모델도 예비 보존,1번 그림체로 발로르 제작. 발로르 기존 승인 디자인을 유지하고 칼 손잡이·가드·문양 같은 고유 디테일의 임의 변경을 막는 피드백과 검수 기준을 명시. 절차 확인 후 팀장에게 하달.\n사용자 실제 승인: “진행”.\n제작 첫 단계는 정면 기본 대기 마스터1장이다. 방향 확장·애니메이션·게임 적용·전 캐릭터 일괄 교체·GitHub 저장은 이 단계에서 실행하지 않는다. 1번의 그림체를 선택한 것이 금발전사의 얼굴·장비를 발로르에 복제하라는 뜻은 아니다.\n",
+  "iteration": 2,
+  "status": "awaiting_user",
+  "createdAt": "2026-11-10T00:08:16.510382+09:00",
+  "approval": {
+    "userQuote": "진행",
+    "source": {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\사용자확인.md",
+      "sha256": "3c5b1c5e876660a4b669d11867ba7485a277f25c9f85b0b675603bc73c14e33e"
+    },
+    "recordedBy": "main01",
+    "recordedAt": "2026-11-10T00:44:04.682872+09:00",
+    "iteration": 2,
+    "hashes": {
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\요청확인.md": "3c5b1c5e876660a4b669d11867ba7485a277f25c9f85b0b675603bc73c14e33e",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\전문프롬프트.md": "5f1d7724f65cfd87f01e9f5f913d613db8c6fc3ee849cd786b3625145d7b6ee1",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\2_사전확인.md": "017f2abdb43e5b01616e1a7cc60f7e42ab596671cb2a17766750f8379044c43f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md": "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md": "d4027f0c9a32fcec376092a83a44eb28eff07b26563103f13f1bbeb3f580b0e8",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사용자확인.md": "ba820d94e98bbcd1c33f6b0bae6e531813e502aea9f122af7ae9ecedcb38f74d",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사전확인.md": "413d31fadc23952b1e13c35423337c410d9d205f6138ae24f60bdbf5ad04ea2e",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\디테일피드백.md": "dff8c9393d8413b6fbe022fb6933a434073a7101fd2a4bd05c45d0b8a6ccee74",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\보존목록.json": "7ef9f68cff77e3f64e49732b308d48caf07660847eb07d2fb0ddb092f96f417f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-21F94B82\\사용자합격-v002.md": "79340ce4458c744731506a5cdb2d9b357ec6f57f2dd749e5a2a5c344747b4061",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md": "412cf153ca5f906d132c0d2ed9813553e8ee95c97d5dcee23a63574374f53ae2",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\report.md": "dbab76f2cd5c41783f0d18e1e7c685e2b86c564958800d59bcaa282c3bb73ef2",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\검수.md": "202bcb9cb4a9c2d3b40c33f2f9c865aa905a105ab4b5043d9882c7e6377fffd1",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\사용자확인.md": "3c5b1c5e876660a4b669d11867ba7485a277f25c9f85b0b675603bc73c14e33e",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\사전확인.md": "017f2abdb43e5b01616e1a7cc60f7e42ab596671cb2a17766750f8379044c43f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\실루엣수정기준.md": "c96b0bbbe04fd012a9a3a48c6276165aa38cb739e4262491c25e0ee140bd81a2",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사용자반려-좌우폭-v001.md": "a7861fc39967fab52d58d77e276ef4b98eaf7382d14e2d6e9369edcab7d91a6f",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v001\\report.md": "311e6687f26b0eaa13661f31bb82538fab69f4fde8e60dbde8a366bc4728ff76",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v001\\검수.md": "a95a6867467a2cbae2d6d3b71f5e103d098cb6c6456aebbf9580cb70b6244a57"
+    }
+  },
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-10T00:08:17.460313+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\실제발송영수증.json",
+        "sha256": "4dac6ddd8f12c084717f1c03a113bd3c73880968bc8bdef924a03ffc3f9b1aed"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T00:11:22.901557+09:00",
+      "iteration": 1,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\읽기확인-v001-7a8e332a3fdb436293422b1d550069be.json",
+        "sha256": "1ae8b43c40126dafdc85562aaf9172f1b1963f5fb93fa666afecc10ce4a7fbf8"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-10T00:26:42.446146+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v001\\report.md",
+        "sha256": "311e6687f26b0eaa13661f31bb82538fab69f4fde8e60dbde8a366bc4728ff76"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-10T00:39:31.770675+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사용자반려-좌우폭-v001.md",
+        "sha256": "a7861fc39967fab52d58d77e276ef4b98eaf7382d14e2d6e9369edcab7d91a6f"
+      },
+      "userQuote": "너무 옆으로 퍼진느낌인데 불합격"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-10T00:44:05.896338+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\실제발송영수증.json",
+        "sha256": "6d03ec0d66cecd67601af911db3baac3fbabe7b0da3f6c148353fd2718b963e3"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T00:46:33.456062+09:00",
+      "iteration": 2,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\읽기확인-v002-0281dbc1767447e281566739ab168d44.json",
+        "sha256": "2f9ac822abc2bfc86d62d849b68dff39dc9a538be7a86df2f38b3cfa8d0600ec"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-10T01:00:38.103142+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v002\\report.md",
+        "sha256": "362d852998e9ba584880f7cd1c86a26a87a0e7e16975d12d06b95b188cd9d2d3"
+      },
+      "userQuote": ""
+    }
+  ],
+  "readingPolicyVersion": "OPS-004",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\디테일피드백.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\보존목록.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-21F94B82\\사용자합격-v002.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\report.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\검수.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\실루엣수정기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사용자반려-좌우폭-v001.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v001\\report.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v001\\검수.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\읽기확인-v002-0281dbc1767447e281566739ab168d44.json",
+    "sha256": "2f9ac822abc2bfc86d62d849b68dff39dc9a538be7a86df2f38b3cfa8d0600ec"
+  },
+  "updatedAt": "2026-11-10T01:00:38.109143+09:00"
+}
