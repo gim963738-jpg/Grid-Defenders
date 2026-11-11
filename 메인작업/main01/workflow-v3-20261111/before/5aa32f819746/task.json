@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "MAIN01-20261111-EC9D0056",
+  "main": "main01",
+  "branch": "characters",
+  "title": "레나 일러스트3방향·SD3방향 병행 / 2.6 신규5장",
+  "request": "# 레나 일러스트3방향·SD3방향 동시 제작 — 사용자 확인\n\n사용자 실제 원문:\n> 합격 매우 만족\n> 정면 3/4 우측면으로 3장하고 SD작업 동시 진행\n> 2.6사용 허가\n\nSD 개수 확인에 대한 실제 응답:\n> SD 3방향도 함께 제작\n\n확정: 레나의 기존 일반 일러스트 합격. 정면0°·오른쪽앞3/4(현재 원본의 약35°)·오른쪽정측면90°의 일반 일러스트 세트와 SD의 같은3방향을 병행 제작한다. 이번 작업에2.6 사용을 명시허가했다. 별도 진행 확인을 반복하지 않는다.\n\n합격 원본: C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/lena/illustration_main01-20261111-74ba96ac_v001/illustration.png\nSHA256: 41dbb10f2aa2e04d66374fee15df5ded732894f71b8ac58595f3ebf39b411391\n\n메인은 합격한3/4 일러스트를 그대로 보존해 세트에 포함하고 정면·90°를 추가하며, SD3방향은 새로 제작해 총6장으로 비교한다고 안내했다. 따라서 실제 신규생성은 일러스트2장+SD3장=5장이다. 합격3/4를 불필요하게 재생성하거나 다른 이미지를 합격 원본으로 대체하지 않는다.\n\n최초 레나 상세설정과2.6/자세·그림체 검수 요청: 메인작업/main01/lena-illustration/사용자확인.md. 이 작품의 최신 실제 합격이 이전 GC9 참조 대비 중간명암 차이 관찰보다 우선한다. 이번 SD는 생성 승인이지 신규 SD결과의 자동합격은 아니다. SD·3방향 모두 초안을 바로 제시하고 사용자 판정을 받는다. Git 저장·리깅·게임통합·애니메이션은 요청하지 않았다.\n",
+  "iteration": 1,
+  "status": "awaiting_user",
+  "createdAt": "2026-11-11T17:25:27.547847+09:00",
+  "approval": {
+    "userQuote": "정면 3/4 우측면으로 3장하고 SD작업 동시 진행 / 2.6사용 허가 / SD 3방향도 함께 제작",
+    "source": {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\lena-threeviews-sd\\사용자확인.md",
+      "sha256": "fc096a7e2b802ef70222933e4a916b6c8dc7da300a42fd902190da75d5784e78"
+    },
+    "recordedBy": "main01",
+    "recordedAt": "2026-11-11T17:25:27.658872+09:00",
+    "iteration": 1,
+    "hashes": {
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-EC9D0056\\요청확인.md": "8ae8661d23cc2f7a98d3ecacba89c5ec10dc302ffc1b9f3096f13ebbd3ba4193",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-EC9D0056\\전문프롬프트.md": "4a4116f743ed6fa0b3fd6e01eef96fa5b32ddb13ce294e56c13c19b1e0b84259",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-EC9D0056\\2_사전확인.md": "37b9799801ecaaa0cf0ddea783df73cf6e9f6d643bcca26830d0ce0ab1df64f4",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md": "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md": "7266f744233aa81bb68d691a2847a82d267ec68f79f5c6ad3ab038fc60295f4a",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md": "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\lena-threeviews-sd\\사용자확인.md": "fc096a7e2b802ef70222933e4a916b6c8dc7da300a42fd902190da75d5784e78",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\lena-threeviews-sd\\사전확인.md": "db716e880ce7b71a077bce5442dcfc81f4c2916d3ae4cefd7660f89fa4eb7397",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작품\\레나\\승인.json": "4ac7c9653dea294dc8f0126471682a6d8c62109b480862644458ddfce46b7b0d",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작품\\레나\\제작기준.md": "8e125048e9a8dba0ee4941feca426dc76c94cee99a9c6706b4fcb234545ec1a4",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\lena-illustration\\사용자확인.md": "fdb28848acbd2136fa07876bd0f2224565a5e6b7ba7b6a26e9816375561e8760",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md": "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0ad5c82c5e7a86025e43efcc55396d3d10ea7d28c82ad4ea18badcef93553ab9",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md": "1ef4d854ad8d3250a57f8ece69605b07c4244eaa2c7599da235c8fbb2be1fb8f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사용자확인.md": "ba820d94e98bbcd1c33f6b0bae6e531813e502aea9f122af7ae9ecedcb38f74d",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\캐릭터제작규약.md": "e3d0b2e954ea092a2c05750a45f1b7e841eb473ed0414c582ed57368ad362799",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md": "412cf153ca5f906d132c0d2ed9813553e8ee95c97d5dcee23a63574374f53ae2",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\README.md": "a10bf09af80558fc4e9ec9d673afda74b8cf53b7a02084a598043d5d08c4d473"
+    }
+  },
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-11T17:25:33.902012+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\lena-threeviews-sd\\실제발송영수증.json",
+        "sha256": "fde83167d20bf4044763baa7f90c5e669942db2ce9b9d9ea11b75b1aa8cc71bc"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-11T17:27:49.083543+09:00",
+      "iteration": 1,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-EC9D0056\\읽기확인-v001-ed76964bcdc14cfdac057edc20fecfae.json",
+        "sha256": "341c2d26ea23017e606025647b9dad2bae7a37cac543f37cb84584f926c04da8"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-11T17:37:47.526882+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\report.md",
+        "sha256": "fe971666ca05fc1e118b0a24e59d0a4e0d53dc3216b116194a3785dab7d526ff"
+      },
+      "userQuote": ""
+    }
+  ],
+  "readingPolicyVersion": "OPS-004",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\lena-threeviews-sd\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\lena-threeviews-sd\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작품\\레나\\승인.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작품\\레나\\제작기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\lena-illustration\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사용자확인.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\캐릭터제작규약.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\README.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-EC9D0056\\읽기확인-v001-ed76964bcdc14cfdac057edc20fecfae.json",
+    "sha256": "341c2d26ea23017e606025647b9dad2bae7a37cac543f37cb84584f926c04da8"
+  },
+  "updatedAt": "2026-11-11T17:37:47.533884+09:00"
+}

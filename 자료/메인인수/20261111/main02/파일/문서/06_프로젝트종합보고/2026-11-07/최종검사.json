@@ -1,0 +1,105 @@
+{
+    "checkedAt":  "2026-11-07",
+    "baseline":  "e31227b84315b07235f60a95a5cf997cff219549",
+    "scope":  "8 accessible Grid Defenders workspaces; final current-source report, integration and validation",
+    "code":  {
+                 "typecheck":  "PASS",
+                 "modelSuites":  53,
+                 "modelAssertions":  1242,
+                 "build":  "PASS",
+                 "htmlEntrypoints":  4,
+                 "evidence":  "검증요약_코드.json"
+             },
+    "browser":  {
+                    "suites":  11,
+                    "assertions":  359,
+                    "failures":  0,
+                    "isolatedFixture":  "게임/tests/browser-check.html",
+                    "fixtureRelocationRechecked":  true,
+                    "evidence":  "브라우저검증_재현확인.json",
+                    "visualGalleriesNotRun":  4
+                },
+    "landscape":  {
+                      "scope":  "desktop browser, infinite-test; not physical mobile",
+                      "loaded":  true,
+                      "units":  6,
+                      "offers":  5,
+                      "itemTooltip":  true,
+                      "purchase":  {
+                                       "beforeGold":  445,
+                                       "afterGold":  385,
+                                       "beforeGear":  0,
+                                       "afterGear":  1
+                                   },
+                      "resourceHttpFailures":  0,
+                      "evidence":  "가로화면실행검증.json"
+                  },
+    "world":  {
+                  "version":  "1.12",
+                  "mapVersion":  24,
+                  "image":  [
+                                1536,
+                                1024
+                            ],
+                  "localLinkResponses":  [
+                                             200,
+                                             200,
+                                             200,
+                                             200,
+                                             200
+                                         ],
+                  "evidence":  "세계관브라우저검증.json"
+              },
+    "sources":  {
+                    "artCopied":  41,
+                    "artBytes":  46127005,
+                    "worldCopied":  7,
+                    "worldBytes":  7405062,
+                    "externalWorkspaceHeadBranchStatusUnchanged":  7,
+                    "sourceHashesUnchanged":  48,
+                    "evidence":  "소스원본비교결과.json",
+                    "limitation":  "External uncommitted contents were hashed only for selected 48 sources; Git status equality does not prove every external file byte unchanged."
+                },
+    "assets":  {
+                   "scope":  "recursive uncompressed 게임/public/assets files",
+                   "beforeFiles":  39,
+                   "afterFiles":  38,
+                   "beforeBytes":  51182826,
+                   "afterBytes":  48924519,
+                   "reducedBytes":  2258307,
+                   "reducedPercent":  4.412,
+                   "measuredFrameRateOrDownloadImprovement":  false,
+                   "evidence":  "../../../자료/아트원본/verification.json"
+               },
+    "documents":  {
+                      "reportPdfPages":  12,
+                      "presentationPdfPages":  10,
+                      "pdfOutOfPageText":  0,
+                      "pdfEmptyPages":  0,
+                      "pdfTemporaryLocalServerLinks":  0,
+                      "csvRows":  23,
+                      "csvColumns":  15,
+                      "evidence":  [
+                                       "PDF검증.json",
+                                       "링크전체검사.json"
+                                   ],
+                      "markdownFilesChecked":  925,
+                      "relativeLinksChecked":  371,
+                      "missingRelativeLinks":  0,
+                      "staticAssetReferencesChecked":  48,
+                      "sourceEntrypointReferencesChecked":  5
+                  },
+    "gitDiffCheck":  "PASS",
+    "notVerified":  [
+                        "Android/iOS physical device input and OS process termination",
+                        "full 40-wave ordinary campaign completion",
+                        "all balance combinations and long-duration low-end performance",
+                        "four visual effect galleries and all external collected frames",
+                        "accounts, payment, server load and store release"
+                    ],
+    "notes":  [
+                  "Complete for the audit/report/independent validated integration scope; unfinished game and production branches remain pending.",
+                  "Temporary PDF QA dependency installed outside the project only; no game dependency changes.",
+                  "Local commit preserves task changes; no remote push as part of this task."
+              ]
+}

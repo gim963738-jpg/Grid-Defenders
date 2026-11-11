@@ -1,0 +1,46 @@
+{
+  "createdAt": "2026-11-11T00:29:27.517769+09:00",
+  "owner": "main03",
+  "kind": "existing-sheet-sequence-preview",
+  "imagesUnmodified": true,
+  "files": [
+    {
+      "file": "builtin/walk_left.png",
+      "sha256": "2e25c87527a17adc04f072bd5c248bd7e231bddc2467ced9e2b7260649db1d4e",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\turtle-dragon-sheet-compare-main03-20261110-a1258c03-v01\\builtin\\walk_left.png"
+    },
+    {
+      "file": "builtin/slam_right_foreleg.png",
+      "sha256": "816e0a699faad891cd0d071c73174a86e25d604fa1a4f582ee37dc40dbc3857a",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\turtle-dragon-sheet-compare-main03-20261110-a1258c03-v01\\builtin\\slam_right_foreleg.png"
+    },
+    {
+      "file": "sunburst26/walk_left.png",
+      "sha256": "303547db255935784ae65780a019179f34f35ddf089462d54af42cbfb355d4be",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\turtle-dragon-sheet-compare-main03-20261110-a1258c03-v01\\sunburst26\\walk_left.png"
+    },
+    {
+      "file": "sunburst26/slam_right_foreleg.png",
+      "sha256": "6cb76078d85582c6ebfdaada8d366c4bdc3d9593645fd6a860ff9f3b6153e6a2",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\turtle-dragon-sheet-compare-main03-20261110-a1258c03-v01\\sunburst26\\slam_right_foreleg.png"
+    }
+  ],
+  "timingMs": {
+    "walk": 2400,
+    "attack": 1300,
+    "recoveredHold": 600,
+    "total": 4300
+  },
+  "version": "v02",
+  "attackScaleDefault": 0.9,
+  "backgrounds": [
+    {
+      "file": "backgrounds\\forest.png",
+      "sha256": "1fd1fc28ec02828ec63903365bda0d869204f38c439c1d5c72e0f6385d79a2ef"
+    },
+    {
+      "file": "backgrounds\\snow.png",
+      "sha256": "b9f6e074f76388247aa91985c133d1ed47e5bdede1e6b807d41022ea387f9f4b"
+    }
+  ]
+}

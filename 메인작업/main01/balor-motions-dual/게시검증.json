@@ -1,0 +1,411 @@
+{
+  "task": "MAIN01-20261111-9B2C9CFE",
+  "workerOutcome": "failed",
+  "userAccepted": false,
+  "url": "http://localhost:5173/dev-previews/balor-motions-dual-v001/index.html",
+  "files": [
+    {
+      "file": "action-plan.json",
+      "sourceSha256": "9bb5f8f1aa206cce7adab3d2bf5cd28530c67f181d5b35d08e990e45a9c1046c",
+      "sha256": "9bb5f8f1aa206cce7adab3d2bf5cd28530c67f181d5b35d08e990e45a9c1046c",
+      "bytes": 12117,
+      "httpByteMatch": true
+    },
+    {
+      "file": "api/01-ref-balor90/native.png",
+      "sourceSha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+      "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+      "bytes": 1623376,
+      "httpByteMatch": true
+    },
+    {
+      "file": "api/02-ref-giant90/native.png",
+      "sourceSha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+      "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+      "bytes": 1800187,
+      "httpByteMatch": true
+    },
+    {
+      "file": "asset-manifest.json",
+      "sourceSha256": "32c1b1629c735b841e176576dc6524ce93d939388cdfafa0adf58de2dac2f32f",
+      "sha256": "32c1b1629c735b841e176576dc6524ce93d939388cdfafa0adf58de2dac2f32f",
+      "bytes": 174450,
+      "httpByteMatch": true
+    },
+    {
+      "file": "assets/field.png",
+      "sourceSha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823",
+      "sha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823",
+      "bytes": 2824239,
+      "httpByteMatch": true
+    },
+    {
+      "file": "comparison.png",
+      "sourceSha256": "5ef15f5adbe3f4acdc3b3ead31a0e016c3b88219bde6e0a4a74ecf98406982cd",
+      "sha256": "5ef15f5adbe3f4acdc3b3ead31a0e016c3b88219bde6e0a4a74ecf98406982cd",
+      "bytes": 184500,
+      "httpByteMatch": true
+    },
+    {
+      "file": "data.js",
+      "sourceSha256": "55c2d2578457bc5cb40866306c183277c31924b5edc248b51d8a8b044ea654e7",
+      "sha256": "55c2d2578457bc5cb40866306c183277c31924b5edc248b51d8a8b044ea654e7",
+      "bytes": 91707,
+      "verification": "파일 해시 확인. 실행 코드는 HTML에 포함하며 공개 JS 직접 프로브를 사용하지 않음."
+    },
+    {
+      "file": "expected-assets.md",
+      "sourceSha256": "e9350a187e6002120f0e322ccb9e5fc704e59c5b5a20ad787167fb6a9a8aadb8",
+      "sha256": "e9350a187e6002120f0e322ccb9e5fc704e59c5b5a20ad787167fb6a9a8aadb8",
+      "bytes": 3149,
+      "httpByteMatch": true
+    },
+    {
+      "file": "generation-records.json",
+      "sourceSha256": "b9af6b6baf2be544db6dda04be10b4afaf296434e38034ab71594abd920413c4",
+      "sha256": "b9af6b6baf2be544db6dda04be10b4afaf296434e38034ab71594abd920413c4",
+      "bytes": 110620,
+      "httpByteMatch": true
+    },
+    {
+      "file": "index.html",
+      "sourceSha256": "a371541fbc151a1ef179f917f1a5d8b17365191124038a1f266d4638ee5cae60",
+      "sha256": "5b7e992e559f933f9e6810f380c201bacff49bbe82d525ee80cfedd88da06434",
+      "bytes": 104435,
+      "httpByteMatch": true
+    },
+    {
+      "file": "player.js",
+      "sourceSha256": "66742e4470b55a9c9a937f77734a223807af6443129c9e349a2fb2f68f302077",
+      "sha256": "66742e4470b55a9c9a937f77734a223807af6443129c9e349a2fb2f68f302077",
+      "bytes": 8441,
+      "verification": "파일 해시 확인. 실행 코드는 HTML에 포함하며 공개 JS 직접 프로브를 사용하지 않음."
+    },
+    {
+      "file": "raw/builtin/01-run-right90.json",
+      "sourceSha256": "8aaf905c0f6af4e73e0f8406933892dd10c1c49ae7149d8def8e361f38109103",
+      "sha256": "8aaf905c0f6af4e73e0f8406933892dd10c1c49ae7149d8def8e361f38109103",
+      "bytes": 3572,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/01-run-right90.png",
+      "sourceSha256": "a9ca38f99ff466c75ba8cf50e7c3fdc0cb10fe0ce4c5e1af6f595d0b159f9dac",
+      "sha256": "a9ca38f99ff466c75ba8cf50e7c3fdc0cb10fe0ce4c5e1af6f595d0b159f9dac",
+      "bytes": 1665144,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/02-combat-idle-right35.json",
+      "sourceSha256": "f66236497806cf6cda5ef0463cb3666d4924ee442875a9c2300684ae54e7b8a3",
+      "sha256": "f66236497806cf6cda5ef0463cb3666d4924ee442875a9c2300684ae54e7b8a3",
+      "bytes": 3255,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/02-combat-idle-right35.png",
+      "sourceSha256": "cb5a071e5e3dc263e72ecbc3f165b968e43fd201cab06b2c37a54c71acd36779",
+      "sha256": "cb5a071e5e3dc263e72ecbc3f165b968e43fd201cab06b2c37a54c71acd36779",
+      "bytes": 2230904,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/03-horizontal-slash-right35.json",
+      "sourceSha256": "4830797ccf2bf89c7685aeea281a65dea8ae9e20044ca8617aa70b9c0df2ba8e",
+      "sha256": "4830797ccf2bf89c7685aeea281a65dea8ae9e20044ca8617aa70b9c0df2ba8e",
+      "bytes": 3305,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/03-horizontal-slash-right35.png",
+      "sourceSha256": "2c4e0499d121236740b18c04db453ea49d88e44b14852ce055eeb9e5989314eb",
+      "sha256": "2c4e0499d121236740b18c04db453ea49d88e44b14852ce055eeb9e5989314eb",
+      "bytes": 2087779,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/04-vertical-slash-right35.json",
+      "sourceSha256": "c6a8987f3737009eb938e720218c6e7d1fd0649368a33eb8e69873ea68f86d7c",
+      "sha256": "c6a8987f3737009eb938e720218c6e7d1fd0649368a33eb8e69873ea68f86d7c",
+      "bytes": 3236,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/04-vertical-slash-right35.png",
+      "sourceSha256": "59e7293fb292ff5dd4ae0609c043e4bdabb3b1a92ac5cab9c8d1f21fc7d63b41",
+      "sha256": "59e7293fb292ff5dd4ae0609c043e4bdabb3b1a92ac5cab9c8d1f21fc7d63b41",
+      "bytes": 1951934,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/05-shield-edge-bash-right35.json",
+      "sourceSha256": "31849618e97fd398c54140e93dafde34d7c9cc72285e6bfad56fd94d4c39da82",
+      "sha256": "31849618e97fd398c54140e93dafde34d7c9cc72285e6bfad56fd94d4c39da82",
+      "bytes": 3300,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/05-shield-edge-bash-right35.png",
+      "sourceSha256": "21f904298f2a38dab0d6c2e8072aa6755a56007786817884825e69df8139d3d6",
+      "sha256": "21f904298f2a38dab0d6c2e8072aa6755a56007786817884825e69df8139d3d6",
+      "bytes": 2013510,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/06-shield-plant-right35.json",
+      "sourceSha256": "baacfc7e95cca468dcc6c8d630f6bae6aeeb31227355a23ba5deea7d1a0b195b",
+      "sha256": "baacfc7e95cca468dcc6c8d630f6bae6aeeb31227355a23ba5deea7d1a0b195b",
+      "bytes": 3324,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/06-shield-plant-right35.png",
+      "sourceSha256": "96c682024d2bb928a6d1b14e5270a8c0ab660f43cba1893e4113f2777c378f76",
+      "sha256": "96c682024d2bb928a6d1b14e5270a8c0ab660f43cba1893e4113f2777c378f76",
+      "bytes": 1992360,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/07-turn-knightly-35to90.json",
+      "sourceSha256": "efc323607c2ad08ed944eb65ff287d3da35c6d4d4d797fbaad085531999296f1",
+      "sha256": "efc323607c2ad08ed944eb65ff287d3da35c6d4d4d797fbaad085531999296f1",
+      "bytes": 3964,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/07-turn-knightly-35to90.png",
+      "sourceSha256": "cc8542a09ac4171d3b208f52beeae152caab30783bbea9a33ba786c4690cc9e6",
+      "sha256": "cc8542a09ac4171d3b208f52beeae152caab30783bbea9a33ba786c4690cc9e6",
+      "bytes": 2081710,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/08-hit-right35.json",
+      "sourceSha256": "e26a83b299a135ce30f65314ffa7a1b3119ef84cce3717c5afecbd8d492f8140",
+      "sha256": "e26a83b299a135ce30f65314ffa7a1b3119ef84cce3717c5afecbd8d492f8140",
+      "bytes": 3199,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/08-hit-right35.png",
+      "sourceSha256": "f5aed532761ea49b5f5337a85c4ea4f6f6a9654b6b5818a65a4e2e3fd892d92d",
+      "sha256": "f5aed532761ea49b5f5337a85c4ea4f6f6a9654b6b5818a65a4e2e3fd892d92d",
+      "bytes": 2237843,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/09-death-right35.json",
+      "sourceSha256": "f0178c0ae8091c344beccbd93347a32dbe11bd66ae9bb43f394b0b58425f440a",
+      "sha256": "f0178c0ae8091c344beccbd93347a32dbe11bd66ae9bb43f394b0b58425f440a",
+      "bytes": 3246,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/09-death-right35.png",
+      "sourceSha256": "b7242c6892c55daedd7f4a7d2071915f41fccc3dd09fb1330c7d6f85847ae233",
+      "sha256": "b7242c6892c55daedd7f4a7d2071915f41fccc3dd09fb1330c7d6f85847ae233",
+      "bytes": 1793151,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/10-ready-dissolve-right90.json",
+      "sourceSha256": "c8e7309bb8449d030b22f1019d2e839d99e1fe5b11c59df1edd89c0a5fd89caf",
+      "sha256": "c8e7309bb8449d030b22f1019d2e839d99e1fe5b11c59df1edd89c0a5fd89caf",
+      "bytes": 3605,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/10-ready-dissolve-right90.png",
+      "sourceSha256": "c09b448d53e42d89eb9ff1c04bdc3fb3a8c322a68a2338e3c31a2ba754707596",
+      "sha256": "c09b448d53e42d89eb9ff1c04bdc3fb3a8c322a68a2338e3c31a2ba754707596",
+      "bytes": 2192561,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/11-tower-shield-slam-right90.json",
+      "sourceSha256": "03c1ba7ebba5b9144efbea4f91ae3620ef727bc25c3cb825478ed607e6be5e84",
+      "sha256": "03c1ba7ebba5b9144efbea4f91ae3620ef727bc25c3cb825478ed607e6be5e84",
+      "bytes": 3691,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/11-tower-shield-slam-right90.png",
+      "sourceSha256": "42ab64a3f2e88f1715de53d6016cfe8e2a780f55a38858b47b4c2c68879c94a6",
+      "sha256": "42ab64a3f2e88f1715de53d6016cfe8e2a780f55a38858b47b4c2c68879c94a6",
+      "bytes": 1938147,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/12-greatsword-slam-right90.json",
+      "sourceSha256": "a4a5a4a26357c64f1d298c9bc2f53b7ad74b5985c37348584e1bb8151d9b6212",
+      "sha256": "a4a5a4a26357c64f1d298c9bc2f53b7ad74b5985c37348584e1bb8151d9b6212",
+      "bytes": 4015,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/12-greatsword-slam-right90.png",
+      "sourceSha256": "3ac3e88b6ec184d8b92543d6cf86777671db18292a62b854658fb88a3c04ae97",
+      "sha256": "3ac3e88b6ec184d8b92543d6cf86777671db18292a62b854658fb88a3c04ae97",
+      "bytes": 1902366,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/13-sword-first-dissolve-right90.json",
+      "sourceSha256": "fc53245ad8ac412d3343c68cdf22da06d2e3a53886786d69d369ec9b1306796c",
+      "sha256": "fc53245ad8ac412d3343c68cdf22da06d2e3a53886786d69d369ec9b1306796c",
+      "bytes": 4039,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/builtin/13-sword-first-dissolve-right90.png",
+      "sourceSha256": "5b0e612661d0b8421851cbfd67c79d8fca2d77afae8fe1a8cdf8f73bcf20d43c",
+      "sha256": "5b0e612661d0b8421851cbfd67c79d8fca2d77afae8fe1a8cdf8f73bcf20d43c",
+      "bytes": 1516906,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/01-run-right90.png",
+      "sourceSha256": "53af74df0ce36d703177c0aac12433bf4564f62627c5a2c3e0bd23b0237f2418",
+      "sha256": "53af74df0ce36d703177c0aac12433bf4564f62627c5a2c3e0bd23b0237f2418",
+      "bytes": 3279124,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/02-combat-idle-right35.png",
+      "sourceSha256": "bca77d0a0e8d37b94e9bc47075edfec79d58fd8115a4b75a5d9948759cc7c884",
+      "sha256": "bca77d0a0e8d37b94e9bc47075edfec79d58fd8115a4b75a5d9948759cc7c884",
+      "bytes": 3514704,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/03-horizontal-slash-right35.png",
+      "sourceSha256": "7af002fcb7bc3d1f539b1bd354592421f16a7c82a1cff28e5ee2af4389060d29",
+      "sha256": "7af002fcb7bc3d1f539b1bd354592421f16a7c82a1cff28e5ee2af4389060d29",
+      "bytes": 3406266,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/04-vertical-slash-right35.png",
+      "sourceSha256": "a2cbc78ee4b118127e385406740d753e09633bf2b3b671bdf786f04b76bcab32",
+      "sha256": "a2cbc78ee4b118127e385406740d753e09633bf2b3b671bdf786f04b76bcab32",
+      "bytes": 3198988,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/05-shield-edge-bash-right35.png",
+      "sourceSha256": "b292cd67288fb8a3ced49504e9f58f8f3c2f3c66d8d1b8af42da5bb53d8c7af6",
+      "sha256": "b292cd67288fb8a3ced49504e9f58f8f3c2f3c66d8d1b8af42da5bb53d8c7af6",
+      "bytes": 3365158,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/06-shield-plant-right35.png",
+      "sourceSha256": "51f805cbd60d298ddbda5ab4b920de3f1a7408f5219f96096bc32111f0f24b28",
+      "sha256": "51f805cbd60d298ddbda5ab4b920de3f1a7408f5219f96096bc32111f0f24b28",
+      "bytes": 3565884,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/07-turn-knightly-35to90.png",
+      "sourceSha256": "eb5b4aa2c2fe4bd117a13680a66ecce3fca899d3a9631a3c7ffee8c2706ccc0c",
+      "sha256": "eb5b4aa2c2fe4bd117a13680a66ecce3fca899d3a9631a3c7ffee8c2706ccc0c",
+      "bytes": 3304140,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/08-hit-right35.png",
+      "sourceSha256": "8789bfe98e1dfbb89a98206914b72c659723534b968a6ef70d25cbba1bdcdfec",
+      "sha256": "8789bfe98e1dfbb89a98206914b72c659723534b968a6ef70d25cbba1bdcdfec",
+      "bytes": 3471819,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/09-death-right35.png",
+      "sourceSha256": "a497e26332c2887acd52af4cceee5a287e8ccb1f7421bafe283b5f98c785bc36",
+      "sha256": "a497e26332c2887acd52af4cceee5a287e8ccb1f7421bafe283b5f98c785bc36",
+      "bytes": 3296040,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/10-ready-dissolve-right90.png",
+      "sourceSha256": "ec1b432898b40b6eb19588a8598a02404b8710888fc2841a18e34e34a2aacd86",
+      "sha256": "ec1b432898b40b6eb19588a8598a02404b8710888fc2841a18e34e34a2aacd86",
+      "bytes": 3004735,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/11-tower-shield-slam-right90.png",
+      "sourceSha256": "de48c170fc83fd9bfeb44b48ad9b1022658d1853fb3dcad74cf5bebbcfd6301b",
+      "sha256": "de48c170fc83fd9bfeb44b48ad9b1022658d1853fb3dcad74cf5bebbcfd6301b",
+      "bytes": 3480923,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/12-greatsword-slam-right90.png",
+      "sourceSha256": "2ad481bf275c070ce9dfa019866e85473ecd3f817e57287091f66357a10e3f18",
+      "sha256": "2ad481bf275c070ce9dfa019866e85473ecd3f817e57287091f66357a10e3f18",
+      "bytes": 3360914,
+      "httpByteMatch": true
+    },
+    {
+      "file": "raw/image26/13-sword-first-dissolve-right90.png",
+      "sourceSha256": "42f0a2630ac537f6daf2a24c0a3304c09e1a25f5a866b14d9fb757811eb84959",
+      "sha256": "42f0a2630ac537f6daf2a24c0a3304c09e1a25f5a866b14d9fb757811eb84959",
+      "bytes": 2952522,
+      "httpByteMatch": true
+    },
+    {
+      "file": "report.md",
+      "sourceSha256": "20d83a0b93c229999e23b4c51c4e0b1b8b097479049525a2daf9354c656e42b8",
+      "sha256": "20d83a0b93c229999e23b4c51c4e0b1b8b097479049525a2daf9354c656e42b8",
+      "bytes": 5045,
+      "httpByteMatch": true
+    },
+    {
+      "file": "source/approved-right035.png",
+      "sourceSha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+      "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+      "bytes": 1472748,
+      "httpByteMatch": true
+    },
+    {
+      "file": "technical-checks.json",
+      "sourceSha256": "c0633b509d8292f4f0784a49cfccfa0837374e1fc05975d0ca57ef08a63236ee",
+      "sha256": "c0633b509d8292f4f0784a49cfccfa0837374e1fc05975d0ca57ef08a63236ee",
+      "bytes": 1889,
+      "httpByteMatch": true
+    },
+    {
+      "file": "visual-review.json",
+      "sourceSha256": "4a9f7d841752fc6c4653d24e2e990473a8238b3737a61b1f89803bcea3d7e1ed",
+      "sha256": "4a9f7d841752fc6c4653d24e2e990473a8238b3737a61b1f89803bcea3d7e1ed",
+      "bytes": 9913,
+      "httpByteMatch": true
+    },
+    {
+      "file": "검수.md",
+      "sourceSha256": "c661ab3f7179cf01a40c1abf00d0af4f207c9e72141e07fb66d4373e4767ed69",
+      "sha256": "c661ab3f7179cf01a40c1abf00d0af4f207c9e72141e07fb66d4373e4767ed69",
+      "bytes": 7795,
+      "httpByteMatch": true
+    },
+    {
+      "file": "제작기준.md",
+      "sourceSha256": "aa897fc56a99630510bace58e648bfc3f62f09956e000bc56849efd4157ee60e",
+      "sha256": "aa897fc56a99630510bace58e648bfc3f62f09956e000bc56849efd4157ee60e",
+      "bytes": 894,
+      "httpByteMatch": true
+    }
+  ],
+  "fileCount": 56,
+  "previewScriptsInline": true,
+  "originalImageBytesPreserved": true,
+  "excluded": [
+    "api request records",
+    "references",
+    "profiles",
+    "generation scripts",
+    "credentials"
+  ],
+  "gameRuntimeChanged": false
+}

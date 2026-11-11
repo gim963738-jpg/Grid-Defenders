@@ -1,0 +1,509 @@
+{
+  "task": "MAIN01-20261111-1EB56391",
+  "productFiles": 32,
+  "checkFiles": 39,
+  "files": [
+    {
+      "path": "src/actorMotion.ts",
+      "beforeSha256": null,
+      "afterSha256": "b43cae71c95824d5c30e9ba43f1873d8c2f3340966348b749d8e5b476ff2466a",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\actorMotion.ts",
+      "bytes": 3362
+    },
+    {
+      "path": "src/actorSpacing.ts",
+      "beforeSha256": null,
+      "afterSha256": "d3e6c8b47a2f789da2bb9e18d29c1dacc962ed4a5f7c6116d419906d694af91a",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\actorSpacing.ts",
+      "bytes": 1256
+    },
+    {
+      "path": "src/battleSave.ts",
+      "beforeSha256": "a70c688f51d8f519cac28c3e32dac766263a369aa9f34027bc42270ff057e01a",
+      "afterSha256": "5f1c821d742e48ac4b96416845abb56305643ad186382c86dfd16cbcc808fac5",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\battleSave.ts",
+      "bytes": 19320
+    },
+    {
+      "path": "src/blondRuntimeData.ts",
+      "beforeSha256": null,
+      "afterSha256": "0adc7bf71d683e0e046e85b79931459b0ec7b126e5abdc16964cc99dfcc97fa3",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\blondRuntimeData.ts",
+      "bytes": 16664
+    },
+    {
+      "path": "src/bossBattle.ts",
+      "beforeSha256": "f011098410ab6a9a191b8e74c7600569069a095b76939ce0bdcc2be797a4ada9",
+      "afterSha256": "74f2e7858340cf5733300e2c9cd049fea5cad4236768a54eaa0f5f21bb0b97d4",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\bossBattle.ts",
+      "bytes": 22896
+    },
+    {
+      "path": "src/bossBattleView.ts",
+      "beforeSha256": "f6f7125be135e64d06f83581f7c63911989ed443c058483493d2bb9788512903",
+      "afterSha256": "4b9d74a9bd697a7bcee8d7983d2c401bce50fd545c012aea090612bee9110e26",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\bossBattleView.ts",
+      "bytes": 19599
+    },
+    {
+      "path": "src/combatMotionArt.ts",
+      "beforeSha256": null,
+      "afterSha256": "12306bc5f23b221c72b55bf30a7acb95e21d51a85d15a46552f0e7b0aedaf8c1",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\combatMotionArt.ts",
+      "bytes": 5201
+    },
+    {
+      "path": "src/defense.ts",
+      "beforeSha256": "5fce5c07de0f628091c040ed41ffea13eb7f329b06609bf2ab84ee1de5c91192",
+      "afterSha256": "739233e3da4ca9799000d9394770c3b290648b7ea88d8b6019231a2d9fabe6f4",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\defense.ts",
+      "bytes": 47468
+    },
+    {
+      "path": "src/defenseConfig.ts",
+      "beforeSha256": "9029f5e5f81b0f49dc6414c9082fbc7c5b6e3d094d1769bec76c24f316b0a2bb",
+      "afterSha256": "63daeaa517f828276be564c0c70aa4eee36937e9abeac05c0684ed067c2b8583",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\defenseConfig.ts",
+      "bytes": 7830
+    },
+    {
+      "path": "src/defenseView.ts",
+      "beforeSha256": "64bb40656de19d068cf5eec4dde143ac9356184d48298e65f864b0933880fc59",
+      "afterSha256": "a8d64e79f07a2a7162d206b9a9fba00eb60e6690565a33d541b87c99b56772c9",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\defenseView.ts",
+      "bytes": 22433
+    },
+    {
+      "path": "src/main.ts",
+      "beforeSha256": "99e9513c451a20d3ac01b6a0c015e9aff2f53617a204a07b9ffb8fa366515a93",
+      "afterSha256": "eba5f167b27227e77806de7539c5c0a27b3e6d487ffbc2e8ad0636201fcfdfdb",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\src\\main.ts",
+      "bytes": 93777
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-01-animation.json",
+      "beforeSha256": null,
+      "afterSha256": "383a2aef5968e055d0ddae36881a960d3a92e3b250933e2a20b26a99f1ec65bb",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-01-animation.json",
+      "bytes": 3433
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-01-sheet.png",
+      "beforeSha256": null,
+      "afterSha256": "a404b2fd756bbda67962370fa68c20e1e7470d15915d9a74583576046627d7fc",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-01-sheet.png",
+      "bytes": 2215294
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-02-animation.json",
+      "beforeSha256": null,
+      "afterSha256": "6c1ba92e755d4db7845f4a8f32412d7d47ffd238b968497838f30474059b866c",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-02-animation.json",
+      "bytes": 3446
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-02-sheet.png",
+      "beforeSha256": null,
+      "afterSha256": "dad09beed178f3fd2521e325089c6981c9a61a11c5f80fed392dbc65e991d9d7",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-02-sheet.png",
+      "bytes": 2271729
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-03-animation.json",
+      "beforeSha256": null,
+      "afterSha256": "77b4c339abdf4c2240179e80bc91f7d10cef71bba0125d03b6881e669f697280",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-03-animation.json",
+      "bytes": 3445
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-03-sheet.png",
+      "beforeSha256": null,
+      "afterSha256": "2c8deb21647541db4a2d11fae27df16ad4ebd27cede15c3671a1f4ae2f43ef94",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-03-sheet.png",
+      "bytes": 2200541
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-04-animation.json",
+      "beforeSha256": null,
+      "afterSha256": "713c7c8d7b044cc226e12c1d76d0ded085a56a2765d7c7a228d0482f6e276d54",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-04-animation.json",
+      "bytes": 3441
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-04-sheet.png",
+      "beforeSha256": null,
+      "afterSha256": "a10c5cd8c231e0e0c7da5347df911171a5dfadf2780156b599b4e93f3193b245",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-04-sheet.png",
+      "bytes": 2343713
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-05-animation.json",
+      "beforeSha256": null,
+      "afterSha256": "088366107af579985bed6e2a2005735e4c82e6dbb61939c332988b819cc189b6",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-05-animation.json",
+      "bytes": 3446
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-05-sheet.png",
+      "beforeSha256": null,
+      "afterSha256": "88006a034e114b25b26f8d51a45d5faa795721d2bbccff3f7bd31fe70abf8235",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-05-sheet.png",
+      "bytes": 2206255
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-06-animation.json",
+      "beforeSha256": null,
+      "afterSha256": "2d154e6bd3e3f3b85100bf3ac88ec8fe2e98b0c3bd8bf29cb3017c5fe44eb50b",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-06-animation.json",
+      "bytes": 1957
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-06-sheet.png",
+      "beforeSha256": null,
+      "afterSha256": "be4d707a48d0eff4a0a16d2e103662bec89c4d7be9725b1a1f901b3a3430d8e5",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-06-sheet.png",
+      "bytes": 2235659
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-07-animation.json",
+      "beforeSha256": null,
+      "afterSha256": "386127c30dacceb5dcaa0e4ea0e3ec83d8155379926ed0a79cd664c7ad53cdce",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-07-animation.json",
+      "bytes": 3433
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-07-sheet.png",
+      "beforeSha256": null,
+      "afterSha256": "b1ee0c667ed2a02d07d4dfae1292f572a52537cf1b006a3698610c9dba41eb0a",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-07-sheet.png",
+      "bytes": 2401626
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-08-animation.json",
+      "beforeSha256": null,
+      "afterSha256": "802cf649e49e0531f828c66693b9dd860b42f526136176659d2569ad39495a67",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-08-animation.json",
+      "bytes": 3442
+    },
+    {
+      "path": "public/assets/combat-motion-v1/blond-08-sheet.png",
+      "beforeSha256": null,
+      "afterSha256": "8336288d9658667f069649e2f665de061c0dd57569adf81def319cbc04ad9a53",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\blond-08-sheet.png",
+      "bytes": 2221375
+    },
+    {
+      "path": "public/assets/combat-motion-v1/turtle-idle.png",
+      "beforeSha256": null,
+      "afterSha256": "4c78674d0d3925c58790885d829624ad8711cf7273b4f50566ba0c3f77185809",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\turtle-idle.png",
+      "bytes": 2360024
+    },
+    {
+      "path": "public/assets/combat-motion-v1/turtle-manifest.json",
+      "beforeSha256": null,
+      "afterSha256": "0bca6ebe39071f29c677da61e9be32cd0e98bb6c5958e4011c85a9af2e81ee8c",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\turtle-manifest.json",
+      "bytes": 2319
+    },
+    {
+      "path": "public/assets/combat-motion-v1/turtle-strong.png",
+      "beforeSha256": null,
+      "afterSha256": "6290330c7b584f2f363cf65ac1405f0d1c3b37b8db5e0e7ca64867db0d16159f",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\turtle-strong.png",
+      "bytes": 2105606
+    },
+    {
+      "path": "public/assets/combat-motion-v1/turtle-walk.png",
+      "beforeSha256": null,
+      "afterSha256": "a36f6ed5ea0ed729cb34afaa210d592a5898e5b5826868ceb7ae401e32a22a68",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\turtle-walk.png",
+      "bytes": 2143224
+    },
+    {
+      "path": "public/assets/combat-motion-v1/turtle-weak.png",
+      "beforeSha256": null,
+      "afterSha256": "d3f2c2a6bfb4b28d9078c8d5295cd4311e5494d6d7610ca6979e3c908fbdd5aa",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\public\\assets\\combat-motion-v1\\turtle-weak.png",
+      "bytes": 2254838
+    },
+    {
+      "path": "tests/actor-depth.check.ts",
+      "beforeSha256": "acd355cf1f149ce68a5787eb0cfb16ef84a4b666d6a92a6ca08ab07235a367ac",
+      "afterSha256": "75d1949cc817ccf77350d40ce0d261b5c3e692d8bab303bc8636c0860f5fab1f",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\actor-depth.check.ts",
+      "bytes": 8776
+    },
+    {
+      "path": "tests/assassin-combat.check.ts",
+      "beforeSha256": "8593c1431eba05a6d4593d68c66399c5d9e422e279cdd91b407e8e180e58512e",
+      "afterSha256": "cff729603543b9de3cd7a2588306bb2ce2b1d0db434cd21ea7e6bb1d2ad71a4d",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\assassin-combat.check.ts",
+      "bytes": 10558
+    },
+    {
+      "path": "tests/battle-continuation.check.ts",
+      "beforeSha256": "50c79621e45029fdae060e67404fd45c3bec6d3d666a79a24acd76589beb7fa8",
+      "afterSha256": "e37e9a6a6830e2353704a65b5f2397370c5f298190e780c37c7db3a1300e1fdc",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\battle-continuation.check.ts",
+      "bytes": 3958
+    },
+    {
+      "path": "tests/battle-formation.check.ts",
+      "beforeSha256": "bcf5a650cec92526fbd4d70b2c5ce628ba9196928ee49888ed1fb2f97c3f5df6",
+      "afterSha256": "aee5a637f6d62fc5fae96392015f20905e5f0d3da11ab258c71ff9f51d200bdc",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\battle-formation.check.ts",
+      "bytes": 7589
+    },
+    {
+      "path": "tests/battle-save.check.ts",
+      "beforeSha256": "1295419c0a8cc06f91616c8885e7df6cc85f8c55b13ab4eabe3977eb7c89342b",
+      "afterSha256": "19a92782a342c4851d94852715a1ae79394e2d8a98c7336b811b2171b81d1506",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\battle-save.check.ts",
+      "bytes": 19036
+    },
+    {
+      "path": "tests/blade-skill.check.ts",
+      "beforeSha256": "910c1f8b6bc90b6b8e301a7c8bd3ca0c47a5db7ff33e927cb1e2c6f77a967cc9",
+      "afterSha256": "7291351b13d75912439bf9d6cc90aedaee0c4917c9cc84e10e138e676ce99aec",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\blade-skill.check.ts",
+      "bytes": 4785
+    },
+    {
+      "path": "tests/blade-visual.check.ts",
+      "beforeSha256": "927363a5ac871eb9dd563351b7a3900fe55818a59324a2098f0c53ff921d869d",
+      "afterSha256": "0f588b56ccc6b3f25606a2962bef98412c24082b901f79ea2e5c3e0741bc9c89",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\blade-visual.check.ts",
+      "bytes": 2894
+    },
+    {
+      "path": "tests/blond-warrior.check.ts",
+      "beforeSha256": "ce502bfc495752976e4bcd9296a2af1d92f815527fe0ee440f03ce61366259ca",
+      "afterSha256": "138fcaeeaea14169f63985928a08c944dc4f8cf159414b65ff9b55b489b71365",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\blond-warrior.check.ts",
+      "bytes": 6237
+    },
+    {
+      "path": "tests/boss-battle.check.ts",
+      "beforeSha256": "f1fc5847ca2bf6081f3b866dd55bd53b923575904bdf6873062993e9df80552b",
+      "afterSha256": "81d51aa2efc82dae13cc9d1d9a6e87ffadfcf5ecb3be9043a0bc605d6189c06a",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\boss-battle.check.ts",
+      "bytes": 2663
+    },
+    {
+      "path": "tests/boss-fixture.ts",
+      "beforeSha256": "6d5af449cc4310cca87b448bd807d17618e1fa4b338c49343c4fe87439e4e96c",
+      "afterSha256": "d6bebc43c67ed0ada2fb9ba149eb273fc42c4f736e1e550215357900acb36fd1",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\boss-fixture.ts",
+      "bytes": 342
+    },
+    {
+      "path": "tests/boss-formation.check.ts",
+      "beforeSha256": "359fbe0eaf53ec619fd185fb8fc5033a51694d776fa33139325ad66d7f9c3d6d",
+      "afterSha256": "941e6e6d21202a02c52cea785dda62431a7d95ef063dcc05c744d5e6f3fd545b",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\boss-formation.check.ts",
+      "bytes": 4523
+    },
+    {
+      "path": "tests/boss-hero-cards.check.ts",
+      "beforeSha256": "3f8ef2dfa5918c513085f462519955e06dc9af3e7f6f5366ba53521e23cc2dcf",
+      "afterSha256": "7f83a0467ab357dacc672b7b3e64661c8962166fa678856a543a4bf105ac5c2a",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\boss-hero-cards.check.ts",
+      "bytes": 3210
+    },
+    {
+      "path": "tests/boss-roster-ice.check.ts",
+      "beforeSha256": "0cc17eb55425b39d17ad598d858beda81860fae3c832a2f2ebdc97e48c0d9d54",
+      "afterSha256": "bef7c6d567fbc89bbd4a11884db8edce7a20e1afd57f64476fa40ab725fb2db0",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\boss-roster-ice.check.ts",
+      "bytes": 3464
+    },
+    {
+      "path": "tests/boss-skills.check.ts",
+      "beforeSha256": "4319f7ede6a5d4b77ebfb8ad9e578c9bc67dbbc78be9d42c325016c388c6ffd3",
+      "afterSha256": "41e28a9e64de7a9de3635c78b2e7450a97c845604488ebe2654da03f8f51ea87",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\boss-skills.check.ts",
+      "bytes": 2164
+    },
+    {
+      "path": "tests/boss-test-balance.check.ts",
+      "beforeSha256": "8df1663ad6e9e4bb20bf2210c618607954328ce2f9b979d7b79166f15dc7d6dc",
+      "afterSha256": "d0cb70b3747869b345cc4a0cb1b822a9aec6a5e370fb853c294a326908bab2dc",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\boss-test-balance.check.ts",
+      "bytes": 2816
+    },
+    {
+      "path": "tests/boss-wave-auto.check.ts",
+      "beforeSha256": "dc94ebf998c573f829424508707aaf41e92131b0e8015ac199a5799aff253fe4",
+      "afterSha256": "bd80f65bf0e88043b4fa0d206c58dde74acbff8bdd82edada1181e151b2245ee",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\boss-wave-auto.check.ts",
+      "bytes": 2626
+    },
+    {
+      "path": "tests/combat-playback.check.ts",
+      "beforeSha256": "2e66fb7c4db4ddd967c4ab66f6408259221b8cae70911f5aa3c83e16bfc1dae2",
+      "afterSha256": "e8c6b7e1e15c3a9be2b5405f1c88f236823e6e269b345020ae2d799a4ed8f694",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\combat-playback.check.ts",
+      "bytes": 2983
+    },
+    {
+      "path": "tests/damage-meter.check.ts",
+      "beforeSha256": "1612eb60c1830129d7834953734c3d932f4bb6603028018dc21e6f2e01aa5c63",
+      "afterSha256": "7e9628308b046bef83756b66cd1c79403ea96c1abe96b44cb2d778e08cccbc9e",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\damage-meter.check.ts",
+      "bytes": 3235
+    },
+    {
+      "path": "tests/damage-visibility.check.ts",
+      "beforeSha256": "e052b662770a99e3bc7ce53c30d2f0654f18105df4028f2a932788d0904568bf",
+      "afterSha256": "37b5dda93031012e60adec9310025cc7c992639b53d229ca220c9d7c47c2bd45",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\damage-visibility.check.ts",
+      "bytes": 2620
+    },
+    {
+      "path": "tests/fire-ground.check.ts",
+      "beforeSha256": "557bb4fe3a558b34f857636a47fefb23d4e28dbcb1e08a81ab8b4cd9fb5da1ea",
+      "afterSha256": "fc56a9426e02591e2da4152f4937444c8c23e599f4368990d9c04a37a0057458",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\fire-ground.check.ts",
+      "bytes": 2343
+    },
+    {
+      "path": "tests/fire-skill.check.ts",
+      "beforeSha256": "72b15f2d1c2d76c67872dc28c24ff9e905ef359b9ad0fc8ba343d75eeac00172",
+      "afterSha256": "67d445ddd74dac770340f4148737eac7e8944217ad33471efe3924c801332c21",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\fire-skill.check.ts",
+      "bytes": 2531
+    },
+    {
+      "path": "tests/fire-visual.check.ts",
+      "beforeSha256": "95ad2526355d5a1b11ec507a71a6204773281b45a4332a2e636aa6228777bf41",
+      "afterSha256": "41e66f6991d08cbf73d330332e0bb84f387f2d7bcbe5bde350d9ed4a1d22b7ea",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\fire-visual.check.ts",
+      "bytes": 2854
+    },
+    {
+      "path": "tests/game-run.check.ts",
+      "beforeSha256": "ea38a57c74b8befbbbdc9a24cd7be01b7531e52709a37b08005d89214a53a60e",
+      "afterSha256": "f0419f3ae572afe342411803bc30b988faf3c6c6d313985a126777d678bfe31f",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\game-run.check.ts",
+      "bytes": 4997
+    },
+    {
+      "path": "tests/hero-art.check.ts",
+      "beforeSha256": "61062b64d6565245f55536f1b96b95dd89a180f70b9e29a13c5f8d28f5aa105c",
+      "afterSha256": "8eca0eb58fdea6f09155c442e6995365f009112a61aa1f53d28bcd4b65b41ce6",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\hero-art.check.ts",
+      "bytes": 4681
+    },
+    {
+      "path": "tests/hero-critical.check.ts",
+      "beforeSha256": "2775d081caa71aab6284b5d8eb6d7e1635b18b198579a4979674257a5c7d56d7",
+      "afterSha256": "9a29eb278889f32589fe52fb4a0c97da01e0eec8c794852c5de2e8098d89b468",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\hero-critical.check.ts",
+      "bytes": 4507
+    },
+    {
+      "path": "tests/landscape-field.check.ts",
+      "beforeSha256": "97d8b6acd85938c792b4df3863f1f5e3bca621513643159779b29edf24acfeb5",
+      "afterSha256": "0fd04875b1f13de5a38f15263a9a80a20e1f166469119e7ff2d9bb3c577131e2",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\landscape-field.check.ts",
+      "bytes": 3054
+    },
+    {
+      "path": "tests/landscape-inventory.check.ts",
+      "beforeSha256": "9cd56a99f56ba4bfd44039702e22cd0005fccb95903eb1e2db7952aacfe91eea",
+      "afterSha256": "28b5c0edaca5a41c495501001d0ab5e2c30ae274fb63e7f1a9fbff5fe5c28b54",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\landscape-inventory.check.ts",
+      "bytes": 8267
+    },
+    {
+      "path": "tests/peak-dps.check.ts",
+      "beforeSha256": "14b949cb83eb4fd90df95943238b66b8fe6764310932e02aa752e1153691a627",
+      "afterSha256": "4648452c48dd27ae5411ac5d53db2e2df0d54cf28c972d087633d0208f5e11b7",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\peak-dps.check.ts",
+      "bytes": 1956
+    },
+    {
+      "path": "tests/ready-boss-fixture.ts",
+      "beforeSha256": null,
+      "afterSha256": "075f7055800943027a15cf89ece15e0e4d5fce784e7cc51bf7335926ad43d829",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\ready-boss-fixture.ts",
+      "bytes": 361
+    },
+    {
+      "path": "tests/runtime-motion.check.ts",
+      "beforeSha256": null,
+      "afterSha256": "055c68b9aef802fbd4188b319bf43ecfb8f7ef68b27eea4b71362469fe15bc52",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\runtime-motion.check.ts",
+      "bytes": 8282
+    },
+    {
+      "path": "tests/skill-visual.check.ts",
+      "beforeSha256": "31f3d34054f2fd78b224271fab2b11dc30650b3e651f235a56fd6f1bcbf80e3b",
+      "afterSha256": "243a2d2da8cf340af6bc495458754ea80f84bd2739e4a692e789a1f628f25bef",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\skill-visual.check.ts",
+      "bytes": 4662
+    },
+    {
+      "path": "tests/slime-art.check.ts",
+      "beforeSha256": "4c04c2d1f0ccec2665243655fb255b182e57e62ac336d3f46d2d8230e9964c5a",
+      "afterSha256": "e4417c44d8ab89afeaf0a19691a9188274393919689d82845e523479eece6e96",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\slime-art.check.ts",
+      "bytes": 6469
+    },
+    {
+      "path": "tests/sword-attack.check.ts",
+      "beforeSha256": "6aa3c1b1da1a5eb038dae7b1e33993c1982b251587c9425ded2ef4c2a9499cf1",
+      "afterSha256": "211f3fca97792ecf7c170f5a2e27880cecfe319d1830a07143c281558879ac65",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\sword-attack.check.ts",
+      "bytes": 4404
+    },
+    {
+      "path": "tests/sword-visual.check.ts",
+      "beforeSha256": "0810cb21c1107c56e34a665574ab8593c701c32adb7ca201d7cbdef1283cef50",
+      "afterSha256": "acfc5d91162a497bcbb715e41bd29839b0db5c131587127fca3a2e279828c017",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\sword-visual.check.ts",
+      "bytes": 2829
+    },
+    {
+      "path": "tests/training.check.ts",
+      "beforeSha256": "91b411a5c096aef76e668c80f717e0bbc626a8f382802fd0d71cb6c990f0ac29",
+      "afterSha256": "adfd63776fb831974faaf58d81c93eeaee49f5a2b303f4ac1b22f763bb0e68d2",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\tests\\training.check.ts",
+      "bytes": 6787
+    },
+    {
+      "path": "scripts/check-tests.mjs",
+      "beforeSha256": "bc1ee7c1d53c81713426be92ff5846a35d0f9830e1bb00a90b4112377ba0c232",
+      "afterSha256": "214e2291400d48bdde2a609508f23a3ef6386a4c8229bc5bf968681484f792d4",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\scripts\\check-tests.mjs",
+      "bytes": 4867
+    },
+    {
+      "path": "scripts/runtime-check.mjs",
+      "beforeSha256": null,
+      "afterSha256": "675994d295de9a54336c88f7195dccc30ea7ce4475f0d773a34fd89ffe8f7461",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\scripts\\runtime-check.mjs",
+      "bytes": 587
+    },
+    {
+      "path": "qa/battle-landscape.html",
+      "beforeSha256": null,
+      "afterSha256": "7cd1a6982b502c5edaab866a6b3301c6292ec423b4d4efe461a448467e785bca",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\qa\\battle-landscape.html",
+      "bytes": 18645
+    },
+    {
+      "path": "qa/entry.ts",
+      "beforeSha256": null,
+      "afterSha256": "e4296dcc30b7afe3ddccfdc63f60fc85a8327c14b70e32820ac43749db6ffd73",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\staged\\qa\\entry.ts",
+      "bytes": 3020
+    }
+  ],
+  "state": "applied_pending_validation",
+  "allBaselineAndDeliveryHashesMatch": true,
+  "userProgressCaptured": true,
+  "gameServerRestarted": false,
+  "gitOperations": false
+}

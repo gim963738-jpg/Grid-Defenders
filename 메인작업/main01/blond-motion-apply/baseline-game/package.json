@@ -1,0 +1,21 @@
+{
+  "name": "grid-defenders",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "check": "tsc --noEmit",
+    "check:tests": "tsc --project tsconfig.tests.json",
+    "test": "npm run check:tests && node scripts/check-tests.mjs",
+    "build": "npm run check && vite build --base=./",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "pixi.js": "8.22.0"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}

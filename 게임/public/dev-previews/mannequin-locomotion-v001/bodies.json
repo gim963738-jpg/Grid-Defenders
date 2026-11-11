@@ -1,0 +1,50 @@
+{
+  "status": "Male from blond35 combined ratios; female is provisional SD mannequin for user feedback, not universal female standard",
+  "bodies": [
+    {
+      "id": "male",
+      "name": "남성체 · 기본 초안",
+      "description": "금발35 결합비율 참고 · 어깨112/골반68/허리78 반폭",
+      "rest": {
+        "shoulderHalfWidth": 112,
+        "hipHalfWidth": 68,
+        "waistHalfWidth": 78,
+        "pelvisRadius": 93,
+        "headRadiusX": 98,
+        "headRadiusY": 110
+      },
+      "lengths": {
+        "thigh": 205,
+        "shin": 195,
+        "upperArm": 130,
+        "forearm": 95,
+        "torso": 310,
+        "neck": 70,
+        "headHeight": 220
+      }
+    },
+    {
+      "id": "female",
+      "name": "여성체 · 미확정 초안",
+      "description": "같은 SD 계열 · 어깨96/골반80/허리63 반폭 · 별도 관절 배치",
+      "rest": {
+        "shoulderHalfWidth": 96,
+        "hipHalfWidth": 80,
+        "waistHalfWidth": 63,
+        "pelvisRadius": 104,
+        "headRadiusX": 94,
+        "headRadiusY": 110
+      },
+      "lengths": {
+        "thigh": 205,
+        "shin": 195,
+        "upperArm": 126,
+        "forearm": 92,
+        "torso": 300,
+        "neck": 70,
+        "headHeight": 220
+      }
+    }
+  ],
+  "motionPolicy": "Exactly one shared motion profile, same cycle periods/speeds/phase. No gendered character or behavioral difference. Widths are separate local shape/joint values, no full-body horizontal compression."
+}

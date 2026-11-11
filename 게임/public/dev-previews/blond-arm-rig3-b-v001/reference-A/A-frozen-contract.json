@@ -1,0 +1,29 @@
+{
+  "task": "MAIN01-20261110-0FE35B71",
+  "variantBranch": "A builtin-image restoration route",
+  "sourceSha256": "366b8073d944fea1849dd1795c4e36cdd63c2653f04ea9262a20d457670ee285",
+  "rigSha256": "a98d016d5aa5517ed47f0b3b8152c6f7954a6928454a59e019014115abec7149",
+  "animationsSha256": "1a75bfcbe49cb4368d7c1887490539fa66e6b0f3b3fd6dba82dd9c82cd5cb56f",
+  "rendererSha256": "5283d46fcb62403144277da4cae0b34208ed3f0ea103d527478e18593eac9c04",
+  "parts": [
+    {
+      "body": "bf8735c95ede2440b86836b91cf10f2162fafc5b02b8195e74e66e8421553235"
+    },
+    {
+      "upperarm": "08361ac710deed4e28a8667ed22f8c7a928a9db457bd0c088081e8d80aa40ab8"
+    },
+    {
+      "forearm": "651f69ee379140747f7ca29cbe2ba1403432d76b4a77481a54b35324f6a6f875"
+    },
+    {
+      "hand": "934e0c4e00944fdd1a5814f1964efd987d518710ae79167a074b5aeea5fbfc28"
+    },
+    {
+      "weapon": "5608704f5cf5ca6f9d11e278e396597202db38034a6db382ada8501c3ead576d"
+    },
+    {
+      "pauldron": "4618dcd3ffb97d409ea82e468e68438be820648ec6c4858a0633c977d4052c4a"
+    }
+  ],
+  "instruction": "freeze this exact source/rig/clips for separately dispatched B comparison; no B API calls performed here"
+}

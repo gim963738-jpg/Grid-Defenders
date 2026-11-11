@@ -1,0 +1,24 @@
+{
+    "task":  "MAIN02-20261109-9009B97A",
+    "iteration":  11,
+    "reviewer":  "main02",
+    "at":  "2026-11-10T07:51:01.7034781+09:00",
+    "viewed":  [
+                   "01-hero-right-portraits.png",
+                   "02-hero-late-selected.png",
+                   "03-hero-skill-reader.png",
+                   "04-equipment-5x3.png",
+                   "05-equipment-held.png"
+               ],
+    "scale":  "800x360",
+    "observations":  [
+                         "영웅 좌실제게임캐릭터와6값·우큰초상횡스크롤 기본/후반선택 확인",
+                         "하단상세능력치와4스킬역할 유지·단일설명카드 확인",
+                         "장비창고5x3 셀추가와아래조합 확인",
+                         "장비배치로제거·전투시작108x48 위치시각통일 확인",
+                         "held상대파란선·idle선없음 시각확인"
+                     ],
+    "ack":  "iteration11/ui/19문서 모두현재해시일치·적용요약있음",
+    "limits":  "담당자 상태49/갤러리12/668보존해시 통과보고. 메인은5PNG시각검토와ACK해시검토. 독립QA·실기기·게임통합·사용자합격 아님",
+    "status":  "ready_for_user_review"
+}

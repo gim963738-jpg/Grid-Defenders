@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "builtInChecks": [
+    {
+      "name": "intro frame count 67",
+      "pass": true
+    },
+    {
+      "name": "05 exactly seven frames",
+      "pass": true
+    },
+    {
+      "name": "05 ends at frame7",
+      "pass": true
+    },
+    {
+      "name": "05 directly to06",
+      "pass": true
+    },
+    {
+      "name": "06 directly to idle02",
+      "pass": true
+    },
+    {
+      "name": "only final idle loops",
+      "pass": true
+    },
+    {
+      "name": "six actions times two routes",
+      "pass": true
+    }
+  ],
+  "imagesLoaded": 12,
+  "introFrames": 67,
+  "introMs": 6380,
+  "tailLoopMs": 1800,
+  "controls": "pause/restart verified",
+  "tail": "02 loops after06; 07/08 absent",
+  "render": "both variants draw through same clock",
+  "drawCalls": 6
+}

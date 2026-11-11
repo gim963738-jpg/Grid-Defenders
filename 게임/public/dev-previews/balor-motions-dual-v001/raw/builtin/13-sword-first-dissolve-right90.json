@@ -1,0 +1,38 @@
+{
+  "task": "MAIN01-20261111-9B2C9CFE",
+  "iteration": 1,
+  "route": "host_image_gen",
+  "model": null,
+  "modelReported": false,
+  "callOrdinal": 13,
+  "action": "13-sword-first-dissolve-right90",
+  "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 13-sword-first-dissolve-right90. Exact phases: 1 EXACT preceding greatsword-slam LAST bent impact pose; 2 posture frozen, sword tip begins disintegrating; 3 blade dissolves FIRST into white particles; 4 sword mostly gone while armour still intact; 5 sword fully gone and hands/torso now start dissolving; 6 armour breaks into white particles; 7 body dissolves without rising; 8 smoke/particles blow LEFT; 9 sparse leftward particles; 10 wispy leftward smoke; 11 almost empty; 12 completely TRANSPARENT EMPTY cell. Never reset to upright READY pose. Hold impact posture until dissolving.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential. LAST attached image is the exact preceding clip last-frame CONNECTION POSE; begin from it, preserving identity and camera. Do not copy backdrop.",
+  "references": [
+    {
+      "file": "source/approved-right035.png",
+      "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+      "attached": true
+    },
+    {
+      "file": "api/02-ref-giant90/native.png",
+      "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+      "attached": true
+    },
+    {
+      "file": "references/builtin-12-last.png",
+      "sha256": "8257fe03fb80d7e0393856edaac9f94a75456725386a4904ae81b6320b75c1cb",
+      "attached": true
+    }
+  ],
+  "transparent_background": true,
+  "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2c262cab-6e06-4b6b-abf9-c548ff47aa96.png",
+  "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\13-sword-first-dissolve-right90.png",
+  "sha256": "5b0e612661d0b8421851cbfd67c79d8fca2d77afae8fe1a8cdf8f73bcf20d43c",
+  "width": 1448,
+  "height": 1086,
+  "mode": "RGBA",
+  "usage": null,
+  "cost": null,
+  "nativeBytesPreserved": true,
+  "at": "2026-11-11T09:32:52.867100+00:00"
+}

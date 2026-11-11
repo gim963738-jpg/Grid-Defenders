@@ -1,0 +1,43 @@
+{
+  "method": "Native PNG visual landmark estimates; projected lengths only, not true 3D sword length. Endpoints uncertainty about 6-10px. Body height hairTip-to-sole; changed crouch means ratios are observational, not anatomical proof.",
+  "before": {
+    "tip": [
+      50,
+      300
+    ],
+    "guardCenter": [
+      270,
+      665
+    ],
+    "pommel": [
+      370,
+      850
+    ],
+    "bodyHeight": 1179,
+    "bladeProjectedPxApprox": 426,
+    "wholeProjectedPxApprox": 636,
+    "bladePerBodyApprox": 0.36,
+    "wholePerBodyApprox": 0.54
+  },
+  "after": {
+    "tip": [
+      10,
+      1055
+    ],
+    "guardCenter": [
+      335,
+      890
+    ],
+    "pommel": [
+      480,
+      840
+    ],
+    "bodyHeight": 1092,
+    "bladeProjectedPxApprox": 364,
+    "wholeProjectedPxApprox": 517,
+    "bladePerBodyApprox": 0.33,
+    "wholePerBodyApprox": 0.47
+  },
+  "axisReview": "Blade is straight within itself, but grip-to-blade may retain a small angular mismatch. Hilt and guard centers partly occluded; cannot certify perfect collinearity.",
+  "safeMargin": "Alpha32 content starts at x4 on 1024px canvas; tip inside but insufficient left breathing room."
+}

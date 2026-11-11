@@ -1,0 +1,143 @@
+{
+  "task": "MAIN01-20261111-9B2C9CFE",
+  "iteration": 1,
+  "role": "characters",
+  "workSummary": "승인 SD35를 첨부해 공통90기준2개 및 내장/2.6 동일13동작 네이티브 시트를 제작한다. 초기 호출 상한·재시도0, frameRects 고정스케일 재생, 전체 프레임/연결/72CSSpx 명암·필드 검수와 실제 실패를 보고한다.",
+  "documents": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md",
+      "sha256": "7266f744233aa81bb68d691a2847a82d267ec68f79f5c6ad3ab038fc60295f4a",
+      "applies": "최신 main01 단일메인과 본 작업의 합격 SD35를 우선한다. 과거 SD/일러스트 미통과를 마스터로 쓰지 않고 기존 원본·게임·카탈로그를 변경하지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md",
+      "sha256": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+      "applies": "현재 작업의 본문 필독·적용 요약·start 후 제작하고 원본/검증/사용자 합격을 분리한다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "sha256": "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+      "applies": "확인된 총13동작×2경로만 수행하고 작업5종 기록과 실제 결과·잔여결함을 제출한다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "sha256": "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+      "applies": "main01 현재 Task/Dispatch로 실제 회신하며 재승인·중복송신·턴재시작을 하지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "sha256": "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+      "applies": "팀장이 원본 시트/프롬프트/사용량을 취합하고 재생속도와 미적 합격은 사용자에게 남긴다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "sha256": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "applies": "캐릭터 아트와 독립 미리보기만 담당한다. 게임 공통 런타임과 타팀 파일은 읽기전용이다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md",
+      "sha256": "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+      "applies": "이번 작품 승인 SD35와 동작 설계를 사용한다. 과거 공통 마스터의 얼굴/체격을 강제 복제하지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "sha256": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "applies": "read-pack의 현재27개 문서별 적용/해시를 새 ACK로 작성하고 start를 통과한다. 반환 전 버전 유효성을 확인한다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "sha256": "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+      "applies": "characters 팀장 소유이며 main01에 취합한다. sprites 규정은 적용하되 새 상설 담당은 만들지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "sha256": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "applies": "세계관/캐릭터/스프라이트 분류를 유지한다. 트리 변경이나 원본 이동은 없다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "sha256": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "applies": "같은 분류라도 다른 분야 제작 기준을 혼합하지 않는다. 현재 characters 경로에서 작업한다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+      "sha256": "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+      "applies": "활성 main01만 요청/회신한다. main02/03 및 옛 Dispatch에 새 결과를 보내지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-motions-dual\\사용자확인.md",
+      "sha256": "9c4455b459a407b4ba76d909a324881e08371644f3877ba51e5618498802963b",
+      "applies": "실제 사용자 진행과 이번 2.6 명시 허가를 적용한다. 합격 전투태세 기반 9종 묶음/13연결시트를 두 경로로 제작한다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-motions-dual\\사전확인.md",
+      "sha256": "fcb90fd99ceb54edad68fd09beca389d2917b896d11ab21cf6dea77aca511ab5",
+      "applies": "원본 시트 바이트와 공통 기준을 보존한다. 2.6 임시기준2+시트13, 내장13 초기호출만. 영상·자동키잉·재조립·추가유료0."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-motions-dual\\동작설계.json",
+      "sha256": "bfb42cf674d720c5ef7b55e1b9fbf6e6dee4eecbb3b464a41720a9858acce538",
+      "applies": "13ID/시점/루프·종료유지/소환용10역재생/11→12→13 연결을 action-plan에 전개한다. 프레임수·시간은 제안값이다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작품\\발로르\\전투태세승인.json",
+      "sha256": "f34ce73bd29c8625cbd46ec51edfd4da900987aee1d8a9451b678110d8535843",
+      "applies": "승인 SHA를 대조하여 실제 입력한다. 과거 newMotionProductionApproved false는 이번 별도 진행의 허가를 취소하지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-sd-guard6\\v003\\사용자합격.md",
+      "sha256": "0fd9d60e4ae32d6d9a1b41115cad614a6c8bd08b4aca54aad767ca146f587505",
+      "applies": "전투태세 합격을 유지하고 과거 기술관찰을 삭제하지 않는다. 새 모션의 사용자 합격으로 확대하지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard35_natural_main01-20261111-1b358aa6_v003\\제작기준.md",
+      "sha256": "3b5d81cac53c0556165f8f0eca07ca1a66b674151ecfc527a7cbad4c14a082de",
+      "applies": "자연그립·낮은 검·결합비율과 원본 바이트를 보존한다. 이번 모션의 회전·무릎 변화는 최신 동작 지시에 따른다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+      "sha256": "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+      "applies": "이번 작업에서만 명시된 2.6 15POST 범위를 사용한다. 등록 키나 이전 허가를 추가 호출 권한으로 추론하지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "sha256": "0ad5c82c5e7a86025e43efcc55396d3d10ea7d28c82ad4ea18badcef93553ab9",
+      "applies": "이번 진행은 확인된 범위의 제작·검수를 포함한다. 같은 허락을 반복 요구하지 않고 범위를 확대하지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+      "sha256": "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be",
+      "applies": "로컬 산출물/필수기록만 작성한다. 사용자 저장 요청 없는 커밋·푸시·예약백업0."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+      "sha256": "1ef4d854ad8d3250a57f8ece69605b07c4244eaa2c7599da235c8fbb2be1fb8f",
+      "applies": "고해상도 시트를 보존하고 고정 본체/기준점으로72CSSpx 표시3번을 버퍼에만 적용한다. DPR/장비/여백을 분리한다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\규정.md",
+      "sha256": "054180df089a2d1694430be7dc09e3718b31553e9dfa2904584717bedf5ccc41",
+      "applies": "프레임 위상/접지/앵커/전체 명암·필드 검수 및 네이티브 시트 보존을 적용한다. 과거 프레임 수를 강제하지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\작업진행방법.md",
+      "sha256": "6cfe384d656136b57294d569d88f9028e080f5d42d0cf93c8f1142ea92f87c5d",
+      "applies": "sprites의 공통 방법을 팀장이 적용한다. 새 작업 ACK를 사용하고 완성 시트 자동 분해·재조립을 하지 않는다."
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+      "sha256": "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+      "applies": "그림·패딩·표시·피해판정을 분리한다. 모든 프레임의 실제셀/잘림·밝은배경·필드를 검수한다. 피해·쿨타임 구현은 범위외다."
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md",
+      "sha256": "412cf153ca5f906d132c0d2ed9813553e8ee95c97d5dcee23a63574374f53ae2",
+      "applies": "손목/손바닥/엄지·네손가락·손잡이 접촉과 일체형 검축을 실제 그림에서 검수한다. 동작별 투영은 자연 회전을 따른다."
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\README.md",
+      "sha256": "a10bf09af80558fc4e9ec9d673afda74b8cf53b7a02084a598043d5d08c4d473",
+      "applies": "기존 image-studio 2.6-high 연결과 어댑터를 읽기전용 사용하며 실제 입력/요청ID/usage/응답모델 미보고를 기록한다. 키는 메모리로만 읽고 자동재시도0."
+    }
+  ]
+}

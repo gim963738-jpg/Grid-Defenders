@@ -1,0 +1,89 @@
+{
+  "coordinateSystem": "3D proxy: x forward/right travel, y up, z anatomical lateral; orthographic right-front yaw35; not a recovered nude body",
+  "camera": {
+    "yawDeg": 35,
+    "groundForwardSlope": 0.1,
+    "groundLateralSlope": 0.06
+  },
+  "lengths": {
+    "thigh": 205,
+    "shin": 195,
+    "upperArm": 130,
+    "forearm": 95,
+    "torso": 310,
+    "neck": 70,
+    "headHeight": 220
+  },
+  "rest": {
+    "hipHeight": 410,
+    "ankleHeight": 28,
+    "hipHalfWidth": 68,
+    "shoulderHalfWidth": 112,
+    "headRadiusX": 98,
+    "headRadiusY": 110,
+    "footLength": 122,
+    "footWidth": 53
+  },
+  "hierarchy": {
+    "Root": null,
+    "Pelvis": "Root",
+    "Torso": "Pelvis",
+    "Chest": "Torso",
+    "Neck": "Chest",
+    "Head": "Neck",
+    "RightUpperArm": "Chest",
+    "RightForearm": "RightUpperArm",
+    "RightHand": "RightForearm",
+    "LeftUpperArm": "Chest",
+    "LeftForearm": "LeftUpperArm",
+    "LeftHand": "LeftForearm",
+    "RightThigh": "Pelvis",
+    "RightShin": "RightThigh",
+    "RightFoot": "RightShin",
+    "LeftThigh": "Pelvis",
+    "LeftShin": "LeftThigh",
+    "LeftFoot": "LeftShin"
+  },
+  "reference": {
+    "file": "reference.png",
+    "sha256": "366b8073d944fea1849dd1795c4e36cdd63c2653f04ea9262a20d457670ee285",
+    "hairTop": 17,
+    "estimatedScalpCrown": 110,
+    "chin": 335,
+    "sole": 1221,
+    "scalpErrorPx": 35,
+    "jointErrorPx": 25,
+    "method": "Visible face/chin/sole and limb axes visually estimated; skull hidden by hair and body hidden by armor. Mannequin approximates combined ratios rather than extracting nude anatomy.",
+    "estimatedSourceJoints": {
+      "nearShoulder": [
+        548,
+        429
+      ],
+      "nearElbow": [
+        492,
+        562
+      ],
+      "nearWrist": [
+        455,
+        653
+      ],
+      "nearHand": [
+        473,
+        708
+      ],
+      "pelvis": [
+        650,
+        775
+      ],
+      "nearKnee": [
+        590,
+        987
+      ],
+      "nearAnkle": [
+        570,
+        1170
+      ]
+    },
+    "proportionCorrection": "Initial code draft had overly long arms/legs; visually compared source shoulder/elbow/wrist/hip landmarks and shortened limbs while increasing torso/neck spacing. Hidden pelvis is an estimate ±35px, not user-confirmed anatomy."
+  }
+}

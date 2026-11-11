@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grid Defenders — 로비</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body style="visibility:hidden">
+    <main id="app">
+      <section id="lobby-screen" class="lobby-screen" aria-label="게임 로비">
+        <div class="lobby-glow" aria-hidden="true"></div>
+        <div class="lobby-emblem" aria-hidden="true"><svg viewBox="0 0 80 88"><path d="M40 4 70 20v29L40 82 10 49V20Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m25 24 30 39m0-39L25 63M22 53l13 10m10 0 13-10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="m40 14 5 7-5 7-5-7Z" fill="currentColor"/></svg></div>
+        <span class="lobby-eyebrow">DEFEND THE FOREST</span><h1 tabindex="-1">GRID<br><span>DEFENDERS</span></h1>
+        <p class="lobby-subtitle">숲을 지키는 새로운 전투</p>
+        <section id="run-result" class="run-result" aria-label="지난 전투 결과" hidden><small>전투 종료</small><h2 id="run-result-title">전장 방어 실패</h2><p id="run-result-reason"></p><dl><div><dt>도달 웨이브</dt><dd id="run-result-wave">1</dd></div><div><dt>처치</dt><dd id="run-result-kills">0</dd></div><div><dt>전투 시간</dt><dd id="run-result-time">00:00</dd></div></dl></section>
+        <div class="lobby-start-area"><button id="game-start" disabled>게임 시작 <span>›</span></button><p id="lobby-hint">전장을 준비하는 중입니다.</p></div>
+      </section>
+      <nav id="battle-shell-header" class="battle-shell-header" aria-label="전장 메뉴" hidden><button id="battle-return">‹ 로비</button><span>잊혀진 숲</span></nav>
+      <div id="defense-screen" hidden>
+      <section id="battlefield" aria-label="순환 전장">
+        <span id="run-mode-label" class="run-mode-badge">일반전</span>
+        <section id="wave-info" aria-label="웨이브 전투 상태">
+          <div class="wave-controls" aria-label="전투 배속과 일시정지"><button id="speed" aria-label="전투 배속 변경">1×</button><button id="pause" class="pause-control" aria-label="전투 일시정지" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" fill="currentColor"/></svg></button></div>
+          <strong id="wave-number">WAVE 1</strong><b id="wave-timer">00:30</b>
+          <progress id="wave-progress" max="30" value="30" aria-label="현재 웨이브 남은 시간"></progress>
+          <div class="wave-monster-count" aria-label="현재 전장 몬스터 수와 2웨이브 분량"><span>몬스터</span><strong id="enemies">0</strong><span class="monster-count-divider" aria-hidden="true">/</span><strong id="enemy-limit" title="2웨이브 분량">20</strong></div>
+        </section>
+        <div id="battle-scene"><button id="bounty-summon" hidden aria-label="현상금 몬스터 소환"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12 4 3l9 6h6l9-6-1 9v12l-5 5H10l-5-5Z" fill="#bb8034" stroke="#ffdd7a" stroke-width="2"/><path d="M9 14h4v5H9zm10 0h4v5h-4zm-7 9h8" fill="#fff0bc" stroke="#fff0bc"/></svg><span id="bounty-label">소환</span></button><p id="status" role="status">전장을 준비하는 중입니다.</p></div>
+        <div id="wave-alert" class="wave-alert" role="status" aria-live="polite" aria-atomic="true" hidden>
+          <span class="wave-alert-rune" aria-hidden="true"><svg viewBox="0 0 40 48"><path d="M20 2 36 13v19L20 46 4 32V13Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m20 8 11 8v14l-11 9-11-9V16Z" fill="currentColor" opacity=".12"/><path d="M20 15v12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="33" r="1.8" fill="currentColor"/></svg></span>
+          <div class="wave-alert-copy"><small id="wave-alert-label">ELITE INCOMING</small><strong id="wave-alert-title">네임드 출현 예고</strong><span class="wave-alert-meta" aria-hidden="true"><span id="wave-alert-round">WAVE 5</span><i></i><b id="wave-alert-seconds">10</b>초 후 시작</span></div>
+        </div>
+      </section>
+      <div id="command-area" class="summon-background" data-hero-backdrop="tank">
+      <div class="field-caption" hidden><span>↻ 외곽 순환 · 아군 일방 공격</span><span id="population">배치 0 / 16</span></div>
+      <p class="combat-legend" hidden><span>● 일반형</span><span class="physical">⬡ 물리 방어형</span><span class="magic">◇ 마법 방어형</span><span>왕관: 네임드</span></p>
+      <p id="message" role="status" hidden>병사를 선택하고 전장의 빈 칸을 눌러주세요.</p>
+      <nav class="tabs" aria-label="전투 조작 메뉴">
+        <button data-tab="summon" class="active" aria-pressed="true">소환·지휘</button>
+        <button data-tab="gear" aria-pressed="false">장비·가방</button>
+        <button data-tab="shop" aria-pressed="false">상점</button>
+      </nav>
+      <div class="command-panels">
+      <section id="summon" class="panel">
+        <div class="section-title summon-heading"><h2>병사 소환</h2><div class="resource-wallet" role="group" aria-label="소환 재화"><span class="resource-token resource-gold"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="#d8a83e" stroke="#ffe298"/><circle cx="8" cy="8" r="4.1" fill="none" stroke="#8d6225"/><path d="M8 4.8v6.4M6.4 6h2.1c1.7 0 1.7 2 0 2H7.5c-1.7 0-1.7 2 0 2h2.1" fill="none" stroke="#fff0b8" stroke-width=".8"/></svg><span class="resource-label">골드</span><strong data-resource-value="gold">480</strong></span><span class="resource-token resource-anvils"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12v2H9.5v2.5L12 11v2H4v-2l2.5-2.5V6H4L1 4Z" fill="#a7bec9" stroke="#d9e7ed" stroke-width=".7"/><path d="M4 13h8" stroke="#627f8b" stroke-width="2"/></svg><span class="resource-label">모루</span><strong data-resource-value="anvils">0</strong></span></div></div>
+        <div id="soldiers" class="cards three" aria-label="병사 선택 · 클릭하여 능력치 확인"></div>
+        <div class="section-title"><h2>영웅 소환</h2><span id="hero-count">무료 · 최대 3명</span><div class="hero-carousel-controls"><button id="hero-prev" aria-label="이전 영웅">‹</button><span id="hero-carousel-position" aria-live="polite">1 / 4</span><button id="hero-next" aria-label="다음 영웅">›</button></div></div>
+        <div id="heroes" class="hero-carousel" role="group" aria-roledescription="캐러셀" aria-label="영웅 선택 · 좌우로 넘긴 뒤 클릭하여 소환" tabindex="0"></div>
+        <div id="hero-skill-slots" class="hero-skill-slots" role="group" aria-label="중앙 영웅 스킬"></div>
+        <p class="hero-carousel-hint">좌우: 카드 넘기기 · 위로 드래그: 전장 소환</p>
+        <section id="unit-detail" class="detail"></section>
+      </section>
+      <section id="gear" class="panel" hidden>
+        <div class="equipment-layout">
+          <section class="equipment-board">
+            <div class="inventory-hero-bar"><span id="inventory-hero-icon" class="inventory-hero-icon"></span><div class="inventory-hero-name"><small>선택 영웅</small><b id="inventory-hero-name">영웅 선택</b></div><button id="inventory-hero-stats" class="inventory-stats-button" aria-haspopup="dialog" aria-controls="hero-info" disabled>능력치</button></div>
+            <h2 id="gear-title">영웅 장비</h2><div id="equipment" aria-label="영웅 장비칸 4열 5행"></div>
+          </section>
+          <div class="equipment-bag-column">
+            <div class="inventory-actions"><div class="resource-wallet" role="group" aria-label="공용 가방 재화"><span class="resource-token resource-gold"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="#d8a83e" stroke="#ffe298"/><circle cx="8" cy="8" r="4.1" fill="none" stroke="#8d6225"/><path d="M8 4.8v6.4M6.4 6h2.1c1.7 0 1.7 2 0 2H7.5c-1.7 0-1.7 2 0 2h2.1" fill="none" stroke="#fff0b8" stroke-width=".8"/></svg><span class="resource-label">골드</span><strong data-resource-value="gold">480</strong></span><span class="resource-token resource-anvils"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12v2H9.5v2.5L12 11v2H4v-2l2.5-2.5V6H4L1 4Z" fill="#a7bec9" stroke="#d9e7ed" stroke-width=".7"/><path d="M4 13h8" stroke="#627f8b" stroke-width="2"/></svg><span class="resource-label">모루</span><strong data-resource-value="anvils">0</strong></span></div></div>
+            <aside class="equipment-bag">
+              <h3>공용 가방</h3><div class="bag-frame"><div class="inventory-scroll"><div id="gear-bag" class="inventory-grid" aria-label="영웅 장비창의 공용 가방 5열 3행 표시"></div></div></div>
+              <p id="combine-status" aria-live="polite"></p><div class="inventory-combine-action" aria-label="아이템 조합"><button id="combine" class="small-button" disabled>조합</button></div><div id="item-detail" class="detail"></div>
+              <p class="gear-combine-hint">조합 예정: 노란선 · 후순위: 회색선 · 누르는 동안: 파란 점선</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section id="shop" class="panel" hidden>
+        <div class="shop-layout">
+          <div class="shop-counter">
+            <div class="shop-merchant" role="img" aria-label="은발 상인 캐릭터"></div>
+            <div class="shop-bag-column"><div class="section-title"><h2>공용 가방</h2></div><div class="bag-frame"><div class="inventory-scroll"><div id="shop-bag" class="inventory-grid" aria-label="상점 공용 가방 5열 3행 표시"></div></div></div></div>
+          </div>
+          <section id="shop-market" aria-label="상점과 드래그 판매 영역"><div class="section-title"><button id="reroll" class="small-button">새로고침 20G</button></div><div id="shop-cards" class="shop-cards"></div><p id="shop-sale-hint">아이템을 여기로 끌어 판매</p><div id="gear-sale-layer" class="gear-sale-layer" role="status" hidden><div class="gear-sale-prompt"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 10h18l-2 18H9L7 10Zm-2-4h22v4H5V6Zm7-3h8v3h-8V3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13 14v10m6-10v10" stroke="currentColor" stroke-width="2"/></svg><b id="gear-sale-title">아이템 판매</b><span>이곳에 내려놓으면 판매됩니다</span><strong id="gear-sale-value">+0G</strong></div></div></section>
+        </div>
+        <div id="shop-item-detail" class="detail"></div>
+        <p class="hint">공용 가방은 아래로 확장됩니다. 블록 드래그: 이동 · 더블클릭·두 번 탭: 회전. 상점 상품을 공용 가방 또는 영웅 장비칸에 내려놓으면 구매합니다.</p>
+      </section>
+      </div>
+      </div>
+      <footer>몬스터 누적 20마리 · 보스전 전멸 또는 제한시간 초과 시 전투 종료</footer>
+      </div>
+      <section id="boss-screen" aria-label="보스전 화면" hidden>
+        <header class="masthead"><div><span class="eyebrow">GRID DEFENDERS</span><h1 tabindex="-1">보스전 <span>전투 시험</span></h1></div><span class="boss-phase">BOSS</span></header>
+        <div class="boss-wave-heading"><strong id="boss-wave-label">BOSS · WAVE 1</strong><span id="boss-time-limit" class="boss-time-limit">남은 시간 01:00</span><div class="boss-battle-controls"><button id="boss-speed" aria-label="보스전 배속 변경">1×</button><button id="boss-pause" class="pause-control" aria-label="전투 일시정지" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" fill="currentColor"/></svg></button></div></div>
+        <p id="boss-test-profile" class="boss-scene-note" hidden></p>
+        <section class="boss-arena fighting" aria-label="보스전 시험 전장"><div class="boss-side"><div class="boss-emblem" aria-hidden="true">♛</div><h2>보스전</h2><p>전투 준비</p></div><div class="boss-allied-side"><span class="boss-allies-label">아군 진영</span><div id="boss-party" role="img" aria-label="아군 진영 가로 4칸 세로 8칸, 중앙 참고 편성"></div></div><div id="boss-combat" aria-label="양측 전열 우선 자동 전투"></div></section>
+        <p id="boss-combat-status" class="boss-scene-note" role="status">전열 우선 교전 준비</p>
+        <section class="boss-commander-skills" aria-label="지휘자 스킬"><div class="boss-skills-heading"><h2>지휘자 스킬 <small>테스트</small></h2><button id="boss-auto-skills" aria-pressed="true">스킬 자동 ON</button></div><button id="boss-commander-skill"><b>공격 지휘</b><span>병사 공격력 +100 · 10초</span><strong id="commander-skill-cooldown">사용 가능</strong></button></section>
+        <section class="boss-hero-skills" id="boss-hero-skills" aria-label="배치 영웅 평타와 스킬"></section>
+      </section>
+    </main>
+    <aside id="dev-tools" aria-label="개발자 도구와 아이템 조합">
+      <header class="tools-heading"><h2>개발자 도구 <span>임시</span></h2><p id="dev-balance">골드 480G · 모루 0</p></header>
+      <button id="dev-infinite-test" class="infinite-test-button" disabled title="전투를 초기화하고 기존 무한웨이브 시험 시작 · 누적 패배 및 보스 시간 제한 없음">무한웨이브 테스트</button><button id="dev-lobby" class="dev-lobby-button" disabled>로비로 돌아가기</button><div class="scene-dev-actions"><button id="dev-boss-scene" aria-pressed="false" title="현재 아군 편성에 맞춘 50초 이상 시험 보스 준비">보스전 바로가기</button><button id="dev-defense-scene" aria-pressed="false">웨이브전 바로가기</button></div><button id="boss-restart">보스전 다시 시험</button><p id="scene-dev-status" class="tools-hint" role="status">현재 화면: 로비</p>
+      <div class="dev-actions"><button id="dev-gold">골드 +10,000G</button><button id="dev-anvils">모루 +10</button><button id="dev-test-deploy">영웅·병사 테스트 배치 ×12</button><button id="dev-test-gear" disabled title="선택 영웅에게 무료 배치 · 기존 장비는 공용 가방 보관 · 반복 시 재사용">선택 영웅 장비 테스트<br>질풍의 검 ×5 · 가속 룬 ×2</button><button id="dev-damage-numbers" aria-pressed="true">데미지 숫자 ON</button><button id="dev-reset" class="danger">게임 리셋</button></div>
+      <p class="tools-hint">리셋: 전투·재화·유닛·장비·기록 초기화.<br>3웨이브마다 현상금 소환 기회 적립(최대3회). 현상금 보상은 모루·골드입니다.<br>10웨이브마다 보스전 · 승리 후 다음 웨이브 진행.</p>
+      <p class="tools-hint">조합은 영웅 장비칸 오른쪽에서 실행합니다.<br>아이템을 누르는 동안 파란 점선으로 상대를 확인합니다. 변이 붙은 재료 중 조합 예정은 노란 실선, 재료를 공유하는 후순위는 회색 실선입니다.<br>조합 1회당 모루 1개를 사용합니다.</p>
+      <section class="monster-test-tools"><h3>몬스터 시험 소환</h3><p class="tools-hint">일치 방어형은 피해 ×0.75, 나머지 ×1.<br>몬스터는 일반전에서 아군을 공격하지 않습니다.</p><div id="test-enemy-buttons"></div><button id="dev-next-wave">다음 웨이브로 · 일반 몬스터 정리</button><details><summary>임시 몬스터 능력치</summary><p class="tools-hint">1웨이브 기준. 체력·공격은 웨이브당 기본값의10% 가산. 방어력 숫자는 준비 데이터이며 현재 피해는 타입 배율만 적용.</p><div id="test-enemy-stats"></div></details></section>
+      <section id="recipe-tree" aria-label="개발자용 조합 공식 트리"></section>
+    </aside>
+    <aside id="dev-log" aria-label="임시 개발자 기록창">
+      <header class="dev-log-heading"><h2>개발자 기록창 <span>임시</span></h2><p>전투 경과 시간 · 최신 기록 위 · 구역별 최근 100건</p></header>
+      <section class="log-section"><h3>① 전투 피해 <small id="damage-count">0건</small></h3><ol id="damage-log" aria-label="피해 기록"><li class="log-empty">공격이 발생하면 표시됩니다.</li></ol></section>
+      <section class="log-section dps-section"><h3 class="dps-heading"><span>② 데미지 미터기</span><span class="dps-tabs" aria-label="DPS 전투 선택"><button id="dps-tab-defense" aria-pressed="true">웨이브전</button><button id="dps-tab-boss" aria-pressed="false">보스전</button></span><small id="dps-total">0.0 DPS</small></h3><button id="dps-last-boss" hidden aria-pressed="false">최근 결과</button><p id="dps-summary">현재 전투 · 누적 실제 피해 / 경과시간</p><ol id="dps-meter" aria-label="유닛별 누적 피해와 평균 DPS"><li class="log-empty">피해가 발생하면 표시됩니다.</li></ol></section>
+      <section class="log-section"><h3>③ 처치 · 골드 획득 <small id="reward-count">0건</small></h3><ol id="reward-log" aria-label="처치 보상 기록"><li class="log-empty">처치 보상이 발생하면 표시됩니다.</li></ol></section>
+      <section class="log-section"><h3>④ 재화 사용 · 판매 · 조합 <small id="economy-count">0건</small></h3><ol id="economy-log" aria-label="재화 사용 판매 조합 기록"><li class="log-empty">소환·강화·구매·판매·조합 시 표시됩니다.</li></ol></section>
+    </aside>
+    <svg id="combination-links" aria-hidden="true"></svg>
+    <button id="field-upgrade" hidden></button>
+    <div id="center-notice" role="status" aria-live="polite" hidden></div>
+    <div id="hero-drop-target" hidden></div>
+    <div id="gear-drag-layer" aria-hidden="true"></div>
+    <section id="hero-info" role="dialog" aria-modal="false" aria-label="유닛 능력치" hidden></section>
+    <section id="hero-skill-tooltip" role="dialog" aria-modal="false" aria-labelledby="hero-skill-tooltip-title" hidden></section>
+    <dialog id="leave-battle-dialog" aria-labelledby="leave-battle-title"><h2 id="leave-battle-title">로비로 돌아갈까요?</h2><p>진행 중인 전투는 종료되며, 이번 전투 보상은 지급되지 않습니다.</p><div><button id="leave-battle-cancel">계속 전투</button><button id="leave-battle-confirm">로비로 이동</button></div></dialog>
+    <script type="module" src="/src/game-entry.ts"></script>
+  </body>
+</html>

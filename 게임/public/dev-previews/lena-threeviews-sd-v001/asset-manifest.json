@@ -1,0 +1,195 @@
+{
+  "task": "MAIN01-20261111-EC9D0056",
+  "iteration": 1,
+  "assets": [
+    {
+      "id": "illustration-front-000",
+      "form": "illustration",
+      "view": "front-000",
+      "label": "일러스트 · 정면0°",
+      "file": "illustration/front-000.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaChannel": true,
+      "sha256": "e5cda6387ca82d411e05d043c7512fc851c42c4a66a8c010d43bbd21064462fa",
+      "bytes": 1789444,
+      "provenance": "new_api_native_bytes",
+      "userAccepted": false,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\01-ill0\\native.png"
+    },
+    {
+      "id": "illustration-right-035",
+      "form": "illustration",
+      "view": "right-035",
+      "label": "일러스트 · 우측앞3/4 약35°",
+      "file": "illustration/right-035.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaChannel": true,
+      "sha256": "41dbb10f2aa2e04d66374fee15df5ded732894f71b8ac58595f3ebf39b411391",
+      "bytes": 1710890,
+      "provenance": "approved_native_byte_copy",
+      "userAccepted": true,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\illustration_main01-20261111-74ba96ac_v001\\illustration.png"
+    },
+    {
+      "id": "illustration-right-090",
+      "form": "illustration",
+      "view": "right-090",
+      "label": "일러스트 · 우측정측면90°",
+      "file": "illustration/right-090.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaChannel": true,
+      "sha256": "59757edbb27c3aaac3433820b762adf2d66ea78982f92fbaefc0dbd885813fd4",
+      "bytes": 1577549,
+      "provenance": "new_api_native_bytes",
+      "userAccepted": false,
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\03-ill90\\native.png"
+    },
+    {
+      "id": "sd-front-000",
+      "form": "sd",
+      "view": "front-000",
+      "label": "SD · 정면0°",
+      "file": "sd/front-000.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaChannel": true,
+      "sha256": "328108bbb1948f75d3a79a26ce9457af47581005100b7a910e15429e71c7095a",
+      "bytes": 1907246,
+      "provenance": "new_api_native_bytes",
+      "userAccepted": false,
+      "hairTop": 17,
+      "footY": 1518,
+      "footX": 530,
+      "bodyHeight": 1502,
+      "measurement": {
+        "method": "HeadROI visible hair top to bootsROI sole, alpha32 locator plus native visual check. FootX estimated support center. Sword/canvas excluded.",
+        "headROI": [
+          200,
+          0,
+          800,
+          500
+        ],
+        "bootsROI": [
+          330,
+          1320,
+          740,
+          1536
+        ],
+        "bodyHeightErrorPx": 10,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "hiddenScalp": "unmeasured, no exact head-unit claim"
+      },
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\04-sd0\\native.png"
+    },
+    {
+      "id": "sd-right-035",
+      "form": "sd",
+      "view": "right-035",
+      "label": "SD · 우측앞3/4 약35°",
+      "file": "sd/right-035.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaChannel": true,
+      "sha256": "2ba0aab7c459d5a01747af5f62788f57428c5f44f1eb1d071a3454df22d72da8",
+      "bytes": 1778779,
+      "provenance": "new_api_native_bytes",
+      "userAccepted": false,
+      "hairTop": 42,
+      "footY": 1516,
+      "footX": 570,
+      "bodyHeight": 1475,
+      "measurement": {
+        "method": "HeadROI visible hair top to bootsROI sole, alpha32 locator plus native visual check. FootX estimated support center. Sword/canvas excluded.",
+        "headROI": [
+          200,
+          0,
+          800,
+          500
+        ],
+        "bootsROI": [
+          330,
+          1320,
+          740,
+          1536
+        ],
+        "bodyHeightErrorPx": 10,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "hiddenScalp": "unmeasured, no exact head-unit claim"
+      },
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\02-sd35\\native.png"
+    },
+    {
+      "id": "sd-right-090",
+      "form": "sd",
+      "view": "right-090",
+      "label": "SD · 우측정측면90°",
+      "file": "sd/right-090.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaChannel": true,
+      "sha256": "78f6351cd74aed7532916dd1e6db4212b72b69d7b59248909ab0fe2b9a7ce0ec",
+      "bytes": 1604114,
+      "provenance": "new_api_native_bytes",
+      "userAccepted": false,
+      "hairTop": 40,
+      "footY": 1520,
+      "footX": 550,
+      "bodyHeight": 1481,
+      "measurement": {
+        "method": "HeadROI visible hair top to bootsROI sole, alpha32 locator plus native visual check. FootX estimated support center. Sword/canvas excluded.",
+        "headROI": [
+          200,
+          0,
+          800,
+          500
+        ],
+        "bootsROI": [
+          330,
+          1320,
+          740,
+          1536
+        ],
+        "bodyHeightErrorPx": 10,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "hiddenScalp": "unmeasured, no exact head-unit claim"
+      },
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\05-sd90\\native.png"
+    }
+  ],
+  "references": [
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\illustration_main01-20261111-74ba96ac_v001\\illustration.png",
+      "file": "inputs/lena-approved.png",
+      "sha256": "41dbb10f2aa2e04d66374fee15df5ded732894f71b8ac58595f3ebf39b411391",
+      "role": "approved Lena identity/illustration drawing/rendering master"
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-1-front.png",
+      "file": "inputs/sd-peer.png",
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "role": "SD combined proportions and broad cel-plane translation only, never peer identity"
+    }
+  ],
+  "display": {
+    "sdBodyCSS": 72,
+    "method": 3,
+    "pixelSourceUnchanged": true,
+    "dprChoices": [
+      1,
+      2
+    ]
+  },
+  "newDirectionsAndSDUserAccepted": false
+}

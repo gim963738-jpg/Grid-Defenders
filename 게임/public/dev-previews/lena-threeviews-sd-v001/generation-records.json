@@ -1,0 +1,231 @@
+{
+  "task": "MAIN01-20261111-EC9D0056",
+  "iteration": 1,
+  "art_source": "api+existing approved original",
+  "apiPosts": 5,
+  "newImages": 5,
+  "reusedApprovedImages": 1,
+  "builtin": 0,
+  "retry": 0,
+  "fallback": 0,
+  "additionalPaid": 0,
+  "usage": {
+    "input_tokens": 18428,
+    "output_tokens": 6860,
+    "total_tokens": 25288
+  },
+  "cost": null,
+  "balance": null,
+  "responseModelReported": false,
+  "route": "existing read-only image-studio sunburst-2.6-high edits; no server/UI",
+  "jobs": [
+    {
+      "job": "ill0",
+      "file": "illustration/front-000.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\01-ill0\\native.png",
+      "record": "api/01-ill0/request-record.json",
+      "requestId": "req_7c17098f29ac4d439f0e8b581ee76e0f",
+      "httpPosts": 1,
+      "requestModel": "gpt-image-2.6-sunburst",
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 2104,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 568
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3476
+      },
+      "cost": null,
+      "inputs": [
+        {
+          "name": "lena-approved.png",
+          "sha256": "41dbb10f2aa2e04d66374fee15df5ded732894f71b8ac58595f3ebf39b411391",
+          "bytes": 1710890,
+          "attached": true
+        }
+      ],
+      "sha256": "e5cda6387ca82d411e05d043c7512fc851c42c4a66a8c010d43bbd21064462fa",
+      "nativeBytesMatch": true
+    },
+    {
+      "job": "sd35",
+      "file": "sd/right-035.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\02-sd35\\native.png",
+      "record": "api/02-sd35/request-record.json",
+      "requestId": "req_a0c65909418b4abca04f39e60e05ec02",
+      "httpPosts": 1,
+      "requestModel": "gpt-image-2.6-sunburst",
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 3690,
+        "input_tokens_details": {
+          "image_tokens": 3021,
+          "text_tokens": 669
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 5062
+      },
+      "cost": null,
+      "inputs": [
+        {
+          "name": "lena-approved.png",
+          "sha256": "41dbb10f2aa2e04d66374fee15df5ded732894f71b8ac58595f3ebf39b411391",
+          "bytes": 1710890,
+          "attached": true
+        },
+        {
+          "name": "sd-peer.png",
+          "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+          "bytes": 943540,
+          "attached": true
+        }
+      ],
+      "sha256": "2ba0aab7c459d5a01747af5f62788f57428c5f44f1eb1d071a3454df22d72da8",
+      "nativeBytesMatch": true
+    },
+    {
+      "job": "ill90",
+      "file": "illustration/right-090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\03-ill90\\native.png",
+      "record": "api/03-ill90/request-record.json",
+      "requestId": "req_f7e4aadbf7bb45ffab39559818375aac",
+      "httpPosts": 1,
+      "requestModel": "gpt-image-2.6-sunburst",
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 2155,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 619
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3527
+      },
+      "cost": null,
+      "inputs": [
+        {
+          "name": "lena-approved.png",
+          "sha256": "41dbb10f2aa2e04d66374fee15df5ded732894f71b8ac58595f3ebf39b411391",
+          "bytes": 1710890,
+          "attached": true
+        }
+      ],
+      "sha256": "59757edbb27c3aaac3433820b762adf2d66ea78982f92fbaefc0dbd885813fd4",
+      "nativeBytesMatch": true
+    },
+    {
+      "job": "sd0",
+      "file": "sd/front-000.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\04-sd0\\native.png",
+      "record": "api/04-sd0/request-record.json",
+      "requestId": "req_db3cdd4a750b4cdb8bef1efa7434481e",
+      "httpPosts": 1,
+      "requestModel": "gpt-image-2.6-sunburst",
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 5223,
+        "input_tokens_details": {
+          "image_tokens": 4557,
+          "text_tokens": 666
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 6595
+      },
+      "cost": null,
+      "inputs": [
+        {
+          "name": "right-035.png",
+          "sha256": "2ba0aab7c459d5a01747af5f62788f57428c5f44f1eb1d071a3454df22d72da8",
+          "bytes": 1778779,
+          "attached": true
+        },
+        {
+          "name": "lena-approved.png",
+          "sha256": "41dbb10f2aa2e04d66374fee15df5ded732894f71b8ac58595f3ebf39b411391",
+          "bytes": 1710890,
+          "attached": true
+        },
+        {
+          "name": "sd-peer.png",
+          "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+          "bytes": 943540,
+          "attached": true
+        }
+      ],
+      "sha256": "328108bbb1948f75d3a79a26ce9457af47581005100b7a910e15429e71c7095a",
+      "nativeBytesMatch": true
+    },
+    {
+      "job": "sd90",
+      "file": "sd/right-090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\lena\\threeviews_sd_main01-20261111-ec9d0056_v001\\api\\05-sd90\\native.png",
+      "record": "api/05-sd90/request-record.json",
+      "requestId": "req_2f37ffbf3453467ea35c79cd5a8b6654",
+      "httpPosts": 1,
+      "requestModel": "gpt-image-2.6-sunburst",
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 5256,
+        "input_tokens_details": {
+          "image_tokens": 4557,
+          "text_tokens": 699
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 6628
+      },
+      "cost": null,
+      "inputs": [
+        {
+          "name": "right-035.png",
+          "sha256": "2ba0aab7c459d5a01747af5f62788f57428c5f44f1eb1d071a3454df22d72da8",
+          "bytes": 1778779,
+          "attached": true
+        },
+        {
+          "name": "lena-approved.png",
+          "sha256": "41dbb10f2aa2e04d66374fee15df5ded732894f71b8ac58595f3ebf39b411391",
+          "bytes": 1710890,
+          "attached": true
+        },
+        {
+          "name": "sd-peer.png",
+          "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+          "bytes": 943540,
+          "attached": true
+        }
+      ],
+      "sha256": "78f6351cd74aed7532916dd1e6db4212b72b69d7b59248909ab0fe2b9a7ce0ec",
+      "nativeBytesMatch": true
+    }
+  ],
+  "promptFiles": [
+    "prompts/ill0.txt",
+    "prompts/sd35.txt",
+    "prompts/ill90.txt",
+    "prompts/sd0.txt",
+    "prompts/sd90.txt"
+  ],
+  "internalSd35": "SD35 used for SD0/90 continuity, not user acceptance"
+}

@@ -1,0 +1,80 @@
+{
+    "role":  "main02",
+    "time":  "2026-11-11T13:08:00.5896147+09:00",
+    "sourceMessage":  "msg_1fa3177e6df6",
+    "replyMessage":  "msg_cc29526471b7",
+    "scope":  "수신·본문 읽기·적용 요약 회신만",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인02\\AGENTS.md",
+                          "sha256":  "EDF116902F8CC59BEDA541DB688A4B83FE76E871B895635CECE9DD35F33EDC2E"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main02\\작업진행방법.md",
+                          "sha256":  "C6D6AF0AE2259E43C725BA2BA5E64A716D6AFE2EDC6F03F5C59D2F1A2D26B121"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406D2CC01D677E268E393094BF3BEAC4B649542BFC778A7DF1778888032395"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09CBB63BA0EC84BB45F5717878A06236EFE0EE957C93CC823355FA63C4446E23"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "DCDDDF02D131C1DDA45E73E67600E756F731816194405D52A4A0275080C5460C"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34DCEDC602FE9A0614C53C103CB197E8869A091BCA4ECC9315743BE77DFF1929"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0F629FE9369F139A128E612F8A0BD4F25F6A08B7D34FA19F087420ECE5C55DFC"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7F5A765403E4FC06894AD2E50446B7826BFCD72063EB7455BB5736211D052021"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75AD62E5A34E134592BED16F8BBC3BDEF005782DE8310F63EBD58BB68337FE9F"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0EA96411F480A067F7F98CE8E91DEF7ADD7E0BF19ABB20BEA70AF34E12328C15"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+                          "sha256":  "0887E59ED10411AC81E888B7901E026294136BC8EB85FFF529354AFFFEB34E49"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+                          "sha256":  "0170B732EB8CE54BC75B92E715BF8D6323A9BE1F2366C095CE00E24B6D929FBA"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+                          "sha256":  "1EF4D854AD8D3250A57F8ECE69605B07C4244EAA2C7599DA235C8FBB2BE1FB8F"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인기준.md",
+                          "sha256":  "AE864343DD9D44022119501022B85DC7442AB79171D6A947C37F6C06BAE2C27A"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\규정.md",
+                          "sha256":  "054180DF089A2D1694430BE7DC09E3718B31553E9DFA2904584717BEDF5CCC41"
+                      }
+                  ],
+    "applies":  [
+                    "후속 SD 지시에 SD-DISPLAY-001 및 기존 SD-STD-002와 개별 제작기준 첨부",
+                    "승인 고해상도 원본 보존. 본체72 CSSpx와 캔버스·장비·여백·DPR 분리",
+                    "파생 표시 버퍼에서 고품질 축소 및 보수적 경계정리. 2번 대비 차이가 작음을 명시",
+                    "개별 본체높이·발점 메타 사용, 밝고 어두운 실제 필드 크기로 검증",
+                    "기존 원본·필독 해시·미리보기·속도·판정·보스 크기는 유지"
+                ],
+    "conflicts":  "기존 원본·메타 분리 규정과 충돌 없음. 현재 미리보기에 일괄 적용하지 않음.",
+    "missingOptionalPath":  "기준/main02/규정.md는 없음. 작업연결에서 지정한 작업진행방법.md 사용.",
+    "production":  false,
+    "image26Authorization":  false
+}

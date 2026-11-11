@@ -1,0 +1,43 @@
+import { actorPoint, adaptMotion, copy, editFrames, effectFrame, effectPoint, frameAt, frameTime, motionDuration, SceneHistory, validateScene, type ActorScene, type SceneEffect } from './actorModel';
+import { createPreset } from './model';
+import { prepareActors } from './actorRender';
+
+export function checkActorModel(raw:ActorScene){const passed:string[]=[];const check=(ok:unknown,label:string)=>{if(!ok)throw Error(label);passed.push(label);};const rejects=(fn:()=>unknown,label:string)=>{try{fn();}catch{passed.push(label);return;}throw Error(label);};
+const s=validateScene(raw),m=s.motions[0],original=JSON.stringify(s);const h=new SceneHistory();h.push(s);editFrames(m,[2],{x:8,y:-3,scale:1.1},true);check(m.frames[2].offset[0]===8&&m.frames[1].offset[0]===0&&m.frames[3].scale===1,'single frame transformation isolated');check(h.back(s)?.motions[0].frames[2].offset[0]===0,'history undoes full edit');check(h.forward(raw)?.motions[0].frames[2].offset[0]===8,'history redoes full edit');editFrames(m,[2,3],{x:2,y:1,scale:2},true);check(m.frames[2].offset[0]===10&&m.frames[3].offset[0]===2&&m.frames[2].scale===2.2,'relative multi keeps differences');
+check(frameAt(m,.069,false)===0&&frameAt(m,.07,false)===1,'time boundary in seconds');check(frameAt(m,motionDuration(m)+.071,true)===1,'loop uses elapsed time');check(frameAt(m,500,false)===11,'one shot holds last');check(Math.abs(frameTime(m,3)-.21)<1e-9,'one based UI maps to exact source time');
+const f=m.frames[2];const p=actorPoint(s,m,f,[100,100]);s.scale=2;const p2=actorPoint(s,m,f,[100,100]);check(Math.abs(p2[0]-s.root[0]-(p[0]-s.root[0])*2)<1e-8,'root common scale transforms frame point identically');
+const e:SceneEffect={id:'test',name:'test',recipe:createPreset('slash'),start:.2,duration:.3,x:7,y:8,angle:0,scale:1,layer:'front',follow:'field',point:'hand',keys:{[`${m.id}:2`]:[3,4]}};
+check(effectFrame(e,.199)===null&&effectFrame(e,.5)===null,'effect hidden before start and at duration end');check(effectFrame(e,.2)===0,'effect begins at elapsed zero');e.recipe.settings.fps=12;check(effectFrame(e,.29)===1,'independent effect fps sampled by seconds');check(effectPoint(s,m,f,e,2).join()==='10,12','field fixed coords and per-frame exact key');e.follow='point';f.points.hand=[100,100];e.x=e.y=0;e.keys={};check(effectPoint(s,m,f,e,2).join()===actorPoint(s,m,f,[100,100]).join(),'attachment uses identical corrected transform');e.follow='root';check(effectPoint(s,m,f,e,2).join()===s.root.join(),'root follows common actor root');
+check(JSON.stringify(raw)===original,'input source document is immutable');check(validateScene(JSON.parse(JSON.stringify(s))).motions[0].frames[2].scale===2.2,'versioned JSON roundtrip exact transforms');
+for(const [label,edit]of [['NaN scale',(v:ActorScene)=>{v.scale=NaN;}],['rect out of range',(v:ActorScene)=>{v.motions[0].frames[0].rect[2]=9000;}],['empty frames',(v:ActorScene)=>{v.motions[0].frames=[];}],['missing asset',(v:ActorScene)=>{v.motions[0].frames[0].asset='missing';}],['negative time',(v:ActorScene)=>{v.motions[0].frames[0].duration=-1;}],['duplicate motion',(v:ActorScene)=>{v.motions.push(copy(v.motions[0]));}],['object URL not persisted',(v:ActorScene)=>{v.assets[0].data='blob:unrecoverable';}]] as const){const v=copy(raw);edit(v);rejects(()=>validateScene(v),label);}
+for(const mm of s.motions){check(mm.frames.every(f=>f.offset[1]===0||mm===m),'demo has no auto bbox floor locking '+mm.id);check(mm.frames.every((f,i)=>f.sourceIndex===i),'explicit source mapping '+mm.id);}
+const adapted=adaptMotion({schema:'grid-defenders.direct-sheet.v1',frameRects:[[0,0,20,30],[20,0,20,30]],frameOffsets:[[32,32],[29,34]],sourceAnchor:[10,25],bodyHeightReference:25,durationsMs:[50,90]},[s.assets[0]],'adapter');check(adapted.frames[1].origin.join()==='29,34'&&adapted.frames[1].duration===.09,'direct sheet nonuniform registration and milliseconds adapter');return passed;}
+export async function checkActorRecovery(raw:ActorScene){const valid=validateScene(raw);await prepareActors(valid);const bad=copy(valid);bad.assets[0].sha256='0'.repeat(64);try{await prepareActors(bad);}catch{return ['embedded PNG hashes decode successfully','tampered hash rejected before replacement'];}throw Error('tampered hash accepted');}
+
+export function checkActorTechnicalFix(raw:ActorScene){
+ const passed:string[]=[],check=(ok:unknown,label:string)=>{if(!ok)throw Error(label);passed.push(label);};
+ const e:SceneEffect={id:'boundary',name:'boundary',recipe:createPreset('slash'),start:.2,duration:.25,x:0,y:0,angle:0,scale:1,layer:'front',follow:'root',point:'tip',keys:{}};
+ e.recipe.settings.frames=4;e.recipe.settings.fps=10;e.recipe.placement.impactFrame=1;
+ check([.1999,.2,.3,.4499,.45].map(t=>effectFrame(e,t)).join()===[null,0,1,2,null].join(),'QA-01 exact five samples');
+ for(const fps of [7,10,12,24,30,60])for(const start of [.001,.2,1.7,299]){
+  e.start=start;e.duration=4/fps;e.recipe.settings.fps=fps;
+  for(const kind of ['recipe','raster'] as const){
+   if(kind==='raster'){e.raster=copy(raw.motions[0]);e.raster.frames=e.raster.frames.slice(0,4);e.raster.frames.forEach(f=>f.duration=1/fps);}else delete e.raster;
+   const tag=`${kind} fps${fps} start${start}`,delta=1e-10;
+   check(effectFrame(e,start-delta)===null&&effectFrame(e,start)===0&&effectFrame(e,start+delta)===0,tag+' start before/exact/after');
+   for(const i of [1,2,3]){const boundary=start+i/fps;check(effectFrame(e,boundary-delta)===i-1&&effectFrame(e,boundary)===i&&effectFrame(e,boundary+delta)===i,tag+` internal boundary${i} before/exact/after`);}
+   const end=start+e.duration;check(effectFrame(e,end-delta)===3&&effectFrame(e,end)===null&&effectFrame(e,end+delta)===null,tag+' strict half-open end');
+  }
+ }
+ const motion=copy(raw.motions[0]);motion.frames=motion.frames.slice(0,3);motion.frames.forEach(f=>f.duration=.1);
+ check(frameAt(motion,.1-1e-10,false)===0,'raster does not promote genuine pre-boundary time by old fixed1ns epsilon');
+ const valid=copy(raw);valid.effects=[{...e,raster:undefined,start:.2,duration:.25,keys:{'motion:0':[2,1]}}];valid.motions[0].frames[0].points={tip:[10,40]};
+ const values:unknown[]=[[],null,'',42,true,new Date(),new Map(),new Set(),new Uint8Array(0),{tip:[1]},{tip:[NaN,2]},{tip:'bad'}];
+ for(const field of ['points','keys'] as const)for(let i=0;i<values.length;i++){
+  const bad=copy(valid);Reflect.set(field==='points'?bad.motions[0].frames[0]:bad.effects[0],field,values[i]);
+  let rejected=false;try{validateScene(bad);}catch{rejected=true;}check(rejected,`QA-02 ${field} rejects malformed value${i}`);
+ }
+ const empty=copy(valid);empty.motions[0].frames[0].points={};empty.effects[0].keys={};check(!!validateScene(empty),'valid empty records remain accepted');
+ const parsed=validateScene(valid);check(JSON.stringify(parsed.motions[0].frames[0].points)===JSON.stringify(valid.motions[0].frames[0].points)&&JSON.stringify(parsed.effects[0].keys)===JSON.stringify(valid.effects[0].keys),'valid point/key coordinates remain exact');
+ return passed;
+}

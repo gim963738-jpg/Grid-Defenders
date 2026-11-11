@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 3,
+  "id": "MAIN01-20261111-961C8C00",
+  "main": "main01",
+  "branch": "ui",
+  "title": "72CSSpx 교전 비교도구 — 복수 스티커·본체크기·3표시모드",
+  "iteration": 1,
+  "status": "returned",
+  "createdAt": "2026-11-11T02:53:55.772805+09:00",
+  "approval": null,
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-11T02:54:18.664415+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\battle-sticker-quality\\실제발송영수증.json",
+        "sha256": "f3e290ecc8cd84106f9555702c66098f37568e7f71214b6598345f63b65a1488"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-11T02:55:44.307726+09:00",
+      "iteration": 1,
+      "role": "ui",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-961C8C00\\읽기확인-v001-7a3b7a37e8eb41f990eb73a0f48628a4.json",
+        "sha256": "4cdcfb582056cf037680f6ed0dbb4602268a2a7189f9e1817cb43a67459d0e2a"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-11T03:10:59.531857+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\previews\\battle-sticker-quality_main01-20261111-961c8c00_v001\\보고.md",
+        "sha256": "4ad7d050bc1ecca74328ecd67aa0c606abab4a1bb4cf6861a7780f7a1b0f0daa"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "OPS006_migration",
+      "at": "2026-11-11T23:20:45.738268+09:00",
+      "previousStatus": "awaiting_user",
+      "previousApproval": {
+        "userQuote": "이 내용으로 진행",
+        "source": {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\battle-sticker-quality\\사용자확인.md",
+          "sha256": "804468611b59c2de30ca1f713dd308f914b6cc9a5d36639dff2a001805119043"
+        },
+        "recordedBy": "main01",
+        "recordedAt": "2026-11-11T02:53:55.818730+09:00",
+        "iteration": 1,
+        "hashes": {
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-961C8C00\\요청확인.md": "804468611b59c2de30ca1f713dd308f914b6cc9a5d36639dff2a001805119043",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-961C8C00\\전문프롬프트.md": "5dc2ae6a5b77c01280ff21961a8966197e2a899d1d244d20c7e388e71685f3c5",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-961C8C00\\2_사전확인.md": "25d6c90730bac1a3c74b8de2cb5a8deda0b107829bf9058e540204537bc6a036",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\규정.md": "f1a0a3140e7639c13b4f4ea3eedf0383bb6a8d1bb1a73db6bc68584d62a20de1",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\AGENTS.md": "a4fee6387b17ffa27ec90c9ccdab1c7ebfb93722945f729b24e60b93f0593ba7",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\작업진행방법.md": "3eebec5fd956a74fcfa287271e4d44de645339a1c0822c652ab7885169e3d2fd",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\battle-sticker-quality\\사용자확인.md": "804468611b59c2de30ca1f713dd308f914b6cc9a5d36639dff2a001805119043",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\battle-sticker-quality\\사전확인.md": "25d6c90730bac1a3c74b8de2cb5a8deda0b107829bf9058e540204537bc6a036",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md": "6fda6b3a8bbbf0f1ed1701eb7e1e746a5cdc8e5c2e520453aefbae5734308450",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md": "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\모바일UI규격.md": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\turtle-dragon-black-green-main03-20261110-05df6177-v02\\보고.md": "620251183ba3cc3a463193c89e20224ec7e5480cd42368799a3634174dc60edc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261110-05DF6177\\사용자합격-v002.md": "25d0086d8ea90d99e3ab1afb4bac4b94a38741580eb8cac44dcf3644a939f748"
+        }
+      },
+      "note": "原 지시/판정 보존; 새 발송은 버튼 승인 필요"
+    }
+  ],
+  "readingPolicyVersion": "OPS-006",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\battle-sticker-quality\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\battle-sticker-quality\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\모바일UI규격.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\turtle-dragon-black-green-main03-20261110-05df6177-v02\\보고.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261110-05DF6177\\사용자합격-v002.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-961C8C00\\읽기확인-v001-7a3b7a37e8eb41f990eb73a0f48628a4.json",
+    "sha256": "4cdcfb582056cf037680f6ed0dbb4602268a2a7189f9e1817cb43a67459d0e2a"
+  },
+  "updatedAt": "2026-11-11T23:20:45.738268+09:00",
+  "stages": {
+    "production": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "technical": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "user": {
+      "status": "not_reviewed",
+      "evidence": null
+    },
+    "integration": {
+      "status": "unknown",
+      "evidence": null
+    }
+  },
+  "pendingChoice": null,
+  "spec": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-961C8C00\\통합작업명세.json"
+}

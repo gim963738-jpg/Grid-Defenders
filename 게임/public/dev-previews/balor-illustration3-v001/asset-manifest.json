@@ -1,0 +1,549 @@
+{
+  "task": "MAIN01-20261110-F6A9F332",
+  "iteration": 1,
+  "approved_original": {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\inputs\\approved-front-v02.png",
+    "sha256": "061f23cc26b1f023918288446f9ac025de99bcf32550fb9be3e9850850f496fe",
+    "bytes": 1645282,
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alpha": {
+      "zero": 1058460,
+      "partial": 514404,
+      "opaque": 0,
+      "max": 254
+    },
+    "bounds": {
+      "1": [
+        0,
+        191,
+        1002,
+        1438
+      ],
+      "32": [
+        138,
+        300,
+        883,
+        1431
+      ],
+      "128": [
+        139,
+        301,
+        882,
+        1431
+      ]
+    },
+    "margins_alpha32": {
+      "top": 0.1953125,
+      "left": 0.134765625,
+      "right": 0.1376953125,
+      "bottom": 0.068359375
+    },
+    "outer_edge_alpha_max": 1
+  },
+  "outputs": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\front-000.png",
+      "sha256": "78c1d1879ca5732e72cf9c468e2d1d03c703a3b379cad6ae32c335e4fedc1ea5",
+      "bytes": 1686789,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 1050992,
+        "partial": 521872,
+        "opaque": 0,
+        "max": 254
+      },
+      "bounds": {
+        "1": [
+          0,
+          31,
+          1004,
+          1480
+        ],
+        "32": [
+          133,
+          299,
+          886,
+          1432
+        ],
+        "128": [
+          134,
+          300,
+          886,
+          1431
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.19466145833333334,
+        "left": 0.1298828125,
+        "right": 0.134765625,
+        "bottom": 0.06770833333333337
+      },
+      "outer_edge_alpha_max": 1
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\right-035.png",
+      "sha256": "24c7fed7d8bc154ee97b2721f6944c740a5d9ad087361fa9f925286c3de876c7",
+      "bytes": 1954161,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 869552,
+        "partial": 703312,
+        "opaque": 0,
+        "max": 254
+      },
+      "bounds": {
+        "1": [
+          0,
+          87,
+          1004,
+          1468
+        ],
+        "32": [
+          55,
+          118,
+          924,
+          1461
+        ],
+        "128": [
+          55,
+          120,
+          924,
+          1460
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.07682291666666667,
+        "left": 0.0537109375,
+        "right": 0.09765625,
+        "bottom": 0.048828125
+      },
+      "outer_edge_alpha_max": 1
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\right-090.png",
+      "sha256": "5464674edb5d12ee5951023aad4e44059a5650cf7bb4c3a0f0c6334331fa0b9f",
+      "bytes": 1345100,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 1303428,
+        "partial": 269436,
+        "opaque": 0,
+        "max": 254
+      },
+      "bounds": {
+        "1": [
+          0,
+          23,
+          994,
+          1500
+        ],
+        "32": [
+          267,
+          296,
+          760,
+          1391
+        ],
+        "128": [
+          268,
+          297,
+          759,
+          1390
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.19270833333333334,
+        "left": 0.2607421875,
+        "right": 0.2578125,
+        "bottom": 0.09440104166666663
+      },
+      "outer_edge_alpha_max": 1
+    }
+  ],
+  "candidates": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\candidates\\front-000-first.png",
+      "sha256": "af89aedfbc1b3a0aba4cda29b6c678c84cad46cdd791093cbcfbf71e184df4b2",
+      "bytes": 1846602,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 886785,
+        "partial": 686079,
+        "opaque": 0,
+        "max": 254
+      },
+      "bounds": {
+        "1": [
+          0,
+          81,
+          946,
+          1478
+        ],
+        "32": [
+          89,
+          145,
+          937,
+          1450
+        ],
+        "128": [
+          89,
+          147,
+          936,
+          1450
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.09440104166666667,
+        "left": 0.0869140625,
+        "right": 0.0849609375,
+        "bottom": 0.05598958333333337
+      },
+      "outer_edge_alpha_max": 1
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\candidates\\front-000-framing-attempt.png",
+      "sha256": "c1f374abe925eaee0d7c1683b9d3d86bc34f8ba729caa7eb6a3b201498f8846f",
+      "bytes": 1587930,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 1129871,
+        "partial": 442993,
+        "opaque": 0,
+        "max": 254
+      },
+      "bounds": {
+        "1": [
+          0,
+          21,
+          1000,
+          1416
+        ],
+        "32": [
+          174,
+          351,
+          849,
+          1392
+        ],
+        "128": [
+          175,
+          353,
+          849,
+          1392
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.228515625,
+        "left": 0.169921875,
+        "right": 0.1708984375,
+        "bottom": 0.09375
+      },
+      "outer_edge_alpha_max": 1
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\candidates\\right-035-axis-before-alpha.png",
+      "sha256": "cb221e87de90b16ba45f2dd43182a7e11fa6db8919e692a49138b1eebe9c8cea",
+      "bytes": 2072124,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 0,
+        "partial": 1572864,
+        "opaque": 0,
+        "max": 252
+      },
+      "bounds": {
+        "1": [
+          0,
+          0,
+          1024,
+          1536
+        ],
+        "32": [
+          0,
+          0,
+          1024,
+          1536
+        ],
+        "128": [
+          0,
+          0,
+          1024,
+          1536
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "bottom": 0.0
+      },
+      "outer_edge_alpha_max": 232
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\candidates\\right-035-first.png",
+      "sha256": "984346ee20b785b77675e1953166c466ee7905ee8e8e435b047e4f1f55d539ec",
+      "bytes": 1695792,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 1069319,
+        "partial": 503545,
+        "opaque": 0,
+        "max": 254
+      },
+      "bounds": {
+        "1": [
+          0,
+          0,
+          1018,
+          1494
+        ],
+        "32": [
+          106,
+          295,
+          834,
+          1436
+        ],
+        "128": [
+          107,
+          297,
+          833,
+          1436
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.19205729166666666,
+        "left": 0.103515625,
+        "right": 0.185546875,
+        "bottom": 0.06510416666666663
+      },
+      "outer_edge_alpha_max": 1
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\candidates\\right-090-first.png",
+      "sha256": "ba1d16e764e6104cd7582e5978e85e56b0e639038f5627de118a384532bd3b84",
+      "bytes": 1712330,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 886043,
+        "partial": 686821,
+        "opaque": 0,
+        "max": 254
+      },
+      "bounds": {
+        "1": [
+          0,
+          0,
+          1024,
+          1536
+        ],
+        "32": [
+          185,
+          53,
+          791,
+          1469
+        ],
+        "128": [
+          185,
+          55,
+          790,
+          1469
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.034505208333333336,
+        "left": 0.1806640625,
+        "right": 0.2275390625,
+        "bottom": 0.04361979166666663
+      },
+      "outer_edge_alpha_max": 8
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\candidates\\right-090-framing-attempt.png",
+      "sha256": "5b17794b1b9f980df7bcee2ee84daa214ee477d8fd4bfface51f036dcb94ca18",
+      "bytes": 1301245,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 1314552,
+        "partial": 258312,
+        "opaque": 0,
+        "max": 254
+      },
+      "bounds": {
+        "1": [
+          0,
+          127,
+          996,
+          1536
+        ],
+        "32": [
+          270,
+          297,
+          735,
+          1389
+        ],
+        "128": [
+          270,
+          298,
+          734,
+          1389
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.193359375,
+        "left": 0.263671875,
+        "right": 0.2822265625,
+        "bottom": 0.095703125
+      },
+      "outer_edge_alpha_max": 1
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001\\candidates\\right-090-hilt-attempt.png",
+      "sha256": "c0b47e5aeedff7577270920fba15b67ffae72491ba66c82fd031bce84626d5e0",
+      "bytes": 1901626,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "zero": 0,
+        "partial": 1572864,
+        "opaque": 0,
+        "max": 252
+      },
+      "bounds": {
+        "1": [
+          0,
+          0,
+          1024,
+          1536
+        ],
+        "32": [
+          0,
+          0,
+          1024,
+          1536
+        ],
+        "128": [
+          0,
+          0,
+          1024,
+          1536
+        ]
+      },
+      "margins_alpha32": {
+        "top": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "bottom": 0.0
+      },
+      "outer_edge_alpha_max": 211
+    }
+  ],
+  "manual_review": {
+    "inputs/approved-front-v02.png": {
+      "crown": 300,
+      "sole": 1431,
+      "chin": 458,
+      "pommel": [
+        218,
+        798
+      ],
+      "guard": [
+        325,
+        924
+      ],
+      "tip": [
+        646,
+        1337
+      ],
+      "approx_axis_angle_delta_degrees": 2.48235712937233,
+      "axis_basis": "manual approximate centers, +/-4px uncertainty; decoration excluded",
+      "hair_to_chin_vs_body_ratio": 7.158227848101266,
+      "body_height": 1131
+    },
+    "front-000.png": {
+      "crown": 300,
+      "sole": 1431,
+      "chin": 457,
+      "pommel": [
+        218,
+        798
+      ],
+      "guard": [
+        319,
+        917
+      ],
+      "tip": [
+        646,
+        1337
+      ],
+      "approx_axis_angle_delta_degrees": 2.419276307693605,
+      "axis_basis": "manual approximate centers, +/-4px uncertainty; decoration excluded",
+      "hair_to_chin_vs_body_ratio": 7.203821656050955,
+      "body_height": 1131
+    },
+    "right-035.png": {
+      "crown": 120,
+      "sole": 1460,
+      "chin": 308,
+      "pommel": [
+        264,
+        698
+      ],
+      "guard": [
+        430,
+        859
+      ],
+      "tip": [
+        849,
+        1320
+      ],
+      "approx_axis_angle_delta_degrees": 3.6085117640727624,
+      "axis_basis": "manual approximate centers, +/-4px uncertainty; decoration excluded",
+      "hair_to_chin_vs_body_ratio": 7.127659574468085,
+      "body_height": 1340
+    },
+    "right-090.png": {
+      "crown": 300,
+      "sole": 1388,
+      "chin": 459,
+      "pommel": [
+        414,
+        843
+      ],
+      "guard": [
+        510,
+        958
+      ],
+      "tip": [
+        758,
+        1338
+      ],
+      "approx_axis_angle_delta_degrees": 6.724806363649092,
+      "axis_basis": "manual approximate centers, +/-4px uncertainty; decoration excluded",
+      "hair_to_chin_vs_body_ratio": 6.8427672955974845,
+      "body_height": 1088
+    }
+  },
+  "postprocessing": false,
+  "comparison_display_only": true,
+  "user_approval": null,
+  "technical_completion": false
+}

@@ -1,0 +1,369 @@
+{
+  "task": "MAIN01-20261111-1B358AA6",
+  "iteration": 3,
+  "assets": [
+    {
+      "id": "before",
+      "label": "차수2 SD35°",
+      "file": "inputs/clean-035.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard35_lower_main01-20261111-1b358aa6_v002\\final\\right-035.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d93cfbaa081a08a0ee84cb6d06497db68a478f3e65d1037414d382cc588ce90e",
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "boundsAlpha32": [
+        4,
+        204,
+        1001,
+        1296
+      ],
+      "hairTop": 204,
+      "sole": 1295,
+      "footX": 560,
+      "bodyHeight": 1092,
+      "footY": 1295,
+      "measurement": {
+        "method": "Native visual hair-to-supporting-sole; sword/canvas excluded. footX visual support estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "hiddenScalp": "not measured"
+      }
+    },
+    {
+      "id": "after",
+      "label": "이번 차수3 SD35°",
+      "file": "final/right-035.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard35_natural_main01-20261111-1b358aa6_v003\\api\\01-edit35\\native.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "alphaZeroPixels": 1153503,
+      "boundsAlpha32": [
+        39,
+        296,
+        1005,
+        1175
+      ],
+      "hairTop": 296,
+      "sole": 1174,
+      "footX": 630,
+      "bodyHeight": 879,
+      "footY": 1174,
+      "measurement": {
+        "method": "Native visual hair tip to supporting sole; equipment/tip/canvas excluded. Foot center estimated from support boots.",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "hiddenScalp": "hair-hidden scalp crown unmeasured, not an exact head-unit claim"
+      }
+    },
+    {
+      "id": "blond",
+      "label": "기존 금발전사1번 · 비교전용",
+      "file": "inputs/blond-style1.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard6_main01-20261111-1b358aa6_v001\\inputs\\style-sd1.png",
+      "width": 1070,
+      "height": 1470,
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "boundsAlpha32": [
+        92,
+        54,
+        881,
+        1408
+      ],
+      "hairTop": 54,
+      "sole": 1407,
+      "footX": 550,
+      "bodyHeight": 1354,
+      "footY": 1407,
+      "measurement": {
+        "method": "Native visual hair-to-supporting-sole; sword/canvas excluded. footX visual support estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "hiddenScalp": "not measured"
+      }
+    },
+    {
+      "id": "old-builtin0",
+      "label": "내장 정면0°",
+      "file": "original-six/builtin0.png",
+      "width": 1199,
+      "height": 1312,
+      "mode": "RGBA",
+      "sha256": "b9b49fe5d39b7a231f71ba304b5b520a5aad9714591c0bd191775fed244282c2",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaZeroPixels": 880507,
+      "boundsAlpha32": [
+        67,
+        67,
+        1060,
+        1263
+      ],
+      "hairTop": 67,
+      "sole": 1262,
+      "bodyHeight": 1196,
+      "footX": 630,
+      "footY": 1262,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "host_image",
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-81f048d7-86f7-4080-ad1b-45da02162d33.png"
+    },
+    {
+      "id": "old-builtin35",
+      "label": "내장 우측35°",
+      "file": "original-six/builtin35.png",
+      "width": 1217,
+      "height": 1293,
+      "mode": "RGBA",
+      "sha256": "b88c91189b0d3a4444a14e76a5e4a9bc8ccab2bad10a6be83112931dde35816c",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaZeroPixels": 865139,
+      "boundsAlpha32": [
+        71,
+        77,
+        1035,
+        1241
+      ],
+      "hairTop": 77,
+      "sole": 1240,
+      "bodyHeight": 1164,
+      "footX": 650,
+      "footY": 1240,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "host_image",
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-5d525ca8-7248-4d10-a716-5bad62cdc668.png"
+    },
+    {
+      "id": "old-builtin90",
+      "label": "내장 우측90° 보완",
+      "file": "original-six/builtin90.png",
+      "width": 1199,
+      "height": 1312,
+      "mode": "RGBA",
+      "sha256": "0e0ccbcf44dc3303d289e061b060d2b4088e7af2d0eb3c231ecd13d49c3fc1c7",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaZeroPixels": 1113860,
+      "boundsAlpha32": [
+        192,
+        45,
+        1107,
+        1229
+      ],
+      "hairTop": 45,
+      "sole": 1228,
+      "bodyHeight": 1184,
+      "footX": 580,
+      "footY": 1228,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "host_image",
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-f4061343-286a-40df-99b7-bb4d914d1326.png"
+    },
+    {
+      "id": "old-image260",
+      "label": "2.6 정면0°",
+      "file": "original-six/image260.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "fea60c5ed7ab75b080bde77c77d4e2e04c0f7f50bd8273923659f5f315f9c33c",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "alphaZeroPixels": 947249,
+      "boundsAlpha32": [
+        51,
+        203,
+        938,
+        1366
+      ],
+      "hairTop": 203,
+      "sole": 1365,
+      "bodyHeight": 1163,
+      "footX": 520,
+      "footY": 1365,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "api/image-studio",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard6_main01-20261111-1b358aa6_v001\\api\\01-front\\native.png"
+    },
+    {
+      "id": "old-image2635",
+      "label": "2.6 우측35°",
+      "file": "original-six/image2635.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "6120ad2c6bbf3ab1b92b4304d7f06d227594e02864b21c13f9a9667ccb45af80",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "alphaZeroPixels": 887178,
+      "boundsAlpha32": [
+        45,
+        204,
+        980,
+        1383
+      ],
+      "hairTop": 204,
+      "sole": 1382,
+      "bodyHeight": 1179,
+      "footX": 550,
+      "footY": 1382,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "api/image-studio",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard6_main01-20261111-1b358aa6_v001\\api\\02-right-035\\native.png"
+    },
+    {
+      "id": "old-image2690",
+      "label": "2.6 우측90°",
+      "file": "original-six/image2690.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "aec1e989b0971bdefdfff9a068a049d243f86601690a324b094414881cf8465a",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "alphaZeroPixels": 886410,
+      "boundsAlpha32": [
+        20,
+        157,
+        986,
+        1420
+      ],
+      "hairTop": 157,
+      "sole": 1419,
+      "bodyHeight": 1263,
+      "footX": 530,
+      "footY": 1419,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "api/image-studio",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard6_main01-20261111-1b358aa6_v001\\api\\03-right-090\\native.png"
+    }
+  ],
+  "newGeneratedImages": 1,
+  "comparisonOnly": "before/blond/original-six byte copies; no new 0/90/builtin",
+  "roi": {
+    "before": {
+      "face": [
+        380,
+        195,
+        760,
+        560
+      ],
+      "grip": [
+        285,
+        735,
+        550,
+        990
+      ],
+      "shield": [
+        640,
+        440,
+        945,
+        1080
+      ],
+      "whole-sword": [
+        0,
+        760,
+        570,
+        1100
+      ],
+      "stance": [
+        280,
+        790,
+        870,
+        1320
+      ]
+    },
+    "after": {
+      "face": [
+        470,
+        290,
+        805,
+        600
+      ],
+      "grip": [
+        355,
+        745,
+        595,
+        955
+      ],
+      "shield": [
+        695,
+        500,
+        955,
+        1055
+      ],
+      "whole-sword": [
+        25,
+        770,
+        590,
+        1100
+      ],
+      "stance": [
+        350,
+        780,
+        920,
+        1195
+      ]
+    }
+  },
+  "display": {
+    "equalBodyCSS": 360,
+    "footLineCSS": 400,
+    "smallBodyCSS": 72,
+    "method": 3,
+    "dpr": [
+      1,
+      2
+    ],
+    "sameCanvasScale": 0.32,
+    "sourceResampled": false
+  }
+}

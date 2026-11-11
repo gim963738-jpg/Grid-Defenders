@@ -1,0 +1,63 @@
+﻿{
+    "duration":  12.4,
+    "dt":  0.008333333333333333,
+    "cycles":  {
+                   "walk":  1.05,
+                   "run":  0.70
+               },
+    "timeline":  [
+                     [
+                         0,
+                         1.4,
+                         "Idle"
+                     ],
+                     [
+                         1.4,
+                         2.6,
+                         "Start→Walk"
+                     ],
+                     [
+                         2.6,
+                         5.6,
+                         "Walk"
+                     ],
+                     [
+                         5.6,
+                         6.4,
+                         "Walk→Run"
+                     ],
+                     [
+                         6.4,
+                         9.4,
+                         "Run"
+                     ],
+                     [
+                         9.4,
+                         10.8,
+                         "Stop"
+                     ],
+                     [
+                         10.8,
+                         12.4,
+                         "Idle"
+                     ]
+                 ],
+    "variants":  [
+                     {
+                         "id":  2,
+                         "name":  "공통 기본 동작",
+                         "walkSpeed":  205,
+                         "runSpeed":  390,
+                         "walkDuty":  0.62,
+                         "runDuty":  0.40,
+                         "walkLift":  64,
+                         "runLift":  128,
+                         "bob":  1.0,
+                         "sway":  16,
+                         "arm":  1.0,
+                         "lean":  1.0,
+                         "description":  "남녀 동일한 디딤·역상·체공·주기, 체형 관절만 별도"
+                     }
+                 ],
+    "policy":  "Same rig, timeline and state cycle periods. Speeds/steps are temporary preview values, not user-confirmed final speeds. World feet locked during stance; camera follows root; floor markers move opposite forward travel. No reverse walking."
+}

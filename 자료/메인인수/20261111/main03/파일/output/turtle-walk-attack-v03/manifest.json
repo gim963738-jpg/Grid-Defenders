@@ -1,0 +1,50 @@
+{
+  "version": "v03",
+  "owner": "main03",
+  "createdAt": "2026-11-11T00:43:37.141595+09:00",
+  "approvalQuote": "이 내용으로 진행",
+  "generationRoute": "built-in image_gen",
+  "detailedImageModel": "not reported",
+  "delegated": false,
+  "reference": {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\turtle-dragon-black-green-main03-20261110-05df6177-v02\\front_left.png",
+    "sha256": "631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094"
+  },
+  "files": [
+    {
+      "path": "builtin\\idle_breathe.png",
+      "bytes": 2571286,
+      "sha256": "391e550c9a11c8aad1e520a492c19eca33e1b61a22a4fef1b0c8bada41a4f88a",
+      "generatedInV03": true
+    },
+    {
+      "path": "builtin\\slam_both_forelegs.png",
+      "bytes": 2148144,
+      "sha256": "d7bd6f0917d95b2e9d069f93ccfe9208efc220fca5ebbb5a8e801dd4a1de830e",
+      "generatedInV03": true
+    },
+    {
+      "path": "builtin\\slam_right_foreleg.png",
+      "bytes": 2901059,
+      "sha256": "816e0a699faad891cd0d071c73174a86e25d604fa1a4f582ee37dc40dbc3857a",
+      "generatedInV03": false
+    },
+    {
+      "path": "builtin\\walk_left.png",
+      "bytes": 2466748,
+      "sha256": "2e25c87527a17adc04f072bd5c248bd7e231bddc2467ced9e2b7260649db1d4e",
+      "generatedInV03": false
+    }
+  ],
+  "sequence": [
+    "walk_left",
+    "slam_right_foreleg",
+    "idle_breathe",
+    "slam_right_foreleg",
+    "idle_breathe",
+    "slam_both_forelegs",
+    "idle_breathe"
+  ],
+  "totalMs": 14400,
+  "defaultDiagonalScale": 0.9
+}

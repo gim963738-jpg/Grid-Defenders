@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 3,
+  "id": "MAIN01-DIRECT-20261111-1E8512E0",
+  "main": "main01",
+  "branch": "characters",
+  "executor": "main01-direct",
+  "title": "발로르 Sunburst 13모션 — MAIN01 직접 제작 원본",
+  "iteration": 1,
+  "status": "returned",
+  "createdAt": "2026-11-11T21:36:52.667946+09:00",
+  "updatedAt": "2026-11-11T23:28:38.053663+09:00",
+  "approval": null,
+  "readingPolicyVersion": "OPS-006",
+  "additionalReadings": [],
+  "readingAcknowledgement": null,
+  "stages": {
+    "production": {
+      "status": "complete",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-sunburst13-direct-v001\\작업.json",
+        "sha256": "26c066a482ed40a06c681e614d4b7134064d9f9a8cc766368766f0bfb663be86"
+      },
+      "note": "13개 기존 출력의 파일·PNG 시그니처 확인; 추가 생성 없음"
+    },
+    "technical": {
+      "status": "not_run",
+      "evidence": null,
+      "note": "사용자 요청으로 미술/모션 검수 없이 제출한 원본"
+    },
+    "user": {
+      "status": "not_reviewed",
+      "evidence": null
+    },
+    "integration": {
+      "status": "not_applied",
+      "evidence": null,
+      "note": "비교 페이지 제공, 실게임 모션 적용 아님"
+    }
+  },
+  "history": [
+    {
+      "action": "import_existing_direct_result",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-sunburst13-direct-v001\\작업.json",
+        "sha256": "26c066a482ed40a06c681e614d4b7134064d9f9a8cc766368766f0bfb663be86"
+      }
+    }
+  ],
+  "pipeline": {
+    "version": 1,
+    "step": null,
+    "phase": "legacy",
+    "resumeRequired": true,
+    "criteria": [],
+    "review": null,
+    "lastResult": null,
+    "round": 0,
+    "events": [],
+    "note": "새 12단계 이전 기록. 과거 단계를 소급하지 않으며 새 후속 작업은 update-spec과 상세 브리핑부터 시작."
+  }
+}

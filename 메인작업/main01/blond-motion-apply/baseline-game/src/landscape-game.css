@@ -1,0 +1,195 @@
+body.landscape-live{background:#090f16;color:#e9dfc4;min-width:800px}body.landscape-live #app{width:800px!important;min-width:800px;max-width:none;height:auto!important;min-height:360px;margin:0 auto;padding:0;border:0;display:block!important}body.landscape-live #defense-screen{display:block!important}body.landscape-live #app[data-battle-scene=boss] #defense-screen,body.landscape-live #app[data-battle-scene=lobby] #defense-screen{display:none!important}body.landscape-live #command-area,body.landscape-live #battle-shell-header,body.landscape-live #defense-screen>footer,body.landscape-live #dev-tools,body.landscape-live #dev-log,body.landscape-live .screen-bottom-guide{display:none!important}
+#live-landscape{position:relative;width:800px;height:360px;overflow:hidden;background:#264626 url('/assets/battlefields/forest-clearing-v1.png') center 60%/1600px 1766px no-repeat;isolation:isolate}
+body.landscape-live #battlefield{position:absolute;inset:0;width:800px;height:360px;margin:0;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible;z-index:2}body.landscape-live #battle-scene{width:800px;height:360px;position:absolute;inset:0}body.landscape-live #battle-scene canvas{width:800px!important;height:360px!important}body.landscape-live #wave-info,body.landscape-live #run-mode-label{display:none}
+#live-terrain{position:absolute;inset:0;z-index:0;pointer-events:none}#live-terrain>svg{display:block;width:800px;height:360px}
+#live-tiles{position:absolute;left:var(--live-grid-left);top:var(--live-grid-top);width:var(--live-grid-width);height:var(--live-grid-height);background:repeating-linear-gradient(0deg,transparent 0 calc(var(--live-grid-cell-height) - 2px),#c8e8ac48 calc(var(--live-grid-cell-height) - 2px) var(--live-grid-cell-height)),repeating-linear-gradient(90deg,transparent 0 calc(var(--live-grid-cell-width) - 2px),#c8e8ac48 calc(var(--live-grid-cell-width) - 2px) var(--live-grid-cell-width));pointer-events:none;z-index:1}
+/* Compact battle readout stays inside the clear strip to the left of the terrain. */
+#live-status{position:absolute;left:4px;top:8px;z-index:5;display:flex;flex-direction:column;gap:10px;width:84px;height:280px;padding:8px 6px;border:2px solid #9d8c5c88;background:linear-gradient(160deg,#294034f5,#102723f5 58%,#142d29f5);box-shadow:inset 0 0 0 1px #ddc98516;clip-path:polygon(8px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 8px);font-variant-numeric:tabular-nums}
+#live-wave{--wave-fill:1;--dial-accent:#dfc17c;display:flex;flex-direction:column;gap:8px;width:68px;flex:none;color:#f2ead0;text-align:center}
+.live-wave-heading{display:flex;align-items:center;justify-content:center;gap:6px;height:20px;flex:none}
+.live-wave-heading span{font-size:10px;line-height:14px;letter-spacing:1px;color:#c8b882}
+#live-wave .live-wave-heading strong{padding:0;border:0;background:none;color:#f3d997;font-size:18px;line-height:20px;font-weight:800}
+.live-wave-dial{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;width:68px;height:68px;flex:none;border-radius:50%}
+.live-wave-dial::before{content:"";position:absolute;inset:0;z-index:-2;border-radius:50%;background:conic-gradient(var(--dial-accent) calc(var(--wave-fill) * 1turn),#81957d38 0)}
+.live-wave-dial::after{content:"";position:absolute;inset:2px;z-index:-1;border-radius:50%;background:radial-gradient(circle at 50% 30%,#2c4439,#172c27 80%);box-shadow:inset 0 0 0 2px #0c211b}
+.live-wave-dial>span{color:#a9bba5;font-size:10px;line-height:14px}
+#live-wave .live-wave-dial b{font-size:22px;line-height:26px;letter-spacing:-.5px;font-weight:800;color:#fff1ca;text-shadow:0 1px 2px #071b12}
+.live-enemy-readout{display:flex;flex-direction:column;align-items:center;height:44px;flex:none}
+.live-enemy-readout>span{font-size:12px;line-height:14px;color:#b4c2aa}
+#live-wave .live-enemy-readout small{display:flex;align-items:baseline;justify-content:center;gap:4px;font-size:12px;line-height:22px;color:#9eb49e;background:none}
+.live-enemy-readout em{font-size:16px;font-weight:800;font-style:normal;color:#e9e5cb}
+.live-enemy-gauge{width:100%;height:4px;margin-top:4px;overflow:hidden;border-radius:2px;background:#6c85623b}
+.live-enemy-gauge i{display:block;width:100%;height:100%;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,#8fa870,#e1c27d);transition:transform 150ms linear}
+#live-wave.is-urgent{--dial-accent:#f1a17d}#live-wave.is-urgent .live-wave-dial b,#live-wave.is-crowded .live-enemy-readout em{color:#ffb08c}
+#live-wave.is-crowded .live-enemy-gauge i{background:#ec9a73}
+#live-status.is-paused .live-wave-dial{--dial-accent:#92a08c}#live-status.is-paused .live-wave-dial b{color:#c1cebb}
+@media(prefers-reduced-motion:reduce){.live-enemy-gauge i{transition:none}}
+#live-controls{position:absolute;right:12px;top:8px;display:flex;gap:4px;z-index:5}#live-controls button{width:40px;height:32px;min-height:32px;padding:2px;border:2px solid #75825e;border-radius:4px;background:#182c22dd;color:#eee0ac;font-size:16px}#live-actions{position:absolute;right:12px;top:96px;z-index:5;display:flex;flex-direction:column;gap:8px;width:240px;transition:transform .2s,opacity .2s}#live-actions.away{transform:translateX(264px);opacity:0;pointer-events:none}#live-actions button{width:240px;height:56px;border:2px solid #819261;border-radius:6px;background:#1b3026e6;font-size:16px}
+#live-tray{position:absolute;left:116px;bottom:4px;width:368px;height:72px;display:flex;gap:2px;overflow-x:auto;overflow-y:hidden;z-index:5;scroll-snap-type:x mandatory;scrollbar-width:none}#live-tray>button{position:relative;flex:0 0 72px;width:72px;height:72px;min-height:72px;padding:2px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;border:2px solid #8b9567;border-radius:6px;background:#1a3028ec;overflow:hidden;scroll-snap-align:start;touch-action:none}#live-tray svg,#live-tray .live-item-art{display:block;width:56px;height:40px}#live-tray .live-item-art svg{width:100%;height:100%}#live-tray>button>span{font-size:22px}#live-tray b,#live-tray small{font-size:12px;line-height:14px}#live-tray>button>svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}#live-tray .tank-portrait,#live-tray .melee-portrait,#live-tray .ranged-portrait{background-size:cover}#live-tray button.dragging{opacity:.4}
+#live-inventory{position:absolute;right:12px;bottom:4px;width:264px;height:296px;z-index:5;display:flex;flex-direction:column;gap:4px;background:#142820e6;border:2px solid #63765c;border-radius:6px;padding:4px}#live-hero-bags{display:flex;gap:4px;height:126px;overflow-x:auto;flex:none;scrollbar-width:thin}.live-hero-bag{flex:none;border:0;border-radius:0;padding:2px}.live-hero-bag>button{height:18px;min-height:18px;width:100%;padding:0;border:0;background:none;font-size:10px}#live-shared{min-height:0;flex:1;display:flex;flex-direction:column}.live-grid{position:relative;display:grid;grid-template-columns:repeat(var(--columns),var(--cell));grid-auto-rows:var(--cell);gap:2px}.live-cell{width:var(--cell);height:var(--cell);min-height:0;min-width:0;padding:0;border:1px solid #677f6a;border-radius:2px;background:#20392f;touch-action:none}.live-cell:nth-child(even){background:#344c40}.live-cell.picked{outline:2px solid #ffdc70;outline-offset:-2px}.live-gear-art{position:absolute;pointer-events:none;display:grid;place-items:center;padding:2px}.live-gear-art svg{width:100%;height:100%}.live-gear-art.inactive{opacity:.45}#live-notice{position:absolute;left:116px;top:270px;max-width:368px;z-index:5;margin:0;font-size:10px;line-height:12px;color:#f5e1aa;text-shadow:0 1px 3px #001a0a;pointer-events:none}
+/* Both battle scenes share one mobile viewport and one set of controls. */
+body.landscape-live #app{position:relative}
+body.landscape-live #boss-screen{position:relative;isolation:isolate;width:800px;height:360px;min-height:360px;margin:0;padding:0;overflow:hidden;background:radial-gradient(ellipse at 35% 50%,#293a31,#101b1d 80%)}
+body.landscape-live #boss-screen>.masthead,body.landscape-live #boss-screen>.boss-scene-note,body.landscape-live #boss-screen>.boss-commander-skills{display:none!important}
+body.landscape-live #boss-screen>.boss-wave-heading{position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:5;display:flex;align-items:center;justify-content:center;width:168px;height:32px;margin:0;padding:4px 8px;gap:0;border:2px solid #9d8c5c88;border-radius:4px;background:#142820ee;pointer-events:none}
+body.landscape-live .boss-wave-heading>strong,body.landscape-live .boss-wave-heading>.boss-battle-controls{display:none}
+body.landscape-live #boss-time-limit{margin:0;color:#f3dca0;font-size:16px;line-height:20px;font-weight:700}
+body.landscape-live #boss-time-limit.urgent{color:#ff9a7d}
+body.landscape-live #boss-screen .boss-arena{--boss-cell:calc(360px / 8);position:absolute;inset:0;width:800px;height:360px;min-height:0;max-width:none;aspect-ratio:20/9;margin:0;padding:0;border:0;border-radius:0;background:radial-gradient(ellipse at 82% 50%,#6b393842,transparent 65%),repeating-linear-gradient(0deg,transparent 0 calc(var(--boss-cell) - 1px),#b6cba51c calc(var(--boss-cell) - 1px) var(--boss-cell)),repeating-linear-gradient(90deg,#172925 0 calc(var(--boss-cell) - 1px),#b6cba51c calc(var(--boss-cell) - 1px) var(--boss-cell))}
+body.landscape-live #boss-screen .boss-allies-label,body.landscape-live #boss-screen .boss-side{display:none}
+body.landscape-live #boss-screen #boss-party{border:0;background:#304a32;width:var(--boss-formation-width,216px);height:var(--boss-formation-height,252px);margin-top:var(--boss-formation-top,24px);grid-template-columns:repeat(var(--boss-formation-columns,6),minmax(0,1fr));grid-template-rows:repeat(7,minmax(0,1fr))}
+
+#live-tray>button{isolation:isolate}#live-tray.scrolling{scroll-snap-type:none}#live-tray{touch-action:none}.live-drag-ghost{position:fixed;z-index:1000;left:-100px;top:-100px;transform:translate(-50%,-50%);width:64px;height:64px;pointer-events:none;opacity:.85;display:flex;align-items:center;justify-content:center;background:#19372999;border-radius:6px;overflow:hidden}.live-drag-ghost img,.live-drag-ghost svg{width:100%;height:100%;object-fit:contain}.live-drag-ghost small,.live-drag-ghost b{display:none}
+
+
+body.landscape-live #bounty-summon{left:12px;right:auto;top:72px;width:64px;height:40px}
+
+/* Keep the existing live developer controls below the game frame. */
+body.landscape-live #landscape-dev-area{width:800px;margin:16px auto;display:grid;grid-template-columns:392px 392px;gap:16px;align-items:start}
+body.landscape-live #landscape-dev-area #dev-tools,body.landscape-live #landscape-dev-area #dev-log{display:block!important;position:static!important;inset:auto!important;width:392px;min-width:0;max-width:none;max-height:none;height:auto;margin:0;padding:12px;overflow:visible;transform:none}
+body.landscape-live #landscape-dev-area #dev-log[hidden]{display:none!important}
+
+/* Horizontal 5 x 4 hero boards, 20 cells. */
+#live-hero-bags{height:120px;align-items:flex-start;overflow-y:hidden;scrollbar-width:thin}
+.live-hero-bag{padding:2px;min-height:112px}
+.live-hero-bag>button{line-height:18px}
+.live-grid{overflow:hidden;isolation:isolate}
+.live-gear-art{overflow:hidden;isolation:isolate;box-sizing:border-box}
+.live-gear-art svg,.live-gear-art .equipment-item-art{display:block;width:100%;height:100%;max-width:100%;max-height:100%;overflow:hidden;pointer-events:none}
+.live-gear-art .live-block-art{filter:drop-shadow(0 1px 1px #0006)}
+
+
+
+/* Selection is a small lift, with the portrait and its own fixed name bar. */
+#live-tray{height:80px;align-items:flex-end}
+#live-tray[data-menu=hero][data-hero-loop=false]{justify-content:center;overflow-x:hidden;scroll-snap-type:none}
+#live-tray>.live-unit-card{padding:0;transition:transform 140ms ease-out,border-color 140ms ease-out;transform:translateY(0)}
+#live-tray>.live-unit-card.is-selected{transform:translateY(-6px);border-color:#ffdd83;box-shadow:0 2px 8px #18200da0}
+#live-tray>.live-hero-card>.live-card-portrait{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#live-tray>.live-hero-card>img.live-card-portrait{object-fit:cover}
+#live-tray .hero-nameplate{position:absolute;z-index:1;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;height:18px;font-size:12px;line-height:14px;padding:2px;background:#12251ef2;border-top:1px solid #d4be7955;color:#fff1ca}
+#live-tray .class-emblem{position:absolute;left:2px;top:2px;z-index:1;display:grid;place-items:center;width:20px;height:20px;border:1px solid #cdbb77;border-radius:4px;background:#16291ff0;color:#f5d68c}
+#live-tray .class-emblem svg{position:static;width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#live-tray .soldier-card-body{display:grid;place-items:center;width:48px;height:50px;margin-bottom:14px}
+#live-tray .soldier-card-body svg{position:static;width:44px;height:48px}
+#live-tray .soldier-cost{position:absolute;left:0;right:0;bottom:0;height:18px;line-height:18px;background:#14281ef2;color:#edcf8a}
+/* Preview, drop and combination cues are separate from the item drawing. */
+#live-links{position:absolute;inset:0;width:800px;height:360px;z-index:9;pointer-events:none;overflow:hidden}
+#live-links path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+#live-links .combo-ready{stroke:#ffdc61;stroke-width:2;filter:drop-shadow(0 0 2px #e4b731)}
+#live-links .combo-deferred{stroke:#8e9d98;stroke-width:1;stroke-dasharray:3 3}
+#live-links .combo-hint{stroke:#45a8ff;stroke-width:2;stroke-dasharray:4 3;filter:drop-shadow(0 0 2px #1787e4)}
+.live-cell.live-combo-partner{box-shadow:inset 0 0 0 2px #45a8ff}
+.live-cell.live-drop-preview{background:#80cf8066!important;outline:2px solid #b9f4a5;outline-offset:-2px}
+.live-cell.live-drop-preview.drop-warning{background:#d4a94377!important;outline-color:#ffd978}
+.live-cell.live-drop-preview.drop-invalid{background:#d8575777!important;outline-color:#ff9a8a}
+#live-drop-target{position:absolute;z-index:10;border:2px solid #b8ef98;border-radius:4px;background:#9ed56822;pointer-events:none}
+#live-drop-target.invalid{border-color:#ff9a8a;background:#d8575733}
+.live-drag-ghost.item-ghost{transform:none;display:block;padding:2px;border:2px solid #cbeaaa;border-radius:4px;background:#1b3429bb;overflow:hidden}
+.live-drag-ghost.item-ghost svg{display:block;max-width:100%;max-height:100%;overflow:hidden}
+.live-drag-ghost.unit-ghost{background:none;overflow:visible}
+.live-drag-ghost.invalid{border-color:#ff8b7d;filter:drop-shadow(0 0 4px #dd584a)}
+#live-sale-target{position:absolute;z-index:11;left:116px;bottom:4px;width:368px;height:72px;display:flex;align-items:center;justify-content:center;gap:8px;border:2px dashed #c5b381;border-radius:6px;background:#24372fe8;color:#eed8a7;font-size:14px}
+#live-sale-target.is-target{border-color:#ffe3a1;background:#6b503ee8;box-shadow:inset 0 0 0 2px #e0ae66}
+@media(prefers-reduced-motion:reduce){#live-tray>.live-unit-card,#live-actions{transition:none}}
+
+.live-cell{margin:0}.live-hero-bag>button{display:block;margin:0}#live-hero-bags{scrollbar-width:none}#live-hero-bags::-webkit-scrollbar{display:none}
+#live-tray>button:disabled{font-size:12px;line-height:16px}
+
+/* Leave room for every hero row and a usable horizontal scrollbar. */
+#live-inventory{height:304px}#live-hero-bags{height:128px;scrollbar-width:thin;touch-action:pan-x}#live-hero-bags::-webkit-scrollbar{display:block;height:8px}#live-hero-bags::-webkit-scrollbar-thumb{background:#71836b;border-radius:4px}#live-hero-bags::-webkit-scrollbar-track{background:#1a2e24}
+
+.live-hero-bag-header{display:flex;gap:2px;height:24px;margin:0;padding:0}.live-hero-bag-header button{display:block;margin:0;min-height:24px;height:24px;border:0;padding:0;background:none;font-size:12px;line-height:24px}.live-hero-bag-header [data-live-hero]{flex:1;width:auto;white-space:nowrap}#live-tray>.live-unit-card.unavailable{filter:saturate(.35);opacity:.6}
+
+/* Seven-column shared bag and equally sized hero equipment cells. */
+#live-inventory{height:312px}#live-hero-bags{height:148px}.live-hero-bag{min-height:136px}
+#live-hero-bags>.live-hero-bag:first-child{margin-left:auto}#live-hero-bags>.live-hero-bag:last-child{margin-right:auto}
+
+/* Enlarged shop inventory: square cells and controls fit the marked right-hand area. */
+#live-controls,#live-actions{right:4px}
+#live-inventory{right:4px;top:44px;bottom:auto;width:260px;height:312px;padding:6px;gap:6px}
+#live-equipment{display:flex;align-items:flex-start;justify-content:center;gap:6px;min-height:190px;flex:none}
+#live-hero-bags{flex:0 0 180px;width:180px;min-width:180px;height:190px}
+.live-hero-bag{padding:6px;min-height:170px}
+#live-combine{align-self:center;flex:0 0 50px;width:50px;height:40px;min-height:40px;padding:0;border:1px solid #a18e56;border-radius:4px;background:#31482e;color:#f3dca0;font-size:16px;line-height:20px;white-space:normal}
+#live-combine:disabled{opacity:.4}
+#live-shared{flex:none;height:100px}
+#live-bag-board{flex:none;width:236px;height:100px;margin:0 auto;overflow:hidden;touch-action:none}
+#live-wallet{position:relative;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(2,44px);gap:4px;width:68px;height:102px;padding-top:10px;flex:none}
+#live-wallet::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#ad9b6380,transparent)}
+#live-wallet .resource-token{grid-template-columns:16px minmax(0,1fr);grid-template-rows:16px 22px;column-gap:4px;row-gap:2px;align-content:center;height:44px;padding:0;border:0;border-radius:0;background:none}
+#live-wallet .resource-token svg{width:16px;height:16px}
+#live-wallet .resource-label{font-size:12px;line-height:16px;color:#b6c3ad}
+#live-wallet .resource-token strong{max-width:100%;overflow:hidden;text-overflow:ellipsis;text-align:left;font-size:16px;line-height:22px;letter-spacing:-.2px}
+#live-wallet .resource-token strong.has-long-value{font-size:12px;letter-spacing:-.3px}
+#live-wallet .resource-gold strong{color:#f2ce81}#live-wallet .resource-anvils strong{color:#bfd9dc}
+#live-notice{left:4px;right:auto;top:296px;bottom:auto;width:84px;max-width:84px;max-height:56px;margin:0;padding:6px;border-left:2px solid #ccb174;border-radius:0 4px 4px 0;background:#172e26e8;color:#e5dcc0;font-size:12px;line-height:14px;text-shadow:none;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;word-break:keep-all;overflow-wrap:anywhere}
+#live-notice:empty{display:none}
+#live-tray[data-menu=shop]{left:90px;width:442px;height:108px}
+.live-offer-wrap{--offer-lift:-6px;position:relative;flex:0 0 72px;width:72px;height:72px;isolation:isolate;transform:translateY(0);transition:transform 140ms ease-out}
+.live-offer-wrap.is-selected{transform:translateY(var(--offer-lift));z-index:2}
+#live-tray .live-offer{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:72px;height:72px;min-height:72px;margin:0;padding:2px;border:2px solid #8b9567;border-radius:6px;background:#1a3028ec;overflow:hidden;touch-action:none;scroll-snap-align:start}
+#live-tray .is-selected>.live-offer{border-color:#ffdd83;box-shadow:0 2px 8px #18200da0}
+#live-tray .live-buy{position:absolute;left:0;bottom:70px;z-index:2;width:72px;height:24px;min-height:24px;margin:0;padding:0;border:2px solid #ffdd83;border-radius:4px 4px 2px 2px;background:#d8ba70;color:#203024;font-size:12px;line-height:20px}
+#live-tray .live-buy:disabled{opacity:.6}
+#live-tray>[data-action=reroll]{font-size:12px;line-height:16px}
+#live-tray .live-offer:active,#live-tray .live-buy:active{transform:none}
+.live-offer-wrap:has(.dragging)>.live-buy{visibility:hidden}
+#live-offer-tooltip{position:absolute;z-index:12;width:176px;padding:8px 10px;border:1px solid #c2a56b;border-radius:6px;background:#152a25f5;color:#f0dfb5;box-shadow:0 4px 12px #06140e70;pointer-events:none;text-align:center;}
+#live-offer-tooltip strong{display:block;font-size:14px;line-height:18px;font-weight:700;overflow-wrap:anywhere;}
+#live-offer-tooltip span{display:block;margin-top:4px;color:#c7d8be;font-size:12px;line-height:16px;word-break:keep-all;overflow-wrap:anywhere;}
+#live-offer-tooltip::after{content:'';position:absolute;left:calc(var(--tooltip-arrow) - 4px);bottom:-5px;width:8px;height:8px;border-right:1px solid #c2a56b;border-bottom:1px solid #c2a56b;background:#152a25;transform:rotate(45deg);}
+#live-combine-tip{position:absolute;z-index:12;width:196px;margin:0;padding:8px 10px;border:1px solid #c2a56b;border-radius:6px;background:#152a25;color:#ffe3a1;box-shadow:0 4px 12px #06140d66;font-size:14px;line-height:20px;text-align:center;word-break:keep-all;overflow-wrap:anywhere;pointer-events:none}
+#live-combine-tip::after{content:'';position:absolute;left:calc(var(--tooltip-arrow) - 4px);bottom:-5px;width:8px;height:8px;border-right:1px solid #c2a56b;border-bottom:1px solid #c2a56b;background:#152a25;transform:rotate(45deg)}
+#live-sale-target{left:90px;width:442px}
+@media(prefers-reduced-motion:reduce){.live-offer-wrap{transition:none}}
+
+/* Hero inspection uses the right column; equipment management stays in the shop. */
+#live-hero-panel{position:absolute;right:4px;top:44px;z-index:5;display:flex;flex-direction:column;gap:4px;width:272px;height:312px;padding:8px;border:2px solid #63765c;border-radius:6px;background:#142820f2}
+.live-hero-heading{display:flex;align-items:center;gap:8px;flex:none;height:36px}
+.live-hero-avatar{display:grid;place-items:center;width:36px;height:36px;flex:none;overflow:hidden}
+.live-hero-avatar img,.live-hero-avatar svg{display:block;width:32px;height:36px;object-fit:contain}
+.live-hero-heading h2{margin:0;color:#f3dca0;font-size:14px;line-height:18px}
+.live-hero-heading small{font-size:10px;line-height:14px;color:#b8c7b1}
+#live-hero-panel h3{height:16px;margin:0 0 4px;color:#e8d6a0;font-size:12px;line-height:16px}
+.live-hero-stats{flex:none}
+.live-hero-stats dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 4px;margin:0}
+.live-hero-stats dl>div{display:flex;align-items:center;justify-content:space-between;gap:4px;height:18px;padding:0 4px;border-left:2px solid #63765c;background:#21372b;white-space:nowrap}
+.live-hero-stats dt{margin:0;color:#bccab4;font-size:10px;line-height:18px}
+.live-hero-stats dd{margin:0;color:#fff1c7;font-size:12px;line-height:18px;font-variant-numeric:tabular-nums}
+.live-worn-equipment{display:flex;flex-direction:column;flex:1;min-height:0}
+.live-worn-equipment h3 span{float:right;color:#bac7ad;font-size:10px}
+.live-worn-layout{display:flex;align-items:center;justify-content:center;flex:1;min-height:110px}
+.live-equipment-preview{flex:none;user-select:none}
+.live-equipment-preview .live-gear-art{pointer-events:auto}
+
+/* Boss skills reuse the original buttons and simulation-driven cooldowns. */
+body.landscape-live #live-controls #boss-auto-skills{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;width:40px;height:32px;min-height:32px;margin:0;padding:0;border:2px solid #75825e;border-radius:4px;background:#182c22dd;color:#c9d0b7;font-size:10px;line-height:12px}
+body.landscape-live #live-controls #boss-auto-skills span,body.landscape-live #live-controls #boss-auto-skills b{font-size:10px;line-height:12px}
+body.landscape-live #live-controls #boss-auto-skills[aria-pressed=true]{border-color:#b4d59d;background:#345439;color:#e4ffd9}
+body.landscape-live #boss-screen>#boss-hero-skills{position:absolute;left:8px;bottom:8px;z-index:6;display:flex;align-items:center;gap:8px;width:max-content;max-width:calc(100% - 88px);height:64px;margin:0;padding:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;touch-action:pan-x}
+body.landscape-live #boss-hero-skills::-webkit-scrollbar{display:none}
+body.landscape-live .boss-hero-skill-row{display:flex;align-items:center;gap:8px;flex:0 0 188px;width:188px;height:64px}
+body.landscape-live .boss-hero-skill-row .boss-skill-hero-card{flex:none;width:64px;height:64px;min-height:0;margin:0;padding:2px 2px 4px;border:2px solid #a18e60;border-radius:6px;background:radial-gradient(ellipse at 50% 30%,#395043,#142b27 85%)}
+body.landscape-live .boss-skill-hero-card img{inset:0;width:100%;height:48px;object-fit:contain}
+body.landscape-live .boss-skill-hero-card>b{max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:10px;line-height:12px}
+body.landscape-live .boss-skill-hero-card>small{display:none}
+body.landscape-live .boss-skill-column{display:flex;align-items:center;gap:4px;width:116px;height:56px}
+body.landscape-live .boss-skill-column>.boss-skill{display:block;flex:none;width:56px;height:56px;min-width:56px;min-height:56px;margin:0;padding:0;border-width:2px;border-radius:6px;background:#152d2c;cursor:default}
+body.landscape-live .boss-skill-column>button.boss-skill:not(:disabled){cursor:pointer}
+body.landscape-live .boss-skill-column>.boss-skill>b,body.landscape-live .boss-skill-column>.boss-skill>span:not(.boss-skill-label),body.landscape-live .boss-skill-column>.boss-skill>strong{display:none}
+body.landscape-live .boss-skill-icon{position:absolute;inset:2px;z-index:0;display:grid;place-items:center;margin:0;pointer-events:none}
+body.landscape-live .boss-skill-icon svg{display:block;width:100%;height:100%;overflow:hidden}
+body.landscape-live .boss-skill-time{position:absolute;top:18px;left:4px;right:4px;z-index:3;height:18px;border-radius:2px;background:#0c1c1bbd;color:#fff1cf;font-size:12px;font-style:normal;font-weight:800;line-height:18px;text-align:center;text-shadow:0 1px 2px #000;pointer-events:none}
+body.landscape-live .boss-skill-label{position:absolute;bottom:0;left:0;right:0;z-index:3;height:14px;background:#10251bf0;color:#ead6a6;font-size:10px!important;line-height:14px;text-align:center;pointer-events:none}
+body.landscape-live .boss-skill-column>.boss-skill-empty{border-style:dashed;background:#14272480;opacity:.65}
+body.landscape-live .boss-skill-empty::before{content:'—';inset:0;display:grid;place-items:center;height:auto;background:none;color:#657d6b;font-size:20px}
+body.landscape-live .boss-skill-empty.boss-skill-preview::before{display:none}
+body.landscape-live #boss-hero-skills>.boss-scene-note{display:none}
+body.landscape-live #boss-screen>#boss-commander-skill{position:absolute;right:8px;bottom:8px;z-index:6;display:block;width:64px;height:64px;min-height:64px;margin:0;padding:0;border:2px solid #b7a168;border-radius:6px;background:radial-gradient(ellipse at 50% 30%,#5b5130,#263c2d 85%)}
+body.landscape-live #boss-commander-skill>.boss-skill-icon{position:absolute;inset:4px 8px 16px;z-index:1}
+body.landscape-live #boss-commander-skill>span,body.landscape-live #boss-commander-skill>strong{display:none}
+body.landscape-live #boss-commander-skill>b{position:absolute;bottom:2px;left:2px;right:2px;z-index:3;font-size:10px;line-height:14px;text-align:center;color:#f4d99b;pointer-events:none}
+body.landscape-live #boss-commander-skill>.boss-skill-time{position:absolute;top:26px;left:6px;right:6px;z-index:3}
+body.landscape-live #boss-commander-skill.buff-active{border-color:#a9d99a;box-shadow:inset 0 0 16px #91c57838}
+body.landscape-live #boss-screen :is([data-hero-skill],#boss-commander-skill):focus-visible{outline:2px solid #ffe2a4;outline-offset:2px}

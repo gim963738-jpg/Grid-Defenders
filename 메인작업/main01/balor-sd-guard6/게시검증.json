@@ -1,0 +1,245 @@
+{
+  "task": "MAIN01-20261111-1B358AA6",
+  "workerOutcome": "failed",
+  "userAccepted": false,
+  "url": "http://localhost:5173/dev-previews/balor-sd-guard6-v001/index.html",
+  "files": [
+    {
+      "file": "asset-manifest.json",
+      "bytes": 6990,
+      "sha256": "87c035d390e4bd319974be19177e1088386a4de9299bc2c6921709edaba8c413",
+      "httpByteMatch": true
+    },
+    {
+      "file": "built-in/front-000.png",
+      "bytes": 1381114,
+      "sha256": "b9b49fe5d39b7a231f71ba304b5b520a5aad9714591c0bd191775fed244282c2",
+      "httpByteMatch": true
+    },
+    {
+      "file": "built-in/right-035.png",
+      "bytes": 1474075,
+      "sha256": "b88c91189b0d3a4444a14e76a5e4a9bc8ccab2bad10a6be83112931dde35816c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "built-in/right-090.png",
+      "bytes": 882545,
+      "sha256": "0e0ccbcf44dc3303d289e061b060d2b4088e7af2d0eb3c231ecd13d49c3fc1c7",
+      "httpByteMatch": true
+    },
+    {
+      "file": "comparison-dark.png",
+      "bytes": 840206,
+      "sha256": "49cc49ee678ef0d1471781acfec9676bc5e57ad5aa0d80f9b14b8f9277624b6d",
+      "httpByteMatch": true
+    },
+    {
+      "file": "comparison.png",
+      "bytes": 862323,
+      "sha256": "c4fe505be0208fd1a97a7ece35217481e5791b54f9ef0a24680e7f04d7941fe3",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-dark-dpr1.png",
+      "bytes": 61823,
+      "sha256": "8018afa5855fff8e04e4213a32233fb93157cedfbecc07893addbbaf3318785b",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-dark-dpr2.png",
+      "bytes": 213770,
+      "sha256": "a0f7c368c214799413abd00db91508e65df08ab7e53804fab95f15a7418cc642",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-field-dpr1.png",
+      "bytes": 567683,
+      "sha256": "c3c82961f91a4e60d534d19e0aae1c7ffdba84b56755554bc2cd2dbaaaeb4417",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-field-dpr2.png",
+      "bytes": 1783822,
+      "sha256": "1745f7318834ebfad46ef5b02b0c1b7f2114c378a24c74f934138a1d899e99da",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-light-dpr1.png",
+      "bytes": 63289,
+      "sha256": "23e554ed6bc83630cf1782e3cbec0ab329a74c8cfb4e70c2a441be93a59146f6",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-light-dpr2.png",
+      "bytes": 220309,
+      "sha256": "51e7d16a2c286be63da3d22632d69939847e6ad36620ef1b9e85501a7e5e7609",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/browser-evidence.json",
+      "bytes": 12999,
+      "sha256": "8165ed04c4eaf954b57b60b802b0feaec7b077c183c1f9621f3fcafd35f908f6",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/display-72.json",
+      "bytes": 10005,
+      "sha256": "8762a2c177f4342b7593b576fb7a3f923c7653adc1e0efd9cc47bc4dde7f061c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/face-dark.png",
+      "bytes": 937420,
+      "sha256": "c031fb011ef119376182c6efb4f7142c2809b0758b5f43e0ff6370548c25b14b",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/face-light.png",
+      "bytes": 987424,
+      "sha256": "c8729be3d59a3b3b8097ce02f3fb8db225f88462e0d8c671a482e0e2db4b6905",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/grip-dark.png",
+      "bytes": 810516,
+      "sha256": "61ebec67dccf8a2abfa7dc53860220b0434fe4c14aa7ab2efa8af1541e514810",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/grip-light.png",
+      "bytes": 832301,
+      "sha256": "d863dc9e90c627d3c845cf4a587853ed3c5c1a3bfc788074af75a9e1d9a5ef73",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/inspection-rois.json",
+      "bytes": 1415,
+      "sha256": "6247ba7d64192178c2c6769e1347abb8a363f1b523fd1467a700926d58321470",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/shield-dark.png",
+      "bytes": 1645433,
+      "sha256": "b28657c16398369a844997c2f9bfab455b70c90c2fd32d2ee03dd2f5b4d94f52",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/shield-light.png",
+      "bytes": 1676154,
+      "sha256": "ab06d57b40a0f16a63dc465038f5d7bd6f725cf453605610d3b9a45d655a7cb7",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/verification.json",
+      "bytes": 6073,
+      "sha256": "0ecc6467e006f5d65b0bf0cb0bf8ea1d7b29a783296049f544b2353f4e45efe3",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/zoom-evidence.png",
+      "bytes": 792789,
+      "sha256": "becfe08949dc06768135915129a05beaeaa9a32e4566ef011d305da4495d0c7b",
+      "httpByteMatch": true
+    },
+    {
+      "file": "generation-records.json",
+      "bytes": 5687,
+      "sha256": "8f6b7ca1bfdb02181935d3ab3acd4807bd00427488f7e23c7df10b667f396961",
+      "httpByteMatch": true
+    },
+    {
+      "file": "image26/front-000.png",
+      "bytes": 1775187,
+      "sha256": "fea60c5ed7ab75b080bde77c77d4e2e04c0f7f50bd8273923659f5f315f9c33c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "image26/right-035.png",
+      "bytes": 1783436,
+      "sha256": "6120ad2c6bbf3ab1b92b4304d7f06d227594e02864b21c13f9a9667ccb45af80",
+      "httpByteMatch": true
+    },
+    {
+      "file": "image26/right-090.png",
+      "bytes": 1734523,
+      "sha256": "aec1e989b0971bdefdfff9a068a049d243f86601690a324b094414881cf8465a",
+      "httpByteMatch": true
+    },
+    {
+      "file": "index.html",
+      "bytes": 2056,
+      "sha256": "600516d26cb6018fc0b1396645df159cf36cfe239d199ef319af3bd90ebe9eea",
+      "httpByteMatch": true
+    },
+    {
+      "file": "input-manifest.json",
+      "bytes": 1576,
+      "sha256": "59f91c83d81b7dd2ca8e5cce5d2155e1d91d7549aa3c681a0b5aa19b67e0c02b",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/field.png",
+      "bytes": 2824239,
+      "sha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/identity-035.png",
+      "bytes": 1693833,
+      "sha256": "3cbc21b29438cf85fc41be989f89c70c89eb4c398c791d092fb511314e41a3f0",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/identity-090.png",
+      "bytes": 1586383,
+      "sha256": "4433610d0ac2978d909940690d0c4daaea6ae14a1fe311161d8bfe8d4886515a",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/identity-front.png",
+      "bytes": 1566373,
+      "sha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/style-sd1.png",
+      "bytes": 943540,
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "player.js",
+      "bytes": 8942,
+      "sha256": "2f36090d02a788f2c1f19beedcb8dfaa6c74f86e78a5c3a6cc7ca5591be70611",
+      "httpByteMatch": true
+    },
+    {
+      "file": "검수.md",
+      "bytes": 4542,
+      "sha256": "23b9fe62265fe22a8564ba6415eff3fe1ff181cadf2c32362a5d5096f4210e7b",
+      "httpByteMatch": true
+    },
+    {
+      "file": "보고.md",
+      "bytes": 5030,
+      "sha256": "e629e90139206e3b30f352bfb1e3727603d0bfbb31da9643877eca3114f8d49b",
+      "httpByteMatch": true
+    },
+    {
+      "file": "제작기준.md",
+      "bytes": 2503,
+      "sha256": "2b017f27fce86dbf9bcb68e9c9af968f905a17cca3c929f70f62e4bc99748902",
+      "httpByteMatch": true
+    }
+  ],
+  "fileCount": 38,
+  "excluded": [
+    ".qa-profile",
+    "api",
+    "prompts",
+    "generations",
+    "generation scripts",
+    "read-pack"
+  ]
+}

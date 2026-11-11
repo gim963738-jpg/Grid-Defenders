@@ -1,0 +1,118 @@
+﻿{
+    "iteration":  1,
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\AGENTS.md",
+                          "sha256":  "85359b640a88dc55b5ea843a691eaf7f24d9ed8d34d06a6b19b2a7c658930e75",
+                          "applies":  "main01 단일 회신 및 effects 공방 파일만 편집, 원본 보존·명암 전장 검증"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\effects\\작업진행방법.md",
+                          "sha256":  "fb88269750d30b5eda01c2f6dcfd61d783b7437501c2e9d193c9368b31049eda",
+                          "applies":  "매 작업 본문 필독과 ACK/start 후 착수, 기술검증과 사용자합격 분리"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+                          "applies":  "실제 진행 승인 범위에 한해 기존공방 구현, 작업5종 기록과 원본 보존"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+                          "applies":  "main01 현재 Task/Dispatch 회신, 발송기록과 착수 연결"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+                          "applies":  "본인 직접 구현, 외부 생성0, 독립 테스터 최종합격 별도"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "effect-workshop 도구만 수정, 런타임·타팀 파일 제외"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\effects\\규정.md",
+                          "sha256":  "6a1e791efe202431216870813ec7e70b1275d7728a9191640875beb70e6d803f",
+                          "applies":  "공방·재료함·기준점 계약 유지, 제안은 작업문서에만 기록"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "read-pack 전체 적용 요약/현재 해시 start 통과 후 구현"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+                          "applies":  "effects 팀장→main01, qa는 독립검증이며 게임개발 영역 제외"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "세계관 자료 분류와 실제 조직 구분, 기존 sources 위치 유지"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "character_skills/effects 노드 위치 확인, 타팀 원본 변경0"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+                          "sha256":  "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+                          "applies":  "단일 main01 run_47ce1a81d7b1 공식 반환, Git 금지 유지"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md",
+                          "sha256":  "95929cc6cb382d485d13223cefc732232a43bdf30163b41c49ed9b0af59b621c",
+                          "applies":  "사용자 진행으로 보정과 기존공방 합성 승인, 생성API·게임통합 제외"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사전확인.md",
+                          "sha256":  "67d08720de6902693d25908f05256a5c2836df1df7377d3872da80a77be929b7",
+                          "applies":  "기존 공방 전용 파일과 확정 금발 모션 사용, 진행중 발로르 탐색0"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+                          "sha256":  "0ad5c82c5e7a86025e43efcc55396d3d10ea7d28c82ad4ea18badcef93553ab9",
+                          "applies":  "명시 진행 원문 확인, 같은 범위 재승인 없이 구현"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+                          "sha256":  "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+                          "applies":  "Image2.6 및 생성 호출0, 기존 PNG 바이트 재사용"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+                          "sha256":  "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be",
+                          "applies":  "로컬 JSON 저장과 Git 저장 분리, Git 명령0"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+                          "sha256":  "1ef4d854ad8d3250a57f8ece69605b07c4244eaa2c7599da235c8fbb2be1fb8f",
+                          "applies":  "몸키72CSSpx·장비 여백 제외, 표시3번 별도 버퍼·명암 필드 확인"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+                          "sha256":  "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+                          "applies":  "원본 영역·프레임 매핑·pivot 보존, 표시와 피해판정 분리"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\모바일UI규격.md",
+                          "sha256":  "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+                          "applies":  "새 공방 조작48px·본문14px·320/390 스크롤 대응, 게임UI 수정0"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\문서\\03_작업기록\\WEB-168_공방부품노드와사용성\\2_사용법과검증.md",
+                          "sha256":  "b956d82c8616c8302b623ec5abc942bceb6b1f8bd6192e36c26f77b449b318ac",
+                          "applies":  "기존 노드/그리기/부품·복사 관계/캐시/정리와 효과전용 출력 보존"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\문서\\03_작업기록\\WEB-169_전체이펙트재료함통합\\2_사용법과검증.md",
+                          "sha256":  "737b027ba8a4d3519fea51d5745e4ba2e3edc4fd40b24d46d06ada553c0d2cf2",
+                          "applies":  "재료함 PNG/recipe 어댑터 재사용, 기존 저장소 보존과 출처·제약 표시"
+                      }
+                  ],
+    "task":  "MAIN01-20261111-47B7186F",
+    "workSummary":  "기존 공방 안 캐릭터 프레임 보정·동기 합성, 에셋 원본과 개인 저장함 보존, 단위/시간/복구 검사·headless 증거. 외부생성·Git·진행중 발로르 탐색0.",
+    "role":  "effects"
+}

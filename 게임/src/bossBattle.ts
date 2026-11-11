@@ -1,3 +1,6 @@
+import {BOSS_FIELD} from './bossField';
+import {separateActors,approachPoint,constrainActor,actorFieldBounds} from './actorSpacing';
+import {createMotion,startMotion,advanceMotion,locked,setPose,dieMotion,motionDuration,type ActorMotion} from './actorMotion';
 import {LANDSCAPE_BATTLE} from './defenseConfig';
 import {FORMATION,formationRank,isFormationCell} from './battleFormation';
 import {blondDirection,type BlondWalk} from './blondMotion';
@@ -24,7 +27,7 @@ export function waveBossRoster(game:Defense):BossAlly[]{
   return game.units.map(u=>({id:u.id,kind:u.kind,slot:u.slot,level:u.level,stats:{...game.stats(u)},...(cells?{formationCell:cells.get(u.id)}:{})}));
 }
 export interface BossActor {
-  walk?:BlondWalk;
+  walk?:BlondWalk; motion?:ActorMotion;
   normalDamageMultiplier?:number;bossDamageMultiplier?:number;armorBreakRemaining?:number;
   level?:number;sourceSlot?:number;regen?:number;critChance?:number;critMultiplier?:number;physicalArmor?:number;magicArmor?:number;
   id:string;side:'ally'|'enemy';kind:UnitKind|'boss'|'retainer';name:string;
@@ -38,8 +41,16 @@ export interface BossHit {from:string;to:string;x:number;y:number;damage:number;
 export class BossBattle {
   readonly damageMeter:DamageMeter;
   encounter=0;
+  preparationRemaining=3;
+  motionVersion=1;
   tuning:BossTuning={healthScale:1,attackScale:1};
-  actors:BossActor[]=[];
+  private actorList:BossActor[]=[];
+  get actors():BossActor[]{return this.actorList;}
+  set actors(value:BossActor[]){
+    // Checkpoint restoration assigns this named field. Repair the same display
+    // boundary immediately, including when restored paused before its first tick.
+    this.actorList=value;for(const a of value)if(a.kind==='boss')constrainActor(a,BOSS_FIELD.width,BOSS_FIELD.height);
+  }
   hits:BossHit[]=[];
   iceProjectiles:BossIceProjectile[]=[];
   iceBursts:BossIceBurst[]=[];
@@ -60,7 +71,7 @@ export class BossBattle {
   constructor(roster:BossAlly[]=[],private random:()=>number=Math.random,peaks?:DamagePeaks){this.damageMeter=new DamageMeter(peaks);this.reset(roster);}
   reset(roster:BossAlly[]=this.roster,tuning:BossTuning={healthScale:1,attackScale:1}):void {
     this.tuning={...tuning};
-    this.encounter++;
+    this.encounter++;this.preparationRemaining=3;this.motionVersion=1;
     this.damageMeter.reset();
     this.roster=roster.map(u=>({...u,stats:{...u.stats}}));
     this.actors=[];this.hits=[];this.iceProjectiles=[];this.iceBursts=[];this.elapsed=0;this.result='fighting';
@@ -69,18 +80,20 @@ export class BossBattle {
       const d=UNITS[u.kind],s=u.stats,col=LANDSCAPE_BATTLE?3-u.slot%4:3-Math.floor(u.slot/4),row=LANDSCAPE_BATTLE?Math.floor(u.slot/4)+1:u.slot%4+2;
       const formed=LANDSCAPE_BATTLE&&isFormationCell(u.formationCell),position=formed?bossFormationPoint(u.formationCell!):{x:(col+.5)*70.3125,y:(row+.5)*70.3125};
       this.actors.push({id:`ally-${u.id}`,side:'ally',kind:u.kind,name:d.name,level:u.level,sourceSlot:u.slot,
-        ...(u.kind==='blond'?{walk:{direction:0,moving:false,elapsed:0}}:{}),
+        ...(u.kind==='blond'?{walk:{direction:0,moving:false,elapsed:0},motion:createMotion()}:{}),
         ...position,hp:s.hp,maxHp:s.hp,attack:s.attack,
         rate:s.rate,range:u.kind==='assassin'?80:s.range*(u.kind==='ranged'||u.kind==='arcanist'?1.5:1),speed:u.kind==='guard'||u.kind==='tank'||u.kind==='melee'||u.kind==='blond'?64:53,
         rank:formed?formationRank(u.formationCell!):Math.floor(u.slot/4),damageType:s.damageType,defenseType:'normal',cooldown:.25,
         normalDamageMultiplier:s.normalDamageMultiplier,bossDamageMultiplier:s.bossDamageMultiplier,regen:s.regen,physicalArmor:s.physicalArmor,magicArmor:s.magicArmor,critChance:s.critChance,critMultiplier:s.critMultiplier});
     }
     this.actors.push(
-      {id:'retainer-top',side:'enemy',kind:'retainer',name:'친위대 · 강철 감시자',x:760,y:215,hp:1800,maxHp:1800,attack:70,rate:.8,range:50,speed:50,rank:0,damageType:'physical',defenseType:'physical',physicalArmor:35,magicArmor:25,cooldown:.25},
-      {id:'retainer-bottom',side:'enemy',kind:'retainer',name:'친위대 · 비전 파수꾼',x:760,y:347.5,hp:1800,maxHp:1800,attack:70,rate:.8,range:50,speed:50,rank:0,damageType:'magic',defenseType:'magic',physicalArmor:25,magicArmor:35,cooldown:.25},
-      {id:'tester-boss',side:'enemy',kind:'boss',name:'시험 보스',x:900,y:281.25,hp:6000,maxHp:6000,attack:120,rate:.7,range:80,speed:34,rank:1,damageType:'physical',defenseType:'normal',physicalArmor:60,magicArmor:40,cooldown:.25},
+      {id:'retainer-normal',side:'enemy',kind:'retainer',name:'노랑 친위대',x:805,y:281.25,hp:1800,maxHp:1800,attack:70,rate:.8,range:50,speed:50,rank:0,damageType:'physical',defenseType:'normal',physicalArmor:25,magicArmor:25,cooldown:.25},
+      {id:'retainer-top',side:'enemy',kind:'retainer',name:'파랑 친위대',x:760,y:215,hp:1800,maxHp:1800,attack:70,rate:.8,range:50,speed:50,rank:0,damageType:'physical',defenseType:'physical',physicalArmor:35,magicArmor:25,cooldown:.25},
+      {id:'retainer-bottom',side:'enemy',kind:'retainer',name:'빨강 친위대',x:760,y:347.5,hp:1800,maxHp:1800,attack:70,rate:.8,range:50,speed:50,rank:0,damageType:'magic',defenseType:'magic',physicalArmor:25,magicArmor:35,cooldown:.25},
+      {id:'tester-boss',motion:createMotion(true),side:'enemy',kind:'boss',name:'터틀 보스',x:900,y:335,hp:6000,maxHp:6000,attack:120,rate:.7,range:80,speed:34,rank:1,damageType:'physical',defenseType:'normal',physicalArmor:60,magicArmor:40,cooldown:.25},
     );
     for(const enemy of this.actors.filter(a=>a.side==='enemy')){
+      enemy.x*=BOSS_FIELD.width/1250;
       enemy.hp=enemy.maxHp=Math.max(1,Math.ceil(enemy.maxHp*tuning.healthScale));
       enemy.attack=Math.max(1,Math.floor(enemy.attack*tuning.attackScale));
     }
@@ -96,11 +109,11 @@ export class BossBattle {
   skillCooldown(id:string):number {return this.actors.find(a=>a.id===id)?.kind==='ranged'?this.heroSkillCooldown:this.heroSkillCooldowns.get(id)??0;}
   canHeroSkill(id:string):boolean {
     const hero=this.actors.find(a=>a.id===id&&a.side==='ally'&&a.hp>0&&(a.kind==='ranged'||a.kind==='melee'||a.kind==='assassin')),target=hero&&this.target(hero);
-    return this.result==='fighting'&&this.skillCooldown(id)<=0&&!!hero&&!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range;
+    return this.preparationRemaining<=0&&this.result==='fighting'&&this.skillCooldown(id)<=0&&!!hero&&!!target&&Math.hypot(hero.x-target.x,hero.y-target.y)<=hero.range+1e-8;
   }
   canTriple():boolean {const hero=this.hero();return !!hero&&this.canHeroSkill(hero.id);}
   commanderSkill():boolean {
-    if(this.result!=='fighting'||!this.actors.some(a=>a.side==='ally'&&a.hp>0)||this.commanderCooldown>0)return false;
+    if(this.preparationRemaining>0||this.result!=='fighting'||!this.actors.some(a=>a.side==='ally'&&a.hp>0)||this.commanderCooldown>0)return false;
     this.commanderBuff=10;this.commanderCooldown=15;return true;
   }
   useHeroSkill(id:string):boolean {
@@ -127,6 +140,10 @@ export class BossBattle {
   }
   private damageFactor(source:BossActor,target:BossActor):number {return combatDefenseMultiplier(source.damageType,target)*(source.side==='ally'?(target.kind==='boss'?source.bossDamageMultiplier??1:source.normalDamageMultiplier??1):1);}
   private strike(actor:BossActor,target:BossActor,damage:Map<string,number>):void {
+    if(actor.kind==='blond'||actor.kind==='boss'){
+      const rolled=criticalAttack({attack:this.attackPower(actor)},actor,this.random);
+      startMotion(actor.motion??=createMotion(actor.kind==='boss'),target.id,rolled.attack,rolled.critical,actor.kind==='boss');return;
+    }
     if(actor.kind==='ranged'){
       this.iceProjectiles.push(criticalAttack({x:actor.x,y:actor.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...actor},attack:this.attackPower(actor)},actor,this.random));
       return;
@@ -144,9 +161,22 @@ export class BossBattle {
     damage.set(target.id,(damage.get(target.id)??0)+amount);
     this.hits.push({from:actor.id,to:target.id,x:target.x,y:target.y,damage:amount,magic:actor.damageType==='magic',life:.32,critical});
   }
+  get deathPlaying():boolean{return this.actors.some(a=>a.kind==='blond'&&a.hp<=0&&(!a.motion||a.motion.clip!=='08'||a.motion.age<motionDuration('08')));}
   tick(seconds:number):void {
-    const dt=Math.min(.05,Math.max(0,seconds));
+    if(!Number.isFinite(seconds)||seconds<=0)return;
+    let left=seconds;while(left>1e-9){const dt=Math.min(.02,left);this.step(dt);left-=dt;}
+  }
+  private step(dt:number):void {
+    for(const a of this.actors)if(a.kind==='boss')constrainActor(a,BOSS_FIELD.width,BOSS_FIELD.height);
+    for(const a of this.actors)if(a.kind==='blond'&&a.hp<=0)dieMotion(a.motion??=createMotion());
+    if(this.preparationRemaining>0){
+      const consumed=Math.min(dt,this.preparationRemaining);this.preparationRemaining=Math.max(0,this.preparationRemaining-consumed);if(this.preparationRemaining<1e-9)this.preparationRemaining=0;
+      for(const a of this.actors)if(a.motion)advanceMotion(a.motion,consumed);
+      if(dt-consumed>1e-9)this.step(dt-consumed);return;
+    }
+    if(this.result==='fighting')for(const a of this.actors)if(a.kind==='blond'&&a.hp<=0&&a.motion)advanceMotion(a.motion,dt);
     if(this.result!=='fighting'){
+      for(const a of this.actors)if(a.motion){if(a.hp>0)setPose(a.motion,a.kind==='boss'?'idle':'02');advanceMotion(a.motion,dt);}
       for(const actor of this.actors)if(actor.walk){actor.walk.moving=false;actor.walk.elapsed=0;}
       // Finish the final sword flash without extending combat time or dealing damage.
       for(const swing of this.swordAttacks)swing.age+=dt;
@@ -172,6 +202,13 @@ export class BossBattle {
     for(const a of live)if(a.regen)a.hp=Math.min(a.maxHp,a.hp+a.regen*dt);
     const plans=live.map(actor=>({actor,target:this.target(actor)}));
     const damage=new Map<string,number>();
+    for(const source of live)if(source.motion&&advanceMotion(source.motion,dt)){
+      const m=source.motion,victim=live.find(a=>a.id===m.targetId&&a.side!==source.side);
+      if(victim&&Math.hypot(victim.x-source.x,victim.y-source.y)<=source.range+1e-8){
+        const amount=m.attack*this.damageFactor(source,victim);damage.set(victim.id,(damage.get(victim.id)??0)+amount);
+        this.hits.push({from:source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,critical:m.critical,sword:source.kind==='blond'});
+      }
+    }
     // Same homing speed, impact lifetime and AoE radius as the wave ice attack.
     this.iceProjectiles=this.iceProjectiles.filter(p=>{
       const target=live.find(a=>a.id===p.targetId);
@@ -179,7 +216,7 @@ export class BossBattle {
       const dx=p.tx-p.x,dy=p.ty-p.y,distance=Math.hypot(dx,dy),step=320*dt;
       if(distance>step){p.x+=dx/distance*step;p.y+=dy/distance*step;return true;}
       this.iceBursts.push({x:p.tx,y:p.ty,life:.45});
-      for(const victim of live)if(victim.side!==p.source.side&&Math.hypot(victim.x-p.tx,victim.y-p.ty)<=AREA_ATTACK.mageRadius){
+      for(const victim of live)if(victim.side!==p.source.side&&Math.hypot(victim.x-p.tx,victim.y-p.ty)<=AREA_ATTACK.mageRadius+1e-6){
         const amount=p.attack*this.damageFactor(p.source,victim);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
         this.hits.push({from:p.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,critical:p.critical,splash:victim.id!==p.targetId});
@@ -218,22 +255,38 @@ export class BossBattle {
     for(const {actor,target} of plans){
       if(!target)continue;
       actor.cooldown=Math.max(0,actor.cooldown-dt);
+      if(actor.motion&&locked(actor.motion))continue;
       if(this.assassinActions.some(a=>a.sourceId===actor.id&&a.kind==='boss'))continue;
       const dx=target.x-actor.x,dy=target.y-actor.y,dist=Math.hypot(dx,dy);
-      if(dist>actor.range){
-        const step=Math.min(actor.speed*dt,dist-actor.range);
-        actor.x+=dx/dist*step;actor.y+=dy/dist*step;
-        if(actor.walk&&step>0){actor.walk.direction=blondDirection(dx,dy,actor.walk.direction);actor.walk.moving=true;actor.walk.elapsed+=dt;}
-      } else if(actor.cooldown<=0){
+      // A turtle held at its full-height boundary cannot follow an opponent
+      // farther above/below. Its current target steps closer instead of camping
+      // forever outside the turtle's real reach. This is a movement destination;
+      // all attack eligibility and hit checks still use the unchanged ranges.
+      let stopDistance=actor.range;
+      if(target.kind==='boss'&&this.target(target)?.id===actor.id){
+        const bounds=actorFieldBounds(target,BOSS_FIELD.width,BOSS_FIELD.height);
+        if((target.y<=bounds.top+1e-6&&actor.y<target.y-target.range+2)||(target.y>=bounds.bottom-1e-6&&actor.y>target.y+target.range-2))
+          stopDistance=Math.min(stopDistance,target.range-2);
+      }
+      if(dist>stopDistance+1e-8){
+        if(actor.motion)setPose(actor.motion,actor.kind==='boss'?'walk':'01');
+        const waypoint=approachPoint(actor,target,live,BOSS_FIELD.width,BOSS_FIELD.height),mx=waypoint.x-actor.x,my=waypoint.y-actor.y,travel=Math.hypot(mx,my);
+        const step=Math.min(actor.speed*dt,dist-stopDistance,travel);
+        if(travel>1e-9){actor.x+=mx/travel*step;actor.y+=my/travel*step;}
+        if(actor.walk&&step>0){actor.walk.direction=blondDirection(mx,my,actor.walk.direction);actor.walk.moving=true;actor.walk.elapsed+=dt;}
+      } else {
+        if(actor.motion)setPose(actor.motion,actor.kind==='boss'?'idle':'02');
+        if(actor.cooldown>0)continue;
         if(actor.walk)actor.walk.direction=blondDirection(dx,dy,actor.walk.direction);
         this.strike(actor,target,damage);
-        actor.cooldown=1/actor.rate;
+        actor.cooldown=actor.kind==='boss'?Math.max(1/actor.rate,motionDuration(actor.motion!.clip)+2.4):1/actor.rate;
       }
     }
+    separateActors(this.actors.filter(a=>!this.assassinActions.some(action=>action.kind==='boss'&&action.sourceId===a.id)),BOSS_FIELD.width,BOSS_FIELD.height);
     for(const actor of this.actors)if(actor.walk&&!actor.walk.moving)actor.walk.elapsed=0;
     for(const cast of this.fireCasts){
       const target=live.find(a=>a.id===cast.targetId),beats=advanceFire(cast,dt,target);
-      for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.tx,victim.y-cast.ty)<=FIRE_SKILL.radius){
+      for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.tx,victim.y-cast.ty)<=FIRE_SKILL.radius+1e-6){
         const amount=cast.attack*FIRE_SKILL.damageMultiplier*this.damageFactor(cast.source,victim);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
         this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:true,life:.32,ice:true,critical:cast.critical,splash:victim.id!==cast.targetId});
@@ -242,7 +295,7 @@ export class BossBattle {
     this.fireCasts=this.fireCasts.filter(fireAlive);
     for(const cast of this.bladeCasts){
       const beats=advanceBlade(cast,dt);
-      for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.x,victim.y-cast.y)<=BLADE_SKILL.radius){
+      for(let i=0;i<beats;i++)for(const victim of live)if(victim.side!==cast.source.side&&Math.hypot(victim.x-cast.x,victim.y-cast.y)<=BLADE_SKILL.radius+1e-6){
         const amount=cast.attack*bladeDamageMultiplier(cast.hits-beats+i)*this.damageFactor(cast.source,victim);
         damage.set(victim.id,(damage.get(victim.id)??0)+amount);
         this.hits.push({from:cast.source.id,to:victim.id,x:victim.x,y:victim.y,damage:amount,magic:false,life:.32,sword:true,critical:cast.critical,splash:victim.id!==cast.targetId});
@@ -261,6 +314,7 @@ export class BossBattle {
         }
       }
       actor.hp=Math.max(0,actor.hp-attempted);
+      if(actor.kind==='blond'&&actor.hp<=0)dieMotion(actor.motion??=createMotion());
     }
     if(!this.actors.some(a=>a.side==='ally'&&a.hp>0))this.result='defeat';
     else if(!this.actors.some(a=>a.side==='enemy'&&a.hp>0))this.result='victory';

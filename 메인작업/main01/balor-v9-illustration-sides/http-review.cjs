@@ -1,0 +1,14 @@
+const {chromium}=require('C:/Users/user/AppData/Local/ms-playwright-go/1.57.0/package');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+(async()=>{const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
+try{const page=await browser.newPage({viewport:{width:1280,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+const response=await page.goto('http://127.0.0.1:5173/dev-previews/balor-v9-illustration-sides4-v001/index.html');assert.equal(response.status(),200);
+await page.waitForFunction(()=>window.ready);assert.equal(await page.locator('.stage').count(),6);
+assert(await page.locator('.stage img').evaluateAll(images=>images.every(i=>i.complete&&i.naturalWidth===1024&&i.naturalHeight===1536)));
+const srcs=await page.locator('.stage img').evaluateAll(images=>images.map(x=>x.getAttribute('src')));assert.equal(srcs[0],srcs[3]);assert.equal(new Set(srcs).size,5);
+await page.locator('.stage').nth(1).click();assert(await page.locator('#zoom').evaluate(e=>e.open));await page.click('#close');assert(!(await page.locator('#zoom').evaluate(e=>e.open)));
+await page.click('#dark');assert(await page.locator('body').evaluate(e=>e.classList.contains('dark')));await page.click('#light');assert(!(await page.locator('body').evaluate(e=>e.classList.contains('dark'))));
+await page.click('#native');assert(await page.locator('body').evaluate(e=>e.classList.contains('native')));await page.click('#native');assert(!(await page.locator('body').evaluate(e=>e.classList.contains('native'))));
+await page.screenshot({path:path.join(__dirname,'http-reviewed.png'),fullPage:true});assert.deepEqual(errors,[]);
+const result={passed:true,http:200,cards:6,uniqueSources:5,existingFrontReused:true,allAssetsLoaded:true,zoomOpenClose:true,lightDark:true,nativeToggle:true,errors,artisticAcceptance:false,workerOutcome:'failed',userScreenChanged:false};fs.writeFileSync(path.join(__dirname,'http-review.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result));
+}finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});

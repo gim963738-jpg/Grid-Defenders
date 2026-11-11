@@ -22,7 +22,7 @@ export const UNITS: Record<UnitKind, UnitDef> = {
   arcanist:{damageType:'magic',magicArmor:35,name:'마법 딜러',icon:'법',hero:true,cost:0,attack:100,rate:.8,range:240,hp:780,armor:15,color:0xbe93ed},
   assassin:{damageType:'physical',magicArmor:15,name:'암살자',icon:'암',hero:true,cost:0,attack:100,rate:1.2,range:130,hp:1000,armor:25,color:0xf16e79},
   // WEB-170 temporary stats; no active skill is assigned.
-  blond:{damageType:'physical',magicArmor:20,name:'금발 전사',icon:'검',hero:true,cost:0,attack:85,rate:1.1,range:130,hp:1400,armor:35,color:0x85b8ed},
+  blond:{damageType:'physical',magicArmor:20,name:'금발 전사',icon:'검',hero:true,cost:0,attack:85,rate:1.1,range:100,hp:1400,armor:35,color:0x85b8ed},
 };
 export type Cell = [number, number];
 export interface ItemDef { id:string; name:string; short:string; cells:Cell[]; color:string;

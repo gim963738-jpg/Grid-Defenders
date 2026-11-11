@@ -1,0 +1,464 @@
+{
+  "task": "MAIN01-20261110-DE754BC7",
+  "source": "source.png",
+  "sourceSha256": "366b8073d944fea1849dd1795c4e36cdd63c2653f04ea9262a20d457670ee285",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "staticBody": "parts/body.png",
+  "staticBodyRestorationSource": "api/01-body/native.png",
+  "ownershipOrder": [
+    "weapon",
+    "upperarm",
+    "forearm",
+    "hand",
+    "pauldron"
+  ],
+  "sameAMasks": true,
+  "outsideEditRegionExact": true,
+  "parts": [
+    {
+      "name": "weapon",
+      "file": "parts/weapon.png",
+      "sourcePolygon": [
+        [
+          511,
+          622
+        ],
+        [
+          536,
+          631
+        ],
+        [
+          529,
+          658
+        ],
+        [
+          507,
+          691
+        ],
+        [
+          502,
+          733
+        ],
+        [
+          527,
+          770
+        ],
+        [
+          535,
+          800
+        ],
+        [
+          517,
+          835
+        ],
+        [
+          480,
+          848
+        ],
+        [
+          451,
+          826
+        ],
+        [
+          323,
+          1157
+        ],
+        [
+          242,
+          1232
+        ],
+        [
+          250,
+          1140
+        ],
+        [
+          382,
+          823
+        ],
+        [
+          346,
+          823
+        ],
+        [
+          326,
+          797
+        ],
+        [
+          326,
+          777
+        ],
+        [
+          344,
+          774
+        ],
+        [
+          335,
+          753
+        ],
+        [
+          346,
+          737
+        ],
+        [
+          355,
+          749
+        ],
+        [
+          356,
+          719
+        ],
+        [
+          372,
+          694
+        ],
+        [
+          414,
+          683
+        ],
+        [
+          424,
+          749
+        ],
+        [
+          449,
+          699
+        ],
+        [
+          482,
+          639
+        ]
+      ],
+      "ownershipMask": "parts/weapon-ownership.png",
+      "restorationMask": "parts/weapon-restoration-region.png",
+      "originalOwnedPixelCount": 65319,
+      "originalOwnedPixelsExact": true,
+      "restorationRegionPixels": 2503,
+      "bounds": [
+        235,
+        616,
+        545,
+        1235
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "restoration": "AI hidden grip donor registered; original visible sword unchanged",
+      "sha256": "3f6c9bc1ecb240a8b7107e3654fb174f09666e6270bd07bee7c4421bdd442491",
+      "maskByteIdenticalToA": true,
+      "BrestorationSource": "api/03-weapon/native.png",
+      "provenance": "original master visible pixels; scoped B API donor restoration only, no A image pixels used"
+    },
+    {
+      "name": "upperarm",
+      "file": "parts/upperarm.png",
+      "sourcePolygon": [
+        [
+          488,
+          452
+        ],
+        [
+          582,
+          471
+        ],
+        [
+          582,
+          506
+        ],
+        [
+          570,
+          540
+        ],
+        [
+          549,
+          577
+        ],
+        [
+          521,
+          608
+        ],
+        [
+          453,
+          559
+        ],
+        [
+          469,
+          523
+        ]
+      ],
+      "ownershipMask": "parts/upperarm-ownership.png",
+      "restorationMask": "parts/upperarm-restoration-region.png",
+      "originalOwnedPixelCount": 5479,
+      "originalOwnedPixelsExact": true,
+      "restorationRegionPixels": 18196,
+      "bounds": [
+        462,
+        396,
+        597,
+        617
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "restoration": "AI donor local hidden shoulder/elbow/wrist overlap, inferred",
+      "sha256": "7c94dc287015db49d2c65a90b66bbb3b1932cd98ebde9a4a81e041a7a16d26bb",
+      "maskByteIdenticalToA": true,
+      "BrestorationSource": "api/02-arm/native.png",
+      "provenance": "original master visible pixels; scoped B API donor restoration only, no A image pixels used"
+    },
+    {
+      "name": "forearm",
+      "file": "parts/forearm.png",
+      "sourcePolygon": [
+        [
+          456,
+          542
+        ],
+        [
+          490,
+          546
+        ],
+        [
+          525,
+          571
+        ],
+        [
+          514,
+          592
+        ],
+        [
+          495,
+          619
+        ],
+        [
+          484,
+          643
+        ],
+        [
+          479,
+          660
+        ],
+        [
+          469,
+          673
+        ],
+        [
+          430,
+          661
+        ],
+        [
+          427,
+          648
+        ],
+        [
+          435,
+          611
+        ],
+        [
+          441,
+          588
+        ]
+      ],
+      "ownershipMask": "parts/forearm-ownership.png",
+      "restorationMask": "parts/forearm-restoration-region.png",
+      "originalOwnedPixelCount": 9432,
+      "originalOwnedPixelsExact": true,
+      "restorationRegionPixels": 1250,
+      "bounds": [
+        429,
+        535,
+        534,
+        682
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "restoration": "AI donor local hidden shoulder/elbow/wrist overlap, inferred",
+      "sha256": "a73f54b58f4608cfb9845a15676ab01c57139391f5a12c576f62ef3e511838b1",
+      "maskByteIdenticalToA": true,
+      "BrestorationSource": "api/02-arm/native.png",
+      "provenance": "original master visible pixels; scoped B API donor restoration only, no A image pixels used"
+    },
+    {
+      "name": "hand",
+      "file": "parts/hand.png",
+      "sourcePolygon": [
+        [
+          435,
+          650
+        ],
+        [
+          475,
+          656
+        ],
+        [
+          487,
+          674
+        ],
+        [
+          493,
+          696
+        ],
+        [
+          505,
+          713
+        ],
+        [
+          501,
+          737
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          468,
+          752
+        ],
+        [
+          453,
+          739
+        ],
+        [
+          438,
+          743
+        ],
+        [
+          427,
+          724
+        ],
+        [
+          417,
+          706
+        ],
+        [
+          423,
+          680
+        ]
+      ],
+      "ownershipMask": "parts/hand-ownership.png",
+      "restorationMask": "parts/hand-restoration-region.png",
+      "originalOwnedPixelCount": 7976,
+      "originalOwnedPixelsExact": true,
+      "restorationRegionPixels": 0,
+      "bounds": [
+        409,
+        642,
+        511,
+        761
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "restoration": "original source pixels only",
+      "sha256": "934e0c4e00944fdd1a5814f1964efd987d518710ae79167a074b5aeea5fbfc28",
+      "maskByteIdenticalToA": true,
+      "BrestorationSource": null,
+      "provenance": "original master visible pixels; scoped B API donor restoration only, no A image pixels used"
+    },
+    {
+      "name": "pauldron",
+      "file": "parts/pauldron.png",
+      "sourcePolygon": [
+        [
+          472,
+          418
+        ],
+        [
+          478,
+          390
+        ],
+        [
+          500,
+          370
+        ],
+        [
+          526,
+          356
+        ],
+        [
+          560,
+          351
+        ],
+        [
+          596,
+          372
+        ],
+        [
+          624,
+          406
+        ],
+        [
+          633,
+          430
+        ],
+        [
+          608,
+          448
+        ],
+        [
+          588,
+          474
+        ],
+        [
+          570,
+          500
+        ],
+        [
+          527,
+          506
+        ],
+        [
+          470,
+          494
+        ],
+        [
+          467,
+          483
+        ],
+        [
+          481,
+          464
+        ],
+        [
+          476,
+          455
+        ],
+        [
+          472,
+          448
+        ],
+        [
+          487,
+          430
+        ]
+      ],
+      "ownershipMask": "parts/pauldron-ownership.png",
+      "restorationMask": "parts/pauldron-restoration-region.png",
+      "originalOwnedPixelCount": 23450,
+      "originalOwnedPixelsExact": true,
+      "restorationRegionPixels": 0,
+      "bounds": [
+        467,
+        343,
+        642,
+        515
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "restoration": "original source pixels only",
+      "sha256": "4618dcd3ffb97d409ea82e468e68438be820648ec6c4858a0633c977d4052c4a",
+      "maskByteIdenticalToA": true,
+      "BrestorationSource": null,
+      "provenance": "original master visible pixels; scoped B API donor restoration only, no A image pixels used"
+    }
+  ]
+}

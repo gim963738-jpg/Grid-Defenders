@@ -1,4 +1,8 @@
+import {turtleHudOffset} from './actorSpacing';
 import {heroImage,heroPortrait,sheetHero,assassinArt,assassinSkillIcon} from './heroArt';
+import {runtimeBossImage,bossSlimeImage} from './combatMotionArt';
+import {blondDirection} from './blondMotion';
+import {motionFrame} from './actorMotion';
 import {blondBossImage} from './blondArt';
 import {rangedBossImage} from './rangedArt';
 import {skillFramePlacement} from './skillVisual';
@@ -14,14 +18,15 @@ import {BOSS_FIELD} from './bossField';
 import {soldierImage} from './soldierArt';
 import {bossSkillIcon} from './bossSkillIcons';
 
-function art(a:BossActor,battle?:BossBattle):string {
-  if(a.kind==='blond')return blondBossImage(a.walk?.direction??0,!!a.walk?.moving&&a.hp>0&&battle?.result==='fighting',a.walk?.elapsed??0);
+function art(a:BossActor,battle?:BossBattle,worldPerCss=BOSS_FIELD.width/800):string {
+  if(a.kind==='blond')return runtimeBossImage(a.motion,72*worldPerCss)||blondBossImage(a.walk?.direction??0,!!a.walk?.moving&&a.hp>0&&battle?.result==='fighting',a.walk?.elapsed??0);
   if(a.kind==='ranged')return rangedBossImage();
   if(battle&&a.kind==='assassin'){const action=battle.assassinActions.find(c=>c.sourceId===a.id&&!c.cancelled);if(action){const frame=assassinArt(action.kind==='basic'?'basic':'boss',assassinFrame(action));if(frame)return `<svg class="boss-assassin-frame" viewBox="0 0 ${frame.contentWidth} ${frame.contentHeight}" preserveAspectRatio="xMidYMax meet" overflow="visible" aria-hidden="true"><image href="${frame.url}" x="${-frame.padding}" y="${-frame.padding}" width="${frame.texture.width}" height="${frame.texture.height}"/></svg>`;}}
   if(a.kind in UNITS&&UNITS[a.kind as UnitKind].hero){const target=battle?.target(a),walking=!!target&&Math.hypot(target.x-a.x,target.y-a.y)>a.range;return heroImage(a.kind as UnitKind,walking?'walk':a.cooldown>1/a.rate-.2?'attack':'idle',Math.floor((battle?.elapsed??0)*(a.kind==='melee'&&!walking?5:8)));}
   if(a.kind==='melee')return `<img src="${import.meta.env.BASE_URL}assets/heroes/${a.kind}-idle.png" alt="" draggable="false">`;
+  if(a.kind==='boss'){const runtime=runtimeBossImage(a.motion,180*worldPerCss);if(runtime)return runtime;}
+  if(a.kind==='retainer'){const t=battle?.target(a);return bossSlimeImage(a.defenseType,t?blondDirection(t.x-a.x,t.y-a.y,6):6);}
   if(a.kind==='boss')return '<span class="boss-test-monster boss-test-chief">♛<i>◆</i></span>';
-  if(a.kind==='retainer')return `<span class="boss-test-monster ${a.defenseType}">♜<i>◆</i></span>`;
   const soldier=soldierImage(a.kind);if(soldier)return soldier;
   const color='#'+UNITS[a.kind].color.toString(16).padStart(6,'0');
   const weapon=a.kind==='archer'?'<path d="M35 10 L40 24 L35 32" fill="none" stroke="#d2b47b" stroke-width="3"/>':(a.kind==='mage'||a.kind==='healer')?`<path d="M36 35 V7" stroke="#ab8758" stroke-width="3"/><circle cx="36" cy="7" r="4" fill="${color}"/>`:'<path d="M35 28 L41 7" stroke="#d9e4e6" stroke-width="3"/>';
@@ -42,8 +47,9 @@ function updateSkillStatus(card:HTMLElement,text:string,compact:string,label:str
   card.title=[label,description,text].filter(Boolean).join(' · ');card.setAttribute('aria-label',card.title);
 }
 export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:BossBattle,showDamageNumbers:()=>boolean=()=>true,paused:()=>boolean=()=>false){
-  const nodes=new Map<string,HTMLElement>();
+  const nodes=new Map<string,HTMLElement>(),hudNodes=new Map<string,HTMLElement>();
   const actorLayer=document.createElement('div');actorLayer.className='boss-actor-layer';root.append(actorLayer);
+  const hudLayer=document.createElement('div');hudLayer.className='boss-actor-hud-layer';hudLayer.style.cssText='position:absolute;inset:0;z-index:3;pointer-events:none';root.append(hudLayer);
   const skillRoot=document.getElementById('boss-hero-skills')!;let heroSignature='';
   const trails=document.createElementNS('http://www.w3.org/2000/svg','svg');
   const viewBox=`0 0 ${BOSS_FIELD.width} ${BOSS_FIELD.height}`;
@@ -53,34 +59,41 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
   const assassinEffects=document.createElementNS('http://www.w3.org/2000/svg','svg');
   assassinEffects.setAttribute('viewBox',viewBox);assassinEffects.classList.add('boss-hit-trails','boss-assassin-effects');root.append(assassinEffects);
   return {draw(){
-    const stopped=paused();
+    const stopped=paused()||battle.preparationRemaining>0;
     const current=new Set(battle.actors.map(a=>a.id));
-    for(const [id,node] of nodes)if(!current.has(id)){node.remove();nodes.delete(id);}
+    for(const [id,node] of nodes)if(!current.has(id)){node.remove();hudNodes.get(id)?.remove();hudNodes.delete(id);nodes.delete(id);}
     for(const actor of battle.actors){
       let node=nodes.get(actor.id);
-      if(node&&node.dataset.kind!==actor.kind){node.remove();nodes.delete(actor.id);node=undefined;}
+      if(node&&node.dataset.kind!==actor.kind){node.remove();hudNodes.get(actor.id)?.remove();hudNodes.delete(actor.id);nodes.delete(actor.id);node=undefined;}
       if(!node){
         node=document.createElement('div');node.className=`boss-fighter ${actor.side} ${actor.kind}`;
         node.dataset.bossActor=actor.id;node.dataset.kind=actor.kind;
         node.innerHTML=`<div class="boss-fighter-art">${art(actor)}</div><div class="boss-fighter-hp"><i></i></div><span class="boss-armor-break" hidden></span><small></small>`;
+        const hud=document.createElement('div');hud.dataset.bossHud=actor.id;
+        for(const child of Array.from(node.children))if(!child.classList.contains('boss-fighter-art'))hud.append(child);
+        hudLayer.append(hud);hudNodes.set(actor.id,hud);
         actorLayer.append(node);nodes.set(actor.id,node);
       }
-      node.hidden=actor.hp<=0;
+      node.hidden=actor.hp<=0&&actor.kind!=='blond';
+      node.dataset.motion=actor.motion?.clip??'';node.dataset.motionFrame=String(actor.motion?motionFrame(actor.motion):-1);
       const heroKind=actor.kind in UNITS?actor.kind as UnitKind:null;
       node.classList.toggle('sheet-hero',!!heroKind&&sheetHero(heroKind));
       node.classList.toggle('assassin-motion',battle.assassinActions.some(a=>a.sourceId===actor.id&&!a.cancelled));
-      const nextArt=art(actor,battle),artNode=node.querySelector<HTMLElement>('.boss-fighter-art')!;
+      const nextArt=art(actor,battle,BOSS_FIELD.width/(root.clientWidth||800)),artNode=node.querySelector<HTMLElement>('.boss-fighter-art')!;
       if(artNode.dataset.frameArt!==nextArt){artNode.innerHTML=nextArt;artNode.dataset.frameArt=nextArt;}
-      const broken=node.querySelector<HTMLElement>('.boss-armor-break')!;broken.hidden=!(actor.armorBreakRemaining!>0);
+      const hud=hudNodes.get(actor.id)!;
+      const broken=hud.querySelector<HTMLElement>('.boss-armor-break')!;broken.hidden=!(actor.armorBreakRemaining!>0);
       if(!broken.hidden){if(!broken.children.length)broken.innerHTML=BROKEN_SHIELD_SVG;broken.title=`방어력 30% 감소 · ${actor.armorBreakRemaining!.toFixed(1)}초 · 물리 ${effectiveArmor(actor,'physical').toFixed(1)} / 마법 ${effectiveArmor(actor,'magic').toFixed(1)}`;}
 
-      node.querySelector('small')!.textContent=actor.side==='enemy'?actor.name:`Lv.${actor.level??1} ${UNITS[actor.kind as keyof typeof UNITS]?.icon??''}`;
+      hud.querySelector('small')!.textContent=actor.side==='enemy'?actor.name:`Lv.${actor.level??1} ${UNITS[actor.kind as keyof typeof UNITS]?.icon??''}`;
       node.style.left=`${actor.x/BOSS_FIELD.width*100}%`;node.style.top=`${actor.y/BOSS_FIELD.height*100}%`;
-      node.style.width=`${(actor.kind==='boss'?90:actor.kind==='retainer'?65:52)/BOSS_FIELD.width*100}%`;
-      node.style.zIndex=String(Math.round((actor.y+(actor.kind==='boss'?55.6875:actor.kind==='retainer'?40.5:32))*100));
+      if(actor.kind==='blond'||actor.kind==='boss'||actor.kind==='retainer')node.style.height=`${73.125/BOSS_FIELD.width*(root.clientWidth||800)/(root.clientHeight||360)*100}%`;
+      node.style.width=`${52/BOSS_FIELD.width*100}%`;
+      node.style.zIndex=String((heroKind&&UNITS[heroKind].hero?1000000:0)+Math.round(actor.y*100));
       node.classList.toggle('attacking',battle.hits.some(h=>h.from===actor.id));
+      hud.className=node.className;hud.style.cssText=node.style.cssText;if(actor.kind==='boss')hud.style.left=`${(actor.x+turtleHudOffset(BOSS_FIELD.width,root.clientWidth||800))/BOSS_FIELD.width*100}%`;hud.hidden=actor.hp<=0;
       node.setAttribute('aria-label',`${actor.name} Lv.${actor.level??1} 체력 ${Math.ceil(actor.hp)}/${actor.maxHp} 공격 ${actor.attack} 사거리 ${actor.range}`);
-      node.querySelector<HTMLElement>('.boss-fighter-hp i')!.style.width=`${actor.hp/actor.maxHp*100}%`;
+      hud.querySelector<HTMLElement>('.boss-fighter-hp i')!.style.width=`${actor.hp/actor.maxHp*100}%`;
     }
     trails.innerHTML=`<defs><filter id="boss-fire-alpha" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${FIRE_ALPHA_MATRIX.join(' ')}"/></filter></defs>`+battle.hits.map(h=>{
       const from=battle.actors.find(a=>a.id===h.from)!;
@@ -146,6 +159,6 @@ export function createBossBattleView(root:HTMLElement,status:HTMLElement,battle:
     const allies=battle.actors.filter(a=>a.side==='ally'&&a.hp>0).length;
     const enemies=battle.actors.filter(a=>a.side==='enemy'&&a.hp>0).length;
     const text=!battle.actors.some(a=>a.side==='ally')?'웨이브전에서 아군을 먼저 배치하세요':battle.result==='victory'?'시험 승리':battle.result==='defeat'?'시험 패배':stopped?'일시정지':'전열 우선 교전';
-    status.textContent=`${text} · 아군 ${allies} / 적 ${enemies} · ${Math.floor(battle.elapsed)}초`;
+    status.textContent=`${battle.preparationRemaining>0?`전투 준비 ${Math.ceil(battle.preparationRemaining)}초`:text} · 아군 ${allies} / 적 ${enemies} · ${Math.floor(battle.elapsed)}초`;
   }};
 }

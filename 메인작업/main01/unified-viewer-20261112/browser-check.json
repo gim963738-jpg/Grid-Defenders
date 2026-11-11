@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checks": [
+    "existing reference defaults to side-by-side",
+    "recorded 12-frame sheet is loaded",
+    "image area has no explanatory prose",
+    "zoom changes actual displayed canvas size",
+    "specific non-whole-sheet frame selection",
+    "animation only plays frames 2 and 3",
+    "clean modifies rendered pixels",
+    "rough modifies rendered pixels",
+    "blur modifies rendered pixels",
+    "sketch modifies rendered pixels",
+    "resolution degradation resamples pixels",
+    "filtered frame export",
+    "invalid frame cannot silently play",
+    "invalid selection preserves last valid sequence",
+    "780px pane has no document overflow",
+    "390px viewer has no document overflow",
+    "narrow-screen filters accessible",
+    "no reference defaults to collected gallery",
+    "previous/current illustration auto comparison",
+    "all 212 catalog image URLs load over HTTP",
+    "multiple-file importer uses the common gallery",
+    "custom grid and selected frames crop the expected actual pixels",
+    "imported sprites retain zoom and frame tools",
+    "no browser runtime errors"
+  ],
+  "errors": [],
+  "imageResponses": {
+    "count": 212,
+    "failures": []
+  }
+}

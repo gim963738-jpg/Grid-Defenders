@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-11-07T10:28:08.100368+00:00",
+  "scope": "기준 프로젝트의 최종 타입 검사·세로/가로 모델 검사·프로덕션 빌드. 브라우저 전용 검사는 별도 담당.",
+  "overall_status": "passed_with_browser_checks_not_run",
+  "test": {
+    "command": "npm test",
+    "started_at_utc": "2026-11-07T10:27:47.0838272Z",
+    "finished_at_utc": "2026-11-07T10:27:51.1603421Z",
+    "exit_code": 0,
+    "log": "자동검증로그.txt",
+    "source_and_test_typecheck": "passed",
+    "layouts": [
+      "portrait",
+      "landscape"
+    ],
+    "registered_test_files": 42,
+    "executed_model_test_files": 27,
+    "passed_suite_executions": 53,
+    "passed_assertions": 1242,
+    "failed_suite_executions": 0,
+    "not_applicable": [
+      "NOT APPLICABLE landscape/defense-field-layout: legacy portrait field geometry"
+    ],
+    "browser_suites_not_run": [
+      "tests/actor-depth.check.ts",
+      "tests/assassin-visual.check.ts",
+      "tests/battle-continuation.check.ts",
+      "tests/blade-visual.check.ts",
+      "tests/blond-warrior.check.ts",
+      "tests/boss-hero-cards.check.ts",
+      "tests/damage-visibility.check.ts",
+      "tests/fire-visual.check.ts",
+      "tests/gale-art.check.ts",
+      "tests/hero-art.check.ts",
+      "tests/render-quality.check.ts",
+      "tests/shop-equip.check.ts",
+      "tests/skill-visual.check.ts",
+      "tests/slime-art.check.ts",
+      "tests/sword-visual.check.ts"
+    ],
+    "browser_suites_not_run_reason": "실제 DOM·캔버스·이미지·WebGL 환경이 필요하다. 브라우저 검증은 부모 작업에서 별도 수행 예정이며 이 로그의 통과 범위에 포함하지 않는다."
+  },
+  "build": {
+    "command": "npm run build",
+    "started_at_utc": "2026-11-07T10:25:14.7090342Z",
+    "finished_at_utc": "2026-11-07T10:25:17.4660360Z",
+    "exit_code": 0,
+    "log": "빌드로그.txt",
+    "source_typecheck": "passed",
+    "html_entries": [
+      "index.html",
+      "battle-landscape.html",
+      "lobby-preview.html",
+      "battle-landscape-preview.html"
+    ],
+    "timing_caution": "로그의 빌드 시간은 이번 실행의 관측값이다. 같은 조건의 전후 비교가 없으므로 성능 개선율 근거로 사용하지 않는다.",
+    "post_build_change_note": "빌드 후 actor-depth 브라우저 테스트 픽스처만 수정했다. 테스트는 프로덕션 빌드 입력에 포함되지 않으며 수정 후 전체 소스·테스트 타입 검사를 다시 통과했다."
+  },
+  "diff_check": {
+    "command": "git diff --check",
+    "exit_code": 0,
+    "status": "passed",
+    "warnings": "일부 파일의 LF→CRLF 정규화 예고만 표시되었으며 공백 오류는 없었다."
+  },
+  "source_changes_in_this_verification": [
+    "게임/tests/actor-depth.check.ts"
+  ],
+  "existing_servers_closed": false,
+  "browser_local_storage_modified": false,
+  "model_storage_note": "모델 검증 실행기는 Node의 global localStorage를 비활성화한 환경에서 주입식 테스트 저장소를 사용한다. 브라우저의 기존 저장 데이터에는 접근하지 않는다.",
+  "inspected_implementation_sha256": {
+    "게임/package.json": "6d0e5934539a2d2d5795ab423856d2a04b93453f305171f5d8d9b9f7c8082fb6",
+    "게임/tsconfig.tests.json": "ac43429cf1c38959cc319e347d070f3edca37374952fda3ce68ff77a9aff7d30",
+    "게임/scripts/check-tests.mjs": "5ea4e25cf60f7b80c0b3815a62f4e6320d31fb91d4379712d7f7c069825d7a26",
+    "게임/src/main.ts": "3633785c8d72c7d0d82574b6c12da5af4455a1fafcb36a0bfb5076f67345c64e",
+    "게임/tests/assassin-combat.check.ts": "8593c1431eba05a6d4593d68c66399c5d9e422e279cdd91b407e8e180e58512e",
+    "게임/tests/boss-roster-ice.check.ts": "34e10e8e8b976889160a14a6a488ddfc3261f922f385e2edcdc31cbb347ff668",
+    "게임/tests/actor-depth.check.ts": "acd355cf1f149ce68a5787eb0cfb16ef84a4b666d6a92a6ca08ab07235a367ac"
+  },
+  "expected_report": "문서/06_프로젝트종합보고/2026-11-07/프로젝트종합보고서.md",
+  "runtime_source_changed_in_this_verification": false,
+  "fixture_correction": {
+    "file": "게임/tests/actor-depth.check.ts",
+    "cause": "가로 테스트가 이동 목적지 16을 고정 사용했다. 세로 화면의 유효 인덱스는 0~15여서 기존 모델이 정상적으로 거절한 것이며 런타임 회귀가 아니다.",
+    "change": "현재 레이아웃의 마지막 배치칸을 비운 뒤 이동·깊이·삭제 검증에 동일한 유효 인덱스를 사용한다.",
+    "validation": "수정 후 npm test 전체 타입·1242개 모델 항목 통과. 이후 실제 브라우저 actor-depth 25항목 통과(브라우저검증.json 참조)."
+  },
+  "separate_browser_validation": {
+    "artifact": "브라우저검증.json",
+    "passed_suites": 11,
+    "passed_assertions": 359,
+    "failed_suites": 0,
+    "scope": "isolated browser page with script-free index.html DOM and real CSS; default portrait module geometry",
+    "visual_galleries_not_run": [
+      "assassin-visual",
+      "blade-visual",
+      "fire-visual",
+      "sword-visual"
+    ],
+    "note": "npm test에서 미실행으로 출력한 15개 중 11개를 별도 브라우저 환경에서 검증했다. npm test 자체의 실행 범위·원본 로그는 변경하지 않는다."
+  }
+}

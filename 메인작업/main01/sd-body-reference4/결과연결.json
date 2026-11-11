@@ -1,0 +1,102 @@
+{
+  "task": "MAIN01-20261110-C5138514",
+  "state": "delivered_for_review_not_accepted",
+  "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001",
+  "gallery": "http://localhost:5173/dev-previews/sd-body-reference4-v001/index.html",
+  "files": [
+    {
+      "path": "A-male.png",
+      "sha256": "55bc180b50731872866de35c6e139380b6627e22a6eeb9ed627fef3fd92ad548",
+      "bytes": 1194096,
+      "http": 200
+    },
+    {
+      "path": "A-female.png",
+      "sha256": "0aef530ef1fc8cc11650c5e8a89006d25bc80f0d198255b21b56720db77854d6",
+      "bytes": 1148763,
+      "http": 200
+    },
+    {
+      "path": "B-male.png",
+      "sha256": "09ed9cd1dc36cbb8b6d39855cc7164173f4f97dfe27abc12c00d141de85c2801",
+      "bytes": 1176487,
+      "http": 200
+    },
+    {
+      "path": "B-female.png",
+      "sha256": "10c799d52b3a5436b0471b2b4ab0900c705c12c160b8e858b0df29432df2f73b",
+      "bytes": 1195328,
+      "http": 200
+    },
+    {
+      "path": "reference.png",
+      "sha256": "366b8073d944fea1849dd1795c4e36cdd63c2653f04ea9262a20d457670ee285",
+      "bytes": 847339,
+      "http": 200
+    },
+    {
+      "path": "comparison.png",
+      "sha256": "0eb2b8f523a35aba52be535ed8b51314440aed8bb653d28db330890dba27258d",
+      "bytes": 379057,
+      "http": 200
+    },
+    {
+      "path": "comparison-dark.png",
+      "sha256": "564da0278cfcd3e688cafa0b4f9431f91a2710c388d9fb9a45bc9f3e05ccdab1",
+      "bytes": 358384,
+      "http": 200
+    },
+    {
+      "path": "index.html",
+      "sha256": "8095bb2a1198174ef40f82056bdc5a22a3c6b5491b788244de040dbdb1f24164",
+      "bytes": 7888,
+      "http": 200
+    },
+    {
+      "path": "generation-records.json",
+      "sha256": "f1e6e88fa84dbca7f50db0cafd98e8c5c141f35613484fa97870f724b9648344",
+      "bytes": 18319,
+      "http": 200
+    },
+    {
+      "path": "api-usage.json",
+      "sha256": "7f2edb451cbcae85c64681872a562312113cb82261565867356432d109b59773",
+      "bytes": 480,
+      "http": 200
+    },
+    {
+      "path": "asset-manifest.json",
+      "sha256": "60e23bfd61583e48c2053f6b8b3d99c71526b26db3d0c93d7aa2a35a3bbcfe4e",
+      "bytes": 6286,
+      "http": 200
+    },
+    {
+      "path": "report.md",
+      "sha256": "a1ddbe9aaf0dd2c714f592016c21d61adde87cfae794ee18929febf3a697de67",
+      "bytes": 3960,
+      "http": 200
+    },
+    {
+      "path": "검수.md",
+      "sha256": "645664031d3394f3bd595762fedd5729a4c42795b023070a7378837bcd1ae6f6",
+      "bytes": 2797,
+      "http": 200
+    },
+    {
+      "path": "제작기준.md",
+      "sha256": "7cffa14aa7cf48bc716c21f7e465bf11c8a82916dd5f18426fc45cfaa330e138",
+      "bytes": 1786,
+      "http": 200
+    }
+  ],
+  "mainReviewed": [
+    "comparison.png",
+    "report.md",
+    "검수.md"
+  ],
+  "mainObservation": "4개 이미지의 비교판에서 복장/민머리/입상 조건과 남녀 실루엣 차이 확인. 손발·발끝방향·머리비중·근육/옷 명암 차이는 남아 있음. 사용자 합격이 아님.",
+  "userScreenChanged": false,
+  "gameRuntimeChanged": false,
+  "committed": false,
+  "pushed": false
+}

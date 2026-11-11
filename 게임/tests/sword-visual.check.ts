@@ -1,7 +1,8 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {BLADE_SHEET_URL} from '../src/bladeSkill';
 import {Application,Assets,Texture} from 'pixi.js';
 import {Defense} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 import {createDefenseView} from '../src/defenseView';
 import {createBossBattleView} from '../src/bossBattleView';
 import {createSwordAttack,SWORD_SHEET_URL} from '../src/swordAttack';
@@ -17,7 +18,7 @@ export async function showSwordVisual(sequence=0,animate=false){
  const blade=await Assets.load<Texture>(BLADE_SHEET_URL);
  const view=createDefenseView(app,game,()=>{},textures[0],textures[1],fire,sword,blade);view.draw(null,false);app.render();
  const root=document.createElement('div');root.style.cssText='position:relative;width:390px;height:220px;background:#344c36;margin-top:20px';overlay.append(root);const status=document.createElement('p');overlay.append(status);
- const b=new BossBattle(waveBossRoster(game),()=>1),h=b.actors.find(a=>a.kind==='melee')!,t=b.actors.find(a=>a.kind==='retainer')!;h.x=330;h.y=280;t.x=560;t.y=280;b.actors=[h,t];
+ const b=new BossBattle(waveBossRoster(game),()=>1),h=b.actors.find(a=>a.kind==='melee')!,t=b.actors.find(a=>a.id==='retainer-top')!;h.x=330;h.y=280;t.x=560;t.y=280;b.actors=[h,t];
  const bs=createSwordAttack(h.id,t.id,90,false,sequence,1,t.x,t.y);Object.assign(bs,{age:.29,hit:true,connected:true});b.swordAttacks=[bs];const bossView=createBossBattleView(root,status,b);bossView.draw();
  if(animate)app.ticker.add(ticker=>{swing.age=(swing.age+ticker.deltaMS/1000)%.8;bs.age=swing.age;swing.connected=bs.connected=swing.age>=.15;view.draw(null,false);bossView.draw();});
  return {wave:game.swordAttacks[0].kind,boss:root.querySelectorAll('.boss-sword-slash').length};

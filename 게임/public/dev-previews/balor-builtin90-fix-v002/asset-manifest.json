@@ -1,0 +1,108 @@
+{
+  "task": "MAIN01-20261111-42D3D4BB",
+  "iteration": 2,
+  "assets": [
+    {
+      "id": "before",
+      "label": "내장90 수정 전",
+      "file": "references/target-builtin90.png",
+      "sha256": "cae423f6d3338257d25ac73efda067e2d0d6a3ff5e6518aa1e0209c7c60f7e9f",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "zeroPixels": 1120040,
+        "partialPixels": 452824
+      },
+      "boundsAlpha32": [
+        165,
+        105,
+        756,
+        1455
+      ],
+      "hairTop": 105,
+      "sole": 1454,
+      "bodyHeight": 1350,
+      "footX": 552,
+      "footY": 1454,
+      "method": "Native visual hair crown tip to supporting sole; sword tip/canvas haze excluded; supporting boot contact midpoint estimated",
+      "errorPx": {
+        "hairTop": 4,
+        "sole": 3,
+        "footX": 12
+      },
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\built-in\\right-090.png"
+    },
+    {
+      "id": "reference",
+      "label": "기존2.6: 몸통·시선만",
+      "file": "references/reference-image26-90.png",
+      "sha256": "4433610d0ac2978d909940690d0c4daaea6ae14a1fe311161d8bfe8d4886515a",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "zeroPixels": 1125882,
+        "partialPixels": 446982
+      },
+      "boundsAlpha32": [
+        183,
+        103,
+        811,
+        1467
+      ],
+      "hairTop": 103,
+      "sole": 1466,
+      "bodyHeight": 1364,
+      "footX": 546,
+      "footY": 1466,
+      "method": "Native visual hair crown tip to supporting sole; sword tip/canvas haze excluded; supporting boot contact midpoint estimated",
+      "errorPx": {
+        "hairTop": 4,
+        "sole": 3,
+        "footX": 12
+      },
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\image26\\right-090.png"
+    },
+    {
+      "id": "after",
+      "label": "내장90 수정 후",
+      "file": "final/builtin-right-090.png",
+      "sha256": "d50979fff77f9f7dfa114cc482c87dad944bb97db22003400a85e6fb52f7a99c",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "zeroPixels": 1133889,
+        "partialPixels": 438975
+      },
+      "boundsAlpha32": [
+        152,
+        97,
+        696,
+        1460
+      ],
+      "hairTop": 97,
+      "sole": 1459,
+      "bodyHeight": 1363,
+      "footX": 550,
+      "footY": 1459,
+      "method": "Native visual hair crown tip to supporting sole; sword tip/canvas haze excluded; supporting boot contact midpoint estimated",
+      "errorPx": {
+        "hairTop": 4,
+        "sole": 3,
+        "footX": 12
+      },
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-07b41534-1bec-4f94-9958-eb7a63f593fb.png"
+    }
+  ],
+  "originalBytesPreserved": true,
+  "normalization": "CSS uniform display registration only; no source raster resizing/reencoding",
+  "hiddenScalp": "not measured; concealed by hair; no exact head-unit claim"
+}

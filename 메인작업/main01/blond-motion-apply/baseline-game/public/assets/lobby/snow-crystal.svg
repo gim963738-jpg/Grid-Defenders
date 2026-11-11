@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<defs><linearGradient id="ice" x1="10" y1="5" x2="54" y2="59" gradientUnits="userSpaceOnUse"><stop stop-color="#e7fdff"/><stop offset=".38" stop-color="#67dfff"/><stop offset="1" stop-color="#1772d2"/></linearGradient><linearGradient id="face" x1="22" y1="12" x2="45" y2="53" gradientUnits="userSpaceOnUse"><stop stop-color="#a1eeff"/><stop offset="1" stop-color="#238fdf"/></linearGradient></defs>
+<path d="M32 3 57 17.5v29L32 61 7 46.5v-29Z" fill="url(#ice)" stroke="#b2f2ff" stroke-width="1.5"/>
+<path d="M32 10 51 21v22L32 54 13 43V21Z" fill="url(#face)" stroke="#e0fbff" stroke-opacity=".65"/>
+<path d="m32 3 0 7M57 17.5 51 21M57 46.5 51 43M32 61v-7M7 46.5 13 43M7 17.5 13 21" stroke="#c1f4ff" stroke-width="1.3"/>
+<g stroke="#ecffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M32 15v34M17.3 23.5l29.4 17M17.3 40.5l29.4-17"/><path d="m27 19 5 5 5-5m-10 26 5-5 5 5M18.3 29.8l6.8-1.8-1.8-6.8m17.4 21.6-1.8-6.8 6.8-1.8M18.3 34.2l6.8 1.8-1.8 6.8m17.4-21.6-1.8 6.8 6.8 1.8"/></g>
+<path d="m32 26 5.2 3v6L32 38l-5.2-3v-6Z" fill="#edffff" stroke="#88deff" stroke-width="1.2"/>
+</svg>

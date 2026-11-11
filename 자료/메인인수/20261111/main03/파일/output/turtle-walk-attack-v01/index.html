@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>터틀 드래곤 · 이동 → 공격</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#11171b;color:#edf1ed;font:16px system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:28px 20px}h1{font-size:26px;margin:0 0 10px}p{color:#adbab7;line-height:1.6}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:22px 0}button,select{font:inherit;color:inherit;background:#273530;border:1px solid #53655c;border-radius:9px;padding:10px 16px;min-height:44px}button{cursor:pointer}button.primary{background:#c6ff77;color:#14210d;border:0;font-weight:700}input[type=range]{accent-color:#c6ff77;max-width:220px}article{border:1px solid #34413d;border-radius:14px;overflow:hidden;margin:18px 0;background:#18201e}h2{margin:0;padding:15px 20px;font-size:18px}canvas{display:block;width:100%;height:auto;background:#e8ece7}body.dark canvas{background:#202723}.state{padding:12px 20px;color:#d1e9c1;min-height:48px}.timeline{display:flex;gap:5px;margin:15px 0}.timeline span{flex:1;padding:10px;text-align:center;border-radius:6px;background:#28332e;color:#9ca99f}.timeline span.active{background:#c6ff77;color:#172411}#seek{width:100%;max-width:none}a{color:#c6ff77}.fine{font-size:14px}output{font-variant-numeric:tabular-nums}
+</style>
+<main><h1>이동 후 바로 내려찍기</h1><p>왼쪽으로 두 걸음 주기 이동한 뒤, 도착한 자리에서 공격하고 원자세로 돌아옵니다. 두 생성 경로를 같은 시간에 비교합니다.</p>
+<div class="controls"><button id="restart" class="primary" disabled>처음부터 재생</button><button id="pause" disabled>일시정지</button><label>속도 <input id="speed" type="range" min="0.25" max="2" value="1" step="0.25"> <output id="speedText">1×</output></label><label>배경 <select id="bg"><option value="light">밝게</option><option value="dark">어둡게</option></select></label><label><input type="checkbox" id="loop"> 반복</label></div>
+<div class="timeline"><span data-phase="walk">① 왼쪽 이동</span><span data-phase="attack">② 즉시 내려찍기</span><span data-phase="rest">③ 원자세</span></div>
+<input id="seek" aria-label="재생 위치" type="range" min="0" max="4300" value="0" step="1"><p><output id="clock">이미지 불러오는 중…</output></p>
+<article><h2>내장 GPT 이미지</h2><canvas id="builtin" width="1000" height="370"></canvas><div class="state" id="builtin-state"></div></article>
+<article><h2>GPT Image 2.6 · Sunburst High</h2><canvas id="sunburst26" width="1000" height="370"></canvas><div class="state" id="sunburst26-state"></div></article>
+<p class="fine">기존 원시 시트를 그대로 표시합니다. 걷기 정측면 → 공격 3/4 사선의 방향 전환, 배경 잔류와 발 모양 변화는 원본에 남아 있습니다. 중간 회전 그림을 새로 생성하거나 원본을 보정하지 않았습니다. 이동 거리는 연결 확인용으로 정한 값이며 실제 보폭 측정값은 아닙니다.</p>
+</main><script src="data.js"></script><script src="sequence.js"></script></html>

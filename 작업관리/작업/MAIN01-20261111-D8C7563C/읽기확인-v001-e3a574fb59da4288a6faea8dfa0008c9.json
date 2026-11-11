@@ -1,0 +1,113 @@
+﻿{
+    "task":  "MAIN01-20261111-D8C7563C",
+    "iteration":  1,
+    "role":  "qa",
+    "workSummary":  "현재Desktop root의금발/터틀반영본을독립headless저장소에서직접부트·소환·보스진입하고타격종료·중단·준비·간격·세이브복구·원본SHA를집중검사.제품/사용자탭·저장소/원본/API/Git변경0.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\AGENTS.md",
+                          "sha256":  "1b9d9b063111fec739274fe7f6f1344b9e9b7d01bc6b561a59fe703cf7a4bbc6",
+                          "applies":  "main01회신/원본보존과밝음·어두움·실전장기준검사."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\작업진행방법.md",
+                          "sha256":  "7cca62cd4801a5fe43692cbbc943894ec2641bdca157cdc4d655495287dd1fa8",
+                          "applies":  "이번지시본문/currentSHA/새ACK와start후독립검사;미적합격대신금지."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+                          "applies":  "승인된후속QA범위/5종기록유지,제품수정금지."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+                          "applies":  "main01새Task로현재root검사근거반환."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+                          "applies":  "qa는제작팀분리,결함은gameplay에돌림."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "실행코드는gameplay책임,테스터새output만편집."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\규정.md",
+                          "sha256":  "afeeb75712ebaf5123392ec531b991b51fb932f2499e61b7af7c89bf7bb38458",
+                          "applies":  "기능·자산·모바일과미검증을재현증거로보고."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "read-pack/currentSHA/문서별ACK/start후착수."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+                          "applies":  "main01단일활성/qa독립책임확인."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "자료분류와조직구분,Desktop현재root를대상으로고정."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "캐릭터/몬스터기획소속과런타임검증구분."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+                          "sha256":  "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+                          "applies":  "폐지main02/03아닌main01Run으로만회신,저장전Git금지."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사용자승인.md",
+                          "sha256":  "8ae46ded5b595e3cfc67c7a0dfa67e455f43ebb393bbe1df9b19b03a1260aab2",
+                          "applies":  "사거리100/무스킬/콤보03-04-05첫7-06와타격종료6/5/6/5,보스3초준비·넉백만hurt·death/터틀570/1205ms기대검사."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사전확인.md",
+                          "sha256":  "b6a0da24880485baab2cd023a52a2cfdc83ad2ee0d8df2fe5d91593268ec5d38",
+                          "applies":  "시트고유좌표보존·지면간격과원본몸통겹침분리,모델없는넉백새기믹금지."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\반영검증.md",
+                          "sha256":  "98be64b60cfd90691157a2e4b80f6d565fef055b5eb344eab5586e6daedd7ceb",
+                          "applies":  "실제root통합71경로/원본PNG12바이트보존검사;기존검사결과복사로독립검사대신않음."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\현재반영해시.json",
+                          "sha256":  "9fb37c56e6cf0654ddff797821ddb1352f418d06509dbe2ce53e9af395d903ec",
+                          "applies":  "현재71SHA와실제품대조및검사전후고정."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-runtime_main01-20261111-1eb56391_v001\\검증보고.md",
+                          "sha256":  "5867551861b4b2880dfcff234059cdabae155a216c4e158b191b57921c8c6ce5",
+                          "applies":  "제작24/207/1649는방법참고;타격·준비·세이브·실화면집중재현."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+                          "sha256":  "1ef4d854ad8d3250a57f8ece69605b07c4244eaa2c7599da235c8fbb2be1fb8f",
+                          "applies":  "본체72CSS/등비/발점·표시3버퍼와원본몸통차이분리."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+                          "sha256":  "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+                          "applies":  "타격완료1회/중단/시간·피해분리/명암전체프레임·실전장검사."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+                          "sha256":  "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+                          "applies":  "이번생성API/2.6허가없음,원시트수정/생성0."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+                          "sha256":  "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be",
+                          "applies":  "Git저장요청없음;커밋/푸시/예약백업0,자기검증자료만작성."
+                      }
+                  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "role": "qa",
+  "coordinatorRoot": "C:\\Users\\user\\Desktop\\Grid Defenders",
+  "sharedRoot": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리",
+  "organization": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+  "teamRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+  "ruleVersion": "OPS-007-v4.1",
+  "teamOwner": "qa",
+  "organizationRole": "tester",
+  "workMethod": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\작업진행방법.md",
+  "requiredReadings": [
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\AGENTS.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\운영규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\작업진행방법.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\규정.md"
+  ],
+  "readingPolicyVersion": "OPS-006",
+  "coordinatorRole": "main01",
+  "operatingMode": "single-main",
+  "instructionSource": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\운영규칙.md",
+  "pipelinePolicyVersion": "PIPELINE-12-v1",
+  "approvalMode": "explicit-question-reply",
+  "proceedMarker": "################진행############"
+}

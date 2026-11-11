@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>금발 전사 · 발로르 SD 비교</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eee;color:#182030;font:15px system-ui}body.dark{background:#202634;color:#eee}header,section{padding:12px}h1{font-size:21px;margin:0 0 8px}p{margin:8px 0}button,select,a{margin:3px;padding:7px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.card{text-align:center;min-width:0}.card p{font-size:14px;min-height:42px;padding:4px}.stage{position:relative;height:390px;overflow:hidden;background:#a0a0a01a;cursor:zoom-in}.reference .stage{background:#95b9ed24}.stage img{position:absolute;max-width:none}.stage:after{content:'';position:absolute;left:0;right:0;bottom:35px;border-top:1px solid #888}body.native .stage{overflow:auto}body.native .stage img{height:auto!important;left:0!important;top:0!important}dialog{max-width:95vw;max-height:95vh;overflow:auto}dialog img{max-width:none}.detail{max-width:100%;display:block;margin:12px auto}#battle{width:800px;height:360px;display:block}#small{overflow:auto}
+</style>
+<header><h1>금발 전사 기준 · 발로르 SD 6장 비교</h1><p>각 행 첫 칸: 기존 금발 전사 1번 그림체 기준. 위: 내장 / 아래: GPT Image 2.6. 발로르는 모두 신규 방어 전투태세입니다.</p><p>같은 본체 높이·발선으로 표시합니다. 금발 전사는 기존 기본 자세이며, 발로르 90°는 자세·시점 보완이 필요한 결과입니다.</p><button id="light">밝음</button><button id="dark">어두움</button><button id="fieldbtn">실필드</button><button id="native">원본 픽셀 토글</button><a href="index.html">발로르 6장만 보기</a></header>
+<main id="main" class="grid"></main>
+<section id="small"><h2>발로르 본체 72 CSSpx · 3번 표시</h2><select id="dpr"><option value="1">DPR1</option><option value="2">DPR2</option></select><span id="modeinfo"></span><canvas id="battle"></canvas></section>
+<section><h2>발로르 세부 확대</h2><div id="details"></div></section>
+<dialog id="zoom"><button id="close">닫기</button><img id="large" alt="원본 확대"></dialog>
+<script src="player.js"></script>
+<script>
+const reference={id:'blond',label:'기존 금발 전사 · 1번 그림체',file:'inputs/style-sd1.png',width:1070,height:1470,bodyHeight:1353,footX:555,footY:1407,boundsAlpha32:[92,54,881,1408]};
+for(let row=0;row<2;row++){
+ const ref=card(reference);ref.classList.add('reference');main.insertBefore(ref,main.children[row*4]);
+}
+function align(){
+ const cards=[...main.children],all=[reference,...assets.slice(0,3),reference,...assets.slice(3)];
+ const size=Math.min(360,...cards.map((c,i)=>(c.clientWidth-18)*all[i].bodyHeight/(all[i].boundsAlpha32[2]-all[i].boundsAlpha32[0])));
+ cards.forEach((c,i)=>{const a=all[i],stage=c.querySelector('.stage'),im=stage.querySelector('img'),s=size/a.bodyHeight;stage.style.height=(size+60)+'px';im.style.height=a.height*s+'px';im.style.left=(stage.clientWidth/2-a.footX*s)+'px';im.style.top=(size+25-a.footY*s)+'px';c.dataset.bodyHeight=size.toFixed(2)});
+}
+window.addEventListener('resize',align);align();
+</script></html>

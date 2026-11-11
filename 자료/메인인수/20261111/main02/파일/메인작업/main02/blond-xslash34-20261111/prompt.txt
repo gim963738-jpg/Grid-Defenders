@@ -1,0 +1,31 @@
+Create ONE game-ready 2D animation sprite sheet for the SAME blond dual-wielding SD warrior as Reference 1. Genuine transparent RGBA background. Landscape canvas 1536x1024, EXACTLY 12 sequential full-body poses in 4 columns x 3 rows, ordered left-to-right, top-to-bottom. No lettering, numbers, grid, labels, borders, floor, shadows, painted transparency checkerboard or decorative background.
+
+REFERENCE ROLES:
+Image 1: PRIMARY identity, approved SD proportions, costume, handedness and the requested RIGHT FRONT THREE-QUARTER (about 45 degrees) camera.
+Image 2: SECONDARY reference for the existing action 06 sequence and weapon/arm movement ONLY. This second image's profile camera MUST NOT be copied. Redraw this action in Image 1's 3/4 view.
+
+IDENTITY LOCK:
+Layered spiky blond hair, brown eyes, youthful confident SD face, same head/body ratio, blue scarf and lowered short hood, silver armor and gloves, brown belts/pouches/trousers, blue waistcloth. ANATOMICAL right hand firmly holds the LONG straight sword with cyan diagonal inlays, wing-shaped guard and ring knuckle guard; anatomical left hand holds the SHORT angular dagger. Right leg has silver plate armor/boot; left leg blue cloth wrap/boot. Preserve this asymmetry in all poses. Exactly two arms, two hands, two blades, two legs. Keep grips and blade lengths coherent; no exchanging, melting, duplicating or dropping weapons.
+
+CAMERA LOCK:
+The warrior faces toward screen-right AND slightly toward the viewer in the approved right-front three-quarter view. Near and far shoulders and both sides of the chest remain visible. Both eyes are visible with perspective foreshortening, as in Image 1. Head, torso, pelvis and feet stay in this 3/4 camera throughout. No switching to pure profile, front, back or mirrored stance. Camera and scale do not move. Small anatomical shoulder torsion is fine but does not rotate the whole character's viewing direction.
+
+ACTION 06: separate post-thrust dual-blade ripping X slash, ONE forward one-shot:
+1. Start ALREADY at the post-thrust position, both hands forward, front knee flexed. Do not animate the preceding thrust.
+2. Pull hands slightly inward and cross-load the shoulders, wrists keep the different blades visible.
+3. Prepare a clear diagonal crossing near the front of the torso, long sword poised to sweep one diagonal and dagger the opposite diagonal.
+4. Begin pulling the blades in opposing diagonal directions, elbows separating.
+5. Forceful crossing-through: right long sword sweeps upward/outward, left dagger sweeps downward/outward, readable opposing diagonal paths.
+6. Wide ripping apex: arms spread apart with LONG sword above on one side and SHORT dagger lower on the other; X-shaped cutting action must be communicated by the TWO moving weapons and arm poses.
+7. Weight transfer and muscular counter-tension after the rip, keep three-quarter face and torso visible.
+8. Natural deceleration and follow-through of both arms and scarf.
+9. Bring weight back over planted supporting feet, weapons begin returning.
+10. Lower both blades toward three-quarter combat guard.
+11. Recover same balanced three-quarter combat guard.
+12. Settle into that guard with both weapons ready.
+These are twelve genuinely different successive poses, not twelve repeated neutral sprites. Do not reverse earlier frames to fake recovery. Preserve clear anticipation, fast rip and slower settle.
+
+FRAME REGISTRATION:
+Identical character scale in all 12 cells. Keep the stance root at the same relative location, soles near y=305 in a nominal 384x341 cell. Allow subtle real weight transfer; no random floating feet. Character body height about 235 pixels leaves room for raised long sword and wide arms. At least 16 pixels transparent clearance around ALL weapon tips, hair, feet and arms in each cell. No subject part touches or spills into a neighboring cell. Show both different blades even when arms cross; natural small far-hand occlusion only. Clean game sprite shading matching references, readable at small display sizes.
+
+CHARACTER ONLY: no slash light, no glowing X, no trails, no hit flashes, no sparks, no particles, no monsters. The requested X is the character's dual-sword cutting MOTION. Actual transparency, no brown/light/background texture.

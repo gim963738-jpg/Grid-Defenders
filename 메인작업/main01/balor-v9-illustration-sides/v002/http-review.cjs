@@ -1,0 +1,18 @@
+const {chromium}=require('C:/Users/user/AppData/Local/ms-playwright-go/1.57.0/package');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+(async()=>{const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
+try{const page=await browser.newPage({viewport:{width:1280,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+const base='http://127.0.0.1:5173/dev-previews/balor-builtin90-fix-v002/';const response=await page.goto(base+'index.html');assert.equal(response.status(),200);await page.waitForFunction(()=>window.ready);
+assert.equal(await page.locator('.stage').count(),9);
+await page.waitForFunction(()=>[...document.images].filter(i=>i.getAttribute('src')).every(i=>i.complete&&i.naturalWidth>0));
+assert(await page.locator('img[src]').evaluateAll(images=>images.every(i=>i.complete&&i.naturalWidth>0)));
+const srcs=await page.locator('#main .stage img').evaluateAll(images=>images.map(i=>i.getAttribute('src')));assert.equal(srcs.length,3);assert.equal(new Set(srcs).size,3);assert(srcs[2].includes('final/'));
+await page.locator('#main .stage').nth(2).click();assert(await page.locator('#zoom').evaluate(e=>e.open));await page.click('#close');assert(!(await page.locator('#zoom').evaluate(e=>e.open)));
+await page.click('#dark');await page.waitForFunction(()=>[...document.images].every(i=>i.complete&&i.naturalWidth>0));assert(await page.locator('body').evaluate(e=>e.classList.contains('dark')));
+await page.click('#light');await page.waitForFunction(()=>[...document.images].every(i=>i.complete&&i.naturalWidth>0));assert(!(await page.locator('body').evaluate(e=>e.classList.contains('dark'))));
+await page.click('#native');assert(await page.locator('body').evaluate(e=>e.classList.contains('native')));await page.click('#native');
+await page.screenshot({path:path.join(__dirname,'http-reviewed.png'),fullPage:true});
+await page.locator('a[href="preserved-v001/index.html"]').click();await page.waitForFunction(()=>window.ready);assert.equal(await page.locator('.stage').count(),6);assert(await page.locator('.stage img').evaluateAll(images=>images.every(i=>i.complete&&i.naturalWidth===1024)));
+assert.deepEqual(errors,[]);const result={passed:true,http:200,mainStages:9,beforeReferenceAfter:true,allImagesLoaded:true,zoomOpenClose:true,lightDark:true,nativeToggle:true,preservedSixCards:true,errors,userScreenChanged:false,userAccepted:false};
+fs.writeFileSync(path.join(__dirname,'http-review.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result));
+}finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});

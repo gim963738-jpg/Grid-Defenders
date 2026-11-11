@@ -1,0 +1,75 @@
+{
+  "body": {
+    "source": "api/01-body/native.png",
+    "sourceSize": [
+      1024,
+      1024
+    ],
+    "workingCanvas": [
+      1254,
+      1254
+    ],
+    "uniformScale": 1.224609375,
+    "rotationDeg": 0,
+    "translationPx": [
+      0,
+      0
+    ],
+    "resampler": "bicubic, AI donor only; native API PNG bytes unchanged"
+  },
+  "arm": {
+    "source": "api/02-arm/native.png",
+    "sourceSize": [
+      1024,
+      1024
+    ],
+    "workingCanvas": [
+      1254,
+      1254
+    ],
+    "uniformScale": 1.224609375,
+    "rotationDeg": 0,
+    "translationPx": [
+      0,
+      0
+    ],
+    "resampler": "bicubic, AI donor only; native API PNG bytes unchanged"
+  },
+  "weaponHiddenGrip": {
+    "source": "api/03-weapon/native.png",
+    "sourceSize": [
+      1024,
+      1024
+    ],
+    "sourcePommel": [
+      689.0,
+      86.0
+    ],
+    "sourceGuard": [
+      579.0,
+      304.0
+    ],
+    "targetPommel": [
+      512.0,
+      640.0
+    ],
+    "targetGuard": [
+      436.0,
+      786.0
+    ],
+    "nativeToWorkingUniformScale": 0.6740777301324872,
+    "rotationDeg": 0.7242138424016221,
+    "coordinateEstimateErrorPx": 8,
+    "targetCanvas": [
+      1254,
+      1254
+    ],
+    "resampler": "bicubic, hidden grip donor only",
+    "policy": "original visible sword pixels remain source exact; no runtime weapon scale/deformation"
+  },
+  "maskPolicy": "exact byte copies of A ownership/restoration/removal masks; no additional threshold/alpha cleanup",
+  "confounds": [
+    "B API native1024 vs A builtin1254, donor uniform registration required",
+    "B donor geometry is a generated estimate; same A region/pose masks do not prove identical hidden anatomy"
+  ]
+}

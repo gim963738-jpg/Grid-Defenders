@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "MAIN02-20261109-78E189DC",
+  "main": "main01",
+  "branch": "effects",
+  "title": "오른쪽향 2D캐릭터·두꺼운 흰색검격 3연격",
+  "request": "사용자: 이펙트 이번엔 마음에들고 이번엔 저 검격이 조금 두꺼운 버전도 한번 보고싶네\n추가 참조: C:/Users/user/AppData/Roaming/orca/agent-session-attachments/d03c769c-6a86-4bf3-b60d-c829d3ec3a65/orca-paste-1794216432494-04e8c9d3-ca4f-47a6-a2a0-e66691777849.png\n사용자: 이번엔 2D캐릭터가 오른쪽을 보고 내려치기 올려치기 사선으로 내려치는 3연격으로 디자인해줘\n메인 이해문: 캐릭터 동작과 두꺼운 흰색 검격을 함께 보여주는 연출. 1위→아래 내려치기 2아래→위 올려치기 3위→오른쪽아래 사선내려치기. 캐릭터는 오른쪽을 향하고 검격은 첨부처럼 넓고휘어진면/날카로운끝. 기존6연격 보존 별도제작.\n사용자 확인 원문: 진행\n범위: 연출 디자인과 실제 재생 미리보기. 기존6연격은 사용자호평. 25%증가라는 AI제안은 확정되지 않았고 최신 넓은 참격 형태/3연격이 우선. 영웅 정체성·피해·게임통합 미정.",
+  "iteration": 3,
+  "status": "awaiting_user",
+  "createdAt": "2026-11-09T18:29:36.437953+09:00",
+  "approval": {
+    "userQuote": "이펙트 만들어와",
+    "source": {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\사용자피드백-v003.md",
+      "sha256": "d079e8316c932d01185f9d2ff2bdf98b514e5391ed76ffb0cfbb56a064838bb5"
+    },
+    "recordedBy": "main02",
+    "recordedAt": "2026-11-09T19:28:35.746579+09:00",
+    "iteration": 3,
+    "hashes": {
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\요청확인.md": "e7c7239fabf80d73c4e6638a10a72db8664c519c8f59dba7a18b33ca5ac033c1",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\전문프롬프트.md": "81296f226c72671388ab3d9f649919c643276b5e31d1af9b5529cda42ae6e3d8",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\2_사전확인.md": "e0fb81c15a0217fb659fe5f465f36d70685e64f0ec0ab1958d7066809c1aee91",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\effects\\규정.md": "6a1e791efe202431216870813ec7e70b1275d7728a9191640875beb70e6d803f",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\AGENTS.md": "2a5e30af256f7036ba6850ed4d04f74033de77610a49d1d03b685acdb2dbd88c",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\effects\\작업진행방법.md": "fb88269750d30b5eda01c2f6dcfd61d783b7437501c2e9d193c9368b31049eda",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\사용자피드백-v003.md": "d079e8316c932d01185f9d2ff2bdf98b514e5391ed76ffb0cfbb56a064838bb5",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\문서\\00_개발규칙\\스킬구현규약.md": "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\effects\\MAIN02-20261109-C970BE7A-v002\\결과보고.md": "cd97d9f549fbc6923eeb9ee9147511776fd722ffe241693a61d9741f3e26bb09",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623"
+    }
+  },
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-09T18:31:02.048955+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\송신영수증-v001.json",
+        "sha256": "1d3330c9924b3781512023e1664aadd9d5f95549ed10ae268f6d24f2889b4539"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-09T18:32:08.726520+09:00",
+      "iteration": 1,
+      "role": "effects",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\읽기확인-v001-18c16497e9ba4f2ab61918c8eda04f8e.json",
+        "sha256": "c6f90409ca579579172f1eac1be8739b61af3d8bede04bb216675f7579006a71"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-09T19:03:43.962079+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\effects\\MAIN02-20261109-78E189DC\\결과보고.md",
+        "sha256": "c141d2982a54a7e8c1a265d9d6079d40e8cd120ed712f40360f2c1c6afcbc4f8"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-09T19:03:44.081106+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\사용자피드백-v002.md",
+        "sha256": "2b380a6bb6eeebcb3e254f5ea7a9ac8f176c343f4381f26f48a70dfc05583e8a"
+      },
+      "userQuote": "진행 ㄱ"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-09T19:05:06.046087+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\송신영수증-v002.json",
+        "sha256": "b64449a9516438a4c5c3ce23928640e8f39d73b0ec1b1039992f1cf590d7dd09"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-09T19:06:07.077822+09:00",
+      "iteration": 2,
+      "role": "effects",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\읽기확인-v002-32b5807e5c854edfbb1e1ffdba70e8ed.json",
+        "sha256": "59a10db2279183363dab16a88b1826609f2a25710069851d99c4e95cefe4d885"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-09T19:21:27.031791+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\effects\\MAIN02-20261109-78E189DC-v002\\결과보고.md",
+        "sha256": "0ec21b7364cefbe520b167090cbe48bcc09d1b217aa759f969c9fc616f37c10d"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-09T19:27:44.597752+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\사용자피드백-v003.md",
+        "sha256": "d079e8316c932d01185f9d2ff2bdf98b514e5391ed76ffb0cfbb56a064838bb5"
+      },
+      "userQuote": "이펙트 만들어와"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-09T19:28:59.949173+09:00",
+      "iteration": 3,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\송신영수증-v003.json",
+        "sha256": "2556e7d4b252883ce5fdaf3bfdb80781d2021719c372851e93dfefe1b57f239d"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-09T19:30:36.918517+09:00",
+      "iteration": 3,
+      "role": "effects",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\읽기확인-v003-05ce7cd2e52a4db1947c041fafb0be33.json",
+        "sha256": "8176bf100fb871adfe85408a76bb0d77ebbab650ca19c3c94ef3bd7b2ea1458c"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-09T19:41:21.083023+09:00",
+      "iteration": 3,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\effects\\MAIN02-20261109-78E189DC-v003\\결과보고.md",
+        "sha256": "5e7031cbacba4eaea05c06b598b03a7f2ca510f1f7a1ecee395d2dbbdcffb7ef"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "transfer",
+      "at": "2026-11-11T17:12:28.359792+09:00",
+      "from": "main02",
+      "to": "main01",
+      "iteration": 3,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\사용자지시.md",
+        "sha256": "7fde8bfe8a09dc8b66d3462ca24119ce558fec6e0323f0ba7c41a6e7384d8cdc"
+      },
+      "note": "단일 메인 전환에 따른 담당 이관. 작업번호/차수/상태/사용자판정·이전 승인근거 보존. 새 제작 발송 없음."
+    }
+  ],
+  "readingPolicyVersion": "OPS-004",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\사용자피드백-v003.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\문서\\00_개발규칙\\스킬구현규약.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\effects\\MAIN02-20261109-C970BE7A-v002\\결과보고.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-78E189DC\\읽기확인-v003-05ce7cd2e52a4db1947c041fafb0be33.json",
+    "sha256": "8176bf100fb871adfe85408a76bb0d77ebbab650ca19c3c94ef3bd7b2ea1458c"
+  },
+  "updatedAt": "2026-11-11T17:12:28.359792+09:00",
+  "originalMain": "main02",
+  "handover": {
+    "from": "main02",
+    "to": "main01",
+    "evidence": {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\사용자지시.md",
+      "sha256": "7fde8bfe8a09dc8b66d3462ca24119ce558fec6e0323f0ba7c41a6e7384d8cdc"
+    },
+    "requiresCurrentRequestReview": true
+  }
+}

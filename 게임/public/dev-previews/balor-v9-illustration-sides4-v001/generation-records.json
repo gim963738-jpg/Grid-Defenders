@@ -1,0 +1,203 @@
+{
+  "task": "MAIN01-20261111-42D3D4BB",
+  "iteration": 1,
+  "builtIn": [
+    {
+      "id": "builtin35",
+      "tool": "image_gen.imagegen",
+      "prompt": "prompts/right-035.txt",
+      "reference": "inputs/front-v9.png",
+      "referenceSha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "output": "built-in/right-035.png",
+      "nativeSource": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-635df9d5-78bc-4bc2-9ce2-7a7c9a974da5.png",
+      "modelReported": false,
+      "responseModel": null,
+      "transparentRequested": true,
+      "sha256": "0c01c26152ed32f83ea233c9258e87efb58913a6ee1049074817b5769cd0cbba",
+      "nativeByteCopyVerified": true,
+      "requestExactTimeReported": false,
+      "nativeFileModifiedAtUtcEpoch": 1794371360.450116,
+      "note": "Tool did not report exact request timestamp/model/usage; native filesystem mtime is not claimed as model execution timing."
+    },
+    {
+      "id": "builtin90",
+      "tool": "image_gen.imagegen",
+      "prompt": "prompts/right-090.txt",
+      "reference": "inputs/front-v9.png",
+      "referenceSha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "output": "built-in/right-090.png",
+      "nativeSource": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-07e4163b-e138-4fe1-9419-2a48d9eaf188.png",
+      "modelReported": false,
+      "responseModel": null,
+      "transparentRequested": true,
+      "sha256": "cae423f6d3338257d25ac73efda067e2d0d6a3ff5e6518aa1e0209c7c60f7e9f",
+      "nativeByteCopyVerified": true,
+      "requestExactTimeReported": false,
+      "nativeFileModifiedAtUtcEpoch": 1794371326.9076188,
+      "note": "Tool did not report exact request timestamp/model/usage; native filesystem mtime is not claimed as model execution timing."
+    }
+  ],
+  "image26": [
+    {
+      "task": "MAIN01-20261111-42D3D4BB",
+      "iteration": 1,
+      "job": "right035",
+      "status": "succeeded",
+      "startedAt": "2026-11-11T04:27:54.823Z",
+      "request": {
+        "endpoint": "POST https://api.openai.com/v1/images/edits",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high",
+        "size": "1024x1536",
+        "background": "transparent",
+        "n": 1,
+        "output_format": "png",
+        "prompt": "Use case: identity-preserve. Asset: one transparent full-body adult knight illustration, NOT SD. The attached approved Balor v9 FRONT is the ONLY identity, STYLE, integrated adult PROPORTION, EQUIPMENT and POSE master. Rotate that exact man and all his attached equipment; do not redesign or replace him. Preserve his same brown layered short hair silhouette, blue-gray eyes, youthful adult male face/small calm smile, skull-to-body ratio, shoulder/ribcage/waist volumes, limb lengths and adult age. Same clean fine linework, large cel-shadow planes, restrained soft silver plate reflections and matte blue cloth as reference. Preserve silver segmented plate arrangement, blue underlayers, white full-body side-facing lion chest emblem, TWO circular silver star cape clasps without linking cord, brown waist belt, blue hanging front cloth with its white diamond/linear pattern, blue dragon-pattern cape with white lining. The sword belongs to anatomical RIGHT hand; large silver kite shield belongs to anatomical LEFT hand. Keep reference shield outline, large black wing-and-cross graphic, silver sculpted border and original shield-to-body size. Rotate shield with its holding forearm and grip; far-side occlusion is natural. Do not flip ownership or move equipment independently for visibility. The ONE sword is a rigid straight weapon: preserve blue wrapped grip, silver end pommel, silver wing/angular guard, centered RED diamond gemstone and same long tapered silver double-edged blade. Grip axis, guard center and blade centerline are collinear in projection, no bent/offset blade; hand closes around the actual grip, four fingers oppose thumb. Preserve original relaxed BOTH-FEET-supported upright idle pose, arms naturally lowered, sword down, shield carried in place; not attack/walking/crouching. Head, chest, pelvis, feet, weapons all turn coherently. Same camera elevation, non-dramatic perspective, lighting and color finish. Keep the same full-character display height and framing as source: portrait1024x1536, reference hair top aroundy375 and boot soles aroundy1386; generous top/side margins, entire hair, cape, shield and sword tip safely inside. Framing never justifies shrinking or bending the weapon or changing body proportions. Transparent alpha background, no glow, cast shadow, colored matte, vignette, floor, labels, montage, extra limbs or equipment. Newly exposed side/back armor and shield reverse should be minimal functional continuation of reference, no new ornament. One character only. Requested view: screen-RIGHT-facing FRONT THREE-QUARTER approximately35degrees from front (less turned than45). Front of face and both eyes remain readable with far eye foreshortened, visible chest front/lion with foreshortening, near right shoulder/arm/sword and naturally farther left shield. This is NOT left-facing, strict profile, back-three-quarter, or only a head turn.",
+        "images": [
+          {
+            "name": "front-v9.png",
+            "sha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+            "bytes": 1566373,
+            "attached": true
+          }
+        ]
+      },
+      "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+      "usage": {
+        "input_tokens": 2138,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 602
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3510
+      },
+      "cost": null,
+      "endedAt": "2026-11-11T04:28:45.936Z",
+      "httpPosts": 1,
+      "httpStatus": 200,
+      "requestId": "req_7930302733a74de1bd9739358a94c4c3",
+      "responseModel": null,
+      "responseModelReported": false,
+      "response": {
+        "created": 1794371324,
+        "size": "1024x1536",
+        "quality": "high",
+        "background": "transparent",
+        "output_format": "png",
+        "usage": {
+          "input_tokens": 2138,
+          "input_tokens_details": {
+            "image_tokens": 1536,
+            "text_tokens": 602
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 3510
+        }
+      },
+      "output": {
+        "file": "native.png",
+        "sha256": "3cbc21b29438cf85fc41be989f89c70c89eb4c398c791d092fb511314e41a3f0",
+        "bytes": 1693833,
+        "originalResponseBytesPreserved": true
+      }
+    },
+    {
+      "task": "MAIN01-20261111-42D3D4BB",
+      "iteration": 1,
+      "job": "right090",
+      "status": "succeeded",
+      "startedAt": "2026-11-11T04:29:40.900Z",
+      "request": {
+        "endpoint": "POST https://api.openai.com/v1/images/edits",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high",
+        "size": "1024x1536",
+        "background": "transparent",
+        "n": 1,
+        "output_format": "png",
+        "prompt": "Use case: identity-preserve. Asset: one transparent full-body adult knight illustration, NOT SD. The attached approved Balor v9 FRONT is the ONLY identity, STYLE, integrated adult PROPORTION, EQUIPMENT and POSE master. Rotate that exact man and all his attached equipment; do not redesign or replace him. Preserve his same brown layered short hair silhouette, blue-gray eyes, youthful adult male face/small calm smile, skull-to-body ratio, shoulder/ribcage/waist volumes, limb lengths and adult age. Same clean fine linework, large cel-shadow planes, restrained soft silver plate reflections and matte blue cloth as reference. Preserve silver segmented plate arrangement, blue underlayers, white full-body side-facing lion chest emblem, TWO circular silver star cape clasps without linking cord, brown waist belt, blue hanging front cloth with its white diamond/linear pattern, blue dragon-pattern cape with white lining. The sword belongs to anatomical RIGHT hand; large silver kite shield belongs to anatomical LEFT hand. Keep reference shield outline, large black wing-and-cross graphic, silver sculpted border and original shield-to-body size. Rotate shield with its holding forearm and grip; far-side occlusion is natural. Do not flip ownership or move equipment independently for visibility. The ONE sword is a rigid straight weapon: preserve blue wrapped grip, silver end pommel, silver wing/angular guard, centered RED diamond gemstone and same long tapered silver double-edged blade. Grip axis, guard center and blade centerline are collinear in projection, no bent/offset blade; hand closes around the actual grip, four fingers oppose thumb. Preserve original relaxed BOTH-FEET-supported upright idle pose, arms naturally lowered, sword down, shield carried in place; not attack/walking/crouching. Head, chest, pelvis, feet, weapons all turn coherently. Same camera elevation, non-dramatic perspective, lighting and color finish. Keep the same full-character display height and framing as source: portrait1024x1536, reference hair top aroundy375 and boot soles aroundy1386; generous top/side margins, entire hair, cape, shield and sword tip safely inside. Framing never justifies shrinking or bending the weapon or changing body proportions. Transparent alpha background, no glow, cast shadow, colored matte, vignette, floor, labels, montage, extra limbs or equipment. Newly exposed side/back armor and shield reverse should be minimal functional continuation of reference, no new ornament. One character only. Requested view: screen-RIGHT-facing STRICT90degree full SIDE PROFILE. Exactly one visible eye and a clean nose/lips/chin side contour; side chest/ribcage/pelvis, overlapping shoulders and legs/boots. No frontal two-eye face, no frontal chest plane forced toward viewer. Far left shield may naturally hide behind torso/near arm and show an edge/reverse consistent with the actual holding pose. Do not fabricate a second arm/weapon to expose obscured parts. Keep same adult head/body ratio and standing height rather than lengthening torso or shrinking the face.",
+        "images": [
+          {
+            "name": "front-v9.png",
+            "sha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+            "bytes": 1566373,
+            "attached": true
+          }
+        ]
+      },
+      "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+      "usage": {
+        "input_tokens": 2172,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 636
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3544
+      },
+      "cost": null,
+      "endedAt": "2026-11-11T04:30:29.007Z",
+      "httpPosts": 1,
+      "httpStatus": 200,
+      "requestId": "req_de85c178460f4a5bad95e5f0bb2c7ce7",
+      "responseModel": null,
+      "responseModelReported": false,
+      "response": {
+        "created": 1794371427,
+        "size": "1024x1536",
+        "quality": "high",
+        "background": "transparent",
+        "output_format": "png",
+        "usage": {
+          "input_tokens": 2172,
+          "input_tokens_details": {
+            "image_tokens": 1536,
+            "text_tokens": 636
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 3544
+        }
+      },
+      "output": {
+        "file": "native.png",
+        "sha256": "4433610d0ac2978d909940690d0c4daaea6ae14a1fe311161d8bfe8d4886515a",
+        "bytes": 1586383,
+        "originalResponseBytesPreserved": true
+      }
+    }
+  ],
+  "usage": {
+    "input_tokens": 4310,
+    "output_tokens": 2744,
+    "total_tokens": 7054,
+    "httpPosts": 2,
+    "successfulRequests": 2,
+    "retries": 0,
+    "additionalPaidRequests": 0,
+    "costReported": null,
+    "responseModels": [
+      null,
+      null
+    ],
+    "requestedModel": "gpt-image-2.6-sunburst",
+    "quality": "high"
+  },
+  "independentReferenceInputs": true
+}

@@ -1,0 +1,38 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grid Defenders · 정리최적화변경내역</title><style>
+*{box-sizing:border-box}html{background:#e8edf0;color:#172b35;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}body{margin:0;font-size:15px;line-height:1.8}main{max-width:1080px;margin:28px auto;background:#fff;padding:58px 62px;box-shadow:0 12px 42px #23384818}h1{font-size:32px;line-height:1.35;margin:0 0 18px;color:#123d42;border-top:7px solid #c6aa69;padding-top:20px}h2{font-size:23px;line-height:1.5;margin:44px 0 16px;color:#175459;border-bottom:2px solid #d8e6e5;padding-bottom:8px}h3{font-size:18px;margin:28px 0 10px;color:#284c55}p{margin:12px 0}strong{font-weight:700;color:#163e43}a{color:#135f78;text-decoration:none;overflow-wrap:anywhere}a:hover{text-decoration:underline}table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.65;margin:14px 0 22px}thead{background:#184b50;color:white}th{font-weight:600;text-align:left;padding:10px}td{vertical-align:top;padding:10px;border-bottom:1px solid #d7e1e3;overflow-wrap:anywhere}tbody tr:nth-child(even){background:#f2f6f6}th:first-child,td:first-child{min-width:100px}pre{background:#edf3f4;border-left:3px solid #76969a;padding:18px;font-size:12px;line-height:1.65;white-space:pre-wrap}code{font-family:Consolas,"Malgun Gothic",monospace;font-size:.9em}li{margin:5px 0}nav.toolbar{position:sticky;top:0;display:flex;gap:16px;background:#12383e;color:white;padding:10px 24px;z-index:5;font-size:13px}nav a{color:#fff}nav button{margin-left:auto;border:1px solid #a7babb;border-radius:4px;background:transparent;color:white;padding:4px 14px;cursor:pointer}.foot{color:#658087;font-size:11px;border-top:1px solid #b8cacc;padding-top:12px;margin-top:36px}.slide{break-after:page;padding:12px 0 28px}.slides main{max-width:1180px}.slides h2{margin-top:14px}.slides li{font-size:18px;margin:16px 0}.slides .slide p{font-size:15px}.slides .slide:last-child{break-after:auto}
+@page{size:A4;margin:16mm 14mm 16mm} @media print{html{background:white}body{font-size:9.5pt;line-height:1.65}main{margin:0;padding:0;max-width:none;box-shadow:none}nav.toolbar{display:none}h1{font-size:24pt}h2{font-size:17pt;break-after:avoid;margin-top:24pt}h3{font-size:12pt;break-after:avoid}p,li{orphans:3;widows:3}table{font-size:8pt;line-height:1.55;page-break-inside:auto}thead{display:table-header-group;print-color-adjust:exact}tr{break-inside:avoid}td,th{padding:6pt 5pt}td:first-child,th:first-child{min-width:0}pre{font-size:8pt;break-inside:avoid}a{color:inherit}body{print-color-adjust:exact}.foot{font-size:8pt}.slides{font-size:13pt}.slides main{max-width:none}.slides h1{font-size:24pt}.slides h2{font-size:23pt}.slides li{font-size:15pt;line-height:1.8;margin:13pt 0}.slides .slide p{font-size:12pt}.slides .slide{padding:0;break-inside:avoid}.slides .slide h2{margin-top:0}}
+</style><body class="report"><nav class="toolbar"><span>GRID DEFENDERS · 2026.11.07</span><a href="프로젝트종합보고서.html">종합 보고서</a><a href="발표핵심요약.html">발표 요약</a><button onclick="window.print()">인쇄 / PDF</button></nav><main><h1>실제 정리·통합·최적화 변경 내역</h1>
+<p>기준일 2026-11-07 / WEB-179. 아래는 이번에 수행한 항목이다. 진형·튜토리얼·로비 영웅 데이터 통합 같은 새 게임 기능은 향후 계획이며 이번 구현 목록에 포함하지 않는다.</p>
+<h2>변경과 이유</h2>
+<div class="table-wrap"><table><thead><tr><th>변경</th><th>이유</th><th>영향·검증</th></tr></thead><tbody>
+<tr><td>외부 제작 원본41개를 자료/아트원본으로 복사</td><td>현재 배포 아트의 재현 입력이 외부 폴더에만 있음</td><td>46,127,005B, 모든 SHA-256 일치. 원본 변경 없음</td></tr>
+<tr><td>패커2개 SourceRoot 기본값 내부화, OutputRoot 추가</td><td>다른 PC에서 재현·별도 검증 가능</td><td>PNG7개 바이트동일, JSON2개 구조동일</td></tr>
+<tr><td>merchant.png를 비배포 원본으로 이동</td><td>실제 참조 없는 큰 원본이 public에 포함됨</td><td>2,258,559B 원본 보존·해시동일. cutout은 그대로 사용</td></tr>
+<tr><td>sources.json에 내부 입력/manifest 연결</td><td>원출처와 새 보관 위치를 모두 추적</td><td>기존 출처·해시 보존, 추가252B</td></tr>
+<tr><td>세계관7개 자료 복사, atlas 링크 수정1건</td><td>main에서 기준 설정·지도·열람 자료 접근</td><td>원본7,405,062B 검증, main의 끊긴 캐릭터 갤러리 링크를 통합 현황으로 연결</td></tr>
+<tr><td>루트 HWP를 자료/기획원본으로 이동·본문 추출</td><td>기획 원본을 검색·분류 가능하게 보관</td><td>96,256B SHA동일,75문단·4쪽표기. 원래 서식·그림은 HWP에 유지</td></tr>
+<tr><td>README·task를 현재 안내로 갱신</td><td>과거 ‘미구현’ 설명과 현재 상태 혼재</td><td>역사 보관본2개, 상대 링크 재배치, 해시 기록</td></tr>
+<tr><td>큰기획·정의목록 최신 안내 추가</td><td>초기 기획을 현재 구현으로 오해할 수 있음</td><td>초기 원문을 접기 영역에 보존, 현재구현현황 신규 작성</td></tr>
+<tr><td>npm test/check:tests·공통 실행기</td><td>기존 검사 파일이 일반 빌드 검증에서 빠짐</td><td>27모델파일/53회/1,242항목. 브라우저 파일15개는 별도 분류</td></tr>
+<tr><td>테스트3개 파일 현행화</td><td>7번째 영웅·옵셔널 타입·세로/가로 칸 기준의 낡은 기대값</td><td>실제 기능 변경 없이 검사 데이터 수정. 브라우저 포함 재검증</td></tr>
+<tr><td>독립 아트 로딩6개 Promise.all</td><td>직렬 대기를 줄이는 코드 구조 개선</td><td>기존 리소스·화면 보존. 로딩 시간 수치 측정하지 않음</td></tr>
+<tr><td>Orca 이름8개·부모관계4개 정리</td><td>작업 목적과 결과물 관계를 화면에서 구분</td><td>변경전후 JSON 보존. 실제 폴더·브랜치·수동순서·작업상태 유지</td></tr>
+</tbody></table></div>
+<h2>동일 조건 리소스 용량 비교</h2>
+<p>측정 범위는 게임/public/assets 전체 재귀 파일 합계이며 압축 전 파일 크기다.</p>
+<div class="table-wrap"><table><thead><tr><th>측정</th><th>변경 전</th><th>변경 후</th><th>차이</th></tr></thead><tbody>
+<tr><td>파일 수</td><td>39</td><td>38</td><td>-1</td></tr>
+<tr><td>바이트</td><td>51,182,826</td><td>48,924,519</td><td>-2,258,307</td></tr>
+<tr><td>감소율</td><td>—</td><td>—</td><td>4.412%</td></tr>
+</tbody></table></div>
+<p>merchant 원본 제거분에 출처 JSON 증가분252B가 반영된 순수 차이다. 다운로드·FPS·메모리 개선율이 아니다. 원본41개와 세계관을 새로 보관했으므로 저장소 전체는 커졌다. <a href="../../../자료/아트원본/verification.json">아트 검증</a></p>
+<h2>복구·추적</h2>
+<ul>
+<li>원본 제작 워크트리는 보존했다. 복사 출처·검토 HEAD·파일 SHA는 <a href="../../../자료/아트원본/manifest.json">아트 manifest</a>, <a href="세계관통합_출처.json">세계관 출처</a>에 있다.</li>
+<li>변경 시작 기준 main은 e31227b84315b07235f60a95a5cf997cff219549이다. 버전 관리 상세는 <a href="../../03_작업기록/WEB-179_프로젝트종합분석과통합정리/5_버전관리.md">WEB-179</a>에 기록한다.</li>
+<li>HWP 원래 위치·해시는 <a href="기획원본_이관.json">이관 기록</a>, 문서 원문 해시는 <a href="문서이관_출처.json">문서 이관 기록</a>에 있다.</li>
+<li><a href="작업목록_변경전.json">작업목록 변경전</a>과 <a href="작업목록_변경후.json">변경후</a>로 표시 이름·부모·설명을 복원할 수 있다. 복원해도 파일 위치가 자동으로 변하지 않는다.</li>
+</ul>
+<h2>제안만 한 항목</h2>
+<p>main.ts·landscape-entry.ts 책임 분리, 반복 능력치 계산 비용 측정, CSS 중복 규칙 통합, 오래된 백업 삭제, 미채택 그림 정리, 이펙트 도구 전체 병합은 수행하지 않았다. 현재 진행 작업·공유 경로 의존과 실제 사용 여부를 고려해 후속 검토 대상으로 남겼다. 다음 실제 기능 변경에 맞춘 작은 범위 정리와 회귀 검증을 권장한다.</p>
+<p>전체 작업별 상태·후속 완료 조건은 <a href="작업영역통합현황.md">작업영역 통합 현황</a>을 따른다.</p><p class="foot">Grid Defenders · 자료 기준 2026-11-07 · 사실·제안·미확인 구분 및 검증 범위는 본문 참조</p></main></body></html>

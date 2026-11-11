@@ -1,0 +1,872 @@
+{
+  "checks": [
+    {
+      "set": "male-035",
+      "sourceOwnershipMissing": 0,
+      "sourceOwnershipOverlap": 0,
+      "visibleRgbaExactAtNonzeroAlpha": true,
+      "completePartReassembly": {
+        "method": "Actual individual bind0 PNGs from COMPLETE part hidden regions plus exact individual visible extraction, with separate render masks; no full source overlay; unoccluded full-geometry composition separately supplied",
+        "changedNonzeroAlphaPixels": 21581,
+        "additionalAlphaPixelsOutsideOriginal": 0,
+        "backgroundChecks": [
+          {
+            "background": [
+              250,
+              250,
+              245,
+              255
+            ],
+            "maxChannelDelta": 5,
+            "pixelsDeltaOver2": 21
+          },
+          {
+            "background": [
+              25,
+              38,
+              51,
+              255
+            ],
+            "maxChannelDelta": 3,
+            "pixelsDeltaOver2": 29
+          }
+        ],
+        "notPixelIdentical": true,
+        "remaining": "Complete geometry unmasked differs in contour/shape; bind0 material variants are not animated rigging validation"
+      },
+      "jointZeroOverlap": [],
+      "completePartSilhouettesPresent": true,
+      "riggingValidated": false,
+      "problem": "Whole donor silhouettes restored; hidden anatomy/manual registration and unmasked contour differences remain inferred. Bind0 uses separately documented source-pose material variants."
+    },
+    {
+      "set": "female-035",
+      "sourceOwnershipMissing": 0,
+      "sourceOwnershipOverlap": 0,
+      "visibleRgbaExactAtNonzeroAlpha": true,
+      "completePartReassembly": {
+        "method": "Actual individual bind0 PNGs from COMPLETE part hidden regions plus exact individual visible extraction, with separate render masks; no full source overlay; unoccluded full-geometry composition separately supplied",
+        "changedNonzeroAlphaPixels": 15544,
+        "additionalAlphaPixelsOutsideOriginal": 0,
+        "backgroundChecks": [
+          {
+            "background": [
+              250,
+              250,
+              245,
+              255
+            ],
+            "maxChannelDelta": 4,
+            "pixelsDeltaOver2": 51
+          },
+          {
+            "background": [
+              25,
+              38,
+              51,
+              255
+            ],
+            "maxChannelDelta": 3,
+            "pixelsDeltaOver2": 8
+          }
+        ],
+        "notPixelIdentical": true,
+        "remaining": "Complete geometry unmasked differs in contour/shape; bind0 material variants are not animated rigging validation"
+      },
+      "jointZeroOverlap": [],
+      "completePartSilhouettesPresent": true,
+      "riggingValidated": false,
+      "problem": "Whole donor silhouettes restored; hidden anatomy/manual registration and unmasked contour differences remain inferred. Bind0 uses separately documented source-pose material variants."
+    },
+    {
+      "set": "male-090",
+      "sourceOwnershipMissing": 0,
+      "sourceOwnershipOverlap": 0,
+      "visibleRgbaExactAtNonzeroAlpha": true,
+      "completePartReassembly": {
+        "method": "Actual individual bind0 PNGs from COMPLETE part hidden regions plus exact individual visible extraction, with separate render masks; no full source overlay; unoccluded full-geometry composition separately supplied",
+        "changedNonzeroAlphaPixels": 107287,
+        "additionalAlphaPixelsOutsideOriginal": 0,
+        "backgroundChecks": [
+          {
+            "background": [
+              250,
+              250,
+              245,
+              255
+            ],
+            "maxChannelDelta": 5,
+            "pixelsDeltaOver2": 1672
+          },
+          {
+            "background": [
+              25,
+              38,
+              51,
+              255
+            ],
+            "maxChannelDelta": 5,
+            "pixelsDeltaOver2": 843
+          }
+        ],
+        "notPixelIdentical": true,
+        "remaining": "Complete geometry unmasked differs in contour/shape; bind0 material variants are not animated rigging validation"
+      },
+      "jointZeroOverlap": [],
+      "completePartSilhouettesPresent": true,
+      "riggingValidated": false,
+      "problem": "Whole donor silhouettes restored; hidden anatomy/manual registration and unmasked contour differences remain inferred. Bind0 uses separately documented source-pose material variants."
+    },
+    {
+      "set": "female-090",
+      "sourceOwnershipMissing": 0,
+      "sourceOwnershipOverlap": 0,
+      "visibleRgbaExactAtNonzeroAlpha": true,
+      "completePartReassembly": {
+        "method": "Actual individual bind0 PNGs from COMPLETE part hidden regions plus exact individual visible extraction, with separate render masks; no full source overlay; unoccluded full-geometry composition separately supplied",
+        "changedNonzeroAlphaPixels": 99760,
+        "additionalAlphaPixelsOutsideOriginal": 0,
+        "backgroundChecks": [
+          {
+            "background": [
+              250,
+              250,
+              245,
+              255
+            ],
+            "maxChannelDelta": 5,
+            "pixelsDeltaOver2": 2010
+          },
+          {
+            "background": [
+              25,
+              38,
+              51,
+              255
+            ],
+            "maxChannelDelta": 4,
+            "pixelsDeltaOver2": 1276
+          }
+        ],
+        "notPixelIdentical": true,
+        "remaining": "Complete geometry unmasked differs in contour/shape; bind0 material variants are not animated rigging validation"
+      },
+      "jointZeroOverlap": [],
+      "completePartSilhouettesPresent": true,
+      "riggingValidated": false,
+      "problem": "Whole donor silhouettes restored; hidden anatomy/manual registration and unmasked contour differences remain inferred. Bind0 uses separately documented source-pose material variants."
+    }
+  ],
+  "ack": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사용자확인.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사용자선택.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사전확인.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\README.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\report.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\검수.md",
+      "exists": true,
+      "hashUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\.codex\\skills\\.system\\imagegen\\SKILL.md",
+      "exists": true,
+      "hashUnchanged": true
+    }
+  ],
+  "preservation": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\A-female.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\A-male.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\api-jobs.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\api-request.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\api-usage.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\asset-manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\B-female.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\B-male.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\browser-evidence.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\browser-qa.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\build-gallery.py",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\close-records.py",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\comparison-dark.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\comparison.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\finalize.py",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\fix-gallery.py",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\generation-records.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\index.html",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\preservation-before.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\prompt-female.txt",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\prompt-male.txt",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\read-pack.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\reference.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\report.md",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\secret-scan.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\secret-scan.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\setup.py",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\start-result.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\verification.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\zoom-evidence.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\검수.md",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\결과.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\분석.md",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\사전확인.md",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\읽기확인.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\제작기준.md",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\api\\01-male\\native.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\api\\01-male\\prompt.txt",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\api\\01-male\\request-record.json",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\api\\02-female\\native.png",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\api\\02-female\\prompt.txt",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\api\\02-female\\request-record.json",
+      "unchanged": true
+    }
+  ],
+  "allReadHashesUnchanged": true,
+  "allPriorFilesUnchanged": true,
+  "wholePartSilhouettesPresent": true,
+  "animatedJointsValidated": false,
+  "visualInspection": {
+    "openedWith": "view_image",
+    "fullPngs": [
+      "male-035/full.png",
+      "female-035/full.png",
+      "male-090/full.png",
+      "female-090/full.png"
+    ],
+    "completeBoards": [
+      "male-035/parts-board.png",
+      "female-035/parts-board.png",
+      "male-090/parts-board.png",
+      "female-090/parts-board.png"
+    ],
+    "overview": [
+      "comparison.png",
+      "comparison-dark.png"
+    ],
+    "checked": "all 16 silhouettes on four final boards, source/bind0/unoccluded examples, light/dark and small preview"
+  },
+  "browserFinal": {
+    "fileProtocol": true,
+    "userUiTouched": false,
+    "errors": [],
+    "measurements": {
+      "registration": [
+        {
+          "file": "male-035/full.png",
+          "displayBodyHeight": 516.0003483072917,
+          "displayFootY": 564.00040078125
+        },
+        {
+          "file": "female-035/full.png",
+          "displayBodyHeight": 515.9997500000001,
+          "displayFootY": 563.99973015625
+        },
+        {
+          "file": "male-090/full.png",
+          "displayBodyHeight": 516.0003385416667,
+          "displayFootY": 564.0003609375001
+        },
+        {
+          "file": "female-090/full.png",
+          "displayBodyHeight": 515.9995833333332,
+          "displayFootY": 563.9995947916666
+        }
+      ],
+      "mainCards": 8,
+      "partDownloadLinks": 64,
+      "images": [
+        {
+          "src": "male-035/full.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/reassembly-comparison.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/difference.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts-board.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Head.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Neck.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Torso.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Pelvis.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/UpperArm_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Forearm_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Hand_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Foot_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/UpperArm_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Forearm_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Hand_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Foot_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Thigh_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Shin_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Thigh_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/parts/Shin_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/full.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/reassembly-comparison.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/difference.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts-board.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Head.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Neck.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Torso.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Pelvis.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/UpperArm_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Forearm_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Hand_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Foot_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/UpperArm_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Forearm_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Hand_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Foot_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Thigh_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Shin_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Thigh_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/parts/Shin_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/full.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/reassembly-comparison.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/difference.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts-board.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Head.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Neck.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Torso.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Pelvis.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/UpperArm_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Forearm_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Hand_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Foot_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/UpperArm_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Forearm_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Hand_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Foot_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Thigh_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Shin_R.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Thigh_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/parts/Shin_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/full.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/reassembly-comparison.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/difference.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts-board.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Head.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Neck.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Torso.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Pelvis.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/UpperArm_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Forearm_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Hand_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Foot_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/UpperArm_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Forearm_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Hand_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Foot_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Thigh_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Shin_R.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Thigh_L.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/parts/Shin_L.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/full.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/full.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/full.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/full.png",
+          "loaded": true
+        },
+        {
+          "src": "male-035/full.png",
+          "loaded": true
+        },
+        {
+          "src": "female-035/full.png",
+          "loaded": true
+        },
+        {
+          "src": "male-090/full.png",
+          "loaded": true
+        },
+        {
+          "src": "female-090/full.png",
+          "loaded": true
+        }
+      ]
+    },
+    "filterChecks": [
+      {
+        "filter": "035",
+        "visible": 4
+      },
+      {
+        "filter": "090",
+        "visible": 4
+      },
+      {
+        "filter": "male-",
+        "visible": 4
+      },
+      {
+        "filter": "female-",
+        "visible": 4
+      },
+      {
+        "filter": "all",
+        "visible": 8
+      }
+    ],
+    "zoomOpens": true,
+    "zoomCloses": true,
+    "lightDarkCaptured": true
+  },
+  "whole64NonemptyAndShaCorrect": true
+}

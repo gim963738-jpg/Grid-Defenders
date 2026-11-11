@@ -1,0 +1,56 @@
+{
+  "task": "MAIN01-20261110-D820F076",
+  "iteration": 3,
+  "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\style1_blond_balor_three_views_main01-20261110-d820f076_v003",
+  "folder": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076",
+  "saveReceipt": "C:\\Users\\user\\orca\\backups\\Grid Defenders\\SAVE-20261110-010839\\receipt.json",
+  "plan": {
+    "task": "MAIN01-20261110-D820F076",
+    "main": "main01",
+    "iteration": 3,
+    "selector": "id:de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+    "prompt": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\발송지시-v003.md",
+    "promptSha256": "cbbb7689665b4a4b9f0e70c91da1f455b990f798414e683ad2199a2926040abc",
+    "sourcePromptSha256": "6437413c7f6a362071ae93ea26309b41a575397bb1716e510c352240841a6b87",
+    "status": "prepared_not_sent",
+    "approval": {
+      "userQuote": "진행하기전에 저장하고 진행",
+      "source": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\사용자확인.md",
+        "sha256": "b698f9a83d7e62ab486cb5cfe4d3fa86fb73a2d11f898c370f6207908db5f919"
+      },
+      "recordedBy": "main01",
+      "recordedAt": "2026-11-10T01:16:26.052283+09:00",
+      "iteration": 3,
+      "hashes": {
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\요청확인.md": "b698f9a83d7e62ab486cb5cfe4d3fa86fb73a2d11f898c370f6207908db5f919",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\전문프롬프트.md": "6437413c7f6a362071ae93ea26309b41a575397bb1716e510c352240841a6b87",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\2_사전확인.md": "c8b5d97eed301801312a765eee72689512d18d65611475e88be6faaf3200aaf1",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md": "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md": "d4027f0c9a32fcec376092a83a44eb28eff07b26563103f13f1bbeb3f580b0e8",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\사용자확인.md": "b698f9a83d7e62ab486cb5cfe4d3fa86fb73a2d11f898c370f6207908db5f919",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\사전확인.md": "c8b5d97eed301801312a765eee72689512d18d65611475e88be6faaf3200aaf1",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\두께반려기준.md": "99f32e525f38c09ef05610246dde6811c2745d9f0df236cfe4b7f8ccbe8fa31e",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\디테일피드백.md": "dff8c9393d8413b6fbe022fb6933a434073a7101fd2a4bd05c45d0b8a6ccee74",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\보존목록.json": "7ef9f68cff77e3f64e49732b308d48caf07660847eb07d2fb0ddb092f96f417f",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\후속작업보류.md": "576fc5a336677fe62cdf3ad836aaf4c780cbd6d5b9015843b30b26a4d9dd1290",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v002\\report.md": "362d852998e9ba584880f7cd1c86a26a87a0e7e16975d12d06b95b188cd9d2d3",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v002\\검수.md": "5b203ce81d84f843ef831c4ab33e19acf9190d5687eb017af0df1800ce92ff1c",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-21F94B82\\사용자합격-v002.md": "79340ce4458c744731506a5cdb2d9b357ec6f57f2dd749e5a2a5c344747b4061",
+        "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md": "412cf153ca5f906d132c0d2ed9813553e8ee95c97d5dcee23a63574374f53ae2"
+      }
+    },
+    "instruction": "Use the official Orca skill; record the actual receipt. Do not duplicate an active editor."
+  }
+}

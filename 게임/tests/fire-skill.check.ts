@@ -16,7 +16,7 @@ export function checkFireSkill(){
  for(let i=0;i<35;i++)w.tick(.05);check(hp-w.enemies[0].hp===w.stats(hero).attack*3,'wave total equals three base attacks');
  check(w.damageMeter.snapshot(w.elapsed).total===225,'fire damage is counted in wave DPS');
  w.reset();check(w.fireCasts.length===0,'wave reset clears fire effects');
- const b=bossFixture(),h=b.hero()!,t=b.actors.find(a=>a.kind==='retainer')!;b.actors=[h,t];h.x=t.x-20;h.y=t.y;h.cooldown=999;t.cooldown=999;
+ const b=bossFixture(),h=b.hero()!,t=b.actors.find(a=>a.id==='retainer-top')!;b.actors=[h,t];h.x=t.x-20;h.y=t.y;h.cooldown=999;t.cooldown=999;
  const before=t.hp;b.tripleSkill();for(let i=0;i<10;i++)b.tick(.05);check(t.hp===before,'boss has no early impact damage');
  for(let i=0;i<35;i++)b.tick(.05);check(before-t.hp===h.attack*3,'boss total equals three base attacks');
  b.reset();check(b.fireCasts.length===0&&b.heroSkillCooldown===0,'boss reset clears fire effects and cooldown');

@@ -1,0 +1,123 @@
+{
+  "headless": true,
+  "transport": "CDP anonymous pipes; no listening TCP/HTTP server",
+  "userUiTouched": false,
+  "fileProtocol": true,
+  "errors": [],
+  "measurements": {
+    "cards": 9,
+    "images": [
+      {
+        "src": "references/target-builtin90.png",
+        "loaded": true
+      },
+      {
+        "src": "references/reference-image26-90.png",
+        "loaded": true
+      },
+      {
+        "src": "final/builtin-right-090.png",
+        "loaded": true
+      },
+      {
+        "src": "references/target-builtin90.png",
+        "loaded": true
+      },
+      {
+        "src": "references/reference-image26-90.png",
+        "loaded": true
+      },
+      {
+        "src": "final/builtin-right-090.png",
+        "loaded": true
+      },
+      {
+        "src": "references/target-builtin90.png",
+        "loaded": true
+      },
+      {
+        "src": "references/reference-image26-90.png",
+        "loaded": true
+      },
+      {
+        "src": "final/builtin-right-090.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/gaze-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/torso-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/pauldron-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/shield-connection-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/sword-grip-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/whole-sword-light.png",
+        "loaded": true
+      }
+    ],
+    "registration": [
+      {
+        "id": "before",
+        "displayBodyHeight": 720,
+        "displayFootY": 759.9999666666668
+      },
+      {
+        "id": "reference",
+        "displayBodyHeight": 720.0001875,
+        "displayFootY": 760.0002437500001
+      },
+      {
+        "id": "after",
+        "displayBodyHeight": 720.0003131510417,
+        "displayFootY": 760.0003006510417
+      },
+      {
+        "id": "before",
+        "displayBodyHeight": 56.999970703125,
+        "displayFootY": 84.99997955729167
+      },
+      {
+        "id": "reference",
+        "displayBodyHeight": 57.00001484375,
+        "displayFootY": 84.999979296875
+      },
+      {
+        "id": "after",
+        "displayBodyHeight": 57.00002109375001,
+        "displayFootY": 84.99999609375001
+      },
+      {
+        "id": "before",
+        "displayBodyHeight": 72,
+        "displayFootY": 84.99999666666666
+      },
+      {
+        "id": "reference",
+        "displayBodyHeight": 72.00001875,
+        "displayFootY": 85.00002437500001
+      },
+      {
+        "id": "after",
+        "displayBodyHeight": 72.00003131510417,
+        "displayFootY": 85.00003006510417
+      }
+    ]
+  },
+  "nativeToggle": true,
+  "zoomOpens": true,
+  "zoomCloses": true,
+  "lightDarkCaptured": true
+}

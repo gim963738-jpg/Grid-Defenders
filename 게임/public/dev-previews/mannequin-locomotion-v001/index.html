@@ -1,0 +1,275 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>전신 마네킹 · 남녀 이동 2체형</title><style>*{box-sizing:border-box}body{margin:0;background:#e6edf1;color:#22394b;font:15px system-ui}header{padding:20px 25px}h1{margin:0 0 8px;font-size:25px}.controls{padding:13px 25px;background:#d3e0e9;display:flex;gap:9px;align-items:center;flex-wrap:wrap}button,select{padding:8px;font:inherit}input[type=range]{width:260px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:18px}.card{border:1px solid #afc0cb;border-radius:9px;overflow:hidden;background:white}.card h2{font-size:19px;margin:12px 15px}.desc,.stats{margin:9px 15px;min-height:35px}.large{width:100%;display:block;cursor:zoom-in}.small{display:flex;gap:22px;padding:10px 15px}.small canvas{display:block}footer{padding:20px 25px;line-height:1.8}dialog{border:0;max-width:95vw}dialog canvas{max-width:80vw;max-height:85vh}details{padding:10px 25px}summary{cursor:pointer}.reference{display:flex;align-items:end;gap:30px;padding:15px}.reference img{height:350px;max-width:40vw;object-fit:contain}canvas{touch-action:none}@media(max-width:700px){.grid{gap:5px;padding:5px}.card h2{font-size:14px}.desc{font-size:11px}}</style>
+<header><h1>공통 전신 마네킹 · 남녀 이동 2체형</h1><div>우측 앞35° · 같은 기본 동작/상태 주기 · 별도 체형 데이터 · 코드 도형 + 발 목표 IK · 최종속도/미적 선택 대기</div></header>
+<div class="controls"><button id="play">일시정지</button><button id="restart">다시시작</button><button id="stopNow">지금 감속정지</button><select id="mode"><option>Auto</option><option>Idle</option><option>Start</option><option>StartRun</option><option>Walk</option><option>Run</option><option>Stop</option></select><label>시간 <input id="scrub" type="range" min="0" max="12.4" step="0.008333333"></label><span id="time"></span><label>시연속도 <select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1× 임시</option><option value="1.5">1.5×</option></select></label><select id="bg"><option value="light">밝음</option><option value="dark">어두움</option><option value="field">필드 유사</option></select><label><input id="bones" type="checkbox">뼈대/관절</label><label><input id="contacts" type="checkbox" checked>접지 표시</label></div>
+<main class="grid" id="grid"></main><details><summary>비율 참고 / 코드 마네킹 정지 대조</summary><div class="reference"><img src="reference.png" alt="비율 참고 금발35 원본"><canvas id="restCompare" width="360" height="420"></canvas></div>원본의 모발/갑주 안 두상·관절은 추정. 마네킹은 비율 참고 모형이며 원본 알몸 복원이 아닙니다.</details>
+<footer>초록=지지발 / 주황=공중발. 루트는 오른쪽으로 전진하고 카메라는 몸을 따라갑니다. 바닥 눈금은 월드 고정점이므로 화면에서 왼쪽으로 흐릅니다. 발 미끄러짐은 월드 좌표로 검사합니다.<br>Start=Idle→Walk · StartRun=Idle→Run · Stop=달리기 1.6초 뒤 감속·발 정리 · 지금 감속정지=현재 위상의 지지/공중발을 이어서 정지.<br>57/72CSSpx는 갤러리 미리보기이며 실게임/실기기 검증이 아닙니다. 의상·헤어·장비·공격·스킬/게임 통합은 포함하지 않았습니다.<br><a href="comparison.webm">동기 연속 영상</a> · <a href="rig.json">공통 본</a> · <a href="motions.json">공통 동작 데이터</a> · <a href="검수.md">검수</a> · <a href="report.md">보고</a></footer>
+<dialog id="zoom"><button onclick="this.parentElement.close()">닫기</button><canvas width="720" height="1210"></canvas></dialog>
+<script>const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const mix=(a,b,t)=>a+(b-a)*t, sm=t=>{t=clamp(t);return t*t*t*(10+t*(-15+6*t))}, add=(a,b)=>a.map((v,i)=>v+b[i]), sub=(a,b)=>a.map((v,i)=>v-b[i]), mul=(a,s)=>a.map(v=>v*s), norm=a=>Math.hypot(...a), unit=a=>mul(a,1/(norm(a)||1)), dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0);
+function ik(a,b,l1,l2,pole=[1,0,0]){const d0=norm(sub(b,a)),d=clamp(d0,0.001,l1+l2-.0001),u=unit(sub(b,a)),p=unit(sub(pole,mul(u,dot(pole,u)))),along=(l1*l1-l2*l2+d*d)/(2*d),h=Math.sqrt(Math.max(0,l1*l1-along*along));return {joint:add(a,add(mul(u,along),mul(p,h))),end:add(a,mul(u,d)),reachError:Math.abs(d-d0)}}
+class Simulator{
+ constructor(rig,motions,variant,mode='Auto',stopAt=null){this.r=rig;this.m=motions;this.v=variant;this.mode=mode;this.stopAt=stopAt;this.t=0;this.root=0;this.vel=0;this.phase=0;this.running=0;this.active=false;this.feet=[-1,1].map(z=>({p:[0,28,z*68],swing:null,contact:true}));this.prevRun=0;this.samples=[]}
+ control(t){const v=this.v;let speed=0,run=0,label='Idle';
+  const launch=(tt,isRun)=>({speed:(isRun?v.runSpeed:v.walkSpeed)*sm(tt/1.2),run:isRun?sm(tt/1.2):0,label:tt<1.2?'Start→'+(isRun?'Run':'Walk'):(isRun?'Run':'Walk')});
+  if(this.mode==='Auto'){if(t<1.4){}else if(t<2.6){({speed,run,label}=launch(t-1.4,false))}else if(t<5.6){speed=v.walkSpeed;label='Walk'}else if(t<6.4){run=sm((t-5.6)/.8);speed=mix(v.walkSpeed,v.runSpeed,run);label='Walk→Run'}else if(t<9.4){speed=v.runSpeed;run=1;label='Run'}else if(t<10.8){run=1-sm((t-9.4)/1.0);speed=v.runSpeed*(1-sm((t-9.4)/.85));label='Stop'}
+  }else if(this.mode==='Idle'){}else if(this.mode==='StartRun'){({speed,run,label}=launch(t,true))}else if(this.mode==='Start'){({speed,run,label}=launch(t,false))}else if(this.mode==='Stop'){speed=v.runSpeed*(1-sm((t-1.6)/.85));run=t<1.6?1:1-sm((t-1.6));label=t<1.6?'Run':t<3?'Stop':'Idle'}else{run=this.mode==='Run'?1:0;speed=run?v.runSpeed:v.walkSpeed;label=this.mode}
+  if(this.stopAt!==null&&t>=this.stopAt){const c=this.controlBeforeStop||{speed,run};this.controlBeforeStop=c;speed=c.speed*(1-sm((t-this.stopAt)/.65));run=c.run*(1-sm((t-this.stopAt)/.9));label=t-this.stopAt<1.35?'Stop 요청':'Idle'}
+  return{speed,run,label};
+ }
+ step(dt){const t=this.t,c=this.control(t),v=this.v,r=this.r;this.vel=c.speed;this.running=c.run;this.root+=c.speed*dt;const moving=c.speed>2;
+  if(moving){this.phase+=dt/mix(this.m.cycles.walk,this.m.cycles.run,c.run)}
+  const duty=mix(v.walkDuty,v.runDuty,c.run),cycle=mix(this.m.cycles.walk,this.m.cycles.run,c.run);
+  for(let i=0;i<2;i++){const f=this.feet[i],phase=(this.phase+i*.5)%1;const wantsSwing=moving&&phase>duty;
+   if(!f.swing&&f.contact&&wantsSwing){const dur=(1-duty)*cycle;const target=this.root+c.speed*(dur+duty*cycle*.5);f.swing={start:t,duration:dur,from:[...f.p],to:[target,28,f.p[2]],lift:mix(v.walkLift,v.runLift,c.run),settle:false};f.contact=false}
+   if(f.swing){const s=f.swing,u=clamp((t-s.start)/s.duration);f.p=[mix(s.from[0],s.to[0],sm(u)),mix(s.from[1],s.to[1],sm(u))+s.lift*Math.sin(Math.PI*u)**2,s.from[2]];if(u>=1){f.p=[...s.to];f.swing=null;f.contact=true}}
+  }
+  // After braking, replace one support foot at a time; never teleport planted feet to rest.
+  if(!moving&&!this.feet.some(f=>f.swing)){const f=this.feet.find(f=>Math.abs(f.p[0]-this.root)>4);if(f){f.swing={start:t,duration:.26,from:[...f.p],to:[this.root,28,f.p[2]],lift:35,settle:true};f.contact=false}}
+  this.t+=dt;return this.pose(c)
+ }
+ pose(c=this.control(this.t)){const r=this.r,v=this.v,run=c.run,move=clamp(c.speed/v.walkSpeed),ph=this.phase*2*Math.PI,amp=clamp(move),idle=Math.sin(this.t*2*Math.PI/3.1)*2;
+  const airborne=this.feet.every(f=>!f.contact);let hipY=r.rest.hipHeight+idle*(1-amp)+amp*v.bob*(mix(-8,3,run)+mix(8,18,run)*Math.cos(ph*2));
+  const sway=amp*v.sway*Math.sin(ph),hipX=this.root+amp*mix(0,13,run)*v.lean;
+  // Lower pelvis to keep all ankle goals reachable without changing any limb length.
+  for(const f of this.feet){const dx=f.p[0]-hipX,dy=Math.sqrt(Math.max(1,(r.lengths.thigh+r.lengths.shin-3)**2-dx*dx));hipY=Math.min(hipY,f.p[1]+dy)}
+  const pelvis=[hipX,hipY,sway],lean=amp*mix(.025,.15,run)*v.lean,torso=[Math.sin(lean)*r.lengths.torso,Math.cos(lean)*r.lengths.torso,0],chest=add(pelvis,torso),neck=add(chest,[0,r.lengths.neck,0]),head=add(neck,[7,110,0]);
+  const joints={Root:[this.root,0,0],Pelvis:pelvis,Torso:add(pelvis,mul(torso,.48)),Chest:chest,Neck:neck,Head:head},bones=[];
+  const link=(n,a,b,l)=>{joints[n]=b;bones.push({name:n,a,b,length:l})};
+  let reachError=0;
+  for(let i=0;i<2;i++){const sign=i===0?-1:1,prefix=i===0?'Right':'Left',f=this.feet[i],hip=add(pelvis,[0,0,sign*r.rest.hipHalfWidth]),k=ik(hip,f.p,r.lengths.thigh,r.lengths.shin,[1,.05,0]);reachError=Math.max(reachError,k.reachError);joints[prefix+'Hip']=hip;link(prefix+'Thigh',hip,k.joint,r.lengths.thigh);link(prefix+'Shin',k.joint,k.end,r.lengths.shin);joints[prefix+'Foot']=k.end;
+   const shoulder=add(chest,[0,0,sign*r.rest.shoulderHalfWidth]),swing=amp*v.arm*mix(.25,.65,run)*Math.sin(ph+i*Math.PI),angle=-swing-.05*amp,elbow=add(shoulder,[Math.sin(angle)*Math.sqrt(r.lengths.upperArm**2-64),-Math.cos(angle)*Math.sqrt(r.lengths.upperArm**2-64),sign*8]);
+   const bend=mix(.20,1.30,run)*amp+.12;const wrist=add(elbow,[Math.sin(angle+bend)*r.lengths.forearm,-Math.cos(angle+bend)*r.lengths.forearm,0]);joints[prefix+'Shoulder']=shoulder;link(prefix+'UpperArm',shoulder,elbow,r.lengths.upperArm);link(prefix+'Forearm',elbow,wrist,r.lengths.forearm);joints[prefix+'Hand']=add(wrist,[8,-25,0]);
+  }
+  return{time:this.t,root:this.root,velocity:c.speed,run,label:c.label,phase:this.phase,airborne,joints,bones,feet:this.feet.map(f=>({p:[...f.p],contact:f.contact,swing:!!f.swing})),reachError,rig:r}
+ }
+}
+function simulate(r,m,v,mode='Auto',stopAt=null,duration=null){const s=new Simulator(r,m,v,mode,stopAt),d=duration??(mode==='Auto'?m.duration:mode==='Idle'?3.1:mode==='Stop'?4.2:mode.startsWith('Start')?3.4:mode==='Run'?m.cycles.run*6:m.cycles.walk*4),out=[s.pose()];for(let t=0;t<d-m.dt/2;t+=m.dt)out.push(s.step(m.dt));return out}
+function at(samples,t){return samples[Math.min(samples.length-1,Math.max(0,Math.round(t/(1/120))))]}
+function project(p,root=0){const a=35*Math.PI/180;return[(p[0]-root)*Math.sin(a)+p[2]*Math.cos(a),-p[1]+(p[0]-root)*.10+p[2]*.06]}
+function draw(canvas,p,opt={}){const ctx=canvas.getContext('2d'),w=canvas.width,h=canvas.height,sc=Math.min(w/720,h/1210)*1010/(p.rig.rest.hipHeight+p.rig.lengths.torso+p.rig.lengths.neck+220),ox=w*.48,oy=h*.91;ctx.clearRect(0,0,w,h);ctx.fillStyle=opt.bg==='dark'?'#172332':opt.bg==='field'?'#78906a':'#f4f5f1';ctx.fillRect(0,0,w,h);const P=q=>{let a=project(q,p.root);return[ox+a[0]*sc,oy+a[1]*sc]},line=(a,b,color,width)=>{a=P(a);b=P(b);ctx.strokeStyle=color;ctx.lineWidth=width*sc;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(...a);ctx.lineTo(...b);ctx.stroke()},ellipse=(q,rx,ry,color)=>{q=P(q);ctx.fillStyle=color;ctx.beginPath();ctx.ellipse(q[0],q[1],rx*sc,ry*sc,0,0,Math.PI*2);ctx.fill()};
+  // Perspective grid represents fixed world points, while follow-camera subtracts root.
+  ctx.strokeStyle=opt.bg==='dark'?'#354656':'#c3ccbd';ctx.lineWidth=1;for(let k=Math.floor(p.root/150)-8;k<Math.floor(p.root/150)+9;k++){const a=P([k*150,0,-400]),b=P([k*150,0,400]);ctx.beginPath();ctx.moveTo(...a);ctx.lineTo(...b);ctx.stroke()}line([p.root-620,0,0],[p.root+620,0,0],'#88978c',2);
+ const j=p.joints,far='#778895',near='#b1bdc5',mid='#98a9b5',edge='#33495b';
+ function limb(prefix,color){for(const[n,width]of[['Thigh',66],['Shin',52],['UpperArm',48],['Forearm',40]]){const b=p.bones.find(b=>b.name===prefix+n);line(b.a,b.b,edge,width+5);line(b.a,b.b,color,width)}ellipse(j[prefix+'Hand'],22,28,color);const f=j[prefix+'Foot'];line(add(f,[-30,-13,0]),add(f,[65,-13,0]),edge,32);line(add(f,[-30,-13,0]),add(f,[65,-13,0]),color,27)}
+ limb('Left',far);
+ ellipse(j.Pelvis,p.rig.rest.pelvisRadius??93,58,edge);ellipse(j.Pelvis,(p.rig.rest.pelvisRadius??93)-4,54,mid);
+ // Rounded torso polygon has an oblique front plane; no anatomy, clothing or texture.
+ const corners=[add(j.Chest,[0,0,-p.rig.rest.shoulderHalfWidth+9]),add(j.Chest,[0,0,p.rig.rest.shoulderHalfWidth-9]),add(j.Pelvis,[0,90,p.rig.rest.waistHalfWidth??78]),add(j.Pelvis,[0,30,p.rig.rest.hipHalfWidth+6]),add(j.Pelvis,[0,30,-p.rig.rest.hipHalfWidth-6]),add(j.Pelvis,[0,90,-(p.rig.rest.waistHalfWidth??78)])].map(P);ctx.fillStyle=mid;ctx.strokeStyle=edge;ctx.lineWidth=4*sc;ctx.beginPath();ctx.moveTo(...corners[0]);for(const c of corners.slice(1))ctx.lineTo(...c);ctx.closePath();ctx.fill();ctx.stroke();line(j.Chest,j.Neck,mid,48);
+ limb('Right',near);
+ ellipse(j.Head,p.rig.rest.headRadiusX,p.rig.rest.headRadiusY,edge);ellipse(j.Head,p.rig.rest.headRadiusX-4,p.rig.rest.headRadiusY-4,near);
+ // Two unequal direction marks and side plane show right-front35, not strict profile.
+ ellipse(add(j.Head,[90,6,-10]),5,10,edge);ellipse(add(j.Head,[90,6,35]),3.4,8,edge);line(add(j.Head,[88,-14,35]),add(j.Head,[105,-18,35]),edge,4);
+ if(opt.bones){for(const b of p.bones)line(b.a,b.b,'#e8666c',5);for(const n of['Pelvis','Chest','Neck','Head'])ellipse(j[n],7,7,'#ffe28e');for(const b of p.bones)ellipse(b.a,6,6,'#39d0cf')}
+ if(opt.contacts){p.feet.forEach(f=>{ellipse([f.p[0],0,f.p[2]],30,7,f.contact?'#2eaa67':'#cf8c38')})}
+ return p;
+}
+
+const rig={
+  "coordinateSystem": "3D proxy: x forward/right travel, y up, z anatomical lateral; orthographic right-front yaw35; not a recovered nude body",
+  "camera": {
+    "yawDeg": 35,
+    "groundForwardSlope": 0.1,
+    "groundLateralSlope": 0.06
+  },
+  "lengths": {
+    "thigh": 205,
+    "shin": 195,
+    "upperArm": 130,
+    "forearm": 95,
+    "torso": 310,
+    "neck": 70,
+    "headHeight": 220
+  },
+  "rest": {
+    "hipHeight": 410,
+    "ankleHeight": 28,
+    "hipHalfWidth": 68,
+    "shoulderHalfWidth": 112,
+    "headRadiusX": 98,
+    "headRadiusY": 110,
+    "footLength": 122,
+    "footWidth": 53
+  },
+  "hierarchy": {
+    "Root": null,
+    "Pelvis": "Root",
+    "Torso": "Pelvis",
+    "Chest": "Torso",
+    "Neck": "Chest",
+    "Head": "Neck",
+    "RightUpperArm": "Chest",
+    "RightForearm": "RightUpperArm",
+    "RightHand": "RightForearm",
+    "LeftUpperArm": "Chest",
+    "LeftForearm": "LeftUpperArm",
+    "LeftHand": "LeftForearm",
+    "RightThigh": "Pelvis",
+    "RightShin": "RightThigh",
+    "RightFoot": "RightShin",
+    "LeftThigh": "Pelvis",
+    "LeftShin": "LeftThigh",
+    "LeftFoot": "LeftShin"
+  },
+  "reference": {
+    "file": "reference.png",
+    "sha256": "366b8073d944fea1849dd1795c4e36cdd63c2653f04ea9262a20d457670ee285",
+    "hairTop": 17,
+    "estimatedScalpCrown": 110,
+    "chin": 335,
+    "sole": 1221,
+    "scalpErrorPx": 35,
+    "jointErrorPx": 25,
+    "method": "Visible face/chin/sole and limb axes visually estimated; skull hidden by hair and body hidden by armor. Mannequin approximates combined ratios rather than extracting nude anatomy.",
+    "estimatedSourceJoints": {
+      "nearShoulder": [
+        548,
+        429
+      ],
+      "nearElbow": [
+        492,
+        562
+      ],
+      "nearWrist": [
+        455,
+        653
+      ],
+      "nearHand": [
+        473,
+        708
+      ],
+      "pelvis": [
+        650,
+        775
+      ],
+      "nearKnee": [
+        590,
+        987
+      ],
+      "nearAnkle": [
+        570,
+        1170
+      ]
+    },
+    "proportionCorrection": "Initial code draft had overly long arms/legs; visually compared source shoulder/elbow/wrist/hip landmarks and shortened limbs while increasing torso/neck spacing. Hidden pelvis is an estimate ±35px, not user-confirmed anatomy."
+  }
+},motions=﻿{
+    "duration":  12.4,
+    "dt":  0.008333333333333333,
+    "cycles":  {
+                   "walk":  1.05,
+                   "run":  0.70
+               },
+    "timeline":  [
+                     [
+                         0,
+                         1.4,
+                         "Idle"
+                     ],
+                     [
+                         1.4,
+                         2.6,
+                         "Start→Walk"
+                     ],
+                     [
+                         2.6,
+                         5.6,
+                         "Walk"
+                     ],
+                     [
+                         5.6,
+                         6.4,
+                         "Walk→Run"
+                     ],
+                     [
+                         6.4,
+                         9.4,
+                         "Run"
+                     ],
+                     [
+                         9.4,
+                         10.8,
+                         "Stop"
+                     ],
+                     [
+                         10.8,
+                         12.4,
+                         "Idle"
+                     ]
+                 ],
+    "variants":  [
+                     {
+                         "id":  2,
+                         "name":  "공통 기본 동작",
+                         "walkSpeed":  205,
+                         "runSpeed":  390,
+                         "walkDuty":  0.62,
+                         "runDuty":  0.40,
+                         "walkLift":  64,
+                         "runLift":  128,
+                         "bob":  1.0,
+                         "sway":  16,
+                         "arm":  1.0,
+                         "lean":  1.0,
+                         "description":  "남녀 동일한 디딤·역상·체공·주기, 체형 관절만 별도"
+                     }
+                 ],
+    "policy":  "Same rig, timeline and state cycle periods. Speeds/steps are temporary preview values, not user-confirmed final speeds. World feet locked during stance; camera follows root; floor markers move opposite forward travel. No reverse walking."
+}
+,bodies={
+  "status": "Male from blond35 combined ratios; female is provisional SD mannequin for user feedback, not universal female standard",
+  "bodies": [
+    {
+      "id": "male",
+      "name": "남성체 · 기본 초안",
+      "description": "금발35 결합비율 참고 · 어깨112/골반68/허리78 반폭",
+      "rest": {
+        "shoulderHalfWidth": 112,
+        "hipHalfWidth": 68,
+        "waistHalfWidth": 78,
+        "pelvisRadius": 93,
+        "headRadiusX": 98,
+        "headRadiusY": 110
+      },
+      "lengths": {
+        "thigh": 205,
+        "shin": 195,
+        "upperArm": 130,
+        "forearm": 95,
+        "torso": 310,
+        "neck": 70,
+        "headHeight": 220
+      }
+    },
+    {
+      "id": "female",
+      "name": "여성체 · 미확정 초안",
+      "description": "같은 SD 계열 · 어깨96/골반80/허리63 반폭 · 별도 관절 배치",
+      "rest": {
+        "shoulderHalfWidth": 96,
+        "hipHalfWidth": 80,
+        "waistHalfWidth": 63,
+        "pelvisRadius": 104,
+        "headRadiusX": 94,
+        "headRadiusY": 110
+      },
+      "lengths": {
+        "thigh": 205,
+        "shin": 195,
+        "upperArm": 126,
+        "forearm": 92,
+        "torso": 300,
+        "neck": 70,
+        "headHeight": 220
+      }
+    }
+  ],
+  "motionPolicy": "Exactly one shared motion profile, same cycle periods/speeds/phase. No gendered character or behavioral difference. Widths are separate local shape/joint values, no full-body horizontal compression."
+},bodyRigs=bodies.bodies.map(b=>({...rig,rest:{...rig.rest,...b.rest},lengths:{...rig.lengths,...b.lengths}})),cache={},D=id=>document.getElementById(id);let time=0,playing=true,last=performance.now(),mode='Auto',stopAt=null,arrays=[],duration=12.4,zoomIndex=0;
+function getSamples(v,m,stop=null,r=rig){if(['Walk','Run'].includes(m)){const cycle=motions.cycles[m.toLowerCase()],warm=cycle*4;return simulate(r,motions,v,m,stop===null?null:warm+stop,stop===null?warm+cycle*2:warm+stop+2).slice(Math.round(warm/motions.dt))}return simulate(r,motions,v,m,stop,stop===null?null:Math.max(motions.duration,stop+2))}
+function rebuild(){arrays=bodyRigs.map(r=>getSamples(motions.variants[0],mode,stopAt,r));duration=(arrays[0].length-1)*motions.dt;D('scrub').max=duration}
+const cards=bodies.bodies.map((v,i)=>{const card=document.createElement('article');card.className='card';card.innerHTML='<h2>'+v.name+'</h2><div class="desc">'+v.description+'</div><canvas class="large" width="720" height="1210"></canvas><div class="stats"></div><div class="small"><div>57CSSpx<canvas width="80" height="140" style="height:66px;width:38px"></canvas></div><div>72CSSpx<canvas width="100" height="176" style="height:83px;width:48px"></canvas></div></div>';D('grid').append(card);[...card.querySelectorAll('.small canvas')].forEach((c,j)=>{const h=[57,72][j];c.width=720;c.height=1210;c.style.width=(720*h/1010)+'px';c.style.height=(1210*h/1010)+'px'});card.querySelector('.large').onclick=()=>{zoomIndex=i;D('zoom').showModal();paint()};return card});
+function options(){return{bg:D('bg').value,bones:D('bones').checked,contacts:D('contacts').checked}}
+function paint(){arrays.forEach((a,i)=>{const p=at(a,time),c=cards[i];const cv=[...c.querySelectorAll('canvas')];for(const can of cv)draw(can,p,options());c.querySelector('.stats').textContent=p.label+' · '+(p.airborne?'체공':'지지')+' · 속도 '+p.velocity.toFixed(0)+'u/s';if(D('zoom').open&&i===zoomIndex)draw(D('zoom').querySelector('canvas'),p,options())});D('scrub').value=time;D('time').textContent=time.toFixed(2)+' / '+duration.toFixed(2)+'s';draw(D('restCompare'),simulate(rig,motions,motions.variants[0],'Idle')[0],options())}
+D('play').onclick=()=>{playing=!playing;D('play').textContent=playing?'일시정지':'재생'};D('restart').onclick=()=>{stopAt=null;rebuild();time=0;paint()};D('stopNow').onclick=()=>{stopAt=time;rebuild();playing=true;last=performance.now();paint()};D('mode').onchange=()=>{mode=D('mode').value;stopAt=null;time=0;rebuild();paint()};D('scrub').oninput=()=>{playing=false;time=+D('scrub').value;paint()};for(const n of ['bg','bones','contacts'])D(n).onchange=paint;
+window.setState=(t,opt={})=>{playing=false;for(const[k,v]of Object.entries(opt)){if(k==='mode'){mode=v;D(k).value=v;stopAt=null;rebuild()}else if(k==='stopAt'){stopAt=v;rebuild()}else if(['bones','contacts'].includes(k))D(k).checked=v;else if(D(k))D(k).value=v}time=t;paint()};window.snapshot=()=>({time,playing,mode,stopAt,duration,states:arrays.map(a=>{const p=at(a,time);return{label:p.label,root:p.root,feet:p.feet,joints:p.joints,velocity:p.velocity,airborne:p.airborne}})});window.mannequin={rig,motions,bodies,bodyRigs,simulate,at,draw,getSamples};rebuild();paint();window.ready=true;requestAnimationFrame(function tick(now){if(playing){time+=(now-last)/1000*+D('speed').value;if(time>duration){time=0;stopAt=null;rebuild()}paint()}last=now;requestAnimationFrame(tick)});
+</script></html>

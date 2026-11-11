@@ -1,42 +1,13 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 3,
   "id": "MAIN01-20261109-7AE73F23",
   "main": "main01",
   "branch": "monsters",
   "title": "몬스터3종 SD 정면·좌측면·우측면9장",
-  "request": "사용자 원본: C:/Users/user/Downloads/Dnd Character concept.jfif, Blue Golem Guardian.jfif, Undead Archer.jfif.\n최초 요청: 몬스터 정면 측면 우측면 디자인 통일감있게 뽑아와봐.\n메인 이해 확인: 원본3종(녹색 전사·푸른 골렘·언데드 전사)을 기존 몬스터 SD 화풍으로 맞추고 체형/장비/색상/디테일이 방향마다 이어지게 한다. 비대칭 장비는 단순 반전하지 않는다. Undead Archer라는 파일명과 달리 이미지의 방패·검을 유지한다. 방향은 정면·좌측면·우측면으로 몬스터당3장, 총9장인지 질문했다.\n사용자 확인 원문: #네 맞습니다",
   "iteration": 1,
-  "status": "awaiting_user",
+  "status": "returned",
   "createdAt": "2026-11-09T18:00:28.593489+09:00",
-  "approval": {
-    "userQuote": "#네 맞습니다",
-    "source": {
-      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\monster-3x3\\사용자확인.md",
-      "sha256": "6afd9ef5f66436af1ad05e55b492a132bae2138363b57d3ac268153688dbecb6"
-    },
-    "recordedBy": "main01",
-    "recordedAt": "2026-11-09T18:00:28.639500+09:00",
-    "iteration": 1,
-    "hashes": {
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-7AE73F23\\요청확인.md": "6afd9ef5f66436af1ad05e55b492a132bae2138363b57d3ac268153688dbecb6",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-7AE73F23\\전문프롬프트.md": "8397635b10e09e608231359fdfb4f7e082826f15f1cf84702adecddb6c26e4c2",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-7AE73F23\\2_사전확인.md": "8f917b2ed1145199b3086ab94b9b99267d2b8726a08d0b474120bc203aaba247",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\monsters\\규정.md": "7d9b35870d0ee5e95cfcddfaaac1ac308d684ed1ac1d53f7ee3e02cb8fc50936",
-      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\AGENTS.md": "5511b6008958aaa98562b884bcaf6cabad7c32bfb243cf5530b0403eebf77f2f",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\monsters\\작업진행방법.md": "a2ada0bf75658fcecff913144dfc17c9407e64405b1373a786836cdace79b73a",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
-      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\문서\\00_개발규칙\\몬스터디자인기준.md": "51f9e47fbcccad46601b90f89b4bc0f2e7029b21761fec9ffe46cd2a52cd2ed8",
-      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\silver-staff-8views-v1\\제작기준.md": "f435e861e5df7932409e040737f53d1c556457c8b8edbac765074f7ba8d6a095",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\monster-3x3\\사용자확인.md": "6afd9ef5f66436af1ad05e55b492a132bae2138363b57d3ac268153688dbecb6"
-    }
-  },
+  "approval": null,
   "history": [
     {
       "action": "sent",
@@ -67,9 +38,44 @@
         "sha256": "515c929b46ea7068d74f430a62356f6f08d1ae83bec4c3a2cc1eabcbb3e27f1b"
       },
       "userQuote": ""
+    },
+    {
+      "action": "OPS006_migration",
+      "at": "2026-11-11T23:20:45.738268+09:00",
+      "previousStatus": "awaiting_user",
+      "previousApproval": {
+        "userQuote": "#네 맞습니다",
+        "source": {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\monster-3x3\\사용자확인.md",
+          "sha256": "6afd9ef5f66436af1ad05e55b492a132bae2138363b57d3ac268153688dbecb6"
+        },
+        "recordedBy": "main01",
+        "recordedAt": "2026-11-09T18:00:28.639500+09:00",
+        "iteration": 1,
+        "hashes": {
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-7AE73F23\\요청확인.md": "6afd9ef5f66436af1ad05e55b492a132bae2138363b57d3ac268153688dbecb6",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-7AE73F23\\전문프롬프트.md": "8397635b10e09e608231359fdfb4f7e082826f15f1cf84702adecddb6c26e4c2",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-7AE73F23\\2_사전확인.md": "8f917b2ed1145199b3086ab94b9b99267d2b8726a08d0b474120bc203aaba247",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\monsters\\규정.md": "7d9b35870d0ee5e95cfcddfaaac1ac308d684ed1ac1d53f7ee3e02cb8fc50936",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\AGENTS.md": "5511b6008958aaa98562b884bcaf6cabad7c32bfb243cf5530b0403eebf77f2f",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\monsters\\작업진행방법.md": "a2ada0bf75658fcecff913144dfc17c9407e64405b1373a786836cdace79b73a",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\문서\\00_개발규칙\\몬스터디자인기준.md": "51f9e47fbcccad46601b90f89b4bc0f2e7029b21761fec9ffe46cd2a52cd2ed8",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\silver-staff-8views-v1\\제작기준.md": "f435e861e5df7932409e040737f53d1c556457c8b8edbac765074f7ba8d6a095",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\monster-3x3\\사용자확인.md": "6afd9ef5f66436af1ad05e55b492a132bae2138363b57d3ac268153688dbecb6"
+        }
+      },
+      "note": "原 지시/판정 보존; 새 발송은 버튼 승인 필요"
     }
   ],
-  "readingPolicyVersion": "OPS-004",
+  "readingPolicyVersion": "OPS-006",
   "additionalReadings": [
     "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\문서\\00_개발규칙\\몬스터디자인기준.md",
     "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\silver-staff-8views-v1\\제작기준.md",
@@ -79,5 +85,37 @@
     "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-7AE73F23\\읽기확인-v001-687e048295404ad5ab5b9ab23bb64f4c.json",
     "sha256": "eaa6f549d160b4379011dc172b44c2cb5733bbf957569c083a10f788a10629f5"
   },
-  "updatedAt": "2026-11-09T18:16:45.711646+09:00"
+  "updatedAt": "2026-11-11T23:20:45.738268+09:00",
+  "stages": {
+    "production": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "technical": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "user": {
+      "status": "not_reviewed",
+      "evidence": null
+    },
+    "integration": {
+      "status": "unknown",
+      "evidence": null
+    }
+  },
+  "pendingChoice": null,
+  "spec": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-7AE73F23\\통합작업명세.json",
+  "pipeline": {
+    "version": 1,
+    "step": null,
+    "phase": "legacy",
+    "resumeRequired": true,
+    "criteria": [],
+    "review": null,
+    "lastResult": null,
+    "round": 0,
+    "events": [],
+    "note": "새 12단계 이전 기록. 과거 단계를 소급하지 않으며 새 후속 작업은 update-spec과 상세 브리핑부터 시작."
+  }
 }

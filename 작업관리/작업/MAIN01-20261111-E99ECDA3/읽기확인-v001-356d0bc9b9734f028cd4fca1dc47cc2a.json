@@ -1,0 +1,118 @@
+﻿{
+    "task":  "MAIN01-20261111-E99ECDA3",
+    "iteration":  1,
+    "role":  "qa",
+    "workSummary":  "수정v002의원52재현과recipe/raster시간경계/루프,실제불량JSON비동기거부및문서/undo/redo보존,정상독립복구와좌표/모바일을기존5182의새문맥에서검사.원자료/제품/사용자환경/API/Git수정0.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\AGENTS.md",
+                          "sha256":  "1b9d9b063111fec739274fe7f6f1344b9e9b7d01bc6b561a59fe703cf7a4bbc6",
+                          "applies":  "단일main01회신과원본보존,명암/실전장/48px기준으로재검증."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\작업진행방법.md",
+                          "sha256":  "7cca62cd4801a5fe43692cbbc943894ec2641bdca157cdc4d655495287dd1fa8",
+                          "applies":  "이번새필독/currentSHA/ACK/start후독립재검증하며과거ACK재사용금지."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+                          "applies":  "승인된기술수정범위검증과5종기록유지,원본수정금지."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+                          "applies":  "main01Run47ce1a81d7b1새Dispatch로근거반환."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+                          "applies":  "qa는제작팀분리,발견결함은effects기술수정으로반환."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "제품공방src는effects책임;자기새output만작성."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\규정.md",
+                          "sha256":  "afeeb75712ebaf5123392ec531b991b51fb932f2499e61b7af7c89bf7bb38458",
+                          "applies":  "정상/실패/미검증과미적합격을구분."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "본문22문서별적용ACK/start통과후검사."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+                          "applies":  "조직main01활성/qa독립역할확인."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "자료분류와조직구분;오래된자기게임사용안함."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "공용effects도구검증이며진행중캐릭터원본탐색없음."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+                          "sha256":  "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+                          "applies":  "폐지main02/03대신main01단일운영과저장전Git금지준수."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md",
+                          "sha256":  "95929cc6cb382d485d13223cefc732232a43bdf30163b41c49ed9b0af59b621c",
+                          "applies":  "사용자진행승인범위안기술재검증이며새미술/API/Git승인아님."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\character-effect-workshop_main01-20261111-5fc52518_v001\\report.md",
+                          "sha256":  "053d914933bc24eb0b8067c3a8aa815d0a79cf73ba34bdbc21417b8848edff3d",
+                          "applies":  "원QA2결함/52검사를보존하고경계·불량파일거부·이력보존재현."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_fix_main01-20261111-a2fbd5f6_v002\\report.md",
+                          "sha256":  "19b3de9e51c47d7ee7af9ce9fef0d48583af68424918d5ef30418aecd4c2f551",
+                          "applies":  "제작53/268/15통과는방법참고;별도경계조기전환과실제파일입력재검증."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_fix_main01-20261111-a2fbd5f6_v002\\changed-files.json",
+                          "sha256":  "f6dfeb3c8124f205f343877777f3c4336cb0aa2a74e20bee4056260b510f28e9",
+                          "applies":  "수정2파일afterSHA검사버전고정,그외원본보존확인."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\technical-fix-v002\\수신파일검증.json",
+                          "sha256":  "1c91f1894f7952e073ba02de08f464ed74ab9a6e41002185d7fc60d5df5abc23",
+                          "applies":  "main수신SHA와실제2파일일치확인."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\ACTOR-README.md",
+                          "sha256":  "405a9c8285ef85f940188f75c2b1cb371ba0dff7d933a2d3a89a104f3d7444ac",
+                          "applies":  "원본px→frame→72CSS변환/초시간/복구계약을재검증."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+                          "sha256":  "1ef4d854ad8d3250a57f8ece69605b07c4244eaa2c7599da235c8fbb2be1fb8f",
+                          "applies":  "72CSS/표시3은파생버퍼만,체공/죽음bbox정규화금지."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+                          "sha256":  "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+                          "applies":  "원본영역/여백/발점/판정분리와명암전체프레임/실전장검사."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+                          "sha256":  "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+                          "applies":  "생성API/2.6호출허가없음;신규생성0."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+                          "sha256":  "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be",
+                          "applies":  "저장요청없으므로Git커밋/푸시/예약백업0;자기QA증거만작성."
+                      }
+                  ]
+}

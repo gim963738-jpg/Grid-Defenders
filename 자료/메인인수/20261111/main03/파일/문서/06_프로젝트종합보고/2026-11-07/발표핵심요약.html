@@ -1,0 +1,109 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grid Defenders · 발표핵심요약</title><style>
+*{box-sizing:border-box}html{background:#e8edf0;color:#172b35;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}body{margin:0;font-size:15px;line-height:1.8}main{max-width:1080px;margin:28px auto;background:#fff;padding:58px 62px;box-shadow:0 12px 42px #23384818}h1{font-size:32px;line-height:1.35;margin:0 0 18px;color:#123d42;border-top:7px solid #c6aa69;padding-top:20px}h2{font-size:23px;line-height:1.5;margin:44px 0 16px;color:#175459;border-bottom:2px solid #d8e6e5;padding-bottom:8px}h3{font-size:18px;margin:28px 0 10px;color:#284c55}p{margin:12px 0}strong{font-weight:700;color:#163e43}a{color:#135f78;text-decoration:none;overflow-wrap:anywhere}a:hover{text-decoration:underline}table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.65;margin:14px 0 22px}thead{background:#184b50;color:white}th{font-weight:600;text-align:left;padding:10px}td{vertical-align:top;padding:10px;border-bottom:1px solid #d7e1e3;overflow-wrap:anywhere}tbody tr:nth-child(even){background:#f2f6f6}th:first-child,td:first-child{min-width:100px}pre{background:#edf3f4;border-left:3px solid #76969a;padding:18px;font-size:12px;line-height:1.65;white-space:pre-wrap}code{font-family:Consolas,"Malgun Gothic",monospace;font-size:.9em}li{margin:5px 0}nav.toolbar{position:sticky;top:0;display:flex;gap:16px;background:#12383e;color:white;padding:10px 24px;z-index:5;font-size:13px}nav a{color:#fff}nav button{margin-left:auto;border:1px solid #a7babb;border-radius:4px;background:transparent;color:white;padding:4px 14px;cursor:pointer}.foot{color:#658087;font-size:11px;border-top:1px solid #b8cacc;padding-top:12px;margin-top:36px}.slide{break-after:page;padding:12px 0 28px}.slides main{max-width:1180px}.slides h2{margin-top:14px}.slides li{font-size:18px;margin:16px 0}.slides .slide p{font-size:15px}.slides .slide:last-child{break-after:auto}
+@page{size:A4;margin:16mm 14mm 16mm} @media print{html{background:white}body{font-size:9.5pt;line-height:1.65}main{margin:0;padding:0;max-width:none;box-shadow:none}nav.toolbar{display:none}h1{font-size:24pt}h2{font-size:17pt;break-after:avoid;margin-top:24pt}h3{font-size:12pt;break-after:avoid}p,li{orphans:3;widows:3}table{font-size:8pt;line-height:1.55;page-break-inside:auto}thead{display:table-header-group;print-color-adjust:exact}tr{break-inside:avoid}td,th{padding:6pt 5pt}td:first-child,th:first-child{min-width:0}pre{font-size:8pt;break-inside:avoid}a{color:inherit}body{print-color-adjust:exact}.foot{font-size:8pt}.slides{font-size:13pt}.slides main{max-width:none}.slides h1{font-size:24pt}.slides h2{font-size:23pt}.slides li{font-size:15pt;line-height:1.8;margin:13pt 0}.slides .slide p{font-size:12pt}.slides .slide{padding:0;break-inside:avoid}.slides .slide h2{margin-top:0}}
+@page{size:A4 landscape;margin:13mm 17mm}.slides h1{font-size:18pt;border-top-width:4px;padding-top:8px;margin-bottom:8px}.slides .slide:first-child>p{font-size:10pt}@media print{.slides li{font-size:12.5pt;line-height:1.55;margin:10pt 0}.slides .slide p{font-size:10.5pt;line-height:1.55;margin:8pt 0}.slides h2{font-size:21pt;margin-bottom:10pt}.slides .foot{display:none}.slides .slide hr{margin:8pt 0}.slides .slide{break-inside:avoid}}</style><body class="slides"><nav class="toolbar"><span>GRID DEFENDERS · 2026.11.07</span><a href="프로젝트종합보고서.html">종합 보고서</a><a href="발표핵심요약.html">발표 요약</a><button onclick="window.print()">인쇄 / PDF</button></nav><main><section class="slide"><h1>Grid Defenders — 사업 발표 핵심 요약</h1>
+<p>기준일: <strong>2026-11-07</strong>. 발표용 10장 구성. <code>[확인]</code>은 파일·코드·자료 또는 명시된 검증 기록으로 확인한 내용, <code>[가설]</code>은 사용자·사업 검증이 필요한 판단, <code>[제안]</code>은 향후 실행안, <code>[미확인]</code>은 근거가 확보되지 않은 사항이다. 검사 기록과 이번 최종 재검증은 구분한다. 전체 개발 진행률은 산정하지 않았다.</p>
+<p>상세 근거와 최종 검증 결과: <a href="프로젝트종합보고서.md">프로젝트 종합 보고서</a>, <a href="../../05_프로젝트정의/현재구현현황.md">현재 구현 현황</a>.</p>
+<hr>
+<h2>1장. 무엇을 만드는 프로젝트인가</h2>
+<ul>
+<li><strong>[확인]</strong> Grid Defenders는 실시간 전투에 영웅별 장비 배치·회전·조합을 결합한 모바일 2D 타워 디펜스다.</li>
+<li><strong>[확인]</strong> 병사·영웅 배치, 웨이브 방어, 장비 구매와 조합, 이동하는 보스전, 종료·보상·로비 복귀를 갖춘 <strong>개발 중 웹 시제품</strong>이다.</li>
+<li><strong>[가설]</strong> 주된 이용자는 병력 선택과 장비 구성을 직접 고민하는 모바일 전략 게임 이용자다. 연령·성별·국가와 실제 수요는 검증되지 않았다.</li>
+<li><strong>[제안]</strong> 다음 목표는 첫 플레이부터 첫 보스·결과·재도전까지 이해하고 즐길 수 있는 체험판을 완성하는 것이다.</li>
+</ul>
+<p><strong>발표 메모:</strong> “핵심은 전투 중 제한된 자원과 장비 공간을 배분하는 전략입니다. 현재는 이 경험을 실제로 조작할 수 있는 단계이며, 출시와 사업성이 검증된 단계는 아닙니다.”</p>
+<p>근거: <a href="../../01_큰기획/큰기획.md">큰기획의 현재 방향</a>, <a href="../../05_프로젝트정의/현재구현현황.md">현재 구현 현황</a>.</p>
+<hr>
+</section><section class="slide"><h2>2장. 사용자가 경험하는 한 판</h2>
+<ul>
+<li><strong>[확인]</strong> 로비 → 전투 시작 → 병사·영웅 배치 → 웨이브 방어 → 보스전 → 결과·보상 → 로비로 이어지는 기본 흐름이 구현되어 있다.</li>
+<li><strong>[확인]</strong> 전투 중 골드를 병력과 상품에 나누어 쓰고, 영웅 장비판에서 아이템의 모양·회전·조합을 관리한다.</li>
+<li><strong>[확인]</strong> 일반전은 길목을 지키는 방어전이고 보스전은 아군이 이동해 맞붙는 전투다. 현재 일반 모드에는 보스 제한시간이 있다.</li>
+<li><strong>[가설]</strong> 같은 병력으로도 장비 구성과 투자 순서에 따라 다른 해법을 찾는 경험이 반복 플레이의 이유가 될 수 있다. 실제 빌드 다양성과 재도전 의향은 아직 측정하지 않았다.</li>
+</ul>
+<p><strong>발표 메모:</strong> “병력을 먼저 늘릴지, 장비와 조합에 투자할지가 플레이의 주요 판단입니다. 전투와 장비 퍼즐이 함께 재미있는지는 이용자 관찰로 확인하겠습니다.”</p>
+<p>근거: <a href="../../05_프로젝트정의/현재구현현황.md">현재 구현 현황</a>. 로비 영웅 편성·소유·장비 전체가 전투에 연결된 것은 아니다.</p>
+<hr>
+</section><section class="slide"><h2>3장. 초기 기획과 현재 개발 방향</h2>
+<ul>
+<li><strong>[확인]</strong> 초기 원본의 ‘일시정지 없는 전투’는 이후 사용자 요구에 따라 배속·일시정지·중단 복귀를 지원하는 방향으로 변경됐다.</li>
+<li><strong>[확인]</strong> 현재 전투는 가로 논리 화면 800×360, 배치판 5×4, 영웅 최대 3명이다. 영웅 장비판은 5×4, 공용 가방은 7×3, 상점 상품은 5개로 구성한다. 수치는 시제품 기준이다.</li>
+<li><strong>[확인]</strong> 원본에 있는 40웨이브·고유 보스 4종·최종 성장에 따른 네 번째 영웅 슬롯은 기획 범위다. 40웨이브 완주·최종 승리 콘텐츠가 완성됐다는 뜻은 아니다.</li>
+<li><strong>[확인]</strong> 로비 영웅 연결은 후속 작업이며, 진형 간격 조절과 강제 튜토리얼은 구현 과제다. 힐러 역할·스킬 설계는 영웅 콘셉트 확정에 맞춰 진행한다.</li>
+</ul>
+<p><strong>발표 메모:</strong> “원본은 방향과 변경 이력을 보여 줍니다. 지금의 구현 판단은 최신 요구와 현재 코드에 따릅니다. 화면에 버튼이나 슬롯이 있다는 이유만으로 해당 기능 전체를 완료로 잡지 않습니다.”</p>
+<p>근거: <a href="../../../자료/기획원본/게임기획서V2_본문추출.txt">HWP 원문 검색용 추출본</a>, <a href="../../05_프로젝트정의/현재구현현황.md">현재 구현 현황</a>.</p>
+<hr>
+</section><section class="slide"><h2>4장. 어디까지 구현됐는가</h2>
+<ul>
+<li><strong>[확인·사용 가능한 시제품]</strong> 배치·이동·자동 공격, 상점 구매·판매·회전·조합·장비 효과, 웨이브와 보스 전환, 전투 결과·로비 복귀의 기본 동작이 있다. 정식 콘텐츠와 밸런스 검증은 남아 있다.</li>
+<li><strong>[확인·추가 검증 필요]</strong> 브라우저 로컬 저장, 체크포인트·이어하기, 보상 중복 방지와 병사 훈련 효과가 있다. 실제 모바일 이탈·복귀와 장시간 플레이 검증을 별도로 완료해야 한다.</li>
+<li><strong>[확인·제작 중]</strong> 캐릭터·몬스터·스프라이트·이펙트·세계관 자료가 분산 작업 영역에 존재한다. 제작물 보유, 정리·통합, 게임 적용 완료를 각각 구분한다.</li>
+<li><strong>[확인·미완료/보류]</strong> 진형 편집·저장·보스 적용, 강제 튜토리얼, 로비 영웅 연결, 정식 완주 콘텐츠가 남아 있다. 출시 앱 포장·계정 저장·결제·운영은 결정과 구현이 필요하다.</li>
+</ul>
+<p><strong>발표 메모:</strong> “현재 단계는 핵심 시스템이 연결된 시제품입니다. 남은 일은 단순히 콘텐츠 수를 늘리는 것만이 아니라, 첫 사용 경험·모바일 조작·완주와 성장 흐름을 안정화하는 것입니다.”</p>
+<p>근거: <a href="../../05_프로젝트정의/현재구현현황.md">현재 구현 현황</a>, <a href="브랜치현황.json">작업 영역 조사</a>.</p>
+<hr>
+</section><section class="slide"><h2>5장. 어떤 게임과 비교하며 무엇을 검증할 것인가</h2>
+<ul>
+<li><strong>[외부 확인]</strong> 「운빨존많겜 / Lucky Defense」는 무작위 소환·합성·룰렛을 강조한다. Grid Defenders는 직접 선택하는 병력과 장비 공간 관리에 초점을 둔다. <a href="https://play.google.com/store/apps/details?id=com.percent.aos.luckydefense">공식 Google Play</a></li>
+<li><strong>[외부 확인]</strong> 「Backpack Battles」는 아이템 구매·제작·배치와 PvP 자동 전투를 결합한다. Grid Defenders의 비교 지점은 여러 영웅의 장비판과 실시간 웨이브·보스전의 결합이다. <a href="https://store.steampowered.com/app/2427700/Backpack_Battles/">공식 Steam</a></li>
+<li><strong>[외부 확인]</strong> 「Legion TD 2」는 군대 구성과 웨이브 방어를 중심으로 한다. 병력의 배치와 전투 판단이라는 공통점을 비교할 수 있다. <a href="https://www.legiontd2.com/press/">공식 소개</a></li>
+<li><strong>[가설]</strong> 차별화 후보는 <strong>직접 선택하는 병력 + 영웅별 장비 퍼즐 + 방어전/보스전 전환</strong>이다. 독창성·우월성·흥행 가능성을 입증한 것은 아니며, 조작 부담보다 전략적 만족이 큰지 검증해야 한다.</li>
+</ul>
+<p><strong>발표 메모:</strong> “이미 수요가 있는 장르 요소를 결합하고 있습니다. 결합 자체보다 각 시스템이 서로 의미 있는 선택을 만들어 주는지가 경쟁력의 관건입니다.”</p>
+<p>외부 자료 확인일: 2026-11-07. 스토어 설치 수·리뷰 수를 이 프로젝트의 잠재 이용자 수나 매출로 환산하지 않았다.</p>
+<hr>
+</section><section class="slide"><h2>6장. 시장과 사업화 방향</h2>
+<ul>
+<li><strong>[외부 확인]</strong> 한국콘텐츠진흥원의 『2025 대한민국 게임백서』 발표에 따르면 <strong>2024년 국내 게임산업 매출은 23조 8,515억 원, 모바일은 14조 710억 원·59.0%</strong>다. 모바일 시장의 배경 자료이며 이 프로젝트의 직접 시장 규모나 예상 매출이 아니다. <a href="https://welcon.kocca.kr/ko/info/business/1957374">KOCCA 발표</a></li>
+<li><strong>[가설]</strong> ‘무료 체험 후 일회성 전체 해금’은 운영 부담을 제한할 수 있으나 구매할 만큼 충분한 콘텐츠가 필요하다. ‘무료 이용 + 외형 판매’는 전략 선택을 유지하기 쉽지만 캐릭터 애착과 지속적인 아트 제작이 필요하다.</li>
+<li><strong>[제안]</strong> 먼저 첫 플레이 이해도·재도전 의향·체감 조작 부담을 검증하고, 그 결과에 따라 위 대안의 상품 가치와 가격을 시험한다. 광고는 SDK·경제 설계·운영 부담을 확인한 후 별도 판단한다.</li>
+<li><strong>[미확인]</strong> 수익 모델, 상품·가격, 목표 국가, 유입 경로, 전환율, 유지율, 실제 매출은 확정·측정되지 않았다. 원본의 ‘병사 유료 소환’은 인게임 골드 소비이며 현금 판매를 뜻하지 않는다.</li>
+<li><strong>[미확인/산정안]</strong> 팀 인원과 예산은 미확인이다. 비용은 <code>역할별 투입 기간×합의 단가 + 콘텐츠 제작·외주비 + 테스트·배포·운영비</code>로 산정하고, 개발·기획·아트/UI·QA 역할을 누가 담당할지 먼저 정한다.</li>
+</ul>
+<p><strong>발표 메모:</strong> “큰 모바일 시장이 곧 우리 게임의 매출 전망은 아닙니다. 수익화 방식부터 고정하기보다 체험의 가치와 이용자 반응을 확인하고, 감당할 수 있는 운영 방식으로 좁히겠습니다.”</p>
+<p>시장 자료: 2024년 실적, 발표 게시일 2026-03-26, 확인일 2026-11-07. 비용 수식은 계획 수립 방법이며 확정 예산이나 견적이 아니다.</p>
+<hr>
+</section><section class="slide"><h2>7장. 이번 조사와 정리에서 실제 수행한 내용</h2>
+<ul>
+<li><strong>[수행]</strong> 분산된 결과물 중 <strong>아트 원본 41파일</strong>을 기준 프로젝트에 통합했다. 원본 보관과 게임용 리소스 적용은 구분하며, 통합 수를 신규 플레이 콘텐츠 수로 계산하지 않는다. <a href="../../../자료/아트원본/manifest.json">원본 manifest</a></li>
+<li><strong>[수행]</strong> <strong>세계관 관련 7파일</strong>을 통합하고 출처·원본 해시·최종 위치를 기록했다. 설정집·지도 열람이 가능해졌으며 기존 캐릭터 소속 배정이나 게임 내 세계관 적용을 자동 완료한 것은 아니다. <a href="세계관통합_출처.json">출처 기록</a></li>
+<li><strong>[수행]</strong> HWP 원본을 기획원본 폴더로 이관하고 <strong>4쪽·75문단의 검색용 본문</strong>을 생성했다. 추출 전후 원본 SHA256을 비교해 원본 보존을 확인했다. <a href="기획원본_이관.json">이관 기록</a>, <a href="../../../자료/기획원본/게임기획서V2_본문추출.txt">본문 추출본</a></li>
+<li><strong>[측정 범위 제한]</strong> <code>게임/public/assets</code>의 동일 조건 파일 합계는 <strong>51,182,826B → 48,924,519B, 약 4.41% 감소</strong>했다. 압축 전 파일 용량이며 로딩 시간·프레임 속도·메모리 개선을 측정한 결과는 아니다. 원본 보관으로 저장소 전체 용량은 증가했다. <a href="../../../자료/아트원본/verification.json">아트 검증 기록</a></li>
+<li><strong>[최종 검사 확인]</strong> 모델 <strong>27파일·53회 실행·1,242항목</strong>, 별도 브라우저 <strong>11개 검사·359항목</strong>, 타입 검사와 <strong>HTML 진입점 4개 빌드</strong>가 통과했다. 브라우저 검사는 기본 세로 지오메트리 기준이며 가로 전체 화면·실제 모바일 검증 완료를 뜻하지 않는다. <a href="검증요약_코드.json">코드 검사</a>, <a href="브라우저검증.json">브라우저 검사</a>, <a href="빌드로그.txt">빌드 로그</a></li>
+</ul>
+<p>브라우저 최초 실패 4건은 테스트 배치칸과 필수 화면 요소를 수정·보강한 후 통과했다. <strong>assassin/blade/fire/sword 연출 갤러리 4개는 실행·육안 검토하지 않았다.</strong> 이 검증 보완에서 게임 코드 API·원본 자료·기존 게임 저장 데이터는 변경하지 않았다. <a href="브라우저검증_초기.json">초기 결과</a>, <a href="브라우저검증.json">최종 원인 분류</a></p>
+<p><strong>발표 메모:</strong> “이번에는 보고서 작성과 함께 흩어진 자료를 실제로 모으고 추적 가능하게 정리했습니다. 자료 통합, 파일 용량 개선, 기능 검증은 서로 다른 성과로 설명하겠습니다.”</p>
+<hr>
+</section><section class="slide"><h2>8장. 지금 해결해야 할 주요 위험</h2>
+<ul>
+<li><strong>[확인] 요구사항과 문서의 시점 차이:</strong> 초기 세로 화면·무제한 가방·일시정지 금지 같은 설명이 이후 변경과 공존했다. 최신 구현 현황을 기준 문서로 두고 과거 기록은 변경 이력으로 보존한다.</li>
+<li><strong>[확인] 분산된 작업과 적용 범위:</strong> 작업 화면의 ‘완료’ 표시만으로 게임 통합을 판단할 수 없다. 진행 중 원본을 보존하고 독립적으로 검증된 결과물부터 반영해야 한다.</li>
+<li><strong>[확인] 이펙트 제작과 게임 적용의 간격:</strong> 무료 재료는 변형 포함 632개·기본 497개다. 절차적 부품 보관함과 PNG 재료함은 별도 체계이고 실제 스킬 장착은 후속이다. 원본 소재의 배포·도구 번들 제한도 함께 확인해야 한다. <a href="https://craftpix.net/file-licenses/">CraftPix 이용 조건</a>, <a href="https://untiedgames.itch.io/super-pixel-effects-gigapack">unTied 공식 배포</a></li>
+<li><strong>[미검증] 모바일 사용성과 반복 플레이:</strong> 작은 터치 영역, 전투 중 정보량, 가방 조작 부담, 빌드 편중과 보스 난이도는 실제 이용자·기기에서 확인해야 한다. 검사 개수만으로 이 위험을 해소했다고 볼 수 없다.</li>
+</ul>
+<p><strong>발표 메모:</strong> “핵심 위험은 구현량보다 연결과 검증의 간격입니다. 완료 표시·보유 자료 수·자동 검사 수와 이용자가 경험하는 완성도를 분리해 관리하겠습니다.”</p>
+<p>라이선스 출처 확인일: 2026-11-07. CodeManu는 공식 페이지의 public domain 본문과 CC BY 4.0 메타데이터가 달라 출처·라이선스·변경 표시를 보존하는 방식으로 관리 중이다. <a href="https://codemanu.itch.io/vfx-free-pack">공식 페이지</a></p>
+<hr>
+</section><section class="slide"><h2>9장. 다음 실행 계획과 완료 기준</h2>
+<ul>
+<li><strong>P0 · 기준 상태 확정:</strong> 목적은 이후 작업의 회귀와 중복을 줄이는 것. 통합 목록·현재 구현 명세·검사 결과를 고정하고 첫 실행부터 보상 복귀까지 확인한다. <strong>완료 기준:</strong> 출처 추적, 필수 검사 통과, 결과·저장 상태의 오류 재현 및 해결 확인. 자원: 개발·QA.</li>
+<li><strong>P0 · 첫 플레이 경험:</strong> 목적은 배치·구매·장착·조합을 이해시키는 것. 강제 튜토리얼과 진형 조작 범위를 정하고 실제 기기에서 시험한다. <strong>완료 기준:</strong> 처음 접한 이용자의 핵심 행동 수행 여부와 막힌 지점을 관찰·기록하고 주요 방해 요소 수정. 자원: 기획·UI·개발·테스터.</li>
+<li><strong>P1 · 완주 가능한 체험판:</strong> 목적은 시작·성장·보스·결과·재도전의 가치를 검증하는 것. 목표 웨이브 수와 보스 구성을 확정하고 밸런스·보상·이탈 복귀를 점검한다. <strong>완료 기준:</strong> 합의한 분량의 정상 완주·패배·복귀 경로와 재도전 흐름 검증. 자원: 기획·개발·아트·QA.</li>
+<li><strong>P2 · 성장 연결과 사업 실험:</strong> 목적은 전투 밖의 지속 동기와 제공 방식을 확인하는 것. 후속 로비 영웅 연결, 앱 배포 방식, 계정·결제 필요 범위를 결정한다. <strong>완료 기준:</strong> 데이터 소유·저장 규칙, 상품 가설, 운영 책임·비용 및 검증 계획의 문서화. 자원: 개발·기획·아트·운영 담당.</li>
+</ul>
+<p><strong>발표 메모:</strong> “기간을 먼저 약속하기보다 각 단계의 종료 조건을 정하겠습니다. 담당자와 투입 가능 시간이 확인된 뒤 의존 관계를 반영해 일정을 산정합니다.”</p>
+<p>이 순서는 실행 계획 제안이며 이번 정리 작업에서 해당 기능을 모두 구현했다는 의미가 아니다. 인력·콘텐츠 분량이 미정이므로 확정 출시일을 제시하지 않는다.</p>
+<hr>
+</section><section class="slide"><h2>10장. 지금 필요한 의사결정</h2>
+<ul>
+<li><strong>지금 확정 — 체험판 범위:</strong> 40웨이브 전체를 바로 목표로 할지, 첫 보스까지의 체험을 먼저 완성할지 선택한다. <strong>권장:</strong> 첫 보스 구간부터 검증하고 확장. 판단 기준은 완주 품질과 검증 가능한 제작 범위다.</li>
+<li><strong>지금 확정 — 진형 조작과 튜토리얼:</strong> 전열·중열·후열 간격 조절의 적용 대상·허용 시점·저장 규칙을 정한다. <strong>권장:</strong> 합의한 최소 조작 범위부터 구현하고 실제 터치로 이해되는지 확인한다.</li>
+<li><strong>추가 검증 — 목표 사용자와 한 판 길이:</strong> 전략적 만족과 전투 중 조작 부담을 관찰한다. <strong>권장:</strong> 목표 이용자군과 테스트 과제를 먼저 정하고, 재도전 의향·실패 원인을 수집한다.</li>
+<li><strong>후속 확정 — 영웅 연결과 수익화:</strong> 로비 영웅의 소유·성장·장비 중 어떤 데이터를 전투가 사용할지 먼저 정한다. 상품·가격은 플레이 검증 이후 선택하며 현금 영웅 판매나 확률형 상품을 확정안으로 제시하지 않는다.</li>
+<li><strong>출시 전 확정 — 책임과 운영 조건:</strong> 담당자·예산·목표 국가·앱 포장·지원 기기·계정 저장·결제·문의 대응을 결정한다. <strong>다음 단계 진입 기준:</strong> 핵심 플레이 검증과 필수 기술 검증을 완료하고 남은 위험의 담당자·처리 기준을 정한 상태다.</li>
+</ul>
+<p><strong>발표 메모:</strong> “이번 발표에서 요청할 결정은 체험판 범위와 검증 우선순위입니다. 출시 일정·수익 전망·투입 예산은 아직 검증되지 않은 내용을 숫자로 확정하기보다, 필요한 정보를 확보한 뒤 판단하겠습니다.”</p>
+<p>근거와 후속 의사결정표: <a href="프로젝트종합보고서.md">프로젝트 종합 보고서</a>.</p></section><p class="foot">Grid Defenders · 자료 기준 2026-11-07 · 사실·제안·미확인 구분 및 검증 범위는 본문 참조</p></main></body></html>

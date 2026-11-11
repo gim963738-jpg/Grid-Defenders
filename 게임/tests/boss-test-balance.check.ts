@@ -1,5 +1,6 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {Defense} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 import {calibrateBossTest} from '../src/bossTestBalance';
 export function checkBossTestBalance(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};

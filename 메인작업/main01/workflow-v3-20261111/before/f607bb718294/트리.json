@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "root": "world",
+  "nodes": {
+    "world": {
+      "name": "세계관",
+      "parent": null,
+      "domainPath": [
+        "세계관"
+      ],
+      "index": "도메인/세계관/index.json",
+      "order": 0,
+      "kind": "domain"
+    },
+    "monsters": {
+      "name": "몬스터",
+      "parent": "world",
+      "domainPath": [
+        "세계관",
+        "몬스터"
+      ],
+      "index": "도메인/세계관/몬스터/index.json",
+      "order": 1,
+      "kind": "domain"
+    },
+    "monster_sprites": {
+      "name": "몬스터 스프라이트",
+      "parent": "monsters",
+      "domainPath": [
+        "세계관",
+        "몬스터",
+        "몬스터 스프라이트"
+      ],
+      "index": "도메인/세계관/몬스터/몬스터 스프라이트/index.json",
+      "order": 2,
+      "kind": "specialist"
+    },
+    "characters": {
+      "name": "캐릭터",
+      "parent": "world",
+      "domainPath": [
+        "세계관",
+        "캐릭터"
+      ],
+      "index": "도메인/세계관/캐릭터/index.json",
+      "order": 3,
+      "kind": "domain"
+    },
+    "splash": {
+      "name": "캐릭터 일러스트",
+      "parent": "characters",
+      "domainPath": [
+        "세계관",
+        "캐릭터",
+        "캐릭터 일러스트"
+      ],
+      "index": "도메인/세계관/캐릭터/캐릭터 일러스트/index.json",
+      "order": 4,
+      "kind": "specialist"
+    },
+    "sprites": {
+      "name": "캐릭터 스프라이트",
+      "parent": "characters",
+      "domainPath": [
+        "세계관",
+        "캐릭터",
+        "캐릭터 스프라이트"
+      ],
+      "index": "도메인/세계관/캐릭터/캐릭터 스프라이트/index.json",
+      "order": 5,
+      "kind": "specialist"
+    },
+    "character_stats": {
+      "name": "캐릭터 능력치",
+      "parent": "characters",
+      "domainPath": [
+        "세계관",
+        "캐릭터",
+        "캐릭터 능력치"
+      ],
+      "index": "도메인/세계관/캐릭터/캐릭터 능력치/index.json",
+      "order": 6,
+      "kind": "specialist"
+    },
+    "character_skills": {
+      "name": "캐릭터 스킬",
+      "parent": "characters",
+      "domainPath": [
+        "세계관",
+        "캐릭터",
+        "캐릭터 스킬"
+      ],
+      "index": "도메인/세계관/캐릭터/캐릭터 스킬/index.json",
+      "order": 7,
+      "kind": "specialist"
+    },
+    "video": {
+      "name": "영상·모션 소스",
+      "parent": "sprites",
+      "domainPath": [
+        "세계관",
+        "캐릭터",
+        "캐릭터 스프라이트",
+        "영상·모션 소스"
+      ],
+      "index": "도메인/세계관/캐릭터/캐릭터 스프라이트/영상·모션 소스/index.json",
+      "order": 8,
+      "kind": "specialist"
+    },
+    "effects": {
+      "name": "이펙트·제작도구",
+      "parent": "character_skills",
+      "domainPath": [
+        "세계관",
+        "캐릭터",
+        "캐릭터 스킬",
+        "이펙트·제작도구"
+      ],
+      "index": "도메인/세계관/캐릭터/캐릭터 스킬/이펙트·제작도구/index.json",
+      "order": 9,
+      "kind": "specialist"
+    }
+  },
+  "externalRoles": [
+    "ui",
+    "items",
+    "gameplay",
+    "qa"
+  ],
+  "organizationFile": "조직.json"
+}

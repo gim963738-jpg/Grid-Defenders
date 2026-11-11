@@ -1,0 +1,103 @@
+*{box-sizing:border-box}body{margin:0;background:#090f16;color:#e9dfc4;font-family:system-ui,sans-serif;font-size:14px}button{font:inherit;color:inherit;cursor:pointer;border:2px solid #566256;border-radius:6px;background:#20352f;min-height:48px}button:focus-visible{outline:2px solid #f8db88;outline-offset:2px}[hidden]{display:none!important}.preview-tools{max-width:800px;margin:20px auto 12px;display:flex;justify-content:space-between;align-items:center;gap:12px}.preview-tools b{font-size:20px}.preview-tools p,.preview-note{font-size:12px;color:#99afba}.preview-tools button{padding:8px 16px}.preview-scroll{overflow:auto;padding:0 12px}.landscape{width:800px;height:360px;flex:none;margin:auto;padding:12px;display:grid;grid-template-columns:504px 264px;grid-template-rows:208px 120px;gap:8px;background:#142223;box-shadow:0 12px 40px #0008;border-radius:8px}.region{position:relative;min-width:0;min-height:0;border-radius:6px;overflow:hidden;outline:2px solid transparent;outline-offset:-2px}.show-guides .field{outline-color:#4da6e8}.show-guides .market{outline-color:#dfb563}.show-guides .command{outline-color:#94c58c}.field{background:linear-gradient(#10291d44,#10291d22),url('/assets/battlefields/forest-clearing-v1.png') center/cover}.region-label{position:absolute;top:8px;left:8px;padding:4px 8px;background:#10232de8;color:#9bd8ff;font-size:12px;z-index:2}.field-hud{height:48px;display:flex;align-items:center;justify-content:flex-end;gap:16px;padding:8px 12px;background:linear-gradient(#091d18dc,transparent)}.field-hud>span:first-child{display:none}.field-hud strong{font-size:14px}.field-hud>span{font-size:20px}.field-grid{width:192px;height:128px;margin:0 auto;background:repeating-linear-gradient(0deg,transparent 0 30px,#c8e8ac30 30px 32px),repeating-linear-gradient(90deg,transparent 0 30px,#c8e8ac30 30px 32px);border:2px solid #c8e8ac30}.field-footer{height:32px;display:flex;align-items:center;justify-content:space-between;padding:4px 12px;background:#112719cc;font-size:12px}.market{background:#1b292b;padding:8px}.market-heading{height:24px;display:flex;justify-content:space-between;font-size:12px;color:#dfc68f}#offers{display:grid;grid-template-columns:repeat(5,94px);gap:4px;margin-top:4px}.offer{height:72px;min-width:0;padding:2px;display:flex;align-items:center;flex-direction:column;border-color:#59604d}.item-art{display:block;width:72px;height:32px}.item-art svg{width:100%;height:100%}.offer b,.offer small{font-size:12px;line-height:16px}.offer small{color:#e5c47d}.command{grid-column:2;grid-row:1/3;background:#1b2c2b;padding:8px;display:flex;flex-direction:column;gap:8px}.command-heading{font-size:12px;height:16px;color:#b0d49c}.command nav{display:grid;grid-template-columns:120px 120px;gap:8px}.command nav button[aria-pressed=true]{background:#c5a76b;color:#152321;border-color:#e4c98d}.command-body{min-height:0;overflow:auto;flex:1;scrollbar-width:thin}h2{font-size:14px;margin:0 0 8px;line-height:20px}h2 small{float:right;font-size:12px;font-weight:400}.soldiers{display:grid;grid-template-columns:repeat(3,76px);gap:8px;margin-bottom:12px}.soldiers button{height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:20px}.soldiers b{font-size:14px}.soldiers small{font-size:12px;color:#d5bc85}.heroes{display:flex;gap:8px}.heroes button{position:relative;width:120px;height:96px;padding:0;overflow:hidden}.heroes img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}.heroes span{position:absolute;bottom:0;left:0;right:0;background:#13251de6;font-size:12px;padding:4px}.equip-row{display:flex;gap:8px;align-items:center;margin-bottom:12px}.equip-row button{width:76px;height:80px;font-size:12px}.silhouette{width:76px;height:80px;display:grid;place-items:center;font-size:64px;color:#71867c}.bag{display:grid;grid-template-columns:repeat(4,56px);gap:8px}.bag button{width:56px;height:48px;color:#657a6f}.preview-note{max-width:800px;margin:16px auto;line-height:20px}.show-guides .market-heading strong{color:#ffce78}.show-guides .command-heading{color:#b6e5a7}.landscape:not(.show-guides) .region-label{display:none}@media(max-width:824px){.preview-tools,.preview-note{margin-left:12px;margin-right:12px}.preview-tools b{font-size:16px}}
+/* Preserve even dimensions when a panel scrolls. */
+.command-body{scrollbar-width:none}.command-body::-webkit-scrollbar{display:none}.heroes button,.equip-row button,.silhouette{flex:none}
+
+/* Click-to-open inventory window, isolated from the live game. */
+.landscape{position:relative}.command-empty{font-size:14px;line-height:24px;text-align:center;color:#91a99c;margin:auto 0}.inventory-window{position:absolute;z-index:10;right:12px;top:12px;width:552px;height:336px;display:flex;flex-direction:column;padding:12px;border:2px solid #a28d60;border-radius:8px;background:#132422;box-shadow:0 8px 32px #000a}.inventory-window-heading{display:flex;justify-content:space-between;align-items:center;height:48px;flex:none;margin-bottom:8px}.inventory-window-heading h2{margin:0;font-size:20px}.inventory-window-heading button{width:48px;height:48px;font-size:24px}.inventory-window .command-body{scrollbar-width:thin}.inventory-window #soldier-summon,.inventory-window #hero-summon{padding:0 8px 8px}.inventory-window .soldiers{grid-template-columns:repeat(3,156px);gap:8px}.inventory-window .heroes button{width:156px;height:112px}.ingame-equipment{display:grid;grid-template-columns:220px 272px;gap:8px;padding-bottom:8px}.hero-equipment,.shared-equipment{border:2px solid #45594d;border-radius:6px;padding:6px;background:#192d27}.selected-hero{height:48px;display:flex;align-items:center;gap:4px;margin-bottom:8px}.selected-hero>span{font-size:24px}.selected-hero div{display:flex;flex-direction:column;flex:1}.selected-hero small{font-size:12px}.selected-hero b{font-size:14px}.selected-hero button{width:56px;font-size:12px;padding:2px}.ingame-equipment h2{text-align:center}.hero-gear-grid{display:grid;grid-template-columns:repeat(4,48px);gap:4px}.inventory-window .bag{display:grid;grid-template-columns:repeat(5,48px);gap:4px}.hero-gear-grid button,.inventory-window .bag button{width:48px;height:48px;min-height:48px;background:#1a3028;border:2px solid #536d5c;border-radius:4px;padding:0}.hero-gear-grid button:nth-child(even),.inventory-window .bag button:nth-child(even){background:#344c40}.equipment-wallet{height:48px;display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-bottom:8px;font-size:12px}.equipment-wallet span{border:2px solid #40594c;border-radius:4px;padding:4px 8px;min-width:96px}.equipment-wallet b{display:block;text-align:right;color:#edc978}.combine-caption,.item-description{font-size:12px;line-height:18px;color:#b7c8ac;margin:8px 0}.combine-button{width:100%;height:48px}.item-description{padding:8px;border:2px solid #40594c;border-radius:4px}button:disabled{opacity:.5;cursor:default}
+
+/* Smaller launcher faces; retain the mobile touch target height. */
+.command nav{grid-template-columns:104px 104px;gap:8px;justify-content:center}.command nav button{width:104px;height:48px;min-height:48px;font-size:12px;padding:4px 8px}
+
+.command nav{grid-template-columns:104px 104px}.command nav button[data-panel=equipment]{grid-column:1 / 3;justify-self:center}
+
+/* Fit the full patrol loop around the unchanged 192 x 128 deployment grid.
+   The source road centers (y ~390 and ~1140 / 1317) map to y34 and y188. */
+.field{background-image:linear-gradient(#10291d22,#10291d12),url('/assets/battlefields/forest-clearing-v1.png');background-size:100% 100%,100% 270px;background-position:center,center -46px;background-repeat:no-repeat}
+.field-footer{background:transparent;text-shadow:0 2px 4px #06170a,0 0 4px #06170a}
+
+/* Components parked outside the screen while placement is reviewed. */
+.market-slot{grid-column:1;grid-row:2;background:#12201f}.command-slot{grid-column:2;grid-row:1/3;background:#172825}.show-guides .market-slot{outline-color:#dfb56366}.show-guides .command-slot{outline-color:#94c58c66}.component-staging{width:800px;margin:24px auto 0;padding:12px;border:2px dashed #52666c;border-radius:8px;background:#101c23}.component-staging>h2{font-size:16px;margin:0 0 8px}.component-staging>p{font-size:12px;color:#9bb0b7;margin:0 0 12px}.component-staging .market{width:504px;height:120px;margin-bottom:16px}.staged-actions nav{display:flex;gap:8px}.staged-actions button{width:104px;height:48px;font-size:12px;padding:4px 8px}.staged-actions button[aria-pressed=true]{background:#c5a76b;color:#152321;border-color:#e4c98d}@media(max-width:824px){.component-staging{margin-left:12px;margin-right:12px}}
+
+/* One continuous terrain surface; route follows the deployment footprint. */
+.landscape{background:#264626 url('/assets/battlefields/forest-clearing-v1.png') center 60%/1600px 1766px no-repeat;border-radius:0;box-shadow:none}
+.landscape .region,.landscape.show-guides .region{outline:none;border:0;border-radius:0;background-color:transparent}
+.landscape .field{isolation:isolate;background:none;overflow:visible}
+.field::before{content:"";position:absolute;z-index:-1;left:112px;top:0;width:280px;height:208px;background:url('/assets/battlefields/forest-clearing-v1.png') center -46px/280px 270px no-repeat;mask-image:linear-gradient(to right,transparent,#000 12px,#000 calc(100% - 12px),transparent),linear-gradient(to bottom,transparent,#000 12px,#000 calc(100% - 12px),transparent);mask-composite:intersect;pointer-events:none}
+.field-hud{background:none}.field-grid{position:relative}.field-footer{background:none}.region-label{display:none!important}
+
+/* Keep only the road band, so its surroundings share the full-screen grass. */
+.field::before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='208' viewBox='0 0 280 208' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='soft'%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3C/filter%3E%3C/defs%3E%3Crect x='20' y='34' width='240' height='154' rx='28' fill='none' stroke='white' stroke-width='26' filter='url(%23soft)'/%3E%3C/svg%3E");mask-composite:add}
+
+/* Preserve tile placement after removing the battle text. */
+.field-grid{margin:48px auto 0}
+
+/* User red-line bounds: enlarge the patrol loop and its six-by-four grid together. */
+.field::before{left:24px;top:-20px;width:480px;height:268px;background-size:480px 348px;background-position:center -60px;mask-size:100% 100%;mask-repeat:no-repeat}
+.field-grid{position:absolute;left:90px;top:40px;width:348px;height:168px;margin:0;border:0;background:repeating-linear-gradient(0deg,transparent 0 40px,#c8e8ac48 40px 42px),repeating-linear-gradient(90deg,transparent 0 56px,#c8e8ac48 56px 58px);outline:2px solid #c8e8ac48;outline-offset:-2px}
+
+/* Slightly wider road edges, preserving loop center and deployment tiles. */
+.field::before{filter:drop-shadow(2px 0 0 #b99a4c) drop-shadow(-2px 0 0 #b99a4c) drop-shadow(0 2px 0 #b99a4c) drop-shadow(0 -2px 0 #b99a4c)}
+
+.battle-preview-controls{position:absolute;z-index:4;right:12px;top:8px;display:flex;gap:4px;height:48px}.battle-preview-controls button,.battle-preview-controls a{display:flex;align-items:center;justify-content:center;gap:4px;width:64px;height:48px;min-height:48px;padding:8px;border:2px solid #75825e;border-radius:6px;background:#182c22dd;color:#eee0ac;text-decoration:none}.battle-preview-controls svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.battle-preview-controls #preview-speed{flex-direction:column;gap:0;padding:2px}.battle-preview-controls #preview-speed svg{width:20px;height:20px}.battle-preview-controls span{font-size:14px;line-height:18px}.battle-preview-controls button[aria-pressed=true]{background:#c4a363;color:#17291e}.battle-preview-controls a:focus-visible{outline:2px solid #f8db88;outline-offset:2px}.patrol-preview-marker{position:absolute;left:0;top:0;width:12px;height:12px;border:2px solid #fff0ad;border-radius:50%;background:#da7646;z-index:3;pointer-events:none;offset-path:path('M 118 36 H 434 Q 482 36 482 84 V 184 Q 482 232 434 232 H 118 Q 70 232 70 184 V 84 Q 70 36 118 36 Z');offset-distance:0%;offset-rotate:0deg}
+
+/* User markup: remove the left tile column and lower the full battlefield. */
+.landscape .field{transform:translateY(32px)}
+.field-grid{left:148px;width:290px}
+.patrol-preview-marker{top:32px}
+/* Explicit half-size controls requested for this preview. */
+.battle-preview-controls{height:24px}
+.battle-preview-controls button,.battle-preview-controls a{width:32px;height:24px;min-height:24px;min-width:32px;padding:2px;border-radius:4px;gap:0}
+.battle-preview-controls svg{width:12px;height:12px}
+.battle-preview-controls #preview-speed{padding:2px}
+.battle-preview-controls #preview-speed span{font-size:12px;line-height:16px}
+
+/* Slightly enlarge the top controls after the half-size review. */
+.battle-preview-controls{height:32px}.battle-preview-controls button,.battle-preview-controls a{width:40px;height:32px;min-width:40px;min-height:32px;padding:4px}.battle-preview-controls svg{width:16px;height:16px}.battle-preview-controls #preview-speed span{font-size:14px;line-height:20px}
+
+/* User-marked right-side positions: soldiers, heroes, shop. */
+.right-action-buttons{position:absolute;right:12px;top:128px;z-index:4;display:flex;flex-direction:column;gap:24px;width:240px}.right-action-buttons button{width:240px;height:56px;min-height:56px;font-size:16px;border:2px solid #819261;background:#1b3026e6;border-radius:6px;color:#efdfb2}.right-action-buttons button[aria-pressed=true]{background:#c4a364;color:#18291e}.inventory-window #shop-preview{display:grid;grid-template-columns:repeat(3,156px);gap:8px}.inventory-window #shop-preview .offer{height:96px}
+
+/* Remove the unused lane clearance left by the deleted 58px tile column. */
+.field::before{left:82px;width:422px;background-size:422px 348px}
+.patrol-preview-marker{offset-path:path('M 176 36 H 434 Q 482 36 482 84 V 184 Q 482 232 434 232 H 176 Q 128 232 128 184 V 84 Q 128 36 176 36 Z')}
+
+/* Compact wave display and slide-away menu / bottom icon shelf. */
+.landscape{overflow:hidden}.compact-wave-hud{position:absolute;top:6px;left:12px;width:100px;height:52px;z-index:4;display:flex;flex-direction:column;align-items:center;gap:2px;color:#f4ecc2;text-shadow:0 2px 4px #122917}.compact-wave-hud strong{font-size:10px;line-height:12px;letter-spacing:2px;width:76px;text-align:center;border:2px solid #b3ad6d;border-radius:4px;background:#203721aa}.compact-wave-hud>b{font-size:22px;line-height:24px}.compact-wave-hud>span{font-size:10px;line-height:12px;background:#1d3424aa;padding:0 6px;border-radius:4px}.compact-wave-hud em{font-style:normal;font-weight:700;color:#f8d878}.right-action-buttons{transition:transform 200ms ease-in,opacity 200ms ease-in}.right-action-buttons.sliding-out{transform:translateX(264px);opacity:0;pointer-events:none}#bottom-action-tray{position:absolute;z-index:5;left:12px;right:12px;bottom:6px;height:64px;display:flex;align-items:stretch;gap:8px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;animation:tray-appear 160ms ease-out both}#bottom-action-tray>button{position:relative;flex:0 0 96px;width:96px;height:64px;min-height:64px;margin:0;padding:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;background:#1a3028ec;border:2px solid #8b9567;border-radius:6px;overflow:hidden;font-size:18px}#bottom-action-tray b,#bottom-action-tray small,#bottom-action-tray span{font-size:12px;line-height:14px}#bottom-action-tray .item-art{height:28px;width:64px}#bottom-action-tray img{height:42px;width:80px;object-fit:cover;object-position:50% 20%}#bottom-action-tray button[aria-pressed=true]{border-color:#ffda78;background:#5b5430}#bottom-action-tray button:focus-visible{outline-offset:-4px}@keyframes tray-appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){.right-action-buttons{transition:none}#bottom-action-tray{animation:none}}
+
+/* Reserve the marked lower-left card slot across all bottom lists. */
+#bottom-action-tray{left:116px}
+
+/* One small size step for the upper-left battle status. */
+.compact-wave-hud{width:112px;height:60px}.compact-wave-hud strong{width:88px;font-size:12px;line-height:14px}.compact-wave-hud>b{font-size:26px;line-height:28px}.compact-wave-hud>span{font-size:12px;line-height:14px}
+
+/* Five visible hero portraits; remaining cards are freely draggable. */
+#bottom-action-tray[data-kind=hero-summon]{width:512px;right:auto;scroll-snap-type:x mandatory;touch-action:pan-y;user-select:none;cursor:grab;scroll-behavior:smooth}
+#bottom-action-tray[data-kind=hero-summon].is-dragging{scroll-snap-type:none;scroll-behavior:auto;cursor:grabbing}
+#bottom-action-tray .preview-hero-card{scroll-snap-align:start;padding:0;justify-content:flex-end;cursor:inherit}
+#bottom-action-tray .preview-hero-portrait{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#bottom-action-tray .preview-hero-card>span{position:relative;z-index:1;display:block;width:100%;padding:2px;background:#11251de6;font-size:12px;line-height:14px;text-align:center}
+
+/* Compact item cards: centered smaller art and price only. */
+#offers{grid-template-columns:repeat(5,72px)}
+.offer{width:72px;justify-content:center;align-items:center;gap:4px}
+.offer .item-art{width:56px;height:28px}
+.inventory-window #shop-preview{grid-template-columns:repeat(5,72px)}
+.inventory-window #shop-preview .offer{height:72px}
+#bottom-action-tray[data-kind=shop-preview]>.offer{flex:0 0 72px;width:72px;justify-content:center;gap:4px}
+#bottom-action-tray[data-kind=shop-preview] .item-art{width:56px;height:24px}
+
+/* Unified 72px cards fill the lower shelf, with only 2px between cards. */
+#bottom-action-tray{height:72px;bottom:4px;gap:2px}
+#bottom-action-tray>button,#bottom-action-tray[data-kind=shop-preview]>.offer{flex:0 0 72px;width:72px;height:72px;min-height:72px;padding:2px;gap:2px}
+#bottom-action-tray[data-kind=hero-summon]{width:368px;touch-action:none}
+#bottom-action-tray[data-kind=soldier-summon]{touch-action:none}
+#bottom-action-tray[data-kind=shop-preview] .item-art{width:56px;height:40px}
+#offers{gap:2px}.item-art{height:40px}.offer .item-art{height:40px}
+.field-grid{display:grid;grid-template-columns:repeat(5,58px);grid-template-rows:repeat(4,42px);background:none;isolation:isolate}
+.deployment-cell{position:relative;width:58px;height:42px;min-width:0;min-height:0;border:0;border-right:2px solid #c8e8ac48;border-bottom:2px solid #c8e8ac48;border-radius:0;background:transparent;padding:2px;display:grid;place-items:center;touch-action:none}
+.placement-ready .deployment-cell:not(.occupied){background:#d4e8a012}.deployment-cell.drop-target{background:#eddd6d66;box-shadow:inset 0 0 0 2px #ffe48c}.placed-unit{display:grid;place-items:center;width:34px;height:34px;border:2px solid #ebcd8a;border-radius:6px;overflow:hidden;background:#1a342b;pointer-events:none}.placed-unit svg{width:100%;height:100%;position:static}.placed-soldier{font-size:24px;line-height:28px;color:#ffe1a2}.deployment-ghost{position:fixed;z-index:100;pointer-events:none;transform:translate(-50%,-50%);width:48px;height:48px;border:2px solid #efd27e;border-radius:6px;overflow:hidden;background:#20382de6;display:grid;place-items:center;opacity:.9}.deployment-ghost svg{position:static;width:100%;height:100%}
+
+.landscape .field{z-index:1}
+
+/* Board actors use combat bodies, never card frames or portrait crops. */
+.deployment-cell{overflow:visible}.placed-unit{position:absolute;left:50%;bottom:2px;transform:translateX(-50%);border:0;border-radius:0;overflow:visible;background:none;width:42px;height:42px;filter:drop-shadow(0 2px 2px #13251a66)}.placed-unit.hero{width:80px;height:56px}.placed-unit img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}.placed-unit .soldier-unit-art{width:42px;height:42px}.deployment-ghost{border:0;border-radius:0;background:none;width:64px;height:64px;overflow:visible}.deployment-ghost img{width:100%;height:100%;object-fit:contain}.deployment-ghost svg{width:100%;height:100%}

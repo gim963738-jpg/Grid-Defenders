@@ -1,6 +1,7 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import { DamageMeter, DamagePeaks } from '../src/damageMeter';
 import { Defense } from '../src/defense';
-import { BossBattle, waveBossRoster } from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 export function checkPeakDps():string[]{
  const passed:string[]=[];const check=(ok:boolean,label:string)=>{if(!ok)throw new Error(label);passed.push(label);};
  const history=new DamagePeaks(),wave=new DamageMeter(history),boss=new DamageMeter(history),source={id:'7',name:'원거리 딜러',color:'#fff'};

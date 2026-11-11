@@ -1,5 +1,6 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {Defense} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 import {createBossBattleView} from '../src/bossBattleView';
 export function checkBossHeroCards(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};

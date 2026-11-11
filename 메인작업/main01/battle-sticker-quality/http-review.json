@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "url": "http://localhost:5173/dev-previews/battle-sticker-quality-v001/index.html",
+  "results": [
+    {
+      "dpr": 1,
+      "http": 200,
+      "css": [
+        800,
+        360
+      ],
+      "png": [
+        800,
+        360
+      ],
+      "drag": true,
+      "bodySizeFootAnchored": true,
+      "independentFiveStickers": true,
+      "modesPreserveLayout": true,
+      "download": true,
+      "deleteReset": true,
+      "narrowScreenScroll": true,
+      "pageErrors": []
+    },
+    {
+      "dpr": 2,
+      "http": 200,
+      "css": [
+        800,
+        360
+      ],
+      "png": [
+        1600,
+        720
+      ],
+      "drag": true,
+      "bodySizeFootAnchored": true,
+      "independentFiveStickers": true,
+      "modesPreserveLayout": true,
+      "download": true,
+      "deleteReset": true,
+      "narrowScreenScroll": true,
+      "pageErrors": []
+    }
+  ],
+  "visibleUserBrowserChanged": false
+}

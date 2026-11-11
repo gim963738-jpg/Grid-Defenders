@@ -1,0 +1,436 @@
+{
+    "source":  "monster-design worktree/output/monsters/round-slime",
+    "inputSource": "자료/아트원본/monster-design/round-slime",
+    "archiveManifest": "자료/아트원본/manifest.json",
+    "processing":  "Read-only sources; 8-direction stationary atlas, uniform scale to104px visible width; fixed64/112 ground pivot; original30-frame animation copied byte-for-byte.",
+    "idle":  {
+                 "anchor":  {
+                                "y":  112,
+                                "x":  64
+                            },
+                 "cell":  128,
+                 "columns":  8,
+                 "visibleWidth":  104
+             },
+    "animation":  {
+                      "fps":  30,
+                      "frameCount":  30,
+                      "sha256":  "57f1e826c2966b745f138ff4b5c05849e26a42849351fa13872208fc818e1388",
+                      "anchor":  {
+                                     "x":  128,
+                                     "y":  228
+                                 },
+                      "visibleWidth":  211,
+                      "file":  "yellow-right-ripple.png"
+                  },
+    "sources":  [
+                    {
+                        "palette":  "yellow",
+                        "file":  "eight_views_v01/yellow/images/01_front_000.png",
+                        "sha256":  "2a3239a674ee3810b77f60807df8fd3b1989b7523dabff87d9aaa5bc53eeef3e",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       108,
+                                       315,
+                                       1146,
+                                       1118
+                                   ],
+                        "direction":  0,
+                        "scale":  0.100192681
+                    },
+                    {
+                        "palette":  "yellow",
+                        "file":  "eight_views_v01/yellow/images/02_front_right_045.png",
+                        "sha256":  "5344c49555da9bd652ccccdc91be4e6c98e2d9ee63727613642ef192a01f2449",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       102,
+                                       314,
+                                       1150,
+                                       1121
+                                   ],
+                        "direction":  1,
+                        "scale":  0.0992366448
+                    },
+                    {
+                        "palette":  "yellow",
+                        "file":  "eight_views_v01/yellow/images/03_right_090.png",
+                        "sha256":  "2ec3e50cece0b82553c606b9898033158fc57ba53dbdd921e8050bb3b7ee06f6",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       110,
+                                       314,
+                                       1141,
+                                       1120
+                                   ],
+                        "direction":  2,
+                        "scale":  0.100872941
+                    },
+                    {
+                        "palette":  "yellow",
+                        "file":  "eight_views_v01/yellow/images/04_back_right_135.png",
+                        "sha256":  "3bfa3d3d4e714ae5a09f13f4730926a4a4075db4b19a1164a3ca23fa01280487",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       113,
+                                       311,
+                                       1143,
+                                       1120
+                                   ],
+                        "direction":  3,
+                        "scale":  0.100970872
+                    },
+                    {
+                        "palette":  "yellow",
+                        "file":  "eight_views_v01/yellow/images/05_back_180.png",
+                        "sha256":  "a7768ed4985e7c4ea818400e693adcc4fb050006e0d45cc9e9c0ae0a866a283d",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       106,
+                                       314,
+                                       1149,
+                                       1118
+                                   ],
+                        "direction":  4,
+                        "scale":  0.09971237
+                    },
+                    {
+                        "palette":  "yellow",
+                        "file":  "eight_views_v01/yellow/images/06_back_left_225.png",
+                        "sha256":  "3afab0be09ff06b31f3f47e45a80fc7d875a3b68c3243b3a656e8020f3815b8a",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       108,
+                                       314,
+                                       1146,
+                                       1120
+                                   ],
+                        "direction":  5,
+                        "scale":  0.100192681
+                    },
+                    {
+                        "palette":  "yellow",
+                        "file":  "eight_views_v01/yellow/images/07_left_270.png",
+                        "sha256":  "a47ec38a49158660c921a8d3ed0adca586e9b1607288e40b4d890c072287661f",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       104,
+                                       323,
+                                       1151,
+                                       1121
+                                   ],
+                        "direction":  6,
+                        "scale":  0.09933142
+                    },
+                    {
+                        "palette":  "yellow",
+                        "file":  "eight_views_v01/yellow/images/08_front_left_315.png",
+                        "sha256":  "8d55d314fcf6142f20f1daf725b7dc7395a9ec92747e03ef8f860e18afc49f74",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       108,
+                                       313,
+                                       1149,
+                                       1122
+                                   ],
+                        "direction":  7,
+                        "scale":  0.09990394
+                    },
+                    {
+                        "palette":  "blue",
+                        "file":  "eight_views_v01/blue/images/01_front_000.png",
+                        "sha256":  "1a7a9285333552819418ce32b9dfbded8ad7dda9eb68d6cf31acac9e3d8e6c5d",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       110,
+                                       317,
+                                       1145,
+                                       1117
+                                   ],
+                        "direction":  0,
+                        "scale":  0.10048309
+                    },
+                    {
+                        "palette":  "blue",
+                        "file":  "eight_views_v01/blue/images/02_front_right_045.png",
+                        "sha256":  "a150252c185ec11481743eb9f3771fd8fda3c8063d158248c0d1f2e876111d91",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       104,
+                                       315,
+                                       1149,
+                                       1121
+                                   ],
+                        "direction":  1,
+                        "scale":  0.09952153
+                    },
+                    {
+                        "palette":  "blue",
+                        "file":  "eight_views_v01/blue/images/03_right_090.png",
+                        "sha256":  "66c5efc1b4d479d5e799e7b40fe8c2e035c19bcd288e3adb7cc00e1dbe71c05b",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       112,
+                                       316,
+                                       1140,
+                                       1118
+                                   ],
+                        "direction":  2,
+                        "scale":  0.101167314
+                    },
+                    {
+                        "palette":  "blue",
+                        "file":  "eight_views_v01/blue/images/04_back_right_135.png",
+                        "sha256":  "67462da11de4b776b539cb5c0af3c272e1aef329e6f273a72f2c911c5124fd3c",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       114,
+                                       313,
+                                       1142,
+                                       1121
+                                   ],
+                        "direction":  3,
+                        "scale":  0.101167314
+                    },
+                    {
+                        "palette":  "blue",
+                        "file":  "eight_views_v01/blue/images/05_back_180.png",
+                        "sha256":  "e65fa0f5d4019502ed739d061a3b58803518983d88cd42832e41054c7888d366",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       108,
+                                       316,
+                                       1147,
+                                       1118
+                                   ],
+                        "direction":  4,
+                        "scale":  0.100096248
+                    },
+                    {
+                        "palette":  "blue",
+                        "file":  "eight_views_v01/blue/images/06_back_left_225.png",
+                        "sha256":  "a026c7e42af49411435704f99c4367a3d90b78569077f67c055f720868ac2bde",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       110,
+                                       317,
+                                       1145,
+                                       1121
+                                   ],
+                        "direction":  5,
+                        "scale":  0.10048309
+                    },
+                    {
+                        "palette":  "blue",
+                        "file":  "eight_views_v01/blue/images/07_left_270.png",
+                        "sha256":  "a3cc7fc3bdf8f0865ac57c637254f4e67e91629a28458fc176c6081ca5b41341",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       106,
+                                       325,
+                                       1149,
+                                       1122
+                                   ],
+                        "direction":  6,
+                        "scale":  0.09971237
+                    },
+                    {
+                        "palette":  "blue",
+                        "file":  "eight_views_v01/blue/images/08_front_left_315.png",
+                        "sha256":  "2b21b17b2b35442cfa144740932234b1ddcc888d0b7c409bc62b85a1fe817ba4",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       109,
+                                       314,
+                                       1149,
+                                       1122
+                                   ],
+                        "direction":  7,
+                        "scale":  0.1
+                    },
+                    {
+                        "palette":  "red",
+                        "file":  "eight_views_v01/red/images/01_front_000.png",
+                        "sha256":  "004f04b6d1e6d93b04a884b38bb4502610cbe77a09bc0aca464bb92b29548169",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       109,
+                                       316,
+                                       1145,
+                                       1118
+                                   ],
+                        "direction":  0,
+                        "scale":  0.1003861
+                    },
+                    {
+                        "palette":  "red",
+                        "file":  "eight_views_v01/red/images/02_front_right_045.png",
+                        "sha256":  "d564cd12c7ca22baa5022432d3328b7860623689edba9c0adb83689c2b1dde5c",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       102,
+                                       313,
+                                       1152,
+                                       1123
+                                   ],
+                        "direction":  1,
+                        "scale":  0.0990476161
+                    },
+                    {
+                        "palette":  "red",
+                        "file":  "eight_views_v01/red/images/03_right_090.png",
+                        "sha256":  "4513d7ec51bfc85977ebfb9c30c836c25073c094532f4f85002da4b53aefd2eb",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       110,
+                                       313,
+                                       1144,
+                                       1120
+                                   ],
+                        "direction":  2,
+                        "scale":  0.100580268
+                    },
+                    {
+                        "palette":  "red",
+                        "file":  "eight_views_v01/red/images/04_back_right_135.png",
+                        "sha256":  "794c12ef6332f2fa93770c4d23c26aac3f3736441b61a51055caf3abc14b6681",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       113,
+                                       311,
+                                       1144,
+                                       1123
+                                   ],
+                        "direction":  3,
+                        "scale":  0.100872941
+                    },
+                    {
+                        "palette":  "red",
+                        "file":  "eight_views_v01/red/images/05_back_180.png",
+                        "sha256":  "104c40943e9277b2ccf0f2fdfa2f19d9cb1b08d14a30e991dbc2e1835e5d81bc",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       106,
+                                       312,
+                                       1149,
+                                       1121
+                                   ],
+                        "direction":  4,
+                        "scale":  0.09971237
+                    },
+                    {
+                        "palette":  "red",
+                        "file":  "eight_views_v01/red/images/06_back_left_225.png",
+                        "sha256":  "ac382d247db8fc6b5f9b7d9d1085eb97c443f794a0f2b0f9924273621d8f144d",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       107,
+                                       314,
+                                       1147,
+                                       1121
+                                   ],
+                        "direction":  5,
+                        "scale":  0.1
+                    },
+                    {
+                        "palette":  "red",
+                        "file":  "eight_views_v01/red/images/07_left_270.png",
+                        "sha256":  "2452c9e31bda50b67c75c5ab3d8a822644e04ad98b759cc7530059bcaddc8373",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       104,
+                                       320,
+                                       1150,
+                                       1123
+                                   ],
+                        "direction":  6,
+                        "scale":  0.09942639
+                    },
+                    {
+                        "palette":  "red",
+                        "file":  "eight_views_v01/red/images/08_front_left_315.png",
+                        "sha256":  "0fd675fb6a62e36317b2b9867c45a9bbf6c036337d123c0b7af0664e83ad13a6",
+                        "sourceSize":  [
+                                           1254,
+                                           1254
+                                       ],
+                        "bounds":  [
+                                       106,
+                                       312,
+                                       1150,
+                                       1123
+                                   ],
+                        "direction":  7,
+                        "scale":  0.0996168554
+                    }
+                ]
+}

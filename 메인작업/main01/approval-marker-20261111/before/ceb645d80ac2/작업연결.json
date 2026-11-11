@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "role": "monsters",
+  "kind": "worker",
+  "coordinatorRoot": "C:\\Users\\user\\Desktop\\Grid Defenders",
+  "sharedRoot": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리",
+  "ruleVersion": "OPS-007-v4",
+  "createdFor": "OPS-001",
+  "domainPath": [
+    "세계관",
+    "몬스터"
+  ],
+  "domainIndex": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\세계관\\몬스터\\index.json",
+  "hierarchyVersion": 1,
+  "organization": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+  "teamRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+  "teamOwner": "monsters",
+  "organizationRole": "team-lead",
+  "workMethod": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\monsters\\작업진행방법.md",
+  "requiredReadings": [
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\AGENTS.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\운영규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\monsters\\작업진행방법.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\monsters\\규정.md"
+  ],
+  "readingPolicyVersion": "OPS-006",
+  "coordinatorRole": "main01",
+  "operatingMode": "single-main",
+  "instructionSource": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\운영규칙.md",
+  "organizationParent": "main01",
+  "pipelinePolicyVersion": "PIPELINE-12-v1"
+}

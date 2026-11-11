@@ -1,0 +1,5 @@
+import {createServer} from 'vite';import {writeFile} from 'node:fs/promises';import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('../',import.meta.url)),evidence={};
+Object.defineProperty(globalThis,'localStorage',{configurable:true,value:undefined});
+for(const layout of ['portrait','landscape']){globalThis.location=new URL(layout==='landscape'?'http://test/battle-landscape.html':'http://test/index.html');const s=await createServer({root,cacheDir:fileURLToPath(new URL('../.qa-cache/visual-spacing-'+layout+'/',import.meta.url)),configFile:false,logLevel:'error',server:{host:'127.0.0.1',port:0,watch:null,hmr:false}});await s.listen();try{const m=await s.ssrLoadModule('/tests/visual-spacing.check.ts');const r=m.checkVisualSpacing();evidence[layout]={checks:r,...m.visualSpacingEvidence};console.log(layout,r.length,'PASS',JSON.stringify(m.visualSpacingEvidence));}finally{await s.close();}}
+await writeFile(new URL('../../spacing-model-evidence.json',import.meta.url),JSON.stringify(evidence,null,2));

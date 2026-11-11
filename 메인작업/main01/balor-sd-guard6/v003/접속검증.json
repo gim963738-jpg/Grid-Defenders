@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "images": [
+    {
+      "src": "inputs/clean-035.png",
+      "loaded": true
+    },
+    {
+      "src": "final/right-035.png",
+      "loaded": true
+    },
+    {
+      "src": "inputs/blond-style1.png",
+      "loaded": true
+    },
+    {
+      "src": "original-six/builtin0.png",
+      "loaded": true
+    },
+    {
+      "src": "original-six/builtin35.png",
+      "loaded": true
+    },
+    {
+      "src": "original-six/builtin90.png",
+      "loaded": true
+    },
+    {
+      "src": "original-six/image260.png",
+      "loaded": true
+    },
+    {
+      "src": "original-six/image2635.png",
+      "loaded": true
+    },
+    {
+      "src": "original-six/image2690.png",
+      "loaded": true
+    }
+  ],
+  "zoom": true,
+  "nativeToggle": true,
+  "lightDarkField": true,
+  "display": {
+    "canvas": [
+      1600,
+      720
+    ],
+    "stats": [
+      {
+        "id": "before",
+        "bodyCSS": 72,
+        "physicalBody": 144,
+        "dpr": 2
+      },
+      {
+        "id": "after",
+        "bodyCSS": 72,
+        "physicalBody": 144,
+        "dpr": 2
+      },
+      {
+        "id": "blond",
+        "bodyCSS": 72,
+        "physicalBody": 144,
+        "dpr": 2
+      }
+    ]
+  },
+  "jsErrors": [],
+  "isolatedHeadless": true,
+  "userWindowTouched": false
+}

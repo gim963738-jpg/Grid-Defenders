@@ -1,0 +1,33 @@
+{
+  "time": "2026-11-10T17:28:55.604383+00:00",
+  "userApproval": "너가바로 진행해봐 진행",
+  "executor": "main02",
+  "targetFrames": {
+    "03": 6,
+    "04": 5,
+    "05": 6,
+    "06": 5
+  },
+  "defaultHitstopMs": 80,
+  "reaction": "frozen initial displacement then damped recoil300ms",
+  "dummy": {
+    "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\게임\\src\\devRangeDummy.ts",
+    "sourceSha256": "b6dac177a04a9a072fa18182234f8875416da0c6bfca89055ff10bdd616f4d3e",
+    "kind": "existing game SVG reused",
+    "root": [
+      316,
+      347
+    ],
+    "size": [
+      144,
+      192
+    ]
+  },
+  "cycleFrames": 43,
+  "baseCycleMs": 3740,
+  "hitstopCycleMs": 4060,
+  "sourceArtChanged": false,
+  "gameSourceChanged": false,
+  "generationCalls": 0,
+  "damageLogic": "not implemented; preview only"
+}

@@ -1,0 +1,67 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
+import {Container,Sprite,Texture} from 'pixi.js';
+import {Defense} from '../src/defense';
+import {UNITS,ITEMS,SLOTS} from '../src/defenseConfig';
+import {waveBossRoster} from '../src/bossBattle';
+import {createBossBattleView} from '../src/bossBattleView';
+import {createDefenseView} from '../src/defenseView';
+import {loadHeroArt,heroPortrait} from '../src/heroArt';
+import {blondFrame,blondDirection,blondPlacement,blondWalkFrame,blondBossImage,BLOND_WAVE_BODY_HEIGHT,BLOND_BOSS_BODY_HEIGHT,type BlondFrame} from '../src/blondArt';
+import {loadCombatMotionArt,runtimeFrame} from '../src/combatMotionArt';
+
+export async function checkBlondWarrior(){
+ const passed:string[]=[],check=(ok:boolean,label:string)=>{if(!ok)throw Error(label);passed.push(label);};
+ await Promise.all([loadHeroArt(),loadCombatMotionArt()]);
+ const def=UNITS.blond,g=new Defense(()=>1);
+ check(def.hero&&def.hp===1400&&def.attack===85&&def.rate===1.1&&def.armor===35&&def.magicArmor===20,'blond warrior has the requested temporary hero stats');
+ check(g.summon('blond',0)&&g.gold===480,'blond warrior summons through the existing free hero rules');
+ check(!g.summon('blond',1)&&g.units.length===1,'duplicate blond hero is rejected');
+ const unit=g.units[0],stats=g.stats(unit);
+ check(unit.facing===0&&blondFrame()===blondFrame(0),'newly summoned blond warrior and default art face front');
+ check(stats.physicalAttack===85&&stats.magicAttack===0&&stats.critChance===.1&&stats.critMultiplier===1.5,'new hero uses normal physical attack and shared critical stats');
+ g.gear.push({id:100,def:ITEMS[0],owner:unit.id,x:0,y:0,turns:0,order:100,costBasis:60});
+ check(g.stats(unit).attack===100,'existing equipment modifies the new hero stats');
+ const idle=Array.from({length:8},(_,i)=>blondFrame(i)!),metadata=await fetch(`${import.meta.env.BASE_URL}assets/heroes/blond-warrior-v1/frames.json`).then(r=>r.json());
+ check(new Set(idle.map(f=>f.texture)).size===8,'all eight supplied idle directions have separate textures');
+ for(let i=0;i<8;i++){
+  const angle=Math.PI/2-i*Math.PI/4;
+  check(blondDirection(Math.cos(angle),Math.sin(angle))===i,`direction ${i} follows actor movement without mirroring`);
+ }
+ check(blondDirection(0,0,6)===6&&blondDirection(NaN,0)===2,'zero and invalid vectors keep a stable facing');
+ let ms=0;const walking:BlondFrame[]=[];
+ for(let i=0;i<60;i++){
+  const frame=blondFrame(2,true,(ms+metadata.walk.frames[i].duration/2)/1000)!;walking.push(frame);
+  check(frame.frame===i&&blondWalkFrame(ms/1000)===i,`source frame ${i} uses its original duration boundary`);
+  ms+=metadata.walk.frames[i].duration;
+ }
+ check(ms===4017&&blondWalkFrame(ms/1000)===0,'all sixty frames loop at original 4017ms, not sixty fps');
+ check(new Set(walking.map(f=>f.texture)).size===60&&new Set(walking.map(f=>f.url)).size===60,'all sixty distinct source poses are retained');
+ check(blondFrame(2,false,1)===idle[2]&&[0,1,3,4,5,6,7].every(i=>blondFrame(i,true,1)===idle[i]),'walking animation applies only to rightward movement');
+ check(walking.every(f=>f.anchorX===walking[0].anchorX&&f.anchorY===walking[0].anchorY&&f.bodyHeight===171.5),'walk keeps the original common foot anchor and one body scale');
+ const image=new Image();image.src=`${import.meta.env.BASE_URL}assets/heroes/blond-warrior-v1/walk-right-60.png`;await image.decode();
+ const atlas=document.createElement('canvas');atlas.width=1680;atlas.height=1080;const ac=atlas.getContext('2d')!;ac.drawImage(image,0,0);const source=ac.getImageData(0,0,1680,1080).data;
+ let clear=true,same=true;
+ for(let i=0;i<60;i++){
+  const art=walking[i],canvas=art.texture.source.resource as HTMLCanvasElement,w=canvas.width,h=canvas.height,pixels=canvas.getContext('2d')!.getImageData(0,0,w,h).data;
+  for(let n=0;n<w;n++)clear&&=pixels[n*4+3]===0&&pixels[((h-1)*w+n)*4+3]===0;
+  for(let n=0;n<h;n++)clear&&=pixels[(n*w)*4+3]===0&&pixels[(n*w+w-1)*4+3]===0;
+  for(let y=0;y<180;y++)for(let x=0;x<168;x++)for(let c=0;c<4;c++)same&&=pixels[((y+24)*w+x+24)*4+c]===source[((Math.floor(i/10)*180+y)*1680+i%10*168+x)*4+c];
+  const p=blondPlacement(art,100,200,72);
+  check(Math.abs(p.width/art.texture.width-p.height/art.texture.height)<1e-10&&p.x===100&&p.y===200,`frame ${i} uses uniform scale and a stable world foot position`);
+ }
+ check(clear&&same,'all sixty runtime frames preserve transparent borders and exact packed RGBA without added bloom');
+ const b=new BossBattle(waveBossRoster(g),()=>1),hero=b.actors.find(a=>a.kind==='blond')!,target=b.actors.find(a=>a.kind==='boss')!;
+ b.actors=[hero,target];b.autoSkills=false;target.speed=0;target.attack=0;hero.x=100;hero.y=target.y;target.x=700;
+ b.tick(.05);check(hero.x>100&&hero.motion?.clip==='01','boss travel uses approved run clip');
+ target.x=hero.x+hero.range-1;hero.cooldown=0;b.tick(.05);hero.cooldown=999;
+ check(hero.motion?.clip==='03'&&!b.hits.some(h=>h.from===hero.id),'range entry begins independent first basic without instant damage');
+ b.tick(.4);check(b.hits.some(h=>h.from===hero.id&&h.damage>0&&!h.magic),'03 contact end deals one ordinary physical hit');
+ check(!b.canHeroSkill(hero.id)&&!b.useHeroSkill(hero.id),'blond remains without active skill');
+ const stage=new Container(),view=createDefenseView({stage} as never,g,()=>{},Texture.EMPTY,Texture.EMPTY,Texture.EMPTY,Texture.EMPTY,Texture.EMPTY);
+ view.draw(null,false);const all:Sprite[]=[];const visit=(n:Container)=>{for(const c of n.children){if(c instanceof Sprite)all.push(c);if(c instanceof Container)visit(c);}};visit(stage);
+ const f=runtimeFrame(unit.motion)!,sprite=all.find(s=>s.visible&&s.texture===f.texture)!;
+ check(!!sprite&&Math.abs(sprite.scale.y*f.bodyHeight-72)<.01&&sprite.x===SLOTS[0].x&&sprite.y===SLOTS[0].y+12,'wave runtime uses 72 body reference and unchanged ground root');
+ check(BLOND_WAVE_BODY_HEIGHT===57&&BLOND_BOSS_BODY_HEIGHT===72&&blondBossImage(0,false,0).includes('boss-blond-frame'),'legacy art reference and fallback renderer remain available to other heroes');
+ check(heroPortrait('blond').includes('portrait.png'),'portrait source remains unchanged');stage.destroy({children:true});
+ return passed;
+}

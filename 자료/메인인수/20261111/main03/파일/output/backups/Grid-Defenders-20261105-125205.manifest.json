@@ -1,0 +1,3817 @@
+{
+  "saved_at": "20261105-125205",
+  "archive": "Grid-Defenders-20261105-125205.zip",
+  "attachments": 7,
+  "files": [
+    {
+      "file": "AGENTS.md",
+      "bytes": 1076,
+      "sha256": "d8ba327ffa5901af51cca8114595f2f8c87c20840d34f9f99f1767e6ae47ed60"
+    },
+    {
+      "file": "output/imagegen/lobby-concepts/model-3-camp-v3-barracks.png",
+      "bytes": 2331784,
+      "sha256": "7fc9b23e9d467e715199f38387b4f3bb7a2eff4ad2c5a6f2879fb8ba46e3f560"
+    },
+    {
+      "file": "output/imagegen/lobby-concepts/model-3-camp-v3-prompt.json",
+      "bytes": 2023,
+      "sha256": "13495b98baaae4463f9a084466bff06bc4ad294f39a416a9c23868e1af9035f2"
+    },
+    {
+      "file": "output/save_workspace.py",
+      "bytes": 3557,
+      "sha256": "210e457f944bdc586e4d233914aef0c6f09e2d364ff05fb943a85f40fe761a6f"
+    },
+    {
+      "file": "task.md",
+      "bytes": 29753,
+      "sha256": "c580f66e88829d7af167808f5ee59551ee774dd3ee0a729f2d77f9d2d247e47c"
+    },
+    {
+      "file": "게임/.gitignore",
+      "bytes": 22,
+      "sha256": "ea51f78e69c37ba5b07274b23829325147e58ae7f0b4ddb332200f761dd6ffb1"
+    },
+    {
+      "file": "게임/dist/assets/battlefields/forest-clearing-v1.png",
+      "bytes": 2824239,
+      "sha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823"
+    },
+    {
+      "file": "게임/dist/assets/browserAll-CnLcgEJg.js",
+      "bytes": 43500,
+      "sha256": "165dc4910c269f1cda4a77abc65ce6422044762c65b832cf72c119a9fef8f840"
+    },
+    {
+      "file": "게임/dist/assets/Cache-fNcOcM1E.js",
+      "bytes": 1100,
+      "sha256": "d7fd8c5fb06aaff2fb738e050d31f83bb9dc3bdfcd3eeaf5fa361ed84f2f62ad"
+    },
+    {
+      "file": "게임/dist/assets/CanvasPool-BKClwQdf.js",
+      "bytes": 71190,
+      "sha256": "e0c1d447584a954a4f88e36c5f35dce8a5a31606840cd36058886677c52c0c65"
+    },
+    {
+      "file": "게임/dist/assets/canvasUtils-B0HNDru7.js",
+      "bytes": 6011,
+      "sha256": "0a78b1b09505346ec03d25df66081128bd5c34218415c136126bb4f85040dc13"
+    },
+    {
+      "file": "게임/dist/assets/effects/assassin-sheet.png",
+      "bytes": 1840465,
+      "sha256": "68fc6888708dd6d8cc0ff75063ace10a4692f600574b64702707d85e8a53f0e0"
+    },
+    {
+      "file": "게임/dist/assets/effects/blade-skill-sheet.png",
+      "bytes": 1891416,
+      "sha256": "2ed253f1dce75e08e04b9fb22157399e8ee5932fd726b378157f2476fa4a5e83"
+    },
+    {
+      "file": "게임/dist/assets/effects/fire-skill-sheet.png",
+      "bytes": 1761181,
+      "sha256": "a9e8a83bccbc029b9c2e2388c660929c67d2f77cebff574b8fb355ae99a25b0b"
+    },
+    {
+      "file": "게임/dist/assets/effects/sword-basic-sheet.png",
+      "bytes": 1856689,
+      "sha256": "f18b2250639dfca07be252663864945491b363e65351efa641cd15f3f6c0a6c1"
+    },
+    {
+      "file": "게임/dist/assets/Filter-C-9RPzfk.js",
+      "bytes": 41957,
+      "sha256": "0fbf00e1b8a31b5cec32b2f1ad18ea1cf264633704db314e07a48b2a8bb56c76"
+    },
+    {
+      "file": "게임/dist/assets/game-BsPIKKYE.js",
+      "bytes": 405072,
+      "sha256": "ec57cb0997c9bf5130ae3c0418417ce6643ff83110695a4947524670de5a969f"
+    },
+    {
+      "file": "게임/dist/assets/game-DzwMVd1y.css",
+      "bytes": 68974,
+      "sha256": "13cd4d5bab9c95debdaaa760bf2e3ebad94836d40daf01472e73b8c281985018"
+    },
+    {
+      "file": "게임/dist/assets/GCManagedHash-BNMlzcZi.js",
+      "bytes": 19313,
+      "sha256": "340df63e03de2d88f4f49e3a23420177b92e2a78c7ca8857c57af7e2117dd534"
+    },
+    {
+      "file": "게임/dist/assets/getTexelRangeRects-DC-oQS47.js",
+      "bytes": 11358,
+      "sha256": "129063cbcb29cc0af92e9e7ab7938b5dfb943e56f0edb29013541965ac538531"
+    },
+    {
+      "file": "게임/dist/assets/getTextureBatchBindGroup-CIH9f4hr.js",
+      "bytes": 344,
+      "sha256": "b5c2ac7ee925ca1fb00792ee978551ba1606be01b4ad06c3887f4c3152e2ad59"
+    },
+    {
+      "file": "게임/dist/assets/GraphicsContext-CzVmTByP.js",
+      "bytes": 61677,
+      "sha256": "aba2acde08eb4de242ca9ebd7282e8ff8df3ad943f02f594b233cb64c4f365fe"
+    },
+    {
+      "file": "게임/dist/assets/heroes/hero-roster-sheet.png",
+      "bytes": 2484434,
+      "sha256": "cf16a2f4da17f0df10e9f7e2212f746f6ff3385a360d822c713252da563ab04a"
+    },
+    {
+      "file": "게임/dist/assets/heroes/melee-idle.png",
+      "bytes": 2030919,
+      "sha256": "2eb96b95ea1c78ed1b368941e477659838e96cfa4f24b6b0aaf121ecee77633f"
+    },
+    {
+      "file": "게임/dist/assets/heroes/melee-motion-sheet.png",
+      "bytes": 1939162,
+      "sha256": "e7f963a96044009c62a0fb04ec3a310c2c917ea5e400948ea4d8b66be16dc688"
+    },
+    {
+      "file": "게임/dist/assets/heroes/melee-reference.png",
+      "bytes": 2421379,
+      "sha256": "9910870a36b7e3e99921329e36b79b7f3533a96305b77c34a1acc8133702961f"
+    },
+    {
+      "file": "게임/dist/assets/heroes/ranged-idle.png",
+      "bytes": 912398,
+      "sha256": "e868661679b4e069face6a2ed9ef72e27f88d1e4795ba9ede3c7630d0ff13793"
+    },
+    {
+      "file": "게임/dist/assets/heroes/ranged-reference.png",
+      "bytes": 2365903,
+      "sha256": "29b520cbfa90df63ee9f1a9b7598999c79b7cbda818b7b79b9535345ba58583a"
+    },
+    {
+      "file": "게임/dist/assets/init-CEHtxoWS.js",
+      "bytes": 14215,
+      "sha256": "423791e28878ef6935f74949f2882a2fe5ec4118b85d13aa4b6971b25087daba"
+    },
+    {
+      "file": "게임/dist/assets/items/gale-sword.png",
+      "bytes": 1348886,
+      "sha256": "90a1dfe5559daf779d6c9528189f703b20afaecd22c9c48c1d1c8f72211670f0"
+    },
+    {
+      "file": "게임/dist/assets/items/tier1-equipment-atlas.png",
+      "bytes": 1465736,
+      "sha256": "bdd6eb1971ee4c1d844488d336cdcabed26e5a38d9ef3dd337778ba9df1a2599"
+    },
+    {
+      "file": "게임/dist/assets/lobby/camp-concept.png",
+      "bytes": 2331784,
+      "sha256": "7fc9b23e9d467e715199f38387b4f3bb7a2eff4ad2c5a6f2879fb8ba46e3f560"
+    },
+    {
+      "file": "게임/dist/assets/lobby/camp-scene-clean.png",
+      "bytes": 2303648,
+      "sha256": "5350a50b8e064ac160f6ec5686eb1c3eb2a096e49354b0646fa0a4905c73ff6d"
+    },
+    {
+      "file": "게임/dist/assets/lobby/hero-concept.png",
+      "bytes": 2447320,
+      "sha256": "c99ea54f84f01399f13bc69e9fe62452930d2adad496202405d557f60cc60f8a"
+    },
+    {
+      "file": "게임/dist/assets/lobby/mission-parchment.png",
+      "bytes": 1518722,
+      "sha256": "efb9adf7697d044e6a4e0ceca158af853bcfeec53d699fcc4bead50ea642b9c1"
+    },
+    {
+      "file": "게임/dist/assets/lobbyPreview-BD9P6-gl.css",
+      "bytes": 26940,
+      "sha256": "60053adddf3264c2f1d5033f306cf38073445f41849291403812fc92bfe82c9c"
+    },
+    {
+      "file": "게임/dist/assets/lobbyPreview-FCg6YU7d.js",
+      "bytes": 16202,
+      "sha256": "90addc1435574caed556206bdcc5e9afac5ee1fc7d5208bf45ac64a3045ebef6"
+    },
+    {
+      "file": "게임/dist/assets/RenderTargetSystem-D8YJAv_5.js",
+      "bytes": 58801,
+      "sha256": "ddd7df157c9edfc188b0f88c74b8eda7b8777ca104ea09359ae8d5327e0f493e"
+    },
+    {
+      "file": "게임/dist/assets/screen-bottom-guide-B_yNnlwB.js",
+      "bytes": 955,
+      "sha256": "6b5a009b931aefbe5b6cb8fa595dc43ea2075fabaf43daefb8ef2af8c9ff56c0"
+    },
+    {
+      "file": "게임/dist/assets/screen-bottom-guide-bn6Ny46A.css",
+      "bytes": 475,
+      "sha256": "141d52b5e38d1e0fe965eb05f6dcde435e159cdeeebe95d3463c7850fa62b421"
+    },
+    {
+      "file": "게임/dist/assets/shop/merchant-cutout.png",
+      "bytes": 2029846,
+      "sha256": "62f3b3c709cefb3f93b4869e1e36a1c27b41bd78a5afdf605097f788a2dc0d47"
+    },
+    {
+      "file": "게임/dist/assets/shop/merchant-silver-cutout.png",
+      "bytes": 2250742,
+      "sha256": "49a7ac00e515b9225a50a603a5e12f62df4a560597f5cf73e2e48124a0987f38"
+    },
+    {
+      "file": "게임/dist/assets/shop/merchant.png",
+      "bytes": 2258559,
+      "sha256": "e97081c2874712fd602e466ab8d0ade6dc1df162174aead64b548db4928aa90b"
+    },
+    {
+      "file": "게임/dist/assets/webworkerAll-DxTiGloO.js",
+      "bytes": 54,
+      "sha256": "97c9c4db578bb2076ee4c2476ecc8dff3ef834fcf036b9dda72d25a0fda8f003"
+    },
+    {
+      "file": "게임/dist/index.html",
+      "bytes": 19012,
+      "sha256": "19476e30ccaa9fecb60cda4fd75d5f4f60ddfdf45172a59d47e02c002608273e"
+    },
+    {
+      "file": "게임/dist/lobby-preview.html",
+      "bytes": 3904,
+      "sha256": "c0c4db3c2b1d12d072d58d67de6f0c749f3f92cec96a516959d0df26e61468b1"
+    },
+    {
+      "file": "게임/index.html",
+      "bytes": 17965,
+      "sha256": "cecd15e61799d5a7412b3c2a1fde7bb8ed24ee4c6d62610a5f56d8179e427d50"
+    },
+    {
+      "file": "게임/lobby-preview.html",
+      "bytes": 3678,
+      "sha256": "c6c94326366cbbb349f1ad110b672dbfdaa2bba6dae3be65242f32a4f97491be"
+    },
+    {
+      "file": "게임/package-lock.json",
+      "bytes": 43300,
+      "sha256": "a27ae27e9e8721e313633fcf8a38f5a3818d5a0f2aff7dd7e33503ac670a7698"
+    },
+    {
+      "file": "게임/package.json",
+      "bytes": 421,
+      "sha256": "874cbac67807fd3cea954c0a0bc4cac7c9e882729928ca848ee3b9e344e527c2"
+    },
+    {
+      "file": "게임/public/assets/battlefields/forest-clearing-v1.png",
+      "bytes": 2824239,
+      "sha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823"
+    },
+    {
+      "file": "게임/public/assets/effects/assassin-sheet.png",
+      "bytes": 1840465,
+      "sha256": "68fc6888708dd6d8cc0ff75063ace10a4692f600574b64702707d85e8a53f0e0"
+    },
+    {
+      "file": "게임/public/assets/effects/blade-skill-sheet.png",
+      "bytes": 1891416,
+      "sha256": "2ed253f1dce75e08e04b9fb22157399e8ee5932fd726b378157f2476fa4a5e83"
+    },
+    {
+      "file": "게임/public/assets/effects/fire-skill-sheet.png",
+      "bytes": 1761181,
+      "sha256": "a9e8a83bccbc029b9c2e2388c660929c67d2f77cebff574b8fb355ae99a25b0b"
+    },
+    {
+      "file": "게임/public/assets/effects/sword-basic-sheet.png",
+      "bytes": 1856689,
+      "sha256": "f18b2250639dfca07be252663864945491b363e65351efa641cd15f3f6c0a6c1"
+    },
+    {
+      "file": "게임/public/assets/heroes/hero-roster-sheet.png",
+      "bytes": 2484434,
+      "sha256": "cf16a2f4da17f0df10e9f7e2212f746f6ff3385a360d822c713252da563ab04a"
+    },
+    {
+      "file": "게임/public/assets/heroes/melee-idle.png",
+      "bytes": 2030919,
+      "sha256": "2eb96b95ea1c78ed1b368941e477659838e96cfa4f24b6b0aaf121ecee77633f"
+    },
+    {
+      "file": "게임/public/assets/heroes/melee-motion-sheet.png",
+      "bytes": 1939162,
+      "sha256": "e7f963a96044009c62a0fb04ec3a310c2c917ea5e400948ea4d8b66be16dc688"
+    },
+    {
+      "file": "게임/public/assets/heroes/melee-reference.png",
+      "bytes": 2421379,
+      "sha256": "9910870a36b7e3e99921329e36b79b7f3533a96305b77c34a1acc8133702961f"
+    },
+    {
+      "file": "게임/public/assets/heroes/ranged-idle.png",
+      "bytes": 912398,
+      "sha256": "e868661679b4e069face6a2ed9ef72e27f88d1e4795ba9ede3c7630d0ff13793"
+    },
+    {
+      "file": "게임/public/assets/heroes/ranged-reference.png",
+      "bytes": 2365903,
+      "sha256": "29b520cbfa90df63ee9f1a9b7598999c79b7cbda818b7b79b9535345ba58583a"
+    },
+    {
+      "file": "게임/public/assets/items/gale-sword.png",
+      "bytes": 1348886,
+      "sha256": "90a1dfe5559daf779d6c9528189f703b20afaecd22c9c48c1d1c8f72211670f0"
+    },
+    {
+      "file": "게임/public/assets/items/tier1-equipment-atlas.png",
+      "bytes": 1465736,
+      "sha256": "bdd6eb1971ee4c1d844488d336cdcabed26e5a38d9ef3dd337778ba9df1a2599"
+    },
+    {
+      "file": "게임/public/assets/lobby/camp-concept.png",
+      "bytes": 2331784,
+      "sha256": "7fc9b23e9d467e715199f38387b4f3bb7a2eff4ad2c5a6f2879fb8ba46e3f560"
+    },
+    {
+      "file": "게임/public/assets/lobby/camp-scene-clean.png",
+      "bytes": 2303648,
+      "sha256": "5350a50b8e064ac160f6ec5686eb1c3eb2a096e49354b0646fa0a4905c73ff6d"
+    },
+    {
+      "file": "게임/public/assets/lobby/hero-concept.png",
+      "bytes": 2447320,
+      "sha256": "c99ea54f84f01399f13bc69e9fe62452930d2adad496202405d557f60cc60f8a"
+    },
+    {
+      "file": "게임/public/assets/lobby/mission-parchment.png",
+      "bytes": 1518722,
+      "sha256": "efb9adf7697d044e6a4e0ceca158af853bcfeec53d699fcc4bead50ea642b9c1"
+    },
+    {
+      "file": "게임/public/assets/shop/merchant-cutout.png",
+      "bytes": 2029846,
+      "sha256": "62f3b3c709cefb3f93b4869e1e36a1c27b41bd78a5afdf605097f788a2dc0d47"
+    },
+    {
+      "file": "게임/public/assets/shop/merchant-silver-cutout.png",
+      "bytes": 2250742,
+      "sha256": "49a7ac00e515b9225a50a603a5e12f62df4a560597f5cf73e2e48124a0987f38"
+    },
+    {
+      "file": "게임/public/assets/shop/merchant.png",
+      "bytes": 2258559,
+      "sha256": "e97081c2874712fd602e466ab8d0ade6dc1df162174aead64b548db4928aa90b"
+    },
+    {
+      "file": "게임/README.md",
+      "bytes": 18476,
+      "sha256": "e6c297b1298e45c4857edccd39976db711d0ca4c85027bde4ffe44283cd464ed"
+    },
+    {
+      "file": "게임/src/armorBreak.ts",
+      "bytes": 1396,
+      "sha256": "fc5d20ccb9b8626058455f998974b074c58789297c6127611c19f1baa73725b9"
+    },
+    {
+      "file": "게임/src/assassinCombat.ts",
+      "bytes": 3767,
+      "sha256": "3a105d59e693c347acc907394f1871ad5937aa55bb2516c7a6da199289236528"
+    },
+    {
+      "file": "게임/src/assassinVisual.ts",
+      "bytes": 1668,
+      "sha256": "ba89ca661e80cfaf371b36ace54f9c9f10f379d3b25011d6d69335a0c67d6734"
+    },
+    {
+      "file": "게임/src/barracks-preview.css",
+      "bytes": 2840,
+      "sha256": "20712a04d1f4696c06c497a010bc09dec59ec1177cfbc9d43bd5df75b81bc018"
+    },
+    {
+      "file": "게임/src/barracks-preview.ts",
+      "bytes": 3853,
+      "sha256": "9522190a68425bdba6fcbf4155af4b2d1b247519bef859738264d07714adde7d"
+    },
+    {
+      "file": "게임/src/bladeSkill.ts",
+      "bytes": 2727,
+      "sha256": "8a35d62c17d213ca4d3558546b86833e8619e28ed12718954356c109949d0b70"
+    },
+    {
+      "file": "게임/src/bossBattle.ts",
+      "bytes": 17801,
+      "sha256": "a68b81163d815c3963f9a7e0a554b78d8ecbbd3a00c540f91c73a51b7f121b6d"
+    },
+    {
+      "file": "게임/src/bossBattleView.ts",
+      "bytes": 14845,
+      "sha256": "1b07699e5161972ef8b84e9231d5cbe149bcdc42f5bc4a7b1cb2139f472b79cb"
+    },
+    {
+      "file": "게임/src/bossDamageHistory.ts",
+      "bytes": 990,
+      "sha256": "946a0f1efc71a79c267199157a60c22dfb3e56b7f1f8d6eefc69837e62b52049"
+    },
+    {
+      "file": "게임/src/bossTestBalance.ts",
+      "bytes": 1910,
+      "sha256": "fb0b5df0cd4182dd35bbb964ec84895e274ba4cc3d5eae04f5acad2609cd4569"
+    },
+    {
+      "file": "게임/src/combatPlayback.ts",
+      "bytes": 682,
+      "sha256": "32f63ff5e827b5aefdee9150d2f84d205a01089c72f2aaed107b211345486ffa"
+    },
+    {
+      "file": "게임/src/critical.ts",
+      "bytes": 496,
+      "sha256": "8bfefc4994cfc88e059e22d8b3ef025dec3ab921fe42e65104b7a664caf886a8"
+    },
+    {
+      "file": "게임/src/damageMeter.ts",
+      "bytes": 2643,
+      "sha256": "90d24685d5025f1a350653baba2423bdebb2e7979c5d4fd389ccfee2b5a41829"
+    },
+    {
+      "file": "게임/src/defense.ts",
+      "bytes": 43825,
+      "sha256": "1793e41411e1675bf94fb729cdaabec2806e37a390dfbce47356be47b29363b7"
+    },
+    {
+      "file": "게임/src/defenseConfig.ts",
+      "bytes": 7008,
+      "sha256": "5a3032764bd4c91ccd6fd2355f4d10686deb4f1f9c56b05df811c1b098e3cae1"
+    },
+    {
+      "file": "게임/src/defenseFieldLayout.ts",
+      "bytes": 867,
+      "sha256": "eda4becce6afb56f69e7eba9ab3cd9960b19132f4e3cc8bca21b4fae2c7f2759"
+    },
+    {
+      "file": "게임/src/defenseView.ts",
+      "bytes": 17801,
+      "sha256": "cb255add6ec27baf5af516c9f8b93d778b4128b3c1ee7c3659bafd3c1e0c4a9d"
+    },
+    {
+      "file": "게임/src/fireSkill.ts",
+      "bytes": 4130,
+      "sha256": "2d0bd2776f30cf4bcfdfdf51b2b8c670735a2fa4a00e0b1f51dc48150992cbf6"
+    },
+    {
+      "file": "게임/src/gameRun.ts",
+      "bytes": 2048,
+      "sha256": "f526390eb274ec957dc29458b71d1d0489fbe58364b6c0438c575924d57fa6d7"
+    },
+    {
+      "file": "게임/src/hero-preview.css",
+      "bytes": 7335,
+      "sha256": "c72d1b0ba0c8152eb1741b2e466ba044742be76932306c8e681a1d35db1e7dc9"
+    },
+    {
+      "file": "게임/src/hero-preview.ts",
+      "bytes": 12373,
+      "sha256": "e5338a730fe44d36205a1392b20d2b082dec2936bee66267622d78c5e0fbcd1c"
+    },
+    {
+      "file": "게임/src/heroArt.ts",
+      "bytes": 4642,
+      "sha256": "9cced2235da88f296064a0d0018557e688685944809abf508ff621765ccc535b"
+    },
+    {
+      "file": "게임/src/iceEffects.ts",
+      "bytes": 723,
+      "sha256": "74d5e97fe1128426a6066ec06c98f5b353a3ccd8fad7cc4dac060851d80c06ef"
+    },
+    {
+      "file": "게임/src/itemArt.ts",
+      "bytes": 1336,
+      "sha256": "86347291f5f02daf01b8bce2b389a50697878e1ff0bb02bf504e547a784f6dfe"
+    },
+    {
+      "file": "게임/src/lobby-preview.css",
+      "bytes": 10710,
+      "sha256": "be01dae4193e9ff32eaf405cbe00931d4664f364c52fc57b4bceaedf6a635b52"
+    },
+    {
+      "file": "게임/src/lobby-preview.ts",
+      "bytes": 5486,
+      "sha256": "44636d3570c1f366c2d42e79b9aa156f5a21f1176725ad41206fed138da45795"
+    },
+    {
+      "file": "게임/src/main.ts",
+      "bytes": 80511,
+      "sha256": "a585be7e71777a0df9e9e98f90d2d5409d184bd92aad67fc01238df9f219c221"
+    },
+    {
+      "file": "게임/src/mobile-ui.css",
+      "bytes": 7355,
+      "sha256": "990fe5f07ba8ae42fff6cc3f39856bb4522b50cbc8dd960af2627d352a015749"
+    },
+    {
+      "file": "게임/src/renderQuality.ts",
+      "bytes": 1970,
+      "sha256": "1be3996cd6df95516e432947f29fc27d5c84078b6194e2655ef0c1985ff0d40b"
+    },
+    {
+      "file": "게임/src/sceneTransition.ts",
+      "bytes": 2804,
+      "sha256": "b1567f42e5624b2ef8ef533faaffbac41753d41ad2a5934edfc6fd5e872a2f5b"
+    },
+    {
+      "file": "게임/src/screen-bottom-guide.css",
+      "bytes": 537,
+      "sha256": "42dd8f405f58fdac1d68e60d249c57c65c57ec9a901998ec41968b2d0afd669e"
+    },
+    {
+      "file": "게임/src/screen-bottom-guide.ts",
+      "bytes": 484,
+      "sha256": "ed5623afc5e707ea4c1c4a56426108045080bbb0428e0554248ca8ef648f4603"
+    },
+    {
+      "file": "게임/src/skillVisual.ts",
+      "bytes": 3453,
+      "sha256": "39485d9ee3b9671899ad8cb67f413fc60090a5c0277f6c585a778d62cdbbebda"
+    },
+    {
+      "file": "게임/src/style.css",
+      "bytes": 75189,
+      "sha256": "7b62b34345225598128199881446e1cba7669740ceb623abfb5aec809f7500bc"
+    },
+    {
+      "file": "게임/src/swordAttack.ts",
+      "bytes": 3044,
+      "sha256": "1ce30cf0e022be94606f5b303ebb7135efcca29c85f0765a41f0c928e5a30c09"
+    },
+    {
+      "file": "게임/src/waveWarning.ts",
+      "bytes": 629,
+      "sha256": "697b42103b1de8d3b741c8dd37640698085f760fdab4cfa565772bef296affe8"
+    },
+    {
+      "file": "게임/tests/assassin-combat.check.ts",
+      "bytes": 10319,
+      "sha256": "b0458d287e95ae36baeaaa26ddd9df7f1764fc397e634ea2505a3e53aa162998"
+    },
+    {
+      "file": "게임/tests/assassin-visual.check.ts",
+      "bytes": 2613,
+      "sha256": "631552ea7e23d100b1747fefa67609daa1a9ad676521f98adeb6652390bdc6c1"
+    },
+    {
+      "file": "게임/tests/blade-skill.check.ts",
+      "bytes": 4693,
+      "sha256": "910c1f8b6bc90b6b8e301a7c8bd3ca0c47a5db7ff33e927cb1e2c6f77a967cc9"
+    },
+    {
+      "file": "게임/tests/blade-visual.check.ts",
+      "bytes": 2836,
+      "sha256": "927363a5ac871eb9dd563351b7a3900fe55818a59324a2098f0c53ff921d869d"
+    },
+    {
+      "file": "게임/tests/boss-battle.check.ts",
+      "bytes": 2532,
+      "sha256": "ffb376aefec4c64a1c60d2701d4a2d39ff504f6c78b3953189c20cb0095dec7b"
+    },
+    {
+      "file": "게임/tests/boss-dps-history.check.ts",
+      "bytes": 2536,
+      "sha256": "6777487a5eab8de0ebba42f1936801d88f891f31d8ddffccf66e9b5ed99d22b2"
+    },
+    {
+      "file": "게임/tests/boss-fixture.ts",
+      "bytes": 287,
+      "sha256": "6d5af449cc4310cca87b448bd807d17618e1fa4b338c49343c4fe87439e4e96c"
+    },
+    {
+      "file": "게임/tests/boss-hero-cards.check.ts",
+      "bytes": 3152,
+      "sha256": "3f8ef2dfa5918c513085f462519955e06dc9af3e7f6f5366ba53521e23cc2dcf"
+    },
+    {
+      "file": "게임/tests/boss-roster-ice.check.ts",
+      "bytes": 3135,
+      "sha256": "ce38d75e401926afdb451aa8029e17b06b173f07a428f0ae2f1571ce527d13db"
+    },
+    {
+      "file": "게임/tests/boss-skills.check.ts",
+      "bytes": 2141,
+      "sha256": "4319f7ede6a5d4b77ebfb8ad9e578c9bc67dbbc78be9d42c325016c388c6ffd3"
+    },
+    {
+      "file": "게임/tests/boss-test-balance.check.ts",
+      "bytes": 2758,
+      "sha256": "8df1663ad6e9e4bb20bf2210c618607954328ce2f9b979d7b79166f15dc7d6dc"
+    },
+    {
+      "file": "게임/tests/boss-wave-auto.check.ts",
+      "bytes": 2571,
+      "sha256": "dc94ebf998c573f829424508707aaf41e92131b0e8015ac199a5799aff253fe4"
+    },
+    {
+      "file": "게임/tests/combat-playback.check.ts",
+      "bytes": 2925,
+      "sha256": "2e66fb7c4db4ddd967c4ab66f6408259221b8cae70911f5aa3c83e16bfc1dae2"
+    },
+    {
+      "file": "게임/tests/damage-meter.check.ts",
+      "bytes": 3231,
+      "sha256": "1612eb60c1830129d7834953734c3d932f4bb6603028018dc21e6f2e01aa5c63"
+    },
+    {
+      "file": "게임/tests/damage-visibility.check.ts",
+      "bytes": 2562,
+      "sha256": "e052b662770a99e3bc7ce53c30d2f0654f18105df4028f2a932788d0904568bf"
+    },
+    {
+      "file": "게임/tests/defense-field-layout.check.ts",
+      "bytes": 2241,
+      "sha256": "a8393ffa5b77d7382306a384628301e13d2468ee3c31e0fd9c6584501a66b281"
+    },
+    {
+      "file": "게임/tests/dev-gear.check.ts",
+      "bytes": 3534,
+      "sha256": "dfb8f318c3bff4403afe54b6c8f42b8d69de9521401a24a27f7814e503286a3b"
+    },
+    {
+      "file": "게임/tests/dev-placement.check.ts",
+      "bytes": 2121,
+      "sha256": "ab98e281af52ef3f3bf9db245e06a8e4ad382001d8dda155e7cd5aa236814e8d"
+    },
+    {
+      "file": "게임/tests/dps-window.check.ts",
+      "bytes": 1869,
+      "sha256": "ba964444323f33a2ef9eabc88887738a5c475e6c0f23d484f7a482c513368b4a"
+    },
+    {
+      "file": "게임/tests/fire-ground.check.ts",
+      "bytes": 2341,
+      "sha256": "557bb4fe3a558b34f857636a47fefb23d4e28dbcb1e08a81ab8b4cd9fb5da1ea"
+    },
+    {
+      "file": "게임/tests/fire-skill.check.ts",
+      "bytes": 2529,
+      "sha256": "72b15f2d1c2d76c67872dc28c24ff9e905ef359b9ad0fc8ba343d75eeac00172"
+    },
+    {
+      "file": "게임/tests/fire-visual.check.ts",
+      "bytes": 2796,
+      "sha256": "95ad2526355d5a1b11ec507a71a6204773281b45a4332a2e636aa6228777bf41"
+    },
+    {
+      "file": "게임/tests/gale-art.check.ts",
+      "bytes": 1773,
+      "sha256": "553a3eaaedaa136b24bac234d4a2aff4896e827dd5f5ce4c92dab90517f15042"
+    },
+    {
+      "file": "게임/tests/game-run.check.ts",
+      "bytes": 4939,
+      "sha256": "ea38a57c74b8befbbbdc9a24cd7be01b7531e52709a37b08005d89214a53a60e"
+    },
+    {
+      "file": "게임/tests/hero-art.check.ts",
+      "bytes": 4623,
+      "sha256": "61062b64d6565245f55536f1b96b95dd89a180f70b9e29a13c5f8d28f5aa105c"
+    },
+    {
+      "file": "게임/tests/hero-critical.check.ts",
+      "bytes": 4397,
+      "sha256": "2775d081caa71aab6284b5d8eb6d7e1635b18b198579a4979674257a5c7d56d7"
+    },
+    {
+      "file": "게임/tests/ice-attack.check.ts",
+      "bytes": 3089,
+      "sha256": "d268543b96523dc48a12d76996b1a5a6fcefd47f34949ecc41e23bfe6396803d"
+    },
+    {
+      "file": "게임/tests/peak-dps.check.ts",
+      "bytes": 1901,
+      "sha256": "14b949cb83eb4fd90df95943238b66b8fe6764310932e02aa752e1153691a627"
+    },
+    {
+      "file": "게임/tests/render-quality.check.ts",
+      "bytes": 2587,
+      "sha256": "d46eb98c9faeaa7879bc47b83c6ac355349ed88ce91404e437f5f3a36ffd9838"
+    },
+    {
+      "file": "게임/tests/shop-equip.check.ts",
+      "bytes": 2322,
+      "sha256": "42bd01edcaabcf998cf268e29f96df6e318ad35383f09cb4ec07067af7148cee"
+    },
+    {
+      "file": "게임/tests/skill-visual.check.ts",
+      "bytes": 4662,
+      "sha256": "243a2d2da8cf340af6bc495458754ea80f84bd2739e4a692e789a1f628f25bef"
+    },
+    {
+      "file": "게임/tests/sword-attack.check.ts",
+      "bytes": 4344,
+      "sha256": "6aa3c1b1da1a5eb038dae7b1e33993c1982b251587c9425ded2ef4c2a9499cf1"
+    },
+    {
+      "file": "게임/tests/sword-visual.check.ts",
+      "bytes": 2769,
+      "sha256": "0810cb21c1107c56e34a665574ab8593c701c32adb7ca201d7cbdef1283cef50"
+    },
+    {
+      "file": "게임/tests/wave-ranged-skill.check.ts",
+      "bytes": 2054,
+      "sha256": "e701ccf05377821582961b9bbb93cf91be6fd3b9196604211046cdba466af56a"
+    },
+    {
+      "file": "게임/tests/wave-warning.check.ts",
+      "bytes": 2519,
+      "sha256": "5dd8b27d79457b52a5e2aa99eab8e2d14c0aed8b4a8e175ac92f5ba473a4d13d"
+    },
+    {
+      "file": "게임/tsconfig.json",
+      "bytes": 290,
+      "sha256": "7ef1778519d62a68eb1ec09effb9d410831ba6bd49e6a330a1fb562870fec90a"
+    },
+    {
+      "file": "게임/vite.config.ts",
+      "bytes": 212,
+      "sha256": "973004b99d5a92b836940cfd23fba52c48d6edcda14a8f58254273d095e95fb8"
+    },
+    {
+      "file": "문서/00_개발규칙/개발규칙.md",
+      "bytes": 4686,
+      "sha256": "1fca0db3e4437dd1f0d0e128dd8b6b12dd8d99008379c53214d3b27ac0efc020"
+    },
+    {
+      "file": "문서/00_개발규칙/모바일UI규격.md",
+      "bytes": 2070,
+      "sha256": "2860420f95e8c38d1ee7f65e040c536509c1a635f0673532d8dd768881088024"
+    },
+    {
+      "file": "문서/00_개발규칙/스킬구현규약.md",
+      "bytes": 8177,
+      "sha256": "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3"
+    },
+    {
+      "file": "문서/00_개발규칙/작업요청_양식.md",
+      "bytes": 1462,
+      "sha256": "7f0bd8b6fd5bd5f448f66d0f8fbfe3201fcc94b383285ae2d374ad58c2a5b9b2"
+    },
+    {
+      "file": "문서/01_큰기획/큰기획.md",
+      "bytes": 7474,
+      "sha256": "0fd3fe35162267afa310c2b170cfd875037549b1ae0bc0866b44dd31151d35d0"
+    },
+    {
+      "file": "문서/02_세부기획/01_전투/전투기본규칙.md",
+      "bytes": 5920,
+      "sha256": "140dfb50c4b922b34cbb8da825379a3438fecc51ca650388b4c2d3b0ed0cbfd3"
+    },
+    {
+      "file": "문서/02_세부기획/02_영웅/임시영웅.md",
+      "bytes": 5460,
+      "sha256": "34f867468bed7655fb686f81bf22b471ef335bc6297d6065d167d57a966947f5"
+    },
+    {
+      "file": "문서/02_세부기획/03_아이템/오염과정화.md",
+      "bytes": 1319,
+      "sha256": "31ebd9114f3bc2fffe0a821f2e9c6c4964d0c47076d77fc693b172700e97ff60"
+    },
+    {
+      "file": "문서/02_세부기획/03_아이템/임시아이템.md",
+      "bytes": 11256,
+      "sha256": "52ed89aae9e74d6aea6293675a0160b6cb1229c3d13fb27cc89e5d660ead211d"
+    },
+    {
+      "file": "문서/03_작업기록/DAY-001_20261102_마감/1_대화기록.md",
+      "bytes": 392,
+      "sha256": "f8555d487708eb30c3df9324ac0f21577a1973523c699374e421ff9a53bda284"
+    },
+    {
+      "file": "문서/03_작업기록/DAY-001_20261102_마감/2_사전확인.md",
+      "bytes": 479,
+      "sha256": "9cb5a03e072478e2daad9721017a306e3aa081e98e7893ddd05bdd3f4dd7fac4"
+    },
+    {
+      "file": "문서/03_작업기록/DAY-001_20261102_마감/3_작업일지.md",
+      "bytes": 689,
+      "sha256": "754f64f378a77fa509e956c650ae5389668b62145d2fcf6694753e249e90a383"
+    },
+    {
+      "file": "문서/03_작업기록/DAY-001_20261102_마감/4_정의문서.md",
+      "bytes": 344,
+      "sha256": "77c38ac28b2e0e03131804d991e7355ec219642a06e9e52fbd9e28408d8e0ace"
+    },
+    {
+      "file": "문서/03_작업기록/DAY-001_20261102_마감/5_버전관리.md",
+      "bytes": 279,
+      "sha256": "a1371ee7e58c6fc4020940ef0517a98e7da196b30490ce918796faa3f41974b0"
+    },
+    {
+      "file": "문서/03_작업기록/DOC-001_초기기획정리/1_대화기록.md",
+      "bytes": 808,
+      "sha256": "6938385d99cdaaf3db98df5e097474e9b3f2b2d071e9159a6925e471eb1de6ae"
+    },
+    {
+      "file": "문서/03_작업기록/DOC-001_초기기획정리/2_사전확인.md",
+      "bytes": 1332,
+      "sha256": "a3c69f6e5243a25450f684edce65b37ec688ed1d7c662ee4c4463eb54ae63b80"
+    },
+    {
+      "file": "문서/03_작업기록/DOC-001_초기기획정리/3_작업일지.md",
+      "bytes": 1135,
+      "sha256": "25d6df8221ad37db93a30fecf1102d9e6450c988a5680cb7cc65b1dfea73a544"
+    },
+    {
+      "file": "문서/03_작업기록/DOC-001_초기기획정리/4_정의문서.md",
+      "bytes": 783,
+      "sha256": "86ecf3fa618c798fdadefdcddc4479ee038c2d3e02bdfcf49b2a4b15275e30f8"
+    },
+    {
+      "file": "문서/03_작업기록/DOC-001_초기기획정리/5_버전관리.md",
+      "bytes": 1135,
+      "sha256": "fe52a50c38494744a4626d24c3578f0035ce5110ede459b4cecb1e94d49bfe62"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-001_PixiJS실행기반/1_대화기록.md",
+      "bytes": 397,
+      "sha256": "6ba6a07c98bd0e75870f0e7da7c6e43f33684f9af25cdef028ea307629557a0e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-001_PixiJS실행기반/2_사전확인.md",
+      "bytes": 1320,
+      "sha256": "0d599b798554e9945d5e32b9fc08db7dc6c24f25a87e75e24da05a2f87e144f8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-001_PixiJS실행기반/3_작업일지.md",
+      "bytes": 1504,
+      "sha256": "3492b14560eb3776081ca7b222b0f0c3096baad83ce484279cabd7ee49d22d59"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-001_PixiJS실행기반/4_정의문서.md",
+      "bytes": 856,
+      "sha256": "58e1293482cc0396568dd257474fd8a08b41c4e80013320f54f31e39eee32bca"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-001_PixiJS실행기반/5_버전관리.md",
+      "bytes": 680,
+      "sha256": "4185ff344ed941daa05c44fa128ace6d841080deb20187300e041b701d48076e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-002_디펜스전투/1_대화기록.md",
+      "bytes": 741,
+      "sha256": "3a84ff4754d5127191c7824ab87ec70a8b654b5e9281d4ca3c233681da8cb9d8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-002_디펜스전투/2_사전확인.md",
+      "bytes": 1671,
+      "sha256": "bc162a1480dc92f0d9c7ccbb4d2282df6b4d0df92706ecea4137c33f457ffa93"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-002_디펜스전투/3_작업일지.md",
+      "bytes": 2413,
+      "sha256": "b1b819321290d3875e10799f39429c32e768d84b20ce36ce8b1bc3d3c9dc24ac"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-002_디펜스전투/4_정의문서.md",
+      "bytes": 1189,
+      "sha256": "24efc9c5d3546610559a29e65fe8ab34ed6d0d0babcc6bb77e62972fba4b0ded"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-002_디펜스전투/5_버전관리.md",
+      "bytes": 615,
+      "sha256": "7d1fa787b3bbac84b75eea3bc1eb54cd3616a0a0a42d59cc8c98a38506f7a9e7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-003_개발자기록창/1_대화기록.md",
+      "bytes": 579,
+      "sha256": "ff3cb4d2bcdf7b11107afdfe577fac61d56b58f5ac95877e7f936556c9da559d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-003_개발자기록창/2_사전확인.md",
+      "bytes": 1106,
+      "sha256": "9bceda796036a1b4e34c41aa87af583de4128f0cc2d7870877f255c70f5a247c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-003_개발자기록창/3_작업일지.md",
+      "bytes": 1840,
+      "sha256": "1f1044fd303e4b7b1c70c71363e767f8021654b2fe3948707ffb41c5d997e14b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-003_개발자기록창/4_정의문서.md",
+      "bytes": 1019,
+      "sha256": "b6cb722231651cffd141aacf2630e3d9bd042f8bb8ef440d71af6dac6302fc15"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-003_개발자기록창/5_버전관리.md",
+      "bytes": 458,
+      "sha256": "aab6afc402764e675a89dd8eb804ade9ed0244e377963f588c461ae9197305f2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-004_이동범위공격가방/1_대화기록.md",
+      "bytes": 831,
+      "sha256": "6eb0db1abb9dfead28d667a0da2dd3d4eb404b954ffeaed6a6e2dd9df88f7424"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-004_이동범위공격가방/2_사전확인.md",
+      "bytes": 1446,
+      "sha256": "3eb54af26ae9ebec8c58f13933c3344d3a495daaa4452b65e6dace3e530db5b6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-004_이동범위공격가방/3_작업일지.md",
+      "bytes": 2513,
+      "sha256": "1cb030f8877db6c365b60a7f244f8d3b4dc044f4d24035b0d7b84d1173f37c4b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-004_이동범위공격가방/4_정의문서.md",
+      "bytes": 1430,
+      "sha256": "5c46d7ca164a4ba1fb1ef1d4ae0edfcfcb3bcecb8aa9a67efd7ee638c7e42390"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-004_이동범위공격가방/5_버전관리.md",
+      "bytes": 475,
+      "sha256": "8cd8a99fc33395caaffb7cf2f49eb4d14b9cc380a032a9190768e38b7c0548fe"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-005_영웅정보팝업/1_대화기록.md",
+      "bytes": 649,
+      "sha256": "2aee2843265a4e58117de4df847893d78dfe3cdaf199f72569c272fad1da525c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-005_영웅정보팝업/2_사전확인.md",
+      "bytes": 1070,
+      "sha256": "140b50d66ed3eee6a8ef7b017befa2eff2b9084f0498e3b283e6b9d49382e6d3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-005_영웅정보팝업/3_작업일지.md",
+      "bytes": 2001,
+      "sha256": "6e06ee945c91157bc11130f78b9115828df7c04909c0d65c6fdfdb59e5615ba3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-005_영웅정보팝업/4_정의문서.md",
+      "bytes": 988,
+      "sha256": "1f456cb75506c83c7a5ca4c34db695ace2a365f666cc0c397d9fc982048fc335"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-005_영웅정보팝업/5_버전관리.md",
+      "bytes": 511,
+      "sha256": "4a39836630cd052c00ec17c8baeaf81bec2bd9901def799509b61fa1b6134413"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-006_개발도구조합장비활성/1_대화기록.md",
+      "bytes": 563,
+      "sha256": "63f0b2de9d49212664fc0ff2276f026bec75a5bedc0faef2d9075ac5b262ee34"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-006_개발도구조합장비활성/2_사전확인.md",
+      "bytes": 1272,
+      "sha256": "30aea6ddec576effdd8f9adc755f880b3fd4f741c292b1cb8368d52eded956f7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-006_개발도구조합장비활성/3_작업일지.md",
+      "bytes": 1123,
+      "sha256": "ec152a66d7be1a806692b6bcf0381826b39609b167fc685480d31ac02f5284a3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-006_개발도구조합장비활성/4_정의문서.md",
+      "bytes": 1431,
+      "sha256": "0734d6d34c12c8efc11e55a852a7fa35f94f3829210d5b0af04bdc1994b46d7e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-006_개발도구조합장비활성/5_버전관리.md",
+      "bytes": 560,
+      "sha256": "21004cf8f3df7181d045a37171ef391aff7bf9aa011a1664c81305a28da137c2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-007_조합연결선드래그구매/1_대화기록.md",
+      "bytes": 772,
+      "sha256": "e874ba96c501581977721e4c915893199dff9f5329ee0b3af6fa4f3fe023f41b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-007_조합연결선드래그구매/2_사전확인.md",
+      "bytes": 1304,
+      "sha256": "bbc102a86186ef3578873da108b5cdf51dd469dcb401cc6415f0fcda9e8e4e34"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-007_조합연결선드래그구매/3_작업일지.md",
+      "bytes": 1465,
+      "sha256": "d28397d9d1e72b233699a816f7a8d94b84b08b4d239f972e73d95f27636e6079"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-007_조합연결선드래그구매/4_정의문서.md",
+      "bytes": 2098,
+      "sha256": "3f0407e7f325638c03b752cfd306f64f9d81a30dafaacc90807fcce0bd7bbe60"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-007_조합연결선드래그구매/5_버전관리.md",
+      "bytes": 451,
+      "sha256": "c6c7e2ed87a32d1eb7310716721c2a212aab8f987423fc87f12a6f78f57c2be2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-008_조합표시수정원위치배치/1_대화기록.md",
+      "bytes": 494,
+      "sha256": "ca6e56cd09981557d49be0c9d5d47983ad03ba49f4f557dd3d5224a0c673eeea"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-008_조합표시수정원위치배치/2_사전확인.md",
+      "bytes": 1135,
+      "sha256": "77ff21c26b9aec2bea220043baab8e227cf1ad7abde64a8b2aff3e7a2dca0f4e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-008_조합표시수정원위치배치/3_작업일지.md",
+      "bytes": 1471,
+      "sha256": "d6c2963e34d2688ea9b4f13f1d19df1c03797b6893f63dc9e167565e2ed23c63"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-008_조합표시수정원위치배치/4_정의문서.md",
+      "bytes": 1529,
+      "sha256": "6cd8c6f75716860c667b10607156560539be8c1501f1441b4725ed939adbb3ba"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-008_조합표시수정원위치배치/5_버전관리.md",
+      "bytes": 472,
+      "sha256": "9048c189dffa40de7ec1113680f4bd9215176b26bec95e83c229af9851405659"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-009_개발자조합트리/1_대화기록.md",
+      "bytes": 306,
+      "sha256": "13eb39efb567e3f4083e63b166aa984ea379ac256fbc769b5d0561dade9a871b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-009_개발자조합트리/2_사전확인.md",
+      "bytes": 550,
+      "sha256": "c8a5cc443e08dc1eebf16491873509c9f3a70f33f7861d2a7007d7951f85e9e5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-009_개발자조합트리/3_작업일지.md",
+      "bytes": 602,
+      "sha256": "5e87dfa81ae677cab604e2f61f6930588d7e06141ebca5dec51359627ae34b3e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-009_개발자조합트리/4_정의문서.md",
+      "bytes": 579,
+      "sha256": "58c23276ca18fe32f89b543183abb69197d81ee933a3e57bc782a907cb88ea96"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-009_개발자조합트리/5_버전관리.md",
+      "bytes": 378,
+      "sha256": "c6574973144b1de313597c6c60106e7a2eba5bf560ac70305d0839600aae7f25"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-010_블록드래그배치잔상/1_대화기록.md",
+      "bytes": 295,
+      "sha256": "5e4947fc6ad8b12afbcddada8074bbdec13453efcc157925865372a5af8fb173"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-010_블록드래그배치잔상/2_사전확인.md",
+      "bytes": 718,
+      "sha256": "83baa812e0a76fb1e865de6a4238d9e4706a7950724deec0bc9d65fc8bdc7557"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-010_블록드래그배치잔상/3_작업일지.md",
+      "bytes": 1164,
+      "sha256": "541052951e146be201c8d2508738d094e3d350b46f64dcf441aba45eb84c3ddb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-010_블록드래그배치잔상/4_정의문서.md",
+      "bytes": 989,
+      "sha256": "69025ae7af623dd8a6d32cd3256416d74492e9d50261bdad0e079e01fecc7f1d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-010_블록드래그배치잔상/5_버전관리.md",
+      "bytes": 386,
+      "sha256": "de2fff9fd082d61df87ea1d8397eb764c173f07e81351ba74667ca7ee85a6dd1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-011_자동배치상점승급/1_대화기록.md",
+      "bytes": 683,
+      "sha256": "4b0587909a6c3ce05f57f842980c2346bf555d71ea5d2879ba7d0c5fe0ce3469"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-011_자동배치상점승급/2_사전확인.md",
+      "bytes": 1302,
+      "sha256": "145400dea11e9ba4beb419f82adfe6d49efccbe79e887dada23bb37e05cb30e4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-011_자동배치상점승급/3_작업일지.md",
+      "bytes": 1553,
+      "sha256": "de092b5ff093574bd047ce6276b6acd453fe9c6196ee4421236fa0195bde659e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-011_자동배치상점승급/4_정의문서.md",
+      "bytes": 2374,
+      "sha256": "d4b17b227fc35c1e7a76f3d2d066333eed8f1afb30555a7239d998a9f31aca23"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-011_자동배치상점승급/5_버전관리.md",
+      "bytes": 431,
+      "sha256": "2f3ea9436610ff60495d03d756eadcb7e6bbe6807fd2597a2180ae77f5c96aed"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-012_현상금치명타이동잔상/1_대화기록.md",
+      "bytes": 597,
+      "sha256": "2b9c02a6e13a0cb225a5aebfaf9f4a349de15cd8ca33a2610e578176bd829830"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-012_현상금치명타이동잔상/2_사전확인.md",
+      "bytes": 1277,
+      "sha256": "b43bc683bb48320d1dd1859760700004c75b01211acaea5ad5ff3c3c2f3ded78"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-012_현상금치명타이동잔상/3_작업일지.md",
+      "bytes": 1535,
+      "sha256": "656139e7d5a8201cdf3413060b3486a5c11cf340eb290c8902566b98759a7c5f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-012_현상금치명타이동잔상/4_정의문서.md",
+      "bytes": 2072,
+      "sha256": "268dd454b068f13fa789ab9c0e69e25f63fdf8a5983442265b212390cccf05ab"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-012_현상금치명타이동잔상/5_버전관리.md",
+      "bytes": 466,
+      "sha256": "a14ea07a31e5b312def9b76e6eef0f4d185fae25e9702e419b3ff5803d3174d8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-013_장비칸4x5목록제거/1_대화기록.md",
+      "bytes": 285,
+      "sha256": "a83456bde3c14d3a50cd73202601a77a411e0e27e8d7f81e716558fa2dde6997"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-013_장비칸4x5목록제거/2_사전확인.md",
+      "bytes": 655,
+      "sha256": "0ccc727ec36fb53db4a51fc42da1340277f6fe31894f9a273da55cf916b3fa0a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-013_장비칸4x5목록제거/3_작업일지.md",
+      "bytes": 695,
+      "sha256": "e38a86b5e0230473f9eeaf3a2ccd196c211b575422658156682dc9e7f21142e2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-013_장비칸4x5목록제거/4_정의문서.md",
+      "bytes": 519,
+      "sha256": "5561a96b4de7d7273842cb0e813e7dba4385a990004ec4e9c8468fb4bd8f042d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-013_장비칸4x5목록제거/5_버전관리.md",
+      "bytes": 345,
+      "sha256": "c1fa78cc2adecfc107de9b07d8b6aa942dd91833723673a108e5d732f53bef46"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-014_무한웨이브공방타입네임드/1_대화기록.md",
+      "bytes": 837,
+      "sha256": "992c6baaf216c9207038dcde8b73451c436efb234ac21b25675a333d58aa6435"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-014_무한웨이브공방타입네임드/2_사전확인.md",
+      "bytes": 1553,
+      "sha256": "c2ef0a70151fb4ee0ff661be4229a28c4cff967be59a4c9a016b90523cc00667"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-014_무한웨이브공방타입네임드/3_작업일지.md",
+      "bytes": 1844,
+      "sha256": "7238d362fee8badc525ba6a371e2140c95b343a34fe70f14a6f8e116f8358d03"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-014_무한웨이브공방타입네임드/4_정의문서.md",
+      "bytes": 3268,
+      "sha256": "1ada813c46af7875e6bc3699930244b387d3f886212a452c1f91f79ee3724647"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-014_무한웨이브공방타입네임드/5_버전관리.md",
+      "bytes": 438,
+      "sha256": "38d0ed1984cf5c1fdd1617c2af43d8753287bd46d8747acb48893d5a60ece4b1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-015_원거리영웅이미지얼음공격/1_대화기록.md",
+      "bytes": 276,
+      "sha256": "f28b9e11d458827b5ebc7cc91d6ad91e50ee198a4a98dbc71a3ef97da9148f35"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-015_원거리영웅이미지얼음공격/2_사전확인.md",
+      "bytes": 864,
+      "sha256": "0e5d9e3bb26716dde0a5c68825455dcadf875db02dad4c2b3879ea6997d4e1a7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-015_원거리영웅이미지얼음공격/3_작업일지.md",
+      "bytes": 1074,
+      "sha256": "ae572b8d624ddc71ed137f97419c35d1823859a73124d4eeeb20459c6c221679"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-015_원거리영웅이미지얼음공격/4_정의문서.md",
+      "bytes": 1410,
+      "sha256": "1685dc43b0275a0885fc61e021980174e30e04f994c9f6defbd1cb84d908b427"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-015_원거리영웅이미지얼음공격/5_버전관리.md",
+      "bytes": 349,
+      "sha256": "4355f36c6e2296cf98701a70eea0cd1f53ffd36c81cd743515b55a6c935e837e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-015_원거리영웅이미지얼음공격/모바일_초상화.png",
+      "bytes": 76725,
+      "sha256": "5f28fd172c4c8c4f92192d82b814bc58c1c80f7bcbf502507855e769072ead4c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-015_원거리영웅이미지얼음공격/전장_확인.png",
+      "bytes": 137246,
+      "sha256": "cab3aecb71ca9213397beeae86d9c7b75128015841699179a35886403d7b7549"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-016_원거리소환카드/1_대화기록.md",
+      "bytes": 166,
+      "sha256": "540760a268bd188c2f65f61240a0f7b730448f4b547564d47843a1e9e9590a5c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-016_원거리소환카드/2_사전확인.md",
+      "bytes": 270,
+      "sha256": "753c4544d09ad1dbab39549f0c32ea11f080855145ee8004b9e72d32c0fae594"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-016_원거리소환카드/3_작업일지.md",
+      "bytes": 312,
+      "sha256": "ef04f5efd38aac1268e5082d36558a58b10f5644da01c267ccd7d864db85046c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-016_원거리소환카드/4_정의문서.md",
+      "bytes": 323,
+      "sha256": "47e1fc7664d14af5693761720f57f46fe301f281dd1f85c8ca7938a00096a1f5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-016_원거리소환카드/5_버전관리.md",
+      "bytes": 184,
+      "sha256": "d3b85617b35ce7a299e0ca3c71c5c54f9eaf85f4b68680f87e21fc7e9d3c4eeb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-016_원거리소환카드/카드_확인.png",
+      "bytes": 182558,
+      "sha256": "2eb17292104a4dee1b892a33692560551b44c410ab4ef954934f499573b743cb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-017_전장웨이브정보통합/1_대화기록.md",
+      "bytes": 191,
+      "sha256": "d5ea19c7f5154be10babdab1cb620757ec8e1af3a12a16e71e8ad42fab6e96be"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-017_전장웨이브정보통합/2_사전확인.md",
+      "bytes": 399,
+      "sha256": "a9548311e21a0c588064965e74b732182b8b89566a212d9ae6a65166ba0971c1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-017_전장웨이브정보통합/3_작업일지.md",
+      "bytes": 526,
+      "sha256": "32867bdbc7e263722c43dea8ca62eb74f1da27ddfa57c28ce484ee4f7f5240e7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-017_전장웨이브정보통합/4_정의문서.md",
+      "bytes": 535,
+      "sha256": "c982b895383d1fa9a5591ecb5cd6214746201ea44a3619c576164a1dc1d549d6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-017_전장웨이브정보통합/5_버전관리.md",
+      "bytes": 226,
+      "sha256": "a0e9b6f7afc5784d34e48038c0479046efefcc60e7b9f0f869987bc370da9ed9"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-017_전장웨이브정보통합/전장_390px.png",
+      "bytes": 73855,
+      "sha256": "c519544935a1b1eef5b49c997e8590f40e2c8448b13b299971754c88c1827b4f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-018_장비조합버튼가방배치/1_대화기록.md",
+      "bytes": 206,
+      "sha256": "e1955a63461b7672748861c71b6d4e9cbc003a88800d55b3710c87c03eae4081"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-018_장비조합버튼가방배치/2_사전확인.md",
+      "bytes": 277,
+      "sha256": "8c2c7ea478b0f75bfb7797ed459c98ef89df211e7b54572156e8107ded3285a2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-018_장비조합버튼가방배치/3_작업일지.md",
+      "bytes": 516,
+      "sha256": "3334f43eef61923939cdb1403d70778c273812c1cc1db3b86a564ddb679fdfcb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-018_장비조합버튼가방배치/4_정의문서.md",
+      "bytes": 431,
+      "sha256": "7852f375025d26149dbae1ad0bed19d8ad7ea5e64c81bbf396965da016771f9c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-018_장비조합버튼가방배치/5_버전관리.md",
+      "bytes": 214,
+      "sha256": "3b4221bea42a204233c299715e33acb192dee90aa43968cd6bdded9a43930d37"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-018_장비조합버튼가방배치/배치_확인.png",
+      "bytes": 17409,
+      "sha256": "7ada3bfc0476ae4f0fad764f692bd73f5478c0e6506d8898de6fd55036c162b0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-019_가방장비규격체스판/1_대화기록.md",
+      "bytes": 162,
+      "sha256": "27812b87ae6c52a1f3a9d5c933a6e7714837708052c33921e082b80ba21aefc3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-019_가방장비규격체스판/2_사전확인.md",
+      "bytes": 298,
+      "sha256": "ceae58888b937b3d6cfae08fcc1113c4b3c11358dfe162a51b6ac6d3fd4ce5b8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-019_가방장비규격체스판/3_작업일지.md",
+      "bytes": 529,
+      "sha256": "812ccccc1357ab1496c292014ba15854c4db10ed573c5eddea411584fdb7524d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-019_가방장비규격체스판/4_정의문서.md",
+      "bytes": 472,
+      "sha256": "c3291219b0a47aeaad186dbb462b980362565b8971e8fd1ab4a002b0576ff52f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-019_가방장비규격체스판/5_버전관리.md",
+      "bytes": 182,
+      "sha256": "f05a5f192cd5b5482642006f1b22aa8ed4db3e193c82487c6c9abbdad143edd0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-019_가방장비규격체스판/배치_확인.png",
+      "bytes": 20645,
+      "sha256": "9f344d0985775097b24345853b4705021cc2305d1c4a1a54a1dfcb67b02a9cd2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-020_상점세로배치/1_대화기록.md",
+      "bytes": 159,
+      "sha256": "fbdc74da3309ce3621544c9e71c8e81caf5fa139618051699ee935ae71110e6c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-020_상점세로배치/2_사전확인.md",
+      "bytes": 348,
+      "sha256": "1e04936d44eb8ba977f6bda86cce7fd83578fe069c4e89cd42a60d0569ef4791"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-020_상점세로배치/3_작업일지.md",
+      "bytes": 475,
+      "sha256": "09873ddf200176ce31c2b636e40291ea95af4f64a61f53557d434566a331d647"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-020_상점세로배치/4_정의문서.md",
+      "bytes": 386,
+      "sha256": "0fbd9bc96daa24402af6565c27da0b66fed140a2888152d7616a84d5ad46512f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-020_상점세로배치/5_버전관리.md",
+      "bytes": 171,
+      "sha256": "7c4d4cdc1fdca1da0a40e5dea005c6ccdb8c5aeeb9bcaf07c5c899f11bbcee69"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-020_상점세로배치/배치_확인.png",
+      "bytes": 21682,
+      "sha256": "39a2ef1b9900c4848c61738d1c8e891171cc265b9703afbd45d6ae5d2208b9c2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-021_상인상점가로배치/1_대화기록.md",
+      "bytes": 222,
+      "sha256": "7677e70348f79e7c1e1efc798f97c730594487ac8c7f4794d8926b0035a1b9c9"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-021_상인상점가로배치/2_사전확인.md",
+      "bytes": 421,
+      "sha256": "c7b4c6b504dfaec429236433366c2a2a18ba0e0994a02394dbdfb34f40ae4855"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-021_상인상점가로배치/3_작업일지.md",
+      "bytes": 416,
+      "sha256": "8aa32379ea5bca3e7a1611c11d2b48743abec8784e05a52c12d0606dead373c7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-021_상인상점가로배치/4_정의문서.md",
+      "bytes": 1064,
+      "sha256": "196a5f4210db4e75e1120eec98b3df87f71e69589be0019b52bd39aa13411f67"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-021_상인상점가로배치/5_버전관리.md",
+      "bytes": 178,
+      "sha256": "4b6c0aca3a9372c656380d0e8c1b088675a48556b98ccd0a24699186ccac7f89"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-021_상인상점가로배치/배치_확인.png",
+      "bytes": 141383,
+      "sha256": "02d9309134ab6aae2d9f100d8a09ef7dfc40f8ec7b7a312ca8986b0f390d4426"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-022_상인교체우측2열상점/1_대화기록.md",
+      "bytes": 211,
+      "sha256": "68c5a2ab6041d3a062c3575f506e424198a8174326abe4c59aae735c93feb952"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-022_상인교체우측2열상점/2_사전확인.md",
+      "bytes": 317,
+      "sha256": "15039380226f3e7745926b0f3c8350699ed55e37db137b1be746407fc11826a8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-022_상인교체우측2열상점/3_작업일지.md",
+      "bytes": 388,
+      "sha256": "122281956431defa4e436f2ff07f2ab23e53b20e4b36e6fe44b95e4350cf1c7f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-022_상인교체우측2열상점/4_정의문서.md",
+      "bytes": 1046,
+      "sha256": "8d7db7b0ebc5f89767eb6b8e2aca8a826e40086497fd91564ade613e292339c2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-022_상인교체우측2열상점/5_버전관리.md",
+      "bytes": 168,
+      "sha256": "c9d0dac0027a633128ed65809da99c4210a2ad0212e47a91726f157cfad81e48"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-022_상인교체우측2열상점/배치_확인.png",
+      "bytes": 109525,
+      "sha256": "df1bef45f8b43a383c8949d0d4e5d79c43d1ec9f2f2ea93a747ea3dec4d4256b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-023_상인초상화위치조정/1_대화기록.md",
+      "bytes": 152,
+      "sha256": "02cd83f5702eb7a0da1c784b90cf3d5c13559ea6b406cb7e565338618ffb64b7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-023_상인초상화위치조정/2_사전확인.md",
+      "bytes": 172,
+      "sha256": "fc247cd05a485fb66075531a22a2f3a0aa7cca56df5a03229305027056e6a8fd"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-023_상인초상화위치조정/3_작업일지.md",
+      "bytes": 666,
+      "sha256": "964df95e20f45f24d3d8513c8220610da9aacb2e4de8dce5569b3e4f7fcaddcc"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-023_상인초상화위치조정/4_정의문서.md",
+      "bytes": 364,
+      "sha256": "ca0ce77aa85fcbbd6c921b3acf6b3352a3a8d332ec40f490798404bf6ff04766"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-023_상인초상화위치조정/5_버전관리.md",
+      "bytes": 159,
+      "sha256": "e6a35061635ab6e78012eacf6d81e49ca67edd548b00e7641231fd3940e5b130"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-023_상인초상화위치조정/배치_확인.png",
+      "bytes": 101283,
+      "sha256": "0b6b134535b950bbfb82d3d695f600a6c5a93c2051da14ca07ecc02a57fe144c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-024_상인노출영역상점확장/1_대화기록.md",
+      "bytes": 122,
+      "sha256": "e37d1751c24bd85ce4f1d274fac892456482c7abc58c72cfbee9b5269a51915b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-024_상인노출영역상점확장/2_사전확인.md",
+      "bytes": 183,
+      "sha256": "85c459da55810aae033a46aca987322c9eb9c39dddfde664682231fbd352f337"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-024_상인노출영역상점확장/3_작업일지.md",
+      "bytes": 316,
+      "sha256": "ddf055a2268701f176948da1b52aa82ce851b8354e29f64bdab8229815808e2e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-024_상인노출영역상점확장/4_정의문서.md",
+      "bytes": 254,
+      "sha256": "bc69a8142d620baf932557fb364785a0865ca89a80dc09e7da44f6f5f35c1ad4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-024_상인노출영역상점확장/5_버전관리.md",
+      "bytes": 159,
+      "sha256": "f89a6f7651766895aa8f0a3c93d15d8edaaf7d0b459b09229a9842bbd9439df3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-024_상인노출영역상점확장/배치_확인.png",
+      "bytes": 70680,
+      "sha256": "88ecbcfc769d4c900b201fe94fcffe05d500f18286f52841139eb8f1eff37275"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-025_상인가방상품32배치/1_대화기록.md",
+      "bytes": 107,
+      "sha256": "7dc773056b6782b0ec09ade37c4f99e6b01337d5479765b6e910e1d91c33f78a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-025_상인가방상품32배치/2_사전확인.md",
+      "bytes": 160,
+      "sha256": "f407f25c482c97b432fa8b7772db20e698f6d9212c9606edc58478eceaf32a83"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-025_상인가방상품32배치/3_작업일지.md",
+      "bytes": 294,
+      "sha256": "2c9dbf8b0b7fef5dc187ff283cc21d2b708d9919dc53cab2c2edd105c25b3318"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-025_상인가방상품32배치/4_정의문서.md",
+      "bytes": 225,
+      "sha256": "d933fe8fa7c9fa44b35c62d378ffd5488a06511fb401fda51507483d81299cad"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-025_상인가방상품32배치/5_버전관리.md",
+      "bytes": 152,
+      "sha256": "701e5dd8739a57e405cf5a857c3985c87d126eec9c5cafd22e93e1d263bc8224"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-025_상인가방상품32배치/배치_확인.png",
+      "bytes": 69291,
+      "sha256": "2dd3c6fd893db398871ed538e4943514dc65a744be6253f138b760e32aa30b66"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-026_가방높이실루엣상품정렬/1_대화기록.md",
+      "bytes": 269,
+      "sha256": "d246805f713fb5b38d7d5b9b4f6d2020a412b77e118162f947d69aa63e0e10b1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-026_가방높이실루엣상품정렬/2_사전확인.md",
+      "bytes": 259,
+      "sha256": "96edaa62989b0663e5419b6475c700c6afee8d07f474273c34930dbf38bb94ab"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-026_가방높이실루엣상품정렬/3_작업일지.md",
+      "bytes": 454,
+      "sha256": "5296a3412b95cca75daefe513f44ed44775c5f3983f114cfbb9742d4ab7e53e4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-026_가방높이실루엣상품정렬/4_정의문서.md",
+      "bytes": 357,
+      "sha256": "6fc2c1e0f97b365499ad8e869a257fee22a0ff5eaaa0a68d3de5545e837e35fa"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-026_가방높이실루엣상품정렬/5_버전관리.md",
+      "bytes": 169,
+      "sha256": "aa42a6f9e928d258fb907f59864b9c0cd65927a5d8547cc836ed878ce1131c9f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-026_가방높이실루엣상품정렬/배치_확인.png",
+      "bytes": 79778,
+      "sha256": "122dd973c729fea8b9a7d9f259d08fd8891fca7264274127c37c40526d6b5a7c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-027_상인이미지연결보정/1_대화기록.md",
+      "bytes": 158,
+      "sha256": "23c9076875323c6ef59e906b8f5a60e306217f217b4cd08cf4a52407a3e4726b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-027_상인이미지연결보정/2_사전확인.md",
+      "bytes": 192,
+      "sha256": "38ca62fae078171d96aef40cb3d4565c17c9101a95aa73e62442ef0ae7489d08"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-027_상인이미지연결보정/3_작업일지.md",
+      "bytes": 431,
+      "sha256": "a1ddc20a2d2013a75080a0cf7068136f485a3cd07fde282fbb4164d8c3e72be3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-027_상인이미지연결보정/4_정의문서.md",
+      "bytes": 302,
+      "sha256": "1881cd76bebb395b78eed7373efdfd5d6238d6ddb0e6aef1adc80d80b3bd1052"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-027_상인이미지연결보정/5_버전관리.md",
+      "bytes": 169,
+      "sha256": "6c57e4381721465d5de01bafaf7f71e7c807d69162abd7bd898d4963c1af51ab"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-028_상점이름새로고침위치/1_대화기록.md",
+      "bytes": 156,
+      "sha256": "1118aeb59965f9f9a66333180fa46bd8db379fc8c9495389fd04a81864504590"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-028_상점이름새로고침위치/2_사전확인.md",
+      "bytes": 213,
+      "sha256": "9cbc9eb3f3e4b9c9d7ca3c02e3bcf40d9459842ab580d9de17aff46d1a24cfa5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-028_상점이름새로고침위치/3_작업일지.md",
+      "bytes": 334,
+      "sha256": "8b7cfdea835c0c12fae348da769e79dd872513e244b90e6fa12e9b9735a55844"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-028_상점이름새로고침위치/4_정의문서.md",
+      "bytes": 293,
+      "sha256": "88f4fbbfde83f11e27328c6ced1f62709463dafdf54438eed068a755fb0b88e7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-028_상점이름새로고침위치/5_버전관리.md",
+      "bytes": 182,
+      "sha256": "e51887366e036d708fd9906e7cb092836233936fb789e91615e1ce1ddd4be16d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-028_상점이름새로고침위치/배치_확인.png",
+      "bytes": 89364,
+      "sha256": "3ef6f02a7cf74b8d806961ed287d45cc4daabef5836b89d72718865ac49857f5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-029_공용가방3열장비잘림수정/1_대화기록.md",
+      "bytes": 149,
+      "sha256": "1f3a0616b21e49e0438e85fba1bd4b3c2737bbcbbbc48ed9759a2fbe1a43f472"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-029_공용가방3열장비잘림수정/2_사전확인.md",
+      "bytes": 322,
+      "sha256": "dc621eba21afbb759263ee8c44702249848639aaad8a4a45b962b4513fcbd4c4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-029_공용가방3열장비잘림수정/3_작업일지.md",
+      "bytes": 602,
+      "sha256": "ffc4353880df525017026bbab13ecb18674f789e17a012f85c5ba17841e4240f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-029_공용가방3열장비잘림수정/4_정의문서.md",
+      "bytes": 358,
+      "sha256": "e3946c4690794567c0229a0ba45faa39a0e13cdb412bea0c62d222c8ad8d4356"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-029_공용가방3열장비잘림수정/5_버전관리.md",
+      "bytes": 182,
+      "sha256": "e9cc72c8a6fcea983e2198e5158ba2f31d40e3d05dd1828c32a9ba1c45f3bfad"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-029_공용가방3열장비잘림수정/배치_확인.png",
+      "bytes": 17164,
+      "sha256": "7674b00ef71699d5817f52116e60a9568dbb40cf139f42b0b6860225c7e4c4e0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-030_가로가방소환그리드/1_대화기록.md",
+      "bytes": 208,
+      "sha256": "2e15a996018f2803eaccd538e23802d96ada9757cfe7a03a333ac9f0c83e12b9"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-030_가로가방소환그리드/2_사전확인.md",
+      "bytes": 347,
+      "sha256": "4a3ead38dc971b77df429ae904eca2915bb6e935908cf29603d048d9ee89ebab"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-030_가로가방소환그리드/3_작업일지.md",
+      "bytes": 540,
+      "sha256": "730511f52152accf6fc70750cd180009ffc26eaed7ab10964313c23e63779da3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-030_가로가방소환그리드/4_정의문서.md",
+      "bytes": 333,
+      "sha256": "0eccbaa5a0daa5a4d03a5143e46ff877393b1780a6925dc915730b4c011f30cb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-030_가로가방소환그리드/5_버전관리.md",
+      "bytes": 178,
+      "sha256": "4de0da595d4005479967a2bc1512847541f84560a378bd5e3c02d1d8d49c2491"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-030_가로가방소환그리드/전장_소환선택.png",
+      "bytes": 92357,
+      "sha256": "b2fb6b23bdec2082b6805ccb2da1a1c2b7a379935c813a8c45fa5e7d86d61f10"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-030_가로가방소환그리드/전장_평소.png",
+      "bytes": 65597,
+      "sha256": "6eff7f74af739afebca27241ee7ba14fbee7ab03858fdfdb81988f5028885498"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-031_가방여분행표시수정/1_대화기록.md",
+      "bytes": 136,
+      "sha256": "d80c804e580de2fd93558553fb8c773d59040984ecc340b61cdb7b0901497e01"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-031_가방여분행표시수정/2_사전확인.md",
+      "bytes": 192,
+      "sha256": "3cf99bea2fdd260651f85acfa88ed48fc2f162d31d40dc831b418f45c833106b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-031_가방여분행표시수정/3_작업일지.md",
+      "bytes": 538,
+      "sha256": "600736d81ee4eca5fafdf21f8d9beb5605c2312ac35ff096ff127a3d61aa63a5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-031_가방여분행표시수정/4_정의문서.md",
+      "bytes": 284,
+      "sha256": "313cad588c89c8037484d8b91b6c6c6168884ecc7cb0eea277f1bed5018567d5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-031_가방여분행표시수정/5_버전관리.md",
+      "bytes": 172,
+      "sha256": "9e40a5688605cff46ab25338e2099cc9a3b8a73f29d079ecc8291626e79e3779"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-031_가방여분행표시수정/수정_확인.png",
+      "bytes": 86906,
+      "sha256": "c056a95c38deb137d2055ef8d85333a08376c2c0ff8c6e585afbd132ef11dfdb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-032_대형아이템상점고정/1_대화기록.md",
+      "bytes": 158,
+      "sha256": "927950afa2fdea3556829deef6bb03973110eda7d9cb1c65ce685f0ecf1f30fb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-032_대형아이템상점고정/2_사전확인.md",
+      "bytes": 288,
+      "sha256": "3267a70d3d2000c9321f4e7e6252b2ddccdcff4e5ce3a89e7822ac2e186d5a25"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-032_대형아이템상점고정/3_작업일지.md",
+      "bytes": 647,
+      "sha256": "11dc0cc00d41093717daf5b17f175eaae8358fa5601f1a85f994718e4fc674f8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-032_대형아이템상점고정/4_정의문서.md",
+      "bytes": 443,
+      "sha256": "19084863b007a2a0c2e3c830120f394a277c6b7ce8deabcc2ed297c0fb642e6f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-032_대형아이템상점고정/5_버전관리.md",
+      "bytes": 175,
+      "sha256": "9787c71c0051943cd6b4b19e9f7a7b8e277156baa82a14ea1d5a2472f32223ef"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-032_대형아이템상점고정/혼합형태_확인.png",
+      "bytes": 75681,
+      "sha256": "70a50ba93d0b18b949ed42d608b0317d162ef7c94c5f86dec9e1937a08a20bba"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-033_장비가방상점통합시안/1_대화기록.md",
+      "bytes": 198,
+      "sha256": "85d989cb763e054a3c35389e5e503720fb5dcbf1b215bb8bcbddfd27f3f8bde1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-033_장비가방상점통합시안/2_사전확인.md",
+      "bytes": 469,
+      "sha256": "1f186ff4ec78e91af7d16bbd2a8a8e78ed2a6c174bcad08bf0533fbb6dbb76bd"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-033_장비가방상점통합시안/3_작업일지.md",
+      "bytes": 774,
+      "sha256": "bbfb02d5da3406254ef3b5276a0409fa646da8e2130c372afc1820b690718e0f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-033_장비가방상점통합시안/4_정의문서.md",
+      "bytes": 666,
+      "sha256": "821f538ae9fdcb32833dae2f18e047a7154e5cfb42b0214a9f01eae3c69c9607"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-033_장비가방상점통합시안/5_버전관리.md",
+      "bytes": 189,
+      "sha256": "241bd6c25a6c471a0f841b297b0b5d1fa66355c92cbe4345b9c25f5cd9296c2c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-033_장비가방상점통합시안/아이템정보_확인.png",
+      "bytes": 87516,
+      "sha256": "e87c825dd2dcfa05f9e333fe1a454ab87320c3f1fb34c43885ecedfec6b739ce"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-033_장비가방상점통합시안/통합패널_확인.png",
+      "bytes": 87985,
+      "sha256": "2f5e6acfb0ff968cacf8876c043bfd2e47b98b7216692f2f91a89c2668ede6a3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-034_시안디자인롤백/1_대화기록.md",
+      "bytes": 164,
+      "sha256": "905e2d27211268cac5773fc3ba9c176290cbc717b0c9faf6ecc3d8c57609a726"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-034_시안디자인롤백/2_사전확인.md",
+      "bytes": 274,
+      "sha256": "65b78ea95c344f7295d72bc295cff1cb869b9137935b07aa1ae430968cc790e6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-034_시안디자인롤백/3_작업일지.md",
+      "bytes": 310,
+      "sha256": "63d7ad62ab9be4394f758330f479bc9fa2900150c6e182f939257c9b85102739"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-034_시안디자인롤백/4_정의문서.md",
+      "bytes": 186,
+      "sha256": "6455cbe4a7a9b292f0a93bd0e8a3f2ec098bbcd95e5c3c1099f7240dc36c3f1a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-034_시안디자인롤백/5_버전관리.md",
+      "bytes": 165,
+      "sha256": "8a86d2ee149e99f8b1b5af0d26a35f2029b725311fb3f98dba6b1eac8f8c0cf8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-034_시안디자인롤백/롤백_확인.png",
+      "bytes": 35434,
+      "sha256": "ce74afb88a5ddff54918cd0dbd819fbed48e41293da810822d28df0d6d44e008"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-035_상점배경제거6칸배치/1_대화기록.md",
+      "bytes": 142,
+      "sha256": "38ba1e5a7c7ddd8569360146ed294d0658939bb030bec3edf38fa45d5adc2079"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-035_상점배경제거6칸배치/2_사전확인.md",
+      "bytes": 271,
+      "sha256": "9206a7b794e8e08d34aff0fc3995594d5955a869ab1dd6d60ce1c525b5625376"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-035_상점배경제거6칸배치/3_작업일지.md",
+      "bytes": 379,
+      "sha256": "6a2c178a6547ab403ba5d5c0d63fe8ea1dd1e1cbdda430ed7c9829f59b5439ec"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-035_상점배경제거6칸배치/4_정의문서.md",
+      "bytes": 211,
+      "sha256": "c2f78453a91a910515b5e636bc30bc1e90f63377dadd73c892ca63d5f3bd1759"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-035_상점배경제거6칸배치/5_버전관리.md",
+      "bytes": 154,
+      "sha256": "9a64e7655a41e381cf6fa4771b6bd77473d131d0465918e11ad6d20905340c26"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-035_상점배경제거6칸배치/배치_확인.png",
+      "bytes": 32971,
+      "sha256": "70eeba37dbe3a276f6cadcb70b953e1e0b6c39a28af3bc0b7aa3e2e3a71152bf"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-036_첫상품칸상인배치/1_대화기록.md",
+      "bytes": 128,
+      "sha256": "db993041ae01b041bc3b9485541ddc7772e9bf3b197b25a67b4cfc78f6f5be9f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-036_첫상품칸상인배치/2_사전확인.md",
+      "bytes": 273,
+      "sha256": "9a9c0c724649604d300f54a005627751f1e53e422a158c1970a044ea6c5957fe"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-036_첫상품칸상인배치/3_작업일지.md",
+      "bytes": 325,
+      "sha256": "98b6c0341bfc8055d88f0da222845699136cf5e6b5ccd2e7dab13c5984567950"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-036_첫상품칸상인배치/4_정의문서.md",
+      "bytes": 237,
+      "sha256": "eca2e2cb23c94e5408e994cd5b0ba5304e02340a51c1ffb582d04ae72c9ba108"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-036_첫상품칸상인배치/5_버전관리.md",
+      "bytes": 176,
+      "sha256": "a1bab72267338681e3ccd373a66e65338fd6ad8d16563b1adb4f574732c0ed93"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-036_첫상품칸상인배치/배치_확인.png",
+      "bytes": 57035,
+      "sha256": "62a2448ad4dc0f3e9d27f0baa4a28403552a3733c8234d1f9a337bed9d91a559"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-037_상인배경확장/1_대화기록.md",
+      "bytes": 237,
+      "sha256": "fd364b10e5c1a2949f639e1b59efc98581bb021ac8927c09dc4bbc54b7ad9fe8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-037_상인배경확장/2_사전확인.md",
+      "bytes": 231,
+      "sha256": "7551f8925598f3295ddee0ceba591756967dc14af4a9071c8eb95b808132bcdf"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-037_상인배경확장/3_작업일지.md",
+      "bytes": 443,
+      "sha256": "d4425612441894663affbe6ad5b090c330a2a5352095728a6e814ffc782e8f52"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-037_상인배경확장/4_정의문서.md",
+      "bytes": 301,
+      "sha256": "744bdb39cbed332e3c7b4a5a2d6399258c773265fc4ff047b1ead69f7078c7e4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-037_상인배경확장/5_버전관리.md",
+      "bytes": 162,
+      "sha256": "51d0f88119ee186143817353b05e470af16127fa893d52e4cde51fc00a069e3c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-037_상인배경확장/배치_확인.png",
+      "bytes": 99021,
+      "sha256": "056eece1758819044d61a86ba99ae3e36b866f56e757017c588686d413eba5a9"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-038_상인위치겹침페이드/1_대화기록.md",
+      "bytes": 168,
+      "sha256": "fd44f0f41d8c313b6d7700a95c104448e64a5806fd27e199df5176cdf74cc75b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-038_상인위치겹침페이드/2_사전확인.md",
+      "bytes": 176,
+      "sha256": "f71a2460045df64e033a64dd5fe67a067583d1193be44559cc78adfeb3defd02"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-038_상인위치겹침페이드/3_작업일지.md",
+      "bytes": 474,
+      "sha256": "9e2348ce5682fc45f1786e439602cac0dee9b243ed6b10d5c9915a30ce55119f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-038_상인위치겹침페이드/4_정의문서.md",
+      "bytes": 307,
+      "sha256": "d724a8fa5717dcf1ca922d6d286da105ba2d36ce4593e69e8e90ba5e2ba8f4a3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-038_상인위치겹침페이드/5_버전관리.md",
+      "bytes": 166,
+      "sha256": "71465df5d50c38b5d8db74a27b3f2ebe2588e7d0e6f29591a7f668edb620d17b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-038_상인위치겹침페이드/배치_확인.png",
+      "bytes": 102329,
+      "sha256": "8d37ae632d31d91cdb56319a044d8c848eee725d8087b45ccbd42de2f4dd3c95"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-039_영웅소환캐러셀/1_대화기록.md",
+      "bytes": 226,
+      "sha256": "26596bbc24b3ec2a228e90645ed479185c045a9b8fd551247ef5451affe9ee78"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-039_영웅소환캐러셀/2_사전확인.md",
+      "bytes": 381,
+      "sha256": "21ea55674349885df6eb4760418420f5b5fd1ebfd6c2601e36a48d0512a78ca0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-039_영웅소환캐러셀/3_작업일지.md",
+      "bytes": 660,
+      "sha256": "00461ed12cff2c50e855769936b339ffdc69d4b66a7418b9c51320026ec3edbe"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-039_영웅소환캐러셀/4_정의문서.md",
+      "bytes": 434,
+      "sha256": "2c5ee44a4e6ac1add2274d18766d08881f0530e72969e12f5a6ea75541d45487"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-039_영웅소환캐러셀/5_버전관리.md",
+      "bytes": 177,
+      "sha256": "667d8e77e1aac2d90f8d992810c668e87e98aeaf59b3aac828738685b5a3c31e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-039_영웅소환캐러셀/캐러셀_확인.png",
+      "bytes": 93758,
+      "sha256": "c9c6441fdf7442ce2fd6f8c9146af2cee3a26ffb66f6dbd1511af39525327b7b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-040_영웅카드겹침드래그/1_대화기록.md",
+      "bytes": 226,
+      "sha256": "bb9ca9b96708ef31318d46c6ef01bd02898f09f7095cac3337a0fc81ad496f0d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-040_영웅카드겹침드래그/2_사전확인.md",
+      "bytes": 344,
+      "sha256": "03d357efa04c88289ad418d78d79a87516150be8e68cc04319ed6fb4a03d0b0b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-040_영웅카드겹침드래그/3_작업일지.md",
+      "bytes": 655,
+      "sha256": "f3e5093ee69c8aa67ae700d8180bc2f3ece62f76835b987ecbd76cdbf8061d00"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-040_영웅카드겹침드래그/4_정의문서.md",
+      "bytes": 390,
+      "sha256": "5dffa256a3e83a032fe2fb0c9ebac453555ce8d11e74517793f15e7a2815f554"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-040_영웅카드겹침드래그/5_버전관리.md",
+      "bytes": 165,
+      "sha256": "c375e44f5749a3a51ad4f5c68866bc387f03a0e370fee7d8f5952a88b4958e99"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-040_영웅카드겹침드래그/캐러셀_확인.png",
+      "bytes": 96823,
+      "sha256": "579437d372c9e72b1f3c75dd41748b9fdf723ba5632c2620570b458dae9298d5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-041_영웅배경순환캐러셀/1_대화기록.md",
+      "bytes": 237,
+      "sha256": "eea5dd27adde167dc355ce3b50d18e78ffe07b5ef4345fef43fcd46768ecb428"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-041_영웅배경순환캐러셀/2_사전확인.md",
+      "bytes": 353,
+      "sha256": "8184fe7ae972478964b24f5252b8cb9e331435e877731610bec59555b3e9ea93"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-041_영웅배경순환캐러셀/3_작업일지.md",
+      "bytes": 708,
+      "sha256": "ef1243c51ceb5774d2453fe6b811f887bb4fa6710dd2c401f107522c853bd94d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-041_영웅배경순환캐러셀/4_정의문서.md",
+      "bytes": 515,
+      "sha256": "d805eb18f887907674fb371b1265c8fb604851cf6b1f93998ebcad1cb622128f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-041_영웅배경순환캐러셀/5_버전관리.md",
+      "bytes": 177,
+      "sha256": "c590265d68e88f2443f3481076af4f0f30d57c810d17dc114d14e8316121f2e8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-041_영웅배경순환캐러셀/배경_확인.png",
+      "bytes": 146578,
+      "sha256": "9638acf91cbe892bc6c11e088283f305504a3a3f4c5fd3be2bc0d57dffe69b51"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-042_안내제거배경선명도/1_대화기록.md",
+      "bytes": 145,
+      "sha256": "ca1e86144f67bf35c5da38020cb51164596e29563fb82b9242589f330596c117"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-042_안내제거배경선명도/2_사전확인.md",
+      "bytes": 250,
+      "sha256": "3e2baa897ba3c636c955268bd42c1ba859a5e4783cd582c8e3e0dc1e52d6960d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-042_안내제거배경선명도/3_작업일지.md",
+      "bytes": 259,
+      "sha256": "9954cfe94f6dad4ba2e5b0424183cff0f96819a15f9098180932c3eb5605fe71"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-042_안내제거배경선명도/4_정의문서.md",
+      "bytes": 226,
+      "sha256": "e88747883281f73e9e7dfd901367e36ee058050c7ee802528b3d9062acb0b2ab"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-042_안내제거배경선명도/5_버전관리.md",
+      "bytes": 166,
+      "sha256": "2890caeb165c776d88e15f8e51f14a5e550c152856506230e8c6a983918fa5e0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-042_안내제거배경선명도/배경_확인.png",
+      "bytes": 254730,
+      "sha256": "6f1b922b0b867b6f731bd730c7a2beb5134a61c56105dbe2ca57a6ad2d0840c4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-043_보스화면슬라이드전환/1_대화기록.md",
+      "bytes": 216,
+      "sha256": "9f897e048b506bc5caa18b04e9c7d2914607dcbef5cbdf149514c3ef35fbdd43"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-043_보스화면슬라이드전환/2_사전확인.md",
+      "bytes": 559,
+      "sha256": "954e0dd1d5a781e973805c0d552412c374d5d548d5728ea5989c6de63712b83a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-043_보스화면슬라이드전환/3_작업일지.md",
+      "bytes": 1081,
+      "sha256": "5b7d3b840334632ffbaf6e0493557b250ff3c634a132a8e30df268a4704d716e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-043_보스화면슬라이드전환/4_정의문서.md",
+      "bytes": 657,
+      "sha256": "3f5c8e0ee32f20f41ed79afa99adf2d9a03bb35b8d020a75a7c64c4707124d3f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-043_보스화면슬라이드전환/5_버전관리.md",
+      "bytes": 236,
+      "sha256": "64058ae6f8bbe5629189ecf112bfe74d1b8db3dc28777118eef0935f7d569fd0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-043_보스화면슬라이드전환/보스전_320px.png",
+      "bytes": 90465,
+      "sha256": "e2f86eedde9791739ff9329c0fd53fc691b8e1490f0bdd7ee6b471867e518d6f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-043_보스화면슬라이드전환/보스전_390px.png",
+      "bytes": 105471,
+      "sha256": "bc9dee6c488b8da96899d93b9beb5ca3473383b11e8bbbad7bd0cb03e0d68aa4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-043_보스화면슬라이드전환/전환_중간.png",
+      "bytes": 71540,
+      "sha256": "52d91b3630f02c3c6d48b6da310ecd464e7bb61d7dc16a9edb27a54ae6636f0b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-044_테스트배치드래그소환/1_대화기록.md",
+      "bytes": 300,
+      "sha256": "b658ea1987d879bbf4cc4443f116cc82d84b9fe2b0150fa7665588524265fd7d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-044_테스트배치드래그소환/2_사전확인.md",
+      "bytes": 369,
+      "sha256": "0689974a32d48662100c6129e91fee19219374b6e66c510f003ef39d92425f8e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-044_테스트배치드래그소환/3_작업일지.md",
+      "bytes": 737,
+      "sha256": "f1181cd4d76f7056b9325cbd6fe66bd82e759628b3ee3b75550d3c9ef455d496"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-044_테스트배치드래그소환/4_정의문서.md",
+      "bytes": 593,
+      "sha256": "23e97ae2fce4567ef874b041ce2e9ff76c28d3912d6fdb1984b0ff1d46870b55"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-044_테스트배치드래그소환/5_버전관리.md",
+      "bytes": 275,
+      "sha256": "db2f5ca6aed31aca77a9aeade27c408968305b54392d1515345821a5be3c1059"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-045_소환영웅카드상태/1_대화기록.md",
+      "bytes": 154,
+      "sha256": "a49979601987c1d1afaa7f36d9ac04fb3b904dff169388a8b81095804aa42201"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-045_소환영웅카드상태/2_사전확인.md",
+      "bytes": 168,
+      "sha256": "22a76d76c543f1bbe0b96a4118f263e5faf402da149fb413fc7599dbdd015586"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-045_소환영웅카드상태/3_작업일지.md",
+      "bytes": 294,
+      "sha256": "86d36b04c1814541a844f0f816b54299369478f82dff794b090ea7b7fc85fe16"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-045_소환영웅카드상태/4_정의문서.md",
+      "bytes": 264,
+      "sha256": "97c6a6a8330e99756592e21540876d95517a88b21a1f8cec078f31fdc3eae155"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-045_소환영웅카드상태/5_버전관리.md",
+      "bytes": 189,
+      "sha256": "c83f413c89d35bcd691d75488947f213c85c765e37c3cc5d61a45b10161c95a8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-046_현재편성테스트배치/1_대화기록.md",
+      "bytes": 172,
+      "sha256": "6314ca9ff0b4adcb95d698914c94ca8c08a9278927990d21e12069f2b3d250e5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-046_현재편성테스트배치/2_사전확인.md",
+      "bytes": 182,
+      "sha256": "768f38a5874d71fe8ab51eb2a8aba2ae67c35845c4c04b0e7221847823ee6720"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-046_현재편성테스트배치/3_작업일지.md",
+      "bytes": 217,
+      "sha256": "a513ca7de17c8ccb5112567f3c441eb4a0234900fa82dddb4976fe44855ff812"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-046_현재편성테스트배치/4_정의문서.md",
+      "bytes": 273,
+      "sha256": "854cb1e520065ad7548f718290200701664eb37bb0a768144a225e30a567864b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-046_현재편성테스트배치/5_버전관리.md",
+      "bytes": 156,
+      "sha256": "2563d2e21ce43273a7ececb759c054f41cc8594da2ec5f8d8210c08ab836542a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-048_아군진영가로전장/1_대화기록.md",
+      "bytes": 187,
+      "sha256": "d64bb27e62e8123309e4d7950d9e04112e883f0455246e44d27f72788e415d60"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-048_아군진영가로전장/2_사전확인.md",
+      "bytes": 162,
+      "sha256": "0d080899179b1650947bd0085e1e90a8ec21c3ee0913aead211f919ab4eb7434"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-048_아군진영가로전장/3_작업일지.md",
+      "bytes": 252,
+      "sha256": "260102e3efebfc490be093c18832af8859f598756b0e68b9b1417eb01c08ee4e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-048_아군진영가로전장/4_정의문서.md",
+      "bytes": 282,
+      "sha256": "c5ccaff50ca5aa05e4c06df8152d9e3c9bfd7aa5f98da4913fd2f0ec62becaea"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-048_아군진영가로전장/5_버전관리.md",
+      "bytes": 155,
+      "sha256": "838bf293e025b013be6d23959030e3dcacd81ce07665501e1cd0e822729a3b26"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-049_보스필드가로구도/1_대화기록.md",
+      "bytes": 155,
+      "sha256": "0bd5370e4370ea6de175a67a955872cc7de713a428987347d58705764244407d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-049_보스필드가로구도/2_사전확인.md",
+      "bytes": 105,
+      "sha256": "69922b9b0c0f4e515722a2183b601ab864973ac48f669b3e67b3f2d939eea523"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-049_보스필드가로구도/3_작업일지.md",
+      "bytes": 268,
+      "sha256": "92452045aa22d6dd06bec7f89d4cdd645d4ece80acdf89442aa085a3fe3a531a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-049_보스필드가로구도/4_정의문서.md",
+      "bytes": 174,
+      "sha256": "3e2a83e8f7d2f68dd1579e30887634d174718b27b036b522cab9229fd6880232"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-049_보스필드가로구도/5_버전관리.md",
+      "bytes": 134,
+      "sha256": "6c8f7fe650cbf1a89c8ae590823e2983f07fd93a52ea2daff975ae8986f8b0ed"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-050_아군세로전열/1_대화기록.md",
+      "bytes": 113,
+      "sha256": "4cc82ed63de6a9a2b216d10635e57ebad6a3e2019daff4b55f50bdda50f10374"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-050_아군세로전열/2_사전확인.md",
+      "bytes": 79,
+      "sha256": "ed9fefde6527db9c4a6f99d95f7a736ec8d08e74ff8c245564718e342ac87a92"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-050_아군세로전열/3_작업일지.md",
+      "bytes": 251,
+      "sha256": "24161b98ffb84710788d85de92cc5d00159619482bd6bf61bad480fcfc3d00b2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-050_아군세로전열/4_정의문서.md",
+      "bytes": 256,
+      "sha256": "d4fb81d251e01c03a0446cc85683a81c33d78f566763278ed73a7e67837671e9"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-050_아군세로전열/5_버전관리.md",
+      "bytes": 125,
+      "sha256": "2c5a462993d6e4d8ab1142dce6d6dd4b2e5a31bbfc594ec039d592bad49a383e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-051_세로배치판/1_대화기록.md",
+      "bytes": 108,
+      "sha256": "374fd768129b6ba0f61aaa1f319733b239a8af021fef6d6f01252ca64c11ea55"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-051_세로배치판/2_사전확인.md",
+      "bytes": 109,
+      "sha256": "c014163add91d6a47c28f294cfeb330bc01adb6b99ddeb5039ba1b781a791ec1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-051_세로배치판/3_작업일지.md",
+      "bytes": 223,
+      "sha256": "a26ba3d7ab4b34ce0ee899fc5e9276d85be57f793a1005b6b74d182497958102"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-051_세로배치판/4_정의문서.md",
+      "bytes": 187,
+      "sha256": "a80a5fdd112e5ff8169f192f677a8cba4ad4f7b4c62027c114c0af046e7c0fd2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-051_세로배치판/5_버전관리.md",
+      "bytes": 132,
+      "sha256": "9952200efb1cbcb10b5d686a54e30a897afde234c64ee9f081a7a72e75942e7c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-052_배치판필드맞춤/1_대화기록.md",
+      "bytes": 108,
+      "sha256": "b0f5ef3777df1ff88d260f2861ff59558fde1569f50f09e28f800b413539e74f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-052_배치판필드맞춤/2_사전확인.md",
+      "bytes": 87,
+      "sha256": "39b2570b993846bf17a25ba5e84af4b93cba6098969912b9e896d7ecbd1158ff"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-052_배치판필드맞춤/3_작업일지.md",
+      "bytes": 255,
+      "sha256": "7cddfa099b999ea44e99265d22b039f08815eb69bf5f4a2f5ce1da9f0d76ff3c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-052_배치판필드맞춤/4_정의문서.md",
+      "bytes": 158,
+      "sha256": "693fd10cd6887a2165900c6f3c16e0b6354bc08733bb0d35cc14a013f1a024c0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-052_배치판필드맞춤/5_버전관리.md",
+      "bytes": 135,
+      "sha256": "97c12a70d376aa090ae5971e723edb613b4df6d9097576641acdb0b9da5c4e99"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-053_보스친위대전투/1_대화기록.md",
+      "bytes": 181,
+      "sha256": "dfe8f53c52ed0b014ccc11b25259489ecf14cb4f5252ce80f83e5deb2d23ce86"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-053_보스친위대전투/2_사전확인.md",
+      "bytes": 243,
+      "sha256": "7ef54f0d2691d468022675a2143f18e64a214865a61af862032504de81f3777c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-053_보스친위대전투/3_작업일지.md",
+      "bytes": 501,
+      "sha256": "a967b2cfa1d7adb5846fd6ef69752eef23e643edcb34d7eb5c34fa2ec40c3065"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-053_보스친위대전투/4_정의문서.md",
+      "bytes": 1180,
+      "sha256": "71a587bc7e8771c415138690b046509f5acd24f1ac6352f878e3b18994dcc2a1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-053_보스친위대전투/5_버전관리.md",
+      "bytes": 209,
+      "sha256": "d5045fce26c18084882ec72c408520d4d47a8a32254d20269a492c042d6f6509"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-054_보스전테스트스킬/1_대화기록.md",
+      "bytes": 242,
+      "sha256": "80e9a3f1a156757d25b2994c9d4399de5c31da573b3aa47a64c72c41ab63a852"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-054_보스전테스트스킬/2_사전확인.md",
+      "bytes": 284,
+      "sha256": "4ac7482e8743a0f224b49ffc6989b1fcd02a9e1de55afbf25458c79c528058b9"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-054_보스전테스트스킬/3_작업일지.md",
+      "bytes": 502,
+      "sha256": "5e53bfd0b0845195586742985f52ff9c95683fd29b135b52b40a16c8587b6207"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-054_보스전테스트스킬/4_정의문서.md",
+      "bytes": 840,
+      "sha256": "8ef3fe30d982c55cbf055835e81d824af71e969d0f93e8807b8669b50aadb869"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-054_보스전테스트스킬/5_버전관리.md",
+      "bytes": 192,
+      "sha256": "e3ad90ec8af5f4df3595de52559c097f1071e432d3a04e9b5ffa79b46be81d56"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-055_보스편성연동얼음공격/1_대화기록.md",
+      "bytes": 174,
+      "sha256": "2a23d6cc04cc35af8ce0ae04df2f851606236918fe6c39fc3b3713355be69020"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-055_보스편성연동얼음공격/2_사전확인.md",
+      "bytes": 269,
+      "sha256": "378cd657d66f690a66b9687ce8187e5357fa8d1286883f2fe3b357e820f9c78b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-055_보스편성연동얼음공격/3_작업일지.md",
+      "bytes": 673,
+      "sha256": "a20fa207e39d9048fe71bbeb801ab6ed6e6bba8be6671a29b5ad4b1bc86325dc"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-055_보스편성연동얼음공격/4_정의문서.md",
+      "bytes": 1093,
+      "sha256": "7facd064f0edaf3d3c92756f4d80805704553e4bc94b0cbae67a2ca165c44988"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-055_보스편성연동얼음공격/5_버전관리.md",
+      "bytes": 203,
+      "sha256": "fae5727d8d3f4e3a91af15e6c8be020e2661107df229ef041107148568cda23e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-056_10웨이브보스자동스킬/1_대화기록.md",
+      "bytes": 219,
+      "sha256": "c53da27f76932d1c24031378578b3bbeb0addc01c96aaaa2cd86fa32f52282bf"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-056_10웨이브보스자동스킬/2_사전확인.md",
+      "bytes": 208,
+      "sha256": "cd0c974b7289acc65ceb597c9ae663d93c37655f972afec14782d8a7076b0c98"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-056_10웨이브보스자동스킬/3_작업일지.md",
+      "bytes": 488,
+      "sha256": "b8a74bb817e4e7145c6432fb4b82530c42d5ac14efb4751be7d861072a62149e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-056_10웨이브보스자동스킬/4_정의문서.md",
+      "bytes": 1157,
+      "sha256": "d8c0154bec8d482d2742909404569a1dc1d5cd19144c1353e5420d2bbc248f1b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-056_10웨이브보스자동스킬/5_버전관리.md",
+      "bytes": 186,
+      "sha256": "b5b43dcf132ef542e9b37e227931c6e5ca48060e47493c098f3216cf38da7d4e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-057_스킬쿨타임채움/1_대화기록.md",
+      "bytes": 149,
+      "sha256": "1a0412a4193bea0b6f4fa17e71f4bd380cb2d80b07d6407701d1f6d49a6f617c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-057_스킬쿨타임채움/2_사전확인.md",
+      "bytes": 142,
+      "sha256": "06fde2bc258ccdecfd9948cbe9a89efb9438daf16f625da5025412e824c27df0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-057_스킬쿨타임채움/3_작업일지.md",
+      "bytes": 319,
+      "sha256": "a5bf2c798c988bf6936d07dc84235b2920be4c6e0485ceb46ec40c17226eb24e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-057_스킬쿨타임채움/4_정의문서.md",
+      "bytes": 436,
+      "sha256": "c824778e40078ef68c2949358c1a4799efc4fc6be2bb04a2981fb8be24b5fc7e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-057_스킬쿨타임채움/5_버전관리.md",
+      "bytes": 145,
+      "sha256": "0bf64934e124e996a1ced6a13c875e0e0be3b023f3e3cfa7f1f38dd32f23689e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-058_DPS미터기/1_대화기록.md",
+      "bytes": 123,
+      "sha256": "d5c30c9ed22ff3f51007ed22c08452e61b45d483a43ded87ff402f906a3999a2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-058_DPS미터기/2_사전확인.md",
+      "bytes": 199,
+      "sha256": "ba43e9ed4b1833876dfa0a0e2686ea08add2606f72b889833d4f357d3e657675"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-058_DPS미터기/3_작업일지.md",
+      "bytes": 463,
+      "sha256": "855a5ec63d094513c8c18e58b629849a94c92d4401d9de0aff7372a2aa82f84d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-058_DPS미터기/4_정의문서.md",
+      "bytes": 755,
+      "sha256": "451b3c93c81a9e4c699fd7fc22885ba9358bf5e390ca6858dd9cf5579bc752c2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-058_DPS미터기/5_버전관리.md",
+      "bytes": 190,
+      "sha256": "c74c56030cbaee99fd368fb03870cf6dda32040232d7fa626553fa4108adf511"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-059_게임최고DPS/1_대화기록.md",
+      "bytes": 140,
+      "sha256": "84f20765f474f4e172ffc5fb97114d6bac536580811958f78a3ecc31f6fb3d95"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-059_게임최고DPS/2_사전확인.md",
+      "bytes": 202,
+      "sha256": "ab9d4554f43bb6a6cec4fff448c9c19665caec1e6bddb524f76acaaf8145b9f0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-059_게임최고DPS/3_작업일지.md",
+      "bytes": 393,
+      "sha256": "a12b309693a7441aaefc96be56b8c2dbf4727b110af1b3470beda16f868cbb6a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-059_게임최고DPS/4_정의문서.md",
+      "bytes": 521,
+      "sha256": "4de140bb419e020ee8989a5ca7e823ec88b44474c2bb552404bd60b03fa75eff"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-059_게임최고DPS/5_버전관리.md",
+      "bytes": 179,
+      "sha256": "f9863d478dd8a7fae814bba0f789f55a1cc53eb866fa3c617a799053e2cd63e6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-060_DPS탭보스기록/1_대화기록.md",
+      "bytes": 242,
+      "sha256": "966cd640d1ec37288b995eadc15a807cda55b8af69c3a6548eec3af80c7e3619"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-060_DPS탭보스기록/2_사전확인.md",
+      "bytes": 239,
+      "sha256": "6b60601e8bf76b0a5aedb3403bf1fc567c32b9c1e2ebf182403328f8250f11b1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-060_DPS탭보스기록/3_작업일지.md",
+      "bytes": 527,
+      "sha256": "b96eb337aace884c047d4579a247ad456814322da4c5c64dd4db1055e05ed78f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-060_DPS탭보스기록/4_정의문서.md",
+      "bytes": 912,
+      "sha256": "0c55adf7e5842a4204f193e9dc68f404e01c6e22a091a0eebe45638cebe3b3d8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-060_DPS탭보스기록/5_버전관리.md",
+      "bytes": 189,
+      "sha256": "dea8b4be16e44c5fca22369363c51acd903d9fabb4d46ccc67507fcad87216c4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-061_최고DPS급등수정/1_대화기록.md",
+      "bytes": 187,
+      "sha256": "332ae62c6e13eec0803858d167259af21a1425bb1d31e107fba4c76f3bb3725f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-061_최고DPS급등수정/2_사전확인.md",
+      "bytes": 245,
+      "sha256": "4648beb6109029ca1262e825520df83f626387d92337cf5a2e514bffd3bdcbd1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-061_최고DPS급등수정/3_작업일지.md",
+      "bytes": 483,
+      "sha256": "fb3259593c13f0910b7cb4cfb8abf26a7839d94eb2c883d87805ac7ec3320541"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-061_최고DPS급등수정/4_정의문서.md",
+      "bytes": 638,
+      "sha256": "0f6d7004f15e7b0c20076857d3aebda4e656f1d10589f84fab2e42ea19e75657"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-061_최고DPS급등수정/5_버전관리.md",
+      "bytes": 189,
+      "sha256": "9e16c68b4f29b293a9f38b8bc647b72a609e00f804fab22ba8538a0a621ae826"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-062_영웅장비가방헤더분리/1_대화기록.md",
+      "bytes": 231,
+      "sha256": "475a967a1af658511c30a0850fabd0a0116b884afcb005c93ffda029235737b1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-062_영웅장비가방헤더분리/2_사전확인.md",
+      "bytes": 212,
+      "sha256": "d42b826fa863274c4b07f728e6f7d2885618681f12f7d786b9c0722fe55718a7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-062_영웅장비가방헤더분리/3_작업일지.md",
+      "bytes": 456,
+      "sha256": "6e5f83ab024c2f083d3b567e2c48279f197ea4518a2fde7753d7e278b9ccb4b3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-062_영웅장비가방헤더분리/4_정의문서.md",
+      "bytes": 283,
+      "sha256": "7733a19b3d8f166e475c5b8d054dd49b7eb9d9ab92fc95e934125a212292fdcb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-062_영웅장비가방헤더분리/5_버전관리.md",
+      "bytes": 191,
+      "sha256": "ee3511a018d724cf4092de76e753e0b5d50bfdac0af87e4bb20d0dbd6e35dec1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-063_가방조합버튼만유지/1_대화기록.md",
+      "bytes": 103,
+      "sha256": "b409bb26569d4f2b31ace06cccaff544337efc5cc2ff35f9bee273c5dd4bb278"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-063_가방조합버튼만유지/2_사전확인.md",
+      "bytes": 162,
+      "sha256": "3707e63219a9ac5522fecb4d5d0289086ef7cd7c0bda62355019e0fa51b2beec"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-063_가방조합버튼만유지/3_작업일지.md",
+      "bytes": 275,
+      "sha256": "f7835e91ee930a5041ecbaf0f0879f2163a60f149c4879f119a9ae92f9423921"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-063_가방조합버튼만유지/4_정의문서.md",
+      "bytes": 226,
+      "sha256": "10cd27d64cdce74f17a4852d553837748f56b2c2697a665c45e9b9efa5232235"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-063_가방조합버튼만유지/5_버전관리.md",
+      "bytes": 128,
+      "sha256": "7cdbc2fe591d8122ba2166ea918b860ec588941f96a7f0c89c3464e74342bf2f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-064_전장탭간격/1_대화기록.md",
+      "bytes": 107,
+      "sha256": "1ad75784eacf2211582a8ad883d204335de339eb53de47f44e87d3aac1b93ce0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-064_전장탭간격/2_사전확인.md",
+      "bytes": 85,
+      "sha256": "caa25a39c28c718e2f0425efc5eb807cfe0a34a02ca77a1416455fba24d39b69"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-064_전장탭간격/3_작업일지.md",
+      "bytes": 152,
+      "sha256": "b8bf3807d45d445525949069816942ad548706ba8858ecba09c4cd2265860135"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-064_전장탭간격/4_정의문서.md",
+      "bytes": 99,
+      "sha256": "302c44ffc4a922d618a7b612e7692172b6929fb3d2965df43671763a0c7c17f3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-064_전장탭간격/5_버전관리.md",
+      "bytes": 136,
+      "sha256": "40102b826eab1f12d08ee4691925103042e172179bc22af749808292b8a4b2e5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-065_웨이브원딜스킬쿨타임/1_대화기록.md",
+      "bytes": 245,
+      "sha256": "ac0f935e507dfb72964a41fc0c1f8667e67f2752daa6a9bd8cc7f09ab387e9f4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-065_웨이브원딜스킬쿨타임/2_사전확인.md",
+      "bytes": 240,
+      "sha256": "0fb63b9f6c14a75fbed32e2fff7d6d01c94233d1d1b502b7c06681496161d5dc"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-065_웨이브원딜스킬쿨타임/3_작업일지.md",
+      "bytes": 554,
+      "sha256": "b96d7d65cff89fa2a8638d0b9726d14f5301e30acd78f38e3984077e85abc513"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-065_웨이브원딜스킬쿨타임/4_정의문서.md",
+      "bytes": 333,
+      "sha256": "edae123d1f5086cd38a09c348e4079dc254c8613745358850ae544f5fd10c47c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-065_웨이브원딜스킬쿨타임/5_버전관리.md",
+      "bytes": 162,
+      "sha256": "cd968a1d715dc8ca64f59c91b5ee6b211a3e8eeaa195897d6ace321b4f1826de"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-066_검영웅캐릭터적용/1_대화기록.md",
+      "bytes": 200,
+      "sha256": "88349c19a4eff5bb459a4045b394653998493d50ced80182aef5e20c9c33826c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-066_검영웅캐릭터적용/2_사전확인.md",
+      "bytes": 280,
+      "sha256": "6f4c8b1e33be84f453ea5d75a63e1c7af693605a87855a0226055eb2d2a74aa0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-066_검영웅캐릭터적용/3_작업일지.md",
+      "bytes": 706,
+      "sha256": "a73cbe5a620e66ad2028e4a8ff406442f6f89f09b413d56001ce1a4770a5f867"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-066_검영웅캐릭터적용/4_정의문서.md",
+      "bytes": 317,
+      "sha256": "2649213c199ebb04b744f4478d038737e8146cbba2ffd9dea85bfebd10fc3d3b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-066_검영웅캐릭터적용/5_버전관리.md",
+      "bytes": 167,
+      "sha256": "c32ad10c238037dc9d73d30c058aab04b7400a905796fd46acfee091f2e730e7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-067_원딜화염기둥3타/1_대화기록.md",
+      "bytes": 270,
+      "sha256": "6a4fc8b97b7138f05b2e1d9c6ff68025f5c52f6a21c8e732404ac7abc0184fc7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-067_원딜화염기둥3타/2_사전확인.md",
+      "bytes": 257,
+      "sha256": "58f4ecbf69c6a2e4321e89d4f60b05846f0f45c9d26180e1d0e4380a4d1b55d0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-067_원딜화염기둥3타/3_작업일지.md",
+      "bytes": 706,
+      "sha256": "06c2ab21e134941f97c3ada88ea979827d50d94ef511c0acb0ca23512f9f8596"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-067_원딜화염기둥3타/4_정의문서.md",
+      "bytes": 935,
+      "sha256": "3d1f448e593466b84be212e9c312ee99ff0755eb3581cfc8a59b3bc4be8675c8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-067_원딜화염기둥3타/5_버전관리.md",
+      "bytes": 149,
+      "sha256": "86f888b3510bf5e2e6df458d69162c0b0bed4132f1cdcc86d98055aa05106024"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-068_화염발밑고정/1_대화기록.md",
+      "bytes": 241,
+      "sha256": "dd2d021a5efe64c58ff4703d519a868e34bc08282b0f9a136f3e219e28b29e79"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-068_화염발밑고정/2_사전확인.md",
+      "bytes": 300,
+      "sha256": "4b66b9f7a19e8bb20e5446506590bce51b3fd2065e19b756b797697441bd1d58"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-068_화염발밑고정/3_작업일지.md",
+      "bytes": 811,
+      "sha256": "64f5a3ba3d5c0a584c803ed61eb61159600b0e2c47ec0857ca4e0c7c115a2258"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-068_화염발밑고정/4_정의문서.md",
+      "bytes": 781,
+      "sha256": "31197aae7a0871599c409e4851a64036a1e37d9181b9578f26fd53202707c421"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-068_화염발밑고정/5_버전관리.md",
+      "bytes": 205,
+      "sha256": "67a6c37c7c37b96fa3964efcb4f9f3158a0e5309f2387b171b6fec7fedae824b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-069_검영웅평타모션/1_대화기록.md",
+      "bytes": 247,
+      "sha256": "b7a859143be333e6c59381fae9c1224b0fb175319272fd5197466a4d386d9940"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-069_검영웅평타모션/2_사전확인.md",
+      "bytes": 368,
+      "sha256": "2c4a3a8c6e2749a4dc3257e0f7c25c06bb293f78ec384b14aba3841a8dbe0809"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-069_검영웅평타모션/3_작업일지.md",
+      "bytes": 1018,
+      "sha256": "6b98c7c6d7a9247b34e10116ab5a86a7b14bd8ecc814145e1cd0539eac78c178"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-069_검영웅평타모션/4_정의문서.md",
+      "bytes": 1134,
+      "sha256": "8e00c3789d7e1cb47fdea875e4939fa9054f777a6704a17cbc95de8e9ea9b94c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-069_검영웅평타모션/5_버전관리.md",
+      "bytes": 154,
+      "sha256": "3dc89d8b24b338596b75877cae5ed3f98a8b924a9d9a7eaaab176a55b8e07639"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-070_선택영웅장비테스트/1_대화기록.md",
+      "bytes": 200,
+      "sha256": "a98d6fcd2f50d4e3bcdec1d36cacf48a473ab661bb8104ed8916d34e02837f41"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-070_선택영웅장비테스트/2_사전확인.md",
+      "bytes": 259,
+      "sha256": "fa6fc060a1d1805dce50814810a89ed18c481efd3fe2725989b9e98e56de12fd"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-070_선택영웅장비테스트/3_작업일지.md",
+      "bytes": 881,
+      "sha256": "ea96f685dc371b048a475f408c0de575f026a0cda222bdc22d0d79e1a5e96c9e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-070_선택영웅장비테스트/4_정의문서.md",
+      "bytes": 733,
+      "sha256": "94fd829dd4442af38ea36a714ff4f7a30b6262443b30e8eb66b2427ccd05f695"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-070_선택영웅장비테스트/5_버전관리.md",
+      "bytes": 177,
+      "sha256": "b1533b261a3f82b6c9c420d486b86cda475d6499640169fa012fc886f89e02ec"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-071_검영웅범위스킬과영웅별카드/1_대화기록.md",
+      "bytes": 393,
+      "sha256": "ca09a5e51f97724e8ea8367443cd1e3d6662b385963784134f838e4b5a64ab8e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-071_검영웅범위스킬과영웅별카드/2_사전확인.md",
+      "bytes": 356,
+      "sha256": "f4c8afc971f6c9c930cfb43aff82bd66fff81c2c77ac3daed013abaa54db78aa"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-071_검영웅범위스킬과영웅별카드/3_작업일지.md",
+      "bytes": 1020,
+      "sha256": "fc4f7fb08e5ff9ee6aafd1edbafd3de9b30267659756e976f294bae0eaf02fbe"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-071_검영웅범위스킬과영웅별카드/4_정의문서.md",
+      "bytes": 1227,
+      "sha256": "765e3e7d0a246299323d22a88f6e54df9f33b95de83b5af98746ced55b2b203d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-071_검영웅범위스킬과영웅별카드/5_버전관리.md",
+      "bytes": 194,
+      "sha256": "13fd93b6c1619f5cfdbd7801bce849e2228c1aedcc7aba81da0354e4a131fd34"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-072_검스킬6타와8초/1_대화기록.md",
+      "bytes": 311,
+      "sha256": "91c66e426f1587573c7fcc73873fb074e12af0778660130584a3d36c6c19b10a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-072_검스킬6타와8초/2_사전확인.md",
+      "bytes": 261,
+      "sha256": "5150de1c5458fd3389b9d75ffe98f1179a97a7660423dfc9e693e5fe62477ca1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-072_검스킬6타와8초/3_작업일지.md",
+      "bytes": 787,
+      "sha256": "7cab5f1f057e370a0b3bc8c7e70fb639e068d225bc45ab1c6ffd137f02e99841"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-072_검스킬6타와8초/4_정의문서.md",
+      "bytes": 700,
+      "sha256": "58f716b2394ff058ce64e7d72bdb4b7ecad6785d617bf6b4308146df72eda21a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-072_검스킬6타와8초/5_버전관리.md",
+      "bytes": 201,
+      "sha256": "8e770057c825f72d896244a279c6787f81efdab37e586033137eafd0893bd49e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-073_공통배속과데미지표시/1_대화기록.md",
+      "bytes": 236,
+      "sha256": "90e08c4ebe572915e75fd869bcc7a445478e3ae9bdafcc01a06627db7e3cea2e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-073_공통배속과데미지표시/2_사전확인.md",
+      "bytes": 280,
+      "sha256": "d8375c97fa016a24a60e949952114c4faf319027dcc5821a438f002134baf4a3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-073_공통배속과데미지표시/3_작업일지.md",
+      "bytes": 781,
+      "sha256": "fa0687c1c3a65e9adfd8118065f4fb8cde62bb5b65f87c79079dff60d12ba2b8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-073_공통배속과데미지표시/4_정의문서.md",
+      "bytes": 918,
+      "sha256": "255b72bb49b8e15140888675e2462f3bb665707259980a4cb1a55d601e493029"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-073_공통배속과데미지표시/5_버전관리.md",
+      "bytes": 152,
+      "sha256": "06a634d73d8ad6d20db5d751e773143052a005f8497abe39321653e754fcdd29"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-074_편성맞춤50초시험보스/1_대화기록.md",
+      "bytes": 307,
+      "sha256": "5eb5cc14b82c4733aec2856d4c6ef0aeee3044c9e66510b21f3499adb702a9a6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-074_편성맞춤50초시험보스/2_사전확인.md",
+      "bytes": 347,
+      "sha256": "3667bbbf74897736fc6cba203a361f206f9ca24429b77a1df2f756729e8fd989"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-074_편성맞춤50초시험보스/3_작업일지.md",
+      "bytes": 1083,
+      "sha256": "d0453906c174202507a261b340a1b7825bf4483ec4445edb5f731dfeffbdfe9e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-074_편성맞춤50초시험보스/4_정의문서.md",
+      "bytes": 1110,
+      "sha256": "c306588f7a1f741574b4a9bc8fc05767a92b1e31fe5675f470118363b54dd3e4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-074_편성맞춤50초시험보스/5_버전관리.md",
+      "bytes": 174,
+      "sha256": "af480cf7e84dce2f5f4afc9ce33c5284ec03fa3367104f17bcadd9d1de6f9e9d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-075_조합버튼하단이동/1_대화기록.md",
+      "bytes": 134,
+      "sha256": "1e9b187f6931b36edd84c08fe6f2a6deb98e007f3434d3a22e09db3edcb9e3f1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-075_조합버튼하단이동/2_사전확인.md",
+      "bytes": 241,
+      "sha256": "813e32569de88bcbbfa8375a17454d908dfb64d19e4d5d2b9d95363cf44891dd"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-075_조합버튼하단이동/3_작업일지.md",
+      "bytes": 435,
+      "sha256": "d9d4df6613fbc6fdd00082987c20de7c7cfa8a4fe63f8fd5dcb4f6a0b04571cf"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-075_조합버튼하단이동/4_정의문서.md",
+      "bytes": 214,
+      "sha256": "c05b6294248f2eb5b90e71f9d2fbce2d43a0c414cff7e7576230a0f92e43fca6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-075_조합버튼하단이동/5_버전관리.md",
+      "bytes": 123,
+      "sha256": "f0ca495c86531b9e99e9036c63d2909f85c7767e0aad0d597a744ed9925cd7ef"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-076_소환가방재화표시/1_대화기록.md",
+      "bytes": 198,
+      "sha256": "49f9629ea075a544c143b993559be66bb0f3efede157ceec846e4d9db11f98e1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-076_소환가방재화표시/2_사전확인.md",
+      "bytes": 233,
+      "sha256": "ecf892497c4365fdb66fc686df1dbd15604d73aab4550f70d44106d1af3ce0b1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-076_소환가방재화표시/3_작업일지.md",
+      "bytes": 609,
+      "sha256": "b99adbf65e95584f09dd9ecf3c930379d70e390a659d61bc9c3a4b0f17a04fa4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-076_소환가방재화표시/4_정의문서.md",
+      "bytes": 432,
+      "sha256": "45ea6bde42712034c7d41c649973373dc827c33fde3545092a19d61c40a6c01c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-076_소환가방재화표시/5_버전관리.md",
+      "bytes": 134,
+      "sha256": "d7227680b318182855297901fdaa2c95c2031df6d108f7781d5a8feadbf2099e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-077_재화UI규격통일/1_대화기록.md",
+      "bytes": 188,
+      "sha256": "df91acb89c7286cd79c5543a4c5d92975ac0a7c9ab95093664ea62720fe76f43"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-077_재화UI규격통일/2_사전확인.md",
+      "bytes": 233,
+      "sha256": "0c3002a578261a1aeecf3365fa5c760fd3ce90b6108af01464e554f6d8c12f02"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-077_재화UI규격통일/3_작업일지.md",
+      "bytes": 584,
+      "sha256": "390f6b961001ce27a33da5a452c38c8556da86e2d9118790585b7f85aa6d37e7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-077_재화UI규격통일/4_정의문서.md",
+      "bytes": 330,
+      "sha256": "6e3184b9589c0c56f652d87b407425acb4ed659bc84f7695acf386cd71471369"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-077_재화UI규격통일/5_버전관리.md",
+      "bytes": 115,
+      "sha256": "a21510fe4d6ff09fddadbaf079f67d39d5299a917d587de5029c481da1a6c46b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-078_재화좌표와가방카드분리/1_대화기록.md",
+      "bytes": 248,
+      "sha256": "1fee769477c2ab0f0f57b26aaac813c1551804738b2aa917e7b1b1911b751f19"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-078_재화좌표와가방카드분리/2_사전확인.md",
+      "bytes": 259,
+      "sha256": "42ef77102a28b1d0ba08c5929e5268c3a34af50db92cfe21ff51dff9a858665a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-078_재화좌표와가방카드분리/3_작업일지.md",
+      "bytes": 715,
+      "sha256": "d46847ebf8f8a116336ec1c383f23b363d0df756f140d891ec615e09cc12e3af"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-078_재화좌표와가방카드분리/4_정의문서.md",
+      "bytes": 527,
+      "sha256": "983ef894f75faac6d02a5255c62d4acf5274c66a6b40c682bbe56e515e89088d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-078_재화좌표와가방카드분리/5_버전관리.md",
+      "bytes": 120,
+      "sha256": "193929a8208f71a2efa5e2b39f6e7cb8e4c791735694a62848bb89fcee7d665f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-079_전장카운트와일시정지/1_대화기록.md",
+      "bytes": 256,
+      "sha256": "b1cdf321b987ff302e188066fcf6ae4cd614b8725f5a071d10582ead60ffa0bf"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-079_전장카운트와일시정지/2_사전확인.md",
+      "bytes": 322,
+      "sha256": "07dabe4a3ac3fa29c7a158030cef3d959b0eb6747339db42e38f94668bde49a6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-079_전장카운트와일시정지/3_작업일지.md",
+      "bytes": 1112,
+      "sha256": "0fb968fd2ef8962de518e5b29032a18a00d5d4d0fbf9b584a14397ed51274519"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-079_전장카운트와일시정지/4_정의문서.md",
+      "bytes": 851,
+      "sha256": "02b0f7fea2748692a8caf0ac70507443e6c916fe9a1800708041babaeb7405fc"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-079_전장카운트와일시정지/5_버전관리.md",
+      "bytes": 160,
+      "sha256": "c448c502c8fa058983ee9df03af8b9b746f2b074c0af797841d497203ddc4fca"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-080_드래그판매레이어/1_대화기록.md",
+      "bytes": 233,
+      "sha256": "605acdb81d43cc04f674efb407363e6f973aa87496fe43be3b51222473469192"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-080_드래그판매레이어/2_사전확인.md",
+      "bytes": 284,
+      "sha256": "5a12e20b88e461cf62b9c393f6a63ffa5288468387b9200f0dd5b66616ee5571"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-080_드래그판매레이어/3_작업일지.md",
+      "bytes": 984,
+      "sha256": "259e3341b09cc23ce223b13e7fa1a78231c14b2e10d9514785c3bd1543219129"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-080_드래그판매레이어/4_정의문서.md",
+      "bytes": 629,
+      "sha256": "e607d627a2324ccef48a1d0cc3c599cee7f208029c21952cbbb914e7460d3599"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-080_드래그판매레이어/5_버전관리.md",
+      "bytes": 139,
+      "sha256": "ac6abb009cd65a73e657dd4fd61f6e94dbfc06e1acea17ba9aba60f397d7f4da"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-081_유닛드래그이미지와장비능력치/1_대화기록.md",
+      "bytes": 339,
+      "sha256": "e9d036ee548700b1407283e31da72e6dc874de766e1bab6400f6a7b919b5d1bc"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-081_유닛드래그이미지와장비능력치/2_사전확인.md",
+      "bytes": 539,
+      "sha256": "aae0661559593c2ed3662afd08f42cefbb26aee693f770260b6e1b7687ffada7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-081_유닛드래그이미지와장비능력치/3_작업일지.md",
+      "bytes": 1090,
+      "sha256": "1db1288c16ed02628a427e8e25260e0c75bd5291a6ef2a6d6374fedb25b6254b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-081_유닛드래그이미지와장비능력치/4_정의문서.md",
+      "bytes": 608,
+      "sha256": "2282c687cae4a8db4bc2835c45621c171a8943e663f71ca74125a6e7c346963e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-081_유닛드래그이미지와장비능력치/5_버전관리.md",
+      "bytes": 336,
+      "sha256": "7a8877c1a351fe95ee1b4fe3532fa1fa36282a3c9fdcbfb465f2b7bbcbb99492"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-082_중앙영웅스킬칸과툴팁/1_대화기록.md",
+      "bytes": 417,
+      "sha256": "4e684de15f99925240c19bf98677330025756a7e2206cad3df21ffea9bc69f0e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-082_중앙영웅스킬칸과툴팁/2_사전확인.md",
+      "bytes": 405,
+      "sha256": "efc6423e7b0d584ebc8348ee7410661a0ed404b275403c144b6eb34273a8fa8f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-082_중앙영웅스킬칸과툴팁/3_작업일지.md",
+      "bytes": 1288,
+      "sha256": "b30929ab739cc6534aa06789240d1c64e6e59d5057ee5f68aa6b1a6b60ed8f28"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-082_중앙영웅스킬칸과툴팁/4_정의문서.md",
+      "bytes": 747,
+      "sha256": "162170b4955cd39f3af9dc80394cd0f71526b3e857e2f93771629a920e3eb5ab"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-082_중앙영웅스킬칸과툴팁/5_버전관리.md",
+      "bytes": 288,
+      "sha256": "1642b0c6deee4f75eb98a45fea5f8df4c45f51591a2601107783eba8e0f65247"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-083_장비능력치증가강조/1_대화기록.md",
+      "bytes": 307,
+      "sha256": "af7d8ccb19eea55cbb443c9b00430a303bde5a09a8b14c41ed6f18256b199909"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-083_장비능력치증가강조/2_사전확인.md",
+      "bytes": 382,
+      "sha256": "f7228a5c546d1f26cbdf5f34b50feac4f469c31ae30eb448026c4f47d484baac"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-083_장비능력치증가강조/3_작업일지.md",
+      "bytes": 1298,
+      "sha256": "2fd451f464924dc1a8e3c54ddc48043ea1cdf92250b1c5dcb8b1b51cfdedd7a8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-083_장비능력치증가강조/4_정의문서.md",
+      "bytes": 468,
+      "sha256": "6690ec56e74cd07136b574240bf0db8e8a7ee6e8e56447463073b293e860a91a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-083_장비능력치증가강조/5_버전관리.md",
+      "bytes": 262,
+      "sha256": "acdf5291c7e2794a84df3852210a97577643427d2b5e956f19f121aa153d1171"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-084_전장능력치툴팁제거/1_대화기록.md",
+      "bytes": 204,
+      "sha256": "201cc1feb07c5f02333b08904e337522e68edc9c95cbf2fe64466b2e3171b6a0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-084_전장능력치툴팁제거/2_사전확인.md",
+      "bytes": 320,
+      "sha256": "60bddc4a8fc516885f4328a42c2ad3feb958dbd5345fc72025616c1109e4a25e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-084_전장능력치툴팁제거/3_작업일지.md",
+      "bytes": 517,
+      "sha256": "ba570ab91f75d9d990d683c82d641150009377305d19e1eeb53f09bdda2111ba"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-084_전장능력치툴팁제거/4_정의문서.md",
+      "bytes": 253,
+      "sha256": "cb42a6c4904f4d68fcad4b8451742988bf45f3b007cdc7a2063d8fb869a08728"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-084_전장능력치툴팁제거/5_버전관리.md",
+      "bytes": 192,
+      "sha256": "cfb722536153100288c79adaecdb232ccbe22edd0424d556710f1b87dccdda8c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-085_숲전장과상단통합/1_대화기록.md",
+      "bytes": 485,
+      "sha256": "2dda30bfe6b6191a529149a6f64284db2720b1a52c3f1617e4794b18ad539ad1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-085_숲전장과상단통합/2_사전확인.md",
+      "bytes": 607,
+      "sha256": "d09ac5998e3bccdb9bce67a64488aa4ed2609ee148be57c4321e3280348db17c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-085_숲전장과상단통합/3_작업일지.md",
+      "bytes": 2235,
+      "sha256": "4566e1f8ec3be4016f614cfa4eca9fe9d3fe6a4ded432a405acbbc84d3499a6b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-085_숲전장과상단통합/4_정의문서.md",
+      "bytes": 1012,
+      "sha256": "ca9b26aef8bfd791563d32b0f1d8df518692d379796c993960331b1c430f4ff1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-085_숲전장과상단통합/5_버전관리.md",
+      "bytes": 301,
+      "sha256": "0df8495c372a66f95bb3ab6f74b8f08857a3afb678638cc25c870260d21e0321"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-085_숲전장과상단통합/배경프롬프트.txt",
+      "bytes": 2247,
+      "sha256": "a178e6b808595c203aedef679275e548708a34a63801f390f492671e85ba8a99"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-085_숲전장과상단통합/상단이펙트검증.png",
+      "bytes": 365073,
+      "sha256": "1787e8b1a7874cbb51d0ccfc5bc18bd65502e92b40476af4abbaad4af5367024"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-085_숲전장과상단통합/적용화면_320.png",
+      "bytes": 325561,
+      "sha256": "100ead8f448c45f1bec66d816307651c479b5e8c39a779083753433d1fe408d0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-086_현상금버튼상단이동/1_대화기록.md",
+      "bytes": 210,
+      "sha256": "2cf99e97d4110440035bb7861885e2d82c28fd7734fb87403ae480642d029f8c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-086_현상금버튼상단이동/2_사전확인.md",
+      "bytes": 172,
+      "sha256": "9db5ddc14969f47028a8935a96c24c94ced8deed8f4ed241f68249510b173023"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-086_현상금버튼상단이동/3_작업일지.md",
+      "bytes": 423,
+      "sha256": "c666ae3c2863d215fc6b7377d3db17df2340f7af0f05dc159e97014f08f8a9a7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-086_현상금버튼상단이동/4_정의문서.md",
+      "bytes": 176,
+      "sha256": "0500a1ab4bfe3b0646ee97bfbcee68adbe4df04eab196df25359b59aa7786088"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-086_현상금버튼상단이동/5_버전관리.md",
+      "bytes": 138,
+      "sha256": "1343d74e3dd13a80c2b73a8b4826dd0ed526f0d2990579043e64b4babc5d7367"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-087_라운드경고와몬스터기준표시/1_대화기록.md",
+      "bytes": 449,
+      "sha256": "f43538454ccd67c3aa4b4488dcf4d57b17303812863e0cb88f563fe39494a7d6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-087_라운드경고와몬스터기준표시/2_사전확인.md",
+      "bytes": 517,
+      "sha256": "e8683b059ec7cf678c2d21d7ecab730b7862297310197ba8b211105f360e8cea"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-087_라운드경고와몬스터기준표시/3_작업일지.md",
+      "bytes": 1508,
+      "sha256": "cda1dbeb1025b2aeb3ec9f5c7e0fcf5346163bded444db935fc00325dbcb333f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-087_라운드경고와몬스터기준표시/4_정의문서.md",
+      "bytes": 826,
+      "sha256": "516bb5ffc2fed845c9bba4b03e0cf7e084ba1650f05059a371b12eca269c04db"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-087_라운드경고와몬스터기준표시/5_버전관리.md",
+      "bytes": 312,
+      "sha256": "0bec09a565be97281379d298e35cad55e864b8d15e4f86dec349c7d99ed99415"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-087_라운드경고와몬스터기준표시/네임드경고_390.png",
+      "bytes": 358377,
+      "sha256": "0b090fc748d78953105af2e9299af30ad91a9872f5f7841ba81babb1d34dabc3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-087_라운드경고와몬스터기준표시/보스경고_320.png",
+      "bytes": 282264,
+      "sha256": "b174a23d73fa2af0e4d8c420ef88ba92c401f38e2faf0855701f1402d598c5f7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-088_일반전종료와로비/1_대화기록.md",
+      "bytes": 596,
+      "sha256": "2494d6dc761d961e94980ad6e283635c227a6cddd9206e676f64a7f2e688be40"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-088_일반전종료와로비/2_사전확인.md",
+      "bytes": 624,
+      "sha256": "692edc69f6982871bb92b3e3ee527bb795d44d07bad9ce40910649cc03e54266"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-088_일반전종료와로비/3_작업일지.md",
+      "bytes": 2410,
+      "sha256": "9a56717fbcaefedf3dcb6ad1b38c724d10715cef289518d613f800dd5dc92a4f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-088_일반전종료와로비/4_정의문서.md",
+      "bytes": 1645,
+      "sha256": "1bfe3ce693f20958dad46fe26dfa41eaa19443a9035bc1c0ef7169f4e0a75c48"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-088_일반전종료와로비/5_버전관리.md",
+      "bytes": 337,
+      "sha256": "c9775817ab3461c91c4ecea1ba8fb551183cca3f2d5d47715684c48ffd1116d5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-088_일반전종료와로비/종료로비_320.png",
+      "bytes": 297230,
+      "sha256": "4baf8dd60090f430ddc199bab8295bbf51a94fe2fb41491fa404167465a09290"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-088_일반전종료와로비/초기로비_390.png",
+      "bytes": 404227,
+      "sha256": "e66155d7cc89f684ceb4be988f45b0ea3e624b93bbfcc9ef0185be31674fa0b7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-089_신규영웅과암살자전투/1_대화기록.md",
+      "bytes": 965,
+      "sha256": "135cea017e311e3487fe8ed8c1cb0aded7e795a1e70dfde26fe9694f16c7e1a7"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-089_신규영웅과암살자전투/2_사전확인.md",
+      "bytes": 831,
+      "sha256": "3a3f62dc38a2672a3c4757d79016dbfbfc7f7ab83628f2007edfb25648fd6faa"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-089_신규영웅과암살자전투/3_작업일지.md",
+      "bytes": 1628,
+      "sha256": "874ec43d6f8d3c2f956e68836bfba3fc7358104d8fc512c0fc0c2b5733bf5302"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-089_신규영웅과암살자전투/4_정의문서.md",
+      "bytes": 2288,
+      "sha256": "80e8994b8c5b11a0d8589a1001171687092a6e1b71e20111e0d46509e3c60fc3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-089_신규영웅과암살자전투/5_버전관리.md",
+      "bytes": 809,
+      "sha256": "5c7c742598f343c704fe99ad98df0ee3b6667d2c6ca08ea177302026a88d5264"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-090_전장표시품질과암살자연타/1_대화기록.md",
+      "bytes": 340,
+      "sha256": "6e80f96ba7ad0edc85cdf57e2197e6bb15bd7066b99e8b6486ebb57a5ec71665"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-090_전장표시품질과암살자연타/2_사전확인.md",
+      "bytes": 582,
+      "sha256": "13c2a6509e7d8dafd94a628d194e1de5d26a1a2efe3527992e1844c26749c3e4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-090_전장표시품질과암살자연타/3_작업일지.md",
+      "bytes": 1519,
+      "sha256": "d68f54b9eb8061f6da2cd148230381447c6aa9be15967319d6b0c86028316452"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-090_전장표시품질과암살자연타/4_정의문서.md",
+      "bytes": 1861,
+      "sha256": "3723f2e41060e04ac98331f6d8d1c30662fd1d11ecaa6a84e5bd2526eb1749ad"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-090_전장표시품질과암살자연타/5_버전관리.md",
+      "bytes": 538,
+      "sha256": "682d751836c41cef7ea6bd12c10ae75e3c195e645b09cd6331bb3cccf6291957"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-091_암살자잘림수정과스킬규약/1_대화기록.md",
+      "bytes": 433,
+      "sha256": "dd87f0e2bf4f2fbb9b1649ef895b85d4e2d494478c4c584c30b4ba8bfbcb804e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-091_암살자잘림수정과스킬규약/2_사전확인.md",
+      "bytes": 691,
+      "sha256": "cd50f4d5167692a216ad08849f17b82f5a9e9f1dfc8da02e8dea11d886ef2ea5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-091_암살자잘림수정과스킬규약/3_작업일지.md",
+      "bytes": 2177,
+      "sha256": "9967853a1921f1c356f75b00071f706d336934707f3da82d7e0389fbb68ddd48"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-091_암살자잘림수정과스킬규약/4_정의문서.md",
+      "bytes": 1374,
+      "sha256": "4981aceeda7e64e08a0758d7841731663c6901050505caea5c131af11941041f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-091_암살자잘림수정과스킬규약/5_버전관리.md",
+      "bytes": 581,
+      "sha256": "450dc4672de93687df2b25809a6036e4237ed4d2f39a559625b692d64fa438b8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-092_타격이펙트전면표시/1_대화기록.md",
+      "bytes": 125,
+      "sha256": "50496bd0a78bb5ac502b18433e50909695f4404fea0815939dcbd13d9e804cf1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-092_타격이펙트전면표시/2_사전확인.md",
+      "bytes": 172,
+      "sha256": "59ce75fffdfb0a70650dbf3560a4b53608e20e3aa3242a1d5e766cbfcf72994a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-092_타격이펙트전면표시/3_작업일지.md",
+      "bytes": 516,
+      "sha256": "f849591e1b5a339ee038df1d73c9e1bf463a81c24dcd34444f43f32516d8d4b5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-092_타격이펙트전면표시/4_정의문서.md",
+      "bytes": 225,
+      "sha256": "7953c997172af6e5c2f38b3294a1b7386aed0f8f4d1951d02249ddfb8ccae974"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-092_타격이펙트전면표시/5_버전관리.md",
+      "bytes": 149,
+      "sha256": "3e9b907116e3a6397a7683cea963671419cd8de7ec4eeb5e1e1776b82ea66a4b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-093_근접영웅대기이동시트/1_대화기록.md",
+      "bytes": 126,
+      "sha256": "f203ad0fd41bd344f0263a31fa208e357ead357c2d73d724cad16bc2ca37bd24"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-093_근접영웅대기이동시트/2_사전확인.md",
+      "bytes": 188,
+      "sha256": "d2a5649392a1ebd385bb6ed9fff8ffb9943051a5932037f4f7de36e0815b786a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-093_근접영웅대기이동시트/3_작업일지.md",
+      "bytes": 676,
+      "sha256": "ef297ff8b57d3e9a114c139781adca6f4138530cfd0ced7d89f3392d58c366bf"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-093_근접영웅대기이동시트/4_정의문서.md",
+      "bytes": 293,
+      "sha256": "86e0ff4e973e9a65d502fe777367ce3c5639a8baa579b271ae10b93ba9c8b214"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-093_근접영웅대기이동시트/5_버전관리.md",
+      "bytes": 163,
+      "sha256": "970f5a0746b52b842373e07418d4fb472aa89cb30dcc9deb798225c6e570907b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-094_영웅치명타시전단위판정/1_대화기록.md",
+      "bytes": 193,
+      "sha256": "a07165f8b6027a65f7e22f375f02e6be9c4b384bad528521c395d5223373db02"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-094_영웅치명타시전단위판정/2_사전확인.md",
+      "bytes": 250,
+      "sha256": "a988de534fb797266724657964aa4aa5fb871bb2fc7a282d9d9a12ef641f001f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-094_영웅치명타시전단위판정/3_작업일지.md",
+      "bytes": 742,
+      "sha256": "41f96e45f0464a781802b010d8a5998e40e16133f628cecc61d973385db05054"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-094_영웅치명타시전단위판정/4_정의문서.md",
+      "bytes": 454,
+      "sha256": "915493e3d3bbfd9634ccad6491b91476dbfc6fd826ca794205115591a37cfafe"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-094_영웅치명타시전단위판정/5_버전관리.md",
+      "bytes": 218,
+      "sha256": "b5009a2aec98a50ef5ebdd231be01528e79f636e0ebc803d4816ddeaa1191cc4"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-095_1단계장비아이콘과직접구매/1_대화기록.md",
+      "bytes": 218,
+      "sha256": "efd0107694733c0df7f7028c15294ca25b36f2ba065e155975617834e98e8d16"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-095_1단계장비아이콘과직접구매/2_사전확인.md",
+      "bytes": 286,
+      "sha256": "0d71bca606eaa15d7c30e55ef780b6584ec13d67879834e47e8b8cb08a680dd9"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-095_1단계장비아이콘과직접구매/3_작업일지.md",
+      "bytes": 808,
+      "sha256": "8cb0789c667c80ae62271a9e513c32b7922ccf4c48615d2e403987cca3dfcecf"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-095_1단계장비아이콘과직접구매/4_정의문서.md",
+      "bytes": 619,
+      "sha256": "26d819ef9ce721873f353da5ec228369c20f90d804b8870d5f0f67396f32f28c"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-095_1단계장비아이콘과직접구매/5_버전관리.md",
+      "bytes": 235,
+      "sha256": "17c8bb7c52b3ae87b0be91cf2ff2d352abda7b3e594e853c28a1e784e6ce0161"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-095_1단계장비아이콘과직접구매/이미지제작기록.md",
+      "bytes": 865,
+      "sha256": "a5edfdc44ad0ad688084765172912de737caacca6e5b505837cf8a49b08c50e1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-096_근접카드일러스트복구/1_대화기록.md",
+      "bytes": 97,
+      "sha256": "96432456f85e74d3cc047c59b9e3edc767215af1a79d87d8ab364a8d77fca010"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-096_근접카드일러스트복구/2_사전확인.md",
+      "bytes": 191,
+      "sha256": "85a65af7002a9d0aea6c0843378e36755d4b19b37fe88e86e687ff70e9450c4f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-096_근접카드일러스트복구/3_작업일지.md",
+      "bytes": 377,
+      "sha256": "bd90094ddea10f48a428fdf996f73bfa46e0eb015d288ce4a226858a58adcfe2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-096_근접카드일러스트복구/4_정의문서.md",
+      "bytes": 187,
+      "sha256": "41305418116307fb8a7825e8c02b45e1b3dd24d9c49f4a05add3caaaa2be78f6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-096_근접카드일러스트복구/5_버전관리.md",
+      "bytes": 123,
+      "sha256": "b944ed15cbb977f6a0f67e6fb9dcf4e3cb0721172412b79c4e0209090a1d1a37"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-097_질풍검확정아트적용/1_대화기록.md",
+      "bytes": 163,
+      "sha256": "00264fe166e99ffc274dd1be19a3321824df3df2f9f64027da4f97b0927b1351"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-097_질풍검확정아트적용/2_사전확인.md",
+      "bytes": 197,
+      "sha256": "3a0f9be3739d1189fce7bd9cab43c94c4704b396269a81018521cf2e2223ace1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-097_질풍검확정아트적용/3_작업일지.md",
+      "bytes": 581,
+      "sha256": "be1484786ccbe1ce35a53ee76975e19de3e5119734fbfb4ee58d870e9413b2bb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-097_질풍검확정아트적용/4_정의문서.md",
+      "bytes": 317,
+      "sha256": "dcb58e26c95a4af7156ccefed1dfb46584498633677f9a7c71d47d2435346219"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-097_질풍검확정아트적용/5_버전관리.md",
+      "bytes": 174,
+      "sha256": "be8aebb55fa09fe98dc97df62e66183f625d3d7c9ced351be361ca5acbf54baf"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-097_질풍검확정아트적용/이미지제작기록.md",
+      "bytes": 769,
+      "sha256": "cbfabde37959af5016a18ba12456a8018ef36a1c7660707193f75f85b4864477"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-098_로비독립시안/1_대화기록.md",
+      "bytes": 253,
+      "sha256": "e70d6dc139a635cdaa3fcea23fdb69d763338384a5f722f75864c5cdd2ac7c6a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-098_로비독립시안/2_사전확인.md",
+      "bytes": 340,
+      "sha256": "c475f6e6dcc676d8e966757876d3687b87ae89ceaf06544a2181976bdb3a62f5"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-098_로비독립시안/3_작업일지.md",
+      "bytes": 879,
+      "sha256": "c83dc6864d259b8002b7979548095cdcd747c203404208348a5b99c1148b6366"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-098_로비독립시안/4_정의문서.md",
+      "bytes": 577,
+      "sha256": "682dd43f4bdf2193343eaa0840778f0fd8aa18614d3c431ab5c2f37e71146af8"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-098_로비독립시안/5_버전관리.md",
+      "bytes": 307,
+      "sha256": "ef6e7803a2f1a9142cbcfaf805cdef0b76e4df6d758c8db382ebf07c184d97b0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-099_로비영웅화면연결/1_대화기록.md",
+      "bytes": 151,
+      "sha256": "7f77abd69b0638f5e1709ef972f2f969680a3341253a68fbe9908b1638dff874"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-099_로비영웅화면연결/2_사전확인.md",
+      "bytes": 295,
+      "sha256": "d521345242a48728c452784c51aa5cb2f3b61ef3e2ff5cfa915c31d9ddde1107"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-099_로비영웅화면연결/3_작업일지.md",
+      "bytes": 810,
+      "sha256": "0421d4a9a41df28876c2c2757d0b02f63033721c58ffa73196f0e35542459f15"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-099_로비영웅화면연결/4_정의문서.md",
+      "bytes": 674,
+      "sha256": "d4ac882bef6a6a6af43672d4c12af434fc0fb42537d39658a8502330827dbae6"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-099_로비영웅화면연결/5_버전관리.md",
+      "bytes": 197,
+      "sha256": "e15e5bb758742c12b59a3e3876ceae16684a5b9d849797fbef89ae667b3d249d"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-100_영웅화면정렬/1_대화기록.md",
+      "bytes": 139,
+      "sha256": "3491f75a03b3da23ccf82a15a40e36aff73c1529def76f6a65f1eb87bd262f7b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-100_영웅화면정렬/2_사전확인.md",
+      "bytes": 332,
+      "sha256": "1990810ede575e9882669a23d09d1fcb3eeeaa04ef78967b98f755ef6523c290"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-100_영웅화면정렬/3_작업일지.md",
+      "bytes": 964,
+      "sha256": "252d3fcbf341af456e5144dd42343823f4d0f78169afd03638ead0e8b169009e"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-100_영웅화면정렬/4_정의문서.md",
+      "bytes": 505,
+      "sha256": "588ffee46599fd3ab5a2f60fd38dc4fe96d5c8daeb1a919600d06c3c4d5deb31"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-100_영웅화면정렬/5_버전관리.md",
+      "bytes": 143,
+      "sha256": "bcd0d1c58f1a55ee430761154e5ca66d3fd2011f3043f6705463c4db231fdb2b"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-101_메인로비아이콘정렬/1_대화기록.md",
+      "bytes": 118,
+      "sha256": "ecb4e45a22dc561e2845de0f0b89246a555debdf1d8fce2b9b1dd3b887bb3037"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-101_메인로비아이콘정렬/2_사전확인.md",
+      "bytes": 269,
+      "sha256": "b31dd0a1521e53da5b3941d3b7e2abbe7c450660ab726e3a808497826d86dbc3"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-101_메인로비아이콘정렬/3_작업일지.md",
+      "bytes": 862,
+      "sha256": "0ebe99812de0ca62cf8554c3d4eb340188c3dac0944f1695ad68d63ffba7ec66"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-101_메인로비아이콘정렬/4_정의문서.md",
+      "bytes": 439,
+      "sha256": "6b340873e6325a8534e6ed7024206994aa23ac11188c43deaf53e93722f1aac1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-101_메인로비아이콘정렬/5_버전관리.md",
+      "bytes": 131,
+      "sha256": "329e1b4661b1faf9d9e664409eaa36c195803d37e0f01b824db00f5a4796f29a"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-102_영웅목록상세분리/1_대화기록.md",
+      "bytes": 232,
+      "sha256": "7e1c4b019edd5bca846a35c9b61aa41afab5ac2496a617e7bf6fc1a1e11f42a9"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-102_영웅목록상세분리/2_사전확인.md",
+      "bytes": 194,
+      "sha256": "3e1f9010287bc78b863a619e4abbcd1a58dc3431802bef23da307683c2451672"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-102_영웅목록상세분리/3_작업일지.md",
+      "bytes": 1267,
+      "sha256": "265763d7464a73f329fa0d3de742dd9210634aadcd8c3a500252d9fcc75eb5db"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-102_영웅목록상세분리/4_정의문서.md",
+      "bytes": 396,
+      "sha256": "058be82b6e1fbb097e243da28b6e7b2b7cb3f04b4f4cd5e8cef5279fe73f0d04"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-102_영웅목록상세분리/5_버전관리.md",
+      "bytes": 135,
+      "sha256": "022d88ea8a42c1a351dac66be18ea3d0e622d9e04d394e0b0208ee56c5b230cc"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-103_임무바로가기/1_대화기록.md",
+      "bytes": 146,
+      "sha256": "443615ee68be07830c035d44e4d2af9ec8074c31b24713808c585b29223c794f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-103_임무바로가기/2_사전확인.md",
+      "bytes": 214,
+      "sha256": "d820d7da001213d828d1e9a83ced8e9e30d92292197a32033964bb9418fc4fbc"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-103_임무바로가기/3_작업일지.md",
+      "bytes": 637,
+      "sha256": "64c01333022ac490d74fc661f9ee6713281663a2ae08b95c567091b397a9c4df"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-103_임무바로가기/4_정의문서.md",
+      "bytes": 353,
+      "sha256": "e259040533557a13681a0c97c58f74926f4b8e02defa3ec17afa9843965006bb"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-103_임무바로가기/5_버전관리.md",
+      "bytes": 118,
+      "sha256": "651983d0c7b10da2595db7cc5209c12a7610a0e966e17c11f33ea75ba83877fd"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-104_공통모바일규격/1_대화기록.md",
+      "bytes": 139,
+      "sha256": "518df28a21d01370d14a9863ec236567968f11457865bfd8b112975aae7990ea"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-104_공통모바일규격/2_사전확인.md",
+      "bytes": 277,
+      "sha256": "e7c1d33dd7afa889f385dba1a3d560bf3893b8383d9e357f65e92a0b509df349"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-104_공통모바일규격/3_작업일지.md",
+      "bytes": 1366,
+      "sha256": "e41eed56135ea1e079a3c9908e1997d92305f3c81bd73cdba16f0695bab7f825"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-104_공통모바일규격/4_정의문서.md",
+      "bytes": 295,
+      "sha256": "974c5608df2922050a2933554832ed18b5937d296aafde9e0a63cfbbef09e684"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-104_공통모바일규격/5_버전관리.md",
+      "bytes": 116,
+      "sha256": "c4d675a2f3c0d6884246d815720655875db596b909e2ab00bb25481e79f14345"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-105_전투로비8칸편성/1_대화기록.md",
+      "bytes": 171,
+      "sha256": "0c021d35992ed8ec25d57c0b72cc8ffc753ce55114861d50044bf6bb712ea5e1"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-105_전투로비8칸편성/2_사전확인.md",
+      "bytes": 185,
+      "sha256": "910b1b2cfff0d50ebca355e184c9e4f2a80589a9be1e97619e73aef9d207f265"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-105_전투로비8칸편성/3_작업일지.md",
+      "bytes": 1274,
+      "sha256": "a4b4b01825de96ed69b436d2fbdc18cadbaad2c46f64926866100298dfd64345"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-105_전투로비8칸편성/4_정의문서.md",
+      "bytes": 343,
+      "sha256": "f2384189949ee799bd3e2dace31d41c426d8680557d3ffd8a5d7e2c51206fbf0"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-105_전투로비8칸편성/5_버전관리.md",
+      "bytes": 124,
+      "sha256": "cbfec64c0facb99da76e33dd44ee881c32f38296c07fbca56f49cafdd27db8ce"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-106_병영마름모메뉴/1_대화기록.md",
+      "bytes": 177,
+      "sha256": "a0d60e57ec6e5712f6463e7f470c167cece6cbf0a98b2148412e4328f87bd01f"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-106_병영마름모메뉴/2_사전확인.md",
+      "bytes": 193,
+      "sha256": "8e094f463ceb3c81ad456684b9eaa4ac82196eea20303baec0676552d73dbe74"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-106_병영마름모메뉴/3_작업일지.md",
+      "bytes": 614,
+      "sha256": "ec84ee0f3fbf8fed60983d69657c264a5da92dfe5288e4ba9ea2dd7916cdc7a2"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-106_병영마름모메뉴/4_정의문서.md",
+      "bytes": 307,
+      "sha256": "59fb1983717c4cb7cd970031ba64e07fad925311b539f60e007c4bb8789ee080"
+    },
+    {
+      "file": "문서/03_작업기록/WEB-106_병영마름모메뉴/5_버전관리.md",
+      "bytes": 120,
+      "sha256": "556baec8cce01758c4b7f7537cdc6202a2689a3b51fe4f8eb2d1f330efed44b7"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/개발도구조합_v004.png",
+      "bytes": 33452,
+      "sha256": "d0a102646b08c67709965d153312133e4bb10a7306c97cef0ea6e7166a1569ca"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/개발자기록_v001.png",
+      "bytes": 362794,
+      "sha256": "003447c865496862e01f7dbbd058ed9c927c4fb397133352f977c7bc2befdadf"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/개발자조합트리_v007.png",
+      "bytes": 26284,
+      "sha256": "f3faed40a82536d706409048a4949c3ac524030173cd078bce0592b4984c3eb1"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/격자가방_v002.png",
+      "bytes": 18116,
+      "sha256": "2c50706a976bdd46cd68821cce1a1eb4b76f8169a197b219d592167475110159"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/디펜스_v001_라벨.png",
+      "bytes": 74174,
+      "sha256": "0692430ad4800117b4770066db9a43006823238b2b9be5df966d502f6ce1ddbb"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/라벨설명.md",
+      "bytes": 13559,
+      "sha256": "068f66dc514dabea29352148697b5fe839ea79de825d956f93b586f606b5601c"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/몬스터시험도구_v012.png",
+      "bytes": 43714,
+      "sha256": "e35e0d791f4c244d367ace604ff76a6d7bf45b31e1a68c08d16294d8cd28711c"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/무한웨이브타입_v012.png",
+      "bytes": 77657,
+      "sha256": "a345e6b52fc77b517c0e19653b6958c02e06c5c6d4f2e92911767766ed397f13"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/병사승급_v009.png",
+      "bytes": 79531,
+      "sha256": "c22bb9e24fd957670d4f5916907f0127de4517f926912e86da6114e22984ea4f"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/병사이동잔상_v010.png",
+      "bytes": 100444,
+      "sha256": "0b241c826397675579aff7c41a1b214c1b32604b1c0b2e4f307fc5c94769d5b6"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/블록배치잔상_v008.png",
+      "bytes": 27590,
+      "sha256": "55535f10138e3b1d3c1719ac34102db8f2311461f34ac373ff289c2eb1fadd2a"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/상점할인판매_v009.png",
+      "bytes": 19192,
+      "sha256": "a7299daad0abc275b0b5822d2a1b6d95007f93d97af0f57326a2897b02db07c2"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/영웅능력치_v003.png",
+      "bytes": 53571,
+      "sha256": "3f6e798663272846cb526f4c1bd889c7fbe9a103dcbfb60c51d75e6dceb95c11"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/영웅범위_v002.png",
+      "bytes": 62036,
+      "sha256": "827eb93d4c5c14bc7688e83acb42d473220fffc20c9657169df6c813832e1ab0"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/영웅빈칸안내_v009.png",
+      "bytes": 50757,
+      "sha256": "6c29b254d717b2a78a2143b188bf17496533c7e670bb614962d45f67bd4844db"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/영웅소환카드_v003.png",
+      "bytes": 98970,
+      "sha256": "b40b361148eca2fb989b132a5edee9b9c0cb02785ac215f998898b8e3a88cefe"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/장비4x5_v011.png",
+      "bytes": 22332,
+      "sha256": "e42b2a57d2290ad3746960881ad5fa9b41f241488bec4ab33e2e59ae0ada5719"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/조합연결선_v005.png",
+      "bytes": 30365,
+      "sha256": "e63917b6c2970f7597ab1b8a0e3dc65b06d560dee76ee38c0b2a42af2a4d3370"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/조합우선순위_v006.png",
+      "bytes": 25019,
+      "sha256": "0240a0e8362a8bcd27cf4d42995d4957d96e6befd061b0c482d70415f7f99f65"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/치명타숫자_v010.png",
+      "bytes": 68858,
+      "sha256": "328241c417e14ad084d18ddd37174e1885bad5289f902be35fd1013b2b03a0ab"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/현상금등장_v010.png",
+      "bytes": 64903,
+      "sha256": "4c3a829aa6bff0268f09a4f0ae19f98ce4ce5db5a9038c7d61d1999250e248a1"
+    },
+    {
+      "file": "문서/04_UI/디펜스화면/현상금버튼_v010.png",
+      "bytes": 71893,
+      "sha256": "fa362cf385eb3f503b218b1da7147c45a530fdeeb99772f4de86e74de3d17e97"
+    },
+    {
+      "file": "문서/05_프로젝트정의/정의목록.md",
+      "bytes": 7713,
+      "sha256": "fa787eb8969ecccf14678c536941858fd49c7f15fef36f0057072bfce2b4b9a4"
+    },
+    {
+      "file": "문서/작업저장안내.md",
+      "bytes": 1137,
+      "sha256": "b025bc572bd363e6aeec22271675933eb82cef01d703002220b876dbb27d0a59"
+    },
+    {
+      "file": "자료/첨부파일/01_모델1/orca-paste-1793842998660-427074e4-e275-4ea5-bfef-1802374579bc.png",
+      "bytes": 1112277,
+      "sha256": "19cb91b07b7afc487ccc009766903fe3cbc135e9e7e39b6a4e057a3bbb18716a"
+    },
+    {
+      "file": "자료/첨부파일/02_모델2/orca-paste-1793843103679-8dda1c72-a4e1-4cd2-a692-21621b89d53d.png",
+      "bytes": 413783,
+      "sha256": "86dc127c7dc7b7ad62bbc00363eed002d8a12f469f4f471dd58fe04c3431ff9f"
+    },
+    {
+      "file": "자료/첨부파일/03_모델3/orca-paste-1793843488058-3562b273-abf3-4c94-95eb-542d34124645.png",
+      "bytes": 1048620,
+      "sha256": "91c177d924527004e17e32c1823cc7dde4eb170ff434e834f75173f63df02f4e"
+    },
+    {
+      "file": "자료/첨부파일/04_모델4/orca-paste-1793843592350-342133f5-712e-4121-b561-f86d2e6b951f.png",
+      "bytes": 935963,
+      "sha256": "0bfbe426032e59b05e5c3f13a8f922a5c5526778e9d214102225212712da49b8"
+    },
+    {
+      "file": "자료/첨부파일/05_영웅목록상세요청/orca-paste-1793846665559-1355c8f3-7704-4d02-8a94-bc73830710f7.png",
+      "bytes": 273135,
+      "sha256": "f6e095cd24789731637b752c9764ff79147e71927ec30a2e7428206d5a0dab04"
+    },
+    {
+      "file": "자료/첨부파일/06_임무아이콘요청/orca-paste-1793847574604-306ffaa3-5eed-47b7-b3d0-b634c3872183.png",
+      "bytes": 7459,
+      "sha256": "b48481bc5793f6a583238468a78378e24bfec53ed79262351b6d62cf14f424ab"
+    },
+    {
+      "file": "자료/첨부파일/07_로비8칸편성요청/orca-paste-1793848770040-01b5003c-8bdf-47fc-be4f-533c00abe7b7.png",
+      "bytes": 277933,
+      "sha256": "e4cddf83d23a60e92ca3cc6b94946c169079c828c6bdc4de1154c0507f22470a"
+    },
+    {
+      "file": "자료/첨부파일/첨부파일목록.json",
+      "bytes": 3140,
+      "sha256": "8d65aa34c9aa8f7f84fd00988a1b1e4b0e6f1b9b6ca921bfef3a8decd9b383a3"
+    }
+  ]
+}

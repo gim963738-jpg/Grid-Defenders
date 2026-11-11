@@ -1,0 +1,36 @@
+.training-screen{display:flex;flex-direction:column;background:radial-gradient(ellipse at 50% 38%,#344337,#101e22 72%);padding-bottom:calc(28px + var(--app-safe-bottom));}
+.training-wallet{margin-left:auto;text-align:right;white-space:nowrap;font-family:system-ui,sans-serif;color:#f5cd7e;}
+.training-wallet small{display:block;font-size:11px;color:#bfa97b;}.training-wallet b{font-size:16px;font-variant-numeric:tabular-nums;}
+.training-intro{text-align:center;padding:8px 12px 14px;}.training-intro>span{font:10px/1.5 Georgia,serif;letter-spacing:.2em;color:#a99163;}
+.training-intro h2{font-size:20px;margin:8px 0;color:#f5e5c1;}.training-intro p{font-size:13px;color:#b4c0ae;margin:0 0 12px;}.training-intro>strong{font-size:13px;border-block:1px solid #a68b55;padding:4px 20px;color:#e0c18b;}
+.training-pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:0 12px;}
+.training-pillar{min-width:0;text-align:center;--pillar-color:#edb76b;}.pillar-health{--pillar-color:#99cc99;}.pillar-normal{--pillar-color:#94bfd0;}.pillar-boss{--pillar-color:#c7a1d9;}
+.training-emblem{display:grid;place-items:center;width:42px;height:42px;border:1px solid #9d8555;background:#142126;border-radius:50%;margin:0 auto 8px;color:var(--pillar-color);font:24px Georgia,serif;}
+.training-pillar h3{min-height:34px;margin:0;font:12px/17px system-ui,sans-serif;color:#eddec3;word-break:keep-all;}.training-total{display:block;color:var(--pillar-color);font:600 18px/28px system-ui,sans-serif;}
+.training-tower{display:flex;flex-direction:column;gap:5px;padding:8px 5px;margin:6px 0 10px;border:1px solid #89734e;border-radius:4px;background:linear-gradient(90deg,#131e20,#24312b,#131e20);box-shadow:inset 0 0 15px #0007,0 4px 8px #0004;}
+.training-step{height:21px;display:grid;place-items:center;background:#28342f;border:1px solid #5f6450;color:#8b9179;font:10px system-ui,sans-serif;transition:background .2s,box-shadow .2s;}
+.training-step.filled{background:color-mix(in srgb,var(--pillar-color) 70%,#384431);border-color:var(--pillar-color);color:#16201c;box-shadow:0 0 6px color-mix(in srgb,var(--pillar-color) 30%,transparent);}
+.training-level{font:600 17px system-ui,sans-serif;color:#e9d3a8;}.training-level small{font-size:12px;color:#95a28f;}.training-next{font:11px/18px system-ui,sans-serif;color:#b6c0ab;margin:4px 0 7px;}
+.training-pillar button{display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%;min-width:48px;min-height:52px;padding:5px 2px;border:1px solid #c49b56;border-radius:5px;background:linear-gradient(#b38946,#6b502b);font:14px system-ui,sans-serif;color:#fff0cd;}.training-pillar button small{font-size:11px;margin-top:3px;}
+.training-screen button:disabled{cursor:default;filter:saturate(.25);opacity:.48;}.training-screen button:disabled:active{transform:none;}
+.training-promotion{text-align:center;padding:16px 12px 0;}.training-promotion p{display:flex;justify-content:space-between;font:13px system-ui,sans-serif;color:#b5bba5;}.training-promotion p b{color:#e6c58b;}
+.training-promotion>button{width:100%;min-height:52px;background:linear-gradient(120deg,#9a6b2f,#e9c06e,#a47635);border:1px solid #e0c181;border-radius:6px;color:#241b10;font-size:18px;font-weight:700;}
+.training-message{min-height:38px;margin:12px 12px 0;text-align:center;font:12px/19px system-ui,sans-serif;color:#dbc89d;}.training-help,.training-test{margin:8px 12px;font:12px/1.6 system-ui,sans-serif;color:#a8b7a9;}.training-help summary,.training-test summary{padding:12px 0;min-height:48px;cursor:pointer;}.training-test button{width:100%;min-height:48px;background:#26382f;border:1px solid #8e7a52;border-radius:4px;color:#e9d3a8;}
+@media(max-height:740px){.training-intro{padding-top:8px;}.training-step{height:17px;}.training-tower{gap:4px;}.training-promotion{padding-top:10px;}}
+
+/* Debug controls live outside the mobile game frame, in the desktop gutter. */
+.training-workspace{width:100%;}
+.training-support{width:min(calc(100% - 24px),480px);margin:16px auto;padding:16px;background:#141e20;border:1px solid #635438;border-radius:9px;color:#d9d5bb;font:12px/1.6 system-ui,sans-serif;}
+.training-support h2{margin:0 0 12px;font-size:16px;color:#e4c68f;}
+.training-support .training-help,.training-support .training-test{margin:8px 0;}
+.training-support button{min-width:48px;min-height:48px;cursor:pointer;}
+@media(min-width:1080px){.training-workspace{display:grid;grid-template-columns:minmax(0,1fr) 480px minmax(0,1fr);gap:16px;align-items:start;}.training-workspace>.training-screen{grid-column:2;margin:0;}.training-workspace>.training-support{grid-column:3;width:min(100%,260px);margin:16px 0;position:sticky;top:16px;}}
+
+.training-summary{margin:16px 12px 0;padding:14px 12px 4px;border:1px solid #716246;border-radius:8px;background:#10202380;font-family:system-ui,sans-serif;}
+.training-summary-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;}
+.training-summary-heading h2{margin:0;font-size:16px;color:#efd8a5;}.training-summary-heading>span{font-size:12px;color:#b8c4b3;white-space:nowrap;}
+.training-summary table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px;}.training-summary th,.training-summary td{padding:10px 0;text-align:left;vertical-align:middle;border-bottom:1px solid #b7b38b24;}
+.training-summary thead th{padding-top:0;color:#b2bba8;font-weight:400;}.training-summary th:first-child{width:40%;padding-right:8px;}.training-summary th:nth-child(2){width:32%;}.training-summary th:last-child,.training-summary td:last-child{text-align:right;}
+.training-summary tbody tr{--pillar-color:#edb76b;}.training-summary tbody .pillar-health{--pillar-color:#99cc99;}.training-summary tbody .pillar-normal{--pillar-color:#94bfd0;}.training-summary tbody .pillar-boss{--pillar-color:#c7a1d9;}
+.training-summary tbody th{font-weight:400;color:#e2dec9;word-break:keep-all;}.training-summary td{color:#9da997;font-variant-numeric:tabular-nums;}.training-summary td strong{font-size:14px;color:var(--pillar-color);}.training-summary tbody tr:last-child>*{border-bottom:0;}
+.training-summary-track{height:5px;margin:6px 0 0;border-radius:3px;background:#38443b;overflow:hidden;}.training-summary-track>span{display:block;height:100%;background:var(--pillar-color);border-radius:inherit;}

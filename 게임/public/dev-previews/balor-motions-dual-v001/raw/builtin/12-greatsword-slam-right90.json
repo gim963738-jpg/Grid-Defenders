@@ -1,0 +1,38 @@
+{
+  "task": "MAIN01-20261111-9B2C9CFE",
+  "iteration": 1,
+  "route": "host_image_gen",
+  "model": null,
+  "modelReported": false,
+  "callOrdinal": 12,
+  "action": "12-greatsword-slam-right90",
+  "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 12-greatsword-slam-right90. Exact phases: 1 EXACT preceding tower-shield-slam LAST impact pose; 2 shield begins vanishing; 3 shield completely gone; 4 left hand moves to greatsword grip; 5 natural TWO-HAND grip; 6 gigantic sword lifted in huge arc; 7 sword HIGH above helmet, arms/torso gather force; 8 high apex pause, full weight preparation; 9 huge forceful downward stroke; 10 greatsword strikes ground in front to right; 11 body absorbs recoil; 12 HOLD bent greatsword impact stance. No shield reappears. Rigid straight gigantic blade, no bending or shrinking to fit.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential. LAST attached image is the exact preceding clip last-frame CONNECTION POSE; begin from it, preserving identity and camera. Do not copy backdrop.",
+  "references": [
+    {
+      "file": "source/approved-right035.png",
+      "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+      "attached": true
+    },
+    {
+      "file": "api/02-ref-giant90/native.png",
+      "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+      "attached": true
+    },
+    {
+      "file": "references/builtin-11-last.png",
+      "sha256": "ab5379e93bda437e67a53d4e1e91676688369964987c2c621720e2cfcff15647",
+      "attached": true
+    }
+  ],
+  "transparent_background": true,
+  "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-1ad5c31e-6054-4647-932a-35489bbd76b9.png",
+  "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\12-greatsword-slam-right90.png",
+  "sha256": "3ac3e88b6ec184d8b92543d6cf86777671db18292a62b854658fb88a3c04ae97",
+  "width": 1448,
+  "height": 1086,
+  "mode": "RGBA",
+  "usage": null,
+  "cost": null,
+  "nativeBytesPreserved": true,
+  "at": "2026-11-11T09:31:28.701693+00:00"
+}

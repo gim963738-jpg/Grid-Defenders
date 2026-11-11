@@ -1,0 +1,431 @@
+{
+  "sourceTask": "MAIN02-20261111-8D69415B",
+  "directUserInstruction": "아니 여기서 그냥 바로 작업해서 보여줘",
+  "executor": "main02",
+  "sequence": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05[1..7]",
+    "06",
+    "02[loop]"
+  ],
+  "introFrames": 67,
+  "introMs": 6380,
+  "tailLoopMs": 1800,
+  "steps": [
+    {
+      "action": "01_run_right90",
+      "frame": 1,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 2,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 3,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 4,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 5,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 6,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 7,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 8,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 9,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 10,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 11,
+      "durationMs": 70
+    },
+    {
+      "action": "01_run_right90",
+      "frame": 12,
+      "durationMs": 70
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 1,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 2,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 3,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 4,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 5,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 6,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 7,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 8,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 9,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 10,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 11,
+      "durationMs": 150
+    },
+    {
+      "action": "02_combat_idle_34",
+      "frame": 12,
+      "durationMs": 150
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 1,
+      "durationMs": 110
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 2,
+      "durationMs": 90
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 3,
+      "durationMs": 90
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 4,
+      "durationMs": 70
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 5,
+      "durationMs": 60
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 6,
+      "durationMs": 60
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 7,
+      "durationMs": 80
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 8,
+      "durationMs": 70
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 9,
+      "durationMs": 80
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 10,
+      "durationMs": 100
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 11,
+      "durationMs": 110
+    },
+    {
+      "action": "03_longsword_thrust_34",
+      "frame": 12,
+      "durationMs": 140
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 1,
+      "durationMs": 100
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 2,
+      "durationMs": 90
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 3,
+      "durationMs": 70
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 4,
+      "durationMs": 60
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 5,
+      "durationMs": 50
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 6,
+      "durationMs": 60
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 7,
+      "durationMs": 60
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 8,
+      "durationMs": 70
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 9,
+      "durationMs": 80
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 10,
+      "durationMs": 90
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 11,
+      "durationMs": 100
+    },
+    {
+      "action": "04_dagger_thrust_34",
+      "frame": 12,
+      "durationMs": 130
+    },
+    {
+      "action": "05_dual_thrust_right90",
+      "frame": 1,
+      "durationMs": 110
+    },
+    {
+      "action": "05_dual_thrust_right90",
+      "frame": 2,
+      "durationMs": 100
+    },
+    {
+      "action": "05_dual_thrust_right90",
+      "frame": 3,
+      "durationMs": 90
+    },
+    {
+      "action": "05_dual_thrust_right90",
+      "frame": 4,
+      "durationMs": 70
+    },
+    {
+      "action": "05_dual_thrust_right90",
+      "frame": 5,
+      "durationMs": 60
+    },
+    {
+      "action": "05_dual_thrust_right90",
+      "frame": 6,
+      "durationMs": 70
+    },
+    {
+      "action": "05_dual_thrust_right90",
+      "frame": 7,
+      "durationMs": 90
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 1,
+      "durationMs": 110
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 2,
+      "durationMs": 90
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 3,
+      "durationMs": 80
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 4,
+      "durationMs": 60
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 5,
+      "durationMs": 60
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 6,
+      "durationMs": 70
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 7,
+      "durationMs": 80
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 8,
+      "durationMs": 90
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 9,
+      "durationMs": 100
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 10,
+      "durationMs": 110
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 11,
+      "durationMs": 120
+    },
+    {
+      "action": "06_dual_rip_x_right90",
+      "frame": 12,
+      "durationMs": 160
+    }
+  ],
+  "sources": [
+    {
+      "route": "A_builtin",
+      "action": "01_run_right90",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\01_run_right90\\sheet.png",
+      "sha256": "a404b2fd756bbda67962370fa68c20e1e7470d15915d9a74583576046627d7fc"
+    },
+    {
+      "route": "A_builtin",
+      "action": "02_combat_idle_34",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\02_combat_idle_34\\sheet.png",
+      "sha256": "dad09beed178f3fd2521e325089c6981c9a61a11c5f80fed392dbc65e991d9d7"
+    },
+    {
+      "route": "A_builtin",
+      "action": "03_longsword_thrust_34",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\03_longsword_thrust_34\\sheet.png",
+      "sha256": "2c8deb21647541db4a2d11fae27df16ad4ebd27cede15c3671a1f4ae2f43ef94"
+    },
+    {
+      "route": "A_builtin",
+      "action": "04_dagger_thrust_34",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\04_dagger_thrust_34\\sheet.png",
+      "sha256": "a10c5cd8c231e0e0c7da5347df911171a5dfadf2780156b599b4e93f3193b245"
+    },
+    {
+      "route": "A_builtin",
+      "action": "05_dual_thrust_right90",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\05_dual_thrust_right90\\sheet.png",
+      "sha256": "88006a034e114b25b26f8d51a45d5faa795721d2bbccff3f7bd31fe70abf8235"
+    },
+    {
+      "route": "A_builtin",
+      "action": "06_dual_rip_x_right90",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\06_dual_rip_x_right90\\sheet.png",
+      "sha256": "c789864f2ec038a78f7703814fe06cc7fd3b43d824b94b6b996b045b1c649e8c"
+    },
+    {
+      "route": "B_image26",
+      "action": "01_run_right90",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\B_image26\\01_run_right90\\sheet.png",
+      "sha256": "27a9ba39c49f35c817264195cfcb4df30441cbf80b5b7160f621c2e92f85a1b5"
+    },
+    {
+      "route": "B_image26",
+      "action": "02_combat_idle_34",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\B_image26\\02_combat_idle_34\\sheet.png",
+      "sha256": "d7e0b05bcd29182419e9720e2ed01c84c8d2540f52db340ab3f98fcd9c410aa6"
+    },
+    {
+      "route": "B_image26",
+      "action": "03_longsword_thrust_34",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\B_image26\\03_longsword_thrust_34\\sheet.png",
+      "sha256": "738d09db0e34d5a02e377e17e950a9044f1581575ddd436ee8dbc93fafdb33e4"
+    },
+    {
+      "route": "B_image26",
+      "action": "04_dagger_thrust_34",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\B_image26\\04_dagger_thrust_34\\sheet.png",
+      "sha256": "6c57c9ac9be116cbd50900e4b0d0493f5456e1aacc4192b01aa7f6e13d93f159"
+    },
+    {
+      "route": "B_image26",
+      "action": "05_dual_thrust_right90",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\B_image26\\05_dual_thrust_right90\\sheet.png",
+      "sha256": "c2b87e9a03b696561f606eaf7dda6555f43a539d89ede31de025f30f9c08f5b4"
+    },
+    {
+      "route": "B_image26",
+      "action": "06_dual_rip_x_right90",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\B_image26\\06_dual_rip_x_right90\\sheet.png",
+      "sha256": "defecc9dc0baf2f79ac9d4f58c5967570ef4afb247231558a60cd108be4ea061"
+    }
+  ],
+  "inlineBytes": 503236,
+  "sourceMutation": false,
+  "newGenerationCalls": 0
+}

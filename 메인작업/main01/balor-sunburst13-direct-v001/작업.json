@@ -1,0 +1,920 @@
+{
+  "task": "MAIN01-DIRECT-20261111-1E8512E0",
+  "role": "main01",
+  "executor": "main01 direct; no delegated author or generator",
+  "at": "2026-11-11T21:36:52.667946+09:00",
+  "userApproval": "2.6선버스트 작업 진행해봐",
+  "model": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "count": 13,
+  "maxGenerationPosts": 13,
+  "artReviewRequested": false,
+  "automaticRetry": false,
+  "automaticFallback": false,
+  "postprocess": false,
+  "gitOperations": false,
+  "sourceReferences": [
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard35_natural_main01-20261111-1b358aa6_v003\\final\\right-035.png",
+      "file": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png",
+      "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+      "role": "approved identity, design and35-degree combat-ready stance",
+      "viewedBeforeGeneration": true
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\01-ref-balor90\\native.png",
+      "file": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\balor90-working.png",
+      "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+      "role": "existing working90 camera reference, not a new accepted master",
+      "viewedBeforeGeneration": true
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\02-ref-giant90\\native.png",
+      "file": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\giant90-working.png",
+      "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+      "role": "existing white-knight giant working identity and90 camera reference",
+      "viewedBeforeGeneration": true
+    }
+  ],
+  "output": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001",
+  "jobs": [
+    {
+      "number": 1,
+      "id": "01-run-right90",
+      "label": "달리기",
+      "camera": 90,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "loop",
+      "requestId": "ae19b667-dd62-402e-950d-00bca00a202b",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png",
+        "balor90-working.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\01-run-right90.txt",
+      "promptSha256": "d9dec732e014a2fcd472438c9047de9cae6e8bc554f8d9bad11d694e9cbebe0b",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\01-run-right90.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:39:08.834912+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        },
+        {
+          "name": "balor90-working.png",
+          "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+          "bytes": 1623376,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\balor90-working.png"
+        }
+      ],
+      "receipt": {
+        "id": "ae19b667-dd62-402e-950d-00bca00a202b",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:39:08.884Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:39:58.956859+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\ae19b667-dd62-402e-950d-00bca00a202b\\ae19b667-dd62-402e-950d-00bca00a202b_sunburst-2.6-high.png",
+      "sha256": "ebb11ec392cff4f4c85d652a02aef73e9158c085f3bc46d1c993fd0a5b5cdf53",
+      "bytes": 3220641,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 3820,
+        "input_tokens_details": {
+          "image_tokens": 3072,
+          "text_tokens": 748
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5233
+      },
+      "cost": null,
+      "apiRequestId": "req_d28cc455469a4fff9483f6223215d1fc",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 2,
+      "id": "02-combat-idle-right35",
+      "label": "전투 대기",
+      "camera": 35,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "loop",
+      "requestId": "9293c05b-f164-4163-9af3-603ed92bdda4",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\02-combat-idle-right35.txt",
+      "promptSha256": "2203cda4231587ce49b45005804743a617524d9cff91fbf2321e6d34d76b6dda",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\02-combat-idle-right35.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:39:58.989866+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        }
+      ],
+      "receipt": {
+        "id": "9293c05b-f164-4163-9af3-603ed92bdda4",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:39:59.013Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:40:49.098836+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\9293c05b-f164-4163-9af3-603ed92bdda4\\9293c05b-f164-4163-9af3-603ed92bdda4_sunburst-2.6-high.png",
+      "sha256": "404c3d721e9d6f4466516f66d2ac2a8170ac7da9212d352b6f769b55d335eef7",
+      "bytes": 3404933,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 2219,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 683
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3632
+      },
+      "cost": null,
+      "apiRequestId": "req_dacc49891a6046b488cb3205af367745",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 3,
+      "id": "03-horizontal-slash-right35",
+      "label": "횡베기",
+      "camera": 35,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "4a0c273b-6330-48fb-886a-737537293d91",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\03-horizontal-slash-right35.txt",
+      "promptSha256": "85a2ce28f5751043a88c804a4bc18bb48686e9613b3e79edb5614971b7789045",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\03-horizontal-slash-right35.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:40:49.140846+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        }
+      ],
+      "receipt": {
+        "id": "4a0c273b-6330-48fb-886a-737537293d91",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:40:49.183Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:41:49.266376+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\4a0c273b-6330-48fb-886a-737537293d91\\4a0c273b-6330-48fb-886a-737537293d91_sunburst-2.6-high.png",
+      "sha256": "6ae4b1a5cde2b27cda0697137045ba82019a382238faab31b78b47debc2ba2a8",
+      "bytes": 3299046,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 2281,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 745
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3694
+      },
+      "cost": null,
+      "apiRequestId": "req_8fa54bb8f26f41f0bf823aa3a3e95cc3",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 4,
+      "id": "04-vertical-slash-right35",
+      "label": "종베기",
+      "camera": 35,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "907ba372-2021-4153-a80e-47929f16ec6b",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\04-vertical-slash-right35.txt",
+      "promptSha256": "8f003bdd86f0664cdd559adeccd079bdb04b57220ec33d6cfccecf0b2ebd7c00",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\04-vertical-slash-right35.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:41:49.307385+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        }
+      ],
+      "receipt": {
+        "id": "907ba372-2021-4153-a80e-47929f16ec6b",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:41:49.336Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:42:39.390674+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\907ba372-2021-4153-a80e-47929f16ec6b\\907ba372-2021-4153-a80e-47929f16ec6b_sunburst-2.6-high.png",
+      "sha256": "5f434d82b94c25d0d3d6bd13b2222504c3400339881da3961972a6535064ef79",
+      "bytes": 2921310,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 2253,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 717
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3666
+      },
+      "cost": null,
+      "apiRequestId": "req_a3162ec088a541499185c13a00a2d625",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 5,
+      "id": "05-shield-corner-strike-right35",
+      "label": "방패 모서리 가격",
+      "camera": 35,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "20c07e81-a800-4171-a3c3-5f71ff9c961e",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\05-shield-corner-strike-right35.txt",
+      "promptSha256": "db42d480efd46fdf6edcc4edbf859411bd6f2549d57bc5bd53cc5c94a7d89425",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\05-shield-corner-strike-right35.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:42:39.434684+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        }
+      ],
+      "receipt": {
+        "id": "20c07e81-a800-4171-a3c3-5f71ff9c961e",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:42:39.461Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:43:39.562261+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\20c07e81-a800-4171-a3c3-5f71ff9c961e\\20c07e81-a800-4171-a3c3-5f71ff9c961e_sunburst-2.6-high.png",
+      "sha256": "db23bb63701d2db4c77719af287b90ead2fe0c9b8b91379501659e9e5248117a",
+      "bytes": 3366161,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 2292,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 756
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3705
+      },
+      "cost": null,
+      "apiRequestId": "req_c492a4d42dd44ef3a0286c0f45be7ee4",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 6,
+      "id": "06-shield-plant-right35",
+      "label": "방패 내려꽂기",
+      "camera": 35,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "d2b1e3a2-8844-4532-a853-0cc8c7c99b26",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\06-shield-plant-right35.txt",
+      "promptSha256": "ba6f818b40c72eab7728cc0918a364f626969b35094392cc82772d5d2322cd36",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\06-shield-plant-right35.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:43:39.623274+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        }
+      ],
+      "receipt": {
+        "id": "d2b1e3a2-8844-4532-a853-0cc8c7c99b26",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:43:39.652Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:44:39.841669+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\d2b1e3a2-8844-4532-a853-0cc8c7c99b26\\d2b1e3a2-8844-4532-a853-0cc8c7c99b26_sunburst-2.6-high.png",
+      "sha256": "2489a1907b85cdee7ad5def3e0f63e8ebcf75c159a42b2722bcff49bf24df5da",
+      "bytes": 3263514,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 2283,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 747
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3696
+      },
+      "cost": null,
+      "apiRequestId": "req_311d5243030b4f728bf0317553d91699",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 7,
+      "id": "07-knightly-wrist-roll-right35",
+      "label": "기사도 자세·검면 회전",
+      "camera": 35,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "d43353fb-ec1e-4cf8-8164-a3d848f72a5f",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png"
+      ],
+      "precedingSheet": 6,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\07-knightly-wrist-roll-right35.txt",
+      "promptSha256": "e330d61923ff7dd746ca5cc0039600102cfbb3fa811a902a63222e65f7202811",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\07-knightly-wrist-roll-right35.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:44:39.907684+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        },
+        {
+          "name": "06-shield-plant-right35.png",
+          "sha256": "2489a1907b85cdee7ad5def3e0f63e8ebcf75c159a42b2722bcff49bf24df5da",
+          "bytes": 3263514,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\06-shield-plant-right35.png"
+        }
+      ],
+      "receipt": {
+        "id": "d43353fb-ec1e-4cf8-8164-a3d848f72a5f",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:44:39.968Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:45:45.124912+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\d43353fb-ec1e-4cf8-8164-a3d848f72a5f\\d43353fb-ec1e-4cf8-8164-a3d848f72a5f_sunburst-2.6-high.png",
+      "sha256": "af0ca453421b13d77b5fb9348f22a68c807dd58555eb3d8cc8e1e2915669600c",
+      "bytes": 3179929,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 3960,
+        "input_tokens_details": {
+          "image_tokens": 3044,
+          "text_tokens": 916
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5373
+      },
+      "cost": null,
+      "apiRequestId": "req_a473447ebd2a453d9956425e8ef8eb96",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 8,
+      "id": "08-hit-right35",
+      "label": "피격",
+      "camera": 35,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "49c27313-1323-4b79-95e9-b832eb0122e4",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\08-hit-right35.txt",
+      "promptSha256": "6e2bbc80acfcab68de39e9f520bc732c619d035e94f0f6077a98ae92b015cb0a",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\08-hit-right35.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:45:45.187221+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        }
+      ],
+      "receipt": {
+        "id": "49c27313-1323-4b79-95e9-b832eb0122e4",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:45:45.224Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:46:40.392242+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\49c27313-1323-4b79-95e9-b832eb0122e4\\49c27313-1323-4b79-95e9-b832eb0122e4_sunburst-2.6-high.png",
+      "sha256": "1159547af94593d23ae1e2eb23ce2401dfd179af87f007c5db62b96dcc0b1b5f",
+      "bytes": 3388529,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 2223,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 687
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3636
+      },
+      "cost": null,
+      "apiRequestId": "req_5d432a4e078b4284b4c224e98e5ab675",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 9,
+      "id": "09-death-right35",
+      "label": "사망",
+      "camera": 35,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "ef18427f-7c06-4eaa-9c0f-c81e9ed86e29",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\09-death-right35.txt",
+      "promptSha256": "023ac43ae7357d659b525ffcd3c1a5a0c4ad216d0a9d52026bc93811be267c07",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\09-death-right35.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:46:40.454257+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        }
+      ],
+      "receipt": {
+        "id": "ef18427f-7c06-4eaa-9c0f-c81e9ed86e29",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:46:40.476Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:47:35.565358+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\ef18427f-7c06-4eaa-9c0f-c81e9ed86e29\\ef18427f-7c06-4eaa-9c0f-c81e9ed86e29_sunburst-2.6-high.png",
+      "sha256": "2af4771b152751c1427abc1cdd4c56ec09dbbbe10f9100b3f02847ea16794e13",
+      "bytes": 3048257,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 2233,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 697
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3646
+      },
+      "cost": null,
+      "apiRequestId": "req_654e790b66ed4212bdecc7b541ac56aa",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 10,
+      "id": "10-giant-ready-dissolve-right90",
+      "label": "거인 소환용 소멸",
+      "camera": 90,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "6dfe13da-5a23-4c81-90a7-2c1efa592c7a",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png",
+        "giant90-working.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\10-giant-ready-dissolve-right90.txt",
+      "promptSha256": "c7c8c3d8f678f500baf9de2c53542662a9c7a19ff5bc0cd5cd273d97c118c416",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\10-giant-ready-dissolve-right90.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:47:35.649377+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        },
+        {
+          "name": "giant90-working.png",
+          "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+          "bytes": 1800187,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\giant90-working.png"
+        }
+      ],
+      "receipt": {
+        "id": "6dfe13da-5a23-4c81-90a7-2c1efa592c7a",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:47:35.700Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:48:30.831824+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\6dfe13da-5a23-4c81-90a7-2c1efa592c7a\\6dfe13da-5a23-4c81-90a7-2c1efa592c7a_sunburst-2.6-high.png",
+      "sha256": "8110bb6c59549be89abecec6bc97a44cdbd6cfe5e4a314b32472bdbb7a62ec75",
+      "bytes": 3164950,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 3825,
+        "input_tokens_details": {
+          "image_tokens": 3072,
+          "text_tokens": 753
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5238
+      },
+      "cost": null,
+      "apiRequestId": "req_e25f4527c3e24f97a5a958f9a91ce9d2",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 11,
+      "id": "11-giant-tower-shield-slam-right90",
+      "label": "거인 타워방패 강타",
+      "camera": 90,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "7d2839a8-2731-43e8-9a10-0f15a81c5a5d",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png",
+        "giant90-working.png"
+      ],
+      "precedingSheet": null,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\11-giant-tower-shield-slam-right90.txt",
+      "promptSha256": "b6d4bd892a1fe6508e7ff2030ead044cab4516a35a1183975b713fee8eb8b9f3",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\11-giant-tower-shield-slam-right90.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:48:30.909832+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        },
+        {
+          "name": "giant90-working.png",
+          "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+          "bytes": 1800187,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\giant90-working.png"
+        }
+      ],
+      "receipt": {
+        "id": "7d2839a8-2731-43e8-9a10-0f15a81c5a5d",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:48:30.956Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:49:36.192838+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\7d2839a8-2731-43e8-9a10-0f15a81c5a5d\\7d2839a8-2731-43e8-9a10-0f15a81c5a5d_sunburst-2.6-high.png",
+      "sha256": "cf237874b5584884cdc14ecc836d576c6d0a7fb6513955a1f6fe81a81b086d28",
+      "bytes": 3297252,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 3829,
+        "input_tokens_details": {
+          "image_tokens": 3072,
+          "text_tokens": 757
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5242
+      },
+      "cost": null,
+      "apiRequestId": "req_66e2c2a483484320884aebc86a9d9f11",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 12,
+      "id": "12-giant-greatsword-slam-right90",
+      "label": "거인 대검 강타",
+      "camera": 90,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "436f40f8-5c57-4b67-aa72-e90bd674835c",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png",
+        "giant90-working.png"
+      ],
+      "precedingSheet": 11,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\12-giant-greatsword-slam-right90.txt",
+      "promptSha256": "b19bd3e7331bef3af2353aa37b74fefb9b42a46d83cc00a07a46175b210ad517",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\12-giant-greatsword-slam-right90.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:49:36.293860+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        },
+        {
+          "name": "giant90-working.png",
+          "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+          "bytes": 1800187,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\giant90-working.png"
+        },
+        {
+          "name": "11-giant-tower-shield-slam-right90.png",
+          "sha256": "cf237874b5584884cdc14ecc836d576c6d0a7fb6513955a1f6fe81a81b086d28",
+          "bytes": 3297252,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\11-giant-tower-shield-slam-right90.png"
+        }
+      ],
+      "receipt": {
+        "id": "436f40f8-5c57-4b67-aa72-e90bd674835c",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:49:36.409Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:50:41.625445+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\436f40f8-5c57-4b67-aa72-e90bd674835c\\436f40f8-5c57-4b67-aa72-e90bd674835c_sunburst-2.6-high.png",
+      "sha256": "ca9e1f89b177a93542398bc8f80edd787825a37e61fb62d1910057b7bd7ea0ab",
+      "bytes": 2954807,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 5428,
+        "input_tokens_details": {
+          "image_tokens": 4580,
+          "text_tokens": 848
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 6841
+      },
+      "cost": null,
+      "apiRequestId": "req_2f20684e7d284530891c3309370833ef",
+      "artReviewed": false,
+      "postprocessed": false
+    },
+    {
+      "number": 13,
+      "id": "13-giant-sword-first-dissolve-right90",
+      "label": "거인 마무리 소멸",
+      "camera": 90,
+      "frames": 12,
+      "columns": 4,
+      "rows": 3,
+      "playback": "oneshot",
+      "requestId": "25a2945d-aced-4fce-b24d-c592ba39bf9c",
+      "preset": "sunburst-2.6-high",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "referenceNames": [
+        "approved-balor35.png",
+        "giant90-working.png"
+      ],
+      "precedingSheet": 12,
+      "promptFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\13-giant-sword-first-dissolve-right90.txt",
+      "promptSha256": "e7c9406762ed0afec1458627956b1d9642000a1b50b2680e416bb617733257fa",
+      "outputFile": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\13-giant-sword-first-dissolve-right90.png",
+      "status": "succeeded",
+      "submittedAt": "2026-11-11T21:50:41.736037+09:00",
+      "attachedReferences": [
+        {
+          "name": "approved-balor35.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\approved-balor35.png"
+        },
+        {
+          "name": "giant90-working.png",
+          "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+          "bytes": 1800187,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\references\\giant90-working.png"
+        },
+        {
+          "name": "12-giant-greatsword-slam-right90.png",
+          "sha256": "ca9e1f89b177a93542398bc8f80edd787825a37e61fb62d1910057b7bd7ea0ab",
+          "bytes": 2954807,
+          "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\originals\\12-giant-greatsword-slam-right90.png"
+        }
+      ],
+      "receipt": {
+        "id": "25a2945d-aced-4fce-b24d-c592ba39bf9c",
+        "status": "running",
+        "label": "Sunburst 2.6 · High",
+        "createdAt": "2026-11-11T12:50:41.856Z",
+        "model": "gpt-image-2.6-sunburst",
+        "quality": "high"
+      },
+      "finishedAt": "2026-11-11T21:51:46.942914+09:00",
+      "sourceOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\imagegen\\sunburst\\25a2945d-aced-4fce-b24d-c592ba39bf9c\\25a2945d-aced-4fce-b24d-c592ba39bf9c_sunburst-2.6-high.png",
+      "sha256": "1aeb70cfb087b465ca7a33346edc7db7dd1c528054cc6a0d1a772c57d231f646",
+      "bytes": 2816313,
+      "responseModel": null,
+      "usage": {
+        "input_tokens": 5415,
+        "input_tokens_details": {
+          "image_tokens": 4580,
+          "text_tokens": 835
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 6828
+      },
+      "cost": null,
+      "apiRequestId": "req_515daaa74f614bf7b0740cc4218ccfa8",
+      "artReviewed": false,
+      "postprocessed": false
+    }
+  ],
+  "state": "all_originals_received",
+  "apiPosts": 13,
+  "completed": 13,
+  "failed": 0,
+  "updatedAt": "2026-11-11T21:51:47.023933+09:00",
+  "completedAt": "2026-11-11T21:51:47.023933+09:00"
+}

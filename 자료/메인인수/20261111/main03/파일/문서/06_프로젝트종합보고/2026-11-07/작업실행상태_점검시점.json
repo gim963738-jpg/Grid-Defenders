@@ -1,0 +1,693 @@
+{
+    "worktrees":  [
+                      {
+                          "workspaceKind":  "git",
+                          "worktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
+                          "repoId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+                          "hostId":  "local",
+                          "terminalPlatform":  "win32",
+                          "repo":  "Grid Defenders",
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders",
+                          "branch":  "refs/heads/main",
+                          "isArchived":  false,
+                          "isMainWorktree":  true,
+                          "hasHostSidebarActivity":  true,
+                          "defaultBranch":  true,
+                          "worktreeInstanceId":  "0524c1dc-147b-4e74-9f67-554ba3d20cbc",
+                          "parentWorktreeId":  null,
+                          "childWorktreeIds":  [
+                                                   "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2"
+                                               ],
+                          "displayName":  "Grid Defenders",
+                          "workspaceStatus":  "in-progress",
+                          "sortOrder":  1793874665689,
+                          "manualOrder":  1793874669169,
+                          "lastActivityAt":  1794045227617,
+                          "linkedIssue":  null,
+                          "linkedPR":  null,
+                          "linkedLinearIssue":  null,
+                          "linkedGitLabMR":  null,
+                          "linkedGitLabIssue":  null,
+                          "linkedItems":  [
+
+                                          ],
+                          "comment":  "",
+                          "isPinned":  false,
+                          "isActive":  true,
+                          "unread":  false,
+                          "liveTerminalCount":  1,
+                          "hasAttachedPty":  true,
+                          "unverifiableTerminalCount":  0,
+                          "lastOutputAt":  1794045074912,
+                          "preview":  "te] (client) page reload src/landscape-entry.ts\n오후 6:31:08 [vite] (client) hmr update /src/landscape-game.css\n오후 6:31:33 [vite] (client) page reload src/landscape-entry.ts\n오후 6:51:14 [vite] (client) page reload src/landscape-entry.ts (x2)\n오후 6:51:14 [vite] (client) hmr update /src/landscape-game.css",
+                          "status":  "working",
+                          "agents":  [
+                                         {
+                                             "paneKey":  "structured-agent-session-codex_49abb136_6d65_450b_9f0b_1485e9d50e4f:5a825ec1-600e-4506-aa8c-582e3cb09406",
+                                             "parentPaneKey":  null,
+                                             "state":  "working",
+                                             "agentType":  "codex",
+                                             "prompt":  "아래 내용을 그대로 복사해서 사용하면 돼. 현재 진행 중인 프로젝트의 전체 자료와 작업 내용을 분석하여, **사업 발표에 사용할 수 있는 수준의 상세한 프로젝트 종합 보고서**를 작성하라. 보고서에는 프로젝트의 전체적인 내용, 현재 진행도, 주요 문제점, 앞으로의 방향성과 실행 계획을 체계적으로 담아야 한다. 동시에 **프로젝트 내부의 파일·문서·코드·리소",
+                                             "taskTitle":  null,
+                                             "displayName":  null,
+                                             "conversationName":  "이전 Orca 세션 작업 이어가기",
+                                             "lastAssistantMessage":  "기준은 `main`이며, 연결된 작업 공간은 총 8개로 확인됐습니다. 이펙트·스프라이트 등은 작업 표시와 실제 파일 상태를 따로 확인하고 있습니다. 문서에는 초기 개발 단계의 설명이 남아 있고, 기존 테스트 파일들이 일반 빌드 검사에서 빠져 있는 점도 발견했습니다. 최신 구현 현황을 찾기 쉽게 정리하고, 기존 검사를 한 번에 실행할 수 있도록 개선하겠습니다",
+                                             "toolName":  "shell",
+                                             "toolInput":  "\"C:\\\\WINDOWS\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\" -Command \u0027$rep…",
+                                             "interrupted":  false,
+                                             "mainAgent":  {
+                                                               "state":  "working",
+                                                               "stateStartedAt":  1794046196476
+                                                           },
+                                             "stateStartedAt":  1794046196476,
+                                             "updatedAt":  1794046366684,
+                                             "children":  [
+                                                              {
+                                                                  "id":  "e0eac621-1c88-4674-b821-e97d6a3556c2",
+                                                                  "providerId":  "01a1b57d-1b14-79c1-b1ae-fc2a114ab5ba",
+                                                                  "kind":  "agent",
+                                                                  "description":  "project_code_audit",
+                                                                  "state":  "working",
+                                                                  "membership":  "live",
+                                                                  "firstObservedAt":  1794046238069,
+                                                                  "observedAt":  1794046348931,
+                                                                  "stoppable":  true,
+                                                                  "invocation":  {
+                                                                                     "invocationId":  "01a1b57d-1d60-7c10-8f47-18695b796df4",
+                                                                                     "generation":  1
+                                                                                 }
+                                                              },
+                                                              {
+                                                                  "id":  "2d0638ba-64eb-40fc-b05e-691d91f5b4e5",
+                                                                  "providerId":  "01a1b57d-4f1c-7523-9e76-f446a1da5594",
+                                                                  "kind":  "agent",
+                                                                  "description":  "project_business_evidence",
+                                                                  "state":  "working",
+                                                                  "membership":  "live",
+                                                                  "firstObservedAt":  1794046251380,
+                                                                  "observedAt":  1794046349567,
+                                                                  "stoppable":  true,
+                                                                  "invocation":  {
+                                                                                     "invocationId":  "01a1b57d-515f-7901-9ad5-4b2cb1d93d90",
+                                                                                     "generation":  1
+                                                                                 }
+                                                              },
+                                                              {
+                                                                  "id":  "5ff43e7f-6ffd-422b-ad56-96f51a96a57d",
+                                                                  "providerId":  "01a1b57d-7b94-7a40-960b-0714f3f84371",
+                                                                  "kind":  "agent",
+                                                                  "description":  "project_asset_audit",
+                                                                  "state":  "working",
+                                                                  "membership":  "live",
+                                                                  "lastMessage":  "리소스의 실제 사용 경로와 원본·가공본 관계를 확인하겠습니다. 다른 작업 공간은 읽기만 수행하고, 통합 후보와 보존해야 할 진행 중 산출물을 구분하겠습니다.",
+                                                                  "firstObservedAt":  1794046262893,
+                                                                  "observedAt":  1794046356437,
+                                                                  "stoppable":  true,
+                                                                  "invocation":  {
+                                                                                     "invocationId":  "01a1b57d-7e59-7120-9dc6-b201e28201da",
+                                                                                     "generation":  1
+                                                                                 }
+                                                              }
+                                                          ],
+                                             "structuredHostOwned":  true,
+                                             "subagentObservation":  "live"
+                                         }
+                                     ],
+                          "sidebarStatus":  "working",
+                          "terminalVerdict":  "live"
+                      },
+                      {
+                          "workspaceKind":  "git",
+                          "worktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/스킬-이펙트",
+                          "repoId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+                          "hostId":  "local",
+                          "terminalPlatform":  "win32",
+                          "repo":  "Grid Defenders",
+                          "path":  "C:/Users/user/orca/workspaces/Grid Defenders/스킬-이펙트",
+                          "branch":  "refs/heads/gim963738-jpg/스킬-이펙트",
+                          "isArchived":  false,
+                          "isMainWorktree":  false,
+                          "hasHostSidebarActivity":  true,
+                          "defaultBranch":  false,
+                          "worktreeInstanceId":  "2f23ff58-1760-4968-b120-2271703e04eb",
+                          "lineageWorktreeInstanceId":  "2f23ff58-1760-4968-b120-2271703e04eb",
+                          "parentWorktreeInstanceId":  "f3d6b223-778c-4193-812b-aab45e635045",
+                          "parentWorktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+                          "childWorktreeIds":  [
+
+                                               ],
+                          "displayName":  "스킬 이펙트",
+                          "workspaceStatus":  "in-progress",
+                          "sortOrder":  1793966890429,
+                          "manualOrder":  1793966887738,
+                          "lastActivityAt":  1794045237471,
+                          "createdAt":  1793966890429,
+                          "creatorProvenance":  {
+                                                    "kind":  "host"
+                                                },
+                          "linkedIssue":  null,
+                          "linkedPR":  null,
+                          "linkedLinearIssue":  null,
+                          "linkedGitLabMR":  null,
+                          "linkedGitLabIssue":  null,
+                          "linkedItems":  [
+
+                                          ],
+                          "comment":  "공방 직선·곡선·undo/초기화·선별 의미 지정 완료 · 224검사/빌드·화면 확인",
+                          "isPinned":  false,
+                          "isActive":  false,
+                          "unread":  false,
+                          "liveTerminalCount":  1,
+                          "hasAttachedPty":  true,
+                          "unverifiableTerminalCount":  0,
+                          "lastOutputAt":  1794044898210,
+                          "preview":  "ts\n오후 6:42:42 [vite] (client) page reload src/effect-workshop/materials.ts\n오후 6:46:01 [vite] (client) page reload src/effect-workshop/materials.ts (x2)\n오후 6:47:26 [vite] (client) page reload src/effect-workshop/componentLibrary.ts\n오후 6:48:18 [vite] (client) page reload src/effect-workshop/gallery.ts",
+                          "status":  "active",
+                          "agents":  [
+                                         {
+                                             "paneKey":  "structured-agent-session-codex_3c83e0c9_c068_47cf_bd43_f5c8664c0dc8:f28c661b-4f3b-448d-a354-69a4189fa8df",
+                                             "parentPaneKey":  null,
+                                             "state":  "done",
+                                             "agentType":  "codex",
+                                             "prompt":  "무료이펙트 저게다야?",
+                                             "taskTitle":  null,
+                                             "displayName":  null,
+                                             "conversationName":  "개인용 이펙트 제작 사이트 기능 도입",
+                                             "lastAssistantMessage":  "아니요. **지금 수집한 분량이며, 무료 이펙트 전체를 모은 것은 아닙니다.** 현재 [무료 이펙트 재료함](http://127.0.0.1:5182/effect-materials.html)에는: - **움직이는 이펙트 314종** - **낱개 입자·텍스처 183종** - 합계 **497종**, 크기·FPS 변형까지 포함하면 **632개** 한 페이지에 24",
+                                             "toolName":  null,
+                                             "toolInput":  null,
+                                             "interrupted":  false,
+                                             "mainAgent":  {
+                                                               "state":  "done",
+                                                               "outcome":  "success",
+                                                               "stateStartedAt":  1794045237448
+                                                           },
+                                             "stateStartedAt":  1794045237448,
+                                             "updatedAt":  1794045237448,
+                                             "children":  [
+
+                                                          ],
+                                             "structuredHostOwned":  true,
+                                             "subagentObservation":  "live"
+                                         }
+                                     ],
+                          "sidebarStatus":  "done",
+                          "terminalVerdict":  "live"
+                      },
+                      {
+                          "workspaceKind":  "git",
+                          "worktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/item-system",
+                          "repoId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+                          "hostId":  "local",
+                          "terminalPlatform":  "win32",
+                          "repo":  "Grid Defenders",
+                          "path":  "C:/Users/user/orca/workspaces/Grid Defenders/item-system",
+                          "branch":  "refs/heads/feature/item-system",
+                          "isArchived":  false,
+                          "isMainWorktree":  false,
+                          "hasHostSidebarActivity":  true,
+                          "defaultBranch":  false,
+                          "cliCreated":  true,
+                          "worktreeInstanceId":  "d8490469-05d9-48d7-a63e-f4c8761604d8",
+                          "parentWorktreeId":  null,
+                          "childWorktreeIds":  [
+
+                                               ],
+                          "displayName":  "아이템 작업",
+                          "workspaceStatus":  "in-progress",
+                          "sortOrder":  1793874664689,
+                          "manualOrder":  1793874668169,
+                          "lastActivityAt":  1793889470983,
+                          "createdAt":  1793865158917,
+                          "creatorProvenance":  {
+                                                    "kind":  "host"
+                                                },
+                          "linkedIssue":  null,
+                          "linkedPR":  null,
+                          "linkedLinearIssue":  null,
+                          "linkedGitLabMR":  null,
+                          "linkedGitLabIssue":  null,
+                          "linkedItems":  [
+
+                                          ],
+                          "comment":  "",
+                          "isPinned":  false,
+                          "isActive":  false,
+                          "unread":  false,
+                          "liveTerminalCount":  1,
+                          "hasAttachedPty":  true,
+                          "unverifiableTerminalCount":  0,
+                          "lastOutputAt":  1793865327290,
+                          "preview":  "\u003e grid-defenders@0.1.0 dev\n\u003e vite --host 127.0.0.1\nPort 5173 is in use, trying another one...\nVITE v8.3.5  ready in 252 ms\n➜  Local:   http://127.0.0.1:5174/\n➜  press h + enter to show help",
+                          "status":  "active",
+                          "agents":  [
+                                         {
+                                             "paneKey":  "structured-agent-session-codex_a66c6b97_80f9_4439_b659_fe576fa573ac:18f9b012-e724-43f3-a830-0141d16a389c",
+                                             "parentPaneKey":  null,
+                                             "state":  "done",
+                                             "agentType":  "codex",
+                                             "prompt":  "이거 오른쪽 화면에 켜봐",
+                                             "taskTitle":  null,
+                                             "displayName":  null,
+                                             "conversationName":  "아까 작업 내용 열기",
+                                             "lastAssistantMessage":  "오른쪽 화면에 **전체 아이템 디자인 이미지**를 열었습니다.",
+                                             "toolName":  null,
+                                             "toolInput":  null,
+                                             "interrupted":  false,
+                                             "mainAgent":  {
+                                                               "state":  "done",
+                                                               "outcome":  "success",
+                                                               "stateStartedAt":  1793889470957
+                                                           },
+                                             "stateStartedAt":  1793889470957,
+                                             "updatedAt":  1793889470957,
+                                             "children":  [
+
+                                                          ],
+                                             "subagentObservation":  "unverifiable"
+                                         }
+                                     ],
+                          "sidebarStatus":  "active",
+                          "terminalVerdict":  "live"
+                      },
+                      {
+                          "workspaceKind":  "git",
+                          "worktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+                          "repoId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+                          "hostId":  "local",
+                          "terminalPlatform":  "win32",
+                          "repo":  "Grid Defenders",
+                          "path":  "C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
+                          "branch":  "refs/heads/gim963738-jpg/몬스터-디자인",
+                          "isArchived":  false,
+                          "isMainWorktree":  false,
+                          "hasHostSidebarActivity":  true,
+                          "defaultBranch":  false,
+                          "worktreeInstanceId":  "0ae85254-7aa0-4ae2-80d6-e4e51a9b6dbd",
+                          "parentWorktreeId":  null,
+                          "childWorktreeIds":  [
+
+                                               ],
+                          "displayName":  "몬스터 디자인",
+                          "workspaceStatus":  "in-progress",
+                          "sortOrder":  1793975875040,
+                          "manualOrder":  1793975873372,
+                          "lastActivityAt":  1793978379230,
+                          "createdAt":  1793975875039,
+                          "creatorProvenance":  {
+                                                    "kind":  "host"
+                                                },
+                          "linkedIssue":  null,
+                          "linkedPR":  null,
+                          "linkedLinearIssue":  null,
+                          "linkedGitLabMR":  null,
+                          "linkedGitLabIssue":  null,
+                          "linkedItems":  [
+
+                                          ],
+                          "comment":  "",
+                          "isPinned":  false,
+                          "isActive":  false,
+                          "unread":  false,
+                          "liveTerminalCount":  0,
+                          "hasAttachedPty":  false,
+                          "unverifiableTerminalCount":  0,
+                          "lastOutputAt":  null,
+                          "preview":  "",
+                          "status":  "inactive",
+                          "agents":  [
+                                         {
+                                             "paneKey":  "structured-agent-session-codex_14ccc270_9553_4dc4_adcb_2b04ecde6344:26666c6c-8aea-475e-ac7a-4bbdac63141c",
+                                             "parentPaneKey":  null,
+                                             "state":  "done",
+                                             "agentType":  "codex",
+                                             "prompt":  "정면과 후면은 따로뽑아야하고?",
+                                             "taskTitle":  null,
+                                             "displayName":  null,
+                                             "conversationName":  "4방향 SD 몬스터 스프라이트 디자인",
+                                             "lastAssistantMessage":  "네. **정면과 후면은 각각 따로 제작해야 합니다.** 얼굴·가슴과 뒤통수·등처럼 보이는 부분이 달라서 반전으로 만들 수 없어요. 사람 캐릭터가 비대칭 디자인이면, 8방향 모두 장비의 실제 좌우를 유지하며 각각 제작하는 게 맞습니다.",
+                                             "toolName":  null,
+                                             "toolInput":  null,
+                                             "interrupted":  false,
+                                             "mainAgent":  {
+                                                               "state":  "done",
+                                                               "outcome":  "success",
+                                                               "stateStartedAt":  1793993425570
+                                                           },
+                                             "stateStartedAt":  1793993425570,
+                                             "updatedAt":  1793993425570,
+                                             "children":  [
+
+                                                          ],
+                                             "subagentObservation":  "unverifiable"
+                                         }
+                                     ],
+                          "sidebarStatus":  "inactive",
+                          "terminalVerdict":  "none"
+                      },
+                      {
+                          "workspaceKind":  "git",
+                          "worktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/스프라이트-시트작업",
+                          "repoId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+                          "hostId":  "local",
+                          "terminalPlatform":  "win32",
+                          "repo":  "Grid Defenders",
+                          "path":  "C:/Users/user/orca/workspaces/Grid Defenders/스프라이트-시트작업",
+                          "branch":  "refs/heads/gim963738-jpg/스프라이트-시트작업",
+                          "isArchived":  false,
+                          "isMainWorktree":  false,
+                          "hasHostSidebarActivity":  true,
+                          "defaultBranch":  false,
+                          "worktreeInstanceId":  "be4696eb-f399-4f3e-b04c-cb7c255d4b1a",
+                          "lineageWorktreeInstanceId":  "be4696eb-f399-4f3e-b04c-cb7c255d4b1a",
+                          "parentWorktreeInstanceId":  "f3d6b223-778c-4193-812b-aab45e635045",
+                          "parentWorktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+                          "childWorktreeIds":  [
+
+                                               ],
+                          "displayName":  "스프라이트 시트작업",
+                          "workspaceStatus":  "in-progress",
+                          "sortOrder":  1793976101223,
+                          "manualOrder":  1793976099268,
+                          "lastActivityAt":  1794045474930,
+                          "createdAt":  1793976101223,
+                          "creatorProvenance":  {
+                                                    "kind":  "host"
+                                                },
+                          "linkedIssue":  null,
+                          "linkedPR":  null,
+                          "linkedLinearIssue":  null,
+                          "linkedGitLabMR":  null,
+                          "linkedGitLabIssue":  null,
+                          "linkedItems":  [
+
+                                          ],
+                          "comment":  "",
+                          "isPinned":  false,
+                          "isActive":  false,
+                          "unread":  false,
+                          "liveTerminalCount":  0,
+                          "hasAttachedPty":  false,
+                          "unverifiableTerminalCount":  0,
+                          "lastOutputAt":  null,
+                          "preview":  "",
+                          "status":  "inactive",
+                          "agents":  [
+                                         {
+                                             "paneKey":  "structured-agent-session-codex_76ab2d8f_719c_4b97_acb3_b2c4407c791e:2f8860cd-8276-4b15-ad50-5f4eca0b1344",
+                                             "parentPaneKey":  null,
+                                             "state":  "done",
+                                             "agentType":  "codex",
+                                             "prompt":  "지금 금발 전사의 걷는 모션있잖아 그거 참고해서 그정도 퀄리티를 내가 마법사 걷는모습 뛰는모습 이렇게 하면 딱 원하는 만큼 나와야하는데 이에대한 좋은 해결방안을 생각해봐",
+                                             "taskTitle":  null,
+                                             "displayName":  null,
+                                             "conversationName":  "금발 검사 오른쪽 걷기 30프레임",
+                                             "lastAssistantMessage":  "말씀하신 목표에는 **금발 전사 걷기를 품질 기준으로 삼고, 검증된 동작을 다른 캐릭터에도 재사용하는 제작 체계**가 필요합니다. 프레임과 머리카락을 하나씩 지정하는 일을 사용자에게 맡기면 안 됩니다. 이번 달리기는 캐릭터 원화는 참조했지만, 동작은 다시 생성하면서 발의 연결이 달라졌습니다. **그림체를 참조하는 것만으로는 움직임의 품질까지 고정되지 않습니",
+                                             "toolName":  null,
+                                             "toolInput":  null,
+                                             "interrupted":  false,
+                                             "mainAgent":  {
+                                                               "state":  "done",
+                                                               "outcome":  "success",
+                                                               "stateStartedAt":  1794045474905
+                                                           },
+                                             "stateStartedAt":  1794045474905,
+                                             "updatedAt":  1794045474906,
+                                             "children":  [
+
+                                                          ],
+                                             "structuredHostOwned":  true,
+                                             "subagentObservation":  "live"
+                                         }
+                                     ],
+                          "sidebarStatus":  "done",
+                          "terminalVerdict":  "none"
+                      },
+                      {
+                          "workspaceKind":  "git",
+                          "worktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트",
+                          "repoId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+                          "hostId":  "local",
+                          "terminalPlatform":  "win32",
+                          "repo":  "Grid Defenders",
+                          "path":  "C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트",
+                          "branch":  "refs/heads/gim963738-jpg/스플래시-아트",
+                          "isArchived":  false,
+                          "isMainWorktree":  false,
+                          "hasHostSidebarActivity":  true,
+                          "defaultBranch":  false,
+                          "worktreeInstanceId":  "ded77369-6272-44f8-a88d-688817c0a95a",
+                          "lineageWorktreeInstanceId":  "ded77369-6272-44f8-a88d-688817c0a95a",
+                          "parentWorktreeInstanceId":  "f3d6b223-778c-4193-812b-aab45e635045",
+                          "parentWorktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+                          "childWorktreeIds":  [
+
+                                               ],
+                          "displayName":  "스플래시 아트",
+                          "workspaceStatus":  "in-progress",
+                          "sortOrder":  1793948590975,
+                          "manualOrder":  1793948588896,
+                          "lastActivityAt":  1793972970290,
+                          "createdAt":  1793948590974,
+                          "creatorProvenance":  {
+                                                    "kind":  "host"
+                                                },
+                          "linkedIssue":  null,
+                          "linkedPR":  null,
+                          "linkedLinearIssue":  null,
+                          "linkedGitLabMR":  null,
+                          "linkedGitLabIssue":  null,
+                          "linkedItems":  [
+
+                                          ],
+                          "comment":  "스플래시 아트",
+                          "isPinned":  false,
+                          "isActive":  false,
+                          "unread":  false,
+                          "liveTerminalCount":  0,
+                          "hasAttachedPty":  false,
+                          "unverifiableTerminalCount":  0,
+                          "lastOutputAt":  null,
+                          "preview":  "",
+                          "status":  "inactive",
+                          "agents":  [
+                                         {
+                                             "paneKey":  "structured-agent-session-codex_3af2f07d_3c84_4c11_8f92_f7ad66fcad38:93c577c1-a6a2-42ae-ae7d-c9f904fbaf5a",
+                                             "parentPaneKey":  null,
+                                             "state":  "done",
+                                             "agentType":  "codex",
+                                             "prompt":  "검과 도 창과 부서진 무구들을 골고루 섞어주고 하늘에서 쏱아지는 무구들 역시 다양한 무기들을 섞고 무기마다 검은 이펙트 추가",
+                                             "taskTitle":  null,
+                                             "displayName":  null,
+                                             "conversationName":  "성좌와 황금 푸른 늑대 스플래시 아트",
+                                             "lastAssistantMessage":  "지상과 공중에 **직검·곡도·장창·부서진 방패와 갑옷**을 섞고, 각 무기에 검은 기운과 잔상을 추가했습니다. [수정본 v2 PNG](\u003cC:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트/output/illustration/test06_blade_battlefield/blade_battlefield_splash_v",
+                                             "toolName":  null,
+                                             "toolInput":  null,
+                                             "interrupted":  false,
+                                             "mainAgent":  {
+                                                               "state":  "done",
+                                                               "outcome":  "success",
+                                                               "stateStartedAt":  1793972970274
+                                                           },
+                                             "stateStartedAt":  1793972970274,
+                                             "updatedAt":  1793972970274,
+                                             "children":  [
+
+                                                          ],
+                                             "subagentObservation":  "unverifiable"
+                                         }
+                                     ],
+                          "sidebarStatus":  "inactive",
+                          "terminalVerdict":  "none"
+                      },
+                      {
+                          "workspaceKind":  "git",
+                          "worktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/영상제작",
+                          "repoId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+                          "hostId":  "local",
+                          "terminalPlatform":  "win32",
+                          "repo":  "Grid Defenders",
+                          "path":  "C:/Users/user/orca/workspaces/Grid Defenders/영상제작",
+                          "branch":  "refs/heads/gim963738-jpg/영상제작",
+                          "isArchived":  false,
+                          "isMainWorktree":  false,
+                          "hasHostSidebarActivity":  true,
+                          "defaultBranch":  false,
+                          "worktreeInstanceId":  "2ea7ad23-47d2-464f-843e-7ecf4f3ffcbe",
+                          "parentWorktreeId":  null,
+                          "childWorktreeIds":  [
+
+                                               ],
+                          "displayName":  "영상제작",
+                          "workspaceStatus":  "in-progress",
+                          "sortOrder":  1793983414156,
+                          "manualOrder":  1793983412161,
+                          "lastActivityAt":  1793991027509,
+                          "createdAt":  1793983414155,
+                          "creatorProvenance":  {
+                                                    "kind":  "host"
+                                                },
+                          "linkedIssue":  null,
+                          "linkedPR":  null,
+                          "linkedLinearIssue":  null,
+                          "linkedGitLabMR":  null,
+                          "linkedGitLabIssue":  null,
+                          "linkedItems":  [
+
+                                          ],
+                          "comment":  "Gemini 달리기 영상 240장 배경제거 · 1280×720 원본 유지 · 투명 PNG·WebM 검수",
+                          "isPinned":  false,
+                          "isActive":  false,
+                          "unread":  false,
+                          "liveTerminalCount":  0,
+                          "hasAttachedPty":  false,
+                          "unverifiableTerminalCount":  0,
+                          "lastOutputAt":  null,
+                          "preview":  "",
+                          "status":  "inactive",
+                          "agents":  [
+                                         {
+                                             "paneKey":  "structured-agent-session-codex_007c37e2_10cc_4b29_a7b2_0ad1aff59281:dfe564a2-9f15-4b20-ae2e-ceb470ada34c",
+                                             "parentPaneKey":  null,
+                                             "state":  "done",
+                                             "agentType":  "codex",
+                                             "prompt":  "배경제거해하는데",
+                                             "taskTitle":  null,
+                                             "displayName":  null,
+                                             "conversationName":  "오른쪽 검 양손 내려치기 영상 제작",
+                                             "lastAssistantMessage":  "**240장 모두 배경을 제거했습니다.** 원본 **1280×720** 해상도를 유지한 투명 PNG입니다. - [투명 PNG 240장 ZIP](\u003cC:/Users/user/orca/workspaces/Grid Defenders/영상제작/output/video-frames/gemini_generated_video_00ffc02e-transparent-v01/g",
+                                             "toolName":  null,
+                                             "toolInput":  null,
+                                             "interrupted":  false,
+                                             "mainAgent":  {
+                                                               "state":  "done",
+                                                               "outcome":  "success",
+                                                               "stateStartedAt":  1793991027455
+                                                           },
+                                             "stateStartedAt":  1793991027455,
+                                             "updatedAt":  1793991027456,
+                                             "children":  [
+
+                                                          ],
+                                             "subagentObservation":  "unverifiable"
+                                         }
+                                     ],
+                          "sidebarStatus":  "inactive",
+                          "terminalVerdict":  "none"
+                      },
+                      {
+                          "workspaceKind":  "git",
+                          "worktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+                          "repoId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9",
+                          "hostId":  "local",
+                          "terminalPlatform":  "win32",
+                          "repo":  "Grid Defenders",
+                          "path":  "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
+                          "branch":  "refs/heads/gim963738-jpg/캐릭터디자인2",
+                          "isArchived":  false,
+                          "isMainWorktree":  false,
+                          "hasHostSidebarActivity":  true,
+                          "defaultBranch":  false,
+                          "worktreeInstanceId":  "f3d6b223-778c-4193-812b-aab45e635045",
+                          "lineageWorktreeInstanceId":  "f3d6b223-778c-4193-812b-aab45e635045",
+                          "parentWorktreeInstanceId":  "0524c1dc-147b-4e74-9f67-554ba3d20cbc",
+                          "parentWorktreeId":  "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
+                          "childWorktreeIds":  [
+                                                   "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/스킬-이펙트",
+                                                   "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/스프라이트-시트작업",
+                                                   "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트"
+                                               ],
+                          "displayName":  "캐릭터디자인2",
+                          "workspaceStatus":  "in-progress",
+                          "sortOrder":  1793956093688,
+                          "manualOrder":  1793956091248,
+                          "lastActivityAt":  1794034059632,
+                          "createdAt":  1793956093688,
+                          "creatorProvenance":  {
+                                                    "kind":  "host"
+                                                },
+                          "linkedIssue":  null,
+                          "linkedPR":  null,
+                          "linkedLinearIssue":  null,
+                          "linkedGitLabMR":  null,
+                          "linkedGitLabIssue":  null,
+                          "linkedItems":  [
+
+                                          ],
+                          "comment":  "",
+                          "isPinned":  false,
+                          "isActive":  false,
+                          "unread":  false,
+                          "liveTerminalCount":  0,
+                          "hasAttachedPty":  false,
+                          "unverifiableTerminalCount":  0,
+                          "lastOutputAt":  null,
+                          "preview":  "",
+                          "status":  "inactive",
+                          "agents":  [
+                                         {
+                                             "paneKey":  "structured-agent-session-codex_7641a2e9_3942_4d29_a2f6_b0306685a0a4:48bce6b0-e6ae-4041-acbc-70af980b32bd",
+                                             "parentPaneKey":  null,
+                                             "state":  "done",
+                                             "agentType":  "codex",
+                                             "prompt":  "사용자가 현재 character-design 브랜치의 모든 파일을 캐릭터디자인2로 인수인계하고 이전 작업공간 및 로컬 브랜치 삭제를 명시 요청했습니다. 전체 인계와 해시 검증은 완료했습니다. output/handoffs/character-design-20261106/HANDOFF.txt를 UTF-8로 먼저 읽고 남은 작업 1~7을 지금 완료하세요. 883파",
+                                             "taskTitle":  null,
+                                             "displayName":  null,
+                                             "conversationName":  "character-design 인계·정리 완료",
+                                             "lastAssistantMessage":  "인수인계와 최종 삭제를 완료했습니다. - 883파일 해시·Git bundle 재검증 완료, 소스 후속 변경 없음. - `character-design` 워크트리와 `feature/character-overhaul` 로컬 브랜치 삭제 확인. - 다른 워크트리·원격 참조·기존 제작 작업 보존. - 오른쪽 갤러리에 최신 4구도 표시 완료. 인계 자료와 삭제 증거",
+                                             "toolName":  null,
+                                             "toolInput":  null,
+                                             "interrupted":  false,
+                                             "mainAgent":  {
+                                                               "state":  "done",
+                                                               "outcome":  "success",
+                                                               "stateStartedAt":  1793967949703
+                                                           },
+                                             "stateStartedAt":  1793967949703,
+                                             "updatedAt":  1793967949703,
+                                             "children":  [
+
+                                                          ],
+                                             "subagentObservation":  "unverifiable"
+                                         },
+                                         {
+                                             "paneKey":  "structured-agent-session-codex_83c636a1_1f15_4503_8a58_6b24c79371ea:51663bf6-af69-45f5-ac67-8f9af250a83b",
+                                             "parentPaneKey":  null,
+                                             "state":  "done",
+                                             "agentType":  "codex",
+                                             "prompt":  "동대륙에도 소오염지역 하나 만들자",
+                                             "taskTitle":  null,
+                                             "displayName":  null,
+                                             "conversationName":  "그랜드체이스 캐릭터 그림체 분석 준비",
+                                             "lastAssistantMessage":  "동대륙 **호수 동쪽·진월국 북쪽 내륙**에 지명 없는 소오염지역 1곳을 추가했습니다. 기존 세 곳을 포함해 **총 네 곳**입니다. 내장 image_gen으로 수정한 [지도 v24](\u003cC:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/world/maps/continent_world_east_mino",
+                                             "toolName":  null,
+                                             "toolInput":  null,
+                                             "interrupted":  false,
+                                             "mainAgent":  {
+                                                               "state":  "done",
+                                                               "outcome":  "success",
+                                                               "stateStartedAt":  1794034573366
+                                                           },
+                                             "stateStartedAt":  1794034573366,
+                                             "updatedAt":  1794034573366,
+                                             "children":  [
+
+                                                          ],
+                                             "subagentObservation":  "unverifiable"
+                                         }
+                                     ],
+                          "sidebarStatus":  "inactive",
+                          "terminalVerdict":  "none"
+                      }
+                  ],
+    "hostScope":  {
+                      "hostIds":  [
+                                      "local"
+                                  ],
+                      "omittedHostIds":  [
+
+                                         ]
+                  },
+    "totalCount":  8,
+    "truncated":  false
+}

@@ -1,0 +1,28 @@
+{
+  "points": {
+    "pommel": [
+      450,
+      718
+    ],
+    "gripBelowHand": [
+      450,
+      863
+    ],
+    "guardGem": [
+      450,
+      911
+    ],
+    "bladeNear": [
+      450,
+      986
+    ],
+    "bladeFar": [
+      450,
+      1370
+    ]
+  },
+  "method": "Visual native-pixel center landmarks, ±4px estimate. Supporting check only, not exact 3D or user angle threshold. Whole sword orientation and grip reviewed visually.",
+  "beforeEstimatedAxisDifferenceDegrees": 10.8,
+  "afterEstimatedAxisDifferenceDegrees": 0.0,
+  "caution": "Projected centerline estimate does not prove hidden finger anatomy."
+}

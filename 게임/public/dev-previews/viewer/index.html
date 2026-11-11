@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Grid Defenders · 결과물</title>
+  <link rel="stylesheet" href="./viewer.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <span class="brand">GD <span>결과물</span></span>
+    <select id="collection" aria-label="작업 모음"></select>
+    <span class="spacer"></span>
+    <button id="import" title="이미지 또는 뷰어 JSON 불러오기">＋ 불러오기</button>
+    <input id="files" type="file" accept="image/png,image/jpeg,image/webp,image/gif,application/json,.json" multiple hidden>
+  </header>
+  <nav class="toolbar" aria-label="보기 도구">
+    <div class="segmented" id="modes" aria-label="보기 방식">
+      <button data-mode="gallery">시안 모음</button><button data-mode="focus">개별</button><button data-mode="compare">비교</button>
+    </div>
+    <div class="segmented" id="media" hidden>
+      <button data-media="sheet">시트</button><button data-media="frame">프레임</button>
+    </div>
+    <span class="spacer"></span>
+    <div class="zoom-controls">
+      <button id="zoom-out" aria-label="축소">−</button>
+      <input id="zoom" aria-label="확대 비율" type="number" min="5" max="800" step="5" value="100"><span>%</span>
+      <button id="zoom-in" aria-label="확대">＋</button>
+      <button id="fit">맞춤</button><button id="actual">1:1</button>
+    </div>
+    <button id="settings" aria-label="디자인 검토 도구" aria-expanded="false">보기 조절</button>
+  </nav>
+  <div class="workspace">
+    <aside class="library" aria-label="결과물 목록">
+      <input id="search" type="search" aria-label="결과물 검색" placeholder="검색">
+      <div id="assets"></div>
+    </aside>
+    <main id="stage" class="checker" aria-label="결과물 캔버스"></main>
+    <aside id="inspector" aria-label="디자인 검토 도구" hidden>
+      <div class="panel-title"><b>보기 조절</b><button id="close-settings" aria-label="보기 조절 닫기">×</button></div>
+      <section>
+        <label>배경<select id="background"><option value="checker">투명 격자</option><option value="light">밝게</option><option value="dark">어둡게</option><option value="field">전장색</option></select></label>
+        <label>표현<select id="effect"><option value="original">원본</option><option value="clean">선 정리 · 샤픈</option><option value="rough">선 흩트리기 · 러프</option><option value="blur">블러</option><option value="sketch">스케치</option></select></label>
+        <label>강도<output id="strength-value">50%</output><input id="strength" type="range" min="0" max="100" value="50"></label>
+        <label class="check"><input id="smooth" type="checkbox" checked>안티앨리어싱</label>
+      </section>
+      <section>
+        <label>해상도<output id="resolution-value">100%</output><input id="resolution" type="range" min="10" max="100" step="5" value="100"></label>
+        <label>압축 품질<output id="quality-value">100%</output><input id="quality" type="range" min="10" max="100" step="5" value="100"></label>
+        <button id="reset-filters" class="wide">보기 원복</button>
+      </section>
+      <section>
+        <label>비교 기준<select id="reference"><option value="">없음</option></select></label>
+        <label class="check"><input id="reference-filters" type="checkbox" checked>기준에도 같은 보기 적용</label>
+      </section>
+      <section><label class="check"><input id="is-sheet" type="checkbox">스프라이트 시트</label></section>
+      <section id="sheet-settings" hidden>
+        <div class="two-fields"><label>가로 칸<input id="columns" type="number" min="1" max="128" value="4"></label><label>세로 칸<input id="rows" type="number" min="1" max="128" value="3"></label></div>
+        <label>프레임 수<input id="frame-count" type="number" min="1" max="4096" value="12"></label>
+        <details><summary>시트 여백</summary><div class="two-fields"><label>왼쪽<input id="margin-x" type="number" min="0" value="0"></label><label>위쪽<input id="margin-y" type="number" min="0" value="0"></label><label>가로 간격<input id="spacing-x" type="number" min="0" value="0"></label><label>세로 간격<input id="spacing-y" type="number" min="0" value="0"></label></div></details>
+      </section>
+      <section class="downloads"><button id="download">현재 보기 PNG</button><a id="original" download>원본</a><button id="export-state">설정 JSON</button></section>
+    </aside>
+  </div>
+  <section id="timeline" aria-label="프레임 애니메이션 테스터" hidden>
+    <div class="playbar">
+      <button id="previous" aria-label="이전 프레임">❮</button><button id="play" aria-label="재생">▶</button><button id="next" aria-label="다음 프레임">❯</button>
+      <output id="frame-label">1 / 12</output>
+      <label class="inline">FPS <input id="fps" type="number" min="1" max="60" value="12"></label>
+      <label class="check inline"><input id="loop" type="checkbox" checked>반복</label>
+      <span class="spacer"></span>
+      <label class="inline sequence-label">선택 순서 <input id="sequence" aria-label="재생 프레임 순서" value="1-12" placeholder="2,3 또는 1-5,8"></label>
+      <button id="all-frames">전체</button><button id="no-frames">해제</button>
+    </div>
+    <div id="frames" aria-label="선택 프레임"></div>
+  </section>
+  <footer><span id="dimensions"></span><span id="status" role="status" aria-live="polite"></span><span class="spacer"></span><span id="count"></span></footer>
+</div>
+<script type="module" src="./viewer.js"></script>
+</body>
+</html>

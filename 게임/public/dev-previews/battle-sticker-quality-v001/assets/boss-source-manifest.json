@@ -1,0 +1,206 @@
+{
+  "task": "MAIN03-20261110-05DF6177",
+  "iteration": 2,
+  "role": "monsters",
+  "files": [
+    {
+      "file": "front_left.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "bytes": 2115038,
+      "sha256": "631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "alphaZero": 931375,
+      "alphaFull255": 0,
+      "alphaPartial": 641489,
+      "alphaBoundsExclusive": {
+        "0": [
+          0,
+          21,
+          1533,
+          992
+        ],
+        "8": [
+          85,
+          50,
+          1490,
+          972
+        ],
+        "128": [
+          86,
+          56,
+          1489,
+          972
+        ]
+      },
+      "visibleMarginsAlphaOver8": [
+        85,
+        50,
+        46,
+        52
+      ]
+    },
+    {
+      "file": "left_090.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "bytes": 1892905,
+      "sha256": "eeb880730114ae74b97dfa57a7c05b93a215bf766099f4feebc2e8e74eedc76c",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "alphaZero": 1032916,
+      "alphaFull255": 0,
+      "alphaPartial": 539948,
+      "alphaBoundsExclusive": {
+        "0": [
+          0,
+          0,
+          1520,
+          1024
+        ],
+        "8": [
+          45,
+          98,
+          1504,
+          927
+        ],
+        "128": [
+          45,
+          104,
+          1502,
+          926
+        ]
+      },
+      "visibleMarginsAlphaOver8": [
+        45,
+        98,
+        32,
+        97
+      ]
+    }
+  ],
+  "approvedReference": {
+    "file": "approved-v01.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "bytes": 1985470,
+    "sha256": "7fe4b85504818a0268eb8f74151c6010d4834ab47df0e5e7c24589675b4e84c3",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "alphaZero": 977463,
+    "alphaFull255": 0,
+    "alphaPartial": 595401,
+    "alphaBoundsExclusive": {
+      "0": [
+        0,
+        7,
+        1520,
+        1024
+      ],
+      "8": [
+        91,
+        107,
+        1451,
+        941
+      ],
+      "128": [
+        92,
+        111,
+        1450,
+        940
+      ]
+    },
+    "visibleMarginsAlphaOver8": [
+      91,
+      107,
+      85,
+      83
+    ]
+  },
+  "byteForByteCopyOnly": true,
+  "direction": {
+    "front_left.png": "screen-left front three-quarter; no measured exact degree claim",
+    "left_090.png": "screen-left lateral profile (user label90); project azimuth270"
+  },
+  "measurements": {
+    "method": "manual visual landmarks approximate ±15px; separate from alpha/silhouette bounds and not game pivot or collision",
+    "front_left.png": {
+      "shellMainSurfaceTopApprox": [
+        850,
+        220
+      ],
+      "lowestVisibleFootContactApprox": [
+        535,
+        968
+      ],
+      "bodyHeightShellToFootApprox": 748,
+      "feetContactApprox": [
+        [
+          220,
+          914
+        ],
+        [
+          535,
+          968
+        ],
+        [
+          805,
+          856
+        ],
+        [
+          1146,
+          916
+        ]
+      ]
+    },
+    "left_090.png": {
+      "shellMainSurfaceTopApprox": [
+        765,
+        280
+      ],
+      "lowestVisibleFootContactApprox": [
+        1017,
+        925
+      ],
+      "bodyHeightShellToFootApprox": 645,
+      "feetContactApprox": [
+        [
+          337,
+          925
+        ],
+        [
+          504,
+          866
+        ],
+        [
+          876,
+          868
+        ],
+        [
+          1017,
+          925
+        ]
+      ]
+    }
+  },
+  "zip": {
+    "file": "originals.zip",
+    "bytes": 3983995,
+    "sha256": "175eb378f5f97da1ddc63d2cd1f878cd89411af352533b1d08936faee51e4f5e",
+    "entries": [
+      "front_left.png",
+      "left_090.png"
+    ],
+    "extractedBytesMatch": true
+  }
+}

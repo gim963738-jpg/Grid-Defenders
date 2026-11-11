@@ -1,0 +1,46 @@
+import { validateRecipe, type EffectRecipe } from './model';
+
+export const ACTOR_FORMAT = 'gd.character-scene@1';
+export type Point = [number, number];
+export interface ActorAsset { id: string; name: string; sha256: string; width: number; height: number; data: string }
+export interface ActorFrame { asset: string; sourceIndex: number; rect: [number,number,number,number]; duration: number; origin: Point; offset: Point; scale: number; points: Record<string,Point> }
+export interface ActorMotion { id: string; name: string; bodyHeight: number; pivot: Point; frames: ActorFrame[]; loop: boolean; status: string }
+export interface SceneEffect { id: string; name: string; recipe: EffectRecipe; raster?: ActorMotion; x: number; y: number; scale: number; angle: number; start: number; duration: number; layer: 'front'|'back'; follow: 'root'|'point'|'field'; point: string; keys: Record<string,Point> }
+export interface ActorScene { format: typeof ACTOR_FORMAT; name: string; assets: ActorAsset[]; motions: ActorMotion[]; motion: string; root: Point; scale: number; effects: SceneEffect[] }
+export const emptyScene = ():ActorScene => ({format:ACTOR_FORMAT,name:'캐릭터 합성',assets:[],motions:[],motion:'',root:[195,290],scale:1,effects:[]});
+export const copy = <T>(v:T):T => structuredClone(v);
+export function number(v:unknown,min:number,max:number,label:string):number { if(typeof v!=='number'||!Number.isFinite(v)||v<min||v>max)throw Error(`${label}: ${min}~${max} 유효 수치가 필요합니다.`); return v; }
+const pair=(v:unknown,label:string):Point=>{if(!Array.isArray(v)||v.length!==2)throw Error(label+' 좌표가 필요합니다.');return [number(v[0],-100000,100000,label),number(v[1],-100000,100000,label)];};
+export const motionDuration=(m:ActorMotion)=>m.frames.reduce((s,f)=>s+f.duration,0);
+export function frameAt(m:ActorMotion,time:number,loop=m.loop):number { let t=loop?Math.max(0,time)%motionDuration(m):Math.max(0,time); for(let i=0;i<m.frames.length;i++){if(t<m.frames[i].duration-1e-9)return i;t-=m.frames[i].duration;}return m.frames.length-1; }
+export const frameTime=(m:ActorMotion,index:number)=>m.frames.slice(0,index).reduce((s,f)=>s+f.duration,0);
+/** Source local point -> registered actor source px -> frame scale/offset -> common scale -> field CSSpx. */
+export function actorPoint(s:ActorScene,m:ActorMotion,f:ActorFrame,p:Point):Point { const k=72/m.bodyHeight*s.scale;return [s.root[0]+((p[0]+f.origin[0]-m.pivot[0])*f.scale+f.offset[0])*k,s.root[1]+((p[1]+f.origin[1]-m.pivot[1])*f.scale+f.offset[1])*k]; }
+export function effectPoint(s:ActorScene,m:ActorMotion,f:ActorFrame,e:SceneEffect,index:number):Point { const key=e.keys[`${m.id}:${index}`]??[0,0]; const base=e.follow==='field'?[0,0]:e.follow==='point'?actorPoint(s,m,f,f.points[e.point]??[m.pivot[0]-f.origin[0],m.pivot[1]-f.origin[1]]):s.root; const k=e.follow==='field'?1:72/m.bodyHeight*s.scale*(e.follow==='point'?f.scale:1);return [base[0]+(e.x+key[0])*k,base[1]+(e.y+key[1])*k]; }
+export function effectFrame(e:SceneEffect,time:number):number|null { const age=time-e.start;if(age<0||age>=e.duration)return null; return e.raster?frameAt(e.raster,age,false):Math.min(e.recipe.settings.frames-1,Math.floor(age*e.recipe.settings.fps)); }
+export function editFrames(m:ActorMotion,indices:number[],values:{x:number;y:number;scale:number},relative:boolean):void { for(const i of indices){const f=m.frames[i];if(!f)throw Error('선택 프레임 범위 오류');f.offset=relative?[f.offset[0]+values.x,f.offset[1]+values.y]:[values.x,values.y];f.scale=relative?f.scale*values.scale:values.scale;number(f.scale,.01,20,'프레임 배율');} }
+export function validateScene(raw:unknown):ActorScene {
+ const s=copy(raw) as ActorScene;if(!s||s.format!==ACTOR_FORMAT)throw Error('캐릭터 합성 gd.character-scene@1 JSON이 필요합니다. 기존 이펙트 JSON과 구분하세요.');
+ if(new Blob([JSON.stringify(s)]).size>90*1024*1024)throw Error('합성 문서는 최대90MB입니다.');
+ if(!Array.isArray(s.assets)||s.assets.length>64||!Array.isArray(s.motions)||s.motions.length>32||!Array.isArray(s.effects)||s.effects.length>12)throw Error('에셋64·동작32·효과12 제한');
+ s.root=pair(s.root,'root');number(s.scale,.01,20,'공통배율');
+ const ids=new Set<string>();for(const a of s.assets){if(ids.has(a.id)||!a.id||!/^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(a.data)||! /^[a-f0-9]{64}$/.test(a.sha256))throw Error('에셋 ID·PNG·SHA256 오류');ids.add(a.id);number(a.width,1,8192,'이미지 폭');number(a.height,1,8192,'이미지 높이');if(a.width*a.height>32e6)throw Error('이미지 최대3200만 픽셀');}
+ if(s.assets.reduce((total,a)=>total+a.width*a.height,0)>64_000_000)throw Error('에셋 합계 최대6400만 픽셀');
+ const motions=new Set<string>();let total=0;for(const m of s.motions){if(!m.id||motions.has(m.id))throw Error('동작 ID 중복');motions.add(m.id);number(m.bodyHeight,1,8192,'기준 본체 높이');m.pivot=pair(m.pivot,'발점');if(!Array.isArray(m.frames)||!m.frames.length||m.frames.length>600)throw Error('동작 프레임1~600');total+=m.frames.length;
+ for(const f of m.frames){const a=s.assets.find(a=>a.id===f.asset);if(!a||!Array.isArray(f.rect)||f.rect.length!==4)throw Error('에셋 연결·frameRects 오류');const [x,y,w,h]=f.rect;[x,y,w,h].forEach(v=>{number(v,0,8192,'영역');if(!Number.isInteger(v))throw Error('영역은 정수px');});if(!w||!h||x+w>a.width||y+h>a.height)throw Error('frameRects가 이미지 범위를 벗어납니다.');number(f.sourceIndex,0,100000,'소스인덱스');number(f.duration,.001,30,'프레임 시간(초)');f.origin=pair(f.origin,'등록 오프셋');f.offset=pair(f.offset,'보정');number(f.scale,.01,20,'프레임배율');if(!f.points||Object.keys(f.points).length>32)throw Error('부착점 최대32');for(const p of Object.values(f.points))pair(p,'부착점');}}
+ if(total>1200)throw Error('전체 프레임 최대1200');if(s.motions.length&&!motions.has(s.motion))throw Error('활성 동작 없음');
+ const effects=new Set<string>();for(const e of s.effects){if(!e.id||effects.has(e.id))throw Error('효과 ID 중복');effects.add(e.id);e.recipe=validateRecipe(e.recipe);number(e.x,-100000,100000,'효과X');number(e.y,-100000,100000,'효과Y');number(e.scale,.01,20,'효과배율');number(e.angle,-3600,3600,'각도');number(e.start,0,300,'시작초');number(e.duration,.001,300,'지속초');if(!['root','point','field'].includes(e.follow)||!['front','back'].includes(e.layer))throw Error('기준·레이어 오류');if(!e.keys||Object.keys(e.keys).length>1200)throw Error('프레임 키 오류');for(const p of Object.values(e.keys))pair(p,'효과키');}
+ for(const e of s.effects)if(e.raster){const temp:ActorScene={...s,effects:[],motions:[e.raster],motion:e.raster.id};validateScene(temp);}
+ return s;
+}
+export function adaptMotion(meta:any,assets:ActorAsset[],id:string=crypto.randomUUID()):ActorMotion {
+ if(!meta||typeof meta!=='object'||Array.isArray(meta))throw Error('메타 JSON 객체가 필요합니다.');
+ if(meta.format||(meta.schema&&!['grid-defenders.direct-sheet.v1','gd.actor-motion@1'].includes(meta.schema)))throw Error('지원 메타: gd.actor-motion@1 또는 grid-defenders.direct-sheet.v1. 이펙트 작품 JSON은 공방에서 열어 붙이세요.');
+ const direct=meta.schema==='grid-defenders.direct-sheet.v1',first=assets[0];if(!first)throw Error('PNG를 먼저 선택하세요.');
+ if(meta.sourceSha256&&meta.sourceSha256!==first.sha256)throw Error('메타 sourceSha256과 선택한 PNG가 다릅니다. 해당 원본 PNG를 함께 선택하세요.');
+ const rects=meta.frameRects??(assets.length>1?assets.map(a=>[0,0,a.width,a.height]):null);if(!Array.isArray(rects)||!rects.length||rects.length>600)throw Error('frameRects1~600개 필요');
+ for(const name of ['durationsMs','durations','order','origins','assetIndices'])if(meta[name]!==undefined&&(!Array.isArray(meta[name])||meta[name].length!==rects.length))throw Error(name+' 길이가 frameRects와 같아야 합니다.');
+ if(direct&&(!Array.isArray(meta.frameOffsets)||meta.frameOffsets.length!==rects.length))throw Error('direct-sheet frameOffsets가 frameRects 수와 같아야 합니다.');
+ const m:ActorMotion={id,name:String(meta.id??meta.name??first.name).slice(0,100),bodyHeight:meta.bodyHeightReference??meta.bodyHeight??first.height,pivot:meta.sourceAnchor??meta.pivot??[first.width/2,first.height],loop:meta.loopDefault??true,status:String(meta.status??'외부 입력 · 사용자 판정 미확인'),frames:rects.map((r:any,i:number)=>({asset:assets[meta.assetIndices?.[i]??(assets.length>1?i:0)]?.id,sourceIndex:meta.order?.[i]??i,rect:r,duration:meta.durationsMs?.[i]!==undefined?meta.durationsMs[i]/1000:meta.durations?.[i]??.1,origin:direct?[meta.frameOffsets[i][0],meta.frameOffsets[i][1]]:meta.origins?.[i]??[0,0],offset:[0,0],scale:1,points:{}}))};return m;
+}
+export class SceneHistory { undo:ActorScene[]=[];redo:ActorScene[]=[]; push(s:ActorScene){this.undo.push(copy(s));if(this.undo.length>40)this.undo.shift();this.redo=[];} back(s:ActorScene){const v=this.undo.pop();if(v)this.redo.push(copy(s));return v;} forward(s:ActorScene){const v=this.redo.pop();if(v)this.undo.push(copy(s));return v;} }

@@ -21,7 +21,7 @@ export function checkBattleSave(){
   const boss=new BossBattle([],()=>.9,game.damageMeter.peaks);return {game,boss,run};
  }
  const source=fixture(),g=source.game,b=source.boss,r=source.run;
- g.gold=10000;g.anvils=4;g.summon('ranged',0);g.summon('melee',1);g.summon('assassin',2);g.summon('guard',3);
+ g.enemies[0].hp=g.enemies[0].maxHp=100000;g.gold=10000;g.anvils=4;g.summon('ranged',0);g.summon('melee',1);g.summon('assassin',2);g.summon('guard',3);
  g.autoArrangeFormation();g.moveFormationUnit(g.units[0].id,20);
  g.buy(0);g.equip(g.gear[0].id,g.units[0].id,0,0,1);g.buy(2);g.speed=3;
  for(let i=0;i<80;i++){g.tick(.05);r.advance(.05);}

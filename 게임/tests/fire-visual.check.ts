@@ -1,3 +1,4 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {DEFENSE_FIELD,FOREST_TERRAIN_URL} from '../src/defenseFieldLayout';
 import {BLADE_SHEET_URL} from '../src/bladeSkill';
 import {SWORD_SHEET_URL} from '../src/swordAttack';
@@ -6,7 +7,7 @@ import {Defense} from '../src/defense';
 import {createDefenseView} from '../src/defenseView';
 import {createFireCast,FIRE_SHEET_URL} from '../src/fireSkill';
 import {createBossBattleView} from '../src/bossBattleView';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 /** Browser-only visual fixture; does not touch the running game's state. */
 export async function showFireVisual(age=.98){
  const overlay=document.createElement('div');overlay.id='fire-visual-fixture';overlay.style.cssText='position:fixed;inset:0;z-index:99999;background:#101d20;overflow:auto;display:flex;flex-direction:column;align-items:center';

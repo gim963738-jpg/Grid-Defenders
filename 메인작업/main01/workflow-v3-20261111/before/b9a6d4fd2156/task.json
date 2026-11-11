@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "MAIN01-20261110-B87520F7",
+  "main": "main01",
+  "branch": "characters",
+  "title": "공통 마네킹 전신 이동3안 — Idle/Start/Walk/Run/Stop (코드 전용)",
+  "request": "지금이작업은 이미지 작업이라기보단 코딩작업에 가까워보이니 GPT2.6은 사용하지않고 진행하자\nIdle 기본 대기\n시작/ Walk / Run / 정지",
+  "iteration": 1,
+  "status": "awaiting_user",
+  "createdAt": "2026-11-10T22:25:33.360809+09:00",
+  "approval": {
+    "userQuote": "지금이작업은 이미지 작업이라기보단 코딩작업에 가까워보이니 GPT2.6은 사용하지않고 진행하자\nIdle 기본 대기\n시작/ Walk / Run / 정지",
+    "source": {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\mannequin-locomotion\\사용자확인.md",
+      "sha256": "fbfdd4c8198a33d1dbc319c9fc7fe15a6e5ceebd8df054982091163214c25b77"
+    },
+    "recordedBy": "main01",
+    "recordedAt": "2026-11-10T22:25:33.404819+09:00",
+    "iteration": 1,
+    "hashes": {
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-B87520F7\\요청확인.md": "fbfdd4c8198a33d1dbc319c9fc7fe15a6e5ceebd8df054982091163214c25b77",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-B87520F7\\전문프롬프트.md": "ed2fc4d8552772378fffba15c7bf962b74889ec224d1c7d1566d320f88becd5e",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-B87520F7\\2_사전확인.md": "aca83f95c6aefacc61d11e96fef46a71f3eb4daf68b6adbbfdfb312704687a43",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md": "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md": "d4027f0c9a32fcec376092a83a44eb28eff07b26563103f13f1bbeb3f580b0e8",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\mannequin-locomotion\\사용자확인.md": "fbfdd4c8198a33d1dbc319c9fc7fe15a6e5ceebd8df054982091163214c25b77",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\mannequin-locomotion\\사전확인.md": "aca83f95c6aefacc61d11e96fef46a71f3eb4daf68b6adbbfdfb312704687a43",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md": "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49"
+    }
+  },
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-10T22:25:59.169491+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\mannequin-locomotion\\실제발송영수증.json",
+        "sha256": "d2a0c7c985c89314390916f1dc55b910564a013cbc0dd418d4ec0c9aa7546ca2"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T22:27:51.596059+09:00",
+      "iteration": 1,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-B87520F7\\읽기확인-v001-4c739f77a98541cba28eecb862d101b4.json",
+        "sha256": "9a7ad9b393d887e925079dfdeb464e11b859266e09143d9e41eb6998a399a813"
+      }
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T22:28:04.357180+09:00",
+      "iteration": 1,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-B87520F7\\읽기확인-v001-1264557eb85b4d2eb600ab37b076693a.json",
+        "sha256": "9a7ad9b393d887e925079dfdeb464e11b859266e09143d9e41eb6998a399a813"
+      }
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T22:32:04.987463+09:00",
+      "iteration": 1,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-B87520F7\\읽기확인-v001-070f0df26d584b30b8d95b19e18e58c2.json",
+        "sha256": "7b389772dfab5a3d8510f39439b78756879eaa687fec0203e802b632d7fc90a8"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-10T22:44:37.908856+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\mannequin_locomotion_main01-20261110-b87520f7_v001\\report.md",
+        "sha256": "936602b9c458d84afc874970d198947737d097d53d5f29af80a3eaf8c5584135"
+      },
+      "userQuote": ""
+    }
+  ],
+  "readingPolicyVersion": "OPS-004",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\mannequin-locomotion\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\mannequin-locomotion\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-B87520F7\\읽기확인-v001-070f0df26d584b30b8d95b19e18e58c2.json",
+    "sha256": "7b389772dfab5a3d8510f39439b78756879eaa687fec0203e802b632d7fc90a8"
+  },
+  "updatedAt": "2026-11-10T22:44:37.916858+09:00"
+}

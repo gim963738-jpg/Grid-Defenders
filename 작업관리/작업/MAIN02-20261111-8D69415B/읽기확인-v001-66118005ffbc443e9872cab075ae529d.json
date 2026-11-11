@@ -1,0 +1,114 @@
+﻿{
+    "task":  "MAIN02-20261111-8D69415B",
+    "iteration":  1,
+    "role":  "sprites",
+    "teamOwner":  "characters",
+    "workSummary":  "승인 SD45/90 원본을 읽기전용으로 참조해 8개 독립 모션을 직접 제작한다. 호출 전 기존 영상 연결과 실제 모델을 검사하며 GPT Image2.6·코드원화·프레임 위장생성을 금지한다. 지정 출력만 작성하고 원본·프롬프트·비용·검수/결함을 보존한다.",
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\AGENTS.md",
+                          "sha256":  "c768485e0b8b83bbe0f5aa06549a95609ac136babd139918874c3bb1530c44d6",
+                          "applies":  "전투시각과 피해판정 분리, 기존 원본과 미커밋 보존, 지정 출력만 작성한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\작업진행방법.md",
+                          "sha256":  "6cfe384d656136b57294d569d88f9028e080f5d42d0cf93c8f1142ea92f87c5d",
+                          "applies":  "본문 필독 및 적용 ACK/start 후 생성, 각 액션 원본과 검수·미완료를 구분해 보고한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+                          "applies":  "사용자 진행 승인의 8모션 범위만 수행하고 사전확인과 5종 기록을 남긴다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+                          "applies":  "main02 원작업과 iteration1을 유지하고 공식 worker_done으로 결과와 잔여결함을 회신한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+                          "applies":  "characters 책임 sprites 전문작업을 직접 수행하며 외부 호출 모델·비용 기록, 완성 시트 원본 보존한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "캐릭터 동작 출력만 담당하고 게임src 및 공통 런타임·타팀 파일을 수정하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\규정.md",
+                          "sha256":  "054180df089a2d1694430be7dc09e3718b31553e9dfa2904584717bedf5ccc41",
+                          "applies":  "작품별 좌우·앵커를 보존하고 신규2안 SD 기준 적용, 구30프레임은 후속 강제규격으로 복제하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "현재 전체 문서 path/sha256/applies 확인서 작성 후 start 통과, 갱신 시 다시 확인한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+                          "applies":  "조직상 sprites는 characters 소속 전문작업이며 별도 하위 편집자를 만들지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "도메인 분류와 실제 조직을 구별하고 index가 가리키는 실제 기존 원본을 읽기전용 참조한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "세계관/캐릭터/스프라이트 분류 및 sprites 역할 ID 유지, 파일 이동이나 통합 없음."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인02\\메인작업\\main02\\blond-motions-20261111\\사용자요청.md",
+                          "sha256":  "9370b29de9693fedd2508d172de76feb79bb372016d65fee75d7d64599e9361c",
+                          "applies":  "실제 진행 승인 8모션을 별도 생성·투명시트·미리보기로 납품하고 2.6 호출 금지한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+                          "sha256":  "6fda6b3a8bbbf0f1ed1701eb7e1e746a5cdc8e5c2e520453aefbae5734308450",
+                          "applies":  "GPT Image2.6 명시모델/API/자동대체 금지, 키나 진행을 해당 모델 허가로 해석하지 않는다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인기준.md",
+                          "sha256":  "ae864343dd9d44022119501022b85dc7442ab79171d6a947c37f6c06bae2c27a",
+                          "applies":  "SD-STD-002 신규2안 ID6 비율·얼굴가독성과 인물 각도 일관성 적용; 성인형과 구분한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_승인참조\\20261109_신규2안\\승인.json",
+                          "sha256":  "39dd7a9765eacb8a4254bb46f1868531ca651258e5f421b511fa1535f2e45303",
+                          "applies":  "MAIN01-20261109-DBF50341 iteration4 selectedVariant6의 45/90 원본과 SHA를 대조하고 채택한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\제작기준.md",
+                          "sha256":  "04a8f9e627ff0cb8fe7a2e42188ab826b280b172f9815c661c2ee81763a2305d",
+                          "applies":  "층진 금발·청목도리·은갑옷·갈색장비 및 오른손 장검/왼손 단검, 오른다리 판금 비대칭 보존한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\gc9_longsword_dagger\\run_right_30f_v01\\제작기준.md",
+                          "sha256":  "cb9218a60919e754b5cd51a38876876b447512bd3f06ab7fa27613e97b952482",
+                          "applies":  "구30f는 동작 검토이력; 새 마스터나 공통 프레임 수로 사용하지 않고 원본 보존한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\문서\\00_개발규칙\\스킬구현규약.md",
+                          "sha256":  "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+                          "applies":  "추출영역·투명여백·표시·앵커와 피해판정 분리, 밝고 어두운 전체프레임 및 전장 표시 검수한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+                          "sha256":  "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49",
+                          "applies":  "결과·기술검증·사용자합격·통합을 구분하고 메인에게 근거 파일과 남은 문제를 보고한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+                          "sha256":  "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+                          "applies":  "이번 실제 진행 승인 범위 내 제작하며 동일 승인 반복 요구 없이 수행하고 새 범위 확대 금지한다."
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+                          "sha256":  "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+                          "applies":  "로컬 산출물과 필수기록만 작성하고 사용자 별도 저장 요청 없으므로 커밋·푸시·자동백업 금지한다."
+                      }
+                  ]
+}

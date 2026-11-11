@@ -1,0 +1,64 @@
+from pathlib import Path
+import importlib.util,json,hashlib
+R=Path('C:/Users/user/Desktop/Grid Defenders');S=R/'작업관리';H=Path(__file__).resolve().parent
+if (H/'연결.json').exists():raise SystemExit('Task already registered; inspect before recovery.')
+U=Path('C:/Users/user/orca/workspaces/Grid Defenders/UI-전투화면')
+hero=Path('C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/game_reference10_main01-20261109-e1fd458c_v002/01_arknights/character.png')
+heroMeta=hero.parent.parent/'asset-manifest.json'
+boss=Path('C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인/output/monsters/turtle-dragon-black-green-main03-20261110-05df6177-v02/front_left.png')
+bossMeta=boss.parent/'manifest.json';field=R/'게임/public/assets/battlefields/forest-clearing-v1.png'
+assert hashlib.sha256(hero.read_bytes()).hexdigest()=='254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57'
+assert hashlib.sha256(boss.read_bytes()).hexdigest()=='631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094'
+approval='''# 사용자 확인 및 최종 승인
+사용자는 본체72CSSpx 캐릭터를 부드럽게 표시할 방법을 물었고, main01은 같은 원본/같은 표시크기에서 현재 표시·고품질 축소·경계 정리를 비교하는 방안을 제안했다.
+사용자: “여기서 작업하고 비교하는데 이때 메인2에서 작업한 터틀드레곤과 필드배경에 적용해서 보스앞에 금발전사 교전 이미지 한번 뽑아볼래”. 실제 확인된 터틀드래곤은 main03 작업의 디자인승인 v02 원본이며 출처를 바꾸지 않는다.
+사용자 보완: “캐릭터는 스티커형식으로 내가 위치 얼마든지 바꿀수있게해주고 만드는김에 csspx 크기조절기능 넣어주고 자세는 전투태세기준으로 뽑아줘”.
+사용자 보완: “캐릭터 복수 구도도 보고싶으니까 스티커 여러장 가능하게”.
+최종 이해문: 기존 필드 위에 전투태세 금발전사·터틀드래곤 스티커를 여러 개 추가/복제하고 각각 드래그 이동·본체CSSpx 크기조절·삭제. 금발전사 기본72CSSpx. 현재표시/고품질축소/경계정리3방식에서 같은배치유지. 기존에셋만사용, 이미지생성API/실제게임수정없음.
+사용자가 위 이해문을 인용하고 실제 선택: “이 내용으로 진행”.
+이 승인은 독립 비교도구 구현/조작검증/로컬 전달 범위이며 새 아트·이펙트·애니메이션·게임통합·유료API·커밋푸시는 포함하지 않는다.
+'''
+(H/'사용자확인.md').write_text(approval,encoding='utf-8')
+pre='''# main01 사전확인
+규정A/메인운영/팀장운영/파일담당표/자기작업진행방법/메인보고형식/진행승인/이미지2.6사용규칙과UI규정·방법/도메인·역할·작업대장을확인했다. 사용자의최종선택으로제작을승인받았으므로추가허락은요구하지않는다. main은실제시안/전문지시·검수역할을유지하고코드제작은UI작업공간의별도output에연결한다. 실제게임src/설정은편집하지않는다.
+전투태세원본(01_arknights/character.png)과승인된터틀v02 front_left를직접열람하고메타/SHA를확인했다. 금발전사는기본대기낮춘검/나체마네킹이아닌실제양검전투태세원본이다. 배경은현재root게임 forest-clearing-v1. 참조는읽기전용복사하고원본해시를보존한다.
+ui잠금없음. UI공간의공식terminal list에는오래된쉘프롬프트1개뿐이고활성AI편집증거없음,최근작업대장에점유없음을확인했다. 기존표시이름만으로우편함을추정하지않고새감독담당을기존UI공간에공식실행한다. 같은파일편집자가있는지담당도시작때확인해야한다. 기본모델GPT6.1Sol/medium. 사용자창·탭·패널은조작하지않고검사는별도headless.
+원본PNG4K이미지생성등은불필요한네이티브코드/Canvas비교도구다. 이미지생성/API/키env열람0. 3모드색/크기/좌표가동일하고72는武器/투명여백이아닌메타본체높이를기준으로한다. 경계정리는파생표시에서만적용하고효과를보장하거나모든스파이크/초록발광을제거하지않는다. 원본이미지보존/수치·표시/DPR·터치/다중조작을검수후독립URL로전달한다. Git자동저장없음.
+'''.replace('武器','무기')
+(H/'사전확인.md').write_text(pre,encoding='utf-8')
+spec=importlib.util.spec_from_file_location('board',S/'도구/작업대장.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);b=m.Board(S)
+t=b.new('main01','ui','72CSSpx 교전 비교도구 — 복수 스티커·본체크기·3표시모드','이 내용으로 진행 (전투태세 금발전사·터틀드래곤 복수 스티커, 이동/복제/삭제/본체CSSpx 조절, 현재/축소/경계3모드, 기존에셋·API0·실게임수정0)');tid=t['id'];F=b.folder(tid);out=U/('output/previews/battle-sticker-quality_'+tid.lower()+'_v001')
+prompt=f'''# {tid} 차수1 / main01 → UI 팀장
+
+## 사용자 확정·실제 범위
+{H/'사용자확인.md'} 전체가원문/최종이해문/실제 ‘이내용으로진행’근거다. 기존에셋만으로스티커를여러개자유배치·본체CSSpx크기조절해72px윤곽품질을비교하는**독립도구**를만든다. 정지그림을AI로재해석하는작업아님. 게임런타임/개발자도구에통합하지말고새 {out} 에만구현한다. 모든입력은읽기전용복사,원시SHA보존. 사용자현재창·브라우저·탭·패널은움직이지않고검사는격리headless. 기존작업/미커밋/공통규정/게임src·설정/카탈로그/키env/Git변경금지.
+
+## 정확한 원본
+전투태세금발전사: {hero} / SHA254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57 / 메타 {heroMeta}. 실제이미지를열어SD양검전투태세임을확인. bodyHeight1123, hairTop42, footY1164, footX470, native1312×1199이며원래메타추정오차±10px를그대로기록. 무기/빈여백을본체높이로세지말것. 72CSSpx일때전체PNG높이가72가아닌1123/1199비율로표시되어야한다. 표시값이임의배율/화면전체축소로바뀌지않도록한다.
+터틀드래곤디자인승인v02: {boss} / SHA631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094 / 메타 {bossMeta}. 왼쪽앞3/4로금발전사를마주본다. 메타shell~foot 본체높이748/기준foot[535,968]는수동±15px기준. 초기표시180CSSpx등장면에맞는임시값을사용하고게임밸런스확정값이라하지않는다. 초록발광/큰갑각/비대칭디테일을마음대로빼거나반전하지말것.
+필드 {field}. root현재landscape배경은800×360영역에이이미지를1600×1766크기로center60%배치하며필요시그CSS구도를참고한다. 원래배경을불필요하게재생성하지않는다. 실제승인보스는main03작업이며사용자가말한main2의호칭과원본출처를혼동해metadata를바꾸지않는다.
+
+## 사용자 조작
+기본800×360CSSpx전장에금발전사1명/보스1마리를마주보게배치하되자유롭게수정가능. 기본금발전사본체72CSSpx. 추가버튼으로전사/보스스티커를여러개생성하고선택대상복제·삭제·초기배치복귀를제공한다. 새복제체는고유ID/개별x,y/크기를갖고원본과동시에움직이지않는다. 대상을클릭/탭선택후드래그로위치변경,선택대상숫자입력과슬라이더로본체CSSpx크기변경. 발기준anchor를유지해크기변경때바닥이튀지않는다. 선택목록으로서로겹친스티커도다시고를수있게한다. 빈곳클릭은선택해제,필요한확대/현재선택표시는사용자가구분가능하게한다. 포인터/터치/마우스모두지원하고페이지스크롤과캔버스드래그를분리한다. 삭제키등단축키를넣는다면입력칸편집중발동하지않게한다.
+세품질모드가같은스티커리스트/좌표/크기를공유한다. 모드변경/복제/창리사이즈때다른배치/크기로초기화하지않는다. 반응형패널에맞춘다고전장을CSS transform으로축소해본체72가달라지게하지말것. 작은뷰포트는전장스크롤/패닝을제공하고조작버튼은공통모바일48px터치기준을따른다. 이전게임UI작은버튼을복제하지않는다. 원본그림에없던공격이펙트·체력바·새스킬·애니메이션은추가하지않는다.
+
+## 세 표시 방식의 실제 구현
+1 현재표시: 기존미리보기처럼native원본을표시높이에직접CSS/Canvas축소하는기준. 픽셀아트nearest로일부러열화해비교하지말고현재브라우저기본보간을따른다.
+2 고품질축소: 동일원본을실제장치DPR에맞는표시픽셀크기로고품질미리축소/샘플링해사용. 원본RGBA→알파를고려한축소→목표physicalpixels,screen72×DPR관계를맞추고사소한차이가없으면그대로보고한다. browser지원Canvas고품질보간/적절한단계축소등현실적인방법을선택하고정확한처리내용을문서화한다. 과도한샤프닝/블러로단순히선명·부드럽게보이도록속이지않는다.
+3 축소+경계정리:2와같은축소에연결된투명경계의약한잔여색/알파번짐만보수적으로처리한파생표시. 얼굴선/금속선/헤어뾰족/검/보스초록발광을형태별로재그리거나잘라내지않는다. 조정은파생버퍼/캐시에서만하고원본바이트보존. 특히실제발광과원치않는반투명띠를구분해보스발광보존을확대검수. 이것이더낫다는선택은사용자가한다. 효과가작거나경계소실위험이있으면설명하고비교가능하게한다.
+텍스처/축소결과는asset+본체높이+DPR+mode로캐시하고매pointermove마다native전체화소를재처리하지않는다. 원본로드실패/숫자NaN·0·음수·너무큰값/빠른slider조절/비선택상태를정상처리한다. 사실상72CSSpx을144물리픽셀로표시하는고밀도화면과1DPR화면은최종차이가다르므로둘다검수한다. DPR3까지도좋지만메모리폭증을피하고측정조건을공개한다.
+
+## 비교/출력/구현경계
+현재장면을원본크기로내려받는PNG출력을제공한다. 세모드동일배치의교전장면을비교할수있게하고100%뷰에서72기준을알수있도록한다. 전장전체와선택캐릭터확대를함께볼수있지만확대그림은실제72표시와분리해라. 에셋선택/초기값이전투시스템확정으로보이지않게짧게‘비교용’표시만하고과도한구현메타는접힌설명으로둔다. 메인목적은비주얼비교와자유배치다.
+사용자승인은이미지생성API를포함하지않는다. GPT2.6/내장imagegen/Grok/텍스트·영상API/외부모델모두호출0,키env열람0. 기존PNG를기술적으로축소/합성/캡처하는로컬코드만허용하며코드로캐릭터외형을새로디자인하지않는다. 승인된금발전사/터틀원본은같은캐릭터/복장/무기/시점그대로고정이다. 프레임추출/새동작/별도모델아트는하지않는다.
+HTML/CSS/JS와assets및정확한처리·크기/발점정의·sourceSHA·사용자승인·사전확인/실질5종기록/검수/보고를새output에보존하고다른worktree의gamefiles를수정하지않는다. 외부참조는복사해폴더내상대경로로연결,main01이root게임/public/dev-previews의새경로에사본배포할수있게한다. 포트/사용자창을임의로열거나기존서버를재시작하지않는다.
+
+## 검증/회신
+새read-pack본문→이번ACK→start후착수. 기존구조/화면/캐릭터/monster근거와이번사용자승인을읽는다. 다른편집자가동일UI공간/파일을쓰면main01에즉시알리고겹쳐쓰지않는다. 실제headless브라우저로로딩오류/기본본체72,DPR1·2,追加/복제최소5체,독립드래그/발점고정크기변경·수치와슬라이더/삭제/겹친선택/빈공간해제/3모드변경시배치유지/狭뷰포트터치와스크롤/PNG다운로드를검수한다. 拡大/단색밝음·어두움/실제필드에서손발·검·보스발광·알파경계를확인하고효과를과장하지않는다. 대표3모드교전PNG와모든조작·실제geometry수치·원본해시/검사버전·한계를증거로남긴다. 실제게임/기기실측과구분.
+완료시worker_done으로main01에index.html·출력경로/교전PNG/검수·보고/조작증거/남은문제를회신한다. 사용자최종합격·실제게임통합·커밋푸시는미완료로둔다. 실패가있으면과장해성공보고하지말고보완/문제를구체적으로기록한다.
+'''.replace('追加','추가').replace('狭뷰포트','좁은 뷰포트').replace('拡大','확대')
+for name,body in [('요청확인.md',approval),('1_대화기록.md',approval),('전문프롬프트.md',prompt),('2_사전확인.md',pre),('3_작업일지.md','# 작업일지\n사용자실제승인·원본/해시·담당공간/범위확인. 구현전이며담당은실제변경/검증을추가한다.\n'),('4_정의문서.md','# 정의\n독립교전비교도구,기존전투태세전사/승인보스/필드. 스티커복수배치·CSSpx/발점·3표시모드·로컬PNG출력,API0. 세부는전문지시참조.\n'),('5_버전관리.md','# 버전\n새v001출력폴더만작성. 기존원본/게임/UI/공통규정보존,Git커밋·푸시없음.\n')]: (F/name).write_text(body,encoding='utf-8')
+b.set_readings(tid,'main01',[str(H/'사용자확인.md'),str(H/'사전확인.md'),str(S/'진행승인규칙.md'),str(S/'이미지2.6사용규칙.md'),str(S/'저장운영규정.md'),str(S/'메인보고형식.md'),str(R/'문서/00_개발규칙/모바일UI규격.md'),str(boss.parent/'보고.md'),str(S/'작업/MAIN03-20261110-05DF6177/사용자합격-v002.md')])
+b.confirm(tid,'main01','이 내용으로 진행',H/'사용자확인.md');plan=b.prepare(tid,'main01')
+(H/'연결.json').write_text(json.dumps({'task':tid,'iteration':1,'folder':str(F),'output':str(out),'plan':plan,'state':'prepared_not_sent'},ensure_ascii=False,indent=2),encoding='utf-8')
+print(json.dumps({'task':tid,'prompt':plan['prompt'],'output':str(out),'state':'prepared_not_sent'},ensure_ascii=False))

@@ -1,0 +1,301 @@
+{
+  "task": "MAIN01-20261110-0169434D",
+  "iteration": 1,
+  "art_source": "host_image",
+  "assets": [
+    {
+      "id": "style-reference",
+      "file": "style-reference.png",
+      "label": "선택1번 · STYLE/PROPORTION",
+      "width": 1070,
+      "height": 1470,
+      "bodyHeight": 1353,
+      "footX": 555,
+      "footY": 1407,
+      "hairTop": 54,
+      "chin": 420,
+      "estimatedScalpCrown": 110,
+      "measurementErrorPx": 12,
+      "scalpErrorPx": 30,
+      "method": "manual visible hair/sole and boot support center; skull under hair estimated; weapon/cape excluded",
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1105404,
+        "partialPixels": 465158,
+        "lowPixels1to31": 21511,
+        "borderNonzeroPixels": 0
+      },
+      "boundsAlpha32": [
+        92,
+        54,
+        881,
+        1408
+      ],
+      "measurementROI": {
+        "body": [
+          92,
+          54,
+          881,
+          1407
+        ],
+        "feetSupport": "visible boot soles; midpoint of support including natural overlap; ±12px",
+        "skull": "hair flow/forehead arc inference ±30px, not directly measured"
+      },
+      "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/idle6_style1_style4_main01-20261109-e1fd458c_v003/variant-1-front.png",
+      "direction": "style_reference"
+    },
+    {
+      "id": "front-000",
+      "file": "front-000.png",
+      "label": "발로르 · 정면0",
+      "width": 1070,
+      "height": 1470,
+      "bodyHeight": 1360,
+      "footX": 538,
+      "footY": 1431,
+      "hairTop": 71,
+      "chin": 405,
+      "estimatedScalpCrown": 125,
+      "measurementErrorPx": 12,
+      "scalpErrorPx": 30,
+      "method": "manual visible hair/sole and boot support center; skull under hair estimated; weapon/cape excluded",
+      "sha256": "21027e708d812568b834533cc73d577f37b9ca965b78cd3b8982e326eae6ce28",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 887390,
+        "partialPixels": 684327,
+        "lowPixels1to31": 14241,
+        "borderNonzeroPixels": 0
+      },
+      "boundsAlpha32": [
+        126,
+        71,
+        945,
+        1432
+      ],
+      "measurementROI": {
+        "body": [
+          126,
+          71,
+          945,
+          1431
+        ],
+        "feetSupport": "visible boot soles; midpoint of support including natural overlap; ±12px",
+        "skull": "hair flow/forehead arc inference ±30px, not directly measured"
+      },
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-dfdc177e-3b37-4d7f-a3ab-d885b23206f1.png",
+      "direction": "front"
+    },
+    {
+      "id": "right-035",
+      "file": "right-035.png",
+      "label": "발로르 · 오른쪽앞35",
+      "width": 1070,
+      "height": 1470,
+      "bodyHeight": 1375,
+      "footX": 575,
+      "footY": 1436,
+      "hairTop": 61,
+      "chin": 407,
+      "estimatedScalpCrown": 120,
+      "measurementErrorPx": 12,
+      "scalpErrorPx": 30,
+      "method": "manual visible hair/sole and boot support center; skull under hair estimated; weapon/cape excluded",
+      "sha256": "e467ee8e3a33b6d9bf6ce319e1ff13a281542a9140b6e993a73e95763d9174f2",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 916942,
+        "partialPixels": 654837,
+        "lowPixels1to31": 13919,
+        "borderNonzeroPixels": 2
+      },
+      "boundsAlpha32": [
+        119,
+        62,
+        915,
+        1440
+      ],
+      "measurementROI": {
+        "body": [
+          119,
+          61,
+          915,
+          1436
+        ],
+        "feetSupport": "visible boot soles; midpoint of support including natural overlap; ±12px",
+        "skull": "hair flow/forehead arc inference ±30px, not directly measured"
+      },
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-44e25894-f3da-4c17-9dcb-59a23964226a.png",
+      "direction": "right35"
+    },
+    {
+      "id": "right-090",
+      "file": "right-090.png",
+      "label": "발로르 · 오른쪽정90",
+      "width": 1070,
+      "height": 1470,
+      "bodyHeight": 1370,
+      "footX": 550,
+      "footY": 1427,
+      "hairTop": 57,
+      "chin": 400,
+      "estimatedScalpCrown": 115,
+      "measurementErrorPx": 12,
+      "scalpErrorPx": 30,
+      "method": "manual visible hair/sole and boot support center; skull under hair estimated; weapon/cape excluded",
+      "sha256": "f29b33ad5812d2a9284cc343572c2da3173dead2f8f115908902bba65625ea0d",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1129393,
+        "partialPixels": 442619,
+        "lowPixels1to31": 19412,
+        "borderNonzeroPixels": 3
+      },
+      "boundsAlpha32": [
+        216,
+        57,
+        860,
+        1423
+      ],
+      "measurementROI": {
+        "body": [
+          216,
+          57,
+          860,
+          1427
+        ],
+        "feetSupport": "visible boot soles; midpoint of support including natural overlap; ±12px",
+        "skull": "hair flow/forehead arc inference ±30px, not directly measured"
+      },
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-14b321c2-3189-4e05-a15b-113d768cdb48.png",
+      "direction": "right90"
+    }
+  ],
+  "postprocess": "none; native PNG bytes/alpha preserved; CSS uniform display only",
+  "sources": [
+    {
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/idle6_style1_style4_main01-20261109-e1fd458c_v003/variant-1-front.png",
+      "role": "SOLE STYLE/PROPORTION",
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "nativeSize": [
+        1070,
+        1470
+      ],
+      "bytes": 943540,
+      "hashRecorded": "final read-only verification"
+    },
+    {
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트/output/balor-illustration-three-views-main01-20261110-f6a9f332-v001/front-000.png",
+      "role": "provisional failed illustration IDENTITY/DIRECTION only",
+      "sha256": "78c1d1879ca5732e72cf9c468e2d1d03c703a3b379cad6ae32c335e4fedc1ea5",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "bytes": 1686789,
+      "hashRecorded": "final read-only verification"
+    },
+    {
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트/output/balor-illustration-three-views-main01-20261110-f6a9f332-v001/right-035.png",
+      "role": "provisional failed illustration IDENTITY/DIRECTION only",
+      "sha256": "24c7fed7d8bc154ee97b2721f6944c740a5d9ad087361fa9f925286c3de876c7",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "bytes": 1954161,
+      "hashRecorded": "final read-only verification"
+    },
+    {
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트/output/balor-illustration-three-views-main01-20261110-f6a9f332-v001/right-090.png",
+      "role": "provisional failed illustration IDENTITY/DIRECTION only",
+      "sha256": "5464674edb5d12ee5951023aad4e44059a5650cf7bb4c3a0f0c6334331fa0b9f",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "bytes": 1345100,
+      "hashRecorded": "final read-only verification"
+    },
+    {
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/스플래시-아트/output/balor-gc9-retry-20261109-v02/front.png",
+      "role": "original design auxiliary",
+      "sha256": "061f23cc26b1f023918288446f9ac025de99bcf32550fb9be3e9850850f496fe",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "bytes": 1645282,
+      "hashRecorded": "final read-only verification"
+    }
+  ],
+  "rawBytePreservation": true,
+  "swordAxis": [
+    {
+      "file": "front-000.png",
+      "pommelCenter": [
+        239,
+        780
+      ],
+      "guardGemCenter": [
+        350,
+        924
+      ],
+      "bladeTip": [
+        637,
+        1385
+      ],
+      "axisAngleDifferenceDeg": 5.7,
+      "coordinateErrorPx": 6,
+      "method": "manual approximate center points on native PNG; guard decorative curves excluded",
+      "judgment": "not certified straight; residual kink is material, not exempted as projection"
+    },
+    {
+      "file": "right-035.png",
+      "pommelCenter": [
+        307,
+        775
+      ],
+      "guardGemCenter": [
+        436,
+        923
+      ],
+      "bladeTip": [
+        759,
+        1377
+      ],
+      "axisAngleDifferenceDeg": 5.6,
+      "coordinateErrorPx": 6,
+      "method": "manual approximate center points on native PNG; guard decorative curves excluded",
+      "judgment": "not certified straight; residual kink is material, not exempted as projection"
+    },
+    {
+      "file": "right-090.png",
+      "pommelCenter": [
+        398,
+        820
+      ],
+      "guardGemCenter": [
+        536,
+        951
+      ],
+      "bladeTip": [
+        856,
+        1342
+      ],
+      "axisAngleDifferenceDeg": 7.2,
+      "coordinateErrorPx": 6,
+      "method": "manual approximate center points on native PNG; guard decorative curves excluded",
+      "judgment": "not certified straight; residual kink is material, not exempted as projection"
+    }
+  ],
+  "status": "three generated SD candidates submitted; technical sword-axis criteria not met",
+  "userApproval": false,
+  "rigging": false,
+  "gameIntegration": false
+}

@@ -1,5 +1,6 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {Defense} from '../src/defense';
-import {BossBattle,waveBossRoster,bossFormationPoint,BOSS_FORMATION} from '../src/bossBattle';
+import {waveBossRoster,bossFormationPoint,BOSS_FORMATION} from '../src/bossBattle';
 import {FORMATION,formationRank} from '../src/battleFormation';
 import {LANDSCAPE_BATTLE,UNITS} from '../src/defenseConfig';
 

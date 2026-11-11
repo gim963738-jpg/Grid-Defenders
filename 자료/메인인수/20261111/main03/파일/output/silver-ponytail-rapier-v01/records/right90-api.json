@@ -1,0 +1,67 @@
+{
+  "view": "right90",
+  "startedAt": "2026-11-11T06:05:15.255Z",
+  "status": "succeeded",
+  "requestedModel": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "size": "1024x1536",
+  "background": "transparent",
+  "n": 1,
+  "endpoint": "/images/edits",
+  "automaticRetries": 0,
+  "promptSha256": "b81da1d969c278af55279ac4054b17e4ea526e321d5255b4c081b98e2f7046e2",
+  "references": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\output\\silver-ponytail-rapier-v01\\front.png",
+      "sha256": "90b7881926df9a91325ab6f4cc3fbac425a5a1157b0eb109120dcb650288755c",
+      "bytes": 1169770
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\output\\silver-ponytail-rapier-v01\\right35.png",
+      "sha256": "38cf7b82e7fce078ac49975ae982e09b1c95c3311381d95c8daf94e742a36734",
+      "bytes": 1308655
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_front.png",
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "bytes": 1643944
+    },
+    {
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+      "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+      "bytes": 199279
+    },
+    {
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+      "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a",
+      "bytes": 83496
+    }
+  ],
+  "approval": "User explicitly permitted image2.6 and approved three full-body views via 이 내용으로 진행.",
+  "finishedAt": "2026-11-11T06:06:02.015Z",
+  "requestId": "req_ae48c5d69ec84b5b85775d83263537f9",
+  "response": {
+    "created": 1794377161,
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "output_format": "png",
+    "usage": {
+      "input_tokens": 6398,
+      "input_tokens_details": {
+        "image_tokens": 5658,
+        "text_tokens": 740
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 7770
+    }
+  },
+  "responseModel": "not reported",
+  "outputBytes": 1307131,
+  "outputSha256": "7c5fcddb3dfc055498e1893d090997585daf140ecf8dc643e30e681f80ccc67e",
+  "costUsd": "unknown"
+}

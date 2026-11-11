@@ -1,0 +1,263 @@
+{
+  "task": "MAIN01-20261111-1B358AA6",
+  "workerOutcome": "failed",
+  "userAccepted": false,
+  "url": "http://localhost:5173/dev-previews/balor-sd-guard35-v002/index.html",
+  "files": [
+    {
+      "file": "asset-manifest.json",
+      "bytes": 10021,
+      "sha256": "bdc01906cfbbeabdae627f3bf33346765f2b99e0704e651100407a7d25ede0e2",
+      "httpByteMatch": true
+    },
+    {
+      "file": "comparison-dark.png",
+      "bytes": 652144,
+      "sha256": "db11dfeae5c377b310923c08884b4fe7a54e596163a667265307c42406a38c81",
+      "httpByteMatch": true
+    },
+    {
+      "file": "comparison.png",
+      "bytes": 670391,
+      "sha256": "1c0c2c6df2ee1676e9eb185e493929fffb919c56d8704684a90e5fb610307039",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-dark-dpr1.png",
+      "bytes": 34157,
+      "sha256": "8889744be7ab41587da0385588afb829f3326920e77df76ab151956405dfd115",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-dark-dpr2.png",
+      "bytes": 117998,
+      "sha256": "7a6bba526151e90de86929bbe01bb9756ddb17147644dc61aeb71694578af2cc",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-field-dpr1.png",
+      "bytes": 555764,
+      "sha256": "f715dc53f24c8bd7c79d79503584d3fdbe1c2b6e311c98b13072b057173e8532",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-field-dpr2.png",
+      "bytes": 1726895,
+      "sha256": "18159c7c6de1683aceb4b01ee173336ae41833b1fbbbbe03b6df84eee6ff5de5",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-light-dpr1.png",
+      "bytes": 35203,
+      "sha256": "f38a2149ae04ba7c34ca6ca50a0f726ef9badcb359e09d3b51e41056e272985f",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-light-dpr2.png",
+      "bytes": 122349,
+      "sha256": "19cc42e01b9cb705e8f62456629d3a1a0a72c4ce66b0f64d9b1df72beba195a8",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/browser-evidence.json",
+      "bytes": 8506,
+      "sha256": "1dea46bd4a1d261eeb4a82b66a3e5aef16d03690be71dbe7c62e96d421894473",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/display-72.json",
+      "bytes": 5256,
+      "sha256": "ded1ba7d743e92e98c92f71fbc08a5aaa416d4e974d51d162f31ae455f04f7a8",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/face-dark.png",
+      "bytes": 314480,
+      "sha256": "f636c54349c777d49d5dffc7b97011ca55c74661b3ac16fd347303e9c9098e64",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/face-light.png",
+      "bytes": 330141,
+      "sha256": "f3cb665b601e2f0dd7fd34c6588bd5df4445e29d36303218386cc3fa6840ccb8",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/grip-dark.png",
+      "bytes": 271476,
+      "sha256": "8aab653fd26d194123950b027fd4691966b11f6ee9325f0c0481d9a029d7cd47",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/grip-light.png",
+      "bytes": 276261,
+      "sha256": "2780eab7e241d0d13bee563d15261dea342d2ca0bf3503839274c583d8d8bc0d",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/shield-dark.png",
+      "bytes": 525015,
+      "sha256": "ff21688fd80182c99ca0fad3b9fc893c8aa38bf59f14f07bd86b5ce3f2b232f0",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/shield-light.png",
+      "bytes": 530575,
+      "sha256": "60aed38cf6ba9e5264c5737dfdaa2176054c839e4a28e5dd261cab933415b6f1",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/sword-measurements.json",
+      "bytes": 1198,
+      "sha256": "6f49cf75a88b7dbd696c0b5db9b9d5ad643f3f9de5c229934e4f12cb3e77ff54",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/verification.json",
+      "bytes": 22403,
+      "sha256": "2f7c0a088335e04198267ecbddd394e45354399a0b9ebf31c4dc2ae3c8e50544",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/whole-sword-dark.png",
+      "bytes": 384332,
+      "sha256": "209f6f6e80559865a1d02bf06f56ec1c90e7ce41d60b7fc1dd64ea8d135be0c4",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/whole-sword-light.png",
+      "bytes": 398869,
+      "sha256": "c44200be064414621b187110d214a2b58dbbc56752cfe5fa7b00cff723f18f7a",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/zoom-evidence.png",
+      "bytes": 963270,
+      "sha256": "e52bc8e8417e0cdb112fc3c5a76da7ae3adb066dfe1b2ace93077c7ef9ff02a9",
+      "httpByteMatch": true
+    },
+    {
+      "file": "final/right-035.png",
+      "bytes": 1693076,
+      "sha256": "d93cfbaa081a08a0ee84cb6d06497db68a478f3e65d1037414d382cc588ce90e",
+      "httpByteMatch": true
+    },
+    {
+      "file": "generation-records.json",
+      "bytes": 1983,
+      "sha256": "c731780216afcac4ac491b3d598118b662890d55f6cb34733052bab7cb89154e",
+      "httpByteMatch": true
+    },
+    {
+      "file": "index.html",
+      "bytes": 2212,
+      "sha256": "ddbcb664c37cdea85752b1385ce3fafc5827482dd9f4a59b88aba9b36327e4ea",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/blond-style1.png",
+      "bytes": 943540,
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/clean-035.png",
+      "bytes": 1783436,
+      "sha256": "6120ad2c6bbf3ab1b92b4304d7f06d227594e02864b21c13f9a9667ccb45af80",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/field.png",
+      "bytes": 2824239,
+      "sha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/guide.png",
+      "bytes": 78171,
+      "sha256": "bab08c47eed90ce0e5a9b462f2372e2f39dc350d153695b34dcd45ecc6e303c2",
+      "httpByteMatch": true
+    },
+    {
+      "file": "landmarks.json",
+      "bytes": 833,
+      "sha256": "42b4e03b6dd001976a95940bc1ed14644695a0ed7a2b0e43abc69154a092f9ca",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/builtin0.png",
+      "bytes": 1381114,
+      "sha256": "b9b49fe5d39b7a231f71ba304b5b520a5aad9714591c0bd191775fed244282c2",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/builtin35.png",
+      "bytes": 1474075,
+      "sha256": "b88c91189b0d3a4444a14e76a5e4a9bc8ccab2bad10a6be83112931dde35816c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/builtin90.png",
+      "bytes": 882545,
+      "sha256": "0e0ccbcf44dc3303d289e061b060d2b4088e7af2d0eb3c231ecd13d49c3fc1c7",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/image260.png",
+      "bytes": 1775187,
+      "sha256": "fea60c5ed7ab75b080bde77c77d4e2e04c0f7f50bd8273923659f5f315f9c33c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/image2635.png",
+      "bytes": 1783436,
+      "sha256": "6120ad2c6bbf3ab1b92b4304d7f06d227594e02864b21c13f9a9667ccb45af80",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/image2690.png",
+      "bytes": 1734523,
+      "sha256": "aec1e989b0971bdefdfff9a068a049d243f86601690a324b094414881cf8465a",
+      "httpByteMatch": true
+    },
+    {
+      "file": "player.js",
+      "bytes": 11469,
+      "sha256": "e98cb92ba5c294e426a329cdf22da77837a2f1bbc5b86e9e976e6bc7250dd4f4",
+      "httpByteMatch": true
+    },
+    {
+      "file": "report.md",
+      "bytes": 2110,
+      "sha256": "39d916947a39102fdba4495c7f724d6fef06239644b585550a97a8686f4a0b45",
+      "httpByteMatch": true
+    },
+    {
+      "file": "검수.md",
+      "bytes": 2833,
+      "sha256": "317e911bfb9cc349640f51a815799b69c846ae94e569b574997902e7462d19a9",
+      "httpByteMatch": true
+    },
+    {
+      "file": "보고.md",
+      "bytes": 2110,
+      "sha256": "39d916947a39102fdba4495c7f724d6fef06239644b585550a97a8686f4a0b45",
+      "httpByteMatch": true
+    },
+    {
+      "file": "제작기준.md",
+      "bytes": 1444,
+      "sha256": "811d33062010e1a1c187ec0a8b61245247f0622891f96e474a99495a8da37ba8",
+      "httpByteMatch": true
+    }
+  ],
+  "fileCount": 41,
+  "excluded": [
+    ".qa-profile",
+    "api",
+    "prompts",
+    "generations",
+    "generation scripts",
+    "read-pack"
+  ]
+}

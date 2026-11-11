@@ -1,0 +1,49 @@
+{
+  "version": "v04",
+  "at": "2026-11-11T00:53:43.095404+09:00",
+  "owner": "main03",
+  "approvalQuote": "이 내용으로 진행",
+  "route": "built-in image_gen",
+  "imageModel": "not reported",
+  "generationCalls": 1,
+  "delegation": false,
+  "files": [
+    {
+      "file": "builtin\\idle_breathe.png",
+      "bytes": 2571286,
+      "sha256": "391e550c9a11c8aad1e520a492c19eca33e1b61a22a4fef1b0c8bada41a4f88a",
+      "newInV04": false
+    },
+    {
+      "file": "builtin\\slam_both_forelegs.png",
+      "bytes": 2148144,
+      "sha256": "d7bd6f0917d95b2e9d069f93ccfe9208efc220fca5ebbb5a8e801dd4a1de830e",
+      "newInV04": false
+    },
+    {
+      "file": "builtin\\slam_right_foreleg.png",
+      "bytes": 2901059,
+      "sha256": "816e0a699faad891cd0d071c73174a86e25d604fa1a4f582ee37dc40dbc3857a",
+      "newInV04": false
+    },
+    {
+      "file": "builtin\\walk_front_left.png",
+      "bytes": 2585579,
+      "sha256": "7b878ab031d4bc76ce113e6f5f933a7429975c64f78cdf7f0bd383e641fec939",
+      "newInV04": true
+    }
+  ],
+  "totalMs": 14400,
+  "walkDisplacement": {
+    "from": [
+      680,
+      275
+    ],
+    "to": [
+      320,
+      320
+    ],
+    "units": "preview pixels, not measured stride"
+  },
+  "actionScale": 0.9
+}

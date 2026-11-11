@@ -4,7 +4,7 @@
   "kind": "main",
   "coordinatorRoot": "C:\\Users\\user\\Desktop\\Grid Defenders",
   "sharedRoot": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리",
-  "ruleVersion": "A-2.0.0",
+  "ruleVersion": "OPS-007-v4.1",
   "createdFor": "OPS-001",
   "domainTree": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
   "hierarchyVersion": 1,
@@ -15,19 +15,16 @@
   "workMethod": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main01\\작업진행방법.md",
   "requiredReadings": [
     "C:\\Users\\user\\Desktop\\Grid Defenders\\AGENTS.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main01\\작업진행방법.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md"
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\운영규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main01\\작업진행방법.md"
   ],
-  "readingPolicyVersion": "OPS-004",
+  "readingPolicyVersion": "OPS-006",
   "reportRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
-  "proceedRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md"
+  "proceedRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+  "coordinatorRole": "main01",
+  "operatingMode": "single-main",
+  "instructionSource": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\운영규칙.md",
+  "pipelinePolicyVersion": "PIPELINE-12-v1",
+  "approvalMode": "explicit-question-reply",
+  "proceedMarker": "################진행############"
 }

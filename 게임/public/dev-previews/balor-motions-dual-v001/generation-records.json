@@ -1,0 +1,1500 @@
+[
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 1,
+    "action": "01-run-right90",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 is shared strict90 Balor camera/identity reference. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 01-run-right90. Exact phases: 1 near foot forward contact; 2 near foot loaded compression; 3 rear leg swings through; 4 push off; 5 short airborne phase; 6 opposite foot approaches ground; 7 FAR foot forward contact; 8 far foot loaded compression; 9 near leg swings through; 10 opposite push off; 11 short flight; 12 next near contact approach, smoothly loops to frame1. Shield and sword safely carried naturally; obvious alternating legs, no skating.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      },
+      {
+        "file": "api/01-ref-balor90/native.png",
+        "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2f43574c-be4a-431c-b733-342107769be4.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\01-run-right90.png",
+    "sha256": "a9ca38f99ff466c75ba8cf50e7c3fdc0cb10fe0ce4c5e1af6f595d0b159f9dac",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:17:47.881443+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 2,
+    "action": "02-combat-idle-right35",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 02-combat-idle-right35. Exact phases: 1 approved combat stance; 2 tiny inhale begins; 3 torso expands subtly; 4 shoulders rise subtly; 5 inhale crest; 6 soft settle; 7 exhale begins; 8 chest settles; 9 cape follows softly; 10 quiet exhale; 11 settle back; 12 just before starting stance. Very subtle connected breathing, knees supported, no large pose changes.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-91eac3f9-b97f-4c74-a474-d20ab2e33832.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\02-combat-idle-right35.png",
+    "sha256": "cb5a071e5e3dc263e72ecbc3f165b968e43fd201cab06b2c37a54c71acd36779",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:18:36.124938+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 3,
+    "action": "03-horizontal-slash-right35",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 03-horizontal-slash-right35. Exact phases: 1 approved combat guard; 2 sword arm draws back horizontally; 3 hips coil; 4 fullest horizontal windup; 5 starts forward; 6 sword sweeps horizontally toward screen-right enemy; 7 clear horizontal cutting extension; 8 follow-through; 9 recoil absorbs; 10 arm returns naturally; 11 feet and torso recover; 12 approved guard restored. Keep shield in left hand.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-32422c2c-62ec-4553-af33-b914283cfb19.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\03-horizontal-slash-right35.png",
+    "sha256": "2c4e0499d121236740b18c04db453ea49d88e44b14852ce055eeb9e5989314eb",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:19:55.799321+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 4,
+    "action": "04-vertical-slash-right35",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 04-vertical-slash-right35. Exact phases: 1 combat guard; 2 sword rises; 3 elbow lifts; 4 sword high overhead preparation; 5 weight coils; 6 downward vertical cut begins; 7 forceful down cut; 8 low follow-through; 9 weight and wrist absorb; 10 sword recovers; 11 stance recovers; 12 original guard. Straight rigid sword, no rubber bend.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-1238b7e8-d9a0-4a1f-8b96-906a2b5a2f4d.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\04-vertical-slash-right35.png",
+    "sha256": "59e7293fb292ff5dd4ae0609c043e4bdabb3b1a92ac5cab9c8d1f21fc7d63b41",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:21:09.376621+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 5,
+    "action": "05-shield-edge-bash-right35",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 05-shield-edge-bash-right35. Exact phases: 1 guard; 2 rotate left shield so its EDGE leads; 3 coil torso sideways; 4 full side windup; 5 begins lateral swing; 6 forceful SIDEWAYS sweep; 7 UPPER CORNER EDGE of shield strikes enemy to right; 8 lateral follow-through; 9 absorb recoil; 10 return shield; 11 restore balance; 12 guard. NOT a forward push or poke, unmistakable edge-led sideways blow.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-9d159238-ffcd-4326-b80a-44c559d93d78.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\05-shield-edge-bash-right35.png",
+    "sha256": "21f904298f2a38dab0d6c2e8072aa6755a56007786817884825e69df8139d3d6",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:22:22.506125+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 6,
+    "action": "06-shield-plant-right35",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 06-shield-plant-right35. Exact phases: 1 combat guard; 2 left shield lifts; 3 shield lifted for downward blow; 4 weight gathers; 5 shield starts descending; 6 fast downstroke; 7 shield lower tip strikes ground; 8 body absorbs impact; 9 shield now firmly PLANTED vertically in ground; 10 hips recover; 11 stable feet; 12 shield remains planted, Balor beside it facing35, sword still right hand. End stable for next turning clip.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-353e9ec7-d669-41fa-81d5-c36fa9e150ae.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\06-shield-plant-right35.png",
+    "sha256": "96c682024d2bb928a6d1b14e5270a8c0ab660f43cba1893e4113f2777c378f76",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:23:33.914507+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 7,
+    "action": "07-turn-knightly-35to90",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 is shared strict90 Balor camera/identity reference. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: starts screen-RIGHT35 and rotates to strictRIGHT90. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 07-turn-knightly-35to90. Exact phases: 1 EXACT preceding shield-plant LAST pose; 2 keep shield planted at same ground point; 3 right sword begins rising; 4 torso turns to screen right; 5 hips rotate; 6 step feet naturally in place; 7 sword nearly upright; 8 torso now strict90; 9 knees straighten into STANDING knightly posture; 10 upright sword held naturally close; 11 standing90 chivalric posture; 12 identical held standing90 pose, shield stays fixed on ground. Do not kneel. Whole body rotates35 to90, not only head.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential. LAST attached image is the exact preceding clip last-frame CONNECTION POSE; begin from it, preserving identity and camera. Do not copy backdrop.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      },
+      {
+        "file": "api/01-ref-balor90/native.png",
+        "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+        "attached": true
+      },
+      {
+        "file": "references/builtin-06-last.png",
+        "sha256": "c27f029a3ec3db130e175bd57b3ccce7e2bab96134b929f78bea513f069ac65e",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-a3da1b68-7881-4bd0-a3a0-a3880b3c28dd.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\07-turn-knightly-35to90.png",
+    "sha256": "cc8542a09ac4171d3b208f52beeae152caab30783bbea9a33ba786c4690cc9e6",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:25:05.296014+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 8,
+    "action": "08-hit-right35",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 08-hit-right35. Exact phases: 1 guard; 2 impact anticipation; 3 sudden torso recoil from enemy on right; 4 head and chest react; 5 greatest recoil, shield stays connected; 6 knees absorb; 7 regain balance; 8 weight returns; 9 hands recover; 10 guard returns; 11 settle; 12 original combat guard. No new weapon or effect.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-3314bf2c-3a3e-4b17-a0b7-0e7ce4b79471.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\08-hit-right35.png",
+    "sha256": "f5aed532761ea49b5f5337a85c4ea4f6f6a9654b6b5818a65a4e2e3fd892d92d",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:26:25.263868+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 9,
+    "action": "09-death-right35",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 09-death-right35. Exact phases: 1 guard; 2 hit disrupts balance; 3 knees give; 4 pelvis drops; 5 torso tilts; 6 one knee collapses; 7 body falls naturally; 8 torso touches ground; 9 head follows naturally; 10 cape settles; 11 fully fallen body; 12 hold same fallen position. Body does not shrink to fit; consistent camera/scale and enough horizontal ground space.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-5d4e5c31-9aaa-497e-b3b5-226aa96a105d.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\09-death-right35.png",
+    "sha256": "b7242c6892c55daedd7f4a7d2071915f41fccc3dd09fb1330c7d6f85847ae233",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:27:37.985797+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 10,
+    "action": "10-ready-dissolve-right90",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 10-ready-dissolve-right90. Exact phases: 1 intact UPRIGHT common attack-ready knight, shield forward and sword low; 2 surface becomes smoky; 3 small white fragments separate; 4 more armour dissolves; 5 torso dissolves; 6 major white particles; 7 silhouette fades; 8 particles blow LEFT; 9 sparse white smoke moving left; 10 tiny leftward dust; 11 nearly empty; 12 COMPLETELY TRANSPARENT EMPTY cell. Dissolve from READY pose, not bent impact. This sheet alone reverses for summoning.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      },
+      {
+        "file": "api/02-ref-giant90/native.png",
+        "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-e0cf3988-0f37-438b-85d8-ba45f0dba15f.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\10-ready-dissolve-right90.png",
+    "sha256": "c09b448d53e42d89eb9ff1c04bdc3fb3a8c322a68a2338e3c31a2ba754707596",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:28:52.789708+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 11,
+    "action": "11-tower-shield-slam-right90",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 11-tower-shield-slam-right90. Exact phases: 1 same upright common READY knight; 2 tower shield rises; 3 shield above head; 4 shield VERY HIGH above helmet with arms extended; 5 highest apex, weight and force gather; 6 hips and torso drive down; 7 massive shield heavy downward slam; 8 shield bottom hits ground strongly; 9 knees/hips compress absorbing huge weight; 10 recoil settles; 11 shield remains grounded in bent impact stance; 12 HOLD this impact stance. Wide overhead motion, whole-body force, not tiny arm jab. Greatsword kept naturally, no third hand.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      },
+      {
+        "file": "api/02-ref-giant90/native.png",
+        "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-fcd5f562-c511-4dc1-9607-37074a593ab9.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\11-tower-shield-slam-right90.png",
+    "sha256": "42ab64a3f2e88f1715de53d6016cfe8e2a780f55a38858b47b4c2c68879c94a6",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:30:04.122808+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 12,
+    "action": "12-greatsword-slam-right90",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 12-greatsword-slam-right90. Exact phases: 1 EXACT preceding tower-shield-slam LAST impact pose; 2 shield begins vanishing; 3 shield completely gone; 4 left hand moves to greatsword grip; 5 natural TWO-HAND grip; 6 gigantic sword lifted in huge arc; 7 sword HIGH above helmet, arms/torso gather force; 8 high apex pause, full weight preparation; 9 huge forceful downward stroke; 10 greatsword strikes ground in front to right; 11 body absorbs recoil; 12 HOLD bent greatsword impact stance. No shield reappears. Rigid straight gigantic blade, no bending or shrinking to fit.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential. LAST attached image is the exact preceding clip last-frame CONNECTION POSE; begin from it, preserving identity and camera. Do not copy backdrop.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      },
+      {
+        "file": "api/02-ref-giant90/native.png",
+        "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+        "attached": true
+      },
+      {
+        "file": "references/builtin-11-last.png",
+        "sha256": "ab5379e93bda437e67a53d4e1e91676688369964987c2c621720e2cfcff15647",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-1ad5c31e-6054-4647-932a-35489bbd76b9.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\12-greatsword-slam-right90.png",
+    "sha256": "3ac3e88b6ec184d8b92543d6cf86777671db18292a62b854658fb88a3c04ae97",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:31:28.701693+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "route": "host_image_gen",
+    "model": null,
+    "modelReported": false,
+    "callOrdinal": 13,
+    "action": "13-sword-first-dissolve-right90",
+    "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 13-sword-first-dissolve-right90. Exact phases: 1 EXACT preceding greatsword-slam LAST bent impact pose; 2 posture frozen, sword tip begins disintegrating; 3 blade dissolves FIRST into white particles; 4 sword mostly gone while armour still intact; 5 sword fully gone and hands/torso now start dissolving; 6 armour breaks into white particles; 7 body dissolves without rising; 8 smoke/particles blow LEFT; 9 sparse leftward particles; 10 wispy leftward smoke; 11 almost empty; 12 completely TRANSPARENT EMPTY cell. Never reset to upright READY pose. Hold impact posture until dissolving.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential. LAST attached image is the exact preceding clip last-frame CONNECTION POSE; begin from it, preserving identity and camera. Do not copy backdrop.",
+    "references": [
+      {
+        "file": "source/approved-right035.png",
+        "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+        "attached": true
+      },
+      {
+        "file": "api/02-ref-giant90/native.png",
+        "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+        "attached": true
+      },
+      {
+        "file": "references/builtin-12-last.png",
+        "sha256": "8257fe03fb80d7e0393856edaac9f94a75456725386a4904ae81b6320b75c1cb",
+        "attached": true
+      }
+    ],
+    "transparent_background": true,
+    "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2c262cab-6e06-4b6b-abf9-c548ff47aa96.png",
+    "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\13-sword-first-dissolve-right90.png",
+    "sha256": "5b0e612661d0b8421851cbfd67c79d8fca2d77afae8fe1a8cdf8f73bcf20d43c",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "usage": null,
+    "cost": null,
+    "nativeBytesPreserved": true,
+    "at": "2026-11-11T09:32:52.867100+00:00"
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-01",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:16:08.810Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 is shared strict90 Balor camera/identity reference. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 01-run-right90. Exact phases: 1 near foot forward contact; 2 near foot loaded compression; 3 rear leg swings through; 4 push off; 5 short airborne phase; 6 opposite foot approaches ground; 7 FAR foot forward contact; 8 far foot loaded compression; 9 near leg swings through; 10 opposite push off; 11 short flight; 12 next near contact approach, smoothly loops to frame1. Shield and sword safely carried naturally; obvious alternating legs, no skating.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        },
+        {
+          "name": "native.png",
+          "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+          "bytes": 1623376,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 3607,
+      "input_tokens_details": {
+        "image_tokens": 3072,
+        "text_tokens": 535
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 5020
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:17:06.558Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_b5c85060424d4af0a813216bffc2d8c0",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794388624,
+      "model": null,
+      "usage": {
+        "input_tokens": 3607,
+        "input_tokens_details": {
+          "image_tokens": 3072,
+          "text_tokens": 535
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5020
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "53af74df0ce36d703177c0aac12433bf4564f62627c5a2c3e0bd23b0237f2418",
+      "bytes": 3279124,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-02",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:17:20.739Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 02-combat-idle-right35. Exact phases: 1 approved combat stance; 2 tiny inhale begins; 3 torso expands subtly; 4 shoulders rise subtly; 5 inhale crest; 6 soft settle; 7 exhale begins; 8 chest settles; 9 cape follows softly; 10 quiet exhale; 11 settle back; 12 just before starting stance. Very subtle connected breathing, knees supported, no large pose changes.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2030,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 494
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 3443
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:18:05.871Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_1b04431ea59e45ba99cbab31d07b345c",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794388683,
+      "model": null,
+      "usage": {
+        "input_tokens": 2030,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 494
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3443
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "bca77d0a0e8d37b94e9bc47075edfec79d58fd8115a4b75a5d9948759cc7c884",
+      "bytes": 3514704,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-03",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:18:45.299Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 03-horizontal-slash-right35. Exact phases: 1 approved combat guard; 2 sword arm draws back horizontally; 3 hips coil; 4 fullest horizontal windup; 5 starts forward; 6 sword sweeps horizontally toward screen-right enemy; 7 clear horizontal cutting extension; 8 follow-through; 9 recoil absorbs; 10 arm returns naturally; 11 feet and torso recover; 12 approved guard restored. Keep shield in left hand.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2031,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 495
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 3444
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:20:47.905Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_e9afa06f427840a0b9a84fc744410155",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794388845,
+      "model": null,
+      "usage": {
+        "input_tokens": 2031,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 495
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3444
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "7af002fcb7bc3d1f539b1bd354592421f16a7c82a1cff28e5ee2af4389060d29",
+      "bytes": 3406266,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-04",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:20:05.790Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 04-vertical-slash-right35. Exact phases: 1 combat guard; 2 sword rises; 3 elbow lifts; 4 sword high overhead preparation; 5 weight coils; 6 downward vertical cut begins; 7 forceful down cut; 8 low follow-through; 9 weight and wrist absorb; 10 sword recovers; 11 stance recovers; 12 original guard. Straight rigid sword, no rubber bend.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2027,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 491
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 3440
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:21:00.285Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_94ea2fd56d3240cea2da8b831987f723",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794388858,
+      "model": null,
+      "usage": {
+        "input_tokens": 2027,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 491
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3440
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "a2cbc78ee4b118127e385406740d753e09633bf2b3b671bdf786f04b76bcab32",
+      "bytes": 3198988,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-05",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:21:18.166Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 05-shield-edge-bash-right35. Exact phases: 1 guard; 2 rotate left shield so its EDGE leads; 3 coil torso sideways; 4 full side windup; 5 begins lateral swing; 6 forceful SIDEWAYS sweep; 7 UPPER CORNER EDGE of shield strikes enemy to right; 8 lateral follow-through; 9 absorb recoil; 10 return shield; 11 restore balance; 12 guard. NOT a forward push or poke, unmistakable edge-led sideways blow.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2043,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 507
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 3456
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:22:18.251Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_29235d7e86f24f35843f4553532e3f2a",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794388936,
+      "model": null,
+      "usage": {
+        "input_tokens": 2043,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 507
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3456
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "b292cd67288fb8a3ced49504e9f58f8f3c2f3c66d8d1b8af42da5bb53d8c7af6",
+      "bytes": 3365158,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-06",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:22:33.661Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 06-shield-plant-right35. Exact phases: 1 combat guard; 2 left shield lifts; 3 shield lifted for downward blow; 4 weight gathers; 5 shield starts descending; 6 fast downstroke; 7 shield lower tip strikes ground; 8 body absorbs impact; 9 shield now firmly PLANTED vertically in ground; 10 hips recover; 11 stable feet; 12 shield remains planted, Balor beside it facing35, sword still right hand. End stable for next turning clip.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2044,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 508
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 3457
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:23:36.144Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_1d9e66adaced41a1b7d900b19b2f2144",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794389013,
+      "model": null,
+      "usage": {
+        "input_tokens": 2044,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 508
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3457
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "51f805cbd60d298ddbda5ab4b920de3f1a7408f5219f96096bc32111f0f24b28",
+      "bytes": 3565884,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-07",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:24:03.833Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 is shared strict90 Balor camera/identity reference. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: starts screen-RIGHT35 and rotates to strictRIGHT90. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 07-turn-knightly-35to90. Exact phases: 1 EXACT preceding shield-plant LAST pose; 2 keep shield planted at same ground point; 3 right sword begins rising; 4 torso turns to screen right; 5 hips rotate; 6 step feet naturally in place; 7 sword nearly upright; 8 torso now strict90; 9 knees straighten into STANDING knightly posture; 10 upright sword held naturally close; 11 standing90 chivalric posture; 12 identical held standing90 pose, shield stays fixed on ground. Do not kneel. Whole body rotates35 to90, not only head.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential. LAST attached image is the exact preceding clip last-frame CONNECTION POSE; begin from it, while keeping the approved identity/working reference. Do not copy surrounding source backdrop.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        },
+        {
+          "name": "native.png",
+          "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+          "bytes": 1623376,
+          "attached": true
+        },
+        {
+          "name": "image26-06-last.png",
+          "sha256": "34cdd5523cadc1f76cd7ac4e4d9d97fc5d65a5e352685dbd29654cbabdbd404f",
+          "bytes": 296833,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 4441,
+      "input_tokens_details": {
+        "image_tokens": 3840,
+        "text_tokens": 601
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 5854
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:24:58.221Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_bd851db42b7848b0ac2e4f18275fcdfa",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794389096,
+      "model": null,
+      "usage": {
+        "input_tokens": 4441,
+        "input_tokens_details": {
+          "image_tokens": 3840,
+          "text_tokens": 601
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5854
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "eb5b4aa2c2fe4bd117a13680a66ecce3fca899d3a9631a3c7ffee8c2706ccc0c",
+      "bytes": 3304140,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-08",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:25:19.004Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 08-hit-right35. Exact phases: 1 guard; 2 impact anticipation; 3 sudden torso recoil from enemy on right; 4 head and chest react; 5 greatest recoil, shield stays connected; 6 knees absorb; 7 regain balance; 8 weight returns; 9 hands recover; 10 guard returns; 11 settle; 12 original combat guard. No new weapon or effect.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2021,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 485
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 3434
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:26:12.300Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_adc7316ea7de4c8fa383e3218a48ae86",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794389170,
+      "model": null,
+      "usage": {
+        "input_tokens": 2021,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 485
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3434
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "8789bfe98e1dfbb89a98206914b72c659723534b968a6ef70d25cbba1bdcdfec",
+      "bytes": 3471819,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-09",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:26:33.007Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: screen-RIGHT front three-quarter35 degrees throughout. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 09-death-right35. Exact phases: 1 guard; 2 hit disrupts balance; 3 knees give; 4 pelvis drops; 5 torso tilts; 6 one knee collapses; 7 body falls naturally; 8 torso touches ground; 9 head follows naturally; 10 cape settles; 11 fully fallen body; 12 hold same fallen position. Body does not shrink to fit; consistent camera/scale and enough horizontal ground space.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2033,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 497
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 3446
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:27:29.017Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_3146db04acd64cf99b2fd553868abeab",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794389246,
+      "model": null,
+      "usage": {
+        "input_tokens": 2033,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 497
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 3446
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "a497e26332c2887acd52af4cceee5a287e8ccb1f7421bafe283b5f98c785bc36",
+      "bytes": 3296040,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-10",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:27:45.380Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 10-ready-dissolve-right90. Exact phases: 1 intact UPRIGHT common attack-ready knight, shield forward and sword low; 2 surface becomes smoky; 3 small white fragments separate; 4 more armour dissolves; 5 torso dissolves; 6 major white particles; 7 silhouette fades; 8 particles blow LEFT; 9 sparse white smoke moving left; 10 tiny leftward dust; 11 nearly empty; 12 COMPLETELY TRANSPARENT EMPTY cell. Dissolve from READY pose, not bent impact. This sheet alone reverses for summoning.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        },
+        {
+          "name": "native.png",
+          "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+          "bytes": 1800187,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 3614,
+      "input_tokens_details": {
+        "image_tokens": 3072,
+        "text_tokens": 542
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 5027
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:28:48.687Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_c924fad6e3b942fb8ff4d7ea1c8e49a2",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794389326,
+      "model": null,
+      "usage": {
+        "input_tokens": 3614,
+        "input_tokens_details": {
+          "image_tokens": 3072,
+          "text_tokens": 542
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5027
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "ec1b432898b40b6eb19588a8598a02404b8710888fc2841a18e34e34a2aacd86",
+      "bytes": 3004735,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-11",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:29:02.217Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 11-tower-shield-slam-right90. Exact phases: 1 same upright common READY knight; 2 tower shield rises; 3 shield above head; 4 shield VERY HIGH above helmet with arms extended; 5 highest apex, weight and force gather; 6 hips and torso drive down; 7 massive shield heavy downward slam; 8 shield bottom hits ground strongly; 9 knees/hips compress absorbing huge weight; 10 recoil settles; 11 shield remains grounded in bent impact stance; 12 HOLD this impact stance. Wide overhead motion, whole-body force, not tiny arm jab. Greatsword kept naturally, no third hand.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        },
+        {
+          "name": "native.png",
+          "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+          "bytes": 1800187,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 3627,
+      "input_tokens_details": {
+        "image_tokens": 3072,
+        "text_tokens": 555
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 5040
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:30:02.257Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_a504d992e553401da56fbc39abe7000c",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794389399,
+      "model": null,
+      "usage": {
+        "input_tokens": 3627,
+        "input_tokens_details": {
+          "image_tokens": 3072,
+          "text_tokens": 555
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5040
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "de48c170fc83fd9bfeb44b48ad9b1022658d1853fb3dcad74cf5bebbcfd6301b",
+      "bytes": 3480923,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-12",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:30:22.329Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 12-greatsword-slam-right90. Exact phases: 1 EXACT preceding tower-shield-slam LAST impact pose; 2 shield begins vanishing; 3 shield completely gone; 4 left hand moves to greatsword grip; 5 natural TWO-HAND grip; 6 gigantic sword lifted in huge arc; 7 sword HIGH above helmet, arms/torso gather force; 8 high apex pause, full weight preparation; 9 huge forceful downward stroke; 10 greatsword strikes ground in front to right; 11 body absorbs recoil; 12 HOLD bent greatsword impact stance. No shield reappears. Rigid straight gigantic blade, no bending or shrinking to fit.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential. LAST attached image is the exact preceding clip last-frame CONNECTION POSE; begin from it, while keeping the approved identity/working reference. Do not copy surrounding source backdrop.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        },
+        {
+          "name": "native.png",
+          "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+          "bytes": 1800187,
+          "attached": true
+        },
+        {
+          "name": "image26-11-last.png",
+          "sha256": "1b76c5400b0aa432b70f43124b6f1e1aeaf75d7ceb7cb03daf5ecc36903f256c",
+          "bytes": 272828,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 4452,
+      "input_tokens_details": {
+        "image_tokens": 3840,
+        "text_tokens": 612
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 5865
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:31:19.363Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_3f85dcc371874725ad1d6b0dab9cd996",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794389477,
+      "model": null,
+      "usage": {
+        "input_tokens": 4452,
+        "input_tokens_details": {
+          "image_tokens": 3840,
+          "text_tokens": 612
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5865
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "2ad481bf275c070ce9dfa019866e85473ecd3f817e57287091f66357a10e3f18",
+      "bytes": 3360914,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "sheet-13",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:31:46.516Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "2048x1152",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 GIANT identity/ready-pose reference; use its helmet, armour, tower shield and sword. Balor image supplies shared art finish ONLY; do not put Balor in this giant-only sheet. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions.\nCamera: strict screen-RIGHT90 profile; all body, helmet and feet profile. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 13-sword-first-dissolve-right90. Exact phases: 1 EXACT preceding greatsword-slam LAST bent impact pose; 2 posture frozen, sword tip begins disintegrating; 3 blade dissolves FIRST into white particles; 4 sword mostly gone while armour still intact; 5 sword fully gone and hands/torso now start dissolving; 6 armour breaks into white particles; 7 body dissolves without rising; 8 smoke/particles blow LEFT; 9 sparse leftward particles; 10 wispy leftward smoke; 11 almost empty; 12 completely TRANSPARENT EMPTY cell. Never reset to upright READY pose. Hold impact posture until dissolving.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential. LAST attached image is the exact preceding clip last-frame CONNECTION POSE; begin from it, while keeping the approved identity/working reference. Do not copy surrounding source backdrop.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        },
+        {
+          "name": "native.png",
+          "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+          "bytes": 1800187,
+          "attached": true
+        },
+        {
+          "name": "image26-12-last.png",
+          "sha256": "1caeb8eab0c7825f41b68469b1b7eed057c1fbf804481785617710e35cbaee93",
+          "bytes": 264174,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 4446,
+      "input_tokens_details": {
+        "image_tokens": 3840,
+        "text_tokens": 606
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 5859
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:32:39.007Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_638d1b53933949ba9c41f32832c6d1a0",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794389557,
+      "model": null,
+      "usage": {
+        "input_tokens": 4446,
+        "input_tokens_details": {
+          "image_tokens": 3840,
+          "text_tokens": 606
+        },
+        "output_tokens": 1413,
+        "output_tokens_details": {
+          "image_tokens": 1413,
+          "text_tokens": 0
+        },
+        "total_tokens": 5859
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "42f0a2630ac537f6daf2a24c0a3304c09e1a25f5a866b14d9fb757811eb84959",
+      "bytes": 2952522,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "ref-balor90",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:14:36.060Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign. Produce ONE transparent full-body working reference: entire character facing SCREEN RIGHT in strict 90-degree side profile, one eye/nose profile, torso pelvis feet all profile. Neutral grounded combat-ready stance, sword low naturally held, shield forward. Preserve body/head/weapon proportions; do not copy 35 degree camera. Leave generous transparent margins, no glow or background, no labels.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 1747,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 211
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 3119
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:15:27.739Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_729970c817874adcb001afa6b1d08b29",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794388526,
+      "model": null,
+      "usage": {
+        "input_tokens": 1747,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 211
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3119
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+      "bytes": 1623376,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261111-9B2C9CFE",
+    "iteration": 1,
+    "job": "ref-giant90",
+    "status": "succeeded",
+    "startedAt": "2026-11-11T09:14:50.703Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Image1 is STYLE only, not identity. A separate white heavy-armoured medieval knight giant, full closed heavy medieval helmet concealing face, massive white silver plate, large rectangular tower shield in anatomical LEFT hand and gigantic straight two-handed greatsword. Same outlined SD cel game-art finish as Balor, but closed helmet and all-white heavy armour. No brown hair or Balor face. Thick convincing armour, not skinny. Fully consistent design throughout all giant actions. Produce ONE transparent full body working reference: strict screen-right 90 degree side profile. Stable upright attack-ready posture, tower shield held forward at body level, greatsword carried low ready for later transition. All helmet, feet, shield, sword tip inside generous margins. Not an attack impact pose. No background, ground shadow, text or glow.",
+      "images": [
+        {
+          "name": "approved-right035.png",
+          "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+          "bytes": 1472748,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 1715,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 179
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 3087
+    },
+    "cost": null,
+    "endedAt": "2026-11-11T09:15:45.508Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_dd473bce30504601b3eb64c92ec49a0e",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794388545,
+      "model": null,
+      "usage": {
+        "input_tokens": 1715,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 179
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3087
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+      "bytes": 1800187,
+      "originalResponseBytesPreserved": true
+    }
+  }
+]

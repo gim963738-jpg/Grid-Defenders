@@ -1,0 +1,222 @@
+{
+  "title": "여성 레이피어 전사 의상 수정 2차",
+  "role": "main03",
+  "iteration": 2,
+  "finishedAt": "2026-11-11T15:36:38.789029+09:00",
+  "approval": "현재사용자6장/2.6High/화면좌우확정질문을인용하고 이 내용으로 진행",
+  "requestedModel": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "responseModels": [
+    "not reported",
+    "not reported",
+    "not reported",
+    "not reported",
+    "not reported",
+    "not reported"
+  ],
+  "costUsd": "unknown",
+  "calls": 6,
+  "automaticRetries": 0,
+  "outfits": {
+    "A": "팔꿈치길이 반팔재킷+검정반팔티",
+    "B": "단추1~2개푼오버핏셔츠,흰보조색적용"
+  },
+  "views": [
+    "front0",
+    "screenRight35",
+    "screenRight90"
+  ],
+  "armorAttachments": {
+    "anatomicalRight": [
+      "pauldron",
+      "kneeGuard",
+      "armoredBoot"
+    ],
+    "anatomicalLeft": [
+      "gloveSmallMetalBackplate",
+      "armPouch"
+    ]
+  },
+  "weaponHands": {
+    "hilt": "anatomicalRight",
+    "scabbard": "anatomicalLeft"
+  },
+  "userDesignApproved": false,
+  "usage": {
+    "input_tokens": 40753,
+    "output_tokens": 8232,
+    "total_tokens": 48985
+  },
+  "outputs": {
+    "a_front": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1333264,
+      "sha256": "dc85b8aff3074b96a5bbe44ba2ef4a62b8b7891ef98514b9e11c27b10516e9c5",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1245697,
+      "partiallyTransparentPixels": 327167,
+      "highAlphaBounds": [
+        262,
+        115,
+        709,
+        1465
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 25.59,
+        "top": 7.49,
+        "right": 30.76,
+        "bottom": 4.62
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "a_right35": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1383661,
+      "sha256": "89ad5cbee1510b24628d44bb8eebf264dc51a2a7d8d3d62214b189f4d4f958d1",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1228709,
+      "partiallyTransparentPixels": 344155,
+      "highAlphaBounds": [
+        254,
+        167,
+        719,
+        1461
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 24.8,
+        "top": 10.87,
+        "right": 29.79,
+        "bottom": 4.88
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "a_right90": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1192532,
+      "sha256": "dec5dae8561a957d172180f0d02ceddba98460fb0918d2cad66d67166256a610",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1355549,
+      "partiallyTransparentPixels": 217315,
+      "highAlphaBounds": [
+        294,
+        250,
+        659,
+        1457
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 28.71,
+        "top": 16.28,
+        "right": 35.64,
+        "bottom": 5.14
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "b_front": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1289994,
+      "sha256": "8c2d6214c0c9474666bee877d997b0186c6747067660901589f47e598e860bec",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1281495,
+      "partiallyTransparentPixels": 291369,
+      "highAlphaBounds": [
+        265,
+        143,
+        684,
+        1446
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 25.88,
+        "top": 9.31,
+        "right": 33.2,
+        "bottom": 5.86
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "b_right35": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1383560,
+      "sha256": "eca35c54c014bd0fb66eb108399ed2cd675aa9fa92d60ffa838eddb0e0154842",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1245543,
+      "partiallyTransparentPixels": 327321,
+      "highAlphaBounds": [
+        273,
+        171,
+        696,
+        1472
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 26.66,
+        "top": 11.13,
+        "right": 32.03,
+        "bottom": 4.17
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "b_right90": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1214001,
+      "sha256": "3752639283237968a4a06bf975047d3456152156e591f671195f15f18c9b5c20",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1336670,
+      "partiallyTransparentPixels": 236194,
+      "highAlphaBounds": [
+        320,
+        187,
+        675,
+        1451
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 31.25,
+        "top": 12.17,
+        "right": 34.08,
+        "bottom": 5.53
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    }
+  },
+  "requestIds": [
+    "req_4996083e4dc041f4af9edbda186683c0",
+    "req_144c7affb4fa4433b00be56515072f4e",
+    "req_984192b770ea4138bc534d1a8edcf40e",
+    "req_fdb36fbbfda04b89934d6ea1fe9d1223",
+    "req_ccf248dd4662427287ba6b006e8b0f90",
+    "req_4aef9002c8694d5f9707495ac8c28a7b"
+  ]
+}

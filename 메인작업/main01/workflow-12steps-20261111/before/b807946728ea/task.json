@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 3,
+  "id": "MAIN01-20261111-1EB56391",
+  "main": "main01",
+  "branch": "gameplay",
+  "title": "금발 전사 평타·사거리100 / 터틀드래곤·3색 친위대·겹침 방지 실게임 적용",
+  "iteration": 1,
+  "status": "returned",
+  "createdAt": "2026-11-11T18:40:27.641272+09:00",
+  "approval": null,
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-11T18:40:37.658906+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\실제발송영수증.json",
+        "sha256": "ed44a10892d2437970fd5906970d2d61de561ae8acadca9d4b0d445681f8f64b"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-11T18:42:12.481724+09:00",
+      "iteration": 1,
+      "role": "gameplay",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-1EB56391\\읽기확인-v001-194aaa92336543ceb8d6dae39d9060cc.json",
+        "sha256": "b505829a9c16e618bb573ac197ec2692eec1a3c66640bfb4c4ff1da0aa671cad"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-11T19:27:34.786889+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-runtime_main01-20261111-1eb56391_v001\\결과.json",
+        "sha256": "88b5df9aae9230ca70175d60cbac1de83f79c898e930dbf3325d46fc58752c71"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "OPS006_migration",
+      "at": "2026-11-11T23:20:45.738268+09:00",
+      "previousStatus": "awaiting_user",
+      "previousApproval": {
+        "userQuote": "마지막 연결했던 기준으로 진행해줘 / 달리기 추가하고 피격은 넉백시에만 모션적용이란이야기야",
+        "source": {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사용자승인.md",
+          "sha256": "8ae46ded5b595e3cfc67c7a0dfa67e455f43ebb393bbe1df9b19b03a1260aab2"
+        },
+        "recordedBy": "main01",
+        "recordedAt": "2026-11-11T18:40:27.690283+09:00",
+        "iteration": 1,
+        "hashes": {
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-1EB56391\\요청확인.md": "92a36cdb7a133ec7044b601cba2f6499cfecb18337c11781409b0d423952eb0c",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-1EB56391\\전문프롬프트.md": "8d2de6ca8b6ac7915ed88bbf9854cf9dc8095a4d3e3038e2180a8fa8ffc21af9",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-1EB56391\\2_사전확인.md": "384f4af69d7c1e7f08a39bc558f9c44314576568d7458cefb1d432e0b16d8312",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\gameplay\\규정.md": "9d59ee6b893155fcc8bf04a6ff335609fd25ae2490bc0123911a672e100da9cc",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\AGENTS.md": "f0ed9bc2106adacf55055a387afe989df47d62478440b4f79977b48d15d82f63",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\gameplay\\작업진행방법.md": "7160bf0c8eb4111627f08435e10e17c51632ebc750bf3cca7b2842657ce14093",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md": "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사용자승인.md": "8ae46ded5b595e3cfc67c7a0dfa67e455f43ebb393bbe1df9b19b03a1260aab2",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사전확인.md": "b6a0da24880485baab2cd023a52a2cfdc83ad2ee0d8df2fe5d91593268ec5d38",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\입력기준.md": "4faaa9ab1e5730b703b65ef76487a87f0b2145c703bc5484de27464b92b2ef94",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0ad5c82c5e7a86025e43efcc55396d3d10ea7d28c82ad4ea18badcef93553ab9",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md": "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md": "1ef4d854ad8d3250a57f8ece69605b07c4244eaa2c7599da235c8fbb2be1fb8f",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\규정.md": "054180df089a2d1694430be7dc09e3718b31553e9dfa2904584717bedf5ccc41",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\작업진행방법.md": "6cfe384d656136b57294d569d88f9028e080f5d42d0cf93c8f1142ea92f87c5d",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md": "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\모바일UI규격.md": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\main02-인수인계.md": "4dd024ff8096dcf3207d371bc39fc0cc8af2b3db8917f083d693da3a8b22f4ea",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\main03-인수인계.md": "874246a3cbb22d5f22e1f21d0c04163a5a717bffa316807fa1c16e6798ffd3c5",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일\\메인작업\\main02\\blond-xslash34-20261111\\connected-record.json": "aef941e34dc378d207bf76870976e49cb5cd410366db10f142fd97f2688a1a97",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일\\메인작업\\main02\\blond-xslash34-20261111\\hitstop-record.json": "ae451f1afd5ad999f63688f17918c2ffb74c2237bcdfcf5ccc5e45598ce23032",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일\\메인작업\\main02\\blond-xslash34-20261111\\hitstop-report.md": "3a191cc0c19807df19c98d447aff5e6cf5bfcfca8d36a0e085a3819c58dc4481",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\납품보고.md": "1fe1ad02e0101cb6d2e6ba9298c4a08959b485f3082a69ab6551a3ef56ccb40b",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일\\output\\turtle-fullmotion-v07\\보고.md": "8fee1207d2402b48ca40a0ca10b1a3e159855c6e7403c2dd15da2a650cdd59a0",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일\\output\\turtle-fullmotion-v07\\manifest.json": "0bca6ebe39071f29c677da61e9be32cd0e98bb6c5958e4011c85a9af2e81ee8c"
+        }
+      },
+      "note": "原 지시/판정 보존; 새 발송은 버튼 승인 필요"
+    }
+  ],
+  "readingPolicyVersion": "OPS-006",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사용자승인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\입력기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\sprites\\작업진행방법.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\모바일UI규격.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\main02-인수인계.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\main03-인수인계.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일\\메인작업\\main02\\blond-xslash34-20261111\\connected-record.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일\\메인작업\\main02\\blond-xslash34-20261111\\hitstop-record.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일\\메인작업\\main02\\blond-xslash34-20261111\\hitstop-report.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\납품보고.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일\\output\\turtle-fullmotion-v07\\보고.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일\\output\\turtle-fullmotion-v07\\manifest.json"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-1EB56391\\읽기확인-v001-194aaa92336543ceb8d6dae39d9060cc.json",
+    "sha256": "b505829a9c16e618bb573ac197ec2692eec1a3c66640bfb4c4ff1da0aa671cad"
+  },
+  "updatedAt": "2026-11-11T23:20:45.738268+09:00",
+  "stages": {
+    "production": {
+      "status": "complete",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\qa\\반환검토.md",
+        "sha256": "10010d72b0db9d38d6889ae1f5d51dec5ff88543c4b99595a028c6b11745abd6"
+      },
+      "note": "검토된 v003 산출물 기준. 미적 합격과 별개."
+    },
+    "technical": {
+      "status": "pass_with_warnings",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\qa\\반환검토.md",
+        "sha256": "10010d72b0db9d38d6889ae1f5d51dec5ff88543c4b99595a028c6b11745abd6"
+      },
+      "note": "기존 v003 독립 검사 127 PASS / 0 FAIL / 1 WARN / 5 unverified. 이번 개편 중 재검사 아님."
+    },
+    "user": {
+      "status": "not_reviewed",
+      "evidence": null
+    },
+    "integration": {
+      "status": "applied",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\연결.json",
+        "sha256": "d38aa48637c7e52cd294c85602f4a1a6c8a0083e0ed2d6a445740b91aea35501"
+      },
+      "note": "운영 개편 이전 이미 반영된 상태를 보존. 신규 적용 실행 아님."
+    }
+  },
+  "pendingChoice": null,
+  "spec": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-1EB56391\\통합작업명세.json"
+}

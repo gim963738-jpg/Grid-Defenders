@@ -1,0 +1,64 @@
+{
+  "status": "failed_quality_candidates_for_review",
+  "gallery": "http://localhost:5173/dev-previews/balor-sd-provisional-v001/index.html",
+  "overview": "http://localhost:5173/dev-previews/balor-sd-provisional-v001/comparison.png",
+  "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_provisional_three_main01-20261110-0169434d_v001",
+  "files": [
+    {
+      "path": "asset-manifest.json",
+      "sha256": "0a301313c0dc592a393c70180b185109f7924b7c255e1f7b4e2b26bef649ca01",
+      "bytes": 9757
+    },
+    {
+      "path": "comparison.png",
+      "sha256": "ad17b8268626dbb4f73ae31ae9e7ea990343da50b0b91d0177db297594fa06a5",
+      "bytes": 807778
+    },
+    {
+      "path": "front-000.png",
+      "sha256": "21027e708d812568b834533cc73d577f37b9ca965b78cd3b8982e326eae6ce28",
+      "bytes": 1344082
+    },
+    {
+      "path": "identity-detail-comparison.png",
+      "sha256": "60fd4ff6301d7a86a43c9a13168bdd703af9c41c1af347a1e65b22025fdf52d5",
+      "bytes": 1354058
+    },
+    {
+      "path": "index.html",
+      "sha256": "b52d84874647ea7af51ce68a75aad436a749eb7d3f4e9ab0ccf9b046a41f9f7c",
+      "bytes": 7584
+    },
+    {
+      "path": "report.md",
+      "sha256": "49766e4fde1784a9705c5eb55b14e06c36307ed67c823accdf408478a7c40c54",
+      "bytes": 1961
+    },
+    {
+      "path": "right-035.png",
+      "sha256": "e467ee8e3a33b6d9bf6ce319e1ff13a281542a9140b6e993a73e95763d9174f2",
+      "bytes": 1301775
+    },
+    {
+      "path": "right-090.png",
+      "sha256": "f29b33ad5812d2a9284cc343572c2da3173dead2f8f115908902bba65625ea0d",
+      "bytes": 869488
+    },
+    {
+      "path": "검수.md",
+      "sha256": "f001dc42b554d6d3478c920e2c81e0c1d0182c2edfb857a877b00acb9c603e8f",
+      "bytes": 2870
+    }
+  ],
+  "httpByteChecks": 5,
+  "mainReviewed": [
+    "comparison.png",
+    "report.md",
+    "검수.md"
+  ],
+  "mainObservation": "Main viewed the three provisional SD views alongside selected style1. Sword grip/blade axis mismatch persists. Internal quality failure and user aesthetic review pending; not rigged or integrated.",
+  "userScreenChanged": false,
+  "gameRuntimeChanged": false,
+  "committed": false,
+  "pushed": false
+}

@@ -1,6 +1,7 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {loadHeroArt,heroFrame,heroPortrait,assassinArt,assassinSkillIcon,ASSASSIN_SHEET_URL} from '../src/heroArt';
 import {Defense} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 import {createBossBattleView} from '../src/bossBattleView';
 export async function checkHeroArt(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};await loadHeroArt();

@@ -1,0 +1,73 @@
+{
+  "at": "2026-11-11T22:33:55.488505+09:00",
+  "task": "MAIN01-20261111-7988D454",
+  "role": "main01",
+  "workSummary": "worker_done 회신 보고·127/0/1 결과 및 현재73제품/21원본/24필독 해시 확인, 후기전장과강제하단 증거2장 직접열람. 반환·통합상태만 기록하고 사용자 시각합격은 대기. 제품테스트 재실행/제품수정/새하달/새이미지API/Git0.",
+  "documents": [
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\AGENTS.md",
+      "sha256": "cd2454c98dfe93233f4af82153e919da630f3683b3e297a7ad0a91ae2cbe0f60",
+      "applies": "결과 기록은 기존 승인 범위에서 처리; 신규 제작·API·Git·화면 조작 없음"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\main01\\작업진행방법.md",
+      "sha256": "350280646f393768599d193dcfe2ed69ad3cf8d6aaecacc96ade9a7d1cc2e1b5",
+      "applies": "메인 자체 반환검토로 문서/근거 확인; 사용자 합격 대리결정 없음"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "sha256": "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+      "applies": "실제 결과·기술검증·사용자합격을 구분"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "sha256": "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+      "applies": "공식 회신/영수증 연결, 누락만 확인하고 통과 검사 전수 반복 없음"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "sha256": "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+      "applies": "테스터의 독립성과 원본 보존"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "sha256": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "applies": "제품 파일 수정 없이 QA 보고만 처리"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "sha256": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "applies": "returned 처리 전 현재 차수 ACK 유효성 확인"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "sha256": "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+      "applies": "main01 단일 총괄·qa 독립 역할 확인"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "sha256": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "applies": "자료 분류를 추가 AI 경유로 사용하지 않음"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "sha256": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "applies": "게임개발/테스터 원작업 연결 유지"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+      "sha256": "6d7c5945c21cbb893f5dcb39eb60d9ec5bf604fbe5536800dab1a2a946143a97",
+      "applies": "번호/상태 목록과 경고를 함께 보고"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "sha256": "0ad5c82c5e7a86025e43efcc55396d3d10ea7d28c82ad4ea18badcef93553ab9",
+      "applies": "기승인 동일 범위 결과 처리에 재승인 요청 없음"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+      "sha256": "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+      "applies": "폐지된 메인02/03 경유 없이 main01에서 반환 마무리"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {BLADE_SKILL,bladeDamageMultiplier,createBladeCast,advanceBlade,bladeAlive,bladeFrame,bladePlacement} from '../src/bladeSkill';
 import {FIRE_SKILL} from '../src/fireSkill';
 import {Defense,pathPoint} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 export function checkBladeSkill(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};
  check(BLADE_SKILL.cooldown===8&&BLADE_SKILL.radius===FIRE_SKILL.radius&&BLADE_SKILL.hits===6,'sword keeps radius and uses eight second six-hit skill');
@@ -21,11 +22,11 @@ export function checkBladeSkill(){
  check(g.meleeSkills.get(hero.id)!.casts===1,'cooldown prevents extra cast');g.nextTestWave();check(g.bladeCasts.length===0&&g.meleeSkills.get(hero.id)!.cooldown>0,'wave change clears blade effects while retaining cooldown');g.reset();check(g.meleeSkills.size===0&&g.bladeCasts.length===0,'reset clears sword skill state');
  const batched=setup();batched.tick(.01);batched.bladeCasts[0].attack=100;batched.tick(1.1);check(batched.enemies[0].hp===4400&&batched.enemies[1].hp===4400,'batched update uses five seventy-five damage hits and final two-hundred-twenty-five damage hit');
  const wave=new Defense(()=>1);wave.summon('melee',0);wave.summon('ranged',1);wave.summon('healer',2);const b=new BossBattle(waveBossRoster(wave),()=>1);b.autoSkills=false;
- const m=b.actors.find(a=>a.kind==='melee')!,r=b.hero()!,h=b.actors.find(a=>a.kind==='healer')!,t=b.actors.find(a=>a.kind==='retainer')!,n={...t,id:'nearby',x:508,defenseType:'normal' as const};t.x=500;t.y=280;t.defenseType='normal';n.y=280;
- b.actors=[m,r,h,t,n];b.actors.forEach(a=>{a.speed=0;a.cooldown=999;a.hp=a.maxHp=10000;});m.x=480;r.x=475;h.x=470;m.y=r.y=h.y=280;
+ const m=b.actors.find(a=>a.kind==='melee')!,r=b.hero()!,h=b.actors.find(a=>a.kind==='healer')!,t=b.actors.find(a=>a.id==='retainer-top')!,n={...t,id:'nearby',x:548,defenseType:'normal' as const};t.x=500;t.y=280;t.defenseType='normal';n.y=280;
+ b.actors=[m,r,h,t,n];b.actors.forEach(a=>{a.speed=0;a.cooldown=999;a.hp=a.maxHp=10000;});m.x=r.x=h.x=420;m.y=280;r.y=220;h.y=340;
  check(b.useHeroSkill(m.id)&&b.useHeroSkill(r.id)&&b.skillCooldown(m.id)===8&&b.skillCooldown(r.id)===4,'boss sword and ranged skills have independent cooldowns');
  check(!b.useHeroSkill(m.id)&&!b.useHeroSkill(h.id),'cooldown and unassigned hero block skill use');
- for(let i=0;i<40;i++)b.tick(.05);check(t.hp===9235&&n.hp===9235,'boss sword six hits and ranged three hits keep their own damage rules');
+ for(let i=0;i<40;i++)b.tick(.05);check(t.hp===9235&&n.hp===9235,`boss sword six hits and ranged three hits keep their own damage rules: ${t.hp},${n.hp}; ${t.x},${n.x}`);
  check(b.damageMeter.snapshot(b.elapsed).total===1530,'boss area skill damage is counted in DPS');
  for(let i=0;i<125;i++)b.tick(.05);b.autoSkills=true;b.tick(.05);check(b.skillCooldown(m.id)>0&&b.skillCooldown(r.id)>0,'auto use casts both assigned hero skills');
  b.reset();check(b.bladeCasts.length===0&&b.heroSkillCooldowns.size===0&&b.heroSkillCooldown===0,'boss restart resets every hero skill cooldown');

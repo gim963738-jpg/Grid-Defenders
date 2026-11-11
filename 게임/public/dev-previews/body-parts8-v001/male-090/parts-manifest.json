@@ -1,0 +1,1815 @@
+{
+  "set": "male-090",
+  "source": "full.png",
+  "sourceSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+  "sourceCanvas": [
+    1024,
+    1536
+  ],
+  "anatomicalSidePolicy": "right is near in these right-facing views; left is far, not a screen-side label",
+  "partOrder": [
+    "Foot_L",
+    "Shin_L",
+    "Thigh_L",
+    "Hand_L",
+    "Forearm_L",
+    "UpperArm_L",
+    "Foot_R",
+    "Shin_R",
+    "Thigh_R",
+    "Pelvis",
+    "Torso",
+    "Hand_R",
+    "Forearm_R",
+    "UpperArm_R",
+    "Neck",
+    "Head"
+  ],
+  "partNames": [
+    "Head",
+    "Neck",
+    "Torso",
+    "Pelvis",
+    "UpperArm_R",
+    "Forearm_R",
+    "Hand_R",
+    "Foot_R",
+    "UpperArm_L",
+    "Forearm_L",
+    "Hand_L",
+    "Foot_L",
+    "Thigh_R",
+    "Shin_R",
+    "Thigh_L",
+    "Shin_L"
+  ],
+  "parts": [
+    {
+      "name": "Head",
+      "file": "parts/Head.png",
+      "side": "central",
+      "nearFar": "central",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        528.0,
+        392
+      ],
+      "bbox": [
+        0,
+        28,
+        968,
+        505
+      ],
+      "visiblePixels": 53913,
+      "restoredPixels": 0,
+      "visibleExtraction": "visible/Head.png",
+      "restoredOnly": "restored/Head.png",
+      "visibleMask": "masks/Head-visible.png",
+      "restoredMask": "masks/Head-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        0,
+        0,
+        256,
+        384
+      ],
+      "donorCropBBox": [
+        15,
+        83,
+        244,
+        322
+      ],
+      "donorCropSha256": "b6a70b9b299313b8cb5ddab0dfba36daafe3928bcd2f78c77a369c49982ffb85",
+      "registration": {
+        "uniformScale": 1.1589958158995817,
+        "rotationDeg": 0,
+        "targetBBox": [
+          389,
+          130,
+          667,
+          407
+        ],
+        "pasteOffset": [
+          396,
+          130
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "bd114276e27e61db7d45b16b0c0392fd0e1cd6a91a052f7c9bcc045306e3dace",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 53913,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 0,
+      "parent": "Neck",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Head-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Head.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Head.png",
+      "bind0Sources": [
+        "parts/Head.png",
+        "visible/Head.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Neck",
+      "file": "parts/Neck.png",
+      "side": "central",
+      "nearFar": "central",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        510.5,
+        441
+      ],
+      "bbox": [
+        458,
+        346,
+        562,
+        451
+      ],
+      "visiblePixels": 672,
+      "restoredPixels": 8397,
+      "visibleExtraction": "visible/Neck.png",
+      "restoredOnly": "restored/Neck.png",
+      "visibleMask": "masks/Neck-visible.png",
+      "restoredMask": "masks/Neck-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        256,
+        0,
+        512,
+        384
+      ],
+      "donorCropBBox": [
+        77,
+        169,
+        179,
+        272
+      ],
+      "donorCropSha256": "4dcd21f8b84353579f97dec9f88f0e95ffd07f0fd4f6a16953b7f24747130228",
+      "registration": {
+        "uniformScale": 1.0194174757281553,
+        "rotationDeg": 0,
+        "targetBBox": [
+          456,
+          346,
+          565,
+          451
+        ],
+        "pasteOffset": [
+          458,
+          346
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "d96c01d47ce45989ec143ea8c6b323380b48d0be4494599a376c83be98336187",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 1659,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 987,
+      "parent": "Torso",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Neck-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Neck.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Neck.png",
+      "bind0Sources": [
+        "parts/Neck.png",
+        "visible/Neck.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Torso",
+      "file": "parts/Torso.png",
+      "side": "central",
+      "nearFar": "central",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        517.0,
+        783
+      ],
+      "bbox": [
+        418,
+        416,
+        616,
+        791
+      ],
+      "visiblePixels": 15178,
+      "restoredPixels": 46546,
+      "visibleExtraction": "visible/Torso.png",
+      "restoredOnly": "restored/Torso.png",
+      "visibleMask": "masks/Torso-visible.png",
+      "restoredMask": "masks/Torso-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        512,
+        0,
+        768,
+        384
+      ],
+      "donorCropBBox": [
+        50,
+        55,
+        214,
+        366
+      ],
+      "donorCropSha256": "76f3d95f79c77a66b7b32860db33ed6307ab5a9c60a87a5e68c3ca8acfd4abb6",
+      "registration": {
+        "uniformScale": 1.2057877813504823,
+        "rotationDeg": 0,
+        "targetBBox": [
+          417,
+          416,
+          618,
+          791
+        ],
+        "pasteOffset": [
+          418,
+          416
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "582f2e66d93b999926427ee8bccc325befdd5c236f52fe1eafc978867313ef0a",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 25673,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 10495,
+      "parent": "Pelvis",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Torso-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Torso.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Torso.png",
+      "bind0Sources": [
+        "parts/Torso.png",
+        "visible/Torso.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig.",
+      "pivotMethod": "Estimated waist attachment at overlap of actual Torso/Pelvis complete silhouettes, not source alpha-noise bbox; ?25px"
+    },
+    {
+      "name": "Pelvis",
+      "file": "parts/Pelvis.png",
+      "side": "central",
+      "nearFar": "central",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        517.0,
+        808
+      ],
+      "bbox": [
+        460,
+        773,
+        574,
+        882
+      ],
+      "visiblePixels": 1772,
+      "restoredPixels": 9400,
+      "visibleExtraction": "visible/Pelvis.png",
+      "restoredOnly": "restored/Pelvis.png",
+      "visibleMask": "masks/Pelvis-visible.png",
+      "restoredMask": "masks/Pelvis-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        768,
+        0,
+        1024,
+        384
+      ],
+      "donorCropBBox": [
+        43,
+        147,
+        209,
+        306
+      ],
+      "donorCropSha256": "5584ab8b2c4f3eff821ff1a6297ae067204625bb64253c80fdc8d88c46df6df0",
+      "registration": {
+        "uniformScale": 0.6855345911949685,
+        "rotationDeg": 0,
+        "targetBBox": [
+          421,
+          773,
+          613,
+          882
+        ],
+        "pasteOffset": [
+          460,
+          773
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged",
+        "pelvisDerivative": {
+          "uniformScale": 1.1566265060240963,
+          "pasteOffset": [
+            421,
+            773
+          ],
+          "clip": "central waist/seat polygon; no RGB painting"
+        }
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "174bb503a2dad102747f55b0671ad344fe4d912fdd909eee5715c841a79ac040",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 10797,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 9025,
+      "parent": "Root",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Pelvis-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Pelvis.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Pelvis.png",
+      "bind0Sources": [
+        "parts/Pelvis.png",
+        "visible/Pelvis.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "UpperArm_R",
+      "file": "parts/UpperArm_R.png",
+      "side": "right",
+      "nearFar": "near",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        486,
+        499
+      ],
+      "bbox": [
+        414,
+        450,
+        547,
+        729
+      ],
+      "visiblePixels": 12836,
+      "restoredPixels": 15585,
+      "visibleExtraction": "visible/UpperArm_R.png",
+      "restoredOnly": "restored/UpperArm_R.png",
+      "visibleMask": "masks/UpperArm_R-visible.png",
+      "restoredMask": "masks/UpperArm_R-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        0,
+        384,
+        256,
+        768
+      ],
+      "donorCropBBox": [
+        60,
+        56,
+        195,
+        339
+      ],
+      "donorCropSha256": "0b0d9effd79b4dd948ec64b9ef57aa135b69f8d80da5fd91314a674a20bbc69c",
+      "registration": {
+        "uniformScale": 0.9851851851851852,
+        "rotationDeg": 0,
+        "targetBBox": [
+          414,
+          439,
+          547,
+          740
+        ],
+        "pasteOffset": [
+          414,
+          450
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "88b19ed469f3add33905a6034275ff8eb6ee6a555e994bebf2cfd40abe444231",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 23814,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 10978,
+      "parent": "Torso",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/UpperArm_R-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/UpperArm_R.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/UpperArm_R.png",
+      "bind0Sources": [
+        "parts/UpperArm_R.png",
+        "visible/UpperArm_R.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Forearm_R",
+      "file": "parts/Forearm_R.png",
+      "side": "right",
+      "nearFar": "near",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        474,
+        679
+      ],
+      "bbox": [
+        442,
+        635,
+        526,
+        889
+      ],
+      "visiblePixels": 7649,
+      "restoredPixels": 10149,
+      "visibleExtraction": "visible/Forearm_R.png",
+      "restoredOnly": "restored/Forearm_R.png",
+      "visibleMask": "masks/Forearm_R-visible.png",
+      "restoredMask": "masks/Forearm_R-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        256,
+        384,
+        512,
+        768
+      ],
+      "donorCropBBox": [
+        80,
+        56,
+        173,
+        336
+      ],
+      "donorCropSha256": "c1353693da77bac31ef83b122c7d6c9f980106d2439b53f08c6c5f4573520f11",
+      "registration": {
+        "uniformScale": 0.9071428571428571,
+        "rotationDeg": 0,
+        "targetBBox": [
+          430,
+          635,
+          538,
+          889
+        ],
+        "pasteOffset": [
+          442,
+          635
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "46a36c7949ffaa6d666807f34f0fdcc8ea842eb47e868064ab1321e3f453df61",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 17411,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 9762,
+      "parent": "UpperArm_R",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Forearm_R-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Forearm_R.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Forearm_R.png",
+      "bind0Sources": [
+        "parts/Forearm_R.png",
+        "visible/Forearm_R.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Hand_R",
+      "file": "parts/Hand_R.png",
+      "side": "right",
+      "nearFar": "near",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        494,
+        845
+      ],
+      "bbox": [
+        460,
+        803,
+        538,
+        957
+      ],
+      "visiblePixels": 3946,
+      "restoredPixels": 5318,
+      "visibleExtraction": "visible/Hand_R.png",
+      "restoredOnly": "restored/Hand_R.png",
+      "visibleMask": "masks/Hand_R-visible.png",
+      "restoredMask": "masks/Hand_R-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        512,
+        384,
+        768,
+        768
+      ],
+      "donorCropBBox": [
+        74,
+        99,
+        186,
+        321
+      ],
+      "donorCropSha256": "07cd17f9b1dd73bfec58735ad62eaf75c5e5acec9f93e8c2ebe41fbc4f8af9c5",
+      "registration": {
+        "uniformScale": 0.6936936936936937,
+        "rotationDeg": 0,
+        "targetBBox": [
+          452,
+          803,
+          545,
+          957
+        ],
+        "pasteOffset": [
+          460,
+          803
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "125bda050bd17691ff27d5ea7d35cc26cabdc0075cfaa6dd199433204593f526",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 9219,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 5273,
+      "parent": "Forearm_R",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Hand_R-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Hand_R.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Hand_R.png",
+      "bind0Sources": [
+        "parts/Hand_R.png",
+        "visible/Hand_R.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Foot_R",
+      "file": "parts/Foot_R.png",
+      "side": "right",
+      "nearFar": "near",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        473,
+        1348
+      ],
+      "bbox": [
+        426,
+        1283,
+        994,
+        1526
+      ],
+      "visiblePixels": 14405,
+      "restoredPixels": 24,
+      "visibleExtraction": "visible/Foot_R.png",
+      "restoredOnly": "restored/Foot_R.png",
+      "visibleMask": "masks/Foot_R-visible.png",
+      "restoredMask": "masks/Foot_R-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        768,
+        384,
+        1024,
+        768
+      ],
+      "donorCropBBox": [
+        31,
+        113,
+        224,
+        284
+      ],
+      "donorCropSha256": "ba062137dc44803f202fac476346f2a9073689e2f85284e3dd9d0e691fb22779",
+      "registration": {
+        "uniformScale": 0.6198830409356725,
+        "rotationDeg": 0,
+        "targetBBox": [
+          424,
+          1314,
+          616,
+          1420
+        ],
+        "pasteOffset": [
+          460,
+          1314
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "431aec33dbc0be446043502c867da3122483711235a4247bcc5fe199dcaa54df",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 14405,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 0,
+      "parent": "Shin_R",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Foot_R-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Foot_R.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Foot_R.png",
+      "bind0Sources": [
+        "parts/Foot_R.png",
+        "visible/Foot_R.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "UpperArm_L",
+      "file": "parts/UpperArm_L.png",
+      "side": "left",
+      "nearFar": "far",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        486,
+        499
+      ],
+      "bbox": [
+        412,
+        450,
+        549,
+        729
+      ],
+      "visiblePixels": 0,
+      "restoredPixels": 28899,
+      "visibleExtraction": "visible/UpperArm_L.png",
+      "restoredOnly": "restored/UpperArm_L.png",
+      "visibleMask": "masks/UpperArm_L-visible.png",
+      "restoredMask": "masks/UpperArm_L-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        0,
+        768,
+        256,
+        1152
+      ],
+      "donorCropBBox": [
+        55,
+        53,
+        196,
+        340
+      ],
+      "donorCropSha256": "8fb3a8afa8febce09a58a3e98cbe17527780a663a50d01b0ccc72d66e87578e2",
+      "registration": {
+        "uniformScale": 0.9432624113475178,
+        "rotationDeg": 0,
+        "targetBBox": [
+          426,
+          431,
+          559,
+          732
+        ],
+        "pasteOffset": [
+          426,
+          446
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "186e15c71ed90d98cc0506027da160b32b592be6f9a6d227a77ae568fb8f21f3",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 0,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 0,
+      "profileHiddenRegistration": {
+        "method": "Uniform scale of independent AI far-side part to near-side native length (foot: width), aligned in strict profile where far limb is fully occluded",
+        "uniformScale": 1.029520295202952,
+        "pasteOffset": [
+          412,
+          450
+        ],
+        "sourceCropBBox": [
+          426,
+          446,
+          559,
+          717
+        ],
+        "newSize": [
+          137,
+          279
+        ],
+        "mirror": false,
+        "nonUniformWarp": false,
+        "estimateErrorPx": 25
+      },
+      "parent": "Torso",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/UpperArm_L-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/UpperArm_L.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/UpperArm_L.png",
+      "bind0Sources": [
+        "parts/UpperArm_L.png",
+        "visible/UpperArm_L.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Forearm_L",
+      "file": "parts/Forearm_L.png",
+      "side": "left",
+      "nearFar": "far",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        474,
+        679
+      ],
+      "bbox": [
+        441,
+        635,
+        527,
+        889
+      ],
+      "visiblePixels": 0,
+      "restoredPixels": 18030,
+      "visibleExtraction": "visible/Forearm_L.png",
+      "restoredOnly": "restored/Forearm_L.png",
+      "visibleMask": "masks/Forearm_L-visible.png",
+      "restoredMask": "masks/Forearm_L-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        256,
+        768,
+        512,
+        1152
+      ],
+      "donorCropBBox": [
+        83,
+        56,
+        178,
+        336
+      ],
+      "donorCropSha256": "cb0eb2de1403799b123f86fa345a67132955329f8adc1e27726bbc94da4f99ce",
+      "registration": {
+        "uniformScale": 0.9071428571428571,
+        "rotationDeg": 0,
+        "targetBBox": [
+          442,
+          627,
+          550,
+          881
+        ],
+        "pasteOffset": [
+          453,
+          627
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "e48e7d78adb4644de77856ee082f4fbbcb4e9dda3e587c8f3fc47bbe8f0b2914",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 0,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 0,
+      "profileHiddenRegistration": {
+        "method": "Uniform scale of independent AI far-side part to near-side native length (foot: width), aligned in strict profile where far limb is fully occluded",
+        "uniformScale": 1.0,
+        "pasteOffset": [
+          441,
+          635
+        ],
+        "sourceCropBBox": [
+          453,
+          627,
+          539,
+          881
+        ],
+        "newSize": [
+          86,
+          254
+        ],
+        "mirror": false,
+        "nonUniformWarp": false,
+        "estimateErrorPx": 25
+      },
+      "parent": "UpperArm_L",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Forearm_L-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Forearm_L.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Forearm_L.png",
+      "bind0Sources": [
+        "parts/Forearm_L.png",
+        "visible/Forearm_L.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Hand_L",
+      "file": "parts/Hand_L.png",
+      "side": "left",
+      "nearFar": "far",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        494,
+        845
+      ],
+      "bbox": [
+        460,
+        803,
+        538,
+        957
+      ],
+      "visiblePixels": 0,
+      "restoredPixels": 9314,
+      "visibleExtraction": "visible/Hand_L.png",
+      "restoredOnly": "restored/Hand_L.png",
+      "visibleMask": "masks/Hand_L-visible.png",
+      "restoredMask": "masks/Hand_L-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        512,
+        768,
+        768,
+        1152
+      ],
+      "donorCropBBox": [
+        69,
+        96,
+        182,
+        318
+      ],
+      "donorCropSha256": "3f0ea3501b731a8dd5b9cfc9d05d6e573a4d590dadcda829644eee09e2ac5847",
+      "registration": {
+        "uniformScale": 0.6936936936936937,
+        "rotationDeg": 0,
+        "targetBBox": [
+          464,
+          795,
+          557,
+          949
+        ],
+        "pasteOffset": [
+          472,
+          795
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "b2ddc4fe36dfe11cd0988819fcc2b4b3707a421673f58516646c0873aed3155a",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 0,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 0,
+      "profileHiddenRegistration": {
+        "method": "Uniform scale of independent AI far-side part to near-side native length (foot: width), aligned in strict profile where far limb is fully occluded",
+        "uniformScale": 1.0,
+        "pasteOffset": [
+          460,
+          803
+        ],
+        "sourceCropBBox": [
+          472,
+          795,
+          550,
+          949
+        ],
+        "newSize": [
+          78,
+          154
+        ],
+        "mirror": false,
+        "nonUniformWarp": false,
+        "estimateErrorPx": 25
+      },
+      "parent": "Forearm_L",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Hand_L-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Hand_L.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Hand_L.png",
+      "bind0Sources": [
+        "parts/Hand_L.png",
+        "visible/Hand_L.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Foot_L",
+      "file": "parts/Foot_L.png",
+      "side": "left",
+      "nearFar": "far",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        473,
+        1348
+      ],
+      "bbox": [
+        429,
+        1256,
+        612,
+        1420
+      ],
+      "visiblePixels": 0,
+      "restoredPixels": 17331,
+      "visibleExtraction": "visible/Foot_L.png",
+      "restoredOnly": "restored/Foot_L.png",
+      "visibleMask": "masks/Foot_L-visible.png",
+      "restoredMask": "masks/Foot_L-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        768,
+        768,
+        1024,
+        1152
+      ],
+      "donorCropBBox": [
+        31,
+        113,
+        224,
+        286
+      ],
+      "donorCropSha256": "c497239e3bf4ee5d2d6cdacdb44059b3a193a9500755709530e826e41b4fdb40",
+      "registration": {
+        "uniformScale": 0.6127167630057804,
+        "rotationDeg": 0,
+        "targetBBox": [
+          436,
+          1306,
+          628,
+          1412
+        ],
+        "pasteOffset": [
+          473,
+          1306
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "964164129c7266493b29dc80913f48a7f63fe16b0c51adeaa606239f94b8f78a",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 0,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 0,
+      "profileHiddenRegistration": {
+        "method": "Uniform scale of independent AI far-side part to near-side native length (foot: width), aligned in strict profile where far limb is fully occluded",
+        "uniformScale": 1.5508474576271187,
+        "pasteOffset": [
+          429,
+          1256
+        ],
+        "sourceCropBBox": [
+          473,
+          1306,
+          591,
+          1412
+        ],
+        "newSize": [
+          183,
+          164
+        ],
+        "mirror": false,
+        "nonUniformWarp": false,
+        "estimateErrorPx": 25
+      },
+      "parent": "Shin_L",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Foot_L-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Foot_L.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Foot_L.png",
+      "bind0Sources": [
+        "parts/Foot_L.png",
+        "visible/Foot_L.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Thigh_R",
+      "file": "parts/Thigh_R.png",
+      "side": "right",
+      "nearFar": "near",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        514,
+        849
+      ],
+      "bbox": [
+        431,
+        828,
+        588,
+        1118
+      ],
+      "visiblePixels": 8264,
+      "restoredPixels": 28740,
+      "visibleExtraction": "visible/Thigh_R.png",
+      "restoredOnly": "restored/Thigh_R.png",
+      "visibleMask": "masks/Thigh_R-visible.png",
+      "restoredMask": "masks/Thigh_R-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        0,
+        1152,
+        256,
+        1536
+      ],
+      "donorCropBBox": [
+        51,
+        53,
+        203,
+        334
+      ],
+      "donorCropSha256": "2a020d9cca330c2c9fcd9708a5d06fbc2ecec05e529a101b7a2291ed312f5209",
+      "registration": {
+        "uniformScale": 1.0328947368421053,
+        "rotationDeg": 0,
+        "targetBBox": [
+          431,
+          775,
+          588,
+          1172
+        ],
+        "pasteOffset": [
+          431,
+          828
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "9e05a923cb6aef61abb3e7bfd770838e00d6ee4fc5093e877cdbe5190dc3db86",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 17352,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 9088,
+      "parent": "Pelvis",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Thigh_R-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Thigh_R.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Thigh_R.png",
+      "bind0Sources": [
+        "parts/Thigh_R.png",
+        "visible/Thigh_R.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Shin_R",
+      "file": "parts/Shin_R.png",
+      "side": "right",
+      "nearFar": "near",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        505,
+        1098
+      ],
+      "bbox": [
+        414,
+        1027,
+        564,
+        1420
+      ],
+      "visiblePixels": 14596,
+      "restoredPixels": 26327,
+      "visibleExtraction": "visible/Shin_R.png",
+      "restoredOnly": "restored/Shin_R.png",
+      "visibleMask": "masks/Shin_R-visible.png",
+      "restoredMask": "masks/Shin_R-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        256,
+        1152,
+        512,
+        1536
+      ],
+      "donorCropBBox": [
+        60,
+        31,
+        178,
+        340
+      ],
+      "donorCropSha256": "f25c2ddf7c1dc6572180d33d7c66d10b136d4f59a4c42b4708e2c59d3aade2c2",
+      "registration": {
+        "uniformScale": 1.2718446601941749,
+        "rotationDeg": 0,
+        "targetBBox": [
+          402,
+          1027,
+          577,
+          1420
+        ],
+        "pasteOffset": [
+          414,
+          1027
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "7864e916e224f7a501e2c51582f28d09f4fe3826df168e05b512f18d3298eca8",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 27388,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 12792,
+      "parent": "Thigh_R",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Shin_R-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Shin_R.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Shin_R.png",
+      "bind0Sources": [
+        "parts/Shin_R.png",
+        "visible/Shin_R.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Thigh_L",
+      "file": "parts/Thigh_L.png",
+      "side": "left",
+      "nearFar": "far",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        514,
+        849
+      ],
+      "bbox": [
+        432,
+        828,
+        586,
+        1118
+      ],
+      "visiblePixels": 0,
+      "restoredPixels": 35993,
+      "visibleExtraction": "visible/Thigh_L.png",
+      "restoredOnly": "restored/Thigh_L.png",
+      "visibleMask": "masks/Thigh_L-visible.png",
+      "restoredMask": "masks/Thigh_L-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        512,
+        1152,
+        768,
+        1536
+      ],
+      "donorCropBBox": [
+        51,
+        53,
+        203,
+        340
+      ],
+      "donorCropSha256": "6b34ae58a293d163fc61c06808af9fa86180ff6e0eb10c118b245678a4f2f74c",
+      "registration": {
+        "uniformScale": 1.0328947368421053,
+        "rotationDeg": 0,
+        "targetBBox": [
+          443,
+          767,
+          600,
+          1164
+        ],
+        "pasteOffset": [
+          443,
+          818
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "88a8745572a09c6819bc12454a5c3f41c748701d57ff1a886dc2012c5a8951c5",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 0,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 0,
+      "profileHiddenRegistration": {
+        "method": "Uniform scale of independent AI far-side part to near-side native length (foot: width), aligned in strict profile where far limb is fully occluded",
+        "uniformScale": 0.9797297297297297,
+        "pasteOffset": [
+          432,
+          828
+        ],
+        "sourceCropBBox": [
+          443,
+          818,
+          600,
+          1114
+        ],
+        "newSize": [
+          154,
+          290
+        ],
+        "mirror": false,
+        "nonUniformWarp": false,
+        "estimateErrorPx": 25
+      },
+      "parent": "Pelvis",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Thigh_L-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Thigh_L.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Thigh_L.png",
+      "bind0Sources": [
+        "parts/Thigh_L.png",
+        "visible/Thigh_L.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    },
+    {
+      "name": "Shin_L",
+      "file": "parts/Shin_L.png",
+      "side": "left",
+      "nearFar": "far",
+      "sourceCanvas": [
+        1024,
+        1536
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "pivot": [
+        505,
+        1098
+      ],
+      "bbox": [
+        416,
+        1027,
+        561,
+        1420
+      ],
+      "visiblePixels": 0,
+      "restoredPixels": 39642,
+      "visibleExtraction": "visible/Shin_L.png",
+      "restoredOnly": "restored/Shin_L.png",
+      "visibleMask": "masks/Shin_L-visible.png",
+      "restoredMask": "masks/Shin_L-restored.png",
+      "donorNative": "api/05-male-090-parts/native.png",
+      "donorCell": [
+        768,
+        1152,
+        1024,
+        1536
+      ],
+      "donorCropBBox": [
+        63,
+        31,
+        177,
+        340
+      ],
+      "donorCropSha256": "236f6845a6582ae744b2dc75b15c55f972ad2af6bb36fe28f73a1c712993d77f",
+      "registration": {
+        "uniformScale": 1.2718446601941749,
+        "rotationDeg": 0,
+        "targetBBox": [
+          414,
+          1019,
+          589,
+          1412
+        ],
+        "pasteOffset": [
+          429,
+          1019
+        ],
+        "resampler": "bicubic donor only",
+        "nonUniformWarp": false,
+        "donorSegmentation": "cell alpha>32 content bbox; donor derivative alpha<16 removed, native unchanged"
+      },
+      "inputFullSha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "outputSha256": "aade9607d0841f21f7bd40974d801c677ad66167dfb264119e9c9dabfbc5d336",
+      "interpretation": "Whole generated donor silhouette/caps + compatible exact source interior; separate exact visible extraction preserves remaining original pixels",
+      "visiblePixelsClaimedByExtraction": 0,
+      "sourcePixelsSeparatelyPreservedNotInCompletePart": 0,
+      "profileHiddenRegistration": {
+        "method": "Uniform scale of independent AI far-side part to near-side native length (foot: width), aligned in strict profile where far limb is fully occluded",
+        "uniformScale": 1.0,
+        "pasteOffset": [
+          416,
+          1027
+        ],
+        "sourceCropBBox": [
+          429,
+          1019,
+          574,
+          1412
+        ],
+        "newSize": [
+          145,
+          393
+        ],
+        "mirror": false,
+        "nonUniformWarp": false,
+        "estimateErrorPx": 25
+      },
+      "parent": "Thigh_L",
+      "pivotEstimateErrorPx": 25,
+      "visibilityMaskAtSourcePose": "masks/Shin_L-visible.png",
+      "bindOffset": [
+        0,
+        0
+      ],
+      "bindRotation": 0,
+      "bindScale": 1,
+      "nonempty": true,
+      "actualDimensions": [
+        1024,
+        1536
+      ],
+      "renderMask": "render-masks/Shin_L.png",
+      "renderMaskPurpose": "bind0 hidden overlap only; whole PNG remains unchanged",
+      "completeGeometryRestored": true,
+      "bind0File": "bind0-parts/Shin_L.png",
+      "bind0Sources": [
+        "parts/Shin_L.png",
+        "visible/Shin_L.png"
+      ],
+      "bind0MaterialPolicy": "Whole part supplies inferred hidden pixels; exact individual visible extraction supplies only source-owned pixels at bind0. This source-pose material variant is NOT an animated rig."
+    }
+  ],
+  "rawSheet": "api/05-male-090-parts/native.png",
+  "rawSheetSha256": "adfd8b6172a93df9e25352c792acd56491c4ecbcc538b1be5f39c908a02b44ed",
+  "visibleReassemblyExactRgba": true,
+  "completePartReassembly": {
+    "method": "Actual individual bind0 PNGs from COMPLETE part hidden regions plus exact individual visible extraction, with separate render masks; no full source overlay; unoccluded full-geometry composition separately supplied",
+    "changedNonzeroAlphaPixels": 107287,
+    "additionalAlphaPixelsOutsideOriginal": 0,
+    "backgroundChecks": [
+      {
+        "background": [
+          250,
+          250,
+          245,
+          255
+        ],
+        "maxChannelDelta": 5,
+        "pixelsDeltaOver2": 1672
+      },
+      {
+        "background": [
+          25,
+          38,
+          51,
+          255
+        ],
+        "maxChannelDelta": 5,
+        "pixelsDeltaOver2": 843
+      }
+    ],
+    "notPixelIdentical": true,
+    "remaining": "Complete geometry unmasked differs in contour/shape; bind0 material variants are not animated rigging validation"
+  },
+  "limitations": [
+    "Hidden anatomical geometry is inferred, not observed",
+    "Completed geometry restored after erroneous mask bake; exact visible and bind0 material variants stored separately; NOT rigging-ready",
+    "Bind0 uses actual per-part material PNGs combining complete hidden pixels and exact individual source-visible extraction, through separate source-pose masks; never full source overlay",
+    "Previous unconstrained candidates and donor raw results preserved for comparison"
+  ],
+  "processingRefinement": "Bake error corrected: completed donor geometry restored to all parts/*.png; masked fragments archived; screen visibility now separate render-masks/*.png. Exact visible source files remain independently preserved.",
+  "zeroPoseOcclusionPolicy": "All six anatomical-left limb parts are fully occluded in this strict-profile full master; omit them only for source-pose composite. Complete inferred part PNGs and unoccluded composite retained.",
+  "sourceVisibilityReconstruction": "reassembled-visible.png is exact nonzero-alpha RGBA partition from visible/*.png; not evidence that completed geometry matches source; raw completed composite is reassembled.png",
+  "jointOverlapChecks": [
+    {
+      "part": "Head",
+      "parent": "Neck",
+      "pivot": [
+        528,
+        392
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 2673,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Neck",
+      "parent": "Torso",
+      "pivot": [
+        510,
+        441
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 1871,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Torso",
+      "parent": "Pelvis",
+      "pivot": [
+        517,
+        783
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 1082,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "UpperArm_R",
+      "parent": "Torso",
+      "pivot": [
+        486,
+        499
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 3721,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Forearm_R",
+      "parent": "UpperArm_R",
+      "pivot": [
+        474,
+        679
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 3638,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Hand_R",
+      "parent": "Forearm_R",
+      "pivot": [
+        494,
+        845
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 3285,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Foot_R",
+      "parent": "Shin_R",
+      "pivot": [
+        473,
+        1348
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 3681,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "UpperArm_L",
+      "parent": "Torso",
+      "pivot": [
+        486,
+        499
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 3721,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Forearm_L",
+      "parent": "UpperArm_L",
+      "pivot": [
+        474,
+        679
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 3128,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Hand_L",
+      "parent": "Forearm_L",
+      "pivot": [
+        494,
+        845
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 2586,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Foot_L",
+      "parent": "Shin_L",
+      "pivot": [
+        473,
+        1348
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 3582,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Thigh_R",
+      "parent": "Pelvis",
+      "pivot": [
+        514,
+        849
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 3141,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Shin_R",
+      "parent": "Thigh_R",
+      "pivot": [
+        505,
+        1098
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 2866,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Thigh_L",
+      "parent": "Pelvis",
+      "pivot": [
+        514,
+        849
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 3137,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    },
+    {
+      "part": "Shin_L",
+      "parent": "Thigh_L",
+      "pivot": [
+        505,
+        1098
+      ],
+      "roiRadius": 30,
+      "overlapPixels": 2917,
+      "meaning": "zero means static connection/domain requires review; positive does not prove animation quality"
+    }
+  ]
+}

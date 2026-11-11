@@ -1,0 +1,151 @@
+{
+  "sources": {
+    "warrior": {
+      "sha256": "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+      "native": [
+        1312,
+        1199
+      ]
+    },
+    "boss": {
+      "sha256": "631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094",
+      "native": [
+        1536,
+        1024
+      ]
+    },
+    "field": {
+      "sha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823",
+      "native": [
+        1194,
+        1317
+      ]
+    }
+  },
+  "sceneDifferences": [
+    {
+      "dpr": 1,
+      "modes": [
+        "current",
+        "quality"
+      ],
+      "resolution": [
+        800,
+        360
+      ],
+      "meanAbsoluteRGB": [
+        0.8423645833333333,
+        0.8691944444444445,
+        0.7488506944444444
+      ],
+      "maxRGB": [
+        [
+          0,
+          126
+        ],
+        [
+          0,
+          121
+        ],
+        [
+          0,
+          144
+        ]
+      ],
+      "note": "Whole scene composited difference; not a quality score."
+    },
+    {
+      "dpr": 1,
+      "modes": [
+        "quality",
+        "edge"
+      ],
+      "resolution": [
+        800,
+        360
+      ],
+      "meanAbsoluteRGB": [
+        0.00175,
+        0.0022395833333333334,
+        0.00022916666666666666
+      ],
+      "maxRGB": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "note": "Whole scene composited difference; not a quality score."
+    },
+    {
+      "dpr": 2,
+      "modes": [
+        "current",
+        "quality"
+      ],
+      "resolution": [
+        1600,
+        720
+      ],
+      "meanAbsoluteRGB": [
+        0.33925,
+        0.345625,
+        0.2969392361111111
+      ],
+      "maxRGB": [
+        [
+          0,
+          131
+        ],
+        [
+          0,
+          126
+        ],
+        [
+          0,
+          109
+        ]
+      ],
+      "note": "Whole scene composited difference; not a quality score."
+    },
+    {
+      "dpr": 2,
+      "modes": [
+        "quality",
+        "edge"
+      ],
+      "resolution": [
+        1600,
+        720
+      ],
+      "meanAbsoluteRGB": [
+        0.002416666666666667,
+        0.0031119791666666665,
+        0.00019357638888888888
+      ],
+      "maxRGB": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "note": "Whole scene composited difference; not a quality score."
+    }
+  ]
+}

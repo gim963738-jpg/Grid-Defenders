@@ -1,6 +1,7 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {COMBAT_SPEEDS,nextCombatSpeed,stepCombat} from '../src/combatPlayback';
 import {Defense,pathPoint} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 export function checkCombatPlayback(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};
  let speed=1;const cycle=[];for(let i=0;i<6;i++){speed=nextCombatSpeed(speed);cycle.push(speed);}

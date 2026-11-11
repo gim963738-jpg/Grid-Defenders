@@ -1,0 +1,125 @@
+{
+  "kind": "implementation_plan_not_user_fixed_frame_counts",
+  "routes": [
+    "A_builtin",
+    "B_image26"
+  ],
+  "sharedWorkingStills": [
+    "balor-right90",
+    "white-knight-giant-right90"
+  ],
+  "initialImage26PostLimit": 15,
+  "initialBuiltinSheetLimit": 13,
+  "jobs": [
+    {
+      "id": "01-run-right90",
+      "actor": "balor",
+      "facing": 90,
+      "mode": "loop",
+      "phases": "근경 발 접지·하중 압축·통과·밀어내기→원경 발이 선행하는 반대 반주기→다시 자연스럽게 이어지는 마지막 위상"
+    },
+    {
+      "id": "02-combat-idle-right35",
+      "actor": "balor",
+      "facing": 35,
+      "mode": "loop",
+      "phases": "합격 전투태세를 유지하는 작은 호흡과 어깨·팔·천의 자연스러운 움직임"
+    },
+    {
+      "id": "03-horizontal-slash-right35",
+      "actor": "balor",
+      "facing": 35,
+      "mode": "oneshot",
+      "phases": "준비→가로베기→팔/몸통의후속흐름→전투태세회복"
+    },
+    {
+      "id": "04-vertical-slash-right35",
+      "actor": "balor",
+      "facing": 35,
+      "mode": "oneshot",
+      "phases": "검을올려준비→아래로베기→후속반동→전투태세회복"
+    },
+    {
+      "id": "05-shield-edge-bash-right35",
+      "actor": "balor",
+      "facing": 35,
+      "mode": "oneshot",
+      "phases": "팔/몸통횡방향준비→방패모서리로적을후려침→후속반동→회복"
+    },
+    {
+      "id": "06-shield-plant-right35",
+      "actor": "balor",
+      "facing": 35,
+      "mode": "oneshot_hold",
+      "phases": "방패를들어준비→바닥강타→바닥에고정된방패와안정된양발자세"
+    },
+    {
+      "id": "07-turn-knightly-35to90",
+      "actor": "balor",
+      "facing": "35-to-90",
+      "mode": "oneshot_hold",
+      "phases": "06종료자세에서시작→고정방패는지면에유지→검을세우며오른쪽으로돌아서90도서있는기사도자세",
+      "startFrom": "06:last",
+      "holdForUltimate": true
+    },
+    {
+      "id": "08-hit-right35",
+      "actor": "balor",
+      "facing": 35,
+      "mode": "oneshot",
+      "phases": "전투태세→충격/반동→무게중심수습→전투태세회복"
+    },
+    {
+      "id": "09-death-right35",
+      "actor": "balor",
+      "facing": 35,
+      "mode": "oneshot_hold",
+      "phases": "타격후중심상실→다리/골반무너짐→몸통과머리자연낙하→쓰러진자세정지"
+    },
+    {
+      "id": "10-ready-dissolve-right90",
+      "actor": "giant",
+      "facing": 90,
+      "mode": "oneshot",
+      "phases": "공통공격준비자세→흰연기/입자로분해→왼쪽바람으로흩어짐→빈프레임",
+      "reversePlaybackFor": "summon-only"
+    },
+    {
+      "id": "11-tower-shield-slam-right90",
+      "actor": "giant",
+      "facing": 90,
+      "mode": "oneshot_hold",
+      "phases": "준비자세→방패를머리위로높고크게치켜듦→정점힘모음→몸통/골반/팔체중실어강타→충격반동→타격자세정지",
+      "independentSheet": true
+    },
+    {
+      "id": "12-greatsword-slam-right90",
+      "actor": "giant",
+      "facing": 90,
+      "mode": "oneshot_hold",
+      "phases": "11종료타격자세→방패사라짐→자연스러운대검양손그립전환→머리위로큰궤적들기→정점힘모음→체중실어강한내려찍기→반동후그자세정지",
+      "startFrom": "11:last"
+    },
+    {
+      "id": "13-sword-first-dissolve-right90",
+      "actor": "giant",
+      "facing": 90,
+      "mode": "oneshot",
+      "phases": "12의대검타격종료자세유지→검부터흰입자로분해→거인전체분해→입자가왼쪽바람에날려감→빈프레임",
+      "startFrom": "12:last"
+    }
+  ],
+  "ultimateSequence": [
+    "balor:07:last-hold",
+    "giant:10:reverse",
+    "giant:11",
+    "giant:12",
+    "giant:13"
+  ],
+  "preview": {
+    "balorBodyCSSpx": 72,
+    "displayMode": 3,
+    "giantBodyScaleDefaultProposal": 2.5,
+    "speedChosenByUser": true
+  }
+}

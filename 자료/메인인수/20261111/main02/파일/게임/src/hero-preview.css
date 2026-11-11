@@ -1,0 +1,90 @@
+﻿[hidden]{display:none!important}
+.hero-screen{background:radial-gradient(ellipse at 20% 30%,#213230,#101e22 65%);color:#f1e4c7;font-size:3cqw;line-height:1.4;padding-bottom:3cqw}
+.hero-screen button{line-height:1.25}
+.hero-header{display:flex;align-items:center;gap:2cqw;padding:3cqw}
+.hero-header>button{display:grid;place-items:center;flex:none;width:8cqw;height:8cqw;border:1px solid #ad8a52;border-radius:1.5cqw;background:#152126;font:5cqw/1 Georgia;padding:0}
+.hero-header h1{font-size:5cqw;margin:0;font-weight:600;outline:none}
+.hero-wallet{display:flex;gap:1.5cqw;margin-left:auto}
+.hero-wallet>span{display:flex;align-items:center;justify-content:space-between;gap:2cqw;border:1px solid #716247;border-radius:5cqw;padding:1cqw 2cqw;background:#0b151ad9;color:#e1bd74;min-width:15cqw;font-size:3cqw}
+.hero-wallet b{color:#efe1c2;font-weight:500}
+.hero-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2cqw;padding:0 3cqw 3cqw}
+.hero-categories button,.hero-detail-tabs button{border:1px solid #74664e;border-radius:1.5cqw;background:linear-gradient(#26302f,#172127);min-height:8cqw;padding:1cqw;font-size:3.4cqw}
+.hero-screen button.active{background:linear-gradient(115deg,#c29c5f,#efdb9e,#bea06c);color:#241d13;border-color:#f1dca0;box-shadow:0 0 9px #d9bc6636;font-weight:700}
+.hero-showcase{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3cqw;padding:3cqw;border-block:1px solid #8a714444;background:linear-gradient(110deg,#22342d,#101b21);align-items:stretch}
+.hero-illustration{min-width:0;overflow:hidden;position:relative;border:1px solid #84704b88;border-radius:2cqw;background:#16252a;display:flex;align-items:center}
+.hero-full-art{display:block;width:100%;height:100%;position:absolute;inset:0}
+.hero-portrait{display:block;width:100%;height:100%;overflow:hidden}
+.large-portrait{position:static;width:calc(100% - 4cqw);height:auto;aspect-ratio:1;margin:2cqw;border-radius:1.5cqw;border:1px solid #8a714477}
+.hero-information{min-width:0;display:flex;flex-direction:column;gap:1.6cqw}
+.hero-role{font-size:2.8cqw;color:#dec394}
+.hero-information h2{font-size:5.3cqw;margin:0;font-weight:600;letter-spacing:.04em}
+.hero-level{display:flex;gap:1.5cqw;align-items:center;font-size:3cqw;margin:0;white-space:nowrap}
+.hero-level>span{display:block;flex:1;height:1cqw;border:1px solid #827587;border-radius:1cqw;overflow:hidden}
+.hero-level i{display:block;background:#cb98dc;height:100%}
+.hero-stars{color:#f2c05f;letter-spacing:.08em;text-shadow:0 1px 3px #47280c;font-size:3.1cqw;line-height:1.2}
+.hero-stats{font-size:3cqw;border-block:1px solid #726a4b77;margin:0;padding:.7cqw 0}
+.hero-stats>div{display:flex;justify-content:space-between;gap:1cqw;padding:.8cqw .5cqw;border-bottom:1px solid #aaa1}
+.hero-stats>div:last-child{border:0}.hero-stats dt{white-space:nowrap}.hero-stats dd{margin:0;font-variant-numeric:tabular-nums}
+.hero-detail-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1cqw}
+.hero-detail-tabs button{font-size:3cqw;min-height:7cqw}
+.hero-skills,.preview-equipment{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1cqw}
+.skill-art{width:100%;min-width:0;aspect-ratio:1;padding:0;overflow:hidden;border:1px solid #cfad6d;border-radius:1cqw;background:#1a1929}
+.skill-image{display:block;width:100%;height:100%}
+.preview-equipment{grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr))}
+.preview-equipment button{min-width:0;min-height:9.8cqw;border:1px solid #827052;border-radius:1cqw;background:#152227;font-size:2.1cqw;padding:.5cqw 0}
+.preview-equipment span{display:block;font-size:4cqw;color:#c6ad7f}
+.hero-screen .chosen{border-color:#f9d272;box-shadow:0 0 0 1px #f6c961,0 0 12px #e8b84866}
+.hero-collection{padding:0 3cqw 4cqw}
+.collection-heading{display:flex;align-items:center;justify-content:space-between;gap:2cqw}
+.collection-heading h2{font-size:3.7cqw;font-weight:600;margin:0}
+.collection-heading h2 span{color:#bea984;font-size:3cqw;margin-left:1cqw}
+.collection-heading select{font:3cqw 'Noto Serif KR',serif;color:#f2e5c9;border:1px solid #8b7958;border-radius:5cqw;background:#1a262b;padding:1.2cqw 2cqw}
+.hero-filters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1cqw;margin:2.5cqw 0}
+.hero-filters button{min-width:0;min-height:8cqw;border-radius:5cqw;border:1px solid #7c725c;background:#1d282b;padding:1cqw 0;font-size:3cqw}
+.hero-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.5cqw 2cqw}
+.hero-card{display:flex;flex-direction:column;min-width:0;position:relative;border:1px solid #aa8c59;border-bottom:2px solid #9270b9;border-radius:1.4cqw;background:#14222a;padding:0;overflow:hidden}
+.hero-card>.hero-portrait{height:auto;aspect-ratio:1;flex:none}
+.role-badge{position:absolute;left:1cqw;top:1cqw;border:1px solid #e0bd6f;background:#302540ed;border-radius:50%;width:4.8cqw;height:4.8cqw;display:grid;place-items:center;font:3cqw/1 Georgia;color:#f2d88f}
+.card-caption{display:flex;flex-direction:column;align-items:center;gap:.7cqw;width:100%;padding:1.3cqw .4cqw;background:#14222a;text-align:center}
+.card-caption small{font-size:2.5cqw;line-height:1.3}.card-caption strong{font-size:3.1cqw;line-height:1.3}.card-caption .hero-stars{font-size:2.5cqw}
+.unowned{filter:grayscale(1);opacity:.65}
+.hero-bottom-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin:1cqw 3cqw 0;border:1px solid #997c4d;background:linear-gradient(#1e292d,#101c21)}
+.hero-bottom-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1cqw;min-width:0;min-height:14cqw;border:0;border-right:1px solid #94774980;background:none;padding:1.5cqw 0;font-size:3.2cqw}
+.hero-bottom-nav button:last-child{border:0}
+.hero-bottom-nav span{display:grid;place-items:center;width:6cqw;height:6cqw;font:5cqw/1 Georgia,serif;color:#e0bc78}
+.hero-bottom-nav button.active{background:linear-gradient(#4c315b,#2e223d);color:#f5dfac;border-color:#c29ad6}
+.hero-preview-note{text-align:center;color:#a2aea7;font:10px/1.6 system-ui,sans-serif;margin:3cqw 2cqw 0}
+.hero-notice{position:fixed;left:50%;bottom:25px;transform:translateX(-50%);background:#13232af5;border:1px solid #aa905d;color:#efdfbd;padding:12px 18px;font:13px/1.6 system-ui,sans-serif;max-width:90vw;width:max-content;opacity:0;pointer-events:none;z-index:5;transition:opacity .2s}
+.hero-notice.visible{opacity:1}
+
+.hero-collection{padding-top:2cqw}
+.hero-list-return{display:block;width:calc(100% - 6cqw);min-height:10cqw;margin:3cqw;border:1px solid #9d8354;border-radius:1.5cqw;background:#1b2a2c;color:#efdfba;font-size:3.5cqw}
+.hero-screen[data-view="detail"] .hero-showcase{min-height:70cqw}
+.hero-grid{grid-template-rows:repeat(4,minmax(37cqw,auto))}
+.hero-empty-slot{min-width:0;min-height:37cqw;border:1px solid #6f735644;border-radius:1.4cqw;background:linear-gradient(145deg,#1a2a2b88,#10202588);box-shadow:inset 0 1px 8px #0002}
+.collection-tools{display:flex;align-items:center;gap:1.5cqw;flex:none}
+.hero-filter-toggle{display:grid;place-items:center;width:8cqw;height:8cqw;padding:1.6cqw;border:1px solid #8b7958;border-radius:50%;background:#1a262b;color:#e9d6af}
+.hero-filter-toggle svg{display:block;width:100%;height:100%}
+.hero-filter-toggle[aria-expanded="true"],.hero-filter-toggle.has-filter{border-color:#e6c476;color:#f5d78c;background:#354038}
+.hero-grid{margin-top:2.5cqw}
+
+.hero-ability-section{min-width:0;}.hero-ability-heading{display:flex;align-items:center;justify-content:space-between;gap:4px;margin:4px 0 8px;flex-wrap:wrap;}.hero-ability-heading h3{margin:0;font-size:14px;color:#e4c790;}.hero-ability-heading>span{font:12px/1.4 system-ui,sans-serif;color:#a9b8a4;}
+.hero-screen .hero-sample-stats{font:12px/1.5 system-ui,sans-serif;}.hero-screen .hero-sample-stats>div{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:8px;align-items:baseline;padding:7px 0;}.hero-sample-stats dt{white-space:normal;color:#bdc8b5;word-break:keep-all;}.hero-sample-stats dd{display:contents;}.hero-sample-stats dd strong{text-align:right;font-size:14px;font-weight:600;color:#eddaa6;}.hero-sample-stats dd small{grid-column:1/-1;text-align:right;display:block;font-size:12px;color:#94a890;overflow-wrap:anywhere;}
+
+.hero-showcase>.hero-ability-section{grid-column:1/-1;}.hero-screen .hero-sample-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;}.hero-screen .hero-sample-stats>div{min-width:0;align-content:start;}.hero-screen .hero-sample-stats>div:nth-last-child(-n+2){border-bottom:0;}.hero-showcase:has(>.hero-ability-section)>.hero-illustration{aspect-ratio:1;align-self:start;}
+
+.hero-screen .hero-information>.hero-role{font-size:14px;line-height:1.5;}.hero-screen .hero-information>h2{font-size:24px;}.hero-screen .hero-information>.hero-level{font-size:14px;}.hero-screen .hero-information>.hero-stars{font-size:18px;letter-spacing:.1em;}.hero-screen .hero-growth-button{width:100%;min-height:48px;margin-top:4px;padding:10px 12px;border:1px solid #d9b66f;border-radius:6px;background:linear-gradient(120deg,#a27a3d,#e6c47c,#af8648);color:#302515;font:600 16px/1.4 system-ui,sans-serif;cursor:pointer;}
+
+.hero-affiliation{display:flex;align-items:center;gap:8px;margin:0;font:12px/1.5 system-ui,sans-serif;color:#9eae9d;}.hero-affiliation strong{font-weight:400;color:#d4c8a9;}
+
+.hero-information{align-items:flex-end;text-align:right;}.hero-information>.hero-affiliation{justify-content:flex-end;}.hero-screen .hero-information>.hero-level{width:100%;flex-direction:row-reverse;}.hero-information>.hero-ability-section{width:100%;text-align:left;}
+
+.hero-screen .hero-formation-button{display:flex;align-items:center;justify-content:space-between;gap:8px;width:calc(100% - 24px);min-height:52px;margin:8px 12px 12px;padding:10px 14px;border:1px solid #b99a5a;border-radius:6px;background:linear-gradient(115deg,#3f5540,#253d31);color:#f2ddb0;font-size:16px;font-weight:600;}.hero-formation-button small{margin-left:auto;font:12px/1.5 system-ui,sans-serif;color:#b7c8a8;}.hero-formation-button>span:last-child{font-size:22px;color:#d5b775;}
+.hero-formation-badge{position:absolute;z-index:1;right:0;top:0;display:grid;place-items:center;width:42px;height:22px;clip-path:polygon(0 0,100% 0,100% 100%,15% 100%);background:linear-gradient(115deg,#b58b42,#efd293,#c5a05b);color:#302719;font:600 12px/1 system-ui,sans-serif;filter:drop-shadow(0 1px 2px #0007);pointer-events:none;}
+
+.hero-screen .hero-formation-button.is-editing{border-color:#f0cf83;background:linear-gradient(115deg,#ad8544,#e4c481,#b18b4a);color:#342916;box-shadow:inset 0 0 0 2px #ffedb744;}.hero-formation-button.is-editing small,.hero-formation-button.is-editing>span:last-child{color:#5f4d2b;}.hero-formation-hint{margin:0 12px 8px;color:#bdcea9;text-align:center;font:12px/1.6 system-ui,sans-serif;}.hero-screen .hero-card.formation-selected{border-color:#f0ce7e;box-shadow:inset 0 0 0 2px #dfbd6b66,0 0 8px #dcc47b33;}.formation-editing .hero-card:not(.formation-selected):not(.unowned){border-color:#6b8074;}
+
+/* Growth below hero information; skill/equipment share the next row. */
+.hero-action-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"skills equipment";gap:12px;}.hero-screen .hero-action-grid>button{width:100%;height:48px;min-height:48px;margin:0;padding:8px;border:1px solid #8d7952;border-radius:6px;background:linear-gradient(#283830,#18282b);color:#ead9b2;font:600 16px/1.4 system-ui,sans-serif;}.hero-action-grid>[data-action="growth"]{grid-area:growth;}.hero-action-grid>[data-detail="스킬"]{grid-area:skills;}.hero-action-grid>[data-detail="장비"]{grid-area:equipment;}.hero-screen .hero-action-grid>.hero-growth-button{border-color:#d9b66f;background:linear-gradient(120deg,#a27a3d,#e6c47c,#af8648);color:#302515;}.hero-screen .hero-action-grid>button.active{background:linear-gradient(115deg,#c29c5f,#efdb9e,#bea06c);color:#241d13;border-color:#f1dca0;}
+
+.hero-showcase:has(>.hero-ability-section)>.hero-illustration{align-self:stretch;aspect-ratio:auto;}.hero-showcase:has(>.hero-ability-section) .large-portrait{width:100%;height:100%;margin:0;aspect-ratio:auto;border:0;border-radius:0;}.hero-screen .hero-information>.hero-growth-button{height:48px;min-height:48px;margin:0;margin-top:auto;padding:8px;flex-shrink:0;font:600 16px/1.4 system-ui,sans-serif;}.hero-information{padding-bottom:0;}

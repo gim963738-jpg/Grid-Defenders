@@ -15,7 +15,7 @@ export function checkFireGround(){
  check(enemyRadius({named:false})===8&&enemyRadius({named:false,bounty:true})===12&&enemyRadius({named:true})===14,'ground offsets match regular bounty and named monster feet');
  const w=new Defense(()=>1);w.enemies[0].speed=0;w.waveSpawned=10;w.summon('ranged',0);w.units[0].cooldown=999;w.tick(.01);
  check(w.fireCasts[0].footOffset===8,'wave cast receives the rendered monster foot offset');
- const b=bossFixture(),h=b.hero()!,t=b.actors.find(a=>a.kind==='retainer')!;b.actors=[h,t];h.x=t.x-20;h.y=t.y;h.cooldown=999;t.cooldown=999;b.tripleSkill();
+ const b=bossFixture(),h=b.hero()!,t=b.actors.find(a=>a.id==='retainer-top')!;b.actors=[h,t];h.x=t.x-20;h.y=t.y;h.cooldown=999;t.cooldown=999;b.tripleSkill();
  check(b.fireCasts[0].footOffset===40.5,'boss retainer flame is based at its feet');
  b.reset();const h2=b.hero()!,boss=b.actors.find(a=>a.kind==='boss')!;b.actors=[h2,boss];h2.x=boss.x-20;h2.y=boss.y;b.tripleSkill();
  check(b.fireCasts[0].footOffset===55.6875,'large boss uses its own foot height');

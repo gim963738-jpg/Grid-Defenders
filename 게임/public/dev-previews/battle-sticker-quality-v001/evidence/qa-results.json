@@ -1,0 +1,368 @@
+{
+  "time": "2026-11-10T18:01:16.570Z",
+  "scope": "isolated headless Edge; file URL + allow-file-access-from-files; no server/user window",
+  "checks": [
+    "DPR1 initial 72/180 and independent IDs",
+    "DPR1 actual CSS geometry",
+    "DPR1 current preserves arrangement",
+    "DPR1 quality preserves arrangement",
+    "DPR1 edge preserves arrangement",
+    "DPR1 >=5 independent stickers",
+    "DPR1 foot locked numeric size",
+    "DPR1 invalid \"\" ignored",
+    "DPR1 invalid \"0\" ignored",
+    "DPR1 invalid \"-10\" ignored",
+    "DPR1 invalid \"999999\" ignored",
+    "DPR1 fast slider final144",
+    "DPR1 independent mouse drag",
+    "DPR1 drag cache no native reprocessing",
+    "DPR1 overlapped list selection",
+    "DPR1 input Delete guarded",
+    "DPR1 delete selected",
+    "DPR1 empty deselect",
+    "DPR1 edited placement current retained",
+    "DPR1 edited placement quality retained",
+    "DPR1 edited placement edge retained",
+    "DPR1 resize preserves geometry",
+    "DPR1 reset",
+    "DPR1 no page errors",
+    "DPR2 initial 72/180 and independent IDs",
+    "DPR2 actual CSS geometry",
+    "DPR2 current preserves arrangement",
+    "DPR2 quality preserves arrangement",
+    "DPR2 edge preserves arrangement",
+    "DPR2 >=5 independent stickers",
+    "DPR2 foot locked numeric size",
+    "DPR2 invalid \"\" ignored",
+    "DPR2 invalid \"0\" ignored",
+    "DPR2 invalid \"-10\" ignored",
+    "DPR2 invalid \"999999\" ignored",
+    "DPR2 fast slider final144",
+    "DPR2 independent mouse drag",
+    "DPR2 drag cache no native reprocessing",
+    "DPR2 overlapped list selection",
+    "DPR2 input Delete guarded",
+    "DPR2 delete selected",
+    "DPR2 empty deselect",
+    "DPR2 edited placement current retained",
+    "DPR2 edited placement quality retained",
+    "DPR2 edited placement edge retained",
+    "DPR2 resize preserves geometry",
+    "DPR2 reset",
+    "DPR2 no page errors",
+    "narrow actual touch independent drag",
+    "narrow touch horizontal native scroll",
+    "scroll preserves stickers",
+    "narrow 800CSS field without scale",
+    "mobile controls >=48px",
+    "asset load failure surfaced"
+  ],
+  "runs": [
+    {
+      "dpr": 1,
+      "initial": [
+        {
+          "id": 1,
+          "kind": "warrior",
+          "size": 72,
+          "x": 280,
+          "y": 280
+        },
+        {
+          "id": 2,
+          "kind": "boss",
+          "size": 180,
+          "x": 460,
+          "y": 280
+        }
+      ],
+      "geometry": {
+        "canvas": {
+          "x": 13,
+          "y": 319.34375,
+          "width": 800,
+          "height": 360,
+          "top": 319.34375,
+          "right": 813,
+          "bottom": 679.34375,
+          "left": 13
+        },
+        "g": {
+          "x": 249.86642920747997,
+          "y": 205.3713268032057,
+          "w": 84.11754229741763,
+          "h": 76.8726625111309,
+          "k": 0.06411398040961709
+        },
+        "metrics": {
+          "dpr": 1,
+          "processingCount": 0,
+          "cacheEntries": 0,
+          "cacheBytes": 0
+        }
+      }
+    },
+    {
+      "dpr": 1,
+      "stage": "five-stickers",
+      "stickers": [
+        {
+          "id": 1,
+          "kind": "warrior",
+          "size": 72,
+          "x": 280,
+          "y": 280
+        },
+        {
+          "id": 2,
+          "kind": "boss",
+          "size": 180,
+          "x": 460,
+          "y": 280
+        },
+        {
+          "id": 3,
+          "kind": "warrior",
+          "size": 72,
+          "x": 304,
+          "y": 292
+        },
+        {
+          "id": 4,
+          "kind": "warrior",
+          "size": 72,
+          "x": 280,
+          "y": 280
+        },
+        {
+          "id": 5,
+          "kind": "boss",
+          "size": 180,
+          "x": 460,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "dpr": 1,
+      "stage": "after-controls",
+      "stickers": [
+        {
+          "id": 2,
+          "kind": "boss",
+          "size": 180,
+          "x": 200,
+          "y": 240
+        },
+        {
+          "id": 3,
+          "kind": "warrior",
+          "size": 72,
+          "x": 304,
+          "y": 292
+        },
+        {
+          "id": 4,
+          "kind": "warrior",
+          "size": 72,
+          "x": 280,
+          "y": 280
+        },
+        {
+          "id": 5,
+          "kind": "boss",
+          "size": 180,
+          "x": 460,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "dpr": 1,
+      "kind": "warrior",
+      "mode": "quality",
+      "edgeStats": null
+    },
+    {
+      "dpr": 1,
+      "kind": "warrior",
+      "mode": "edge",
+      "edgeStats": {
+        "changed": 116,
+        "greenPreserved": 0
+      }
+    },
+    {
+      "dpr": 1,
+      "kind": "boss",
+      "mode": "quality",
+      "edgeStats": null
+    },
+    {
+      "dpr": 1,
+      "kind": "boss",
+      "mode": "edge",
+      "edgeStats": {
+        "changed": 897,
+        "greenPreserved": 417
+      }
+    },
+    {
+      "dpr": 2,
+      "initial": [
+        {
+          "id": 1,
+          "kind": "warrior",
+          "size": 72,
+          "x": 280,
+          "y": 280
+        },
+        {
+          "id": 2,
+          "kind": "boss",
+          "size": 180,
+          "x": 460,
+          "y": 280
+        }
+      ],
+      "geometry": {
+        "canvas": {
+          "x": 13,
+          "y": 319.34375,
+          "width": 800,
+          "height": 360,
+          "top": 319.34375,
+          "right": 813,
+          "bottom": 679.34375,
+          "left": 13
+        },
+        "g": {
+          "x": 249.86642920747997,
+          "y": 205.3713268032057,
+          "w": 84.11754229741763,
+          "h": 76.8726625111309,
+          "k": 0.06411398040961709
+        },
+        "metrics": {
+          "dpr": 2,
+          "processingCount": 0,
+          "cacheEntries": 0,
+          "cacheBytes": 0
+        }
+      }
+    },
+    {
+      "dpr": 2,
+      "stage": "five-stickers",
+      "stickers": [
+        {
+          "id": 1,
+          "kind": "warrior",
+          "size": 72,
+          "x": 280,
+          "y": 280
+        },
+        {
+          "id": 2,
+          "kind": "boss",
+          "size": 180,
+          "x": 460,
+          "y": 280
+        },
+        {
+          "id": 3,
+          "kind": "warrior",
+          "size": 72,
+          "x": 304,
+          "y": 292
+        },
+        {
+          "id": 4,
+          "kind": "warrior",
+          "size": 72,
+          "x": 280,
+          "y": 280
+        },
+        {
+          "id": 5,
+          "kind": "boss",
+          "size": 180,
+          "x": 460,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "dpr": 2,
+      "stage": "after-controls",
+      "stickers": [
+        {
+          "id": 2,
+          "kind": "boss",
+          "size": 180,
+          "x": 200,
+          "y": 240
+        },
+        {
+          "id": 3,
+          "kind": "warrior",
+          "size": 72,
+          "x": 304,
+          "y": 292
+        },
+        {
+          "id": 4,
+          "kind": "warrior",
+          "size": 72,
+          "x": 280,
+          "y": 280
+        },
+        {
+          "id": 5,
+          "kind": "boss",
+          "size": 180,
+          "x": 460,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "dpr": 2,
+      "kind": "warrior",
+      "mode": "quality",
+      "edgeStats": null
+    },
+    {
+      "dpr": 2,
+      "kind": "warrior",
+      "mode": "edge",
+      "edgeStats": {
+        "changed": 275,
+        "greenPreserved": 0
+      }
+    },
+    {
+      "dpr": 2,
+      "kind": "boss",
+      "mode": "quality",
+      "edgeStats": null
+    },
+    {
+      "dpr": 2,
+      "kind": "boss",
+      "mode": "edge",
+      "edgeStats": {
+        "changed": 4649,
+        "greenPreserved": 2282
+      }
+    }
+  ],
+  "browser": "157.0.4341.42",
+  "outcome": "passed",
+  "inspectedFiles": {
+    "app.js": "734501b7153e7156b1cd82a4221482a2aeb29f8f54d07b3535a5a905e2c380c1",
+    "index.html": "de3037f0c18660cf5b04bcd5f3beff95d2d0320e9a85622c57cf7f7c994307ec",
+    "style.css": "0d516c884b9c95720df5ac737ac745770dc2d6c0e5c0710ab87efb7d1cd83e15",
+    "qa.cjs": "10eaf26f8472e0be3ea103b2bdfbae8bfbfd307818cc6e5b68a7604d320bd940"
+  }
+}

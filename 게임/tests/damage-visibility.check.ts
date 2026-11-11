@@ -1,6 +1,7 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {Application,Assets,Texture,Text} from 'pixi.js';
 import {Defense} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 import {createDefenseView} from '../src/defenseView';
 import {createBossBattleView} from '../src/bossBattleView';
 export async function checkDamageVisibility(){

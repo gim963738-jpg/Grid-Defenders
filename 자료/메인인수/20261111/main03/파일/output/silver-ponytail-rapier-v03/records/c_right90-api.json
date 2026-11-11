@@ -1,0 +1,57 @@
+{
+  "view": "c_right90",
+  "startedAt": "2026-11-11T07:08:35.231Z",
+  "status": "succeeded",
+  "requestedModel": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "size": "1024x1536",
+  "background": "transparent",
+  "n": 1,
+  "endpoint": "/images/edits",
+  "automaticRetries": 0,
+  "promptSha256": "287747e8cb3b5c45d67cb0f4d5fd13bb9511f39c37e208c790f60a387ec6ed08",
+  "references": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\output\\silver-ponytail-rapier-v03\\c_front.png",
+      "sha256": "b8b98d8d6bb2ad03b375a36183e83990d4d7090d1a25f2d62d0b5e284078e14e",
+      "bytes": 1429464
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_front.png",
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "bytes": 1643944
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_front.png",
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+      "bytes": 1545142
+    }
+  ],
+  "approval": "User explicitly permitted image2.6 and approved revision 3 final summary: nine views, three outfits, arms down empty hands, restored belt and straight screen-left hip sword, GC9 character AND clothes style retained; user said 진행.",
+  "finishedAt": "2026-11-11T07:09:28.724Z",
+  "requestId": "req_57a5a3ec9929428e84988f2aa7f44b2b",
+  "response": {
+    "created": 1794380967,
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "output_format": "png",
+    "usage": {
+      "input_tokens": 6120,
+      "input_tokens_details": {
+        "image_tokens": 4608,
+        "text_tokens": 1512
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 7492
+    }
+  },
+  "responseModel": "not reported",
+  "outputBytes": 1462846,
+  "outputSha256": "29d55b72a16f8c6da3eed8df3eb5da903d40c66f7527e475119b3dc60f38ea16",
+  "costUsd": "unknown"
+}

@@ -1,0 +1,245 @@
+{
+  "port": 10890,
+  "checks": [
+    {
+      "name": "real landscape application loads changed modules and all original assets",
+      "passed": true
+    },
+    {
+      "name": "actual live summon has range100 and unassigned skill",
+      "passed": true
+    },
+    {
+      "name": "actual main scene contains current allies and exactly four enemies",
+      "passed": true
+    },
+    {
+      "name": "actual scene uses blond motion turtle sheet and three slime palettes",
+      "passed": true
+    },
+    {
+      "name": "isolated real model and render harness ready",
+      "passed": true
+    },
+    {
+      "name": "all 12 new source sheets load without fallback",
+      "passed": true
+    },
+    {
+      "name": "all approved blond frames and all 64 turtle frames have real cached textures",
+      "passed": true
+    },
+    {
+      "name": "rendered preparation countdown displays 3 seconds",
+      "passed": true
+    },
+    {
+      "name": "countdown freezes combat for first two seconds",
+      "passed": true
+    },
+    {
+      "name": "real boss movement enters running",
+      "passed": true
+    },
+    {
+      "name": "boss combat leaves wave units currency gear untouched",
+      "passed": true
+    },
+    {
+      "name": "boss 02 keeps 72 CSS body reference root and hero actor priority",
+      "passed": true
+    },
+    {
+      "name": "boss 03 keeps 72 CSS body reference root and hero actor priority",
+      "passed": true
+    },
+    {
+      "name": "boss 04 keeps 72 CSS body reference root and hero actor priority",
+      "passed": true
+    },
+    {
+      "name": "boss 05 keeps 72 CSS body reference root and hero actor priority",
+      "passed": true
+    },
+    {
+      "name": "boss 06 keeps 72 CSS body reference root and hero actor priority",
+      "passed": true
+    },
+    {
+      "name": "boss 07 keeps 72 CSS body reference root and hero actor priority",
+      "passed": true
+    },
+    {
+      "name": "boss 08 keeps 72 CSS body reference root and hero actor priority",
+      "passed": true
+    },
+    {
+      "name": "dead blond remains visible on final death frame",
+      "passed": true
+    },
+    {
+      "name": "wave real Pixi actor layer renders on bright background",
+      "passed": true
+    },
+    {
+      "name": "320px viewport keeps finite actor placement",
+      "passed": true
+    },
+    {
+      "name": "related legacy browser suites pass with approved motion and depth contracts",
+      "passed": true
+    },
+    {
+      "name": "HP and labels stay above hero actor layer and below effects",
+      "passed": true
+    },
+    {
+      "name": "no uncaught browser exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "motionFrames": [
+    {
+      "clip": "02",
+      "frame": 3,
+      "hidden": false,
+      "bodyCSS": 71.98284171968382,
+      "root": [
+        400,
+        300
+      ],
+      "registrationError": 0,
+      "screenRoot": [
+        257.359375,
+        335.921875
+      ],
+      "heroZ": 1030000,
+      "maxEnemyZ": 35143
+    },
+    {
+      "clip": "03",
+      "frame": 5,
+      "hidden": false,
+      "bodyCSS": 71.98284171968382,
+      "root": [
+        400,
+        300
+      ],
+      "registrationError": 0,
+      "screenRoot": [
+        257.359375,
+        335.921875
+      ],
+      "heroZ": 1030000,
+      "maxEnemyZ": 35143
+    },
+    {
+      "clip": "04",
+      "frame": 4,
+      "hidden": false,
+      "bodyCSS": 71.98284171968382,
+      "root": [
+        400,
+        300
+      ],
+      "registrationError": 0,
+      "screenRoot": [
+        257.359375,
+        335.921875
+      ],
+      "heroZ": 1030000,
+      "maxEnemyZ": 35143
+    },
+    {
+      "clip": "05",
+      "frame": 5,
+      "hidden": false,
+      "bodyCSS": 71.98284171968382,
+      "root": [
+        400,
+        300
+      ],
+      "registrationError": 0,
+      "screenRoot": [
+        257.359375,
+        335.921875
+      ],
+      "heroZ": 1030000,
+      "maxEnemyZ": 35143
+    },
+    {
+      "clip": "06",
+      "frame": 4,
+      "hidden": false,
+      "bodyCSS": 71.98284171968382,
+      "root": [
+        400,
+        300
+      ],
+      "registrationError": 0,
+      "screenRoot": [
+        257.359375,
+        335.921875
+      ],
+      "heroZ": 1030000,
+      "maxEnemyZ": 35143
+    },
+    {
+      "clip": "07",
+      "frame": 5,
+      "hidden": false,
+      "bodyCSS": 71.98284171968382,
+      "root": [
+        400,
+        300
+      ],
+      "registrationError": 0,
+      "screenRoot": [
+        257.359375,
+        335.921875
+      ],
+      "heroZ": 1030000,
+      "maxEnemyZ": 35143
+    },
+    {
+      "clip": "08",
+      "frame": 11,
+      "hidden": false,
+      "bodyCSS": 71.98284171968382,
+      "root": [
+        400,
+        300
+      ],
+      "registrationError": 0,
+      "screenRoot": [
+        257.359375,
+        335.921875
+      ],
+      "heroZ": 1030000,
+      "maxEnemyZ": 35143
+    }
+  ],
+  "regression": [
+    {
+      "name": "hero-art",
+      "passed": true,
+      "count": 22
+    },
+    {
+      "name": "boss-hero-cards",
+      "passed": true,
+      "count": 12
+    },
+    {
+      "name": "blond-warrior",
+      "passed": true,
+      "count": 148
+    },
+    {
+      "name": "actor-depth",
+      "passed": true,
+      "count": 25
+    }
+  ]
+}

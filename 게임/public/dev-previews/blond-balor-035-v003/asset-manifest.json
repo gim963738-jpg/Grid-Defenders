@@ -1,0 +1,665 @@
+{
+  "task": "MAIN01-20261110-D820F076",
+  "iteration": 3,
+  "assets": [
+    {
+      "id": "blond-front",
+      "file": "blond-front.png",
+      "character": "blond",
+      "direction": "front",
+      "label": "금발1 · 0°",
+      "hairTop": 21,
+      "sole": 1208,
+      "bodyHeight": 1187,
+      "footX": 637,
+      "footY": 1208,
+      "chin": 348,
+      "footROIs": [
+        [
+          450,
+          1100,
+          580,
+          1220
+        ],
+        [
+          675,
+          1100,
+          830,
+          1220
+        ]
+      ],
+      "measurementErrorPx": 10,
+      "scalpCrown": {
+        "y": 137,
+        "error": 25,
+        "method": "inferred under layered hair; not direct"
+      },
+      "widthMeasures": {
+        "shoulders": {
+          "x1": 452,
+          "x2": 801,
+          "y": 430,
+          "error": 12,
+          "method": "manual visible span; chest/waist partially occluded, visually inferred"
+        },
+        "chest": {
+          "x1": 559,
+          "x2": 718,
+          "y": 494,
+          "error": 15,
+          "method": "manual visible span; chest/waist partially occluded, visually inferred"
+        },
+        "waist": {
+          "x1": 564,
+          "x2": 710,
+          "y": 570,
+          "error": 15,
+          "method": "manual visible span; chest/waist partially occluded, visually inferred"
+        },
+        "upperArm": {
+          "x1": 457,
+          "x2": 536,
+          "y": 530,
+          "error": 12,
+          "method": "manual visible span; chest/waist partially occluded, visually inferred"
+        }
+      },
+      "measurementMethod": "Native alpha>=32 bottom within manually identified boot support ROIs, excluding weapons/cape; hairTop manually verified; footX manual support center; scalp hidden/inferred",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "efb7e8f80959609d2e7b3895709b8e89807d7a250649e1bab7c226a48916b79c",
+      "boundsAlpha32": [
+        228,
+        21,
+        936,
+        1217
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1198521,
+        "partialPixels": 371557,
+        "low1to31": 20407
+      },
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-0f7032ee-9cc5-4752-a895-1a91eebde701.png",
+      "sourceSha256": "efb7e8f80959609d2e7b3895709b8e89807d7a250649e1bab7c226a48916b79c",
+      "nativeBytesIdentical": true,
+      "newGeneration": true
+    },
+    {
+      "id": "blond-right-035",
+      "file": "blond-right-035.png",
+      "character": "blond",
+      "direction": "right35",
+      "label": "금발1 · 오른쪽앞35°",
+      "hairTop": 17,
+      "sole": 1226,
+      "bodyHeight": 1209,
+      "footX": 656,
+      "footY": 1226,
+      "chin": 338,
+      "footROIs": [
+        [
+          475,
+          1110,
+          615,
+          1235
+        ],
+        [
+          655,
+          1100,
+          860,
+          1220
+        ]
+      ],
+      "measurementErrorPx": 12,
+      "scalpCrown": {
+        "y": 111,
+        "error": 28,
+        "method": "inferred under oblique hair; not direct"
+      },
+      "measurementMethod": "Native alpha>=32 bottom within manually identified boot support ROIs, excluding weapons/cape; hairTop manually verified; footX manual support center; scalp hidden/inferred",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "366b8073d944fea1849dd1795c4e36cdd63c2653f04ea9262a20d457670ee285",
+      "boundsAlpha32": [
+        242,
+        17,
+        947,
+        1232
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1195231,
+        "partialPixels": 375449,
+        "low1to31": 23417
+      },
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-9fc15016-cdf6-481b-9815-1e91afd63498.png",
+      "sourceSha256": "366b8073d944fea1849dd1795c4e36cdd63c2653f04ea9262a20d457670ee285",
+      "nativeBytesIdentical": true,
+      "newGeneration": true
+    },
+    {
+      "id": "blond-right-090",
+      "file": "blond-right-090.png",
+      "character": "blond",
+      "direction": "right90",
+      "label": "금발1 · 오른쪽정90°",
+      "hairTop": 15,
+      "sole": 1230,
+      "bodyHeight": 1215,
+      "footX": 641,
+      "footY": 1230,
+      "chin": 315,
+      "footROIs": [
+        [
+          575,
+          1120,
+          707,
+          1235
+        ],
+        [
+          705,
+          1120,
+          744,
+          1235
+        ]
+      ],
+      "measurementErrorPx": 12,
+      "scalpCrown": {
+        "y": 108,
+        "error": 25,
+        "method": "inferred sagittal scalp under hair"
+      },
+      "depthROIs": {
+        "visibleChest": [
+          590,
+          440,
+          706,
+          520
+        ],
+        "pauldron": [
+          543,
+          345,
+          690,
+          493
+        ]
+      },
+      "depthMethod": "visible profile spans only, not hidden chest exact3D",
+      "measurementMethod": "Native alpha>=32 bottom within manually identified boot support ROIs, excluding weapons/cape; hairTop manually verified; footX manual support center; scalp hidden/inferred",
+      "footROINote": "left sword tip at x~545 excluded; near boot support x575..707 used, alpha>=32 sole1230",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "d469a17d8ec6c26fa0db3549db48aaf2d5023649b6669b73b1918740d9e38c77",
+      "boundsAlpha32": [
+        450,
+        15,
+        770,
+        1240
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1339308,
+        "partialPixels": 232094,
+        "low1to31": 10352
+      },
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-63823a8c-71f0-4c49-8ccb-57b12b8c6e48.png",
+      "sourceSha256": "d469a17d8ec6c26fa0db3549db48aaf2d5023649b6669b73b1918740d9e38c77",
+      "nativeBytesIdentical": true,
+      "newGeneration": true
+    },
+    {
+      "id": "balor-front",
+      "file": "balor-front.png",
+      "character": "balor",
+      "direction": "front",
+      "label": "발로르 · 0°",
+      "hairTop": 52,
+      "sole": 1187,
+      "bodyHeight": 1135,
+      "footX": 626,
+      "footY": 1187,
+      "chin": 351,
+      "footROIs": [
+        [
+          480,
+          1080,
+          585,
+          1195
+        ],
+        [
+          670,
+          1080,
+          780,
+          1195
+        ]
+      ],
+      "measurementErrorPx": 10,
+      "scalpCrown": {
+        "y": 134,
+        "error": 25,
+        "method": "inferred hidden under hair"
+      },
+      "widthMeasures": {
+        "shoulders": {
+          "x1": 466,
+          "x2": 772,
+          "y": 428,
+          "error": 12,
+          "method": "manual visible span; shield-covered torso inferred with larger uncertainty"
+        },
+        "chest": {
+          "x1": 549,
+          "x2": 704,
+          "y": 505,
+          "error": 18,
+          "method": "manual visible span; shield-covered torso inferred with larger uncertainty"
+        },
+        "waist": {
+          "x1": 554,
+          "x2": 700,
+          "y": 602,
+          "error": 20,
+          "method": "manual visible span; shield-covered torso inferred with larger uncertainty"
+        },
+        "upperArm": {
+          "x1": 467,
+          "x2": 532,
+          "y": 542,
+          "error": 12,
+          "method": "manual visible span; shield-covered torso inferred with larger uncertainty"
+        }
+      },
+      "shieldROI": [
+        647,
+        399,
+        909,
+        1098
+      ],
+      "swordBladeROI": [
+        459,
+        766,
+        754,
+        1150
+      ],
+      "measurementMethod": "Native alpha>=32 bottom within manually identified boot support ROIs, excluding weapons/cape; hairTop manually verified; footX manual support center; scalp hidden/inferred",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "d11dc411ce04329b9731d33f97ef34a8d13e828b33948a32b089fcffddf042ad",
+      "boundsAlpha32": [
+        362,
+        52,
+        910,
+        1187
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1157037,
+        "partialPixels": 414404,
+        "low1to31": 10271
+      },
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-8734b587-7251-435c-945f-9cc2429c0f07.png",
+      "sourceSha256": "d11dc411ce04329b9731d33f97ef34a8d13e828b33948a32b089fcffddf042ad",
+      "nativeBytesIdentical": true,
+      "newGeneration": true
+    },
+    {
+      "id": "balor-right-035",
+      "file": "balor-right-035.png",
+      "character": "balor",
+      "direction": "right35",
+      "label": "발로르 · 오른쪽앞35°",
+      "hairTop": 34,
+      "sole": 1199,
+      "bodyHeight": 1165,
+      "footX": 651,
+      "footY": 1199,
+      "chin": 345,
+      "footROIs": [
+        [
+          500,
+          1090,
+          621,
+          1210
+        ],
+        [
+          655,
+          1090,
+          815,
+          1210
+        ]
+      ],
+      "measurementErrorPx": 12,
+      "scalpCrown": {
+        "y": 124,
+        "error": 25,
+        "method": "inferred under oblique hair"
+      },
+      "measurementMethod": "Native alpha>=32 bottom within manually identified boot support ROIs, excluding weapons/cape; hairTop manually verified; footX manual support center; scalp hidden/inferred",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "025141039f97e0a8f221ad4928127949c6cbe6631221877bbd831123a376cb44",
+      "boundsAlpha32": [
+        334,
+        34,
+        902,
+        1199
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1130022,
+        "partialPixels": 441387,
+        "low1to31": 12202
+      },
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-c9a14752-2d04-48ff-a316-0a725751d4d5.png",
+      "sourceSha256": "025141039f97e0a8f221ad4928127949c6cbe6631221877bbd831123a376cb44",
+      "nativeBytesIdentical": true,
+      "newGeneration": true
+    },
+    {
+      "id": "balor-right-090",
+      "file": "balor-right-090.png",
+      "character": "balor",
+      "direction": "right90",
+      "label": "발로르 · 오른쪽정90°",
+      "hairTop": 40,
+      "sole": 1181,
+      "bodyHeight": 1141,
+      "footX": 621,
+      "footY": 1181,
+      "chin": 336,
+      "footROIs": [
+        [
+          535,
+          1090,
+          699,
+          1188
+        ]
+      ],
+      "measurementErrorPx": 12,
+      "scalpCrown": {
+        "y": 115,
+        "error": 25,
+        "method": "inferred sagittal scalp, hidden by hair"
+      },
+      "depthROIs": {
+        "visibleChest": [
+          572,
+          445,
+          690,
+          548
+        ],
+        "pauldron": [
+          519,
+          349,
+          665,
+          522
+        ]
+      },
+      "depthMethod": "near body profile visible, shield/cape separated; hidden far arm not measured",
+      "measurementMethod": "Native alpha>=32 bottom within manually identified boot support ROIs, excluding weapons/cape; hairTop manually verified; footX manual support center; scalp hidden/inferred",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "f9ee8666b23508f64ef9788203287523cbff76ad39bb2ed6dd6efd9aa7c4644e",
+      "boundsAlpha32": [
+        403,
+        40,
+        839,
+        1181
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1309507,
+        "partialPixels": 261820,
+        "low1to31": 12221
+      },
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-09769c9e-d49c-422e-a42e-eb0fc1ffc433.png",
+      "sourceSha256": "f9ee8666b23508f64ef9788203287523cbff76ad39bb2ed6dd6efd9aa7c4644e",
+      "nativeBytesIdentical": true,
+      "newGeneration": true
+    },
+    {
+      "id": "selected1",
+      "file": "references/blond-master.png",
+      "label": "선택1 정면 원본",
+      "hairTop": 54,
+      "sole": 1407,
+      "bodyHeight": 1353,
+      "footX": 555,
+      "footY": 1407,
+      "chin": 420,
+      "measurementErrorPx": 10,
+      "width": 1070,
+      "height": 1470,
+      "mode": "RGBA",
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "boundsAlpha32": [
+        92,
+        54,
+        881,
+        1408
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1105404,
+        "partialPixels": 465158,
+        "low1to31": 21511
+      }
+    },
+    {
+      "id": "rejected2",
+      "file": "references/balor-rejected-v002.png",
+      "label": "발로르 차수2 반려",
+      "hairTop": 152,
+      "sole": 1153,
+      "bodyHeight": 1001,
+      "footX": 626,
+      "footY": 1153,
+      "chin": 414,
+      "measurementErrorPx": 8,
+      "widthMeasures": {
+        "shoulders": {
+          "x1": 430,
+          "x2": 785,
+          "y": 470,
+          "error": 12,
+          "method": "manual visible span; chest/waist partially occluded, visually inferred"
+        },
+        "chest": {
+          "x1": 542,
+          "x2": 705,
+          "y": 545,
+          "error": 18,
+          "method": "manual visible span; chest/waist partially occluded, visually inferred"
+        },
+        "waist": {
+          "x1": 548,
+          "x2": 690,
+          "y": 650,
+          "error": 20,
+          "method": "manual visible span; chest/waist partially occluded, visually inferred"
+        },
+        "upperArm": {
+          "x1": 439,
+          "x2": 526,
+          "y": 580,
+          "error": 12,
+          "method": "manual visible span; chest/waist partially occluded, visually inferred"
+        }
+      },
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "de8ba54051d81cdce795e144a08740c429353f9c5bea57f48453940aa7f4997e",
+      "boundsAlpha32": [
+        370,
+        152,
+        883,
+        1153
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroPixels": 1195063,
+        "partialPixels": 376968,
+        "low1to31": 12072
+      }
+    },
+    {
+      "id": "blond-identity",
+      "file": "references/blond-earliest-equipment.png",
+      "label": "금발 최초 장비 원화",
+      "hairTop": 8,
+      "sole": 1486,
+      "bodyHeight": 1478,
+      "footX": 520,
+      "footY": 1486,
+      "measurementErrorPx": 15,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+      "boundsAlpha32": [
+        24,
+        8,
+        874,
+        1487
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "zeroPixels": 1071663,
+        "partialPixels": 501201,
+        "low1to31": 47259
+      }
+    },
+    {
+      "id": "balor-identity",
+      "file": "references/balor-identity.png",
+      "label": "발로르 승인 디자인 원화",
+      "hairTop": 302,
+      "sole": 1431,
+      "bodyHeight": 1129,
+      "footX": 512,
+      "footY": 1431,
+      "measurementErrorPx": 8,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "061f23cc26b1f023918288446f9ac025de99bcf32550fb9be3e9850850f496fe",
+      "boundsAlpha32": [
+        138,
+        300,
+        883,
+        1431
+      ],
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "zeroPixels": 1058460,
+        "partialPixels": 514404,
+        "low1to31": 13678
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "blond-master",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-1-front.png",
+      "file": "references\\blond-master.png",
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "dimensions": [
+        1070,
+        1470
+      ]
+    },
+    {
+      "id": "blond-combat-style",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\01_arknights\\character.png",
+      "file": "references\\blond-combat-style.png",
+      "sha256": "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+      "dimensions": [
+        1312,
+        1199
+      ]
+    },
+    {
+      "id": "blond-earliest-equipment",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\images\\main_threequarter_v01.png",
+      "file": "references\\blond-earliest-equipment.png",
+      "sha256": "9795d1ee55b85126ddd75177983a8b8dae9e522a389b7d6fd795c26c02beecdb",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "blond-pixel-history",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\pixel_8views_v01\\images\\01_front_000.png",
+      "file": "references\\blond-pixel-history.png",
+      "sha256": "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "balor-identity",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-gc9-retry-20261109-v02\\front.png",
+      "file": "references\\balor-identity.png",
+      "sha256": "061f23cc26b1f023918288446f9ac025de99bcf32550fb9be3e9850850f496fe",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "balor-rejected-v002",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v002\\front.png",
+      "file": "references\\balor-rejected-v002.png",
+      "sha256": "de8ba54051d81cdce795e144a08740c429353f9c5bea57f48453940aa7f4997e",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "grip-anatomy",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\자료\\캐릭터제작\\한손무기그립\\원본\\그립자세_참조.png",
+      "file": "references\\grip-anatomy.png",
+      "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+      "dimensions": [
+        335,
+        484
+      ]
+    }
+  ],
+  "measurementMethod": "Native PNG alpha>=32 and manual visible hair top/sole/boot support ROIs; hidden skull and occluded body spans are visual estimates with errors. Sword/cape tips excluded from body height.",
+  "postprocess": "NONE; original bytes/alpha preserved; CSS uniform display only",
+  "userArtisticApproval": "pending; prior Balor SD v001/v002 rejected",
+  "art_source": "host_image",
+  "route": "builtin image_gen",
+  "generationRecords": "generation-records.json",
+  "gameIntegrated": false,
+  "referenceRoles": {
+    "blond-master": "selected identity/style/proportion master; original copied bytes unchanged",
+    "blond-earliest-equipment": "earliest equipment authority only; adult anatomy excluded",
+    "blond-combat-style": "style/equipment cross-check only; not idle pose",
+    "blond-pixel-history": "historical equipment check; not this task style/proportion",
+    "balor-identity": "approved Balor design authority; not SD acceptance",
+    "balor-rejected-v002": "REJECTED bulk counterexample only; not body master",
+    "grip-anatomy": "wrist/hand wrapping only"
+  }
+}

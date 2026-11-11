@@ -1,0 +1,145 @@
+/* Shared app contract for lobby, shop, heroes, battle, barracks and records.
+   Design reference: 360 x 800 logical px; not a required Android resolution.
+   Native WebView integration must forward system insets or consume them once.
+   CSS px use the device-width viewport, never physical screenshot pixels. */
+:root {
+  --app-max-width:480px;
+  --app-gutter:12px;
+  --app-space:8px;
+  --app-touch:48px;
+  --app-icon:24px;
+  --app-body:14px;
+  --app-caption:12px;
+  --app-title:20px;
+  --app-safe-top:env(safe-area-inset-top,0px);
+  --app-safe-bottom:env(safe-area-inset-bottom,0px);
+  --app-safe-left:env(safe-area-inset-left,0px);
+  --app-safe-right:env(safe-area-inset-right,0px);
+}
+html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+body { padding:0; min-width:280px; }
+.camp {
+  width:min(100%,var(--app-max-width)); min-height:100svh; min-height:100dvh;
+  border:0; border-radius:0;
+  padding:var(--app-safe-top) var(--app-safe-right) var(--app-safe-bottom) var(--app-safe-left);
+  font-size:var(--app-body);
+}
+.camp button,.camp select { min-width:var(--app-touch); min-height:var(--app-touch); touch-action:manipulation; }
+.topbar { grid-template-columns:minmax(0,1fr) minmax(128px,1fr) var(--app-touch); padding:8px var(--app-gutter); gap:8px; }
+.profile strong,.profile small { font-size:12px; }
+.profile .portrait { width:40px; height:40px; }
+.settings { width:var(--app-touch); height:var(--app-touch); padding:12px; }
+.wallet>span { min-height:32px; padding:4px 6px; }
+.wallet b { font-size:14px; }
+.coin,.crystal { width:20px; height:20px; }
+.side-menu { right:var(--app-gutter); top:12px; gap:8px; }
+.side-menu button { width:48px; height:61px; }
+.stage { font-size:16px; }
+.record { font-size:12px; }
+.battle { min-height:56px; font-size:24px; }
+.management { margin:12px 0 0; gap:8px; }
+.management button { font-size:14px; gap:8px; }
+.management button>span,.management .barracks-mini { width:28px; height:24px; }
+.bottom-nav,.hero-bottom-nav { margin:8px var(--app-gutter) 0; }
+.bottom-nav button,.hero-bottom-nav button { min-height:64px; font-size:14px; padding:8px 0; gap:4px; }
+.nav-art { width:32px; height:28px; }
+.hero-bottom-nav span { width:28px; height:28px; font-size:26px; }
+.hero-header { gap:8px; padding:8px var(--app-gutter); }
+.hero-header>button { width:48px; height:48px; font-size:28px; }
+.hero-header h1 { font-size:20px; white-space:nowrap; }
+.hero-wallet { gap:6px; }
+.hero-wallet>span { min-width:58px; padding:4px 8px; font-size:14px; gap:8px; }
+.hero-categories { gap:8px; padding:0 var(--app-gutter) 12px; }
+.hero-categories button,.hero-detail-tabs button { font-size:14px; padding:8px; }
+.hero-showcase { padding:12px; gap:12px; }
+.hero-information { gap:8px; }
+.hero-role { font-size:12px; }
+.hero-information h2 { font-size:22px; }
+.hero-level,.hero-stats { font-size:12px; }
+.hero-stats>div { padding:6px 0; }
+.hero-detail-panel { grid-column:1/-1; display:grid; gap:8px; }
+.hero-detail-tabs { gap:8px; }
+.hero-skills,.preview-equipment { gap:8px; }
+.skill-art { aspect-ratio:1; }
+.preview-equipment button { font-size:12px; }
+.preview-equipment span { font-size:22px; }
+.hero-collection { padding:12px var(--app-gutter); }
+.collection-heading { gap:8px; }
+.collection-heading h2 { font-size:16px; }
+.collection-heading h2 span { font-size:12px; }
+.collection-tools { gap:8px; }
+.collection-heading select { font-size:14px; padding:8px; }
+.hero-filter-toggle { width:48px; height:48px; padding:12px; }
+.hero-filters { gap:4px; margin:8px 0; }
+.hero-filters button { font-size:12px; padding:8px 0; }
+.hero-grid { gap:8px; margin-top:12px; }
+.card-caption small { font-size:12px; }
+.card-caption strong { font-size:13px; }
+.card-caption .hero-stars { font-size:11px; letter-spacing:0; }
+.hero-list-return { margin:12px; width:calc(100% - 24px); font-size:14px; }
+.hero-preview-note { font-size:12px; margin:12px; }
+dialog .close { min-width:48px; min-height:48px; }
+.dialog-confirm { min-height:48px; }
+@media(max-width:359px) {
+  .topbar { grid-template-columns:minmax(0,1fr) 48px; }
+  .topbar .profile { grid-column:1; }
+  .topbar .settings { grid-column:2; grid-row:1; }
+  .topbar .wallet { grid-column:1/-1; grid-row:2; }
+  .hero-header { display:grid; grid-template-columns:48px minmax(0,1fr) 48px; }
+  .hero-header .hero-wallet { grid-column:1/-1; grid-row:2; justify-self:end; }
+  .hero-header>button:last-child { grid-column:3; grid-row:1; }
+  .collection-heading h2 { font-size:14px; }
+  .collection-heading h2 span { display:block; }
+}
+/* Battle tab: camp, eight-slot roster and primary controls share one viewport. */
+.battle-lobby{display:flex;flex-direction:column;min-height:100dvh;padding-bottom:calc(28px + var(--app-safe-bottom));}
+.battle-lobby .topbar{flex:none}
+.battle-lobby .scene{flex:1 0 190px;height:auto;min-height:190px;background:none;overflow:hidden;}
+.camp-scenery{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:hidden;}
+.battle-lobby .scene:after{inset:75% 0 -1px}
+.lobby-roster{position:relative;z-index:1;flex:none;margin:-16px 12px 10px;padding:8px;border:1px solid #9a80518c;border-radius:8px;background:linear-gradient(120deg,#142427f5,#111f23f5);box-shadow:0 6px 20px #0003}
+.roster-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;padding:0 2px;color:#d9c297}
+.roster-heading h2{margin:0;font-size:12px;font-weight:600}.roster-heading>span{font:12px/1.3 system-ui,sans-serif}
+.lobby-roster-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.lobby-roster-slot{position:relative;display:flex;flex-direction:column;width:100%;height:clamp(84px,24cqw,104px);padding:0;min-width:0;border:1px solid #9b8156;border-radius:5px;background:#19282c;overflow:hidden}
+.lobby-roster-slot .hero-portrait{position:static;display:block;width:100%;height:calc(100% - 22px);flex:1;min-height:0;}
+.roster-slot-label{display:block;flex:none;width:100%;height:22px;background:#101b23;color:#f3dfb6;font:12px/18px system-ui,sans-serif;padding:2px;text-align:center}
+.lobby-roster-slot.vacant{border-style:dashed;border-color:#7c795a;color:#a59d80;background:#122126}
+.roster-plus{display:grid;place-items:center;flex:1;width:100%;font:28px/1 system-ui,sans-serif}.vacant .roster-slot-label{color:#8d9a94;background:none}
+.battle-lobby .depart{flex:none;margin:0;padding:0 12px 4px;background:none}
+.battle-lobby .stage{min-height:28px;font-size:14px;padding:3px 20px}
+.battle-lobby .record{margin:4px 0 8px;font-size:12px}
+.battle-lobby .battle{height:52px;min-height:52px;width:100%;max-width:360px;font-size:24px}
+.battle-lobby .management{margin-top:4px}
+.battle-lobby .bottom-nav{flex:none;margin:4px 12px 0}
+.roster-picker{max-height:85dvh;overflow:auto;padding:24px 16px 16px}
+.roster-picker h1{font-size:18px;margin:16px 0}
+.roster-picker .close{min-width:48px;min-height:48px}
+.roster-picker-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.roster-picker-grid button{display:flex;flex-direction:column;padding:0;border:1px solid #a08554;border-radius:6px;background:#17282d;overflow:hidden;min-width:48px;min-height:48px}
+.roster-picker-grid .hero-portrait{height:auto;aspect-ratio:1}
+.roster-picker-grid button>span{padding:6px;font-size:14px}
+.roster-picker p{font-size:12px}
+@media(max-height:700px){.battle-lobby .scene{flex-basis:160px;min-height:160px}}
+
+/* Area and record sit over the upper camp scenery. */
+.lobby-stage-banner{position:absolute;z-index:2;top:clamp(24px,10%,48px);left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 128px);text-align:center;background:#101d22ba;border-radius:4px;text-shadow:0 1px 3px #000;pointer-events:none;}.battle-lobby .lobby-stage-banner .stage{width:100%;box-sizing:border-box;padding:4px 8px;gap:6px;line-height:1.5;word-break:keep-all;}.battle-lobby .lobby-stage-banner .record{margin:4px 8px 6px;gap:6px;white-space:nowrap;}.lobby-stage-banner .record span{flex:1;min-width:4px;max-width:32px;}.battle-lobby .side-menu{z-index:3;}
+
+.battle-lobby .lobby-stage-banner .stage{font-size:16px;min-height:34px;padding:5px 10px;}.battle-lobby .lobby-stage-banner .stage>span{width:16px;height:18px;}.battle-lobby .lobby-stage-banner .record{font-size:14px;margin:6px 8px 8px;}
+
+.battle-lobby .sweep-button{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;max-width:360px;min-height:48px;margin:0 auto 10px;padding:10px 16px;border:1px solid #9e8d5a;border-radius:6px;background:linear-gradient(120deg,#344b3c,#21382f);color:#ead8a8;font:600 16px/1.4 system-ui,sans-serif;}.sweep-button>span{font-size:20px;color:#d7bf7c;}
+
+/* A single navigation bar sits outside all route containers. */
+body.app-fixed-navigation .camp{padding-bottom:calc(116px + var(--app-safe-bottom));}
+.app-bottom-nav{position:fixed;z-index:50;left:50%;bottom:calc(28px + var(--app-safe-bottom));transform:translateX(-50%);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));width:min(calc(100% - 24px),456px);height:72px;margin:0;container-type:inline-size;border:1px solid #ac8b4f;background:linear-gradient(110deg,#172123,#22302e,#111d21);box-shadow:0 -6px 20px #0005;}
+.app-bottom-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:48px;min-height:70px;padding:8px 2px;font-size:14px;line-height:1.3;}
+.app-bottom-nav .nav-art{display:block;flex:none;width:32px;height:28px;}.app-bottom-nav .selected:before{top:-9px;font-size:12px;}.app-bottom-nav button:last-child{border-right:0;}
+body.app-fixed-navigation .toast,body.app-fixed-navigation .hero-notice{bottom:calc(112px + var(--app-safe-bottom));}
+
+.app-bottom-nav .nav-art{display:grid;place-items:center;width:32px;height:32px;color:#c8ac75;}.app-bottom-nav .navigation-icon{display:block;width:32px;height:32px;overflow:visible;}.app-bottom-nav .selected .nav-art{color:#ffe3a0;filter:drop-shadow(0 1px 3px #e0a54855);}.app-bottom-nav button{gap:3px;}
+
+/* Reserve scrollbar space before long routes open, so centered UI stays put. */
+html:has(body.app-fixed-navigation){scrollbar-gutter:stable;}
+.app-bottom-nav button:active{transform:none;}
+
+.app-bottom-nav .selected:before{content:'';left:50%;right:auto;top:-7px;width:10px;height:10px;border-right:2px solid #ffda85;border-bottom:2px solid #ffda85;transform:translateX(-50%) rotate(45deg);filter:drop-shadow(0 0 3px #ffc05088);}

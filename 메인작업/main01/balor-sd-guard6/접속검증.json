@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "images": [
+    {
+      "src": "built-in/front-000.png",
+      "loaded": true
+    },
+    {
+      "src": "built-in/right-035.png",
+      "loaded": true
+    },
+    {
+      "src": "built-in/right-090.png",
+      "loaded": true
+    },
+    {
+      "src": "image26/front-000.png",
+      "loaded": true
+    },
+    {
+      "src": "image26/right-035.png",
+      "loaded": true
+    },
+    {
+      "src": "image26/right-090.png",
+      "loaded": true
+    }
+  ],
+  "zoom": true,
+  "nativeToggle": true,
+  "lightDarkField": true,
+  "display": {
+    "canvas": [
+      1600,
+      720
+    ],
+    "stats": [
+      {
+        "id": "builtin0",
+        "bodyCSS": 72,
+        "physicalBody": 144,
+        "dpr": 2
+      },
+      {
+        "id": "builtin35",
+        "bodyCSS": 72,
+        "physicalBody": 144,
+        "dpr": 2
+      },
+      {
+        "id": "builtin90",
+        "bodyCSS": 72,
+        "physicalBody": 144,
+        "dpr": 2
+      },
+      {
+        "id": "image260",
+        "bodyCSS": 72,
+        "physicalBody": 144,
+        "dpr": 2
+      },
+      {
+        "id": "image2635",
+        "bodyCSS": 72,
+        "physicalBody": 144,
+        "dpr": 2
+      },
+      {
+        "id": "image2690",
+        "bodyCSS": 72,
+        "physicalBody": 144,
+        "dpr": 2
+      }
+    ]
+  },
+  "jsErrors": [],
+  "isolatedHeadless": true,
+  "userWindowTouched": false
+}

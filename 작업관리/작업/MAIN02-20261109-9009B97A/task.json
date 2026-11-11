@@ -1,46 +1,13 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 3,
   "id": "MAIN02-20261109-9009B97A",
-  "main": "main02",
+  "main": "main01",
   "branch": "ui",
   "title": "전쟁터·햇빛숲·마계 전투UI 9장 비교 시안",
-  "request": "# 사용자 요청/선호/이해확인\n사용자: UI디자인 전달사항 / 전장디자인,필드표현느낌은 6번,9번,5번 그림체 느낌이 좋고 / 버튼은 개인적으로 9번,5번 느낌이 마음에든 / 참고해서 필드컨셉 전쟁터 , 모험을떠나는 햇빛드는 숲속 , 마계 / 한 9장정도 시안 뽑아와봐\n메인 이해문: 5·6·9번의 필드 그림체와 5·9번의 버튼 느낌을 조합해, 3개 테마 × 3안으로 총9장. 전쟁터: 파괴된성벽·참호·전투흔적. 햇빛드는 모험의숲: 나뭇잎사이햇살·숲길·탐험. 마계: 어두운지형·기이한식생·불길한빛. 각 이미지에 버튼을 포함한 전투UI와 왼쪽방어/오른쪽적진입 유지. 같은테마 안 지형·빛·구도 차이.\n사용자 최신 메시지: 위 이해문 전체를 인용하고 마지막에 “바로 진행”. 이 대화의 실제 확인 근거이며 특정 최종안 선택/게임통합 승인은 아니다.\n참조 원작업 MAIN02-20261109-063FC22B. 05-C-wave.png / 06-C-boss.png / 09-shop.png. 사용자 선호 부분만 승계하고 나머지 전체16장이 합격했다고 기록하지 않는다.",
-  "iteration": 9,
-  "status": "awaiting_user",
+  "iteration": 11,
+  "status": "returned",
   "createdAt": "2026-11-09T18:23:12.792211+09:00",
-  "approval": {
-    "userQuote": "진행",
-    "source": {
-      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v009.md",
-      "sha256": "4d072e26df0fea8735c840a78cb6b85cfb1db0508fa7039a489d0bea1a56d2f3"
-    },
-    "recordedBy": "main02",
-    "recordedAt": "2026-11-10T00:49:08.543970+09:00",
-    "iteration": 9,
-    "hashes": {
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\요청확인.md": "fce7942d97b2689026d8fd43b5701a9c4533084d104de1b676290998902a78de",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\전문프롬프트.md": "01fb99a071e6aef19e6d53bc251f28509de66710454d82657aabf3e40710643d",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\2_사전확인.md": "a57ba01ea1c26c825dcc47ec1ce784a6e94c4b328b1b2c48793102ca52edc604",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\규정.md": "f1a0a3140e7639c13b4f4ea3eedf0383bb6a8d1bb1a73db6bc68584d62a20de1",
-      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\AGENTS.md": "a4fee6387b17ffa27ec90c9ccdab1c7ebfb93722945f729b24e60b93f0593ba7",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\작업진행방법.md": "3eebec5fd956a74fcfa287271e4d44de645339a1c0822c652ab7885169e3d2fd",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v009.md": "4d072e26df0fea8735c840a78cb6b85cfb1db0508fa7039a489d0bea1a56d2f3",
-      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인02\\메인작업\\main02\\ui-deployment-review-20261110\\analysis-information-layers.json": "dbecf68f14a9fa196428d85edf4914bb8917ab7bf1fcdd22f320853b4e6b3afb",
-      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\결과보고.md": "a2d463df5dedfb42a715153bc6d3558b731a4f69fdaad3bf464b366253db32dc",
-      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\문서\\00_개발규칙\\모바일UI규격.md": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md": "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
-      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623"
-    }
-  },
+  "approval": null,
   "history": [
     {
       "action": "sent",
@@ -391,12 +358,165 @@
         "sha256": "3ee32dca7556ec081b8285aeb65d8a8a80c8b53decee40b0ae7a25534a7256a2"
       },
       "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-10T01:19:07.530743+09:00",
+      "iteration": 9,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v010.md",
+        "sha256": "78a5853f1993992ceeb0cc80fbb2dccb00ab4068ba971eebee937fe658633b04"
+      },
+      "userQuote": "지금은 일단 병사 종류는 5가지정도 생각하고있으니"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-10T01:20:41.857695+09:00",
+      "iteration": 10,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\송신영수증-v010.json",
+        "sha256": "caca444f3de925d69a8b6bb0b27d4b7773c6c7ab17b4fcc3e52dcb70226d1c95"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T01:22:54.361232+09:00",
+      "iteration": 10,
+      "role": "ui",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\읽기확인-v010-42fd63eb0f524eae8e50fffbc452c459.json",
+        "sha256": "2d9ebb11b9e052282d37c9b6775ebe17dc9a549b92b1354bd41a15f60a371d79"
+      }
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T01:26:05.520665+09:00",
+      "iteration": 10,
+      "role": "ui",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\읽기확인-v010-c1aa553fd9284e7185ee0224fbc6c273.json",
+        "sha256": "2d9ebb11b9e052282d37c9b6775ebe17dc9a549b92b1354bd41a15f60a371d79"
+      }
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T01:27:15.401370+09:00",
+      "iteration": 10,
+      "role": "ui",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\읽기확인-v010-0fe01819e664445eb239bcf4bb20d208.json",
+        "sha256": "ce8f7123ab81ffba40c0206e12ff9cc913ca3dc3f682ed1e1aa35b042ae6e3bb"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-10T01:31:40.769477+09:00",
+      "iteration": 10,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v010\\결과보고.md",
+        "sha256": "aca44f3417eadae258ccb8fc38581fbe250fee95fdbbad4dc51011b6fb95d234"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-10T07:36:02.342439+09:00",
+      "iteration": 10,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v011.md",
+        "sha256": "ff76d428fda7ab6a9439994cf688a50c329068b2eaf3dcaf4933da8f10d0df6d"
+      },
+      "userQuote": "영웅은 저기에 초상화를 걸어야지"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-10T07:38:18.916555+09:00",
+      "iteration": 11,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\송신영수증-v011.json",
+        "sha256": "7706ba648d0fb89ea5ba908bb2ed15e731be5cac418b633a5ae8690cc81c319f"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T07:40:45.292786+09:00",
+      "iteration": 11,
+      "role": "ui",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\읽기확인-v011-4ad271ae2fc044c0b602df156c382ca9.json",
+        "sha256": "7dc210b213e189a6e8418ef04ee104a1677f073da7a5c495c189e2a970e28a69"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-10T07:51:01.918526+09:00",
+      "iteration": 11,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v011\\결과보고.md",
+        "sha256": "2ed78228dd8ea18d9e2a4073b81a9725501b0dc014a8c9b868f4e97c3d47390b"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "transfer",
+      "at": "2026-11-11T17:12:28.363793+09:00",
+      "from": "main02",
+      "to": "main01",
+      "iteration": 11,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\사용자지시.md",
+        "sha256": "7fde8bfe8a09dc8b66d3462ca24119ce558fec6e0323f0ba7c41a6e7384d8cdc"
+      },
+      "note": "단일 메인 전환에 따른 담당 이관. 작업번호/차수/상태/사용자판정·이전 승인근거 보존. 새 제작 발송 없음."
+    },
+    {
+      "action": "OPS006_migration",
+      "at": "2026-11-11T23:20:45.738268+09:00",
+      "previousStatus": "awaiting_user",
+      "previousApproval": {
+        "userQuote": "진행",
+        "source": {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v011.md",
+          "sha256": "ff76d428fda7ab6a9439994cf688a50c329068b2eaf3dcaf4933da8f10d0df6d"
+        },
+        "recordedBy": "main02",
+        "recordedAt": "2026-11-10T07:38:02.848060+09:00",
+        "iteration": 11,
+        "hashes": {
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\요청확인.md": "4c917d025c32e04bb46b7bd20b5272e42d985dfcb026bcb969676252b5a7befa",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\전문프롬프트.md": "e52b3f2f552a8fa0a3f4e947ebfdffe51aa1692f325f9e513cca3614fdfb70ee",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\2_사전확인.md": "2f2ae1d63dc0439eed3a79aba3aec87ec539fb678ecf4346f5922d83f495832a",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\규정.md": "f1a0a3140e7639c13b4f4ea3eedf0383bb6a8d1bb1a73db6bc68584d62a20de1",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\AGENTS.md": "a4fee6387b17ffa27ec90c9ccdab1c7ebfb93722945f729b24e60b93f0593ba7",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\ui\\작업진행방법.md": "3eebec5fd956a74fcfa287271e4d44de645339a1c0822c652ab7885169e3d2fd",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v011.md": "ff76d428fda7ab6a9439994cf688a50c329068b2eaf3dcaf4933da8f10d0df6d",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\참조경로정정-v011.md": "f84b7b5a93fc9508cdad6a9867a2f236fb7bc281713fa47d020b117505f3de74",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v010\\결과보고.md": "aca44f3417eadae258ccb8fc38581fbe250fee95fdbbad4dc51011b6fb95d234",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\결과보고.md": "a2d463df5dedfb42a715153bc6d3558b731a4f69fdaad3bf464b366253db32dc",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\문서\\00_개발규칙\\모바일UI규격.md": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md": "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623"
+        }
+      },
+      "note": "原 지시/판정 보존; 새 발송은 버튼 승인 필요"
     }
   ],
-  "readingPolicyVersion": "OPS-004",
+  "readingPolicyVersion": "OPS-006",
   "additionalReadings": [
-    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v009.md",
-    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인02\\메인작업\\main02\\ui-deployment-review-20261110\\analysis-information-layers.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\사용자피드백-v011.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\참조경로정정-v011.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v010\\결과보고.md",
     "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\output\\ui-concepts\\MAIN02-20261109-9009B97A-v008\\결과보고.md",
     "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\UI-전투화면\\문서\\00_개발규칙\\모바일UI규격.md",
     "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
@@ -404,8 +524,50 @@
     "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md"
   ],
   "readingAcknowledgement": {
-    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\읽기확인-v009-c74a221d4b784f72b6a922f3a3dd3712.json",
-    "sha256": "368f93d0697c4df67f48c4988003758ffc4813e23d92ff9d3409bead7f8a44ab"
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\읽기확인-v011-4ad271ae2fc044c0b602df156c382ca9.json",
+    "sha256": "7dc210b213e189a6e8418ef04ee104a1677f073da7a5c495c189e2a970e28a69"
   },
-  "updatedAt": "2026-11-10T01:04:26.157795+09:00"
+  "updatedAt": "2026-11-11T23:20:45.738268+09:00",
+  "originalMain": "main02",
+  "handover": {
+    "from": "main02",
+    "to": "main01",
+    "evidence": {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\사용자지시.md",
+      "sha256": "7fde8bfe8a09dc8b66d3462ca24119ce558fec6e0323f0ba7c41a6e7384d8cdc"
+    },
+    "requiresCurrentRequestReview": true
+  },
+  "stages": {
+    "production": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "technical": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "user": {
+      "status": "not_reviewed",
+      "evidence": null
+    },
+    "integration": {
+      "status": "unknown",
+      "evidence": null
+    }
+  },
+  "pendingChoice": null,
+  "spec": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261109-9009B97A\\통합작업명세.json",
+  "pipeline": {
+    "version": 1,
+    "step": null,
+    "phase": "legacy",
+    "resumeRequired": true,
+    "criteria": [],
+    "review": null,
+    "lastResult": null,
+    "round": 0,
+    "events": [],
+    "note": "새 12단계 이전 기록. 과거 단계를 소급하지 않으며 새 후속 작업은 update-spec과 상세 브리핑부터 시작."
+  }
 }

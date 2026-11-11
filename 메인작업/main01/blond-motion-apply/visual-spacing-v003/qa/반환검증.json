@@ -1,0 +1,625 @@
+{
+  "at": "2026-11-11T22:33:55.488505+09:00",
+  "task": "MAIN01-20261111-7988D454",
+  "result": "technical_pass_with_warning",
+  "workerResult": {
+    "PASS": 127,
+    "FAIL": 0,
+    "WARN": 1,
+    "미검증": 5
+  },
+  "checkedCurrentHashes": {
+    "target-hashes-after.json": 73,
+    "original-assets-after.json": 21,
+    "reading-sha-check.json": 24
+  },
+  "allCurrentHashesMatch": true,
+  "checks": [
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\actorMotion.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\actorSpacing.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\battleSave.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\blondRuntimeData.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\bossBattle.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\bossBattleView.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\combatMotionArt.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\defense.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\defenseConfig.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\defenseView.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\src\\main.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-01-animation.json",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-01-sheet.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-02-animation.json",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-02-sheet.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-03-animation.json",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-03-sheet.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-04-animation.json",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-04-sheet.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-05-animation.json",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-05-sheet.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-06-animation.json",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-06-sheet.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-07-animation.json",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-07-sheet.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-08-animation.json",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\blond-08-sheet.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\turtle-idle.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\turtle-manifest.json",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\turtle-strong.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\turtle-walk.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\combat-motion-v1\\turtle-weak.png",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\actor-depth.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\assassin-combat.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\battle-continuation.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\battle-formation.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\battle-save.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\blade-skill.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\blade-visual.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\blond-warrior.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\boss-battle.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\boss-fixture.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\boss-formation.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\boss-hero-cards.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\boss-roster-ice.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\boss-skills.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\boss-test-balance.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\boss-wave-auto.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\combat-playback.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\damage-meter.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\damage-visibility.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\fire-ground.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\fire-skill.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\fire-visual.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\game-run.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\hero-art.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\hero-critical.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\landscape-field.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\landscape-inventory.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\peak-dps.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\ready-boss-fixture.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\runtime-motion.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\skill-visual.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\slime-art.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\sword-attack.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\sword-visual.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\training.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\scripts\\check-tests.mjs",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\scripts\\runtime-check.mjs",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\qa\\battle-landscape.html",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\qa\\entry.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\tests\\visual-spacing.check.ts",
+      "passed": true
+    },
+    {
+      "group": "target-hashes-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\scripts\\visual-spacing-check.mjs",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\01_run_right90\\sheet.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\01_run_right90\\animation.json",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\02_combat_idle_34\\sheet.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\02_combat_idle_34\\animation.json",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\03_longsword_thrust_34\\sheet.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\03_longsword_thrust_34\\animation.json",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\04_dagger_thrust_34\\sheet.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\04_dagger_thrust_34\\animation.json",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\05_dual_thrust_right90\\sheet.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\05_dual_thrust_right90\\animation.json",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일\\메인작업\\main02\\blond-xslash34-20261111\\sheet.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일\\메인작업\\main02\\blond-xslash34-20261111\\animation.json",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\07_hurt_34\\sheet.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\07_hurt_34\\animation.json",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\08_death_34\\sheet.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\A_builtin\\08_death_34\\animation.json",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일\\output\\turtle-fullmotion-v07\\after\\idle.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일\\output\\turtle-fullmotion-v07\\after\\walk.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일\\output\\turtle-fullmotion-v07\\after\\weak.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일\\output\\turtle-fullmotion-v07\\after\\strong.png",
+      "passed": true
+    },
+    {
+      "group": "original-assets-after.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일\\output\\turtle-fullmotion-v07\\manifest.json",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\AGENTS.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\작업진행방법.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\규정.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사용자승인.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\반영검증.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\현재반영해시.json",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\실제반영.json",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-spacing-boundary_main01-20261111-dcd6b21b_v003\\검증보고.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-spacing-boundary_main01-20261111-dcd6b21b_v003\\변경manifest.json",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-spacing-boundary_main01-20261111-dcd6b21b_v003\\통합.patch",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\blond-turtle-root-qa_main01-20261111-d8c7563c\\report.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+      "passed": true
+    },
+    {
+      "group": "reading-sha-check.json",
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+      "passed": true
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\blond-turtle-boundary-root-qa_main01-20261111-7988d454_v001\\report.md",
+    "sha256": "7e1571fe75c7a8036244375ad10f113e754fa46f34b953c60ec5cc3a61c2d1b3"
+  },
+  "visualEvidenceOpened": [
+    "arena-boss-late.png",
+    "boundary-bottom-right.png"
+  ],
+  "observation": "후기 전체전장에서 터틀 머리/뿔/몸통/발이 프레임 안에 있고 큰몸통 가림이 해소됨. 강제 최하단에서 이름표 하단이 경계에 닿는 경고는 유지.",
+  "warning": "WARN-01 강제 최하단 이름표 bbox가 외측경계보다1.1328CSSpx 아래. 낮은심각도 표시 한계이며 수정하지 않음.",
+  "userAccepted": false,
+  "newSunburst13ArtReviewed": false,
+  "testsRerun": false,
+  "productEdits": 0,
+  "apiCalls": 0,
+  "gitOperations": 0
+}

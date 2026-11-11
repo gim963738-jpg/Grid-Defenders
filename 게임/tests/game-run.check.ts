@@ -1,6 +1,7 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {GameRun,RUN_LIMITS} from '../src/gameRun';
 import {Defense} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 import {stepCombat} from '../src/combatPlayback';
 export function checkGameRun(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};

@@ -1,0 +1,255 @@
+{
+  "at": "2026-11-11T22:02:07.818115+09:00",
+  "task": "MAIN01-20261111-B11472D8",
+  "nativeMessage": "msg_86b9aeb6763a",
+  "nativeOutcome": "succeeded",
+  "report": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\balor-workshop-correction_qa_main01-20261111-b11472d8_v001\\report.md",
+  "reportSha256": "7f8bbd1379088c99447bdc2af0401dcf1ed838cfa40542e510654d2db8ea7c1c",
+  "browserPass": 160,
+  "preservationPass": 3,
+  "failed": 0,
+  "readAck": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-B11472D8\\읽기확인-v001-a69c29bf6e7643f7a95832ed87d88c5c.json",
+    "sha256": "60fbb49f30169c89c119d49d3a473493b252e5070e1231626e5f1baaa37b266e",
+    "documents": 23
+  },
+  "currentHashes": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\ACTOR-README.md",
+      "sha256": "59fcba2862e0c0a577eb37700e9837aac5c31d9179c9ff10fcdaa5223bbb9646"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\actor.css",
+      "sha256": "e9ff11b5e6363a881fca8f88aaffc433d87c254309240ca0065586cd8d825642"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\actorComparison.ts",
+      "sha256": "7f838875c0179f0e922527960a3b32df7c2fc23c78277c598a439a2487d53083"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\actorComparisonChecks.ts",
+      "sha256": "11d7f37deade97f9434536338e5e4fd80514645d303f447be603b82bac6d5f13"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\actorEditor.ts",
+      "sha256": "b24d8216f36398bf7d553d85c209e08030273e6a9860cad159936c9b6fd9f7b3"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\actorModel.ts",
+      "sha256": "4abef37cf448bbad7bceb16a16d00987a3dd88c105e69dbc9bad98c3fc1cfb28"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\BALOR-README.md",
+      "sha256": "500cd6f4e0d3c3bdbc7890d9682e05e78b1c8cb7e4358ac1dba5f31addd9312c"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\public\\actor-corrections\\balor-v001\\builtin-02-combat-idle-right35.png",
+      "sha256": "cb5a071e5e3dc263e72ecbc3f165b968e43fd201cab06b2c37a54c71acd36779"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\public\\actor-corrections\\balor-v001\\builtin-03-horizontal-slash-right35.png",
+      "sha256": "2c4e0499d121236740b18c04db453ea49d88e44b14852ce055eeb9e5989314eb"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\public\\actor-corrections\\balor-v001\\builtin-04-vertical-slash-right35.png",
+      "sha256": "59e7293fb292ff5dd4ae0609c043e4bdabb3b1a92ac5cab9c8d1f21fc7d63b41"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\public\\actor-corrections\\balor-v001\\corrections.json",
+      "sha256": "c52869ed4a5e6a8dec16245928aeebd5762887e204f644b0d15503410c4d01a2"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\public\\actor-corrections\\balor-v001\\image26-02-combat-idle-right35.png",
+      "sha256": "bca77d0a0e8d37b94e9bc47075edfec79d58fd8115a4b75a5d9948759cc7c884"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\public\\actor-corrections\\balor-v001\\image26-03-horizontal-slash-right35.png",
+      "sha256": "7af002fcb7bc3d1f539b1bd354592421f16a7c82a1cff28e5ee2af4389060d29"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\public\\actor-corrections\\balor-v001\\image26-04-vertical-slash-right35.png",
+      "sha256": "a2cbc78ee4b118127e385406740d753e09633bf2b3b671bdf786f04b76bcab32"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\public\\actor-corrections\\balor-v001\\scene.json",
+      "sha256": "473440ff111af461bd8245f0d1ae84dd2462731003472c437653ae21d33d8cd3"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\actorChecks.ts",
+      "sha256": "dcd9e9fed72fc69a36e296f3572c3c4917b8ecc9a2999bed1464fe638b3be4e0"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\actorRender.ts",
+      "sha256": "4e45bd6965efa9d1d652a778cee8829e4f8343627918c06e9c2ca47eb7cc1aa4"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\battle.ts",
+      "sha256": "298e25e198c24be5c6f7523852511ca8f6753f3a475d9dc76113b313207fa94c"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\componentLibrary.ts",
+      "sha256": "f75457be0e385e85c5f3dbd5d55eb12455a1cda1eb651e4fdd2e1b66d431d28b"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\componentModel.ts",
+      "sha256": "3fb5ae9ce6276cd6857c779af258b5df4e73090211cb8e0bbe2d1813998fec0e"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\components.css",
+      "sha256": "ba603b7e2daed6cbc42512d851c30d9b0007bbcbf7cc74059a64c16fe26f2a2f"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\drawing.css",
+      "sha256": "50e5d729c2124748d5bd0cdf07a55d4c2c57aaa251ef4e29ee5ad50e607b2fd4"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\drawingEditor.ts",
+      "sha256": "4f4db01d35a6bf759dcd9d2b3a1d2827e0227d986d0aa6faeba733b9bf65d26a"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\drawingModel.ts",
+      "sha256": "f1e64c46c6c5a931a2feedaa07560a5e05cd21c9fe477cd783b4f2fc774df50e"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\drawingRender.ts",
+      "sha256": "36e7c761c636864c363f6685d45e834bd2e3daf4908c71b60783812b44fec614"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\emeraldWeave.ts",
+      "sha256": "fb57a99b36e1388c6f3b8a3d4640a0f1837ccf185d041abd56988617e9043c29"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\flamethrower.ts",
+      "sha256": "9ff69cc90ef308b43637cff7b1b27551cca8ceaf7e0911e9e248e22b5a9349b6"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\gallery.css",
+      "sha256": "f850f2daa13959d6cbbb3797879fd12a918decf863f87dcb4c8b737cbc9e01e9"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\gallery.ts",
+      "sha256": "840958c8f9cbf3c8a6f1204a4eb06e59d1a6604d07c51cb973c4573a5b8b514a"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\galleryModel.ts",
+      "sha256": "c41596b2162f8ba4f4fcaff38246cb50077fa1f755b2d90f29d91029ec4bc3d1"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\graphModel.ts",
+      "sha256": "8122c544e16fd1f41a6ba646011436cbfc85871e1ebda65e0a1f7f1b62f854b4"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\graphRender.ts",
+      "sha256": "14a9d81c22ed2f5f585a28fa51b4b8a1496e421a66d454fd0751da24ee4a6d89"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\horizontalSlash.ts",
+      "sha256": "bfdd3dd0afcda7e0291d52c0e98a3d3cb47fb1abd0fa4858057793b240fe62d0"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\main.ts",
+      "sha256": "00b62920d7f7eca8e936f43669f8f3ce8c635e56b9e6f05b937973378667f4f5"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\materialCategories.json",
+      "sha256": "a17532cf26bbb91eed2121dbedb61d0a9f889816981ff6a063ac211ae88824bb"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\materialClassification.ts",
+      "sha256": "df7d42aa416c3ce4d1089eb543ad6c9021398260dbe52a836eb2ad88ff1041be"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\materialExport.ts",
+      "sha256": "daf795c9aa9d7d466420344a204a056f368fda4fab3fc1d0569060df953485ad"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\materialModel.ts",
+      "sha256": "df072339ee2490a86cdee8540cb80bc8be3ce6073244317e69eba88384f64974"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\materialRender.ts",
+      "sha256": "5650e3f26ac98d8888e13eedc20f06e19c30d5516535bd0c460bb35bf335995c"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\materials.css",
+      "sha256": "3c8aee79f5ef0f05b049b31ca9a12438ecdef09ebd9edf6d1246ca69770076c4"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\materials.ts",
+      "sha256": "b15c365f660df05f7ff4bd4ade4527435186f3dac7d2dfe7e1bdefed7e64a6ca"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\model.ts",
+      "sha256": "ebe8c77bf497183b874bb58efbb075fc52becfee26afb86199c5e975705b7309"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\movementPresets.ts",
+      "sha256": "66fe21d243d0012723029e7de8b106f526a15981eacdef35a85aadb30d5e0d3f"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\movementRender.ts",
+      "sha256": "91b3510312b2c8128034ec57c6f8c50fe7107108d40040b45f96ab5e76f57605"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\nodeEditor.ts",
+      "sha256": "64f944d9bfb4400e32a6694051bccc75dc08c78d79b7aa2fdffed0a4a8a5337b"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\nodes.css",
+      "sha256": "a1ed133e178424c30b45a62ecff83a3d42c3b50a5ee02558ea84776507c80aab"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\recipeMaterial.ts",
+      "sha256": "753eabdb9a6e64d271ffd164ce939e8d2e6f65a0647811a74aabcb65314ba6f0"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\renderer.ts",
+      "sha256": "d9bb5b3dc4b03e4e15ef5c49da2baada5f4d9794ae89216a3615b73efe232a41"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\sequenceModel.ts",
+      "sha256": "fb95e56d5a27bc0a458ad7531d4dc3e907f7f38b07bd18b6068fbe2e6ec9c17d"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\sequenceRender.ts",
+      "sha256": "43a46074d2168ea3be03bde08df0a41820705aefa675b4384606617f4a4db77f"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\style.css",
+      "sha256": "780616077d838b508f6fd01fe61a4d6e72e1f19ff67133d5f1bdb807a13ecd1a"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\unifiedMaterials.ts",
+      "sha256": "7501fb07eeefba7f6a626128f3dd17361e99325e1e8bfd85e1b9340a1f524429"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\02-combat-idle-right35.png",
+      "sha256": "cb5a071e5e3dc263e72ecbc3f165b968e43fd201cab06b2c37a54c71acd36779"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\03-horizontal-slash-right35.png",
+      "sha256": "2c4e0499d121236740b18c04db453ea49d88e44b14852ce055eeb9e5989314eb"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\04-vertical-slash-right35.png",
+      "sha256": "59e7293fb292ff5dd4ae0609c043e4bdabb3b1a92ac5cab9c8d1f21fc7d63b41"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\image26\\02-combat-idle-right35.png",
+      "sha256": "bca77d0a0e8d37b94e9bc47075edfec79d58fd8115a4b75a5d9948759cc7c884"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\image26\\03-horizontal-slash-right35.png",
+      "sha256": "7af002fcb7bc3d1f539b1bd354592421f16a7c82a1cff28e5ee2af4389060d29"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\image26\\04-vertical-slash-right35.png",
+      "sha256": "a2cbc78ee4b118127e385406740d753e09633bf2b3b671bdf786f04b76bcab32"
+    }
+  ],
+  "http": 200,
+  "personallyViewed": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\balor-workshop-correction_qa_main01-20261111-b11472d8_v001\\comparison-wide-dpr2.png",
+  "technicalQaPassed": true,
+  "userAccepted": false,
+  "newSunburst13ArtReviewed": false
+}

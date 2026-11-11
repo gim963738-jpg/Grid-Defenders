@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "scope": "Actual script in Node VM with local PNG loading; browser screenshots checked separately",
+  "totalMs": 14400,
+  "images": 4,
+  "backgrounds": 2,
+  "samples": [
+    {
+      "ms": 0,
+      "phase": "walk",
+      "action": "walk_front_left",
+      "frame": 0
+    },
+    {
+      "ms": 2399,
+      "phase": "walk",
+      "action": "walk_front_left",
+      "frame": 11
+    },
+    {
+      "ms": 2400,
+      "phase": "single1",
+      "action": "slam_right_foreleg",
+      "frame": 0
+    },
+    {
+      "ms": 2970,
+      "phase": "single1",
+      "action": "slam_right_foreleg",
+      "frame": 6
+    },
+    {
+      "ms": 3700,
+      "phase": "rest1",
+      "action": "idle_breathe",
+      "frame": 0
+    },
+    {
+      "ms": 6099,
+      "phase": "rest1",
+      "action": "idle_breathe",
+      "frame": 11
+    },
+    {
+      "ms": 6100,
+      "phase": "single2",
+      "action": "slam_right_foreleg",
+      "frame": 0
+    },
+    {
+      "ms": 7400,
+      "phase": "rest2",
+      "action": "idle_breathe",
+      "frame": 0
+    },
+    {
+      "ms": 9800,
+      "phase": "double",
+      "action": "slam_both_forelegs",
+      "frame": 0
+    },
+    {
+      "ms": 11005,
+      "phase": "double",
+      "action": "slam_both_forelegs",
+      "frame": 10
+    },
+    {
+      "ms": 12000,
+      "phase": "rest3",
+      "action": "idle_breathe",
+      "frame": 0
+    },
+    {
+      "ms": 14400,
+      "phase": "rest3",
+      "action": "idle_breathe",
+      "frame": 11
+    }
+  ],
+  "checks": [
+    "exact seven segment sequence",
+    "one front paw attack twice",
+    "breathing idle three times",
+    "both front paw impact",
+    "one-shot stop",
+    "repeat",
+    "pause",
+    "seek",
+    "scale",
+    "snow background",
+    "speed"
+  ]
+}

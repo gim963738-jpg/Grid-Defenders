@@ -1,0 +1,96 @@
+{
+  "method": "Manual native-pixel visible centers; uncertainty endpoints about6-10px, short hilt angle about3-5deg. Projected lengths are not true3D length, hidden joints partly inferred. No user numeric target.",
+  "before": {
+    "tip": [
+      10,
+      1055
+    ],
+    "guard": [
+      335,
+      890
+    ],
+    "pommel": [
+      480,
+      840
+    ],
+    "hairTop": 204,
+    "sole": 1295,
+    "bodyHeight": 1092,
+    "feetCenters": [
+      [
+        375,
+        1280
+      ],
+      [
+        750,
+        1260
+      ]
+    ],
+    "beltCenter": [
+      612,
+      815
+    ],
+    "nearKnee": [
+      470,
+      1010
+    ],
+    "tipMarginLeftAlpha32": 4,
+    "bladeProjectedLengthApprox": 364,
+    "wholeProjectedLengthApprox": 517,
+    "bladePerBodyApprox": 0.33,
+    "wholePerBodyApprox": 0.47,
+    "horizontalFeetSpanPerBodyApprox": 0.34,
+    "beltHeightFromSolePerBodyApprox": 0.44,
+    "nearKneeHeightFromSolePerBodyApprox": 0.26,
+    "bladeAngleFromGuardToTipApproxDeg": 153,
+    "hiltAxisAngleFromPommelToGuardApproxDeg": 161,
+    "axisDifferenceApproxDeg": 8
+  },
+  "after": {
+    "tip": [
+      44,
+      1080
+    ],
+    "guard": [
+      415,
+      885
+    ],
+    "pommel": [
+      544,
+      834
+    ],
+    "hairTop": 296,
+    "sole": 1174,
+    "bodyHeight": 879,
+    "feetCenters": [
+      [
+        450,
+        1160
+      ],
+      [
+        805,
+        1145
+      ]
+    ],
+    "beltCenter": [
+      678,
+      815
+    ],
+    "nearKnee": [
+      540,
+      969
+    ],
+    "tipMarginLeftAlpha32": 39,
+    "bladeProjectedLengthApprox": 419,
+    "wholeProjectedLengthApprox": 557,
+    "bladePerBodyApprox": 0.48,
+    "wholePerBodyApprox": 0.63,
+    "horizontalFeetSpanPerBodyApprox": 0.4,
+    "beltHeightFromSolePerBodyApprox": 0.41,
+    "nearKneeHeightFromSolePerBodyApprox": 0.23,
+    "bladeAngleFromGuardToTipApproxDeg": 152,
+    "hiltAxisAngleFromPommelToGuardApproxDeg": 158,
+    "axisDifferenceApproxDeg": 6
+  },
+  "interpretation": "Length and margin improved visibly; mild lower/wider stable stance. Sword blade straight, grip natural, but centerline through hilt/guard/blade retains a small visible direction change; exact collinearity not passed. Angle numbers support uncertainty, not automatic anatomy/failure scoring."
+}

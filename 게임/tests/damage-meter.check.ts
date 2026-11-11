@@ -14,13 +14,13 @@ export function checkDamageMeter():string[]{
  wave.tick(.01);check(wave.damageMeter.snapshot(wave.waveTime).total===5,'wave overkill counts only actual five HP');
  wave.nextTestWave();check(wave.damageMeter.snapshot(wave.waveTime).total===0,'new wave clears DPS');
  wave.reset();check(wave.damageMeter.snapshot(1).total===0,'game reset clears wave DPS');
- const battle=bossFixture(),guards=battle.actors.filter(a=>a.kind==='guard').slice(0,2),enemy=battle.actors.find(a=>a.kind==='retainer')!;
+ const battle=bossFixture(),guards=battle.actors.filter(a=>a.kind==='guard').slice(0,2),enemy=battle.actors.find(a=>a.id==='retainer-top')!;
  battle.actors=[...guards,enemy];enemy.hp=10;enemy.cooldown=999;for(const guard of guards){guard.x=enemy.x-10;guard.y=enemy.y;guard.cooldown=0;}
  battle.tick(.05);s=battle.damageMeter.snapshot(battle.elapsed);
  check(s.total===10&&s.rows.length===2&&s.rows.every(r=>r.damage===5),'simultaneous boss overkill allocated without double counting');
  battle.tick(.05);check(battle.damageMeter.snapshot(battle.elapsed).total===10,'persistent visual hits are not counted twice');
  battle.reset();check(battle.damageMeter.snapshot(1).total===0,'boss retry clears DPS');
- const one=battle.actors.find(a=>a.kind==='guard')!,foe=battle.actors.find(a=>a.kind==='retainer')!;battle.actors=[one,foe];one.cooldown=999;one.x=foe.x-10;one.y=foe.y;foe.cooldown=0;battle.tick(.05);
+ const one=battle.actors.find(a=>a.kind==='guard')!,foe=battle.actors.find(a=>a.id==='retainer-top')!;battle.actors=[one,foe];one.cooldown=999;one.x=foe.x-10;one.y=foe.y;foe.cooldown=0;battle.tick(.05);
  check(one.hp<one.maxHp&&battle.damageMeter.snapshot(battle.elapsed).total===0,'enemy attacks do not count as allied DPS');
  battle.reset();const hero=battle.hero()!,targets=battle.actors.filter(a=>a.side==='enemy').slice(0,2);battle.actors=[hero,...targets];hero.x=600;hero.y=210;hero.cooldown=0;targets.forEach((e,i)=>{e.x=700+i*15;e.y=210;e.hp=5+i*2;e.speed=0;e.cooldown=999;});
  battle.tick(.05);check(battle.damageMeter.snapshot(battle.elapsed).total===0,'projectile launch does not count unlanded damage');

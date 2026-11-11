@@ -1,0 +1,211 @@
+{
+  "task": "MAIN01-20261111-1B358AA6",
+  "iteration": 1,
+  "assets": [
+    {
+      "id": "builtin0",
+      "label": "내장 정면0°",
+      "file": "built-in/front-000.png",
+      "width": 1199,
+      "height": 1312,
+      "mode": "RGBA",
+      "sha256": "b9b49fe5d39b7a231f71ba304b5b520a5aad9714591c0bd191775fed244282c2",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaZeroPixels": 880507,
+      "boundsAlpha32": [
+        67,
+        67,
+        1060,
+        1263
+      ],
+      "hairTop": 67,
+      "sole": 1262,
+      "bodyHeight": 1196,
+      "footX": 630,
+      "footY": 1262,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "host_image",
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-81f048d7-86f7-4080-ad1b-45da02162d33.png"
+    },
+    {
+      "id": "builtin35",
+      "label": "내장 우측35°",
+      "file": "built-in/right-035.png",
+      "width": 1217,
+      "height": 1293,
+      "mode": "RGBA",
+      "sha256": "b88c91189b0d3a4444a14e76a5e4a9bc8ccab2bad10a6be83112931dde35816c",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaZeroPixels": 865139,
+      "boundsAlpha32": [
+        71,
+        77,
+        1035,
+        1241
+      ],
+      "hairTop": 77,
+      "sole": 1240,
+      "bodyHeight": 1164,
+      "footX": 650,
+      "footY": 1240,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "host_image",
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-5d525ca8-7248-4d10-a716-5bad62cdc668.png"
+    },
+    {
+      "id": "builtin90",
+      "label": "내장 우측90° 보완",
+      "file": "built-in/right-090.png",
+      "width": 1199,
+      "height": 1312,
+      "mode": "RGBA",
+      "sha256": "0e0ccbcf44dc3303d289e061b060d2b4088e7af2d0eb3c231ecd13d49c3fc1c7",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaZeroPixels": 1113860,
+      "boundsAlpha32": [
+        192,
+        45,
+        1107,
+        1229
+      ],
+      "hairTop": 45,
+      "sole": 1228,
+      "bodyHeight": 1184,
+      "footX": 580,
+      "footY": 1228,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "host_image",
+      "source": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-f4061343-286a-40df-99b7-bb4d914d1326.png"
+    },
+    {
+      "id": "image260",
+      "label": "2.6 정면0°",
+      "file": "image26/front-000.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "fea60c5ed7ab75b080bde77c77d4e2e04c0f7f50bd8273923659f5f315f9c33c",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "alphaZeroPixels": 947249,
+      "boundsAlpha32": [
+        51,
+        203,
+        938,
+        1366
+      ],
+      "hairTop": 203,
+      "sole": 1365,
+      "bodyHeight": 1163,
+      "footX": 520,
+      "footY": 1365,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "api/image-studio",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard6_main01-20261111-1b358aa6_v001\\api\\01-front\\native.png"
+    },
+    {
+      "id": "image2635",
+      "label": "2.6 우측35°",
+      "file": "image26/right-035.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "6120ad2c6bbf3ab1b92b4304d7f06d227594e02864b21c13f9a9667ccb45af80",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "alphaZeroPixels": 887178,
+      "boundsAlpha32": [
+        45,
+        204,
+        980,
+        1383
+      ],
+      "hairTop": 204,
+      "sole": 1382,
+      "bodyHeight": 1179,
+      "footX": 550,
+      "footY": 1382,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "api/image-studio",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard6_main01-20261111-1b358aa6_v001\\api\\02-right-035\\native.png"
+    },
+    {
+      "id": "image2690",
+      "label": "2.6 우측90°",
+      "file": "image26/right-090.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "aec1e989b0971bdefdfff9a068a049d243f86601690a324b094414881cf8465a",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "alphaZeroPixels": 886410,
+      "boundsAlpha32": [
+        20,
+        157,
+        986,
+        1420
+      ],
+      "hairTop": 157,
+      "sole": 1419,
+      "bodyHeight": 1263,
+      "footX": 530,
+      "footY": 1419,
+      "measurement": {
+        "method": "Native visible hair tip to supporting sole, equipment/canvas not body height; visual contact midpoint estimate",
+        "heightErrorPx": 8,
+        "footXErrorPx": 25,
+        "footYErrorPx": 6,
+        "scalp": "Hair-hidden crown not directly measurable, no exact scalp-unit claim"
+      },
+      "route": "api/image-studio",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard6_main01-20261111-1b358aa6_v001\\api\\03-right-090\\native.png"
+    }
+  ],
+  "originalBytesPreserved": true,
+  "display": {
+    "bodyCSSpx": 72,
+    "mode": "3 high downscale + conservative exterior low-alpha edge cleanup",
+    "dpr": [
+      1,
+      2
+    ],
+    "originalPNGNotResized": true
+  },
+  "remainingIssues": [
+    "90-degree same-pose continuity not achieved; see inspection"
+  ]
+}

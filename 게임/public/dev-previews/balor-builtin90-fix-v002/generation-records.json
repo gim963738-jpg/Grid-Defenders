@@ -1,0 +1,76 @@
+{
+  "task": "MAIN01-20261111-42D3D4BB",
+  "iteration": 2,
+  "builtinEditCalls": 3,
+  "image26Calls": 0,
+  "paidApiCalls": 0,
+  "envOrKeyReads": 0,
+  "automaticRetries": 0,
+  "model": "builtin tool internal image model not reported",
+  "calls": [
+    {
+      "id": 1,
+      "prompt": "prompts/edit-01.txt",
+      "inputs": [
+        "references/target-builtin90.png",
+        "references/reference-image26-90.png",
+        "references/identity-front-v9.png"
+      ],
+      "inputRoles": [
+        "EDIT/preserve shield back, pauldrons, pose",
+        "TORSO and GAZE ONLY; existing PNG, no API call",
+        "SWORD identity only"
+      ],
+      "output": "generations/candidate-01.png",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-c94bce82-1f27-410b-aec6-7f1121e5203f.png",
+      "review": "Straight blade and shield back retained; pommel not readable, rejected as final",
+      "sha256": "e005ccc69a00091af332a2b430bd569583704afeba30c9298c471fabaeb8bd43",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA"
+    },
+    {
+      "id": 2,
+      "prompt": "prompts/edit-02.txt",
+      "inputs": [
+        "generations/candidate-01.png",
+        "references/identity-front-v9.png"
+      ],
+      "inputRoles": [
+        "LOCAL hand/grip/pommel edit target",
+        "SWORD identity only"
+      ],
+      "output": "generations/candidate-02.png",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-02fd401c-828a-44d1-866f-8806a49818a1.png",
+      "review": "Visible pommel and straight axis; rejected as final because alpha>=32 reaches canvas edges",
+      "sha256": "090a56bbd020a9782269f94e9b6786323e4ffeef5b2eb2289c74f7cd27d6c75f",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA"
+    },
+    {
+      "id": 3,
+      "prompt": "prompts/edit-03.txt",
+      "inputs": [
+        "generations/candidate-02.png"
+      ],
+      "inputRoles": [
+        "BACKGROUND removal only target"
+      ],
+      "output": "generations/candidate-03.png",
+      "native": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-07b41534-1bec-4f94-9958-eb7a63f593fb.png",
+      "review": "Selected after alpha correction; slight edge/face/armor line rerendering remains disclosed",
+      "sha256": "d50979fff77f9f7dfa114cc482c87dad944bb97db22003400a85e6fb52f7a99c",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA"
+    }
+  ],
+  "settings": {
+    "transparent_background": true
+  },
+  "final": "final/builtin-right-090.png",
+  "finalSha256": "d50979fff77f9f7dfa114cc482c87dad944bb97db22003400a85e6fb52f7a99c",
+  "usage": null,
+  "usageReason": "Builtin tool did not report token/cost usage; no external API calls this iteration"
+}

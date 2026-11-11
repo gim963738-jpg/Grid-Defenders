@@ -1,0 +1,68 @@
+{
+  "checkedOn": "2026-11-07",
+  "sourceFiles": 41,
+  "sourceBytes": 46127005,
+  "sourceCopySha256Checks": 41,
+  "archivePngDecodeChecks": 35,
+  "originalSha256AndMtimeUnchanged": true,
+  "runtimeFilesRebuiltInTemporaryOutput": [
+    {
+      "file": "게임/public/assets/monsters/slimes-v1/idle-yellow.png",
+      "sha256": "a64f57990221d24c86003a9b7ce6f2317646b3da3d22f6d382180fcd5fd27c20",
+      "rebuiltBytesEqual": true
+    },
+    {
+      "file": "게임/public/assets/monsters/slimes-v1/idle-blue.png",
+      "sha256": "4a900001f4b9685cbe925ed0d347834741544c4a2d1e82aebb6edb6960ae5cf3",
+      "rebuiltBytesEqual": true
+    },
+    {
+      "file": "게임/public/assets/monsters/slimes-v1/idle-red.png",
+      "sha256": "90e834e03a6b308b17dd9752be1de040e2b97556e819348b7de3a9d8736229f5",
+      "rebuiltBytesEqual": true
+    },
+    {
+      "file": "게임/public/assets/monsters/slimes-v1/yellow-right-ripple.png",
+      "sha256": "57f1e826c2966b745f138ff4b5c05849e26a42849351fa13872208fc818e1388",
+      "rebuiltBytesEqual": true
+    },
+    {
+      "file": "게임/public/assets/heroes/blond-warrior-v1/idle-8.png",
+      "sha256": "c28fcdc901423602d5cf8f14e1ccc9f0dfc3361a7e007f550204695525282f1c",
+      "rebuiltBytesEqual": true
+    },
+    {
+      "file": "게임/public/assets/heroes/blond-warrior-v1/portrait.png",
+      "sha256": "7ba2c885ab04ec8a611b92ab83c6ef8ddb456b731406479989c1eb6c8bcb28e1",
+      "rebuiltBytesEqual": true
+    },
+    {
+      "file": "게임/public/assets/heroes/blond-warrior-v1/walk-right-60.png",
+      "sha256": "05d1d16c37eee5e86ead39b2fbef55d3702fde838ff97d3eb62017ab301e64e3",
+      "rebuiltBytesEqual": true
+    },
+    {
+      "file": "게임/public/assets/monsters/slimes-v1/yellow-right-ripple.frames.json",
+      "rebuiltJsonEqual": true
+    },
+    {
+      "file": "게임/public/assets/heroes/blond-warrior-v1/frames.json",
+      "rebuiltJsonEqual": true
+    }
+  ],
+  "runtimePngFilesChanged": 0,
+  "merchantMoveSha256Equal": true,
+  "publicAssetsBefore": {
+    "files": 39,
+    "bytes": 51182826
+  },
+  "publicAssetsAfter": {
+    "files": 38,
+    "bytes": 48924519
+  },
+  "publicAssetsBytesReduction": 2258307,
+  "publicAssetsMeasurement": "Recursive sum of file sizes in 게임/public/assets before vs after on the same machine. Includes the merchant original relocation and source-provenance JSON additions. This is package payload size, not measured download time or FPS.",
+  "sourceArchiveBytesAdded": 48385564,
+  "windowsPowerShellPolicy": "The system script execution policy rejected a direct call. Verification used a process-local -ExecutionPolicy Bypass; no persistent policy was changed.",
+  "visualScope": "No artwork or frame geometry changed. Exact PNG bytes and frame metadata match existing runtime assets; no new art approval or real-device performance measurement claimed."
+}

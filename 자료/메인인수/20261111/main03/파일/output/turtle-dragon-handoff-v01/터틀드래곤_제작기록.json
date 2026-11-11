@@ -1,0 +1,40 @@
+{
+  "name": "터틀드래곤",
+  "recordedAt": "2026-11-11T01:12:16.221092+09:00",
+  "userQuote": "GPT Image 2.6 High 새 걷기 → 동일한 기존 한앞발 공격 제작물 터틀드래곤으로 기록",
+  "selectedCombination": {
+    "walk": "03_selected_gpt26_walk.png",
+    "attack": "02_existing_single_paw_attack.png"
+  },
+  "walkRequestedModel": "gpt-image-2.6-sunburst",
+  "walkQuality": "high",
+  "attackRoute": "built-in image_gen; detailed model not reported",
+  "requestId": "req_e9e0850af66546f3bbf993f4898a7311",
+  "references": [
+    {
+      "name": "01_approved_front_left.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\turtle-dragon-black-green-main03-20261110-05df6177-v02\\front_left.png",
+      "sha256": "631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094",
+      "usedInActual26WalkRequest": true
+    },
+    {
+      "name": "02_existing_single_paw_attack.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\output\\turtle-walk-attack-v05\\builtin\\slam_right_foreleg.png",
+      "sha256": "816e0a699faad891cd0d071c73174a86e25d604fa1a4f582ee37dc40dbc3857a",
+      "usedInActual26WalkRequest": true
+    },
+    {
+      "name": "03_selected_gpt26_walk.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\output\\turtle-walk-attack-v05\\sunburst26\\walk_front_left.png",
+      "sha256": "79ffd8e91999ae812311165477a17f5407ca11a1df6f68aaf5405a0c48d0d312",
+      "usedInActual26WalkRequest": false
+    },
+    {
+      "name": "04_existing_breathing.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\output\\turtle-walk-attack-v05\\builtin\\idle_breathe.png",
+      "sha256": "391e550c9a11c8aad1e520a492c19eca33e1b61a22a4fef1b0c8bada41a4f88a",
+      "usedInActual26WalkRequest": false
+    }
+  ],
+  "scope": "선택 제작물 이름·조합 기록 및 다른 AI용 텍스트/참조 정리. 새 생성·외부 발송·게임 통합 없음."
+}

@@ -33,12 +33,18 @@
         "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
         "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
         "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
-        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md"
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+        "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md"
       ],
       "readingPolicyVersion": "OPS-004",
       "reportRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
-      "proceedRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md"
-    },
+      "proceedRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "active": true,
+      "status": "active"
+    }
+  },
+  "readingPolicyVersion": "OPS-004",
+  "retiredMains": {
     "main02": {
       "path": "C:/Users/user/orca/workspaces/Grid Defenders/메인02",
       "gitBranch": "coord/main-02",
@@ -82,7 +88,12 @@
       ],
       "readingPolicyVersion": "OPS-004",
       "reportRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
-      "proceedRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md"
+      "proceedRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "active": false,
+      "status": "retired",
+      "successor": "main01",
+      "retirementEvidence": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\사용자지시.md",
+      "archivePath": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일"
     },
     "main03": {
       "path": "C:/Users/user/orca/workspaces/Grid Defenders/메인03",
@@ -127,8 +138,17 @@
       ],
       "readingPolicyVersion": "OPS-004",
       "reportRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
-      "proceedRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md"
+      "proceedRules": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "active": false,
+      "status": "retired",
+      "successor": "main01",
+      "retirementEvidence": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\사용자지시.md",
+      "archivePath": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일"
     }
   },
-  "readingPolicyVersion": "OPS-004"
+  "activeMainIds": [
+    "main01"
+  ],
+  "operatingMode": "single-main",
+  "policy": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md"
 }

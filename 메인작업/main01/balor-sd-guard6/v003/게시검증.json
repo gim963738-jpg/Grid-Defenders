@@ -1,0 +1,317 @@
+{
+  "task": "MAIN01-20261111-1B358AA6",
+  "workerOutcome": "failed",
+  "userAccepted": false,
+  "url": "http://localhost:5173/dev-previews/balor-sd-guard35-v003/index.html",
+  "files": [
+    {
+      "file": "asset-manifest.json",
+      "bytes": 11024,
+      "sha256": "e2adb1a3c635aefe68f093fa63927a6c398d3351ce770b4bfb9b358ddbd275d8",
+      "httpByteMatch": true
+    },
+    {
+      "file": "comparison-dark.png",
+      "bytes": 699892,
+      "sha256": "a70f148f3594deecfaa3924a60e3ece82ce29907348acdd4970c6794be10e68d",
+      "httpByteMatch": true
+    },
+    {
+      "file": "comparison-field.png",
+      "bytes": 773376,
+      "sha256": "b69802f2534ac8890064e29dc0f8636d4d93650e57420efc56ea366fb1211bf8",
+      "httpByteMatch": true
+    },
+    {
+      "file": "comparison.png",
+      "bytes": 716753,
+      "sha256": "de58a6965472cc7cfdf61f4e53e5453b6543be4ab7e8d8ed74744ca45155cd20",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-dark-dpr1.png",
+      "bytes": 34935,
+      "sha256": "563c68de686680e11d2e0848d9b8ed7fe02ad14312fca302ba568067bfa43251",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-dark-dpr2.png",
+      "bytes": 120907,
+      "sha256": "cce22dd7f8fa8302b1573e4f183bd4cf77d2b328c70f8bb37f8a09b622f4f09f",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-field-dpr1.png",
+      "bytes": 556658,
+      "sha256": "aac0bb0b20135b0328fcb4776b786e354c07da0214ed1dc110c03bc04e06cdb3",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-field-dpr2.png",
+      "bytes": 1729164,
+      "sha256": "e35beec54faf6ac6df0eb181dc1379479c23f93225029e1d23de579f8eea606c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-light-dpr1.png",
+      "bytes": 36076,
+      "sha256": "e3766e1ee6c7c98429b7dd2456fd306ab3eafe9d05e694ddfc55214a02a73391",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/72-light-dpr2.png",
+      "bytes": 125514,
+      "sha256": "c103532ea18c93f6ad2922d07a41300f9ff73df0b009051c4e829c3dce502acd",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/axis-after.png",
+      "bytes": 203173,
+      "sha256": "3e2517041e26d78004eb3b20174b963ab980ff08d53710082ca3e18a09921b7c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/axis-before.png",
+      "bytes": 239964,
+      "sha256": "cc9b96628e763fe50a6e9b70938796b1781a9f349ebe59e76553dc3e3822861e",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/browser-evidence.json",
+      "bytes": 8754,
+      "sha256": "7bf636bbebbc3d6242b2f7734cb40f31d8d40eb4e65df92f15d3abff42301ba6",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/display-72.json",
+      "bytes": 5259,
+      "sha256": "0925df0e82cd5fd2c4d356699fd9cfb9a582e6134d0f0a15e971f6bbd9b06437",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/face-dark.png",
+      "bytes": 288198,
+      "sha256": "ba54c46bcce6662f77021076d674a3949ba70004353aad0f0b7f2a1ee84e475c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/face-light.png",
+      "bytes": 302487,
+      "sha256": "6ba24e89732008ab8674bbc3a8d42251919d25fa9608897ca6eef718033b5d98",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/grip-dark.png",
+      "bytes": 196548,
+      "sha256": "fa9733cb58823d4a4d829c9bfbd737909b02ea71e18fd93757e6dabd773044dd",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/grip-light.png",
+      "bytes": 197103,
+      "sha256": "51803d756fd5ab40c66dab133dba24e06bad03a43368e63654f3e567e041e679",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/measurements.json",
+      "bytes": 2341,
+      "sha256": "41fb385ebcc3699fc16c13489f9dbe01ac091e500627fe40854ebd76067ca7bc",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/original-six-comparison.png",
+      "bytes": 785627,
+      "sha256": "10ef72490c69980ee34babdc6cbc4823d66f25e64839799002051bea780809aa",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/page-reference-check.json",
+      "bytes": 236,
+      "sha256": "8fde82093e4b79eaccb1dab015156f021f1d9da522f41c52f5795be84d73b926",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/shield-dark.png",
+      "bytes": 459575,
+      "sha256": "3c753ca9d6a3e20ad1ff8a294648c5cddacb7f09e651d386402f94583fe1be80",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/shield-light.png",
+      "bytes": 464705,
+      "sha256": "36e311a35973183af952c8905a9fd1d40539f63c46a2faf445c2099d55bac4be",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/stance-dark.png",
+      "bytes": 686973,
+      "sha256": "b61eaac6649965cbe5564279609efd734ed7d83974e09cc3a2c6cd743c9b226e",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/stance-light.png",
+      "bytes": 699186,
+      "sha256": "3ee1ca8679f58ea1e0e2ebf3cb226b0b7fe382218274ee9802a69a7af0c4d339",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/verification.json",
+      "bytes": 36905,
+      "sha256": "ba13a13d7214a8f53526e219fc3121d956be53b23a8b9c3d68eb5e6a0bf335d2",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/whole-sword-dark.png",
+      "bytes": 400858,
+      "sha256": "6efe31d90c56d658bc31504a06ac8adf426d6f1285bc5aa867a3b4d8c05bdaea",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/whole-sword-light.png",
+      "bytes": 408020,
+      "sha256": "6c150786b48de085ffb064df69cdef47ad54512e97b1b64275f286c67b7da07f",
+      "httpByteMatch": true
+    },
+    {
+      "file": "evidence/zoom-evidence.png",
+      "bytes": 892731,
+      "sha256": "140cb89af33bb48890af7269561988bce8b930bbda4f07914a76f77fd524afc1",
+      "httpByteMatch": true
+    },
+    {
+      "file": "final/right-035.png",
+      "bytes": 1472748,
+      "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+      "httpByteMatch": true
+    },
+    {
+      "file": "generation-records.json",
+      "bytes": 2108,
+      "sha256": "a835eef2dde26c29ddc80db4c49525449edc4545223de36a1b8f0f4765f29cc6",
+      "httpByteMatch": true
+    },
+    {
+      "file": "index.html",
+      "bytes": 2872,
+      "sha256": "f3a920b66bba7941853e10db63f3b8f0fd4db0c6669aec68ac67924466c0bdee",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/blond-style1.png",
+      "bytes": 943540,
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/clean-035.png",
+      "bytes": 1693076,
+      "sha256": "d93cfbaa081a08a0ee84cb6d06497db68a478f3e65d1037414d382cc588ce90e",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/field.png",
+      "bytes": 2824239,
+      "sha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823",
+      "httpByteMatch": true
+    },
+    {
+      "file": "inputs/guide.png",
+      "bytes": 78171,
+      "sha256": "bab08c47eed90ce0e5a9b462f2372e2f39dc350d153695b34dcd45ecc6e303c2",
+      "httpByteMatch": true
+    },
+    {
+      "file": "landmarks.json",
+      "bytes": 920,
+      "sha256": "9f828afc20a3c1a03f4512db0424ea529606c066b9839be289e5c36db04e28f8",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/builtin0.png",
+      "bytes": 1381114,
+      "sha256": "b9b49fe5d39b7a231f71ba304b5b520a5aad9714591c0bd191775fed244282c2",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/builtin35.png",
+      "bytes": 1474075,
+      "sha256": "b88c91189b0d3a4444a14e76a5e4a9bc8ccab2bad10a6be83112931dde35816c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/builtin90.png",
+      "bytes": 882545,
+      "sha256": "0e0ccbcf44dc3303d289e061b060d2b4088e7af2d0eb3c231ecd13d49c3fc1c7",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/image260.png",
+      "bytes": 1775187,
+      "sha256": "fea60c5ed7ab75b080bde77c77d4e2e04c0f7f50bd8273923659f5f315f9c33c",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/image2635.png",
+      "bytes": 1783436,
+      "sha256": "6120ad2c6bbf3ab1b92b4304d7f06d227594e02864b21c13f9a9667ccb45af80",
+      "httpByteMatch": true
+    },
+    {
+      "file": "original-six/image2690.png",
+      "bytes": 1734523,
+      "sha256": "aec1e989b0971bdefdfff9a068a049d243f86601690a324b094414881cf8465a",
+      "httpByteMatch": true
+    },
+    {
+      "file": "player.js",
+      "bytes": 11851,
+      "sha256": "fccb2d9c323d04aa0b2d5defb94ed7ffdf6921998bd1a012e0e2f22e93923747",
+      "httpByteMatch": true
+    },
+    {
+      "file": "report.md",
+      "bytes": 2508,
+      "sha256": "d8d911b4437c9f77d1a8345451ec1543f3336f59b889a794acc725bed8352f59",
+      "httpByteMatch": true
+    },
+    {
+      "file": "same-canvas-comparison.png",
+      "bytes": 258270,
+      "sha256": "ca5678e7b84bf891d76f54e291cd2b5b789f5e1889de8f698508f3b1531205bb",
+      "httpByteMatch": true
+    },
+    {
+      "file": "검수.md",
+      "bytes": 3671,
+      "sha256": "dbb34bb54097ff487fa0ca5eedc52f6ae06479fca6e8f4b56fa489d67c9e6d34",
+      "httpByteMatch": true
+    },
+    {
+      "file": "보고.md",
+      "bytes": 2508,
+      "sha256": "d8d911b4437c9f77d1a8345451ec1543f3336f59b889a794acc725bed8352f59",
+      "httpByteMatch": true
+    },
+    {
+      "file": "분석.md",
+      "bytes": 2155,
+      "sha256": "1395d06f4198371c13a45377fe27b3d6abac0bd9e62d12d5fec491a2e95dbf5b",
+      "httpByteMatch": true
+    },
+    {
+      "file": "제작기준.md",
+      "bytes": 2134,
+      "sha256": "3b5d81cac53c0556165f8f0eca07ca1a66b674151ecfc527a7cbad4c14a082de",
+      "httpByteMatch": true
+    }
+  ],
+  "fileCount": 50,
+  "excluded": [
+    ".qa-profile",
+    "api",
+    "prompts",
+    "generations",
+    "generation scripts",
+    "read-pack"
+  ]
+}

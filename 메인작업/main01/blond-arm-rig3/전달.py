@@ -1,0 +1,62 @@
+from pathlib import Path
+import json,hashlib,subprocess,importlib.util
+
+ROOT=Path(__file__).resolve().parents[3];S=ROOT/'작업관리';HERE=Path(__file__).resolve().parent;receipt=HERE/'실제발송영수증.json'
+if receipt.exists() or (HERE/'연결.json').exists():raise SystemExit('Existing attempt; inspect receipt before retry')
+spec=importlib.util.spec_from_file_location('board',S/'도구/작업대장.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);b=m.Board(S)
+assert 'characters' not in b.leases(),'Character workspace has another editor'
+W=Path('C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2')
+SRC=W/'output/characters/style1_blond_balor_three_views_main01-20261110-d820f076_v003/blond-right-035.png'
+assert SRC.is_file()
+proof=HERE/'사용자확인.md';proof.write_text('''# 금발전사 오른팔 묶음 · 움직임 조사와 시험3안 승인
+사용자는 발로르 대신 잘 나온 금발전사를 선택했고, 한 번에 전신을 분리하지 않고 부위 묶음별 움직임을 확인하며 진행하도록 정했다. 첫 묶음은 오른쪽 위팔·아래팔·손·장검이다.
+사용자: “작업 시키기전에 우리 게임에 맞는 형태의 움직임을 조사하고 분석해서 걸맞는 리깅방식을 적용한뒤 시안으로 한 3개씩 가져와봐 그러면 내가 한가지를 선택하거나 각 시안에 장점이나 단점을 지적할게 이게 더빠르겠지??”.
+메인 이해확인: 우측35도/작은표시/반복전투를고려한조사분석후, 같은원본·파츠·공통뼈대로 절제형/준비타격복귀명확형/큰휘두름반동강조형 3개비교. 같은크기/배경/기본재생속도,관절확대및원본비교. 사용자가안선택/장단점조합피드백후다음부위확대.
+사용자 실제 승인: “진행”.
+이번범위는 조사·분석→원본파츠분리/가림·연결복원→오른팔손장검시험리깅→움직임3안·검수자료다. 원본전체재디자인/발로르수정/다른부위본리깅/완성전투모션양산/게임적용/커밋푸시는제외한다. 기존프레임영상생성보다사용자지정Bone/Cutout방식이우선한다.
+''',encoding='utf-8')
+pre=HERE/'사전확인.md';pre.write_text('''# 제작 하달 전 판단
+main01/캐릭터방법·분야규정/공유작업대장·도메인을본문확인,자기generate2dsprite스킬을읽었다. 원본35도실제view_image로확인. 원본은화면왼쪽가까운팔에장검/오른견갑이있고반대손은단검. 사용자최신Bone/Cutout시험지시가스킬의video2dsprite·시트/60프레임기본보다우선한다. 움직임은실제위팔/아래팔/손/장검독립변환으로만들고통짜이미지회전/생성영상으로위장하지않음. 기존characters ctx_762174efbb2b failed/settled/retained는이전발로르품질실패작업,이번은금발의별도승인신규작업이며재시도/서킷브레이커우회가아니다. 공유characters잠금없음. 신규output만사용하고기존소스/게임/UI/공통규정/화면/Git변경없음.
+''',encoding='utf-8')
+t=b.new('main01','characters','금발35도 오른팔·손·장검 컷아웃 리깅 시험3안',proof.read_text(encoding='utf-8'));folder=b.folder(t['id']);out=W/'output/characters/gc9_longsword_dagger'/('arm_rig3_'+t['id'].lower()+'_v001')
+prompt=f'''# {t['id']} 차수1 / main01→characters 팀장
+실제사용자승인과합의 {proof}. 대상은**금발전사우측35도원본의오른팔·손·장검묶음**. 사용자확정과정설명→조사분석→실제파츠분리/복원→시험리깅→움직임3안까지한번에수행. 같은진행승인/정면마스터승인을다시묻지않는다. 다른부위전신리깅/완성걷기공격세트/발로르작업으로확장금지.
+
+## 원본/이번공정의우선규칙
+유일고정마스터 {SRC}; SHA256 {hashlib.sha256(SRC.read_bytes()).hexdigest()}. 실제원본을열고제작전SHA보존. 35도시점/얼굴·머리몸비율/그림체·장비를고정. 새캐릭터로전체재생성하지않는다. 화면왼쪽가까운팔이인체오른팔·장검이며초승달견갑. 반대왼손단검/얼굴/몸통/골반/다리등은원본정지상태유지.
+사용자가원하는것은**Bone Rig/Cutout의실제동작**이다. generate2dsprite/imagegen스킬은원본·파츠제작/복원/검수에적용하되,캐릭터동작을video2dsprite/이미지프레임생성으로대체하지않는다. 정지팔한덩어리를돌리거나통짜인물을회전시키는시늉도불가. 원본영역을보존하는분리와가려진관절/옷의국소복원을구분한다. 이미지제작·복원은내장imagegen/이미지편집참조경로사용,유료API/외부서비스임의전환없음. 이미있는원본을그대로쓸수있는부위는재디자인하지않는다.
+
+## 1. 조사·분석 (실제제작전)
+우리게임코드의본체57/72표시(게임/src/blondArt.ts), 우측진행·작은화면·반복전투특성과이원본의팔/장검길이를확인. 게임코드는읽기전용. 공식게임영상/인게임자료에서2D전투참고2~3개를실제찾아보고준비-타격-복귀의궤적/멈춤/반동/무게감·작은화면식별을비교한다. 게임예시는웹탐색한실제자료만,포스터/일러스트를게임동작분석으로대체하지않음. 자료URL·조사일/영상시간구간·직접관찰/추정을기록. 이전 game_reference10 sources.json/분석.md는조사출발점으로만사용가능. 외부게임에셋추출/재배포/캐릭터복제없음.
+본/관절제어·장비고정·표시순서는공식1차자료도확인: https://en.esotericsoftware.com/spine-ik-constraints 및 https://en.esotericsoftware.com/spine-slots/ . 특정유료툴을구매/설치하거나Spine파일호환완료라고선언하지않는다. 현재목표는동작선택용공통뼈대시제품. 채택한제어방식(FK관절회전/필요시손목목표IK)과그이유를게임조건에연결한다. 세안은같은뼈대·파츠를공유하고키/곡선/각도·준비·복귀차이로비교한다.
+
+## 2. 파츠/재조립
+최소파츠: 정지몸체판(움직일오른팔·장검원형잔상제거/가려진몸부분국소복원),오른견갑/위팔,오른아래팔,오른손,독립장검. 견갑이관절을가리도록표시순서/보조연결을정한다. 장검은폼멜/파란그립/날개가드·고리/긴은검신청사선까지전체강체,구부리거나길이늘리지않는다. 손과검의가려진교차는손앞/뒤겹침마스크나필요한손표시순서로맞추고가드붙은위팔한덩어리로속이지않는다.
+분리한파츠는투명PNG/레이어manifest로저장하고이름/출처영역/원점·pivot·겹침/복원영역을기록. 얼굴이나다른신체를새로바꾸지않는다. 파츠펼침판/원본재조립비교/반투명겹침·차이보기/몸체와팔분리표시를제공. 복원한부분은추정이며원본그대로라고하지않는다. 어깨/팔꿈치/손목회전시틈을막을겹침영역을확보하고복원부위확대검수.
+
+## 3. 실제시험리깅
+공통계층예: Root→TorsoAnchor(정지)→RightShoulder→RightUpperArm→RightForearm→RightHand→Weapon_R. 실제관절pivot좌표와기본각을측정하고부모자식변환을명시. 필요견갑별도보조bone/slot. 무기는손의같은grip_socket에부착해부모변환을상속하고scale=1유지. 모든프레임기본정지이미지를다시생성하지않고분리PNG들을뼈대transform으로그린다.
+새output안의독립HTML/Canvas/현재사용가능런타임으로미리보기코드구현가능. 기존게임/UI소스편집/새유료SDK·대규모패키지설치불가. 이것은게임화면개편이아닌아트검수용플레이어다. source rig.json/animations.json·파츠파일과renderer소스를함께제출해반복가능하게한다. 정지몸체위에기존팔/검과새팔이동시에보이는고스트/추가손/추가무기금지. 본체원본미세차이가생기면해당영역과이유를기록하고숨기지않는다.
+
+## 4. 같은부위움직임3안
+A 절제형: 작은준비/적당한전방팔궤적/짧고안정적인복귀,반복관찰에부담이적은방향.
+B 명확형: 준비→타격순간→복귀구분이잘읽히는팔꿈치/손목궤적·잠깐멈춤/회복.
+C 강조형: 보다큰궤적/반동으로무게감강조,어깨연결부의가능범위를지키고몸통을관통하지않음.
+단순속도차이3개가아니라포즈/궤적·준비/복귀의성격이눈에띄게다르게한다. 같은행동종류·시점·크기·배경·기본전체길이로동기재생비교. 아직몸통/다리연동없는**오른팔묶음동작시안**임을표시,완성전신공격으로과장하지않는다. 사용자에게2안준비+1안복귀같은조합피드백이가능하도록구간을표시한다.
+
+## 5. 검수플레이어/산출물
+index.html에3안나란히동시재생,재생/정지·재시작·스크럽·속도조절(최종속도는사용자결정),관절/뼈대·pivot/파츠경계표시토글,원본/재조립/펼침판/확대뷰. 큰관찰크기와본체57/72CSSpx미리보기·밝음/어두움/필드비슷한배경. 앱창/탭은자동열기·이동하지않고격리headless에서실제동작확인후증거만제출.
+3안의실제움직임은자체재생되는플레이어필수. 가능한경우동기비교짧은WebM도동일런타임에서녹화하되외부영상생성으로대체하지않음. 재생파일이불가능하면실제HTML재생과타임스탬프별스크린샷/수치검증을구분하고실행안한영상을제작했다고하지않음.
+필수검사: 재조립원본일치영역/복원차이,어깨·팔꿈치·손목극점의틈과겹침/찌그러짐,손-검그립의위치오차/무기길이불변/원본검직선성/정지몸체관통,부모자식연결과루프접합,세안포즈차이,작은표시가독성. 중간시각도검사하며스크린샷한프레임만으로모션검수완료라고하지않음. 과한각도는시험범위조절/필요교체파츠로해결하되전신확장금지. 파츠복원/가림한계는보고.
+허용새출력 {out} 및이번작업5종기록만. source원본사본/해시/연구분석.md(출처/기준시점)/리깅설계.md/parts·rig·clips data/원본대조·펼침PNG/검수.md/report.md/실제browser-evidence·기술검증근거를제출. 선행파츠검수와3안제작모두승인됐으므로진행중확인질문으로무조건멈추지않되,정체성이나새툴/유료API등범위변경은ask로보고.
+새read-pack본문→문서별적용/해시ACK→characters start통과후실제편집·복원·런타임구현. imagegen/generate2dsprite관련지침을이번Cutout예외와함께읽고적용. 필요시승인범위내임시하위담당에조사/파츠/preview독립파일을분담해도원작업·필독/방법/파일소유를전달하고중복편집조정. 사용자진행승인원문을이월하고기술검수/사용자선택/실게임통합을구분.
+완료시worker_done으로main01에실제움직임플레이어/3안/파츠대조/보고/검수절대경로회신. 그림체변경·원본교체·발로르/좌팔/다리/전신모션/전투이펙트/게임적용/카탈로그/공통규정/창패널조작/커밋푸시금지. 필요미확인내용/도구한계는완료로위장하지않고분리보고.
+'''
+for name,text in [('요청확인.md',proof.read_text(encoding='utf-8')),('전문프롬프트.md',prompt),('2_사전확인.md',pre.read_text(encoding='utf-8')),('1_대화기록.md',proof.read_text(encoding='utf-8')),('3_작업일지.md','규정·원본35이미지·도구/분야·기존담당완료·잠금없음확인. 사용자신규Cutout공정예외를기록한뒤오른팔3안범위준비. 실제발송/착수/제작/검수는증거로추가기록.\n'),('4_정의문서.md','확정: 금발35오른위팔/아래팔/손/장검과필요견갑,조사/분리/복원/시험Bone와3움직임안. 다른부위/발로르/게임통합제외. 영상생성대체금지. 사용자3안선택전전신확대금지.\n'),('5_버전관리.md',f'원본 {SRC} SHA보존. 새 {out}와본작업기록만편집. 기존worktree/index/게임보존. 이번저장승인없음·커밋푸시금지.\n')]: (folder/name).write_text(text,encoding='utf-8')
+readings=[proof,pre,S/'진행승인규칙.md',S/'저장운영규정.md',W/'문서/02_세부기획/02_영웅/한손무기그립기준.md',W/'output/characters/style1_blond_balor_three_views_main01-20261110-d820f076_v003/report.md']
+b.set_readings(t['id'],'main01',[str(p) for p in readings]);b.confirm(t['id'],'main01','진행',proof);plan=b.prepare(t['id'],'main01')
+(HERE/'연결.json').write_text(json.dumps({'task':t['id'],'iteration':1,'folder':str(folder),'output':str(out),'plan':plan},ensure_ascii=False,indent=2),encoding='utf-8')
+r=subprocess.run(['C:/Users/user/AppData/Local/Programs/orca/resources/bin/orca.exe','orchestration','send','--to','dispatch:ctx_762174efbb2b','--type','dispatch','--subject','진행 승인: 금발35 오른팔/손/장검 조사·실제Cutout리깅·움직임3안','--body',Path(plan['prompt']).read_text(encoding='utf-8'),'--json'],capture_output=True,text=True,encoding='utf-8');receipt.write_text(r.stdout,encoding='utf-8');print(r.stdout,flush=True)
+if r.returncode or not json.loads(r.stdout).get('ok'):raise SystemExit('Inspect receipt; no blind resend')
+b.record(t['id'],'main01','sent',receipt)
+print(json.dumps({'task':t['id'],'sent':True,'workerStartNotYetVerified':True,'scope':'research+right-arm cutout rig+3 motion proposals'},ensure_ascii=False),flush=True)

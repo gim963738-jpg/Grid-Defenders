@@ -1,0 +1,434 @@
+[
+  {
+    "task": "MAIN01-20261110-D11FE5E5",
+    "iteration": 1,
+    "job": "male-090",
+    "status": "succeeded",
+    "startedAt": "2026-11-10T14:30:41.229Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Precise same-character turnaround, one full-body male person. Attached selected SD male front-three-quarter35 master controls identity, face and brown eyes, bald actual skull size, integrated head/torso/pelvis/limb proportions, body shape, opaque plain BLACK fitted short-sleeve crewneck T-shirt and BLACK short shorts, bare feet, crisp linework/angular matte cel-shading and colors. This is the ONLY design master. Rotate this exact person to a STRICT RIGHT-FACING90degree side profile: one visible eye, clear nose/lips/chin side contour, side chest/pelvis, overlapping shoulders/legs/feet. Do not retain35degree front face/chest, do not show both eyes. All head/torso/pelvis/feet point screen RIGHT. Natural upright BOTH-FEET-supported idle stance, relaxed arms hanging beside torso with slight natural gap. No walking/attack/hip-jut, no bent combat knees, no A/T pose. Keep the same body height, skull-to-body and limb lengths; do not lengthen adult anatomy, inflate head, redesign face, lose sex-specific shoulder/waist/hip/limb silhouette, or copy another person. Naturally occluded far limbs may hide behind near ones in this FULL composite. No hair/scarf/armor/weapons/gloves/belts/accessories/shoes, no nudity or underwear. Head, fingers and toes fully inside safe margins. Transparent alpha background, no floor shadow/glow/checker/text/labels. Requested1024x1536portrait PNG, one complete person only.",
+      "images": [
+        {
+          "name": "full.png",
+          "sha256": "55bc180b50731872866de35c6e139380b6627e22a6eeb9ed627fef3fd92ad548",
+          "bytes": 1194096,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 1872,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 336
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 3244
+    },
+    "cost": null,
+    "endedAt": "2026-11-10T14:31:19.313Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_b19abb6b7f79455a9d71f92cbb2f19b9",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794321078,
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "transparent",
+      "output_format": "png",
+      "usage": {
+        "input_tokens": 1872,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 336
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3244
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+      "bytes": 989384,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261110-D11FE5E5",
+    "iteration": 1,
+    "job": "female-090",
+    "status": "succeeded",
+    "startedAt": "2026-11-10T14:30:41.243Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Precise same-character turnaround, one full-body female person. Attached selected SD female front-three-quarter35 master controls identity, face and brown eyes, bald actual skull size, integrated head/torso/pelvis/limb proportions, body shape, opaque plain BLACK fitted short-sleeve crewneck T-shirt and BLACK short shorts, bare feet, crisp linework/angular matte cel-shading and colors. This is the ONLY design master. Rotate this exact person to a STRICT RIGHT-FACING90degree side profile: one visible eye, clear nose/lips/chin side contour, side chest/pelvis, overlapping shoulders/legs/feet. Do not retain35degree front face/chest, do not show both eyes. All head/torso/pelvis/feet point screen RIGHT. Natural upright BOTH-FEET-supported idle stance, relaxed arms hanging beside torso with slight natural gap. No walking/attack/hip-jut, no bent combat knees, no A/T pose. Keep the same body height, skull-to-body and limb lengths; do not lengthen adult anatomy, inflate head, redesign face, lose sex-specific shoulder/waist/hip/limb silhouette, or copy another person. Naturally occluded far limbs may hide behind near ones in this FULL composite. No hair/scarf/armor/weapons/gloves/belts/accessories/shoes, no nudity or underwear. Head, fingers and toes fully inside safe margins. Transparent alpha background, no floor shadow/glow/checker/text/labels. Requested1024x1536portrait PNG, one complete person only.",
+      "images": [
+        {
+          "name": "full.png",
+          "sha256": "0aef530ef1fc8cc11650c5e8a89006d25bc80f0d198255b21b56720db77854d6",
+          "bytes": 1148763,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 1872,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 336
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 3244
+    },
+    "cost": null,
+    "endedAt": "2026-11-10T14:31:22.917Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_913feebd373a4461add65d11cb6f8ac2",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794321082,
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "transparent",
+      "output_format": "png",
+      "usage": {
+        "input_tokens": 1872,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 336
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3244
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "44af479dbb59a1227b14ffdd6300f9559c1fc14fcfabeb4485b38ac2e96b5971",
+      "bytes": 1065991,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261110-D11FE5E5",
+    "iteration": 1,
+    "job": "male-035-parts",
+    "status": "succeeded",
+    "startedAt": "2026-11-10T14:30:59.865Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Cutout layer restoration sheet for the attached EXACT male SD character at right-front35degree three-quarter view. Maintain this character's exact black T-shirt/short-shorts, bald head, face, sex-specific proportions, skin palette, line weight and matte angular cel-shading. Preserve reference pose and perspective per part, not new character/style. Restore only hidden surfaces/joint underlap needed to make complete cutout parts, not exposed nude anatomy. Each part is a complete individual silhouette with smoothly rounded overlap caps at joints, same local orientation as attached neutral standing pose. Both anatomical sides are required even if the far side is COMPLETELY INVISIBLE in full image. Reconstruct the far side independently in correct view; NEVER leave blank cells or mirror the visible arm/hand/foot. Torso is the full opaque black SHIRT BODY, with covered side surfaces behind arms; upper arms include their black shirt sleeve; pelvis is the central black shorts/waist; each thigh includes its black shorts leg at top. No visible private anatomy, underwear or transparent garments.\nProduce exactly16 separated parts on a regular4columns x4rows grid in a1024x1536portrait transparent PNG. Each cell256wide x384high with generous transparent padding; each part centered in its cell, no overlap between cells. Draw parts at their natural relative size as much as cell permits, do NOT stretch narrow parts. No grid lines, no text/letters/numbers/captions, no background/checker/glow/shadows. This is an exploded COMPONENT SHEET, NOT assembled people or multiple full characters. Do not add a complete character in the sheet.\nMANDATORY cell order, left-to-right within rows:\nrow1: HEAD(face and bald skull, no neck); NECK(complete skin connector); TORSO(complete opaque shirt without arms or neck); PELVIS(complete central shorts waistband/seat, no long thighs).\nrow2: RIGHT UPPER ARM(sleeve+skin to elbow, full shoulder cap); RIGHT FOREARM(elbow to wrist, both caps); RIGHT HAND(complete relaxed five-finger hand+wrist cap); RIGHT FOOT(complete bare foot+ankle cap).\nrow3: LEFT UPPER ARM; LEFT FOREARM; LEFT HAND; LEFT FOOT. These are anatomical LEFT and may have been hidden: explicitly finish them, no mirrored copies.\nrow4: RIGHT THIGH(black shorts leg+skin from hip cap to knee cap); RIGHT SHIN(knee to ankle, both caps); LEFT THIGH; LEFT SHIN.\nSame exact view for every limb, no front-facing replacement for profile parts. Head unchanged as much as possible. All16 cells filled, every limb endpoint intact. No dismemberment/gore: these are clean non-anatomical2D animation layers with rounded closure/overlap edges. No weapons, hair or new clothing.",
+      "images": [
+        {
+          "name": "full.png",
+          "sha256": "55bc180b50731872866de35c6e139380b6627e22a6eeb9ed627fef3fd92ad548",
+          "bytes": 1194096,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2133,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 597
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 3505
+    },
+    "cost": null,
+    "endedAt": "2026-11-10T14:31:56.773Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_03cd3482ebd34620801fc1a557553c35",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794321115,
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "transparent",
+      "output_format": "png",
+      "usage": {
+        "input_tokens": 2133,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 597
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3505
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "009efe242fed579e637986d9a7f731084dc9043833119fd25a6015219e406ee6",
+      "bytes": 1569539,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261110-D11FE5E5",
+    "iteration": 1,
+    "job": "female-035-parts",
+    "status": "succeeded",
+    "startedAt": "2026-11-10T14:30:59.881Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Cutout layer restoration sheet for the attached EXACT female SD character at right-front35degree three-quarter view. Maintain this character's exact black T-shirt/short-shorts, bald head, face, sex-specific proportions, skin palette, line weight and matte angular cel-shading. Preserve reference pose and perspective per part, not new character/style. Restore only hidden surfaces/joint underlap needed to make complete cutout parts, not exposed nude anatomy. Each part is a complete individual silhouette with smoothly rounded overlap caps at joints, same local orientation as attached neutral standing pose. Both anatomical sides are required even if the far side is COMPLETELY INVISIBLE in full image. Reconstruct the far side independently in correct view; NEVER leave blank cells or mirror the visible arm/hand/foot. Torso is the full opaque black SHIRT BODY, with covered side surfaces behind arms; upper arms include their black shirt sleeve; pelvis is the central black shorts/waist; each thigh includes its black shorts leg at top. No visible private anatomy, underwear or transparent garments.\nProduce exactly16 separated parts on a regular4columns x4rows grid in a1024x1536portrait transparent PNG. Each cell256wide x384high with generous transparent padding; each part centered in its cell, no overlap between cells. Draw parts at their natural relative size as much as cell permits, do NOT stretch narrow parts. No grid lines, no text/letters/numbers/captions, no background/checker/glow/shadows. This is an exploded COMPONENT SHEET, NOT assembled people or multiple full characters. Do not add a complete character in the sheet.\nMANDATORY cell order, left-to-right within rows:\nrow1: HEAD(face and bald skull, no neck); NECK(complete skin connector); TORSO(complete opaque shirt without arms or neck); PELVIS(complete central shorts waistband/seat, no long thighs).\nrow2: RIGHT UPPER ARM(sleeve+skin to elbow, full shoulder cap); RIGHT FOREARM(elbow to wrist, both caps); RIGHT HAND(complete relaxed five-finger hand+wrist cap); RIGHT FOOT(complete bare foot+ankle cap).\nrow3: LEFT UPPER ARM; LEFT FOREARM; LEFT HAND; LEFT FOOT. These are anatomical LEFT and may have been hidden: explicitly finish them, no mirrored copies.\nrow4: RIGHT THIGH(black shorts leg+skin from hip cap to knee cap); RIGHT SHIN(knee to ankle, both caps); LEFT THIGH; LEFT SHIN.\nSame exact view for every limb, no front-facing replacement for profile parts. Head unchanged as much as possible. All16 cells filled, every limb endpoint intact. No dismemberment/gore: these are clean non-anatomical2D animation layers with rounded closure/overlap edges. No weapons, hair or new clothing.",
+      "images": [
+        {
+          "name": "full.png",
+          "sha256": "0aef530ef1fc8cc11650c5e8a89006d25bc80f0d198255b21b56720db77854d6",
+          "bytes": 1148763,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2133,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 597
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 3505
+    },
+    "cost": null,
+    "endedAt": "2026-11-10T14:31:57.906Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_758b660e47194739893aab17423a80f7",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794321116,
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "transparent",
+      "output_format": "png",
+      "usage": {
+        "input_tokens": 2133,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 597
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3505
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "b2f3593e514b955532a436b02a980e22eed58db46ca05dff2d0b3f3676aae3fc",
+      "bytes": 1529284,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261110-D11FE5E5",
+    "iteration": 1,
+    "job": "male-090-parts",
+    "status": "succeeded",
+    "startedAt": "2026-11-10T14:33:10.858Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Cutout layer restoration sheet for the attached EXACT male SD character at strict right-facing90degree profile view. Maintain this character's exact black T-shirt/short-shorts, bald head, face, sex-specific proportions, skin palette, line weight and matte angular cel-shading. Preserve reference pose and perspective per part, not new character/style. Restore only hidden surfaces/joint underlap needed to make complete cutout parts, not exposed nude anatomy. Each part is a complete individual silhouette with smoothly rounded overlap caps at joints, same local orientation as attached neutral standing pose. Both anatomical sides are required even if the far side is COMPLETELY INVISIBLE in full image. Reconstruct the far side independently in correct view; NEVER leave blank cells or mirror the visible arm/hand/foot. Torso is the full opaque black SHIRT BODY, with covered side surfaces behind arms; upper arms include their black shirt sleeve; pelvis is the central black shorts/waist; each thigh includes its black shorts leg at top. No visible private anatomy, underwear or transparent garments.\nProduce exactly16 separated parts on a regular4columns x4rows grid in a1024x1536portrait transparent PNG. Each cell256wide x384high with generous transparent padding; each part centered in its cell, no overlap between cells. Draw parts at their natural relative size as much as cell permits, do NOT stretch narrow parts. No grid lines, no text/letters/numbers/captions, no background/checker/glow/shadows. This is an exploded COMPONENT SHEET, NOT assembled people or multiple full characters. Do not add a complete character in the sheet.\nMANDATORY cell order, left-to-right within rows:\nrow1: HEAD(face and bald skull, no neck); NECK(complete skin connector); TORSO(complete opaque shirt without arms or neck); PELVIS(complete central shorts waistband/seat, no long thighs).\nrow2: RIGHT UPPER ARM(sleeve+skin to elbow, full shoulder cap); RIGHT FOREARM(elbow to wrist, both caps); RIGHT HAND(complete relaxed five-finger hand+wrist cap); RIGHT FOOT(complete bare foot+ankle cap).\nrow3: LEFT UPPER ARM; LEFT FOREARM; LEFT HAND; LEFT FOOT. These are anatomical LEFT and may have been hidden: explicitly finish them, no mirrored copies.\nrow4: RIGHT THIGH(black shorts leg+skin from hip cap to knee cap); RIGHT SHIN(knee to ankle, both caps); LEFT THIGH; LEFT SHIN.\nSame exact view for every limb, no front-facing replacement for profile parts. Head unchanged as much as possible. All16 cells filled, every limb endpoint intact. No dismemberment/gore: these are clean non-anatomical2D animation layers with rounded closure/overlap edges. No weapons, hair or new clothing. CRITICAL PROFILE CONSISTENCY: BOTH the row2 RIGHT FOOT and row3 LEFT FOOT point SCREEN RIGHT with heel on the LEFT and toes on the RIGHT; anatomical LEFT does NOT mean toes point screen left. Both hands and arms have the same right-facing side projection while preserving anatomical thumb orientation. Far side is NOT a horizontally flipped near side. Keep every part, including both feet, in the same camera view as the attached profile master.",
+      "images": [
+        {
+          "name": "full.png",
+          "sha256": "86e2d28532e6d18dc384d519b5dd1b9abd75586039dd917142c5261ed78c9de7",
+          "bytes": 989384,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2221,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 685
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 3593
+    },
+    "cost": null,
+    "endedAt": "2026-11-10T14:34:02.989Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_ac7aa33fbf9a4648813d5556f55f913b",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794321242,
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "transparent",
+      "output_format": "png",
+      "usage": {
+        "input_tokens": 2221,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 685
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3593
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "adfd8b6172a93df9e25352c792acd56491c4ecbcc538b1be5f39c908a02b44ed",
+      "bytes": 1525510,
+      "originalResponseBytesPreserved": true
+    }
+  },
+  {
+    "task": "MAIN01-20261110-D11FE5E5",
+    "iteration": 1,
+    "job": "female-090-parts",
+    "status": "succeeded",
+    "startedAt": "2026-11-10T14:33:10.874Z",
+    "request": {
+      "endpoint": "POST https://api.openai.com/v1/images/edits",
+      "model": "gpt-image-2.6-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "background": "transparent",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "Cutout layer restoration sheet for the attached EXACT female SD character at strict right-facing90degree profile view. Maintain this character's exact black T-shirt/short-shorts, bald head, face, sex-specific proportions, skin palette, line weight and matte angular cel-shading. Preserve reference pose and perspective per part, not new character/style. Restore only hidden surfaces/joint underlap needed to make complete cutout parts, not exposed nude anatomy. Each part is a complete individual silhouette with smoothly rounded overlap caps at joints, same local orientation as attached neutral standing pose. Both anatomical sides are required even if the far side is COMPLETELY INVISIBLE in full image. Reconstruct the far side independently in correct view; NEVER leave blank cells or mirror the visible arm/hand/foot. Torso is the full opaque black SHIRT BODY, with covered side surfaces behind arms; upper arms include their black shirt sleeve; pelvis is the central black shorts/waist; each thigh includes its black shorts leg at top. No visible private anatomy, underwear or transparent garments.\nProduce exactly16 separated parts on a regular4columns x4rows grid in a1024x1536portrait transparent PNG. Each cell256wide x384high with generous transparent padding; each part centered in its cell, no overlap between cells. Draw parts at their natural relative size as much as cell permits, do NOT stretch narrow parts. No grid lines, no text/letters/numbers/captions, no background/checker/glow/shadows. This is an exploded COMPONENT SHEET, NOT assembled people or multiple full characters. Do not add a complete character in the sheet.\nMANDATORY cell order, left-to-right within rows:\nrow1: HEAD(face and bald skull, no neck); NECK(complete skin connector); TORSO(complete opaque shirt without arms or neck); PELVIS(complete central shorts waistband/seat, no long thighs).\nrow2: RIGHT UPPER ARM(sleeve+skin to elbow, full shoulder cap); RIGHT FOREARM(elbow to wrist, both caps); RIGHT HAND(complete relaxed five-finger hand+wrist cap); RIGHT FOOT(complete bare foot+ankle cap).\nrow3: LEFT UPPER ARM; LEFT FOREARM; LEFT HAND; LEFT FOOT. These are anatomical LEFT and may have been hidden: explicitly finish them, no mirrored copies.\nrow4: RIGHT THIGH(black shorts leg+skin from hip cap to knee cap); RIGHT SHIN(knee to ankle, both caps); LEFT THIGH; LEFT SHIN.\nSame exact view for every limb, no front-facing replacement for profile parts. Head unchanged as much as possible. All16 cells filled, every limb endpoint intact. No dismemberment/gore: these are clean non-anatomical2D animation layers with rounded closure/overlap edges. No weapons, hair or new clothing. CRITICAL PROFILE CONSISTENCY: BOTH the row2 RIGHT FOOT and row3 LEFT FOOT point SCREEN RIGHT with heel on the LEFT and toes on the RIGHT; anatomical LEFT does NOT mean toes point screen left. Both hands and arms have the same right-facing side projection while preserving anatomical thumb orientation. Far side is NOT a horizontally flipped near side. Keep every part, including both feet, in the same camera view as the attached profile master.",
+      "images": [
+        {
+          "name": "full.png",
+          "sha256": "44af479dbb59a1227b14ffdd6300f9559c1fc14fcfabeb4485b38ac2e96b5971",
+          "bytes": 1065991,
+          "attached": true
+        }
+      ]
+    },
+    "retryPolicy": "none; duplicate invocation refused; failure stops without alternate model",
+    "usage": {
+      "input_tokens": 2221,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 685
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 3593
+    },
+    "cost": null,
+    "endedAt": "2026-11-10T14:34:07.507Z",
+    "httpPosts": 1,
+    "httpStatus": 200,
+    "requestId": "req_4519eeabc4524649bd7634e81d7e30ed",
+    "responseModel": null,
+    "responseModelReported": false,
+    "response": {
+      "created": 1794321245,
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "transparent",
+      "output_format": "png",
+      "usage": {
+        "input_tokens": 2221,
+        "input_tokens_details": {
+          "image_tokens": 1536,
+          "text_tokens": 685
+        },
+        "output_tokens": 1372,
+        "output_tokens_details": {
+          "image_tokens": 1372,
+          "text_tokens": 0
+        },
+        "total_tokens": 3593
+      }
+    },
+    "output": {
+      "file": "native.png",
+      "sha256": "a977f3287835f915ac15930376686b35218313fc5e1c3b858e300ddc3fcf6de6",
+      "bytes": 1518158,
+      "originalResponseBytesPreserved": true
+    }
+  }
+]

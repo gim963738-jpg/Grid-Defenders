@@ -1,0 +1,122 @@
+[
+  {
+    "id": "before/walk",
+    "alpha": {
+      "min": 0,
+      "max": 254,
+      "zero": 902247,
+      "partial": 670617,
+      "pixels": 1572864
+    },
+    "candidateRedYellowSpillPixels": 287,
+    "notes": [
+      "No art approval implied by numerical checks",
+      "Some cell margins, silhouette details and foot stability require visual inspection"
+    ]
+  },
+  {
+    "id": "before/weak",
+    "alpha": {
+      "min": 2,
+      "max": 254,
+      "zero": 0,
+      "partial": 1572864,
+      "pixels": 1572864
+    },
+    "candidateRedYellowSpillPixels": 43,
+    "notes": [
+      "No art approval implied by numerical checks",
+      "Some cell margins, silhouette details and foot stability require visual inspection"
+    ]
+  },
+  {
+    "id": "before/strong",
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "zero": 846417,
+      "partial": 724632,
+      "pixels": 1572516
+    },
+    "candidateRedYellowSpillPixels": 6,
+    "notes": [
+      "No art approval implied by numerical checks",
+      "Some cell margins, silhouette details and foot stability require visual inspection"
+    ]
+  },
+  {
+    "id": "before/idle",
+    "alpha": {
+      "min": 0,
+      "max": 254,
+      "zero": 856707,
+      "partial": 716157,
+      "pixels": 1572864
+    },
+    "candidateRedYellowSpillPixels": 0,
+    "notes": [
+      "No art approval implied by numerical checks",
+      "Some cell margins, silhouette details and foot stability require visual inspection"
+    ]
+  },
+  {
+    "id": "after/walk",
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "zero": 858717,
+      "partial": 712255,
+      "pixels": 1572516
+    },
+    "candidateRedYellowSpillPixels": 383,
+    "notes": [
+      "No art approval implied by numerical checks",
+      "Some cell margins, silhouette details and foot stability require visual inspection"
+    ]
+  },
+  {
+    "id": "after/weak",
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "zero": 836138,
+      "partial": 733762,
+      "pixels": 1572516
+    },
+    "candidateRedYellowSpillPixels": 331,
+    "notes": [
+      "No art approval implied by numerical checks",
+      "Some cell margins, silhouette details and foot stability require visual inspection"
+    ]
+  },
+  {
+    "id": "after/strong",
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "zero": 871255,
+      "partial": 699650,
+      "pixels": 1572516
+    },
+    "candidateRedYellowSpillPixels": 56,
+    "notes": [
+      "No art approval implied by numerical checks",
+      "Some cell margins, silhouette details and foot stability require visual inspection"
+    ]
+  },
+  {
+    "id": "after/idle",
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "zero": 775930,
+      "partial": 794119,
+      "pixels": 1572516
+    },
+    "candidateRedYellowSpillPixels": 0,
+    "notes": [
+      "No art approval implied by numerical checks",
+      "Some cell margins, silhouette details and foot stability require visual inspection"
+    ]
+  }
+]

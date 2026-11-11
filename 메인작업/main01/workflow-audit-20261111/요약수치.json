@@ -1,0 +1,81 @@
+{
+  "at": "2026-11-11T22:10:12.906623+09:00",
+  "tasks": 48,
+  "branchCounts": {
+    "qa": 7,
+    "characters": 16,
+    "monsters": 4,
+    "gameplay": 4,
+    "splash": 5,
+    "effects": 7,
+    "ui": 3,
+    "sprites": 2
+  },
+  "statuses": {
+    "awaiting_user": 36,
+    "accepted": 7,
+    "draft": 2,
+    "in_progress": 1,
+    "confirmed": 1,
+    "cancelled": 1
+  },
+  "eventCounts": {
+    "sent": 80,
+    "start": 85,
+    "returned": 78,
+    "revise": 35,
+    "accept": 7,
+    "transfer": 15,
+    "cancelled_by_user_scope_change": 1
+  },
+  "plans": 80,
+  "promptMissing": 0,
+  "promptHashMismatch": 0,
+  "acks": 85,
+  "emptyApplies": 0,
+  "ackTaskRoleMismatch": 0,
+  "evidenceMismatch": 0,
+  "direct13PromptEquals": 13,
+  "direct13NativeBytesEqual": 13,
+  "native": {
+    "native-tasks": {
+      "topKeys": [
+        "id",
+        "ok",
+        "result",
+        "_meta"
+      ],
+      "resultType": "dict",
+      "resultKeys": [
+        "runId",
+        "legacyReadOnly",
+        "tasks",
+        "count"
+      ]
+    },
+    "native-workers": {
+      "topKeys": [
+        "ok",
+        "result"
+      ],
+      "resultType": "dict",
+      "resultKeys": [
+        "workers",
+        "scope"
+      ]
+    },
+    "native-messages": {
+      "topKeys": [
+        "id",
+        "ok",
+        "result",
+        "_meta"
+      ],
+      "resultType": "dict",
+      "resultKeys": [
+        "messages",
+        "count"
+      ]
+    }
+  }
+}

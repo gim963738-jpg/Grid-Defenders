@@ -1,0 +1,99 @@
+{
+  "task": "MAIN01-20261111-DCD6B21B",
+  "at": "2026-11-11T22:02:15.701673+09:00",
+  "productCount": 4,
+  "checkCount": 7,
+  "files": [
+    {
+      "path": "src/actorSpacing.ts",
+      "beforeSha256": "d3e6c8b47a2f789da2bb9e18d29c1dacc962ed4a5f7c6116d419906d694af91a",
+      "afterSha256": "d3d8d8353b7aa37bb04236779b55a04286e565da5ebbfc613e5c8d3e357f62f5",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\src\\actorSpacing.ts"
+    },
+    {
+      "path": "src/bossBattle.ts",
+      "beforeSha256": "74f2e7858340cf5733300e2c9cd049fea5cad4236768a54eaa0f5f21bb0b97d4",
+      "afterSha256": "7fcead29f0030b266b78c82d36613f5f6454a34ce8a2b2127da0bbdc5706f414",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\src\\bossBattle.ts"
+    },
+    {
+      "path": "src/bossBattleView.ts",
+      "beforeSha256": "4b9d74a9bd697a7bcee8d7983d2c401bce50fd545c012aea090612bee9110e26",
+      "afterSha256": "ec4c6b87497dc83015117b508502e48ec3f1be394a634b243d1dd6c7d5245517",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\src\\bossBattleView.ts"
+    },
+    {
+      "path": "src/combatMotionArt.ts",
+      "beforeSha256": "12306bc5f23b221c72b55bf30a7acb95e21d51a85d15a46552f0e7b0aedaf8c1",
+      "afterSha256": "9335862999f554a451341ef46e7a693fbbafdb9d31f4b74f470cde99540f560d",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\src\\combatMotionArt.ts"
+    },
+    {
+      "path": "tests/visual-spacing.check.ts",
+      "beforeSha256": null,
+      "afterSha256": "4a876b94c538ab886800b3cc86ef772d0976b97092fbae3d7bc0ab4f8e7cd715",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\tests\\visual-spacing.check.ts"
+    },
+    {
+      "path": "tests/boss-battle.check.ts",
+      "beforeSha256": "81d51aa2efc82dae13cc9d1d9a6e87ffadfcf5ecb3be9043a0bc605d6189c06a",
+      "afterSha256": "5b4b6ae38ba02624bd52eea4d8b2eb4a3465a1ba58d1dfe6f7f34286a345ff16",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\tests\\boss-battle.check.ts"
+    },
+    {
+      "path": "tests/runtime-motion.check.ts",
+      "beforeSha256": "055c68b9aef802fbd4188b319bf43ecfb8f7ef68b27eea4b71362469fe15bc52",
+      "afterSha256": "4b305cf31cc61ffb0632a152cf17160b733b0c97d9c050bfddb285473eb7868d",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\tests\\runtime-motion.check.ts"
+    },
+    {
+      "path": "tests/assassin-combat.check.ts",
+      "beforeSha256": "cff729603543b9de3cd7a2588306bb2ce2b1d0db434cd21ea7e6bb1d2ad71a4d",
+      "afterSha256": "78ffbf01145fcff10d47e6a8ced59944fa24a2dc3cb381cba121e88d90700047",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\tests\\assassin-combat.check.ts"
+    },
+    {
+      "path": "tests/training.check.ts",
+      "beforeSha256": "adfd63776fb831974faaf58d81c93eeaee49f5a2b303f4ac1b22f763bb0e68d2",
+      "afterSha256": "b864117c75717d461db353989943081cf936ad5b85b26eb931f5187f33dd058f",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\tests\\training.check.ts"
+    },
+    {
+      "path": "scripts/check-tests.mjs",
+      "beforeSha256": "214e2291400d48bdde2a609508f23a3ef6386a4c8229bc5bf968681484f792d4",
+      "afterSha256": "94d05d89eb554242567d8d81b56cd162f747b66cc9f9c8e6a6c87d269c52376f",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\scripts\\check-tests.mjs"
+    },
+    {
+      "path": "scripts/visual-spacing-check.mjs",
+      "beforeSha256": null,
+      "afterSha256": "f2ee11a21622befdf441031c063007e027f57a12ee2231a8a27a6170ec0fa645",
+      "staged": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\integration\\staged\\scripts\\visual-spacing-check.mjs"
+    }
+  ],
+  "root71BeforeMatch": true,
+  "readAck": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-DCD6B21B\\읽기확인-v001-7ebd673f77e34b25be8e27f17dd7db19.json",
+    "sha256": "59137cd58d831de1469e0825c58e9dbf7cf9b01b4497d09a3c6471bb04428a26",
+    "documents": 23
+  },
+  "nativeMessage": "msg_c04f6445c73f",
+  "nativeOutcome": "succeeded",
+  "viewed": [
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-spacing-boundary_main01-20261111-dcd6b21b_v003\\after-visual\\arena-crowd.png",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-spacing-boundary_main01-20261111-dcd6b21b_v003\\after-visual\\arena-boss-late.png"
+  ],
+  "limitations": [
+    "original art alpha/cell/direction limitations preserved",
+    "extreme bottom existing name-label may meet arena boundary; whole body fits",
+    "forced320 finite-only, full mobile/real-device/performance not verified",
+    "15 unrelated full DOM suites not rerun",
+    "independent QA and user visual acceptance pending"
+  ],
+  "state": "applied_pending_root_checks",
+  "userStorageWrite": false,
+  "browserNavigation": false,
+  "serverRestart": false,
+  "gitWrite": false,
+  "apiCall": false
+}

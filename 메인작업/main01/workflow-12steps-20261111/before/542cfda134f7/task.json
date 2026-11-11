@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 3,
+  "id": "MAIN01-20261110-DE754BC7",
+  "main": "main01",
+  "branch": "characters",
+  "title": "B안 GPT Image2.6 파츠·동일오른팔리깅3안 비교",
+  "iteration": 1,
+  "status": "returned",
+  "createdAt": "2026-11-10T21:01:32.979753+09:00",
+  "approval": null,
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-10T21:23:38.687834+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-arm-rig3-b\\실제발송영수증.json",
+        "sha256": "55f40d8e63c49b9045cf451d49320b2024834aa5c97d61ec84a5b07012aa5221"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T21:26:11.758690+09:00",
+      "iteration": 1,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-DE754BC7\\읽기확인-v001-10ae1e27460c4dfb96f92dff0882e349.json",
+        "sha256": "16303889bd7d8152be26925f57276cf29709ddb057b2f28ca52cf3200a33c67d"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-10T21:43:39.127029+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\arm_rig3_B_main01-20261110-de754bc7_v001\\report.md",
+        "sha256": "1d9b30733830bd04a90830800c9ec81840baa0e7f983847f8e342ce6fe84b74a"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "OPS006_migration",
+      "at": "2026-11-11T23:20:45.738268+09:00",
+      "previousStatus": "awaiting_user",
+      "previousApproval": {
+        "userQuote": "B안 진행",
+        "source": {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-arm-rig3-b\\사용자확인.md",
+          "sha256": "aa89ace6e12fb3df920b87c3eec6f35661c563e2774b9a0175fdecd45c24412a"
+        },
+        "recordedBy": "main01",
+        "recordedAt": "2026-11-10T21:01:33.026764+09:00",
+        "iteration": 1,
+        "hashes": {
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-DE754BC7\\요청확인.md": "aa89ace6e12fb3df920b87c3eec6f35661c563e2774b9a0175fdecd45c24412a",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-DE754BC7\\전문프롬프트.md": "f2a26bb319edcc8deaa4a1d04d37fd007457a0282338f06a9c2495f44bb02917",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-DE754BC7\\2_사전확인.md": "7b68d29a6d887b081f7b1e1cdcf2e1ba5ae4eb83bde29d1b1acf8d18913f1644",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md": "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md": "d4027f0c9a32fcec376092a83a44eb28eff07b26563103f13f1bbeb3f580b0e8",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-arm-rig3-b\\사용자확인.md": "aa89ace6e12fb3df920b87c3eec6f35661c563e2774b9a0175fdecd45c24412a",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-arm-rig3-b\\사전확인.md": "7b68d29a6d887b081f7b1e1cdcf2e1ba5ae4eb83bde29d1b1acf8d18913f1644",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\image-credit-connection\\기존연결검증.json": "c478209638ac7fc8a78d53e5e2e8bf0c607baa53b4863a6604e769b7764fa251",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\README.md": "a10bf09af80558fc4e9ec9d673afda74b8cf53b7a02084a598043d5d08c4d473",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-arm-rig3\\사용자확인.md": "f98d52528cd89658477b3060d1bac91e07560c217328a1e2bc89f7e908a45006"
+        }
+      },
+      "note": "原 지시/판정 보존; 새 발송은 버튼 승인 필요"
+    }
+  ],
+  "readingPolicyVersion": "OPS-006",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-arm-rig3-b\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-arm-rig3-b\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\image-credit-connection\\기존연결검증.json",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\README.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-arm-rig3\\사용자확인.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-DE754BC7\\읽기확인-v001-10ae1e27460c4dfb96f92dff0882e349.json",
+    "sha256": "16303889bd7d8152be26925f57276cf29709ddb057b2f28ca52cf3200a33c67d"
+  },
+  "updatedAt": "2026-11-11T23:20:45.738268+09:00",
+  "stages": {
+    "production": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "technical": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "user": {
+      "status": "not_reviewed",
+      "evidence": null
+    },
+    "integration": {
+      "status": "unknown",
+      "evidence": null
+    }
+  },
+  "pendingChoice": null,
+  "spec": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-DE754BC7\\통합작업명세.json"
+}

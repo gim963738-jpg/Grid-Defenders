@@ -1,0 +1,28 @@
+{
+  "userRequestedRetirement": true,
+  "handoverReceived": true,
+  "activeProductionInRetiringMains": false,
+  "targets": [
+    {
+      "role": "main02",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인02",
+      "archive": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main02\\파일",
+      "files": 1314,
+      "shaVerifiedAgain": true,
+      "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+      "branch": "coord/main-02"
+    },
+    {
+      "role": "main03",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03",
+      "archive": "C:\\Users\\user\\Desktop\\Grid Defenders\\자료\\메인인수\\20261111\\main03\\파일",
+      "files": 1520,
+      "shaVerifiedAgain": true,
+      "head": "1a54b474e96a718f77c4852c1aea3f66e0564a34",
+      "branch": "coord/main-03"
+    }
+  ],
+  "allowedOnlyExactTargets": true,
+  "keepBranches": true,
+  "keepTeamWorkspaces": true
+}

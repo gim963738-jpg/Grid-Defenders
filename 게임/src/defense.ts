@@ -1,3 +1,4 @@
+import {createMotion,startMotion,advanceMotion,locked,setPose,type ActorMotion} from './actorMotion';
 import {NO_TRAINING,type TrainingBonuses} from './training';
 import {criticalAttack} from './critical';
 import {blondDirection} from './blondMotion';
@@ -10,7 +11,7 @@ import { DamageMeter } from './damageMeter';
 import {autoFormation,reconcileFormation,moveFormation,type FormationPlacement} from './battleFormation';
 import { LANDSCAPE_BATTLE, AREA_ATTACK, BAG_GRID, GRID, ITEMS, MONSTERS, DAMAGE_LABEL, DEFENSE_LABEL, PATH, RECIPES, RULES, SLOTS, UNITS, rotated, type UnitKind, type ItemDef, type DamageType, type DefenseType, type MonsterDef } from './defenseConfig';
 
-export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; facing?:number; }
+export interface Unit { id:number; kind:UnitKind; slot:number; level:number; spent:number; cooldown:number; facing?:number; motion?:ActorMotion; }
 export interface Enemy { armorBreakRemaining?:number; id:number; distance:number; x:number; y:number; hp:number; maxHp:number; speed:number; bounty?:boolean; named:boolean;name:string;defenseType:DefenseType;damageType:DamageType;attack:number;armor:number;magicArmor:number;rate:number;goldReward:number;wave:number; }
 export function enemyRadius(enemy:Pick<Enemy,'named'|'bounty'>):number{return enemy.named?14:enemy.bounty?12:8;}
 export function defenseMultiplier(attack:DamageType,defense:DefenseType):number {return attack===defense?0.75:1;}
@@ -133,7 +134,7 @@ export class Defense {
     this.bossPending=false;
     const removed=this.keepWaveMonsters?0:this.enemies.filter(e=>!e.named&&!e.bounty&&e.hp>0).length;
     this.enemies=this.enemies.filter(e=>e.hp>0&&(this.keepWaveMonsters||e.named||e.bounty));
-    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.bladeCasts=[];this.assassinActions=[];this.assassinImpacts=[];this.wave++;
+    this.shots=[];this.attackAreas=[];this.iceProjectiles=[];this.iceBursts=[];this.fireCasts=[];this.swordAttacks=[];this.bladeCasts=[];this.assassinActions=[];this.assassinImpacts=[];this.wave++;for(const u of this.units)if(u.kind==='blond'){const next=u.motion?.sequence??0;u.motion=createMotion();u.motion.sequence=next;}
     this.log('economy',this.keepWaveMonsters?`[웨이브 전환] 생존 몬스터 ${this.enemies.length}마리 유지`:`[웨이브 전환] 남은 일반 몬스터 ${removed}마리 정리 · 처치 보상 없음 · 네임드/현상금 유지`);
     this.startWave();
   }
@@ -494,6 +495,10 @@ export class Defense {
     this.assassinActions.push(criticalAttack(createAssassinAction('wave',{...unit},id,[target.id],stats.attack,pos.x,pos.y,target,stats.rate),stats,this.random));return true;
   }
   tick(realSeconds:number):void {
+    if(!Number.isFinite(realSeconds)||realSeconds<=0)return;
+    let left=realSeconds;while(left>1e-9){const step=Math.min(left,.02/this.speed);this.step(step);left-=step;}
+  }
+  private step(realSeconds:number):void {
     if(this.bossPending||(this.keepWaveMonsters&&this.monsterLimitReached))return;
     const dt=realSeconds*this.speed;this.elapsed+=dt;
     this.advanceWaves(dt);
@@ -578,13 +583,28 @@ export class Defense {
     }
     this.swordAttacks=this.swordAttacks.filter(swordAlive);
     for(const u of this.units) {
-      u.cooldown-=dt;if(u.cooldown>0||startedSkills.has(u.id)||this.assassinActions.some(a=>a.sourceId===u.id&&assassinSourceBusy(a)))continue;
+      u.cooldown-=dt;
+      if(u.kind==='blond'){
+        const motion=u.motion??=createMotion(),stats=this.stats(u),pos=SLOTS[u.slot];
+        if(advanceMotion(motion,dt)){
+          const victim=this.enemies.find(e=>e.id===motion.targetId&&e.hp>0);
+          if(victim&&Math.hypot(victim.x-pos.x,victim.y-pos.y)<=stats.range+1e-8)this.hit(u,victim,motion.attack,motion.critical);
+        }
+        if(locked(motion))continue;
+        setPose(motion,'02');
+      }
+      if(u.cooldown>0||startedSkills.has(u.id)||this.assassinActions.some(a=>a.sourceId===u.id&&assassinSourceBusy(a)))continue;
       const s=this.stats(u),pos=SLOTS[u.slot];
       // 순환 일반전의 임시 선두 판정: 총 이동 거리 최대, 동률은 먼저 생성된 대상.
       const target=this.enemies.filter(e=>e.hp>0&&Math.hypot(e.x-pos.x,e.y-pos.y)<=s.range)
         .sort((a,b)=>b.distance-a.distance||a.id-b.id)[0];
       if(!target){u.cooldown=0;continue;}
-      if(u.kind==='blond')u.facing=blondDirection(target.x-pos.x,target.y-pos.y,u.facing??0);
+      if(u.kind==='blond'){
+        u.facing=blondDirection(target.x-pos.x,target.y-pos.y,u.facing??0);
+        const rolled=criticalAttack({attack:s.attack},s,this.random);
+        startMotion(u.motion??=createMotion(),target.id,rolled.attack,rolled.critical);
+        u.cooldown=1/s.rate;continue;
+      }
       u.cooldown=1/s.rate;
       if(u.kind==='ranged'){
         this.iceProjectiles.push(criticalAttack({x:pos.x,y:pos.y-12,tx:target.x,ty:target.y,targetId:target.id,source:{...u},attack:s.attack},s,this.random));

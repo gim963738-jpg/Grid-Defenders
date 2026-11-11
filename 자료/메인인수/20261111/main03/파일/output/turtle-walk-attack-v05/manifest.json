@@ -1,0 +1,65 @@
+{
+  "version": "v05",
+  "at": "2026-11-11T01:05:58.860802+09:00",
+  "owner": "main03",
+  "approval": "2.6 explicit request followed by 진행하는데 어떤 좋은 제안 이야기하면 나한테 전달해줘",
+  "newImageCount": 1,
+  "apiCalls": 1,
+  "automaticRetries": 0,
+  "requestedModel": "gpt-image-2.6-sunburst",
+  "requestedQuality": "high",
+  "responseModel": "not reported",
+  "requestId": "req_e9e0850af66546f3bbf993f4898a7311",
+  "usage": {
+    "input_tokens": 3885,
+    "input_tokens_details": {
+      "image_tokens": 3072,
+      "text_tokens": 813
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+      "image_tokens": 1372,
+      "text_tokens": 0
+    },
+    "total_tokens": 5257
+  },
+  "costUsd": "unknown",
+  "rawSheetsUnmodified": true,
+  "files": [
+    {
+      "file": "builtin\\idle_breathe.png",
+      "sha256": "391e550c9a11c8aad1e520a492c19eca33e1b61a22a4fef1b0c8bada41a4f88a",
+      "bytes": 2571286
+    },
+    {
+      "file": "builtin\\slam_both_forelegs.png",
+      "sha256": "d7bd6f0917d95b2e9d069f93ccfe9208efc220fca5ebbb5a8e801dd4a1de830e",
+      "bytes": 2148144
+    },
+    {
+      "file": "builtin\\slam_right_foreleg.png",
+      "sha256": "816e0a699faad891cd0d071c73174a86e25d604fa1a4f582ee37dc40dbc3857a",
+      "bytes": 2901059
+    },
+    {
+      "file": "builtin\\walk_front_left.png",
+      "sha256": "7b878ab031d4bc76ce113e6f5f933a7429975c64f78cdf7f0bd383e641fec939",
+      "bytes": 2585579
+    },
+    {
+      "file": "sunburst26\\walk_front_left.png",
+      "sha256": "79ffd8e91999ae812311165477a17f5407ca11a1df6f68aaf5405a0c48d0d312",
+      "bytes": 2494427
+    },
+    {
+      "file": "backgrounds\\forest.png",
+      "sha256": "1fd1fc28ec02828ec63903365bda0d869204f38c439c1d5c72e0f6385d79a2ef",
+      "bytes": 3116003
+    },
+    {
+      "file": "backgrounds\\snow.png",
+      "sha256": "b9f6e074f76388247aa91985c133d1ed47e5bdede1e6b807d41022ea387f9f4b",
+      "bytes": 2625907
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "task": "MAIN01-20261111-1B358AA6",
+  "iteration": 2,
+  "route": "api/image-studio/read-only existing adapter",
+  "preset": "sunburst-2.6-high",
+  "requestModel": "gpt-image-2.6-sunburst",
+  "responseModel": null,
+  "quality": "high",
+  "apiPosts": 1,
+  "builtinCalls": 0,
+  "retry": 0,
+  "fallback": 0,
+  "additionalPaidEdits": 0,
+  "requestId": "req_2afa6bb9ada44567aa75201a826871c7",
+  "usage": {
+    "input_tokens": 2486,
+    "input_tokens_details": {
+      "image_tokens": 1825,
+      "text_tokens": 661
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+      "image_tokens": 1372,
+      "text_tokens": 0
+    },
+    "total_tokens": 3858
+  },
+  "cost": null,
+  "balance": null,
+  "requestRecord": "api/01-edit35/request-record.json",
+  "inputRoles": [
+    "inputs/clean-035.png: sole edit/style/identity/proportion source",
+    "inputs/guide.png: user position/angle only; annotations/background excluded"
+  ],
+  "prompt": "prompts/edit-035.txt",
+  "output": {
+    "id": "after",
+    "label": "수정2.6 SD35°",
+    "file": "final/right-035.png",
+    "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard35_lower_main01-20261111-1b358aa6_v002\\api\\01-edit35\\native.png",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "d93cfbaa081a08a0ee84cb6d06497db68a478f3e65d1037414d382cc588ce90e",
+    "mode": "RGBA",
+    "alphaMin": 0,
+    "alphaMax": 254,
+    "boundsAlpha32": [
+      4,
+      204,
+      1001,
+      1296
+    ],
+    "hairTop": 204,
+    "sole": 1295,
+    "footX": 560,
+    "bodyHeight": 1092,
+    "footY": 1295,
+    "measurement": {
+      "method": "Native visual hair-to-supporting-sole; sword/canvas excluded. footX visual support estimate",
+      "heightErrorPx": 8,
+      "footXErrorPx": 25,
+      "footYErrorPx": 6,
+      "hiddenScalp": "not measured"
+    }
+  },
+  "originalResponseBytesPreserved": true
+}

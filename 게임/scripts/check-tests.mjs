@@ -6,7 +6,7 @@ import { createServer } from 'vite';
 // DOM, canvas and image assertions stay in a real browser; do not fake those APIs.
 const root = fileURLToPath(new URL('../', import.meta.url));
 const models = [
-  'assassin-combat', 'battle-formation', 'battle-save', 'blade-skill', 'boss-battle', 'boss-formation',
+  'visual-spacing', 'runtime-motion', 'assassin-combat', 'battle-formation', 'battle-save', 'blade-skill', 'boss-battle', 'boss-formation',
   'boss-dps-history', 'boss-roster-ice', 'boss-skills', 'boss-test-balance',
   'boss-wave-auto', 'camp-progress', 'combat-playback', 'damage-meter',
   'defense-field-layout', 'dev-gear', 'dev-placement', 'dps-window',
@@ -48,9 +48,10 @@ try {
     });
     // Separate module graphs ensure layout-sensitive constants are evaluated afresh.
     const server = await createServer({
-      root, configFile: false, logLevel: 'error', appType: 'custom',
-      server: { middlewareMode: true, watch: null, hmr: false },
+      root, cacheDir:fileURLToPath(new URL('../.qa-cache/'+layout+'/',import.meta.url)), configFile: false, logLevel: 'error', appType: 'custom',
+      server: { host:'127.0.0.1',port:0,watch:null,hmr:false },
     });
+    await server.listen();
     try {
       for (const name of models) {
         if (layout !== 'portrait' && portraitOnly.has(name)) {

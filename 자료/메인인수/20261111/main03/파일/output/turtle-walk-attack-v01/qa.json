@@ -1,0 +1,90 @@
+{
+  "ok": true,
+  "scope": "Node VM playback and control checks; not a real browser visual approval",
+  "loadedImages": 4,
+  "samples": [
+    {
+      "ms": 0,
+      "phase": "walk",
+      "action": "walk_left",
+      "frame": 0,
+      "x": 680
+    },
+    {
+      "ms": 1199,
+      "phase": "walk",
+      "action": "walk_left",
+      "frame": 11,
+      "x": 500.15
+    },
+    {
+      "ms": 1200,
+      "phase": "walk",
+      "action": "walk_left",
+      "frame": 0,
+      "x": 500
+    },
+    {
+      "ms": 2399,
+      "phase": "walk",
+      "action": "walk_left",
+      "frame": 11,
+      "x": 320.15
+    },
+    {
+      "ms": 2400,
+      "phase": "attack",
+      "action": "slam_right_foreleg",
+      "frame": 0,
+      "x": 320
+    },
+    {
+      "ms": 2969,
+      "phase": "attack",
+      "action": "slam_right_foreleg",
+      "frame": 5,
+      "x": 320
+    },
+    {
+      "ms": 2970,
+      "phase": "attack",
+      "action": "slam_right_foreleg",
+      "frame": 6,
+      "x": 320
+    },
+    {
+      "ms": 3699,
+      "phase": "attack",
+      "action": "slam_right_foreleg",
+      "frame": 11,
+      "x": 320
+    },
+    {
+      "ms": 3700,
+      "phase": "rest",
+      "action": "slam_right_foreleg",
+      "frame": 11,
+      "x": 320
+    },
+    {
+      "ms": 4300,
+      "phase": "rest",
+      "action": "slam_right_foreleg",
+      "frame": 11,
+      "x": 320
+    }
+  ],
+  "drawCalls": 50,
+  "checks": [
+    "PNG sources loaded",
+    "walk to immediate attack boundary",
+    "impact frame",
+    "recover hold",
+    "one-shot stop",
+    "loop",
+    "pause",
+    "seek",
+    "background switch",
+    "speed control"
+  ]
+}

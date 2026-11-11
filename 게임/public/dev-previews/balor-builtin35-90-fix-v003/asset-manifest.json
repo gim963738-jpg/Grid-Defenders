@@ -1,0 +1,331 @@
+{
+  "task": "MAIN01-20261111-42D3D4BB",
+  "iteration": 3,
+  "assets": [
+    {
+      "id": "front",
+      "label": "승인 v9 · 정면0°",
+      "file": "references/front-v9.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\inputs\\front-v9.png",
+      "sourceSha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "sha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "directionDegreesRequested": 0,
+      "route": "approved-original",
+      "boundsAlpha32": [
+        185,
+        375,
+        824,
+        1387
+      ],
+      "hairTop": 375,
+      "sole": 1386,
+      "bodyHeight": 1012,
+      "footX": 432.0,
+      "footY": 1386,
+      "measurement": "alpha32 silhouette hair-to-sole (boots are bottommost for these five images), foot median of last8px alpha32 support; equipment excluded conceptually; manually checked, ±8px height/±25px footX; pose yaw is visual approximation, not 3D measurement",
+      "rois": {
+        "face": [
+          400,
+          350,
+          630,
+          550
+        ],
+        "torso": [
+          300,
+          505,
+          600,
+          800
+        ],
+        "grip": [
+          230,
+          800,
+          460,
+          1060
+        ],
+        "shield": [
+          535,
+          560,
+          835,
+          1320
+        ]
+      },
+      "originalBytesPreserved": true
+    },
+    {
+      "id": "builtin35",
+      "label": "내장 · 오른쪽앞35°",
+      "file": "references/builtin-035.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\built-in\\right-035.png",
+      "sourceSha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "sha256": "0c01c26152ed32f83ea233c9258e87efb58913a6ee1049074817b5769cd0cbba",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "directionDegreesRequested": 35,
+      "route": "built-in",
+      "boundsAlpha32": [
+        76,
+        72,
+        859,
+        1469
+      ],
+      "hairTop": 72,
+      "sole": 1468,
+      "bodyHeight": 1397,
+      "footX": 431.0,
+      "footY": 1468,
+      "measurement": "alpha32 silhouette hair-to-sole (boots are bottommost for these five images), foot median of last8px alpha32 support; equipment excluded conceptually; manually checked, ±8px height/±25px footX; pose yaw is visual approximation, not 3D measurement",
+      "rois": {
+        "face": [
+          405,
+          55,
+          655,
+          300
+        ],
+        "torso": [
+          280,
+          250,
+          700,
+          640
+        ],
+        "grip": [
+          210,
+          660,
+          510,
+          1015
+        ],
+        "shield": [
+          630,
+          400,
+          865,
+          1320
+        ]
+      },
+      "originalBytesPreserved": true
+    },
+    {
+      "id": "builtin90",
+      "label": "내장 · 오른쪽정90°",
+      "file": "references/builtin-090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\built-in\\right-090.png",
+      "sourceSha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "sha256": "cae423f6d3338257d25ac73efda067e2d0d6a3ff5e6518aa1e0209c7c60f7e9f",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "directionDegreesRequested": 90,
+      "route": "built-in",
+      "boundsAlpha32": [
+        165,
+        105,
+        756,
+        1455
+      ],
+      "hairTop": 105,
+      "sole": 1454,
+      "bodyHeight": 1350,
+      "footX": 552.0,
+      "footY": 1454,
+      "measurement": "alpha32 silhouette hair-to-sole (boots are bottommost for these five images), foot median of last8px alpha32 support; equipment excluded conceptually; manually checked, ±8px height/±25px footX; pose yaw is visual approximation, not 3D measurement",
+      "rois": {
+        "face": [
+          370,
+          90,
+          625,
+          320
+        ],
+        "torso": [
+          335,
+          260,
+          675,
+          680
+        ],
+        "grip": [
+          330,
+          720,
+          650,
+          1070
+        ],
+        "shield": [
+          580,
+          370,
+          710,
+          1160
+        ]
+      },
+      "originalBytesPreserved": true
+    },
+    {
+      "id": "image2635",
+      "label": "Image2.6 · 오른쪽앞35°",
+      "file": "references/image26-035.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\image26\\right-035.png",
+      "sourceSha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "sha256": "3cbc21b29438cf85fc41be989f89c70c89eb4c398c791d092fb511314e41a3f0",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "directionDegreesRequested": 35,
+      "route": "image26",
+      "boundsAlpha32": [
+        129,
+        217,
+        806,
+        1423
+      ],
+      "hairTop": 217,
+      "sole": 1422,
+      "bodyHeight": 1206,
+      "footX": 446.0,
+      "footY": 1422,
+      "measurement": "alpha32 silhouette hair-to-sole (boots are bottommost for these five images), foot median of last8px alpha32 support; equipment excluded conceptually; manually checked, ±8px height/±25px footX; pose yaw is visual approximation, not 3D measurement",
+      "rois": {
+        "face": [
+          400,
+          205,
+          620,
+          390
+        ],
+        "torso": [
+          280,
+          360,
+          660,
+          720
+        ],
+        "grip": [
+          245,
+          730,
+          525,
+          1050
+        ],
+        "shield": [
+          620,
+          470,
+          815,
+          1220
+        ]
+      },
+      "originalBytesPreserved": true
+    },
+    {
+      "id": "image2690",
+      "label": "Image2.6 · 오른쪽정90°",
+      "file": "references/image26-090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\image26\\right-090.png",
+      "sourceSha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3",
+      "sha256": "4433610d0ac2978d909940690d0c4daaea6ae14a1fe311161d8bfe8d4886515a",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "directionDegreesRequested": 90,
+      "route": "image26",
+      "boundsAlpha32": [
+        183,
+        103,
+        811,
+        1467
+      ],
+      "hairTop": 103,
+      "sole": 1466,
+      "bodyHeight": 1364,
+      "footX": 546.0,
+      "footY": 1466,
+      "measurement": "alpha32 silhouette hair-to-sole (boots are bottommost for these five images), foot median of last8px alpha32 support; equipment excluded conceptually; manually checked, ±8px height/±25px footX; pose yaw is visual approximation, not 3D measurement",
+      "rois": {
+        "face": [
+          370,
+          100,
+          610,
+          320
+        ],
+        "torso": [
+          350,
+          280,
+          680,
+          700
+        ],
+        "grip": [
+          330,
+          730,
+          650,
+          1080
+        ],
+        "shield": [
+          575,
+          425,
+          730,
+          1220
+        ]
+      },
+      "originalBytesPreserved": true
+    },
+    {
+      "id": "after35",
+      "label": "내장 수정 · 035°",
+      "file": "final/builtin-right-035.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_builtin35_90_fix_main01-20261111-42d3d4bb_v003\\generations\\035-03.png",
+      "sha256": "5331cd5d6dd88e9ad416767adaf2740ef78fffab5eb1b3fb16227c779b4fbdd3",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 253,
+      "alphaZeroPixels": 464,
+      "boundsAlpha32": [
+        0,
+        0,
+        1024,
+        1536
+      ],
+      "hairTop": 72,
+      "sole": 1468,
+      "bodyHeight": 1397,
+      "footX": 560,
+      "footY": 1468,
+      "measurement": "Native visual hair-to-sole, sword/cape tips excluded. Height±8px footX±25px, concealed scalp not measured; no exact 3D/yaw claim",
+      "originalBytesPreserved": true
+    },
+    {
+      "id": "after90",
+      "label": "내장 수정 · 090°",
+      "file": "final/builtin-right-090.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_builtin35_90_fix_main01-20261111-42d3d4bb_v003\\generations\\090-03.png",
+      "sha256": "51a40c3759cee3cf05a3e84940d2319ae08f4bd158d0ac3dc64398be28dd6744",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "alphaZeroPixels": 405,
+      "boundsAlpha32": [
+        0,
+        0,
+        1024,
+        1536
+      ],
+      "hairTop": 105,
+      "sole": 1454,
+      "bodyHeight": 1350,
+      "footX": 552,
+      "footY": 1454,
+      "measurement": "Native visual hair-to-sole, sword/cape tips excluded. Height±8px footX±25px, concealed scalp not measured; no exact 3D/yaw claim",
+      "originalBytesPreserved": true
+    }
+  ],
+  "display": "Uniform CSS bodyHeight/foot registration only; no asset resizing",
+  "newOutputs": 2,
+  "frontReusedInBothRows": true
+}

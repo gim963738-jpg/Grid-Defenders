@@ -1,0 +1,213 @@
+{
+  "task": "MAIN01-20261111-42D3D4BB",
+  "iteration": 3,
+  "builtinCalls": 6,
+  "image26Calls": 0,
+  "paidApiCalls": 0,
+  "credentialEnvReads": 0,
+  "fallback": 0,
+  "calls": [
+    {
+      "call": 1,
+      "angle": 35,
+      "attempt": 1,
+      "prompt": "prompts/035-01.txt",
+      "inputs": [
+        "references/builtin-035.png",
+        "references/image26-035-grip.png"
+      ],
+      "roles": [
+        "EDIT TARGET: original builtin style/pose; subsequent candidate same scope",
+        "ANATOMY ONLY: wrist/finger/grip; not color/line/material/face/style; no API sword kink copying"
+      ],
+      "output": "generations/035-01.png",
+      "sha256": "a2dc0b2e67c1a57452a995acd169080666506f5abb4c42d228ecc404a7072dbc",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-0d4b663c-1754-4033-ace3-99ec1a6143f3.png",
+      "width": 1024,
+      "height": 1536,
+      "transparent_background": true,
+      "selected": false,
+      "review": "Early connection axis discrepancy remains",
+      "alphaBounds32": [
+        75,
+        72,
+        861,
+        1470
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "byteMatchesNative": true
+    },
+    {
+      "call": 2,
+      "angle": 90,
+      "attempt": 1,
+      "prompt": "prompts/090-01.txt",
+      "inputs": [
+        "references/builtin-090.png",
+        "references/image26-090-grip.png"
+      ],
+      "roles": [
+        "EDIT TARGET: original builtin style/pose; subsequent candidate same scope",
+        "ANATOMY ONLY: wrist/finger/grip; not color/line/material/face/style; no API sword kink copying"
+      ],
+      "output": "generations/090-01.png",
+      "sha256": "a2fed5840c1f26933205f5c198d46bc124e3032c4cec9135a62060fed1983cc2",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-dddae25f-1aae-4fd7-a49a-e2bd41a1d484.png",
+      "width": 1024,
+      "height": 1536,
+      "transparent_background": true,
+      "selected": false,
+      "review": "Early connection axis discrepancy remains",
+      "alphaBounds32": [
+        163,
+        101,
+        783,
+        1455
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "byteMatchesNative": true
+    },
+    {
+      "call": 3,
+      "angle": 35,
+      "attempt": 2,
+      "prompt": "prompts/035-02.txt",
+      "inputs": [
+        "generations/035-01.png",
+        "references/image26-035-grip.png"
+      ],
+      "roles": [
+        "EDIT TARGET: original builtin style/pose; subsequent candidate same scope",
+        "ANATOMY ONLY: wrist/finger/grip; not color/line/material/face/style; no API sword kink copying"
+      ],
+      "output": "generations/035-02.png",
+      "sha256": "e04fdfe07125ec8c0ed79dbdeadb80085cb71ca2ba49d2087fe7ddc726942780",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-264a02d5-034c-49bf-a87a-012f0e8f711d.png",
+      "width": 1024,
+      "height": 1536,
+      "transparent_background": true,
+      "selected": false,
+      "review": "Early connection axis discrepancy remains",
+      "alphaBounds32": [
+        71,
+        71,
+        862,
+        1471
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "byteMatchesNative": true
+    },
+    {
+      "call": 4,
+      "angle": 90,
+      "attempt": 2,
+      "prompt": "prompts/090-02.txt",
+      "inputs": [
+        "generations/090-01.png",
+        "references/image26-090-grip.png"
+      ],
+      "roles": [
+        "EDIT TARGET: original builtin style/pose; subsequent candidate same scope",
+        "ANATOMY ONLY: wrist/finger/grip; not color/line/material/face/style; no API sword kink copying"
+      ],
+      "output": "generations/090-02.png",
+      "sha256": "91cf64a37bf2757645b5956a28e5039e75d6b64c254a39c527205a8e21628a14",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-0ed0de79-a072-46b1-8d0a-4ba044938470.png",
+      "width": 1024,
+      "height": 1536,
+      "transparent_background": true,
+      "selected": false,
+      "review": "Early connection axis discrepancy remains",
+      "alphaBounds32": [
+        0,
+        0,
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        253
+      ],
+      "byteMatchesNative": true
+    },
+    {
+      "call": 5,
+      "angle": 35,
+      "attempt": 3,
+      "prompt": "prompts/035-03.txt",
+      "inputs": [
+        "generations/035-02.png",
+        "references/image26-035-grip.png"
+      ],
+      "roles": [
+        "EDIT TARGET: original builtin style/pose; subsequent candidate same scope",
+        "ANATOMY ONLY: wrist/finger/grip; not color/line/material/face/style; no API sword kink copying"
+      ],
+      "output": "generations/035-03.png",
+      "sha256": "5331cd5d6dd88e9ad416767adaf2740ef78fffab5eb1b3fb16227c779b4fbdd3",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-ffe23cbc-318c-430d-bb5a-34d589d28fe4.png",
+      "width": 1024,
+      "height": 1536,
+      "transparent_background": true,
+      "selected": true,
+      "review": "Final candidate, full/native region review recorded separately",
+      "alphaBounds32": [
+        0,
+        0,
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        253
+      ],
+      "byteMatchesNative": true
+    },
+    {
+      "call": 6,
+      "angle": 90,
+      "attempt": 3,
+      "prompt": "prompts/090-03.txt",
+      "inputs": [
+        "generations/090-02.png",
+        "references/image26-090-grip.png"
+      ],
+      "roles": [
+        "EDIT TARGET: original builtin style/pose; subsequent candidate same scope",
+        "ANATOMY ONLY: wrist/finger/grip; not color/line/material/face/style; no API sword kink copying"
+      ],
+      "output": "generations/090-03.png",
+      "sha256": "51a40c3759cee3cf05a3e84940d2319ae08f4bd158d0ac3dc64398be28dd6744",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-c9e75842-8c9b-47a6-b404-da8b140110d8.png",
+      "width": 1024,
+      "height": 1536,
+      "transparent_background": true,
+      "selected": true,
+      "review": "Final candidate, full/native region review recorded separately",
+      "alphaBounds32": [
+        0,
+        0,
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "byteMatchesNative": true
+    }
+  ],
+  "model": "Builtin internal image model not reported",
+  "usage": null,
+  "usageReason": "No usage/cost returned by builtin tool; no external API called",
+  "excludedInput": "v002 rejected, never attached"
+}

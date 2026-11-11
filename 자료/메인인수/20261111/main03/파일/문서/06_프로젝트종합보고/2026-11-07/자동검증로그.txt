@@ -1,0 +1,85 @@
+Command: npm test
+Started (UTC): 2026-11-07T10:27:47.0838272Z
+Finished (UTC): 2026-11-07T10:27:51.1603421Z
+Exit code: 0
+
+
+> grid-defenders@0.1.0 test
+> npm run check:tests && node scripts/check-tests.mjs
+
+
+> grid-defenders@0.1.0 check:tests
+> tsc --project tsconfig.tests.json
+
+PASS portrait/assassin-combat: 42
+PASS portrait/battle-save: 65
+PASS portrait/blade-skill: 22
+PASS portrait/boss-battle: 12
+PASS portrait/boss-dps-history: 13
+PASS portrait/boss-roster-ice: 13
+PASS portrait/boss-skills: 11
+PASS portrait/boss-test-balance: 25
+PASS portrait/boss-wave-auto: 16
+PASS portrait/camp-progress: 20
+PASS portrait/combat-playback: 15
+PASS portrait/damage-meter: 14
+PASS portrait/defense-field-layout: 41
+PASS portrait/dev-gear: 17
+PASS portrait/dev-placement: 13
+PASS portrait/dps-window: 10
+PASS portrait/fire-ground: 10
+PASS portrait/fire-skill: 16
+PASS portrait/game-run: 34
+PASS portrait/hero-critical: 35
+PASS portrait/ice-attack: 13
+PASS portrait/landscape-inventory: 30
+PASS portrait/peak-dps: 10
+PASS portrait/sword-attack: 23
+PASS portrait/training: 84
+PASS portrait/wave-ranged-skill: 12
+PASS portrait/wave-warning: 22
+PASS landscape/assassin-combat: 42
+PASS landscape/battle-save: 65
+PASS landscape/blade-skill: 22
+PASS landscape/boss-battle: 12
+PASS landscape/boss-dps-history: 13
+PASS landscape/boss-roster-ice: 13
+PASS landscape/boss-skills: 11
+PASS landscape/boss-test-balance: 25
+PASS landscape/boss-wave-auto: 16
+PASS landscape/camp-progress: 20
+PASS landscape/combat-playback: 15
+PASS landscape/damage-meter: 14
+NOT APPLICABLE landscape/defense-field-layout: legacy portrait field geometry
+PASS landscape/dev-gear: 17
+PASS landscape/dev-placement: 13
+PASS landscape/dps-window: 10
+PASS landscape/fire-ground: 10
+PASS landscape/fire-skill: 16
+PASS landscape/game-run: 34
+PASS landscape/hero-critical: 35
+PASS landscape/ice-attack: 13
+PASS landscape/landscape-inventory: 37
+PASS landscape/peak-dps: 10
+PASS landscape/sword-attack: 23
+PASS landscape/training: 84
+PASS landscape/wave-ranged-skill: 12
+PASS landscape/wave-warning: 22
+
+Model results: 1242 assertions in 53 passed suites; 0 failed suites.
+NOT RUN: 15 browser suites need real DOM/canvas/images/WebGL:
+  tests/actor-depth.check.ts
+  tests/assassin-visual.check.ts
+  tests/battle-continuation.check.ts
+  tests/blade-visual.check.ts
+  tests/blond-warrior.check.ts
+  tests/boss-hero-cards.check.ts
+  tests/damage-visibility.check.ts
+  tests/fire-visual.check.ts
+  tests/gale-art.check.ts
+  tests/hero-art.check.ts
+  tests/render-quality.check.ts
+  tests/shop-equip.check.ts
+  tests/skill-visual.check.ts
+  tests/slime-art.check.ts
+  tests/sword-visual.check.ts

@@ -1,0 +1,21 @@
+{
+  "task": "MAIN01-DIRECT-20261111-1E8512E0",
+  "originalSheets": 13,
+  "requestedModel": "gpt-image-2.6-sunburst",
+  "apiPosts": 13,
+  "artReviewPerformed": false,
+  "postprocessing": false,
+  "delivery": [
+    {
+      "url": "http://localhost:5173/dev-previews/balor-sunburst13-main01-v001/index.html",
+      "status": 200,
+      "bytes": "6018"
+    },
+    {
+      "url": "http://localhost:5173/dev-previews/balor-sunburst13-main01-v001/balor-sunburst13-originals.zip",
+      "status": 200,
+      "bytes": "41417097"
+    }
+  ],
+  "studioActiveJob": null
+}

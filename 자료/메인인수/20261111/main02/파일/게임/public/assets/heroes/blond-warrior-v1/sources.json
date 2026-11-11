@@ -1,0 +1,144 @@
+{
+    "source":  "character-design worktree/output/characters/gc9_longsword_dagger/pixel_8views_v01 and output/animation/dreamina-right-walk-60-v01",
+    "inputSource": "자료/아트원본/character-design",
+    "archiveManifest": "자료/아트원본/manifest.json",
+    "processing":  "Read-only originals; uniform nearest-neighbor stationary atlas with fixed foot anchor. Walking cells uniformly reduced to one quarter for mobile; all60 source frames, alpha, order, original durations and common pivot retained. No background removal, motion synthesis, interpolation or mirroring.",
+    "stationary":  [
+                       {
+                           "scale":  0.105349794,
+                           "sha256":  "1e008ba048efd7ca2594353dd442fef3689588f1190ea998b31b301ec167fff4",
+                           "file":  "characters/gc9_longsword_dagger/pixel_8views_v01/images/01_front_000.png",
+                           "bounds":  [
+                                          145,
+                                          17,
+                                          994,
+                                          1232
+                                      ],
+                           "pivot":  {
+                                         "y":  1232,
+                                         "x":  613.3897
+                                     }
+                       },
+                       {
+                           "scale":  0.103980504,
+                           "sha256":  "973415cd6ebf92cc6bb2d0c0e97085ef52746948d249e09be643e8ee8d5c8491",
+                           "file":  "characters/gc9_longsword_dagger/pixel_8views_v01/images/02_front_right_045.png",
+                           "bounds":  [
+                                          159,
+                                          8,
+                                          1012,
+                                          1239
+                                      ],
+                           "pivot":  {
+                                         "y":  1239,
+                                         "x":  559.13
+                                     }
+                       },
+                       {
+                           "scale":  0.104149714,
+                           "sha256":  "006dabe546d06195856c6e7e64fbd1236ec1816f2389ab8f8917e047d316ff0e",
+                           "file":  "characters/gc9_longsword_dagger/pixel_8views_v01/images/03_right_090.png",
+                           "bounds":  [
+                                          382,
+                                          10,
+                                          872,
+                                          1239
+                                      ],
+                           "pivot":  {
+                                         "y":  1239,
+                                         "x":  512.079
+                                     }
+                       },
+                       {
+                           "scale":  0.104660667,
+                           "sha256":  "c759651f4afe5fe2f34d528eac4cca37b8ca37143182a902a53c8a6b4bc6e1f8",
+                           "file":  "characters/gc9_longsword_dagger/pixel_8views_v01/images/04_back_right_135.png",
+                           "bounds":  [
+                                          225,
+                                          7,
+                                          1026,
+                                          1230
+                                      ],
+                           "pivot":  {
+                                         "y":  1230,
+                                         "x":  553.2914
+                                     }
+                       },
+                       {
+                           "scale":  0.104660667,
+                           "sha256":  "5a46c704e6eb82d6bcb85956ff0a540394e8d447de122806420c97acfeee9548",
+                           "file":  "characters/gc9_longsword_dagger/pixel_8views_v01/images/05_back_180.png",
+                           "bounds":  [
+                                          259,
+                                          7,
+                                          1077,
+                                          1230
+                                      ],
+                           "pivot":  {
+                                         "y":  1230,
+                                         "x":  623.2626
+                                     }
+                       },
+                       {
+                           "scale":  0.104404569,
+                           "sha256":  "64682b72d18a470d52446813e829fb4c36b2a00857a2c30b14c691a7a11d9ae4",
+                           "file":  "characters/gc9_longsword_dagger/pixel_8views_v01/images/06_back_left_225.png",
+                           "bounds":  [
+                                          229,
+                                          10,
+                                          1092,
+                                          1236
+                                      ],
+                           "pivot":  {
+                                         "y":  1236,
+                                         "x":  559.809265
+                                     }
+                       },
+                       {
+                           "scale":  0.104404569,
+                           "sha256":  "4ac6c35b0edb7589de68971ef1960c9fe5b5a7961437a3cb41d1c8082712067d",
+                           "file":  "characters/gc9_longsword_dagger/pixel_8views_v01/images/07_left_270.png",
+                           "bounds":  [
+                                          182,
+                                          5,
+                                          864,
+                                          1231
+                                      ],
+                           "pivot":  {
+                                         "y":  1231,
+                                         "x":  631.271545
+                                     }
+                       },
+                       {
+                           "scale":  0.104832105,
+                           "sha256":  "1ca18ade28d59bda1c38509ae916aa5a137b8c77f4386535d9a5a702ae480784",
+                           "file":  "characters/gc9_longsword_dagger/pixel_8views_v01/images/08_front_left_315.png",
+                           "bounds":  [
+                                          166,
+                                          16,
+                                          964,
+                                          1237
+                                      ],
+                           "pivot":  {
+                                         "y":  1237,
+                                         "x":  672.1421
+                                     }
+                       }
+                   ],
+    "walk":  {
+                 "originalLoopNote":  "Source first and final poses differ; looping retains this source boundary.",
+                 "metadataSha256":  "806cc582bca993d0e80b59c3c13526c4c5e50f845011c231bc1d63eeaaed30f4",
+                 "frameCount":  60,
+                 "sourceCell":  {
+                                    "width":  672,
+                                    "height":  720,
+                                    "pivot":  {
+                                                  "y":  703,
+                                                  "x":  273
+                                              }
+                                },
+                 "durationMs":  4017,
+                 "scale":  0.25,
+                 "sheetSha256":  "75f6eaf27dc8c446081995884544679eba04c3504d0ddef47b3ec26bbc51c548"
+             }
+}

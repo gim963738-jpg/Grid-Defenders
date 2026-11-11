@@ -1,0 +1,56 @@
+{
+  "id": "25a2945d-aced-4fce-b24d-c592ba39bf9c",
+  "status": "succeeded",
+  "label": "Sunburst 2.6 · High",
+  "createdAt": "2026-11-11T12:50:41.856Z",
+  "model": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "preset": "sunburst-2.6-high",
+  "prompt": "DELIVERABLE: One original high-resolution RGBA PNG sprite sheet, 2048x1152 pixels. Exactly twelve successive animation drawings in a regular FOUR columns by THREE rows grid. Reading order is left-to-right, then the next row. One complete actor per cell. Transparent alpha outside the artwork; leave transparent gutters. Omit labels, numbers, panel borders, ground disks, shadow backplates and painted backgrounds. Draw solid discrete poses rather than multiple exposure trails.\nFIXED FRAMING: Use one fixed orthographic camera, one fixed actor scale and a shared ground/root registration for all twelve cells. Plan the scale around the BIGGEST complete action silhouette, including the highest raised weapon. Keep the entire sword, shield, cape, helmet and hands inside their OWN cell with generous blank space on every side. The full resting human body is approximately40 percent of the cell height, feet near86 percent of cell height; the giant may use a smaller constant body scale to fit its overhead weapon. Preserve this scale during the action, including crouching or falling; natural changes in pose are not a change in body size. Leave substantial room above the helmet. The output is a large native sheet; the game will choose its display size later.\nMECHANICAL CONTINUITY: Keep the same head size, torso thickness, limb lengths, armour pieces and equipment dimensions from drawing to drawing. Hands keep a natural connected grip and wrist/forearm anatomy. The blade, guard, handle and pommel form one straight rigid weapon. Move the whole weapon naturally with the hand. Equipment remains owned by the same anatomical hands. Character-only motion, without extra slash light or impact bursts; the expressly requested dissolution sheets alone contain smoke/particles.\n\nREFERENCE ROLES: Image1 (Balor) supplies the shared SD illustration finish only. Image2 is the existing WHITE KNIGHT GIANT working reference and supplies this actor's identity and equipment. Draw the giant alone. He has a closed heavy medieval helmet, white/silver heavy full plate, substantial broad armoured build, a large rectangular tower shield in his anatomical LEFT hand, and one long straight greatsword initially carried in the RIGHT hand. Match the same helmet visor, layered pauldrons, armour construction, shield and greatsword across all four giant sheets. His face remains enclosed by the helmet. Keep a convincing weighty heavy-knight silhouette and consistent full-colour outlined matte cel shading.\n\nCAMERA: Strict screen-RIGHT90-degree SIDE PROFILE throughout, including torso, helmet/head, pelvis and feet. Fixed orthographic view.\n\nACTION 13-giant-sword-first-dissolve-right90 — twelve chronological poses:\nBegin from the exact END of the preceding greatsword slam, still bent over the impact. When that preceding sheet is attached last, its bottom-right final drawing supplies the starting pose. Frame1: complete held greatsword-impact posture. Frame2: the SWORD TIP begins turning into white particles. Frame3: dissolution advances along the BLADE FIRST. Frame4: most of the blade is gone while the giant armour remains substantially intact. Frame5: sword dissolves fully, then hands/arms begin breaking into white particles. Frame6: torso armour starts dissolving. Frame7: more armour and helmet disintegrate while the surviving body retains the same lowered impact posture. Frame8: the remaining giant becomes white smoke and particles blowing SCREEN LEFT. Frames9-10: sparse leftward particles and smoke. Frame11: almost empty. Frame12: empty transparent cell. Continue from the impact pose until disappearance; the final dissolution is separate from the upright ready-pose summoning dissolution.\n\nDeliver only this single original transparent twelve-frame PNG sheet.\n\nLAST REFERENCE IMAGE: the complete twelve-cell preceding-action sheet. Its BOTTOM-RIGHT cell is the exact final pose to continue from in frame1. Read only that final pose as the start; retain the authoritative character design and current camera described above.",
+  "size": "2048x1152",
+  "background": "transparent",
+  "endpoint": "/v1/images/edits",
+  "references": [
+    {
+      "name": "approved-balor35.png",
+      "source": "upload",
+      "file": "reference-1.png"
+    },
+    {
+      "name": "giant90-working.png",
+      "source": "upload",
+      "file": "reference-2.png"
+    },
+    {
+      "name": "12-giant-greatsword-slam-right90.png",
+      "source": "upload",
+      "file": "reference-3.png"
+    }
+  ],
+  "spec": "문서/00_개발규칙/캐릭터스프라이트제작규약.md",
+  "outputPath": "output/imagegen/sunburst/25a2945d-aced-4fce-b24d-c592ba39bf9c/25a2945d-aced-4fce-b24d-c592ba39bf9c_sunburst-2.6-high.png",
+  "imageUrl": "/output/imagegen/sunburst/25a2945d-aced-4fce-b24d-c592ba39bf9c/25a2945d-aced-4fce-b24d-c592ba39bf9c_sunburst-2.6-high.png",
+  "metadataUrl": "/output/imagegen/sunburst/25a2945d-aced-4fce-b24d-c592ba39bf9c/metadata.json",
+  "response": {
+    "created": 1794401500,
+    "size": "2048x1152",
+    "quality": "high",
+    "background": "transparent",
+    "output_format": "png",
+    "usage": {
+      "input_tokens": 5415,
+      "input_tokens_details": {
+        "image_tokens": 4580,
+        "text_tokens": 835
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 6828
+    }
+  },
+  "requestId": "req_515daaa74f614bf7b0740cc4218ccfa8",
+  "finishedAt": "2026-11-11T12:51:42.043Z"
+}

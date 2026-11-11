@@ -1,0 +1,7309 @@
+{
+  "task": "MAIN01-20261111-9B2C9CFE",
+  "iteration": 1,
+  "expectedSheets": 26,
+  "actualSheets": 26,
+  "commonWorkingReferences": [
+    {
+      "role": "temporary_working_reference_not_user_accepted",
+      "file": "api/01-ref-balor90/native.png",
+      "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "role": "temporary_working_reference_not_user_accepted",
+      "file": "api/02-ref-giant90/native.png",
+      "sha256": "464e4fc0ed0fe6026b1b78f2a9b4ee942d7c529f56535d9ec8463c50b89e08f2",
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "assets": [
+    {
+      "route": "builtin",
+      "id": "01-run-right90",
+      "actor": "balor",
+      "file": "raw/builtin/01-run-right90.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2f43574c-be4a-431c-b733-342107769be4.png",
+      "sha256": "a9ca38f99ff466c75ba8cf50e7c3fdc0cb10fe0ce4c5e1af6f595d0b159f9dac",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5838109082954326,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            27,
+            318,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 75108
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            42,
+            30,
+            319,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70102
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            35,
+            31,
+            319,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 76515
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            23,
+            28,
+            319,
+            324
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 78065
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            19,
+            25,
+            318,
+            305
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 73572
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            20,
+            26,
+            320,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 71239
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            26,
+            28,
+            321,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 73899
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            33,
+            31,
+            325,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 79030
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            31,
+            29,
+            326,
+            327
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 80503
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            33,
+            26,
+            320,
+            327
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 77466
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            30,
+            26,
+            321,
+            312
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 80868
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            38,
+            27,
+            326,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 81692
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 310,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "loop",
+      "phases": "근경 발 접지·하중 압축·통과·밀어내기→원경 발이 선행하는 반대 반주기→다시 자연스럽게 이어지는 마지막 위상",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "02-combat-idle-right35",
+      "actor": "balor",
+      "file": "raw/builtin/02-combat-idle-right35.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-91eac3f9-b97f-4c74-a474-d20ab2e33832.png",
+      "sha256": "cb5a071e5e3dc263e72ecbc3f165b968e43fd201cab06b2c37a54c71acd36779",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.49318676678571066,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            18,
+            338,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 62783
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            17,
+            337,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 65053
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            16,
+            338,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 63309
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            10,
+            14,
+            339,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 64822
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            12,
+            338,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 61325
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            13,
+            338,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 61690
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            16,
+            338,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 60856
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            17,
+            335,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66719
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            18,
+            336,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 65577
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            19,
+            338,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67991
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            20,
+            339,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66510
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            10,
+            20,
+            339,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68915
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 310,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "loop",
+      "phases": "합격 전투태세를 유지하는 작은 호흡과 어깨·팔·천의 자연스러운 움직임",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "03-horizontal-slash-right35",
+      "actor": "balor",
+      "file": "raw/builtin/03-horizontal-slash-right35.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-32422c2c-62ec-4553-af33-b914283cfb19.png",
+      "sha256": "2c4e0499d121236740b18c04db453ea49d88e44b14852ce055eeb9e5989314eb",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5403948292176673,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            19,
+            24,
+            342,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 69083
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            16,
+            25,
+            333,
+            330
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67894
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            36,
+            28,
+            332,
+            330
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 69174
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            12,
+            34,
+            337,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68744
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            41,
+            38,
+            336,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68225
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            29,
+            36,
+            332,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 69434
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            33,
+            36,
+            362,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 6,
+          "fullyTransparentPixels": 71372
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            0,
+            35,
+            358,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 4,
+          "fullyTransparentPixels": 74441
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            39,
+            35,
+            351,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 75247
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            41,
+            30,
+            326,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 73833
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            21,
+            29,
+            339,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 71481
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            20,
+            28,
+            341,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70858
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 310,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "준비→가로베기→팔/몸통의후속흐름→전투태세회복",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "04-vertical-slash-right35",
+      "actor": "balor",
+      "file": "raw/builtin/04-vertical-slash-right35.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-1238b7e8-d9a0-4a1f-8b96-906a2b5a2f4d.png",
+      "sha256": "59e7293fb292ff5dd4ae0609c043e4bdabb3b1a92ac5cab9c8d1f21fc7d63b41",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5047859243205844,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            22,
+            51,
+            313,
+            362
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 5,
+          "fullyTransparentPixels": 69712
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            62,
+            51,
+            314,
+            325
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70144
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            63,
+            25,
+            315,
+            325
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 65533
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            57,
+            4,
+            315,
+            325
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 69917
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            51,
+            0,
+            316,
+            325
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 6,
+          "fullyTransparentPixels": 60274
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            45,
+            15,
+            314,
+            325
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 59688
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            43,
+            55,
+            315,
+            325
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 56091
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            46,
+            61,
+            329,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70310
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            56,
+            61,
+            320,
+            326
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67623
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            57,
+            54,
+            314,
+            326
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66595
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            58,
+            54,
+            315,
+            326
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66298
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            24,
+            54,
+            315,
+            326
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 71605
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 310,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "검을올려준비→아래로베기→후속반동→전투태세회복",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "05-shield-edge-bash-right35",
+      "actor": "balor",
+      "file": "raw/builtin/05-shield-edge-bash-right35.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-9d159238-ffcd-4326-b80a-44c559d93d78.png",
+      "sha256": "21f904298f2a38dab0d6c2e8072aa6755a56007786817884825e69df8139d3d6",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5627689936204634,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            27,
+            30,
+            330,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 71702
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            26,
+            32,
+            318,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 75520
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            27,
+            41,
+            310,
+            327
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 78612
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            26,
+            51,
+            303,
+            327
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 76932
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            31,
+            46,
+            326,
+            324
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 72285
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            23,
+            41,
+            337,
+            324
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 71616
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            25,
+            39,
+            355,
+            324
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68037
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            22,
+            38,
+            350,
+            324
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 74355
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            26,
+            38,
+            333,
+            325
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 74558
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            26,
+            37,
+            321,
+            326
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 74284
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            25,
+            32,
+            322,
+            327
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 72328
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            26,
+            32,
+            331,
+            327
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 74741
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 310,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "팔/몸통횡방향준비→방패모서리로적을후려침→후속반동→회복",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "06-shield-plant-right35",
+      "actor": "balor",
+      "file": "raw/builtin/06-shield-plant-right35.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-353e9ec7-d669-41fa-81d5-c36fa9e150ae.png",
+      "sha256": "96c682024d2bb928a6d1b14e5270a8c0ab660f43cba1893e4113f2777c378f76",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.4876962445183806,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            13,
+            61,
+            322,
+            333
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 59599
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            13,
+            59,
+            313,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 60809
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            13,
+            36,
+            316,
+            333
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 64350
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            10,
+            66,
+            317,
+            333
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67919
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            13,
+            65,
+            324,
+            333
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 56386
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            12,
+            84,
+            318,
+            333
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 61094
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            10,
+            90,
+            323,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 63925
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            8,
+            96,
+            307,
+            335
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 64636
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            11,
+            93,
+            307,
+            333
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68003
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            11,
+            74,
+            308,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66843
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            11,
+            62,
+            308,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67469
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            14,
+            57,
+            308,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 65883
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 310,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "방패를들어준비→바닥강타→바닥에고정된방패와안정된양발자세",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "07-turn-knightly-35to90",
+      "actor": "balor",
+      "file": "raw/builtin/07-turn-knightly-35to90.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-a3da1b68-7881-4bd0-a3a0-a3880b3c28dd.png",
+      "sha256": "cc8542a09ac4171d3b208f52beeae152caab30783bbea9a33ba786c4690cc9e6",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.46909180631441855,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            18,
+            33,
+            337,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 64621
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            25,
+            31,
+            337,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 59909
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            25,
+            31,
+            337,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 57989
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            49,
+            28,
+            337,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 58149
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            51,
+            27,
+            338,
+            349
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 53135
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            47,
+            25,
+            337,
+            349
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 56047
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            57,
+            24,
+            338,
+            349
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 51992
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            75,
+            22,
+            337,
+            349
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 63157
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            83,
+            21,
+            337,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66106
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            93,
+            21,
+            337,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68781
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            96,
+            21,
+            337,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 65087
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            97,
+            21,
+            337,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 72687
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 310,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "06종료자세에서시작→고정방패는지면에유지→검을세우며오른쪽으로돌아서90도서있는기사도자세",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "08-hit-right35",
+      "actor": "balor",
+      "file": "raw/builtin/08-hit-right35.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-3314bf2c-3a3e-4b17-a0b7-0e7ce4b79471.png",
+      "sha256": "f5aed532761ea49b5f5337a85c4ea4f6f6a9654b6b5818a65a4e2e3fd892d92d",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5001252759887265,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            16,
+            33,
+            343,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 62783
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            19,
+            37,
+            342,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 62099
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            5,
+            32,
+            340,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 63760
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            4,
+            33,
+            336,
+            340
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 65437
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            8,
+            31,
+            341,
+            338
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 62021
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            7,
+            36,
+            339,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 64850
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            5,
+            35,
+            332,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67006
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            10,
+            32,
+            328,
+            335
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67552
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            11,
+            32,
+            331,
+            337
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66016
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            32,
+            327,
+            337
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66541
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            8,
+            33,
+            326,
+            337
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68404
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            6,
+            33,
+            327,
+            337
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 69992
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 310,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "전투태세→충격/반동→무게중심수습→전투태세회복",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "09-death-right35",
+      "actor": "balor",
+      "file": "raw/builtin/09-death-right35.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-5d4e5c31-9aaa-497e-b3b5-226aa96a105d.png",
+      "sha256": "b7242c6892c55daedd7f4a7d2071915f41fccc3dd09fb1330c7d6f85847ae233",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5441677350101238,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            21,
+            52,
+            329,
+            342
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67045
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            25,
+            51,
+            318,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 64765
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            20,
+            62,
+            314,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 63731
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 90,
+          "alpha32Bounds": [
+            18,
+            78,
+            316,
+            342
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 69120
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 80,
+          "alpha32Bounds": [
+            25,
+            79,
+            338,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67756
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            18,
+            100,
+            332,
+            331
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 63692
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 90,
+          "alpha32Bounds": [
+            15,
+            117,
+            342,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66342
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            15,
+            142,
+            346,
+            330
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 74631
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            13,
+            163,
+            354,
+            323
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 75264
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 180,
+          "alpha32Bounds": [
+            12,
+            183,
+            353,
+            323
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 79312
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 200,
+          "alpha32Bounds": [
+            12,
+            183,
+            353,
+            323
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 81843
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 300,
+          "alpha32Bounds": [
+            12,
+            183,
+            354,
+            323
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 82218
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 310,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "타격후중심상실→다리/골반무너짐→몸통과머리자연낙하→쓰러진자세정지",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "10-ready-dissolve-right90",
+      "actor": "giant",
+      "file": "raw/builtin/10-ready-dissolve-right90.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-e0cf3988-0f37-438b-85d8-ba45f0dba15f.png",
+      "sha256": "c09b448d53e42d89eb9ff1c04bdc3fb3a8c322a68a2338e3c31a2ba754707596",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.2121310399560453,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            52,
+            49,
+            335,
+            333
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 36435
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            55,
+            49,
+            336,
+            334
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 15247
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            42,
+            49,
+            336,
+            334
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 12825
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            30,
+            49,
+            336,
+            334
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 19206
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            20,
+            49,
+            335,
+            334
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 3161
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            15,
+            49,
+            336,
+            333
+          ],
+          "alphaMin": 0,
+          "alphaMax": 253,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 1322
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            13,
+            49,
+            336,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 251,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 4135
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            48,
+            336,
+            332
+          ],
+          "alphaMin": 0,
+          "alphaMax": 247,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 6025
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            8,
+            50,
+            308,
+            328
+          ],
+          "alphaMin": 0,
+          "alphaMax": 245,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 689
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            15,
+            54,
+            245,
+            267
+          ],
+          "alphaMin": 0,
+          "alphaMax": 226,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 19228
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            23,
+            131,
+            24,
+            132
+          ],
+          "alphaMin": 0,
+          "alphaMax": 33,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 95199
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": null,
+          "alphaMin": 0,
+          "alphaMax": 2,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 120110
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 280,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "공통공격준비자세→흰연기/입자로분해→왼쪽바람으로흩어짐→빈프레임",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "11-tower-shield-slam-right90",
+      "actor": "giant",
+      "file": "raw/builtin/11-tower-shield-slam-right90.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-fcd5f562-c511-4dc1-9607-37074a593ab9.png",
+      "sha256": "42ab64a3f2e88f1715de53d6016cfe8e2a780f55a38858b47b4c2c68879c94a6",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5695701443789872,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            56,
+            67,
+            321,
+            362
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 14,
+          "fullyTransparentPixels": 80552
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            56,
+            68,
+            321,
+            339
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 79787
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            52,
+            24,
+            320,
+            339
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 76849
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            52,
+            4,
+            322,
+            339
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 80291
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            0,
+            321,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 14,
+          "fullyTransparentPixels": 78351
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            34,
+            13,
+            321,
+            342
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70357
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            18,
+            55,
+            320,
+            342
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 66874
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            17,
+            126,
+            342,
+            342
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 61533
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            16,
+            127,
+            345,
+            342
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70776
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            27,
+            116,
+            336,
+            342
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 73767
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            29,
+            120,
+            327,
+            342
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 78155
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            30,
+            120,
+            326,
+            342
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 78373
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 280,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "준비자세→방패를머리위로높고크게치켜듦→정점힘모음→몸통/골반/팔체중실어강타→충격반동→타격자세정지",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "12-greatsword-slam-right90",
+      "actor": "giant",
+      "file": "raw/builtin/12-greatsword-slam-right90.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-1ad5c31e-6054-4647-932a-35489bbd76b9.png",
+      "sha256": "3ac3e88b6ec184d8b92543d6cf86777671db18292a62b854658fb88a3c04ae97",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5314232878524262,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            14,
+            83,
+            334,
+            323
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 65175
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            16,
+            83,
+            332,
+            323
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 61108
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            17,
+            83,
+            328,
+            323
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 78442
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            18,
+            83,
+            302,
+            323
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 80875
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            18,
+            83,
+            339,
+            323
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 76963
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            22,
+            75,
+            346,
+            322
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67780
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            9,
+            39,
+            302,
+            322
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 63250
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            5,
+            15,
+            260,
+            322
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 74853
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            20,
+            15,
+            349,
+            320
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 51698
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            10,
+            110,
+            351,
+            322
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 64156
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            18,
+            115,
+            350,
+            321
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 71193
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            17,
+            119,
+            353,
+            321
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 80185
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 280,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "11종료타격자세→방패사라짐→자연스러운대검양손그립전환→머리위로큰궤적들기→정점힘모음→체중실어강한내려찍기→반동후그자세정지",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "builtin",
+      "id": "13-sword-first-dissolve-right90",
+      "actor": "giant",
+      "file": "raw/builtin/13-sword-first-dissolve-right90.png",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-2c262cab-6e06-4b6b-abf9-c548ff47aa96.png",
+      "sha256": "5b0e612661d0b8421851cbfd67c79d8fca2d77afae8fe1a8cdf8f73bcf20d43c",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.504824715362779,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            21,
+            104,
+            344,
+            309
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 80917
+        },
+        {
+          "index": 1,
+          "rect": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            22,
+            104,
+            344,
+            309
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 74839
+        },
+        {
+          "index": 2,
+          "rect": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            22,
+            104,
+            339,
+            312
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68023
+        },
+        {
+          "index": 3,
+          "rect": [
+            1086,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            22,
+            104,
+            312,
+            312
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70020
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            22,
+            104,
+            256,
+            307
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 58862
+        },
+        {
+          "index": 5,
+          "rect": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            19,
+            104,
+            262,
+            307
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 46065
+        },
+        {
+          "index": 6,
+          "rect": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            19,
+            104,
+            264,
+            307
+          ],
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 32819
+        },
+        {
+          "index": 7,
+          "rect": [
+            1086,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            9,
+            104,
+            250,
+            307
+          ],
+          "alphaMin": 0,
+          "alphaMax": 253,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 40371
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            11,
+            103,
+            264,
+            289
+          ],
+          "alphaMin": 0,
+          "alphaMax": 242,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 30108
+        },
+        {
+          "index": 9,
+          "rect": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            7,
+            110,
+            209,
+            235
+          ],
+          "alphaMin": 0,
+          "alphaMax": 151,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 67580
+        },
+        {
+          "index": 10,
+          "rect": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            33,
+            142,
+            48,
+            152
+          ],
+          "alphaMin": 0,
+          "alphaMax": 36,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 98115
+        },
+        {
+          "index": 11,
+          "rect": [
+            1086,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": null,
+          "alphaMin": 0,
+          "alphaMax": 1,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 126132
+        }
+      ],
+      "root": [
+        181.0,
+        340.28
+      ],
+      "bodyHeight": 280,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "12의대검타격종료자세유지→검부터흰입자로분해→거인전체분해→입자가왼쪽바람에날려감→빈프레임",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "01-run-right90",
+      "actor": "balor",
+      "file": "raw/image26/01-run-right90.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\03-sheet-01\\native.png",
+      "sha256": "53af74df0ce36d703177c0aac12433bf4564f62627c5a2c3e0bd23b0237f2418",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.40457746717664933,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            77,
+            25,
+            421,
+            356
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 81620
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            73,
+            26,
+            420,
+            359
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70376
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            75,
+            25,
+            418,
+            359
+          ],
+          "alphaMin": 0,
+          "alphaMax": 253,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 81021
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            65,
+            19,
+            420,
+            357
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 71879
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            71,
+            14,
+            424,
+            329
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70700
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            72,
+            12,
+            424,
+            337
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68486
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            71,
+            19,
+            421,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70082
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            72,
+            25,
+            421,
+            353
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 81469
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            73,
+            24,
+            421,
+            356
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 89448
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            74,
+            24,
+            420,
+            355
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 89032
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            73,
+            17,
+            422,
+            324
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 96979
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            79,
+            26,
+            420,
+            359
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 83426
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 340,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "loop",
+      "phases": "근경 발 접지·하중 압축·통과·밀어내기→원경 발이 선행하는 반대 반주기→다시 자연스럽게 이어지는 마지막 위상",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "02-combat-idle-right35",
+      "actor": "balor",
+      "file": "raw/image26/02-combat-idle-right35.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\04-sheet-02\\native.png",
+      "sha256": "bca77d0a0e8d37b94e9bc47075edfec79d58fd8115a4b75a5d9948759cc7c884",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.5879181755913628,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            11,
+            429,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 115904
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            10,
+            428,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 117069
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            10,
+            428,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 117053
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            45,
+            10,
+            428,
+            357
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 116562
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            9,
+            429,
+            357
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 115425
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            11,
+            428,
+            357
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 116661
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            11,
+            428,
+            357
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 116583
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            11,
+            428,
+            357
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 116800
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            12,
+            426,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 110620
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            12,
+            426,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 113832
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            12,
+            427,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 115687
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            46,
+            12,
+            428,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 114877
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 340,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "loop",
+      "phases": "합격 전투태세를 유지하는 작은 호흡과 어깨·팔·천의 자연스러운 움직임",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "03-horizontal-slash-right35",
+      "actor": "balor",
+      "file": "raw/image26/03-horizontal-slash-right35.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\05-sheet-03\\native.png",
+      "sha256": "7af002fcb7bc3d1f539b1bd354592421f16a7c82a1cff28e5ee2af4389060d29",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6171900431315104,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            58,
+            19,
+            429,
+            364
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 119168
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            43,
+            19,
+            424,
+            364
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 119117
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            36,
+            26,
+            414,
+            364
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 119431
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            29,
+            34,
+            424,
+            365
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 115922
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            67,
+            33,
+            423,
+            364
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 117774
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            81,
+            31,
+            414,
+            364
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 125818
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            76,
+            29,
+            499,
+            365
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 124215
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            73,
+            29,
+            496,
+            364
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 125505
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            77,
+            29,
+            439,
+            365
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 125835
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            89,
+            27,
+            411,
+            365
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 125534
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            77,
+            20,
+            416,
+            364
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 119869
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            65,
+            19,
+            429,
+            364
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 117946
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 340,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "준비→가로베기→팔/몸통의후속흐름→전투태세회복",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "04-vertical-slash-right35",
+      "actor": "balor",
+      "file": "raw/image26/04-vertical-slash-right35.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\06-sheet-04\\native.png",
+      "sha256": "a2cbc78ee4b118127e385406740d753e09633bf2b3b671bdf786f04b76bcab32",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6159617106119791,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            78,
+            37,
+            425,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 111811
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            77,
+            37,
+            425,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 110745
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            143,
+            22,
+            425,
+            340
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 121156
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            142,
+            0,
+            425,
+            340
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 21,
+          "fullyTransparentPixels": 119335
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            125,
+            0,
+            424,
+            339
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 20,
+          "fullyTransparentPixels": 120948
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            111,
+            1,
+            416,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 124897
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            110,
+            61,
+            438,
+            337
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 128241
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            106,
+            65,
+            418,
+            354
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 123500
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            101,
+            69,
+            427,
+            338
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 120898
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            113,
+            54,
+            414,
+            337
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 126306
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            100,
+            43,
+            424,
+            340
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 124889
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            91,
+            40,
+            425,
+            340
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 120510
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 340,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "검을올려준비→아래로베기→후속반동→전투태세회복",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "05-shield-edge-bash-right35",
+      "actor": "balor",
+      "file": "raw/image26/05-shield-edge-bash-right35.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\07-sheet-05\\native.png",
+      "sha256": "b292cd67288fb8a3ced49504e9f58f8f3c2f3c66d8d1b8af42da5bb53d8c7af6",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.5720045301649306,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            55,
+            17,
+            414,
+            351
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 110269
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            68,
+            19,
+            403,
+            351
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 114137
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            68,
+            25,
+            398,
+            350
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 117841
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            80,
+            36,
+            386,
+            350
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 115605
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            82,
+            36,
+            411,
+            350
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 109837
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            76,
+            35,
+            444,
+            350
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 106962
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            69,
+            32,
+            446,
+            349
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 111481
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            62,
+            31,
+            449,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 110433
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            74,
+            28,
+            428,
+            348
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 112209
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            69,
+            18,
+            406,
+            350
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 115081
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            63,
+            18,
+            409,
+            351
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 114425
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            59,
+            19,
+            417,
+            351
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 111248
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 340,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "팔/몸통횡방향준비→방패모서리로적을후려침→후속반동→회복",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "06-shield-plant-right35",
+      "actor": "balor",
+      "file": "raw/image26/06-shield-plant-right35.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\08-sheet-06\\native.png",
+      "sha256": "51f805cbd60d298ddbda5ab4b920de3f1a7408f5219f96096bc32111f0f24b28",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.4034983317057292,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            61,
+            16,
+            432,
+            355
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 69509
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            59,
+            15,
+            420,
+            354
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 75143
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            54,
+            12,
+            416,
+            354
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 88328
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            36,
+            40,
+            424,
+            354
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 85729
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            41,
+            41,
+            448,
+            351
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 60071
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            41,
+            52,
+            443,
+            350
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 85140
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            42,
+            69,
+            448,
+            351
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 79433
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            42,
+            71,
+            450,
+            350
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 84944
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            52,
+            60,
+            450,
+            352
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 79390
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            58,
+            34,
+            450,
+            352
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 79156
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            57,
+            22,
+            450,
+            352
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 79814
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            56,
+            17,
+            450,
+            352
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 85315
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 340,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "방패를들어준비→바닥강타→바닥에고정된방패와안정된양발자세",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "07-turn-knightly-35to90",
+      "actor": "balor",
+      "file": "raw/image26/07-turn-knightly-35to90.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\09-sheet-07\\native.png",
+      "sha256": "eb5b4aa2c2fe4bd117a13680a66ecce3fca899d3a9631a3c7ffee8c2706ccc0c",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.595662858751085,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            60,
+            19,
+            467,
+            366
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 104068
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            63,
+            19,
+            467,
+            366
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 103412
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            84,
+            19,
+            466,
+            366
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 106372
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            128,
+            20,
+            461,
+            366
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 116043
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            130,
+            20,
+            455,
+            366
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 113188
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            139,
+            17,
+            449,
+            366
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 117142
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            150,
+            4,
+            446,
+            366
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 122398
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            152,
+            1,
+            441,
+            367
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 124274
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            159,
+            1,
+            439,
+            367
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 121597
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            172,
+            1,
+            438,
+            367
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 123809
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            180,
+            1,
+            438,
+            367
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 125479
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            180,
+            1,
+            439,
+            367
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 127563
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 340,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "06종료자세에서시작→고정방패는지면에유지→검을세우며오른쪽으로돌아서90도서있는기사도자세",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "08-hit-right35",
+      "actor": "balor",
+      "file": "raw/image26/08-hit-right35.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\10-sheet-08\\native.png",
+      "sha256": "8789bfe98e1dfbb89a98206914b72c659723534b968a6ef70d25cbba1bdcdfec",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6082852681477865,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            81,
+            27,
+            456,
+            363
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 120559
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            77,
+            38,
+            453,
+            363
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 120008
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            64,
+            29,
+            435,
+            362
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 118276
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            45,
+            32,
+            432,
+            362
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 118007
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            49,
+            31,
+            449,
+            357
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 112900
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            53,
+            31,
+            449,
+            356
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 118090
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            60,
+            32,
+            442,
+            355
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 121029
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            53,
+            23,
+            429,
+            355
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 120902
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            58,
+            23,
+            432,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 118887
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            59,
+            25,
+            431,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 122314
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            58,
+            26,
+            429,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 121844
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            56,
+            29,
+            432,
+            358
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 122309
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 340,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "전투태세→충격/반동→무게중심수습→전투태세회복",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "09-death-right35",
+      "actor": "balor",
+      "file": "raw/image26/09-death-right35.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\11-sheet-09\\native.png",
+      "sha256": "a497e26332c2887acd52af4cceee5a287e8ccb1f7421bafe283b5f98c785bc36",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.5754390292697482,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            52,
+            20,
+            404,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 112942
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            54,
+            16,
+            430,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 101057
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            50,
+            32,
+            420,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 103478
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 90,
+          "alpha32Bounds": [
+            48,
+            55,
+            419,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 114038
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 80,
+          "alpha32Bounds": [
+            48,
+            65,
+            435,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 108998
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            39,
+            82,
+            415,
+            365
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 109598
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 90,
+          "alpha32Bounds": [
+            30,
+            104,
+            456,
+            366
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 113712
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            27,
+            147,
+            495,
+            367
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 114662
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            29,
+            162,
+            497,
+            359
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 118822
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 180,
+          "alpha32Bounds": [
+            29,
+            174,
+            497,
+            359
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 114772
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 200,
+          "alpha32Bounds": [
+            29,
+            175,
+            497,
+            359
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 123765
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 300,
+          "alpha32Bounds": [
+            29,
+            175,
+            497,
+            359
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 121787
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 340,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "타격후중심상실→다리/골반무너짐→몸통과머리자연낙하→쓰러진자세정지",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "10-ready-dissolve-right90",
+      "actor": "giant",
+      "file": "raw/image26/10-ready-dissolve-right90.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\12-sheet-10\\native.png",
+      "sha256": "ec1b432898b40b6eb19588a8598a02404b8710888fc2841a18e34e34a2aacd86",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.26328743828667533,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            127,
+            23,
+            471,
+            369
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 63524
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            113,
+            23,
+            466,
+            369
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 45982
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            103,
+            23,
+            455,
+            369
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 43332
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            72,
+            23,
+            443,
+            369
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 46140
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            78,
+            25,
+            472,
+            369
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 10973
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            57,
+            25,
+            465,
+            369
+          ],
+          "alphaMin": 0,
+          "alphaMax": 253,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 4946
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            35,
+            26,
+            455,
+            369
+          ],
+          "alphaMin": 0,
+          "alphaMax": 253,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 6012
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            17,
+            26,
+            441,
+            369
+          ],
+          "alphaMin": 0,
+          "alphaMax": 252,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 17245
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            25,
+            28,
+            371,
+            335
+          ],
+          "alphaMin": 0,
+          "alphaMax": 252,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 12578
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            30,
+            35,
+            291,
+            301
+          ],
+          "alphaMin": 0,
+          "alphaMax": 235,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 71219
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            24,
+            141,
+            36,
+            153
+          ],
+          "alphaMin": 0,
+          "alphaMax": 175,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 138768
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": null,
+          "alphaMin": 0,
+          "alphaMax": 2,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 160454
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 335,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "공통공격준비자세→흰연기/입자로분해→왼쪽바람으로흩어짐→빈프레임",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "11-tower-shield-slam-right90",
+      "actor": "giant",
+      "file": "raw/image26/11-tower-shield-slam-right90.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\13-sheet-11\\native.png",
+      "sha256": "de48c170fc83fd9bfeb44b48ad9b1022658d1853fb3dcad74cf5bebbcfd6301b",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.3128157721625434,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            109,
+            51,
+            433,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 77843
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            107,
+            51,
+            433,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 59527
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            106,
+            23,
+            432,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 70950
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            95,
+            0,
+            432,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 9,
+          "fullyTransparentPixels": 88886
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            85,
+            0,
+            433,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 49,
+          "fullyTransparentPixels": 63266
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            73,
+            35,
+            433,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 253,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 44688
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            59,
+            85,
+            432,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 45914
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            54,
+            117,
+            478,
+            370
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 57418
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            51,
+            135,
+            474,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 46627
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            61,
+            125,
+            441,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 46166
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            57,
+            117,
+            433,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 62848
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            58,
+            116,
+            434,
+            368
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 73892
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 335,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "준비자세→방패를머리위로높고크게치켜듦→정점힘모음→몸통/골반/팔체중실어강타→충격반동→타격자세정지",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "12-greatsword-slam-right90",
+      "actor": "giant",
+      "file": "raw/image26/12-greatsword-slam-right90.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\14-sheet-12\\native.png",
+      "sha256": "2ad481bf275c070ce9dfa019866e85473ecd3f817e57287091f66357a10e3f18",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6263775295681424,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            47,
+            44,
+            478,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 107973
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            49,
+            44,
+            470,
+            335
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 111072
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 130,
+          "alpha32Bounds": [
+            49,
+            44,
+            463,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 125413
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 150,
+          "alpha32Bounds": [
+            50,
+            44,
+            436,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 130855
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            58,
+            44,
+            447,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 130753
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 60,
+          "alpha32Bounds": [
+            50,
+            41,
+            464,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 131004
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 50,
+          "alpha32Bounds": [
+            43,
+            11,
+            362,
+            338
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 129232
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 70,
+          "alpha32Bounds": [
+            17,
+            5,
+            365,
+            338
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 124713
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            23,
+            45,
+            464,
+            336
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 121708
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 110,
+          "alpha32Bounds": [
+            27,
+            74,
+            483,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 111916
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 120,
+          "alpha32Bounds": [
+            26,
+            82,
+            483,
+            340
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 124630
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 160,
+          "alpha32Bounds": [
+            19,
+            97,
+            489,
+            339
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 128541
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 335,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot_hold",
+      "phases": "11종료타격자세→방패사라짐→자연스러운대검양손그립전환→머리위로큰궤적들기→정점힘모음→체중실어강한내려찍기→반동후그자세정지",
+      "qualityStatus": "failed_or_caution_see_review"
+    },
+    {
+      "route": "image26",
+      "id": "13-sword-first-dissolve-right90",
+      "actor": "giant",
+      "file": "raw/image26/13-sword-first-dissolve-right90.png",
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\15-sheet-13\\native.png",
+      "sha256": "42f0a2630ac537f6daf2a24c0a3304c09e1a25f5a866b14d9fb757811eb84959",
+      "width": 2048,
+      "height": 1152,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.47069549560546875,
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            31,
+            79,
+            510,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 97621
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            31,
+            79,
+            486,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 98384
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            32,
+            79,
+            478,
+            341
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 79051
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            32,
+            79,
+            429,
+            340
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 92353
+        },
+        {
+          "index": 4,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            32,
+            79,
+            381,
+            338
+          ],
+          "alphaMin": 0,
+          "alphaMax": 253,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 73545
+        },
+        {
+          "index": 5,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            33,
+            79,
+            362,
+            338
+          ],
+          "alphaMin": 0,
+          "alphaMax": 254,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 86871
+        },
+        {
+          "index": 6,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            34,
+            79,
+            362,
+            338
+          ],
+          "alphaMin": 0,
+          "alphaMax": 253,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 68132
+        },
+        {
+          "index": 7,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            26,
+            64,
+            362,
+            338
+          ],
+          "alphaMin": 0,
+          "alphaMax": 253,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 71710
+        },
+        {
+          "index": 8,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            21,
+            52,
+            361,
+            324
+          ],
+          "alphaMin": 0,
+          "alphaMax": 252,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 25091
+        },
+        {
+          "index": 9,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            6,
+            80,
+            283,
+            284
+          ],
+          "alphaMin": 0,
+          "alphaMax": 237,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 89123
+        },
+        {
+          "index": 10,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": [
+            10,
+            135,
+            105,
+            178
+          ],
+          "alphaMin": 0,
+          "alphaMax": 82,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 143218
+        },
+        {
+          "index": 11,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "durationMs": 100,
+          "alpha32Bounds": null,
+          "alphaMin": 0,
+          "alphaMax": 2,
+          "edgeAlpha32Pixels": 0,
+          "fullyTransparentPixels": 185411
+        }
+      ],
+      "root": [
+        256.0,
+        360.96
+      ],
+      "bodyHeight": 335,
+      "measurement": {
+        "method": "visual hair/helmet top to sole in first ready/idle frame; equipment/backdrop excluded. One fixed route/actor reference scale shared across clips, never per-frame bbox fit. Equal 4x3 cell grid observed against native sheets.",
+        "estimated": true,
+        "bodyHeightErrorPx": 15,
+        "rootErrorPx": 20,
+        "roi": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "hiddenScalp": "not measured; bodyheight is hair/helmet-inclusive display reference",
+        "nativeGridDriftNotCorrected": true
+      },
+      "modePlayback": "oneshot",
+      "phases": "12의대검타격종료자세유지→검부터흰입자로분해→거인전체분해→입자가왼쪽바람에날려감→빈프레임",
+      "qualityStatus": "failed_or_caution_see_review"
+    }
+  ],
+  "calls": {
+    "builtin": 13,
+    "image26Posts": 15,
+    "retries": 0,
+    "extraPaid": 0,
+    "video": 0,
+    "fallback": 0
+  },
+  "image26Usage": {
+    "input_tokens": 41878,
+    "output_tokens": 21113,
+    "total_tokens": 62991
+  },
+  "cost": null,
+  "costNote": "not reported; null is not zero",
+  "nativeSheetsUnmodified": true,
+  "perFrameRescale": false,
+  "sourceMaster": {
+    "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard35_natural_main01-20261111-1b358aa6_v003\\final\\right-035.png",
+    "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+    "sourceViewed": true,
+    "generationStarted": false,
+    "missingAncillaryLink": "README linked キャ릭터ス프라이트제작규약.md missing in workspace and shared root; current explicit dispatch+sprites rules+skillVisual rules read instead",
+    "permittedOutput": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001"
+  }
+}

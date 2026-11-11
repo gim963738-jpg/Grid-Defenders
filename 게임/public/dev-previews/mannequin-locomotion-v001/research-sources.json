@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-10",
+  "sources": [
+    {
+      "url": "https://docs.unity.com/en-us/engine/6000.6/manual/animation-section/animation-mecanim/avatar-creationand-setup/inverse-kinematics",
+      "title": "Unity official Inverse Kinematics",
+      "observed": "IK solves joints backward from a target while FK propagates parent transforms",
+      "applied": "Two-bone ankle-goal solution, fixed limb lengths and shared rig hierarchy"
+    },
+    {
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/locomotion-based-blending-in-unreal-engine",
+      "title": "Epic official Locomotion Based Blending",
+      "observed": "Blend Space driven by movement speed/direction blends walking and jogging",
+      "applied": "Smooth speed/run blend, while stance goals stay in world coordinates"
+    },
+    {
+      "url": "https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html",
+      "title": "Godot official AnimationTree",
+      "observed": "States, blend spaces and immediate/sync/end transitions are distinct controls",
+      "applied": "Explicit Idle/Start/Walk/Run/Stop, phase-preserving Walk→Run, and stop requests without waiting for loop end"
+    }
+  ],
+  "materialType": "Official public technical documents, not gameplay clips; video timestamp not applicable",
+  "failedFetches": [
+    "Adobe walk-cycle article404",
+    "Unity RootMotion redirect fetch500; not used as evidence"
+  ],
+  "cost": "Public reading only; no production/generation service calls"
+}

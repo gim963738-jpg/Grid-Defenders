@@ -1,0 +1,124 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grid Defenders · 작업영역통합현황</title><style>
+*{box-sizing:border-box}html{background:#e8edf0;color:#172b35;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}body{margin:0;font-size:15px;line-height:1.8}main{max-width:1080px;margin:28px auto;background:#fff;padding:58px 62px;box-shadow:0 12px 42px #23384818}h1{font-size:32px;line-height:1.35;margin:0 0 18px;color:#123d42;border-top:7px solid #c6aa69;padding-top:20px}h2{font-size:23px;line-height:1.5;margin:44px 0 16px;color:#175459;border-bottom:2px solid #d8e6e5;padding-bottom:8px}h3{font-size:18px;margin:28px 0 10px;color:#284c55}p{margin:12px 0}strong{font-weight:700;color:#163e43}a{color:#135f78;text-decoration:none;overflow-wrap:anywhere}a:hover{text-decoration:underline}table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.65;margin:14px 0 22px}thead{background:#184b50;color:white}th{font-weight:600;text-align:left;padding:10px}td{vertical-align:top;padding:10px;border-bottom:1px solid #d7e1e3;overflow-wrap:anywhere}tbody tr:nth-child(even){background:#f2f6f6}th:first-child,td:first-child{min-width:100px}pre{background:#edf3f4;border-left:3px solid #76969a;padding:18px;font-size:12px;line-height:1.65;white-space:pre-wrap}code{font-family:Consolas,"Malgun Gothic",monospace;font-size:.9em}li{margin:5px 0}nav.toolbar{position:sticky;top:0;display:flex;gap:16px;background:#12383e;color:white;padding:10px 24px;z-index:5;font-size:13px}nav a{color:#fff}nav button{margin-left:auto;border:1px solid #a7babb;border-radius:4px;background:transparent;color:white;padding:4px 14px;cursor:pointer}.foot{color:#658087;font-size:11px;border-top:1px solid #b8cacc;padding-top:12px;margin-top:36px}.slide{break-after:page;padding:12px 0 28px}.slides main{max-width:1180px}.slides h2{margin-top:14px}.slides li{font-size:18px;margin:16px 0}.slides .slide p{font-size:15px}.slides .slide:last-child{break-after:auto}
+@page{size:A4;margin:16mm 14mm 16mm} @media print{html{background:white}body{font-size:9.5pt;line-height:1.65}main{margin:0;padding:0;max-width:none;box-shadow:none}nav.toolbar{display:none}h1{font-size:24pt}h2{font-size:17pt;break-after:avoid;margin-top:24pt}h3{font-size:12pt;break-after:avoid}p,li{orphans:3;widows:3}table{font-size:8pt;line-height:1.55;page-break-inside:auto}thead{display:table-header-group;print-color-adjust:exact}tr{break-inside:avoid}td,th{padding:6pt 5pt}td:first-child,th:first-child{min-width:0}pre{font-size:8pt;break-inside:avoid}a{color:inherit}body{print-color-adjust:exact}.foot{font-size:8pt}.slides{font-size:13pt}.slides main{max-width:none}.slides h1{font-size:24pt}.slides h2{font-size:23pt}.slides li{font-size:15pt;line-height:1.8;margin:13pt 0}.slides .slide p{font-size:12pt}.slides .slide{padding:0;break-inside:avoid}.slides .slide h2{margin-top:0}}
+</style><body class="report"><nav class="toolbar"><span>GRID DEFENDERS · 2026.11.07</span><a href="프로젝트종합보고서.html">종합 보고서</a><a href="발표핵심요약.html">발표 요약</a><button onclick="window.print()">인쇄 / PDF</button></nav><main><h1>작업 영역 조사 및 결과물 통합 현황</h1>
+<p>확인일: 2026-11-07. 기준 프로젝트는 <code>C:/Users/user/Desktop/Grid Defenders</code>의 <code>main</code>이며, 조사 시작 HEAD는 <code>e31227b84315b07235f60a95a5cf997cff219549</code>이다. 이 부록은 접근 가능한 8개 작업 영역의 파일, Git 상태, 제작 기록, 출처 manifest, 앱 작업 목록을 대조한 결과다. 전체 사업·기능 완성률을 산정하는 자료가 아니라 <strong>어떤 결과물이 어디에 있고, 무엇을 반영했으며, 무엇을 보존했는지</strong>를 확인하는 자료다.</p>
+<p>이번에는 기존 게임에서 이미 사용하던 금발 전사·슬라임의 원본 41개와 세계관 자료 7개를 복사 통합했다. 미사용 상인 원본 1개와 기획 원본 HWP 1개는 기준 프로젝트 안에서 용도별 폴더로 이관했다. 진행 중인 7개 외부 작업 영역의 원본·미커밋 변경 사항은 보존했다. 브랜치 전체를 합친 것이 아니며, 용도·참조·검증을 확인한 파일만 반영했다.</p>
+<h2>1. 근거와 판정 범위</h2>
+<div class="table-wrap"><table><thead><tr><th>근거</th><th>확인 내용</th><th>해석상 제한</th></tr></thead><tbody>
+<tr><td><a href="브랜치현황.json">브랜치 현황</a></td><td>실제 경로, HEAD, 브랜치, main과의 커밋 차이, 조사 시작 시 Git 변경 목록</td><td><code>?? output/…/</code> 한 줄이 수백 개 파일을 나타낼 수 있다. 변경 목록의 줄 수를 파일 수로 쓰지 않는다.</td></tr>
+<tr><td><a href="작업실행상태_점검시점.json">작업 실행 상태</a></td><td>앱에 보이는 agent·terminal·sidebar 상태</td><td>한 응답의 <code>done</code>은 해당 작업의 전체 요구사항 완료나 main 통합을 뜻하지 않는다.</td></tr>
+<tr><td><a href="작업목록_변경전.json">작업 목록 변경 전</a> / <a href="작업목록_변경후.json">변경 후</a></td><td>표시 이름, 설명, 부모·자식 관계, 수동 정렬값, 실제 폴더·브랜치 유지 여부</td><td>앱 목록 구조와 실제 파일 구조는 별개다.</td></tr>
+<tr><td><a href="../../../자료/아트원본/manifest.json">아트 원본 manifest</a></td><td>41개 복사 원본과 상인 이관의 원래 위치·출처 브랜치·HEAD·바이트 수·SHA-256</td><td>복사한 제작물은 당시 미추적 파일이었다. HEAD만으로 재현할 수 없으므로 파일 해시와 보관본을 함께 사용한다.</td></tr>
+<tr><td><a href="../../../자료/아트원본/verification.json">아트 재현 검증</a></td><td>원본 보존, 복사 해시, 이미지 디코드, 패커 재생성 결과, 배포 경로 크기 비교</td><td>기존 그림을 그대로 재현한 검증이며, 신규 아트 채택 승인이나 실제 기기 성능 측정을 대신하지 않는다.</td></tr>
+<tr><td><a href="세계관통합_출처.json">세계관 통합 출처</a></td><td>세계관 7개 파일의 출처·목적지·전후 해시·원본 보존</td><td>main의 atlas 링크를 바꾼 1개 HTML은 의도적으로 해시가 다르다.</td></tr>
+<tr><td><a href="기획원본_이관.json">기획 원본 이관</a></td><td>HWP 원래 위치·새 위치·크기·SHA-256</td><td>원본 파일 보관 사실이며, 본문 전체의 기획 확정 여부를 뜻하지 않는다.</td></tr>
+</tbody></table></div>
+<p><strong>사실</strong>은 위 자료 또는 실제 파일 검사로 확인한 사항이다. <strong>통합 대기</strong>는 산출물이 없다는 뜻이 아니라 채택, 규격, 권리, 의존성 또는 전장 검증이 남았다는 뜻이다. 외부 서비스 계정의 생성 가능 여부와 원본 재료의 법적 사용 조건은 저장소에 기록된 상태만 확인했으며, 외부 계정·계약을 독립 검증하지 않았다.</p>
+<h2>2. 8개 작업 영역별 반영 상태</h2>
+<p>폴더 표기의 <code>M</code>은 <code>C:/Users/user/Desktop/Grid Defenders</code>, <code>W</code>는 <code>C:/Users/user/orca/workspaces/Grid Defenders</code>를 뜻한다. HEAD는 표에서는 앞 12자리로 줄였으며 전체 값은 <a href="브랜치현황.json">브랜치 현황</a>에 있다. 상태는 브랜치 전체를 완료 처리한 것이 아니라 이번 조사·통합의 처리 상태다.</p>
+<div class="table-wrap"><table><thead><tr><th>작업명</th><th>원래 브랜치·실제 폴더</th><th>점검 HEAD</th><th>조사 전 main 반영 여부</th><th>이번 최종 배치</th><th>처리 상태</th><th>남은 과제·통합 조건</th></tr></thead><tbody>
+<tr><td>게임 통합</td><td><code>main</code> / <code>M</code></td><td><code>e31227b84315b</code></td><td>실제 게임·로비 및 별도 가로 전투 시제품, 기존 게임용 아트가 존재</td><td><code>자료/아트원본/</code>, <code>자료/세계관/</code>, <code>자료/기획원본/</code>, <code>문서/02_세부기획/00_세계관/</code>, <code>output/world/</code>; 아트 패커·출처 연결 갱신</td><td>기준 프로젝트에 선별 반영, 원본 재현 검증 완료</td><td>전체 실행·빌드·기능 검증은 종합 보고서의 검증 결과와 함께 판정. 가로 전투를 로비에 새로 연결하는 변경은 이번 아트 통합 범위에 없음</td></tr>
+<tr><td>아이템 작업</td><td><code>feature/item-system</code> / <code>W/item-system</code></td><td><code>b2a87c8793a0</code></td><td>main에 아이템·상점·장비·조합 기능과 아트 존재. 이 브랜치의 최신 옵션·가치·전투 규칙 수정까지 일괄 반영된 상태는 아님</td><td>원래 폴더 보존, 신규 파일 통합 없음</td><td>설계 진행·통합 대기</td><td>변경 중인 단계·효과·가격·전투 규칙을 현재 main과 대조하고 확정한 규칙부터 반영. 기존 구매·배치·조합 흐름 회귀 검증 필요</td></tr>
+<tr><td>몬스터 디자인</td><td><code>gim963738-jpg/몬스터-디자인</code> / <code>W/몬스터-디자인</code></td><td><code>116c14d8a786</code></td><td><code>게임/public/assets/monsters/slimes-v1/</code>의 노랑·파랑·빨강 슬라임과 노랑 이동 애니메이션이 이미 사용됨</td><td><code>자료/아트원본/monster-design/round-slime/</code>에 원본·메타데이터·검수 기록 <strong>29개 / 17,474,633B</strong></td><td>기존 적용분의 원본 통합 완료, 다른 제작물 보존</td><td>신규 몬스터는 방향·동작·투명 여백·기준점·전장 크기를 검수한 후 선택 반영</td></tr>
+<tr><td>스킬 이펙트</td><td><code>gim963738-jpg/스킬-이펙트</code> / <code>W/스킬-이펙트</code></td><td><code>40eb365afa19</code></td><td>main에 기존 스킬 이펙트 시트·재생 코드가 존재. 별도 이펙트 공방과 재료함 전체가 main에 통합된 것은 아님</td><td>원래 <code>게임/src/effect-workshop/</code>, <code>게임/tools/</code>, <code>output/…</code>, <code>.local/effect-materials/</code> 보존</td><td>기능 일부 구현·통합 대기</td><td>무료 재료함과 부품 보관함 연결, raw 재료 사용 조건, 공방 출력 규격, 기존 스킬 규약에 따른 밝은 배경·실전 검증 필요</td></tr>
+<tr><td>스프라이트 시트 작업</td><td><code>gim963738-jpg/스프라이트-시트작업</code> / <code>W/스프라이트-시트작업</code></td><td><code>40eb365afa19</code></td><td>금발 전사 오른쪽 걷기 60프레임이 main에 존재. 해당 런타임의 원본 출처는 캐릭터디자인2이며 이 브랜치 전체를 반영한 것은 아님</td><td>이 브랜치의 원본·시트·생성 상태는 원래 폴더 보존. 걷기 원본은 출처가 확인된 캐릭터 영역에서 통합</td><td>제작 진행·통합 대기</td><td>동작별 최종본을 구분하고 현재 런타임과 비교. 별도 달리기 생성 경로의 실패 기록은 아래 6절 참조</td></tr>
+<tr><td>스플래시 아트</td><td><code>gim963738-jpg/스플래시-아트</code> / <code>W/스플래시-아트</code></td><td><code>474dd531010c</code></td><td>main의 기존 초상화·로비 이미지가 이 브랜치의 최신 작품 전체를 채택했다는 근거는 없음</td><td><code>output/characters/</code>, <code>output/illustration/</code>, <code>output/imagegen/</code>, <code>output/world/</code> 보존</td><td>제작물 보존·최종 채택 대기</td><td>실제 사용할 화면, 최종 선택 버전, 소속·컨셉, 권리·출처를 확정한 뒤 화면 비율과 용량 검증</td></tr>
+<tr><td>영상 제작</td><td><code>gim963738-jpg/영상제작</code> / <code>W/영상제작</code></td><td><code>7edbad4fab39</code></td><td>main의 금발 60프레임 걷기와 별도 영상·투명 프레임 제작물을 동일 결과물로 볼 수 없음</td><td><code>output/animation/</code>, <code>output/video-frames/</code>, <code>output/imagegen/</code> 보존</td><td>영상·모션 소스 보존·게임 규격 검수 대기</td><td>원본 해상도·프레임을 보존한 상태에서 피벗, 루프, 프레임 타이밍, 투명 경계, 전장 표시 크기 검증 후 파생 시트 생성</td></tr>
+<tr><td>캐릭터디자인2</td><td><code>gim963738-jpg/캐릭터디자인2</code> / <code>W/캐릭터디자인2</code></td><td><code>40eb365afa19</code></td><td>금발 전사 8방향·초상화·걷기 60프레임이 main에 이미 적용. 세계관 최신 자료는 별도 작업 영역에 존재했음</td><td>금발 원본 <strong>12개 / 28,652,372B</strong>를 <code>자료/아트원본/character-design/</code>; 세계관 <strong>7개 / 원본 합계 7,405,062B</strong>를 기획·자료·atlas 경로에 배치</td><td>적용 아트 원본·세계관 선별 통합 완료, 나머지 보존</td><td>최신 제작 방향에 따라 신규 캐릭터 검수. 기존 캐릭터의 세계관 소속은 <code>placement_status: deferred</code> 원칙 유지. 인계 보관본을 신규 콘텐츠로 중복 집계하지 않음</td></tr>
+</tbody></table></div>
+<p>기준 main에서 실제 사용되는 금발 전사와 슬라임의 원본 해시는 각 <code>sources.json</code>과 대조했다. 따라서 이번 작업은 새로 선택한 디자인을 전장에 투입한 작업이 아니라 <strong>이미 적용된 디자인을 다른 컴퓨터에서도 재현할 수 있게 만든 통합</strong>이다.</p>
+<h2>3. 실제 파일 수와 용량</h2>
+<p>집계 시점은 <strong>2026-11-07 19:25:18 KST</strong>이다. 8개 폴더를 <code>followlinks=False</code>로 순회하면서 디렉터리 이름 <code>.git</code>, <code>node_modules</code>, <code>dist</code>, <code>.venv</code>, <code>venv</code>, <code>__pycache__</code>, <code>.cache</code>와 워크트리의 <code>.git</code> 연결 파일을 제외했다. 표의 전체 수량에서는 <code>output/backups</code>를 제외했고, <code>output 콘텐츠</code>에서는 <code>output/backups</code>와 <code>output/handoffs</code>를 제외했다. 숫자는 디스크상 파일 길이의 합계이며 압축 다운로드 크기가 아니다.</p>
+<p>전체 열에는 코드·문서·설정·메타데이터·이미지·영상·ZIP·상속된 동일 파일이 함께 들어간다. 서로 다른 워크트리에 동일 파일이 존재하면 각 폴더에서 각각 집계했다. 따라서 열을 단순 합산해 프로젝트의 고유 콘텐츠 수로 발표하면 안 된다. main은 아트·세계관 통합 후, 종합 보고서 동시 작성 중의 시점 수량이며 이 부록을 포함한 이후 보고서 작성에 따라 늘어날 수 있다.</p>
+<div class="table-wrap"><table><thead><tr><th>실제 폴더명</th><th>전체 파일 수, 백업 제외</th><th>전체 bytes, 백업 제외</th><th>output 콘텐츠 파일 수</th><th>output 콘텐츠 bytes</th><th>그중 미디어 파일 수</th><th>그중 미디어 bytes</th></tr></thead><tbody>
+<tr><td>Grid Defenders / main</td><td>1,219</td><td>138,822,445</td><td>21</td><td>29,253,439</td><td>11</td><td>29,150,572</td></tr>
+<tr><td>item-system</td><td>653</td><td>41,257,776</td><td>2</td><td>2,333,807</td><td>1</td><td>2,331,784</td></tr>
+<tr><td>몬스터-디자인</td><td>1,227</td><td>124,519,064</td><td>160</td><td>66,923,527</td><td>83</td><td>39,798,943</td></tr>
+<tr><td>스킬-이펙트</td><td>15,825</td><td>2,232,041,565</td><td>264</td><td>98,829,926</td><td>142</td><td>96,290,589</td></tr>
+<tr><td>스프라이트-시트작업</td><td>1,403</td><td>205,497,960</td><td>359</td><td>149,556,947</td><td>256</td><td>77,139,542</td></tr>
+<tr><td>스플래시-아트</td><td>720</td><td>126,654,046</td><td>69</td><td>85,375,551</td><td>42</td><td>85,264,902</td></tr>
+<tr><td>영상제작</td><td>2,132</td><td>1,070,238,061</td><td>1,027</td><td>1,011,131,712</td><td>1,003</td><td>513,528,922</td></tr>
+<tr><td>캐릭터디자인2</td><td>2,571</td><td>887,786,882</td><td>447</td><td>468,684,374</td><td>246</td><td>368,792,402</td></tr>
+</tbody></table></div>
+<p>미디어 확장자는 PNG, JPG, JPEG, WebP, GIF, SVG, MP4, WebM, MOV, MKV, AVI, WAV, OGG, MP3로 한정했다. 시트 한 장과 프레임 PNG 한 장을 각각 파일 1개로 세므로 캐릭터 수·동작 수로 환산할 수 없다.</p>
+<div class="table-wrap"><table><thead><tr><th>별도 구분한 폴더</th><th>파일 수</th><th>bytes</th><th>전체 표와의 관계·보존 이유</th></tr></thead><tbody>
+<tr><td>main·몬스터·이펙트·스프라이트·영상·캐릭터의 <code>output/backups</code></td><td>각 2</td><td>각 92,308,549</td><td>위 전체 집계에서 제외. 같은 이름·크기의 기존 백업이 여러 워크트리에 존재하며 별도 신규 성과로 세지 않는다. 이번에 삭제하지 않음</td></tr>
+<tr><td>item-system·스플래시의 <code>output/backups</code></td><td>0</td><td>0</td><td>해당 폴더 내 파일 없음</td></tr>
+<tr><td>캐릭터디자인2의 <code>output/handoffs</code></td><td>900</td><td>359,908,444</td><td>위 전체에는 포함, output 콘텐츠에서는 제외. 과거 작업 인수인계·원본 추적 자료이며 900개 신규 캐릭터가 아님</td></tr>
+<tr><td>스킬-이펙트의 <code>.local</code></td><td>14,454</td><td>2,068,880,326</td><td>위 전체에는 포함. 로컬 재료 수집·개발용 보관 자료이며 게임 배포 대상이 아님</td></tr>
+</tbody></table></div>
+<h2>4. 이번에 반영하고 검증한 결과물</h2>
+<h3>4.1 금발 전사·슬라임 원본</h3>
+<div class="table-wrap"><table><thead><tr><th>구성</th><th>외부 출처</th><th>최종 위치</th><th>처리 결과</th></tr></thead><tbody>
+<tr><td>금발 전사 8방향 PNG 8장과 검수 기록</td><td>캐릭터디자인2 <code>output/characters/gc9_longsword_dagger/pixel_8views_v01/</code></td><td><code>자료/아트원본/character-design/characters/gc9_longsword_dagger/pixel_8views_v01/</code></td><td>기존 런타임 입력 해시 대조 후 복사</td></tr>
+<tr><td>오른쪽 걷기 60프레임 시트·좌표·검수 기록</td><td>캐릭터디자인2 <code>output/animation/dreamina-right-walk-60-v01/</code></td><td><code>자료/아트원본/character-design/animation/dreamina-right-walk-60-v01/</code></td><td>기존 패커 입력을 그대로 보관</td></tr>
+<tr><td>슬라임 3색 × 8방향 PNG 24장, 원본 manifest·검수 요약</td><td>몬스터-디자인 <code>output/monsters/round-slime/eight_views_v01/</code></td><td><code>자료/아트원본/monster-design/round-slime/eight_views_v01/</code></td><td>색상별 기존 런타임 출처 해시 일치</td></tr>
+<tr><td>노란 슬라임 물결 30프레임 시트·좌표·검수 기록</td><td>몬스터-디자인 <code>output/monsters/round-slime/yellow-right-ripple-30f-v01/</code></td><td><code>자료/아트원본/monster-design/round-slime/yellow-right-ripple-30f-v01/</code></td><td>원본 30프레임 보존. 게임의 사용자 요청 재생 범위 2~24프레임은 변경하지 않음</td></tr>
+</tbody></table></div>
+<p>복사한 원본·메타데이터·검수 파일은 <strong>41개, 46,127,005B</strong>다. 원본 복사 41건의 SHA-256이 같고, 외부 원본의 해시·수정 시각이 바뀌지 않았다. 검수 보고서는 그 문서가 작성된 당시의 검수 결과로 보관했으며, 그 안의 과거 <code>전장 미검수</code> 등 상태를 새 검수 완료로 덮어쓰지 않았다.</p>
+<p><code>게임/scripts/pack-blond-art.ps1</code>과 <code>pack-slime-art.ps1</code>은 실행 위치와 관계없이 저장소 내부 원본을 기본 입력으로 찾는다. 기존 명시적 <code>SourceRoot</code> 사용도 유지하며 <code>OutputRoot</code>로 임시 폴더 재생성이 가능하다. <code>sources.json</code>에는 기존 출처·해시를 유지하면서 <code>inputSource</code>, <code>archiveManifest</code>만 추가했다. Windows PowerShell의 한글 경로 해석을 위해 스크립트 UTF-8 BOM을 유지했다.</p>
+<p>재현 검증에서는 실제 배포 PNG를 덮어쓰지 않고 별도 임시 출력에서 슬라임 PNG 4개와 금발 전사 PNG 3개를 만들었다. <strong>PNG 7개가 기존 파일과 바이트 단위로 동일</strong>했고 좌표·프레임 정보 JSON 2개는 구조적으로 같았다. 아트 보관 PNG 35개도 모두 디코드 검사를 통과했다. 실행 정책 때문에 직접 호출이 거부된 뒤 검증 프로세스에만 <code>-ExecutionPolicy Bypass</code>를 지정했으며 시스템의 지속 실행 정책은 바꾸지 않았다.</p>
+<h3>4.2 세계관 v1.12·지도 v24</h3>
+<p>캐릭터디자인2에서 출처를 확인한 <strong>7개 파일, 원본 합계 7,405,062B</strong>를 반영했다.</p>
+<div class="table-wrap"><table><thead><tr><th>최종 배치</th><th>의미</th><th>검증</th></tr></thead><tbody>
+<tr><td><a href="../../02_세부기획/00_세계관/세계관설정집.md">세계관설정집.md</a></td><td>사람이 읽는 세계관 정리</td><td>원본 해시와 동일</td></tr>
+<tr><td><a href="../../../자료/세계관/세계관설정.json">세계관설정.json</a></td><td>구조화한 세계관 정보</td><td>원본 해시와 동일</td></tr>
+<tr><td><a href="../../../output/world/current.json">current.json</a></td><td>현재 버전·지도 연결</td><td>원본 해시와 동일</td></tr>
+<tr><td><a href="../../../output/world/atlas/index.html">atlas/index.html</a></td><td>지도·세계관 보기</td><td>복사 확인 후 제작 모음 링크만 main 현황 색인에 맞게 변경. 변경 전후 해시 별도 기록</td></tr>
+<tr><td><a href="../../../output/world/atlas/설정집.html">atlas/설정집.html</a></td><td>HTML 설정집</td><td>원본 해시와 동일</td></tr>
+<tr><td><a href="../../../output/world/maps/continent_world_expanded_regions_v23.png">지도 v23</a></td><td>v24 생성에 사용된 이전 입력</td><td>원본 해시와 동일</td></tr>
+<tr><td><a href="../../../output/world/maps/continent_world_east_minor_impact_v24.png">지도 v24</a></td><td>동대륙 소오염지역 반영 최신 지도</td><td>원본 해시와 동일</td></tr>
+</tbody></table></div>
+<p>7개 모두 외부 작업 영역의 원본은 바뀌지 않았다. v23은 생성 입력·변경 추적을 위해 함께 보관했다. 새 설정을 가져온 것과 게임 내 모든 캐릭터·맵에 적용한 것은 다르다. 기존 캐릭터의 출신·진영은 미지정 상태를 유지하며 임의 배정하지 않았다.</p>
+<h3>4.3 원본 파일 위치 정리와 배포 크기</h3>
+<div class="table-wrap"><table><thead><tr><th>원래 위치</th><th>최종 위치</th><th>검증·이유</th></tr></thead><tbody>
+<tr><td><code>게임/public/assets/shop/merchant.png</code></td><td><a href="../../../자료/아트원본/shop/merchant.png">자료/아트원본/shop/merchant.png</a></td><td>2,258,559B. 코드·스크립트·테스트의 런타임 참조 없음 확인. 현재 상점은 cutout 이미지를 사용하므로 원본을 비배포 경로로 보관. 이동 전후 SHA-256 동일</td></tr>
+<tr><td><code>게임 기획서 통합본 V2.hwp</code></td><td><a href="&lt;../../../자료/기획원본/게임 기획서 통합본 V2.hwp&gt;">자료/기획원본/게임 기획서 통합본 V2.hwp</a></td><td>96,256B. 이관 후 SHA-256 동일. 원본 기획 자료로 분류</td></tr>
+</tbody></table></div>
+<p>상인 원본을 설명하는 WEB-021 과거 기록과 백업 manifest는 역사 자료로 유지했다. <a href="../../../자료/아트원본/README.md">아트 원본 README</a>와 manifest의 <code>relocations</code>가 이전 경로와 현재 경로를 연결한다. <code>merchant-cutout.png</code>, <code>merchant-silver-cutout.png</code>의 배포 경로는 그대로다.</p>
+<div class="table-wrap"><table><thead><tr><th>측정 대상·조건</th><th>변경 전</th><th>변경 후</th><th>차이</th></tr></thead><tbody>
+<tr><td>같은 컴퓨터에서 <code>게임/public/assets</code> 모든 파일 길이 재귀 합계</td><td>39개 / 51,182,826B</td><td>38개 / 48,924,519B</td><td><strong>2,258,307B 감소, 약 4.41%</strong></td></tr>
+<tr><td>신규 <code>자료/아트원본/</code> 최종 전체: 복사 원본·상인·README·manifest·검증 기록</td><td>없음</td><td>45개 / 48,426,633B</td><td>비배포 원본 보관량 증가</td></tr>
+</tbody></table></div>
+<p>상인 원본 2,258,559B를 public 밖으로 옮겼고 출처 JSON에 252B가 추가되어 순감소가 2,258,307B다. 전체 저장소를 같은 만큼 줄였다는 뜻이 아니다. 원본 재현성을 위해 저장소 전체 보관량은 증가했으며 다운로드 시간·메모리·FPS 개선은 이번에 측정하지 않았다.</p>
+<p>조사 시작의 public/assets 39개에는 SHA-256이 완전히 같은 중복 파일이 없었다. 파일명 단순 검색에서 잡히지 않더라도 슬라임 색상, 병사 종류, 성장 스크롤처럼 코드에서 경로를 조합하는 리소스는 사용 중이었다. 이러한 파일은 삭제 후보에서 제외했다.</p>
+<h2>5. 앱 작업 목록 정리 결과</h2>
+<p>파일 통합과 별도로 앱의 <strong>표시 이름·설명·부모 관계</strong>를 정리했다. 아래 결과는 저장된 변경 전후 JSON을 동일한 작업 ID로 대조한 것이다. 실제 브랜치명이나 디스크 폴더명을 바꾼 작업이 아니다.</p>
+<div class="table-wrap"><table><thead><tr><th>작업 영역</th><th>이전 표시 이름 → 변경 후</th><th>이전 부모 → 변경 후 부모</th><th>변경 후 설명의 핵심</th></tr></thead><tbody>
+<tr><td>main</td><td>Grid Defenders → Grid Defenders · 게임 통합</td><td>없음 → 없음</td><td>기준 main, 실제 전투·로비, 검증된 산출물 통합</td></tr>
+<tr><td>item-system</td><td>아이템 작업 → 아이템·밸런스</td><td>없음 → main</td><td>설계 진행·통합 대기, 옵션·가격 검토</td></tr>
+<tr><td>몬스터-디자인</td><td>몬스터 디자인 → 몬스터·스프라이트</td><td>없음 → main</td><td>슬라임 3종 반영, 신규 몬스터 검수 대기</td></tr>
+<tr><td>스킬-이펙트</td><td>스킬 이펙트 → 이펙트·제작 도구</td><td>캐릭터디자인2 → main</td><td>부분 구현, 공방·재료함 별도 도구, 부품 연결 보완</td></tr>
+<tr><td>캐릭터디자인2</td><td>캐릭터디자인2 → 캐릭터·세계관</td><td>main → main</td><td>세계관 v1.12·지도 v24, 기존 캐릭터 소속 배정 보류</td></tr>
+<tr><td>스프라이트-시트작업</td><td>스프라이트 시트작업 → 캐릭터 동작·시트</td><td>캐릭터디자인2 → 캐릭터디자인2</td><td>금발 걷기 반영, 달리기 품질·재사용 체계 검토</td></tr>
+<tr><td>스플래시-아트</td><td>스플래시 아트 → 스플래시·일러스트</td><td>캐릭터디자인2 → 캐릭터디자인2</td><td>제작물 보존, 사용처·권리·최종 채택 확인</td></tr>
+<tr><td>영상제작</td><td>영상제작 → 영상·모션 소스</td><td>없음 → 캐릭터디자인2</td><td>투명 프레임 보존, 전장 규격·동작 검증</td></tr>
+</tbody></table></div>
+<pre><code>Grid Defenders · 게임 통합
+├─ 아이템·밸런스
+├─ 몬스터·스프라이트
+├─ 이펙트·제작 도구
+└─ 캐릭터·세계관
+   ├─ 캐릭터 동작·시트
+   ├─ 스플래시·일러스트
+   └─ 영상·모션 소스</code></pre>
+<p>위 도식은 분류 관계를 나타내며 앱의 화면상 정렬 순서를 보장하는 도식은 아니다. 각 항목의 <code>manualOrder</code>는 유지했다. 8개 모두 <code>workspaceStatus: in-progress</code>, <code>isArchived: false</code>를 유지했고 실제 경로·브랜치·HEAD도 변경 전후 같다. 목록 정리를 이유로 원래 작업을 종료하거나 전체 완료로 표시하지 않았다.</p>
+<p>점검 시점에는 main agent가 <code>working</code>이었고 다른 영역의 최신 agent 응답에는 <code>done</code>이 표시되어 있었다. 이펙트는 <code>status: active</code>와 <code>sidebarStatus: done</code>이 함께 기록되었다. 이런 표시를 전체 제작 완료로 해석하지 않았으며, 별도 변경 파일과 실제 요구사항의 남은 부분을 기준으로 통합 대기 상태를 기록했다.</p>
+<h2>6. 보존·대기 결과물과 후속 조건</h2>
+<div class="table-wrap"><table><thead><tr><th>대상</th><th>확인된 현재 상태</th><th>통합하지 않은 이유</th><th>다음 작업의 목적과 완료 기준</th></tr></thead><tbody>
+<tr><td>이펙트 공방·무료 PNG 재료 연결</td><td>공방과 무료 재료함이 존재. <code>게임/src/effect-workshop/componentLibrary.ts</code>는 무료 재료를 별도 재료함으로 안내</td><td>새 부품 보관함에 모든 무료 PNG가 연결된 상태가 아님</td><td>필요한 재료 유형을 선택·미리보기·출력할 수 있게 연결하고 저장·복원·출력물 재생을 검증</td></tr>
+<tr><td><code>.local/effect-materials</code></td><td>catalog 등록값 packs 34, materials 632, primary 497, animations 449, textures 183, frames 14,561, pending 3</td><td>로컬 수집물이며 서로 다른 라이선스가 기록됨. 실제 독립 제작 수가 아님</td><td>사용할 재료의 출처·조건·크레딧을 확인하고 실제 게임에 필요한 최종 파생 효과만 통합. raw 재료함을 public으로 복사하지 않음</td></tr>
+<tr><td>재료 3건 수동 검수</td><td>불균등한 beam 영역 1건과 terrain용 grass 재료 2건이 pending</td><td>일괄 분할·이펙트 용도 지정이 적절하다고 확인되지 않음</td><td>빔은 영역 수동 검수 후 좌표 확정. 지형 재료는 이펙트 부품으로 강제 분류하지 않고 용도 결정</td></tr>
+<tr><td>별도 금발 오른쪽 달리기</td><td><code>output/characters/gc9_longsword_dagger/asf_run_right_v01/generation-status.json</code>: local:grok-acp 2회 <code>RATE_LIMIT</code>, 영상 0·runtime 프레임 0</td><td>해당 생성 경로는 계정 영상 모델 접근·한도 확인 필요</td><td>원본 master와 명세를 보존하고 실제 생성 가능 경로를 확인. 결과가 나온 뒤 동작·루프·피벗·전장 검수. 다른 경로의 결과까지 전부 없다고 단정하지 않음</td></tr>
+<tr><td>스플래시·일러스트</td><td>이미지가 존재하고 별도 작업 영역에서 관리 중</td><td>사용 화면·최종 선택·게임 컨셉 연결이 이번 점검에서 확정되지 않음</td><td>채택 목록에 원본 hash·용도·표시 비율을 기록하고 선택된 결과물만 게임용 파생 파일로 반영</td></tr>
+<tr><td>영상·투명 프레임</td><td><code>output/animation/</code>, <code>output/video-frames/</code>와 영상 처리 기록 존재</td><td>원본 해상도 보존과 게임용 동작 완성은 별개의 판단</td><td>밝은 배경 전체 프레임·전장 렌더에서 투명 경계·밟힘·기준점을 검증하고 재생 시간·스케일을 명세화</td></tr>
+<tr><td>기존 캐릭터·세계관 배정</td><td>캐릭터 제작 규칙과 최근 기록에서 기존 아트의 소속 배정을 보류</td><td>세계관 통합만으로 출신·진영·스킬을 임의 확정하면 기획 의도 변경</td><td>기존 아트는 미지정으로 유지. 새 캐릭터 제작 때 정한 소속만 기록하고 최종 승인된 디자인·방향 시트와 연결</td></tr>
+<tr><td><code>output/handoffs</code>와 기존 백업</td><td>원본·Git bundle·인수인계 기록이 함께 보관됨</td><td>사용 여부·복구 책임을 확인하지 않고 중복 삭제하면 추적 근거 손실</td><td>향후 보존 정책을 정하고 단일 색인으로 추적. 동일 해시·복구 경로를 확인한 뒤 별도 정리 여부 판단</td></tr>
+</tbody></table></div>
+<p>이펙트 재료 서버인 <code>게임/tools/private-materials.mjs</code>는 <code>.local/effect-materials</code>를 개발용 localhost GET/HEAD로 제공하며 일반 배포 파일로 복사하지 않는다. 저장소에는 unTied Games·CraftPix 등의 원본 재배포 제한과 크레딧 조건이 기록되어 있다. 이 부록은 그 기록의 존재를 확인한 것이며 각 라이선스의 외부 법률 검토를 완료했다고 주장하지 않는다.</p>
+<p>전투용 신규 이펙트·스프라이트를 통합할 때는 <a href="../../00_개발규칙/스킬구현규약.md">스킬 구현 규약</a>에 따라 추출 영역, 투명 여백, 기준점, 표시 범위를 피해 판정과 분리해야 한다. 검은 배경 정지 화면만으로 통과시키지 않고 밝은 배경의 전체 프레임과 실제 전장에서 확인하는 것이 통합 완료 조건이다.</p>
+<h2>7. 최종 처리 경계</h2>
+<p><strong>이번에 완료한 것:</strong> 8개 영역의 위치·브랜치·파일 분포 조사, 검증된 원본 41개 복사, 세계관 7개 선별 통합, 상인·기획 원본의 내부 이관, 패커 기본 경로 수정, 출처·복구 추적 기록, 기존 런타임 재현 검증, 앱 작업 목록의 이름·설명·계층 정리다.</p>
+<p><strong>보존한 것:</strong> 외부 작업 영역의 미커밋 변경, 생성 중이거나 채택이 끝나지 않은 아트·도구·영상, 과거 백업·handoffs, 역사 문서다. 사용 여부가 불명확한 파일은 삭제하거나 임의로 최신본에 통합하지 않았다.</p>
+<p><strong>추가 판단이 필요한 것:</strong> 아이템 규칙 확정, 공방 재료 연결·권리 검토, 신규 아트 채택, 동작 생성 경로와 전장 검수, 장기 원본·백업 보존 정책이다. 브랜치 전체 완료율은 분모가 확정되지 않아 제시하지 않았다. 현재 사용 가능 기능과 신규 통합 후 전체 실행 결과는 종합 보고서의 기능 진행 현황·검증 결과와 함께 판단한다.</p><p class="foot">Grid Defenders · 자료 기준 2026-11-07 · 사실·제안·미확인 구분 및 검증 범위는 본문 참조</p></main></body></html>

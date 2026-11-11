@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "id": "MAIN01-20261110-D820F076",
+  "main": "main01",
+  "branch": "characters",
+  "title": "1번·발로르 각0/35/90 총6장·발로르 좌우두께 수정",
+  "request": "# 차수3 새 범위와 저장 후 진행 승인\n사용자: “1번 0도 35도 90도 발로르 0도 35도 90도 3장씩 뽑아오는데 일단 지금 뽑아온 발로르는 불합격 아직도 양옆이 더 두꺼워보인다”.\n메인 이해확인: 1번은 선택한 금발전사 모델. 둘 다 동일 기본대기 자세로 정면0/화면오른쪽앞35/오른쪽정측면90 총6장. 발로르 반려본을 그대로 회전시키지 않고 어깨·몸통·상완 및 장비를 포함한 좌우두께를 더 줄이되 고유장비 디테일 유지. 진행 승인 후 절차확인 및 제작하달.\n사용자 실제 승인/선행조건: “진행하기전에 저장하고 진행”.\n선행 저장은 메인작업/main01/save-20261110/plan.json의17개ref 원격검증 receipt로 확인한 후 발송한다. 반려본/원본/4번예비는 보존한다. 파츠·리깅·애니메이션·게임교체는 여전히 보류. 이번 방향별 정지비교6장은 사용자가 명시한 예외다. 미래인게임 우측3/4규칙으로 이번0/90 명시요청을 취소하지 않는다.\n",
+  "iteration": 4,
+  "status": "draft",
+  "createdAt": "2026-11-10T00:08:16.510382+09:00",
+  "approval": null,
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-10T00:08:17.460313+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\실제발송영수증.json",
+        "sha256": "4dac6ddd8f12c084717f1c03a113bd3c73880968bc8bdef924a03ffc3f9b1aed"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T00:11:22.901557+09:00",
+      "iteration": 1,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\읽기확인-v001-7a8e332a3fdb436293422b1d550069be.json",
+        "sha256": "1ae8b43c40126dafdc85562aaf9172f1b1963f5fb93fa666afecc10ce4a7fbf8"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-10T00:26:42.446146+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v001\\report.md",
+        "sha256": "311e6687f26b0eaa13661f31bb82538fab69f4fde8e60dbde8a366bc4728ff76"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-10T00:39:31.770675+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사용자반려-좌우폭-v001.md",
+        "sha256": "a7861fc39967fab52d58d77e276ef4b98eaf7382d14e2d6e9369edcab7d91a6f"
+      },
+      "userQuote": "너무 옆으로 퍼진느낌인데 불합격"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-10T00:44:05.896338+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\실제발송영수증.json",
+        "sha256": "6d03ec0d66cecd67601af911db3baac3fbabe7b0da3f6c148353fd2718b963e3"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T00:46:33.456062+09:00",
+      "iteration": 2,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\읽기확인-v002-0281dbc1767447e281566739ab168d44.json",
+        "sha256": "2f9ac822abc2bfc86d62d849b68dff39dc9a538be7a86df2f38b3cfa8d0600ec"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-10T01:00:38.103142+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v002\\report.md",
+        "sha256": "362d852998e9ba584880f7cd1c86a26a87a0e7e16975d12d06b95b188cd9d2d3"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-10T01:16:25.997117+09:00",
+      "iteration": 2,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\사용자확인.md",
+        "sha256": "b698f9a83d7e62ab486cb5cfe4d3fa86fb73a2d11f898c370f6207908db5f919"
+      },
+      "userQuote": "1번 0도 35도 90도 발로르 0도 35도 90도 3장씩 뽑아오는데 일단 지금 뽑아온 발로르는 불합격 아직도 양옆이 더 두꺼워보인다"
+    },
+    {
+      "action": "sent",
+      "at": "2026-11-10T01:16:26.889990+09:00",
+      "iteration": 3,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\실제발송영수증.json",
+        "sha256": "f2bcd48ff710cc328221325f797b20d04825948e04c5612669958c2b12221ba8"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T01:19:03.725082+09:00",
+      "iteration": 3,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D820F076\\읽기확인-v003-f3b1a0e7ff214e8bba734a51506a593d.json",
+        "sha256": "836ad926ac656fc239ff490e5a5f45b1bf4fd1e4c5695238a5aa774b3552c0fe"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-10T01:39:30.570859+09:00",
+      "iteration": 3,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\style1_blond_balor_three_views_main01-20261110-d820f076_v003\\report.md",
+        "sha256": "a3e94cbd5d3a1cd09ceabb35c01e4c08028137dcd919c23f03b1097675525510"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "revise",
+      "at": "2026-11-10T07:40:52.269531+09:00",
+      "iteration": 3,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\재반려원인분석.md",
+        "sha256": "f7edaa6dc56a96c95145a648e6d41d9e6ca211fc92e399bf44f37941d7adf56e"
+      },
+      "userQuote": "발로르 피드백 얼굴이너무큼 몸은 말라버렸음 무기는 검인데 꺾여버렸고"
+    }
+  ],
+  "readingPolicyVersion": "OPS-004",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\design6-v003\\두께반려기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\디테일피드백.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\보존목록.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\v002\\후속작업보류.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v002\\report.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\style1_front_main01-20261110-d820f076_v002\\검수.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN03-20261109-21F94B82\\사용자합격-v002.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md"
+  ],
+  "readingAcknowledgement": null,
+  "updatedAt": "2026-11-10T07:40:52.280534+09:00"
+}

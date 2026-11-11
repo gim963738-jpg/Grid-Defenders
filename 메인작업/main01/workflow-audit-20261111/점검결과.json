@@ -1,0 +1,275 @@
+{
+  "task": "현재 작업 전달체계 감사",
+  "completedAt": "2026-11-11T22:23:10.104617+09:00",
+  "status": "inspection_complete_proposed_fixes_not_applied",
+  "scope": {
+    "sharedTaskCount": 48,
+    "preparedPromptVersions": 80,
+    "readingAcknowledgements": 85,
+    "registeredRoles": 14,
+    "nativeTaskMetadataCount": 91,
+    "directImageRequests": 13,
+    "semanticReview": "분야별 명시한 사례 대조. 모든 과거 대화/하위 에이전트 내부 추론/모든 생성 이미지의 시각검수는 포함하지 않음."
+  },
+  "mainConclusion": "전달기록은 보존되지만 메인 확인과 담당의 최종 생성문장 변환에서 의미를 바꿀 여지가 있고 실제 사례가 확인됐다. 기록 존재/기술검사 통과를 정확한 이해·사용자 합격으로 볼 수 없다.",
+  "findings": [
+    {
+      "id": "F01",
+      "priority": "P0",
+      "stage": "메인의 이해 확인",
+      "classification": "확인된 범위 축소",
+      "finding": "35도와90도 피드백을 함께 받은 뒤 메인 확인문이 내장90 한 장 수정으로 좁혀졌다. 그 좁아진 확인문에 진행 답변을 받아 담당에게 전달했다. 이후 사용자가 두 각도를 원했다고 정정했다. 수신자가 두 장 지시를 한 장으로 누락한 사례가 아니라 메인 확인 단계의 범위 해석 문제다.",
+      "sources": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-42D3D4BB\\이전차수\\v002\\전문프롬프트.md",
+          "line": 15,
+          "sha256": "15712d841d8abfd9bf5eb08236663fabde7fa73a09858ef57ebc9c62e7f84c62"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-42D3D4BB\\이전차수\\v003\\요청확인.md",
+          "line": null,
+          "sha256": "54778e6c6a023dfc6ebbecac8308ce6f246787e1771fa36992807c5fa7e5b9d5"
+        }
+      ],
+      "recommendation": "확인문에 결과물 개수·각도·수정 항목과 변경하지 않을 항목을 표로 고정하고 원문의 각 요청에 대응시킨다.",
+      "completionCriterion": "사용자 원문의 각 요청이 전달 명세의 항목에 연결되며 제외한 요청은 이유가 명시된다."
+    },
+    {
+      "id": "F02",
+      "priority": "P0",
+      "stage": "담당자의 이미지 생성 프롬프트 변환",
+      "classification": "확인된 추가 해석",
+      "finding": "무기를 신체 각도에 맞추라는 수정에서 실제 내장 프롬프트는 hanging relaxed / safe downward projection을 추가했다. 무기를 편하게 아래로 드는 특정 자세로 해석한 표현이다. 모델 결과의 모든 변화가 이 문장 때문인지는 이번 문자 감사만으로 단정하지 않는다.",
+      "sources": [
+        {
+          "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_builtin90_fix_main01-20261111-42d3d4bb_v002\\prompts\\edit-01.txt",
+          "line": 4,
+          "sha256": "146f3101c69b07af942ec05f765bc1dc1e5f9d2c7ded3c9b7424b478d08a95d4"
+        },
+        {
+          "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_builtin90_fix_main01-20261111-42d3d4bb_v002\\generation-records.json",
+          "line": null,
+          "sha256": "b88de16389d9922f21c9037a6d6d543e9f984664da2a376f9b48ac6280df2fd7"
+        }
+      ],
+      "recommendation": "실제 도구 제출 프롬프트의 동작·포즈·시점·변경 허용 범위를 확정 명세와 대조한다. 새 해석은 기존 포즈를 바꾸지 않는 범위인지 확인하고 충돌하면 메인에게 보고한다.",
+      "completionCriterion": "최종 프롬프트에 추가된 의미 있는 조건마다 사용자 요청 또는 명시된 구현 판단 근거가 연결된다."
+    },
+    {
+      "id": "F03",
+      "priority": "P0",
+      "stage": "동작의 전문 명세화",
+      "classification": "확인된 방향 조건 약화",
+      "finding": "이전 방패 스킬은 방패를 횡방향으로 세운다는 요청이 횡방향 준비→모서리 횡타격으로 요약됐고, 실제 영문은 edge-led sideways blow였다. 방패 긴 축을 수평으로 회전한다는 동작은 분명히 고정되지 않았다. 최신 직접13 프롬프트는 이 조건을 명시했다.",
+      "sources": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-9B2C9CFE\\전문프롬프트.md",
+          "line": 69,
+          "sha256": "bd3983d5348112c48f56c526ce45db3b936f768962bc8e472a53fe1175a042cf"
+        },
+        {
+          "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\api\\07-sheet-05\\prompt.txt",
+          "line": 3,
+          "sha256": "4e6f20cd023eca527ba543c2dc08484aae9ffa6ee1058ffede4f4774fcb409d5"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\output\\imagegen\\balor-sunburst13-main01-v001\\prompts\\05-shield-corner-strike-right35.txt",
+          "line": 10,
+          "sha256": "99bd24528622b881b3a0d62c86fd01b59702947989cb1561f07cdacf429eda48"
+        }
+      ],
+      "recommendation": "자세/시점/방패 자체 방향/타격 이동 방향을 구분하여 순서대로 쓴다. 금지어보다 원하는 준비→타격→회복을 먼저 적는다.",
+      "completionCriterion": "누가 무엇을 어느 축으로 움직여 어디를 타격하는지 한 가지 해석으로 설명할 수 있다."
+    },
+    {
+      "id": "F04",
+      "priority": "P1",
+      "stage": "수신·착수 확인",
+      "classification": "확인된 검증 범위 한계",
+      "finding": "80건 중27건은 줄바꿈 정규화 후 준비본문과 네이티브spec 일치,52건은 요약문과 전체 발송지시 파일 경로,1건은 기존Task 후속 메시지 영수증 방식이었다. ACK85개는 역할/차수/문서SHA/적용요약을 검증하지만 요청별 의미 일치와 최종 생성문장 일치는 검사하지 않는다.",
+      "sources": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\workflow-audit-20261111\\실제수신문대조.json",
+          "line": null,
+          "sha256": "1a9e4b547607852115c00e21e75e8a68aa0f37758e40247ec0a91bc138f8a2ac"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\작업대장.py",
+          "line": 126,
+          "sha256": "eebc99dd343335c1873fad932ffac1b85eec2a35bdfef4763ab215f6e1fcbf84"
+        }
+      ],
+      "recommendation": "단일 작업 명세를 수신 기준으로 고정하고 수신자가 핵심 조건을 짧게 재서술한다. 별도 AI를 신설하지 않고 기존 담당의 착수 확인을 개선한다.",
+      "completionCriterion": "수신 지시 버전과 실제 프롬프트가 연결되고 변경금지·산출물·동작 순서 이해를 확인할 수 있다."
+    },
+    {
+      "id": "F05",
+      "priority": "P1",
+      "stage": "상태·버전 관리",
+      "classification": "확인된 혼재",
+      "finding": "공유작업48건 중36건이 awaiting_user이며 기술실패/기술통과/실게임반영 작업이 함께 포함된다. returned는 결과에 관계없이 awaiting_user로 바꾼다. 직접13건은 별도 메인작업 기록에 있어 공유48건과 합쳐 보이지 않는다. 금발8모션 작업 제목에는2.6금지가 남았지만 v002 전문지시는 명시허가된 두 경로 제작이다.",
+      "sources": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\workflow-audit-20261111\\요약수치.json",
+          "line": null,
+          "sha256": "4561e27beec26134937ed55c32106c6eab4a35a9805208570beb638b57ddb664"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\작업대장.py",
+          "line": 307,
+          "sha256": "eebc99dd343335c1873fad932ffac1b85eec2a35bdfef4763ab215f6e1fcbf84"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261111-8D69415B\\task.json",
+          "line": null,
+          "sha256": "c571bf9dd1943d7dd488138ce21bdaa2c7d39f650a758c24c25583315874cdc1"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN02-20261111-8D69415B\\전문프롬프트.md",
+          "line": 6,
+          "sha256": "9dd2297fb2f0df87bbede6bd9bec97cc6cbda3a776ec659b86f9aab5be21b03b"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-sunburst13-direct-v001\\작업.json",
+          "line": null,
+          "sha256": "26c066a482ed40a06c681e614d4b7134064d9f9a8cc766368766f0bfb663be86"
+        }
+      ],
+      "recommendation": "제작 상태·기술검증·사용자판정·게임반영을 별도 칸으로 기록하고 메인 직접 작업도 같은 색인에 연결한다.",
+      "completionCriterion": "목록 한 곳에서 현재 범위·담당·기술결과·사용자판정·실제반영을 혼동 없이 확인한다."
+    },
+    {
+      "id": "F06",
+      "priority": "P1",
+      "stage": "공통 규정",
+      "classification": "확인된 이전 설명 잔존",
+      "finding": "상단 단일메인 우선 규정은 존재하지만 아래 본문에는 메인3개 유지와 승인 제작0건 등의 과거 설명이 남아 있다. 규정A 제목은v2.2.0, 연결 JSON은 A-2.0.0이다. 현재 경로/필독 연결14역할은 모두 정상 존재하며 단일메인 규정이 연결돼 있다.",
+      "sources": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+          "line": 54,
+          "sha256": "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+          "line": 3,
+          "sha256": "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업연결.json",
+          "line": 7,
+          "sha256": "03c1966e50110bd627c779915be4381ff37ec4dacd0033d6c35284d8434500c6"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\workflow-audit-20261111\\부서연결대조.json",
+          "line": null,
+          "sha256": "c1a02b6397eddbee5443a2401d13015b674991ea0d045fde095604ac56bbd832"
+        }
+      ],
+      "recommendation": "현재 유효 본문과 과거 변경 이력을 분리하고 연결 버전·작업 제목을 현재 지시와 맞춘다. 매 작업 필독 원칙은 유지한다.",
+      "completionCriterion": "활성 본문과 메타데이터가 같은 운영 형태를 가리키고 과거 규정은 이력임이 명확하다."
+    },
+    {
+      "id": "F07",
+      "priority": "P1",
+      "stage": "AI 경유",
+      "classification": "역사적 중계 확인·현재 단축 확인",
+      "finding": "과거 발로르 일러스트에서 main01→main03 대리발송→일러스트 담당→main03→main01 경유가 실제 있었다. 당시Run 소유권에 따른 중계였다. 현재 단일메인 규정은 폐지된 메인 재경유를 금지하고, 최신 직접13은 main01→이미지도구이다. 캐릭터 작업공간의 API 어댑터를 사용한 것은 캐릭터AI 재작성 경유가 아니다.",
+      "sources": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-illustration3\\main03-대리송신영수증.json",
+          "line": null,
+          "sha256": "4d38d55a7de134dfb0547dc1c04109628b7d7179b88f022e321f50cd8cd64fbe"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\workflow-audit-20261111\\native-messages.json",
+          "line": null,
+          "sha256": "ee305cb8bd4cb6f25545a5ba7f71da5a2bfa9df01344dff93376b606347e3b86"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+          "line": 6,
+          "sha256": "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48"
+        },
+        {
+          "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\openai.mjs",
+          "line": 115,
+          "sha256": "2d01b1253148ed5016992ec5dc88d45c9ef7d0bd191289ceb36a2ede691be7d0"
+        }
+      ],
+      "recommendation": "main01→실제 담당1명→제작도구를 기본으로 하고 분리 가능한 일이 있을 때만 하위 담당을 추가한다. 독립 테스터는 기술검증에 유지하며 사용자 원본 즉시 제출 요청을 가로막는 미적 검수 단계로 쓰지 않는다.",
+      "completionCriterion": "실제 제작·검사 역할 없이 전달만 하는 AI 경유가 없고 회신이 현재main01로 도착한다."
+    }
+  ],
+  "departmentCoverage": [
+    {
+      "department": "캐릭터",
+      "sample": "발로르42D v002/v003,모션9B,레나EC9",
+      "result": "범위 축소·자세 추가 해석·방패 방향 약화 확인. 레나6장 구성과 승인 원본 보존은 전문지시에 명확."
+    },
+    {
+      "department": "몬스터",
+      "sample": "3종9방향7AE 및 터틀05DF",
+      "result": "방향·장비·참조 역할이 전문지시/생성문에 명시. 기존 자체보고의 비례·발선 차이는 보존. 이번 새 미적 합격 판정 없음."
+    },
+    {
+      "department": "아이템·경제",
+      "sample": "연결·규정·작업방법",
+      "result": "14역할 연결 검사 포함. 공유48건에 해당 실제 발송 작업이 없어 수행 프롬프트 품질은 미검증."
+    },
+    {
+      "department": "UI",
+      "sample": "72CSSpx 스티커961",
+      "result": "복수 배치/크기/3표시모드/원본 보존과 API사용0 범위 명시. 전체 기능 재실행은 감사 범위 아님."
+    },
+    {
+      "department": "이펙트·제작도구",
+      "sample": "공방47B 및 후속 QA",
+      "result": "캐릭터·효과 동기·프레임 보정·저장복구 요구 명시. QA 실패→수정→재검증은 실제 기술결함 근거가 있어 모두 불필요한 경유로 볼 수 없음."
+    },
+    {
+      "department": "게임개발",
+      "sample": "실게임1EB 및 경계DCD",
+      "result": "달리기 추가/피격은 넉백만 정정이 정확히 전달. 실제 통합 상태와 공통 원장의 사용자대기 표시는 분산."
+    },
+    {
+      "department": "독립 테스터",
+      "sample": "5FC,E99,3A,B114,D8,7988",
+      "result": "별도 독립검증 유지 이유 있음. 기술반환 성공/실패가 공통 대장 awaiting_user에 합쳐지는 관리 문제."
+    },
+    {
+      "department": "일러스트 전문",
+      "sample": "F6 및 이전 main03 작업",
+      "result": "과거 대리송신 경유 확인. 단일메인 이후 경유를 새 업무에 유지할 필요 없음."
+    },
+    {
+      "department": "스프라이트 전문",
+      "sample": "금발8모션8D v002",
+      "result": "전문지시에 두 이미지 경로/최신 허가 반영. 작업 제목에는 과거2.6금지가 남음."
+    },
+    {
+      "department": "영상·몬스터스프라이트·능력치·스킬·세계관 자료",
+      "sample": "각 역할 연결·작업방법·필독 경로",
+      "result": "연결 확인. 공유48건에는 이 역할들의 직접 발송 업무 표본이 없어서 실제 수행 품질을 일괄 통과로 표시하지 않음."
+    }
+  ],
+  "latest13": {
+    "submittedTextEqualsPrepared": 13,
+    "nativeOutputBytesPreserved": 13,
+    "requestedModel": "gpt-image-2.6-sunburst",
+    "responseModelIndependentlyReported": false,
+    "artReviewedInThisAudit": false,
+    "wristRoll": "35도 유지·방패고정→몸세움→서기→검세움→검길이축 기준 손목회전90도·면에서 날로 전환이 최종문에 명시",
+    "shieldStrike": "방패 긴 축을 수평으로 회전한 뒤 머리쪽 모서리 가격이 최종문에 명시"
+  },
+  "proposedPromptStructure": [
+    "사용자 원문과 최신 정정",
+    "산출물·개수·각도",
+    "유지할 요소와 바꿀 요소",
+    "준비→동작→종료·축/방향/순서",
+    "참조별 역할·버전·사용 모델",
+    "실제 제출 프롬프트와 명세 대조",
+    "결과·기술검증·사용자판정·통합 상태"
+  ],
+  "actualChanges": "이 감사 폴더와 감사 스크립트만 작성/보완. 규정·부서배치·원작업·게임·제작물 변경, 새 에이전트, 이미지API, Git 커밋/푸시 없음."
+}

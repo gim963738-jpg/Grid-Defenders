@@ -1,0 +1,26 @@
+{
+  "messageId": "msg_3d86a2b32131",
+  "type": "status",
+  "receivedAt": "2026-11-11T20:38:19.263829+09:00",
+  "nativeTaskId": "task_f581485b4ddd",
+  "dispatchId": "ctx_f49d6c6f7524",
+  "workerReport": {
+    "matchingBaselineStates": 5,
+    "sameRosterActors": 18,
+    "visualStatesAfter": 7,
+    "reportedBodyCoreOverlapArea": 0,
+    "turtleFrameRegistrationChecks": 64,
+    "regressionChecks": 1705,
+    "suites": 63,
+    "technicalCases": "99+27 PASS",
+    "newVisualCases": 9,
+    "build": "PASS",
+    "changedSourceFiles": 4,
+    "nativePngChanged": false,
+    "statsChanged": false,
+    "packaging": "patch/SHA/5종 기록 마무리 중"
+  },
+  "finalOutcomeReceived": false,
+  "mainReverified": false,
+  "rootApplied": false
+}

@@ -1,0 +1,327 @@
+[
+  {
+    "action": "01-run-right90",
+    "status": "주의",
+    "builtin": "다리 교대·압축/체공 위상은 보임. 일부 다리의 전후 구분과 발접지 위치가 흔들리며 12→1이 완전히 같은 자세는 아님.",
+    "image26": "다리 교대와 망토 흐름은 보임. 검·발과 몸의 상대 위치가 변하고 접지 루프는 매끈한 완성 동작이라고 단정 못함.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-0.png",
+      "evidence/overview-dark-0.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "02-combat-idle-right35",
+    "status": "주의",
+    "builtin": "전투태세와 작은 자세 변화가 유지됨. 호흡보다 머리/몸 위치 변화가 일부 크게 읽힘.",
+    "image26": "태세와 외형은 유지되지만 12칸 차이가 매우 작아 작은 표시에서 호흡 식별이 약함.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-0.png",
+      "evidence/overview-dark-0.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "03-horizontal-slash-right35",
+    "status": "미달",
+    "builtin": "2~6 준비와 7~8 전방 검 움직임/회복은 있으나 횡베기보다 찌르기처럼 읽힘. 7/8셀 외곽 alpha32 접촉. 검 길이/투영 변화 큼.",
+    "image26": "같은 준비/전방 전개가 있으나 6~8의 큰 횡궤적이 충분히 읽히지 않고 찌르기 인상. 검날이 짧아지는 표현 포함.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-0.png",
+      "evidence/overview-dark-0.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "04-vertical-slash-right35",
+    "status": "미달",
+    "builtin": "들어올림→아래 베기→회복 위상은 보임. 1/5셀 alpha32 경계 접촉, 최고점 안전여백 부족. 7~9 검 길이/축 표현 흔들림.",
+    "image26": "4/5프레임에서 위로 든 검끝이 셀 상단에서 잘림. 아래 베기/회복은 있으나 검 길이 투영 변화와 손목을 완전 통과시키지 않음.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-0.png",
+      "evidence/overview-dark-0.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "05-shield-edge-bash-right35",
+    "status": "주의",
+    "builtin": "방패 모서리를 돌리고 6~8 전개함. 횡후려치기보다 전방 팔 뻗기 인상이 강하고 7/8 요청하지 않은 타격광 생성. 방패가 작아지는 투영/형상 변화.",
+    "image26": "방패 뒤면/전완 연결이 보이며 5~8 돌아간 모서리 타격 시도. 횡궤적보다 전방 펀치처럼 읽히는 한계, 방패 상대 크기 변화.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-1.png",
+      "evidence/overview-dark-1.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "06-shield-plant-right35",
+    "status": "주의",
+    "builtin": "방패 들어올림→7/8 바닥접촉→9~12 고정 자세. 뒤쪽 접지와 지지발/방패 위치가 프레임별 이동해 정확한 고정좌표는 아님.",
+    "image26": "들어올림/강타/고정 단계가 보임. 9~12 방패 크기/바닥 위치와 몸키가 조금 바뀜.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-1.png",
+      "evidence/overview-dark-1.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "07-turn-knightly-35to90",
+    "status": "주의",
+    "builtin": "06 종료 추출을 참조함. 검을 세우며 서서 90도 쪽으로 회전하는 흐름은 보임. 방패가 지면에 완전히 고정되지 않고 움직이며 연결 경계의 몸키 차이도 있음.",
+    "image26": "06 종료를 참조하고 서있는 기사도 자세로 이어짐. 끝 얼굴은 측면이나 흉갑/발 투영은 완전한 정90 계측으로 보증 못함. 고정 방패 위치 변동.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-1.png",
+      "evidence/overview-dark-1.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "08-hit-right35",
+    "status": "주의",
+    "builtin": "3~6 표정/상체 뒤로 반동→7~12 회복이 읽힘. 외곽과 표정/팔의 미세한 형태 차이, 원래 대기와 완전 동일한 종료는 아님.",
+    "image26": "3~5 상체 뒤로 반응→6~12 회복. 얼굴·칼길이/손목 세부는 셀 해상도에서 완전 일치 판정 불가.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-1.png",
+      "evidence/overview-dark-1.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "09-death-right35",
+    "status": "주의",
+    "builtin": "골반/무릎 붕괴→기울기→9~12 쓰러짐 유지. 몸을 bbox로 줄이지 않고 재생. 쓰러진 검/방패와 손의 가림은 부분 검증만 가능.",
+    "image26": "다리/골반 붕괴와 낙하 후 9~12 정지. 4~6 다리 접힘과 낙하 연결에 단계감, 칼/방패 연결부 일부 가림.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-2.png",
+      "evidence/overview-dark-2.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "10-ready-dissolve-right90",
+    "status": "주의",
+    "builtin": "준비 입상에서 소멸하므로 소환 역재생 시작 자세 구분은 충족. 5~10 연기/분해가 왼쪽으로 퍼짐. 원본 미리보기의 큰 색 테두리는 실제 합성에서 훨씬 약해짐. 마지막셀 alpha 최대2로 시각적 빈칸이나 완전0은 아님.",
+    "image26": "준비 입상→왼쪽 파편/연기→거의 빈칸. 소환 역재생용 흐름은 보임. 마지막셀 alpha 최대2이며 시작 원형과 실제 첫셀의 크기/장비 차이 잔여.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-2.png",
+      "evidence/overview-dark-2.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "11-tower-shield-slam-right90",
+    "status": "미달",
+    "builtin": "방패 높이 들기→6~8 내려치기→9~12 체중 낮춘 유지. 1/5 경계 접촉과 머리위 안전여백 부족. 방패/검·갑주 크기 변화, 강타 힘모음은 있으나 완성 무게감 판정 대기.",
+    "image26": "방패 크게 들고 강타/굽힌 유지 흐름은 있으나 4/5 방패 윗부분이 잘림. 체격/방패 길이 변동과 타격 전 큰 모음의 연속성 한계.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-2.png",
+      "evidence/overview-dark-2.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "12-greatsword-slam-right90",
+    "status": "주의",
+    "builtin": "11 종료 추출 참조. 2~3 방패소멸→4~5 양손그립→6~8 큰 들기→9~12 내려찍기. 대검 길이/가드 형상이 변하며 궤적이 셀에 가까움. 11끝→12첫 크기/자세 점프.",
+    "image26": "같은 연결 참조. 방패소멸/양손전환/들기/강타는 읽히나 9~10 급격한 자세/검 크기 변화. 11끝→12첫 크기 차이가 있음.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-2.png",
+      "evidence/overview-dark-2.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  },
+  {
+    "action": "13-sword-first-dissolve-right90",
+    "status": "주의",
+    "builtin": "12 종료 추출 참조. 검끝부터 사라짐→손/몸 분해→왼쪽 연기 흐름. 준비 입상으로 돌아가지 않음. 마지막셀 alpha 최대1로 시각적 빈칸. 끝자세가 원본과 완전 동일하진 않음.",
+    "image26": "검부터 분해하고 숙인 타격 자세에서 몸 소멸, 왼쪽 연기. 마지막셀 alpha 최대2. 12끝→13첫 갑주/칼길이와 비중 차이가 있음.",
+    "framesVisuallyReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence": [
+      "evidence/overview-light-3.png",
+      "evidence/overview-dark-3.png"
+    ],
+    "bodyScaleNotPerFrameAdjusted": true
+  }
+]

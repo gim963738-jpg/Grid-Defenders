@@ -1,0 +1,52 @@
+﻿{
+    "portsOpened":  0,
+    "gitMutations":  0,
+    "apisCalled":  0,
+    "gameIntegration":  false,
+    "userWindowChanges":  0,
+    "version":  "v001",
+    "iteration":  1,
+    "role":  "ui",
+    "task":  "MAIN01-20261111-961C8C00",
+    "sourceBytesUnchanged":  true,
+    "inputs":  [
+                   {
+                       "expected":  "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+                       "id":  "warrior",
+                       "sourceSha256":  "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+                       "copySha256":  "254e5eb3128813b0dc76c65dbe4d3c867322e640fd1083a9a4c0b74a8c08fb57",
+                       "copy":  "assets/warrior.png",
+                       "source":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\game_reference10_main01-20261109-e1fd458c_v002\\01_arknights\\character.png",
+                       "bodyHeight":  1123,
+                       "foot":  [
+                                    470,
+                                    1164
+                                ],
+                       "uncertainty":  10
+                   },
+                   {
+                       "expected":  "631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094",
+                       "id":  "boss",
+                       "sourceSha256":  "631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094",
+                       "copySha256":  "631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094",
+                       "copy":  "assets/boss.png",
+                       "source":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\몬스터-디자인\\output\\monsters\\turtle-dragon-black-green-main03-20261110-05df6177-v02\\front_left.png",
+                       "approvedOrigin":  "MAIN03-20261110-05DF6177 v02",
+                       "bodyHeight":  748,
+                       "foot":  [
+                                    535,
+                                    968
+                                ],
+                       "uncertainty":  15
+                   },
+                   {
+                       "source":  "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\battlefields\\forest-clearing-v1.png",
+                       "id":  "field",
+                       "expected":  "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823",
+                       "copy":  "assets/field.png",
+                       "copySha256":  "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823",
+                       "sourceSha256":  "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823"
+                   }
+               ],
+    "keyEnvironmentReads":  0
+}

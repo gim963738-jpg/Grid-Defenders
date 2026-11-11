@@ -1,0 +1,68 @@
+{
+  "checks": {
+    "nativeSheetCount": 26,
+    "commonWorkingReferenceCount": 2,
+    "allNativeSheetsBytePreserved": true,
+    "originalShaMatches": true,
+    "readingHashesCurrent": true,
+    "runtimeLoaded": 26,
+    "runtimeErrors": [],
+    "liveFrameAdvance": true,
+    "pauseStable": true,
+    "all26Sheets12FramesVisuallyReviewed": true,
+    "brightDarkOverviewViewed": true,
+    "fieldSequenceViewed": true,
+    "small72PreviewViewed": true,
+    "nativeArtQuality": "failed_core_requirements",
+    "perFrameFitting": false,
+    "nativeSheetReassembly": false,
+    "userAcceptance": "pending",
+    "gameIntegration": "not_started"
+  },
+  "edgeAlpha32Contacts": [
+    {
+      "route": "builtin",
+      "action": "03-horizontal-slash-right35",
+      "frames": [
+        7,
+        8
+      ]
+    },
+    {
+      "route": "builtin",
+      "action": "04-vertical-slash-right35",
+      "frames": [
+        1,
+        5
+      ]
+    },
+    {
+      "route": "builtin",
+      "action": "11-tower-shield-slam-right90",
+      "frames": [
+        1,
+        5
+      ]
+    },
+    {
+      "route": "image26",
+      "action": "04-vertical-slash-right35",
+      "frames": [
+        4,
+        5
+      ]
+    },
+    {
+      "route": "image26",
+      "action": "11-tower-shield-slam-right90",
+      "frames": [
+        4,
+        5
+      ]
+    }
+  ],
+  "qaFile": "evidence/browser-check.json",
+  "lastRuntimeFile": "evidence/final-check.json",
+  "method3": "Canvas high halving + outside-connected alpha1..8 non-green minus1 in display buffer only",
+  "visualObservationCorrection": "Initial raw viewer appearances of huge colored rims/background were not confirmed as equally visible after correct alpha compositing; light/dark native boards and 72CSSpx/field previews are the judgment evidence. Do not describe output as opaque PNG."
+}

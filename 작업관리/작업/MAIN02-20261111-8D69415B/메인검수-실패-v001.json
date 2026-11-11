@@ -1,0 +1,15 @@
+{
+    "task":  "MAIN02-20261111-8D69415B",
+    "iteration":  1,
+    "reviewer":  "main02",
+    "at":  "2026-11-11T01:03:39.6882977+09:00",
+    "outcome":  "failed",
+    "actualCompleted":  0,
+    "requested":  8,
+    "blocker":  "local:grok-acp image_to_video RATE_LIMIT RPM actual/limit 0/0",
+    "checked":  "전체보고본문 및 ACK21문서 현재해시일치. 원본/입력/프롬프트준비는모션제작아님",
+    "notPerformed":  "8종모션·PNG시트·재생갤러리·모션시각검수·실게임반영",
+    "modelRestriction":  "GPT Image2.6 호출0 보고. 재사용승인없음·우회미실행",
+    "ledgerNote":  "도구에는 failed/blocked 상태명없음. returned는실패보고수신·잠금반환이며작품완료/합격을뜻하지않음",
+    "report":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v001\\전체보고.md"
+}

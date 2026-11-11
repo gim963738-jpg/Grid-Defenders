@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "MAIN01-20261111-47B7186F",
+  "main": "main01",
+  "branch": "effects",
+  "title": "캐릭터 프레임 위치·크기 보정 및 이펙트 동기 편집 공방",
+  "request": "# 캐릭터 프레임 보정·이펙트 공방 — 요청과 실제 진행 승인\n\n사용자 최초 요청(공방 참고 화면 첨부):\n> 이거는 캐릭터 키나 위치가 안맞을때 미세하게 수정하는공방인데 이런 공방 만들수있겠어? 여기서 프레임단위로 볼수있고 움직임에 맞춰서 디테일한 위치수정도 가능하대\n\nmain01이 제시한 구성:\n프레임 목록/단계 이동/재생 속도, 선택 프레임 드래그·숫자·방향키1px 위치 보정, 발 기준 등비 크기 보정, 이전·다음 반투명 겹쳐 보기, 발선·몸 중심·기준 캐릭터, 현재/선택/전체 적용,72CSSpx 실제 필드 미리보기, 실행 취소/다시 실행/초기화/설정 내보내기·불러오기. 원본 시트 바이트 보존·프레임별 위치/배율/기준점 별도 데이터. 수동 보정 기본, 자동 정렬은 선택. 잘못 그려진 손목/검은 위치 보정과 별도 수정 대상.\n\n사용자 추가 요청:\n> 추가로 이제 이펙트 작업공방에 우리가 만드는 캐릭터 이미지랑 움직임 넣으면서 이펙트 적용할수있는 환경도 추가로 만들어달라고 전달해줘\n\nmain01은 캐릭터 이미지/움직임을 불러와 재생하며 이펙트 위치·크기·시점을 맞추는 환경을 추가 요구로 정리하고, 공방 구성 진행 승인 전까지 착수 대기라고 설명했다.\n\n그 설명 중 사용자의 실제 후속 응답:\n> 진행\n\n따라서 이번 승인 범위는 앞서 제시한 캐릭터 프레임 보정과 추가 이펙트 동기 편집 환경을 기존 이펙트 공방 안에 함께 구현하는 것이다. 생성 API/유료 이미지/신규 캐릭터·이펙트 원화 제작은 포함하지 않는다. 캐릭터 시트를 읽는 도구 구현이며 기존 진행 중인 발로르 시트 제작 승인을 가져다 쓰지 않는다. Git 저장·게임 전투 로직 반영·사용자 화면 조작도 이번 범위가 아니다.\n\n참고 첨부: C:/Users/user/AppData/Roaming/orca/agent-session-attachments/72cc63c6-9534-4584-80f4-1a53d7c6dc2d/orca-paste-1794387769288-82c4ef47-9f8f-442e-9c03-3b3eeac483a1.png\n",
+  "iteration": 1,
+  "status": "awaiting_user",
+  "createdAt": "2026-11-11T18:16:38.399134+09:00",
+  "approval": {
+    "userQuote": "진행",
+    "source": {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md",
+      "sha256": "95929cc6cb382d485d13223cefc732232a43bdf30163b41c49ed9b0af59b621c"
+    },
+    "recordedBy": "main01",
+    "recordedAt": "2026-11-11T18:16:38.442143+09:00",
+    "iteration": 1,
+    "hashes": {
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-47B7186F\\요청확인.md": "6b504574d5cadcf2e934dc9dd29b8099843a5a21a6cd0dacc80631eb3d9ebfbe",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-47B7186F\\전문프롬프트.md": "468b926f03cdb0df8bf2c167fa02c4e82b34fa9b37a11dddab17d77bcddeeac6",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-47B7186F\\2_사전확인.md": "cc4711eaed7de54c871ce52d99d6dc95f39fbff8249690280b129e102d231b51",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\effects\\규정.md": "6a1e791efe202431216870813ec7e70b1275d7728a9191640875beb70e6d803f",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\AGENTS.md": "85359b640a88dc55b5ea843a691eaf7f24d9ed8d34d06a6b19b2a7c658930e75",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\effects\\작업진행방법.md": "fb88269750d30b5eda01c2f6dcfd61d783b7437501c2e9d193c9368b31049eda",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md": "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md": "95929cc6cb382d485d13223cefc732232a43bdf30163b41c49ed9b0af59b621c",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사전확인.md": "67d08720de6902693d25908f05256a5c2836df1df7377d3872da80a77be929b7",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0ad5c82c5e7a86025e43efcc55396d3d10ea7d28c82ad4ea18badcef93553ab9",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md": "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md": "1ef4d854ad8d3250a57f8ece69605b07c4244eaa2c7599da235c8fbb2be1fb8f",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md": "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+      "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\모바일UI규격.md": "dc4a625692327f512f6c781d45ecd563c87f2d20a22bf443ea75cdd55972b8cc",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\문서\\03_작업기록\\WEB-168_공방부품노드와사용성\\2_사용법과검증.md": "b956d82c8616c8302b623ec5abc942bceb6b1f8bd6192e36c26f77b449b318ac",
+      "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\문서\\03_작업기록\\WEB-169_전체이펙트재료함통합\\2_사용법과검증.md": "737b027ba8a4d3519fea51d5745e4ba2e3edc4fd40b24d46d06ada553c0d2cf2"
+    }
+  },
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-11T18:16:46.502959+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\실제발송영수증.json",
+        "sha256": "ea67c2447aa81b04c9ab1de8efef347172d54319ac62fe1050fb66faf32119ec"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-11T18:18:07.491066+09:00",
+      "iteration": 1,
+      "role": "effects",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-47B7186F\\읽기확인-v001-e3dec62c01c94cfc95349b2fe04b7ad1.json",
+        "sha256": "0f61ac16431905a6e63ec6f648cb1b2b6d44ebb0b602b1a5d664341c9230ba93"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-11T18:48:08.460018+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_main01-20261111-47b7186f_v001\\검증보고.md",
+        "sha256": "0fcebbfdf18c9390ae53dfb77992fe6661cfb5251f47abfe05b1cff476d3f121"
+      },
+      "userQuote": ""
+    }
+  ],
+  "readingPolicyVersion": "OPS-004",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\모바일UI규격.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\문서\\03_작업기록\\WEB-168_공방부품노드와사용성\\2_사용법과검증.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\문서\\03_작업기록\\WEB-169_전체이펙트재료함통합\\2_사용법과검증.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-47B7186F\\읽기확인-v001-e3dec62c01c94cfc95349b2fe04b7ad1.json",
+    "sha256": "0f61ac16431905a6e63ec6f648cb1b2b6d44ebb0b602b1a5d664341c9230ba93"
+  },
+  "updatedAt": "2026-11-11T18:48:08.462019+09:00"
+}

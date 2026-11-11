@@ -35,47 +35,7 @@ def validate_tree(tree,branches):
  return {'nodes':len(nodes),'requiredNodes':len(REQUIRED),'noCycles':True,'uniqueOwners':True}
 
 def main():
- root=Path(__file__).resolve().parents[2];shared=root/'작업관리';historical=shared/'기록/OPS-002'
- catalog=read(shared/'브랜치목록.json');branches=catalog['branches'];tree=read(shared/'도메인/트리.json')
- organization=read(shared/catalog['organizationFile']) if catalog.get('organizationFile') else None
- record=shared/'기록/OPS-003' if organization else historical
- checks=[];summary=validate_tree(tree,branches)
- def check(ok,label):
-  if not ok:raise AssertionError(label)
-  checks.append(label)
- check(summary['noCycles'] and summary['uniqueOwners'],'domain hierarchy and ownership are consistent')
- cli='C:/Users/user/AppData/Local/Programs/orca/resources/bin/orca.exe'
- live=json.loads(subprocess.check_output([cli,'worktree','ps','--json'],text=True,encoding='utf-8'))
- if not live.get('ok'):raise AssertionError('Live Orca state could not be verified')
- state=[w for w in live['result']['worktrees'] if w['repoId']=='de86d10c-8e2c-444d-8b0f-43b772894ad9']
- (record/'after-orca.json').write_text(json.dumps({'workspaces':state},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
- actual={normalized(w['worktreeId']):w for w in state}
- for role,node in tree['nodes'].items():
-  row=branches[role];w=actual[normalized(row['worktreeId'])];parent=node['parent']
-  orgnode=organization['nodes'][role] if organization else None
-  expected=organization['nodes'][orgnode['parent']]['worktreeId'] if orgnode and orgnode['parent'] else branches[parent]['worktreeId'] if parent is not None and not orgnode else None
-  check(normalized(w['parentWorktreeId'])==normalized(expected),'actual Orca parent matches: '+role)
-  check(w['displayName']==(orgnode['name'] if orgnode else node['name']),'actual Orca label matches: '+role)
-  index=read(shared/row['domainIndex'])
-  check(index['role']==role and index['domainPath']==node['domainPath'],'domain index matches: '+role)
-  for source in index['sources']:
-   check(Path(source['path']).exists(),'source reference exists: '+source['label'])
-  pointer=read(Path(row['path'])/'작업연결.json')
-  check(pointer['domainPath']==node['domainPath'],'workspace pointer matches: '+role)
- before=read(historical/'before.json')['workspaces']
- for old in before:
-  w=actual[normalized(old['worktreeId'])]
-  check(normalized(w['path'])==normalized(old['path']) and w['branch']==old['branch'],'original checkout path and branch preserved: '+old['displayName'])
-  head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=w['path'],text=True).strip()
-  check(head==old['headBefore'],'original HEAD preserved: '+old['displayName'])
- for role in ['ui','items']:
-  old=next(w for w in before if normalized(w['worktreeId'])==normalized(branches[role]['worktreeId']))
-  check(normalized(actual[normalized(old['worktreeId'])]['parentWorktreeId'])==normalized(old['parentWorktreeId']),'external project role stays in place: '+role)
- for item in read(historical/'before.json')['files']:
-  backup=Path(item['backup']);check(hashlib.sha256(backup.read_bytes()).hexdigest()==item['sha256'],'original instruction backup retained: '+item['path'])
-  if Path(item['path']).name=='AGENTS.md':check(Path(item['path']).read_bytes().startswith(backup.read_bytes()),'original instruction prefix retained: '+item['path'])
- result={'status':'PASS',**summary,'checks':checks,'roleCount':len(branches),'physicalSourceMoves':0,'productionDispatches':0}
- (record/('도메인검증.json' if organization else '검증.json')).write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
- print(json.dumps(result,ensure_ascii=False,indent=2))
+ from 운영검증 import main as validate_current
+ validate_current()
 
-if __name__=='__main__':main()
+if __name__=="__main__":main()

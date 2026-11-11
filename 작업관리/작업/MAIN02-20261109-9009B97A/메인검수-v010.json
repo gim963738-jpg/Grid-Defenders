@@ -1,0 +1,23 @@
+{
+    "task":  "MAIN02-20261109-9009B97A",
+    "iteration":  10,
+    "reviewer":  "main02",
+    "at":  "2026-11-10T01:31:40.5684227+09:00",
+    "viewed":  [
+                   "01-soldier-split.png",
+                   "02-hero-large.png",
+                   "03-hero-scrolled.png",
+                   "04-hero-skill.png",
+                   "05-detailed-stats.png"
+               ],
+    "scale":  "800x360",
+    "observations":  [
+                         "병사 패널 안 좌6능력치/우2열3행·원본3/미정2/여유1 확인",
+                         "영웅 큰초상3개와다음일부/후반후보화면/4역할명 확인",
+                         "상세능력치 명칭·기존배정스킬자리 버튼·별도스킬설명/10수치와4아이콘 동시확인",
+                         "헤더·5x5색구분필드·가로적진입 유지"
+                     ],
+    "ack":  "iteration10/ui/17본문 적용요약·현재해시 일치",
+    "limits":  "제작자42항목/갤러리12/612보존해시 보고. 메인은5PNG시각검토와ACK해시검토. 독립QA/실기기/게임통합/사용자미적합격 아님",
+    "status":  "ready_for_user_review"
+}

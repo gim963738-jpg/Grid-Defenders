@@ -1,0 +1,84 @@
+{
+  "version": "v07",
+  "owner": "main03",
+  "at": "2026-11-11T01:35:14.493636+09:00",
+  "approvalQuote": "이 내용으로 진행",
+  "scope": "필드진동·토글/이동거리조절",
+  "imagesUnmodified": true,
+  "newGenerationCalls": 0,
+  "distance": {
+    "min": 0,
+    "max": 500,
+    "default": 360,
+    "arrival": [
+      320,
+      330
+    ],
+    "unit": "preview pixels"
+  },
+  "shake": {
+    "weak": {
+      "impactLocalMs": 570,
+      "durationMs": 160,
+      "amplitudePx": 4.5
+    },
+    "strong": {
+      "impactLocalMs": 1205,
+      "durationMs": 240,
+      "amplitudePx": 8
+    },
+    "clock": "same playback timeline; deterministic; UI fixed"
+  },
+  "files": [
+    {
+      "file": "before\\idle.png",
+      "sha256": "391e550c9a11c8aad1e520a492c19eca33e1b61a22a4fef1b0c8bada41a4f88a",
+      "bytes": 2571286
+    },
+    {
+      "file": "before\\strong.png",
+      "sha256": "d7bd6f0917d95b2e9d069f93ccfe9208efc220fca5ebbb5a8e801dd4a1de830e",
+      "bytes": 2148144
+    },
+    {
+      "file": "before\\walk.png",
+      "sha256": "79ffd8e91999ae812311165477a17f5407ca11a1df6f68aaf5405a0c48d0d312",
+      "bytes": 2494427
+    },
+    {
+      "file": "before\\weak.png",
+      "sha256": "816e0a699faad891cd0d071c73174a86e25d604fa1a4f582ee37dc40dbc3857a",
+      "bytes": 2901059
+    },
+    {
+      "file": "after\\idle.png",
+      "sha256": "4c78674d0d3925c58790885d829624ad8711cf7273b4f50566ba0c3f77185809",
+      "bytes": 2360024
+    },
+    {
+      "file": "after\\strong.png",
+      "sha256": "6290330c7b584f2f363cf65ac1405f0d1c3b37b8db5e0e7ca64867db0d16159f",
+      "bytes": 2105606
+    },
+    {
+      "file": "after\\walk.png",
+      "sha256": "a36f6ed5ea0ed729cb34afaa210d592a5898e5b5826868ceb7ae401e32a22a68",
+      "bytes": 2143224
+    },
+    {
+      "file": "after\\weak.png",
+      "sha256": "d3f2c2a6bfb4b28d9078c8d5295cd4311e5494d6d7610ca6979e3c908fbdd5aa",
+      "bytes": 2254838
+    },
+    {
+      "file": "backgrounds\\forest.png",
+      "sha256": "1fd1fc28ec02828ec63903365bda0d869204f38c439c1d5c72e0f6385d79a2ef",
+      "bytes": 3116003
+    },
+    {
+      "file": "backgrounds\\snow.png",
+      "sha256": "b9f6e074f76388247aa91985c133d1ed47e5bdede1e6b807d41022ea387f9f4b",
+      "bytes": 2625907
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "task": "MAIN01-20261109-1DA15A51",
+  "revision": 2,
+  "originalRequest": "사용자가 직접 요청·구체화한 개발자 이미지 대조/전장배치/배치후크기조절/45·90방향의 실제 게임 통합을 독립 기술 검증한다. 원 제작 작업 MAIN01-20261109-F89105C9.",
+  "corrections": [
+    {
+      "text": "이미지 대조 추가해봐",
+      "source": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자신규4안추가-v002.md",
+        "sha256": "be55dfe6d20e3fa31becaa8897d78a41e6810441cec707fc7f651d2728fb07dd"
+      },
+      "at": "2026-11-09T19:50:58.141807+09:00"
+    }
+  ],
+  "current": {
+    "goal": "이미지 대조 실제 게임 통합 독립 검증",
+    "professionalPrompt": "# 독립 QA 차수2 — 실제 이미지 대조 신규4안 추가\n\nMAIN01-20261109-1DA15A51 / main01 / qa. 원기능 MAIN01-20261109-F89105C9 차수2. 사용자가 완성한 두상확대4안을 '이미지 대조 추가해봐'라고 직접 요청했다. 근거 C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자신규4안추가-v002.md. 실제 root/UI에3모듈+새4PNG+manifest 총8파일씩을 좁게 반영했고 root npm run build(tsc+Vite801모듈)가 통과했다. 이번은 그 기능 범위 안의 독립 검증이며 새 제작/새 사용자승인/저장 요청이 아니다.\n\n자기작업방법/AGENTS/공통·분야규정/이번차수 필독을본문으로읽고 read-pack→차수2자기문서별ACK→start 통과후검사한다. 메인은send직후영수증을연결한다. 과거ACK재사용금지. 사용자요청시저장규정을읽고이번에커밋·푸시·예약백업하지않는다.\n\n실제검사대상 C:\\Users\\user\\Desktop\\Grid Defenders\\게임와http://127.0.0.1:5173/battle-landscape.html?battle=normal&from=camp. 통합해시는C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\신규4안-v002-통합결과.json. UI사본과16파일해시일치를확인한다. 자기작업공간의오래된게임을최신본으로가정하지않는다. 실제root로새headless독립프로필에서직접조작하거나해시동일한격리사본에서검사한다. 기존사용자앱/탭/창/브라우저프로필/localStorage/서버/모델/패널을조작·종료하지않는다. 자기검사용프로세스만정리한다.\n\n검사할변경:\n- 이미지대조에기존5종(원본+이전4안)×3방향15개 +신규1~4정면4개=19실제자산. 기본신규4안묶음,기존5종묶음으로전환해9개선택모두접근가능.\n- 신규4개각각클릭/필드배치/카드드래그/배치후선택/이동/50·100·200%및숫자입력·100리셋. 2안1133×1388종횡비/원래footAnchor/전체표시높이보존. 다른배치대상에영향없음.\n- 신규는정면만지원하고45/90비활성. 프로그램강제change도없는자산/다른안/거짓측면으로바뀌지않아야함. 기존90도사용중신규카드를누르면정면으로선택가능. 기존안으로돌아가면45/90재사용. 혼합배치에서기존/신규대상다시선택하고묶음/방향/선택스케일일관성검사.\n- 삭제/전체삭제/닫기그림유지/다시열기/배치모드해제후실제병사·영웅클릭/기존게임입력복구. 미리보기는재화·실제유닛·일반게임저장에포함되지않음.\n- 웨이브/보스전환초기화,리사이즈월드발위치,800×360/320px패널접근·스크롤·최소48px. 드래그취소/터치와dispose는변경연관/시간에따라필요범위를정하고못한범위는명시.\n- 새4PNG원본SHA/알파/크기·메타데이터와실행참조,기존15PNG/main.ts보존,root/UI8파일일치. 밝고어두운원본전체프레임·실전장상태를검사. 작품의미적합격/공통비율/장검각도·알파외곽잔여는원검수한계이며별도임.\n\n제작자 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp/검증.md,browser-check.mjs,browser-result.json,asset-check.json는방법/기대동작참고다.49PASS를그대로인용하지말고실제로자기검사프로필에서관찰한증거를낸다. 이번rootbuild는main통과보고를참고할수있고동일조건의반복모델테스트는필요한공백이없으면하지않는다.\n\n편집허용은새 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\MAIN01-20261109-1DA15A51\\v002-scalp와원QA작업기록차수2에한정한다. 기존QA결과/제품/다른팀/사용자환경은수정하지않는다. 재현제품결함이있으면증거를main01에보내제작팀에서수정하게한다. report.md/result.json/항목별PASS·FAIL·미검증/해시/실제스크린샷을제출하고worker_done으로반환한다. APK/실기기/세로전투전체/미적합격은미검증일경우그대로표시한다.\n"
+  },
+  "revisionHistory": [],
+  "unresolved": [
+    "이관된 과거 조건의 최신 범위 정리 필요. 재발송 승인 아님."
+  ],
+  "migration": {
+    "at": "2026-11-11T23:20:45.738268+09:00",
+    "needsReconciliation": true,
+    "records": [
+      {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\요청확인.md",
+        "sha256": "be55dfe6d20e3fa31becaa8897d78a41e6810441cec707fc7f651d2728fb07dd",
+        "content": "# 사용자 기능 추가 요청\n\n맥락: 금발전사 두상·얼굴 확대 신규4안을 제작했고 기존SD와 비교할 수 있는 갤러리를 제출했다. 기존 개발자도구 이미지 대조는 원본/이전4안×정면/45/90도15개를 전장배치·이동·50~200% 조절·삭제하는 임시 도구다.\n\n사용자 최신 직접 지시: “이미지 대조 추가해봐”.\n\nmain01 이해 내용: 방금 제출한 신규4안을 기존 이미지 대조 도구에 추가해 같은 전장 배치/크기조절로 비교한다. 기존15개를 유지하고 신규4개는 실제 제작된 정면만 연결한다. 실제 병사·영웅 교체나 신규 측면 생성·공통비율 채택을 의미하지 않는다. 기존 기능과 자산을 명확히 특정한 직접 추가 지시를 실행 근거로 사용하며 같은 허락을 반복해 묻지 않는다.\n\n별도 최신 저장 규칙: 기능 추가는 Git 저장 요청이 아니다. 이번 변경을 커밋·푸시하지 않는다.\n",
+        "use": "historical evidence; not independent current instructions"
+      },
+      {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\전문프롬프트.md",
+        "sha256": "98c70238bc5d28254307529692f0c1cc2021daf77b318790396277ac99c6bde2",
+        "content": "# 독립 QA 차수2 — 실제 이미지 대조 신규4안 추가\n\nMAIN01-20261109-1DA15A51 / main01 / qa. 원기능 MAIN01-20261109-F89105C9 차수2. 사용자가 완성한 두상확대4안을 '이미지 대조 추가해봐'라고 직접 요청했다. 근거 C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자신규4안추가-v002.md. 실제 root/UI에3모듈+새4PNG+manifest 총8파일씩을 좁게 반영했고 root npm run build(tsc+Vite801모듈)가 통과했다. 이번은 그 기능 범위 안의 독립 검증이며 새 제작/새 사용자승인/저장 요청이 아니다.\n\n자기작업방법/AGENTS/공통·분야규정/이번차수 필독을본문으로읽고 read-pack→차수2자기문서별ACK→start 통과후검사한다. 메인은send직후영수증을연결한다. 과거ACK재사용금지. 사용자요청시저장규정을읽고이번에커밋·푸시·예약백업하지않는다.\n\n실제검사대상 C:\\Users\\user\\Desktop\\Grid Defenders\\게임와http://127.0.0.1:5173/battle-landscape.html?battle=normal&from=camp. 통합해시는C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\신규4안-v002-통합결과.json. UI사본과16파일해시일치를확인한다. 자기작업공간의오래된게임을최신본으로가정하지않는다. 실제root로새headless독립프로필에서직접조작하거나해시동일한격리사본에서검사한다. 기존사용자앱/탭/창/브라우저프로필/localStorage/서버/모델/패널을조작·종료하지않는다. 자기검사용프로세스만정리한다.\n\n검사할변경:\n- 이미지대조에기존5종(원본+이전4안)×3방향15개 +신규1~4정면4개=19실제자산. 기본신규4안묶음,기존5종묶음으로전환해9개선택모두접근가능.\n- 신규4개각각클릭/필드배치/카드드래그/배치후선택/이동/50·100·200%및숫자입력·100리셋. 2안1133×1388종횡비/원래footAnchor/전체표시높이보존. 다른배치대상에영향없음.\n- 신규는정면만지원하고45/90비활성. 프로그램강제change도없는자산/다른안/거짓측면으로바뀌지않아야함. 기존90도사용중신규카드를누르면정면으로선택가능. 기존안으로돌아가면45/90재사용. 혼합배치에서기존/신규대상다시선택하고묶음/방향/선택스케일일관성검사.\n- 삭제/전체삭제/닫기그림유지/다시열기/배치모드해제후실제병사·영웅클릭/기존게임입력복구. 미리보기는재화·실제유닛·일반게임저장에포함되지않음.\n- 웨이브/보스전환초기화,리사이즈월드발위치,800×360/320px패널접근·스크롤·최소48px. 드래그취소/터치와dispose는변경연관/시간에따라필요범위를정하고못한범위는명시.\n- 새4PNG원본SHA/알파/크기·메타데이터와실행참조,기존15PNG/main.ts보존,root/UI8파일일치. 밝고어두운원본전체프레임·실전장상태를검사. 작품의미적합격/공통비율/장검각도·알파외곽잔여는원검수한계이며별도임.\n\n제작자 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\v002-scalp/검증.md,browser-check.mjs,browser-result.json,asset-check.json는방법/기대동작참고다.49PASS를그대로인용하지말고실제로자기검사프로필에서관찰한증거를낸다. 이번rootbuild는main통과보고를참고할수있고동일조건의반복모델테스트는필요한공백이없으면하지않는다.\n\n편집허용은새 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\MAIN01-20261109-1DA15A51\\v002-scalp와원QA작업기록차수2에한정한다. 기존QA결과/제품/다른팀/사용자환경은수정하지않는다. 재현제품결함이있으면증거를main01에보내제작팀에서수정하게한다. report.md/result.json/항목별PASS·FAIL·미검증/해시/실제스크린샷을제출하고worker_done으로반환한다. APK/실기기/세로전투전체/미적합격은미검증일경우그대로표시한다.\n",
+        "use": "historical evidence; not independent current instructions"
+      },
+      {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\2_사전확인.md",
+        "sha256": "8f717d9d37ec4fa28ece7baf0e2a1a07e671bf62b1683046860115981abba149",
+        "content": "차수2 QA 착수전작성. 원사용자직접기능추가의필수독립검증이며이미root/UI에승인된8파일범위가통합됨. root build통과. 기존QA와다른새폴더에서현재실제게임/새headless프로필을검사하며제품수정/사용자화면·세이브·서버조작/커밋·푸시제외. 실제범위와못한검증을구분한다.\n",
+        "use": "historical evidence; not independent current instructions"
+      },
+      {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\이전차수\\v001\\요청확인.md",
+        "sha256": "726f3c746306a68562104fc39e84ae3f4e1aa5c733afbdf54543ce687e90d48e",
+        "content": "원사용자확인에기반한개발자미리보기기능의독립검증. 제작/코드수정이아니며이미확인된기능범위의필수검증이다.",
+        "use": "historical evidence; not independent current instructions"
+      },
+      {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51\\이전차수\\v001\\전문프롬프트.md",
+        "sha256": "5f9904fdbbfa47c592411619d45dea31d6ec9656c31f8be19aa8666037eeabc4",
+        "content": "# 독립 테스터 지시 — MAIN01-20261109-1DA15A51\n원작업 MAIN01-20261109-F89105C9 / main01. 실제 root/UI 통합이 끝났고 root tsc/build가 통과했다. 제작담당의자체검사와독립적으로실제사용가능여부를검사한다. 사용자 원문/확인은 C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\사용자확인.md, 추가방향은 C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\sd-remodel-4\\사용자방향추가.md.\n자기 AGENTS/작업연결/작업방법/공통규정/추가필독을읽고read-pack→자기읽기확인→start 통과후검사한다. 메인이send직후영수증을연결한다. 필독본문을전부읽고목록복사로대신하지않는다.\n\n대상은 C:\\Users\\user\\Desktop\\Grid Defenders\\게임 실제실행원본이며 root5173 Vite는그대로유지한다. 검사대상해시는 C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\dev-image-compare\\통합결과.json이다. UI보존사본은 C:/Users/user/orca/workspaces/Grid Defenders/UI-전투화면/게임 와동일하다. 테스터자기공간의초기구버전소스를현재최신본으로오해하지않는다.\n기존사용자앱/브라우저탭/창/모델/패널/서버를조작하거나종료하지않는다. 새headless 브라우저의독립프로필로 실제 http://127.0.0.1:5173/battle-landscape.html?battle=normal&from=camp 를검사할수있다. 또는검증용사본을만들되실제통합해시와일치함을확인한다. 자기검사프로세스만정리한다. 사용자의localStorage세이브에영향을주지않는다.\n허용편집은 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\MAIN01-20261109-1DA15A51와원QA작업기록 C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261109-1DA15A51, 테스트에필요한임시사본/독립프로필뿐이다. 제품src/assets/다른팀원본/기록은수정하지않는다. 실패는재현근거와함께main01에보고하고제작팀수정후재검증한다.\n\n핵심검사:\n1. 게임이실제로로드되고개발자도구‘이미지대조’버튼이1개이며원본/1~4안과정면/오른쪽45/오른쪽90총15이미지가깨짐없이선택/배치된다.\n2. 복수대상배치,선택,드래그이동,배치후50/100/200%조절과숫자입력,방향교체시선택대상만바뀌고위치/발기준이유지된다. ratio를늘여가로세로찌그러지지않는다.\n3. 터치/드래그/취소/ESC/블러/패널닫기/다시열기/개별삭제/전체삭제를검사한다. 닫은후그림은남되기존게임입력을가로채지않고,배치모드해제후병사/영웅선택·소환이정상이다.\n4. 골드/실제유닛정원/전투저장에개발자미리보기가들어가지않는다. 웨이브/보스전환·리사이즈에서고스트/고정좌표/오래된선택이남지않는다.800×360과좁은화면에서패널조작가능하다.\n5. 신규3모듈+최소main.ts패치/15PNG의해시와참조·비대칭방향을확인한다. 제작자31브라우저검사가재현가능한지또는독립동등검사를수행한다. 필수범위중못한항목은사유/범위를명시한다.\n\n참고자료는 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\MAIN01-20261109-F89105C9\\검증.md, browser-check.mjs, browser-result.json, 변경manifest.json, 통합.patch. 그대로통과를인용하는것만으로독립검증이라하지않는다. 이자료는동작/실행방법파악용이며직접새프로필에서조작결과를관찰해야한다.\n산출물 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\MAIN01-20261109-1DA15A51/report.md, result.json(항목별PASS/FAIL/미검증),대상해시목록,실제브라우저스크린샷/재현증거. 원작업3/4/5기록도완성한다. 최종worker_done에결과와남은문제를보고한다. 사용자미적합격·실기기APK검사를대신하지않는다.\n",
+        "use": "historical evidence; not independent current instructions"
+      }
+    ]
+  }
+}

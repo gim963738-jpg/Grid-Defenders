@@ -1,0 +1,74 @@
+{
+  "status": "failed_quality_candidates_for_review",
+  "gallery": "http://localhost:5173/dev-previews/balor-illustration3-v001/index.html",
+  "overview": "http://localhost:5173/dev-previews/balor-illustration3-v001/comparison.png",
+  "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스플래시-아트\\output\\balor-illustration-three-views-main01-20261110-f6a9f332-v001",
+  "files": [
+    {
+      "path": "asset-manifest.json",
+      "sha256": "28a292227ed2634c83934055905d559bb85307460492f566eeb9de79e3ff09be",
+      "bytes": 13237
+    },
+    {
+      "path": "comparison.png",
+      "sha256": "ff1f221d1717b505699f3b2e83ce55eb915ca9b24f8dad23e578d85c436b82f0",
+      "bytes": 636756
+    },
+    {
+      "path": "evidence/sword-axes.png",
+      "sha256": "181d0117a55acc4f43b848443f324e8e7be6ec59b5ad638f92d13eb66e70fe6e",
+      "bytes": 1337940
+    },
+    {
+      "path": "front-000.png",
+      "sha256": "78c1d1879ca5732e72cf9c468e2d1d03c703a3b379cad6ae32c335e4fedc1ea5",
+      "bytes": 1686789
+    },
+    {
+      "path": "generation-record.json",
+      "sha256": "fde8ac6d1ae613ae1d43382c3c22a927604363a7eb07e07dd1b36ec3014204e5",
+      "bytes": 61417
+    },
+    {
+      "path": "index.html",
+      "sha256": "74965cafea77791f704786849f5c98d964ccc337a6ccdbbef3002d76dde7a14b",
+      "bytes": 4069
+    },
+    {
+      "path": "inputs/approved-front-v02.png",
+      "sha256": "061f23cc26b1f023918288446f9ac025de99bcf32550fb9be3e9850850f496fe",
+      "bytes": 1645282
+    },
+    {
+      "path": "right-035.png",
+      "sha256": "24c7fed7d8bc154ee97b2721f6944c740a5d9ad087361fa9f925286c3de876c7",
+      "bytes": 1954161
+    },
+    {
+      "path": "right-090.png",
+      "sha256": "5464674edb5d12ee5951023aad4e44059a5650cf7bb4c3a0f0c6334331fa0b9f",
+      "bytes": 1345100
+    },
+    {
+      "path": "검수.md",
+      "sha256": "bda87e5d1165040a833533b7fb1cf40589d73376c63cf569732a266d540860e9",
+      "bytes": 3889
+    },
+    {
+      "path": "보고.md",
+      "sha256": "c62859ff911edaf386fb1719e24f1eb9c00d3180db58db379cef0427240a089b",
+      "bytes": 2115
+    }
+  ],
+  "httpByteChecks": 5,
+  "mainReviewed": [
+    "comparison.png",
+    "보고.md",
+    "검수.md"
+  ],
+  "mainObservation": "FAILED internal acceptance: sword grip/blade axis mismatch remains, especially profile. Main viewed comparison and report. Candidate delivery only; not an SD master or user acceptance.",
+  "userScreenChanged": false,
+  "gameRuntimeChanged": false,
+  "committed": false,
+  "pushed": false
+}

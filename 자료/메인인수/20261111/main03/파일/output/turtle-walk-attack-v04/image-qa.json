@@ -1,0 +1,131 @@
+{
+  "id": "builtin/walk_front_left",
+  "route": "builtin",
+  "action": "walk_front_left",
+  "file": "builtin/walk_front_left.png",
+  "width": 1536,
+  "height": 1024,
+  "cells": [
+    {
+      "index": 0,
+      "sourceRect": [
+        0,
+        0,
+        384,
+        341
+      ]
+    },
+    {
+      "index": 1,
+      "sourceRect": [
+        384,
+        0,
+        384,
+        341
+      ]
+    },
+    {
+      "index": 2,
+      "sourceRect": [
+        768,
+        0,
+        384,
+        341
+      ]
+    },
+    {
+      "index": 3,
+      "sourceRect": [
+        1152,
+        0,
+        384,
+        341
+      ]
+    },
+    {
+      "index": 4,
+      "sourceRect": [
+        0,
+        341,
+        384,
+        342
+      ]
+    },
+    {
+      "index": 5,
+      "sourceRect": [
+        384,
+        341,
+        384,
+        342
+      ]
+    },
+    {
+      "index": 6,
+      "sourceRect": [
+        768,
+        341,
+        384,
+        342
+      ]
+    },
+    {
+      "index": 7,
+      "sourceRect": [
+        1152,
+        341,
+        384,
+        342
+      ]
+    },
+    {
+      "index": 8,
+      "sourceRect": [
+        0,
+        683,
+        384,
+        341
+      ]
+    },
+    {
+      "index": 9,
+      "sourceRect": [
+        384,
+        683,
+        384,
+        341
+      ]
+    },
+    {
+      "index": 10,
+      "sourceRect": [
+        768,
+        683,
+        384,
+        341
+      ]
+    },
+    {
+      "index": 11,
+      "sourceRect": [
+        1152,
+        683,
+        384,
+        341
+      ]
+    }
+  ],
+  "previewGrid": {
+    "columns": 4,
+    "rows": 3,
+    "frames": 12
+  },
+  "alpha": {
+    "min": 0,
+    "max": 254,
+    "zero": 755006,
+    "pixels": 1572864
+  },
+  "sha256": "7b878ab031d4bc76ce113e6f5f933a7429975c64f78cdf7f0bd383e641fec939",
+  "rawSheetUnmodified": true
+}

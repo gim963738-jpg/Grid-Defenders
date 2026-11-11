@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "task": "MAIN01-20261111-3A680E78",
+  "revision": 1,
+  "originalRequest": "# 캐릭터 프레임 보정·이펙트 공방 — 요청과 실제 진행 승인\n\n사용자 최초 요청(공방 참고 화면 첨부):\n> 이거는 캐릭터 키나 위치가 안맞을때 미세하게 수정하는공방인데 이런 공방 만들수있겠어? 여기서 프레임단위로 볼수있고 움직임에 맞춰서 디테일한 위치수정도 가능하대\n\nmain01이 제시한 구성:\n프레임 목록/단계 이동/재생 속도, 선택 프레임 드래그·숫자·방향키1px 위치 보정, 발 기준 등비 크기 보정, 이전·다음 반투명 겹쳐 보기, 발선·몸 중심·기준 캐릭터, 현재/선택/전체 적용,72CSSpx 실제 필드 미리보기, 실행 취소/다시 실행/초기화/설정 내보내기·불러오기. 원본 시트 바이트 보존·프레임별 위치/배율/기준점 별도 데이터. 수동 보정 기본, 자동 정렬은 선택. 잘못 그려진 손목/검은 위치 보정과 별도 수정 대상.\n\n사용자 추가 요청:\n> 추가로 이제 이펙트 작업공방에 우리가 만드는 캐릭터 이미지랑 움직임 넣으면서 이펙트 적용할수있는 환경도 추가로 만들어달라고 전달해줘\n\nmain01은 캐릭터 이미지/움직임을 불러와 재생하며 이펙트 위치·크기·시점을 맞추는 환경을 추가 요구로 정리하고, 공방 구성 진행 승인 전까지 착수 대기라고 설명했다.\n\n그 설명 중 사용자의 실제 후속 응답:\n> 진행\n\n따라서 이번 승인 범위는 앞서 제시한 캐릭터 프레임 보정과 추가 이펙트 동기 편집 환경을 기존 이펙트 공방 안에 함께 구현하는 것이다. 생성 API/유료 이미지/신규 캐릭터·이펙트 원화 제작은 포함하지 않는다. 캐릭터 시트를 읽는 도구 구현이며 기존 진행 중인 발로르 시트 제작 승인을 가져다 쓰지 않는다. Git 저장·게임 전투 로직 반영·사용자 화면 조작도 이번 범위가 아니다.\n\n참고 첨부: C:/Users/user/AppData/Roaming/orca/agent-session-attachments/72cc63c6-9534-4584-80f4-1a53d7c6dc2d/orca-paste-1794387769288-82c4ef47-9f8f-442e-9c03-3b3eeac483a1.png\n",
+  "corrections": [],
+  "current": {
+    "goal": "공방 v003 최종 독립 재검증 — 루프 주기·기존 결함 보존",
+    "professionalPrompt": "# MAIN01-20261111-3A680E78 / 차수1 / qa — 공방 v003 독립 최종 재검증\n원공방 MAIN01-20261111-47B7186F / 이전재검증 MAIN01-20261111-E99ECDA3 FAIL / 루프수정 MAIN01-20261111-771C7AC2 성공반환. 사용자원승인 C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md 범위내필수기술재검증이다. 현재 진행중 게임QA MAIN01-20261111-D8C7563C가끝나고새공식발송을받은후에만본작업read-pack/새ACK/start로착수한다. 두작업번호/증거를혼합하지않는다.\n현재SHA확정 C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\technical-fix-v003\\수신파일검증.json 및 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_loopfix_v003_main01-20261111-771c7ac2\\changed-files.json, 제작보고 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_loopfix_v003_main01-20261111-771c7ac2\\report.md, 이전본인보고 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\character-effect-workshop_retest_main01-20261111-e99ecda3_v002\\report.md·loop-repro.mjs/loop-result.json을읽는다. 대상실제품 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임 /기존 http://127.0.0.1:5182/effect-workshop.html#actor . 자기 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\character-effect-workshop_final_main01-20261111-3a680e78_v003 안에만새재현기/5종기록·검사/화면·버전SHA·최종판정을작성한다.\n\n핵심QA03: 0.1초3프레임loop에서time0.3초가index0/UI1/3F,원래첫프레임픽셀과일치해야한다. 실제합계0.30000000000000004를숨기지않고정수ms기준기대와대조한다. 가변소수기간과여러주기배수/total자체/정확경계와직전·직후1e-10초,내부프레임경계/nonloop끝유지·일시정지/배속/시간축스크럽을확인한다. 진짜끝직전시각이조기wrap하면안된다.\n기존QA01 recipe/raster start.2/fps10/time.3 index1 및시작/끝반개구간,QA02의원래bad-points/bad-keys실제비동기파일거부/활성문서·undo/redo·원본에셋/점/키보존,정상빈객체/독립정상파일복구가유지되는지도집중검사한다. 관련좌표/72CSS/실제전장·모바일은영향범위에맞게확인하고이미통과한수백검사를근거없이전부반복하지않는다.\n제작팀성공을독립합격으로옮기지말고본인의독립기대값과실제UI/픽셀증거로판정한다. 사용자미적합격/실기기·게임통합을대행하지않는다. 제작제품수정/사용자개인저장소·현재창·탭·기존서버/타팀/원본PNG/계정/API/Git변경0. 격리headless새문맥만사용하고원본/시험제품SHA전후를확인한다.\n완료후공식새Task/Dispatch worker_done으로main01 run_47ce1a81d7b1에실제outcome/원작업·수정·재검증작업번호·차수/결과보고경로와한계를반환한다. 실패는숨기지않고재현근거를담당수정으로돌린다.\n"
+  },
+  "revisionHistory": [],
+  "unresolved": [
+    "이관된 과거 조건의 최신 범위 정리 필요. 재발송 승인 아님."
+  ],
+  "migration": {
+    "at": "2026-11-11T23:20:45.738268+09:00",
+    "needsReconciliation": true,
+    "records": [
+      {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-3A680E78\\요청확인.md",
+        "sha256": "6b504574d5cadcf2e934dc9dd29b8099843a5a21a6cd0dacc80631eb3d9ebfbe",
+        "content": "# 캐릭터 프레임 보정·이펙트 공방 — 요청과 실제 진행 승인\n\n사용자 최초 요청(공방 참고 화면 첨부):\n> 이거는 캐릭터 키나 위치가 안맞을때 미세하게 수정하는공방인데 이런 공방 만들수있겠어? 여기서 프레임단위로 볼수있고 움직임에 맞춰서 디테일한 위치수정도 가능하대\n\nmain01이 제시한 구성:\n프레임 목록/단계 이동/재생 속도, 선택 프레임 드래그·숫자·방향키1px 위치 보정, 발 기준 등비 크기 보정, 이전·다음 반투명 겹쳐 보기, 발선·몸 중심·기준 캐릭터, 현재/선택/전체 적용,72CSSpx 실제 필드 미리보기, 실행 취소/다시 실행/초기화/설정 내보내기·불러오기. 원본 시트 바이트 보존·프레임별 위치/배율/기준점 별도 데이터. 수동 보정 기본, 자동 정렬은 선택. 잘못 그려진 손목/검은 위치 보정과 별도 수정 대상.\n\n사용자 추가 요청:\n> 추가로 이제 이펙트 작업공방에 우리가 만드는 캐릭터 이미지랑 움직임 넣으면서 이펙트 적용할수있는 환경도 추가로 만들어달라고 전달해줘\n\nmain01은 캐릭터 이미지/움직임을 불러와 재생하며 이펙트 위치·크기·시점을 맞추는 환경을 추가 요구로 정리하고, 공방 구성 진행 승인 전까지 착수 대기라고 설명했다.\n\n그 설명 중 사용자의 실제 후속 응답:\n> 진행\n\n따라서 이번 승인 범위는 앞서 제시한 캐릭터 프레임 보정과 추가 이펙트 동기 편집 환경을 기존 이펙트 공방 안에 함께 구현하는 것이다. 생성 API/유료 이미지/신규 캐릭터·이펙트 원화 제작은 포함하지 않는다. 캐릭터 시트를 읽는 도구 구현이며 기존 진행 중인 발로르 시트 제작 승인을 가져다 쓰지 않는다. Git 저장·게임 전투 로직 반영·사용자 화면 조작도 이번 범위가 아니다.\n\n참고 첨부: C:/Users/user/AppData/Roaming/orca/agent-session-attachments/72cc63c6-9534-4584-80f4-1a53d7c6dc2d/orca-paste-1794387769288-82c4ef47-9f8f-442e-9c03-3b3eeac483a1.png\n",
+        "use": "historical evidence; not independent current instructions"
+      },
+      {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-3A680E78\\전문프롬프트.md",
+        "sha256": "b3bb185fc15a3a60475b611a9fd77b0bc3ed74b1a61fe40ed9281fe3e16bdd4e",
+        "content": "# MAIN01-20261111-3A680E78 / 차수1 / qa — 공방 v003 독립 최종 재검증\n원공방 MAIN01-20261111-47B7186F / 이전재검증 MAIN01-20261111-E99ECDA3 FAIL / 루프수정 MAIN01-20261111-771C7AC2 성공반환. 사용자원승인 C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md 범위내필수기술재검증이다. 현재 진행중 게임QA MAIN01-20261111-D8C7563C가끝나고새공식발송을받은후에만본작업read-pack/새ACK/start로착수한다. 두작업번호/증거를혼합하지않는다.\n현재SHA확정 C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\technical-fix-v003\\수신파일검증.json 및 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_loopfix_v003_main01-20261111-771c7ac2\\changed-files.json, 제작보고 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_loopfix_v003_main01-20261111-771c7ac2\\report.md, 이전본인보고 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\character-effect-workshop_retest_main01-20261111-e99ecda3_v002\\report.md·loop-repro.mjs/loop-result.json을읽는다. 대상실제품 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임 /기존 http://127.0.0.1:5182/effect-workshop.html#actor . 자기 C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\character-effect-workshop_final_main01-20261111-3a680e78_v003 안에만새재현기/5종기록·검사/화면·버전SHA·최종판정을작성한다.\n\n핵심QA03: 0.1초3프레임loop에서time0.3초가index0/UI1/3F,원래첫프레임픽셀과일치해야한다. 실제합계0.30000000000000004를숨기지않고정수ms기준기대와대조한다. 가변소수기간과여러주기배수/total자체/정확경계와직전·직후1e-10초,내부프레임경계/nonloop끝유지·일시정지/배속/시간축스크럽을확인한다. 진짜끝직전시각이조기wrap하면안된다.\n기존QA01 recipe/raster start.2/fps10/time.3 index1 및시작/끝반개구간,QA02의원래bad-points/bad-keys실제비동기파일거부/활성문서·undo/redo·원본에셋/점/키보존,정상빈객체/독립정상파일복구가유지되는지도집중검사한다. 관련좌표/72CSS/실제전장·모바일은영향범위에맞게확인하고이미통과한수백검사를근거없이전부반복하지않는다.\n제작팀성공을독립합격으로옮기지말고본인의독립기대값과실제UI/픽셀증거로판정한다. 사용자미적합격/실기기·게임통합을대행하지않는다. 제작제품수정/사용자개인저장소·현재창·탭·기존서버/타팀/원본PNG/계정/API/Git변경0. 격리headless새문맥만사용하고원본/시험제품SHA전후를확인한다.\n완료후공식새Task/Dispatch worker_done으로main01 run_47ce1a81d7b1에실제outcome/원작업·수정·재검증작업번호·차수/결과보고경로와한계를반환한다. 실패는숨기지않고재현근거를담당수정으로돌린다.\n",
+        "use": "historical evidence; not independent current instructions"
+      },
+      {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-3A680E78\\2_사전확인.md",
+        "sha256": "c0ab9ab8ffbda81e55a32aed5fb3d79c457efb1ce50768704db60fdf3cb6cb36",
+        "content": "# MAIN01-20261111-3A680E78 / 차수1\n\n현재qa는게임검증D8C7563C수행중이다. 새검증은확정만하고prepare/발송은역할이비고현재본문·해시를다시확인한뒤한다. 수정v003두파일SHA는수신확인. 기존FAIL이력/이미지/사용자작품보존.\n",
+        "use": "historical evidence; not independent current instructions"
+      }
+    ]
+  }
+}

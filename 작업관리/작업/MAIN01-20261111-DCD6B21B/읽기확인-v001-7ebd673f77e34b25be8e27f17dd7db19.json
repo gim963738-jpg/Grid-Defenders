@@ -1,0 +1,123 @@
+{
+    "iteration":  1,
+    "documents":  [
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\AGENTS.md",
+                          "sha256":  "f0ed9bc2106adacf55055a387afe989df47d62478440b4f79977b48d15d82f63",
+                          "applies":  "main01 단일 회신·스킬규약·기존원본/모바일 기준 보존, 이번 새 필독 후 착수"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\gameplay\\작업진행방법.md",
+                          "sha256":  "7160bf0c8eb4111627f08435e10e17c51632ebc750bf3cca7b2842657ce14093",
+                          "applies":  "현재 v002 입력과 root v001 누적patch 기준을 구분해 새 격리본에서만 수정"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+                          "sha256":  "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+                          "applies":  "허용4소스/검사·5종 기록을 작성하고 기술검증/사용자판정/통합 구분"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+                          "sha256":  "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+                          "applies":  "실제 송신 Task/Dispatch 사용·현재모델 중단없음·공통파일 read-only"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+                          "sha256":  "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+                          "applies":  "제작팀 기술검증으로 보고하며 독립 QA 합격을 대신하지 않음; 하위위임 없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+                          "sha256":  "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+                          "applies":  "게임개발 공통 런타임4소스만 담당, UI/공유 원본 수정 없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\gameplay\\규정.md",
+                          "sha256":  "9d59ee6b893155fcc8bf04a6ff335609fd25ae2490bc0123911a672e100da9cc",
+                          "applies":  "전투/좌표 공통 코드의 경계 보완; 완성시트 불필요한 재가공 없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+                          "sha256":  "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+                          "applies":  "현재23문서 applies/SHA ACK 및 start 후 구현; 발송영수증은 메인 연결"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+                          "sha256":  "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+                          "applies":  "gameplay는 main01 산하, qa는 독립; 폐지main회신 없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+                          "sha256":  "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+                          "applies":  "자료분류와 실제 제작 조직을 구분하며 원본경로 보존"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+                          "sha256":  "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+                          "applies":  "몬스터/캐릭터 개별 원본과 작품판정을 보존; 자료 이동없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+                          "sha256":  "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+                          "applies":  "활성 총괄main01으로 새Task 회신·과거Dispatch 재사용없음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사용자승인.md",
+                          "sha256":  "8ae46ded5b595e3cfc67c7a0dfa67e455f43ebb393bbe1df9b19b03a1260aab2",
+                          "applies":  "range100/평타/준비3초/달리기/넉백만hurt/사망/3색친위대/영웅 상단 유지"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\경계피드백.md",
+                          "sha256":  "00205724345a8c72bce277cf4124eb2f59c17bd88532040b4f0c148658051af4",
+                          "applies":  "24.5초 실제 머리상단 잘림을 확인했으며 초기위치/core0만으로 합격하지 않음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v003\\입력버전.json",
+                          "sha256":  "73322692000dd1993d729d984664f708f7c38b2569731110d28c373b4879ca72",
+                          "applies":  "root8개 before SHA를 직접 대조하고 v002 delivery를 새 사본으로 복사; 최종before rootv001"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-spacing_main01-20261111-5c7d9d98_v002\\검증보고.md",
+                          "sha256":  "4ae9402b7b92f040308b393c252781eb1b03dd3835f500ad794994a1227ada72",
+                          "applies":  "v002 몸통분리/후방접근/180CSS 개선은 유지하되 후기클리핑 검증누락을 보완"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-spacing_main01-20261111-5c7d9d98_v002\\변경manifest.json",
+                          "sha256":  "babe5a432c09bacc0f7ece46a2505c1aaa42e0f97c32762762a1143bea397651",
+                          "applies":  "기존4제품+4검사 누적 변경범위/전후SHA를 보존해 새manifest 작성"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\output\\blond-turtle-spacing_main01-20261111-5c7d9d98_v002\\시각등록메타.json",
+                          "sha256":  "620530849d739b35f133a35f09cf2e30c2f69e5f75e51e73839a07fbc052eb90",
+                          "applies":  "source40,270 고정발·230source180CSS·core와 전체외형경계 분리"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v002\\입력버전.json",
+                          "sha256":  "3a805e975a84b9887dcc50fd3f4e0067b9dd47f9204fbff7f10a68820797ae42",
+                          "applies":  "root71 입력SHA와 원본21파일 출처 대조, 옛204baseline사용 금지"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+                          "sha256":  "1ef4d854ad8d3250a57f8ece69605b07c4244eaa2c7599da235c8fbb2be1fb8f",
+                          "applies":  "금발72CSS/고품질버퍼/원본DPR 보존; 보스180CSS 예외 유지"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+                          "sha256":  "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+                          "applies":  "시각최대범위와피해분리·명암전체64프레임·실제후반전장/시간축검증"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+                          "sha256":  "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+                          "applies":  "이미지2.6/API/영상/새원화 호출0; 일반 진행을 허가로 확대하지 않음"
+                      },
+                      {
+                          "path":  "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+                          "sha256":  "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be",
+                          "applies":  "Git커밋/푸시/예약백업0; 필요한 제작/검사/최소기록만 새output작성"
+                      }
+                  ],
+    "task":  "MAIN01-20261111-DCD6B21B",
+    "workSummary":  "v002 후반24.5초 머리 잘림을 고정 최대 표시범위와 지속 경계조건으로 수정한다. 원본/180CSS/발접촉/사거리/전투수치를 보존하고 같은18개체7시점·64프레임·벽/저장/공격·tsc/build를 검사하며 rootv001기준 누적4소스patch를 새output에만 제출한다.",
+    "role":  "gameplay"
+}

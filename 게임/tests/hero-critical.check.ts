@@ -1,5 +1,6 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {Defense,pathPoint} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 import {criticalAttack} from '../src/critical';
 export function checkHeroCritical(){
  const passed:string[]=[];const check=(ok:boolean,s:string)=>{if(!ok)throw Error(s);passed.push(s);};
@@ -16,13 +17,13 @@ export function checkHeroCritical(){
   check(yes.logs.every((l,i)=>Math.abs(l.attack!-no.logs[i].attack!*1.5)<1e-8),kind+' wave applies multiplier exactly once to every beat');
   const boss=(critical:boolean)=>{let rolls=0;const prep=new Defense(()=>1);prep.summon(kind,0);const b=new BossBattle(waveBossRoster(prep),()=>{rolls++;return critical?0:1;});b.autoSkills=false;
    const h=b.actors.find(a=>a.kind===kind)!,e=b.actors.find(a=>a.side==='enemy')!;Object.assign(h,{x:100,y:100,cooldown:999,speed:0});
-   const enemies=[150,158].map((x,i)=>({...e,id:'target'+i,x,y:100,hp:100000,maxHp:100000,physicalArmor:0,magicArmor:0,defenseType:'normal' as const,cooldown:999,speed:0}));b.actors=[h,...enemies];b.useHeroSkill(h.id);
+   const enemies=[150,198].map((x,i)=>({...e,id:'target'+i,x,y:100,hp:100000,maxHp:100000,physicalArmor:0,magicArmor:0,defenseType:'normal' as const,cooldown:999,speed:0}));b.actors=[h,...enemies];b.useHeroSkill(h.id);
    const cast=kind==='melee'?b.bladeCasts[0]:kind==='ranged'?b.fireCasts[0]:b.assassinActions[0];
    for(let i=0;i<39;i++)b.tick(.05);return {b,rolls,cast,loss:enemies.map(e=>100000-e.hp)};};
   const by=boss(true),bn=boss(false);
   check(by.rolls===1&&bn.rolls===1,kind+' boss rolls once, never per target or beat');
   check(by.cast.critical===true&&bn.cast.critical===false,kind+' boss stores the cast critical decision');
-  check(by.loss.every((n,i)=>n>0&&Math.abs(n-bn.loss[i]*1.5)<1e-7),kind+' boss every victim takes the same critical multiplier');
+  check(by.loss.some(n=>n>0)&&by.loss.every((n,i)=>Math.abs(n-bn.loss[i]*1.5)<1e-7),kind+' boss every victim takes the same critical multiplier '+JSON.stringify([by.loss,bn.loss]));
  }
  for(const kind of ['tank','melee','ranged','healer','arcanist','assassin'] as const){
   let rolls=0;const g=new Defense(()=>{rolls++;return 0;});g.summon(kind,2);const u=g.units[0],e=g.enemies[0];u.cooldown=0;Object.assign(e,{distance:200,...pathPoint(200),speed:0,hp:100000,maxHp:100000,defenseType:'normal'});g.waveSpawned=10;

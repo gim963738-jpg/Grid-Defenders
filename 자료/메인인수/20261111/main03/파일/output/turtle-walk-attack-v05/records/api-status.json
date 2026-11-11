@@ -1,0 +1,53 @@
+{
+  "startedAt": "2026-11-10T16:03:35.385Z",
+  "status": "succeeded",
+  "requestedModel": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "endpoint": "/images/edits",
+  "size": "1536x1024",
+  "background": "transparent",
+  "n": 1,
+  "automaticRetries": 0,
+  "promptSha256": "9a914701fcd3cd3884c41d66b9e098c79cae12684fa82125b8a182d5cd91ea7e",
+  "references": [
+    {
+      "name": "approved-v02-identity-and-camera.png",
+      "file": "C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인/output/monsters/turtle-dragon-black-green-main03-20261110-05df6177-v02/front_left.png",
+      "sha256": "631601a924946487e00a704936d397ff2140f1f17a016653386f042aa45ca094",
+      "bytes": 2115038
+    },
+    {
+      "name": "existing-single-paw-attack-target-top-left-frame.png",
+      "file": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\output\\turtle-walk-attack-v05\\builtin\\slam_right_foreleg.png",
+      "sha256": "816e0a699faad891cd0d071c73174a86e25d604fa1a4f582ee37dc40dbc3857a",
+      "bytes": 2901059
+    }
+  ],
+  "approval": "User explicitly requested 2.6 and then said 진행하는데 어떤 좋은 제안 이야기하면 나한테 전달해줘; one sheet only",
+  "finishedAt": "2026-11-10T16:04:39.155Z",
+  "requestId": "req_e9e0850af66546f3bbf993f4898a7311",
+  "response": {
+    "created": 1794326676,
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "output_format": "png",
+    "usage": {
+      "input_tokens": 3885,
+      "input_tokens_details": {
+        "image_tokens": 3072,
+        "text_tokens": 813
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 5257
+    }
+  },
+  "outputSha256": "79ffd8e91999ae812311165477a17f5407ca11a1df6f68aaf5405a0c48d0d312",
+  "outputBytes": 2494427,
+  "costUsd": "unknown",
+  "responseModel": "not reported"
+}

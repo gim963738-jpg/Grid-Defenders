@@ -1,0 +1,162 @@
+{
+  "id": "06_dual_rip_x_right34",
+  "source": "sheet.png",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "frameCount": 12,
+  "frameRects": [
+    [
+      0,
+      0,
+      384,
+      341
+    ],
+    [
+      384,
+      0,
+      384,
+      341
+    ],
+    [
+      768,
+      0,
+      384,
+      341
+    ],
+    [
+      1152,
+      0,
+      384,
+      341
+    ],
+    [
+      0,
+      341,
+      384,
+      342
+    ],
+    [
+      384,
+      341,
+      384,
+      342
+    ],
+    [
+      768,
+      341,
+      384,
+      342
+    ],
+    [
+      1152,
+      341,
+      384,
+      342
+    ],
+    [
+      0,
+      683,
+      384,
+      341
+    ],
+    [
+      384,
+      683,
+      384,
+      341
+    ],
+    [
+      768,
+      683,
+      384,
+      341
+    ],
+    [
+      1152,
+      683,
+      384,
+      341
+    ]
+  ],
+  "frameOffsets": [
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ]
+  ],
+  "sourceAnchor": [
+    182.5,
+    351
+  ],
+  "displayScale": 0.6779661016949152,
+  "anchor": [
+    224,
+    347
+  ],
+  "durationsMs": [
+    110,
+    90,
+    80,
+    60,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    160
+  ],
+  "view": "right front three-quarter",
+  "generationRoute": "builtin image_gen",
+  "sourceSha256": "be4d707a48d0eff4a0a16d2e103662bec89c4d7be9725b1a1f901b3a3430d8e5",
+  "loopDefault": false,
+  "bodyReferenceMethod": "first pose alpha>=128 hair-to-foot height; one fixed transform all frames",
+  "damageGeometry": "not defined; independent"
+}

@@ -9,7 +9,10 @@
     "check:tests": "tsc --project tsconfig.tests.json",
     "test": "npm run check:tests && node scripts/check-tests.mjs",
     "build": "npm run check && vite build --base=./",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "viewer:catalog": "python -X utf8 scripts/build-result-catalog.py",
+    "viewer:register": "python -X utf8 scripts/register-viewer-result.py",
+    "test:viewer": "node scripts/check-result-viewer.mjs"
   },
   "dependencies": {
     "pixi.js": "8.22.0"

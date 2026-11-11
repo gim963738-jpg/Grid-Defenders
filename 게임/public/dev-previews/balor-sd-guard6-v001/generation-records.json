@@ -1,0 +1,136 @@
+{
+  "task": "MAIN01-20261111-1B358AA6",
+  "iteration": 1,
+  "builtinCalls": 4,
+  "image26Posts": 3,
+  "automaticRetries": 0,
+  "paidAdditionalEdits": 0,
+  "apiRequestModel": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "apiResponseModels": [
+    null,
+    null,
+    null
+  ],
+  "apiUsage": {
+    "input_tokens": 13887,
+    "output_tokens": 4116,
+    "total_tokens": 18003
+  },
+  "cost": null,
+  "balance": null,
+  "unreported": "Actual currency cost/balance and API response model not provided; request model separately recorded",
+  "builtIn": [
+    {
+      "id": 1,
+      "file": "built-in/front-000.png",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-81f048d7-86f7-4080-ad1b-45da02162d33.png",
+      "prompt": "prompts/front-000.txt",
+      "inputs": [
+        "inputs/identity-front.png",
+        "inputs/style-sd1.png"
+      ],
+      "sha256": "b9b49fe5d39b7a231f71ba304b5b520a5aad9714591c0bd191775fed244282c2",
+      "model": "builtin detailed model not reported",
+      "transparent_background": true,
+      "usage": null,
+      "inputRoles": [
+        "IDENTITY/EQUIPMENT or same-route candidate",
+        "STYLE/COMBINED SD PROPORTION only"
+      ]
+    },
+    {
+      "id": 2,
+      "file": "built-in/right-035.png",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-5d525ca8-7248-4d10-a716-5bad62cdc668.png",
+      "prompt": "prompts/right-035.txt",
+      "inputs": [
+        "inputs/identity-035.png",
+        "inputs/style-sd1.png",
+        "built-in/front-000.png"
+      ],
+      "sha256": "b88c91189b0d3a4444a14e76a5e4a9bc8ccab2bad10a6be83112931dde35816c",
+      "model": "builtin detailed model not reported",
+      "transparent_background": true,
+      "usage": null,
+      "inputRoles": [
+        "IDENTITY/EQUIPMENT or same-route candidate",
+        "STYLE/COMBINED SD PROPORTION only",
+        "same-route own front candidate; unapproved identity/pose continuity"
+      ]
+    },
+    {
+      "id": 3,
+      "file": "generations/builtin-right-090-initial.png",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-8cea1110-0835-46ee-b3ff-7e5724ba33e7.png",
+      "prompt": "prompts/right-090.txt",
+      "inputs": [
+        "inputs/identity-090.png",
+        "inputs/style-sd1.png",
+        "built-in/front-000.png"
+      ],
+      "review": "Head90 but torso exposed front; preserved candidate",
+      "sha256": "a983a1ab7439c77bffcb4e04006501ba1836c914293eb9b726bc5ab368df8a13",
+      "model": "builtin detailed model not reported",
+      "transparent_background": true,
+      "usage": null,
+      "inputRoles": [
+        "IDENTITY/EQUIPMENT or same-route candidate",
+        "STYLE/COMBINED SD PROPORTION only",
+        "same-route own front candidate; unapproved identity/pose continuity"
+      ]
+    },
+    {
+      "id": 4,
+      "file": "built-in/right-090.png",
+      "native": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-f4061343-286a-40df-99b7-bb4d914d1326.png",
+      "prompt": "prompts/right-090-fix.txt",
+      "inputs": [
+        "generations/builtin-right-090-initial.png",
+        "inputs/style-sd1.png"
+      ],
+      "review": "Profile improved; knees/feet pose continuity failed",
+      "sha256": "0e0ccbcf44dc3303d289e061b060d2b4088e7af2d0eb3c231ecd13d49c3fc1c7",
+      "model": "builtin detailed model not reported",
+      "transparent_background": true,
+      "usage": null,
+      "inputRoles": [
+        "IDENTITY/EQUIPMENT or same-route candidate",
+        "STYLE/COMBINED SD PROPORTION only"
+      ]
+    }
+  ],
+  "apiRecords": [
+    "api/01-front/request-record.json",
+    "api/02-right-035/request-record.json",
+    "api/03-right-090/request-record.json"
+  ],
+  "roles": "Identity illustration vs STYLE SD1; own-route SD front continuity only; no rejected Balor inputs or route-crossing output reference",
+  "inputManifest": [
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\inputs\\front-v9.png",
+      "copy": "inputs/identity-front.png",
+      "sha256": "ad96de56563ef391944deac57480e9120e4f1570c60c3c60568baa322c7331e3"
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\image26\\right-035.png",
+      "copy": "inputs/identity-035.png",
+      "sha256": "3cbc21b29438cf85fc41be989f89c70c89eb4c398c791d092fb511314e41a3f0"
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\image26\\right-090.png",
+      "copy": "inputs/identity-090.png",
+      "sha256": "4433610d0ac2978d909940690d0c4daaea6ae14a1fe311161d8bfe8d4886515a"
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-1-front.png",
+      "copy": "inputs/style-sd1.png",
+      "sha256": "16d35ca4c3f7b9b40ecc5c0d06717d86b170180662b515cb12c2768606f1120c"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\battlefields\\forest-clearing-v1.png",
+      "copy": "inputs/field.png",
+      "sha256": "acf75f43a55df66d510ab986f10de980fd9e68a3fa9dc9d7135533205dced823"
+    }
+  ]
+}

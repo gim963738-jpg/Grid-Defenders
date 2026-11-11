@@ -1,0 +1,153 @@
+{
+  "schema": "cutout-fk-prototype.v1",
+  "source": "source.png",
+  "sourceSha256": "366b8073d944fea1849dd1795c4e36cdd63c2653f04ea9262a20d457670ee285",
+  "nativeCanvas": [
+    1254,
+    1254
+  ],
+  "view": "screen-right front35",
+  "bodyHeight": 1204,
+  "hairTop": 17,
+  "foot": [
+    660,
+    1221
+  ],
+  "coordinateSystem": "native pixels, x right/y down, rotation degrees clockwise; all bind rotation=0, scale=1",
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "bind": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "TorsoAnchor",
+      "parent": "Root",
+      "bind": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "RightShoulder",
+      "parent": "TorsoAnchor",
+      "bind": [
+        548,
+        429
+      ]
+    },
+    {
+      "name": "RightUpperArm",
+      "parent": "RightShoulder",
+      "bind": [
+        548,
+        429
+      ],
+      "channel": "upper"
+    },
+    {
+      "name": "RightForearm",
+      "parent": "RightUpperArm",
+      "bind": [
+        492,
+        562
+      ],
+      "local": [
+        -56,
+        133
+      ],
+      "channel": "forearm"
+    },
+    {
+      "name": "RightHand",
+      "parent": "RightForearm",
+      "bind": [
+        455,
+        653
+      ],
+      "local": [
+        -37,
+        91
+      ],
+      "channel": "hand"
+    },
+    {
+      "name": "Weapon_R",
+      "parent": "RightHand",
+      "bind": [
+        473,
+        708
+      ],
+      "local": [
+        18,
+        55
+      ],
+      "scale": 1
+    },
+    {
+      "name": "PauldronAssist",
+      "parent": "RightShoulder",
+      "bind": [
+        548,
+        429
+      ],
+      "driver": "upper * 0.10, clamp ±8deg"
+    }
+  ],
+  "slots": [
+    {
+      "name": "body",
+      "bone": "TorsoAnchor",
+      "file": "parts/body.png"
+    },
+    {
+      "name": "upperarm",
+      "bone": "RightUpperArm",
+      "file": "parts/upperarm.png"
+    },
+    {
+      "name": "forearm",
+      "bone": "RightForearm",
+      "file": "parts/forearm.png"
+    },
+    {
+      "name": "weapon",
+      "bone": "Weapon_R",
+      "file": "parts/weapon.png"
+    },
+    {
+      "name": "hand",
+      "bone": "RightHand",
+      "file": "parts/hand.png"
+    },
+    {
+      "name": "pauldron",
+      "bone": "PauldronAssist",
+      "file": "parts/pauldron.png"
+    }
+  ],
+  "weapon": {
+    "grip_socket": [
+      473,
+      708
+    ],
+    "pommel": [
+      511,
+      641
+    ],
+    "guard": [
+      435,
+      785
+    ],
+    "tip": [
+      243,
+      1228
+    ],
+    "nativeLength": 645.2852082606574,
+    "rigScale": 1,
+    "policy": "original visible sword geometry preserved rigidly; no mesh deformation or stretch"
+  }
+}

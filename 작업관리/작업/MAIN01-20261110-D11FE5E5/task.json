@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 3,
+  "id": "MAIN01-20261110-D11FE5E5",
+  "main": "main01",
+  "branch": "characters",
+  "title": "남녀3/4·90도 전신/가림복원 파츠판8장 — GPT Image2.6",
+  "iteration": 1,
+  "status": "returned",
+  "createdAt": "2026-11-10T23:27:09.292896+09:00",
+  "approval": null,
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-10T23:27:44.724889+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\실제발송영수증.json",
+        "sha256": "c08379ce199bad96205b541599f0ad06bec037fe08bf3d376787f4b38d3b986e"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-10T23:29:52.824815+09:00",
+      "iteration": 1,
+      "role": "characters",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D11FE5E5\\읽기확인-v001-0944298763f44a5087079f55476e5b7c.json",
+        "sha256": "8d6b66bc6743229e043fae8f35b9f93ae45cd0189593f01d7c53ed27972673ed"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-11T00:10:41.746269+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_parts8_main01-20261110-d11fe5e5_v001\\report.md",
+        "sha256": "ddea6a1d135637d41805be18a602254c1d3caa21e3465d5f5d0d012289795da1"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "OPS006_migration",
+      "at": "2026-11-11T23:20:45.738268+09:00",
+      "previousStatus": "awaiting_user",
+      "previousApproval": {
+        "userQuote": "우측 3/4뷰 기준으로 각 신체부위 분리작업 진행하고 90도 우측뷰도 뽑고 각 신체부위 분리작업 진행해줘 이때 보이지않는 신체부위도 만들어서 파츠로 보여줘야한다 이해했지? 이미지 2.6사용한다\n총 8장이네 3/4뷰 4장 전신/ 파츠분리 + 우측뷰4장 전신 파츠분리",
+        "source": {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사용자확인.md",
+          "sha256": "9d645bc698070f49d09f3a047307187320963d14ce4c4ab2e8065a2618e0ff86"
+        },
+        "recordedBy": "main01",
+        "recordedAt": "2026-11-10T23:27:09.336906+09:00",
+        "iteration": 1,
+        "hashes": {
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D11FE5E5\\요청확인.md": "9d645bc698070f49d09f3a047307187320963d14ce4c4ab2e8065a2618e0ff86",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D11FE5E5\\전문프롬프트.md": "2befc10c0b8daf68af3edf2f227677e2eb3be1763dad230caaf111dfdbbbf09b",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D11FE5E5\\2_사전확인.md": "2976cf25db2a42b4cf9eed67f15afca71de4426fc6a3d355b152306977650084",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "70406d2cc01d677e268e393094bf3beac4b649542bfc778a7df1778888032395",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md": "455f13414556c0afde6af1422eb9863b066c7da988ce1f3e083598584de9e982",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md": "d4027f0c9a32fcec376092a83a44eb28eff07b26563103f13f1bbeb3f580b0e8",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md": "855e0e5433239fc98df45dc41bcb3a902ee5bf5d7f5c596e69a478b965f1feb5",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "09cbb63ba0ec84bb45f5717878a06236efe0ee957c93cc823355fa63c4446e23",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "dcdddf02d131c1dda45e73e67600e756f731816194405d52a4a0275080c5460c",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "7f5a765403e4fc06894ad2e50446b7826bfcd72063eb7455bb5736211d052021",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사용자확인.md": "9d645bc698070f49d09f3a047307187320963d14ce4c4ab2e8065a2618e0ff86",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사용자선택.md": "bc11d4b57f37863925471be343b7fa9c52931cb1a9c0050a572414cd0c28bd36",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사전확인.md": "2976cf25db2a42b4cf9eed67f15afca71de4426fc6a3d355b152306977650084",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md": "0170b732eb8ce54bc75b92e715bf8d6323a9be1f2366c095ce00e24b6d929fba",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "f18e6a22082554d1c9d4b6ffe3e0467528871efaf982cd8f26fb19f31b356623",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md": "0887e59ed10411ac81e888b7901e026294136bc8eb85fff529354afffeb34e49",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\README.md": "a10bf09af80558fc4e9ec9d673afda74b8cf53b7a02084a598043d5d08c4d473",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\report.md": "a1ddbe9aaf0dd2c714f592016c21d61adde87cfae794ee18929febf3a697de67",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\검수.md": "645664031d3394f3bd595762fedd5729a4c42795b023070a7378837bcd1ae6f6",
+          "C:\\Users\\user\\.codex\\skills\\.system\\imagegen\\SKILL.md": "706d4d96e1d5c9e6023fe3ccabba1bb34b364024d344fd25b8515ec7d28fe3c4"
+        }
+      },
+      "note": "原 지시/판정 보존; 새 발송은 버튼 승인 필요"
+    }
+  ],
+  "readingPolicyVersion": "OPS-006",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사용자확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사용자선택.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\body-parts-two-views8\\사전확인.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인보고형식.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\README.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\report.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\body_reference4_main01-20261110-c5138514_v001\\검수.md",
+    "C:\\Users\\user\\.codex\\skills\\.system\\imagegen\\SKILL.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D11FE5E5\\읽기확인-v001-0944298763f44a5087079f55476e5b7c.json",
+    "sha256": "8d6b66bc6743229e043fae8f35b9f93ae45cd0189593f01d7c53ed27972673ed"
+  },
+  "updatedAt": "2026-11-11T23:20:45.738268+09:00",
+  "stages": {
+    "production": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "technical": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "user": {
+      "status": "not_reviewed",
+      "evidence": null
+    },
+    "integration": {
+      "status": "unknown",
+      "evidence": null
+    }
+  },
+  "pendingChoice": null,
+  "spec": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261110-D11FE5E5\\통합작업명세.json",
+  "pipeline": {
+    "version": 1,
+    "step": null,
+    "phase": "legacy",
+    "resumeRequired": true,
+    "criteria": [],
+    "review": null,
+    "lastResult": null,
+    "round": 0,
+    "events": [],
+    "note": "새 12단계 이전 기록. 과거 단계를 소급하지 않으며 새 후속 작업은 update-spec과 상세 브리핑부터 시작."
+  }
+}

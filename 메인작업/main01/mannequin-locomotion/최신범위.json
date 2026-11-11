@@ -1,0 +1,23 @@
+{
+  "task": "MAIN01-20261110-B87520F7",
+  "iteration": 1,
+  "amendment": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\mannequin-locomotion\\범위변경-001.md",
+  "sha256": "3e96a6dca7d8bc8a220ced13de43530dd93737b73747d6ce0d3f148ec6a0b553",
+  "desiredDeliverables": [
+    "남성체1안",
+    "여성체1안"
+  ],
+  "states": [
+    "Idle",
+    "Start",
+    "Walk",
+    "Run",
+    "Stop"
+  ],
+  "delivery": {
+    "messageId": "msg_2164950d2e6a"
+  },
+  "acknowledgement": "worker_read_and_started_supplement_001",
+  "ackEvidence": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\mannequin_locomotion_main01-20261110-b87520f7_v001\\보충읽기확인-001.json",
+  "state": "returned_for_user_review"
+}

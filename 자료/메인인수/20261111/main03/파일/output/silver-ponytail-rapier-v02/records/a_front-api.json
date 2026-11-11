@@ -1,0 +1,67 @@
+{
+  "view": "a_front",
+  "startedAt": "2026-11-11T06:32:49.914Z",
+  "status": "succeeded",
+  "requestedModel": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "size": "1024x1536",
+  "background": "transparent",
+  "n": 1,
+  "endpoint": "/images/edits",
+  "automaticRetries": 0,
+  "promptSha256": "57bf09b32b8157bef4191ffce1994fae57f05339f32ecfdc06fad068042aadf2",
+  "references": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\메인03\\output\\silver-ponytail-rapier-v01\\front.png",
+      "sha256": "90b7881926df9a91325ab6f4cc3fbac425a5a1157b0eb109120dcb650288755c",
+      "bytes": 1169770
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_front.png",
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "bytes": 1643944
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_front.png",
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+      "bytes": 1545142
+    },
+    {
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/그립자세_참조.png",
+      "sha256": "c0d7430b5360a01f2e43cabc7fd82490a7d36270192e9f83106254f9147747d9",
+      "bytes": 199279
+    },
+    {
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/자료/캐릭터제작/한손무기그립/원본/손가락연결_사용자표시.png",
+      "sha256": "d1f2035a2138b50602cbff4e15ab853d8d83d44380585a1b87e32227746a2c1a",
+      "bytes": 83496
+    }
+  ],
+  "approval": "User explicitly permitted image2.6 and approved revision 2: six full-body views, two outfits, front-view screen-based asymmetric armor via 이 내용으로 진행.",
+  "finishedAt": "2026-11-11T06:33:47.072Z",
+  "requestId": "req_4996083e4dc041f4af9edbda186683c0",
+  "response": {
+    "created": 1794378827,
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "output_format": "png",
+    "usage": {
+      "input_tokens": 6750,
+      "input_tokens_details": {
+        "image_tokens": 5658,
+        "text_tokens": 1092
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 8122
+    }
+  },
+  "responseModel": "not reported",
+  "outputBytes": 1333264,
+  "outputSha256": "dc85b8aff3074b96a5bbe44ba2ef4a62b8b7891ef98514b9e11c27b10516e9c5",
+  "costUsd": "unknown"
+}

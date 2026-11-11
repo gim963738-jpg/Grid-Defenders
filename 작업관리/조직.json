@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "version": "2.0.0",
-  "at": "2026-11-09T16:38:45.046690+09:00",
+  "version": "3.0.0",
+  "at": "2026-11-11T23:20:45.738268+09:00",
   "director": "main01",
   "teamLeads": [
     "characters",
@@ -21,24 +21,6 @@
       "teamOwner": "main01",
       "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:\\Users\\user\\Desktop\\Grid Defenders",
       "path": "C:\\Users\\user\\Desktop\\Grid Defenders"
-    },
-    "main02": {
-      "role": "main02",
-      "name": "메인02 · 기획·시안·지시",
-      "kind": "main",
-      "parent": null,
-      "teamOwner": "main02",
-      "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/메인02",
-      "path": "C:/Users/user/orca/workspaces/Grid Defenders/메인02"
-    },
-    "main03": {
-      "role": "main03",
-      "name": "메인03 · 기획·시안·지시",
-      "kind": "main",
-      "parent": null,
-      "teamOwner": "main03",
-      "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/메인03",
-      "path": "C:/Users/user/orca/workspaces/Grid Defenders/메인03"
     },
     "ui": {
       "role": "ui",
@@ -62,7 +44,7 @@
       "role": "monsters",
       "name": "몬스터 팀장 AI",
       "kind": "team-lead",
-      "parent": "world",
+      "parent": "main01",
       "teamOwner": "monsters",
       "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인",
       "path": "C:/Users/user/orca/workspaces/Grid Defenders/몬스터-디자인"
@@ -107,7 +89,7 @@
       "role": "characters",
       "name": "캐릭터 팀장 AI",
       "kind": "team-lead",
-      "parent": "world",
+      "parent": "main01",
       "teamOwner": "characters",
       "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2",
       "path": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2"
@@ -172,5 +154,37 @@
     "gameplay",
     "qa"
   ],
-  "externalAccounts": "not_changed_by_OPS003"
+  "externalAccounts": "not_changed_by_OPS003",
+  "retiredNodes": {
+    "main02": {
+      "role": "main02",
+      "name": "메인02 · 기획·시안·지시",
+      "kind": "main",
+      "parent": null,
+      "teamOwner": "main02",
+      "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/메인02",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/메인02",
+      "active": false,
+      "status": "retired",
+      "successor": "main01"
+    },
+    "main03": {
+      "role": "main03",
+      "name": "메인03 · 기획·시안·지시",
+      "kind": "main",
+      "parent": null,
+      "teamOwner": "main03",
+      "worktreeId": "de86d10c-8e2c-444d-8b0f-43b772894ad9::C:/Users/user/orca/workspaces/Grid Defenders/메인03",
+      "path": "C:/Users/user/orca/workspaces/Grid Defenders/메인03",
+      "active": false,
+      "status": "retired",
+      "successor": "main01"
+    }
+  },
+  "activeMainIds": [
+    "main01"
+  ],
+  "operatingMode": "single-main",
+  "retirementEvidence": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\single-main-20261111\\사용자지시.md",
+  "routing": "main01-direct-executor"
 }

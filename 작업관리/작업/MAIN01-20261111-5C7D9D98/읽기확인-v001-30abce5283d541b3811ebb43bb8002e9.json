@@ -1,0 +1,113 @@
+{
+  "task": "MAIN01-20261111-5C7D9D98",
+  "iteration": 1,
+  "role": "gameplay",
+  "workSummary": "QA-VIS-01의 실제 다유닛 시각중첩을 현재root71SHA기준 새격리본에서 재현하고 터틀 접촉점/고정몸통등록 및 접근간격을 최소수정한다; 크기72/180CSS·수치·원본·시간축·플레이환경 보존 후 모델/실제headless/명암 전후검증과5종기록/정확patch·SHA 제출",
+  "documents": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\게임개발\\AGENTS.md",
+      "sha256": "f0ed9bc2106adacf55055a387afe989df47d62478440b4f79977b48d15d82f63",
+      "applies": "매작업 필독/start와 main01 단독회신, 자기output만 변경하고 전투 아트/피해 분리"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\gameplay\\작업진행방법.md",
+      "sha256": "7160bf0c8eb4111627f08435e10e17c51632ebc750bf3cca7b2842657ce14093",
+      "applies": "현재 root71SHA부터 격리본 작성, 이번차수ACK/start 후 실제 시각 QA를 재현"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "sha256": "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+      "applies": "5종기록과 반려 QA-VIS-01 전후근거 보존, 승인범위내 필수수정으로 재질문없음"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "sha256": "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+      "applies": "main01 소유 Task/Dispatch 회신, 기존미커밋·UI원본 보존"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "sha256": "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+      "applies": "제작/독립검수/미적합격 구분, 하위담당없이 직접수정"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "sha256": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+      "applies": "gameplay의 spacing/model/art등록 최소파일만 변경, UI공통규정/타팀파일 제외"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\gameplay\\규정.md",
+      "sha256": "9d59ee6b893155fcc8bf04a6ff335609fd25ae2490bc0123911a672e100da9cc",
+      "applies": "사용자 속도·기존 완성시트/전투수치 보존, 승인된 실게임 보정만"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "sha256": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+      "applies": "read-pack21본문과 liveContext확인, 현재SHA적용ACK→start, 반환공식영수증"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "sha256": "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+      "applies": "gameplay→main01이며 qa는독립검수자, 새부서/하위생성0"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "sha256": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+      "applies": "도메인분류와 실행조직구분, 원본몬스터/캐릭터 소스 이동0"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "sha256": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+      "applies": "몬스터와캐릭터제작기준혼합0, 이번공통실행 gameplay 소유"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+      "sha256": "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+      "applies": "활성main01 한곳, 과거Dispatch아닌이번새Task로회신"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\사용자승인.md",
+      "sha256": "8ae46ded5b595e3cfc67c7a0dfa67e455f43ebb393bbe1df9b19b03a1260aab2",
+      "applies": "사거리100/무스킬/03→04→05첫7→새06/160ms1.5배/3초/3색/각유닛비겹침/hero상단보존"
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\blond-turtle-root-qa_main01-20261111-d8c7563c\\report.md",
+      "sha256": "eddee0d235b35e5d04e98f621f6cd31e6e4391c47d89aa1d7bec31f6fc52c473",
+      "applies": "QA동일roster·seed1·autoSkills=false,9.5/16.5초와 전체arena명암을 전후비교; 발원형PASS만으로 시각합격금지"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\visual-spacing-v002\\입력버전.json",
+      "sha256": "3a805e975a84b9887dcc50fd3f4e0067b9dd47f9204fbff7f10a68820797ae42",
+      "applies": "현재root71경로SHA를 직접대조하고 그현재본만 새격리game으로 복사"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\반영검증.md",
+      "sha256": "98be64b60cfd90691157a2e4b80f6d565fef055b5eb344eab5586e6daedd7ceb",
+      "applies": "v001실반영과 사용자플레이보존을 인정, root/UI/5173조작0"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\blond-motion-apply\\integration\\현재반영해시.json",
+      "sha256": "9fb37c56e6cf0654ddff797821ddb1352f418d06509dbe2ce53e9af395d903ec",
+      "applies": "현재반영71경로와 입력71목록 본문동일확인, 통합후기준을 되돌리지않음"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+      "sha256": "1ef4d854ad8d3250a57f8ece69605b07c4244eaa2c7599da235c8fbb2be1fb8f",
+      "applies": "금발72CSS/표시3 유지하고터틀예외180CSS 보존, 원본PNG불변"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+      "sha256": "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+      "applies": "시각몸통/접촉/피해판정/투명여백 분리, 고정등록·등비·명암·전장·레이어·저장시간 검증"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+      "sha256": "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+      "applies": "이미지2.6및기타API/새그림호출0,원본만사용"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+      "sha256": "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be",
+      "applies": "원작업5종기록과검수산출물만작성, Git/예약저장/업로드0"
+    }
+  ]
+}

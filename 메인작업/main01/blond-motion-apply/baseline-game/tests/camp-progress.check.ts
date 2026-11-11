@@ -1,0 +1,31 @@
+import {CampProgressStore,CAMP_PROGRESS_KEY,FORMATION_KEY,loadFormation,saveFormation,battlePageUrl,campPageUrl,launchMode,type BattleRecord} from '../src/campProgress';
+export function checkCampProgress(){
+ const passed:string[]=[],check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};
+ const data=new Map<string,string>(),storage={getItem:(k:string)=>data.get(k)??null,setItem:(k:string,v:string)=>{data.set(k,v);}};
+ const progress=new CampProgressStore(storage),record:BattleRecord={id:'run-1',reason:'monster-limit',wave:2,kills:3,seconds:61.5,empireGold:55,finishedAt:100};
+ check(progress.snapshot().records.length===0&&progress.snapshot().bestWave===0,'empty profile has no invented battle record');
+ check(progress.record(record),'valid completed run is saved');
+ check(!progress.record(record)&&progress.snapshot().records.length===1,'repeated completion cannot duplicate history');
+ check(new CampProgressStore(storage).snapshot().records[0].empireGold===55,'battle reward summary survives page reload');
+ check(!progress.record({...record,id:'bad',empireGold:-1}),'negative rewards are rejected');
+ check(!progress.record({...record,id:'bad',seconds:Infinity}),'invalid battle duration is rejected');
+ check(!progress.record({...record,id:'bad',reason:'unexpected' as BattleRecord['reason']}),'unknown failure reason is rejected');
+ for(let i=2;i<=25;i++)progress.record({...record,id:`run-${i}`,wave:i});
+ check(progress.snapshot().records.length===20&&progress.snapshot().records[0].id==='run-25','history keeps latest twenty results');
+ check(progress.snapshot().bestWave===25,'best wave reflects completed battles');
+ check(!data.has('grid-defenders.training.v1'),'history never grants or overwrites training currency');
+ data.set(CAMP_PROGRESS_KEY,JSON.stringify({bestWave:-1,records:[{...record,id:'invalid',kills:-2},record,record]}));
+ check(progress.snapshot().records.length===1&&progress.snapshot().bestWave===2,'malformed and duplicate saved records are sanitized');
+ data.set(CAMP_PROGRESS_KEY,'broken');check(progress.snapshot().records.length===0,'corrupt progress does not block lobby');
+ const owned=['bran','aria','selin'];
+ check(loadFormation(owned,storage).slice(0,3).join()===owned.join(),'new profile preserves existing initial formation');
+ saveFormation(['bran','bran','unknown','aria'],owned,storage);const formation=loadFormation(owned,storage);
+ check(formation.length===8&&formation[0]==='bran'&&formation[1]===null&&formation[2]===null&&formation[3]==='aria','formation rejects duplicates and unknown heroes');
+ saveFormation(Array(8).fill(null),owned,storage);check(loadFormation(owned,storage).every(v=>v===null),'empty formation stays empty after navigation');
+ data.set(FORMATION_KEY,'broken');check(loadFormation(owned,storage)[0]==='bran','corrupt formation falls back safely');
+ check(battlePageUrl('https://example.test/game/lobby-preview.html#heroes')==='https://example.test/game/battle-landscape.html?battle=normal&from=camp','battle entry stays inside deployed game directory');
+ check(campPageUrl('https://example.test/game/index.html?battle=normal','run-1')==='https://example.test/game/lobby-preview.html?result=run-1','battle result returns to the same camp origin');
+ check(launchMode('?battle=normal')==='normal'&&launchMode('?battle=infinite-test')==='infinite-test','supported automatic launch modes are recognized');
+ check(launchMode('?battle=manual')===null&&launchMode('?battle=other')===null,'unknown modes never auto-start a run');
+ return passed;
+}

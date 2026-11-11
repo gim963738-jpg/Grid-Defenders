@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 3,
+  "id": "MAIN01-20261111-3A680E78",
+  "main": "main01",
+  "branch": "qa",
+  "title": "공방 v003 최종 독립 재검증 — 루프 주기·기존 결함 보존",
+  "iteration": 1,
+  "status": "returned",
+  "createdAt": "2026-11-11T19:40:18.793443+09:00",
+  "approval": null,
+  "history": [
+    {
+      "action": "sent",
+      "at": "2026-11-11T20:00:48.122021+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\qa-v003\\실제발송영수증.json",
+        "sha256": "7dde989673f0926c08e627a7cf5a1770a8a41a1ea3bfe5f4ae320d3966d9e485"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "start",
+      "at": "2026-11-11T20:01:55.273820+09:00",
+      "iteration": 1,
+      "role": "qa",
+      "evidence": {
+        "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-3A680E78\\읽기확인-v001-4d2b657f763e4f9ab204caf7fb487c95.json",
+        "sha256": "13169d33e526ff1492fb296cbc24395ebe304957a84fce25c075551dd9af6dc6"
+      }
+    },
+    {
+      "action": "returned",
+      "at": "2026-11-11T20:08:46.523647+09:00",
+      "iteration": 1,
+      "evidence": {
+        "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\character-effect-workshop_final_main01-20261111-3a680e78_v003\\report.md",
+        "sha256": "5c4188038b3012e395b023c113594231c3cf130cf2b6e6b802aefa4572b26fe0"
+      },
+      "userQuote": ""
+    },
+    {
+      "action": "OPS006_migration",
+      "at": "2026-11-11T23:20:45.738268+09:00",
+      "previousStatus": "awaiting_user",
+      "previousApproval": {
+        "userQuote": "진행",
+        "source": {
+          "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md",
+          "sha256": "95929cc6cb382d485d13223cefc732232a43bdf30163b41c49ed9b0af59b621c"
+        },
+        "recordedBy": "main01",
+        "recordedAt": "2026-11-11T19:40:18.834826+09:00",
+        "iteration": 1,
+        "hashes": {
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-3A680E78\\요청확인.md": "6b504574d5cadcf2e934dc9dd29b8099843a5a21a6cd0dacc80631eb3d9ebfbe",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-3A680E78\\전문프롬프트.md": "b3bb185fc15a3a60475b611a9fd77b0bc3ed74b1a61fe40ed9281fe3e16bdd4e",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-3A680E78\\2_사전확인.md": "c0ab9ab8ffbda81e55a32aed5fb3d79c457efb1ce50768704db60fdf3cb6cb36",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md": "9ec009ae255e40f54890b2de3ab326e5a65d4ecb30612e6794c68a4c449cc0c8",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\규정.md": "afeeb75712ebaf5123392ec531b991b51fb932f2499e61b7af7c89bf7bb38458",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\AGENTS.md": "1b9d9b063111fec739274fe7f6f1344b9e9b7d01bc6b561a59fe703cf7a4bbc6",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\qa\\작업진행방법.md": "7cca62cd4801a5fe43692cbbc943894ec2641bdca157cdc4d655495287dd1fa8",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md": "3af3831363c92cd377b9838e877914260c41dec1c3903ef00359d1e805551ad1",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md": "5ca23d099c9a700e368bc5f19f59789e5b85727990a27da214d4ec6b82d36efe",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md": "34dcedc602fe9a0614c53c103cb197e8869a091bca4ecc9315743be77dff1929",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md": "0f629fe9369f139a128e612f8a0bd4f25f6a08b7d34fa19f087420ece5c55dfc",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json": "e5c84138f9aaa878a9b49576333671abf163a69f18ba4f285279ff0f60b595af",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md": "75ad62e5a34e134592bed16f8bbc3bdef005782de8310f63ebd58bb68337fe9f",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json": "0ea96411f480a067f7f98ce8e91def7add7e0bf19abb20bea70af34e12328c15",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md": "9ece7deb4e0450d7763d3e60b761989fa91083680e8810052f394ff228f93e48",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md": "95929cc6cb382d485d13223cefc732232a43bdf30163b41c49ed9b0af59b621c",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\character-effect-workshop_retest_main01-20261111-e99ecda3_v002\\report.md": "ff5d2105f41a7260d4694dbb3aa62af636d8fe421ef79c05025ddd39a666b76b",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_loopfix_v003_main01-20261111-771c7ac2\\report.md": "c11e1595d59faa6e51c0d493868e35ac4237880bb9abe34d9db37878e7207f18",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_loopfix_v003_main01-20261111-771c7ac2\\changed-files.json": "87d50a216fbc23205f44b64181aeeab610014d33d9644700df4d927d3cc5e0f7",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\technical-fix-v003\\수신파일검증.json": "2a338adc9c4f9be44c78b55deb79bb07999a4bebad325ff24cd3bc488cb7f603",
+          "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\ACTOR-README.md": "405a9c8285ef85f940188f75c2b1cb371ba0dff7d933a2d3a89a104f3d7444ac",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md": "8ff38f34abd6c0608b13c9fc4c7f719c5071319b24bf9a4e902a6b45e33eeec3",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md": "e875d1780bc24ba5ea3a651c7fa42f7660f5c9a903715fc8136af18d8bb36386",
+          "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md": "a79bdebbe269f6edaf5a5f7c2af8c25de0fdc17102bdaa6c31fdef25ae2e06be"
+        }
+      },
+      "note": "原 지시/판정 보존; 새 발송은 버튼 승인 필요"
+    }
+  ],
+  "readingPolicyVersion": "OPS-006",
+  "additionalReadings": [
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\사용자확인.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\테스터\\output\\character-effect-workshop_retest_main01-20261111-e99ecda3_v002\\report.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_loopfix_v003_main01-20261111-771c7ac2\\report.md",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\output\\character-effect-workshop_loopfix_v003_main01-20261111-771c7ac2\\changed-files.json",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\character-effect-workshop\\technical-fix-v003\\수신파일검증.json",
+    "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스킬-이펙트\\게임\\src\\effect-workshop\\ACTOR-README.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\단일메인운영규정.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\문서\\00_개발규칙\\스킬구현규약.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+    "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md"
+  ],
+  "readingAcknowledgement": {
+    "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-3A680E78\\읽기확인-v001-4d2b657f763e4f9ab204caf7fb487c95.json",
+    "sha256": "13169d33e526ff1492fb296cbc24395ebe304957a84fce25c075551dd9af6dc6"
+  },
+  "updatedAt": "2026-11-11T23:20:45.738268+09:00",
+  "stages": {
+    "production": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "technical": {
+      "status": "unknown",
+      "evidence": null
+    },
+    "user": {
+      "status": "not_reviewed",
+      "evidence": null
+    },
+    "integration": {
+      "status": "unknown",
+      "evidence": null
+    }
+  },
+  "pendingChoice": null,
+  "spec": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\작업\\MAIN01-20261111-3A680E78\\통합작업명세.json"
+}

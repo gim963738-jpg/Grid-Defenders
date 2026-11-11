@@ -1,0 +1,173 @@
+{
+  "task": "MAIN01-20261111-1B358AA6",
+  "iteration": 1,
+  "outcome": "failed",
+  "reason": "Complete identical defensive pose across 0/35/90 not achieved: builtin90 correction straightened knees/narrowed feet/changed sword arm; API90 torso remains oblique",
+  "ackAllCurrent": true,
+  "ackDocuments": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\AGENTS.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\작업진행방법.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\규정A.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\메인운영규정.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\팀장운영규정.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\파일담당표.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\규정.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도구\\사용법.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\조직.json",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\README.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\도메인\\트리.json",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-sd-guard6\\사용자확인.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-sd-guard6\\사전확인.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\이미지2.6사용규칙.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\저장운영규정.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\진행승인규칙.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\작업관리\\기준\\characters\\SD_72CSSpx_표시기준.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-style1\\사용자확인.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\메인작업\\main01\\balor-v9-illustration-sides\\v003\\사용자불합격.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\문서\\02_세부기획\\02_영웅\\한손무기그립기준.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\tools\\image-studio\\README.md",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\dev-previews\\battle-sticker-quality-v001\\정의문서.md",
+      "matches": true
+    }
+  ],
+  "inputsPreserved": true,
+  "inputChecks": [
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\inputs\\front-v9.png",
+      "sourceUnchanged": true,
+      "copyMatches": true
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\image26\\right-035.png",
+      "sourceUnchanged": true,
+      "copyMatches": true
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\v9_illustration_sides4_main01-20261111-42d3d4bb_v001\\image26\\right-090.png",
+      "sourceUnchanged": true,
+      "copyMatches": true
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_longsword_dagger\\idle6_style1_style4_main01-20261109-e1fd458c_v003\\variant-1-front.png",
+      "sourceUnchanged": true,
+      "copyMatches": true
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\Grid Defenders\\게임\\public\\assets\\battlefields\\forest-clearing-v1.png",
+      "sourceUnchanged": true,
+      "copyMatches": true
+    }
+  ],
+  "nativeByteChecks": [
+    {
+      "file": "built-in/front-000.png",
+      "nativeBytesMatch": true
+    },
+    {
+      "file": "built-in/right-035.png",
+      "nativeBytesMatch": true
+    },
+    {
+      "file": "built-in/right-090.png",
+      "nativeBytesMatch": true
+    },
+    {
+      "file": "image26/front-000.png",
+      "nativeBytesMatch": true
+    },
+    {
+      "file": "image26/right-035.png",
+      "nativeBytesMatch": true
+    },
+    {
+      "file": "image26/right-090.png",
+      "nativeBytesMatch": true
+    }
+  ],
+  "allNativeByteMatch": true,
+  "builtinCalls": 4,
+  "apiPosts": 3,
+  "apiSuccessfulImages": 3,
+  "apiRequestIds": [
+    "req_a9e5ccc8be2a4e88b3ffbb3c7c7c6da1",
+    "req_3b24218177b546aa88211766fdd14a41",
+    "req_7b56d459e6f04a5fa50d5f19cc3f4d76"
+  ],
+  "usage": {
+    "input_tokens": 13887,
+    "output_tokens": 4116,
+    "total_tokens": 18003
+  },
+  "currencyCost": null,
+  "balance": null,
+  "retry": 0,
+  "browserErrors": [],
+  "canvasDisplayTests": "evidence/display-72.json; six combinations light/dark/field at DPR1/2",
+  "userWindowTouched": false,
+  "gameIntegrated": false,
+  "userAestheticAccepted": false
+}

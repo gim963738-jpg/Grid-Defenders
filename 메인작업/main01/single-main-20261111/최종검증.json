@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "activeMainIds": [
+    "main01"
+  ],
+  "retiredWorkspaceRemovalConfirmed": true,
+  "remainingWorkspaces": 15,
+  "teamAndSpecialistWorkspacesPreserved": 14,
+  "transferredTasks": 15,
+  "taskStatusApprovalAndIterationPreserved": true,
+  "activeReadingLinksValid": true,
+  "retiredMainRegistrationBlocked": true,
+  "organizationNodes": 15,
+  "domain": {
+    "nodes": 10,
+    "requiredNodes": 8,
+    "noCycles": true,
+    "uniqueOwners": true
+  },
+  "archives": [
+    {
+      "role": "main02",
+      "files": 1314,
+      "bytes": 383252062,
+      "archiveVerified": true,
+      "legacyPathsResolve": true
+    },
+    {
+      "role": "main03",
+      "files": 1520,
+      "bytes": 469332666,
+      "archiveVerified": true,
+      "legacyPathsResolve": true
+    }
+  ],
+  "totalPreservedFiles": 2834,
+  "totalPreservedBytes": 852584728,
+  "gitCommitPushPerformed": false
+}

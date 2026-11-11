@@ -3,7 +3,8 @@ import {skillFramePlacement} from './skillVisual';
 import {heroFrame,assassinArt} from './heroArt';
 import {soldierFrame,positionSoldier} from './soldierArt';
 import {slimeFrame} from './slimeArt';
-import {blondFrame,blondPlacement,BLOND_WAVE_BODY_HEIGHT} from './blondArt';
+import {runtimeFrame} from './combatMotionArt';
+import {blondFrame,blondPlacement} from './blondArt';
 import {rangedPlacement} from './rangedArt';
 import {ASSASSIN,assassinFrame,assassinBasicTrail} from './assassinCombat';
 import type {UnitKind} from './defenseConfig';
@@ -52,16 +53,18 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
     sprite.anchor.set(.5,1);sprite.eventMode='none';sprite.height=57;sprite.scale.x=sprite.scale.y;sprite.visible=false;actorLayer.addChild(sprite);
   }
   const soldierSprites=new Map<number,Sprite>();
+  const blondSprites=new Map<number,Sprite>();
   const iceEffects=new Graphics();iceEffects.eventMode='none';root.addChild(iceEffects);
   // Unclipped effect layer above actors, below labels; its bounds never use a placement slot.
   const assassinLayer=new Container();assassinLayer.eventMode='none';root.addChild(assassinLayer);
   const assassinSprites:Sprite[]=[];
+  const labelLayer=new Container();labelLayer.label='actor-hud-layer';labelLayer.eventMode='none';
   const unitViews=SLOTS.map((p,index)=>{
     const group=new Container();group.label=`unit-slot-${index}`;group.eventMode='none';group.zIndex=p.y+12;actorLayer.addChild(group);
     const body=new Graphics(),bars=new Graphics();body.eventMode=bars.eventMode='none';
     const badge=new Text({text:'',style:{fontFamily:'system-ui',fontSize:10,fontWeight:'bold',fill:0xf5f4e7}});badge.anchor.set(.5);badge.position.set(p.x,p.y+15);badge.eventMode='none';
     const skillLabel=new Text({text:'',style:{fontFamily:'system-ui',fontSize:7,fill:0xeafaff,stroke:{color:0x10282f,width:1}}});skillLabel.anchor.set(.5);skillLabel.position.set(p.x,p.y+28);skillLabel.eventMode='none';skillLabel.visible=false;
-    group.addChild(body,badge,bars,skillLabel);return {root:group,body,badge,bars,skillLabel};
+    group.addChild(body);labelLayer.addChild(badge,bars,skillLabel);return {root:group,body,badge,bars,skillLabel};
   });
   const fireLayer=new Container();fireLayer.eventMode='none';root.addChild(fireLayer);
   const fireFilter=new ColorMatrixFilter();fireFilter.matrix=FIRE_ALPHA_MATRIX;fireLayer.filters=[fireFilter];
@@ -72,14 +75,16 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
   const bladeLayer=new Container();bladeLayer.eventMode='none';root.addChild(bladeLayer);
   const bladeFilter=new ColorMatrixFilter();bladeFilter.matrix=BLADE_ALPHA_MATRIX;bladeLayer.filters=[bladeFilter];
   const bladeSprites:Sprite[]=[],bladeTextures=new Map<string,Texture>();
+  root.addChild(labelLayer);
   const numberPool:Text[]=[];
   const enemyViews=new Map<number,{root:Container;body:Graphics;health:Graphics;label:Text}>();
   return {
     draw(selectedId:number|null,pending:boolean,movement?:{id:number;slot:number}) {
       actors.clear();selected.clear();effects.clear();assassinTrails.clear();
       actorShadows.clear();
-      for(const [id,visual] of enemyViews)if(!game.enemies.some(enemy=>enemy.id===id)){visual.root.destroy({children:true});enemyViews.delete(id);slimeSprites.delete(id);}
+      for(const [id,visual] of enemyViews)if(!game.enemies.some(enemy=>enemy.id===id)){visual.root.destroy({children:true});visual.health.destroy();visual.label.destroy();enemyViews.delete(id);slimeSprites.delete(id);}
       for(const [id,sprite] of slimeSprites)if(!game.enemies.some(enemy=>enemy.id===id&&!enemy.named&&!enemy.bounty)){sprite.destroy();slimeSprites.delete(id);}
+      for(const [id,sprite] of blondSprites){sprite.visible=false;if(!game.units.some(u=>u.id===id)){sprite.destroy();blondSprites.delete(id);}}
       Object.values(heroSprites).forEach(sprite=>sprite.visible=false);iceEffects.clear();
       movementPreview.clear();
       soldierPreview.visible=false;
@@ -99,7 +104,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
       }
       for(let i=0;i<SLOTS.length;i++) {
         const u=game.units.find(u=>u.slot===i),p=SLOTS[i],visual=unitViews[i];
-        visual.root.visible=!!u;visual.body.clear();visual.bars.clear();visual.skillLabel.visible=false;
+        visual.root.visible=!!u;visual.badge.visible=!!u;visual.bars.visible=!!u;visual.body.clear();visual.bars.clear();visual.skillLabel.visible=false;
         const available=pending&&!u;
         slotGraphics[i].children[0].visible=available;
         slotGraphics[i].children[1].visible=available;
@@ -118,6 +123,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
             .stroke({width:2,color:UNITS[u.kind].color,alpha:UNITS[u.kind].hero?0.65:0.4});
           selected.ellipse(p.x,p.y+8,23,10).fill({color:0xf2d88a,alpha:.12}).stroke({width:2,color:0xffdc90,alpha:.9});
         }
+        visual.root.zIndex=(UNITS[u.kind].hero?100000:0)+p.y+12;
         const color=UNITS[u.kind].color;
         actorShadows.ellipse(p.x,p.y+7,15,5).fill({color:0x0a1713,alpha:0.5});
         const soldier=soldierFrame(u.kind);
@@ -129,11 +135,11 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
           continue;
         }
         if(heroSprites[u.kind]){
-          const sprite=heroSprites[u.kind]!;sprite.visible=true;sprite.position.set(p.x,p.y+12);
+          let sprite=heroSprites[u.kind]!;if(u.kind==='blond'){let own=blondSprites.get(u.id);if(!own){own=new Sprite(sprite.texture);own.eventMode='none';blondSprites.set(u.id,own);}sprite=own;}sprite.visible=true;sprite.position.set(p.x,p.y+12);
           if(sprite.parent!==visual.root)visual.root.addChildAt(sprite,1);
           if(u.kind==='blond'){
-            const art=blondFrame(u.facing??0);
-            if(art){const v=blondPlacement(art,p.x,p.y+12,BLOND_WAVE_BODY_HEIGHT);sprite.texture=art.texture;sprite.anchor.set(v.anchorX,v.anchorY);sprite.width=v.width;sprite.height=v.height;}
+            const art=runtimeFrame(u.motion)??blondFrame(u.facing??0);
+            if(art){const v=blondPlacement(art,p.x,p.y+12,72);sprite.texture=art.texture;sprite.anchor.set(v.anchorX,v.anchorY);sprite.width=v.width;sprite.height=v.height;}
             continue;
           }
           if(u.kind==='ranged'){
@@ -172,7 +178,7 @@ export function createDefenseView(app:Application,game:Defense,onSlot:(slot:numb
           const group=new Container();group.label=`enemy-${e.id}`;group.eventMode='none';actorLayer.addChild(group);
           const body=new Graphics(),health=new Graphics();body.eventMode=health.eventMode='none';
           const label=new Text({style:{fontFamily:'system-ui',fontSize:8,fill:0xf3e5c2,stroke:{color:0x14201d,width:2}}});label.anchor.set(.5);label.eventMode='none';
-          group.addChild(body,health,label);visual={root:group,body,health,label};enemyViews.set(e.id,visual);
+          group.addChild(body);labelLayer.addChild(health,label);visual={root:group,body,health,label};enemyViews.set(e.id,visual);
         }
         visual.body.clear();visual.health.clear();
         actorShadows.ellipse(e.x,e.y+8,11,4).fill({color:0x142419,alpha:0.22});

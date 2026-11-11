@@ -1,0 +1,482 @@
+[
+  {
+    "id": "MAIN01-20261109-1DA15A51",
+    "main": "main01",
+    "branch": "qa",
+    "title": "이미지 대조 실제 게임 통합 독립 검증",
+    "status": "awaiting_user",
+    "iteration": 2,
+    "createdAt": "2026-11-09T18:17:52.172802+09:00",
+    "updatedAt": "2026-11-09T19:57:02.814444+09:00"
+  },
+  {
+    "id": "MAIN01-20261109-44DC56DB",
+    "main": "main01",
+    "branch": "characters",
+    "title": "신규2안 채택에 따른 SD 공통 제작기준 갱신",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-09T20:43:02.241445+09:00",
+    "updatedAt": "2026-11-09T20:53:06.043000+09:00"
+  },
+  {
+    "id": "MAIN01-20261109-7AE73F23",
+    "main": "main01",
+    "branch": "monsters",
+    "title": "몬스터3종 SD 정면·좌측면·우측면9장",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-09T18:00:28.593489+09:00",
+    "updatedAt": "2026-11-09T18:16:45.711646+09:00"
+  },
+  {
+    "id": "MAIN01-20261109-DBF50341",
+    "main": "main01",
+    "branch": "characters",
+    "title": "금발 전사 SD 비율·개성 리모델링 4안",
+    "status": "accepted",
+    "iteration": 4,
+    "createdAt": "2026-11-09T17:23:35.185475+09:00",
+    "updatedAt": "2026-11-09T20:43:02.233443+09:00"
+  },
+  {
+    "id": "MAIN01-20261109-E1FD458C",
+    "main": "main01",
+    "branch": "characters",
+    "title": "실제 서브컬처게임 인게임2D 참고·동일 전투태세10안",
+    "status": "awaiting_user",
+    "iteration": 3,
+    "createdAt": "2026-11-09T21:42:11.326883+09:00",
+    "updatedAt": "2026-11-09T23:56:25.008392+09:00"
+  },
+  {
+    "id": "MAIN01-20261109-F89105C9",
+    "main": "main01",
+    "branch": "gameplay",
+    "title": "개발자 이미지 대조·전장 배치·개별 크기 조절",
+    "status": "awaiting_user",
+    "iteration": 3,
+    "createdAt": "2026-11-09T17:52:44.707594+09:00",
+    "updatedAt": "2026-11-09T20:19:47.105494+09:00"
+  },
+  {
+    "id": "MAIN01-20261110-0169434D",
+    "main": "main01",
+    "branch": "characters",
+    "title": "잠정 일러스트 기반 발로르 SD0/35/90 신속제작",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-10T17:30:38.751513+09:00",
+    "updatedAt": "2026-11-10T17:47:40.330708+09:00"
+  },
+  {
+    "id": "MAIN01-20261110-0FE35B71",
+    "main": "main01",
+    "branch": "characters",
+    "title": "금발35도 오른팔·손·장검 컷아웃 리깅 시험3안",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-10T20:44:44.732444+09:00",
+    "updatedAt": "2026-11-10T21:23:12.872132+09:00"
+  },
+  {
+    "id": "MAIN01-20261110-B87520F7",
+    "main": "main01",
+    "branch": "characters",
+    "title": "공통 마네킹 전신 이동3안 — Idle/Start/Walk/Run/Stop (코드 전용)",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-10T22:25:33.360809+09:00",
+    "updatedAt": "2026-11-10T22:44:37.916858+09:00"
+  },
+  {
+    "id": "MAIN01-20261110-C5138514",
+    "main": "main01",
+    "branch": "characters",
+    "title": "SD 민머리 남녀 서있는 기준 이미지4장 — 내장2+GPT2.6 API2",
+    "status": "accepted",
+    "iteration": 1,
+    "createdAt": "2026-11-10T22:58:50.988822+09:00",
+    "updatedAt": "2026-11-10T23:27:09.284894+09:00"
+  },
+  {
+    "id": "MAIN01-20261110-D11FE5E5",
+    "main": "main01",
+    "branch": "characters",
+    "title": "남녀3/4·90도 전신/가림복원 파츠판8장 — GPT Image2.6",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-10T23:27:09.292896+09:00",
+    "updatedAt": "2026-11-11T00:10:41.749271+09:00"
+  },
+  {
+    "id": "MAIN01-20261110-D820F076",
+    "main": "main01",
+    "branch": "characters",
+    "title": "1번·발로르 각0/35/90 총6장·발로르 좌우두께 수정",
+    "status": "draft",
+    "iteration": 4,
+    "createdAt": "2026-11-10T00:08:16.510382+09:00",
+    "updatedAt": "2026-11-10T07:40:52.280534+09:00"
+  },
+  {
+    "id": "MAIN01-20261110-DE754BC7",
+    "main": "main01",
+    "branch": "characters",
+    "title": "B안 GPT Image2.6 파츠·동일오른팔리깅3안 비교",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-10T21:01:32.979753+09:00",
+    "updatedAt": "2026-11-10T21:43:39.134030+09:00"
+  },
+  {
+    "id": "MAIN01-20261110-F6A9F332",
+    "main": "main01",
+    "branch": "splash",
+    "title": "발로르 원본 일러스트0/35/90 우선제작·SD 선행자료",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-10T07:56:54.969848+09:00",
+    "updatedAt": "2026-11-10T08:20:03.755416+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-1B358AA6",
+    "main": "main01",
+    "branch": "characters",
+    "title": "발로르 SD 방패 전투태세0/35/90 내장3·2.6 3 총6장",
+    "status": "accepted",
+    "iteration": 3,
+    "createdAt": "2026-11-11T15:04:03.293523+09:00",
+    "updatedAt": "2026-11-11T17:29:55.068154+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-1EB56391",
+    "main": "main01",
+    "branch": "gameplay",
+    "title": "금발 전사 평타·사거리100 / 터틀드래곤·3색 친위대·겹침 방지 실게임 적용",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T18:40:27.641272+09:00",
+    "updatedAt": "2026-11-11T19:27:34.793891+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-3A680E78",
+    "main": "main01",
+    "branch": "qa",
+    "title": "공방 v003 최종 독립 재검증 — 루프 주기·기존 결함 보존",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T19:40:18.793443+09:00",
+    "updatedAt": "2026-11-11T20:08:46.531648+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-42D3D4BB",
+    "main": "main01",
+    "branch": "characters",
+    "title": "발로르 승인v9 일러스트 오른쪽35/90 내장·2.6 총4장",
+    "status": "draft",
+    "iteration": 4,
+    "createdAt": "2026-11-11T13:24:17.210529+09:00",
+    "updatedAt": "2026-11-11T14:56:37.475020+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-47B7186F",
+    "main": "main01",
+    "branch": "effects",
+    "title": "캐릭터 프레임 위치·크기 보정 및 이펙트 동기 편집 공방",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T18:16:38.399134+09:00",
+    "updatedAt": "2026-11-11T18:48:08.462019+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-5C7D9D98",
+    "main": "main01",
+    "branch": "gameplay",
+    "title": "QA-VIS-01 터틀 몸통·다유닛 화면 간격 수정",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T19:56:17.346949+09:00",
+    "updatedAt": "2026-11-11T21:27:37.804181+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-5FC52518",
+    "main": "main01",
+    "branch": "qa",
+    "title": "캐릭터 프레임 보정·이펙트 공방 독립 기술 검증",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T18:50:54.379813+09:00",
+    "updatedAt": "2026-11-11T19:08:25.272808+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-74BA96AC",
+    "main": "main01",
+    "branch": "characters",
+    "title": "레나 2.6 일반 일러스트 시안1장·자세/그림체 검수 후 즉시제출",
+    "status": "accepted",
+    "iteration": 1,
+    "createdAt": "2026-11-11T16:54:27.341442+09:00",
+    "updatedAt": "2026-11-11T17:25:27.527843+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-771C7AC2",
+    "main": "main01",
+    "branch": "effects",
+    "title": "공방 루프 주기 끝 부동소수 경계 수정",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T19:34:10.970750+09:00",
+    "updatedAt": "2026-11-11T19:40:18.777438+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-7988D454",
+    "main": "main01",
+    "branch": "qa",
+    "title": "금발·터틀 v003 실제 반영본 시각간격·후기경계 독립 재검증",
+    "status": "in_progress",
+    "iteration": 1,
+    "createdAt": "2026-11-11T22:05:39.413672+09:00",
+    "updatedAt": "2026-11-11T22:07:39.793040+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-961C8C00",
+    "main": "main01",
+    "branch": "ui",
+    "title": "72CSSpx 교전 비교도구 — 복수 스티커·본체크기·3표시모드",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T02:53:55.772805+09:00",
+    "updatedAt": "2026-11-11T03:10:59.539859+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-9B2C9CFE",
+    "main": "main01",
+    "branch": "characters",
+    "title": "발로르9종 모션·백색기사 거인 궁극기 / 내장·2.6 비교",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T18:09:57.938014+09:00",
+    "updatedAt": "2026-11-11T18:48:08.512030+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-9D8AB4E0",
+    "main": "main01",
+    "branch": "effects",
+    "title": "발로르 3동작 공방 보정 초안·원본 비교·검끝 궤적",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T20:54:45.771582+09:00",
+    "updatedAt": "2026-11-11T21:19:44.956228+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-A2FBD5F6",
+    "main": "main01",
+    "branch": "effects",
+    "title": "공방 독립QA 결함 수정 — 효과 시간 경계·부착점/효과키 객체 검증",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T19:08:25.285811+09:00",
+    "updatedAt": "2026-11-11T19:17:37.796631+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-B11472D8",
+    "main": "main01",
+    "branch": "qa",
+    "title": "발로르 공방 보정·원본 비교·검끝 궤적 독립 기술 검증",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T21:19:44.965514+09:00",
+    "updatedAt": "2026-11-11T22:02:07.846122+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-D8C7563C",
+    "main": "main01",
+    "branch": "qa",
+    "title": "금발 전사·터틀드래곤 실게임 반영본 독립 검증",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T19:34:10.806713+09:00",
+    "updatedAt": "2026-11-11T19:56:17.033879+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-DCD6B21B",
+    "main": "main01",
+    "branch": "gameplay",
+    "title": "전장 v002 보스 교전 후반 상단 잘림 보완 — 원본 크기 유지",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T21:27:37.813182+09:00",
+    "updatedAt": "2026-11-11T22:02:07.983983+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-E99ECDA3",
+    "main": "main01",
+    "branch": "qa",
+    "title": "공방 기술수정 v002 독립 재검증 — 시간 경계·데이터 거부/이력 보존",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T19:17:45.671736+09:00",
+    "updatedAt": "2026-11-11T19:34:10.746700+09:00"
+  },
+  {
+    "id": "MAIN01-20261111-EC9D0056",
+    "main": "main01",
+    "branch": "characters",
+    "title": "레나 일러스트3방향·SD3방향 병행 / 2.6 신규5장",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-11T17:25:27.547847+09:00",
+    "updatedAt": "2026-11-11T17:37:47.533884+09:00"
+  },
+  {
+    "id": "MAIN02-20261109-063FC22B",
+    "main": "main01",
+    "branch": "ui",
+    "title": "웨이브·보스전 UI 비교 시안 이미지16장",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-09T17:32:10.544510+09:00",
+    "updatedAt": "2026-11-11T17:12:28.354791+09:00"
+  },
+  {
+    "id": "MAIN02-20261109-78E189DC",
+    "main": "main01",
+    "branch": "effects",
+    "title": "오른쪽향 2D캐릭터·두꺼운 흰색검격 3연격",
+    "status": "awaiting_user",
+    "iteration": 3,
+    "createdAt": "2026-11-09T18:29:36.437953+09:00",
+    "updatedAt": "2026-11-11T17:12:28.359792+09:00"
+  },
+  {
+    "id": "MAIN02-20261109-9009B97A",
+    "main": "main01",
+    "branch": "ui",
+    "title": "전쟁터·햇빛숲·마계 전투UI 9장 비교 시안",
+    "status": "awaiting_user",
+    "iteration": 11,
+    "createdAt": "2026-11-09T18:23:12.792211+09:00",
+    "updatedAt": "2026-11-11T17:12:28.363793+09:00"
+  },
+  {
+    "id": "MAIN02-20261109-C970BE7A",
+    "main": "main01",
+    "branch": "effects",
+    "title": "참조 청백색 사선 검격 6연격 연출·재생 미리보기",
+    "status": "awaiting_user",
+    "iteration": 2,
+    "createdAt": "2026-11-09T17:45:58.125086+09:00",
+    "updatedAt": "2026-11-11T17:12:28.367794+09:00"
+  },
+  {
+    "id": "MAIN02-20261109-C9B9E219",
+    "main": "main01",
+    "branch": "effects",
+    "title": "두꺼운 흰색 내려베기·지면파괴 1타 이펙트",
+    "status": "awaiting_user",
+    "iteration": 3,
+    "createdAt": "2026-11-09T20:18:03.730432+09:00",
+    "updatedAt": "2026-11-11T17:12:28.371795+09:00"
+  },
+  {
+    "id": "MAIN02-20261111-8D69415B",
+    "main": "main01",
+    "branch": "sprites",
+    "title": "금발 전사 90도·3/4측면 8종 모션 스프라이트 — 2.6 이미지 금지",
+    "status": "awaiting_user",
+    "iteration": 2,
+    "createdAt": "2026-11-11T00:54:36.884106+09:00",
+    "updatedAt": "2026-11-11T17:12:28.375796+09:00"
+  },
+  {
+    "id": "MAIN03-20261109-21F94B82",
+    "main": "main01",
+    "branch": "splash",
+    "title": "발로르 GC9 정면 일러스트 재제작1장",
+    "status": "accepted",
+    "iteration": 2,
+    "createdAt": "2026-11-09T18:44:14.730588+09:00",
+    "updatedAt": "2026-11-11T17:12:28.379796+09:00"
+  },
+  {
+    "id": "MAIN03-20261109-5133411E",
+    "main": "main01",
+    "branch": "sprites",
+    "title": "발로르 SD 정면·대기사선·오른쪽3종",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-09T20:44:20.636040+09:00",
+    "updatedAt": "2026-11-11T17:12:28.383798+09:00"
+  },
+  {
+    "id": "MAIN03-20261109-5F7D5052",
+    "main": "main01",
+    "branch": "splash",
+    "title": "GC9 신규 남녀2명 중립기립3방향6장",
+    "status": "accepted",
+    "iteration": 1,
+    "createdAt": "2026-11-09T18:15:18.919787+09:00",
+    "updatedAt": "2026-11-11T17:12:28.387798+09:00"
+  },
+  {
+    "id": "MAIN03-20261109-7290915B",
+    "main": "main01",
+    "branch": "characters",
+    "title": "GC9 참조4캐릭터 세방향 일러스트12장",
+    "status": "confirmed",
+    "iteration": 1,
+    "createdAt": "2026-11-09T17:23:12.196975+09:00",
+    "updatedAt": "2026-11-11T17:12:28.391801+09:00"
+  },
+  {
+    "id": "MAIN03-20261109-9D2018F2",
+    "main": "main01",
+    "branch": "splash",
+    "title": "GC9 참조4캐릭터 세방향 일러스트12장 독립제작",
+    "status": "cancelled",
+    "iteration": 2,
+    "createdAt": "2026-11-09T17:24:50.855447+09:00",
+    "updatedAt": "2026-11-11T17:12:28.395800+09:00"
+  },
+  {
+    "id": "MAIN03-20261110-05DF6177",
+    "main": "main01",
+    "branch": "monsters",
+    "title": "블랙그린 터틀드래곤 왼쪽앞사선1장",
+    "status": "accepted",
+    "iteration": 2,
+    "createdAt": "2026-11-10T22:39:52.252850+09:00",
+    "updatedAt": "2026-11-11T17:12:28.398801+09:00"
+  },
+  {
+    "id": "MAIN03-20261110-20B313E5",
+    "main": "main01",
+    "branch": "splash",
+    "title": "캐릭터모음 최신합격7장 연결·분류",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-10T00:28:41.652153+09:00",
+    "updatedAt": "2026-11-11T17:12:28.402802+09:00"
+  },
+  {
+    "id": "MAIN03-20261110-99B23D0C",
+    "main": "main01",
+    "branch": "monsters",
+    "title": "터틀드래곤 v02 자연스러운왼쪽걷기·오른앞발내려찍기2동작",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-10T23:23:46.279289+09:00",
+    "updatedAt": "2026-11-11T17:12:28.406205+09:00"
+  },
+  {
+    "id": "MAIN03-20261110-A1258C03",
+    "main": "main01",
+    "branch": "monsters",
+    "title": "터틀드래곤 v02 이미지직생성 2경로 4장비교",
+    "status": "awaiting_user",
+    "iteration": 1,
+    "createdAt": "2026-11-10T23:47:36.076412+09:00",
+    "updatedAt": "2026-11-11T17:12:28.410208+09:00"
+  }
+]

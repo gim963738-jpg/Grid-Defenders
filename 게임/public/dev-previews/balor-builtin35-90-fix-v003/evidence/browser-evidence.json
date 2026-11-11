@@ -1,0 +1,164 @@
+{
+  "beforeIds": [
+    "front",
+    "builtin35",
+    "builtin90",
+    "front",
+    "image2635",
+    "image2690"
+  ],
+  "headless": true,
+  "transport": "CDP anonymous pipes; no listening TCP/HTTP server",
+  "userUiTouched": false,
+  "fileProtocol": true,
+  "errors": [],
+  "measurements": {
+    "cards": 10,
+    "images": [
+      {
+        "src": "references/front-v9.png",
+        "loaded": true
+      },
+      {
+        "src": "final/builtin-right-035.png",
+        "loaded": true
+      },
+      {
+        "src": "final/builtin-right-090.png",
+        "loaded": true
+      },
+      {
+        "src": "references/front-v9.png",
+        "loaded": true
+      },
+      {
+        "src": "references/image26-035.png",
+        "loaded": true
+      },
+      {
+        "src": "references/image26-090.png",
+        "loaded": true
+      },
+      {
+        "src": "final/builtin-right-035.png",
+        "loaded": true
+      },
+      {
+        "src": "final/builtin-right-090.png",
+        "loaded": true
+      },
+      {
+        "src": "final/builtin-right-035.png",
+        "loaded": true
+      },
+      {
+        "src": "final/builtin-right-090.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/035-face-hair-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/035-torso-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/035-pauldron-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/035-shield-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/035-grip-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/035-whole-sword-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/090-face-hair-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/090-torso-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/090-pauldron-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/090-shield-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/090-grip-light.png",
+        "loaded": true
+      },
+      {
+        "src": "evidence/090-whole-sword-light.png",
+        "loaded": true
+      }
+    ],
+    "registration": [
+      {
+        "id": "front",
+        "displayBodyHeight": 460.0001197916667,
+        "displayFootY": 510.00016406250006
+      },
+      {
+        "id": "after35",
+        "displayBodyHeight": 460.00044921875,
+        "displayFootY": 510.000440625
+      },
+      {
+        "id": "after90",
+        "displayBodyHeight": 460.0001953125,
+        "displayFootY": 510.00024739583336
+      },
+      {
+        "id": "front",
+        "displayBodyHeight": 460.0001197916667,
+        "displayFootY": 510.00016406250006
+      },
+      {
+        "id": "image2635",
+        "displayBodyHeight": 460.00027734375,
+        "displayFootY": 510.00028671875
+      },
+      {
+        "id": "image2690",
+        "displayBodyHeight": 460.0001197916667,
+        "displayFootY": 510.0001557291667
+      },
+      {
+        "id": "after35",
+        "displayBodyHeight": 56.999964713541665,
+        "displayFootY": 84.99998489583334
+      },
+      {
+        "id": "after90",
+        "displayBodyHeight": 56.999970703125,
+        "displayFootY": 84.99997955729167
+      },
+      {
+        "id": "after35",
+        "displayBodyHeight": 71.99997936197917,
+        "displayFootY": 84.99997817708334
+      },
+      {
+        "id": "after90",
+        "displayBodyHeight": 72,
+        "displayFootY": 84.99999666666666
+      }
+    ]
+  },
+  "nativeToggle": true,
+  "zoomOpens": true,
+  "zoomCloses": true,
+  "lightDarkCaptured": true
+}

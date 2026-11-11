@@ -1,0 +1,77 @@
+{
+  "task": "MAIN01-20261110-0FE35B71",
+  "iteration": 1,
+  "art_source": {
+    "visiblePixels": "existing fixed master; lossless polygon separation",
+    "hiddenRestoration": "host_image builtin image_gen",
+    "motion": "actual FK Canvas transforms only; no video2dsprite/frame generation"
+  },
+  "source": "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/arm_rig3_main01-20261110-0fe35b71_v001/source.png",
+  "sourceSha256": "366b8073d944fea1849dd1795c4e36cdd63c2653f04ea9262a20d457670ee285",
+  "calls": [
+    {
+      "id": 1,
+      "prompt": "Precise local removal/restoration for a 2D cutout rig. Use attached original character EXACTLY, same native square framing, same face/hair/torso/legs/opposite left arm with dagger and every stationary feature. Remove ONLY the near anatomical RIGHT arm on SCREEN LEFT, from under its crescent pauldron down through its gauntleted hand, AND remove the entire LONG SWORD (gold pommel, blue grip, silver wing/ring guard, silver blade with cyan diagonals). Leave the right crescent PAULDRON in place. Do NOT remove the far SCREEN RIGHT hand and SHORT DAGGER. Reconstruct ONLY the small previously occluded right side of chest/strap/waist/brown pants naturally behind the removed arm and sword. Match existing crisp contours/matte cell colors exactly. Where removed arm/sword was outside the body, make actual alpha transparency. This is a STATIC BODY PLATE for a cutout rig, NOT a new character or pose, no replacement arm or weapon. Do not change face/hair, proportions, opposite arm, legs, cloak length, palette, outlines or camera. Transparent background, no glow, ground, text or guides.",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/arm_rig3_main01-20261110-0fe35b71_v001/source.png"
+      ],
+      "raw": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-104c214b-3811-45f6-8ed6-0113e35dc323.png",
+      "saved": "restoration/body-restoration-raw.png",
+      "use": "only edit-region body replacement; outside copied unchanged",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "c9d9c7c7c96f07aa0dc1ffe4a72630511af909e4ca01f1b984e3b8ddb86c95e8",
+      "rawBytesIdentical": true
+    },
+    {
+      "id": 2,
+      "prompt": "Make a local cutout asset from attached original. Keep ONLY the anatomical RIGHT arm on SCREEN LEFT (the near arm): dark clothed upper arm, silver forearm gauntlet, wrist and gloved hand naturally gripping an invisible handle. Remove all other character/body/head/legs, BOTH weapons, and remove the crescent pauldron so the upper sleeve is revealed. Keep the arm exactly in the original relaxed orientation and original canvas position and size, on the same square canvas. Reconstruct only the hidden short sleeve cap behind the pauldron and hidden elbow/wrist overlap, keeping ordinary natural sleeve/glove shapes and original dark brown cloth/silver armor style. No new armor design. Preserve visible arm/hand pixels as closely as possible. Hand position and finger shape should still match the original blue sword grip. Transparent background everywhere else. This supplies only small hidden overlap pixels; do not generate a different character, new pose, or a full body. No text, shadow or marks.",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/arm_rig3_main01-20261110-0fe35b71_v001/source.png"
+      ],
+      "raw": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-38370121-605f-470b-ac71-d1302378f831.png",
+      "saved": "restoration/arm-overlap-raw.png",
+      "use": "hidden shoulder/elbow/wrist underlaps; elbow donor translated40px locally, inferred cloth",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "e51bf6afd20f4e44dd06ba76a259706ff547e3c413365f883eaf39d57bb24b02",
+      "rawBytesIdentical": true
+    },
+    {
+      "id": 3,
+      "prompt": "Extract ONLY the complete LONG SWORD from the near SCREEN LEFT hand of the reference, on the same square canvas in exactly the same original position, orientation and scale. Remove character, arm, glove, short dagger and everything else. Preserve this long sword's round GOLD pommel at upper-right, BLUE WRAPPED grip, silver feathered WING guard with gold center and silver circular knuckle RING, long straight silver double-edged blade with dark central recess and CYAN DIAGONAL inlays, long pointed tip at lower-left. Reconstruct just the short grip/guard segments previously hidden by glove so it is a single complete rigid sword with a continuous grip axis. Do NOT redesign pommel/guard/ring/blade or change sword angle/length. Transparent background, crisp exact existing style, no shadows or guides or extra objects.",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/arm_rig3_main01-20261110-0fe35b71_v001/source.png"
+      ],
+      "raw": "C:/Users/user/.codex/generated_images/01a1bf68-4705-71f0-9449-07a1041b38d9/exec-bebee521-d682-4428-9701-d4edae71c1b7.png",
+      "saved": "restoration/weapon-grip-raw.png",
+      "use": "full result rejected for native placement/scale mismatch; ONLY under-hand grip donor registered by pommel/guard, original visible sword unchanged",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "f74ce73f91006b69fd946cd474d5bfae89cf5b59ce21ecce791b28f34e0c44f7",
+      "rawBytesIdentical": true
+    },
+    {
+      "id": 4,
+      "prompt": "Local joint-overlap restoration only. Image1 original character, image2 isolated near right arm already registered to the SAME1254square canvas. Produce ONLY the dark-brown cloth UPPER ARM sleeve in its SAME position and size: shoulder centered near (548,429), elbow near (492,562). Remove all pauldron/silver forearm armor/hand/weapons/body/head/legs. Finish the sleeve as a continuous natural cloth cylinder from shoulder through elbow, with a rounded CLOTH elbow cap extending slightly beneath where the removed silver forearm cuff was. The cap is dark cloth, NOT a new metal cuff. Reconstruct hidden cloth behind the shoulder pauldron and the elbow seam in existing angular matte cel style. Keep native square frame/placement exactly; do not center/enlarge isolated sleeve. Actual transparent background, no guides, no text, no extra pieces. This is an UNDERLAP sleeve patch to prevent a cutout elbow opening on rotation, not character redesign.",
+      "references": [
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/arm_rig3_main01-20261110-0fe35b71_v001/source.png",
+        "C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2/output/characters/gc9_longsword_dagger/arm_rig3_main01-20261110-0fe35b71_v001/restoration/arm-overlap-raw.png"
+      ],
+      "status": "failed_no_image",
+      "error": "http400 moderation_blocked output stage safety_violations=[sexual], request cb9d24d7-fa99-4a2e-a3b6-0a72f2ba58b3",
+      "handling": "No retry, no API/model switch; reused already generated cloth donor for local overlap registration"
+    }
+  ],
+  "settings": {
+    "transparent_background": true,
+    "model": "builtin tool-managed; actual model/version/cost not exposed"
+  },
+  "motionGenerationCalls": 0
+}

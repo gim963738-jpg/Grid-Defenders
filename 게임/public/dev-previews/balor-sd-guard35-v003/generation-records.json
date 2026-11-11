@@ -1,0 +1,67 @@
+{
+  "task": "MAIN01-20261111-1B358AA6",
+  "iteration": 3,
+  "route": "api/image-studio existing readonly adapter",
+  "preset": "sunburst-2.6-high",
+  "requestModel": "gpt-image-2.6-sunburst",
+  "responseModel": null,
+  "apiPosts": 1,
+  "builtinCalls": 0,
+  "retry": 0,
+  "fallback": 0,
+  "additionalPaidEdits": 0,
+  "requestId": "req_38d23f5b0f544e86b71d44fa7262dc35",
+  "usage": {
+    "input_tokens": 2502,
+    "input_tokens_details": {
+      "image_tokens": 1825,
+      "text_tokens": 677
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+      "image_tokens": 1372,
+      "text_tokens": 0
+    },
+    "total_tokens": 3874
+  },
+  "cost": null,
+  "balance": null,
+  "requestRecord": "api/01-edit35/request-record.json",
+  "prompt": "prompts/edit-035.txt",
+  "inputRoles": [
+    "Image1 current iteration2 edit target, identity/style/35/combined proportions/low sword grip",
+    "Image2 red mark only angle guide, no high sword/annotations/background transfer"
+  ],
+  "output": {
+    "id": "after",
+    "label": "이번 차수3 SD35°",
+    "file": "final/right-035.png",
+    "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\sd_guard35_natural_main01-20261111-1b358aa6_v003\\api\\01-edit35\\native.png",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+    "mode": "RGBA",
+    "alphaMin": 0,
+    "alphaMax": 254,
+    "alphaZeroPixels": 1153503,
+    "boundsAlpha32": [
+      39,
+      296,
+      1005,
+      1175
+    ],
+    "hairTop": 296,
+    "sole": 1174,
+    "footX": 630,
+    "bodyHeight": 879,
+    "footY": 1174,
+    "measurement": {
+      "method": "Native visual hair tip to supporting sole; equipment/tip/canvas excluded. Foot center estimated from support boots.",
+      "heightErrorPx": 8,
+      "footXErrorPx": 25,
+      "footYErrorPx": 6,
+      "hiddenScalp": "hair-hidden scalp crown unmeasured, not an exact head-unit claim"
+    }
+  },
+  "originalResponseBytesPreserved": true
+}

@@ -1,0 +1,94 @@
+{
+  "title": "이름 미정 여성 레이피어 전사 1차",
+  "role": "main03",
+  "finishedAt": "2026-11-11T15:09:17.212844+09:00",
+  "approval": "사용자 GPT Image 2.6 사용 허가 및 이 내용으로 진행",
+  "requestedModel": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "responseModel": "미보고",
+  "costUsd": "unknown",
+  "calls": 3,
+  "automaticRetries": 0,
+  "userDesignApproval": false,
+  "outputs": {
+    "front": {
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "90b7881926df9a91325ab6f4cc3fbac425a5a1157b0eb109120dcb650288755c",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1313044,
+      "highAlphaBounds": [
+        260,
+        144,
+        695,
+        1464
+      ],
+      "marginsPercent": {
+        "left": 25.39,
+        "top": 9.38,
+        "right": 32.13,
+        "bottom": 4.69
+      },
+      "framingDefaultsMet": false
+    },
+    "right35": {
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "38cf7b82e7fce078ac49975ae982e09b1c95c3311381d95c8daf94e742a36734",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1259182,
+      "highAlphaBounds": [
+        230,
+        118,
+        739,
+        1494
+      ],
+      "marginsPercent": {
+        "left": 22.46,
+        "top": 7.68,
+        "right": 27.83,
+        "bottom": 2.73
+      },
+      "framingDefaultsMet": false
+    },
+    "right90": {
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "7c5fcddb3dfc055498e1893d090997585daf140ecf8dc643e30e681f80ccc67e",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1251060,
+      "highAlphaBounds": [
+        229,
+        88,
+        755,
+        1482
+      ],
+      "marginsPercent": {
+        "left": 22.36,
+        "top": 5.73,
+        "right": 26.27,
+        "bottom": 3.52
+      },
+      "framingDefaultsMet": false
+    }
+  },
+  "apiRecords": [
+    "records/front-api.json",
+    "records/right35-api.json",
+    "records/right90-api.json"
+  ],
+  "usage": {
+    "input_tokens": 15425,
+    "output_tokens": 4116,
+    "total_tokens": 19541
+  }
+}

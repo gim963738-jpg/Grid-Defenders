@@ -1,0 +1,51 @@
+{
+  "id": "d43353fb-ec1e-4cf8-8164-a3d848f72a5f",
+  "status": "succeeded",
+  "label": "Sunburst 2.6 · High",
+  "createdAt": "2026-11-11T12:44:39.968Z",
+  "model": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "preset": "sunburst-2.6-high",
+  "prompt": "DELIVERABLE: One original high-resolution RGBA PNG sprite sheet, 2048x1152 pixels. Exactly twelve successive animation drawings in a regular FOUR columns by THREE rows grid. Reading order is left-to-right, then the next row. One complete actor per cell. Transparent alpha outside the artwork; leave transparent gutters. Omit labels, numbers, panel borders, ground disks, shadow backplates and painted backgrounds. Draw solid discrete poses rather than multiple exposure trails.\nFIXED FRAMING: Use one fixed orthographic camera, one fixed actor scale and a shared ground/root registration for all twelve cells. Plan the scale around the BIGGEST complete action silhouette, including the highest raised weapon. Keep the entire sword, shield, cape, helmet and hands inside their OWN cell with generous blank space on every side. The full resting human body is approximately40 percent of the cell height, feet near86 percent of cell height; the giant may use a smaller constant body scale to fit its overhead weapon. Preserve this scale during the action, including crouching or falling; natural changes in pose are not a change in body size. Leave substantial room above the helmet. The output is a large native sheet; the game will choose its display size later.\nMECHANICAL CONTINUITY: Keep the same head size, torso thickness, limb lengths, armour pieces and equipment dimensions from drawing to drawing. Hands keep a natural connected grip and wrist/forearm anatomy. The blade, guard, handle and pommel form one straight rigid weapon. Move the whole weapon naturally with the hand. Equipment remains owned by the same anatomical hands. Character-only motion, without extra slash light or impact bursts; the expressly requested dissolution sheets alone contain smoke/particles.\n\nREFERENCE IDENTITY: Image1 is the approved Balor SD combat-ready design. Reproduce his brown layered short hair, blue-grey eyes, exact SD head/body proportions, silver layered plate armour, royal-blue clothing, white lion chest emblem, blue cape with white decoration and lining, belt and boots. Retain the two round shoulder fittings. Anatomical RIGHT hand holds his single silver double-edged sword with the same blue grip, red guard jewel and original guard/pommel design; anatomical LEFT hand carries his silver kite shield with its black winged-cross emblem. Retain the reference sword length and shield size. Match the clean outlined, matte cel-shaded2D game illustration finish. Copy the character and equipment only, keeping the output background transparent.\n\nCAMERA: Screen-RIGHT FRONT THREE-QUARTER35 degrees throughout the entire action. Same view as the approved35-degree master. Fixed orthographic view.\n\nACTION 07-knightly-wrist-roll-right35 — twelve chronological poses:\nThis action stays at screen-right THREE-QUARTER35 degrees for ALL twelve frames. When a preceding shield-plant sheet is attached last, its bottom-right final drawing defines this clip's START posture and planted shield location. Frame1: that planted-shield endpoint. Frame2: begin straightening knees and lifting the torso. Frame3: continue rising with the shield fixed to the ground. Frame4: fully STANDING upright and balanced. Frame5: raise the right-hand sword in front of the body. Frame6: hold the sword VERTICAL, point upward. Frame7: display the BROAD FLAT FACE of the vertical blade toward the VIEWER/CAMERA. Frame8: start a natural forearm/wrist roll while maintaining the upright sword axis. Frame9: rotate the rigid sword approximately halfway through a quarter-turn around its OWN LONGITUDINAL axis. Frame10: continue the same wrist roll toward90 degrees. Frame11: the quarter-turn is complete: the THIN SHARP EDGE LINE, rather than the broad flat face, now faces the VIEWER/CAMERA. Frame12: hold this standing knightly posture. The body's camera orientation remains35 degrees, shield remains fixed, and blade/guard/handle/pommel rotate together as one straight rigid object. This is a wrist-driven face-to-edge quarter-turn of an upright sword; keep its point upright throughout the roll.\n\nDeliver only this single original transparent twelve-frame PNG sheet.\n\nLAST REFERENCE IMAGE: the complete twelve-cell preceding-action sheet. Its BOTTOM-RIGHT cell is the exact final pose to continue from in frame1. Read only that final pose as the start; retain the authoritative character design and current camera described above.",
+  "size": "2048x1152",
+  "background": "transparent",
+  "endpoint": "/v1/images/edits",
+  "references": [
+    {
+      "name": "approved-balor35.png",
+      "source": "upload",
+      "file": "reference-1.png"
+    },
+    {
+      "name": "06-shield-plant-right35.png",
+      "source": "upload",
+      "file": "reference-2.png"
+    }
+  ],
+  "spec": "문서/00_개발규칙/캐릭터스프라이트제작규약.md",
+  "outputPath": "output/imagegen/sunburst/d43353fb-ec1e-4cf8-8164-a3d848f72a5f/d43353fb-ec1e-4cf8-8164-a3d848f72a5f_sunburst-2.6-high.png",
+  "imageUrl": "/output/imagegen/sunburst/d43353fb-ec1e-4cf8-8164-a3d848f72a5f/d43353fb-ec1e-4cf8-8164-a3d848f72a5f_sunburst-2.6-high.png",
+  "metadataUrl": "/output/imagegen/sunburst/d43353fb-ec1e-4cf8-8164-a3d848f72a5f/metadata.json",
+  "response": {
+    "created": 1794401139,
+    "size": "2048x1152",
+    "quality": "high",
+    "background": "transparent",
+    "output_format": "png",
+    "usage": {
+      "input_tokens": 3960,
+      "input_tokens_details": {
+        "image_tokens": 3044,
+        "text_tokens": 916
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 5373
+    }
+  },
+  "requestId": "req_a473447ebd2a453d9956425e8ef8eb96",
+  "finishedAt": "2026-11-11T12:45:42.450Z"
+}

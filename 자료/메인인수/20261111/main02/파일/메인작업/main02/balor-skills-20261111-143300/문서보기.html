@@ -1,0 +1,14 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>발로르 · 최신 스킬 문서</title><style>body{margin:0;background:#121c24;color:#e8eef2;font:18px/1.8 system-ui,sans-serif}main{max-width:900px;margin:auto;padding:32px 24px}h1{font-size:30px}h2{font-size:24px;margin:6px 0}article{padding:22px;margin:18px 0;border:1px solid #40535e;border-radius:14px;background:#1a2a34}small{color:#9bcebc}p{margin:8px 0}pre{white-space:pre-wrap;font:inherit;color:#b8c8d1}.note{color:#9fb4c2}</style><main><h1>발로르 스킬</h1><p class="note">2026-11-11 수정 · 보스전/디펜스전 공통 · 기획 문서</p><article><small>패시브</small><h2>불패의 지휘</h2><p>전열 병사 1명당 전열 아군의 방어력 증가. 병사 1명당 증가량 및 물리&#183;마법 방어 적용 여부 미정.<br>자신의 가드율 증가. 증가량 미정.</p></article><article><small>1스킬</small><h2>방패술 : 파쇄격</h2><p>전방의 적을 방패로 타격하여 150% 물리 피해를 입힌다. 상태이상 효과 없음. 쿨타임 미정.</p></article><article><small>2스킬</small><h2>기사의 맹세</h2><p>쿨타임 8초. 전방의 적들에게 70% 물리 피해를 입히고 공격속도 및 이동속도 20% 감소(3초), 도발 부여(대상 범위 미정). 동시에 모든 전열 아군에게 자신의 최대 체력 20%만큼 보호막 부여(6초).</p></article><article><small>궁극기</small><h2>거신병</h2><p>쿨타임 30초. 거신병을 현신시켜 방패와 대검으로 적에게 강력한 물리 피해 2회 타격. 타격 후 모든 아군에게 4초간 무적 부여. 타격별 피해 배율 미정.</p></article><pre>### 미확정 항목
+
+- 패시브: 전열 병사 1명당 방어력 증가량, 물리&#183;마법 방어 적용 여부, 자신의 가드율 증가량.
+- 1스킬 쿨타임, 2스킬 도발 대상 범위, 궁극기 타격별 피해 배율.
+- 발로르 고유 사거리 및 각 스킬의 범위&#183;각도는 아래 미확정 설계 제안을 따른다.
+
+### 범위 비교 단위 R — 설계 제안, 미확정
+R은 앞선 범위 피드백에서 사용한 상대 단위다. **1R = 발로르 평타의 최대 사거리**로 두고, 1.2R은 그 거리의 1.2배, 2R은 2배를 뜻한다. 진형 UI 칸 크기와 독립적인 전투 거리 기준이다.
+
+현재 `게임/src/defenseConfig.ts`의 탱커 사거리는 130이다. 이 값을 참고 기준으로 삼으면 1R=130, 1.2R=156, 2R=260 전투 좌표 단위가 된다. 발로르 고유 사거리와 각 스킬 범위&#183;각도는 아직 확정하지 않았다.
+
+WEB-183 개발자 도구의 거리 허수아비는 눈금을1R=130으로 고정해0.5R부터3R까지 표시한다. 웨이브&#183;보스에서 실제 거리를 비교할 수 있으며 스킬 범위의 최종 확정과는 구분한다.
+
+</pre></main></html>

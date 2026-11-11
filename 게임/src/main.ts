@@ -7,6 +7,7 @@ import {battleResolution} from './renderQuality';
 import {loadHeroArt,heroImage,heroPortrait,sheetHero,assassinSkillIcon} from './heroArt';
 import {loadSoldierArt,soldierImage} from './soldierArt';
 import {loadSlimeArt} from './slimeArt';
+import {loadCombatMotionArt,motionArtError} from './combatMotionArt';
 import {BLOND_SKILL_ICON_URL} from './blondArt';
 import {ASSASSIN} from './assassinCombat';
 import {GameRun,FAILURE_TEXT,RUN_LIMITS,type RunMode,type RunFailure} from './gameRun';
@@ -949,7 +950,7 @@ el('leave-battle-dialog').addEventListener('close',()=>{if(!returnPending){comba
 function checkRunFailure():boolean {
   if(!run.active||combatPaused||currentScene==='lobby'||sceneTransitioning)return false;
   const reason=run.failure(currentScene==='defense'?{scene:'defense',monsters:game.enemies.filter(e=>e.hp>0).length}:{scene:'boss',result:bossBattle.result,elapsed:bossBattle.elapsed});
-  if(!reason)return false;finishRun(reason);return true;
+  if(!reason)return false;if(currentScene==='boss'&&reason==='boss-defeat'&&bossBattle.deathPlaying)return false;finishRun(reason);return true;
 }
 
 function renderBossScreen():void {
@@ -1057,7 +1058,7 @@ async function start():Promise<void> {
   await app.init({width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,background:'#172620',backgroundAlpha:LANDSCAPE_BATTLE?0:1,preference:'webgl',resolution:battleResolution(devicePixelRatio),autoDensity:true,antialias:true});
   el('battle-scene').append(app.canvas);app.canvas.setAttribute('aria-label','숲 순환 전장, 상단 정보와 아군 배치 영역');el('status').hidden=true;
   el('battlefield').style.setProperty('--field-top',`${DEFENSE_FIELD.top/DEFENSE_FIELD.height*100}%`);
-  await Promise.all([loadHeroArt(),loadSoldierArt(),loadSlimeArt()]);
+  await Promise.all([loadHeroArt(),loadCombatMotionArt(),loadSoldierArt(),loadSlimeArt()]);
   const [forestTexture,rangedTexture,meleeTexture,fireTexture,swordTexture,bladeTexture]=await Promise.all([
     Assets.load<Texture>(FOREST_TERRAIN_URL),
     Assets.load<Texture>(`${import.meta.env.BASE_URL}assets/heroes/ranged-idle.png`),
@@ -1082,7 +1083,7 @@ async function start():Promise<void> {
    fields:{defense:{element:el('battle-scene'),width:DEFENSE_FIELD.width,height:DEFENSE_FIELD.height,top:DEFENSE_FIELD.top},
     boss:{element:el('boss-screen').querySelector<HTMLElement>('.boss-arena')!,width:BOSS_FIELD.width,height:BOSS_FIELD.height,top:0}}});
   renderMonsterTools();
-  renderRecipeTree();assetsReady=true;document.title='Grid Defenders — 로비';el('lobby-hint').textContent='병사와 영웅을 배치하고 몬스터를 막아내세요.';renderLobby();
+  renderRecipeTree();if(motionArtError){el('status').hidden=false;game.note(motionArtError+'기존 그림으로 표시합니다.');}assetsReady=true;document.title='Grid Defenders — 로비';el('lobby-hint').textContent='병사와 영웅을 배치하고 몬스터를 막아내세요.';renderLobby();
   refresh();
   app.ticker.add(ticker=>{
     if(document.hidden){if(run.active&&!combatPaused)continuation.suspend();return;}
@@ -1092,7 +1093,7 @@ async function start():Promise<void> {
     if(currentScene==='boss'){
       const dt=Math.min(ticker.deltaMS/1000,.1);stepCombat(dt,game.speed,seconds=>{
         if(!run.active)return;
-        const step=bossBattle.result==='fighting'?run.bossStep(seconds,bossBattle.elapsed):seconds,before=bossBattle.elapsed;
+        const step=bossBattle.preparationRemaining>0?Math.min(seconds,bossBattle.preparationRemaining):bossBattle.result==='fighting'?run.bossStep(seconds,bossBattle.elapsed):seconds,before=bossBattle.elapsed;
         if(step>0)bossBattle.tick(step);
         for(const enemy of bossBattle.actors)if(enemy.side==='enemy'&&enemy.hp<=0)defeatedBossEnemies.add(`${bossBattle.encounter}:${enemy.id}`);
         run.advance(bossBattle.elapsed-before);checkRunFailure();
@@ -1102,7 +1103,7 @@ async function start():Promise<void> {
       meterClock+=dt;if(meterClock>=.15){meterClock=0;refreshDamageMeter();}
       if(activeBossWave===game.wave&&bossBattle.result==='victory'){
         if(!combatPaused)bossReturnDelay+=dt;
-        if(!combatPaused&&bossReturnDelay>=1.2&&game.completeBossWave()){
+        if(!combatPaused&&bossReturnDelay>=1.2&&!bossBattle.deathPlaying&&game.completeBossWave()){
           activeBossWave=null;bossReturnDelay=0;void goBattleScene('defense');
         }
       } else bossReturnDelay=0;

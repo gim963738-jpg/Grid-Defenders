@@ -1,0 +1,51 @@
+{
+  "task": "MAIN01-20261111-74BA96AC",
+  "iteration": 1,
+  "assets": [
+    {
+      "file": "illustration.png",
+      "source": "api/01-illustration/native.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "41dbb10f2aa2e04d66374fee15df5ded732894f71b8ac58595f3ebf39b411391",
+      "bytes": 1710890,
+      "returnedBytesPreserved": true
+    }
+  ],
+  "references": [
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_front.png",
+      "file": "inputs/c04_front.png",
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "role": "primary whole style and facial rendering only"
+    },
+    {
+      "source": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_front.png",
+      "file": "inputs/c03_front.png",
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+      "role": "secondary whole style and selected material highlights only"
+    }
+  ],
+  "reviewScope": [
+    "pose",
+    "drawing_style"
+  ],
+  "notPerformed": [
+    "equipment perfection gate",
+    "sword-axis measurement",
+    "alpha or margin measurement gate",
+    "72CSSpx or field/game test",
+    "SD/rigging/directions"
+  ],
+  "affiliation": "무소속",
+  "origin": "발트레인",
+  "class": "전사",
+  "kind": "영웅",
+  "species": "인간형",
+  "gender": "여성",
+  "numericAge": null,
+  "numericHeight": null,
+  "fixedWeaponHand": null,
+  "catalogRegistration": false
+}

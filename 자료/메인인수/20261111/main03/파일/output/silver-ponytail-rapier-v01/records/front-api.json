@@ -1,0 +1,52 @@
+{
+  "view": "front",
+  "startedAt": "2026-11-11T06:02:26.606Z",
+  "status": "succeeded",
+  "requestedModel": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "size": "1024x1536",
+  "background": "transparent",
+  "n": 1,
+  "endpoint": "/images/edits",
+  "automaticRetries": 0,
+  "promptSha256": "c262333e9acc1a1eab730d47ecae22ef6bd8ab602d4b5d1426640076a50458cb",
+  "references": [
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c04_front.png",
+      "sha256": "342392e92ee4530d44aa5b5b9360bac0e5cb1a4875cb2140927a714f1ff91631",
+      "bytes": 1643944
+    },
+    {
+      "path": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\character-redesign-6x2\\images\\c03_front.png",
+      "sha256": "ef97a5830a14b54ccf5de658be247974ee453fb68c5911acea844fdf6140267b",
+      "bytes": 1545142
+    }
+  ],
+  "approval": "User explicitly permitted image2.6 and approved three full-body views via 이 내용으로 진행.",
+  "finishedAt": "2026-11-11T06:03:15.113Z",
+  "requestId": "req_098523f89ff84d959984f54403cdd8af",
+  "response": {
+    "created": 1794376994,
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "output_format": "png",
+    "usage": {
+      "input_tokens": 4233,
+      "input_tokens_details": {
+        "image_tokens": 3072,
+        "text_tokens": 1161
+      },
+      "output_tokens": 1372,
+      "output_tokens_details": {
+        "image_tokens": 1372,
+        "text_tokens": 0
+      },
+      "total_tokens": 5605
+    }
+  },
+  "responseModel": "not reported",
+  "outputBytes": 1169770,
+  "outputSha256": "90b7881926df9a91325ab6f4cc3fbac425a5a1157b0eb109120dcb650288755c",
+  "costUsd": "unknown"
+}

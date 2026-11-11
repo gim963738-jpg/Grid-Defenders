@@ -1,0 +1,564 @@
+{
+  "ok": true,
+  "scope": "Node VM actual player code and PNGs; real browser screenshots reviewed separately",
+  "images": 8,
+  "backgrounds": 2,
+  "totalMs": 14400,
+  "samples": [
+    {
+      "ms": 0,
+      "elapsed": 0,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "walk",
+      "duration": 2400,
+      "phase": "walk",
+      "label": "이동",
+      "start": 0,
+      "local": 0,
+      "x": 680,
+      "y": 285,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 0
+        },
+        {
+          "id": "before/weak",
+          "frame": 0
+        },
+        {
+          "id": "before/strong",
+          "frame": 0
+        },
+        {
+          "id": "before/idle",
+          "frame": 0
+        },
+        {
+          "id": "after/walk",
+          "frame": 0
+        },
+        {
+          "id": "after/weak",
+          "frame": 0
+        },
+        {
+          "id": "after/strong",
+          "frame": 0
+        },
+        {
+          "id": "after/idle",
+          "frame": 0
+        }
+      ]
+    },
+    {
+      "ms": 2399,
+      "elapsed": 2399,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "walk",
+      "duration": 2400,
+      "phase": "walk",
+      "label": "이동",
+      "start": 0,
+      "local": 2399,
+      "x": 320.15,
+      "y": 329.98125,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 11
+        },
+        {
+          "id": "before/weak",
+          "frame": 11
+        },
+        {
+          "id": "before/strong",
+          "frame": 15
+        },
+        {
+          "id": "before/idle",
+          "frame": 11
+        },
+        {
+          "id": "after/walk",
+          "frame": 15
+        },
+        {
+          "id": "after/weak",
+          "frame": 15
+        },
+        {
+          "id": "after/strong",
+          "frame": 15
+        },
+        {
+          "id": "after/idle",
+          "frame": 15
+        }
+      ]
+    },
+    {
+      "ms": 2400,
+      "elapsed": 2400,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "weak",
+      "duration": 1300,
+      "phase": "weak1",
+      "label": "약공격 ①",
+      "start": 2400,
+      "local": 0,
+      "x": 320,
+      "y": 330,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 0
+        },
+        {
+          "id": "before/weak",
+          "frame": 0
+        },
+        {
+          "id": "before/strong",
+          "frame": 0
+        },
+        {
+          "id": "before/idle",
+          "frame": 0
+        },
+        {
+          "id": "after/walk",
+          "frame": 0
+        },
+        {
+          "id": "after/weak",
+          "frame": 0
+        },
+        {
+          "id": "after/strong",
+          "frame": 0
+        },
+        {
+          "id": "after/idle",
+          "frame": 0
+        }
+      ]
+    },
+    {
+      "ms": 2970,
+      "elapsed": 2970,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "weak",
+      "duration": 1300,
+      "phase": "weak1",
+      "label": "약공격 ①",
+      "start": 2400,
+      "local": 570,
+      "x": 320,
+      "y": 330,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 6
+        },
+        {
+          "id": "before/weak",
+          "frame": 6
+        },
+        {
+          "id": "before/strong",
+          "frame": 6
+        },
+        {
+          "id": "before/idle",
+          "frame": 6
+        },
+        {
+          "id": "after/walk",
+          "frame": 9
+        },
+        {
+          "id": "after/weak",
+          "frame": 9
+        },
+        {
+          "id": "after/strong",
+          "frame": 9
+        },
+        {
+          "id": "after/idle",
+          "frame": 9
+        }
+      ]
+    },
+    {
+      "ms": 3700,
+      "elapsed": 3700,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "idle",
+      "duration": 2400,
+      "phase": "idle1",
+      "label": "숨쉬기 ①",
+      "start": 3700,
+      "local": 0,
+      "x": 320,
+      "y": 330,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 0
+        },
+        {
+          "id": "before/weak",
+          "frame": 0
+        },
+        {
+          "id": "before/strong",
+          "frame": 0
+        },
+        {
+          "id": "before/idle",
+          "frame": 0
+        },
+        {
+          "id": "after/walk",
+          "frame": 0
+        },
+        {
+          "id": "after/weak",
+          "frame": 0
+        },
+        {
+          "id": "after/strong",
+          "frame": 0
+        },
+        {
+          "id": "after/idle",
+          "frame": 0
+        }
+      ]
+    },
+    {
+      "ms": 6100,
+      "elapsed": 6100,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "weak",
+      "duration": 1300,
+      "phase": "weak2",
+      "label": "약공격 ②",
+      "start": 6100,
+      "local": 0,
+      "x": 320,
+      "y": 330,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 0
+        },
+        {
+          "id": "before/weak",
+          "frame": 0
+        },
+        {
+          "id": "before/strong",
+          "frame": 0
+        },
+        {
+          "id": "before/idle",
+          "frame": 0
+        },
+        {
+          "id": "after/walk",
+          "frame": 0
+        },
+        {
+          "id": "after/weak",
+          "frame": 0
+        },
+        {
+          "id": "after/strong",
+          "frame": 0
+        },
+        {
+          "id": "after/idle",
+          "frame": 0
+        }
+      ]
+    },
+    {
+      "ms": 7400,
+      "elapsed": 7400,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "idle",
+      "duration": 2400,
+      "phase": "idle2",
+      "label": "숨쉬기 ②",
+      "start": 7400,
+      "local": 0,
+      "x": 320,
+      "y": 330,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 0
+        },
+        {
+          "id": "before/weak",
+          "frame": 0
+        },
+        {
+          "id": "before/strong",
+          "frame": 0
+        },
+        {
+          "id": "before/idle",
+          "frame": 0
+        },
+        {
+          "id": "after/walk",
+          "frame": 0
+        },
+        {
+          "id": "after/weak",
+          "frame": 0
+        },
+        {
+          "id": "after/strong",
+          "frame": 0
+        },
+        {
+          "id": "after/idle",
+          "frame": 0
+        }
+      ]
+    },
+    {
+      "ms": 9800,
+      "elapsed": 9800,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "strong",
+      "duration": 2200,
+      "phase": "strong",
+      "label": "강공격",
+      "start": 9800,
+      "local": 0,
+      "x": 320,
+      "y": 330,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 0
+        },
+        {
+          "id": "before/weak",
+          "frame": 0
+        },
+        {
+          "id": "before/strong",
+          "frame": 0
+        },
+        {
+          "id": "before/idle",
+          "frame": 0
+        },
+        {
+          "id": "after/walk",
+          "frame": 0
+        },
+        {
+          "id": "after/weak",
+          "frame": 0
+        },
+        {
+          "id": "after/strong",
+          "frame": 0
+        },
+        {
+          "id": "after/idle",
+          "frame": 0
+        }
+      ]
+    },
+    {
+      "ms": 11005,
+      "elapsed": 11005,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "strong",
+      "duration": 2200,
+      "phase": "strong",
+      "label": "강공격",
+      "start": 9800,
+      "local": 1205,
+      "x": 320,
+      "y": 330,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 10
+        },
+        {
+          "id": "before/weak",
+          "frame": 10
+        },
+        {
+          "id": "before/strong",
+          "frame": 10
+        },
+        {
+          "id": "before/idle",
+          "frame": 10
+        },
+        {
+          "id": "after/walk",
+          "frame": 10
+        },
+        {
+          "id": "after/weak",
+          "frame": 10
+        },
+        {
+          "id": "after/strong",
+          "frame": 10
+        },
+        {
+          "id": "after/idle",
+          "frame": 10
+        }
+      ]
+    },
+    {
+      "ms": 12000,
+      "elapsed": 12000,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "idle",
+      "duration": 2400,
+      "phase": "idle3",
+      "label": "숨쉬기 ③",
+      "start": 12000,
+      "local": 0,
+      "x": 320,
+      "y": 330,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 0
+        },
+        {
+          "id": "before/weak",
+          "frame": 0
+        },
+        {
+          "id": "before/strong",
+          "frame": 0
+        },
+        {
+          "id": "before/idle",
+          "frame": 0
+        },
+        {
+          "id": "after/walk",
+          "frame": 0
+        },
+        {
+          "id": "after/weak",
+          "frame": 0
+        },
+        {
+          "id": "after/strong",
+          "frame": 0
+        },
+        {
+          "id": "after/idle",
+          "frame": 0
+        }
+      ]
+    },
+    {
+      "ms": 14400,
+      "elapsed": 14400,
+      "playing": false,
+      "loaded": true,
+      "images": 8,
+      "action": "idle",
+      "duration": 2400,
+      "phase": "idle3",
+      "label": "숨쉬기 ③",
+      "start": 12000,
+      "local": 2399.999,
+      "x": 320,
+      "y": 330,
+      "frames": [
+        {
+          "id": "before/walk",
+          "frame": 11
+        },
+        {
+          "id": "before/weak",
+          "frame": 11
+        },
+        {
+          "id": "before/strong",
+          "frame": 15
+        },
+        {
+          "id": "before/idle",
+          "frame": 11
+        },
+        {
+          "id": "after/walk",
+          "frame": 15
+        },
+        {
+          "id": "after/weak",
+          "frame": 15
+        },
+        {
+          "id": "after/strong",
+          "frame": 15
+        },
+        {
+          "id": "after/idle",
+          "frame": 15
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "same action time before/after",
+    "correct baseline chosen2.6 walk",
+    "8 sheets load",
+    "7-segment sequence",
+    "weak impact same570ms",
+    "standalone4actions",
+    "loop",
+    "one-shot stop",
+    "pause",
+    "transition shortcut",
+    "frame stepping",
+    "speed",
+    "scale",
+    "snow background"
+  ]
+}

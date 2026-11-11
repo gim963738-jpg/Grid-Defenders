@@ -1,0 +1,25 @@
+{
+    "task":  "MAIN02-20261111-8D69415B",
+    "iteration":  2,
+    "reviewer":  "main02",
+    "at":  "2026-11-11T01:40:50.7655096+09:00",
+    "status":  "comparison_drafts_delivered_with_visual_WARN",
+    "production":  "16 PNG시트/16 APNG/16 메타데이터·동기갤러리",
+    "viewed":  [
+                   "comparison16.jpg",
+                   "review/all16-battlefield-phases.jpg",
+                   "review/pair-05_dual_thrust_right90.jpg",
+                   "review/pair-06_dual_rip_x_right90.jpg",
+                   "review/pair-07_hurt_34.jpg"
+               ],
+    "observations":  [
+                         "양모델16종전체포즈비교판과전장시작정점종료확인",
+                         "05·06정측면90고정미충족프레임직접확인,사용자합격아님",
+                         "07눈찡그림표현있음,발이동·몸크기미세변동은잔여",
+                         "루프박자·얼굴/갑옷/무기세부편차·근접중복은담당시각WARN보존"
+                     ],
+    "ack":  "iteration2/sprites/25필독본문적용요약있음·현재해시일치",
+    "counts":  "내장10회/명시2.6API9회;Grok/영상0회 담당보고",
+    "limitations":  "메인은비교판/특정프레임시각검토·ACK검증. 담당브라우저재생검증을전체직접재생검증으로확대하지않음. 독립QA/실기기/실게임통합/최종속도/사용자합격미실시",
+    "report":  "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\스프라이트-시트작업\\output\\characters\\blond_motions_MAIN02-20261111-8D69415B_v002\\납품보고.md"
+}

@@ -1,3 +1,4 @@
+import {createMotion} from './actorMotion';
 import {pathPoint,type Defense} from './defense';
 import type {BossBattle} from './bossBattle';
 import type {DamageMeter} from './damageMeter';
@@ -45,13 +46,14 @@ const damageType=choice('physical','magic'),defenseType=choice('normal','physica
 const kind:Validator=v=>typeof v==='string'&&Object.hasOwn(UNITS,v);
 const itemId:Validator=v=>typeof v==='string'&&ITEMS.some(item=>item.id===v);
 const position=shape(fields('x y'));
-const unit=shape({id,kind,slot:v=>integer(v)&&(v as number)<SLOTS.length,level:id,spent:nonnegative,cooldown:number},{facing:v=>integer(v)&&(v as number)<8});
+const motion=shape({clip:choice('01','02','03','04','05','06','07','08','walk','idle','weak','strong'),age:nonnegative,sequence:integer,targetId:nullable(v=>token(v)||id(v)),attack:nonnegative,critical:bool,hit:bool});
+const unit=shape({id,kind,slot:v=>integer(v)&&(v as number)<SLOTS.length,level:id,spent:nonnegative,cooldown:number},{facing:v=>integer(v)&&(v as number)<8,motion});
 const enemy=shape({id,...fields('distance x y hp maxHp speed attack armor magicArmor rate goldReward'),named:bool,name:text,defenseType,damageType,wave:id},{bounty:bool,armorBreakRemaining:nonnegative});
 const stats=shape({...fields('attack physicalAttack magicAttack physicalArmor magicArmor rate range hp normalDamageMultiplier bossDamageMultiplier armor regen gold critChance critMultiplier'),damageType});
 const actor=shape({id:token,side:choice('ally','enemy'),kind:v=>kind(v)||v==='boss'||v==='retainer',name:text,
  ...fields('x y hp maxHp attack rate range speed rank cooldown'),damageType,defenseType},
  {...fields('normalDamageMultiplier bossDamageMultiplier armorBreakRemaining level sourceSlot regen critChance critMultiplier physicalArmor magicArmor'),
-  walk:shape({direction:v=>integer(v)&&(v as number)<8,moving:bool,elapsed:nonnegative})});
+  motion,walk:shape({direction:v=>integer(v)&&(v as number)<8,moving:bool,elapsed:nonnegative})});
 const skill=shape({cooldown:number,casts:integer});
 const critical={critical:bool};
 const impact=shape({...fields('x y life'),kind:choice(1,2,5)});
@@ -97,11 +99,12 @@ const bossFields:Record<string,Validator>={
  iceProjectiles:list(projectile(actor,token)),iceBursts:list(shape(fields('x y life'))),
  fireCasts:list(fire(actor,token)),bladeCasts:list(blade(actor,token)),swordAttacks:list(sword(token,token)),assassinActions:list(assassin(actor,token)),assassinImpacts:list(impact),damageMeter:meter,
 };
+const bossOptionalFields={preparationRemaining:v=>nonnegative(v)&&(v as number)<=3,motionVersion:choice(1)} satisfies Record<string,Validator>;
 const runFields={mode:choice('normal','infinite-test'),active:choice(true),elapsed:nonnegative,result:choice(null)};
 const meta=shape({runId:token,scene:choice('defense','boss'),activeBossWave:nullable(id),bossReturnDelay:nonnegative,bossTestMode:bool,
  bossEncounterWave:id,defeatedBossEnemies:list(token,10000),combatPaused:bool});
 const envelope=shape({version:choice(BATTLE_SAVE_VERSION),layout:choice('landscape','portrait'),mode:runFields.mode,savedAt:nonnegative,
- meta,defense:shape(defenseFields,defenseOptionalFields),boss:shape(bossFields),run:shape(runFields)});
+ meta,defense:shape(defenseFields,defenseOptionalFields),boss:shape(bossFields,bossOptionalFields),run:shape(runFields)});
 
 // Only this version's named data fields are read/written. Model prototypes, RNG,
 // training providers and the shared DamagePeaks instance never enter the save.
@@ -169,7 +172,7 @@ export function captureBattle(game:Defense,boss:BossBattle,run:GameRun,details:B
   defense.damageMeter=readMeter(game.damageMeter);
   defense.gear=game.gear.map(item=>({...item,def:item.def.id}));
   defense.shop=game.shop.map(item=>item?.id??null);
-  const bossData=readFields(boss,bossFields,['damageMeter','tuning']);bossData.damageMeter=readMeter(boss.damageMeter);
+  const bossData={...readFields(boss,bossOptionalFields),...readFields(boss,bossFields,['damageMeter','tuning'])};bossData.damageMeter=readMeter(boss.damageMeter);
   // The developer calibration passes a BossTestProfile, whose explanatory
   // timings also reach reset(). Only combat tuning belongs to persistent state.
   bossData.tuning={healthScale:boss.tuning.healthScale,attackScale:boss.tuning.attackScale};
@@ -195,7 +198,19 @@ export function restoreBattle(value:unknown,game:Defense,boss:BossBattle,run:Gam
   game.gear=(d.gear as Fields[]).map(item=>({...item,def:ITEMS.find(def=>def.id===item.def)!})) as unknown as Defense['gear'];
   game.shop=(d.shop as (string|null)[]).map(item=>item===null?null:ITEMS.find(def=>def.id===item)!);
   writeMeter(game.damageMeter,d.damageMeter as Fields);
-  writeFields(boss,save.boss,['damageMeter']);writeMeter(boss.damageMeter,save.boss.damageMeter as Fields);
+  // Old v1 checkpoints were already fighting. Do not replay preparation or invent a pending hit.
+  if(save.boss.motionVersion===undefined){
+   save.boss.preparationRemaining=0;save.boss.motionVersion=1;
+   for(const a of save.boss.actors as Fields[])if(a.kind==='blond')a.range=Math.max(0,(a.range as number)-30);
+   for(const a of save.boss.roster as Fields[])if(a.kind==='blond'){const stats=a.stats as Fields;stats.range=Math.max(0,(stats.range as number)-30);}
+   const actors=save.boss.actors as Fields[];
+   if(actors.some(a=>a.kind==='boss')&&!actors.some(a=>a.id==='retainer-normal')){
+    const tuning=save.boss.tuning as Fields;
+    actors.push({id:'retainer-normal',side:'enemy',kind:'retainer',name:'노랑 친위대',x:805,y:281.25,hp:Math.ceil(1800*(tuning.healthScale as number)),maxHp:Math.ceil(1800*(tuning.healthScale as number)),attack:Math.floor(70*(tuning.attackScale as number)),rate:.8,range:50,speed:50,rank:0,damageType:'physical',defenseType:'normal',physicalArmor:25,magicArmor:25,cooldown:.25});
+   }
+  }
+  writeFields(boss,save.boss,['damageMeter']);
+  for(const a of boss.actors)if((a.kind==='blond'||a.kind==='boss')&&!a.motion)a.motion=createMotion(a.kind==='boss');writeMeter(boss.damageMeter,save.boss.damageMeter as Fields);
   writeFields(run,save.run);game.revision++;game.logRevision++;
   return save.meta;
  }catch{return null;}

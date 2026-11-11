@@ -1,6 +1,7 @@
+import {ReadyBossBattle as BossBattle} from './ready-boss-fixture';
 import {createSwordAttack,advanceSword,swordAlive,swordImpactTime,swordVisuals,swordSlashFrame} from '../src/swordAttack';
 import {Defense,pathPoint} from '../src/defense';
-import {BossBattle,waveBossRoster} from '../src/bossBattle';
+import {waveBossRoster} from '../src/bossBattle';
 export function checkSwordAttack(){
  const passed:string[]=[];const check=(ok:boolean,name:string)=>{if(!ok)throw Error(name);passed.push(name);};
  check([0,1,2,3].map(i=>createSwordAttack(1,2,90,false,i,1,0,0).kind).join(',')==='5,4,3,5','basic swings cycle 5 then 4 then 3');
@@ -22,7 +23,7 @@ export function checkSwordAttack(){
  check(kinds.join(',')==='5,4,3,5','successive wave attacks use the approved sequence');
  g.units[0].cooldown=0;g.tick(.01);g.nextTestWave();check(g.swordAttacks.length===0,'wave change clears pending sword damage and effects');g.reset();check(g.swordSwingCounts.size===0,'game reset restarts swing sequence');
  const removed=setup();removed.tick(.01);removed.units=[];removed.tick(.2);check(removed.enemies[0].hp===5000&&removed.swordAttacks.length===0,'removed source cannot finish a sword strike');
- const wave=new Defense(()=>1);wave.summon('melee',0);const b=new BossBattle(waveBossRoster(wave),()=>1);b.autoSkills=false;const h=b.actors.find(a=>a.kind==='melee')!,t=b.actors.find(a=>a.kind==='retainer')!;b.actors=[h,t];h.x=t.x-20;h.y=t.y;h.cooldown=0;t.cooldown=999;t.defenseType='normal';const hp=t.hp;
+ const wave=new Defense(()=>1);wave.summon('melee',0);const b=new BossBattle(waveBossRoster(wave),()=>1);b.autoSkills=false;const h=b.actors.find(a=>a.kind==='melee')!,t=b.actors.find(a=>a.id==='retainer-top')!;b.actors=[h,t];h.x=t.x-20;h.y=t.y;h.cooldown=0;t.cooldown=999;t.defenseType='normal';const hp=t.hp;
  b.tick(.01);check(t.hp===hp&&b.swordAttacks[0].kind===5,'boss starts with the same windup and fifth slash');h.cooldown=999;for(let i=0;i<4;i++)b.tick(.05);check(hp-t.hp===h.attack&&b.hits.filter(hit=>hit.sword).length===1,'boss sword peak deals one physical attack');
  for(let i=0;i<12;i++)b.tick(.05);check(hp-t.hp===h.attack,'boss slash animation causes no extra hits');
  const final=createSwordAttack(h.id,t.id,90,false,0,1,t.x,t.y);final.connected=true;final.hit=true;final.age=.15;b.swordAttacks=[final];b.result='victory';const combatTime=b.elapsed,finalHp=t.hp;

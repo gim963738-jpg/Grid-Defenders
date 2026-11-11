@@ -1,0 +1,38 @@
+{
+  "task": "MAIN01-20261111-9B2C9CFE",
+  "iteration": 1,
+  "route": "host_image_gen",
+  "model": null,
+  "modelReported": false,
+  "callOrdinal": 7,
+  "action": "07-turn-knightly-35to90",
+  "prompt": "Asset: ONE native transparent PNG animation sprite sheet. Exactly 12 distinct sequential animation frames in a perfectly regular 4 columns x 3 rows grid, order left to right then next row. NO titles, numbers, cell borders, labels or background. Each cell contains one full actor and equipment, all detached by transparent gutters. Image1 approved BALOR identity/style/proportions. Image2 is shared strict90 Balor camera/identity reference. Same Balor from image 1: brown layered short hair, blue grey eyes, silver and royal blue plate, layered pauldrons, white rampant lion chest emblem, two circular shoulder pins without connecting cords, blue dragon cape with white lining. Anatomical RIGHT hand one rigid silver double-edged sword with blue wrapped grip, silver pommel, silver wing guard and red diamond jewel; LEFT hand silver kite shield with black winged cross. Match his exact SD head-face-neck-torso-limbs combined proportions and clean outlined matte cel illustration finish. No helmet on Balor. No character redesign.\nCamera: starts screen-RIGHT35 and rotates to strictRIGHT90. Fixed orthographic camera, no perspective zoom. SAME body/head/armour thickness and weapon length in all12frames; do not re-fit actor per cell. Cell root at 50% width, ground at86% height; rest body height about50% cell height. Generous space ABOVE for raised shield/sword and on both sides. Do not clamp airborne or fallen poses to footline. Keep all weapon tips, cape and particles inside OWN cell with blank margin. Genuine alpha background, NO painted checkerboard, no glow backdrop or ground oval.\nAction 07-turn-knightly-35to90. Exact phases: 1 EXACT preceding shield-plant LAST pose; 2 keep shield planted at same ground point; 3 right sword begins rising; 4 torso turns to screen right; 5 hips rotate; 6 step feet naturally in place; 7 sword nearly upright; 8 torso now strict90; 9 knees straighten into STANDING knightly posture; 10 upright sword held naturally close; 11 standing90 chivalric posture; 12 identical held standing90 pose, shield stays fixed on ground. Do not kneel. Whole body rotates35 to90, not only head.\nMaintain anatomical ownership and natural fingers gripping handles, connected wrist/forearm; blade-guard-grip-pommel ONE rigid straight axis. Clean crisp full-colour outlined matte cel HD art; not photoreal, not pixel grid. This sheet is for direct frameRect playback, so consistent grid and scale essential. LAST attached image is the exact preceding clip last-frame CONNECTION POSE; begin from it, preserving identity and camera. Do not copy backdrop.",
+  "references": [
+    {
+      "file": "source/approved-right035.png",
+      "sha256": "f131b85dd33bfde3a3c80782995094ecbac0644f96eea5a85de2980f1db2b9b0",
+      "attached": true
+    },
+    {
+      "file": "api/01-ref-balor90/native.png",
+      "sha256": "837a8beb8d310423be9d029baeaa7878d44a2650c1dff874cfd5ab5441480b6f",
+      "attached": true
+    },
+    {
+      "file": "references/builtin-06-last.png",
+      "sha256": "c27f029a3ec3db130e175bd57b3ccce7e2bab96134b929f78bea513f069ac65e",
+      "attached": true
+    }
+  ],
+  "transparent_background": true,
+  "source": "C:\\Users\\user\\.codex\\generated_images\\01a1bf68-4705-71f0-9449-07a1041b38d9\\exec-a3da1b68-7881-4bd0-a3a0-a3880b3c28dd.png",
+  "output": "C:\\Users\\user\\orca\\workspaces\\Grid Defenders\\캐릭터디자인2\\output\\characters\\gc9_balor\\motions_dual_main01-20261111-9b2c9cfe_v001\\raw\\builtin\\07-turn-knightly-35to90.png",
+  "sha256": "cc8542a09ac4171d3b208f52beeae152caab30783bbea9a33ba786c4690cc9e6",
+  "width": 1448,
+  "height": 1086,
+  "mode": "RGBA",
+  "usage": null,
+  "cost": null,
+  "nativeBytesPreserved": true,
+  "at": "2026-11-11T09:25:05.296014+00:00"
+}

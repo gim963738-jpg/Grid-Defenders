@@ -1,0 +1,46 @@
+{
+  "id": "ef18427f-7c06-4eaa-9c0f-c81e9ed86e29",
+  "status": "succeeded",
+  "label": "Sunburst 2.6 · High",
+  "createdAt": "2026-11-11T12:46:40.476Z",
+  "model": "gpt-image-2.6-sunburst",
+  "quality": "high",
+  "preset": "sunburst-2.6-high",
+  "prompt": "DELIVERABLE: One original high-resolution RGBA PNG sprite sheet, 2048x1152 pixels. Exactly twelve successive animation drawings in a regular FOUR columns by THREE rows grid. Reading order is left-to-right, then the next row. One complete actor per cell. Transparent alpha outside the artwork; leave transparent gutters. Omit labels, numbers, panel borders, ground disks, shadow backplates and painted backgrounds. Draw solid discrete poses rather than multiple exposure trails.\nFIXED FRAMING: Use one fixed orthographic camera, one fixed actor scale and a shared ground/root registration for all twelve cells. Plan the scale around the BIGGEST complete action silhouette, including the highest raised weapon. Keep the entire sword, shield, cape, helmet and hands inside their OWN cell with generous blank space on every side. The full resting human body is approximately40 percent of the cell height, feet near86 percent of cell height; the giant may use a smaller constant body scale to fit its overhead weapon. Preserve this scale during the action, including crouching or falling; natural changes in pose are not a change in body size. Leave substantial room above the helmet. The output is a large native sheet; the game will choose its display size later.\nMECHANICAL CONTINUITY: Keep the same head size, torso thickness, limb lengths, armour pieces and equipment dimensions from drawing to drawing. Hands keep a natural connected grip and wrist/forearm anatomy. The blade, guard, handle and pommel form one straight rigid weapon. Move the whole weapon naturally with the hand. Equipment remains owned by the same anatomical hands. Character-only motion, without extra slash light or impact bursts; the expressly requested dissolution sheets alone contain smoke/particles.\n\nREFERENCE IDENTITY: Image1 is the approved Balor SD combat-ready design. Reproduce his brown layered short hair, blue-grey eyes, exact SD head/body proportions, silver layered plate armour, royal-blue clothing, white lion chest emblem, blue cape with white decoration and lining, belt and boots. Retain the two round shoulder fittings. Anatomical RIGHT hand holds his single silver double-edged sword with the same blue grip, red guard jewel and original guard/pommel design; anatomical LEFT hand carries his silver kite shield with its black winged-cross emblem. Retain the reference sword length and shield size. Match the clean outlined, matte cel-shaded2D game illustration finish. Copy the character and equipment only, keeping the output background transparent.\n\nCAMERA: Screen-RIGHT FRONT THREE-QUARTER35 degrees throughout the entire action. Same view as the approved35-degree master. Fixed orthographic view.\n\nACTION 09-death-right35 — twelve chronological poses:\nFrame1: approved combat guard. Frame2: balance is lost. Frame3: the knees give. Frame4: hips drop and torso begins tilting. Frame5: a supporting leg collapses naturally. Frame6: the body falls with its armour weight. Frame7: shoulder/torso approach the ground. Frame8: body lands naturally. Frame9: head and arms settle. Frame10: cape and equipment settle. Frames11-12: hold the same fully fallen posture. Keep the body's anatomical dimensions constant while it occupies a wider horizontal area. Leave enough side space for the entire fallen body, sword and shield.\n\nDeliver only this single original transparent twelve-frame PNG sheet.",
+  "size": "2048x1152",
+  "background": "transparent",
+  "endpoint": "/v1/images/edits",
+  "references": [
+    {
+      "name": "approved-balor35.png",
+      "source": "upload",
+      "file": "reference-1.png"
+    }
+  ],
+  "spec": "문서/00_개발규칙/캐릭터스프라이트제작규약.md",
+  "outputPath": "output/imagegen/sunburst/ef18427f-7c06-4eaa-9c0f-c81e9ed86e29/ef18427f-7c06-4eaa-9c0f-c81e9ed86e29_sunburst-2.6-high.png",
+  "imageUrl": "/output/imagegen/sunburst/ef18427f-7c06-4eaa-9c0f-c81e9ed86e29/ef18427f-7c06-4eaa-9c0f-c81e9ed86e29_sunburst-2.6-high.png",
+  "metadataUrl": "/output/imagegen/sunburst/ef18427f-7c06-4eaa-9c0f-c81e9ed86e29/metadata.json",
+  "response": {
+    "created": 1794401249,
+    "size": "2048x1152",
+    "quality": "high",
+    "background": "transparent",
+    "output_format": "png",
+    "usage": {
+      "input_tokens": 2233,
+      "input_tokens_details": {
+        "image_tokens": 1536,
+        "text_tokens": 697
+      },
+      "output_tokens": 1413,
+      "output_tokens_details": {
+        "image_tokens": 1413,
+        "text_tokens": 0
+      },
+      "total_tokens": 3646
+    }
+  },
+  "requestId": "req_654e790b66ed4212bdecc7b541ac56aa",
+  "finishedAt": "2026-11-11T12:47:31.175Z"
+}

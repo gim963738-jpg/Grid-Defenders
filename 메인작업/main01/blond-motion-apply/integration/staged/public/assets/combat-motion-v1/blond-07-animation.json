@@ -1,0 +1,215 @@
+{
+  "schema": "grid-defenders.direct-sheet.v1",
+  "id": "07_hurt_34",
+  "variant": "A_builtin",
+  "source": "sheet.png",
+  "sourceSha256": "b1ee0c667ed2a02d07d4dfae1292f572a52537cf1b006a3698610c9dba41eb0a",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "grid": [
+    4,
+    3
+  ],
+  "frameCount": 12,
+  "frameRects": [
+    [
+      0,
+      0,
+      384,
+      341
+    ],
+    [
+      384,
+      0,
+      384,
+      341
+    ],
+    [
+      768,
+      0,
+      384,
+      341
+    ],
+    [
+      1152,
+      0,
+      384,
+      341
+    ],
+    [
+      0,
+      341,
+      384,
+      342
+    ],
+    [
+      384,
+      341,
+      384,
+      342
+    ],
+    [
+      768,
+      341,
+      384,
+      342
+    ],
+    [
+      1152,
+      341,
+      384,
+      342
+    ],
+    [
+      0,
+      683,
+      384,
+      341
+    ],
+    [
+      384,
+      683,
+      384,
+      341
+    ],
+    [
+      768,
+      683,
+      384,
+      341
+    ],
+    [
+      1152,
+      683,
+      384,
+      341
+    ]
+  ],
+  "durationsMs": [
+    110,
+    90,
+    60,
+    70,
+    90,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    150
+  ],
+  "frameOffsets": [
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      32,
+      32
+    ]
+  ],
+  "frameCanvas": [
+    448,
+    406
+  ],
+  "partitionXCuts": [
+    [
+      0,
+      384,
+      768,
+      1152,
+      1536
+    ],
+    [
+      0,
+      384,
+      768,
+      1152,
+      1536
+    ],
+    [
+      0,
+      384,
+      768,
+      1152,
+      1536
+    ]
+  ],
+  "partitionYCuts": [
+    0,
+    341,
+    683,
+    1024
+  ],
+  "partitionMethod": "Source-wide row gaps and per-row column gaps alpha<16, nearest planned grid, 3px transparent strip. Exact non-overlapping source partition; offsets restore nominal source cell coordinates. No subject bbox cropping or resizing.",
+  "loopDefault": false,
+  "oneShotHoldLast": true,
+  "anchor": [
+    224,
+    347
+  ],
+  "sourceAnchor": [
+    185.4308176100629,
+    360
+  ],
+  "displayScale": 0.6309148264984227,
+  "anchorDescription": "Common display root, one fixed translation/scale from first grounded pose per sheet; no per-frame alpha bbox lock. Source gait bob/flight/death retained.",
+  "bodyHeightReference": 317,
+  "displayBodyHeight": 200,
+  "bodyHeightReferenceDescription": "Hair top to foot sole from first grounded pose, alpha>=128, lower-foot strip x100..300; visual estimate, not anatomy measurement. One transform for all 12 frames.",
+  "interpolation": false,
+  "frameReordering": false,
+  "reversePlayback": false,
+  "framesDrawnBy": "image model",
+  "promptSha256": "c26581a0ceb0edbabe9d5139a9e9a4cc4fe04b481dbfb36384013ae5f484334b",
+  "referenceHashes": [
+    "b8b5e19b5763082da15a7e7d1913ac43b04f52b66b09157343f8f39f61b94fff",
+    "2bc66a3b3f738b809c65c378ab9b30d0d523220ad27bb59bce1ae74e12221072"
+  ],
+  "artSource": "builtin image_gen",
+  "damageGeometry": "independent; not defined by this asset",
+  "previewOnlyExtraction": true
+}

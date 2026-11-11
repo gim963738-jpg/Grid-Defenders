@@ -1,0 +1,183 @@
+{
+  "checkedAt": "2026-11-11T15:36:38.789029+09:00",
+  "measurement": "alpha>=224 본체 경계와 전체 알파를 구분. 헤일로는 별도 시각관찰.",
+  "outputs": {
+    "a_front": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1333264,
+      "sha256": "dc85b8aff3074b96a5bbe44ba2ef4a62b8b7891ef98514b9e11c27b10516e9c5",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1245697,
+      "partiallyTransparentPixels": 327167,
+      "highAlphaBounds": [
+        262,
+        115,
+        709,
+        1465
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 25.59,
+        "top": 7.49,
+        "right": 30.76,
+        "bottom": 4.62
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "a_right35": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1383661,
+      "sha256": "89ad5cbee1510b24628d44bb8eebf264dc51a2a7d8d3d62214b189f4d4f958d1",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1228709,
+      "partiallyTransparentPixels": 344155,
+      "highAlphaBounds": [
+        254,
+        167,
+        719,
+        1461
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 24.8,
+        "top": 10.87,
+        "right": 29.79,
+        "bottom": 4.88
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "a_right90": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1192532,
+      "sha256": "dec5dae8561a957d172180f0d02ceddba98460fb0918d2cad66d67166256a610",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1355549,
+      "partiallyTransparentPixels": 217315,
+      "highAlphaBounds": [
+        294,
+        250,
+        659,
+        1457
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 28.71,
+        "top": 16.28,
+        "right": 35.64,
+        "bottom": 5.14
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "b_front": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1289994,
+      "sha256": "8c2d6214c0c9474666bee877d997b0186c6747067660901589f47e598e860bec",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1281495,
+      "partiallyTransparentPixels": 291369,
+      "highAlphaBounds": [
+        265,
+        143,
+        684,
+        1446
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 25.88,
+        "top": 9.31,
+        "right": 33.2,
+        "bottom": 5.86
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "b_right35": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1383560,
+      "sha256": "eca35c54c014bd0fb66eb108399ed2cd675aa9fa92d60ffa838eddb0e0154842",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1245543,
+      "partiallyTransparentPixels": 327321,
+      "highAlphaBounds": [
+        273,
+        171,
+        696,
+        1472
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 26.66,
+        "top": 11.13,
+        "right": 32.03,
+        "bottom": 4.17
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    },
+    "b_right90": {
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "bytes": 1214001,
+      "sha256": "3752639283237968a4a06bf975047d3456152156e591f671195f15f18c9b5c20",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1336670,
+      "partiallyTransparentPixels": 236194,
+      "highAlphaBounds": [
+        320,
+        187,
+        675,
+        1451
+      ],
+      "highAlphaMarginsPercent": {
+        "left": 31.25,
+        "top": 12.17,
+        "right": 34.08,
+        "bottom": 5.53
+      },
+      "framingDefaultsMet": false,
+      "sourcePreserved": true
+    }
+  },
+  "visual": {
+    "allSix": "서 있는 자세, 상체X벨트제거, A재킷/검정티와 B화이트오버핏셔츠 구분. 성인여성/은회색포니테일/노란눈/갈색피부/무표정 유지.",
+    "frontAnd35": "견장·무릎·부츠는 정면 화면좌, 손등판·파우치는 화면우로 확인. 사선은 같은장비계열 유지.",
+    "profiles": "화면오른90도 한쪽눈·코윤곽과측면몸통 확인. 근측 견장·무릎·부츠 유지. 원측파우치/장갑판은 가려져 전체검증불가. A/B 프로필 손가락·검집 연결은 겹쳐 일부 모호.",
+    "limitations": [
+      "방향별 인물·머리 크기 및 발 기준선 차이.",
+      "포니테일이 허리보다 길고 풍성하게 표현됨.",
+      "왼턱 희미한 옛칼자국은 확정 관찰되지 않음.",
+      "반투명 옅은 헤일로가 어두운 배경에서 보임.",
+      "생성 프레이밍 상단20% 등 수치기준 미달.",
+      "B 셔츠의 오버핏 정도와 단추 개방량의 최종 미적 판정은 사용자대기."
+    ],
+    "userApproval": false,
+    "independentTester": false
+  }
+}

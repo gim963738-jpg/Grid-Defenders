@@ -1,0 +1,56 @@
+from pathlib import Path
+import json,hashlib,importlib.util
+R=Path('C:/Users/user/Desktop/Grid Defenders');S=R/'작업관리';H=Path(__file__).resolve().parent
+if (H/'연결.json').exists():raise SystemExit('Already prepared; inspect before repeating.')
+W=Path('C:/Users/user/orca/workspaces/Grid Defenders/캐릭터디자인2');V=W/'output/characters/gc9_balor/v9_illustration_sides4_main01-20261111-42d3d4bb_v001'
+style=W/'output/characters/gc9_longsword_dagger/idle6_style1_style4_main01-20261109-e1fd458c_v003/variant-1-front.png'
+refs=[V/'inputs/front-v9.png',V/'image26/right-035.png',V/'image26/right-090.png',style]
+for p in refs:assert p.is_file(),p
+(H/'입력목록.json').write_text(json.dumps([{'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in refs],ensure_ascii=False,indent=2),encoding='utf-8')
+spec=importlib.util.spec_from_file_location('board',S/'도구/작업대장.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);b=m.Board(S)
+request=(H/'사용자확인.md').read_text(encoding='utf-8');t=b.new('main01','characters','발로르 SD 방패 전투태세0/35/90 내장3·2.6 3 총6장',request);tid=t['id'];F=b.folder(tid);O=W/'output/characters/gc9_balor'/('sd_guard6_'+tid.lower()+'_v001')
+prompt=f'''# {tid} / 차수1 / main01 → characters 팀장
+
+## 실제 승인과 산출물
+{request}
+**새 SD 이미지6장: 내장0/35/90 3장 + GPT Image2.6 0/35/90 3장.** 두경로를이작업에서함께진행한다. 서로의이미지를복사해생성으로보고하지않는다. 정면도각각새SD전투태세로생성하며기존일러스트정면을결과한장으로사용하지않는다. 이번은정지시안제작·비교이며SD이후리깅/애니메이션/실게임통합은후속이다.
+
+## 외형/그림체 입력역할
+IDENTITY/EQUIPMENT의선택소스:
+-정면0(기존v9승인): {refs[0]}
+-오른쪽앞35(기존2.6): {refs[1]}
+-오른쪽정90(기존2.6): {refs[2]}
+유일 STYLE/SD PROPORTION 최신1번표본: {style}
+표본의선/색면/간결한명암·또렷한얼굴·두상/얼굴/목/흉곽/골반/팔/다리의결합비율을실제읽고참조. 금발/얼굴/복장/쌍검을발로르에복제하지않는다. 성인일러스트등신을SD에그대로유지하지않고SD표본처럼변환하되얼굴만크게부풀리거나몸만앙상하게하지않는다. 고정새등신수치/어깨=머리폭같은임의규칙을추가하지않는다. 구SD_승인기준/AGENTS의신규2안일반규칙과충돌시이인물의후속사용자채택1번그림체와이번명세가우선하며공통규정을수정하지않는다.
+실제입력이미지를view_image로열고생성호출에첨부한다. 텍스트경로만으로첨부했다고하지않는다. 2.6일러스트의얼굴형/갈색헤어/청회눈·은청갑주/다층견장/사자흉갑·청색용문양망토·검정문양카이트실드·검디자인을SD로옮긴다. 과거반려내장일러스트/SD/수직검v002/알파미달v003을정체성·화풍·자세마스터로넣지않는다. 선택2.6원본에남은검축/장비회전결함까지승인된것은아니므로복제하지않는다.
+
+## 공통 전투태세(이번에는 사용자가 새로 요청한 자세)
+오른쪽에서오는적을막을준비를하는방어전투대기. 인체왼팔로방패를몸전방에들어흉곽을보호하고전완/손잡이/스트랩이자연스럽게받친다. 오른손에는검한자루를자연스럽게쥐고대응할준비를한다. 양발지지/무게중심안정,몸전체와얼굴의공격진행방향일관. 공격중/피격중/도약/걷기/이펙트는아니다. 0은정면에서본같은전투태세,35는오른쪽앞사선,90은오른쪽정측면으로회전한동일한태세.35/90의우측지향은명확히보여야한다. 머리만돌리거나단순반전으로다른방향을대체하지않는다.
+방패를내려놓은기본입상이나공중에떠있는방패가아니다. 방패가적을향해방어하는배치가우선이며카메라에문양을다보여주려고방패/팔을임의비틀지않는다. 방패의앞/뒤/옆가림은각도에맞게허용하고손·전완을관통하지않는다. 큰방패와견장때문에몸통을옆으로부풀리거나얼굴을과대해석하지않는다.
+손목/그립은항상자연스러운전완연장과손가락/엄지감싸기. 날–가드–손잡이–폼멜은하나의강체직선축이다. 칼이손을지나꺾이거나검축숫자만맞추려고손목/주먹을이상하게돌리는오류금지. 긴은양날·은날개가드·붉은마름모보석·청색감긴그립·은폼멜의정체성을유지하고검/방패인체좌우를바꾸지않는다. 양경로/모든시점은같은포즈·카메라/원근·나이·머리/몸의비율·장비상대크기를비교할수있게유지한다.
+
+## 생성 공정·허가 범위
+imagegen 및 generate2dsprite 스킬본문을읽되사용자지정두경로/정지6장/원본보존/표시3번이자동라우팅/3takes/영상/자동키잉/정규화의기본값보다우선한다. 본main의비과금doctor:{H/'doctor.json'} 는host image가능이고전역API환경키는없다고표시했지만기존프로젝트image-studio의승인된.local연결을검사한결과가아니므로새키등록을사용자에게반복요구하지않는다.
+내장3장은 built-in image_gen으로만.2.6 3장은사용자의이번직접진행+경로/개수확인으로명시허가된기존 tools/image-studio/openai.mjs 읽기전용adapter/.env.local 경로를사용. preset sunburst-2.6-high / request gpt-image-2.6-sunburst / high, 실제validateConfig에맞춰1024×1536·투명·참조편집을우선한다. 기존adapter/env를수정하거나키를출력/채팅/인자/결과HTML에담지않는다.
+두경로에동일한승인외형/SD표본/요구포즈/각도를주고공정성을유지한다. 각경로의0도후보를내부확인해같은경로의35/90외형·포즈기준으로활용가능하나사용자합격마스터라고보고하지않는다. 0이미지에심한결함이있으면그결함을고정하지말고남은방향은승인된공통외형/스타일소스로제작하고한계를기록한다. 내장산출물을2.6의입력원본으로쓰거나그반대의경로복제는하지않는다. 동시에작업하되서로의파일을덮어쓰지않는다.
+2.6은방향당초기1회총3POST까지만이번초기제작으로실행. 자동재시도/타임아웃불확실중복호출/추가유료보완/모델대체금지,필요하면main01에상태보고. 내장은초기3장+같은범위내국소보완최대각1회(총6회이내)까지만하고결과/잔여문제를정직하게제출. 모델상세명/usage미보고를추정하지말고실제route/요청·응답모델/프롬프트/설정/첨부참조/횟수/requestId/usage/nativeSHA를기록한다. 금액/잔액미확인은명시. 크레딧은이미지생성에만쓰고코딩/리깅에는쓰지않는다. Grok/타서비스/자동폴백을추가하지않는다.
+
+## 실제 그림 검수와 72CSSpx/표시3번
+nativePNG는해상도/바이트그대로보존하고생성단계에서머리/방패/칼끝/망토/발의안전여백을확보. 바깥사각형배경/그려진체커/alpha32전체캔버스잔여를무시하지말고밝음/어두움전체프레임으로확인. 큰배경판은3번표시로해결되는결함이아니다. 임의코드키잉/그림변형/재인코딩은이번에자동수행하지않는다. 그림은이미지모델로제작하며코드는비교/측정/표시/검증용이다.
+기존SD_72CSSpx_표시기준본문을적용한다. bodyHeight/footX/footY/전체PNG를각파일별측정(추정오차포함)하고무기/여백을본체키로계산하지않는다. 원본고해상도유지,동일발선의본체72CSSpx.3번은현재비교도구의단계고품질축소+외부연결극저알파비초록만알파1감소를파생버퍼에서처리. 참고코드읽기전용:{R/'게임/public/dev-previews/battle-sticker-quality-v001/app.js'}, 정의:{R/'게임/public/dev-previews/battle-sticker-quality-v001/정의문서.md'}. DPR1/2와CSS픽셀구분,3번이2번대비미세차이라는사실유지. nearest/과한blur/sharpen/얼굴재그림으로임의대체하지않는다.
+밝음/어두움및기존필드 {R/'게임/public/assets/battlefields/forest-clearing-v1.png'} 의72실제표시를별도비교. 기존게임표시구도와같은조건을쓰고새배경생성/실게임수정을하지않는다. 이번새SD의얼굴·방패/검실루엣·손목연결을큰확대와72둘다직접확인. 기술숫자가해부/그림체/미적합격을대신하지않는다.
+
+## 결과물·허용파일·보고
+새독립output:{O}
+built-in/front-000.png,right-035.png,right-090.png 및 image26/front-000.png,right-035.png,right-090.png 총6생성원본. 후보/각실제반환원본바이트/프롬프트/참조사본/기록보존. index.html은위내장0/35/90·아래2.6 0/35/90의6칸을큰동일본체키/발선으로표시하고확대/명암/원본크기,3번처리72CSSpx의DPR1/2/실필드비교를제공한다. 35나90을다른링크에만두지않는다. 원본및body메타/발점오차/모드/DPR를명시. localrelative경로로main01이기존HTTP새dev-previews에복사하여열수있게한다. 서버/포트를새로열거나사용자창/탭을조작하지않는다.
+보고.md/제작기준.md/검수.md/asset-manifest.json/generation-records.json/기술검사·화면증거/현재ACK/start/실질5종기록. 기존원본/일러스트판정/반려결과/예비4번모델/카탈로그/공통규정/타팀·타메인/게임/계정·키·설정/Git는보존. 사용자저장요청없으므로커밋/푸시/예약백업0. 리깅/파츠분리/모션자동제작·게임유닛교체금지.
+자동첨부된필독본문과본작업최신승인/피드백을모두새로읽고문서별적용요약과현재SHA의characters ACK→start통과후실제생성. 과거일러스트ACK/유료허가/결과를새작업으로재사용하지않는다. 하위담당필요시원작업/허용범위/필독/자기작업방법전달. 내장각3/API각3의경로와비용권한을혼동하지않는다.
+원본6장/그림체비율/동일인물과장비/전투태세/각도/자연손목/직선검/방패연결/alpha/72가독성/기존SHA보존을실제로확인한뒤공식새Task/Dispatch worker_done으로main01 run_47ce1a81d7b1에원작업·차수1/보고·검수·6PNG·비교페이지절대경로/실제내장·API횟수·usage/미달·한계를회신. 핵심미달은outcome failed로실물과함께보고하고사용자합격/리깅완료/실게임통합으로보고하지않는다.
+'''
+(F/'요청확인.md').write_text(request,encoding='utf-8');(F/'전문프롬프트.md').write_text(prompt,encoding='utf-8');(F/'2_사전확인.md').write_text((H/'사전확인.md').read_text(encoding='utf-8'),encoding='utf-8')
+(F/'1_대화기록.md').write_text('# '+tid+'\n'+request,encoding='utf-8');(F/'3_작업일지.md').write_text('# 작업일지\n사용자SD진행·각3장확인/원형·그림체·도구와충돌검토후전문지시준비. 생성전.\n',encoding='utf-8');(F/'4_정의문서.md').write_text('# 정의\n발로르SD방패전투태세0/35/90 내장3+2.6 3.72CSSpx/3번비교.\n',encoding='utf-8');(F/'5_버전관리.md').write_text('# 이력\n신규SD원작업. 이전42D3D4BB내장일러스트는사용자불합격/재제작보류. 원본보존/커밋푸시없음.\n',encoding='utf-8')
+extra=[H/'사용자확인.md',H/'사전확인.md',S/'이미지2.6사용규칙.md',S/'저장운영규정.md',S/'진행승인규칙.md',S/'기준/characters/SD_72CSSpx_표시기준.md',R/'메인작업/main01/balor-style1/사용자확인.md',R/'메인작업/main01/balor-v9-illustration-sides/v003/사용자불합격.md',W/'문서/02_세부기획/02_영웅/한손무기그립기준.md',W/'tools/image-studio/README.md',R/'게임/public/dev-previews/battle-sticker-quality-v001/정의문서.md']
+for p in extra:assert p.is_file(),p
+b.set_readings(tid,'main01',[str(p) for p in extra]);b.confirm(tid,'main01','내장도 3장 2.6도 3장',H/'사용자확인.md');plan=b.prepare(tid,'main01')
+l={'task':tid,'iteration':1,'folder':str(F),'output':str(O),'plan':plan,'state':'prepared_not_sent','targetDispatch':'ctx_f11a2ed108c8','generationRoutes':['built_in','image26'],'expectedImages':6,'image26InitialCallsAllowed':3}
+(H/'연결.json').write_text(json.dumps(l,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps({'task':tid,'prompt':plan['prompt'],'output':str(O),'state':l['state']},ensure_ascii=False))
